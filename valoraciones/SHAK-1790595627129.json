@@ -551,5 +551,52 @@
     "dcfFy3": 29.539971481904452,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 4
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 18.596383901373247,
+    "valorBetaPropuesta": 23.03260632282504,
+    "betaHoja": 1.6,
+    "betaPropuesta": 0.8318247206782337,
+    "dcfBase": 20.92039729782552,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Crece por aperturas y el margen mejora",
+        "probabilidad": 0.45,
+        "valor": 20.97276915315112,
+        "valorBetaPropuesta": 26.148950757313564,
+        "margen": 0.08,
+        "crecimiento": 0.11025587784191715,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Crece, pero el margen no despega",
+        "probabilidad": 0.3,
+        "valor": 10.034556504306416,
+        "valorBetaPropuesta": 12.350393621048841,
+        "margen": 0.05,
+        "crecimiento": 0.07410432031031111,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Economía unitaria de primer nivel",
+        "probabilidad": 0.15,
+        "valor": 36.35208593316635,
+        "valorBetaPropuesta": 45.06629530279459,
+        "margen": 0.11,
+        "crecimiento": 0.13061194566139522,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Consumidor débil y aperturas que no rinden",
+        "probabilidad": 0.1,
+        "valor": 6.954579411883662,
+        "valorBetaPropuesta": 8.005161003000953,
+        "margen": 0.03,
+        "crecimiento": 0.028004282600283315,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

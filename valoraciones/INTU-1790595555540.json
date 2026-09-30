@@ -562,5 +562,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (667,40 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 10,3%, WACC años 4-10 9,5%, ROE FY+3 35,3%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 441.2976795215717,
+    "valorBetaPropuesta": 427.0730844846327,
+    "betaHoja": 1.2,
+    "betaPropuesta": 1.3420317194955234,
+    "dcfBase": 496.4408222830217,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · La IA es palanca de monetización",
+        "probabilidad": 0.45,
+        "valor": 509.9328650991249,
+        "valorBetaPropuesta": 493.2695763050689,
+        "margen": 0.32,
+        "crecimiento": 0.09826931361269264,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · La IA erosiona impuestos y contabilidad básica",
+        "probabilidad": 0.25,
+        "valor": 259.80340067020285,
+        "valorBetaPropuesta": 252.02688790626095,
+        "margen": 0.29,
+        "crecimiento": 0.048654914071139865,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "C · Plataforma financiera de la pyme",
+        "probabilidad": 0.2,
+        "valor": 628.0467361899803,
+        "valorBetaPropuesta": 607.2601880996974,
+        "margen": 0.35,
+        "crecimiento": 0.1219247044012246,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Recesión y declaración gratuita del Estado",
+        "probabilidad": 0.1,
+        "valor": 212.67692821418677,
+        "valorBetaPropuesta": 206.43015550846985,
+        "margen": 0.26,
+        "crecimiento": 0.025333920441126256,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }

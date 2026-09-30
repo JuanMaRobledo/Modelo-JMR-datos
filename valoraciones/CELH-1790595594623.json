@@ -551,5 +551,52 @@
     "dcfFy3": 25.23431373650452,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 2
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 18.600388981190754,
+    "valorBetaPropuesta": 20.851868665921398,
+    "betaHoja": 1.5,
+    "betaPropuesta": 1.0,
+    "dcfBase": 18.116848909655378,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Alani lidera y Celsius se estabiliza",
+        "probabilidad": 0.4,
+        "valor": 22.222729288548685,
+        "valorBetaPropuesta": 24.94894130274289,
+        "margen": 0.19,
+        "crecimiento": 0.08573530560415432,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Alani crece, Celsius sigue cediendo",
+        "probabilidad": 0.35,
+        "valor": 15.48065959275577,
+        "valorBetaPropuesta": 17.302041447356583,
+        "margen": 0.16,
+        "crecimiento": 0.041063655902926266,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · La moda se desgasta",
+        "probabilidad": 0.15,
+        "valor": 9.394955540518474,
+        "valorBetaPropuesta": 10.394471298539305,
+        "margen": 0.12,
+        "crecimiento": -0.01879373518404648,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Plataforma multimarca",
+        "probabilidad": 0.1,
+        "valor": 28.838230772289904,
+        "valorBetaPropuesta": 32.57406943468541,
+        "margen": 0.22,
+        "crecimiento": 0.12241799206207848,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

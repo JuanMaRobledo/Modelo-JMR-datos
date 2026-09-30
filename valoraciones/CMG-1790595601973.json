@@ -556,5 +556,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (37,05 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,9%, WACC años 4-10 9,5%, ROE FY+3 68,0%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 24.284380650170913,
+    "valorBetaPropuesta": 26.32571787728286,
+    "betaHoja": 1.1,
+    "betaPropuesta": 0.78,
+    "dcfBase": 27.913476128764707,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Crece por aperturas con comparables bajas",
+        "probabilidad": 0.45,
+        "valor": 24.964075084225517,
+        "valorBetaPropuesta": 27.068156321572832,
+        "margen": 0.16,
+        "crecimiento": 0.07197383796645984,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Tráfico débil y margen presionado",
+        "probabilidad": 0.3,
+        "valor": 19.797243272002053,
+        "valorBetaPropuesta": 21.417451874114,
+        "margen": 0.14,
+        "crecimiento": 0.049980951689844844,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Vuelve el tráfico",
+        "probabilidad": 0.2,
+        "valor": 32.60002194508748,
+        "valorBetaPropuesta": 35.42507250682629,
+        "margen": 0.18,
+        "crecimiento": 0.10197455133279387,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Saturación: el tráfico cae",
+        "probabilidad": 0.05,
+        "valor": 11.827389833026343,
+        "valorBetaPropuesta": 12.69594937951254,
+        "margen": 0.12,
+        "crecimiento": 0.02598828880504489,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }

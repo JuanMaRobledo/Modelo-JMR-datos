@@ -597,5 +597,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (47,96 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,3%, WACC años 4-10 8,8%, ROE FY+3 23,0%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 34.2957839418282,
+    "valorBetaPropuesta": 33.41187263665465,
+    "betaHoja": 0.9972365586244075,
+    "betaPropuesta": 1.1157033893529642,
+    "dcfBase": 36.759695783506785,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Recuperación lenta con la vuelta a los mayoristas",
+        "probabilidad": 0.45,
+        "valor": 37.7983431685712,
+        "valorBetaPropuesta": 36.81290768551559,
+        "margen": 0.11,
+        "crecimiento": 0.03094243155580867,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Pérdida de relevancia prolongada",
+        "probabilidad": 0.3,
+        "valor": 21.678488375936837,
+        "valorBetaPropuesta": 21.15171052702152,
+        "margen": 0.085,
+        "crecimiento": 0.005343306120183966,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "C · Vuelve la Nike de márgenes históricos",
+        "probabilidad": 0.2,
+        "valor": 50.167960173657804,
+        "valorBetaPropuesta": 48.84079531398067,
+        "margen": 0.135,
+        "crecimiento": 0.046884243643033896,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Aranceles y competencia estructural",
+        "probabilidad": 0.05,
+        "valor": 14.987819369170982,
+        "valorBetaPropuesta": 14.647839145400747,
+        "margen": 0.06,
+        "crecimiento": -0.012846224373016968,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }

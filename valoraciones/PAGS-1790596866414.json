@@ -551,5 +551,52 @@
     "dcfFy3": 18.915267658859783,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 2
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 11.625154983510944,
+    "valorBetaPropuesta": 13.124086853422138,
+    "betaHoja": 1.3,
+    "betaPropuesta": 0.97,
+    "dcfBase": 12.533970429694545,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Banco digital estable con ROAE de ~15%",
+        "probabilidad": 0.45,
+        "valor": 12.487125966217912,
+        "valorBetaPropuesta": 14.13695747619831,
+        "margen": 0.14,
+        "crecimiento": 0.055645024923835607,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · El PIX y la competencia erosionan",
+        "probabilidad": 0.3,
+        "valor": 10.025937250537817,
+        "valorBetaPropuesta": 11.208110345643329,
+        "margen": 0.12,
+        "crecimiento": 0.013971343155100069,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Crece el banco: crédito y depósitos",
+        "probabilidad": 0.15,
+        "valor": 15.6297875097504,
+        "valorBetaPropuesta": 17.848906265352372,
+        "margen": 0.16,
+        "crecimiento": 0.09033343043964726,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Crisis de crédito en Brasil",
+        "probabilidad": 0.1,
+        "valor": 6.5369899708897865,
+        "valorBetaPropuesta": 7.226869456370446,
+        "margen": 0.08,
+        "crecimiento": -0.004226904030948497,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

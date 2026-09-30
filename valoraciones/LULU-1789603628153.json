@@ -559,5 +559,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (230,22 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,7%, WACC años 4-10 9,0%, ROE FY+3 27,6%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 152.97534288342027,
+    "valorBetaPropuesta": 163.01635568452127,
+    "betaHoja": 1.2,
+    "betaPropuesta": 0.8902410235397273,
+    "dcfBase": 174.30726365414006,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Se estabiliza Américas y crece lo internacional",
+        "probabilidad": 0.4,
+        "valor": 179.4117185957549,
+        "valorBetaPropuesta": 191.3858152279441,
+        "margen": 0.18,
+        "crecimiento": 0.029681556407293863,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Pérdida estructural frente a Alo y Vuori",
+        "probabilidad": 0.35,
+        "valor": 108.34514631430582,
+        "valorBetaPropuesta": 115.13427147922549,
+        "margen": 0.14,
+        "crecimiento": -0.006385513542655374,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "C · La marca se recupera",
+        "probabilidad": 0.15,
+        "valor": 239.89854732523665,
+        "valorBetaPropuesta": 256.2150856266419,
+        "margen": 0.21,
+        "crecimiento": 0.05787466772162109,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Moda que pasa: declive de la marca",
+        "probabilidad": 0.1,
+        "valor": 73.05072136325778,
+        "valorBetaPropuesta": 77.32771731618422,
+        "margen": 0.1,
+        "crecimiento": -0.03527493594186737,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }
