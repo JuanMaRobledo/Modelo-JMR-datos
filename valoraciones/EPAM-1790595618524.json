@@ -467,5 +467,77 @@
       },
       "detalle": "reference/multiplos_v3/ en JMR-valuation (anclas, decisión y respaldo de J8/J19/J30)"
     }
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 107.55,
+    "dcfHoy": 148.69575964240113,
+    "dcfInverso": {
+      "gImplicito": -0.03174163821000392,
+      "gDcf": 0.05,
+      "dif": -0.08174163821000392,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
+    },
+    "gDcf": {
+      "anios4a10": 0.04995714285714286,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.04992857142857143
+    },
+    "parametros": {
+      "ke": 0.10788,
+      "wacc": 0.09959671390716095,
+      "roe": 0.15283397448722952,
+      "fcffEbitda": 0.7021647813631333,
+      "fcfeOcf": 0.9445011868580319
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 9.19,
+        "gImplicito": 0.02154523546203066,
+        "gDcf": 0.04992857142857143,
+        "dif": -0.028383335966540774,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 12.51,
+        "gImplicito": 0.018205395335202323,
+        "gDcf": 0.04992857142857143,
+        "dif": -0.03172317609336911,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 13.71,
+        "gImplicito": 0.061705776514322214,
+        "gDcf": 0.04992857142857143,
+        "dif": 0.01177720508575078,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 12.56,
+        "gImplicito": 0.026177935103244843,
+        "gDcf": 0.04992857142857143,
+        "dif": -0.02375063632532659,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 11.46,
+        "gImplicito": 0.023524010256141543,
+        "gDcf": 0.04992857142857143,
+        "dif": -0.02640456117242989,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      }
+    ],
+    "alertas": 4
   }
 }

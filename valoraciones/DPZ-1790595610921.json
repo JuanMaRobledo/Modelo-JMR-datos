@@ -467,5 +467,77 @@
       },
       "detalle": "reference/multiplos_v3/ en JMR-valuation (anclas, decisión y respaldo de J8/J19/J30)"
     }
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 292.27,
+    "dcfHoy": 226.68096734863386,
+    "dcfInverso": {
+      "gImplicito": 0.0775204591597759,
+      "gDcf": 0.044,
+      "dif": 0.0335204591597759,
+      "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
+    },
+    "gDcf": {
+      "anios4a10": 0.047099999999999996,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.0485
+    },
+    "parametros": {
+      "ke": 0.09004000000000001,
+      "wacc": 0.08241861175944895,
+      "roe": null,
+      "fcffEbitda": 0.6776984527984035,
+      "fcfeOcf": 1.1288573068085113
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 18.41,
+        "gImplicito": 0.043987921947182464,
+        "gDcf": 0.0485,
+        "dif": -0.004512078052817538,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 28.65,
+        "gImplicito": 0.045912081851879005,
+        "gDcf": 0.0485,
+        "dif": -0.002587918148120996,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 22.85,
+        "gImplicito": null,
+        "gDcf": 0.0485,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No se puede calcular (métrica o supuestos no aptos)."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 25.23,
+        "gImplicito": 0.048483004193671374,
+        "gDcf": 0.0485,
+        "dif": -1.6995806328627683e-05,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 21.94,
+        "gImplicito": 0.03669970653213146,
+        "gDcf": 0.0485,
+        "dif": -0.011800293467868539,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      }
+    ],
+    "alertas": 0
   }
 }

@@ -467,5 +467,77 @@
       },
       "detalle": "reference/multiplos_v3/ en JMR-valuation (anclas, decisión y respaldo de J8/J19/J30)"
     }
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 30,
+    "dcfHoy": 38.91828305533593,
+    "dcfInverso": {
+      "gImplicito": 0.08702202437148554,
+      "gDcf": 0.14800000000000002,
+      "dif": -0.06097797562851448,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
+    },
+    "gDcf": {
+      "anios4a10": 0.1013857142857143,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.07564285714285715
+    },
+    "parametros": {
+      "ke": 0.11334999999999999,
+      "wacc": 0.10025716551467069,
+      "roe": 0.29413217226033994,
+      "fcffEbitda": 0.7143767777494924,
+      "fcfeOcf": 0.9484038968623886
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 17.07,
+        "gImplicito": 0.0560611738069633,
+        "gDcf": 0.07564285714285715,
+        "dif": -0.01958168333589385,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 23.94,
+        "gImplicito": 0.056141000097081645,
+        "gDcf": 0.07564285714285715,
+        "dif": -0.019501857045775506,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 19.38,
+        "gImplicito": 0.0715013208795398,
+        "gDcf": 0.07564285714285715,
+        "dif": -0.004141536263317355,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 20.17,
+        "gImplicito": 0.06075906943788379,
+        "gDcf": 0.07564285714285715,
+        "dif": -0.01488378770497336,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 17.6,
+        "gImplicito": 0.056422973586134,
+        "gDcf": 0.07564285714285715,
+        "dif": -0.019219883556723154,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      }
+    ],
+    "alertas": 0
   }
 }

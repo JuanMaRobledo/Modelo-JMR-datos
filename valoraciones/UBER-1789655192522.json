@@ -470,5 +470,77 @@
     },
     "nota": "29-sep-2026: múltiplos de salida elegidos con el prompt de valoración v3 (historia de la etapa actual, peers de hoy ajustados y múltiplo justificado), traídos a hoy en 1, 2 y 3 años."
   },
-  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1R3V8gISxXCYIujVFSITu0svVBC3AsN4GF_pQHHLs5dw/edit"
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1R3V8gISxXCYIujVFSITu0svVBC3AsN4GF_pQHHLs5dw/edit",
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 68.16,
+    "dcfHoy": 111.44294847642047,
+    "dcfInverso": {
+      "gImplicito": 0.018327218743923013,
+      "gDcf": 0.114,
+      "dif": -0.09567278125607699,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
+    },
+    "gDcf": {
+      "anios4a10": 0.08424285714285715,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.06707142857142857
+    },
+    "parametros": {
+      "ke": 0.08555648921601675,
+      "wacc": 0.08629789700290338,
+      "roe": 0.6266403807352412,
+      "fcffEbitda": 0.7811267115836216,
+      "fcfeOcf": 1.0760364801620526
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 30.39,
+        "gImplicito": 0.059076028767683204,
+        "gDcf": 0.06707142857142857,
+        "dif": -0.007995399803745369,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 19.63,
+        "gImplicito": 0.03364167320247181,
+        "gDcf": 0.06707142857142857,
+        "dif": -0.033429755368956766,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 23.35,
+        "gImplicito": 0.04398448847178304,
+        "gDcf": 0.06707142857142857,
+        "dif": -0.023086940099645535,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 19.57,
+        "gImplicito": 0.03278271725607427,
+        "gDcf": 0.06707142857142857,
+        "dif": -0.034288711315354305,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 19.55,
+        "gImplicito": 0.0289242620405948,
+        "gDcf": 0.06707142857142857,
+        "dif": -0.038147166530833776,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      }
+    ],
+    "alertas": 4
+  }
 }

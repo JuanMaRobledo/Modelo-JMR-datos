@@ -470,5 +470,77 @@
     },
     "nota": "29-sep-2026: múltiplos de salida elegidos con el prompt de valoración v3 (historia de la etapa actual, peers de hoy ajustados y múltiplo justificado), traídos a hoy en 1, 2 y 3 años."
   },
-  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Skav94fUb3IYvhsucWI1MQAcN6LH-VQ87Z_7KCImu3g/edit"
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Skav94fUb3IYvhsucWI1MQAcN6LH-VQ87Z_7KCImu3g/edit",
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 100.58,
+    "dcfHoy": 155.29184062099816,
+    "dcfInverso": {
+      "gImplicito": -0.08309273042801207,
+      "gDcf": 0.02,
+      "dif": -0.10309273042801208,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
+    },
+    "gDcf": {
+      "anios4a10": 0.03571428571428571,
+      "perpetuidad": 0.03,
+      "puntoMedio": 0.032857142857142856
+    },
+    "parametros": {
+      "ke": 0.09717999999999999,
+      "wacc": 0.08970254213700972,
+      "roe": 0.27580654094127144,
+      "fcffEbitda": 0.40737626119468867,
+      "fcfeOcf": 0.6202206701058257
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 7.78,
+        "gImplicito": 0.03548261462077429,
+        "gDcf": 0.032857142857142856,
+        "dif": 0.002625471763631433,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 16.48,
+        "gImplicito": 0.02736257977219223,
+        "gDcf": 0.032857142857142856,
+        "dif": -0.005494563084950627,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 13.15,
+        "gImplicito": 0.02665196249860054,
+        "gDcf": 0.032857142857142856,
+        "dif": -0.006205180358542315,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 15.29,
+        "gImplicito": 0.029827022713321046,
+        "gDcf": 0.032857142857142856,
+        "dif": -0.0030301201438218094,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 10.2,
+        "gImplicito": 0.03428907239565065,
+        "gDcf": 0.032857142857142856,
+        "dif": 0.0014319295385077924,
+        "aplica": true,
+        "lectura": "Coherente con el DCF."
+      }
+    ],
+    "alertas": 0
+  }
 }

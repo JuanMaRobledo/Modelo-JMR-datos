@@ -467,5 +467,77 @@
       },
       "detalle": "reference/multiplos_v3/ en JMR-valuation (anclas, decisión y respaldo de J8/J19/J30)"
     }
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 8.9,
+    "dcfHoy": 12.534611514697577,
+    "dcfInverso": {
+      "gImplicito": -0.15480430725452604,
+      "gDcf": 0.057999999999999996,
+      "dif": -0.21280430725452604,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
+    },
+    "gDcf": {
+      "anios4a10": 0.05567142857142857,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.05278571428571428
+    },
+    "parametros": {
+      "ke": 0.14700999999999997,
+      "wacc": 0.13515639126751586,
+      "roe": 0.17863956139157894,
+      "fcffEbitda": 0.11454723644205107,
+      "fcfeOcf": 0.1759037780626891
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 3.0147605904236174,
+        "gImplicito": null,
+        "gDcf": 0.05278571428571428,
+        "dif": null,
+        "aplica": false,
+        "lectura": "No aplica: PagSeguro es una entidad financiera (PagBank): la deuda es materia prima del negocio, no financiación, y el valor empres"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 2.5144630167150437,
+        "gImplicito": null,
+        "gDcf": 0.05278571428571428,
+        "dif": null,
+        "aplica": false,
+        "lectura": "No aplica: Igual que EV/EBITDA: para una financiera el FCFF no se puede separar de la financiación; peso 0%."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 9.25,
+        "gImplicito": 0.08631474142039956,
+        "gDcf": 0.05278571428571428,
+        "dif": 0.03352902713468528,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 7.88,
+        "gImplicito": 0.017842207207207195,
+        "gDcf": 0.05278571428571428,
+        "dif": -0.03494350707850709,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 3.27,
+        "gImplicito": 0.08845833823853379,
+        "gDcf": 0.05278571428571428,
+        "dif": 0.035672623952819504,
+        "aplica": true,
+        "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF."
+      }
+    ],
+    "alertas": 3
   }
 }

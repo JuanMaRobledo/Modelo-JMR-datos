@@ -470,5 +470,77 @@
     },
     "nota": "29-sep-2026: múltiplos de salida elegidos con el prompt de valoración v3 (historia de la etapa actual, peers de hoy ajustados y múltiplo justificado), traídos a hoy en 1, 2 y 3 años."
   },
-  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Y6kXnRlrAKK3C20tQtIfDd2IXYG0eKEi10wyR8TXFLA/edit"
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Y6kXnRlrAKK3C20tQtIfDd2IXYG0eKEi10wyR8TXFLA/edit",
+  "crecimientoImplicito": {
+    "fecha": "2026-09-30",
+    "umbral": 0.02,
+    "precio": 187.48,
+    "dcfHoy": 105.7343166246045,
+    "dcfInverso": {
+      "gImplicito": 0.6191980139428412,
+      "gDcf": 0.484,
+      "dif": 0.13519801394284126,
+      "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
+    },
+    "gDcf": {
+      "anios4a10": 0.25,
+      "perpetuidad": 0.05,
+      "puntoMedio": 0.15
+    },
+    "parametros": {
+      "ke": 0.12225200000000001,
+      "wacc": 0.10941542857142857,
+      "roe": 1.2345793764811694,
+      "fcffEbitda": 1.017524968121194,
+      "fcfeOcf": 0.992126267220666
+    },
+    "multiplos": [
+      {
+        "metodo": "EV/EBITDA",
+        "multiplo": 59.6,
+        "gImplicito": 0.09079279593863845,
+        "gDcf": 0.15,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "multiplo": 73.73,
+        "gImplicito": 0.09456977851694671,
+        "gDcf": 0.15,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+      },
+      {
+        "metodo": "P/E",
+        "multiplo": 78,
+        "gImplicito": 0.10928929336827328,
+        "gDcf": 0.15,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+      },
+      {
+        "metodo": "P/FCFE",
+        "multiplo": 51.77,
+        "gImplicito": 0.10098514383172258,
+        "gDcf": 0.15,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+      },
+      {
+        "metodo": "P/OCF",
+        "multiplo": 69.04,
+        "gImplicito": 0.10635335823389852,
+        "gDcf": 0.15,
+        "dif": null,
+        "aplica": true,
+        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+      }
+    ],
+    "alertas": 0
+  }
 }
