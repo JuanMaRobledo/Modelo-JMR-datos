@@ -612,5 +612,52 @@
     "dcfFy3": 113.66707826569696,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 1
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 81.14564148204771,
+    "valorBetaPropuesta": 81.90693980529036,
+    "betaHoja": 0.799472852377057,
+    "betaPropuesta": 0.7594030095185171,
+    "dcfBase": 88.85408796980948,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Plataforma madura que escala márgenes",
+        "probabilidad": 0.45,
+        "valor": 89.62761128160213,
+        "valorBetaPropuesta": 90.47549261042239,
+        "margen": 0.22,
+        "crecimiento": 0.10942070972640261,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Robotaxis y regulación presionan la movilidad",
+        "probabilidad": 0.25,
+        "valor": 53.683962177267816,
+        "valorBetaPropuesta": 54.16468461118398,
+        "margen": 0.16,
+        "crecimiento": 0.06697178679586724,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Uber es la red de los vehículos autónomos",
+        "probabilidad": 0.2,
+        "valor": 122.08218321997039,
+        "valorBetaPropuesta": 123.26161713645843,
+        "margen": 0.26,
+        "crecimiento": 0.13762519442164267,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Waymo y Tesla desintermedian a Uber",
+        "probabilidad": 0.1,
+        "valor": 29.757892170157103,
+        "valorBetaPropuesta": 29.994735505126098,
+        "margen": 0.1,
+        "crecimiento": 0.02007927594134329,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

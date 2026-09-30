@@ -593,5 +593,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (361,61 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,5%, ROE FY+3 138,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 186.07740369394176,
+    "valorBetaPropuesta": 186.262662632483,
+    "betaHoja": 1.51,
+    "betaPropuesta": 1.5059404639935492,
+    "dcfBase": 259.2947523566745,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Ciclo de IA largo que desacelera con la escala",
+        "probabilidad": 0.4,
+        "valor": 204.90822143537426,
+        "valorBetaPropuesta": 205.11243528556759,
+        "margen": 0.58,
+        "crecimiento": 0.1705496611450923,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Ciclo de semiconductores: el capex se corrige",
+        "probabilidad": 0.3,
+        "valor": 121.19909728176756,
+        "valorBetaPropuesta": 121.31585989923023,
+        "margen": 0.5,
+        "crecimiento": 0.07045919147125179,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · La IA es infraestructura permanente",
+        "probabilidad": 0.2,
+        "valor": 313.4681966821238,
+        "valorBetaPropuesta": 313.7904930171323,
+        "margen": 0.6,
+        "crecimiento": 0.2527107051893509,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Chips propios de los clientes y corrección fuerte",
+        "probabilidad": 0.1,
+        "valor": 50.607465988370286,
+        "valorBetaPropuesta": 50.64831945060415,
+        "margen": 0.4,
+        "crecimiento": -0.01314417112383326,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }

@@ -554,5 +554,52 @@
     "dcfFy3": 114.47720518017847,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 0
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 80.57239533650058,
+    "valorBetaPropuesta": 85.25917340391916,
+    "betaHoja": 1.29,
+    "betaPropuesta": 0.97,
+    "dcfBase": 84.7706480394867,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Se estabiliza con márgenes estables",
+        "probabilidad": 0.45,
+        "valor": 87.70434292624675,
+        "valorBetaPropuesta": 92.89191706093962,
+        "margen": 0.19,
+        "crecimiento": 0.048626490385704546,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · El botón PayPal pierde frente a las billeteras nativas",
+        "probabilidad": 0.3,
+        "valor": 65.52860373862967,
+        "valorBetaPropuesta": 69.16935014256455,
+        "margen": 0.16,
+        "crecimiento": 0.01575629880421503,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Reactivación: Fastlane, Venmo y publicidad",
+        "probabilidad": 0.15,
+        "valor": 109.44867671510202,
+        "valorBetaPropuesta": 116.11104135376313,
+        "margen": 0.22,
+        "crecimiento": 0.06848321279778524,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Pierde el checkout y compite por precio",
+        "probabilidad": 0.1,
+        "valor": 50.29558390835335,
+        "valorBetaPropuesta": 52.90349480662504,
+        "margen": 0.13,
+        "crecimiento": -0.010582205924871468,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

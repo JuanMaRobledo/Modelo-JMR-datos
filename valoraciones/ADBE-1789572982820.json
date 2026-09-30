@@ -561,5 +561,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (737,73 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,2%, WACC años 4-10 10,1%, ROE FY+3 95,6%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 367.803517289037,
+    "valorBetaPropuesta": 374.9921906778489,
+    "betaHoja": 1.3928819168531263,
+    "betaPropuesta": 1.308164891664659,
+    "dcfBase": 536.4823571890387,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · La IA se cobra dentro de la suscripción",
+        "probabilidad": 0.4,
+        "valor": 467.3813052362383,
+        "valorBetaPropuesta": 476.77083514378927,
+        "margen": 0.4,
+        "crecimiento": 0.08175700697834754,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Erosión gradual frente a Figma y Canva",
+        "probabilidad": 0.35,
+        "valor": 268.5755948722109,
+        "valorBetaPropuesta": 273.55020052133665,
+        "margen": 0.37,
+        "crecimiento": 0.05422366658381561,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "C · La IA generativa comoditiza la creatividad",
+        "probabilidad": 0.15,
+        "valor": 187.85703178546464,
+        "valorBetaPropuesta": 191.15350372197176,
+        "margen": 0.32,
+        "crecimiento": 0.009473581880143467,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "D · La IA amplía el mercado de Adobe",
+        "probabilidad": 0.1,
+        "valor": 586.709822214482,
+        "valorBetaPropuesta": 598.6826087956961,
+        "margen": 0.43,
+        "crecimiento": 0.11098407374059693,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

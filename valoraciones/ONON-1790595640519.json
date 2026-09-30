@@ -551,5 +551,52 @@
     "dcfFy3": 53.70921597498919,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 2
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 34.40129273424938,
+    "valorBetaPropuesta": 37.546333867490276,
+    "betaHoja": 1.5,
+    "betaPropuesta": 1.0699640478042454,
+    "dcfBase": 38.91967126029098,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Marca premium que cumple sus metas 2029",
+        "probabilidad": 0.4,
+        "valor": 38.332483731932506,
+        "valorBetaPropuesta": 41.92086370710562,
+        "margen": 0.17,
+        "crecimiento": 0.14875004023533367,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · El ciclo de moda se enfría",
+        "probabilidad": 0.3,
+        "valor": 22.96146308183322,
+        "valorBetaPropuesta": 24.83131304725898,
+        "margen": 0.14,
+        "crecimiento": 0.06200489030643497,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · On se vuelve una marca deportiva global",
+        "probabilidad": 0.2,
+        "valor": 53.37623774341789,
+        "valorBetaPropuesta": 58.60423283795244,
+        "margen": 0.2,
+        "crecimiento": 0.18770117452170076,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Pasa la moda: las ventas caen",
+        "probabilidad": 0.1,
+        "valor": 15.046127682428326,
+        "valorBetaPropuesta": 16.077479028798535,
+        "margen": 0.1,
+        "crecimiento": 0.007904759296862407,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

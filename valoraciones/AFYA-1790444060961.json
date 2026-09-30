@@ -559,5 +559,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (37,45 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 14,0%, WACC años 4-10 11,1%, ROE FY+3 15,2%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 22.951667886519047,
+    "valorBetaPropuesta": 23.1954205642469,
+    "betaHoja": 1.2013957951411405,
+    "betaPropuesta": 1.1617397628536215,
+    "dcfBase": 25.288539651736855,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · La escasez de plazas sostiene precio y margen",
+        "probabilidad": 0.45,
+        "valor": 26.057491728949326,
+        "valorBetaPropuesta": 26.33299861194464,
+        "margen": 0.33,
+        "crecimiento": 0.05830359264824869,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Madurez: precio real plano",
+        "probabilidad": 0.3,
+        "valor": 20.668154008066924,
+        "valorBetaPropuesta": 20.88873519193735,
+        "margen": 0.3,
+        "crecimiento": 0.034878621345427296,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Se liberan plazas y cae el precio",
+        "probabilidad": 0.15,
+        "valor": 13.338865626661455,
+        "valorBetaPropuesta": 13.484402581502678,
+        "margen": 0.26,
+        "crecimiento": 0.003498183775823449,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "D · Maduran los campus y crece lo digital",
+        "probabilidad": 0.1,
+        "valor": 30.245205620725542,
+        "valorBetaPropuesta": 30.56290244065207,
+        "margen": 0.35,
+        "crecimiento": 0.07397231062429022,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

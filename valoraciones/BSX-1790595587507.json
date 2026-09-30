@@ -635,5 +635,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (47,71 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,4%, WACC años 4-10 8,9%, ROE FY+3 19,2%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 33.9831646467099,
+    "valorBetaPropuesta": 34.276704462815665,
+    "betaHoja": 1,
+    "betaPropuesta": 0.9674832324732061,
+    "dcfBase": 36.39026722776026,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · La cartera diversificada sostiene ~7%",
+        "probabilidad": 0.45,
+        "valor": 35.343656815274514,
+        "valorBetaPropuesta": 35.64843082000577,
+        "margen": 0.24,
+        "crecimiento": 0.0654882580165066,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · El campo pulsado se vuelve commodity",
+        "probabilidad": 0.3,
+        "valor": 28.06767133027114,
+        "valorBetaPropuesta": 28.31323742487678,
+        "margen": 0.22,
+        "crecimiento": 0.04142191598002243,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Electrofisiología y Watchman vuelven a doble dígito",
+        "probabilidad": 0.2,
+        "valor": 42.64676655874917,
+        "valorBetaPropuesta": 43.00986750368107,
+        "margen": 0.26,
+        "crecimiento": 0.08277637544095917,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Pierde participación y precio",
+        "probabilidad": 0.05,
+        "valor": 22.57728738010382,
+        "valorBetaPropuesta": 22.77931731227633,
+        "margen": 0.2,
+        "crecimiento": 0.022127335541649362,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

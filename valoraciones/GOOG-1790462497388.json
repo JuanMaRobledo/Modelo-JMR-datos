@@ -593,5 +593,52 @@
       }
     ],
     "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (411,98 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,8%, WACC años 4-10 9,4%, ROE FY+3 42,1%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 251.90627823973372,
+    "valorBetaPropuesta": 251.90627823973372,
+    "betaHoja": 1.07,
+    "betaPropuesta": 1.07,
+    "dcfBase": 311.54026050754584,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Search resiste y Cloud es el segundo motor",
+        "probabilidad": 0.4,
+        "valor": 298.78082908470174,
+        "valorBetaPropuesta": 298.78082908470174,
+        "margen": 0.34,
+        "crecimiento": 0.11668000111116306,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · La IA conversacional erosiona Search",
+        "probabilidad": 0.25,
+        "valor": 141.085360494685,
+        "valorBetaPropuesta": 141.085360494685,
+        "margen": 0.3,
+        "crecimiento": 0.06633989696421727,
+        "roicTerminal": "costo_capital"
+      },
+      {
+        "nombre": "C · Gemini y Cloud dominan la plataforma de IA",
+        "probabilidad": 0.2,
+        "valor": 399.9035005726038,
+        "valorBetaPropuesta": 399.9035005726038,
+        "margen": 0.37,
+        "crecimiento": 0.16081645443720016,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Remedios antimonopolio y guerra de precios en IA",
+        "probabilidad": 0.15,
+        "valor": 114.2793757844066,
+        "valorBetaPropuesta": 114.2793757844066,
+        "margen": 0.27,
+        "crecimiento": 0.03734866906643308,
+        "roicTerminal": "costo_capital"
+      }
+    ]
   }
 }

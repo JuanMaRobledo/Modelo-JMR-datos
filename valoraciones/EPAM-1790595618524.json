@@ -551,5 +551,52 @@
     "dcfFy3": 202.1979513026878,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 4
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 136.11525079780156,
+    "valorBetaPropuesta": 145.99503920738678,
+    "betaHoja": 1.3,
+    "betaPropuesta": 0.9723771120690458,
+    "dcfBase": 148.68333300850418,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · La IA compensa lo que quita: crecimiento moderado",
+        "probabilidad": 0.45,
+        "valor": 146.48237670999126,
+        "valorBetaPropuesta": 157.31974825110186,
+        "margen": 0.12,
+        "crecimiento": 0.055399502176585846,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Deflación de horas por IA",
+        "probabilidad": 0.3,
+        "valor": 110.20416184287188,
+        "valorBetaPropuesta": 117.67452217809708,
+        "margen": 0.1,
+        "crecimiento": 0.020948658020126576,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · La IA crea demanda de ingeniería",
+        "probabilidad": 0.15,
+        "valor": 191.43513478251438,
+        "valorBetaPropuesta": 206.45136778872813,
+        "margen": 0.14,
+        "crecimiento": 0.08628117433816462,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Los servicios se comoditizan",
+        "probabilidad": 0.1,
+        "valor": 84.21662508066763,
+        "valorBetaPropuesta": 89.31090672652604,
+        "margen": 0.08,
+        "crecimiento": -0.011366277186282248,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }

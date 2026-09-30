@@ -574,5 +574,52 @@
     "dcfFy3": 115.48723211668077,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
     "alertas": 4
+  },
+  "valorEsperado": {
+    "fecha": "2026-09-30",
+    "valor": 51.0213395026096,
+    "valorBetaPropuesta": 51.0213395026096,
+    "betaHoja": 1.25,
+    "betaPropuesta": 1.25,
+    "dcfBase": 85.42070050622391,
+    "metodo": "Promedio de las historias ponderado por probabilidad; cada historia es un DCF completo con los insumos de la hoja y la misma tasa de descuento (sección «Valor con criterio Damodaran»).",
+    "historias": [
+      {
+        "nombre": "A · Hipercrecimiento que desacelera con la escala",
+        "probabilidad": 0.4,
+        "valor": 55.61802554514875,
+        "valorBetaPropuesta": 55.61802554514875,
+        "margen": 0.45,
+        "crecimiento": 0.35310401654348533,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "B · Se normaliza en un software de alta calidad",
+        "probabilidad": 0.3,
+        "valor": 26.930616155421163,
+        "valorBetaPropuesta": 26.930616155421163,
+        "margen": 0.38,
+        "crecimiento": 0.19308682566816526,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "C · Sistema operativo de la IA empresarial",
+        "probabilidad": 0.2,
+        "valor": 95.61667270343092,
+        "valorBetaPropuesta": 95.61667270343092,
+        "margen": 0.5,
+        "crecimiento": 0.4713524972397449,
+        "roicTerminal": "hoja"
+      },
+      {
+        "nombre": "D · Comoditización y contratos perdidos",
+        "probabilidad": 0.1,
+        "valor": 15.716098972375727,
+        "valorBetaPropuesta": 15.716098972375727,
+        "margen": 0.3,
+        "crecimiento": 0.08315862759778603,
+        "roicTerminal": "hoja"
+      }
+    ]
   }
 }
