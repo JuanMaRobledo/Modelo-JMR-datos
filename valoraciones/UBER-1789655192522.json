@@ -533,59 +533,84 @@
     "fecha": "2026-09-30",
     "umbral": 0.02,
     "precio": 68.16,
+    "dcfHoy": 88.85408796980948,
     "dcfInverso": {
       "gImplicito": 0.05916799017217282,
       "gDcf": 0.114,
       "dif": -0.05483200982782718,
       "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
     },
+    "gDcf": {
+      "anios4a10": 0.08424285714285715,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.06707142857142857
+    },
+    "parametros": {
+      "ke": 0.08555648921601675,
+      "wacc": 0.08629789700290338,
+      "roe": 0.5379648551594995,
+      "fcffEbitda": 0.7858511596834806,
+      "fcfeOcf": 1.087243652335877
+    },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 20.55,
+        "multiploDcf": 17.642608850108818,
         "gImplicito": 0.04628691006207951,
-        "gDcf": 0.06707142857142857,
-        "dif": -0.020784518509349065,
+        "gDcf": 0.039974522088892905,
+        "dif": 0.006312387973186603,
+        "difValor": 0.16342891866306264,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 14.57,
+        "multiploDcf": 22.45031852751198,
         "gImplicito": 0.016529245942986666,
-        "gDcf": 0.06707142857142857,
-        "dif": -0.05054218262844191,
+        "gDcf": 0.039974522088892905,
+        "dif": -0.02344527614590624,
+        "difValor": -0.34810440081629834,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 35% por debajo del DCF en FY+3."
       },
       {
         "metodo": "P/E",
         "multiplo": 18.96,
+        "multiploDcf": 16.774599080638648,
         "gImplicito": 0.03449299634472536,
-        "gDcf": 0.06707142857142857,
-        "dif": -0.032578432226703216,
+        "gDcf": 0.02743035582793165,
+        "dif": 0.007062640516793707,
+        "difValor": 0.13028036669345822,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 14.26,
+        "multiploDcf": 13.79588104662497,
         "gImplicito": 0.014419104601598868,
-        "gDcf": 0.06707142857142857,
-        "dif": -0.052652323969829704,
+        "gDcf": 0.012187658674922426,
+        "dif": 0.0022314459266764425,
+        "difValor": 0.03364184946263893,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/OCF",
         "multiplo": 13.56,
+        "multiploDcf": 14.999484096323835,
         "gImplicito": 0.004977205484096928,
-        "gDcf": 0.06707142857142857,
-        "dif": -0.062094223087331646,
+        "gDcf": 0.012187658674922426,
+        "dif": -0.007210453190825498,
+        "difValor": -0.09596890713572148,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Coherente con el DCF."
       }
     ],
-    "nota": "Crecimiento del DCF para los múltiplos: punto medio entre el promedio de los años 4-10 (8,4%) y la perpetuidad (5,0%). Ke 8,6%, WACC años 4-10 8,6%, ROE FY+3 53,8%."
+    "dcfFy3": 113.66707826569696,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 1
   }
 }

@@ -495,49 +495,61 @@
       {
         "metodo": "EV/EBITDA",
         "multiplo": 3.0147605904236174,
+        "multiploDcf": null,
         "gImplicito": null,
-        "gDcf": 0.05278571428571428,
+        "gDcf": null,
         "dif": null,
+        "difValor": null,
         "aplica": false,
         "lectura": "No aplica: PagSeguro es una entidad financiera (PagBank): la deuda es materia prima del negocio, no financiación, y el valor empres"
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 2.5144630167150437,
+        "multiploDcf": null,
         "gImplicito": null,
-        "gDcf": 0.05278571428571428,
+        "gDcf": null,
         "dif": null,
+        "difValor": null,
         "aplica": false,
         "lectura": "No aplica: Igual que EV/EBITDA: para una financiera el FCFF no se puede separar de la financiación; peso 0%."
       },
       {
         "metodo": "P/E",
         "multiplo": 9.25,
+        "multiploDcf": 9.979593984903776,
         "gImplicito": 0.08631474142039956,
-        "gDcf": 0.05278571428571428,
-        "dif": 0.03352902713468528,
+        "gDcf": 0.09647486800664364,
+        "dif": -0.010160126586244073,
+        "difValor": -0.06821004459214675,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF."
+        "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 7.88,
+        "multiploDcf": 43.30112661942896,
         "gImplicito": 0.017842207207207195,
-        "gDcf": 0.05278571428571428,
-        "dif": -0.03494350707850709,
+        "gDcf": 0.12111878486559839,
+        "dif": -0.1032765776583912,
+        "difValor": -0.7632083893112614,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF."
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 76% por debajo del DCF en FY+3."
       },
       {
         "metodo": "P/OCF",
         "multiplo": 3.27,
+        "multiploDcf": 7.61683176672843,
         "gImplicito": 0.08845833823853379,
-        "gDcf": 0.05278571428571428,
-        "dif": 0.035672623952819504,
+        "gDcf": 0.12111878486559839,
+        "dif": -0.032660446627064604,
+        "difValor": -0.5324495079433271,
         "aplica": true,
-        "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF."
+        "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 53% por debajo del DCF en FY+3."
       }
     ],
-    "alertas": 3
+    "dcfFy3": 18.915267658859783,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 2
   }
 }

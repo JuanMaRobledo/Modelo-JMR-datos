@@ -495,59 +495,84 @@
     "fecha": "2026-09-30",
     "umbral": 0.02,
     "precio": 187.48,
+    "dcfHoy": 85.42070050622391,
     "dcfInverso": {
       "gImplicito": 0.5985203998432169,
       "gDcf": 0.416,
       "dif": 0.18252039984321694,
       "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
     },
+    "gDcf": {
+      "anios4a10": 0.25,
+      "perpetuidad": 0.05,
+      "puntoMedio": 0.15
+    },
+    "parametros": {
+      "ke": 0.12225200000000001,
+      "wacc": 0.10941542857142857,
+      "roe": 1.2345793764811694,
+      "fcffEbitda": 1.017524968121194,
+      "fcfeOcf": 0.992126267220666
+    },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 59.6,
+        "multiploDcf": 49.19957444259304,
         "gImplicito": 0.09079279593863845,
-        "gDcf": 0.15,
-        "dif": null,
+        "gDcf": 0.08693587654956382,
+        "dif": 0.003856919389074634,
+        "difValor": 0.2055885323065063,
         "aplica": true,
-        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+        "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 73.73,
+        "multiploDcf": 48.511354983436526,
         "gImplicito": 0.09456977851694671,
-        "gDcf": 0.15,
-        "dif": null,
+        "gDcf": 0.08700813576066685,
+        "dif": 0.0075616427562798655,
+        "difValor": 0.5055771831614189,
         "aplica": true,
-        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+        "lectura": "Revisar: el múltiplo vale 51% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       },
       {
         "metodo": "P/E",
         "multiplo": 78,
+        "multiploDcf": 33.139844280033195,
         "gImplicito": 0.10928929336827328,
-        "gDcf": 0.15,
-        "dif": null,
+        "gDcf": 0.09175653703365293,
+        "dif": 0.017532756334620356,
+        "difValor": 1.3536622363369135,
         "aplica": true,
-        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+        "lectura": "Revisar: el múltiplo vale 135% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 51.77,
+        "multiploDcf": 32.19426215948652,
         "gImplicito": 0.10098514383172258,
-        "gDcf": 0.15,
-        "dif": null,
+        "gDcf": 0.08844338589048971,
+        "dif": 0.01254175794123287,
+        "difValor": 0.6080505197956587,
         "aplica": true,
-        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+        "lectura": "Revisar: el múltiplo vale 61% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       },
       {
         "metodo": "P/OCF",
         "multiplo": 69.04,
+        "multiploDcf": 31.9340107945774,
         "gImplicito": 0.10635335823389852,
-        "gDcf": 0.15,
-        "dif": null,
+        "gDcf": 0.0884364423003163,
+        "dif": 0.017916915933582217,
+        "difValor": 1.1619583097192239,
         "aplica": true,
-        "lectura": "No comparable: el DCF supone después de FY+3 un crecimiento cercano o mayor al costo de capital (Gordon no aplica)."
+        "lectura": "Revisar: el múltiplo vale 116% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       }
     ],
-    "nota": "Crecimiento del DCF para los múltiplos: punto medio entre el promedio de los años 4-10 (25,0%) y la perpetuidad (5,0%). Ke 12,2%, WACC años 4-10 10,9%, ROE FY+3 123,5%."
+    "dcfFy3": 115.48723211668077,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 4
   }
 }
