@@ -6,8 +6,8 @@
   "precioAnalisis": 31.33,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 14.65314216938287,
-  "precioMOSMax": 14.65314216938287,
+  "precioMOS": 14.501809617377884,
+  "precioMOSMax": 14.501809617377884,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 17.452288867515215
     },
     "conMOS": {
-      "min": 14.65314216938287,
-      "max": 14.65314216938287,
+      "min": 14.501809617377884,
+      "max": 14.501809617377884,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 34.77279764324112
   },
   "precioMOSHoy": {
-    "conservador": 14.65314216938287,
-    "base": 14.65314216938287,
-    "optimista": 14.65314216938287
+    "conservador": 14.501809617377884,
+    "base": 14.501809617377884,
+    "optimista": 14.501809617377884
   },
   "descuentoMultiples": {
     "version": 2,
@@ -534,6 +534,25 @@
       "MOS": "Sobre el valor esperado",
       "fuente": "Lecturas numéricas de las hojas vinculadas; DCF y múltiplos reproducidos con jmr_engine.js",
       "forward": "Retirada columna heredada Nov 26 (E); no se sustituye con un consenso inventado."
+    },
+    "revisionCaja": {
+      "fecha": "2026-09-30",
+      "antes": {
+        "dcfHoy": {
+          "conservador": 18.31739474,
+          "base": 25.48423499,
+          "optimista": 34.84409412
+        }
+      },
+      "detalle": "Revaloración de CMG: saldos del balance al 30-jun-2026 (10-Q 2T26). Caja e inversiones negociables US$677,9M (antes US$228,2M, solo efectivo), inversiones de largo plazo US$97,1M (antes US$197,1M, dic-2025) y patrimonio US$2.199,8M (antes US$2.830,6M, dic-2025). JMR-valuation scripts/revise_dcf_inputs.py, clave CMG_CAJA."
+    },
+    "revisionHistorias": {
+      "fecha": "2026-09-30",
+      "antes": {
+        "valorEsperado": 22.543295645204413,
+        "probabilidades": "A 45% / B 30% / C 20% / D 5%"
+      },
+      "detalle": "A 40% / B 35% / C 20% / D 5%: la guía del 3T26 (~+1% de comparables) quedó en el piso de A y el brote de salmonella de agosto de 2026 añade presión al tráfico; D incluye una crisis de seguridad alimentaria."
     }
   },
   "crecimientoImplicito": {
@@ -617,8 +636,8 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 22.543295645204413,
-    "valorBetaPropuesta": 24.39128294289729,
+    "valor": 22.310476334427513,
+    "valorBetaPropuesta": 24.1367160360534,
     "betaHoja": 1.1,
     "betaPropuesta": 0.78,
     "dcfBase": 25.760590294129734,
@@ -626,7 +645,7 @@
     "historias": [
       {
         "nombre": "A · Crece por aperturas con comparables bajas",
-        "probabilidad": 0.45,
+        "probabilidad": 0.4,
         "valor": 23.119212935212648,
         "valorBetaPropuesta": 25.01999832137026,
         "margen": 0.16,
@@ -635,7 +654,7 @@
       },
       {
         "nombre": "B · Tráfico débil y margen presionado",
-        "probabilidad": 0.3,
+        "probabilidad": 0.35,
         "valor": 18.462826719674595,
         "valorBetaPropuesta": 19.928660184492447,
         "margen": 0.14,
@@ -652,7 +671,7 @@
         "roicTerminal": 0.137
       },
       {
-        "nombre": "D · Saturación: el tráfico cae",
+        "nombre": "D · Crisis de marca o saturación: el tráfico cae",
         "probabilidad": 0.05,
         "valor": 12.103745135697434,
         "valorBetaPropuesta": 12.97230468218363,
@@ -664,6 +683,6 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 14.65314216938287,
+  "precioMOSValorEsperado": 14.501809617377884,
   "baseMOS": "valorEsperado"
 }
