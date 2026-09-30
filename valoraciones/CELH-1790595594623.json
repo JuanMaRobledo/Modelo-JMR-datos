@@ -2,7 +2,7 @@
   "ticker": "CELH",
   "nombreActivo": "Celsius Holdings, Inc.",
   "fecha": "Análisis del 25 de sept de 2026",
-  "precio": 27.46,
+  "precio": 27.42,
   "precioAnalisis": 27.99,
   "tipo": "Crecimiento",
   "mos": 0.35,
@@ -12,9 +12,9 @@
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
-      "conservador": 13.845473511781407,
-      "base": 25.234818327294384,
-      "optimista": 41.39495335295076,
+      "conservador": 13.84598841963618,
+      "base": 25.235829568705526,
+      "optimista": 41.39669598678051,
       "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
@@ -54,14 +54,14 @@
     }
   ],
   "objetivoPonderado": {
-    "conservador": 16.622359475149334,
-    "base": 27.71960488757707,
-    "optimista": 42.742350708145196
+    "conservador": 16.6226684198622,
+    "base": 27.720211632423755,
+    "optimista": 42.743396288443044
   },
   "cagr": {
-    "conservador": -0.15945057147665886,
-    "base": -0.0032305647936586857,
-    "optimista": 0.15155628063305704
+    "conservador": -0.15944536399907594,
+    "base": -0.0032232921995505315,
+    "optimista": 0.15156567049830882
   },
   "zonas": {
     "value": {
@@ -118,9 +118,9 @@
   },
   "analisisFundamental": null,
   "valorPresentePonderado": {
-    "conservador": 12.663275258621372,
-    "base": 19.39882215865294,
-    "optimista": 28.442347651075032
+    "conservador": 12.663497055051337,
+    "base": 19.399257750638462,
+    "optimista": 28.443098290162375
   },
   "precioMOSHoy": {
     "conservador": 12.090010083741362,
@@ -139,9 +139,9 @@
     "criterio": "Promedio 1-3 años",
     "formula": "VP_n = (Precio FY+n + Dividendos FY+1..FY+n) / (1 + Ke)^n",
     "dcfHoy": {
-      "conservador": 9.939890434119668,
-      "base": 18.116486163133636,
-      "optimista": 29.71810971316394
+      "conservador": 9.940260094836274,
+      "base": 18.117212149776176,
+      "optimista": 29.719360778309515
     },
     "multiplesHoy": {
       "conservador": 16.748352495373933,
@@ -149,9 +149,9 @@
       "optimista": 26.52870455794167
     },
     "ponderadoHoy": {
-      "conservador": 12.663275258621372,
-      "base": 19.39882215865294,
-      "optimista": 28.442347651075032
+      "conservador": 12.663497055051337,
+      "base": 19.399257750638462,
+      "optimista": 28.443098290162375
     },
     "pesoDcf": 0.6,
     "pesoMultiplos": 0.4,
@@ -495,14 +495,14 @@
   },
   "crecimientoImplicito": {
     "fecha": "2026-09-30",
-    "precio": 27.46,
-    "dcfHoy": 18.116486163133636,
-    "dcfFy3": 25.234818327294384,
+    "precio": 27.42,
+    "dcfHoy": 18.117212149776176,
+    "dcfFy3": 25.235829568705526,
     "umbral": 0.02,
     "dcfInverso": {
-      "gImplicito": 0.15272394999391647,
+      "gImplicito": 0.15240026505811827,
       "gDcf": 0.062,
-      "dif": 0.09072394999391648,
+      "dif": 0.09040026505811827,
       "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
     },
     "parametros": {
@@ -516,55 +516,55 @@
       {
         "metodo": "EV/EBITDA",
         "multiplo": 23.03,
-        "multiploDcf": 12.53662474016247,
+        "multiploDcf": 12.537123022779477,
         "gImplicito": 0.0757416373831216,
-        "gDcf": 0.05452950072343646,
-        "dif": 0.021212136659685146,
-        "difValor": 0.8439061095532847,
+        "gDcf": 0.054531314536399915,
+        "dif": 0.02121032284672169,
+        "difValor": 0.8438322211870963,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF. En valor, 84% por encima del DCF en FY+3."
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 21.84,
-        "multiploDcf": 22.107067259167593,
+        "multiploDcf": 22.107945930066382,
         "gImplicito": 0.0539717345773204,
-        "gDcf": 0.05452950072343646,
-        "dif": -0.000557766146116058,
-        "difValor": -0.012180049967486117,
+        "gDcf": 0.0545313145363999,
+        "dif": -0.0005595799590795009,
+        "difValor": -0.012219633545965558,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/E",
         "multiplo": 29.28,
-        "multiploDcf": 19.596544884013454,
+        "multiploDcf": 19.59733018143248,
         "gImplicito": 0.09033466936693622,
-        "gDcf": 0.07513815890157392,
-        "dif": 0.0151965104653623,
-        "difValor": 0.49414094031882905,
+        "gDcf": 0.07514009326173642,
+        "dif": 0.015194576105199809,
+        "difValor": 0.49408106762120996,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 49% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 22.65,
-        "multiploDcf": 25.72835465349883,
+        "multiploDcf": 25.729385672519008,
         "gImplicito": 0.06957801268498943,
-        "gDcf": 0.07501665738583699,
-        "dif": -0.005438644700847553,
-        "difValor": -0.11964832943875037,
+        "gDcf": 0.07501826907349378,
+        "dif": -0.005440256388504344,
+        "difValor": -0.11968360658560284,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/OCF",
         "multiplo": 20.32,
-        "multiploDcf": 21.535298032511186,
+        "multiploDcf": 21.536161022087306,
         "gImplicito": 0.07261654621612301,
-        "gDcf": 0.07501665738583699,
-        "dif": -0.0024001111697139754,
-        "difValor": -0.05643284019921557,
+        "gDcf": 0.07501826907349378,
+        "dif": -0.0024017228573707666,
+        "difValor": -0.05647065049523081,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       }
@@ -620,7 +620,7 @@
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
-  "precioReferenciaConsultadoAt": "2026-09-30T18:37:23+00:00",
+  "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
   "precioMOSValorEsperado": 12.090010083741362,
   "baseMOS": "valorEsperado"
 }

@@ -2,7 +2,7 @@
   "ticker": "DPZ",
   "nombreActivo": "DOMINOS PIZZA INC",
   "fecha": "Análisis del 25 de sept de 2026",
-  "precio": 300.24,
+  "precio": 299.23,
   "precioAnalisis": 292.14,
   "tipo": "Madura",
   "mos": 0.35,
@@ -12,9 +12,9 @@
     {
       "nombre": "DCF Damodaran",
       "peso": 0.4,
-      "conservador": 324.59558479436754,
-      "base": 452.999309520228,
-      "optimista": 596.4641750476184,
+      "conservador": 324.6832846222012,
+      "base": 453.11207035933876,
+      "optimista": 596.6048099822311,
       "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
@@ -54,14 +54,14 @@
     }
   ],
   "objetivoPonderado": {
-    "conservador": 385.4150786293386,
-    "base": 501.39773310561606,
-    "optimista": 653.6091430544668
+    "conservador": 385.4501585604721,
+    "base": 501.44283744126034,
+    "optimista": 653.6653970283119
   },
   "cagr": {
-    "conservador": 0.09676241426457555,
-    "base": 0.19728382057126193,
-    "optimista": 0.3079034878460174
+    "conservador": 0.09679568850565645,
+    "base": 0.19731972092774508,
+    "optimista": 0.3079410090765067
   },
   "zonas": {
     "value": {
@@ -118,9 +118,9 @@
   },
   "analisisFundamental": null,
   "valorPresentePonderado": {
-    "conservador": 306.77458135749055,
-    "base": 385.23266286191716,
-    "optimista": 489.8160946011135
+    "conservador": 306.80166651883144,
+    "base": 385.2674878506964,
+    "optimista": 489.8595282085475
   },
   "precioMOSHoy": {
     "conservador": 201.1930815885858,
@@ -139,9 +139,9 @@
     "criterio": "Promedio 1-3 años",
     "formula": "VP_n = (Precio FY+n + Dividendos FY+1..FY+n) / (1 + Ke)^n",
     "dcfHoy": {
-      "conservador": 250.61975610062944,
-      "base": 349.7600761810581,
-      "optimista": 460.52908011024545
+      "conservador": 250.68746900398165,
+      "base": 349.8471386530062,
+      "optimista": 460.63766412883035
     },
     "multiplesHoy": {
       "conservador": 344.21113152873124,
@@ -149,9 +149,9 @@
       "optimista": 509.34077092835884
     },
     "ponderadoHoy": {
-      "conservador": 306.77458135749055,
-      "base": 385.23266286191716,
-      "optimista": 489.8160946011135
+      "conservador": 306.80166651883144,
+      "base": 385.2674878506964,
+      "optimista": 489.8595282085475
     },
     "pesoDcf": 0.4,
     "pesoMultiplos": 0.6,
@@ -575,15 +575,15 @@
   },
   "crecimientoImplicito": {
     "fecha": "2026-09-30",
-    "precio": 300.24,
-    "dcfHoy": 349.7600761810581,
-    "dcfFy3": 452.999309520228,
+    "precio": 299.23,
+    "dcfHoy": 349.8471386530062,
+    "dcfFy3": 453.11207035933876,
     "umbral": 0.02,
     "dcfInverso": {
-      "gImplicito": 0.024195125827378372,
+      "gImplicito": 0.023733257722124194,
       "gDcf": 0.044,
-      "dif": -0.019804874172621625,
-      "lectura": "Coherente: el precio supone un crecimiento parecido al del DCF."
+      "dif": -0.020266742277875803,
+      "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
     },
     "parametros": {
       "ke": 0.09004000000000001,
@@ -596,55 +596,55 @@
       {
         "metodo": "EV/EBITDA",
         "multiplo": 17.57,
-        "multiploDcf": 15.953189252998232,
+        "multiploDcf": 15.956399033690557,
         "gImplicito": 0.04221883421670469,
-        "gDcf": 0.03831071857621875,
-        "dif": 0.003908115640485946,
-        "difValor": 0.12538471176622412,
+        "gDcf": 0.038319229808284914,
+        "dif": 0.003899604408419778,
+        "difValor": 0.1251046500933568,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 27.89,
-        "multiploDcf": 23.540247417008437,
+        "multiploDcf": 23.544983713334734,
         "gImplicito": 0.04495171623298828,
-        "gDcf": 0.03831071857621875,
-        "dif": 0.00664099765676953,
-        "difValor": 0.22860538031237865,
+        "gDcf": 0.038319229808284914,
+        "dif": 0.006632486424703363,
+        "difValor": 0.22829963128761732,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/E",
         "multiplo": 22.85,
-        "multiploDcf": 20.1011135737458,
+        "multiploDcf": 20.1064541028701,
         "gImplicito": null,
         "gDcf": null,
         "dif": null,
-        "difValor": 0.1281248199049161,
+        "difValor": 0.12784407633255146,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 25.23,
-        "multiploDcf": 15.767012638904752,
+        "multiploDcf": 15.77120167001949,
         "gImplicito": 0.048483004193671374,
-        "gDcf": 0.025029015427186854,
-        "dif": 0.02345398876648452,
-        "difValor": 0.5623095155869755,
+        "gDcf": 0.025045253562207444,
+        "dif": 0.02343775063146393,
+        "difValor": 0.5619207214156159,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF. En valor, 56% por encima del DCF en FY+3."
       },
       {
         "metodo": "P/OCF",
         "multiplo": 19.76,
-        "multiploDcf": 17.79870742396976,
+        "multiploDcf": 17.80343624235208,
         "gImplicito": 0.031133014297508782,
-        "gDcf": 0.025029015427186854,
-        "dif": 0.0061039988703219285,
-        "difValor": 0.10324059737798486,
+        "gDcf": 0.02504525356220745,
+        "dif": 0.006087760735301331,
+        "difValor": 0.10296604645860019,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       }
@@ -700,7 +700,7 @@
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
-  "precioReferenciaConsultadoAt": "2026-09-30T18:37:23+00:00",
+  "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
   "precioMOSValorEsperado": 201.1930815885858,
   "baseMOS": "valorEsperado"
 }
