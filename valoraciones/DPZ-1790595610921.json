@@ -6,8 +6,8 @@
   "precioAnalisis": 292.14,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 201.22509798147135,
-  "precioMOSMax": 201.22509798147135,
+  "precioMOS": 200.68592342419603,
+  "precioMOSMax": 200.68592342419603,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 250.69886655280803
     },
     "conMOS": {
-      "min": 201.22509798147135,
-      "max": 201.22509798147135,
+      "min": 200.68592342419603,
+      "max": 200.68592342419603,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 489.8595282085475
   },
   "precioMOSHoy": {
-    "conservador": 201.22509798147135,
-    "base": 201.22509798147135,
-    "optimista": 201.22509798147135
+    "conservador": 200.68592342419603,
+    "base": 200.68592342419603,
+    "optimista": 200.68592342419603
   },
   "descuentoMultiples": {
     "version": 2,
@@ -654,12 +654,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 309.5770738176482,
-    "valorBetaPropuesta": 297.982526157151,
+    "valor": 308.74757449876313,
+    "valorBetaPropuesta": 297.17785068560727,
     "betaHoja": 0.9,
     "betaPropuesta": 1.0506029158324819,
-    "dcfBase": 349.8143327753037,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 352.1440186585945,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 352.1440186585945,
+    "rango": {
+      "min": 108.74203181067823,
+      "max": 420.890010425947
+    },
+    "dcfBaseTecnicoAnterior": 349.8143327753037,
+    "updatedAt": "2026-10-01T01:27:02.649716+00:00",
     "historias": [
       {
         "nombre": "A · Crece por tiendas con ventas mismas tiendas bajas",
@@ -668,7 +677,35 @@
         "valorBetaPropuesta": 339.302373172631,
         "margen": 0.2,
         "crecimiento": 0.04460579010312138,
-        "roicTerminal": 0.184
+        "roicTerminal": 0.184,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Cadena de suministro": [
+            0.04,
+            0.04,
+            0.045,
+            0.045,
+            0.045
+          ],
+          "Regalías, tiendas propias y fondo de publicidad": [
+            0.04,
+            0.045,
+            0.05,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.040000000000000036,
+          0.04200404858299578,
+          0.04700981058766396,
+          0.047015550471167566,
+          0.04702129566630964
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Los agregadores erosionan la ventaja",
@@ -677,30 +714,136 @@
         "valorBetaPropuesta": 164.64323780070524,
         "margen": 0.185,
         "crecimiento": 0.0254192073538424,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Cadena de suministro": [
+            0.02,
+            0.02,
+            0.025,
+            0.025,
+            0.025
+          ],
+          "Regalías, tiendas propias y fondo de publicidad": [
+            0.025,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.022004048582995983,
+          0.024019846693208224,
+          0.027021661058315827,
+          0.0270275238283868,
+          0.02703339199270327
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Agregadores e internacional aceleran",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.05,
+        "valor": 108.74203181067823,
+        "valorBetaPropuesta": 102.9487968086416,
+        "margen": 0.17,
+        "crecimiento": 0.006793185458554563,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Cadena de suministro": [
+            0,
+            0,
+            0.01,
+            0.01,
+            0.01
+          ],
+          "Regalías, tiendas propias y fondo de publicidad": [
+            0,
+            0.01,
+            0.01,
+            0.01,
+            0.01
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.0,
+          0.004008097165991931,
+          0.010000000000000009,
+          0.010000000000000009,
+          0.010000000000000009
+        ],
+        "terminalGrowth": 0.010000000000000009,
+        "descripcion": "El sistema de franquicias se debilita",
+        "crecimientoAnios6a10": [
+          0.010000000000000009,
+          0.010000000000000009,
+          0.010000000000000009,
+          0.010000000000000009,
+          0.010000000000000009
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 1.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Agregadores e internacional aceleran",
         "probabilidad": 0.2,
         "valor": 420.890010425947,
         "valorBetaPropuesta": 406.09207404341686,
         "margen": 0.21,
         "crecimiento": 0.06163924563226697,
-        "roicTerminal": 0.184
-      },
-      {
-        "nombre": "D · El sistema de franquicias se debilita",
-        "probabilidad": 0.05,
-        "valor": 125.33201818837905,
-        "valorBetaPropuesta": 119.042306239517,
-        "margen": 0.17,
-        "crecimiento": 0.006793185458554563,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.184,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Cadena de suministro": [
+            0.06,
+            0.06,
+            0.06,
+            0.055,
+            0.055
+          ],
+          "Regalías, tiendas propias y fondo de publicidad": [
+            0.07,
+            0.07,
+            0.07,
+            0.065,
+            0.06
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.06400809716599198,
+          0.064030668543815,
+          0.06405328104666785,
+          0.0590759337875153,
+          0.057049366502069265
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 201.22509798147135,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 200.68592342419603,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.650661+00:00",
+    "baseAnterior": {
+      "conservador": 250.68746900398165,
+      "base": 349.8471386530062,
+      "optimista": 460.63766412883035
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

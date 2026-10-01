@@ -6,8 +6,8 @@
   "precioAnalisis": 95.98,
   "tipo": "Cíclica/Commodity",
   "mos": 0.3,
-  "precioMOS": 104.03385534777098,
-  "precioMOSMax": 104.03385534777098,
+  "precioMOS": 103.91443723492225,
+  "precioMOSMax": 103.91443723492225,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 77.90897763
     },
     "conMOS": {
-      "min": 104.03385534777098,
-      "max": 104.03385534777098,
+      "min": 103.91443723492225,
+      "max": 103.91443723492225,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -233,9 +233,9 @@
     "optimista": 175.1580561
   },
   "precioMOSHoy": {
-    "conservador": 104.03385534777098,
-    "base": 104.03385534777098,
-    "optimista": 104.03385534777098
+    "conservador": 103.91443723492225,
+    "base": 103.91443723492225,
+    "optimista": 103.91443723492225
   },
   "descuentoMultiples": {
     "version": 2,
@@ -643,12 +643,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 148.61979335395856,
-    "valorBetaPropuesta": 158.34135839982804,
+    "valor": 148.44919604988894,
+    "valorBetaPropuesta": 158.1575848943609,
     "betaHoja": 1.2,
     "betaPropuesta": 0.8902410235397273,
-    "dcfBase": 167.4420321712164,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 172.24727088595017,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 172.24727088595017,
+    "rango": {
+      "min": 71.3447483225617,
+      "max": 229.96674435497124
+    },
+    "dcfBaseTecnicoAnterior": 167.4420321712164,
+    "updatedAt": "2026-10-01T01:27:02.702937+00:00",
     "historias": [
       {
         "nombre": "A · Se estabiliza Américas y crece lo internacional",
@@ -657,7 +666,42 @@
         "valorBetaPropuesta": 183.69590759100743,
         "margen": 0.18,
         "crecimiento": 0.029681556407293863,
-        "roicTerminal": 0.124
+        "roicTerminal": 0.124,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Américas": [
+            -0.08,
+            0,
+            0.02,
+            0.03,
+            0.03
+          ],
+          "China continental": [
+            0.08,
+            0.1,
+            0.1,
+            0.08,
+            0.08
+          ],
+          "Resto del mundo": [
+            0.06,
+            0.1,
+            0.1,
+            0.09,
+            0.08
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          -0.03338381106904642,
+          0.03436929997650062,
+          0.04924002479579359,
+          0.05102598226606081,
+          0.04977609929696203
+        ],
+        "terminalGrowth": 0.03
       },
       {
         "nombre": "B · Pérdida estructural frente a Alo y Vuori",
@@ -666,30 +710,157 @@
         "valorBetaPropuesta": 115.13427147922549,
         "margen": 0.14,
         "crecimiento": -0.006385513542655374,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Américas": [
+            -0.1,
+            -0.05,
+            -0.02,
+            0,
+            0.01
+          ],
+          "China continental": [
+            0.03,
+            0.05,
+            0.05,
+            0.04,
+            0.04
+          ],
+          "Resto del mundo": [
+            0.03,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          -0.05964305029745809,
+          -0.015996825250759183,
+          0.005398630900820933,
+          0.01702121068396334,
+          0.023604143661874133
+        ],
+        "terminalGrowth": 0.03
       },
       {
-        "nombre": "C · La marca se recupera",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 71.3447483225617,
+        "valorBetaPropuesta": 75.48998226151268,
+        "margen": 0.1,
+        "crecimiento": -0.03527493594186737,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Américas": [
+            -0.12,
+            -0.08,
+            -0.05,
+            -0.03,
+            0
+          ],
+          "China continental": [
+            -0.05,
+            0,
+            0,
+            0.02,
+            0.02
+          ],
+          "Resto del mundo": [
+            0,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          -0.0906345772489634,
+          -0.05002527630470344,
+          -0.028706131792959222,
+          -0.011603577623080064,
+          0.007593856230006635
+        ],
+        "terminalGrowth": 0.007593856230006635,
+        "descripcion": "Moda que pasa: declive de la marca",
+        "crecimientoAnios6a10": [
+          0.007593856230006635,
+          0.007593856230006635,
+          0.007593856230006635,
+          0.007593856230006635,
+          0.007593856230006635
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.76% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · La marca se recupera",
         "probabilidad": 0.15,
         "valor": 229.96674435497124,
         "valorBetaPropuesta": 245.55485742718494,
         "margen": 0.21,
         "crecimiento": 0.05787466772162109,
-        "roicTerminal": 0.124
-      },
-      {
-        "nombre": "D · Moda que pasa: declive de la marca",
-        "probabilidad": 0.1,
-        "valor": 73.05072136325778,
-        "valorBetaPropuesta": 77.32771731618422,
-        "margen": 0.1,
-        "crecimiento": -0.03527493594186737,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.124,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Américas": [
+            -0.04,
+            0.04,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "China continental": [
+            0.12,
+            0.14,
+            0.12,
+            0.1,
+            0.1
+          ],
+          "Resto del mundo": [
+            0.1,
+            0.12,
+            0.12,
+            0.1,
+            0.1
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          0.006616188930953726,
+          0.07089994089940355,
+          0.07529428134131089,
+          0.06881849966486109,
+          0.06936750686654314
+        ],
+        "terminalGrowth": 0.03
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 104.03385534777098,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 103.91443723492225,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.705708+00:00",
+    "baseAnterior": {
+      "conservador": 112.4416708,
+      "base": 167.4420322,
+      "optimista": 223.2707549
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

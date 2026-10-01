@@ -6,8 +6,8 @@
   "precioAnalisis": 55.55,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 12.100507638759536,
-  "precioMOSMax": 12.100507638759536,
+  "precioMOS": 12.161867136598016,
+  "precioMOSMax": 12.161867136598016,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 24.515035130993894
     },
     "conMOS": {
-      "min": 12.100507638759536,
-      "max": 12.100507638759536,
+      "min": 12.161867136598016,
+      "max": 12.161867136598016,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 56.914639141500146
   },
   "precioMOSHoy": {
-    "conservador": 12.100507638759536,
-    "base": 12.100507638759536,
-    "optimista": 12.100507638759536
+    "conservador": 12.161867136598016,
+    "base": 12.161867136598016,
+    "optimista": 12.161867136598016
   },
   "descuentoMultiples": {
     "version": 2,
@@ -574,12 +574,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 18.616165598091595,
-    "valorBetaPropuesta": 23.03627247465904,
+    "valor": 18.710564825535407,
+    "valorBetaPropuesta": 23.149448750598197,
     "betaHoja": 1.6,
     "betaPropuesta": 0.8333172867645702,
-    "dcfBase": 20.943693087662993,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 20.995837455280007,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 20.995837455280007,
+    "rango": {
+      "min": 7.903293282626252,
+      "max": 36.3909853670018
+    },
+    "dcfBaseTecnicoAnterior": 20.943693087662993,
+    "updatedAt": "2026-10-01T01:27:02.784538+00:00",
     "historias": [
       {
         "nombre": "A · Crece por aperturas y el margen mejora",
@@ -588,7 +597,35 @@
         "valorBetaPropuesta": 26.15323057418152,
         "margen": 0.08,
         "crecimiento": 0.11025587784191715,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Shacks propios": [
+            0.13,
+            0.12,
+            0.11,
+            0.1,
+            0.09
+          ],
+          "Licencias": [
+            0.12,
+            0.12,
+            0.12,
+            0.12,
+            0.12
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.6,
+        "crecimientoAnios": [
+          0.12966308059009202,
+          0.1200000000000001,
+          0.11033403741839543,
+          0.10067389073196864,
+          0.0910285847963146
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Crece, pero el margen no despega",
@@ -597,30 +634,136 @@
         "valorBetaPropuesta": 12.352309761491094,
         "margen": 0.05,
         "crecimiento": 0.07410432031031111,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Shacks propios": [
+            0.1,
+            0.08,
+            0.07,
+            0.06,
+            0.06
+          ],
+          "Licencias": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.6,
+        "crecimientoAnios": [
+          0.09932616118018434,
+          0.08000000000000007,
+          0.07033099636445472,
+          0.060667972944491444,
+          0.06068014760363516
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Economía unitaria de primer nivel",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 7.903293282626252,
+        "valorBetaPropuesta": 9.137785857789487,
+        "margen": 0.03,
+        "crecimiento": 0.028004282600283315,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Shacks propios": [
+            0.05,
+            0.03,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "Licencias": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.6,
+        "crecimientoAnios": [
+          0.04932616118018429,
+          0.030000000000000027,
+          0.020330714133549144,
+          0.020333848185531744,
+          0.020337010902567787
+        ],
+        "terminalGrowth": 0.020337010902567787,
+        "descripcion": "Consumidor débil y aperturas que no rinden",
+        "crecimientoAnios6a10": [
+          0.020337010902567787,
+          0.020337010902567787,
+          0.020337010902567787,
+          0.020337010902567787,
+          0.020337010902567787
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.03% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Economía unitaria de primer nivel",
         "probabilidad": 0.15,
         "valor": 36.3909853670018,
         "valorBetaPropuesta": 45.07348985326825,
         "margen": 0.11,
         "crecimiento": 0.13061194566139522,
-        "roicTerminal": "costo_capital"
-      },
-      {
-        "nombre": "D · Consumidor débil y aperturas que no rinden",
-        "probabilidad": 0.1,
-        "valor": 6.959301008188124,
-        "valorBetaPropuesta": 8.006023098397922,
-        "margen": 0.03,
-        "crecimiento": 0.028004282600283315,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Shacks propios": [
+            0.15,
+            0.14,
+            0.13,
+            0.12,
+            0.11
+          ],
+          "Licencias": [
+            0.15,
+            0.15,
+            0.15,
+            0.15,
+            0.15
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.6,
+        "crecimientoAnios": [
+          0.1499999999999999,
+          0.140336919409908,
+          0.1306795488505179,
+          0.12103674093012029,
+          0.11141803508140669
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 12.100507638759536,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 12.161867136598016,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.785470+00:00",
+    "baseAnterior": {
+      "conservador": 12.299360269816088,
+      "base": 20.93444720950923,
+      "optimista": 32.74751899793324
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

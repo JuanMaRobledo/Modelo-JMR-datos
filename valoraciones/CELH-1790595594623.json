@@ -6,8 +6,8 @@
   "precioAnalisis": 27.99,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 12.091349328356896,
-  "precioMOSMax": 12.091349328356896,
+  "precioMOS": 12.047064411310952,
+  "precioMOSMax": 12.047064411310952,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 13.859802443788535
     },
     "conMOS": {
-      "min": 12.091349328356896,
-      "max": 12.091349328356896,
+      "min": 12.047064411310952,
+      "max": 12.047064411310952,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 28.443098290162375
   },
   "precioMOSHoy": {
-    "conservador": 12.091349328356896,
-    "base": 12.091349328356896,
-    "optimista": 12.091349328356896
+    "conservador": 12.047064411310952,
+    "base": 12.047064411310952,
+    "optimista": 12.047064411310952
   },
   "descuentoMultiples": {
     "version": 2,
@@ -574,12 +574,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 18.60207588977984,
-    "valorBetaPropuesta": 20.853140105433024,
+    "valor": 18.533945248170696,
+    "valorBetaPropuesta": 20.775082516458816,
     "betaHoja": 1.5,
     "betaPropuesta": 1.0,
-    "dcfBase": 18.118487391870563,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 22.22477131878745,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 22.22477131878745,
+    "rango": {
+      "min": 8.9415023066515,
+      "max": 28.84102600241345
+    },
+    "dcfBaseTecnicoAnterior": 18.118487391870563,
+    "updatedAt": "2026-10-01T01:27:02.631363+00:00",
     "historias": [
       {
         "nombre": "A · Alani lidera y Celsius se estabiliza",
@@ -588,7 +597,42 @@
         "valorBetaPropuesta": 24.950481232589382,
         "margen": 0.19,
         "crecimiento": 0.08573530560415432,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Celsius": [
+            0,
+            0.02,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Alani Nu": [
+            0.25,
+            0.18,
+            0.14,
+            0.1,
+            0.08
+          ],
+          "Rockstar": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.1144751091129852,
+          0.10070086922211696,
+          0.08855764409745315,
+          0.06827314316313315,
+          0.05766072286563406
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Alani crece, Celsius sigue cediendo",
@@ -597,16 +641,95 @@
         "valorBetaPropuesta": 17.303069426254016,
         "margen": 0.16,
         "crecimiento": 0.041063655902926266,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Celsius": [
+            -0.06,
+            -0.04,
+            -0.02,
+            0,
+            0
+          ],
+          "Alani Nu": [
+            0.18,
+            0.12,
+            0.09,
+            0.07,
+            0.06
+          ],
+          "Rockstar": [
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.05162996751222382,
+          0.04226377318830998,
+          0.03950632630704143,
+          0.03823588467980654,
+          0.03376698469403916
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · La moda se desgasta",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 9.395706584045781,
-        "valorBetaPropuesta": 10.395034205819144,
+        "valor": 8.9415023066515,
+        "valorBetaPropuesta": 9.874650279324413,
         "margen": 0.12,
         "crecimiento": -0.01879373518404648,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Celsius": [
+            -0.1,
+            -0.08,
+            -0.05,
+            -0.03,
+            -0.02
+          ],
+          "Alani Nu": [
+            0.08,
+            0.03,
+            0,
+            0,
+            0
+          ],
+          "Rockstar": [
+            -0.1,
+            -0.1,
+            -0.1,
+            -0.1,
+            -0.1
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          -0.01534866931381873,
+          -0.02439122714402253,
+          -0.025381528435576062,
+          -0.016612161667327485,
+          -0.012166109235124178
+        ],
+        "terminalGrowth": 0.0,
+        "descripcion": "La moda se desgasta",
+        "crecimientoAnios6a10": [
+          -0.009732887388099343,
+          -0.007299665541074508,
+          -0.004866443694049672,
+          -0.002433221847024836,
+          0.0
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
         "nombre": "D · Plataforma multimarca",
@@ -615,12 +738,60 @@
         "valorBetaPropuesta": 32.576181823354936,
         "margen": 0.22,
         "crecimiento": 0.12241799206207848,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Celsius": [
+            0.03,
+            0.05,
+            0.05,
+            0.04,
+            0.04
+          ],
+          "Alani Nu": [
+            0.35,
+            0.25,
+            0.18,
+            0.12,
+            0.1
+          ],
+          "Rockstar": [
+            -0.03,
+            -0.03,
+            -0.03,
+            -0.03,
+            -0.03
+          ]
+        },
+        "salesToCapital": 1.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.1767758343451582,
+          0.15381902454246243,
+          0.12255021463222482,
+          0.08655627761371876,
+          0.07568139995741863
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 12.091349328356896,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 12.047064411310952,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.632463+00:00",
+    "baseAnterior": {
+      "conservador": 9.940260094836274,
+      "base": 18.117212149776176,
+      "optimista": 29.719360778309515
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }
