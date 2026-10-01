@@ -644,7 +644,7 @@
     "betaHoja": 1.086171172667352,
     "betaPropuesta": 1.0005238278367277,
     "dcfBase": 39.27487455165944,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 39.27487455165944,
@@ -653,10 +653,10 @@
       "max": 46.88888829960481
     },
     "dcfBaseTecnicoAnterior": 42.26832436926618,
-    "updatedAt": "2026-10-01T10:13:27.267098+00:00",
+    "updatedAt": "2026-10-01T14:59:54.928051+00:00",
     "historias": [
       {
-        "nombre": "A · El volumen compensa la caída de precio",
+        "nombre": "Base · El volumen compensa la caída de precio",
         "probabilidad": 0.4,
         "valor": 39.27487455165944,
         "valorBetaPropuesta": 39.983282232540674,
@@ -707,7 +707,7 @@
         "terminalGrowth": 0.035
       },
       {
-        "nombre": "B · Guerra de precios con Lilly y genéricos",
+        "nombre": "Conservadora · Guerra de precios con Lilly y genéricos",
         "probabilidad": 0.3,
         "valor": 28.52368069392444,
         "valorBetaPropuesta": 28.998030381151054,
@@ -758,7 +758,7 @@
         "terminalGrowth": 0.035
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 22.713212408512774,
         "valorBetaPropuesta": 23.056955598150758,
@@ -818,7 +818,7 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · La nueva generación recupera el liderazgo",
+        "nombre": "Optimista · La nueva generación recupera el liderazgo",
         "probabilidad": 0.2,
         "valor": 46.88888829960481,
         "valorBetaPropuesta": 47.766553380593734,
@@ -877,14 +877,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T10:13:27.268876+00:00",
+    "fecha": "2026-10-01T14:59:54.929252+00:00",
     "baseAnterior": {
       "conservador": 32.72240069,
       "base": 42.26832437,
       "optimista": 52.34587379
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

@@ -670,7 +670,7 @@
     "betaHoja": 1.2013957951411405,
     "betaPropuesta": 1.1617397628536215,
     "dcfBase": 26.057491728949326,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 26.057491728949326,
@@ -679,10 +679,10 @@
       "max": 30.245205620725542
     },
     "dcfBaseTecnicoAnterior": 25.288539651736855,
-    "updatedAt": "2026-10-01T10:13:26.974032+00:00",
+    "updatedAt": "2026-10-01T14:59:54.787284+00:00",
     "historias": [
       {
-        "nombre": "A · La escasez de plazas sostiene precio y margen",
+        "nombre": "Base · La escasez de plazas sostiene precio y margen",
         "probabilidad": 0.45,
         "valor": 26.057491728949326,
         "valorBetaPropuesta": 26.33299861194464,
@@ -726,7 +726,7 @@
         "terminalGrowth": 0.0518
       },
       {
-        "nombre": "B · Madurez: precio real plano",
+        "nombre": "Conservadora · Madurez: precio real plano",
         "probabilidad": 0.3,
         "valor": 20.668154008066924,
         "valorBetaPropuesta": 20.88873519193735,
@@ -770,7 +770,7 @@
         "terminalGrowth": 0.0518
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
         "valor": 12.548065357577574,
         "valorBetaPropuesta": 12.684878492516129,
@@ -823,7 +823,7 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.89% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Maduran los campus y crece lo digital",
+        "nombre": "Optimista · Maduran los campus y crece lo digital",
         "probabilidad": 0.1,
         "valor": 30.245205620725542,
         "valorBetaPropuesta": 30.56290244065207,
@@ -875,14 +875,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T10:13:26.976207+00:00",
+    "fecha": "2026-10-01T14:59:54.788767+00:00",
     "baseAnterior": {
       "conservador": 19.90223537,
       "base": 25.28853965,
       "optimista": 30.76469277
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

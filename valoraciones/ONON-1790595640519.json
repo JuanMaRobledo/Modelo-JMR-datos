@@ -6,8 +6,8 @@
   "precioAnalisis": 29.96,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 22.289928488354303,
-  "precioMOSMax": 22.289928488354303,
+  "precioMOS": 22.28228168269454,
+  "precioMOSMax": 22.28228168269454,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 23.47689035
     },
     "conMOS": {
-      "min": 22.289928488354303,
-      "max": 22.289928488354303,
+      "min": 22.28228168269454,
+      "max": 22.28228168269454,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 56.32403835
   },
   "precioMOSHoy": {
-    "conservador": 22.289928488354303,
-    "base": 22.289928488354303,
-    "optimista": 22.289928488354303
+    "conservador": 22.28228168269454,
+    "base": 22.28228168269454,
+    "optimista": 22.28228168269454
   },
   "descuentoMultiples": {
     "version": 2,
@@ -617,27 +617,27 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 34.29219767439123,
-    "valorBetaPropuesta": 37.41406342479449,
+    "valor": 34.2804333579916,
+    "valorBetaPropuesta": 37.4116643033648,
     "betaHoja": 1.5,
-    "betaPropuesta": 1.072003583235475,
-    "dcfBase": 38.25029747118081,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "betaPropuesta": 1.0710675366534137,
+    "dcfBase": 38.23686637475675,
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 38.25029747118081,
+    "valorCentral": 38.23686637475675,
     "rango": {
-      "min": 14.710134793203533,
-      "max": 53.30741757243155
+      "min": 14.706365043752896,
+      "max": 53.2878581965382
     },
-    "dcfBaseTecnicoAnterior": 38.83802871902853,
-    "updatedAt": "2026-10-01T10:13:27.278477+00:00",
+    "dcfBaseTecnicoAnterior": 38.82434832294095,
+    "updatedAt": "2026-10-01T14:59:54.939151+00:00",
     "historias": [
       {
-        "nombre": "A · Marca premium que cumple sus metas 2029",
+        "nombre": "Base · Marca premium que cumple sus metas 2029",
         "probabilidad": 0.4,
-        "valor": 38.25029747118081,
-        "valorBetaPropuesta": 41.81536154810403,
+        "valor": 38.23686637475675,
+        "valorBetaPropuesta": 41.81262118722891,
         "margen": 0.17,
         "crecimiento": 0.14875004023533367,
         "roicTerminal": "costo_capital",
@@ -671,10 +671,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · El ciclo de moda se enfría",
+        "nombre": "Conservadora · El ciclo de moda se enfría",
         "probabilidad": 0.3,
-        "valor": 22.86527230704081,
-        "valorBetaPropuesta": 24.722942962444037,
+        "valor": 22.858262214686565,
+        "valorBetaPropuesta": 24.721517237826767,
         "margen": 0.14,
         "crecimiento": 0.06200489030643497,
         "roicTerminal": "costo_capital",
@@ -708,10 +708,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 14.710134793203533,
-        "valorBetaPropuesta": 15.707427173802847,
+        "valor": 14.706365043752896,
+        "valorBetaPropuesta": 15.706662997727998,
         "margen": 0.1,
         "crecimiento": 0.007904759296862407,
         "roicTerminal": "costo_capital",
@@ -754,10 +754,10 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 3.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · On se vuelve una marca deportiva global",
+        "nombre": "Optimista · On se vuelve una marca deportiva global",
         "probabilidad": 0.2,
-        "valor": 53.30741757243155,
-        "valorBetaPropuesta": 58.501465997196945,
+        "valor": 53.2878581965382,
+        "valorBetaPropuesta": 58.49747178676201,
         "margen": 0.2,
         "crecimiento": 0.18770117452170076,
         "roicTerminal": "costo_capital",
@@ -794,19 +794,19 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 22.289928488354303,
+  "precioMOSValorEsperado": 22.28228168269454,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T10:13:27.279737+00:00",
+    "fecha": "2026-10-01T14:59:54.940362+00:00",
     "baseAnterior": {
       "conservador": 24.70539592,
       "base": 38.83802872,
       "optimista": 63.59230232
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }
