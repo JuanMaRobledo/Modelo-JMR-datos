@@ -6,15 +6,16 @@
   "precioAnalisis": 27.99,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 9.236851195,
-  "precioMOSMax": 9.236851195,
+  "precioMOS": 9.236851192485679,
+  "precioMOSMax": 9.236851192485679,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
       "conservador": 14.96106728,
       "base": 25.63951204,
-      "optimista": 36.12319324
+      "optimista": 36.12319324,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 8.283160059
     },
     "conMOS": {
-      "min": 9.236851192,
-      "max": 9.236851192
-    }
+      "min": 9.236851192485679,
+      "max": 9.236851192485679,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T18:37:23+00:00",
   "hojas": {
@@ -120,7 +123,9 @@
     "optimista": 24.73521261
   },
   "precioMOSHoy": {
-    "base": 12.09001008
+    "conservador": 9.236851192485679,
+    "base": 9.236851192485679,
+    "optimista": 9.236851192485679
   },
   "descuentoMultiples": {
     "version": 2,
@@ -575,31 +580,34 @@
         "lectura": "Coherente con el DCF."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (25,64 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,2%, ROE FY+3 31,2%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (25,64 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,2%, ROE FY+3 31,2%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 18.40702235,
+    "dcfFy3": 25.63951204,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 21.15759979301546,
-    "valorBetaPropuesta": 23.685745299836185,
+    "valor": 14.210540296131814,
+    "valorBetaPropuesta": 16.73868580295254,
     "betaHoja": 1.5,
     "betaPropuesta": 1.0,
-    "dcfBase": 25.35408185005034,
+    "dcfBase": 18.407022353166692,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 25.35408185005034,
+    "valorCentral": 18.407022353166692,
     "rango": {
-      "min": 10.247799123182169,
-      "max": 32.880486956209246
+      "min": 3.300739626298522,
+      "max": 25.933427459325596
     },
     "dcfBaseTecnicoAnterior": 13.739237958360732,
-    "updatedAt": "2026-10-01T21:04:38.931293+00:00",
+    "updatedAt": "2026-10-01T21:13:13.044648+00:00",
     "historias": [
       {
         "nombre": "Base · Alani lidera y Celsius se estabiliza",
         "probabilidad": 0.4,
-        "valor": 25.35408185005034,
-        "valorBetaPropuesta": 28.427667572705175,
+        "valor": 18.407022353166692,
+        "valorBetaPropuesta": 21.480608075821525,
         "margen": 0.19092912421809805,
         "crecimiento": 0.08573530560415432,
         "roicTerminal": "costo_capital",
@@ -642,8 +650,8 @@
       {
         "nombre": "Conservadora · Alani crece, Celsius sigue cediendo",
         "probabilidad": 0.35,
-        "valor": 17.687852825420215,
-        "valorBetaPropuesta": 19.74334570503237,
+        "valor": 10.740793328536567,
+        "valorBetaPropuesta": 12.796286208148723,
         "margen": 0.16092912421809805,
         "crecimiento": 0.041063655902926266,
         "roicTerminal": "costo_capital",
@@ -686,8 +694,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 10.247799123182169,
-        "valorBetaPropuesta": 11.303464267870824,
+        "valor": 3.300739626298522,
+        "valorBetaPropuesta": 4.356404770987178,
         "margen": 0.12092912421809805,
         "crecimiento": -0.01879373518404648,
         "roicTerminal": "costo_capital",
@@ -739,8 +747,8 @@
       {
         "nombre": "Optimista · Plataforma multimarca",
         "probabilidad": 0.1,
-        "valor": 32.880486956209246,
-        "valorBetaPropuesta": 37.08987633812161,
+        "valor": 25.933427459325596,
+        "valorBetaPropuesta": 30.142816841237963,
         "margen": 0.22092912421809804,
         "crecimiento": 0.12241799206207848,
         "roicTerminal": "costo_capital",
@@ -784,14 +792,14 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 13.75243986546005,
+  "precioMOSValorEsperado": 9.236851192485679,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T21:04:38.933307+00:00",
+    "fecha": "2026-10-01T21:13:13.046629+00:00",
     "baseAnterior": {
       "conservador": 10.74079333,
       "base": 18.40702235,
