@@ -6,8 +6,8 @@
   "precioAnalisis": 108.23,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 96.82277757218341,
-  "precioMOSMax": 96.82277757218341,
+  "precioMOS": 96.64096690525068,
+  "precioMOSMax": 96.64096690525068,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 81.21028663
     },
     "conMOS": {
-      "min": 96.82277757218341,
-      "max": 96.82277757218341,
+      "min": 96.64096690525068,
+      "max": 96.64096690525068,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 182.1609433
   },
   "precioMOSHoy": {
-    "conservador": 96.82277757218341,
-    "base": 96.82277757218341,
-    "optimista": 96.82277757218341
+    "conservador": 96.64096690525068,
+    "base": 96.64096690525068,
+    "optimista": 96.64096690525068
   },
   "descuentoMultiples": {
     "version": 2,
@@ -596,12 +596,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 148.95811934182063,
-    "valorBetaPropuesta": 160.06626592064458,
+    "valor": 148.67841062346258,
+    "valorBetaPropuesta": 159.75843628252554,
     "betaHoja": 1.3,
     "betaPropuesta": 0.9724365075865421,
-    "dcfBase": 168.21558197550894,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 165.8742915767541,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 165.8742915767541,
+    "rango": {
+      "min": 81.42124342715455,
+      "max": 218.8723793057949
+    },
+    "dcfBaseTecnicoAnterior": 168.21558197550894,
+    "updatedAt": "2026-10-01T01:27:02.667818+00:00",
     "historias": [
       {
         "nombre": "A · La IA compensa lo que quita: crecimiento moderado",
@@ -610,7 +619,42 @@
         "valorBetaPropuesta": 178.56751759439297,
         "margen": 0.12,
         "crecimiento": 0.055399502176585846,
-        "roicTerminal": 0.114
+        "roicTerminal": 0.114,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Norteamérica": [
+            0.04,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "Europa": [
+            0.08,
+            0.07,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "Otros mercados": [
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.056320099697347414,
+          0.0581909882275613,
+          0.05414119828130959,
+          0.05416421460933818,
+          0.054187267433977615
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Deflación de horas por IA",
@@ -619,30 +663,157 @@
         "valorBetaPropuesta": 117.67522430584397,
         "margen": 0.1,
         "crecimiento": 0.020948658020126576,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Norteamérica": [
+            0,
+            0.01,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "Europa": [
+            0.04,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Otros mercados": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.016022787965106033,
+          0.01790783248642036,
+          0.023573986091027788,
+          0.023613274884269675,
+          0.023652282042194273
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · La IA crea demanda de ingeniería",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 81.42124342715455,
+        "valorBetaPropuesta": 86.23308873041609,
+        "margen": 0.08,
+        "crecimiento": -0.011366277186282248,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Norteamérica": [
+            -0.05,
+            -0.04,
+            -0.02,
+            0,
+            0.01
+          ],
+          "Europa": [
+            0,
+            -0.02,
+            0,
+            0.01,
+            0.01
+          ],
+          "Otros mercados": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          -0.028484956382410664,
+          -0.030529595015576172,
+          -0.011032814153939419,
+          0.00421442376499237,
+          0.009682151896373226
+        ],
+        "terminalGrowth": 0.009682151896373226,
+        "descripcion": "Los servicios se comoditizan",
+        "crecimientoAnios6a10": [
+          0.009682151896373226,
+          0.009682151896373226,
+          0.009682151896373226,
+          0.009682151896373226,
+          0.009682151896373226
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.97% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · La IA crea demanda de ingeniería",
         "probabilidad": 0.15,
         "valor": 218.8723793057949,
         "valorBetaPropuesta": 236.51451466835937,
         "margen": 0.14,
         "crecimiento": 0.08628117433816462,
-        "roicTerminal": 0.114
-      },
-      {
-        "nombre": "D · Los servicios se comoditizan",
-        "probabilidad": 0.1,
-        "valor": 84.21833061073485,
-        "valorBetaPropuesta": 89.31138511160655,
-        "margen": 0.08,
-        "crecimiento": -0.011366277186282248,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.114,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Norteamérica": [
+            0.08,
+            0.09,
+            0.09,
+            0.08,
+            0.08
+          ],
+          "Europa": [
+            0.1,
+            0.1,
+            0.09,
+            0.08,
+            0.08
+          ],
+          "Otros mercados": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ]
+        },
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "crecimientoAnios": [
+          0.08801139398255309,
+          0.09375471253534395,
+          0.08970858884141086,
+          0.08000000000000007,
+          0.0800000000000003
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 96.82277757218341,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 96.64096690525068,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.670171+00:00",
+    "baseAnterior": {
+      "conservador": 113.267784,
+      "base": 168.215582,
+      "optimista": 239.4150438
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

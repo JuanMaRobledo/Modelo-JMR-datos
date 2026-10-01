@@ -6,8 +6,8 @@
   "precioAnalisis": 71.05,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 62.06432546091534,
-  "precioMOSMax": 62.06432546091534,
+  "precioMOS": 61.84884807485567,
+  "precioMOSMax": 61.84884807485567,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 73.38081632142642
     },
     "conMOS": {
-      "min": 62.06432546091534,
-      "max": 62.06432546091534,
+      "min": 61.84884807485567,
+      "max": 61.84884807485567,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 134.21403007930462
   },
   "precioMOSHoy": {
-    "conservador": 62.06432546091534,
-    "base": 62.06432546091534,
-    "optimista": 62.06432546091534
+    "conservador": 61.84884807485567,
+    "base": 61.84884807485567,
+    "optimista": 61.84884807485567
   },
   "descuentoMultiples": {
     "version": 2,
@@ -617,12 +617,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 95.48357763217744,
-    "valorBetaPropuesta": 90.98401227452624,
+    "valor": 95.1520739613164,
+    "valorBetaPropuesta": 90.66786127429933,
     "betaHoja": 0.9,
     "betaPropuesta": 1.104267779737668,
-    "dcfBase": 117.31136416284306,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 118.15986684157774,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 118.15986684157774,
+    "rango": {
+      "min": 45.95834385092575,
+      "max": 136.72718054056284
+    },
+    "dcfBaseTecnicoAnterior": 117.31136416284306,
+    "updatedAt": "2026-10-01T01:27:02.802234+00:00",
     "historias": [
       {
         "nombre": "A · Tropiezo temporal; vuelve a crecer con innovación",
@@ -631,7 +640,35 @@
         "valorBetaPropuesta": 112.64498691382937,
         "margen": 0.36,
         "crecimiento": 0.04458884572123023,
-        "roicTerminal": 0.169
+        "roicTerminal": 0.169,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Animales de compañía": [
+            0.01,
+            0.05,
+            0.06,
+            0.06,
+            0.06
+          ],
+          "Animales de producción": [
+            0.03,
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.016655458652936828,
+          0.046628591154368015,
+          0.05329988645620709,
+          0.05338448795528827,
+          0.05346854581098359
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Erosión prolongada de franquicias clave",
@@ -640,30 +677,136 @@
         "valorBetaPropuesta": 61.95841040521397,
         "margen": 0.33,
         "crecimiento": 0.014600826361075292,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Animales de compañía": [
+            -0.04,
+            0,
+            0.02,
+            0.03,
+            0.03
+          ],
+          "Animales de producción": [
+            0.02,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          -0.02003362404118947,
+          0.010391021558296298,
+          0.0235308944678132,
+          0.030000000000000027,
+          0.030000000000000027
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Recuperación fuerte con nuevos productos",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 45.95834385092575,
+        "valorBetaPropuesta": 43.641728369963346,
+        "margen": 0.29,
+        "crecimiento": -0.0066281282144515785,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Animales de compañía": [
+            -0.08,
+            -0.04,
+            0,
+            0.01,
+            0.02
+          ],
+          "Animales de producción": [
+            0,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          -0.053378165388252574,
+          -0.018907758907758976,
+          0.007309569550135286,
+          0.013700829003574277,
+          0.020000000000000018
+        ],
+        "terminalGrowth": 0.020000000000000018,
+        "descripcion": "Genéricos y competencia generalizada",
+        "crecimientoAnios6a10": [
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Recuperación fuerte con nuevos productos",
         "probabilidad": 0.15,
         "valor": 136.72718054056284,
         "valorBetaPropuesta": 130.4016668663091,
         "margen": 0.38,
         "crecimiento": 0.06031150461460277,
-        "roicTerminal": 0.169
-      },
-      {
-        "nombre": "D · Genéricos y competencia generalizada",
-        "probabilidad": 0.1,
-        "valor": 49.27338055953618,
-        "valorBetaPropuesta": 46.80323837223227,
-        "margen": 0.29,
-        "crecimiento": -0.0066281282144515785,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.169,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Animales de compañía": [
+            0.04,
+            0.08,
+            0.08,
+            0.08,
+            0.07
+          ],
+          "Animales de producción": [
+            0.04,
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ]
+        },
+        "salesToCapital": 2,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.040000000000000036,
+          0.06668908269412643,
+          0.06702212835707977,
+          0.06735079043822778,
+          0.0607561941710546
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 62.06432546091534,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 61.84884807485567,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.803183+00:00",
+    "baseAnterior": {
+      "conservador": 75.11054999509862,
+      "base": 117.29900955285687,
+      "optimista": 136.8127420038834
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

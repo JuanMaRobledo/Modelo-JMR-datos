@@ -6,8 +6,8 @@
   "precioAnalisis": 38.17,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 23.21337565674343,
-  "precioMOSMax": 23.21337565674343,
+  "precioMOS": 23.15968795263787,
+  "precioMOSMax": 23.15968795263787,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 27.783141550607503
     },
     "conMOS": {
-      "min": 23.21337565674343,
-      "max": 23.21337565674343,
+      "min": 23.15968795263787,
+      "max": 23.15968795263787,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 52.427119652945116
   },
   "precioMOSHoy": {
-    "conservador": 23.21337565674343,
-    "base": 23.21337565674343,
-    "optimista": 23.21337565674343
+    "conservador": 23.15968795263787,
+    "base": 23.15968795263787,
+    "optimista": 23.15968795263787
   },
   "descuentoMultiples": {
     "version": 2,
@@ -618,12 +618,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 35.71288562575912,
-    "valorBetaPropuesta": 36.348217293119184,
+    "valor": 35.630289157904414,
+    "valorBetaPropuesta": 36.26385515687839,
     "betaHoja": 1.086171172667352,
     "betaPropuesta": 1.0005238278367277,
-    "dcfBase": 41.960928092896836,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 38.98023463537389,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 38.98023463537389,
+    "rango": {
+      "min": 22.46865575132954,
+      "max": 46.57150097705124
+    },
+    "dcfBaseTecnicoAnterior": 41.960928092896836,
+    "updatedAt": "2026-10-01T01:27:02.742594+00:00",
     "historias": [
       {
         "nombre": "A · El volumen compensa la caída de precio",
@@ -632,7 +641,49 @@
         "valorBetaPropuesta": 39.68655431205546,
         "margen": 0.4,
         "crecimiento": 0.008358059738736712,
-        "roicTerminal": 0.131
+        "roicTerminal": 0.131,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Obesidad (Wegovy, Saxenda)": [
+            0.05,
+            0.1,
+            0.1,
+            0.08,
+            0.07
+          ],
+          "Diabetes GLP-1 (Ozempic, Rybelsus)": [
+            -0.08,
+            -0.02,
+            0,
+            0,
+            0
+          ],
+          "Insulinas y otros de diabetes": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05
+          ],
+          "Enfermedades raras": [
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 0.45,
+        "salesToCapital2": 1.1,
+        "crecimientoAnios": [
+          -0.03369878972234808,
+          0.012135466620943225,
+          0.024564323249732345,
+          0.020718572508579225,
+          0.01924234093154764
+        ],
+        "terminalGrowth": 0.035
       },
       {
         "nombre": "B · Guerra de precios con Lilly y genéricos",
@@ -641,30 +692,178 @@
         "valorBetaPropuesta": 28.72927877597852,
         "margen": 0.35,
         "crecimiento": -0.028317103394146836,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Obesidad (Wegovy, Saxenda)": [
+            -0.02,
+            0.04,
+            0.05,
+            0.05,
+            0.04
+          ],
+          "Diabetes GLP-1 (Ozempic, Rybelsus)": [
+            -0.12,
+            -0.06,
+            -0.04,
+            -0.03,
+            -0.03
+          ],
+          "Insulinas y otros de diabetes": [
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07
+          ],
+          "Enfermedades raras": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 0.45,
+        "salesToCapital2": 1.1,
+        "crecimientoAnios": [
+          -0.0768580242918473,
+          -0.029416598115465153,
+          -0.015081182901176216,
+          -0.008521000403938883,
+          -0.00999479416904625
+        ],
+        "terminalGrowth": 0.035
       },
       {
-        "nombre": "C · La nueva generación recupera el liderazgo",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 22.46865575132954,
+        "valorBetaPropuesta": 22.810763395574813,
+        "margen": 0.3,
+        "crecimiento": -0.05959356572762853,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Obesidad (Wegovy, Saxenda)": [
+            -0.08,
+            -0.05,
+            0,
+            0.02,
+            0.02
+          ],
+          "Diabetes GLP-1 (Ozempic, Rybelsus)": [
+            -0.15,
+            -0.1,
+            -0.08,
+            -0.05,
+            -0.05
+          ],
+          "Insulinas y otros de diabetes": [
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08
+          ],
+          "Enfermedades raras": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 0.45,
+        "salesToCapital2": 1.1,
+        "crecimientoAnios": [
+          -0.10938666321489443,
+          -0.07546782421649789,
+          -0.051248739621032824,
+          -0.03043977239777529,
+          -0.028954506164990734
+        ],
+        "terminalGrowth": 0.0,
+        "descripcion": "Novo pierde relevancia frente a Lilly",
+        "crecimientoAnios6a10": [
+          -0.023163604931992588,
+          -0.017372703698994442,
+          -0.011581802465996296,
+          -0.005790901232998149,
+          -1.734723475976807e-18
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · La nueva generación recupera el liderazgo",
         "probabilidad": 0.2,
         "valor": 46.57150097705124,
         "valorBetaPropuesta": 47.44686729852583,
         "margen": 0.43,
         "crecimiento": 0.036682970827976336,
-        "roicTerminal": 0.131
-      },
-      {
-        "nombre": "D · Novo pierde relevancia frente a Lilly",
-        "probabilidad": 0.1,
-        "valor": 23.29462042987667,
-        "valorBetaPropuesta": 23.65438475798277,
-        "margen": 0.3,
-        "crecimiento": -0.05959356572762853,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.131,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Obesidad (Wegovy, Saxenda)": [
+            0.1,
+            0.15,
+            0.15,
+            0.12,
+            0.1
+          ],
+          "Diabetes GLP-1 (Ozempic, Rybelsus)": [
+            -0.04,
+            0,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "Insulinas y otros de diabetes": [
+            -0.04,
+            -0.04,
+            -0.04,
+            -0.04,
+            -0.04
+          ],
+          "Enfermedades raras": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 0.45,
+        "salesToCapital2": 1.1,
+        "crecimientoAnios": [
+          0.00171488361055383,
+          0.03898388176037915,
+          0.05325103617375482,
+          0.04733667957167831,
+          0.042938447013302294
+        ],
+        "terminalGrowth": 0.035
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 23.21337565674343,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 23.15968795263787,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.743501+00:00",
+    "baseAnterior": {
+      "conservador": 32.441924368812835,
+      "base": 41.960928092896836,
+      "optimista": 52.020702425345114
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

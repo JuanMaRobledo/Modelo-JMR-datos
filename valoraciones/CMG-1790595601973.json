@@ -6,8 +6,8 @@
   "precioAnalisis": 31.33,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 15.796556335450042,
-  "precioMOSMax": 15.796556335450042,
+  "precioMOS": 15.78364779736642,
+  "precioMOSMax": 15.78364779736642,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 16.57758257
     },
     "conMOS": {
-      "min": 15.796556335450042,
-      "max": 15.796556335450042,
+      "min": 15.78364779736642,
+      "max": 15.78364779736642,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 36.85200101
   },
   "precioMOSHoy": {
-    "conservador": 15.796556335450042,
-    "base": 15.796556335450042,
-    "optimista": 15.796556335450042
+    "conservador": 15.78364779736642,
+    "base": 15.78364779736642,
+    "optimista": 15.78364779736642
   },
   "descuentoMultiples": {
     "version": 2,
@@ -659,12 +659,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 24.30239436223083,
-    "valorBetaPropuesta": 26.319537957581016,
+    "valor": 24.282535072871415,
+    "valorBetaPropuesta": 26.297700713457814,
     "betaHoja": 1.1,
     "betaPropuesta": 0.78,
-    "dcfBase": 28.189831431435803,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 25.24043038689661,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 25.24043038689661,
+    "rango": {
+      "min": 11.706559348509105,
+      "max": 32.876377247758576
+    },
+    "dcfBaseTecnicoAnterior": 28.189831431435803,
+    "updatedAt": "2026-10-01T01:27:02.639225+00:00",
     "historias": [
       {
         "nombre": "A · Crece por aperturas con comparables bajas",
@@ -673,7 +682,28 @@
         "valorBetaPropuesta": 27.34451162424393,
         "margen": 0.16,
         "crecimiento": 0.07197383796645984,
-        "roicTerminal": 0.184
+        "roicTerminal": 0.184,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.08,
+            0.08,
+            0.07,
+            0.07,
+            0.06
+          ]
+        },
+        "salesToCapital": 2.6,
+        "salesToCapital2": 2.2,
+        "crecimientoAnios": [
+          0.08000000000000007,
+          0.08000000000000007,
+          0.07000000000000006,
+          0.07000000000000006,
+          0.06000000000000005
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Tráfico débil y margen presionado",
@@ -682,30 +712,115 @@
         "valorBetaPropuesta": 21.693807176785093,
         "margen": 0.14,
         "crecimiento": 0.049980951689844844,
-        "roicTerminal": 0.184
+        "roicTerminal": 0.184,
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.06,
+            0.05,
+            0.05,
+            0.05,
+            0.04
+          ]
+        },
+        "salesToCapital": 2.6,
+        "salesToCapital2": 2.2,
+        "crecimientoAnios": [
+          0.06000000000000005,
+          0.050000000000000044,
+          0.050000000000000044,
+          0.050000000000000044,
+          0.040000000000000036
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Vuelve el tráfico",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.05,
+        "valor": 11.706559348509105,
+        "valorBetaPropuesta": 12.535559799719712,
+        "margen": 0.12,
+        "crecimiento": 0.02598828880504489,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.03,
+            0.03,
+            0.03,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 2.6,
+        "salesToCapital2": 2.2,
+        "crecimientoAnios": [
+          0.030000000000000027,
+          0.030000000000000027,
+          0.030000000000000027,
+          0.020000000000000018,
+          0.020000000000000018
+        ],
+        "terminalGrowth": 0.020000000000000018,
+        "descripcion": "Crisis de marca o saturación: el tráfico cae",
+        "crecimientoAnios6a10": [
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018,
+          0.020000000000000018
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Vuelve el tráfico",
         "probabilidad": 0.2,
         "valor": 32.876377247758576,
         "valorBetaPropuesta": 35.70142780949738,
         "margen": 0.18,
         "crecimiento": 0.10197455133279387,
-        "roicTerminal": 0.184
-      },
-      {
-        "nombre": "D · Crisis de marca o saturación: el tráfico cae",
-        "probabilidad": 0.05,
-        "valor": 12.103745135697434,
-        "valorBetaPropuesta": 12.97230468218363,
-        "margen": 0.12,
-        "crecimiento": 0.02598828880504489,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.184,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.11,
+            0.11,
+            0.1,
+            0.1,
+            0.09
+          ]
+        },
+        "salesToCapital": 2.6,
+        "salesToCapital2": 2.2,
+        "crecimientoAnios": [
+          0.1100000000000001,
+          0.1100000000000001,
+          0.10000000000000009,
+          0.10000000000000009,
+          0.09000000000000008
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 15.796556335450042,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 15.78364779736642,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.640767+00:00",
+    "baseAnterior": {
+      "conservador": 20.23573719,
+      "base": 28.18983143,
+      "optimista": 38.58578836
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

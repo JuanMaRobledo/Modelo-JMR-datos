@@ -6,8 +6,8 @@
   "precioAnalisis": 210.96,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 120.95213858417112,
-  "precioMOSMax": 120.95213858417112,
+  "precioMOS": 120.92835686229206,
+  "precioMOSMax": 120.92835686229206,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 172.1424252345778
     },
     "conMOS": {
-      "min": 120.95213858417112,
-      "max": 120.95213858417112,
+      "min": 120.92835686229206,
+      "max": 120.92835686229206,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 363.0730623494804
   },
   "precioMOSHoy": {
-    "conservador": 120.95213858417112,
-    "base": 120.95213858417112,
-    "optimista": 120.95213858417112
+    "conservador": 120.92835686229206,
+    "base": 120.92835686229206,
+    "optimista": 120.92835686229206
   },
   "descuentoMultiples": {
     "version": 2,
@@ -631,12 +631,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 186.0802132064171,
-    "valorBetaPropuesta": 186.26312824428322,
+    "valor": 186.04362594198778,
+    "valorBetaPropuesta": 186.22649991006313,
     "betaHoja": 1.51,
     "betaPropuesta": 1.5059917062830108,
-    "dcfBase": 259.29877349243725,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 204.91131840729753,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 204.91131840729753,
+    "rango": {
+      "min": 50.24221292146254,
+      "max": 313.4730843873144
+    },
+    "dcfBaseTecnicoAnterior": 259.29877349243725,
+    "updatedAt": "2026-10-01T01:27:02.734723+00:00",
     "historias": [
       {
         "nombre": "A · Ciclo de IA largo que desacelera con la escala",
@@ -645,7 +654,35 @@
         "valorBetaPropuesta": 205.11294853646135,
         "margen": 0.58,
         "crecimiento": 0.1705496611450923,
-        "roicTerminal": 0.272
+        "roicTerminal": 0.272,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Data Center": [
+            0.5,
+            0.2,
+            0.1,
+            0.08,
+            0.06
+          ],
+          "Gaming, visualización y automotriz": [
+            0.1,
+            0.08,
+            0.07,
+            0.06,
+            0.06
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          0.4670330395748754,
+          0.19258428634746783,
+          0.09832108915981452,
+          0.07890958748054722,
+          0.06000000000000005
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · Ciclo de semiconductores: el capex se corrige",
@@ -654,30 +691,136 @@
         "valorBetaPropuesta": 121.3161533579539,
         "margen": 0.5,
         "crecimiento": 0.07045919147125179,
-        "roicTerminal": 0.272
+        "roicTerminal": 0.272,
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Data Center": [
+            0.35,
+            -0.1,
+            0,
+            0.08,
+            0.08
+          ],
+          "Gaming, visualización y automotriz": [
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          0.3252747796811566,
+          -0.09020524583549705,
+          0.00376806300749033,
+          0.07763503165501584,
+          0.07769567925198229
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · La IA es infraestructura permanente",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 50.24221292146254,
+        "valorBetaPropuesta": 50.28213878193922,
+        "margen": 0.4,
+        "crecimiento": -0.01314417112383326,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Data Center": [
+            0.25,
+            -0.25,
+            -0.1,
+            0.05,
+            0.05
+          ],
+          "Gaming, visualización y automotriz": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          0.22939564973429705,
+          -0.23324026096061423,
+          -0.09125684973476422,
+          0.045189427143035976,
+          0.04539741530861696
+        ],
+        "terminalGrowth": 0.04539741530861696,
+        "descripcion": "Chips propios de los clientes y corrección fuerte",
+        "crecimientoAnios6a10": [
+          0.04539741530861696,
+          0.04539741530861696,
+          0.04539741530861696,
+          0.04539741530861696,
+          0.04539741530861696
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 4.54% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · La IA es infraestructura permanente",
         "probabilidad": 0.2,
         "valor": 313.4730843873144,
         "valorBetaPropuesta": 313.79130304949246,
         "margen": 0.6,
         "crecimiento": 0.2527107051893509,
-        "roicTerminal": 0.272
-      },
-      {
-        "nombre": "D · Chips propios de los clientes y corrección fuerte",
-        "probabilidad": 0.1,
-        "valor": 50.60808556575589,
-        "valorBetaPropuesta": 50.64842212414012,
-        "margen": 0.4,
-        "crecimiento": -0.01314417112383326,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.272,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Data Center": [
+            0.6,
+            0.3,
+            0.2,
+            0.15,
+            0.12
+          ],
+          "Gaming, visualización y automotriz": [
+            0.12,
+            0.12,
+            0.1,
+            0.1,
+            0.08
+          ]
+        },
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "crecimientoAnios": [
+          0.5604396474898505,
+          0.28935213670007,
+          0.19486149906156935,
+          0.14763472543189593,
+          0.11818632046085242
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 120.95213858417112,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 120.92835686229206,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.735678+00:00",
+    "baseAnterior": {
+      "conservador": 138.56292709554265,
+      "base": 259.29410563837746,
+      "optimista": 432.816305388381
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

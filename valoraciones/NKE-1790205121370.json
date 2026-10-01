@@ -6,8 +6,8 @@
   "precioAnalisis": 36.1,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 20.92648389613019,
-  "precioMOSMax": 20.92648389613019,
+  "precioMOS": 20.924481272544885,
+  "precioMOSMax": 20.924481272544885,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 23.464987088829368
     },
     "conMOS": {
-      "min": 20.92648389613019,
-      "max": 20.92648389613019,
+      "min": 20.924481272544885,
+      "max": 20.924481272544885,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -248,9 +248,9 @@
     "optimista": 45.69858802772292
   },
   "precioMOSHoy": {
-    "conservador": 20.92648389613019,
-    "base": 20.92648389613019,
-    "optimista": 20.92648389613019
+    "conservador": 20.924481272544885,
+    "base": 20.924481272544885,
+    "optimista": 20.924481272544885
   },
   "descuentoMultiples": {
     "version": 2,
@@ -658,12 +658,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 32.19459060943106,
-    "valorBetaPropuesta": 31.36974373103245,
+    "valor": 32.19150965006905,
+    "valorBetaPropuesta": 31.366842564425824,
     "betaHoja": 0.9972365586244075,
     "betaPropuesta": 1.1157033893529642,
-    "dcfBase": 33.96395977432078,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 34.88061644109514,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 34.88061644109514,
+    "rango": {
+      "min": 14.926200181930792,
+      "max": 46.22687864849322
+    },
+    "dcfBaseTecnicoAnterior": 33.96395977432078,
+    "updatedAt": "2026-10-01T01:27:02.726511+00:00",
     "historias": [
       {
         "nombre": "A · Recuperación lenta con la vuelta a los mayoristas",
@@ -672,7 +681,42 @@
         "valorBetaPropuesta": 33.977198092773016,
         "margen": 0.11,
         "crecimiento": 0.03094243155580867,
-        "roicTerminal": 0.112
+        "roicTerminal": 0.112,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Calzado": [
+            -0.02,
+            0.04,
+            0.05,
+            0.05,
+            0.04
+          ],
+          "Indumentaria": [
+            0,
+            0.04,
+            0.04,
+            0.04,
+            0.04
+          ],
+          "Equipamiento y otros": [
+            0,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2.1,
+        "crecimientoAnios": [
+          -0.013163498426656317,
+          0.03896783470678744,
+          0.04552932457651049,
+          0.045582043772093295,
+          0.03903560859756916
+        ],
+        "terminalGrowth": 0.0496
       },
       {
         "nombre": "B · Pérdida de relevancia prolongada",
@@ -681,30 +725,157 @@
         "valorBetaPropuesta": 21.15171052702152,
         "margen": 0.085,
         "crecimiento": 0.005343306120183966,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Calzado": [
+            -0.04,
+            0,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "Indumentaria": [
+            -0.02,
+            0.01,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "Equipamiento y otros": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2.1,
+        "crecimientoAnios": [
+          -0.032144920039656855,
+          0.002945464068262682,
+          0.018950682769584448,
+          0.018970198216499146,
+          0.01898937006665813
+        ],
+        "terminalGrowth": 0.0496
       },
       {
-        "nombre": "C · Vuelve la Nike de márgenes históricos",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.05,
+        "valor": 14.926200181930792,
+        "valorBetaPropuesta": 14.58981581326833,
+        "margen": 0.06,
+        "crecimiento": -0.012846224373016968,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Calzado": [
+            -0.06,
+            -0.03,
+            0,
+            0.01,
+            0.01
+          ],
+          "Indumentaria": [
+            -0.04,
+            -0.02,
+            0,
+            0.01,
+            0.01
+          ],
+          "Equipamiento y otros": [
+            -0.02,
+            -0.02,
+            -0.02,
+            -0.02,
+            -0.02
+          ]
+        },
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2.1,
+        "crecimientoAnios": [
+          -0.05214492003965698,
+          -0.026527204834717266,
+          -0.0010601830266496748,
+          0.008439876934831503,
+          0.008483875302004007
+        ],
+        "terminalGrowth": 0.008483875302004007,
+        "descripcion": "Aranceles y competencia estructural",
+        "crecimientoAnios6a10": [
+          0.008483875302004007,
+          0.008483875302004007,
+          0.008483875302004007,
+          0.008483875302004007,
+          0.008483875302004007
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.85% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Vuelve la Nike de márgenes históricos",
         "probabilidad": 0.2,
         "valor": 46.22687864849322,
         "valorBetaPropuesta": 45.010497369540474,
         "margen": 0.135,
         "crecimiento": 0.046884243643033896,
-        "roicTerminal": 0.112
-      },
-      {
-        "nombre": "D · Aranceles y competencia estructural",
-        "probabilidad": 0.05,
-        "valor": 14.987819369170982,
-        "valorBetaPropuesta": 14.647839145400747,
-        "margen": 0.06,
-        "crecimiento": -0.012846224373016968,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.112,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Calzado": [
+            0,
+            0.06,
+            0.07,
+            0.06,
+            0.05
+          ],
+          "Indumentaria": [
+            0.02,
+            0.06,
+            0.06,
+            0.05,
+            0.05
+          ],
+          "Equipamiento y otros": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2.1,
+        "crecimientoAnios": [
+          0.007345790766843496,
+          0.05843777219070301,
+          0.06502314291870337,
+          0.05559380060047592,
+          0.04904359117803181
+        ],
+        "terminalGrowth": 0.0496
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 20.92648389613019,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 20.924481272544885,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.727485+00:00",
+    "baseAnterior": {
+      "conservador": 17.86170853099653,
+      "base": 33.96395977432078,
+      "optimista": 46.100097341294536
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

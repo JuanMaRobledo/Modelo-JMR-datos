@@ -6,8 +6,8 @@
   "precioAnalisis": 9.05,
   "tipo": "Financiera",
   "mos": 0.35,
-  "precioMOS": 7.541325908199438,
-  "precioMOSMax": 7.541325908199438,
+  "precioMOS": 7.541325908199437,
+  "precioMOSMax": 7.541325908199437,
   "metodos": [
     {
       "nombre": "DCF Damodaran · FCFE",
@@ -77,8 +77,8 @@
       "max": 7.352046044674479
     },
     "conMOS": {
-      "min": 7.541325908199438,
-      "max": 7.541325908199438,
+      "min": 7.541325908199437,
+      "max": 7.541325908199437,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 11.110485388531005
   },
   "precioMOSHoy": {
-    "conservador": 7.541325908199438,
-    "base": 7.541325908199438,
-    "optimista": 7.541325908199438
+    "conservador": 7.541325908199437,
+    "base": 7.541325908199437,
+    "optimista": 7.541325908199437
   },
   "descuentoMultiples": {
     "version": 2,
@@ -575,12 +575,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 11.602039858768366,
+    "valor": 11.602039858768364,
     "valorBetaPropuesta": 13.081783911260432,
     "betaHoja": 1.3,
     "betaPropuesta": 0.97,
-    "dcfBase": 11.923674329093467,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 11.891267632316424,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 11.891267632316424,
+    "rango": {
+      "min": 9.9941785794775,
+      "max": 12.729056658385355
+    },
+    "dcfBaseTecnicoAnterior": 11.923674329093467,
+    "updatedAt": "2026-10-01T01:27:02.757268+00:00",
     "historias": [
       {
         "nombre": "A · Banco digital estable con ROAE de ~15%",
@@ -589,7 +598,35 @@
         "valorBetaPropuesta": 13.441849060361719,
         "margen": 0.156,
         "crecimiento": 0.055645024923835607,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Transacciones (adquirencia)": [
+            -0.03,
+            -0.02,
+            0,
+            0.01,
+            0.01
+          ],
+          "Ingresos financieros y banca": [
+            0.1,
+            0.1,
+            0.09,
+            0.08,
+            0.08
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.4,
+        "crecimientoAnios": [
+          0.04801336417373414,
+          0.05558450348470512,
+          0.05907363661462206,
+          0.057287851045450866,
+          0.05830366591140512
+        ],
+        "terminalGrowth": 0.03
       },
       {
         "nombre": "B · El PIX y la competencia erosionan",
@@ -598,25 +635,110 @@
         "valorBetaPropuesta": 12.46601411157545,
         "margen": 0.13,
         "crecimiento": 0.013971343155100069,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Transacciones (adquirencia)": [
+            -0.08,
+            -0.06,
+            -0.05,
+            -0.04,
+            -0.03
+          ],
+          "Ingresos financieros y banca": [
+            0.05,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.4,
+        "crecimientoAnios": [
+          -0.0019866358262656814,
+          0.009449845104769983,
+          0.01567243958194231,
+          0.02110282507072836,
+          0.02585069593299405
+        ],
+        "terminalGrowth": 0.03
       },
       {
-        "nombre": "C · Crece el banco: crédito y depósitos",
-        "probabilidad": 0.15,
-        "valor": 12.729056658385355,
-        "valorBetaPropuesta": 14.502449595910132,
-        "margen": 0.17,
-        "crecimiento": 0.09033343043964726,
-        "roicTerminal": "costo_capital"
-      },
-      {
-        "nombre": "D · Crisis de crédito en Brasil",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 9.9941785794775,
         "valorBetaPropuesta": 11.17780161238503,
         "margen": 0.1,
         "crecimiento": -0.004226904030948497,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Transacciones (adquirencia)": [
+            -0.1,
+            -0.05,
+            -0.03,
+            0,
+            0
+          ],
+          "Ingresos financieros y banca": [
+            -0.05,
+            0,
+            0.03,
+            0.05,
+            0.05
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.4,
+        "crecimientoAnios": [
+          -0.06999485993317922,
+          -0.01934975750625234,
+          0.0075060234513038004,
+          0.031952831427009,
+          0.03251163423037973
+        ],
+        "terminalGrowth": 0.03,
+        "descripcion": "Crisis de crédito en Brasil"
+      },
+      {
+        "nombre": "D · Crece el banco: crédito y depósitos",
+        "probabilidad": 0.15,
+        "valor": 12.729056658385355,
+        "valorBetaPropuesta": 14.502449595910132,
+        "margen": 0.17,
+        "crecimiento": 0.09033343043964726,
+        "roicTerminal": "costo_capital",
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Transacciones (adquirencia)": [
+            0,
+            0.02,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Ingresos financieros y banca": [
+            0.15,
+            0.14,
+            0.13,
+            0.12,
+            0.1
+          ]
+        },
+        "salesToCapital": 1.4,
+        "salesToCapital2": 1.4,
+        "crecimientoAnios": [
+          0.09001542020046238,
+          0.09597524314765704,
+          0.09585594103657136,
+          0.09111705884519905,
+          0.07879380136795944
+        ],
+        "terminalGrowth": 0.03
       }
     ]
   },
@@ -632,6 +754,19 @@
     "baseWacc": 0.14653232710890593,
     "equityWeight": 0.9951854285575217
   },
-  "precioMOSValorEsperado": 7.541325908199438,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 7.541325908199437,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.758050+00:00",
+    "baseAnterior": {
+      "conservador": 11.184400336313818,
+      "base": 11.923674329093467,
+      "optimista": 12.763931193245314
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

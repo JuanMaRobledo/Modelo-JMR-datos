@@ -6,8 +6,8 @@
   "precioAnalisis": 275.79,
   "tipo": "Software",
   "mos": 0.35,
-  "precioMOS": 286.8223820872518,
-  "precioMOSMax": 286.8223820872518,
+  "precioMOS": 286.512511588341,
+  "precioMOSMax": 286.512511588341,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "max": 304.1613136291267
     },
     "conMOS": {
-      "min": 286.8223820872518,
-      "max": 286.8223820872518,
+      "min": 286.512511588341,
+      "max": 286.512511588341,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -190,9 +190,9 @@
     "optimista": 661.4941462207323
   },
   "precioMOSHoy": {
-    "conservador": 286.8223820872518,
-    "base": 286.8223820872518,
-    "optimista": 286.8223820872518
+    "conservador": 286.512511588341,
+    "base": 286.512511588341,
+    "optimista": 286.512511588341
   },
   "descuentoMultiples": {
     "version": 2,
@@ -600,12 +600,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 441.2652032111566,
-    "valorBetaPropuesta": 427.0637097046971,
+    "valor": 440.7884793666784,
+    "valorBetaPropuesta": 426.6043708508817,
     "betaHoja": 1.2,
     "betaPropuesta": 1.3417746942733277,
-    "dcfBase": 496.4037776656442,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 509.8948170410697,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 509.8948170410697,
+    "rango": {
+      "min": 207.8954373087914,
+      "max": 627.9992695436773
+    },
+    "dcfBaseTecnicoAnterior": 496.4037776656442,
+    "updatedAt": "2026-10-01T01:27:02.691610+00:00",
     "historias": [
       {
         "nombre": "A · La IA es palanca de monetización",
@@ -614,7 +623,42 @@
         "valorBetaPropuesta": 493.2585954544501,
         "margen": 0.32,
         "crecimiento": 0.09826931361269264,
-        "roicTerminal": 0.222
+        "roicTerminal": 0.222,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Global Business Solutions": [
+            0.14,
+            0.13,
+            0.12,
+            0.11,
+            0.1
+          ],
+          "Consumer (TurboTax y ProTax)": [
+            0.07,
+            0.06,
+            0.06,
+            0.05,
+            0.05
+          ],
+          "Credit Karma": [
+            0.1,
+            0.08,
+            0.07,
+            0.07,
+            0.06
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.11519813519813549,
+          0.10477530203586816,
+          0.0982561461941105,
+          0.09018257015192854,
+          0.08321677879468048
+        ],
+        "terminalGrowth": 0.0499
       },
       {
         "nombre": "B · La IA erosiona impuestos y contabilidad básica",
@@ -623,30 +667,157 @@
         "valorBetaPropuesta": 252.02175975989488,
         "margen": 0.29,
         "crecimiento": 0.048654914071139865,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Global Business Solutions": [
+            0.1,
+            0.08,
+            0.07,
+            0.06,
+            0.06
+          ],
+          "Consumer (TurboTax y ProTax)": [
+            0.02,
+            0,
+            -0.02,
+            -0.02,
+            -0.02
+          ],
+          "Credit Karma": [
+            0.05,
+            0.04,
+            0.04,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.07109557109557119,
+          0.05357127312295984,
+          0.04345561807500675,
+          0.037226524148419315,
+          0.03830092696822618
+        ],
+        "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Plataforma financiera de la pyme",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "valor": 207.8954373087914,
+        "valorBetaPropuesta": 201.83264717805048,
+        "margen": 0.26,
+        "crecimiento": 0.025333920441126256,
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Global Business Solutions": [
+            0.06,
+            0.05,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "Consumer (TurboTax y ProTax)": [
+            -0.03,
+            -0.05,
+            -0.03,
+            -0.02,
+            0
+          ],
+          "Credit Karma": [
+            -0.1,
+            0,
+            0.03,
+            0.03,
+            0.03
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.013939393939393918,
+          0.01744677916226056,
+          0.027733641533862485,
+          0.031209733775199977,
+          0.03651442575734998
+        ],
+        "terminalGrowth": 0.03651442575734998,
+        "descripcion": "Recesión y declaración gratuita del Estado",
+        "crecimientoAnios6a10": [
+          0.03651442575734998,
+          0.03651442575734998,
+          0.03651442575734998,
+          0.03651442575734998,
+          0.03651442575734998
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 3.65% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+      },
+      {
+        "nombre": "D · Plataforma financiera de la pyme",
         "probabilidad": 0.2,
         "valor": 627.9992695436773,
         "valorBetaPropuesta": 607.2464911930018,
         "margen": 0.35,
         "crecimiento": 0.1219247044012246,
-        "roicTerminal": 0.222
-      },
-      {
-        "nombre": "D · Recesión y declaración gratuita del Estado",
-        "probabilidad": 0.1,
-        "valor": 212.66267575357304,
-        "valorBetaPropuesta": 206.4260357162045,
-        "margen": 0.26,
-        "crecimiento": 0.025333920441126256,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": 0.222,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Global Business Solutions": [
+            0.17,
+            0.16,
+            0.15,
+            0.14,
+            0.12
+          ],
+          "Consumer (TurboTax y ProTax)": [
+            0.08,
+            0.08,
+            0.07,
+            0.07,
+            0.06
+          ],
+          "Credit Karma": [
+            0.12,
+            0.1,
+            0.1,
+            0.08,
+            0.08
+          ]
+        },
+        "salesToCapital": 2.5,
+        "salesToCapital2": 2,
+        "crecimientoAnios": [
+          0.13829836829836828,
+          0.13106219155079546,
+          0.12348143760016628,
+          0.11576753581550614,
+          0.10137784148849716
+        ],
+        "terminalGrowth": 0.0499
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 286.8223820872518,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 286.512511588341,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.692982+00:00",
+    "baseAnterior": {
+      "conservador": 371.1324310960712,
+      "base": 496.4490269490772,
+      "optimista": 731.0480046603227
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }

@@ -6,8 +6,8 @@
   "precioAnalisis": 13,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 14.91858412623738,
-  "precioMOSMax": 14.91858412623738,
+  "precioMOS": 14.8414811000017,
+  "precioMOSMax": 14.8414811000017,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 12.18386355
     },
     "conMOS": {
-      "min": 14.91858412623738,
-      "max": 14.91858412623738,
+      "min": 14.8414811000017,
+      "max": 14.8414811000017,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -234,9 +234,9 @@
     "optimista": 22.25775947
   },
   "precioMOSHoy": {
-    "conservador": 14.91858412623738,
-    "base": 14.91858412623738,
-    "optimista": 14.91858412623738
+    "conservador": 14.8414811000017,
+    "base": 14.8414811000017,
+    "optimista": 14.8414811000017
   },
   "descuentoMultiples": {
     "version": 2,
@@ -644,12 +644,21 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 22.951667886519047,
-    "valorBetaPropuesta": 23.1954205642469,
+    "valor": 22.83304784615646,
+    "valorBetaPropuesta": 23.07549195089892,
     "betaHoja": 1.2013957951411405,
     "betaPropuesta": 1.1617397628536215,
-    "dcfBase": 25.288539651736855,
-    "metodo": "Promedio de DCF completos ponderado por probabilidades del analista.",
+    "dcfBase": 26.057491728949326,
+    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "valorCentral": 26.057491728949326,
+    "rango": {
+      "min": 12.548065357577574,
+      "max": 30.245205620725542
+    },
+    "dcfBaseTecnicoAnterior": 25.288539651736855,
+    "updatedAt": "2026-10-01T01:27:02.611040+00:00",
     "historias": [
       {
         "nombre": "A · La escasez de plazas sostiene precio y margen",
@@ -658,7 +667,42 @@
         "valorBetaPropuesta": 26.33299861194464,
         "margen": 0.33,
         "crecimiento": 0.05830359264824869,
-        "roicTerminal": 0.148
+        "roicTerminal": 0.148,
+        "id": "A",
+        "central": true,
+        "crecimientoPorGrupo": {
+          "Grado (Medicina)": [
+            0.07,
+            0.06,
+            0.06,
+            0.05,
+            0.05
+          ],
+          "Educación continua": [
+            0.06,
+            0.06,
+            0.05,
+            0.05,
+            0.05
+          ],
+          "Soluciones para la práctica médica": [
+            0.05,
+            0.08,
+            0.08,
+            0.08,
+            0.07
+          ]
+        },
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.2,
+        "crecimientoAnios": [
+          0.06842323651452298,
+          0.06084275117480287,
+          0.06014498165397808,
+          0.051311057869218635,
+          0.05089788998105904
+        ],
+        "terminalGrowth": 0.0518
       },
       {
         "nombre": "B · Madurez: precio real plano",
@@ -667,16 +711,95 @@
         "valorBetaPropuesta": 20.88873519193735,
         "margen": 0.3,
         "crecimiento": 0.034878621345427296,
-        "roicTerminal": 0.148
+        "roicTerminal": 0.148,
+        "id": "B",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Grado (Medicina)": [
+            0.05,
+            0.04,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Educación continua": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Soluciones para la práctica médica": [
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ]
+        },
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.2,
+        "crecimientoAnios": [
+          0.04727524204702638,
+          0.03845743416360703,
+          0.02958982026180368,
+          0.029593640763800666,
+          0.029597427174651303
+        ],
+        "terminalGrowth": 0.0518
       },
       {
-        "nombre": "C · Se liberan plazas y cae el precio",
+        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 13.338865626661455,
-        "valorBetaPropuesta": 13.484402581502678,
+        "valor": 12.548065357577574,
+        "valorBetaPropuesta": 12.684878492516129,
         "margen": 0.26,
         "crecimiento": 0.003498183775823449,
-        "roicTerminal": "costo_capital"
+        "roicTerminal": "costo_capital",
+        "id": "C",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Grado (Medicina)": [
+            0.02,
+            0.0,
+            -0.01,
+            0.0,
+            0.01
+          ],
+          "Educación continua": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Soluciones para la práctica médica": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.2,
+        "crecimientoAnios": [
+          0.017704011065006853,
+          0.0,
+          -0.008871976080456645,
+          0.0,
+          0.008861878695466174
+        ],
+        "terminalGrowth": 0.008861878695466174,
+        "descripcion": "Se liberan plazas y cae el precio",
+        "crecimientoAnios6a10": [
+          0.008861878695466174,
+          0.008861878695466174,
+          0.008861878695466174,
+          0.008861878695466174,
+          0.008861878695466174
+        ],
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.89% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
         "nombre": "D · Maduran los campus y crece lo digital",
@@ -685,12 +808,60 @@
         "valorBetaPropuesta": 30.56290244065207,
         "margen": 0.35,
         "crecimiento": 0.07397231062429022,
-        "roicTerminal": 0.148
+        "roicTerminal": 0.148,
+        "id": "D",
+        "central": false,
+        "crecimientoPorGrupo": {
+          "Grado (Medicina)": [
+            0.09,
+            0.08,
+            0.07,
+            0.06,
+            0.06
+          ],
+          "Educación continua": [
+            0.08,
+            0.08,
+            0.08,
+            0.08,
+            0.08
+          ],
+          "Soluciones para la práctica médica": [
+            0.12,
+            0.12,
+            0.1,
+            0.1,
+            0.08
+          ]
+        },
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.2,
+        "crecimientoAnios": [
+          0.09056708160442595,
+          0.08176136363636388,
+          0.07207881566408814,
+          0.06330382121507427,
+          0.06242304547455024
+        ],
+        "terminalGrowth": 0.0518
       }
     ]
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 14.91858412623738,
-  "baseMOS": "valorEsperado"
+  "precioMOSValorEsperado": 14.8414811000017,
+  "baseMOS": "valorEsperado",
+  "escenariosDCF": {
+    "version": 1,
+    "fuente": "valorEsperado.historias",
+    "principal": "valorEsperado.valor",
+    "central": "A",
+    "fecha": "2026-10-01T01:27:02.613002+00:00",
+    "baseAnterior": {
+      "conservador": 19.90223537,
+      "base": 25.28853965,
+      "optimista": 30.76469277
+    },
+    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+  }
 }
