@@ -669,7 +669,7 @@
     "betaHoja": 1.2,
     "betaPropuesta": 0.8854067520104427,
     "dcfBase": 187.27739014645724,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 187.27739014645724,
@@ -678,10 +678,10 @@
       "max": 244.99153491711576
     },
     "dcfBaseTecnicoAnterior": 182.25200701972466,
-    "updatedAt": "2026-10-01T11:15:39.576448+00:00",
+    "updatedAt": "2026-10-01T14:59:54.884741+00:00",
     "historias": [
       {
-        "nombre": "A · Se estabiliza Américas y crece lo internacional",
+        "nombre": "Base · Se estabiliza Américas y crece lo internacional",
         "probabilidad": 0.4,
         "valor": 187.27739014645724,
         "valorBetaPropuesta": 199.7633258162345,
@@ -725,7 +725,7 @@
         "terminalGrowth": 0.03
       },
       {
-        "nombre": "B · Pérdida estructural frente a Alo y Vuori",
+        "nombre": "Conservadora · Pérdida estructural frente a Alo y Vuori",
         "probabilidad": 0.35,
         "valor": 122.8336426827711,
         "valorBetaPropuesta": 130.41151850879606,
@@ -769,7 +769,7 @@
         "terminalGrowth": 0.03
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 86.06490994200986,
         "valorBetaPropuesta": 90.89321660675468,
@@ -822,7 +822,7 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.76% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · La marca se recupera",
+        "nombre": "Optimista · La marca se recupera",
         "probabilidad": 0.15,
         "valor": 244.99153491711576,
         "valorBetaPropuesta": 261.7881268330667,
@@ -874,14 +874,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.578071+00:00",
+    "fecha": "2026-10-01T14:59:54.885762+00:00",
     "baseAnterior": {
       "conservador": 125.292684,
       "base": 182.252007,
       "optimista": 235.5112065
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

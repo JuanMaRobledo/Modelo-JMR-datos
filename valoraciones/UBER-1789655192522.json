@@ -639,7 +639,7 @@
     "betaHoja": 0.8003093272253278,
     "betaPropuesta": 0.7601975599716997,
     "dcfBase": 89.78307863884211,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 89.78307863884211,
@@ -648,10 +648,10 @@
       "max": 122.09451851324344
     },
     "dcfBaseTecnicoAnterior": 88.96923319597828,
-    "updatedAt": "2026-10-01T11:15:39.940914+00:00",
+    "updatedAt": "2026-10-01T14:59:54.989901+00:00",
     "historias": [
       {
-        "nombre": "A · Plataforma madura que escala márgenes",
+        "nombre": "Base · Plataforma madura que escala márgenes",
         "probabilidad": 0.45,
         "valor": 89.78307863884211,
         "valorBetaPropuesta": 90.63405602933558,
@@ -695,7 +695,7 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · Robotaxis y regulación presionan la movilidad",
+        "nombre": "Conservadora · Robotaxis y regulación presionan la movilidad",
         "probabilidad": 0.25,
         "valor": 54.022584029840715,
         "valorBetaPropuesta": 54.5069690368873,
@@ -739,7 +739,7 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 28.81410053617975,
         "valorBetaPropuesta": 29.039197377103125,
@@ -792,7 +792,7 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.91% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Uber es la red de los vehículos autónomos",
+        "nombre": "Optimista · Uber es la red de los vehículos autónomos",
         "probabilidad": 0.2,
         "valor": 122.09451851324344,
         "valorBetaPropuesta": 123.27654336388238,
@@ -844,14 +844,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.942590+00:00",
+    "fecha": "2026-10-01T14:59:54.991061+00:00",
     "baseAnterior": {
       "conservador": 48.81556306,
       "base": 88.9692332,
       "optimista": 154.3748018
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

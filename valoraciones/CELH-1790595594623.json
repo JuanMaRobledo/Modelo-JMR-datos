@@ -6,8 +6,8 @@
   "precioAnalisis": 27.99,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 12.104235449393547,
-  "precioMOSMax": 12.104235449393547,
+  "precioMOS": 12.104975699488516,
+  "precioMOSMax": 12.104975699488516,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 12.48082988
     },
     "conMOS": {
-      "min": 12.104235449393547,
-      "max": 12.104235449393547,
+      "min": 12.104975699488516,
+      "max": 12.104975699488516,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 28.55486182
   },
   "precioMOSHoy": {
-    "conservador": 12.104235449393547,
-    "base": 12.104235449393547,
-    "optimista": 12.104235449393547
+    "conservador": 12.104975699488516,
+    "base": 12.104975699488516,
+    "optimista": 12.104975699488516
   },
   "descuentoMultiples": {
     "version": 2,
@@ -594,27 +594,27 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 18.621900691374687,
-    "valorBetaPropuesta": 20.87272238859306,
+    "valor": 18.62303953767464,
+    "valorBetaPropuesta": 20.873580599420436,
     "betaHoja": 1.5,
     "betaPropuesta": 1.0,
-    "dcfBase": 22.319362397815,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "dcfBase": 22.320746498716932,
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 22.319362397815,
+    "valorCentral": 22.320746498716932,
     "rango": {
-      "min": 9.010730003660141,
-      "max": 28.946996610849055
+      "min": 9.011207299300782,
+      "max": 28.948890030786316
     },
-    "dcfBaseTecnicoAnterior": 18.105807146434643,
-    "updatedAt": "2026-10-01T11:15:39.491127+00:00",
+    "dcfBaseTecnicoAnterior": 18.10691198528599,
+    "updatedAt": "2026-10-01T14:59:54.811006+00:00",
     "historias": [
       {
-        "nombre": "A · Alani lidera y Celsius se estabiliza",
+        "nombre": "Base · Alani lidera y Celsius se estabiliza",
         "probabilidad": 0.4,
-        "valor": 22.319362397815,
-        "valorBetaPropuesta": 25.055752827647368,
+        "valor": 22.320746498716932,
+        "valorBetaPropuesta": 25.056796483334686,
         "margen": 0.19092912421809805,
         "crecimiento": 0.08573530560415432,
         "roicTerminal": "costo_capital",
@@ -655,10 +655,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · Alani crece, Celsius sigue cediendo",
+        "nombre": "Conservadora · Alani crece, Celsius sigue cediendo",
         "probabilidad": 0.35,
-        "valor": 15.565275916042168,
-        "valorBetaPropuesta": 17.395341286658876,
+        "valor": 15.566202400611767,
+        "valorBetaPropuesta": 17.396038694477667,
         "margen": 0.16092912421809805,
         "crecimiento": 0.041063655902926266,
         "roicTerminal": "costo_capital",
@@ -699,10 +699,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 9.010730003660141,
-        "valorBetaPropuesta": 9.950749604836913,
+        "valor": 9.011207299300782,
+        "valorBetaPropuesta": 9.95110683491182,
         "margen": 0.12092912421809805,
         "crecimiento": -0.01879373518404648,
         "roicTerminal": "costo_capital",
@@ -752,10 +752,10 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Plataforma multimarca",
+        "nombre": "Optimista · Plataforma multimarca",
         "probabilidad": 0.1,
-        "valor": 28.946996610849055,
-        "valorBetaPropuesta": 32.69439366477967,
+        "valor": 28.948890030786316,
+        "valorBetaPropuesta": 32.69582437782602,
         "margen": 0.22092912421809804,
         "crecimiento": 0.12241799206207848,
         "roicTerminal": "costo_capital",
@@ -799,19 +799,19 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 12.104235449393547,
+  "precioMOSValorEsperado": 12.104975699488516,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.492837+00:00",
+    "fecha": "2026-10-01T14:59:54.812728+00:00",
     "baseAnterior": {
       "conservador": 10.01848157,
       "base": 18.10580715,
       "optimista": 29.82599735
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

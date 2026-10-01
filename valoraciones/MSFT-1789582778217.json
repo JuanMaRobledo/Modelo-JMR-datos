@@ -639,7 +639,7 @@
     "betaHoja": 1.3574432619698442,
     "betaPropuesta": 1.2748816653084232,
     "dcfBase": 458.4229910581587,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 458.4229910581587,
@@ -648,10 +648,10 @@
       "max": 599.7297312665733
     },
     "dcfBaseTecnicoAnterior": 467.13127499957704,
-    "updatedAt": "2026-10-01T11:15:39.593524+00:00",
+    "updatedAt": "2026-10-01T14:59:54.894743+00:00",
     "historias": [
       {
-        "nombre": "A · Azure y Copilot sostienen el doble dígito",
+        "nombre": "Base · Azure y Copilot sostienen el doble dígito",
         "probabilidad": 0.45,
         "valor": 458.4229910581587,
         "valorBetaPropuesta": 468.3818563932399,
@@ -695,7 +695,7 @@
         "terminalGrowth": 0.0425
       },
       {
-        "nombre": "B · El capex de IA rinde menos de lo esperado",
+        "nombre": "Conservadora · El capex de IA rinde menos de lo esperado",
         "probabilidad": 0.25,
         "valor": 237.05156790100042,
         "valorBetaPropuesta": 241.7866024522611,
@@ -739,7 +739,7 @@
         "terminalGrowth": 0.0425
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 197.86428381556968,
         "valorBetaPropuesta": 201.66024813224408,
@@ -784,7 +784,7 @@
         "descripcion": "La demanda de cómputo para IA se corrige"
       },
       {
-        "nombre": "D · Microsoft gana la plataforma empresarial de IA",
+        "nombre": "Optimista · Microsoft gana la plataforma empresarial de IA",
         "probabilidad": 0.2,
         "valor": 599.7297312665733,
         "valorBetaPropuesta": 613.1719865825434,
@@ -836,14 +836,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.596310+00:00",
+    "fecha": "2026-10-01T14:59:54.895997+00:00",
     "baseAnterior": {
       "conservador": 361.691552,
       "base": 467.131275,
       "optimista": 552.5726147
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

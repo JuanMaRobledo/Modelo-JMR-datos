@@ -602,7 +602,7 @@
     "betaHoja": 1.25,
     "betaPropuesta": 1.2505283303494035,
     "dcfBase": 55.61625102310631,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 55.61625102310631,
@@ -611,10 +611,10 @@
       "max": 95.58564282629008
     },
     "dcfBaseTecnicoAnterior": 85.37347459644087,
-    "updatedAt": "2026-10-01T11:15:39.685875+00:00",
+    "updatedAt": "2026-10-01T14:59:54.957757+00:00",
     "historias": [
       {
-        "nombre": "A · Hipercrecimiento que desacelera con la escala",
+        "nombre": "Base · Hipercrecimiento que desacelera con la escala",
         "probabilidad": 0.4,
         "valor": 55.61625102310631,
         "valorBetaPropuesta": 55.60951990888733,
@@ -651,7 +651,7 @@
         "terminalGrowth": 0.05
       },
       {
-        "nombre": "B · Se normaliza en un software de alta calidad",
+        "nombre": "Conservadora · Se normaliza en un software de alta calidad",
         "probabilidad": 0.3,
         "valor": 26.93354568200303,
         "valorBetaPropuesta": 26.93072818298596,
@@ -688,7 +688,7 @@
         "terminalGrowth": 0.05
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 15.714188861771536,
         "valorBetaPropuesta": 15.712861439339017,
@@ -726,7 +726,7 @@
         "descripcion": "Comoditización y contratos perdidos"
       },
       {
-        "nombre": "D · Sistema operativo de la IA empresarial",
+        "nombre": "Optimista · Sistema operativo de la IA empresarial",
         "probabilidad": 0.2,
         "valor": 95.58564282629008,
         "valorBetaPropuesta": 95.57331149088469,
@@ -771,14 +771,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.687497+00:00",
+    "fecha": "2026-10-01T14:59:54.959034+00:00",
     "baseAnterior": {
       "conservador": 55.51437591,
       "base": 85.3734746,
       "optimista": 185.5184243
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

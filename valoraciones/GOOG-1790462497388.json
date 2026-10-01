@@ -6,8 +6,8 @@
   "precioAnalisis": 345.71,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 179.18221923668142,
-  "precioMOSMax": 179.18221923668142,
+  "precioMOS": 179.19090023190103,
+  "precioMOSMax": 179.19090023190103,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 174.4238143
     },
     "conMOS": {
-      "min": 179.18221923668142,
-      "max": 179.18221923668142,
+      "min": 179.19090023190103,
+      "max": 179.19090023190103,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 409.3371837
   },
   "precioMOSHoy": {
-    "conservador": 179.18221923668142,
-    "base": 179.18221923668142,
-    "optimista": 179.18221923668142
+    "conservador": 179.19090023190103,
+    "base": 179.19090023190103,
+    "optimista": 179.19090023190103
   },
   "descuentoMultiples": {
     "version": 2,
@@ -654,27 +654,27 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 275.66495267181756,
-    "valorBetaPropuesta": 275.66495267181756,
+    "valor": 275.6783080490785,
+    "valorBetaPropuesta": 275.6783080490785,
     "betaHoja": 1.07,
     "betaPropuesta": 1.07,
-    "dcfBase": 323.8631186898476,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "dcfBase": 323.8792007556622,
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 323.8631186898476,
+    "valorCentral": 323.8792007556622,
     "rango": {
-      "min": 133.15717386538108,
-      "max": 425.87361344086435
+      "min": 133.16232506532492,
+      "max": 425.89575067912904
     },
-    "dcfBaseTecnicoAnterior": 334.19286202991384,
-    "updatedAt": "2026-10-01T11:15:39.550384+00:00",
+    "dcfBaseTecnicoAnterior": 334.2095635655656,
+    "updatedAt": "2026-10-01T14:59:54.868318+00:00",
     "historias": [
       {
-        "nombre": "A · Search resiste y Cloud es el segundo motor",
+        "nombre": "Base · Search resiste y Cloud es el segundo motor",
         "probabilidad": 0.4,
-        "valor": 323.8631186898476,
-        "valorBetaPropuesta": 323.8631186898476,
+        "valor": 323.8792007556622,
+        "valorBetaPropuesta": 323.8792007556622,
         "margen": 0.3427204121327648,
         "crecimiento": 0.11668000111116306,
         "roicTerminal": 0.293,
@@ -715,10 +715,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · La IA conversacional erosiona Search",
+        "nombre": "Conservadora · La IA conversacional erosiona Search",
         "probabilidad": 0.25,
-        "valor": 163.88562571159386,
-        "valorBetaPropuesta": 163.88562571159386,
+        "valor": 163.89251540475627,
+        "valorBetaPropuesta": 163.89251540475627,
         "margen": 0.30272041213276474,
         "crecimiento": 0.06633989696421727,
         "roicTerminal": "costo_capital",
@@ -759,10 +759,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 133.15717386538108,
-        "valorBetaPropuesta": 133.15717386538108,
+        "valor": 133.16232506532492,
+        "valorBetaPropuesta": 133.16232506532492,
         "margen": 0.27272041213276477,
         "crecimiento": 0.03734866906643308,
         "roicTerminal": "costo_capital",
@@ -812,10 +812,10 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.83% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Gemini y Cloud dominan la plataforma de IA",
+        "nombre": "Optimista · Gemini y Cloud dominan la plataforma de IA",
         "probabilidad": 0.2,
-        "valor": 425.87361344086435,
-        "valorBetaPropuesta": 425.87361344086435,
+        "valor": 425.89575067912904,
+        "valorBetaPropuesta": 425.89575067912904,
         "margen": 0.37272041213276474,
         "crecimiento": 0.16081645443720016,
         "roicTerminal": 0.293,
@@ -859,19 +859,19 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 179.18221923668142,
+  "precioMOSValorEsperado": 179.19090023190103,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.552153+00:00",
+    "fecha": "2026-10-01T14:59:54.869366+00:00",
     "baseAnterior": {
       "conservador": 268.7226542,
       "base": 334.192862,
       "optimista": 478.3901481
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

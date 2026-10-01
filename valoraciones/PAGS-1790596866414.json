@@ -600,7 +600,7 @@
     "betaHoja": 1.3,
     "betaPropuesta": 0.97,
     "dcfBase": 11.891267632316424,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 11.891267632316424,
@@ -609,10 +609,10 @@
       "max": 12.729056658385355
     },
     "dcfBaseTecnicoAnterior": 11.923674329093467,
-    "updatedAt": "2026-10-01T11:15:39.675016+00:00",
+    "updatedAt": "2026-10-01T14:59:54.947939+00:00",
     "historias": [
       {
-        "nombre": "A · Banco digital estable con ROAE de ~15%",
+        "nombre": "Base · Banco digital estable con ROAE de ~15%",
         "probabilidad": 0.45,
         "valor": 11.891267632316424,
         "valorBetaPropuesta": 13.441849060361719,
@@ -649,7 +649,7 @@
         "terminalGrowth": 0.03
       },
       {
-        "nombre": "B · El PIX y la competencia erosionan",
+        "nombre": "Conservadora · El PIX y la competencia erosionan",
         "probabilidad": 0.3,
         "valor": 11.140643558401408,
         "valorBetaPropuesta": 12.46601411157545,
@@ -686,7 +686,7 @@
         "terminalGrowth": 0.03
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 9.9941785794775,
         "valorBetaPropuesta": 11.17780161238503,
@@ -724,7 +724,7 @@
         "descripcion": "Crisis de crédito en Brasil"
       },
       {
-        "nombre": "D · Crece el banco: crédito y depósitos",
+        "nombre": "Optimista · Crece el banco: crédito y depósitos",
         "probabilidad": 0.15,
         "valor": 12.729056658385355,
         "valorBetaPropuesta": 14.502449595910132,
@@ -779,14 +779,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.676641+00:00",
+    "fecha": "2026-10-01T14:59:54.949026+00:00",
     "baseAnterior": {
       "conservador": 11.18440034,
       "base": 11.92367433,
       "optimista": 12.76393119
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

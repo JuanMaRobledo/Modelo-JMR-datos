@@ -626,7 +626,7 @@
     "betaHoja": 1.29,
     "betaPropuesta": 0.97,
     "dcfBase": 109.82474544977978,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 109.82474544977978,
@@ -635,10 +635,10 @@
       "max": 138.00919940792932
     },
     "dcfBaseTecnicoAnterior": 105.61320236302456,
-    "updatedAt": "2026-10-01T11:15:39.697435+00:00",
+    "updatedAt": "2026-10-01T14:59:54.968627+00:00",
     "historias": [
       {
-        "nombre": "A · Se estabiliza con márgenes estables",
+        "nombre": "Base · Se estabiliza con márgenes estables",
         "probabilidad": 0.45,
         "valor": 109.82474544977978,
         "valorBetaPropuesta": 116.58904041839365,
@@ -689,7 +689,7 @@
         "terminalGrowth": 0.0496
       },
       {
-        "nombre": "B · El botón PayPal pierde frente a las billeteras nativas",
+        "nombre": "Conservadora · El botón PayPal pierde frente a las billeteras nativas",
         "probabilidad": 0.3,
         "valor": 66.19779491681915,
         "valorBetaPropuesta": 69.86233555033844,
@@ -740,7 +740,7 @@
         "terminalGrowth": 0.0496
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
         "valor": 48.27936015837794,
         "valorBetaPropuesta": 50.70990687887772,
@@ -800,7 +800,7 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Reactivación: Fastlane, Venmo y publicidad",
+        "nombre": "Optimista · Reactivación: Fastlane, Venmo y publicidad",
         "probabilidad": 0.15,
         "valor": 138.00919940792932,
         "valorBetaPropuesta": 146.71430191411062,
@@ -859,14 +859,14 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.699231+00:00",
+    "fecha": "2026-10-01T14:59:54.969877+00:00",
     "baseAnterior": {
       "conservador": 87.84633805,
       "base": 105.6132024,
       "optimista": 137.9316539
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }

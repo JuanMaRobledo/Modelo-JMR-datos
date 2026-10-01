@@ -6,8 +6,8 @@
   "precioAnalisis": 71.05,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 62.79300552249648,
-  "precioMOSMax": 62.79300552249648,
+  "precioMOS": 62.80490413357244,
+  "precioMOSMax": 62.80490413357244,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -77,8 +77,8 @@
       "min": 66.38637717
     },
     "conMOS": {
-      "min": 62.79300552249648,
-      "max": 62.79300552249648,
+      "min": 62.80490413357244,
+      "max": 62.80490413357244,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -123,9 +123,9 @@
     "optimista": 135.8647556
   },
   "precioMOSHoy": {
-    "conservador": 62.79300552249648,
-    "base": 62.79300552249648,
-    "optimista": 62.79300552249648
+    "conservador": 62.80490413357244,
+    "base": 62.80490413357244,
+    "optimista": 62.80490413357244
   },
   "descuentoMultiples": {
     "version": 2,
@@ -638,27 +638,27 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 96.60462388076381,
-    "valorBetaPropuesta": 92.02826322412565,
+    "valor": 96.6229294362653,
+    "valorBetaPropuesta": 92.03218682824989,
     "betaHoja": 0.9,
-    "betaPropuesta": 1.1071472009057617,
-    "dcfBase": 119.79382444095204,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "betaPropuesta": 1.1079546819969703,
+    "dcfBase": 119.81633769252157,
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 119.79382444095204,
+    "valorCentral": 119.81633769252157,
     "rango": {
-      "min": 47.11152920234724,
-      "max": 138.43781933729505
+      "min": 47.12100135783756,
+      "max": 138.4636296286305
     },
-    "dcfBaseTecnicoAnterior": 117.67735166757315,
-    "updatedAt": "2026-10-01T11:15:39.952733+00:00",
+    "dcfBaseTecnicoAnterior": 117.69947295198656,
+    "updatedAt": "2026-10-01T14:59:55.000395+00:00",
     "historias": [
       {
-        "nombre": "A · Tropiezo temporal; vuelve a crecer con innovación",
+        "nombre": "Base · Tropiezo temporal; vuelve a crecer con innovación",
         "probabilidad": 0.4,
-        "valor": 119.79382444095204,
-        "valorBetaPropuesta": 114.16672492814659,
+        "valor": 119.81633769252157,
+        "valorBetaPropuesta": 114.17154836977694,
         "margen": 0.36356978961838077,
         "crecimiento": 0.04458884572123023,
         "roicTerminal": 0.169,
@@ -692,10 +692,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · Erosión prolongada de franquicias clave",
+        "nombre": "Conservadora · Erosión prolongada de franquicias clave",
         "probabilidad": 0.35,
-        "valor": 66.31505223872574,
-        "valorBetaPropuesta": 63.112457199469404,
+        "valor": 66.32785651193807,
+        "valorBetaPropuesta": 63.11520433546065,
         "margen": 0.3335697896183808,
         "crecimiento": 0.014600826361075292,
         "roicTerminal": "costo_capital",
@@ -729,10 +729,10 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 47.11152920234724,
-        "valorBetaPropuesta": 44.74150801869517,
+        "valor": 47.12100135783756,
+        "valorBetaPropuesta": 44.74354172983892,
         "margen": 0.29356978961838076,
         "crecimiento": -0.0066281282144515785,
         "roicTerminal": "costo_capital",
@@ -775,10 +775,10 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Recuperación fuerte con nuevos productos",
+        "nombre": "Optimista · Recuperación fuerte con nuevos productos",
         "probabilidad": 0.15,
-        "valor": 138.43781933729505,
-        "valorBetaPropuesta": 131.98708287455477,
+        "valor": 138.4636296286305,
+        "valorBetaPropuesta": 131.99261193296,
         "margen": 0.3835697896183808,
         "crecimiento": 0.06031150461460277,
         "roicTerminal": 0.169,
@@ -815,19 +815,19 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 62.79300552249648,
+  "precioMOSValorEsperado": 62.80490413357244,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T11:15:39.954360+00:00",
+    "fecha": "2026-10-01T14:59:55.001668+00:00",
     "baseAnterior": {
       "conservador": 76.53376135,
       "base": 117.6773517,
       "optimista": 138.547855
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }
