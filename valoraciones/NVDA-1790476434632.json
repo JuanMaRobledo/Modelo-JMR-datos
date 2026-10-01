@@ -554,20 +554,33 @@
     "fecha": "2026-10-01",
     "umbral": 0.02,
     "precio": 230.67,
+    "dcfHoy": 263.89649343278467,
     "dcfInverso": {
       "gImplicito": 0.16527590048792623,
       "gDcf": 0.21200000000000002,
       "dif": -0.04672409951207379,
       "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
     },
+    "gDcf": {
+      "anios4a10": 0.1013857142857143,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.07564285714285715
+    },
+    "parametros": {
+      "ke": 0.117246,
+      "wacc": 0.10538733720437415,
+      "roe": 1.383619359584715,
+      "fcffEbitda": 0.7585298794686216,
+      "fcfeOcf": 1.009305369414639
+    },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 31.19,
+        "multiploDcf": 19.98302942772515,
         "gImplicito": 0.0791429582980819,
         "gDcf": 0.06496273309252373,
         "dif": 0.014180225205558172,
-        "multiploDcf": 19.98302942772515,
         "difValor": 0.5496384208978953,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 55% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
@@ -575,10 +588,10 @@
       {
         "metodo": "EV/FCFF",
         "multiplo": 43.65,
+        "multiploDcf": 25.83051854093666,
         "gImplicito": 0.0806306219254408,
         "gDcf": 0.06418845632855993,
         "dif": 0.016442165596880873,
-        "multiploDcf": 25.83051854093666,
         "difValor": 0.6761917417564864,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 68% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
@@ -586,10 +599,10 @@
       {
         "metodo": "P/E",
         "multiplo": 37.63,
+        "multiploDcf": 23.701879486965378,
         "gImplicito": 0.0901632732927246,
         "gDcf": 0.0743540618094101,
         "dif": 0.015809211483314503,
-        "multiploDcf": 23.701879486965378,
         "difValor": 0.58594096918051,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 59% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
@@ -597,10 +610,10 @@
       {
         "metodo": "P/FCFE",
         "multiplo": 40.19,
+        "multiploDcf": 24.51552166742515,
         "gImplicito": 0.09012179509589706,
         "gDcf": 0.07345908415471858,
         "dif": 0.01666271094117848,
-        "multiploDcf": 24.51552166742515,
         "difValor": 0.6375233436862073,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 64% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
@@ -608,19 +621,18 @@
       {
         "metodo": "P/OCF",
         "multiplo": 37.52,
+        "multiploDcf": 25.00835614950823,
         "gImplicito": 0.08797886486882338,
         "gDcf": 0.07390458032871695,
         "dif": 0.014074284540106424,
-        "multiploDcf": 25.00835614950823,
         "difValor": 0.4988538895296015,
         "aplica": true,
         "lectura": "Revisar: el múltiplo vale 50% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (292,11 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,5%, ROE FY+3 138,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
-    "dcfHoy": 209.4595953,
-    "dcfFy3": 292.1101754,
-    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
+    "dcfFy3": 292.11017540469066,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 5
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
