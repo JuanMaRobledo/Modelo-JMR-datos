@@ -877,10 +877,10 @@
     "betaHoja": 1.3928819168531263,
     "betaPropuesta": 1.308164891664659,
     "dcfBase": 465.7075740827592,
-    "metodo": "Escenarios = historias; cada historia es un DCF completo. Valor principal = suma de DCF × probabilidad.",
+    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "historias": [
       {
-        "nombre": "A · La IA se cobra dentro de la suscripción",
+        "nombre": "Base · La IA se cobra dentro de la suscripción",
         "probabilidad": 0.4,
         "valor": 465.7075740827592,
         "valorBetaPropuesta": 475.0610194356615,
@@ -917,7 +917,7 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "B · Erosión gradual frente a Figma y Canva",
+        "nombre": "Conservadora · Erosión gradual frente a Figma y Canva",
         "probabilidad": 0.35,
         "valor": 267.9698468540572,
         "valorBetaPropuesta": 272.9320269841235,
@@ -954,7 +954,7 @@
         "terminalGrowth": 0.0499
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
         "valor": 172.43436844074913,
         "valorBetaPropuesta": 175.3789514328795,
@@ -999,7 +999,7 @@
         "criterioTerminal": "Estabilización nominal del negocio residual, sin recuperación de participación: g=0%. Hipótesis del analista acordada con el usuario, no guía de Adobe."
       },
       {
-        "nombre": "D · La IA amplía el mercado de Adobe",
+        "nombre": "Optimista · La IA amplía el mercado de Adobe",
         "probabilidad": 0.1,
         "valor": 583.922051277321,
         "valorBetaPropuesta": 595.834290495499,
@@ -1053,7 +1053,7 @@
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
-    "principal": "valorEsperado.valor",
+    "principal": "valorEsperado.valorCentral",
     "central": "A",
     "fecha": "2026-09-30T22:17:57.438926+00:00",
     "baseAnterior": {
@@ -1061,6 +1061,6 @@
       "base": 536.4823571890387,
       "optimista": 823.0579353445776
     },
-    "nota": "Los tres casos de la hoja original se conservan como calibración y supuestos auxiliares de múltiplos; no son los escenarios DCF activos de ADBE."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }
 }
