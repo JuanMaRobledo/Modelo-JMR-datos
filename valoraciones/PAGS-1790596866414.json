@@ -518,20 +518,33 @@
     "fecha": "2026-10-01",
     "umbral": 0.02,
     "precio": 8.96,
+    "dcfHoy": 11.891267632316424,
     "dcfInverso": {
       "gImplicito": -0.15437528754132873,
       "gDcf": 0.057999999999999996,
       "dif": -0.21237528754132873,
       "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
     },
+    "gDcf": {
+      "anios4a10": 0.05567142857142857,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.05278571428571428
+    },
+    "parametros": {
+      "ke": 0.14700999999999997,
+      "wacc": 0.13515639126751586,
+      "roe": 0.17863956139157894,
+      "fcffEbitda": 0.11454723644205107,
+      "fcfeOcf": 0.1759037780626891
+    },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 3.0147605904236174,
+        "multiploDcf": null,
         "gImplicito": null,
         "gDcf": null,
         "dif": null,
-        "multiploDcf": null,
         "difValor": null,
         "aplica": false,
         "lectura": "No aplica: PagSeguro es una entidad financiera (PagBank): la deuda es materia prima del negocio, no financiación, y el valor empres"
@@ -539,10 +552,10 @@
       {
         "metodo": "EV/FCFF",
         "multiplo": 2.5144630167150437,
+        "multiploDcf": null,
         "gImplicito": null,
         "gDcf": null,
         "dif": null,
-        "multiploDcf": null,
         "difValor": null,
         "aplica": false,
         "lectura": "No aplica: Igual que EV/EBITDA: para una financiera el FCFF no se puede separar de la financiación; peso 0%."
@@ -550,10 +563,10 @@
       {
         "metodo": "P/E",
         "multiplo": 9.25,
+        "multiploDcf": 9.662172049370318,
         "gImplicito": 0.08631474142039956,
         "gDcf": 0.09247124733090627,
         "dif": -0.006156505910506704,
-        "multiploDcf": 9.662172049370318,
         "difValor": -0.03964542222493739,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -561,10 +574,10 @@
       {
         "metodo": "P/FCFE",
         "multiplo": 7.88,
+        "multiploDcf": 15.550968663796551,
         "gImplicito": 0.017842207207207195,
         "gDcf": 0.07770831601403727,
         "dif": -0.059866108806830076,
-        "multiploDcf": 15.550968663796551,
         "difValor": -0.4584395089999189,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 46% por debajo del DCF en FY+3."
@@ -572,19 +585,18 @@
       {
         "metodo": "P/OCF",
         "multiplo": 3.27,
+        "multiploDcf": 7.343594617796255,
         "gImplicito": 0.08845833823853379,
         "gDcf": 0.12017797187073036,
         "dif": -0.03171963363219657,
-        "multiploDcf": 7.343594617796255,
         "difValor": -0.5155352783280331,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 52% por debajo del DCF en FY+3."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (17,94 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 14,7%, WACC años 4-10 13,5%, ROE FY+3 17,9%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
-    "dcfHoy": 11.89126763,
-    "dcfFy3": 17.94443408,
-    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
+    "dcfFy3": 17.944434081954697,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 2
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
