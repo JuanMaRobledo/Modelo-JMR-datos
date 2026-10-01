@@ -6,15 +6,16 @@
   "precioAnalisis": 275.79,
   "tipo": "Software",
   "mos": 0.35,
-  "precioMOS": 288.00530135,
-  "precioMOSMax": 288.00530135,
+  "precioMOS": 288.00530137396044,
+  "precioMOSMax": 288.00530137396044,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
       "conservador": 349.9919551,
       "base": 689.0672992,
-      "optimista": 848.2306064
+      "optimista": 848.2306064,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 230.8083943
     },
     "conMOS": {
-      "min": 288.0053014,
-      "max": 288.0053014
-    }
+      "min": 288.00530137396044,
+      "max": 288.00530137396044,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -208,7 +211,9 @@
     "optimista": 561.203311
   },
   "precioMOSHoy": {
-    "base": 286.8481671
+    "conservador": 288.00530137396044,
+    "base": 288.00530137396044,
+    "optimista": 288.00530137396044
   },
   "descuentoMultiples": {
     "version": 2,
@@ -602,31 +607,34 @@
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 47% por debajo del DCF en FY+3."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (689,07 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 10,3%, WACC años 4-10 9,5%, ROE FY+3 35,3%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (689,07 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 10,3%, WACC años 4-10 9,5%, ROE FY+3 35,3%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 512.9075428,
+    "dcfFy3": 689.0672992,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 443.0713477756893,
-    "valorBetaPropuesta": 428.70471008083257,
+    "valor": 443.08507903686217,
+    "valorBetaPropuesta": 428.70867288157655,
     "betaHoja": 1.2,
-    "betaPropuesta": 1.3427443819926692,
-    "dcfBase": 512.8914239929276,
+    "betaPropuesta": 1.342852613289287,
+    "dcfBase": 512.9075427784487,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 512.8914239929276,
+    "valorCentral": 512.9075427784487,
     "rango": {
-      "min": 208.70769578957936,
-      "max": 631.3607209741626
+      "min": 208.71355020977367,
+      "max": 631.3808195019254
     },
-    "dcfBaseTecnicoAnterior": 512.8914239929276,
-    "updatedAt": "2026-10-01T19:54:17.636832+00:00",
+    "dcfBaseTecnicoAnterior": 499.3569495578694,
+    "updatedAt": "2026-10-01T21:04:39.047934+00:00",
     "historias": [
       {
         "nombre": "Base · La IA es palanca de monetización",
         "probabilidad": 0.45,
-        "valor": 512.8914239929276,
-        "valorBetaPropuesta": 496.0285791226584,
+        "valor": 512.9075427784487,
+        "valorBetaPropuesta": 496.0332299585731,
         "margen": 0.321878607922183,
         "crecimiento": 0.09826931361269264,
         "roicTerminal": 0.226,
@@ -669,8 +677,8 @@
       {
         "nombre": "Conservadora · La IA erosiona impuestos y contabilidad básica",
         "probabilidad": 0.25,
-        "valor": 260.50917282032555,
-        "valorBetaPropuesta": 252.66735560950286,
+        "valor": 260.5166634607912,
+        "valorBetaPropuesta": 252.66951992602978,
         "margen": 0.29187860792218295,
         "crecimiento": 0.048654914071139865,
         "roicTerminal": "costo_capital",
@@ -713,8 +721,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 208.70769578957936,
-        "valorBetaPropuesta": 202.57788212222522,
+        "valor": 208.71355020977367,
+        "valorBetaPropuesta": 202.57957419104932,
         "margen": 0.261878607922183,
         "crecimiento": 0.025333920441126256,
         "roicTerminal": "costo_capital",
@@ -766,8 +774,8 @@
       {
         "nombre": "Optimista · Plataforma financiera de la pyme",
         "probabilidad": 0.2,
-        "valor": 631.3607209741626,
-        "valorBetaPropuesta": 610.3361118051903,
+        "valor": 631.3808195019254,
+        "valorBetaPropuesta": 610.3419099980315,
         "margen": 0.35187860792218295,
         "crecimiento": 0.1219247044012246,
         "roicTerminal": 0.226,
@@ -811,18 +819,18 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 287.99637605419804,
+  "precioMOSValorEsperado": 288.00530137396044,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.639410+00:00",
+    "fecha": "2026-10-01T21:04:39.049214+00:00",
     "baseAnterior": {
-      "conservador": 260.5125756,
-      "base": 512.8987464,
-      "optimista": 631.3698513
+      "conservador": 260.5166635,
+      "base": 512.9075428,
+      "optimista": 631.3808195
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

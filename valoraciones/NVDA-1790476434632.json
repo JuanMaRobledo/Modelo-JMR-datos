@@ -6,15 +6,16 @@
   "precioAnalisis": 210.96,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 123.87212669,
-  "precioMOSMax": 123.87212669,
+  "precioMOS": 123.87212670546033,
+  "precioMOSMax": 123.87212670546033,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.4,
       "conservador": 175.2672034,
       "base": 292.1101754,
-      "optimista": 443.6389319
+      "optimista": 443.6389319,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 94.25681789
     },
     "conMOS": {
-      "min": 123.8721267,
-      "max": 123.8721267
-    }
+      "min": 123.87212670546033,
+      "max": 123.87212670546033,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -120,7 +123,9 @@
     "optimista": 397.9181735
   },
   "precioMOSHoy": {
-    "base": 120.9500187
+    "conservador": 123.87212670546033,
+    "base": 123.87212670546033,
+    "optimista": 123.87212670546033
   },
   "descuentoMultiples": {
     "version": 2,
@@ -612,31 +617,34 @@
         "lectura": "Revisar: el múltiplo vale 50% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (292,11 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,5%, ROE FY+3 138,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (292,11 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,7%, WACC años 4-10 10,5%, ROE FY+3 138,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 209.4595953,
+    "dcfFy3": 292.1101754,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 190.57006352869703,
-    "valorBetaPropuesta": 190.59864956884675,
+    "valor": 190.5725026237851,
+    "valorBetaPropuesta": 190.59905337656485,
     "betaHoja": 1.51,
-    "betaPropuesta": 1.509372553628578,
-    "dcfBase": 209.4569060309855,
+    "betaPropuesta": 1.5094172119019533,
+    "dcfBase": 209.45959531763938,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 209.4569060309855,
+    "valorCentral": 209.45959531763938,
     "rango": {
-      "min": 54.62782916063735,
-      "max": 318.11008078878956
+      "min": 54.62836187290647,
+      "max": 318.1143245787036
     },
-    "dcfBaseTecnicoAnterior": 209.45690603098546,
-    "updatedAt": "2026-10-01T19:54:17.654048+00:00",
+    "dcfBaseTecnicoAnterior": 263.89649343278467,
+    "updatedAt": "2026-10-01T21:04:39.090956+00:00",
     "historias": [
       {
         "nombre": "Base · Ciclo de IA largo que desacelera con la escala",
         "probabilidad": 0.4,
-        "valor": 209.4569060309855,
-        "valorBetaPropuesta": 209.48842429757036,
+        "valor": 209.45959531763938,
+        "valorBetaPropuesta": 209.4888695260087,
         "margen": 0.5804987670485834,
         "crecimiento": 0.1705496611450923,
         "roicTerminal": 0.272,
@@ -672,8 +680,8 @@
       {
         "nombre": "Conservadora · Ciclo de semiconductores: el capex se corrige",
         "probabilidad": 0.3,
-        "valor": 125.67500680827062,
-        "valorBetaPropuesta": 125.69303015580054,
+        "valor": 125.67654464565996,
+        "valorBetaPropuesta": 125.69328475428964,
         "margen": 0.5004987670485834,
         "crecimiento": 0.07045919147125179,
         "roicTerminal": 0.272,
@@ -709,8 +717,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 54.62782916063735,
-        "valorBetaPropuesta": 54.63407248343893,
+        "valor": 54.62836187290647,
+        "valorBetaPropuesta": 54.63416067641389,
         "margen": 0.4004987670485834,
         "crecimiento": -0.01314417112383326,
         "roicTerminal": "costo_capital",
@@ -755,8 +763,8 @@
       {
         "nombre": "Optimista · La IA es infraestructura permanente",
         "probabilidad": 0.2,
-        "valor": 318.11008078878956,
-        "valorBetaPropuesta": 318.1598177736727,
+        "valor": 318.1143245787036,
+        "valorBetaPropuesta": 318.1605203611654,
         "margen": 0.6004987670485834,
         "crecimiento": 0.2527107051893509,
         "roicTerminal": 0.272,
@@ -793,18 +801,18 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 123.87054129365308,
+  "precioMOSValorEsperado": 123.87212670546033,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.656587+00:00",
+    "fecha": "2026-10-01T21:04:39.092391+00:00",
     "baseAnterior": {
-      "conservador": 125.6749512,
-      "base": 209.4568087,
-      "optimista": 318.1099272
+      "conservador": 125.6765446,
+      "base": 209.4595953,
+      "optimista": 318.1143246
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

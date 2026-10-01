@@ -15,20 +15,20 @@
     "fecha": "Revisión 28 de septiembre de 2026 (análisis original 25 de septiembre)",
     "zonas": {
       "value": {
-        "max": 359.0291225,
-        "min": 333.3841852
+        "max": 359.0352799,
+        "min": 333.3899028
       },
       "deepValue": {
-        "max": 307.7392478,
-        "min": 282.0943105
+        "max": 307.7445257,
+        "min": 282.0991485
       },
       "historica": {
-        "max": 256.4493732,
-        "min": 230.8044359
+        "max": 256.4537714,
+        "min": 230.8083943
       },
       "conMOS": {
-        "min": 287.99637605419804,
-        "max": 287.99637605419804,
+        "min": 288.00530137396044,
+        "max": 288.00530137396044,
         "base": "valor esperado; una cifra, sin escenarios"
       },
       "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -417,36 +417,36 @@
         "optimista": 476.2138418
       }
     ],
-    "precioMOS": 287.99637605419804,
-    "precioMOSMax": 287.99637605419804,
+    "precioMOS": 288.00530137396044,
+    "precioMOSMax": 288.00530137396044,
     "precioMOSHoy": {
-      "conservador": 287.99637605419804,
-      "base": 287.99637605419804,
-      "optimista": 287.99637605419804
+      "conservador": 288.00530137396044,
+      "base": 288.00530137396044,
+      "optimista": 288.00530137396044
     },
     "valorEsperado": {
       "fecha": "2026-09-30",
-      "valor": 443.0713477756893,
-      "valorBetaPropuesta": 428.70471008083257,
+      "valor": 443.08507903686217,
+      "valorBetaPropuesta": 428.70867288157655,
       "betaHoja": 1.2,
-      "betaPropuesta": 1.3427443819926692,
-      "dcfBase": 512.8914239929276,
+      "betaPropuesta": 1.342852613289287,
+      "dcfBase": 512.9075427784487,
       "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
       "escenariosUnificados": true,
       "historiaCentralId": "A",
-      "valorCentral": 512.8914239929276,
+      "valorCentral": 512.9075427784487,
       "rango": {
-        "min": 208.70769578957936,
-        "max": 631.3607209741626
+        "min": 208.71355020977367,
+        "max": 631.3808195019254
       },
-      "dcfBaseTecnicoAnterior": 512.8914239929276,
-      "updatedAt": "2026-10-01T19:54:17.636832+00:00",
+      "dcfBaseTecnicoAnterior": 499.3569495578694,
+      "updatedAt": "2026-10-01T21:04:39.047934+00:00",
       "historias": [
         {
           "nombre": "Base · La IA es palanca de monetización",
           "probabilidad": 0.45,
-          "valor": 512.8914239929276,
-          "valorBetaPropuesta": 496.0285791226584,
+          "valor": 512.9075427784487,
+          "valorBetaPropuesta": 496.0332299585731,
           "margen": 0.321878607922183,
           "crecimiento": 0.09826931361269264,
           "roicTerminal": 0.226,
@@ -489,8 +489,8 @@
         {
           "nombre": "Conservadora · La IA erosiona impuestos y contabilidad básica",
           "probabilidad": 0.25,
-          "valor": 260.50917282032555,
-          "valorBetaPropuesta": 252.66735560950286,
+          "valor": 260.5166634607912,
+          "valorBetaPropuesta": 252.66951992602978,
           "margen": 0.29187860792218295,
           "crecimiento": 0.048654914071139865,
           "roicTerminal": "costo_capital",
@@ -533,8 +533,8 @@
         {
           "nombre": "Disrupción · Deterioro de los fundamentales",
           "probabilidad": 0.1,
-          "valor": 208.70769578957936,
-          "valorBetaPropuesta": 202.57788212222522,
+          "valor": 208.71355020977367,
+          "valorBetaPropuesta": 202.57957419104932,
           "margen": 0.261878607922183,
           "crecimiento": 0.025333920441126256,
           "roicTerminal": "costo_capital",
@@ -586,8 +586,8 @@
         {
           "nombre": "Optimista · Plataforma financiera de la pyme",
           "probabilidad": 0.2,
-          "valor": 631.3607209741626,
-          "valorBetaPropuesta": 610.3361118051903,
+          "valor": 631.3808195019254,
+          "valorBetaPropuesta": 610.3419099980315,
           "margen": 0.35187860792218295,
           "crecimiento": 0.1219247044012246,
           "roicTerminal": 0.226,
@@ -632,18 +632,18 @@
     "sourcePath": "valoraciones/INTU-1790595555540.json",
     "mos": 0.35,
     "hojaGoogle": "https://docs.google.com/spreadsheets/d/14sbZoheKmtK5UpMOlRNzvqD1F9sCJEpHW01g4f-X8mM/edit",
-    "precioMOSValorEsperado": 287.99637605419804,
+    "precioMOSValorEsperado": 288.00530137396044,
     "baseMOS": "valorEsperado",
     "escenariosDCF": {
       "version": 1,
       "fuente": "valorEsperado.historias",
       "principal": "valorEsperado.valorCentral",
       "central": "A",
-      "fecha": "2026-10-01T19:54:17.639410+00:00",
+      "fecha": "2026-10-01T21:04:39.049214+00:00",
       "baseAnterior": {
-        "conservador": 260.5125756,
-        "base": 512.8987464,
-        "optimista": 631.3698513
+        "conservador": 260.5166635,
+        "base": 512.9075428,
+        "optimista": 631.3808195
       },
       "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
     }
@@ -697,37 +697,37 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.639410+00:00",
+    "fecha": "2026-10-01T21:04:39.049214+00:00",
     "baseAnterior": {
-      "conservador": 260.5125756,
-      "base": 512.8987464,
-      "optimista": 631.3698513
+      "conservador": 260.5166635,
+      "base": 512.9075428,
+      "optimista": 631.3808195
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 443.0713477756893,
-    "valorBetaPropuesta": 428.70471008083257,
+    "valor": 443.08507903686217,
+    "valorBetaPropuesta": 428.70867288157655,
     "betaHoja": 1.2,
-    "betaPropuesta": 1.3427443819926692,
-    "dcfBase": 512.8914239929276,
+    "betaPropuesta": 1.342852613289287,
+    "dcfBase": 512.9075427784487,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 512.8914239929276,
+    "valorCentral": 512.9075427784487,
     "rango": {
-      "min": 208.70769578957936,
-      "max": 631.3607209741626
+      "min": 208.71355020977367,
+      "max": 631.3808195019254
     },
-    "dcfBaseTecnicoAnterior": 512.8914239929276,
-    "updatedAt": "2026-10-01T19:54:17.636832+00:00",
+    "dcfBaseTecnicoAnterior": 499.3569495578694,
+    "updatedAt": "2026-10-01T21:04:39.047934+00:00",
     "historias": [
       {
         "nombre": "Base · La IA es palanca de monetización",
         "probabilidad": 0.45,
-        "valor": 512.8914239929276,
-        "valorBetaPropuesta": 496.0285791226584,
+        "valor": 512.9075427784487,
+        "valorBetaPropuesta": 496.0332299585731,
         "margen": 0.321878607922183,
         "crecimiento": 0.09826931361269264,
         "roicTerminal": "hoja",
@@ -770,8 +770,8 @@
       {
         "nombre": "Conservadora · La IA erosiona impuestos y contabilidad básica",
         "probabilidad": 0.25,
-        "valor": 260.50917282032555,
-        "valorBetaPropuesta": 252.66735560950286,
+        "valor": 260.5166634607912,
+        "valorBetaPropuesta": 252.66951992602978,
         "margen": 0.29187860792218295,
         "crecimiento": 0.048654914071139865,
         "roicTerminal": "costo_capital",
@@ -814,8 +814,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 208.70769578957936,
-        "valorBetaPropuesta": 202.57788212222522,
+        "valor": 208.71355020977367,
+        "valorBetaPropuesta": 202.57957419104932,
         "margen": 0.261878607922183,
         "crecimiento": 0.025333920441126256,
         "roicTerminal": "costo_capital",
@@ -867,8 +867,8 @@
       {
         "nombre": "Optimista · Plataforma financiera de la pyme",
         "probabilidad": 0.2,
-        "valor": 631.3607209741626,
-        "valorBetaPropuesta": 610.3361118051903,
+        "valor": 631.3808195019254,
+        "valorBetaPropuesta": 610.3419099980315,
         "margen": 0.35187860792218295,
         "crecimiento": 0.1219247044012246,
         "roicTerminal": "hoja",
@@ -911,7 +911,7 @@
     ]
   },
   "auditoriaEspecifica": {
-    "fecha": "2026-10-01T19:54:42.142755+00:00",
+    "fecha": "2026-10-01T21:05:21.475387+00:00",
     "estado": "auditoría de datos y cálculo verificada; salvedades de método abiertas",
     "documento": "data/INTU_Auditoria_Valoracion_2026-10-01.md",
     "cambios": 23,
@@ -936,14 +936,14 @@
       }
     },
     "despues": {
-      "dcfTecnico": 512.8987464,
-      "valorEsperado": 443.0713477756893,
-      "precioMOS": 287.99637605419804,
+      "dcfTecnico": 512.9075428,
+      "valorEsperado": 443.08507903686217,
+      "precioMOS": 288.00530137396044,
       "historias": {
-        "A": 512.8914239929276,
-        "B": 260.50917282032555,
-        "C": 208.70769578957936,
-        "D": 631.3607209741626
+        "A": 512.9075427784487,
+        "B": 260.5166634607912,
+        "C": 208.71355020977367,
+        "D": 631.3808195019254
       }
     }
   }

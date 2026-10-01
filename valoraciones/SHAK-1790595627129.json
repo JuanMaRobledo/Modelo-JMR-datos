@@ -6,15 +6,16 @@
   "precioAnalisis": 55.55,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 8.276266193,
-  "precioMOSMax": 8.276266193,
+  "precioMOS": 8.276266189959433,
+  "precioMOSMax": 8.276266189959433,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
       "conservador": 3.495614839,
       "base": 22.08909668,
-      "optimista": 46.40143187
+      "optimista": 46.40143187,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 7.051337173
     },
     "conMOS": {
-      "min": 8.27626619,
-      "max": 8.27626619
-    }
+      "min": 8.276266189959433,
+      "max": 8.276266189959433,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -120,7 +123,9 @@
     "optimista": 34.34423892
   },
   "precioMOSHoy": {
-    "base": 12.0954044
+    "conservador": 8.276266189959433,
+    "base": 8.276266189959433,
+    "optimista": 8.276266189959433
   },
   "descuentoMultiples": {
     "version": 2,
@@ -575,31 +580,34 @@
         "lectura": "Revisar: el múltiplo supone más crecimiento que el DCF. En valor, 298% por encima del DCF en FY+3."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (22,09 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 12,1%, WACC años 4-10 10,4%, ROE FY+3 19,6%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (22,09 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 12,1%, WACC años 4-10 10,4%, ROE FY+3 19,6%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 15.66963816,
+    "dcfFy3": 22.08909668,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 12.727173099576344,
-    "valorBetaPropuesta": 16.488594306692875,
+    "valor": 12.732717215322204,
+    "valorBetaPropuesta": 16.489545181158295,
     "betaHoja": 1.6,
-    "betaPropuesta": 0.9696216461303793,
-    "dcfBase": 15.663050895420943,
+    "betaPropuesta": 0.9700942038130435,
+    "dcfBase": 15.669638161978131,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 15.663050895420943,
+    "valorCentral": 15.669638161978131,
     "rango": {
       "min": 0.0,
-      "max": 32.90603651592702
+      "max": 32.91640477946299
     },
-    "dcfBaseTecnicoAnterior": 15.663050895420943,
-    "updatedAt": "2026-10-01T19:54:17.673980+00:00",
+    "dcfBaseTecnicoAnterior": 15.930422379235464,
+    "updatedAt": "2026-10-01T21:04:39.237985+00:00",
     "historias": [
       {
         "nombre": "Base · Crece por aperturas y el margen mejora",
         "probabilidad": 0.45,
-        "valor": 15.663050895420943,
-        "valorBetaPropuesta": 20.13321764884777,
+        "valor": 15.669638161978131,
+        "valorBetaPropuesta": 20.134347930878036,
         "margen": 0.09328814708410399,
         "crecimiento": 0.11025587784191715,
         "roicTerminal": "costo_capital",
@@ -635,8 +643,8 @@
       {
         "nombre": "Conservadora · Crece, pero el margen no despega",
         "probabilidad": 0.3,
-        "valor": 2.47631573082622,
-        "valorBetaPropuesta": 4.79260877153024,
+        "valor": 2.4797310850419843,
+        "valorBetaPropuesta": 4.7931941213876765,
         "margen": 0.06328814708410399,
         "crecimiento": 0.07410432031031111,
         "roicTerminal": "costo_capital",
@@ -718,8 +726,8 @@
       {
         "nombre": "Optimista · Economía unitaria de primer nivel",
         "probabilidad": 0.15,
-        "valor": 32.90603651592702,
-        "valorBetaPropuesta": 39.93909155501539,
+        "valor": 32.91640477946299,
+        "valorBetaPropuesta": 39.94086917231251,
         "margen": 0.12328814708410399,
         "crecimiento": 0.13061194566139522,
         "roicTerminal": "costo_capital",
@@ -756,18 +764,18 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 8.272662514724624,
+  "precioMOSValorEsperado": 8.276266189959433,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.675484+00:00",
+    "fecha": "2026-10-01T21:04:39.239393+00:00",
     "baseAnterior": {
-      "conservador": 2.477225157,
-      "base": 15.66480492,
-      "optimista": 32.90879733
+      "conservador": 2.479731085,
+      "base": 15.66963816,
+      "optimista": 32.91640478
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

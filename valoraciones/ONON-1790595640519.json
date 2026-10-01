@@ -6,15 +6,16 @@
   "precioAnalisis": 29.96,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 22.4665815725,
-  "precioMOSMax": 22.4665815725,
+  "precioMOS": 22.466581573895294,
+  "precioMOSMax": 22.466581573895294,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
       "conservador": 31.75068253,
       "base": 53.24096735,
-      "optimista": 74.1982491
+      "optimista": 74.1982491,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 17.36054325
     },
     "conMOS": {
-      "min": 22.46658157,
-      "max": 22.46658157
-    }
+      "min": 22.466581573895294,
+      "max": 22.466581573895294,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -120,7 +123,9 @@
     "optimista": 44.24861345
   },
   "precioMOSHoy": {
-    "base": 22.35890238
+    "conservador": 22.466581573895294,
+    "base": 22.466581573895294,
+    "optimista": 22.466581573895294
   },
   "descuentoMultiples": {
     "version": 2,
@@ -598,31 +603,34 @@
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 57% por debajo del DCF en FY+3."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (53,24 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,3%, WACC años 4-10 10,0%, ROE FY+3 29,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (53,24 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,3%, WACC años 4-10 10,0%, ROE FY+3 29,4%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 38.578985,
+    "dcfFy3": 53.24096735,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 34.571457486749736,
-    "valorBetaPropuesta": 37.73142896110194,
+    "valor": 34.563971652146606,
+    "valorBetaPropuesta": 37.72990198573376,
     "betaHoja": 1.5,
-    "betaPropuesta": 1.0711861802872258,
-    "dcfBase": 38.58753581477111,
+    "betaPropuesta": 1.0705968907153118,
+    "dcfBase": 38.57898500200835,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 38.58753581477111,
+    "valorCentral": 38.57898500200835,
     "rango": {
-      "min": 14.775778840464072,
-      "max": 53.77730627576568
+      "min": 14.773385688842678,
+      "max": 53.76485968537895
     },
-    "dcfBaseTecnicoAnterior": 39.208310151950386,
-    "updatedAt": "2026-10-01T16:10:34.771596+00:00",
+    "dcfBaseTecnicoAnterior": 39.1995943243591,
+    "updatedAt": "2026-10-01T21:04:39.113213+00:00",
     "historias": [
       {
         "nombre": "Base · Marca premium que cumple sus metas 2029",
         "probabilidad": 0.4,
-        "valor": 38.58753581477111,
-        "valorBetaPropuesta": 42.19795312261404,
+        "valor": 38.57898500200835,
+        "valorBetaPropuesta": 42.19620807360116,
         "margen": 0.17,
         "crecimiento": 0.14875004023533367,
         "roicTerminal": "costo_capital",
@@ -658,8 +666,8 @@
       {
         "nombre": "Conservadora · El ciclo de moda se enfría",
         "probabilidad": 0.3,
-        "valor": 23.011346738805834,
-        "valorBetaPropuesta": 24.88987266950846,
+        "valor": 23.006890484610683,
+        "valorBetaPropuesta": 24.88896610101366,
         "margen": 0.14,
         "crecimiento": 0.06200489030643497,
         "roicTerminal": "costo_capital",
@@ -695,8 +703,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 14.775778840464072,
-        "valorBetaPropuesta": 15.782907988335905,
+        "valor": 14.773385688842678,
+        "valorBetaPropuesta": 15.782422728827408,
         "margen": 0.1,
         "crecimiento": 0.007904759296862407,
         "roicTerminal": "costo_capital",
@@ -741,8 +749,8 @@
       {
         "nombre": "Optimista · On se vuelve una marca deportiva global",
         "probabilidad": 0.2,
-        "valor": 53.77730627576568,
-        "valorBetaPropuesta": 59.03497556185099,
+        "valor": 53.76485968537895,
+        "valorBetaPropuesta": 59.032433265532305,
         "margen": 0.2,
         "crecimiento": 0.18770117452170076,
         "roicTerminal": "costo_capital",
@@ -779,18 +787,18 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 22.47144736638733,
+  "precioMOSValorEsperado": 22.466581573895294,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T16:10:34.772675+00:00",
+    "fecha": "2026-10-01T21:04:39.114407+00:00",
     "baseAnterior": {
-      "conservador": 24.94913904,
-      "base": 39.20515682,
-      "optimista": 64.29376111
+      "conservador": 23.00689048,
+      "base": 38.578985,
+      "optimista": 53.76485969
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

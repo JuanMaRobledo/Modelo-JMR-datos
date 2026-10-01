@@ -6,15 +6,16 @@
   "precioAnalisis": 151.14,
   "tipo": "Software",
   "mos": 0.35,
-  "precioMOS": 70.924237475,
-  "precioMOSMax": 70.924237475,
+  "precioMOS": 70.92423749309086,
+  "precioMOSMax": 70.92423749309086,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
       "conservador": 124.1406802,
       "base": 157.3914438,
-      "optimista": 204.3358489
+      "optimista": 204.3358489,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 51.76793691
     },
     "conMOS": {
-      "min": 70.92423749,
-      "max": 70.92423749
-    }
+      "min": 70.92423749309086,
+      "max": 70.92423749309086,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -223,7 +226,9 @@
     "optimista": 142.3055325
   },
   "precioMOSHoy": {
-    "base": 77.39452531
+    "conservador": 70.92423749309086,
+    "base": 70.92423749309086,
+    "optimista": 70.92423749309086
   },
   "descuentoMultiples": {
     "version": 2,
@@ -617,7 +622,10 @@
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 72% por debajo del DCF en FY+3."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (157,39 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,0%, WACC años 4-10 10,2%, ROE FY+3 12,1%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (157,39 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,0%, WACC años 4-10 10,2%, ROE FY+3 12,1%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 115.0398598,
+    "dcfFy3": 157.3914438,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
@@ -635,7 +643,7 @@
       "max": 149.35225728693243
     },
     "dcfBaseTecnicoAnterior": 115.02725617527778,
-    "updatedAt": "2026-10-01T16:10:34.781159+00:00",
+    "updatedAt": "2026-10-01T21:04:38.973166+00:00",
     "historias": [
       {
         "nombre": "Base · La audiencia crece y la monetización se recupera en parte",
@@ -861,11 +869,11 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T16:10:34.782346+00:00",
+    "fecha": "2026-10-01T21:04:38.974748+00:00",
     "baseAnterior": {
-      "conservador": 95.2937487,
-      "base": 115.0272562,
-      "optimista": 157.9180775
+      "conservador": 90.73635836,
+      "base": 115.0398598,
+      "optimista": 149.3522573
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

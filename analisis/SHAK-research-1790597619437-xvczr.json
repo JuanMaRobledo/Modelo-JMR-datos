@@ -15,20 +15,20 @@
     "fecha": "Análisis del 25 de sept de 2026",
     "zonas": {
       "value": {
-        "max": 10.96536345,
-        "min": 10.1821232
+        "max": 10.96874671,
+        "min": 10.18526481
       },
       "deepValue": {
-        "max": 9.398882954,
-        "min": 8.615642708
+        "max": 9.401782897,
+        "min": 8.618300989
       },
       "historica": {
-        "max": 7.832402462,
-        "min": 7.049162215
+        "max": 7.834819081,
+        "min": 7.051337173
       },
       "conMOS": {
-        "min": 8.272662514724624,
-        "max": 8.272662514724624,
+        "min": 8.276266189959433,
+        "max": 8.276266189959433,
         "base": "valor esperado; una cifra, sin escenarios"
       },
       "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -417,36 +417,36 @@
         "optimista": 111.4952877
       }
     ],
-    "precioMOS": 8.272662514724624,
-    "precioMOSMax": 8.272662514724624,
+    "precioMOS": 8.276266189959433,
+    "precioMOSMax": 8.276266189959433,
     "precioMOSHoy": {
-      "conservador": 8.272662514724624,
-      "base": 8.272662514724624,
-      "optimista": 8.272662514724624
+      "conservador": 8.276266189959433,
+      "base": 8.276266189959433,
+      "optimista": 8.276266189959433
     },
     "valorEsperado": {
       "fecha": "2026-09-30",
-      "valor": 12.727173099576344,
-      "valorBetaPropuesta": 16.488594306692875,
+      "valor": 12.732717215322204,
+      "valorBetaPropuesta": 16.489545181158295,
       "betaHoja": 1.6,
-      "betaPropuesta": 0.9696216461303793,
-      "dcfBase": 15.663050895420943,
+      "betaPropuesta": 0.9700942038130435,
+      "dcfBase": 15.669638161978131,
       "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
       "escenariosUnificados": true,
       "historiaCentralId": "A",
-      "valorCentral": 15.663050895420943,
+      "valorCentral": 15.669638161978131,
       "rango": {
         "min": 0.0,
-        "max": 32.90603651592702
+        "max": 32.91640477946299
       },
-      "dcfBaseTecnicoAnterior": 15.663050895420943,
-      "updatedAt": "2026-10-01T19:54:17.673980+00:00",
+      "dcfBaseTecnicoAnterior": 15.930422379235464,
+      "updatedAt": "2026-10-01T21:04:39.237985+00:00",
       "historias": [
         {
           "nombre": "Base · Crece por aperturas y el margen mejora",
           "probabilidad": 0.45,
-          "valor": 15.663050895420943,
-          "valorBetaPropuesta": 20.13321764884777,
+          "valor": 15.669638161978131,
+          "valorBetaPropuesta": 20.134347930878036,
           "margen": 0.09328814708410399,
           "crecimiento": 0.11025587784191715,
           "roicTerminal": "costo_capital",
@@ -482,8 +482,8 @@
         {
           "nombre": "Conservadora · Crece, pero el margen no despega",
           "probabilidad": 0.3,
-          "valor": 2.47631573082622,
-          "valorBetaPropuesta": 4.79260877153024,
+          "valor": 2.4797310850419843,
+          "valorBetaPropuesta": 4.7931941213876765,
           "margen": 0.06328814708410399,
           "crecimiento": 0.07410432031031111,
           "roicTerminal": "costo_capital",
@@ -565,8 +565,8 @@
         {
           "nombre": "Optimista · Economía unitaria de primer nivel",
           "probabilidad": 0.15,
-          "valor": 32.90603651592702,
-          "valorBetaPropuesta": 39.93909155501539,
+          "valor": 32.91640477946299,
+          "valorBetaPropuesta": 39.94086917231251,
           "margen": 0.12328814708410399,
           "crecimiento": 0.13061194566139522,
           "roicTerminal": "costo_capital",
@@ -604,18 +604,18 @@
     "sourcePath": "valoraciones/SHAK-1790595627129.json",
     "mos": 0.35,
     "hojaGoogle": "https://docs.google.com/spreadsheets/d/1RcwUptYoVjCfHvdqED5wXCsjteCds61g4HMKA_T8GCM/edit",
-    "precioMOSValorEsperado": 8.272662514724624,
+    "precioMOSValorEsperado": 8.276266189959433,
     "baseMOS": "valorEsperado",
     "escenariosDCF": {
       "version": 1,
       "fuente": "valorEsperado.historias",
       "principal": "valorEsperado.valorCentral",
       "central": "A",
-      "fecha": "2026-10-01T19:54:17.675484+00:00",
+      "fecha": "2026-10-01T21:04:39.239393+00:00",
       "baseAnterior": {
-        "conservador": 2.477225157,
-        "base": 15.66480492,
-        "optimista": 32.90879733
+        "conservador": 2.479731085,
+        "base": 15.66963816,
+        "optimista": 32.91640478
       },
       "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
     }
@@ -669,37 +669,37 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.675484+00:00",
+    "fecha": "2026-10-01T21:04:39.239393+00:00",
     "baseAnterior": {
-      "conservador": 2.477225157,
-      "base": 15.66480492,
-      "optimista": 32.90879733
+      "conservador": 2.479731085,
+      "base": 15.66963816,
+      "optimista": 32.91640478
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 12.727173099576344,
-    "valorBetaPropuesta": 16.488594306692875,
+    "valor": 12.732717215322204,
+    "valorBetaPropuesta": 16.489545181158295,
     "betaHoja": 1.6,
-    "betaPropuesta": 0.9696216461303793,
-    "dcfBase": 15.663050895420943,
+    "betaPropuesta": 0.9700942038130435,
+    "dcfBase": 15.669638161978131,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 15.663050895420943,
+    "valorCentral": 15.669638161978131,
     "rango": {
       "min": 0.0,
-      "max": 32.90603651592702
+      "max": 32.91640477946299
     },
-    "dcfBaseTecnicoAnterior": 15.663050895420943,
-    "updatedAt": "2026-10-01T19:54:17.673980+00:00",
+    "dcfBaseTecnicoAnterior": 15.930422379235464,
+    "updatedAt": "2026-10-01T21:04:39.237985+00:00",
     "historias": [
       {
         "nombre": "Base · Crece por aperturas y el margen mejora",
         "probabilidad": 0.45,
-        "valor": 15.663050895420943,
-        "valorBetaPropuesta": 20.13321764884777,
+        "valor": 15.669638161978131,
+        "valorBetaPropuesta": 20.134347930878036,
         "margen": 0.09328814708410399,
         "crecimiento": 0.11025587784191715,
         "roicTerminal": "hoja",
@@ -735,8 +735,8 @@
       {
         "nombre": "Conservadora · Crece, pero el margen no despega",
         "probabilidad": 0.3,
-        "valor": 2.47631573082622,
-        "valorBetaPropuesta": 4.79260877153024,
+        "valor": 2.4797310850419843,
+        "valorBetaPropuesta": 4.7931941213876765,
         "margen": 0.06328814708410399,
         "crecimiento": 0.07410432031031111,
         "roicTerminal": "hoja",
@@ -818,8 +818,8 @@
       {
         "nombre": "Optimista · Economía unitaria de primer nivel",
         "probabilidad": 0.15,
-        "valor": 32.90603651592702,
-        "valorBetaPropuesta": 39.93909155501539,
+        "valor": 32.91640477946299,
+        "valorBetaPropuesta": 39.94086917231251,
         "margen": 0.12328814708410399,
         "crecimiento": 0.13061194566139522,
         "roicTerminal": "hoja",

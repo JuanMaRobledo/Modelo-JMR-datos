@@ -6,15 +6,16 @@
   "precioAnalisis": 345.71,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 178.19013250999998,
-  "precioMOSMax": 178.19013250999998,
+  "precioMOS": 179.19994447094496,
+  "precioMOSMax": 179.19994447094496,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.4,
       "conservador": 214.6843405,
       "base": 426.2612392,
-      "optimista": 561.1748907
+      "optimista": 561.1748907,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -76,9 +77,11 @@
       "min": 145.0540795
     },
     "conMOS": {
-      "min": 178.1901325,
-      "max": 178.1901325
-    }
+      "min": 179.19994447094496,
+      "max": 179.19994447094496,
+      "base": "valor esperado; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "savedAt": "2026-09-30T19:10:22+00:00",
   "hojas": {
@@ -120,7 +123,9 @@
     "optimista": 370.7268426
   },
   "precioMOSHoy": {
-    "base": 163.7431724
+    "conservador": 179.19994447094496,
+    "base": 179.19994447094496,
+    "optimista": 179.19994447094496
   },
   "descuentoMultiples": {
     "version": 2,
@@ -635,31 +640,34 @@
         "lectura": "Coherente con el DCF."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (426,26 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,8%, WACC años 4-10 9,4%, ROE FY+3 42,1%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (426,26 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,8%, WACC años 4-10 9,4%, ROE FY+3 42,1%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "dcfHoy": 322.3423989,
+    "dcfFy3": 426.2612392,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 275.6890778196663,
-    "valorBetaPropuesta": 275.6890778196663,
+    "valor": 275.69222226299223,
+    "valorBetaPropuesta": 275.69222226299223,
     "betaHoja": 1.07,
     "betaPropuesta": 1.07,
-    "dcfBase": 323.89216932992883,
+    "dcfBase": 323.8959557571544,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 323.89216932992883,
+    "valorCentral": 323.8959557571544,
     "rango": {
-      "min": 133.16647898014716,
-      "max": 425.9136021521575
+      "min": 133.16769179432364,
+      "max": 425.9188142380721
     },
-    "dcfBaseTecnicoAnterior": 322.33861250245536,
-    "updatedAt": "2026-10-01T19:54:17.618499+00:00",
+    "dcfBaseTecnicoAnterior": 349.46803587864,
+    "updatedAt": "2026-10-01T21:04:39.037276+00:00",
     "historias": [
       {
         "nombre": "Base · Search resiste y Cloud es el segundo motor",
         "probabilidad": 0.4,
-        "valor": 323.89216932992883,
-        "valorBetaPropuesta": 323.89216932992883,
+        "valor": 323.8959557571544,
+        "valorBetaPropuesta": 323.8959557571544,
         "margen": 0.3427204121327648,
         "crecimiento": 0.11668000111116306,
         "roicTerminal": 0.293,
@@ -702,8 +710,8 @@
       {
         "nombre": "Conservadora · La IA conversacional erosiona Search",
         "probabilidad": 0.25,
-        "valor": 163.8980712409646,
-        "valorBetaPropuesta": 163.8980712409646,
+        "valor": 163.89969337347014,
+        "valorBetaPropuesta": 163.89969337347014,
         "margen": 0.30272041213276474,
         "crecimiento": 0.06633989696421727,
         "roicTerminal": "costo_capital",
@@ -746,8 +754,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 133.16647898014716,
-        "valorBetaPropuesta": 133.16647898014716,
+        "valor": 133.16769179432364,
+        "valorBetaPropuesta": 133.16769179432364,
         "margen": 0.27272041213276477,
         "crecimiento": 0.03734866906643308,
         "roicTerminal": "costo_capital",
@@ -799,8 +807,8 @@
       {
         "nombre": "Optimista · Gemini y Cloud dominan la plataforma de IA",
         "probabilidad": 0.2,
-        "valor": 425.9136021521575,
-        "valorBetaPropuesta": 425.9136021521575,
+        "valor": 425.9188142380721,
+        "valorBetaPropuesta": 425.9188142380721,
         "margen": 0.37272041213276474,
         "crecimiento": 0.16081645443720016,
         "roicTerminal": 0.293,
@@ -844,18 +852,18 @@
   },
   "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
   "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
-  "precioMOSValorEsperado": 179.1979005827831,
+  "precioMOSValorEsperado": 179.19994447094496,
   "baseMOS": "valorEsperado",
   "escenariosDCF": {
     "version": 1,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.620857+00:00",
+    "fecha": "2026-10-01T21:04:39.038813+00:00",
     "baseAnterior": {
-      "conservador": 162.3441711,
-      "base": 322.3378112,
-      "optimista": 424.3589423
+      "conservador": 162.3461365,
+      "base": 322.3423989,
+      "optimista": 424.3652574
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   }

@@ -15,20 +15,20 @@
     "fecha": "Análisis del 25 de sept de 2026",
     "zonas": {
       "value": {
-        "max": 25.4429206,
-        "min": 23.62556913
+        "max": 25.4380149,
+        "min": 23.62101383
       },
       "deepValue": {
-        "max": 21.80821766,
-        "min": 19.99086619
+        "max": 21.80401277,
+        "min": 19.98701171
       },
       "historica": {
-        "max": 18.17351472,
-        "min": 16.35616325
+        "max": 18.17001064,
+        "min": 16.35300958
       },
       "conMOS": {
-        "min": 22.708267082799036,
-        "max": 22.708267082799036,
+        "min": 22.705767096885012,
+        "max": 22.705767096885012,
         "base": "valor esperado; una cifra, sin escenarios"
       },
       "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -417,36 +417,36 @@
         "optimista": 43.88716948
       }
     ],
-    "precioMOS": 22.708267082799036,
-    "precioMOSMax": 22.708267082799036,
+    "precioMOS": 22.705767096885012,
+    "precioMOSMax": 22.705767096885012,
     "precioMOSHoy": {
-      "conservador": 22.708267082799036,
-      "base": 22.708267082799036,
-      "optimista": 22.708267082799036
+      "conservador": 22.705767096885012,
+      "base": 22.705767096885012,
+      "optimista": 22.705767096885012
     },
     "valorEsperado": {
       "fecha": "2026-09-30",
-      "valor": 34.93579551199851,
-      "valorBetaPropuesta": 35.113674178834536,
+      "valor": 34.931949379823095,
+      "valorBetaPropuesta": 35.11288416518115,
       "betaHoja": 1,
-      "betaPropuesta": 0.9801824553983615,
-      "dcfBase": 36.3440186413768,
+      "betaPropuesta": 0.9798488469170337,
+      "dcfBase": 36.34002128236686,
       "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
       "escenariosUnificados": true,
       "historiaCentralId": "A",
-      "valorCentral": 36.3440186413768,
+      "valorCentral": 36.34002128236686,
       "rango": {
-        "min": 22.69172419539102,
-        "max": 43.67936127242608
+        "min": 22.689158131023767,
+        "max": 43.67460324909382
       },
-      "dcfBaseTecnicoAnterior": 36.34401864137678,
-      "updatedAt": "2026-10-01T19:54:17.548603+00:00",
+      "dcfBaseTecnicoAnterior": 37.389948715219475,
+      "updatedAt": "2026-10-01T21:04:38.640767+00:00",
       "historias": [
         {
           "nombre": "Base · La cartera diversificada sostiene ~7%",
           "probabilidad": 0.45,
-          "valor": 36.3440186413768,
-          "valorBetaPropuesta": 36.52889225511522,
+          "valor": 36.34002128236686,
+          "valorBetaPropuesta": 36.5280711708723,
           "margen": 0.2424811633951711,
           "crecimiento": 0.0654882580165066,
           "roicTerminal": "costo_capital",
@@ -496,8 +496,8 @@
         {
           "nombre": "Conservadora · El campo pulsado se vuelve commodity",
           "probabilidad": 0.3,
-          "valor": 29.035095530413948,
-          "valorBetaPropuesta": 29.184230961577324,
+          "valor": 29.03187082129351,
+          "valorBetaPropuesta": 29.183568619336477,
           "margen": 0.2224811633951711,
           "crecimiento": 0.04142191598002243,
           "roicTerminal": "costo_capital",
@@ -547,8 +547,8 @@
         {
           "nombre": "Disrupción · Deterioro de los fundamentales",
           "probabilidad": 0.05,
-          "valor": 22.69172419539102,
-          "valorBetaPropuesta": 22.810395175465015,
+          "valor": 22.689158131023767,
+          "valorBetaPropuesta": 22.809868148044714,
           "margen": 0.2024811633951711,
           "crecimiento": 0.022127335541649362,
           "roicTerminal": "costo_capital",
@@ -607,8 +607,8 @@
         {
           "nombre": "Optimista · Electrofisiología y Watchman vuelven a doble dígito",
           "probabilidad": 0.2,
-          "valor": 43.67936127242608,
-          "valorBetaPropuesta": 43.8994180839312,
+          "valor": 43.67460324909382,
+          "valorBetaPropuesta": 43.89844072542716,
           "margen": 0.26248116339517114,
           "crecimiento": 0.08277637544095917,
           "roicTerminal": "costo_capital",
@@ -660,18 +660,18 @@
     "sourcePath": "valoraciones/BSX-1790595587507.json",
     "mos": 0.35,
     "hojaGoogle": "https://docs.google.com/spreadsheets/d/1LVn63SMyvovWzNjbF5Jdi-v0EFUPXLqp4A6n8gwbKHc/edit",
-    "precioMOSValorEsperado": 22.708267082799036,
+    "precioMOSValorEsperado": 22.705767096885012,
     "baseMOS": "valorEsperado",
     "escenariosDCF": {
       "version": 1,
       "fuente": "valorEsperado.historias",
       "principal": "valorEsperado.valorCentral",
       "central": "A",
-      "fecha": "2026-10-01T19:54:17.551770+00:00",
+      "fecha": "2026-10-01T21:04:38.642665+00:00",
       "baseAnterior": {
-        "conservador": 29.03752436,
-        "base": 36.34702943,
-        "optimista": 43.682945
+        "conservador": 29.03187082,
+        "base": 36.34002128,
+        "optimista": 43.67460325
       },
       "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
     }
@@ -725,37 +725,37 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-01T19:54:17.551770+00:00",
+    "fecha": "2026-10-01T21:04:38.642665+00:00",
     "baseAnterior": {
-      "conservador": 29.03752436,
-      "base": 36.34702943,
-      "optimista": 43.682945
+      "conservador": 29.03187082,
+      "base": 36.34002128,
+      "optimista": 43.67460325
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Los tres casos técnicos anteriores son auxiliares de múltiplos."
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 34.93579551199851,
-    "valorBetaPropuesta": 35.113674178834536,
+    "valor": 34.931949379823095,
+    "valorBetaPropuesta": 35.11288416518115,
     "betaHoja": 1,
-    "betaPropuesta": 0.9801824553983615,
-    "dcfBase": 36.3440186413768,
+    "betaPropuesta": 0.9798488469170337,
+    "dcfBase": 36.34002128236686,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 36.3440186413768,
+    "valorCentral": 36.34002128236686,
     "rango": {
-      "min": 22.69172419539102,
-      "max": 43.67936127242608
+      "min": 22.689158131023767,
+      "max": 43.67460324909382
     },
-    "dcfBaseTecnicoAnterior": 36.34401864137678,
-    "updatedAt": "2026-10-01T19:54:17.548603+00:00",
+    "dcfBaseTecnicoAnterior": 37.389948715219475,
+    "updatedAt": "2026-10-01T21:04:38.640767+00:00",
     "historias": [
       {
         "nombre": "Base · La cartera diversificada sostiene ~7%",
         "probabilidad": 0.45,
-        "valor": 36.3440186413768,
-        "valorBetaPropuesta": 36.52889225511522,
+        "valor": 36.34002128236686,
+        "valorBetaPropuesta": 36.5280711708723,
         "margen": 0.2424811633951711,
         "crecimiento": 0.0654882580165066,
         "roicTerminal": "hoja",
@@ -805,8 +805,8 @@
       {
         "nombre": "Conservadora · El campo pulsado se vuelve commodity",
         "probabilidad": 0.3,
-        "valor": 29.035095530413948,
-        "valorBetaPropuesta": 29.184230961577324,
+        "valor": 29.03187082129351,
+        "valorBetaPropuesta": 29.183568619336477,
         "margen": 0.2224811633951711,
         "crecimiento": 0.04142191598002243,
         "roicTerminal": "hoja",
@@ -856,8 +856,8 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.05,
-        "valor": 22.69172419539102,
-        "valorBetaPropuesta": 22.810395175465015,
+        "valor": 22.689158131023767,
+        "valorBetaPropuesta": 22.809868148044714,
         "margen": 0.2024811633951711,
         "crecimiento": 0.022127335541649362,
         "roicTerminal": "costo_capital",
@@ -916,8 +916,8 @@
       {
         "nombre": "Optimista · Electrofisiología y Watchman vuelven a doble dígito",
         "probabilidad": 0.2,
-        "valor": 43.67936127242608,
-        "valorBetaPropuesta": 43.8994180839312,
+        "valor": 43.67460324909382,
+        "valorBetaPropuesta": 43.89844072542716,
         "margen": 0.26248116339517114,
         "crecimiento": 0.08277637544095917,
         "roicTerminal": "hoja",
@@ -967,7 +967,7 @@
     ]
   },
   "auditoriaEspecifica": {
-    "fecha": "2026-10-01T19:54:19.892338+00:00",
+    "fecha": "2026-10-01T21:04:53.440722+00:00",
     "estado": "auditoría de datos y cálculo verificada; salvedades de método abiertas",
     "documento": "data/BSX_Auditoria_Valoracion_2026-10-01.md",
     "cambios": 28,
@@ -992,14 +992,14 @@
       }
     },
     "despues": {
-      "dcfTecnico": 36.34702943,
-      "valorEsperado": 34.93579551199851,
-      "precioMOS": 22.708267082799036,
+      "dcfTecnico": 36.34002128,
+      "valorEsperado": 34.931949379823095,
+      "precioMOS": 22.705767096885012,
       "historias": {
-        "A": 36.3440186413768,
-        "B": 29.035095530413948,
-        "C": 22.69172419539102,
-        "D": 43.67936127242608
+        "A": 36.34002128236686,
+        "B": 29.03187082129351,
+        "C": 22.689158131023767,
+        "D": 43.67460324909382
       }
     }
   }
