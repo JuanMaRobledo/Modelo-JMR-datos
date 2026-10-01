@@ -561,20 +561,33 @@
     "fecha": "2026-10-01",
     "umbral": 0.02,
     "precio": 70,
+    "dcfHoy": 118.99660870659976,
     "dcfInverso": {
       "gImplicito": -0.03758814815699216,
       "gDcf": 0.044000000000000004,
       "dif": -0.08158814815699217,
       "lectura": "El precio supone menos crecimiento que el DCF: posible oportunidad si el DCF es correcto."
     },
+    "gDcf": {
+      "anios4a10": 0.04995714285714286,
+      "perpetuidad": 0.0499,
+      "puntoMedio": 0.04992857142857143
+    },
+    "parametros": {
+      "ke": 0.09004000000000001,
+      "wacc": 0.085330676235806,
+      "roe": 0.8572620174816937,
+      "fcffEbitda": 0.6180354726712552,
+      "fcfeOcf": 0.9102471068876735
+    },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 13.83,
+        "multiploDcf": 16.308107701445884,
         "gImplicito": 0.03890409742785736,
         "gDcf": 0.045701278647007876,
         "dif": -0.0067971812191505165,
-        "multiploDcf": 16.308107701445884,
         "difValor": -0.16316190436925426,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -582,10 +595,10 @@
       {
         "metodo": "EV/FCFF",
         "multiplo": 23.07,
+        "multiploDcf": 25.856637411486886,
         "gImplicito": 0.040240078968011815,
         "gDcf": 0.04491866710723214,
         "dif": -0.004678588139220327,
-        "multiploDcf": 25.856637411486886,
         "difValor": -0.11669634381107175,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -593,10 +606,10 @@
       {
         "metodo": "P/E",
         "multiplo": 22.76,
+        "multiploDcf": 22.522594917273175,
         "gImplicito": 0.04655493157584414,
         "gDcf": 0.046090909298667146,
         "dif": 0.0004640222771769911,
-        "multiploDcf": 22.522594917273175,
         "difValor": 0.009957317671712262,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -604,10 +617,10 @@
       {
         "metodo": "P/FCFE",
         "multiplo": 21.79,
+        "multiploDcf": 20.96541783556752,
         "gImplicito": 0.04221025010969724,
         "gDcf": 0.040414720473791695,
         "dif": 0.0017955296359055475,
-        "multiploDcf": 20.96541783556752,
         "difValor": 0.03715362475937556,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -615,19 +628,18 @@
       {
         "metodo": "P/OCF",
         "multiplo": 17.2,
+        "multiploDcf": 19.2517796541397,
         "gImplicito": 0.035253019428405,
         "gDcf": 0.04082839205244262,
         "dif": -0.005575372624037615,
-        "multiploDcf": 19.2517796541397,
         "difValor": -0.10067708036406431,
         "aplica": true,
         "lectura": "Coherente con el DCF."
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (155,22 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,0%, WACC años 4-10 8,5%, ROE FY+3 85,7%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
-    "dcfHoy": 119.8488858,
-    "dcfFy3": 155.2248705,
-    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
+    "dcfFy3": 155.2248704976862,
+    "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
+    "alertas": 0
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
