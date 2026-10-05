@@ -15,20 +15,20 @@
     "fecha": "Revisión de datos y modelo: 28 de septiembre de 2026 (precio del análisis: 14 de septiembre de 2026)",
     "zonas": {
       "value": {
-        "max": 280.8583554,
-        "min": 260.7970443
+        "max": 287.3358652,
+        "min": 266.8118748
       },
       "deepValue": {
-        "max": 240.7357332,
-        "min": 220.6744221
+        "max": 246.2878844,
+        "min": 225.7638941
       },
       "historica": {
-        "max": 200.613111,
-        "min": 180.5517999
+        "max": 205.2399037,
+        "min": 184.7159133
       },
       "conMOS": {
-        "min": 207.41792280622877,
-        "max": 207.41792280622877,
+        "min": 212.05783093608986,
+        "max": 212.05783093608986,
         "base": "valor esperado; una cifra, sin escenarios"
       },
       "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
@@ -417,35 +417,35 @@
         "optimista": 537.4720258
       }
     ],
-    "precioMOS": 207.41792280622877,
-    "precioMOSMax": 207.41792280622877,
+    "precioMOS": 212.05783093608986,
+    "precioMOSMax": 212.05783093608986,
     "precioMOSHoy": {
-      "conservador": 207.41792280622877,
-      "base": 207.41792280622877,
-      "optimista": 207.41792280622877
+      "conservador": 212.05783093608986,
+      "base": 212.05783093608986,
+      "optimista": 212.05783093608986
     },
     "valorEsperado": {
       "fecha": "2026-09-30",
-      "valor": 319.10449662496734,
+      "valor": 326.2428168247536,
       "valorBetaPropuesta": 326.0854078473015,
-      "betaHoja": 1.3926647880963725,
+      "betaHoja": 1.3060768956422435,
       "betaPropuesta": 1.307960968982399,
-      "dcfBase": 401.2262219617629,
+      "dcfBase": 410.47980738729296,
       "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
       "escenariosUnificados": true,
       "historiaCentralId": "A",
-      "valorCentral": 401.2262219617629,
+      "valorCentral": 410.47980738729296,
       "rango": {
-        "min": 164.10165807810978,
-        "max": 498.00155074776245
+        "min": 167.27117377956876,
+        "max": 509.73025884754486
       },
-      "dcfBaseTecnicoAnterior": 401.2262219617629,
-      "updatedAt": "2026-10-04T23:14:34.379106+00:00",
+      "dcfBaseTecnicoAnterior": 410.47980738729296,
+      "updatedAt": "2026-10-05T12:45:22.383098+00:00",
       "historias": [
         {
           "nombre": "Base · La IA se cobra dentro de la suscripción",
           "probabilidad": 0.4,
-          "valor": 401.2262219617629,
+          "valor": 410.47980738729296,
           "valorBetaPropuesta": 410.27572255811316,
           "margen": 0.4008689536006509,
           "crecimiento": 0.08106378236260814,
@@ -482,7 +482,7 @@
         {
           "nombre": "Conservadora · Erosión gradual frente a Figma y Canva",
           "probabilidad": 0.35,
-          "valor": 240.56744015362716,
+          "valor": 245.6776911947045,
           "valorBetaPropuesta": 245.5650350793938,
           "margen": 0.37086895360065086,
           "crecimiento": 0.05375678434130471,
@@ -519,7 +519,7 @@
         {
           "nombre": "Disrupción · Deterioro de los fundamentales",
           "probabilidad": 0.15,
-          "valor": 164.10165807810978,
+          "valor": 167.27117377956876,
           "valorBetaPropuesta": 167.20133496269847,
           "margen": 0.3208689536006509,
           "crecimiento": 0.009449355756888433,
@@ -565,7 +565,7 @@
         {
           "nombre": "Optimista · La IA amplía el mercado de Adobe",
           "probabilidad": 0.1,
-          "valor": 498.00155074776245,
+          "valor": 509.73025884754486,
           "valorBetaPropuesta": 509.47156301863606,
           "margen": 0.43086895360065086,
           "crecimiento": 0.11004954865604777,
@@ -604,18 +604,18 @@
     "sourcePath": "valoraciones/ADBE-1789572982820.json",
     "mos": 0.35,
     "hojaGoogle": "https://docs.google.com/spreadsheets/d/19WcSOKymo4gR6lnKiLB1gAitYFFwfI3xl08E4BDzLDw/edit",
-    "precioMOSValorEsperado": 207.41792280622877,
+    "precioMOSValorEsperado": 212.05783093608986,
     "baseMOS": "valorEsperado",
     "escenariosDCF": {
       "version": 1,
       "fuente": "valorEsperado.historias",
       "principal": "valorEsperado.valorCentral",
       "central": "A",
-      "fecha": "2026-10-04T23:14:34.382158+00:00",
+      "fecha": "2026-10-05T12:45:22.386403+00:00",
       "baseAnterior": {
-        "conservador": 240.5674402,
-        "base": 401.226222,
-        "optimista": 498.0015507
+        "conservador": 245.6776912,
+        "base": 410.4798074,
+        "optimista": 509.7302588
       },
       "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
     }
@@ -665,7 +665,7 @@
     "alcance": "Cálculos, coherencia interna, estructura, y fuentes primarias disponibles; las limitaciones de divulgación se conservan."
   },
   "auditoriaEspecifica": {
-    "fecha": "2026-10-04T23:14:36.400997+00:00",
+    "fecha": "2026-10-05T12:45:24.523012+00:00",
     "estado": "auditoría de datos y cálculo verificada; salvedades de método abiertas",
     "documento": "data/ADBE_Auditoria_Valoracion_2026-10-01.md",
     "cambios": 14,
@@ -690,14 +690,14 @@
       }
     },
     "despues": {
-      "dcfTecnico": 401.226222,
-      "valorEsperado": 319.10449662496734,
-      "precioMOS": 207.41792280622877,
+      "dcfTecnico": 410.4798074,
+      "valorEsperado": 326.2428168247536,
+      "precioMOS": 212.05783093608986,
       "historias": {
-        "A": 401.2262219617629,
-        "B": 240.56744015362716,
-        "C": 164.10165807810978,
-        "D": 498.00155074776245
+        "A": 410.47980738729296,
+        "B": 245.6776911947045,
+        "C": 167.27117377956876,
+        "D": 509.73025884754486
       }
     }
   },
@@ -706,36 +706,36 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-04T23:14:34.382158+00:00",
+    "fecha": "2026-10-05T12:45:22.386403+00:00",
     "baseAnterior": {
-      "conservador": 240.5674402,
-      "base": 401.226222,
-      "optimista": 498.0015507
+      "conservador": 245.6776912,
+      "base": 410.4798074,
+      "optimista": 509.7302588
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 319.10449662496734,
+    "valor": 326.2428168247536,
     "valorBetaPropuesta": 326.0854078473015,
-    "betaHoja": 1.3926647880963725,
+    "betaHoja": 1.3060768956422435,
     "betaPropuesta": 1.307960968982399,
-    "dcfBase": 401.2262219617629,
+    "dcfBase": 410.47980738729296,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 401.2262219617629,
+    "valorCentral": 410.47980738729296,
     "rango": {
-      "min": 164.10165807810978,
-      "max": 498.00155074776245
+      "min": 167.27117377956876,
+      "max": 509.73025884754486
     },
-    "dcfBaseTecnicoAnterior": 401.2262219617629,
-    "updatedAt": "2026-10-04T23:14:34.379106+00:00",
+    "dcfBaseTecnicoAnterior": 410.47980738729296,
+    "updatedAt": "2026-10-05T12:45:22.383098+00:00",
     "historias": [
       {
         "nombre": "Base · La IA se cobra dentro de la suscripción",
         "probabilidad": 0.4,
-        "valor": 401.2262219617629,
+        "valor": 410.47980738729296,
         "valorBetaPropuesta": 410.27572255811316,
         "margen": 0.4008689536006509,
         "crecimiento": 0.08106378236260814,
@@ -772,7 +772,7 @@
       {
         "nombre": "Conservadora · Erosión gradual frente a Figma y Canva",
         "probabilidad": 0.35,
-        "valor": 240.56744015362716,
+        "valor": 245.6776911947045,
         "valorBetaPropuesta": 245.5650350793938,
         "margen": 0.37086895360065086,
         "crecimiento": 0.05375678434130471,
@@ -809,7 +809,7 @@
       {
         "nombre": "Disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.15,
-        "valor": 164.10165807810978,
+        "valor": 167.27117377956876,
         "valorBetaPropuesta": 167.20133496269847,
         "margen": 0.3208689536006509,
         "crecimiento": 0.009449355756888433,
@@ -855,7 +855,7 @@
       {
         "nombre": "Optimista · La IA amplía el mercado de Adobe",
         "probabilidad": 0.1,
-        "valor": 498.00155074776245,
+        "valor": 509.73025884754486,
         "valorBetaPropuesta": 509.47156301863606,
         "margen": 0.43086895360065086,
         "crecimiento": 0.11004954865604777,
