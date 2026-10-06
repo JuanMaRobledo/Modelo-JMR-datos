@@ -748,8 +748,8 @@
     }
   },
   "analisisFundamental": null,
-  "precioReferenciaFuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
-  "precioReferenciaConsultadoAt": "2026-09-30T19:10:22+00:00",
+  "precioReferenciaFuente": "Precio guardado en la actualización del 6-oct-2026; fecha de cotización no registrada",
+  "precioReferenciaConsultadoAt": null,
   "auditoria": {
     "fecha": "2026-09-28",
     "nota": "FY2026 concilia con 10-K. FY2027 B27/B28 anclados al punto medio de guía: ingresos US$23.395,5M, EBIT GAAP US$7.449M, crecimiento 9,08%, margen 31,84%. Sólo cambiaron esos dos inputs; 0 fórmulas cambiadas en DCF, Resumen y Financials Multiples. DCF presente base US$351,81; conservador US$267,17 frente a US$269,40. Sensibilidad WACC +1 pp/g terminal 4% con FCFF fijo: base US$267,88; sin margen robusto. Cálculo híbrido FY+3 de US$477,51 exploratorio, no valor intrínseco ni objetivo validado. El 60/40 es elección del analista, no regla de Damodaran. Ver hoja de auditoría https://docs.google.com/spreadsheets/d/14sbZoheKmtK5UpMOlRNzvqD1F9sCJEpHW01g4f-X8mM/edit Distinción: DCF presente base US$351,81; fila DCF resumen FY+3 US$472,64 = capitalización aproximada por Ke, sin reestimar la estructura futura. Ponderado FY+3 US$477,51 no equivale al valor intrínseco de hoy. El error #N/A causado por cambiar el rótulo de DCF se reparó restaurando el nombre usado por VLOOKUP; las fórmulas siguen intactas.",
@@ -855,5 +855,9 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 296.02961817249377
+  "precioMOSValorEsperado": 296.02961817249377,
+  "precioReferenciaAnterior": {
+    "fuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
+    "consultadoAt": "2026-09-30T19:10:22+00:00"
+  }
 }

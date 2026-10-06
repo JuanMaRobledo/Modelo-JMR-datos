@@ -12,7 +12,7 @@
     "compras": "Compras: 2026-08-12",
     "precioHoyHoja": 32.57,
     "dcfBase": 34.90118445,
-    "dcfEsperado": null,
+    "dcfEsperado": 32.21976965244784,
     "ponderadoBase": 33.58421221,
     "fuente": "app Cartera, posiciones al 2026-10-06"
   },
@@ -582,16 +582,16 @@
         "central": false,
         "crecimientoPorGrupo": {
           "Mayoristas": [
-            0.0,
+            0,
             -0.08,
             -0.05,
-            0.0,
+            0,
             0.02
           ],
           "Directo al consumidor": [
             0.1,
-            0.0,
-            0.0,
+            0,
+            0,
             0.02,
             0.03
           ]
@@ -720,8 +720,8 @@
     }
   },
   "analisisFundamental": null,
-  "precioReferenciaFuente": "Cierre del 1-oct-2026 (NYSE), fijado en la hoja (Input sheet D1)",
-  "precioReferenciaConsultadoAt": "2026-10-02T16:00:00+00:00",
+  "precioReferenciaFuente": "Precio guardado en la actualización del 6-oct-2026; fecha de cotización no registrada",
+  "precioReferenciaConsultadoAt": null,
   "auditoria": {
     "fecha": "2026-10-02",
     "guardadaOriginal": "2026-09-30T19:10:22+00:00",
@@ -769,5 +769,9 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 20.942850274091096
+  "precioMOSValorEsperado": 20.942850274091096,
+  "precioReferenciaAnterior": {
+    "fuente": "Cierre del 1-oct-2026 (NYSE), fijado en la hoja (Input sheet D1)",
+    "consultadoAt": "2026-10-02T16:00:00+00:00"
+  }
 }
