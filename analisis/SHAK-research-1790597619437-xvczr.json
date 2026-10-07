@@ -628,7 +628,228 @@
         }
       ]
     },
-    "sourcePath": "valoraciones/SHAK-1790595627129.json"
+    "sourcePath": "valoraciones/SHAK-1790595627129.json",
+    "multiplesHistoricos": {
+      "version": 1,
+      "ticker": "SHAK",
+      "fecha": "2026-10-07",
+      "sheet_id": "1j6U5KtzbnRDyI6mQDgJD4pNq15flN9k8RvdXGfUrG1o",
+      "independiente": true,
+      "afecta_dcf": false,
+      "afecta_ponderado": false,
+      "precio_actual": 64.45,
+      "precio_analisis": 58.68,
+      "ke": 0.08993076303760114,
+      "regla": {
+        "historia": "Solo cierres fiscales positivos y válidos; LTM se excluye de las estadísticas históricas. Se respetan las exclusiones/outliers documentados.",
+        "estadisticas": "Mínimo válido, P25, mediana 5A, promedio 5A y mediana histórica depurada.",
+        "valoracion": "Cada ancla histórica se aplica a la métrica Base proyectada a FY+3 y se trae a valor presente con Ke. No entra al DCF ni al ponderado principal."
+      },
+      "pesos_relativos": {
+        "EV/EBITDA": 0.5,
+        "P/E": 0.25,
+        "P/OCF": 0.25
+      },
+      "metodos": [
+        {
+          "nombre": "EV/EBITDA",
+          "aplica": true,
+          "peso_original": 0.2,
+          "actual": 19.290639810426537,
+          "estadisticas": {
+            "n": 6,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2021",
+              "Dec 2022",
+              "Dec 2023",
+              "Dec 2024",
+              "Dec 2025"
+            ],
+            "min": 22.8,
+            "p25": 34.24,
+            "mediana_5a": 44.2,
+            "promedio_5a": 46.91,
+            "mediana_10a": 41.395,
+            "max": 69.66
+          },
+          "descuento_vs_mediana": -0.5339862348006634,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 22.8,
+              "fy3": 174.3361708566951,
+              "vp": 134.64516752618096
+            },
+            "p25": {
+              "multiplo": 34.24,
+              "fy3": 268.952196148744,
+              "vp": 207.72002349844664
+            },
+            "mediana_5a": {
+              "multiplo": 44.2,
+              "fy3": 351.3276867002132,
+              "vp": 271.3411393624122
+            },
+            "promedio_5a": {
+              "multiplo": 46.91,
+              "fy3": 373.7410982860044,
+              "vp": 288.6517040201779
+            },
+            "mediana_10a": {
+              "multiplo": 41.395,
+              "fy3": 328.1285651141819,
+              "vp": 253.42374679228936
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              675.15,
+              "> 2,5x la mediana"
+            ]
+          ]
+        },
+        {
+          "nombre": "P/E",
+          "aplica": true,
+          "peso_original": 0.1,
+          "actual": 67.85919395465994,
+          "estadisticas": {
+            "n": 3,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2023",
+              "Dec 2025"
+            ],
+            "min": 74.47,
+            "p25": 86.375,
+            "mediana_5a": 98.28,
+            "promedio_5a": 110.32,
+            "mediana_10a": 98.28,
+            "max": 158.21
+          },
+          "descuento_vs_mediana": -0.30953201104334616,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 74.47,
+              "fy3": 243.90343783416347,
+              "vp": 188.37409979818435
+            },
+            "p25": {
+              "multiplo": 86.375,
+              "fy3": 282.8945809443517,
+              "vp": 218.4881545597982
+            },
+            "mediana_5a": {
+              "multiplo": 98.28,
+              "fy3": 321.88572405453993,
+              "vp": 248.60220932141212
+            },
+            "promedio_5a": {
+              "multiplo": 110.32,
+              "fy3": 361.31901788458333,
+              "vp": 279.05775063429166
+            },
+            "mediana_10a": {
+              "multiplo": 98.28,
+              "fy3": 321.88572405453993,
+              "vp": 248.60220932141212
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              -74.44,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '21",
+              -318.68,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '22",
+              -69.75,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '24",
+              550.12,
+              "> 2,5x la mediana"
+            ]
+          ]
+        },
+        {
+          "nombre": "P/OCF",
+          "aplica": true,
+          "peso_original": 0.1,
+          "actual": 14.060594989561585,
+          "estadisticas": {
+            "n": 6,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2021",
+              "Dec 2022",
+              "Dec 2023",
+              "Dec 2024",
+              "Dec 2025"
+            ],
+            "min": 15.26,
+            "p25": 21.5925,
+            "mediana_5a": 25.24,
+            "promedio_5a": 28.656,
+            "mediana_10a": 23.495,
+            "max": 46.94
+          },
+          "descuento_vs_mediana": -0.4015494790567531,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 15.26,
+              "fy3": 102.62094152978327,
+              "vp": 79.25729810441946
+            },
+            "p25": {
+              "multiplo": 21.5925,
+              "fy3": 145.20594233170675,
+              "vp": 112.1469993001099
+            },
+            "mediana_5a": {
+              "multiplo": 25.24,
+              "fy3": 169.73476829696787,
+              "vp": 131.09136331294542
+            },
+            "promedio_5a": {
+              "multiplo": 28.656,
+              "fy3": 192.70679557519458,
+              "vp": 148.83336398953105
+            },
+            "mediana_10a": {
+              "multiplo": 23.495,
+              "fy3": 157.99993586122264,
+              "vp": 122.02819259261696
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              84.18,
+              "> 2,5x la mediana"
+            ]
+          ]
+        }
+      ],
+      "consolidado_vp": {
+        "min": 134.23043323874143,
+        "p25": 186.51880021420035,
+        "mediana_5a": 230.5939628397955,
+        "promedio_5a": 251.29863066604463,
+        "mediana_10a": 219.36947387465196
+      },
+      "nota": "Barato frente a su propia historia no equivale a infravalorado intrínsecamente. Esta capa es una lectura histórica independiente."
+    }
   },
   "news": "",
   "remotePath": "analisis/SHAK-research-1790597619437-xvczr.json",
@@ -1251,7 +1472,228 @@
         }
       ]
     },
-    "sourcePath": "valoraciones/SHAK-1790595627129.json"
+    "sourcePath": "valoraciones/SHAK-1790595627129.json",
+    "multiplesHistoricos": {
+      "version": 1,
+      "ticker": "SHAK",
+      "fecha": "2026-10-07",
+      "sheet_id": "1j6U5KtzbnRDyI6mQDgJD4pNq15flN9k8RvdXGfUrG1o",
+      "independiente": true,
+      "afecta_dcf": false,
+      "afecta_ponderado": false,
+      "precio_actual": 64.45,
+      "precio_analisis": 58.68,
+      "ke": 0.08993076303760114,
+      "regla": {
+        "historia": "Solo cierres fiscales positivos y válidos; LTM se excluye de las estadísticas históricas. Se respetan las exclusiones/outliers documentados.",
+        "estadisticas": "Mínimo válido, P25, mediana 5A, promedio 5A y mediana histórica depurada.",
+        "valoracion": "Cada ancla histórica se aplica a la métrica Base proyectada a FY+3 y se trae a valor presente con Ke. No entra al DCF ni al ponderado principal."
+      },
+      "pesos_relativos": {
+        "EV/EBITDA": 0.5,
+        "P/E": 0.25,
+        "P/OCF": 0.25
+      },
+      "metodos": [
+        {
+          "nombre": "EV/EBITDA",
+          "aplica": true,
+          "peso_original": 0.2,
+          "actual": 19.290639810426537,
+          "estadisticas": {
+            "n": 6,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2021",
+              "Dec 2022",
+              "Dec 2023",
+              "Dec 2024",
+              "Dec 2025"
+            ],
+            "min": 22.8,
+            "p25": 34.24,
+            "mediana_5a": 44.2,
+            "promedio_5a": 46.91,
+            "mediana_10a": 41.395,
+            "max": 69.66
+          },
+          "descuento_vs_mediana": -0.5339862348006634,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 22.8,
+              "fy3": 174.3361708566951,
+              "vp": 134.64516752618096
+            },
+            "p25": {
+              "multiplo": 34.24,
+              "fy3": 268.952196148744,
+              "vp": 207.72002349844664
+            },
+            "mediana_5a": {
+              "multiplo": 44.2,
+              "fy3": 351.3276867002132,
+              "vp": 271.3411393624122
+            },
+            "promedio_5a": {
+              "multiplo": 46.91,
+              "fy3": 373.7410982860044,
+              "vp": 288.6517040201779
+            },
+            "mediana_10a": {
+              "multiplo": 41.395,
+              "fy3": 328.1285651141819,
+              "vp": 253.42374679228936
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              675.15,
+              "> 2,5x la mediana"
+            ]
+          ]
+        },
+        {
+          "nombre": "P/E",
+          "aplica": true,
+          "peso_original": 0.1,
+          "actual": 67.85919395465994,
+          "estadisticas": {
+            "n": 3,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2023",
+              "Dec 2025"
+            ],
+            "min": 74.47,
+            "p25": 86.375,
+            "mediana_5a": 98.28,
+            "promedio_5a": 110.32,
+            "mediana_10a": 98.28,
+            "max": 158.21
+          },
+          "descuento_vs_mediana": -0.30953201104334616,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 74.47,
+              "fy3": 243.90343783416347,
+              "vp": 188.37409979818435
+            },
+            "p25": {
+              "multiplo": 86.375,
+              "fy3": 282.8945809443517,
+              "vp": 218.4881545597982
+            },
+            "mediana_5a": {
+              "multiplo": 98.28,
+              "fy3": 321.88572405453993,
+              "vp": 248.60220932141212
+            },
+            "promedio_5a": {
+              "multiplo": 110.32,
+              "fy3": 361.31901788458333,
+              "vp": 279.05775063429166
+            },
+            "mediana_10a": {
+              "multiplo": 98.28,
+              "fy3": 321.88572405453993,
+              "vp": 248.60220932141212
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              -74.44,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '21",
+              -318.68,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '22",
+              -69.75,
+              "métrica negativa o ~0"
+            ],
+            [
+              "Dec '24",
+              550.12,
+              "> 2,5x la mediana"
+            ]
+          ]
+        },
+        {
+          "nombre": "P/OCF",
+          "aplica": true,
+          "peso_original": 0.1,
+          "actual": 14.060594989561585,
+          "estadisticas": {
+            "n": 6,
+            "periodos_validos": [
+              "Dec 2019",
+              "Dec 2021",
+              "Dec 2022",
+              "Dec 2023",
+              "Dec 2024",
+              "Dec 2025"
+            ],
+            "min": 15.26,
+            "p25": 21.5925,
+            "mediana_5a": 25.24,
+            "promedio_5a": 28.656,
+            "mediana_10a": 23.495,
+            "max": 46.94
+          },
+          "descuento_vs_mediana": -0.4015494790567531,
+          "percentil_actual": 0,
+          "precios": {
+            "min": {
+              "multiplo": 15.26,
+              "fy3": 102.62094152978327,
+              "vp": 79.25729810441946
+            },
+            "p25": {
+              "multiplo": 21.5925,
+              "fy3": 145.20594233170675,
+              "vp": 112.1469993001099
+            },
+            "mediana_5a": {
+              "multiplo": 25.24,
+              "fy3": 169.73476829696787,
+              "vp": 131.09136331294542
+            },
+            "promedio_5a": {
+              "multiplo": 28.656,
+              "fy3": 192.70679557519458,
+              "vp": 148.83336398953105
+            },
+            "mediana_10a": {
+              "multiplo": 23.495,
+              "fy3": 157.99993586122264,
+              "vp": 122.02819259261696
+            }
+          },
+          "excluidos": [
+            [
+              "Dec '20",
+              84.18,
+              "> 2,5x la mediana"
+            ]
+          ]
+        }
+      ],
+      "consolidado_vp": {
+        "min": 134.23043323874143,
+        "p25": 186.51880021420035,
+        "mediana_5a": 230.5939628397955,
+        "promedio_5a": 251.29863066604463,
+        "mediana_10a": 219.36947387465196
+      },
+      "nota": "Barato frente a su propia historia no equivale a infravalorado intrínsecamente. Esta capa es una lectura histórica independiente."
+    }
   },
   "auditoriaPrompts": {
     "hojaNativaSincronizada": true,
@@ -1494,5 +1936,226 @@
       "hojaNueva": "1j6U5KtzbnRDyI6mQDgJD4pNq15flN9k8RvdXGfUrG1o",
       "detalle": "Valoración reconstruida desde copia limpia de la plantilla maestra. No se usó una hoja de otra empresa. Históricos de SHAK se contrastaron con SEC; comparables declarados solo en Sector/múltiplos. DCF y múltiplos reproducidos por la hoja nueva."
     }
+  },
+  "multiplesHistoricos": {
+    "version": 1,
+    "ticker": "SHAK",
+    "fecha": "2026-10-07",
+    "sheet_id": "1j6U5KtzbnRDyI6mQDgJD4pNq15flN9k8RvdXGfUrG1o",
+    "independiente": true,
+    "afecta_dcf": false,
+    "afecta_ponderado": false,
+    "precio_actual": 64.45,
+    "precio_analisis": 58.68,
+    "ke": 0.08993076303760114,
+    "regla": {
+      "historia": "Solo cierres fiscales positivos y válidos; LTM se excluye de las estadísticas históricas. Se respetan las exclusiones/outliers documentados.",
+      "estadisticas": "Mínimo válido, P25, mediana 5A, promedio 5A y mediana histórica depurada.",
+      "valoracion": "Cada ancla histórica se aplica a la métrica Base proyectada a FY+3 y se trae a valor presente con Ke. No entra al DCF ni al ponderado principal."
+    },
+    "pesos_relativos": {
+      "EV/EBITDA": 0.5,
+      "P/E": 0.25,
+      "P/OCF": 0.25
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "aplica": true,
+        "peso_original": 0.2,
+        "actual": 19.290639810426537,
+        "estadisticas": {
+          "n": 6,
+          "periodos_validos": [
+            "Dec 2019",
+            "Dec 2021",
+            "Dec 2022",
+            "Dec 2023",
+            "Dec 2024",
+            "Dec 2025"
+          ],
+          "min": 22.8,
+          "p25": 34.24,
+          "mediana_5a": 44.2,
+          "promedio_5a": 46.91,
+          "mediana_10a": 41.395,
+          "max": 69.66
+        },
+        "descuento_vs_mediana": -0.5339862348006634,
+        "percentil_actual": 0,
+        "precios": {
+          "min": {
+            "multiplo": 22.8,
+            "fy3": 174.3361708566951,
+            "vp": 134.64516752618096
+          },
+          "p25": {
+            "multiplo": 34.24,
+            "fy3": 268.952196148744,
+            "vp": 207.72002349844664
+          },
+          "mediana_5a": {
+            "multiplo": 44.2,
+            "fy3": 351.3276867002132,
+            "vp": 271.3411393624122
+          },
+          "promedio_5a": {
+            "multiplo": 46.91,
+            "fy3": 373.7410982860044,
+            "vp": 288.6517040201779
+          },
+          "mediana_10a": {
+            "multiplo": 41.395,
+            "fy3": 328.1285651141819,
+            "vp": 253.42374679228936
+          }
+        },
+        "excluidos": [
+          [
+            "Dec '20",
+            675.15,
+            "> 2,5x la mediana"
+          ]
+        ]
+      },
+      {
+        "nombre": "P/E",
+        "aplica": true,
+        "peso_original": 0.1,
+        "actual": 67.85919395465994,
+        "estadisticas": {
+          "n": 3,
+          "periodos_validos": [
+            "Dec 2019",
+            "Dec 2023",
+            "Dec 2025"
+          ],
+          "min": 74.47,
+          "p25": 86.375,
+          "mediana_5a": 98.28,
+          "promedio_5a": 110.32,
+          "mediana_10a": 98.28,
+          "max": 158.21
+        },
+        "descuento_vs_mediana": -0.30953201104334616,
+        "percentil_actual": 0,
+        "precios": {
+          "min": {
+            "multiplo": 74.47,
+            "fy3": 243.90343783416347,
+            "vp": 188.37409979818435
+          },
+          "p25": {
+            "multiplo": 86.375,
+            "fy3": 282.8945809443517,
+            "vp": 218.4881545597982
+          },
+          "mediana_5a": {
+            "multiplo": 98.28,
+            "fy3": 321.88572405453993,
+            "vp": 248.60220932141212
+          },
+          "promedio_5a": {
+            "multiplo": 110.32,
+            "fy3": 361.31901788458333,
+            "vp": 279.05775063429166
+          },
+          "mediana_10a": {
+            "multiplo": 98.28,
+            "fy3": 321.88572405453993,
+            "vp": 248.60220932141212
+          }
+        },
+        "excluidos": [
+          [
+            "Dec '20",
+            -74.44,
+            "métrica negativa o ~0"
+          ],
+          [
+            "Dec '21",
+            -318.68,
+            "métrica negativa o ~0"
+          ],
+          [
+            "Dec '22",
+            -69.75,
+            "métrica negativa o ~0"
+          ],
+          [
+            "Dec '24",
+            550.12,
+            "> 2,5x la mediana"
+          ]
+        ]
+      },
+      {
+        "nombre": "P/OCF",
+        "aplica": true,
+        "peso_original": 0.1,
+        "actual": 14.060594989561585,
+        "estadisticas": {
+          "n": 6,
+          "periodos_validos": [
+            "Dec 2019",
+            "Dec 2021",
+            "Dec 2022",
+            "Dec 2023",
+            "Dec 2024",
+            "Dec 2025"
+          ],
+          "min": 15.26,
+          "p25": 21.5925,
+          "mediana_5a": 25.24,
+          "promedio_5a": 28.656,
+          "mediana_10a": 23.495,
+          "max": 46.94
+        },
+        "descuento_vs_mediana": -0.4015494790567531,
+        "percentil_actual": 0,
+        "precios": {
+          "min": {
+            "multiplo": 15.26,
+            "fy3": 102.62094152978327,
+            "vp": 79.25729810441946
+          },
+          "p25": {
+            "multiplo": 21.5925,
+            "fy3": 145.20594233170675,
+            "vp": 112.1469993001099
+          },
+          "mediana_5a": {
+            "multiplo": 25.24,
+            "fy3": 169.73476829696787,
+            "vp": 131.09136331294542
+          },
+          "promedio_5a": {
+            "multiplo": 28.656,
+            "fy3": 192.70679557519458,
+            "vp": 148.83336398953105
+          },
+          "mediana_10a": {
+            "multiplo": 23.495,
+            "fy3": 157.99993586122264,
+            "vp": 122.02819259261696
+          }
+        },
+        "excluidos": [
+          [
+            "Dec '20",
+            84.18,
+            "> 2,5x la mediana"
+          ]
+        ]
+      }
+    ],
+    "consolidado_vp": {
+      "min": 134.23043323874143,
+      "p25": 186.51880021420035,
+      "mediana_5a": 230.5939628397955,
+      "promedio_5a": 251.29863066604463,
+      "mediana_10a": 219.36947387465196
+    },
+    "nota": "Barato frente a su propia historia no equivale a infravalorado intrínsecamente. Esta capa es una lectura histórica independiente."
   }
 }
