@@ -812,6 +812,63 @@
       "afectaDCF": false,
       "afectaPonderado": false,
       "detalle": "Lectura independiente con cierres fiscales depurados; LTM/currente no entra a la estadística histórica."
+    },
+    "reinversion20261007": {
+      "fecha": "2026-10-07",
+      "conclusion": "Mantener Sales/Capital Base 1,90x / 1,70x; no cambiar DCF.",
+      "afectaDCF": false,
+      "dcfBase": 24.678204563820863,
+      "sensibilidad": [
+        {
+          "salesCapital15": 1.36,
+          "salesCapital610": 1.36,
+          "dcf": 18.601484995024634
+        },
+        {
+          "salesCapital15": 1.51,
+          "salesCapital610": 1.51,
+          "dcf": 20.998126638236705
+        },
+        {
+          "salesCapital15": 1.7,
+          "salesCapital610": 1.6,
+          "dcf": 22.96348075592453
+        },
+        {
+          "salesCapital15": 1.9,
+          "salesCapital610": 1.7,
+          "dcf": 24.678204563820863
+        },
+        {
+          "salesCapital15": 2,
+          "salesCapital610": 1.8,
+          "dcf": 25.621855345569685
+        },
+        {
+          "salesCapital15": 2.1,
+          "salesCapital610": 1.9,
+          "dcf": 26.471506590900802
+        },
+        {
+          "salesCapital15": 2.3,
+          "salesCapital610": 2,
+          "dcf": 27.640002638345685
+        }
+      ],
+      "evidencia": {
+        "netBuildCost2023": 2.6,
+        "netBuildCost2024": 2.4,
+        "netBuildCost2025": 1.9,
+        "cashOnCashTarget": "30–33%+ en año 3",
+        "salesCapitalObservado": 1.36,
+        "salesCapitalIndustria": 1.51,
+        "capex2025": 165.849,
+        "capex1H2026": 104.901,
+        "openings1H2026": 33,
+        "restaurantMargin1H2026": 0.222,
+        "restaurantMargin2Q2026": 0.23
+      },
+      "detalle": "El FCF reportado está deprimido por growth capex, pero el DCF JMR no resta todo el capex reportado: modela reinversión como Δ ingresos / Sales-to-Capital. El Base ya asume eficiencia superior a la observada y a Restaurant/Dining."
     }
   },
   "escenariosDCF": {
@@ -1052,5 +1109,62 @@
       "mediana_10a": 219.36947387465196
     },
     "nota": "Barato frente a su propia historia no equivale a infravalorado intrínsecamente. Esta capa es una lectura histórica independiente."
+  },
+  "reinversion": {
+    "fecha": "2026-10-07",
+    "conclusion": "Mantener Sales/Capital Base 1,90x / 1,70x; no cambiar DCF.",
+    "afectaDCF": false,
+    "dcfBase": 24.678204563820863,
+    "sensibilidad": [
+      {
+        "salesCapital15": 1.36,
+        "salesCapital610": 1.36,
+        "dcf": 18.601484995024634
+      },
+      {
+        "salesCapital15": 1.51,
+        "salesCapital610": 1.51,
+        "dcf": 20.998126638236705
+      },
+      {
+        "salesCapital15": 1.7,
+        "salesCapital610": 1.6,
+        "dcf": 22.96348075592453
+      },
+      {
+        "salesCapital15": 1.9,
+        "salesCapital610": 1.7,
+        "dcf": 24.678204563820863
+      },
+      {
+        "salesCapital15": 2,
+        "salesCapital610": 1.8,
+        "dcf": 25.621855345569685
+      },
+      {
+        "salesCapital15": 2.1,
+        "salesCapital610": 1.9,
+        "dcf": 26.471506590900802
+      },
+      {
+        "salesCapital15": 2.3,
+        "salesCapital610": 2,
+        "dcf": 27.640002638345685
+      }
+    ],
+    "evidencia": {
+      "netBuildCost2023": 2.6,
+      "netBuildCost2024": 2.4,
+      "netBuildCost2025": 1.9,
+      "cashOnCashTarget": "30–33%+ en año 3",
+      "salesCapitalObservado": 1.36,
+      "salesCapitalIndustria": 1.51,
+      "capex2025": 165.849,
+      "capex1H2026": 104.901,
+      "openings1H2026": 33,
+      "restaurantMargin1H2026": 0.222,
+      "restaurantMargin2Q2026": 0.23
+    },
+    "detalle": "El FCF reportado está deprimido por growth capex, pero el DCF JMR no resta todo el capex reportado: modela reinversión como Δ ingresos / Sales-to-Capital. El Base ya asume eficiencia superior a la observada y a Restaurant/Dining."
   }
 }
