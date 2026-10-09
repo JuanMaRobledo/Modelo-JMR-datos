@@ -871,8 +871,8 @@
   "publication": {
     "authorized": true,
     "publishedAt": "2026-10-09T17:12:35.891726Z",
-    "revisedAt": "2026-10-09T17:12:35.891726Z",
-    "revisionNote": "Reverificación y revisión Damodaran: Ke, puente de capital completo, anclas de múltiplos y convergencia terminal; publicación del perímetro reportado autorizada expresamente."
+    "revisedAt": "2026-10-09T23:51:02.144Z",
+    "revisionNote": "Compatibilidad del tablero: exponer P/B, P/E, ponderados y conclusión sin alterar cálculos existentes."
   },
   "valuationSummary": {
     "currency": "COP",
@@ -1514,7 +1514,7 @@
         ]
       }
     ],
-    "multiplesStatus": "FIVE_FY_HISTORY_ONE_PEER_FUNDAMENTAL_ANCHORS__DISRUPTION_EXCLUDED",
+    "multiplesStatus": "Ponderado Base: P/B 65% + P/E 35%; evidencia limitada a cinco ejercicios y un comparable",
     "multiplesWeights": {
       "pb": 0.65,
       "pe": 0.35
@@ -1619,7 +1619,34 @@
       "value": null,
       "source": "https://cdn.aglty.io/scotiabank-colombia/davibank/Info_Relevante_0610_DAVIbank.pdf"
     },
-    "certification": "REPORTED_PERIMETER_MODEL_REVIEW_COMPLETED__NOT_ACCOUNTING_AUDIT"
+    "certification": "REPORTED_PERIMETER_MODEL_REVIEW_COMPLETED__NOT_ACCOUNTING_AUDIT",
+    "multiplesMethods": [
+      {
+        "name": "P/B",
+        "today": 27062.350806661925,
+        "year3": 33546.541512501244,
+        "year3PV": 24409.874571337896,
+        "weight": 0.65,
+        "status": "Cinco ejercicios homologados y un comparable; ver limitaciones"
+      },
+      {
+        "name": "P/E",
+        "today": 26099.331794749174,
+        "year3": 34518.58994360796,
+        "year3PV": 25006.56309899416,
+        "weight": 0.35,
+        "status": "Beneficio H1 2026 anualizado; no equivale a UDM"
+      }
+    ],
+    "multiplesWeightedToday": 26725.29415249246,
+    "multiplesWeightedYear3": 33886.7584633886,
+    "multiplesWeightedYear3PV": 24618.71555601759,
+    "combinedWeightedToday": 19254.687504334594,
+    "combinedWeightedYear3": 24462.018292698078,
+    "combinedWeightedYear3PV": 18833.371785039617,
+    "combinedStatus": "Base: FCFE 80% + múltiplos 20%; valores de año 3 excluyen dividendos; VP de paquetes incluye las distribuciones del modelo",
+    "conclusion": "En el perímetro reportado, el Base FCFE de COP 17.387 y el ponderado de múltiplos de COP 26.725 están por debajo del precio del análisis de COP 30.800 (8-oct). El combinado presente es COP 19.255. El modelo no identifica margen de seguridad a ese precio; no constituye una valoración del perímetro posterior a la cesión DAVIbank.",
+    "horizonNote": "Hoy usa anclas actuales; año 3 representa precio sin dividendos. El valor presente del paquete a tres años incluye distribuciones intermedias según la hoja, por lo que no es únicamente precio dividido por el factor de descuento."
   },
   "spreadsheet": "https://docs.google.com/spreadsheets/d/16smCZh7JIB3om_UabhiFymPElK6zyq_6Z8iY-P4Kgrs/edit",
   "updatedAt": "2026-10-09T17:12:35.891726Z"
