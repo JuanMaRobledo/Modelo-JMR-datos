@@ -57,7 +57,8 @@
       "Las 12 ramas de RE/DDM reproducen resultados, pero requieren capital regulatorio y efectivo distribuible.",
       "El valor 43.249 corresponde al Base; 39.390 al esperado probabilístico. Los múltiplos completos permanecen pendientes.",
       "Plantilla maestra limpia: https://docs.google.com/spreadsheets/d/1E_Nkgpz7tYruMXqkp_zNPpEcRFLQMouo-KVsEC1cSWY/edit",
-      "Informe textual actualizado en cifras principales desde modelo reproducido; la narrativa histórica y los supuestos heredados requieren auditoría económica adicional."
+      "Informe textual actualizado en cifras principales desde modelo reproducido; la narrativa histórica y los supuestos heredados requieren auditoría económica adicional.",
+      "El tablero muestra cada múltiplo solicitado individualmente, incluido el método 'no aplica' para bancos y sociedades financieras; solo P/E sectorial permite precio numérico condicionado. EV/EBITDA y EV/FCFF no deben aplicarse al banco industrialmente."
     ]
   },
   "assumptions": {
@@ -114,32 +115,72 @@
     "combinedWeightedToday": 62495.94749579512,
     "combinedWeightedYear3": 97080.15223228661,
     "combinedWeightedYear3PV": 63036.61183556965,
-    "multiplesStatus": "Una sola ancla P/E sectorial; referencia NO certificada",
-    "combinedStatus": "Simulación 60% SOTP / 40% P/E; no valor intrínseco",
+    "multiplesStatus": "Solo P/E sectorial reconstruido; ponderado relativo de una ancla y no validación completa",
+    "combinedStatus": "Combinado 60% SOTP + 40% P/E ilustrativo; NO sustituye valor intrínseco 43.249",
     "multiplesMethods": [
       {
-        "name": "P/E sectorial",
+        "name": "P/E sectorial por partes",
         "today": 91366.82292388343,
         "year3": 129529.48479463893,
         "year3PV": 82536.90311142294,
         "weight": 1,
-        "status": "Comparables agregados; individuales pendientes"
+        "status": "Medianas sectoriales históricas 28jul2026; muestra individual/operaciones extraordinarias por corroborar"
       },
       {
-        "name": "P/E histórico comparable",
+        "name": "P/E histórico normalizado",
         "today": null,
         "year3": null,
         "year3PV": null,
         "weight": null,
-        "status": "Escisión impide histórico homogéneo"
+        "status": "No homogéneo tras escisión 2025 y reorganización Grupo Cibest"
       },
       {
-        "name": "P/B comparable",
+        "name": "P/B comparables financieros",
         "today": null,
         "year3": null,
         "year3PV": null,
         "weight": null,
-        "status": "Pendiente de verificar"
+        "status": "Requiere ROE, solvencia, business mix y costo equity por participada"
+      },
+      {
+        "name": "P/B fundamental (por RE)",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "Deriva de supuestos SOTP; NO es una ancla independiente ni se pondera dos veces"
+      },
+      {
+        "name": "P/FCFE o dividendos distribuibles",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No validable hasta obtener CET1/RWA y dividendos legalmente distribuibles"
+      },
+      {
+        "name": "EV/EBITDA industrial",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "NO APLICA a banca, aseguradora y gestora como conglomerado financiero"
+      },
+      {
+        "name": "EV/FCFF industrial",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "NO APLICA como metodología principal de banco/holding financiero"
+      },
+      {
+        "name": "P/OCF sin normalizar",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "NO APLICA al flujo bruto de intermediación financiera"
       }
     ]
   },
@@ -177,7 +218,7 @@
     "authorized": true,
     "publishedAt": "2026-10-09T20:28:03.691Z",
     "scope": "condicional-no-certificado",
-    "revisedAt": "2026-10-09T21:04:34.211Z",
+    "revisedAt": "2026-10-09T23:20:38.775Z",
     "workbookUrl": "https://docs.google.com/spreadsheets/d/1E_Nkgpz7tYruMXqkp_zNPpEcRFLQMouo-KVsEC1cSWY/edit"
   }
 }
