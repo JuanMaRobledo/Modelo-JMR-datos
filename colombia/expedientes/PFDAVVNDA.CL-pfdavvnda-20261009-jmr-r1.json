@@ -107,19 +107,64 @@
       "residualIncomeMatchesDDM": true,
       "terminalCostGreaterThanGrowth": true,
       "nonNegativeTheoreticalDividends": true,
-      "regulatoryCet1TargetsMet": true
+      "regulatoryCet1TargetsMet": true,
+      "primaryReportedCET1AndRWAReconciled": true,
+      "preferredSecurityClassCorrect": true,
+      "controllerEquityHistoricalPBRecalculated": true,
+      "terminalRegulatoryBridgeComplete": false,
+      "capitalConversionEmpiricallyVerified": false,
+      "localBetaEmpiricallyVerified": false,
+      "competingQuoteFeedsReconciled": false
     },
     "warnings": [
-      "Ke anclado TES nominal COP10 12,957%, pero beta proxy y prima incremental local son hipótesis sin regresión validada.",
-      "RWA 145.083 y CET1 17.605 (COP miles de millones) a 2T26 reportados; conversión 85% retención contable→CET1 HIPÓTESIS sin conciliación completa de ajustes prudenciales.",
-      "Dividendos teóricos de DDM representan capacidad analítica, NO dividendos aprobados; Asamblea asignó beneficios FY2025 a reservas.",
-      "Preferenciales PFDAVVNDA: prospecto bancario 2024 mínimo 161,30 COP/año no acumulable si existen utilidades distribuibles, no sumarlo de nuevo como pago adicional.",
-      "Múltiplos externos 5 FY Davivienda y Banco Bogotá, ponderaciones de juicio 65/35 y 80/20; base contable P/B proveedor ~0,76x frente a cálculo atribuible ~0,89x no homologada; 10 FY pendientes.",
-      "Autorización parcial cesión Davibank 06-oct-2026 sin datos suficientes para proyectar impacto, precios Grupo Aval 30.800 e Investing 31.900 no conciliados.",
-      "Valor intrínseco Base principal; múltiplos independientes y combinado son secundarios."
+      "NO CERTIFICADA la valoración económica: beta, prima de equity, iliquidez, 85% CET1, ROE, RWA futuro y probabilidades son hipótesis no auditables como hechos.",
+      "Terminal no estacionaria: libro año10 crece 4,483% Base mientras g perpetuo 4,00%; no se certifica el cumplimiento regulatorio en perpetuidad.",
+      "FY2025 auditado por KPMG; 2T2026 sujeto a revisión limitada, no auditoría anual.",
+      "Ratios P/B FY2021–25 corregidos usando capitalización S&P/StockAnalysis secundaria entre equity del CONTROLADOR auditado; vendor 2025 0,64x no es comparable, corregido 0,7442x.",
+      "Múltiplos PER banco y peer Banco Bogotá no homologados a EPS atribuible de todos los años; series 10 FY faltantes.",
+      "Precio Grupo Aval COP30.800 e Investing.com COP31.900 el 8 de octubre 2026: marcar fuente específica, conflicto abierto.",
+      "Prospecto Banco Davivienda 2024: PF mínimo 161,30 COP, condicionado y no acumulable; flujo DDM no declarado.",
+      "Davibank cesión parcial autorizada octubre 6 2026 sin proforma posterior verificable."
     ],
     "revisionDate": "2026-10-09",
-    "revisionStatus": "PRELIMINAR-REVISADA"
+    "revisionStatus": "AUDITORIA_DOCUMENTAL_CON_RESERVAS",
+    "certificationStatus": "NO_CERTIFICADA_ECONOMICAMENTE",
+    "primaryFinancialStatementsStatus": "2025_AUDITADO_Y_2T2026_REVISION_LIMITADA",
+    "verificationSheet": "https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit#gid=1951000108",
+    "verifiedHistoricalFacts": {
+      "equityControllingCOPMillions": 16879747,
+      "totalEquityIncludingNCICOPMillions": 19356668,
+      "netIncomeFY2025COPMillions": 1522055,
+      "h1NetIncome2025COPMillions": 715135,
+      "h1NetIncome2026COPMillions": 928707,
+      "ltmNetIncomeCOPMillions": 1735627,
+      "ordinaryShares": 371069401,
+      "preferredShares": 116601012,
+      "CET1COPMillions": 17605250,
+      "RWACOPMillions": 145082745,
+      "AT1COPMillions": 1731178,
+      "Tier2COPMillions": 3996219,
+      "preferredMinDividendCOP": 161.3,
+      "groupAvalPriceCOP": 30800,
+      "investingPriceCOP": 31900,
+      "priceDate": "2026-10-08",
+      "historicalControllerPB5FY": [
+        1.01764832581481,
+        0.773665482284959,
+        0.5947476936896339,
+        0.53728980442156,
+        0.7442044460386634
+      ]
+    },
+    "sources": [
+      "https://ir.davivienda.com/wp-content/uploads/2026/08/Banco-Davivienda-EEFF-Consolidados-2T26-2.pdf",
+      "https://ir.davivienda.com/wp-content/uploads/2026/03/Estados_Financieros_Consolidados_2025_-Banco-Davivienda_-Final.pdf",
+      "https://ir.davivienda.com/acciones/",
+      "https://ir.davivienda.com/wp-content/uploads/2024/02/PEC-Acciones-2024-y-Acciones-Preferenciales-2010-Banco-Davivienda-SA.pdf",
+      "https://www.grupoaval.com/wps/portal/grupo-aval/aval/portal-financiero/renta-variable/acciones-bolsa-colombia/datos-historicos",
+      "https://stockanalysis.com/quote/bvc/PFDAVVNDA/financials/ratios/"
+    ],
+    "certified": false
   },
   "assumptions": {
     "valuationCurrency": "COP",
@@ -140,8 +185,8 @@
     {
       "name": "Base",
       "probability": 0.5,
-      "value": 20759.064883416042,
-      "valueThreeYearsExDividend": 28835.092079077804,
+      "value": 20759.226171189726,
+      "valueThreeYearsExDividend": 28834.579702879033,
       "inputs": {
         "costOfEquity": 0.17957,
         "roeYear5": 0.145,
@@ -156,8 +201,8 @@
     {
       "name": "Conservadora",
       "probability": 0.25,
-      "value": 12886.6468929252,
-      "valueThreeYearsExDividend": 18177.135765041654,
+      "value": 12886.916801664944,
+      "valueThreeYearsExDividend": 18176.77181465857,
       "inputs": {
         "costOfEquity": 0.20007,
         "roeYear5": 0.115,
@@ -172,8 +217,8 @@
     {
       "name": "Optimista",
       "probability": 0.15,
-      "value": 30476.989450230172,
-      "valueThreeYearsExDividend": 43683.437797303945,
+      "value": 30477.01064477689,
+      "valueThreeYearsExDividend": 43682.75903134174,
       "inputs": {
         "costOfEquity": 0.16582,
         "roeYear5": 0.17,
@@ -188,8 +233,8 @@
     {
       "name": "Disrupción",
       "probability": 0.1,
-      "value": 11448.44124318477,
-      "valueThreeYearsExDividend": 12755.103003268001,
+      "value": 11448.778969955785,
+      "valueThreeYearsExDividend": 12754.844779536968,
       "inputs": {
         "costOfEquity": 0.21756999999999999,
         "roeYear5": 0.09,
@@ -205,13 +250,13 @@
   "reports": {
     "research": {
       "name": "PFDAVVNDA-Research-Fundamental-2026-10-09.md",
-      "content": "---\nmarket: CO\nticker: PFDAVVNDA.CL\nanalysis_date: 2026-10-09\nrun_id: pfdavvnda-20261009-jmr-r1\nmodel: financial\nvaluation_status: preliminar_revisada\nupdated_at: 2026-10-09T14:27:58.994Z\n---\n# Análisis fundamental revisado · Banco Davivienda S.A. — PFDAVVNDA\n\n**Corte:** 9 de octubre de 2026. **Precio referencia:** COP 30.800 (cierre 8-oct-2026). **Balance:** 30-jun-2026. **Valor intrínseco principal DCF Base:** COP 20.759. **DCF esperado complementario:** COP 19.318.\n\n[Hoja de valoración independiente y auditorías](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit)\n\n## Tabla de contenido\n\n- [1. Identidad, tesis y perímetro](#parte-1)\n- [2. Producto y motor económico](#parte-2)\n- [3. Geografía, segmentos y exposición](#parte-3)\n- [4. Rentabilidad operativa e indicadores](#parte-4)\n- [5. Ventaja competitiva y competencia](#parte-5)\n- [6. Las 5 fuerzas de Porter](#parte-6)\n- [7. Dirección, gobierno y asignación de capital](#parte-7)\n- [8. Calidad de beneficios y reconciliación](#parte-8)\n- [9. Balance, solvencia y riesgos](#parte-9)\n- [10. Historias operativas cuantificables](#parte-10)\n- [11. Catalizadores, riesgos y asimetría](#parte-11)\n- [12. Valor con criterio Damodaran](#parte-12)\n- [13. Calidad del foso y permanencia](#parte-13)\n- [14. Cinco marcos de inversión independientes](#parte-14)\n- [15. Qué vigilar y umbrales](#parte-15)\n- [16. Preguntas abiertas e incertidumbre](#parte-16)\n- [17. Fuentes y fechas](#parte-17)\n- [18. Síntesis final y control de calidad](#parte-18)\n\n<a id=\"parte-1\"></a>\n\n## 1. Identidad, tesis y perímetro\n\nEmisor: Banco Davivienda S.A., preferencial PFDAVVNDA (BVC). Emisor distinto de Davivienda Group S.A. / PFDAVIGRP, que también tiene acción preferencial listada. El canje 1:1 realizado a partir de la reorganización de 2025 no equivale a fusionar sus patrimonios. Unidad DCF: banco consolidado, patrimonio ATRIBUIBLE controlador COP 16.879.747 millones a 30-jun-2026 y 487.670.413 acciones del Banco. Desde el 6-oct-2026 SFC autorizó cesión parcial de Davibank, aún sin balance consolidado posterior verificable. Prospecto bancario 2024 precisa dividendo mínimo PFDAVVNDA COP 161,30 anual no acumulable, prioritario solo si utilidades distribuibles no alcanzan para pagar ambas clases igual; en reparto suficientemente alto todas participan a prorrata. Reembolso preferente en liquidación y no voto con excepciones. No adjudicar plusvalía de control al PF sin evidencia.\n\nFuente: https://ir.davivienda.com/acciones/\n\n<a id=\"parte-2\"></a>\n\n## 2. Producto y motor económico\n\nEl banco transforma depósitos y fondeo institucional en préstamos, inversión de tesorería, comisiones y servicios. Sus ganancias responden al diferencial de rendimiento de activos versus costo del pasivo, comisiones, eficiencia, provisiones de cartera e impuestos. Los depósitos representan parte esencial de la operación y no deben tratarse como deuda financiera de una empresa industrial en un EV = EBITDA. El capital contable y, sobre todo, el capital regulatorio limitan las distribuciones posibles. Para la acción corresponde descontar equity / FCFE regulado.\n\nFuente: https://ir.davivienda.com/estados-financieros/\n\n<a id=\"parte-3\"></a>\n\n## 3. Geografía, segmentos y exposición\n\nEl banco consolida negocios en Colombia y operaciones internacionales, por lo que hay exposición cambiaria, de riesgo soberano y de crédito fuera de Colombia. El cuadro consolidado 2T26 agrupa activos, patrimonio controlador y participaciones no controladoras. Para valorar PFDAVVNDA se toma patrimonio controlador, sin añadir patrimonio de minoritarios. El origen del beneficio debe revisarse por negocios y segmento, diferenciando resultado recurrente y revaluación por tipo de cambio.\n\nFuente: https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"parte-4\"></a>\n\n## 4. Rentabilidad operativa e indicadores\n\nEl Banco reportó cartera bruta COP 174,7 billones al 30-jun-2026; NIM de crédito/depósitos 6,00% 2T26; eficiencia 50,89%; costo de riesgo 1,99%; ROAE del 2T ~13,77–13,80% según la presentación y ROAE semestral 12,21%. La rentabilidad UDM del controlador / patrimonio a una sola fecha es apenas una proxy ~10,28% y NO debe confundirse con ROAE promedio. Año 5 Base ROE 14,5% es hipótesis de normalización optimista respecto a 1S26, aunque cercana a ROAE 2T26; terminal Base 13,5% inferior al Ke calibrado 17,957%. Seguir gasto de provisiones, fondeo y sinergias verificables antes de cambiar ROE.\n\nFuente: https://ir.davivienda.com/estados-financieros/\n\n<a id=\"parte-5\"></a>\n\n## 5. Ventaja competitiva y competencia\n\nEl banco tiene red, escala y marca, pero rivales como Nu y Lulo incrementan el coste de captar depósitos y presionan experiencia digital. No asignar ventaja perpetua automática: en el modelo el ROE terminal Base 13,5% sigue bajo Ke nominal 17,957% (con tesorería de mercado y prima del equity). P/B histórico 5FY del propio activo: mediana 0,64×, promedio 0,706×, mínimo 0,53× (fuente secundaria StockAnalysis/S&P MI), que exige cautela frente al P/B contable propio reconstruido ~0,89×. El retorno económico depende de elevar ROAE sin consumir CET1 excesivo.\n\nFuente: https://elpais.com/america-colombia/2026-10-06/nu-y-revolut-calientan-la-competencia-por-los-ahorros-de-los-colombianos.html\n\n<a id=\"parte-6\"></a>\n\n## 6. Las 5 fuerzas de Porter\n\nRivalidad: alta, por bancos grandes y competidores digitales; presiona depósitos y comisiones. Entrantes: barreras regulatorias, de capital y confianza elevadas, aunque fintech reducen el costo de distribución. Clientes: creciente poder de comparar rendimientos/tasas y migrar digitalmente. Proveedores: fondeadores y depositantes pueden exigir remuneración alta, especialmente con tasas de política elevadas. Sustitutos: billeteras, instrumentos del mercado de capitales, financiación alternativa y neobancos; su efecto es más visible sobre depósitos transaccionales y pagos. Síntesis: negocio con escala pero spreads y rentas económicas expuestos a competencia.\n\nFuente: https://elpais.com/america-colombia/2026-10-06/nu-y-revolut-calientan-la-competencia-por-los-ahorros-de-los-colombianos.html\n\n<a id=\"parte-7\"></a>\n\n## 7. Dirección, gobierno y asignación de capital\n\nLa estructura accionaria Banco/Davivienda Group implica vigilancia de transacciones con vinculadas, dividendos y tutela de minoritarios. El proceso de integración con negocios Scotiabank en Davibank y cesión parcial autorizada SFC 06-oct-2026 no se contabiliza como un activo gratuitamente adicional dentro del Banco a junio. Para asignar valor hacen falta notas proforma: precio/contraprestación, activos ponderados por riesgo, capital, propiedad, sinergias netas, gastos de integración y dilución. La política real de distribución difiere de la capacidad DDM: asamblea 24-mar-2026 destinó 100% del resultado FY2025 a reservas; COP 1.048/acción pagados en 2025 procedieron de utilidades antiguas 2021. Los dividendos teóricos no constituyen una guía de payout.\n\nFuente: https://daviviendagroup.com/es/inversionistas/\n\n<a id=\"parte-8\"></a>\n\n## 8. Calidad de beneficios y reconciliación\n\nA cierre de 2025 la utilidad atribuible controladora fue COP 1.522.055 millones. En los primeros semestres, controladora 2025 COP 715.135 millones y 2026 COP 928.707 millones. La utilidad UDM atribuible se reconstruye en COP 1.735.627 millones: 2025 completo − 1S25 + 1S26. No se mezclan las utilidades consolidadas incluyendo minoritarios ni se anualiza directamente el excepcional segundo trimestre. Persisten riesgos de resultados por FX, provisiones y reconocimientos no recurrentes; el UDM es un punto de partida, no beneficio normalizado definitivo.\n\nFuente: https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"parte-9\"></a>\n\n## 9. Balance, solvencia y riesgos\n\nPatrimonio atribuible propietario Banco COP 16.879.747 millones; excluye minoritarios incluidos en el patrimonio total 19.356.668 millones (30-jun-2026). CET1 regulatorio consolidado COP 17.605 miles de millones y activos ponderados por riesgo RWA COP 145.083 miles de millones, ratio 12,13%; AT1 COP 1.731 miles de millones; Tier II COP 3.996 miles de millones; solvencia total 16,08%. CE004 SFC 2026: CET1 mínimo 4,5% + conservación 1,5% + posible sistémico 1% = 7% si aplica; solvencia total con colchones hasta 11,5%. Se adopta OBJETIVO ANALÍTICO CET1 Base 12%, cons 12,25%, opt 11,75%, disrupción 12,5%; NO son mínimos legales. La tasa de conversión de retenciones contables a CET1 se asume 85% para simular filtros prudenciales, pero requiere puente real (NIIF→PBO). La planilla aplica retención máxima entre crecimiento de libro y capital CET1 requerido cada año, y descuenta NI menos retención. Restricciones de dividendos por capital deben contrastarse con EEFF separados y aprobación de asamblea; no son una promesa de caja.\n\nFuente: https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"parte-10\"></a>\n\n## 10. Historias operativas cuantificables\n\nCuatro historias con probabilidad 50/25/15/10%: BASE Ke 17,957% (TES COP10 12,957% 8-oct + prima accionarial incremental 4,5% con beta proxy 1 + iliquidez PF 0,5%). ROE FY5 14,5%, terminal 13,5%; crecimiento libro primeros cinco años 6,5% y terminal 4%; crecimiento RWA inicial 7%, converge a 4%, CET1 objetivo 12%: DCF COP 20.759. CONSERVADORA Ke 20,007%, ROE FY5 11,5%, terminal 11%; libro 5%→3%; RWA 6%→3%; objetivo CET1 12,25%: DCF COP 12.887. OPTIMISTA Ke 16,582%, ROE FY5 17%, terminal 16%; libro 8%→4,5%; RWA 9%→4,5%; CET1 11,75%: DCF COP 30.477. DISRUPCIÓN (deterioro fundamental) Ke 21,757%, ROE FY5 9%, terminal 8%; libro 2%→1,5%; RWA 2%→1,5%; CET1 12,5%: DCF COP 11.448. La probabilidad y escenarios son juicios, NO distribuciones estadísticas. DCF Base es valor central JMR; esperado por probabilidad COP 19.318 solo complemento. Política de reparto supuesta y beta real por verificar.\n\n<a id=\"parte-11\"></a>\n\n## 11. Catalizadores, riesgos y asimetría\n\nCatalizadores al alza: reducción de morosidad y costo de depósitos, eficiencia bajo 50,89%, sinergias reales sin dilución regulatoria y rentabilidad de ROE acercándose a 14,5–16%. Catalizadores adversos: BanRep 12,25% desde 01-oct-2026, TES nominal 10 años 12,957% al 08-oct, inflación 6,29% septiembre, riesgos fiscales, presión de neobancos, préstamos con exposición crediticia/FX y deterioro CET1. Stress de mercado: costo de equity ≥20% frente a ROE terminal 11% genera fuerte descuento sobre patrimonio. Davibank: cesión parcial autorizada 06-oct-2026 sin magnitudes proforma verificadas; no capitalizar supuestas sinergias y no confundir holding.\n\nFuente: https://www.superfinanciera.gov.co/ReportesInformacionRelevante/faces/B_simevRelevantes/A_infoRelevante/repoInfoRelevante.xhtml?entidad=039&tipoEntidad=001\n\n<a id=\"parte-12\"></a>\n\n## 12. Valor con criterio Damodaran\n\nValoración por residual income (RE) y dividendos teóricos distribuibles (DDM), DCF Base COP 20.759 por acción; CONS COP 12.887; OPT COP 30.477; DISR COP 11.448; esperado probabilístico COP 19.318. Las cuatro trayectorias de patrimonio, utilidad, capital CET1 y RWA se enlazan por año, y RE–DDM concilian dentro de tolerancia <0,01 COP millón. Precio referencial histórico COP 30.800 el 08-oct-2026 Grupo Aval, versus COP 31.900 Investing (NO reconciliados): descuento 1−precio/DCF Base ≈ −48,37%; respecto a esperado ≈ −59,44%. Umbral con margen seguridad 20% sobre esperado ≈ COP 15.454. Valor presente múltiplos EXTERNOS Base: P/B 0,748×→COP 25.891; P/E 8,49×→COP 30.216. Múltiplos SOLO ponderados 65%/35% = COP 27.404; combinado secundario 80% DCF Base/20% múltiplos = COP 22.088. La valoración principal ES DCF Base, no combinado. Precios FY+3 sin descontar Base: DCF residual exdiv COP 28.835, P/B COP 32.609, PER COP 43.761, múltiplos solos ponderados COP 36.512 y combinado COP 30.370. VP del paquete FY+3 (incluye dividendos teóricos separados) Base P/B COP 23.058, P/E COP 29.853, múltiples solos COP 25.437 y combinado DCF HOY+múltiplos VP COP 21.695. Ratios anclados en 5FY mediana propio banco + Banco de Bogotá al 2026, NO en mismas fórmulas DCF; aún no son comparadores contables perfectos. No confundir la equivalencia teórica RE/DDM con certeza de reparto real. No es recomendación de compra/venta.\n\n<a id=\"parte-13\"></a>\n\n## 13. Calidad del foso y permanencia\n\nLa pregunta para Buffett, Damodaran o Greenblatt adaptado a banca es si ROE AJUSTADO AL RIESGO superará el rendimiento requerido de manera DURADERA. Con un Ke Base de 17,957% y ROE terminal 13,5%, el valor económico terminal razonablemente se ubica bajo patrimonio contable, aunque la marca sea reconocida. El 2026 2T ROAE de 13,8% no demuestra ROE normalizado de 17% terminal. Más RWA implican mayor capital retenido y menor distribución disponible; las ventajas de escala en depósitos necesitan validación de costos y calidad de riesgo.\n\n<a id=\"parte-14\"></a>\n\n## 14. Cinco marcos de inversión independientes\n\nBuffett: distinguir precio barato de franquicia bancaria capaz de asignar capital con rentabilidad ajustada por riesgo; pregunta: ¿mantendrá depósitos estables y ROE > Ke? Graham: P/B ~0,89× no basta sin calidad real de activos, reservas, dividendos y margen de seguridad; pregunta: ¿cuánta pérdida por crédito soporta el patrimonio? Lynch: recuperación de EPS y volumen crediticio solo crean tesis si ingresos se vuelven beneficio recurrente, no solo revalorizaciones; pregunta: ¿los crecimientos justifican el precio? Munger: vigilar incentivos, regulación y complejidad matriz/subsidiaria, donde la robustez pesa más que el crecimiento; pregunta: ¿cuál es el beneficio durable tras stress? Greenblatt: sus métricas clásicas de ROIC/yield operativo no trasladan literalmente a bancos; usar ROE normalizado frente a Ke y costo de riesgo, ¿es sostenible el spread económico? Ninguno de estos marcos se atribuye como cita literal.\n\n<a id=\"parte-15\"></a>\n\n## 15. Qué vigilar y umbrales\n\nSemáforo de revisión: (1) ROAE 1S26 12,21% y 2T26 ~13,8% frente a senda Base ROE 14,5% FY5; (2) CET1 consolidado 12,13% y RWA COP 145,083 billones frente a objetivo Base 12% (no mínimo legal); (3) solvencia total 16,08% y mínimo con colchones potencial 11,5%; (4) conversión NIIF→CET1 85% supuesto: reevaluar cada trimestre; (5) costo de riesgo 1,99%, NIM 6,0%, eficiencia 50,89%; (6) evolución TES 10a y Ke; (7) evento 06-oct Davibank, perímetro y dilución; (8) dividendos reales y cap. de distribución; (9) múltiplos 5/10 años ajustados y negociación PFDAVVNDA vs PFDAVIGRP. Se requiere recalcular al publicar 3T26.\n\nFuente: https://ir.davivienda.com/estados-financieros/\n\n<a id=\"parte-16\"></a>\n\n## 16. Preguntas abiertas e incertidumbre\n\nIncertidumbres no cuantificadas por falta de información primaria: beta histórica de la acción bajo régimen post-reorganización, prima incremental accionaria 4,5% y de iliquidez 0,5% no observadas; factor de conversión 85% retención→CET1; dividendos futuros aprobados y controles internos; qué fracción de RWA/capital resulta de cesión parcial Davibank; pleno efecto económico de prelación en liquidación y dividendo si la caja distribuible fuera menor a COP 161,30 por accionista. Históricos P/B y P/E disponibles sólo cinco FY verificables; serie 10FY no homologada. P/B proveedor 2026 0,76× ≠ P/B contable calculado atribuible 0,89×, por lo que el contraste secundario tiene incertidumbre de denominador. Precio Grupo Aval 30.800 vs Investing 31.900 8-oct: no confundir con PFDAVIGRP ~40.800.\n\n<a id=\"parte-17\"></a>\n\n## 17. Fuentes y fechas\n\nFuentes: (1) banco, estados oficiales 2T26 y sección de acciones, incluyendo dividendo 2025/2026; (2) prospecto bancario programa de emisión 2024: derechos mínimo preferencial COP 161,30, no acumulable, con prioridad condicional; (3) FinancialFilings transcribe tabla capital CET1 17.605 mil millones y RWA 145.083 mil millones; (4) SFC Circular 004 2026 mínimos; (5) BanRep 30-sep/05-oct-2026 tasa 12,25% e inflación esperada 4% a 2 años; (6) TES10 COP 12,957% 08-oct de Investing/TradingEconomics; (7) StockAnalysis ratios de Davivienda, Banco Bogotá y Cibest FY2021–2025 y oct2026 (fuente secundaria no homologada); (8) Grupo Aval COP30.800 e Investing COP31.900, divergentes; (9) información relevante 06-oct-2026 SFC Davibank. Hoja JMR: pestañas «Ke Colombia», «Capital Regulatorio», «Pares Históricos», «Valoración JMR» y «Auditoría Banco».\n\nFuente: https://www.superfinanciera.gov.co/publicaciones/10116238/indice-circular-basica-financiera-circular-externa-004-de-2026/\n\n<a id=\"parte-18\"></a>\n\n## 18. Síntesis final y control de calidad\n\nAuditoría 09-oct-2026: EMISOR y moneda correctos, no mezclar holdings. RE=DDM COPm diferencia absoluta ~1e−8; probabilidades suman 100%, controles Ke>g y dividendos teóricos no negativos. DCF Base revisado a COP 20.759, esperado COP 19.318. Tres flujos explícitos de comparación separados: DCF intrínseco principal, múltiplos independientes 5FY+peer solos, combinado sólo secundario; cada uno presente, FY+3 y VP FY+3+dividendos. El P/B actual fuente terciaria difiere por perímetro del patrimonio propio, dato sin validar. Estado: REVISADO y PUBLICABLE COMO PRELIMINAR; no certificado por beta proxy, factor CET1 85%, transacción Davibank sin proforma, falta histórico diez años completo, validación contable P/B y dividendos aprobados. No reemplazar conclusión por precio de múltiplos alto.\n\n",
-      "importedAt": "2026-10-09T14:27:58.994Z"
+      "content": "---\nmarket: CO\nticker: PFDAVVNDA.CL\nanalysis_date: 2026-10-09\nrun_id: pfdavvnda-20261009-jmr-r1\nmodel: financial\nstatus: auditoria_documental_con_reservas\nupdated_at: 2026-10-09T14:55:30.665Z\n---\n# Investigación fundamental · Auditoría documental de Banco Davivienda S.A. (PFDAVVNDA)\n\n**Corte de revisión:** 9 de octubre de 2026. **Fuente para los estados:** balance al 30 de junio de 2026, revisión limitada por KPMG; 2025 anual auditado bajo NIAs. **Precio usado** COP 30.800 (Grupo Aval 08-oct; Investing registra 31.900 con discrepancia). **DCF Base MODELADO, NO certificado:** COP 20.759. [Google Sheets, pestaña Verificación documental](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit).\n\n## Índice\n\n- [1. Identidad, tesis y perímetro](#seccion-1)\n- [2. Producto y motor económico](#seccion-2)\n- [3. Geografía, segmentos y exposición](#seccion-3)\n- [4. Rentabilidad operativa e indicadores](#seccion-4)\n- [5. Ventaja competitiva y competencia](#seccion-5)\n- [6. Las 5 fuerzas de Porter](#seccion-6)\n- [7. Dirección, gobierno y asignación de capital](#seccion-7)\n- [8. Calidad de beneficios y reconciliación](#seccion-8)\n- [9. Balance, solvencia y riesgos](#seccion-9)\n- [10. Historias operativas cuantificables](#seccion-10)\n- [11. Catalizadores, riesgos y asimetría](#seccion-11)\n- [12. Valor con criterio Damodaran](#seccion-12)\n- [13. Calidad del foso y permanencia](#seccion-13)\n- [14. Cinco marcos de inversión independientes](#seccion-14)\n- [15. Qué vigilar y umbrales](#seccion-15)\n- [16. Preguntas abiertas e incertidumbre](#seccion-16)\n- [17. Fuentes y fechas](#seccion-17)\n- [18. Síntesis final y control de calidad](#seccion-18)\n\n<a id=\"seccion-1\"></a>\n\n## 1. Identidad, tesis y perímetro\n\nEmisor: Banco Davivienda S.A., preferencial PFDAVVNDA (BVC). Emisor distinto de Davivienda Group S.A. / PFDAVIGRP, que también tiene acción preferencial listada. El canje 1:1 realizado a partir de la reorganización de 2025 no equivale a fusionar sus patrimonios. Unidad DCF: banco consolidado, patrimonio ATRIBUIBLE controlador COP 16.879.747 millones a 30-jun-2026 y 487.670.413 acciones del Banco. Desde el 6-oct-2026 SFC autorizó cesión parcial de Davibank, aún sin balance consolidado posterior verificable. Prospecto bancario 2024 precisa dividendo mínimo PFDAVVNDA COP 161,30 anual no acumulable, prioritario solo si utilidades distribuibles no alcanzan para pagar ambas clases igual; en reparto suficientemente alto todas participan a prorrata. Reembolso preferente en liquidación y no voto con excepciones. No adjudicar plusvalía de control al PF sin evidencia.\n\n**Referencia:** https://ir.davivienda.com/acciones/\n\n<a id=\"seccion-2\"></a>\n\n## 2. Producto y motor económico\n\nEl banco transforma depósitos y fondeo institucional en préstamos, inversión de tesorería, comisiones y servicios. Sus ganancias responden al diferencial de rendimiento de activos versus costo del pasivo, comisiones, eficiencia, provisiones de cartera e impuestos. Los depósitos representan parte esencial de la operación y no deben tratarse como deuda financiera de una empresa industrial en un EV = EBITDA. El capital contable y, sobre todo, el capital regulatorio limitan las distribuciones posibles. Para la acción corresponde descontar equity / FCFE regulado.\n\n**Referencia:** https://ir.davivienda.com/estados-financieros/\n\n<a id=\"seccion-3\"></a>\n\n## 3. Geografía, segmentos y exposición\n\nEl banco consolida negocios en Colombia y operaciones internacionales, por lo que hay exposición cambiaria, de riesgo soberano y de crédito fuera de Colombia. El cuadro consolidado 2T26 agrupa activos, patrimonio controlador y participaciones no controladoras. Para valorar PFDAVVNDA se toma patrimonio controlador, sin añadir patrimonio de minoritarios. El origen del beneficio debe revisarse por negocios y segmento, diferenciando resultado recurrente y revaluación por tipo de cambio.\n\n**Referencia:** https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"seccion-4\"></a>\n\n## 4. Rentabilidad operativa e indicadores\n\nEl Banco reportó cartera bruta COP 174,7 billones al 30-jun-2026; NIM de crédito/depósitos 6,00% 2T26; eficiencia 50,89%; costo de riesgo 1,99%; ROAE del 2T ~13,77–13,80% según la presentación y ROAE semestral 12,21%. La rentabilidad UDM del controlador / patrimonio a una sola fecha es apenas una proxy ~10,28% y NO debe confundirse con ROAE promedio. Año 5 Base ROE 14,5% es hipótesis de normalización optimista respecto a 1S26, aunque cercana a ROAE 2T26; terminal Base 13,5% inferior al Ke calibrado 17,957%. Seguir gasto de provisiones, fondeo y sinergias verificables antes de cambiar ROE.\n\n**Referencia:** https://ir.davivienda.com/estados-financieros/\n\n<a id=\"seccion-5\"></a>\n\n## 5. Ventaja competitiva y competencia\n\nEl banco tiene red, escala y marca, pero rivales como Nu y Lulo incrementan el coste de captar depósitos y presionan experiencia digital. No asignar ventaja perpetua automática: en el modelo el ROE terminal Base 13,5% sigue bajo Ke nominal 17,957% (con tesorería de mercado y prima del equity). P/B histórico 5FY del propio activo: mediana 0,64×, promedio 0,706×, mínimo 0,53× (fuente secundaria StockAnalysis/S&P MI), que exige cautela frente al P/B contable propio reconstruido ~0,89×. El retorno económico depende de elevar ROAE sin consumir CET1 excesivo.\n\n**Referencia:** https://elpais.com/america-colombia/2026-10-06/nu-y-revolut-calientan-la-competencia-por-los-ahorros-de-los-colombianos.html\n\n<a id=\"seccion-6\"></a>\n\n## 6. Las 5 fuerzas de Porter\n\nRivalidad: alta, por bancos grandes y competidores digitales; presiona depósitos y comisiones. Entrantes: barreras regulatorias, de capital y confianza elevadas, aunque fintech reducen el costo de distribución. Clientes: creciente poder de comparar rendimientos/tasas y migrar digitalmente. Proveedores: fondeadores y depositantes pueden exigir remuneración alta, especialmente con tasas de política elevadas. Sustitutos: billeteras, instrumentos del mercado de capitales, financiación alternativa y neobancos; su efecto es más visible sobre depósitos transaccionales y pagos. Síntesis: negocio con escala pero spreads y rentas económicas expuestos a competencia.\n\n**Referencia:** https://elpais.com/america-colombia/2026-10-06/nu-y-revolut-calientan-la-competencia-por-los-ahorros-de-los-colombianos.html\n\n<a id=\"seccion-7\"></a>\n\n## 7. Dirección, gobierno y asignación de capital\n\nLa estructura accionaria Banco/Davivienda Group implica vigilancia de transacciones con vinculadas, dividendos y tutela de minoritarios. El proceso de integración con negocios Scotiabank en Davibank y cesión parcial autorizada SFC 06-oct-2026 no se contabiliza como un activo gratuitamente adicional dentro del Banco a junio. Para asignar valor hacen falta notas proforma: precio/contraprestación, activos ponderados por riesgo, capital, propiedad, sinergias netas, gastos de integración y dilución. La política real de distribución difiere de la capacidad DDM: asamblea 24-mar-2026 destinó 100% del resultado FY2025 a reservas; COP 1.048/acción pagados en 2025 procedieron de utilidades antiguas 2021. Los dividendos teóricos no constituyen una guía de payout.\n\n**Referencia:** https://daviviendagroup.com/es/inversionistas/\n\n<a id=\"seccion-8\"></a>\n\n## 8. Calidad de beneficios y reconciliación\n\nA cierre de 2025 la utilidad atribuible controladora fue COP 1.522.055 millones. En los primeros semestres, controladora 2025 COP 715.135 millones y 2026 COP 928.707 millones. La utilidad UDM atribuible se reconstruye en COP 1.735.627 millones: 2025 completo − 1S25 + 1S26. No se mezclan las utilidades consolidadas incluyendo minoritarios ni se anualiza directamente el excepcional segundo trimestre. Persisten riesgos de resultados por FX, provisiones y reconocimientos no recurrentes; el UDM es un punto de partida, no beneficio normalizado definitivo.\n\n**Referencia:** https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"seccion-9\"></a>\n\n## 9. Balance, solvencia y riesgos\n\nBanco Davivienda S.A. a 30-jun-2026: patrimonio de accionistas controladores COP 16.879.747 millones, patrimonio total con intereses minoritarios COP 19.356.668 millones; no mezclarlos. En el estado regulatorio oficial CET1 exacto COP 17.605.250 millones, APNR/RWA COP 145.082.745 millones, AT1 COP 1.731.178 millones, Tier2 COP 3.996.219 millones menos deducciones COP 8 millones; ratio CET1 12,1346% (publicado 12,13%), solvencia total 16,0823% (publicado 16,08%). Capítulos y páginas concretas en «Verificación documental». El capital futuro retenido se calcula con CET1 mínimo analítico 12% Base, 12,25% Conservador, 11,75% Optimista, 12,5% Disrupción y factor hipotético de conversión 85% desde patrimonio contable; NO son previsiones oficiales de requisitos regulatorios. La nota KPMG es revisión LIMITADA del estado intermedio 2T26 (no dictamen anual completo), y FY2025 sí tiene dictamen de auditoría. Distanciar control de capital regulatorio proyectado de un dividendo declarado.\n\n**Referencia:** https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/\n\n<a id=\"seccion-10\"></a>\n\n## 10. Historias operativas cuantificables\n\nCuatro historias con probabilidad 50/25/15/10%: BASE Ke 17,957% (TES COP10 12,957% 8-oct + prima accionarial incremental 4,5% con beta proxy 1 + iliquidez PF 0,5%). ROE FY5 14,5%, terminal 13,5%; crecimiento libro primeros cinco años 6,5% y terminal 4%; crecimiento RWA inicial 7%, converge a 4%, CET1 objetivo 12%: DCF COP 20.759. CONSERVADORA Ke 20,007%, ROE FY5 11,5%, terminal 11%; libro 5%→3%; RWA 6%→3%; objetivo CET1 12,25%: DCF COP 12.887. OPTIMISTA Ke 16,582%, ROE FY5 17%, terminal 16%; libro 8%→4,5%; RWA 9%→4,5%; CET1 11,75%: DCF COP 30.477. DISRUPCIÓN (deterioro fundamental) Ke 21,757%, ROE FY5 9%, terminal 8%; libro 2%→1,5%; RWA 2%→1,5%; CET1 12,5%: DCF COP 11.448. La probabilidad y escenarios son juicios, NO distribuciones estadísticas. DCF Base es valor central JMR; esperado por probabilidad COP 19.318 solo complemento. Política de reparto supuesta y beta real por verificar.\n\n<a id=\"seccion-11\"></a>\n\n## 11. Catalizadores, riesgos y asimetría\n\nCatalizadores al alza: reducción de morosidad y costo de depósitos, eficiencia bajo 50,89%, sinergias reales sin dilución regulatoria y rentabilidad de ROE acercándose a 14,5–16%. Catalizadores adversos: BanRep 12,25% desde 01-oct-2026, TES nominal 10 años 12,957% al 08-oct, inflación 6,29% septiembre, riesgos fiscales, presión de neobancos, préstamos con exposición crediticia/FX y deterioro CET1. Stress de mercado: costo de equity ≥20% frente a ROE terminal 11% genera fuerte descuento sobre patrimonio. Davibank: cesión parcial autorizada 06-oct-2026 sin magnitudes proforma verificadas; no capitalizar supuestas sinergias y no confundir holding.\n\n**Referencia:** https://www.superfinanciera.gov.co/ReportesInformacionRelevante/faces/B_simevRelevantes/A_infoRelevante/repoInfoRelevante.xhtml?entidad=039&tipoEntidad=001\n\n<a id=\"seccion-12\"></a>\n\n## 12. Valor con criterio Damodaran\n\nCon criterio de descuento al equity tipo Damodaran, el DCF Base presente nominal COP es COP 20.759,23 por acción, Conservador COP 12.886,92, Optimista COP 30.477,01, Disrupción COP 11.448,78; media ponderada de historias COP 19.317,77, complemento NO valor principal. El precio histórico referenciado por Grupo Aval 08-oct-2026 fue COP 30.800; Investing.com publica COP 31.900 el mismo día: conflicto bursátil no resuelto con BVC. El margen frente al Base calculado 1−30.800/20.759,23 ≈ −48,37%; frente al esperado −59,44%. Por mínimos PF de 2024 el dividendo prioritario anual es COP 161,30, no acumulable ni garantizado. Hecho clave de la auditoría: el P/B FY2025 de StockAnalysis 0,64× usa como denominador el patrimonio total con minoritarios; al usar patrimonio de la controladora y capitalización reportada es 0,7442×. Se reconstruyeron las cinco valoraciones FY2021–FY2025 de Davivienda 1,0176 / 0,7737 / 0,5947 / 0,5373 / 0,7442×, mediana 0,7442×; comparable Banco de Bogotá FY2026 p/b controlador ≈0,9200×. Ancla analítica 60% propia mediana +40% comparador =0,8145× y P/E de proveedor 8,49× no auditado independientemente. Múltiplos presentes Base P/B COP 28.192,46, PER COP 30.216,05, múltiplos solos ponderados 65%/35% COP 28.900,71; combinación 80% DCF/20% múltiplos COP 22.387,52 es SECUNDARIA. Precio FY+3 Base sin descontar DCF residual exdiv COP 28.834,58, P/B COP 35.507,24, P/E COP 43.760,33, múltiplos solos COP 38.395,83, combinado COP 30.746,83. VP FY+3 de P/B precio más dividendos teóricos de años 1-3 COP 24.824,86, PER COP 29.853,44; sólo múltiplos ponderados COP 26.584,86; combinado de DCF presente con paquete múltiplos COP 21.924,35. La igualdad aritmética RE/DDM no certifica esos precios: Ke 17,957% está parametrizado con beta1 y prima accionaria hipotética y 85% de conversión CET1 no reconcilia ajustes prudenciales reales. Además crecimiento efectivo del libro del año10 Base ~4,483% mientras TV perpetuidad aplica 4,0% sin transición a un régimen regulatorio estacionario formal. Un escenario es una decisión de modelización, jamás hecho comprobado. No se emite dictamen sobre valor intrínseco ni recomendación operativa.\n\n<a id=\"seccion-13\"></a>\n\n## 13. Calidad del foso y permanencia\n\nLa pregunta para Buffett, Damodaran o Greenblatt adaptado a banca es si ROE AJUSTADO AL RIESGO superará el rendimiento requerido de manera DURADERA. Con un Ke Base de 17,957% y ROE terminal 13,5%, el valor económico terminal razonablemente se ubica bajo patrimonio contable, aunque la marca sea reconocida. El 2026 2T ROAE de 13,8% no demuestra ROE normalizado de 17% terminal. Más RWA implican mayor capital retenido y menor distribución disponible; las ventajas de escala en depósitos necesitan validación de costos y calidad de riesgo.\n\n<a id=\"seccion-14\"></a>\n\n## 14. Cinco marcos de inversión independientes\n\nBuffett: distinguir precio barato de franquicia bancaria capaz de asignar capital con rentabilidad ajustada por riesgo; pregunta: ¿mantendrá depósitos estables y ROE > Ke? Graham: P/B ~0,89× no basta sin calidad real de activos, reservas, dividendos y margen de seguridad; pregunta: ¿cuánta pérdida por crédito soporta el patrimonio? Lynch: recuperación de EPS y volumen crediticio solo crean tesis si ingresos se vuelven beneficio recurrente, no solo revalorizaciones; pregunta: ¿los crecimientos justifican el precio? Munger: vigilar incentivos, regulación y complejidad matriz/subsidiaria, donde la robustez pesa más que el crecimiento; pregunta: ¿cuál es el beneficio durable tras stress? Greenblatt: sus métricas clásicas de ROIC/yield operativo no trasladan literalmente a bancos; usar ROE normalizado frente a Ke y costo de riesgo, ¿es sostenible el spread económico? Ninguno de estos marcos se atribuye como cita literal.\n\n<a id=\"seccion-15\"></a>\n\n## 15. Qué vigilar y umbrales\n\nSemáforo de revisión: (1) ROAE 1S26 12,21% y 2T26 ~13,8% frente a senda Base ROE 14,5% FY5; (2) CET1 consolidado 12,13% y RWA COP 145,083 billones frente a objetivo Base 12% (no mínimo legal); (3) solvencia total 16,08% y mínimo con colchones potencial 11,5%; (4) conversión NIIF→CET1 85% supuesto: reevaluar cada trimestre; (5) costo de riesgo 1,99%, NIM 6,0%, eficiencia 50,89%; (6) evolución TES 10a y Ke; (7) evento 06-oct Davibank, perímetro y dilución; (8) dividendos reales y cap. de distribución; (9) múltiplos 5/10 años ajustados y negociación PFDAVVNDA vs PFDAVIGRP. Se requiere recalcular al publicar 3T26.\n\n**Referencia:** https://ir.davivienda.com/estados-financieros/\n\n<a id=\"seccion-16\"></a>\n\n## 16. Preguntas abiertas e incertidumbre\n\nImpedimentos concretos para certificación completa: (1) resultados trimestrales 2T26 son revisión limitada de KPMG, distinto de opinión de auditoría FY2025; (2) capitalización FY21-25 y precio de 08-oct vienen de proveedores secundarios, BVC cierra contradictorio entre Grupo Aval 30.800 e Investing 31.900; (3) ratios históricos P/B reconstruidos a controlar excluyen minoritarios, pero capitalización bursátil no viene de registro BVC descargado y PER histórico necesita recalcular ganancias atribuibles por acción en cada FY; (4) beta bursátil no estimada por serie empírica BVC; TES nominal ref12,957% en proveedor mercado no se ancla a un bono TES ISIN de vencimiento y spread real; 4,5 puntos de prima equity y 0,5 puntos de iliquidez son juicio; (5) horizonte futuro ROE, crecimiento RWA y 85% conversión NIIF a CET1 sólo hipótesis; (6) el flujo regulatorio del año10 requiere ~4,483% de retención de libro mientras perpetuidad aplica 4% sin puente explícito; (7) operación parcial Davibank autorizada 06-oct-2026 no tiene proforma confirmado; (8) reparto de PF COP161,30 prioritario no implica distribución anual garantizada ni prima de valoración por clase sin patrón de asambleas. No catalogar el DCF como «certificado», sí los datos históricos contrastados con fuente documental.\n\n<a id=\"seccion-17\"></a>\n\n## 17. Fuentes y fechas\n\nFuentes DOCUMENTALES PRIMARIAS enlazadas y fichadas fila por fila en «Verificación documental»: EEFF consolidado 2T26 Banco Davivienda oficial (revisión limitada KPMG, patrimonio, utilidades, CET1/APNR/AT1/T2); EEFF anuales FY2025 auditados y FY2024/2023/2021 auditados; página oficial acciones y prospecto preferencial bancario de feb-2024 para mínimo COP161,30; BanRep tasa vigente 12,25%; SFC información relevante 06-oct-2026. Fuentes SECUNDARIAS declaradas: Grupo Aval COP30.800 e Investing COP31.900 por 08-oct con conflicto; tasa TES10 12,957% por Investing/TradingEconomics; mercado capitalizaciones FY2021–25 StockAnalysis/S&P. El P/B reconstruido es cociente reproducido con equity de controladora, no el ratio del proveedor que incluye minoritarios. La discrepancia entre KPMG revisión intermedia y auditoría anual está expuesta. A futuro las tasas Ke, ROE, g, RWA, probabilidad y CET1 85% NO son datos verificables.\n\n**Referencia:** https://www.superfinanciera.gov.co/publicaciones/10116238/indice-circular-basica-financiera-circular-externa-004-de-2026/\n\n<a id=\"seccion-18\"></a>\n\n## 18. Síntesis final y control de calidad\n\nDICTAMEN DE AUDITORÍA DOCUMENTAL CON RESERVAS · 09-oct-2026. Verificados: identidad PFDAVVNDA Banco (distinto de PFDAVIGRP holding), patrimonio controlador y NCI 2T26, ingresos y utilidad atribuibles, acciones por clase, capital CET1/APNR exactos, ratios CET1/solvencia, prospecto mínimo PF COP161,30, cinco patrimonios de controladora 2021–25 a partir de EEFF auditados. Derivados y reproducidos: utilidad atribuible UDM COP1.735.627 millones, book/share COP34.613,02, P/B del precio de Grupo Aval 0,8898×; cinco ratios P/B histórico normalizados, VAN DCF 4 historias; conciliación matemática RE/DDM dentro <0,01 COP millones, probabilidad 100% y dividendo teórico no negativo. Pendientes: verificación BVC del cierre 30.800/31.900, histórico P/E completo y 10FY, beta local, primas por riesgo no medidas, activos/RWA proforma Davibank, factor de conversión a CET1 y política real de dividendos. Una brecha entre retención contable año10 y g terminal (~0,483 puntos porcentuales Base) revela que la regulación no se continúa de manera demostrada en TV. ESTADO: DOCUMENTOS RECONCILIADOS, DCF Y PRECIO OBJETIVO NO CERTIFICADOS ECONÓMICAMENTE.\n\n## Reconciliaciones documentales y reservas\n\n**Hechos contrastados con documentos oficiales:** controlador, minoritarios, utilidad semestral, capital regulatorio, número de acciones, derecho preferencial mínimo. **Derivados del modelo:** utilidad UDM, P/B, VAN/DCF, múltiplos normalizados por patrimonio controlador y conciliación aritmética RE/DDM. **Juicio no certificable:** probabilidad de escenarios, ROE y activos ponderados futuros, beta proxy, primas de riesgo, factor 85% capital contable→CET1 y valor perpetuo. **Conflictos de mercado:** Grupo Aval COP30.800 frente a Investing COP31.900 (08-oct). **Brecha de perpetuidad:** crecimiento del libro del año10 Base ≈4,483% frente a g perpetua4%; falta un puente explícito en CET1 para cerrar la perpetuidad. La revisión no es auditoría independiente ni garantiza una valoración justa.\n",
+      "importedAt": "2026-10-09T14:55:30.665Z"
     },
     "valuation": {
       "name": "PFDAVVNDA-Valoracion-JMR-2026-10-09.md",
-      "content": "---\nmarket: CO\nticker: PFDAVVNDA.CL\nanalysis_date: 2026-10-09\nrun_id: pfdavvnda-20261009-jmr-r1\nmodel: financial\nvaluation_status: preliminar_revisada\nupdated_at: 2026-10-09T14:27:58.994Z\n---\n# Valoración JMR revisada · PFDAVVNDA · Banco Davivienda S.A.\n\n**Método principal:** DCF bancario al patrimonio con **renta residual (RE)** y flujo teórico distribuible (DDM) a diez años más terminal. **No** FCFF industrial ni valoración de Davivienda Group. [Abrir hoja independiente](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit).\n\n## Valor intrínseco principal y referencia\n\n| Concepto | COP por acción |\n|---|---:|\n| **DCF Base principal** | **20.759** |\n| DCF esperado probabilístico (complementario) | 19.318 |\n| Cotización 08-oct-2026 Grupo Aval | 30.800 |\n| Diferencia precio/DCF Base (MOS = 1 − precio/valor) | -48,37% |\n| Diferencia precio/DCF esperado | -59,44% |\n| Umbral teórico de entrada con MOS 20% aplicado al esperado | 15.454 |\n| Dividendos mínimos preferentes, históricos, NO acumulables | 161,30 COP/año y acción bajo utilidades distribuibles |\n\n## Cuatro historias independientes de DCF\n\n| Historia | Prob. | Ke | ROE año 5 | ROE terminal | Crec. libro años 1–5 | g terminal | DCF HOY COP | DCF residual FY+3 exdiv COP |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|\n| Base | 50,00% | 17,96% | 14,50% | 13,50% | 6,50% | 4,00% | 20.759 | 28.835 |\n| Conservador | 25,00% | 20,01% | 11,50% | 11,00% | 5,00% | 3,00% | 12.887 | 18.177 |\n| Optimista | 15,00% | 16,58% | 17,00% | 16,00% | 8,00% | 4,50% | 30.477 | 43.683 |\n| Disrupción | 10,00% | 21,76% | 9,00% | 8,00% | 2,00% | 1,50% | 11.448 | 12.755 |\n\nEl DCF Base es el valor intrínseco central de JMR. Los escenarios son hipótesis de juicio y no proyecciones del consenso.\n\n## Costo de patrimonio nominal COP · calibración explícita\n\nEl TES a diez años observado al 8-oct-2026 rinde **12,957%**. El Ke Base = TES 12,957% + (beta **proxy 1,0**, no medida × prima incremental accionarial **4,5 puntos porcentuales**) + prima de iliquidez preferencial **0,5 puntos** = **17,957%**. El riesgo país embebido en TES **no se vuelve a sumar** como CRP soberana. Otras historias Ke conservador 20,01%, optimista 16,58%, disrupción 21,76%; no es CAPM empíricamente estimado. [Hoja «Ke Colombia»](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit).\n\n## Capital regulatorio, dividendo distribuible y derechos PF\n\nEl banco reporta **CET1 COP 17.605 miles de millones**, **RWA COP 145.083 miles de millones**, CET1 **12,13%** y solvencia total ~**16,08%** a 30-jun-2026. Cada escenario proyecta diez años de RWA y capital, aplicando **retención = máximo(crecimiento patrimonial, incremento CET1 requerido / factor de conversión 85%)**. El 85% es **hipótesis** para conversión de utilidades retenidas contables a capital regulatorio, NO reconciliación de partidas reales. Los objetivos CET1 Base 12%, conservador 12,25%, optimista 11,75%, disrupción 12,5% son **prudenciales analíticos**, distintos del mínimo legal. Retener patrimonio reduce la caja repartible y el valor intrínseco frente al modelo anterior.\n\nEl dividendo mínimo preferencial histórico bajo prospecto del Banco de 2024 es **COP 161,30 al año por PFDAVVNDA**, no acumulable, subordinado a la existencia de utilidades legalmente distribuibles y con prelación frente a comunes si el reparto alcanza para pagar la prioridad, pero no para equiparar ambas clases. No debe sumarse a todas las distribuciones como doble dividendo. **La asamblea destinó todo el resultado FY2025 a reservas**, por lo que el flujo teórico de DDM NO equivale a dividendo declarado.\n\n## Valores por métodos secundarios · PRESENTE (COP/acción)\n\n| Método | Base | Conservador | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| DCF RE/DDM hoy | 20.759 | 12.887 | 30.477 | 11.448 |\n| P/B externo histórico + par | 25.891 | 20.712 | 33.658 | 12.945 |\n| P/E externo histórico + par | 30.216 | 24.173 | 39.281 | 15.108 |\n| Múltiplos solos ponderados HOY | 27.404 | 21.924 | 35.626 | 13.702 |\n| Combinado presente 80% DCF y 20% múltiplos | 22.088 | 14.694 | 31.507 | 11.899 |\n\nLos múltiplos externos **son independientes de fórmulas DCF**, aunque no están completamente homologados contablemente. Ancla Base: 60% mediana de cinco FY de Davivienda + 40% múltiplo actual Banco de Bogotá; P/B=0,748× y P/E=8,49×. Escenarios: conservador −20%, optimista +30%, disrupción −50%. **Múltiplos solos =65% P/B +35% P/E. Combinación SECUNDARIA =80% DCF +20% múltiplos.** No utilizar el combinado para reemplazar el DCF intrínseco.\n\n## Valores por métodos secundarios · FY+3 SIN DESCONTAR (COP/acción)\n\n| Método | Base | Conservador | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| DCF remanente año3 exdiv | 28.835 | 18.177 | 43.683 | 12.755 |\n| P/B externo FY+3 | 32.609 | 25.855 | 44.148 | 14.425 |\n| P/E externo FY+3 | 43.761 | 30.157 | 64.773 | 15.208 |\n| Múltiplos solos ponderados FY+3 exdiv | 36.512 | 27.361 | 51.367 | 14.699 |\n| Combinado FY+3 80% DCF residual / 20% múltiplos | 30.370 | 20.014 | 45.220 | 13.144 |\n\n**El DCF FY+3 es valor exdividendo residual**, NO el DCF hoy ni un paquete con los dividendos de los primeros tres años.\n\n## VP FY+3: descuentos al presente de precio más dividendos teóricos anuales (COP/acción)\n\n| Método | Base | Conservador | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| VP precio FY+3 P/B + div | 23.058 | 17.329 | 30.770 | 12.374 |\n| VP precio FY+3 PER + div | 29.853 | 19.818 | 43.787 | 12.807 |\n| VP múltiplos solos FY+3 | 25.437 | 18.200 | 35.326 | 12.526 |\n| VP combinado DCF hoy + múltiplos FY+3 | 21.695 | 13.949 | 31.447 | 11.664 |\n\nFórmula VP FY+3: precio de salida FY+3 /(1+Ke)^3 más dividendos teóricos de años 1,2,3 descontados en sus respectivos períodos. No sumar esas distribuciones de nuevo.\n\n## Auditoría y sensibilidad de los supuestos\n\n- **Control matemático:** probabilidades 100%, todos los terminales con Ke mayor que g, concordancia total RE/DDM menor de COP 0,01 millones, dividendos teóricos proyectados sin negativos y CET1 objetivo verificado para cada uno de los cuatro escenarios.\n- **Datos consolidados del banco:** patrimonio controlador COP 16.879.747 millones (excluye minoritarios), utilidad atribuible LTM reconstruida COP 1.735.627 millones, acciones ordinarias 371.069.401 más PF 116.601.012 = 487.670.413.\n- **Debilidades aún abiertas:** beta verdadera y primas incrementales no calibradas estadísticamente; factor de conversión NIIF→CET1 85% hipotético; derechos PF podrían implicar valor diferencial en insolvencia o si no se reparten ganancias; P/B actual de StockAnalysis ~0,76× discrepa del P/B propio contable ~0,89× por perímetro; historia 10 años incompleta; proforma cesión Davibank aún no verificable; cotización Grupo Aval 30.800 vs Investing.com 31.900 discrepante.\n- **Sinergias Davibank:** SFC autorizó el 6-oct-2026 cesión parcial de activos/pasivos, pero sin asignación proforma verificable al balance de 30-jun-2026 no se añade valor incremental especulativo. Se mantienen riesgos societarios.\n- **Naturaleza:** modelo PRELIMINAR revisado, no “certificado”. No es una recomendación de compra o venta.\n\n## Fuentes consultadas\n\n- [Inversionistas Banco Davivienda: estados financieros](https://ir.davivienda.com/estados-financieros/)\n- [Acciones Banco Davivienda](https://ir.davivienda.com/acciones/)\n- [Fuente de estados y CET1 / RWA 2T2026](https://financialfilings.com/filings/banco-davivienda-sa/interim-quarterly-report/2026/56572003/)\n- [StockAnalysis ratios Davivienda](https://stockanalysis.com/quote/bvc/PFDAVVNDA/financials/ratios/)\n- [StockAnalysis ratios Banco Bogotá](https://stockanalysis.com/quote/bvc/BOGOTA/financials/ratios/)\n- [Grupo Aval precios históricos BVC](https://www.grupoaval.com/wps/portal/grupo-aval/aval/portal-financiero/renta-variable/acciones-bolsa-colombia/datos-historicos)\n- [Hoja JMR auditada](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit)\n",
-      "importedAt": "2026-10-09T14:27:58.994Z"
+      "content": "---\nmarket: CO\nticker: PFDAVVNDA.CL\nanalysis_date: 2026-10-09\nrun_id: pfdavvnda-20261009-jmr-r1\nmodel: financial\nstatus: auditoria_documental_con_reservas\nupdated_at: 2026-10-09T14:55:30.665Z\n---\n# Valoración JMR PFDAVVNDA · Auditoría y revisión documental con reservas\n\n**Emisor Banco Davivienda S.A. (NO Davivienda Group).** [Modelo nativo con fórmulas y auditoría](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit). No existe una certificación de precios intrínsecos futuros: el resultado es condicional a escenarios.\n\n## DCF Base — valor intrínseco MODELADO principal\n\n| Indicador | COP/acción |\n|---|---:|\n| **DCF Base principal (modelo condicionado a supuestos)** | **20.759** |\n| DCF esperado secundario | 19.318 |\n| Referencia Grupo Aval 8 oct 2026 | 30.800 |\n| Otra referencia Investing 8 oct 2026 | 31.900 |\n| MOS Base con referencia Grupo Aval | -48,37% |\n| MOS esperado con referencia Grupo Aval | -59,44% |\n| Umbral analítico esperado × 80% | 15.454 |\n| Valor patrimonial por acción (controladora) | 34.613,02 |\n| PER UDM de utilidad controladora | 8,65× |\n| P/B calculado con patrimonio controlador | 0,89× |\n\n## Escenarios RE/DDM bancarios (10 años más terminal)\n\n| Escenario | Prob. | Ke | ROE FY+5 | ROE terminal | g terminal | DCF presente COP/acción | DCF residual FY+3 exdiv |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| Base | 50,00% | 17,96% | 14,50% | 13,50% | 4,00% | 20.759 | 28.835 |\n| Conservador | 25,00% | 20,01% | 11,50% | 11,00% | 3,00% | 12.887 | 18.177 |\n| Optimista | 15,00% | 16,58% | 17,00% | 16,00% | 4,50% | 30.477 | 43.683 |\n| Disrupción | 10,00% | 21,76% | 9,00% | 8,00% | 1,50% | 11.449 | 12.755 |\n\nKe incorpora cotización TES10 años 12,957% (proveedor secundario), más beta proxy1, prima accionaria 4,5 pp e iliquidez0,5 pp asumidas para Base. Los ROE y g futuros tampoco son hechos certificables.\n\n## Valuaciones a HOY: DCF principal, múltiplos externos y combinados secundarios\n\n| Método | Base | Conservadora | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| DCF RE/DDM hoy | 20.759 | 12.887 | 30.477 | 11.449 |\n| P/B externo histórico + par | 28.192 | 22.554 | 36.650 | 14.096 |\n| P/E externo histórico + par | 30.216 | 24.173 | 39.281 | 15.108 |\n| Múltiplos solos ponderados HOY | 28.901 | 23.121 | 37.571 | 14.450 |\n| Combinado presente 80% DCF y 20% múltiplos | 22.388 | 14.934 | 31.896 | 12.049 |\n\n**P/B anclado en mediana corregida del controlador en FY21-25 0,7442× y P/B de Banco Bogotá 0,9200× al 08-oct**; peso histórico 60% y comparable 40%, por lo que ancla Base P/B 0,8145×. El PER secundario 8,49× procede en parte de cifras S&P no reconciliadas por fuente primaria. Los pesos 65% P/B +35% PER y 80% DCF +20% múltiplos son criterio analítico, no certificado.\n\n## Valores FY+3 SIN descontar: ventas exdividendo estimadas\n\n| Método | Base | Conservadora | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| DCF remanente año3 exdiv | 28.835 | 18.177 | 43.683 | 12.755 |\n| P/B externo FY+3 | 35.507 | 28.154 | 48.072 | 15.708 |\n| P/E externo FY+3 | 43.760 | 30.156 | 64.772 | 15.208 |\n| Múltiplos solos ponderados FY+3 exdiv | 38.396 | 28.855 | 53.917 | 15.533 |\n| Combinado FY+3 80% DCF residual / 20% múltiplos | 30.747 | 20.312 | 45.730 | 13.310 |\n\n## Valores FY+3 DESCONTADOS al presente, incluyendo dividendos teóricos anuales\n\n| Método | Base | Conservadora | Optimista | Disrupción |\n|---|---:|---:|---:|---:|\n| VP precio FY+3 P/B + div | 24.825 | 18.660 | 33.247 | 13.085 |\n| VP precio FY+3 PER + div | 29.853 | 19.818 | 43.787 | 12.808 |\n| VP ponderado SOLO múltiplos FY+3 + dividendos | 26.585 | 19.065 | 36.936 | 12.988 |\n| VP COMBINADO DCF presente + múltiplos FY+3 | 21.924 | 14.123 | 31.769 | 11.757 |\n\nLas distribuciones teóricas son **capacidad de pagar**, no dividendos decretados. El derecho mínimo histórico de la PF del Banco (prospecto 2024) es **COP 161,30 al año**, no acumulable, condicionado a utilidades distribuibles; no se duplica como pago adicional.\n\n## Evidencia primaria documental\n\n| Dato histórico | Monto |\n|---|---:|\n| Patrimonio atribuible propietarios 30-jun-2026 | COP 16.879.747 millones |\n| Patrimonio total incluidos minoritarios | COP 19.356.668 millones |\n| Utilidad atribuible FY2025 | COP 1.522.055 millones |\n| Utilidad atribuible semestres 2025 / 2026 | COP 715.135m / COP 928.707m |\n| Utilidad UDM reconstruida | COP 1.735.627 millones |\n| CET1 exacto | COP 17.605.250 millones |\n| APNR/RWA exacto | COP 145.082.745 millones |\n| Capital AT1 / T2 | COP 1.731.178m / 3.996.219m |\n| CET1 y solvencia total | 12,13% / 16,08% (redondeados) |\n\nDocumentación: [EEFF 2T2026 con revisión limitada KPMG](https://ir.davivienda.com/wp-content/uploads/2026/08/Banco-Davivienda-EEFF-Consolidados-2T26-2.pdf), [estados auditados FY2025](https://ir.davivienda.com/wp-content/uploads/2026/03/Estados_Financieros_Consolidados_2025_-Banco-Davivienda_-Final.pdf), [acciones y derechos](https://ir.davivienda.com/acciones/), [prospecto 2024](https://ir.davivienda.com/wp-content/uploads/2024/02/PEC-Acciones-2024-y-Acciones-Preferenciales-2010-Banco-Davivienda-SA.pdf), [carpeta documental y P/B 5FY reconstruido en la hoja](https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit).\n\n## Salvedades de certificación\n\n- **No confundir auditoría de hechos históricos con opinión sobre valor intrínseco:** KPMG revisó limitadamente 2T26; no auditó el DCF JMR.\n- **Capital regulatorio exacto integrado:** CET1/RWA en junio 2026 están trazados; el factor proyectado de conversión de retención a CET1 del 85% es una hipótesis sin puente de activos, OCI, deducciones prudenciales o solvencia bajo Davibank.\n- **Problema terminal:** libro crece en el año10 Base ~4,483% por retención de CET1, pero perpetuidad usa g4%, sin puente de normalización; la igualdad numérica DDM=RE no demuestra estabilidad regulatoria perpetua.\n- **Ke:** beta y primas accionarias son parámetros de juicio, no coeficientes estimados; la fecha/rendimiento TES no equivalen a bono ISIN oficial acreditado.\n- **Múltiplos:** P/B histórico Davivienda FY2025 de StockAnalysis 0,64× incluía minoritarios; se normalizó a patrimonio controlador 0,744×. Los market caps históricos y PER proceden de fuente secundaria; 10 años homogéneos sin validar.\n- **Precio:** Grupo Aval COP30.800 e Investing COP31.900 el 08-oct son conflictivos.\n- **Davibank:** cesión parcial autorizada 06-oct; sin proforma verificable, no se imputan sinergias ni capital adicional.\n\n**Estado final: revisión documental detallada CON RESERVAS; cálculo aritmético comprobado; valor económico NO certificado.**\n",
+      "importedAt": "2026-10-09T14:55:30.665Z"
     }
   },
   "sources": [
@@ -239,131 +284,127 @@
   "publication": {
     "authorized": true,
     "publishedAt": "2026-10-09T13:54:37.459Z",
-    "revisedAt": "2026-10-09T14:27:58.994Z",
-    "revisionNote": "Reevaluación TES10 / CET1 / derechos PF / múltiplos independientes JMR; informe preliminar"
+    "revisedAt": "2026-10-09T14:55:30.665Z",
+    "revisionNote": "Auditoría documental 2026-10-09: CET1/RWA exactos, P/B histórico corregido por minoritarios, auditoría terminal inconclusa; DCF no certificado"
   },
   "valuationSummary": {
     "currency": "COP",
     "balanceDate": "2026-06-30",
     "priceDate": "2026-10-08",
-    "base": 20759.064883416042,
-    "expected": 19317.586706792325,
+    "base": 20759.226171189726,
+    "expected": 19317.77177972321,
     "marketPrice": 30800,
-    "mosExpected": -0.5944020579532485,
+    "mosExpected": -0.5943867828653533,
     "scenarios": [
       {
         "name": "Base",
         "probability": 0.5,
-        "value": 20759.064883416042,
+        "value": 20759.226171189726,
         "costOfEquity": 0.17957
       },
       {
         "name": "Conservadora",
         "probability": 0.25,
-        "value": 12886.6468929252,
+        "value": 12886.916801664944,
         "costOfEquity": 0.20007
       },
       {
         "name": "Optimista",
         "probability": 0.15,
-        "value": 30476.989450230172,
+        "value": 30477.01064477689,
         "costOfEquity": 0.16582
       },
       {
         "name": "Disrupción",
         "probability": 0.1,
-        "value": 11448.44124318477,
+        "value": 11448.778969955785,
         "costOfEquity": 0.21756999999999999
       }
     ],
-    "multiplesStatus": "independent-five-year-historical-plus-banco-bogota-with-known-comparability-caveat",
-    "mosBase": -0.483689182194591,
-    "mos20Expected": 15454.06936543386,
+    "multiplesStatus": "HISTORICAL_CONTROLLER_EQUITY_NORMALIZED_FY2021_2025__P_E_SECONDARY_WITH_RESERVATIONS",
+    "mosBase": -0.48367765474539515,
+    "mos20Expected": 15454.217423778568,
     "standaloneMultiplesToday": [
-      27404.468808527043,
-      21923.575046821636,
-      35625.80945108516,
-      13702.234404263521
+      28900.714214799616,
+      23120.571371839695,
+      37570.928479239505,
+      14450.357107399808
     ],
     "weightedDcfMultiplesToday": [
-      22088.145668438243,
-      14694.032523704485,
-      31506.75345040117,
-      11899.19987540052
+      22387.523779911702,
+      14933.647715699894,
+      31895.794211669414,
+      12049.09459744459
     ],
     "fy3": {
       "dcfExDividend": [
-        28835.092079077804,
-        18177.135765041654,
-        43683.437797303945,
-        12755.103003268001
+        28834.579702879033,
+        18176.77181465857,
+        43682.75903134174,
+        12754.844779536968
       ],
       "pb": [
-        32608.59384734994,
-        25855.295590480535,
-        44147.59354315995,
-        14425.323753483484
+        35507.24394778378,
+        28153.626488962153,
+        48071.997938772016,
+        15707.593764604244
       ],
       "pe": [
-        43761.081651155866,
-        30156.944276876016,
-        64773.40352936187,
-        15208.005423131483
+        43760.33364166272,
+        30156.429819066318,
+        64772.31512606393,
+        15207.729567146507
       ],
       "standaloneMultiples": [
-        36511.96457868201,
-        27360.87263071895,
-        51366.627038330626,
-        14699.262337860284
+        38395.825340641415,
+        28854.60765449861,
+        53917.10895432418,
+        15532.641295494035
       ],
       "combined": [
-        30370.466578998643,
-        20013.883138177112,
-        45220.075645509285,
-        13143.934870186458
+        30746.82883043151,
+        20312.338982626577,
+        45729.629015938226,
+        13310.404082728382
       ]
     },
     "presentValueFy3Packages": {
       "pb": [
-        23058.247154688488,
-        17329.248920828337,
-        30769.9230756138,
-        12373.761475657408
+        24824.8586463173,
+        18659.549283383632,
+        33247.105978741114,
+        13084.633617877804
       ],
       "pe": [
-        29853.421455304724,
-        19818.193356992775,
-        43787.09101907876,
-        12807.375526026091
+        29853.439172483715,
+        19818.37618176789,
+        43786.85368714827,
+        12807.703484339068
       ],
       "standaloneMultiples": [
-        25436.55815990417,
-        18200.37947348589,
-        35325.93185582654,
-        12525.526393286447
+        26584.861830475547,
+        19065.138697818125,
+        36936.01767668362,
+        12987.708071139246
       ],
       "combined": [
-        21694.563538713668,
-        13949.393409037337,
-        31446.777931349447,
-        11663.858273205105
+        21924.35330304689,
+        14122.56118089558,
+        31768.81205115824,
+        11756.564790192477
       ]
     },
     "capitalRegulatory": {
-      "cet1": 17605,
-      "rwa": 145083,
+      "cet1": 17605.25,
+      "rwa": 145082.745,
+      "cet1CopMillionsExact": 17605250,
+      "rwaCopMillionsExact": 145082745,
       "niifToCet1ConversionHypothesis": 0.85,
       "cet1Targets": [
         0.12,
         0.1225,
         0.1175,
         0.125
-      ],
-      "maxRetentionToIncome": [
-        0.7087502435893349,
-        0.8171148086126498,
-        0.7493054485821414,
-        0.6208487231317441
       ]
     },
     "calibration": {
@@ -371,8 +412,11 @@
       "proxyBeta": 1,
       "incrementalEquityPremium": 0.045,
       "preferredIlliquidityPremium": 0.005
-    }
+    },
+    "certification": "DOCUMENTARY_REVIEW_WITH_RESERVATIONS__DCF_NOT_CERTIFIED",
+    "terminalYear10GrowthBase": 0.04482764180489085,
+    "terminalPerpetualGrowthBase": 0.04
   },
   "spreadsheet": "https://docs.google.com/spreadsheets/d/1P35lwdHGCnRIZlzrxVL8qPAdIEmG4SZ4DBTsTMffHPM/edit",
-  "updatedAt": "2026-10-09T14:27:58.994Z"
+  "updatedAt": "2026-10-09T14:55:30.665Z"
 }
