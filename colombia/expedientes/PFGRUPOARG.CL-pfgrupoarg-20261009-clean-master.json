@@ -1,0 +1,166 @@
+{
+  "schema": "jmr-colombia-dossier-v1",
+  "workflow": "colombia-v1",
+  "runId": "pfgrupoarg-20261009-clean-master",
+  "market": "CO",
+  "ticker": "PFGRUPOARG.CL",
+  "company": "Grupo Argos S.A.",
+  "analysisDate": "2026-10-09",
+  "retrievedAt": "2026-10-09T20:29:33.163Z",
+  "updatedAt": "2026-10-09T20:29:33.163Z",
+  "instrument": {
+    "ticker": "PFGRUPOARG.CL",
+    "exchange": "BVC",
+    "quoteCurrency": "COP",
+    "securityClass": "preferential",
+    "economicRightsVerified": true,
+    "model": "holding",
+    "website": "https://www.grupoargos.com/"
+  },
+  "quote": {
+    "price": 16500,
+    "currency": "COP",
+    "quotedAt": "2026-10-08T20:00:00.000Z",
+    "retrievedAt": "2026-10-09T20:29:33.163Z",
+    "source": "Grupo Argos emisor 08-oct-2026",
+    "kind": "last-available-trade",
+    "ageDays": 1,
+    "sessionDate": "2026-10-08",
+    "history": []
+  },
+  "observations": [
+    {
+      "field": "StockholdersEquity",
+      "fiscalDate": "2026-06-30",
+      "frequency": "quarterly",
+      "value": 10054913000000,
+      "unit": "COP",
+      "currency": "COP",
+      "source": "Grupo Argos EEFF separados 2T2026",
+      "verification": "primary-report",
+      "publishedAt": "2026-08-14",
+      "retrievedAt": "2026-10-09T20:29:33.163Z",
+      "basis": "separate, COP nominal"
+    }
+  ],
+  "coverage": {
+    "annualYears": 0,
+    "fields": {
+      "StockholdersEquity": 0
+    },
+    "reportingCurrencies": [
+      "COP"
+    ],
+    "ltmAvailable": false
+  },
+  "diagnostics": [],
+  "audit": {
+    "isolation": "ok",
+    "primaryReconciled": false,
+    "valuationReady": false,
+    "modelApproved": true,
+    "checks": {
+      "identity": true,
+      "currency": true,
+      "noInheritedAssumptions": true,
+      "sourceMasterClean": true,
+      "navRecalculated": true,
+      "intrinsicDCFComplete": false,
+      "multiplesComplete": false
+    },
+    "warnings": [
+      "SÓLO NAV PROVISIONAL: el valor 17.003 NO es intrínseco.",
+      "Base SOTP DCF y múltiplos homogéneos aún pendientes.",
+      "Acciones 30-jun más recompra septiembre y tenencia Celsia derivada; no equivalen a capitalización 09-oct certificada.",
+      "Se incluye una copia independiente, limpia de plantilla maestra. No se usó NVIDIA."
+    ]
+  },
+  "assumptions": {
+    "valuationCurrency": "COP",
+    "riskfreeRate": null,
+    "equityRiskPremium": 0.042,
+    "countryRiskExposure": null,
+    "beta": null,
+    "costOfEquity": null,
+    "costOfDebt": null,
+    "wacc": null,
+    "terminalGrowth": null,
+    "terminalRoic": null,
+    "terminalRoe": null
+  },
+  "scenarios": [
+    {
+      "name": "Base",
+      "probability": null,
+      "inputs": {
+        "navReferenceOnly": 17003.052924
+      },
+      "value": null
+    },
+    {
+      "name": "Conservadora",
+      "probability": null,
+      "inputs": {
+        "navReferenceOnly": 15472.780632
+      },
+      "value": null
+    },
+    {
+      "name": "Optimista",
+      "probability": null,
+      "inputs": {
+        "navReferenceOnly": 19016.523655
+      },
+      "value": null
+    },
+    {
+      "name": "Disrupción",
+      "probability": null,
+      "inputs": {
+        "navReferenceOnly": 12412.236048
+      },
+      "value": null
+    }
+  ],
+  "valuationSummary": {
+    "base": null,
+    "expected": null,
+    "marketPrice": 16500,
+    "priceDate": "2026-10-08",
+    "scopeLabel": "NAV provisional COP 17.003, no valor intrínseco",
+    "navReference": 17003.052924,
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit"
+  },
+  "reports": {
+    "valuation": {
+      "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A.\ncurrency: COP\nstatus: provisional_nav_no_dcf_certificado\n---\n# PFGRUPOARG · Valoración JMR Colombia · 9 octubre 2026\n\n## 1. Resumen\n**No existe todavía valor intrínseco Base certificado.** La suma de partes que sustituye dos inversiones en libros por sus cotizaciones arroja COP **13,3965 billones** de NAV proforma, COP **19.706 por acción** con igual derecho económico y COP **17.003 por preferencial**, al imputar la prima relativa de la ordinaria. Esta última asignación depende de la cotización, por lo que no es un DCF ni genera margen de seguridad fundamental demostrable. Hoja: https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit.\n\n## 2. Historia y visión externa\nGrupo Argos es un holding de infraestructura con exposición a Cementos Argos, Celsia, Odinsa y otros activos. La rentabilidad económica depende de la capacidad de cada negocio para convertir capital en flujo libre distribuible y de las decisiones de asignación de capital de la matriz. No se incluyen nuevamente las acciones de SURA distribuidas en la escisión de 2025 ni se capitalizan como recurrentes efectos extraordinarios de la reorganización.\n\n## 3. Datos y conciliación\nUnidad COP miles de millones salvo acciones y precios. Patrimonio separado de junio 2026 COP 10.054,913; Cementos en libros 5.151,581; Celsia en libros 1.734,030; tenencia Cementos 671.439.556 acciones; tenencia Celsia estimada 557.205.138 acciones. Marcas Cementos COP 11.340 y Celsia COP 4.760 al 8-oct. Readquisición de septiembre: 1.368.769 ordinarias a COP 21.900 y 560.390 PF a COP 16.500. Algunas tenencias y movimientos posteriores requieren conciliación.\n\n## 4. Supuestos y tasas\nPara la valoración intrínseca corresponde aplicar WACC y betas bottom-up por actividad, Ke específico y riesgo país proporcional a exposición geográfica. ERP madura 4,20% bajo metodología adjusted payout como referencia a verificar con la tabla del corte. El NAV de mercado no descuenta flujos y, por tanto, no está condicionado por la elección 8,86% versus 11,55% de Rf COP. La calibración definitiva de TES, spread soberano, inflación y DCF de cada participada sigue pendiente.\n\n## 5. Historias y probabilidades\nCuatro **pruebas de NAV**, no DCF: Base de prueba COP 17.003; Conservadora COP 15.473; Optimista COP 19.017; Disrupción COP 12.412 por preferencial. Las variaciones simuladas de Cementos/Celsia/Odinsa son 0/0/0%, −10/−10/−10%, +15/+10/+10% y −30/−30/−30%, respectivamente. No se asignan probabilidades hasta elaborar historias económicas de FCFF, márgenes, reinversión y concesiones.\n\n## 6. Múltiplos\nLos métodos P/NAV histórico, P/NAV de holdings comparables y EV/EBITDA de participadas aparecen en la hoja con dos horizontes y campo de ponderación. Su cálculo está pendiente por falta de serie comparable postescisión, peers individuales, capitalización multiclase, deuda, caja y minoritarios. P/E consolidado distorsionado por extraordinarios no debe ser usado sin normalización. El NAV marcado a mercado NO constituye una segunda ancla independiente.\n\n## 7. Resultados\n**Puente:** 10.054,913 − 5.151,581 − 1.734,030 + 7.614,125 + 2.652,296 − 39,222 = **13.396,501** COP miles de millones. Acciones remanentes modeladas: 394.451.913 ordinarias + 285.380.121 preferenciales. Indicador de PF, al distribuir NAV según la relación de precios 21.020/16.500: **COP 17.003**. Base DCF y ponderado múltiplos permanecen pendientes. La tabla FY+3 muestra el horizonte pero sin cifra ficticia.\n\n## 8. Intrínseco frente a múltiplos\nEl precio de cotización de subsidiarias es una opinión agregada del mercado sobre flujos futuros; no valida el valor económico. La suma de partes intrínseca necesita modelos por negocio y puente de matriz para evitar doble conteo.\n\n## 9. Sensibilidad\nLos cuatro escenarios de NAV demuestran que pequeños cambios en marcas de subsidiarias mueven materialmente el valor de PF. Todavía no es posible calcular sensibilidad completa a WACC, ROIC terminal, capex, inflación y vencimientos de concesiones.\n\n## 10. Log de cambios\nSe descartó una copia de plantilla contaminada por NVIDIA, identificada como NO USAR. Se creó copia nueva y limpia de la maestra del 2-oct-2026; se reprodujeron las fórmulas del NAV exclusivamente con datos de Argos en las pestañas CO de https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit. Ningún archivo de otra compañía suministra entradas a este cálculo.\n\n## 11. El precio al final\nPFGRUPOARG cerró según el emisor el 8-oct-2026 a **COP 16.500**; ordinaria COP 21.020. NAV indicativo PF COP 17.003, aproximadamente +3,05% sobre el precio, **no margen de seguridad DCF**. La referencia de $40.000 hacia 2030 es aspiración corporativa y no valor actual certificado.\n\n## 12. Registro de decisión\nNo realizar compras o ventas automáticamente por el NAV. El juicio cambiaría con: DCF auditados de Cementos/Celsia/Odinsa, posición neta de matriz, programa de recompras efectivamente ejecutado y derechos de la especie al corte, junto con comparables postescisión.\n\n## 13. Fuentes\n- [Grupo Argos, reportes financieros 2T2026](https://www.grupoargos.com/relacion-con-el-inversionista/resultados-e-informes/reportes-financieros/)\n- [Grupo Argos, composición accionaria](https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/composicion-accionaria/)\n- [Grupo Argos, comportamiento de la acción](https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/comportamiento-de-la-accion/)\n- [Hoja JMR, copia limpia]( https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit )\n\n## 14. Control de calidad\nIdentidad, fuente de plantilla limpia, unidades y cálculos del NAV reproducidos: sí. Valor intrínseco Base DCF, ROIC/FCFF terminal, capital de participadas, múltiplos homologados, ponderados y FY+3: **NO**, pendientes. La publicación es un expediente informativo condicionado, no valoración certificada.\n"
+    },
+    "research": {
+      "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A.\ncurrency: COP\nstatus: provisional_research\n---\n# Grupo Argos Preferencial · Research fundamental JMR Colombia\n\n## 1. Resumen ejecutivo\nEl accionista preferencial mantiene exposición económica a cemento, energía, concesiones y activos complementarios, con un intermediario corporativo que asigna capital. El reto económico es que la rentabilidad de las participadas llegue al accionista después de deuda, gastos corporativos y posibles minoritarios. Se mantiene NAV provisional COP 17.003 por PF y Base intrínseco pendiente.\n\n## 2. Modelo de negocio\nEl grupo participa en actividades intensivas en capital. Cemento requiere mantener capacidad productiva y logística, generación y distribución eléctrica requieren activos y regulación, concesiones requieren inversión y contratos de horizonte finito. La matriz recibe pagos, puede desinvertir o recomprar acciones y afronta sus obligaciones propias. No sumar esos dividendos a la vez que la valoración integral de cada participada.\n\n## 3. Segmentos y geografía\nLos negocios tienen exposiciones internacionales y colombianas diferentes. Para Cementos y sus operaciones estadounidenses la valoración debe separar flujos USD y COP. Celsia y Odinsa requieren estados y países específicos. No asignar CRP Colombia a todos los activos por el domicilio de la matriz.\n\n## 4. Industria y crecimiento\nCemento depende de volumen constructivo, precio, combustibles y utilización; energía de tarifas, hidrología, demanda y regulación; concesiones de tráfico, tarifas y vigencia contractual.\n### Las 5 fuerzas de Porter\n| Fuerza | Análisis |\n|---|---|\n| Rivalidad | Alta y localizada en cemento, depende de capacidad y logística |\n| Entrantes | Capex, licencias y redes crean barreras |\n| Proveedores | Energía, combustibles y financiación influyen en costos |\n| Clientes | Empresas constructoras y usuarios regulados presentan sensibilidad distinta |\n| Sustitutos | Materiales alternativos, otras fuentes energéticas y cambios de transporte |\n\n## 5. Calidad del negocio\nLa calidad no se deduce de EBITDA consolidado porque incluye minoritarios y compañías con distinta reinversión.\n### Análisis financiero histórico\nAl 30-jun-2026 el patrimonio separado declarado es COP 10.054,913 miles de millones; el valor de subsidiarias contabilizado no equivale a precio bursátil ni a DCF.\n### Evaluación cualitativa\nActivos duraderos pueden generar caja estable, pero deben sostener retorno superior al costo de capital después de su reposición.\n### Auditoría de cifras y supuestos\nSe diferenciaron precios 08-oct de balances de junio. Tenencia Celsia reconstruida y recompra septiembre siguen sujetas a puente de movimientos posterior.\n\n## 6. Ventaja competitiva\nLa economía de escala en cemento, activos regulados y contratos de concesión pueden ser fuentes de ventaja. Es indispensable medir duración y retorno incremental: un activo grande no crea valor si ROIC no excede su WACC.\n\n## 7. Competencia\nCemento compite con otras cementeras regionales; energía con generadores y comercializadores; concesiones con operadores y participantes de procesos públicos. Se necesitan pares comparables individualizados y deuda ajustada por minoritarios antes de aplicar múltiplos.\n\n## 8. Gestión y asignación de capital\nLa escisión de SURA y la gestión de recompras deben valorarse por su efecto en valor por acción sin volver a contar activos distribuidos. El descuento de mercado entre ordinaria y preferencial debe contrastarse con derechos económicos y voto, no aplicarse mecánicamente al valor intrínseco.\n### Equipo, gobierno e incentivos\nExaminar creación de valor por acción y transparencia de operaciones vinculadas.\n### Asignación de capital\nRecomprar por debajo del valor intrínseco puede crear valor, pero este aún no está certificado.\n\n## 9. Catalizadores\nDesinversiones a precios por encima del libro económico, eficiencia operativa, reducción de costos corporativos y mejor conversión a dividendos. Cada catalizador requiere fechas y montos verificables.\n\n## 10. Riesgos\nFinanciación, tasa real, moneda, concesiones, demanda constructiva, riesgos regulatorios, erosión de márgenes y sensibilidad de valor terminal.\n### Escenarios cualitativos de largo plazo\nBase: negocios estables. Conservadora: retorno moderado. Optimista: crecimiento rentable y reciclaje de activos. Disrupción: contracción prolongada de rentabilidad y capital.\n### FODA\nFortaleza: activos de infraestructura; debilidad: complejidad del holding; oportunidad: desinversiones/recompras; amenaza: tasas y ciclos.\n\n## 11. Bulls say / Bears say\nBull: activos estratégicos que el mercado puede valorar con descuento al NAV. Bear: sumas de partes a precios bursátiles pueden ocultar deuda, reposición de activos y valor del voto.\n### Conclusión cualitativa\nSe necesita un DCF por participada, no una inferencia desde el descuento aparente.\n### Síntesis final\nNAV preliminar COP 17.003; valor intrínseco Base pendiente.\n\n## 12. Valor con criterio Damodaran\nUsar modelos FCFF por participada y flujos de concesiones finitas, Ke y WACC por moneda y exposición, ROIC terminal por negocio y puente completo a matriz. ERP madura 4,20% con convención declarada y primas país sin duplicar. No perpetuar concesiones con final contractual.\n### Historias cuantificadas\nEscenarios NAV de referencia: 17.003 / 15.473 / 19.017 / 12.412 COP; **no son DCF**.\n### El precio al final\nPFGRUPOARG, referencia emisor 08-oct-2026 COP 16.500. Ningún margen de seguridad certificado.\n\n## 13. Filosofías de inversión\nBuffett: retorno durable sobre capital. Munger: evitar doble conteo y sesgos de valoración. Lynch: conocer cada negocio separado. Marks: protegerse de endeudamiento y ciclos. Greenblatt: medir verdadero retorno económico, no sólo rentabilidad contable.\n\n## 14. Noticias y eventos recientes\nEscisión 2025 cambia perímetro y comparabilidad. Readquisición de septiembre 2026 modifica caja y acciones. Se requieren conciliación de tercer trimestre y fuente exacta antes de proyectar nuevos flujos.\n\n## 15. Qué vigilar\nFCFF de cemento, EBITDA y deuda atribuible, generación regulada, inversiones de concesiones, vencimientos contractuales, ejecución de recompra, costos centrales y derechos por especie.\n\n## 16. Preguntas abiertas\nDCF de las participadas, ajuste de minoritarios, costo de deuda de mercado, tasa libre COP depurada y tenencias efectivas postseptiembre; históricos y peers postescisión.\n\n## 17. Fuentes\n[Reportes Grupo Argos](https://www.grupoargos.com/relacion-con-el-inversionista/resultados-e-informes/reportes-financieros/), [composición accionaria](https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/composicion-accionaria/), [precios del emisor](https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/comportamiento-de-la-accion/) y [hoja de cálculos]( https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit ).\n\n## 18. Control de calidad final\nIdentidad y NAV reconciliados: sí, condicionados al perímetro y tenencias. DCF, múltiplos, horizontes y ponderaciones intrínsecas: no concluidos. Documento publicado como informe **provisional y no certificado**.\n"
+    }
+  },
+  "sources": [
+    {
+      "role": "price",
+      "url": "https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/comportamiento-de-la-accion/",
+      "retrievedAt": "2026-10-09T20:29:33.163Z"
+    },
+    {
+      "role": "financial-primary",
+      "url": "https://www.grupoargos.com/relacion-con-el-inversionista/resultados-e-informes/reportes-financieros/",
+      "retrievedAt": "2026-10-09T20:29:33.163Z"
+    },
+    {
+      "role": "share-capital",
+      "url": "https://www.grupoargos.com/relacion-con-el-inversionista/acciones-y-dividendos/composicion-accionaria/",
+      "retrievedAt": "2026-10-09T20:29:33.163Z"
+    }
+  ],
+  "publication": {
+    "authorized": true,
+    "publishedAt": "2026-10-09T20:29:33.163Z",
+    "scope": "nav-provisional-no-dcf",
+    "revisedAt": "2026-10-09T20:29:33.163Z",
+    "workbookUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit"
+  }
+}
