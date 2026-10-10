@@ -1,0 +1,1468 @@
+{
+  "schema": "jmr-colombia-dossier-v1",
+  "workflow": "colombia-v1",
+  "runId": "pfdavigrp-20261009-jmr-r3",
+  "market": "CO",
+  "ticker": "PFDAVIGRP.CL",
+  "company": "Davivienda Group · preferencial",
+  "analysisDate": "2026-10-09",
+  "retrievedAt": "2026-10-10T01:58:15.800Z",
+  "updatedAt": "2026-10-10T01:58:15.800Z",
+  "instrument": {
+    "ticker": "PFDAVIGRP.CL",
+    "exchange": "BVC",
+    "quoteCurrency": "COP",
+    "securityClass": "preferred",
+    "economicRightsVerified": true,
+    "model": "financial",
+    "website": "https://ir.daviviendagroup.com/"
+  },
+  "quote": {
+    "price": 40620,
+    "currency": "COP",
+    "quotedAt": null,
+    "sessionDate": "2026-10-09",
+    "retrievedAt": "2026-10-10T01:58:15.800Z",
+    "source": "Investing.com histórico PFDAVIGRP",
+    "url": "https://es.investing.com/equities/davivienda-historical-data",
+    "kind": "historical-session-close",
+    "ageDays": 0,
+    "history": [
+      {
+        "sessionDate": "2026-10-09",
+        "close": 40620,
+        "adjustedClose": null,
+        "volume": null
+      }
+    ],
+    "historyInterval": "1d",
+    "splits": {}
+  },
+  "observations": [
+    {
+      "field": "TotalAssets",
+      "value": 263684146000000,
+      "fiscalDate": "2025-12-31",
+      "frequency": "annual",
+      "unit": "COP",
+      "currency": "COP",
+      "source": "Davivienda Group EEFF consolidados2T26 comparativo2025",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z",
+      "publishedAt": "2026-08-11",
+      "verification": "primary-verified",
+      "basis": "Group consolidado; balance comparativo, no resultados2025"
+    },
+    {
+      "field": "TotalLiabilitiesNetMinorityInterest",
+      "value": 241717411000000,
+      "fiscalDate": "2025-12-31",
+      "frequency": "annual",
+      "unit": "COP",
+      "currency": "COP",
+      "source": "Davivienda Group EEFF consolidados2T26 comparativo2025",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z",
+      "publishedAt": "2026-08-11",
+      "verification": "primary-verified",
+      "basis": "Group consolidado; balance comparativo, no resultados2025"
+    },
+    {
+      "field": "StockholdersEquity",
+      "value": 20906316000000,
+      "fiscalDate": "2025-12-31",
+      "frequency": "annual",
+      "unit": "COP",
+      "currency": "COP",
+      "source": "Davivienda Group EEFF consolidados2T26 comparativo2025",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z",
+      "publishedAt": "2026-08-11",
+      "verification": "primary-verified",
+      "basis": "Group consolidado; balance comparativo, no resultados2025"
+    },
+    {
+      "field": "MinorityInterest",
+      "value": 1060419000000,
+      "fiscalDate": "2025-12-31",
+      "frequency": "annual",
+      "unit": "COP",
+      "currency": "COP",
+      "source": "Davivienda Group EEFF consolidados2T26 comparativo2025",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z",
+      "publishedAt": "2026-08-11",
+      "verification": "primary-verified",
+      "basis": "Group consolidado; balance comparativo, no resultados2025"
+    }
+  ],
+  "coverage": {
+    "annualYears": 1,
+    "fields": {
+      "TotalAssets": 1,
+      "TotalLiabilitiesNetMinorityInterest": 1,
+      "StockholdersEquity": 1,
+      "MinorityInterest": 1
+    },
+    "reportingCurrencies": [
+      "COP"
+    ],
+    "ltmAvailable": false
+  },
+  "diagnostics": [],
+  "audit": {
+    "isolation": "ok",
+    "primaryReconciled": false,
+    "valuationReady": true,
+    "modelApproved": true,
+    "checks": {
+      "identity": true,
+      "currency": true,
+      "noInheritedAssumptions": true,
+      "independentRecalculation": true,
+      "probabilities": true,
+      "presentAndYear3Reconcile": true,
+      "regulatoryPerLicenseCertified": false
+    },
+    "warnings": [
+      "Valoración estimada, no certificación regulatoria de dividendos.",
+      "DAVIbank libro Group y CET1 local: puente estimado visible.",
+      "HDI: subholding bancaria; recuperación de ROE y capital estimados.",
+      "Base financiera H1 junio; no UDM homogéneo. Historia Group posterior a reorganización limitada.",
+      "Cuatro historias, emisión común hipotética y refinanciación supuesta.",
+      "P/B y P/E fundamentales comparten supuestos con DCF; no evidencia relativa independiente."
+    ]
+  },
+  "assumptions": {
+    "valuationCurrency": "COP",
+    "riskfreeRate": 0.0507,
+    "equityRiskPremium": 0.0442,
+    "countryRiskExposure": 0.03217848164359529,
+    "beta": 0.7,
+    "costOfEquity": 0.17681966940528948,
+    "terminalCostOfEquity": 0.14357231308228213,
+    "costOfDebt": null,
+    "wacc": null,
+    "terminalGrowth": 0.04,
+    "terminalRoic": null,
+    "terminalRoe": 0.14
+  },
+  "scenarios": [
+    {
+      "name": "Base",
+      "probability": 0.5,
+      "inputs": {
+        "name": "Base",
+        "p": 0.5,
+        "r1": 0.12,
+        "r5": 0.15,
+        "rt": 0.14,
+        "growth": [
+          0.06,
+          0.04,
+          0.06
+        ],
+        "g": 0.04,
+        "extra": 0,
+        "cost": 60000,
+        "hdi_roe": [
+          0.007063739716760862,
+          0.12,
+          0.12
+        ]
+      },
+      "value": 28212.858501246294,
+      "year3": 38219.35273947741
+    },
+    {
+      "name": "Conservador",
+      "probability": 0.25,
+      "inputs": {
+        "name": "Conservador",
+        "p": 0.25,
+        "r1": 0.08,
+        "r5": 0.12,
+        "rt": 0.11,
+        "growth": [
+          0.04,
+          0.02,
+          0.04
+        ],
+        "g": 0.035,
+        "extra": 0.005,
+        "cost": 80000,
+        "hdi_roe": [
+          0,
+          0.09,
+          0.09
+        ]
+      },
+      "value": 18272.413235135078,
+      "year3": 24433.944363141203
+    },
+    {
+      "name": "Optimista",
+      "probability": 0.15,
+      "inputs": {
+        "name": "Optimista",
+        "p": 0.15,
+        "r1": 0.14,
+        "r5": 0.18,
+        "rt": 0.16,
+        "growth": [
+          0.08,
+          0.06,
+          0.08
+        ],
+        "g": 0.045,
+        "extra": 0,
+        "cost": 50000,
+        "hdi_roe": [
+          0.03,
+          0.15,
+          0.14
+        ]
+      },
+      "value": 36732.07037708609,
+      "year3": 51092.8084974794
+    },
+    {
+      "name": "Disruptivo",
+      "probability": 0.1,
+      "inputs": {
+        "name": "Disruptivo",
+        "p": 0.1,
+        "r1": -0.03,
+        "r5": 0.08,
+        "rt": 0.1,
+        "growth": [
+          0.02,
+          0,
+          0.02
+        ],
+        "g": 0.03,
+        "extra": 0.01,
+        "cost": 100000,
+        "hdi_roe": [
+          -0.05,
+          0.05,
+          0.08
+        ]
+      },
+      "value": 10533.57132094813,
+      "year3": 15163.595150621408
+    }
+  ],
+  "reports": {
+    "research": {
+      "content": "# PFDAVIGRP · Research fundamental JMR Colombia\n\nCorte: 09/10/2026. Elaboración: 10/10/2026. Run pfdavigrp-20261009-jmr-r3. Base financiera junio 2026. Estado: research con valoración estimada corregida R3. Clase preferente Davivienda Group, distinta del Banco Davivienda PFDAVVNDA. Valoración anexa: PFDAVIGRP_Valoracion_JMR_Colombia_2026-10-09.md. Modelo independiente y fichero JSON conservan los cálculos.\n\nÍndice\n\n1. Resumen ejecutivo\n2. Modelo de negocio\n3. Segmentos y geografía\n4. Industria y crecimiento\n5. Calidad del negocio\n6. Ventaja competitiva\n7. Competencia\n8. Gestión y asignación de capital\n9. Catalizadores\n10. Riesgos\n11. Bulls say / Bears say\n12. Valor con criterio Damodaran\n13. Filosofías de inversión\n14. Noticias y eventos recientes\n15. Qué vigilar\n16. Preguntas abiertas\n17. Fuentes\n18. Control de calidad final\n\n## 1. Resumen ejecutivo\n\nDavivienda Group permite participar en una franquicia de intermediación financiera regional y en la integración de las operaciones aportadas por Scotiabank. La tensión económica es convertir una mayor escala en retorno sobre el equity, sin que capital, costos y complejidad impidan llevar el resultado al accionista de la holding. La recuperación contable y la capacidad de distribuir efectivo son preguntas distintas.\n\nEl DCF financiero revisado da **Base COP 28.213 por preferida** y esperado complementario COP 25.238. El ponderado de múltiplos Base es COP 29.301; comparte supuestos con el DCF y no lo valida independientemente. La principal incertidumbre sigue siendo rentabilidad distribuible después de integración, capital local y renovación de instrumentos subordinados. Se mantienen estimaciones donde falta evidencia, con límites explícitos.\n\n- Ventaja potencial: relaciones bancarias, depósitos y distribución existentes; comprobar monetización y costo de fondeo.\n- Riesgo central: rentabilidad nominal insuficiente para compensar Ke y reinversión obligatoria.\n- Señal positiva: retorno sostenible acompañado de eficiencia y capital estable, no solo utilidad extraordinaria.\n- Señal negativa: crecimiento de RWA, financiación externa o costos que diluyan la mejora por acción.\n\n## 2. Modelo de negocio\n\nEl banco reúne depósitos y otras fuentes de fondeo, concede crédito y presta pagos, servicios transaccionales y productos de inversión. Gana margen de interés y comisiones; paga fondeo, pérdidas de crédito, operación y cargas fiscales. El negocio se evalúa con saldo y mezcla de cartera, costo de depósitos, NIM, provisiones, eficiencia y retorno sobre equity. Los depósitos no son deuda industrial que deba restarse mecánicamente de un DCF de accionistas.\n\nDaviPlata amplía la relación transaccional y puede facilitar depósitos y venta cruzada. Un mayor número de usuarios o transacciones no equivale automáticamente a rentabilidad: hay que observar ingreso por relación, costo de atención y pérdida de crédito. En seguros importan prima, siniestralidad, gastos, reservas y capital; su ROE requiere evidencia propia. En la holding importa cuánto dividendo puede subir de cada filial y qué queda tras costos y obligaciones corporativas.\n\n## 3. Segmentos y geografía\n\n| Bloque | Participación usada | Unidad económica y perímetro | Información pendiente |\n| --- | --- | --- | --- |\n| Banco consolidado | 98,9% | Colombia, operaciones regionales y filiales bancarias; vehículos incluidos | Ingreso/NI atribuible por país congruentes y capital de cada licencia |\n| DAVIbank Colombia | 100% mediante vehículos | Se modela equity consolidado y capital separado; puente estimado | Conciliación de perímetro y dividendos transferibles |\n| HDI directo | 17,8% | Participación directa; no se suma otra vez la parte recogida como NCI del banco | Capital bancario por licencia, reservas, payout y ROE propio |\n| Holding/residual | Neto, 152.877,017 COP millones | Eliminaciones y otras posiciones; proxy libro | Valor razonable y flujo corporativo independiente |\n\nLa matriz de riesgo país conserva ponderación por préstamos FY2025 de Colombia, Costa Rica, Honduras, Panamá, El Salvador y Miami. Es preferible a asignar riesgo exclusivamente por domicilio, pero necesita actualización postintegración. Exposición en divisas afecta traducción a COP, capital y retorno: no se presenta un aumento adquirido de tamaño como crecimiento orgánico ni una variación de FX como nueva productividad. No se inventan beneficios por país cuando el dato no está conciliado; el cuadro anterior es de cobertura económica, no de contribuciones auditadas.\n\n## 4. Industria y crecimiento\n\nEl crédito crece con actividad, inclusión financiera, precios y apetito de riesgo. La digitalización cambia acceso y costos, pero puede aumentar competencia por clientes y depósitos. Las barreras regulatorias y el fondeo limitan la velocidad de expansión: vender más cartera puede consumir equity antes de producir beneficio. No se incorporó una cifra de mercado total o penetración sin fuente verificable.\n\nEl modelo separa nominal COP de crecimiento real. El 6% inicial Base del bloque Banco es un supuesto prospectivo; el 4% terminal con inflación COP estimada de 4% representa aproximadamente estabilidad real. La mayor escala adquirida ya está en el patrimonio inicial. El análisis no la añade como crecimiento gratuito ni suma las sinergias a un ROE que ya las incorpora.\n\n### Las 5 fuerzas de Porter\n\n| Fuerza | Evidencia / mecanismo favorable | Presión / contraevidencia | Implicación |\n| --- | --- | --- | --- |\n| Rivalidad existente | Relaciones y canales pueden retener clientes | Precios y tasas comparables; presión sobre fondeo | Escala debe reflejarse en costo y ROE |\n| Amenaza de nuevos entrantes | Licencia, capital y riesgo dificultan entrar | Plataformas digitales pueden adquirir relaciones concretas | Barrera regulatoria no asegura margen |\n| Poder de clientes | Servicio integrado aumenta conveniencia | Clientes pueden repartir depósitos y crédito | Vigilar retención y sensibilidad a precios |\n| Poder de proveedores | Depósitos diversos reducen dependencia puntual | Ahorradores y mercados exigen rentabilidad; tecnología tiene costos | Costo de fondeo y ejecución tecnológica gobiernan retorno |\n| Amenaza de sustitutos | Infraestructura bancaria facilita pagos y crédito | Billeteras y alternativas de ahorro/crédito compiten | Medir monetización, no solo volumen |\n\nLas fuerzas con mayor efecto sobre el valor estimado son fondeo, competencia y calidad de originación. La regulación dificulta entrada, pero también absorbe parte del beneficio de crecer.\n\n## 5. Calidad del negocio\n\n### Análisis financiero histórico\n\nLos estados de junio distinguen utilidad atribuible de consolidada y períodos H1/Q2. Las cifras exactas y el puente de patrimonio están en la valoración; no se construye un LTM mezclando resultados preintegración. La mejoría trimestral merece seguimiento, pero una tasa trimestral no garantiza rendimiento anual repetible. Tampoco el ROAE normalizado empresarial es equivalente al ROE sobre libro inicial que usa esta proyección.\n\nLos dividendos aprobados para 2026 fueron COP 792,81 por acción, con dos cuotas, según nota de patrimonio de estados separados. Ese dato histórico no se añade a flujos futuros de una valoración de octubre. EBIT, caja operativa y deuda financiera industriales no son las métricas rectoras: resultado bancario, capital, provisiones, liquidez y flujo a holding tienen prioridad.\n\n### Evaluación cualitativa de la calidad\n\nLa franquicia puede generar ingresos recurrentes, pero pérdidas de crédito y valoración de inversiones son cíclicas. La recuperación debe sostenerse después de impuestos, costos de integración y efectos PPA. Un balance más grande y utilidades contables no prueban dividendos disponibles en cada jurisdicción. El stress de renovación AT1/T2 reduce Base de 28.213 a 22.548, señal de dependencia del diseño de capital.\n\n### Auditoría de cifras y supuestos del Modelo JMR\n\n| Input | Valor / ubicación | Actividad | Soporte / contraevidencia | Estado / prioridad |\n| --- | --- | --- | --- | --- |\n| Equity Group | 21.065.388; Entradas cierre!B3 | Puente por participación | EEFF Q2 exactos; gerencial difiere | Conciliado / alta |\n| Acciones | 605.452.684; B4 | COP por acción | Q2 y estados separados; dilución futura supuesta | Conciliado / alta |\n| Capital DAVIbank | CET1 2.441.383; B7:B11 | Retención mínima | Nota 6 junio; perímetro separado vs equity consolidado | Diferencia explicada / alta |\n| Puente Banco | 1.751.000; J30 | Deducciones y NCI | Reconcilia cifras redondeadas; no equivale a desglose legal | Requiere aclaración / alta |\n| Ke terminal | 14,357%; B20 | Descuento y terminal | Conversión explícita; inflación normalizada analista | Requiere aclaración económica / alta |\n| ROE Banco / DAVIbank | 12%→15%→14% Base | Utilidad futura | Guidance Group y juicio del analista | Estimación / alta |\n| ROE HDI | 0,706%→12%→12% Base; B55:D55 | Utilidad de participación directa | Año1 anualiza H1; recuperación supuesta, sin guidance de HDI | Estimación explícita / alta |\n| HDI capital | Libro y g; FCFE regulatorio | Retención proxy | Sin solvencia/retornos propios comprobados | No verificable regulatoriamente / alta |\n| Regla preferida | 161,30; B50:B51 | Waterfall anual de FCFE | Aviso OCR; utilidades distribuibles futuras no verificadas | Conciliado derecho / alta |\n| Costo holding | 60.000; K42 | FCFE Group | Estimación con rango 0–120.000 | Requiere aclaración / media |\n| Múltiplos | P/B 0,921×; P/E 6,803× | Métodos secundarios | Fundamentales dependientes de DCF | Conciliado fórmula / media |\n| EV/EBITDA | Excluido | Sin efecto | No se fuerza intermediación como industria | No aplicable |\n| Precio al corte / último cierre | COP 40.620, 09/10/2026 | Contraste final | Tabla histórica Investing.com | Verificado en fuente secundaria / media |\n\n## 6. Ventaja competitiva\n\nUna relación de depósitos y transacciones puede reducir costo de adquisición y producir información para originar mejor. Distribución y marca pueden apoyar retención. La ventaja sería demostrable si esas relaciones producen fondeo más estable, menores costos y pérdidas ajustadas por ciclo. Con los períodos disponibles no se certifica un exceso persistente de rentabilidad del nuevo perímetro combinado.\n\nBase no presupone un moat perpetuo: ROE terminal 14% frente a Ke 14,36% implica ligera destrucción económica en madurez. Optimista necesita evidencia de un retorno mayor que Ke. El negocio digital sería parte de esa ventaja si mejora economía unitaria y distribución; no se le asigna una valoración de software ni se suma un segundo DCF de DaviPlata ya contenido en el Banco.\n\n## 7. Competencia\n\nEl cliente puede comparar bancos universales, alternativas de pagos, ahorro e inversión y financiación especializada. La competencia relevante depende del producto y del país. Esta revisión no incorpora una tabla de resultados de competidores individuales no leídos ni usa sus estados como cifras de Davivienda.\n\n| Comparación disponible | Corte / muestra | P/B | P/E forward | Límite |\n| --- | --- | --- | --- | --- |\n| US money center, Damodaran | Enero 2026; 15 firmas | 1,62× | 13,04× | Mercado/moneda/riesgo distintos |\n| US regional, Damodaran | Enero 2026; 568 firmas | 1,14× | 11,00× | Muestra amplia; no pares específicos Group |\n| Group fundamental Base | Terminal de modelo | 0,921× | 6,803× | Derivado, no cotización de una muestra de pares |\n\nFalta una comparación contemporánea latinoamericana con ROE normalizado, P/B, P/E, capital y calidad de activos congruentes. Hasta tenerla, el múltiplo sectorial permanece contexto y la competencia se examina por mecanismos económicos.\n\n## 8. Gestión y asignación de capital\n\n### Equipo, gobierno e incentivos\n\nEl control de Grupo Bolívar y la relación con Scotiabank requieren evaluar decisiones de partes vinculadas y trato por clase. No se verificó en esta revisión la remuneración del equipo o su incentivo a resultado por acción; no se deduce alineamiento de la participación accionaria por sí sola. La estructura de vehículos demanda reconciliación para evitar doble valoración.\n\nEl aviso preferente establece mínimo no acumulativo de COP 161,30 condicionado a utilidades y prioridad de reembolso en liquidación. El modelo aplica el reparto anual; no estima recuperación concursal. La financiación común en escenarios es una hipótesis del analista, no una decisión anunciada ni una garantía de que el minoritario conserve su valor.\n\n### Asignación de capital\n\nRetener equity es inversión económica del banco. La integración crea valor si beneficio incremental y capital requerido compensan la inversión por acción. El dividendo de holding debe contrastarse con capital de cada filial, restricciones y costo corporativo. No basta con que un banco agregado exceda su mínimo si otra licencia no puede remitir caja. El capital interno aportado a DAVIbank se usa dentro de sus cifras de junio y no se agrega otra vez al Group.\n\n## 9. Catalizadores\n\n| Evento | Mecanismo | Plazo / evidencia | Señal de fracaso |\n| --- | --- | --- | --- |\n| Integración legal y operativa | Eliminar duplicación; permitir ejecución de ahorro | Calendario empresarial 2026–28; no aprobación final verificada | Atraso, interrupción de servicio o costo mayor |\n| Captura de sinergias | Mejora ROE con cartera comparable | Empresa orienta rentabilidad 2028/29; Base llega 15% FY2029 | Eficiencia mejora por ingreso extraordinario, no costo recurrente |\n| Reordenación de oficinas | Puede ahorrar costo fijo | Aviso oficial con inicio 01/10/2026 | Pérdida de depósitos o clientes supera ahorro |\n| Nuevo reporte y capital por licencia | Reducir incertidumbre y mejorar modelo | Siguiente reporte trimestral | Información agregada sigue sin permitir validar caja a holding |\n\nUna meta no es un catalizador consumado. El cierre de una oficina tampoco demuestra por sí solo que se haya capturado un ahorro neto.\n\n## 10. Riesgos\n\n| Riesgo | Probabilidad razonada | Impacto | Mitigación / señal |\n| --- | --- | --- | --- |\n| Integración | Material: todavía hay ejecución pendiente | Costos, pérdida de clientes y retraso del ROE | Medir costo recurrente y migraciones; no solo hitos anunciados |\n| Crédito | Cíclico; sensibilidad a ingreso y tasas | Provisiones erosionan utilidad y CET1 | Originación, cobranza; vigilar CoR, etapas y cobertura |\n| Fondeo | Depende de competencia y tasas | NIM y liquidez bajo presión | Diversificación; observar costo de depósitos y renovación |\n| Capital/AT1/T2 | Renovación supuesta, no comprometida | Retención, emisión y dilución | Stress sin renovación; obtener contratos y calendario |\n| Divisas/país | Operación multijurisdicción | Traducción de equity, RWA y dividendos | Riesgo por exposición operativa; no solo domicilio |\n| Giro de dividendos | Restricciones locales sin cierre completo | Beneficio contable no llega a holding | Revisar solvencia y utilidades distribuibles por filial |\n| Holding Davivienda Internacional | Capital y retorno propios pendientes | Valor de participación puede cambiar | Solicitar cuentas y solvencia de la entidad exacta |\n\n### Escenarios cualitativos de largo plazo\n\nBase supone ejecución suficiente y retorno cercano a Ke en madurez; Conservador, ahorro parcial con capital más exigente; Optimista, rentabilidad superior sostenida por productividad; Disrupción, pérdida inicial, financiación común y recuperación incompleta. No se agrega un spread de descuento diferente a cada escenario además de empeorar toda su operación: la diferencia está en flujos y capital.\n\n### FODA de síntesis\n\nFortaleza: relaciones y distribución ya instaladas. Debilidad: complejidad de consolidación y caja de holding. Oportunidad: integrar sistemas, canales y fondeo para mejorar retorno por acción. Amenaza: integración prolongada, competencia y exigencias de capital que capturen la mejora operacional.\n\n## 11. Bulls say / Bears say\n\n**Bull:** una integración ejecutada puede convertir capacidades duplicadas en eficiencia y aumentar rentabilidad sin repetir todo el costo de captación. Se invalidaría si el avance de ROE depende de ganancias no recurrentes o reduce calidad de originación.\n\n**Bear:** aun recuperando utilidad, el equity retenido y el costo de capital pueden limitar el dividendo y hacer insuficiente el retorno. Se debilitaría con evidencia recurrente de rentabilidad superior a Ke y remesas legales a holding sin financiación adicional.\n\n### Conclusión cualitativa\n\nExiste una historia de mejora económica verificable, pero aún exige ejecución. La información disponible permite modelar escenarios; no permite certificar rentabilidad permanente ni solvencia local completa. La calidad de la franquicia y la calidad del precio requieren juicios separados.\n\n### Síntesis final\n\nLa variable decisiva es beneficio distribuible por acción después de capital e integración. Las cuatro historias cubren distintos grados de recuperación y financiación. Revisar eficiencia, calidad de activos, capital local y emisión real permitirá cambiar probabilidades con hechos, sin convertir una recuperación trimestral en ventaja perpetua.\n\n## 12. Valor con criterio Damodaran\n\n### La historia en un párrafo\n\nEl accionista compra participaciones financieras, sus futuras distribuciones y la capacidad de reinvertir a buen retorno. El FCFE resta capital retenido; las participaciones se agregan sin duplicar vehículos y se resta el costo de holding. El valor depende de retorno sobre libro, crecimiento financiable, Ke y distribución efectiva, no de un EV industrial construido con depósitos.\n\n### Visión externa: tasas base\n\nLa muestra US es contexto y carece de comparabilidad automática con Colombia/región. Sus múltiplos no sustituyen historia, riesgo geográfico ni costo de capital. El caso Damodaran Deutsche Bank 2016 sirve para validar estructura FCFE/capital regulatorio, no para copiar un precio objetivo ni exigir ROE = Ke como condición universal.\n\n### Piezas del valor\n\nEl libro inicial y RWA conducen retención; ROE conduce utilidad; renovación de instrumentos reduce CET1 que habría que financiar; Ke inicial 17,68% converge a 14,36%. El terminal exige g < Ke y reinversión coherente. Una participación HDI a libro con ROE supuesto conserva incertidumbre material; se muestra como proxy. El mínimo preferente cambia reparto en años de caja baja, pero no crea caja nueva.\n\n### Historias cuantificadas y valor esperado\n\n| Historia | Prob. | ROE FY2027 → FY2029–31 → terminal | Crec. Banco / DAVIbank / HDI | g terminal | Valor DCF |\n| --- | --- | --- | --- | --- | --- |\n| Base | 50,00% | 12,00% → 15,00% → 14,00% | 6,00% / 4,00% / 6,00% | 4,00% | 28.213 |\n| Conservador | 25,00% | 8,00% → 12,00% → 11,00% | 4,00% / 2,00% / 4,00% | 3,50% | 18.272 |\n| Optimista | 15,00% | 14,00% → 18,00% → 16,00% | 8,00% / 6,00% / 8,00% | 4,50% | 36.732 |\n| Disruptivo | 10,00% | -3,00% → 8,00% → 10,00% | 2,00% / 0,00% / 2,00% | 3,00% | 10.534 |\n\nEsperado complementario COP 25.238. Dilución a FY2029: Conservador 8,37%, Disruptivo 25,84%. Inflación COP terminal 3%–5% aislando Ke produce Base aproximadamente COP 30.633–26.246. Sin renovación AT1/T2, COP 22.548. Son pruebas de supuestos, no intervalos estadísticos de confianza.\n\n### Pre-mortem\n\nLa recuperación podría fracasar porque integración y fondeo absorben sinergias, el crédito empeora o se inmoviliza equity que el inversor esperaba recibir. La tesis también puede parecer acertada contablemente pero fallar por acción si se emite capital. Por ello se inspeccionan NI atribuible, retorno recurrente y denominador de acciones.\n\n### Indicadores y actualización de probabilidades\n\nContrastar la guía empresarial publicada con resultados comparables; si ROAE no converge hacia 14%–16% en 2028/29 o se necesitan buffers superiores, reasignar peso a Conservador. No aplicar ese umbral al trimestre como prueba de cumplimiento del objetivo anual. Revisar trimestralmente y ante anuncios regulatorios o emisiones.\n\n### El precio al final\n\nCierre al corte y último disponible: COP 40.620 del 09/10/2026. Potencial Base -30,54%. El DCF inverso requiere ROE terminal Banco/DAVIbank 21,13% y HDI 2 puntos por debajo, manteniendo otros supuestos; no identifica de forma única expectativas del mercado.\n\nPresente, con distribuciones potenciales descontadas:\n\n| Historia | Prob. | DCF preferida | P/B paquete* | P/E paquete* | Múltiplos 65/35 | Combinado 80/20 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Base | 50% | 28.213 | 28.751 | 30.323 | 29.301 | 28.431 |\n| Conservador | 25% | 18.272 | 18.298 | 19.607 | 18.756 | 18.369 |\n| Optimista | 15% | 36.732 | 36.386 | 40.116 | 37.692 | 36.924 |\n| Disruptivo | 10% | 10.534 | 11.630 | 9.329 | 10.825 | 10.592 |\n\nFY2029, residual ex-distribuciones:\n\n| Historia | DCF residual FY2029 | P/B FY2029 | P/E FY2029 | Múltiplos 65/35 | Combinado 80/20 | PV FCFE distribuido años1–3 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Base | 38.219 | 39.088 | 41.626 | 39.976 | 38.571 | 4.540 |\n| Conservador | 24.434 | 24.475 | 26.589 | 25.215 | 24.590 | 3.138 |\n| Optimista | 51.093 | 50.534 | 56.556 | 52.642 | 51.403 | 5.085 |\n| Disruptivo | 15.164 | 16.934 | 13.218 | 15.634 | 15.258 | 1.141 |\n\n### Registro de decisión\n\nLa prioridad analítica es Base DCF. Cambiar juicio con eficiencia recurrente, capital local y remesas a holding, no por proximidad entre DCF y múltiplos derivados. Revisar en próximo reporte y en decisiones de integración. La decisión de cartera corresponde al usuario.\n\n## 13. Filosofías de inversión\n\n### Warren Buffett\n\nLa pregunta útil es si depósitos y relaciones permiten reinvertir a retornos superiores al costo de capital de forma duradera. La franquicia ofrece mecanismos plausibles, pero el Base terminal apenas cubre Ke. Veredicto: calidad potencial con prueba incompleta. Objeción: recuperación cíclica puede confundirse con ventaja. Pendiente: exceso de retorno recurrente por ciclo y por acción.\n\n### Charlie Munger\n\nConviene invertir el problema: ¿qué puede volver inútil una buena integración para el minoritario? Financiación dilutiva, incentivos a crecer balance y restricciones de caja son candidatos. Veredicto: estructura e incentivos requieren atención. Objeción: no se verificó remuneración ni alineamiento ejecutivo. Pendiente: gobierno de vinculadas y criterio de asignación de capital.\n\n### Peter Lynch\n\nLa recuperación es comprensible si cada mejora tiene una causa operativa: costos, fondeo y calidad de crédito. Veredicto: historia explicable que necesita comprobarse. Objeción: la utilidad de un trimestre y el P/E sobre un perímetro cambiado pueden exagerar progreso. Pendiente: ganancias normalizadas comparables y ejecución del calendario de recuperación.\n\n### Howard Marks\n\nImportan ciclo de crédito y precio que se paga por soportarlo. El stress de capital muestra que un negocio rentable puede exigir aportes cuando la financiación cambia. Veredicto: examinar riesgo antes de proyectar una normalización favorable. Objeción: no existe un calendario de vencimientos completamente modelado. Pendiente: disponibilidad y precio real de capital durante estrés.\n\n### Joel Greenblatt\n\nRentabilidad y precio siguen siendo relevantes, ajustados a banca: ROE, capital regulatorio y P/B/FCFE son más pertinentes que una fórmula industrial de EBIT y deuda. Veredicto: usar indicadores sectoriales antes de aplicar rankings. Objeción: el múltiplo fundamental comparte supuestos con el DCF. Pendiente: pares contemporáneos con capital y ganancias normalizadas congruentes.\n\nEstas lecturas aplican principios; no atribuyen a ninguna persona una decisión sobre esta acción.\n\n## 14. Noticias y eventos recientes\n\n| Fecha del evento | Publicación / consulta | Hecho | Efecto y límite |\n| --- | --- | --- | --- |\n| 30/06/2026 | Reporte agosto; conferencia 12/08 | Nuevo corte de resultados/capital; guía de recuperación | Actualiza base; guía es prospectiva |\n| 30/09/2026 | Comunicado BanRep 30/09 | Entorno de inflación y tasa monetaria | Ancla macro; no garantiza una tasa terminal determinada |\n| 01/10/2026 | Aviso oficial DAVIbank consultado 10/10 | Actualización de oficinas; sede Cedritos Calle140 cerró ese día | Ejecución operativa observable; ahorro neto no cuantificado |\n| 01/10/2026 | Actualización Damodaran octubre | ERP/rendimiento de bono usados en construcción de Ke | Cambio del entorno de valoración, no evento empresarial |\n\nLa búsqueda oficial cubrió integración y avisos recientes, pero no constituye certificación exhaustiva de toda información relevante de los últimos 90 días. No se afirma una fusión legal consumada sin resolución leída. Se separa fecha efectiva del evento de la consulta posterior al corte.\n\n## 15. Qué vigilar\n\n| Variable | Razón | Favorable / adversa | Próxima evidencia |\n| --- | --- | --- | --- |\n| ROAE/NI atribuible recurrente | Verificar recuperación | Mejora con comparables / ganancias extraordinarias | Reporte trimestral y notas |\n| Eficiencia y costo integración | Sinergia neta | Ahorro recurrente / retraso y sobrecosto | Conferencia y detalle operativo |\n| NIM y depósitos | Economía de fondeo | Margen sostenible / costo de depósitos creciente | Resultados por geografía |\n| CoR, etapas y cobertura | Pérdida futura y capital | Riesgo controlado / deterioro sin provisión suficiente | Notas de cartera |\n| CET1/Tier1/total/leverage local | Validar retención | Buffers y reparto estables / emisión o límites de giro | Estados y solvencia por licencia |\n| Renovación AT1/T2 | Dependencia de financiación | Instrumentos elegibles renovados / CET1 debe sustituirlos | Prospectos, contratos y aprobación |\n| Dividendos/acciones de holding | Valor por acción | Remesa legal y denominador estable / dilución | Asamblea, información relevante |\n| HDI solvencia/retorno | Eliminar proxy | Capital y payout verificados / reservas o buffers mayores | Cuentas de entidad exacta |\n\n## 16. Preguntas abiertas\n\n1. ¿Cuál es el puente exacto entre patrimonio, deducciones, NCI elegible y capital de cada entidad regulada? Obtener reportes locales y notas de consolidación.\n2. ¿Qué parte de las utilidades puede subir legalmente a Group y en qué fecha? Obtener reservas, convenios, límites y propuestas de dividendo.\n3. ¿Cómo vencen, se amortizan regulatoriamente o renuevan AT1/Tier2? Obtener calendario contractual, condiciones y elegibilidad futura.\n4. HDI es Holding Davivienda Internacional S.A., Panamá; libro y NI constan en nota7 de Group separado. ¿Qué proporción del resultado futuro de cada banco será legalmente distribuible? Vigilar autorizaciones y retenciones; la simulación no las certifica.\n5. ¿Cuál es el costo neto recurrente de holding y valor del residual? Conciliar separados, eliminaciones y gasto financiero, evitando duplicar obligaciones.\n6. ¿Qué emisión y clase serían factibles en estrés? La emisión común a 50% BV es una hipótesis, no acceso asegurado.\n7. ¿Cuál fue el cierre de PFDAVIGRP al corte y su último cierre disponible? Obtener dato actualizado de mercado; no rellenar con el histórico recuperado.\n8. ¿Qué datos actuales de pares permiten una valoración relativa independiente? Homologar moneda, período, ROE normalizado y capital.\n\n## 17. Fuentes\n\n### Fuentes primarias\n\n1. [Group: estados financieros consolidados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf), corte 30/06/2026: balance, atribución de resultados y patrimonio.\n2. [Group: estados separados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-separados-2t26.pdf): inversiones, vehículos, acciones y dividendos.\n3. [Group: informe de resultados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/informe_de_resultados_davivienda_group_2t26.pdf), publicado agosto 2026: cifras gerenciales, capital del Banco y estructura accionaria.\n4. [Group: transcripción 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-2t26-transcripcion-1.pdf), conferencia 12/08/2026: guía y calendario de integración.\n5. [DAVIbank: estados separados 2T26](https://cdn.aglty.io/scotiabank-colombia/davibank/pdf/securities/EEFF-y-Notas-Separados-Q2-2026-DAVIbank.pdf), nota 6: capital regulatorio y exposición de apalancamiento.\n6. [Aviso de acciones preferidas](https://daviviendagroup.com/assets/pdf/inversionistas/es/251027_AVISO_PREFERIDAS_251027_448PM.pdf), 27/10/2025: leído mediante OCR del PDF; reglas de dividendo mínimo, no acumulación y liquidación.\n7. [Damodaran: actualización ERP y bonos](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm), datos 01/10/2026; [betas globales](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/BetasGlobal.html), enero 2026.\n8. [Damodaran: valoración financiera](https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/finsvc.pdf) y [modelo Deutsche Bank 2016](https://pages.stern.nyu.edu/~adamodar/pc/blog/DeutscheBank2016.xls); validación histórica conservada en el workbook.\n9. [Damodaran: P/B US](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/pbvdata.html) y [P/E US](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/pedata.html), enero 2026: contexto sectorial, sin traslado automático.\n10. [Banco de la República, decisión 30/09/2026](https://banrep.gov.co/es/noticias/junta-directiva/junta-directiva-septiembre-2026), inflación y expectativas.\n11. [IRC: TES 02/10/2026](https://www.irc.gov.co/documents/d/guest/informe-diario-02-de-octubre-de-2026?download=true): rendimiento conservado del borrador; CRP julio y ponderación geográfica rastreables en Supuestos financieros, no recalculados con exposición junio.\n\nAdemás, [aviso oficial DAVIbank](https://www.davibank.com/) y [oficinas Bogotá](https://www.davibank.com/oficinas/bogota), consultados 10/10/2026; evento efectivo 01/10/2026. Enlaces y fechas son de documentos consultados, no recomendaciones de fuentes futuras.\n\n### Fuentes secundarias y sectoriales\n\n[Investing: histórico PFDAVIGRP](https://es.investing.com/equities/davivienda-historical-data), cierre visible 05/10/2026. Damodaran es fuente primaria del método y del cálculo sectorial, aunque sus datos de mercado se agregan de proveedores. Los supuestos del analista están en Entradas cierre y se distinguen de cifras observadas.\n\n## 18. Control de calidad final\n\n| Control | Sí / No | Resultado |\n| --- | --- | --- |\n| Identidad y aislamiento | Sí | Group preferida; separado de PFDAVVNDA y de otros emisores |\n| 18 títulos, Porter cinco filas, Síntesis final | Sí | Estructura revisada |\n| Moneda, unidades y períodos | Sí | COP; H1/Q2 separados; no LTM artificial |\n| Fuente primaria financiera y acciones | Sí | EEFF/reportes Q2; aviso preferente |\n| Modelo de banca y terminal | Sí | FCFE regulatorio por bloques; g < Ke; controles RI |\n| Narrativas/probabilidades/base | Sí | Cuatro, suma 100%; Base principal |\n| Puente/clase bajo supuestos | Sí | Sin duplicar vehículos; dividendos preferentes modelados |\n| Legalidad efectiva de todos los flujos | No | FCFE elegible, giro local y capital nuevo no están certificados |\n| Proxies materiales identificados | Sí | HDI bancario con ROE propio; capital local/residual estimados y sometidos a estrés |\n| Dos horizontes/múltiplos/pesos | Sí | Presente con distribuciones; FY2029 residual; pesos explícitos |\n| Cálculos revisados | Sí | 48 resultados contrastados en R3; exportación sin errores en8 pestañas revisadas |\n| Cotización al corte | Sí | COP40.620,09/10; último cierre disponible |\n| Pares contemporáneos ajustados | No | Anclas US de contexto; múltiplos aplicados fundamentales |\n| Noticias exhaustivas y gobierno/incentivos | No | Búsqueda limitada; no verificación completa |\n| Autorización de publicación | Sí | Autorización previa conservada; R3 preparado para publicación como estimación |\n\nLa revisión produce un modelo utilizable y un research trazable con incertidumbres visibles. No presenta como terminado un cierre regulatorio por todas las filiales ni como aprobado un dividendo proyectado. Para publicar, el Prompt2 exige consultar al usuario después de preparar el resultado concreto.\n\n\n### Correcciones y alcance de la revisión R3\n\nHDI es **Holding Davivienda Internacional S.A.**, la subholding de los bancos de Centroamérica; se corrige la clasificación equivocada del borrador. Banco Davivienda tiene 75,11%, Group directamente 17,80% e IFC 7,09%. Con 98,9% económico estimado de Group en el Banco, el interés indirecto más directo es 92,08379%. Se valora Banco consolidado atribuible más HDI directo; no se agrega HDI al 100% ni se suman vehículos.\n\nHDI reporta libro COP 9.165.400 millones y utilidad H1 COP 32.371 millones en la nota7 de Group separado. El ROE anualizado de 0,706% usa libro final, no es UDM ni ROAE reportado. La trayectoria propia Base es 0,706%→12% en año3–5→12% terminal; Conservador 0%→9%→9%; Optimista 3%→15%→14%; Disruptivo −5%→5%→8%. Estas recuperaciones son juicios del analista, no metas publicadas de HDI. Crecimiento y retención cambian por escenario, con un buffer adicional inicial de capital estimado en Conservador y Disruptivo.\n\nEl anexo Group usa DAVIbank consolidado redondeado a COP 2.587.000 millones. Los estados locales muestran COP 3.142.490 millones separado y COP 3.604.642 millones controlante consolidado; la nota7 de Group muestra COP 2.581.916 millones separado. El informe Group identifica efectos PPA, pero **no se atribuye toda la diferencia a PPA sin un puente detallado**. La hoja Perímetros y licencias conserva las bases y sus diferencias. Se mantiene el libro del perímetro Group y el CET1 local para la estimación; COP 145.617 millones es puente proxy, no una deducción regulatoria publicada. El estrés de puente +20% cuantifica una perturbación parcial, no toda la diferencia de bases.\n\nLa nota4(e) de Group publica solvencia por licencia. La hoja añade las 20 entidades divulgadas, mínimos, observados, holguras y una simulación de capital/RWA con índices. **Índices no son COP y no se suman al SOTP**. Crecer activos y capital a igual tasa conserva ratios por hipótesis; no demuestra que beneficios sean legalmente distribuibles. El capital de HDI se estima por crecimiento de libro más buffer inicial, usando 13,49% como ancla de conversión en escenarios adversos. No se presenta como CET1 observado de una subholding. Los 0% divulgados para algunas aseguradoras no se interpretan como falta de obligaciones.\n\nAT1 internacional del Banco: USD500 millones, emitido 22/04/2021, cupón6,65%, perpetuo con call desde2031. Tier2 internacional: USD500 millones, emitido 02/07/2025, cupón8,125%, vencimiento2035 y call desde2030. Una opción call no es vencimiento forzoso. Base presupone reemplazo de elegibilidad y fondeo; AT1/T2=0 desde inicio se conserva como estrés severo y se distingue del calendario contractual. Emisión privada DAVIbank a Group: COP300.000 millones, 28/04/2026, plazo10 años; es intragrupo y no se añade como efectivo externo.\n\nEl separado Group informa caja COP26.397 millones, bonos DAVIbank COP703.258 millones y deuda financiera COP470.547 millones. No se añade caja del consolidado bancario como excedente de la holding, ni bonos internos como un segundo activo. Costos corporativos futuros siguen estimados y se someten a sensibilidad. El residual neto de COP152.877,017 millones continúa a libro y contiene eliminaciones/perímetros; no es caja certificada.\n\nP/B y P/E fundamentales se corrigen para usar el ROE terminal **neto de costo corporativo y ponderado por libros**, con HDI en trayectoria propia. Los pesos son decisiones del analista; su coincidencia con DCF no es validación independiente. La ecuación de reconciliación presente / residual FY+3 / distribuciones1–3 se verifica para las cuatro historias. La dilución futura supone acciones comunes emitidas a 50% del libro; sin un compromiso de financiación, la preferida no tiene una opción garantizada de rescate.\n\nFuentes añadidas: [IFC / HDI](https://ir.davivienda.com/wp-content/uploads/2025/12/26_informacion_relevante_Banco_Davivienda_IFC_Ingles.pdf); [Banco EEFF consolidados](https://ir.davivienda.com/wp-content/uploads/2026/08/Banco-Davivienda-EEFF-Consolidados-2T26-2.pdf); [Banco informe2T26](https://ir.davivienda.com/wp-content/uploads/2026/08/Informe-de-Resultados-Banco-Davivienda-2T26-2.pdf); [precio histórico](https://es.investing.com/equities/davivienda-historical-data).\n\n**Control R3:** cálculos Python y Google Sheets coinciden en los cuatro escenarios; cifra anterior de COP29.115 sustituida. Trabajo terminado como valoración estimada con supuestos trazables. No constituye certificación de capital distribuible por filial. Las incertidumbres anteriores se convierten en parámetros y pruebas; no se presentan como hechos verificados.\n",
+      "importedAt": "2026-10-10T01:58:15.800Z",
+      "runId": "pfdavigrp-20261009-jmr-r3",
+      "format": "markdown"
+    },
+    "valuation": {
+      "content": "# PFDAVIGRP · Valoración JMR Colombia\n\nCorte de valoración: 09/10/2026. Revisión y verificación: 10/10/2026. Datos financieros: junio 2026. Moneda nominal: COP. Unidad de estados: COP millones; resultados: COP por acción. Run: pfdavigrp-20261009-jmr-r3. Estado: **valoración estimada corregida R3; lista para publicación como estimación**. Rama: FCFE financiero por bloques. Instrumento: preferencial Davivienda Group; no confundir con PFDAVVNDA.\n\nModelo: [hoja independiente](https://docs.google.com/spreadsheets/d/1ogP8LfxEBxslOeC6Avgk2BAClJ_0cfzpgJ06icvVSys/edit), copia directa de master ID 1akerGnP4X0MMSUL8QBrNwWkwIzIIXyJzEfAjAOjOlZs. Revisión actual en Valoración actual, Entradas cierre, FCFE regulatorio, Group flujos y Sensibilidad cierre. Los cálculos de marzo siguen como historial y están señalados como sustituidos.\n\nÍndice\n\n1. Resumen\n2. Historia y visión externa\n3. Datos\n4. Supuestos y tasas\n5. Historias y probabilidades\n6. Múltiplos\n7. Resultados\n8. Valor intrínseco frente a múltiplos\n9. Sensibilidad\n10. Log de cambios\n11. El precio al final\n12. Registro de decisión\n13. Fuentes\n14. Control de calidad\n\n## 1. Resumen\n\n**Base: COP 28.213 por preferida**, condicionado a distribución de FCFE y financiación supuesta. Conservador 18.272, Optimista 36.732 y Disruptivo 10.534. Esperado complementario 25.238. El ponderado de múltiplos Base es 29.301 y el combinado 28.431; son cálculos secundarios, correlacionados con el DCF.\n\nEl resultado ya tiene restricciones de CET1/Tier1/total/apalancamiento para dos bloques bancarios, participaciones sin sumar vehículos dos veces, costos de holding, capital nuevo y prioridad preferente. No representa un cierre regulatorio completo de todas las licencias regionales: HDI conserva una estimación de capital contable y faltan restricciones de dividendos por país. La cifra permite evaluar supuestos y reproducir escenarios; su precisión no elimina esos límites.\n\n## 2. Historia y visión externa\n\nSe compra una participación en una holding financiera que debe convertir la integración en rentabilidad distribuible por acción. La integración puede aumentar escala y eficiencia, pero exige gasto, capital y coordinación entre jurisdicciones. La historia Base alcanza ROE de 15% en FY2029 y modera a 14% en madurez. Recuperación es posible y coherente con la meta empresarial; no está garantizada por el balance.\n\nComo comparación externa, los bancos estadounidenses tienen riesgo soberano y fondeo diferentes. Sus múltiplos contextualizan las relaciones entre rentabilidad y precio, sin justificar aplicar múltiplos estadounidenses al Group. El crecimiento nominal termina en 4%, supuesto de inflación COP 4% y crecimiento real aproximadamente nulo. El retorno terminal permanece levemente por debajo de Ke: no se impone ROE = Ke para elevar el valor.\n\n## 3. Datos\n\nPatrimonio atribuible consolidado exacto: 21.065.388; NCI 1.028.213; utilidad atribuible H1 1.111.558 y Q2 811.619. Se usan 605.452.684 acciones: 436.008.931 comunes y 169.443.753 preferidas. H1 y Q2 no son LTM; FY2025 incluye un perímetro distinto. Las cifras gerenciales redondeadas y los estados exactos no se intercambian silenciosamente.\n\nEl puente de equity suma Banco consolidado 16.879.747 × 98,9%, DAVIbank Colombia 2.587.000 × 100% y HDI directo 9.165.400 × 17,8%; residual neto 152.877,017. Capital y Multiacciones son vehículos, no activos adicionales que se sumen otra vez. El residual incorpora diferencias de consolidación, activos/pasivos de holding y eliminaciones; se estima a libro, sin presentarlo como valoración independiente de cada activo. El libro de junio se usa como proxy inicial para FY2027: falta puente junio–fecha de valoración y no se incorpora un trimestre inexistente.\n\n## 4. Supuestos y tasas\n\n| Input | Valor Base | Celda | Origen y límite |\n| --- | --- | --- | --- |\n| Ke inicial | 17,68% | Entradas cierre!B19 | TES ajustado por default + beta ERP + CRP; conservado del borrador |\n| Ke terminal | 14,36% | B20 | USD nominal convertido a COP; fórmula visible |\n| Beta inicial / terminal | 0,70 / 1,00 | B15:B16 | Sector global / normalización analista |\n| Inflación terminal COP / USD | 4,0% / 2,5% | B17:B18 | Supuestos; COP anclado a encuesta 2 años, no equivalen a inflación observada |\n| ROE FY2027 / FY2029 / terminal | 12% / 15% / 14% | C42:E42 | Estimación de recuperación; igual en los tres bloques es simplificación material |\n| Crecimiento inicial Banco / DAVIbank / HDI | 6% / 4% / 6% | F42:H42 | Analista; escala RWA y capital, no crecimiento histórico declarado |\n| g terminal | 4% | I42 | Nominal COP; menor que Ke |\n| Costo holding | 60.000 anuales | K42 | Estimación; rango 0–120.000, no cifra auditada |\n| Renovación AT1/T2 | 100% y crecimiento con RWA | Notas 38 y fórmulas | Hipótesis; no calendario de emisiones comprometidas |\n| Capital nuevo / BV | 50% | B24 | Emisión común hipotética; acceso no garantizado |\n| HDI | Retención por crecimiento de libro | FCFE regulatorio | Proxy; falta solvencia y reservas específicas |\n\nKe USD terminal = 5,07% + 1 × 4,42% + 3,21785% = 12,70785%. Ke COP = (1 + Ke USD) × (1 + 4%)/(1 + 2,5%) − 1 = 14,35723%. Ke inicial 17,68197% converge linealmente a terminal en diez años. No es una previsión puntual del TES futuro. La ponderación del CRP por préstamos FY2025 aproxima exposición operativa; debe actualizarse por geografía postintegración y no captura todas las correlaciones de riesgo.\n\nLa inversión bancaria se estima como equity retenido necesario. CET1 requerido = máximo de los requerimientos de CET1, Tier1 menos AT1, capital total menos AT1/Tier2 y leverage menos AT1. El equity controlador necesario descuenta NCI y suma el puente de deducciones. La retención es el máximo de crecimiento del equity, exigencia adicional y cero; conserva el colchón y no libera automáticamente todo exceso inicial. FCFE = utilidad atribuible − retención; Group agrega participaciones y deduce costos de holding. El puente Banco de 1.751.000 reconcilia cifras publicadas redondeadas; DAVIbank usa equity consolidado frente a capital separado, aproximación explícita de perímetro.\n\nLos objetivos Base Banco CET1/Tier1/total/leverage son 12,2%/13,5%/16,5%/5%; DAVIbank 10%/11,2%/13,5%/4%. Son objetivos del analista superiores a mínimos, no requisitos legales afirmados. Conservador suma 0,5 pp y Disruptivo 1 pp. AT1/Tier2 y NCI crecen proporcionalmente: cupón se supone contenido en ROE; no se resta una segunda vez. No se añade de nuevo el bono interno de abril al capital de junio.\n\n## 5. Historias y probabilidades\n\n| Historia | Prob. | ROE FY2027 → FY2029–31 → terminal | Crec. Banco / DAVIbank / HDI | g terminal | Valor DCF |\n| --- | --- | --- | --- | --- | --- |\n| Base | 50,00% | 12,00% → 15,00% → 14,00% | 6,00% / 4,00% / 6,00% | 4,00% | 28.213 |\n| Conservador | 25,00% | 8,00% → 12,00% → 11,00% | 4,00% / 2,00% / 4,00% | 3,50% | 18.272 |\n| Optimista | 15,00% | 14,00% → 18,00% → 16,00% | 8,00% / 6,00% / 8,00% | 4,50% | 36.732 |\n| Disruptivo | 10,00% | -3,00% → 8,00% → 10,00% | 2,00% / 0,00% / 2,00% | 3,00% | 10.534 |\n\nBase captura integración parcial y sostiene rentabilidad cercana al costo de capital en madurez. Conservador supone retorno insuficiente y buffers más altos: necesitaría COP 763.096 millones de capital externo y dilución 8,37% a tres años. Optimista supone que productividad y franquicia producen rentabilidad superior al Ke estable, con mayor crecimiento financiable. Disruptivo reconoce pérdida inicial, recuperación incompleta y COP 3.490.723 millones de capital nuevo; dilución 25,84%. La financiación se modela con acciones comunes a 50% del libro; no es una emisión anunciada.\n\nProbabilidades 50/25/15/10 son juicio del analista, no frecuencias estadísticas. Pre-mortem: la integración no baja costos, el fondeo consume NIM, aumenta CoR y se retiene más equity de lo previsto. Revisar probabilidades con resultados comparables, capital local y ejecución de sinergias; no con la cotización por sí sola.\n\n## 6. Múltiplos\n\n| Método | Ancla 1 | Ancla 2 | Ancla 3 aplicada |\n| --- | --- | --- | --- |\n| P/B | US money center 1,62×; ROE 12,86% | US regional 1,14×; ROE 9,75% | 0.966× fundamental |\n| P/E forward | US money center 13,04× | US regional 11,00× | 6.896× fundamental |\n\nAnclas estadounidenses enero 2026 son independientes como datos, pero no comparables sin ajuste de riesgo, rentabilidad y moneda. Se muestran y no se promedian arbitrariamente. El múltiplo aplicado es fundamental: P/B = (ROE − g)/(Ke − g); P/E forward = (1 − g/ROE)/(Ke − g). Usa el ROE terminal y se aplica a libro FY2029 y utilidad FY2030 respectivamente. La diferencia de rentabilidad transitoria frente a terminal reduce la precisión de ese precio de referencia; no se transforma en validación independiente del DCF. No hay una muestra de pares latinoamericanos contemporáneos y congruentes certificada.\n\nSe excluyen EV/EBITDA, EV/FCFF y P/OCF como métodos principales: los pasivos de intermediación y el flujo de financiación bancaria no se interpretan como deuda industrial e inversión física. No se resta deuda de depósitos al equity calculado por FCFE.\n\n## 7. Resultados\n\nPresente: paquetes que incluyen PV de distribuciones potenciales años1–3.\n\n| Historia | Prob. | DCF preferida | P/B paquete* | P/E paquete* | Múltiplos 65/35 | Combinado 80/20 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Base | 50% | 28.213 | 28.751 | 30.323 | 29.301 | 28.431 |\n| Conservador | 25% | 18.272 | 18.298 | 19.607 | 18.756 | 18.369 |\n| Optimista | 15% | 36.732 | 36.386 | 40.116 | 37.692 | 36.924 |\n| Disruptivo | 10% | 10.534 | 11.630 | 9.329 | 10.825 | 10.592 |\n\n*Cada paquete P/B o P/E descuenta su precio residual FY2029 por el Ke acumulado y añade los mismos FCFE potencialmente distribuidos; no añade dividendos históricos ya pagados.*\n\nFY+3 = FY2029: precios residuales después de distribuciones años1–3.\n\n| Historia | DCF residual FY2029 | P/B FY2029 | P/E FY2029 | Múltiplos 65/35 | Combinado 80/20 | PV FCFE distribuido años1–3 |\n| --- | --- | --- | --- | --- | --- | --- |\n| Base | 38.219 | 39.088 | 41.626 | 39.976 | 38.571 | 4.540 |\n| Conservador | 24.434 | 24.475 | 26.589 | 25.215 | 24.590 | 3.138 |\n| Optimista | 51.093 | 50.534 | 56.556 | 52.642 | 51.403 | 5.085 |\n| Disruptivo | 15.164 | 16.934 | 13.218 | 15.634 | 15.258 | 1.141 |\n\nEl esperado es complementario: DCF presente 25.238, residual FY2029 34.398; múltiplos presente 26.076, FY2029 35.752; combinado presente 25.405, FY2029 34.669. Pesos de múltiplos 65% P/B y 35% P/E; combinado 80% DCF y 20% múltiplos. Son elecciones analíticas, no ajuste estadístico de errores independientes.\n\nPuente por clase: si el flujo distribuible alcanza COP 161,30 para todas las acciones, reparto proporcional; si no, prioridad preferida hasta el mínimo, remanente a comunes. El mínimo no es acumulativo y depende de utilidades distribuibles. Se asume reparto completo de FCFE elegible cada año; por tanto no es un calendario de dividendos aprobado. La emisión hipotética es común y conserva el número actual de preferidas; emitir preferidas alteraría la dilución y exige otro escenario. La preferencia de liquidación no se valora mediante una prima genérica: es valoración de continuidad, no waterfall de insolvencia.\n\nEl DCF económico de aporte proporcional sin dilución es Base 28.213, Conservador 18.578, Optimista 36.732, Disruptivo 8.880. Se distingue del DCF de la preferida que no aporta y sufre dilución. El residual menoritario/holding se aproxima a libro; no se descuentan de nuevo pasivos ya incluidos en ese puente.\n\n## 8. Valor intrínseco frente a múltiplos\n\nEl DCF valora la transición completa y el equity que debe retenerse; los múltiplos condensan rentabilidad estable y un balance futuro. En Base el ponderado es 29.301 frente a DCF 28.213: la diferencia es esperable por la trayectoria de ROE y timing. Su proximidad no prueba exactitud porque comparten ROE, Ke y g. Base DCF tiene prioridad; el combinado no sustituye el juicio económico.\n\nLa revisión Damodaran distingue capital contable de inversión regulatoria, utiliza FCFE y verifica equivalencia con residual income. El caso Deutsche Bank 2016 confirma que el aumento del capital exigido consume caja del accionista; no justifica copiar una meta de precio o hacer ROE terminal = Ke en todos los bancos. La reconstrucción previa conserva el riesgo de fracaso de aquel ejemplo y señala diferencias internas de terminal; sus importes no son inputs de Group.\n\n## 9. Sensibilidad\n\n| Prueba | DCF COP/acción | Interpretación |\n| --- | --- | --- |\n| AT1/T2 excluidos inmediatamente (stress severo) | 22.548 | Resto de supuestos fijo |\n| Puente deducciones +20% | 28.095 | Resto de supuestos fijo |\n| HDI capital contable adicional +2%/año | 27.881 | Resto de supuestos fijo |\n| g terminal 0.03 | 28.365 | Resto de supuestos fijo |\n| g terminal 0.04 | 28.213 | Resto de supuestos fijo |\n| g terminal 0.05 | 28.028 | Resto de supuestos fijo |\n| Inflación COP terminal 0.03 | 30.633 | Ke terminal 13,26% |\n| Inflación COP terminal 0.04 | 28.213 | Ke terminal 14,36% |\n| Inflación COP terminal 0.05 | 26.246 | Ke terminal 15,46% |\n| Costo holding anual 0 | 29.067 | Resto de supuestos fijo |\n| Costo holding anual 60000 | 28.213 | Resto de supuestos fijo |\n| Costo holding anual 120000 | 27.358 | Resto de supuestos fijo |\n| Disrupción emisión/BV 0.25 | 8.446 | Dilución FY2029 41,07% |\n| Disrupción emisión/BV 0.5 | 10.534 | Dilución FY2029 25,84% |\n| Disrupción emisión/BV 1 | 12.042 | Dilución FY2029 14,84% |\n\nLa matriz completa cruza Ke terminal 12%–19,01% con ROE 10%–18%. Manteniendo ROE Base 14% y la tasa terminal anterior 19,00797%, el resultado revisado sería COP 22.597; esa comparación cambia solo la tasa dentro del modelo actual y no reproduce exactamente el borrador antiguo. El terminal aporta 43,52% del DCF Base. Crecer más no eleva automáticamente valor: cuando ROE < Ke, la inversión adicional puede destruir valor. La prueba sin renovación de capital reemplaza AT1/T2 con CET1 desde año1, stress severo que no equivale a sus vencimientos contractuales.\n\nSensibilidad de inflación COP aísla Ke manteniendo retornos y g nominales; no constituye escenario macro completo. Costos de holding y HDI muestran límites de estimación. Una menor valoración de HDI o de participaciones por país debe recalcular su rentabilidad y capital, no ocultarse en un descuento arbitrario a toda la holding.\n\n## 10. Log de cambios\n\n| Antes | Después | Motivo |\n| --- | --- | --- |\n| Patrimonio marzo 20.639.000 | Junio exacto 21.065.388 | Actualización de corte atribuible |\n| Utilidad Q1 consolidada 305.000 | H1 atribuible 1.111.558; Q2 811.619 | No confundir atribución, trimestre y LTM |\n| DAVIbank total marzo 11,22% | Junio 13,19%; CET1 2.441.383 | Capital oficial más reciente |\n| TCE agregado como restricción | CET1, Tier1, total, leverage por bloque | Método financiero; HDI sigue proxy |\n| Ke terminal 19,01% | 14,36%, conversión USD/COP visible | Normalización explícita y sensibilidad |\n| ROE 15% en año5 | 15% en FY2029; mantiene años3–5 | Calendario consistente con meta 2028/29 |\n| Disrupción con piso cero | Capital externo + dilución y DCF económico separado | No borrar aportes ni llamar recuperable una opción sin explicar financiación |\n| Múltiplos 1× y 8× sin ancla | Fundamentales + dos anclas US por método | Trazabilidad; dependencia visible |\n| Paridad de clase asumida | Regla preferente COP 161,30 y emisiones comunes hipotéticas | Aviso original leído |\n| Precio rezagado | Cierre 09/10/2026 COP 40.620 | Tabla histórica recuperada; referencia y último cierre separados de valor |\n\nEl puente Banco se ajustó en 1.000 millones por redondeo para que equity total − CET1 − puente sea cero; es una diferencia de cifras publicadas, no una mejora económica de capital. El historial de marzo no se borra ni se publica como revisión vigente.\n\n## 11. El precio al final\n\nCierre al corte y último cierre disponible al 10/10: **COP 40.620, 09/10/2026, PFDAVIGRP**, leído en la tabla histórica de Investing.com. Margen de seguridad Base = 1 − precio/valor = -43,98%; potencial Base = valor/precio − 1 = -30,54%. El potencial del esperado complementario es -37,87%. Son denominadores distintos. El precio es contraste final, no una entrada para calibrar el valor.\n\nDCF inverso: manteniendo el resto de Base, se necesitaría ROE terminal cercano a 21,13% para igualar esa referencia. Es una solución ceteris paribus calculada por bisección; no significa que el mercado espere exactamente ese ROE. Podría incorporar otra tasa, crecimiento, sinergias o capital. Liquidez y costos de negociación no fueron modelados; el volumen disponible corresponde a una sesión, no a una capacidad de negociación permanente.\n\n## 12. Registro de decisión\n\nLa evaluación económica permanece centrada en recuperación del retorno y convertibilidad en dividendo de holding. Cambiaría positivamente con ejecución observable de eficiencia y ROE sin consumo excesivo de capital; negativamente con crecimiento de RWA mayor que cartera, pérdidas de integración o restricciones de giro de dividendos. Revisar en el siguiente reporte trimestral y después de decisiones regulatorias de integración. No inferir automáticamente una operación de cartera de estos resultados; esa decisión corresponde al usuario.\n\n## 13. Fuentes\n\nDocumentos leídos en esta revisión salvo insumos previos señalados. Consulta 09–10/10/2026.\n\n1. [Group: estados financieros consolidados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf), corte 30/06/2026: balance, atribución de resultados y patrimonio.\n2. [Group: estados separados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-separados-2t26.pdf): inversiones, vehículos, acciones y dividendos.\n3. [Group: informe de resultados 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/informe_de_resultados_davivienda_group_2t26.pdf), publicado agosto 2026: cifras gerenciales, capital del Banco y estructura accionaria.\n4. [Group: transcripción 2T26](https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-2t26-transcripcion-1.pdf), conferencia 12/08/2026: guía y calendario de integración.\n5. [DAVIbank: estados separados 2T26](https://cdn.aglty.io/scotiabank-colombia/davibank/pdf/securities/EEFF-y-Notas-Separados-Q2-2026-DAVIbank.pdf), nota 6: capital regulatorio y exposición de apalancamiento.\n6. [Aviso de acciones preferidas](https://daviviendagroup.com/assets/pdf/inversionistas/es/251027_AVISO_PREFERIDAS_251027_448PM.pdf), 27/10/2025: leído mediante OCR del PDF; reglas de dividendo mínimo, no acumulación y liquidación.\n7. [Damodaran: actualización ERP y bonos](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm), datos 01/10/2026; [betas globales](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/BetasGlobal.html), enero 2026.\n8. [Damodaran: valoración financiera](https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/finsvc.pdf) y [modelo Deutsche Bank 2016](https://pages.stern.nyu.edu/~adamodar/pc/blog/DeutscheBank2016.xls); validación histórica conservada en el workbook.\n9. [Damodaran: P/B US](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/pbvdata.html) y [P/E US](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/pedata.html), enero 2026: contexto sectorial, sin traslado automático.\n10. [Banco de la República, decisión 30/09/2026](https://banrep.gov.co/es/noticias/junta-directiva/junta-directiva-septiembre-2026), inflación y expectativas.\n11. [IRC: TES 02/10/2026](https://www.irc.gov.co/documents/d/guest/informe-diario-02-de-octubre-de-2026?download=true): rendimiento conservado del borrador; CRP julio y ponderación geográfica rastreables en Supuestos financieros, no recalculados con exposición junio.\n12. [Precio histórico PFDAVIGRP](https://es.investing.com/equities/davivienda-historical-data): tabla leída 10/10/2026, cierre directamente visible 09/10/2026: COP40.620.\n\n## 14. Control de calidad\n\n| Control | Sí / No | Evidencia o pendiente |\n| --- | --- | --- |\n| Identidad y aislamiento | Sí | PFDAVIGRP; copia master independiente; no se escribió PFDAVVNDA ni otros emisores |\n| Moneda/unidades/horizontes | Sí | COP millones convertidos a COP/acción; FY2029 residual separado de PV distribuciones |\n| Cuatro historias y probabilidades | Sí | 50/25/15/10; suma 100% |\n| Fórmulas recalculadas | Sí | 48 resultados confrontados con Python; máximo1,46×10⁻¹¹ COP/acción; exportación sin errores en8 pestañas revisadas |\n| Capital y terminal matemáticos | Sí | 12 pruebas DCF = residual income; g < Ke; retención estable consistente |\n| Derecho mínimo preferente | Sí | Aviso original OCR; prioridad de dividendo implementada |\n| Distribución legal futura / capital nuevo | No | FCFE elegible y emisión común son hipótesis; acceso no garantizado |\n| Todas las licencias y HDI | No | Banco regional agregado, subholding bancaria con capital estimado, perímetro DAVIbank aproximado |\n| Puente equity observado | Sí parcial | Reconcilia agregado; no valida cada deducción regulatoria ni posición residual a mercado |\n| Tasas verificadas íntegramente | No | ERP/beta actualizados; TES/CRP/ponderación retienen base previa; inflación terminal es supuesto |\n| Cotización al corte / último cierre | Sí | COP40.620,09/10; Investing histórico |\n| Múltiplos y pesos | Sí | Dos horizontes y pesos visibles; no validación independiente |\n| Visualización nativa revisada en pantalla | No | Formato aplicado por API y exportación inspeccionada; no captura de UI autenticada |\n| Autorización de publicación | Sí | Autorización previa conservada; se publica R3 como estimación de alcance limitado |\n| AISLAMIENTO | OK | Historial preservado; original master sin cambios |\n\n**Alcance terminado de esta revisión:** actualización numérica reproducible y expediente de valoración/research. **Cierre regulatorio completo: No.** Estos pendientes están cuantificados o identificados; no se ocultan bajo la precisión del precio por acción.\n\n\n### Correcciones y alcance de la revisión R3\n\nHDI es **Holding Davivienda Internacional S.A.**, la subholding de los bancos de Centroamérica; se corrige la clasificación equivocada del borrador. Banco Davivienda tiene 75,11%, Group directamente 17,80% e IFC 7,09%. Con 98,9% económico estimado de Group en el Banco, el interés indirecto más directo es 92,08379%. Se valora Banco consolidado atribuible más HDI directo; no se agrega HDI al 100% ni se suman vehículos.\n\nHDI reporta libro COP 9.165.400 millones y utilidad H1 COP 32.371 millones en la nota7 de Group separado. El ROE anualizado de 0,706% usa libro final, no es UDM ni ROAE reportado. La trayectoria propia Base es 0,706%→12% en año3–5→12% terminal; Conservador 0%→9%→9%; Optimista 3%→15%→14%; Disruptivo −5%→5%→8%. Estas recuperaciones son juicios del analista, no metas publicadas de HDI. Crecimiento y retención cambian por escenario, con un buffer adicional inicial de capital estimado en Conservador y Disruptivo.\n\nEl anexo Group usa DAVIbank consolidado redondeado a COP 2.587.000 millones. Los estados locales muestran COP 3.142.490 millones separado y COP 3.604.642 millones controlante consolidado; la nota7 de Group muestra COP 2.581.916 millones separado. El informe Group identifica efectos PPA, pero **no se atribuye toda la diferencia a PPA sin un puente detallado**. La hoja Perímetros y licencias conserva las bases y sus diferencias. Se mantiene el libro del perímetro Group y el CET1 local para la estimación; COP 145.617 millones es puente proxy, no una deducción regulatoria publicada. El estrés de puente +20% cuantifica una perturbación parcial, no toda la diferencia de bases.\n\nLa nota4(e) de Group publica solvencia por licencia. La hoja añade las 20 entidades divulgadas, mínimos, observados, holguras y una simulación de capital/RWA con índices. **Índices no son COP y no se suman al SOTP**. Crecer activos y capital a igual tasa conserva ratios por hipótesis; no demuestra que beneficios sean legalmente distribuibles. El capital de HDI se estima por crecimiento de libro más buffer inicial, usando 13,49% como ancla de conversión en escenarios adversos. No se presenta como CET1 observado de una subholding. Los 0% divulgados para algunas aseguradoras no se interpretan como falta de obligaciones.\n\nAT1 internacional del Banco: USD500 millones, emitido 22/04/2021, cupón6,65%, perpetuo con call desde2031. Tier2 internacional: USD500 millones, emitido 02/07/2025, cupón8,125%, vencimiento2035 y call desde2030. Una opción call no es vencimiento forzoso. Base presupone reemplazo de elegibilidad y fondeo; AT1/T2=0 desde inicio se conserva como estrés severo y se distingue del calendario contractual. Emisión privada DAVIbank a Group: COP300.000 millones, 28/04/2026, plazo10 años; es intragrupo y no se añade como efectivo externo.\n\nEl separado Group informa caja COP26.397 millones, bonos DAVIbank COP703.258 millones y deuda financiera COP470.547 millones. No se añade caja del consolidado bancario como excedente de la holding, ni bonos internos como un segundo activo. Costos corporativos futuros siguen estimados y se someten a sensibilidad. El residual neto de COP152.877,017 millones continúa a libro y contiene eliminaciones/perímetros; no es caja certificada.\n\nP/B y P/E fundamentales se corrigen para usar el ROE terminal **neto de costo corporativo y ponderado por libros**, con HDI en trayectoria propia. Los pesos son decisiones del analista; su coincidencia con DCF no es validación independiente. La ecuación de reconciliación presente / residual FY+3 / distribuciones1–3 se verifica para las cuatro historias. La dilución futura supone acciones comunes emitidas a 50% del libro; sin un compromiso de financiación, la preferida no tiene una opción garantizada de rescate.\n\nFuentes añadidas: [IFC / HDI](https://ir.davivienda.com/wp-content/uploads/2025/12/26_informacion_relevante_Banco_Davivienda_IFC_Ingles.pdf); [Banco EEFF consolidados](https://ir.davivienda.com/wp-content/uploads/2026/08/Banco-Davivienda-EEFF-Consolidados-2T26-2.pdf); [Banco informe2T26](https://ir.davivienda.com/wp-content/uploads/2026/08/Informe-de-Resultados-Banco-Davivienda-2T26-2.pdf); [precio histórico](https://es.investing.com/equities/davivienda-historical-data).\n\n**Control R3:** cálculos Python y Google Sheets coinciden en los cuatro escenarios; cifra anterior de COP29.115 sustituida. Trabajo terminado como valoración estimada con supuestos trazables. No constituye certificación de capital distribuible por filial. Las incertidumbres anteriores se convierten en parámetros y pruebas; no se presentan como hechos verificados.\n",
+      "importedAt": "2026-10-10T01:58:15.800Z",
+      "runId": "pfdavigrp-20261009-jmr-r3",
+      "format": "markdown"
+    }
+  },
+  "sources": [
+    {
+      "role": "financials-primary",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/davivienda-group-eeff-consolidados-2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z"
+    },
+    {
+      "role": "issuer-results",
+      "url": "https://api-cms-dav-group.dav.ac/uploads/informacion-financiera/informe_de_resultados_davivienda_group_2t26.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z"
+    },
+    {
+      "role": "HDI-ownership",
+      "url": "https://ir.davivienda.com/wp-content/uploads/2025/12/26_informacion_relevante_Banco_Davivienda_IFC_Ingles.pdf",
+      "retrievedAt": "2026-10-10T01:58:15.800Z"
+    },
+    {
+      "role": "price",
+      "url": "https://es.investing.com/equities/davivienda-historical-data",
+      "retrievedAt": "2026-10-10T01:58:15.800Z"
+    }
+  ],
+  "publication": {
+    "authorized": true,
+    "publishedAt": "2026-10-10T01:59:47.267Z"
+  },
+  "financialSnapshot": {
+    "date": "2026-06-30",
+    "unit": "COP millions",
+    "assets": 267110385,
+    "liabilities": 245016784,
+    "equityAttributable": 21065388,
+    "nci": 1028213,
+    "netIncomeH1Attributable": 1111558,
+    "preferredShares": 169443753,
+    "commonShares": 436008931
+  },
+  "valuationSummary": {
+    "base": 28212.858501246294,
+    "expected": 25237.700248064644,
+    "marketPrice": 40620,
+    "priceDate": "2026-10-09",
+    "scopeLabel": "FCFE financiero estimado R3; HDI bancario, capital local y puente DAVIbank explícitos",
+    "conclusion": "Valor intrínseco Base estimado COP28.213 frente a cierreCOP40.620: potencial−30,54%. La conclusión anterior COP29.115 queda sustituida. El escenario Optimista también queda por debajo del cierre. Cambiaría la valoración una recuperación más rentable o menor exigencia de capital; los permisos de dividendos no están certificados.",
+    "horizonNote": "Hoy incluye PV de distribuciones1–3. FY+3 es residual ex-distribuciones; su descuento no equivale al paquete hoy.",
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/1ogP8LfxEBxslOeC6Avgk2BAClJ_0cfzpgJ06icvVSys/edit",
+    "multiplesMethods": [
+      {
+        "name": "P/B fundamental",
+        "weight": 0.65,
+        "status": "Estimado; mismo ROE/Ke/g que DCF",
+        "today": 28750.971183609232,
+        "year3": 39088.11784154898,
+        "year3PV": 24211.161210411785
+      },
+      {
+        "name": "P/E forward fundamental",
+        "weight": 0.35,
+        "status": "Estimado; mismo ROE/Ke/g que DCF",
+        "today": 30322.818904252068,
+        "year3": 41625.8139230998,
+        "year3PV": 25783.00893105462
+      }
+    ],
+    "multiplesWeightedToday": 29301.117885834225,
+    "multiplesWeightedYear3": 39976.311470091765,
+    "multiplesWeightedYear3PV": 24761.307912636777,
+    "combinedWeightedToday": 28430.510378163883,
+    "combinedWeightedYear3": 38570.744485600284,
+    "combinedWeightedYear3PV": 23890.700404966436,
+    "multiplesStatus": "65%P/B+35%P/E; fundamental, correlacionado con DCF",
+    "combinedStatus": "80%DCF+20% múltiplos; secundario, no sustituye Base"
+  },
+  "model": {
+    "parts": [
+      {
+        "book": 16879747,
+        "stake": 0.989,
+        "cet": 17605000,
+        "at": 1731000,
+        "t2": 3996000,
+        "rwa": 145083000,
+        "exposure": 244759493.6708861,
+        "nci": 2476921,
+        "ded": 1751668,
+        "targets": [
+          0.122,
+          0.135,
+          0.165,
+          0.05
+        ]
+      },
+      {
+        "book": 2587000,
+        "stake": 1,
+        "cet": 2441383,
+        "at": 250000,
+        "t2": 542904,
+        "rwa": 24515387,
+        "exposure": 42093734,
+        "nci": 0,
+        "ded": 145617,
+        "targets": [
+          0.1,
+          0.112,
+          0.135,
+          0.04
+        ]
+      },
+      {
+        "book": 9165400,
+        "stake": 0.178,
+        "cet": 0,
+        "at": 0,
+        "t2": 0,
+        "rwa": 0,
+        "exposure": 0,
+        "nci": 0,
+        "ded": 0,
+        "targets": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "Base",
+        "p": 0.5,
+        "r1": 0.12,
+        "r5": 0.15,
+        "rt": 0.14,
+        "growth": [
+          0.06,
+          0.04,
+          0.06
+        ],
+        "g": 0.04,
+        "extra": 0,
+        "cost": 60000,
+        "hdi_roe": [
+          0.007063739716760862,
+          0.12,
+          0.12
+        ]
+      },
+      {
+        "name": "Conservador",
+        "p": 0.25,
+        "r1": 0.08,
+        "r5": 0.12,
+        "rt": 0.11,
+        "growth": [
+          0.04,
+          0.02,
+          0.04
+        ],
+        "g": 0.035,
+        "extra": 0.005,
+        "cost": 80000,
+        "hdi_roe": [
+          0,
+          0.09,
+          0.09
+        ]
+      },
+      {
+        "name": "Optimista",
+        "p": 0.15,
+        "r1": 0.14,
+        "r5": 0.18,
+        "rt": 0.16,
+        "growth": [
+          0.08,
+          0.06,
+          0.08
+        ],
+        "g": 0.045,
+        "extra": 0,
+        "cost": 50000,
+        "hdi_roe": [
+          0.03,
+          0.15,
+          0.14
+        ]
+      },
+      {
+        "name": "Disruptivo",
+        "p": 0.1,
+        "r1": -0.03,
+        "r5": 0.08,
+        "rt": 0.1,
+        "growth": [
+          0.02,
+          0,
+          0.02
+        ],
+        "g": 0.03,
+        "extra": 0.01,
+        "cost": 100000,
+        "hdi_roe": [
+          -0.05,
+          0.05,
+          0.08
+        ]
+      }
+    ],
+    "ke_initial": 0.17681966940528948,
+    "ke_terminal": 0.14357231308228213,
+    "residual": 152877.01700000092,
+    "results": [
+      {
+        "name": "Base",
+        "p": 0.5,
+        "dcf": 28212.858501246294,
+        "economic": 28212.858501246297,
+        "residual3": 38219.35273947741,
+        "pvdistributions3": 4539.809973197448,
+        "pb": 0.921279140802836,
+        "pe": 6.803174309628793,
+        "pb3": 39088.11784154898,
+        "pe3": 41625.8139230998,
+        "multiple3": 39976.311470091765,
+        "multiplepresent": 29301.117885834225,
+        "combined": 28430.510378163883,
+        "combined3": 38570.744485600284,
+        "dilution3": 0,
+        "capitalnew3": 0,
+        "terminalPVweight": 0.44168534849257884,
+        "flows": [
+          {
+            "y": 1,
+            "ni": 2325252.44996,
+            "cost": 60000,
+            "cf": 347917.29987999634,
+            "df": 1.1768196694052895,
+            "shares": 605452684,
+            "ps": 574.6399497008363,
+            "pref": 574.6399497008363,
+            "book": 22829846.133080002,
+            "newcap": 0
+          },
+          {
+            "y": 2,
+            "ni": 2958437.4128458006,
+            "cost": 62400,
+            "cf": 1581622.281957,
+            "df": 1.3805571850906593,
+            "shares": 605452684,
+            "ps": 2612.297085724043,
+            "pref": 2612.297085724043,
+            "book": 24144261.263968803,
+            "newcap": 0
+          },
+          {
+            "y": 3,
+            "ni": 3566646.5696257204,
+            "cost": 64896.00000000001,
+            "cf": 2110685.55636743,
+            "df": 1.6144668775630429,
+            "shares": 605452684,
+            "ps": 3486.1280033031117,
+            "pref": 3486.1280033031117,
+            "book": 25535326.277227093,
+            "newcap": 0
+          },
+          {
+            "y": 4,
+            "ni": 3772006.764416288,
+            "cost": 67491.84000000001,
+            "cf": 2232289.636865694,
+            "df": 1.8820441252695195,
+            "shares": 605452684,
+            "ps": 3686.9762012083074,
+            "pref": 3686.9762012083074,
+            "book": 27007551.564777687,
+            "newcap": 0
+          },
+          {
+            "y": 5,
+            "ni": 3989343.0269188103,
+            "cost": 70191.5136,
+            "cf": 2360988.4800785035,
+            "df": 2.1870163267954172,
+            "shares": 605452684,
+            "ps": 3899.5425116960973,
+            "pref": 3899.5425116960973,
+            "book": 28565714.59801799,
+            "newcap": 0
+          },
+          {
+            "y": 6,
+            "ni": 4166595.142925331,
+            "cost": 72999.174144,
+            "cf": 2545741.2817500876,
+            "df": 2.5333279911826856,
+            "shares": 605452684,
+            "ps": 4204.6907198946155,
+            "pref": 4204.6907198946155,
+            "book": 30113569.285049234,
+            "newcap": 0
+          },
+          {
+            "y": 7,
+            "ni": 4336638.178606007,
+            "cost": 75919.14110976002,
+            "cf": 2735237.192430745,
+            "df": 2.925119236808175,
+            "shares": 605452684,
+            "ps": 4517.672916007331,
+            "pref": 4517.672916007331,
+            "book": 31639051.130114738,
+            "newcap": 0
+          },
+          {
+            "y": 8,
+            "ni": 4497814.159903511,
+            "cost": 78955.90675415042,
+            "cf": 2928210.9376154114,
+            "df": 3.366697034245637,
+            "shares": 605452684,
+            "ps": 4836.399300883124,
+            "pref": 4836.399300883124,
+            "book": 33129698.44564869,
+            "newcap": 0
+          },
+          {
+            "y": 9,
+            "ni": 4648497.538427202,
+            "cost": 82114.14302431644,
+            "cf": 3123250.7759243534,
+            "df": 3.8624986011138946,
+            "shares": 605452684,
+            "ps": 5158.538162371667,
+            "pref": 5158.538162371667,
+            "book": 34572831.065127224,
+            "newcap": 0
+          },
+          {
+            "y": 10,
+            "ni": 4787123.526342785,
+            "cost": 85398.7087452891,
+            "cf": 3318811.574992406,
+            "df": 4.417046459552895,
+            "shares": 605452684,
+            "ps": 5481.537472203866,
+            "pref": 5481.537472203866,
+            "book": 35955744.30773231,
+            "newcap": 0
+          },
+          {
+            "y": 11,
+            "ni": 4978608.467396496,
+            "cost": 88814.65709510066,
+            "cf": 3451564.037992102,
+            "df": 5.051212036742809,
+            "shares": 605452684,
+            "ps": 5700.79897109202,
+            "pref": 5700.79897109202,
+            "book": 37393974.0800416,
+            "newcap": 0
+          }
+        ]
+      },
+      {
+        "name": "Conservador",
+        "p": 0.25,
+        "dcf": 18272.413235135078,
+        "economic": 18577.800642442086,
+        "residual3": 24433.944363141203,
+        "pvdistributions3": 3138.0399613872605,
+        "pb": 0.6399774252613089,
+        "pe": 6.125133707793606,
+        "pb3": 24475.436702929834,
+        "pe3": 26589.25404728748,
+        "multiple3": 25215.27277345501,
+        "multiplepresent": 18756.367673081295,
+        "combined": 18369.204122724324,
+        "combined3": 24590.210045203967,
+        "dilution3": 0.08366705658018325,
+        "capitalnew3": 954722.9815390084,
+        "terminalPVweight": 0.3902781351375663,
+        "flows": [
+          {
+            "y": 1,
+            "ni": 1542485.58264,
+            "cost": 80000,
+            "cf": -954722.9815390084,
+            "df": 1.1768196694052895,
+            "shares": 660734385.1901793,
+            "ps": 0,
+            "pref": 0,
+            "book": 23329719.547179006,
+            "newcap": 954722.9815390084
+          },
+          {
+            "y": 2,
+            "ni": 2236327.7483966555,
+            "cost": 82800,
+            "cf": 1277150.2569814932,
+            "df": 1.3805571850906593,
+            "shares": 660734385.1901793,
+            "ps": 1932.9253715377483,
+            "pref": 1932.9253715377483,
+            "book": 24206097.03859417,
+            "newcap": 0
+          },
+          {
+            "y": 3,
+            "ni": 2849908.0221363395,
+            "cost": 85697.99999999999,
+            "cf": 1853913.6568740092,
+            "df": 1.6144668775630429,
+            "shares": 660734385.1901793,
+            "ps": 2805.838016649303,
+            "pref": 2805.838016649303,
+            "book": 25116393.4038565,
+            "newcap": 0
+          },
+          {
+            "y": 4,
+            "ni": 2956950.641068021,
+            "cost": 88697.42999999998,
+            "cf": 1922703.9415208295,
+            "df": 1.8820441252695195,
+            "shares": 660734385.1901793,
+            "ps": 2909.9498748917345,
+            "pref": 2909.9498748917345,
+            "book": 26061942.67340369,
+            "newcap": 0
+          },
+          {
+            "y": 5,
+            "ni": 3068135.8907178934,
+            "cost": 91801.84004999997,
+            "cf": 1994144.9396709555,
+            "df": 2.1870163267954172,
+            "shares": 660734385.1901793,
+            "ps": 3018.073501800546,
+            "pref": 3018.073501800546,
+            "book": 27044131.784400627,
+            "newcap": 0
+          },
+          {
+            "y": 6,
+            "ni": 3133649.705884713,
+            "cost": 95014.90445174996,
+            "cf": 2033109.1561277343,
+            "df": 2.5333279911826856,
+            "shares": 660734385.1901793,
+            "ps": 3077.044576002419,
+            "pref": 3077.044576002419,
+            "book": 28049657.429705862,
+            "newcap": 0
+          },
+          {
+            "y": 7,
+            "ni": 3198229.2755587874,
+            "cost": 98340.4261075612,
+            "cf": 2071747.1101136403,
+            "df": 2.925119236808175,
+            "shares": 660734385.1901793,
+            "ps": 3135.5218625671023,
+            "pref": 3135.5218625671023,
+            "book": 29077799.169043444,
+            "newcap": 0
+          },
+          {
+            "y": 8,
+            "ni": 3261661.8771792594,
+            "cost": 101782.34102132583,
+            "cf": 2109818.713109332,
+            "df": 3.366697034245637,
+            "shares": 660734385.1901793,
+            "ps": 3193.1419953300333,
+            "pref": 3193.1419953300333,
+            "book": 30127859.99209205,
+            "newcap": 0
+          },
+          {
+            "y": 9,
+            "ni": 3323742.41487748,
+            "cost": 105344.72295707223,
+            "cf": 2147077.962628084,
+            "df": 3.8624986011138946,
+            "shares": 660734385.1901793,
+            "ps": 3249.532657529379,
+            "pref": 3249.532657529379,
+            "book": 31199179.721384373,
+            "newcap": 0
+          },
+          {
+            "y": 10,
+            "ni": 3384274.5795437763,
+            "cost": 109031.78826056977,
+            "cf": 2183271.5010347534,
+            "df": 4.417046459552895,
+            "shares": 660734385.1901793,
+            "ps": 3304.310400625422,
+            "pref": 3304.310400625422,
+            "book": 32291151.011632826,
+            "newcap": 0
+          },
+          {
+            "y": 11,
+            "ni": 3502724.1898278086,
+            "cost": 112847.90084968969,
+            "cf": 2259686.00357097,
+            "df": 5.051212036742809,
+            "shares": 660734385.1901793,
+            "ps": 3419.9612646473124,
+            "pref": 3419.9612646473124,
+            "book": 33421341.29703998,
+            "newcap": 0
+          }
+        ]
+      },
+      {
+        "name": "Optimista",
+        "p": 0.15,
+        "dcf": 36732.07037708609,
+        "economic": 36732.07037708609,
+        "residual3": 51092.8084974794,
+        "pvdistributions3": 5085.209603700986,
+        "pb": 1.1263330908332976,
+        "pe": 7.2189150962165725,
+        "pb3": 50534.409016316,
+        "pe3": 56555.9624951828,
+        "multiple3": 52641.95273391938,
+        "multiplepresent": 37691.60956489423,
+        "combined": 36923.97821464772,
+        "combined3": 51402.6373447674,
+        "dilution3": 0,
+        "capitalnew3": 0,
+        "terminalPVweight": 0.47942777335966286,
+        "flows": [
+          {
+            "y": 1,
+            "ni": 2748293.00562,
+            "cost": 50000,
+            "cf": 349201.40387999685,
+            "df": 1.1768196694052895,
+            "shares": 605452684,
+            "ps": 576.7608487139795,
+            "pref": 576.7608487139795,
+            "book": 23261602.584740005,
+            "newcap": 0
+          },
+          {
+            "y": 2,
+            "ni": 3598519.4588384004,
+            "cost": 52250,
+            "cf": 1741781.805253194,
+            "df": 1.3805571850906593,
+            "shares": 605452684,
+            "ps": 2876.8256401902313,
+            "pref": 2876.8256401902313,
+            "book": 25066090.23832521,
+            "newcap": 0
+          },
+          {
+            "y": 3,
+            "ni": 4454808.852428137,
+            "cost": 54601.24999999999,
+            "cf": 2454747.3697477602,
+            "df": 1.6144668775630429,
+            "shares": 605452684,
+            "ps": 4054.4000127807844,
+            "pref": 4054.4000127807844,
+            "book": 27011550.471005585,
+            "newcap": 0
+          },
+          {
+            "y": 4,
+            "ni": 4800424.7030729735,
+            "cost": 57058.30624999999,
+            "cf": 2645858.9647113048,
+            "df": 1.8820441252695195,
+            "shares": 605452684,
+            "ps": 4370.050764712284,
+            "pref": 4370.050764712284,
+            "book": 29109057.903117254,
+            "newcap": 0
+          },
+          {
+            "y": 5,
+            "ni": 5173043.69031643,
+            "cost": 59625.93003124998,
+            "cf": 2851914.7299387045,
+            "df": 2.1870163267954172,
+            "shares": 605452684,
+            "ps": 4710.384156028788,
+            "pref": 4710.384156028788,
+            "book": 31370560.93346373,
+            "newcap": 0
+          },
+          {
+            "y": 6,
+            "ni": 5454099.298186985,
+            "cost": 62309.09688265623,
+            "cf": 3158743.1715751383,
+            "df": 2.5333279911826856,
+            "shares": 605452684,
+            "ps": 5217.159416498909,
+            "pref": 5217.159416498909,
+            "book": 33603607.963192925,
+            "newcap": 0
+          },
+          {
+            "y": 7,
+            "ni": 5712945.650047353,
+            "cost": 65113.00624237576,
+            "cf": 3475184.3745566756,
+            "df": 2.925119236808175,
+            "shares": 605452684,
+            "ps": 5739.811658934979,
+            "pref": 5739.811658934979,
+            "book": 35776256.232441224,
+            "newcap": 0
+          },
+          {
+            "y": 8,
+            "ni": 5944606.126142246,
+            "cost": 68043.09152328267,
+            "cf": 3797517.32261416,
+            "df": 3.366697034245637,
+            "shares": 605452684,
+            "ps": 6272.1950417749895,
+            "pref": 6272.1950417749895,
+            "book": 37855301.94444603,
+            "newcap": 0
+          },
+          {
+            "y": 9,
+            "ni": 6144389.391917823,
+            "cost": 71105.03064183037,
+            "cf": 4121495.0748649985,
+            "df": 3.8624986011138946,
+            "shares": 605452684,
+            "ps": 6807.295076529876,
+            "pref": 6807.295076529876,
+            "book": 39807091.23085702,
+            "newcap": 0
+          },
+          {
+            "y": 10,
+            "ni": 6308041.9664154565,
+            "cost": 74304.75702071273,
+            "cf": 4442418.104006177,
+            "df": 4.417046459552895,
+            "shares": 605452684,
+            "ps": 7337.34975730354,
+            "pref": 7337.34975730354,
+            "book": 41598410.33624558,
+            "newcap": 0
+          },
+          {
+            "y": 11,
+            "ni": 6591903.854904151,
+            "cost": 77648.4710866448,
+            "cf": 4642326.918686455,
+            "df": 5.051212036742809,
+            "shares": 605452684,
+            "ps": 7667.5304963822,
+            "pref": 7667.5304963822,
+            "book": 43470338.80137664,
+            "newcap": 0
+          }
+        ]
+      },
+      {
+        "name": "Disruptivo",
+        "p": 0.1,
+        "dcf": 10533.57132094813,
+        "economic": 8880.160277693187,
+        "residual3": 15163.595150621408,
+        "pvdistributions3": 1141.2478478830772,
+        "pb": 0.5576380064863963,
+        "pe": 5.974763028155641,
+        "pb3": 16934.10314065866,
+        "pe3": 13218.20631074377,
+        "multiple3": 15633.539250188449,
+        "multiplepresent": 10824.654468021668,
+        "combined": 10591.787950362837,
+        "combined3": 15257.583970534817,
+        "dilution3": 0.2584079809530443,
+        "capitalnew3": 3643485.6369680185,
+        "terminalPVweight": 0.42733276861526576,
+        "flows": [
+          {
+            "y": 1,
+            "ni": -660004.1534899999,
+            "cost": 100000,
+            "cf": -3643485.6369680185,
+            "df": 1.1768196694052895,
+            "shares": 816422869.245663,
+            "ps": 0,
+            "pref": 0,
+            "book": 23795992.46647802,
+            "newcap": 3643485.6369680185
+          },
+          {
+            "y": 2,
+            "ni": 550274.6340790002,
+            "cost": 103000,
+            "cf": 29503.667049439857,
+            "df": 1.3805571850906593,
+            "shares": 816422869.245663,
+            "ps": 36.13772734796109,
+            "pref": 161.3,
+            "book": 24213763.43350758,
+            "newcap": 0
+          },
+          {
+            "y": 3,
+            "ni": 1882479.8573190751,
+            "cost": 106090,
+            "cf": 1350263.4709489236,
+            "df": 1.6144668775630429,
+            "shares": 816422869.245663,
+            "ps": 1653.8775698389054,
+            "pref": 1653.8775698389054,
+            "book": 24639889.81987773,
+            "newcap": 0
+          },
+          {
+            "y": 4,
+            "ni": 1915477.5438814566,
+            "cost": 109272.7,
+            "cf": 1371555.929783902,
+            "df": 1.8820441252695195,
+            "shares": 816422869.245663,
+            "ps": 1679.957754063352,
+            "pref": 1679.957754063352,
+            "book": 25074538.733975284,
+            "newcap": 0
+          },
+          {
+            "y": 5,
+            "ni": 1949135.1841750855,
+            "cost": 112550.88100000001,
+            "cf": 1393242.4107955764,
+            "df": 2.1870163267954172,
+            "shares": 816422869.245663,
+            "ps": 1706.5205584979117,
+            "pref": 1706.5205584979117,
+            "book": 25517880.62635479,
+            "newcap": 0
+          },
+          {
+            "y": 6,
+            "ni": 2089401.7979689264,
+            "cost": 115927.40743,
+            "cf": 1458600.1225991205,
+            "df": 2.5333279911826856,
+            "shares": 816422869.245663,
+            "ps": 1786.5743079279487,
+            "pref": 1786.5743079279487,
+            "book": 26032754.8942946,
+            "newcap": 0
+          },
+          {
+            "y": 7,
+            "ni": 2239541.3649599375,
+            "cost": 119405.22965290002,
+            "cf": 1530448.6832002467,
+            "df": 2.925119236808175,
+            "shares": 816422869.245663,
+            "ps": 1874.578408875673,
+            "pref": 1874.578408875673,
+            "book": 26622442.34640139,
+            "newcap": 0
+          },
+          {
+            "y": 8,
+            "ni": 2400735.540808283,
+            "cost": 122987.38654248702,
+            "cf": 1609244.55281973,
+            "df": 3.366697034245637,
+            "shares": 816422869.245663,
+            "ps": 1971.0919591297063,
+            "pref": 1971.0919591297063,
+            "book": 27290945.947847456,
+            "newcap": 0
+          },
+          {
+            "y": 9,
+            "ni": 2574289.140658819,
+            "cost": 126677.00813876164,
+            "cf": 1695518.7148565568,
+            "df": 3.8624986011138946,
+            "shares": 816422869.245663,
+            "ps": 2076.765336599571,
+            "pref": 2076.765336599571,
+            "book": 28043039.36551096,
+            "newcap": 0
+          },
+          {
+            "y": 10,
+            "ni": 2761649.721002092,
+            "cost": 130477.3183829245,
+            "cf": 1789881.221653839,
+            "df": 4.417046459552895,
+            "shares": 816422869.245663,
+            "ps": 2192.34576722184,
+            "pref": 2192.34576722184,
+            "book": 28884330.546476286,
+            "newcap": 0
+          },
+          {
+            "y": 11,
+            "ni": 2844499.212632155,
+            "cost": 134391.63793441223,
+            "cf": 1843577.658303454,
+            "df": 5.051212036742809,
+            "shares": 816422869.245663,
+            "ps": 2258.116140238495,
+            "pref": 2258.116140238495,
+            "book": 29750860.462870575,
+            "newcap": 0
+          }
+        ]
+      }
+    ],
+    "sensitivity": [
+      {
+        "ke": 0.12,
+        "roe": 0.1,
+        "value": 24842.611838961115
+      },
+      {
+        "ke": 0.12,
+        "roe": 0.12,
+        "value": 29519.13476582095
+      },
+      {
+        "ke": 0.12,
+        "roe": 0.14,
+        "value": 34195.65769268078
+      },
+      {
+        "ke": 0.12,
+        "roe": 0.16,
+        "value": 38872.18061954062
+      },
+      {
+        "ke": 0.12,
+        "roe": 0.18,
+        "value": 43548.70354640046
+      },
+      {
+        "ke": 0.14,
+        "roe": 0.1,
+        "value": 21696.1011466104
+      },
+      {
+        "ke": 0.14,
+        "roe": 0.12,
+        "value": 25319.11490294272
+      },
+      {
+        "ke": 0.14,
+        "roe": 0.14,
+        "value": 28942.12865927504
+      },
+      {
+        "ke": 0.14,
+        "roe": 0.16,
+        "value": 32565.142415607363
+      },
+      {
+        "ke": 0.14,
+        "roe": 0.18,
+        "value": 36188.156171939685
+      },
+      {
+        "ke": 0.14357231308228213,
+        "roe": 0.1,
+        "value": 21256.393883752116
+      },
+      {
+        "ke": 0.14357231308228213,
+        "roe": 0.12,
+        "value": 24734.626192499207
+      },
+      {
+        "ke": 0.14357231308228213,
+        "roe": 0.14,
+        "value": 28212.858501246294
+      },
+      {
+        "ke": 0.14357231308228213,
+        "roe": 0.16,
+        "value": 31691.09080999338
+      },
+      {
+        "ke": 0.14357231308228213,
+        "roe": 0.18,
+        "value": 35169.32311874047
+      },
+      {
+        "ke": 0.16,
+        "roe": 0.1,
+        "value": 19553.213347520887
+      },
+      {
+        "ke": 0.16,
+        "roe": 0.12,
+        "value": 22478.439682266522
+      },
+      {
+        "ke": 0.16,
+        "roe": 0.14,
+        "value": 25403.666017012158
+      },
+      {
+        "ke": 0.16,
+        "roe": 0.16,
+        "value": 28328.892351757793
+      },
+      {
+        "ke": 0.16,
+        "roe": 0.18,
+        "value": 31254.11868650343
+      },
+      {
+        "ke": 0.18,
+        "roe": 0.1,
+        "value": 17986.003436793882
+      },
+      {
+        "ke": 0.18,
+        "roe": 0.12,
+        "value": 20416.470167848922
+      },
+      {
+        "ke": 0.18,
+        "roe": 0.14,
+        "value": 22846.936898903958
+      },
+      {
+        "ke": 0.18,
+        "roe": 0.16,
+        "value": 25277.403629958997
+      },
+      {
+        "ke": 0.18,
+        "roe": 0.18,
+        "value": 27707.870361014036
+      },
+      {
+        "ke": 0.1900796694052895,
+        "roe": 0.1,
+        "value": 17342.13011386329
+      },
+      {
+        "ke": 0.1900796694052895,
+        "roe": 0.12,
+        "value": 19574.449686202042
+      },
+      {
+        "ke": 0.1900796694052895,
+        "roe": 0.14,
+        "value": 21806.769258540793
+      },
+      {
+        "ke": 0.1900796694052895,
+        "roe": 0.16,
+        "value": 24039.08883087954
+      },
+      {
+        "ke": 0.1900796694052895,
+        "roe": 0.18,
+        "value": 26271.408403218295
+      }
+    ],
+    "tests": [
+      {
+        "test": "AT1/T2 excluidos inmediatamente: stress severo, no calendario contractual",
+        "value": 22547.51317119314
+      },
+      {
+        "test": "Puente deducciones +20%",
+        "value": 28095.349532757595
+      },
+      {
+        "test": "HDI capital contable adicional +2%/año",
+        "value": 27881.45014509916
+      },
+      {
+        "test": "g terminal 0.03",
+        "value": 28365.221044068832
+      },
+      {
+        "test": "g terminal 0.04",
+        "value": 28212.858501246294
+      },
+      {
+        "test": "g terminal 0.05",
+        "value": 28028.263990582782
+      },
+      {
+        "test": "Inflación COP terminal 0.03",
+        "ke": 0.13257642545649095,
+        "value": 30632.826985224732
+      },
+      {
+        "test": "Inflación COP terminal 0.04",
+        "ke": 0.14357231308228213,
+        "value": 28212.858501246294
+      },
+      {
+        "test": "Inflación COP terminal 0.05",
+        "ke": 0.1545682007080733,
+        "value": 26246.09741136747
+      },
+      {
+        "test": "Costo holding anual 0",
+        "value": 29067.24142303387
+      },
+      {
+        "test": "Costo holding anual 60000",
+        "value": 28212.858501246294
+      },
+      {
+        "test": "Costo holding anual 120000",
+        "value": 27358.475579458714
+      },
+      {
+        "test": "Disrupción emisión/BV 0.25",
+        "value": 8446.395105426443,
+        "dilution3": 0.41069030849175203
+      },
+      {
+        "test": "Disrupción emisión/BV 0.5",
+        "value": 10533.57132094813,
+        "dilution3": 0.2584079809530443
+      },
+      {
+        "test": "Disrupción emisión/BV 1",
+        "value": 12041.685264135096,
+        "dilution3": 0.14837457804523702
+      }
+    ],
+    "implied_terminal_roe_at_40620": 0.21134164942089761,
+    "verification": {
+      "comparedValues": 48,
+      "maxAbsoluteDifference": 1.4551915228366852e-11,
+      "residualIncomeDifferences": [
+        -5.587935447692871e-9,
+        -1.3969838619232178e-9,
+        -3.725290298461914e-9,
+        0,
+        -9.313225746154785e-10,
+        -4.656612873077393e-10,
+        -1.1175870895385742e-8,
+        -9.313225746154785e-10,
+        9.313225746154785e-10,
+        -3.725290298461914e-9,
+        -4.656612873077393e-10,
+        -1.6298145055770874e-9
+      ],
+      "forecastErrors": 0
+    },
+    "licenses": [
+      [
+        "Banco Davivienda Colombia separado",
+        0.09,
+        0.1852
+      ],
+      [
+        "Banco Davivienda Panamá",
+        0.0925,
+        0.136
+      ],
+      [
+        "Banco Davivienda Internacional Panamá",
+        0.09,
+        0.1608
+      ],
+      [
+        "Banco Davivienda Costa Rica",
+        0.1,
+        0.1425
+      ],
+      [
+        "Puesto de Bolsa Costa Rica",
+        0.1,
+        3.0556
+      ],
+      [
+        "Corredora de Seguros Costa Rica",
+        0.2,
+        2.8314
+      ],
+      [
+        "Seguros Costa Rica",
+        1.3,
+        7.3609
+      ],
+      [
+        "Leasing Costa Rica",
+        0.2,
+        1.5472
+      ],
+      [
+        "Banco Davivienda Honduras",
+        0.125,
+        0.1378
+      ],
+      [
+        "Seguros Honduras",
+        0,
+        3.603
+      ],
+      [
+        "Banco Davivienda El Salvador",
+        0.12,
+        0.1349
+      ],
+      [
+        "Seguros El Salvador",
+        0,
+        0.7594
+      ],
+      [
+        "Valores El Salvador",
+        0.12,
+        2.864
+      ],
+      [
+        "Servicios El Salvador",
+        0.12,
+        1.055
+      ],
+      [
+        "DAVIbank Costa Rica",
+        0.1,
+        0.1534
+      ],
+      [
+        "DAVIbank Safi Costa Rica",
+        0.0563,
+        0.1876
+      ],
+      [
+        "DAVIbank Corredora Seguros Costa Rica",
+        0.2,
+        4.1406
+      ],
+      [
+        "DAVIbank Leasing Costa Rica",
+        0.2,
+        1.54
+      ],
+      [
+        "DAVIbank Safe Costa Rica",
+        0.1,
+        4.93
+      ],
+      [
+        "DAVIbank Colombia",
+        0.09,
+        0.1319
+      ]
+    ],
+    "capitalSchedule": [
+      {
+        "instrument": "Banco AT1 USD500m",
+        "issue": "2021-04-22",
+        "maturity": "perpetual",
+        "firstCallYear": 2031,
+        "coupon": 0.0665
+      },
+      {
+        "instrument": "Banco Tier2 USD500m",
+        "issue": "2025-07-02",
+        "maturityYear": 2035,
+        "firstCallYear": 2030,
+        "coupon": 0.08125
+      }
+    ],
+    "rights": {
+      "preferredCount": 169443753,
+      "commonCount": 436008931,
+      "minimumDividend": 161.3,
+      "cumulative": false,
+      "newCapitalClass": "common",
+      "fullFcfeEligibility": "analyst assumption, not declared dividend"
+    }
+  },
+  "unresolved": [
+    "Detalle de conversión libro local DAVIbank a libro Group, no asignado totalmente a PPA.",
+    "Autorización de distribución por licencia futura y renovación de subordinados.",
+    "Valor de residual neto y costo corporativo normalizados: estimación explícita."
+  ]
+}
