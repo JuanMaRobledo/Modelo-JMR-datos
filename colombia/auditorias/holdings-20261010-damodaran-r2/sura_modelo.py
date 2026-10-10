@@ -16,12 +16,10 @@ CRP = {"Colombia": 0.0272018253, "Panamá": 0.0272018253, "El Salvador": 0.08044
        "Guatemala": 0.0309777, "Chile": 0.0104734301, "México": 0.0272018253,
        "Perú": 0.0197831457, "Uruguay": 0.0197831457, "Brasil": 0.0309777,
        "Rep. Dominicana": 0.0372356}
-# Exposición por país: ESTIMACIÓN del analista (cartera / utilidad / primas aprox.), con sensibilidad 100% Colombia
-EXPO = {
-    "Cibest": {"Colombia": .72, "Panamá": .13, "El Salvador": .08, "Guatemala": .07},
-    "AM": {"Chile": .35, "México": .25, "Colombia": .20, "Perú": .15, "Uruguay": .05},
-    "Suramericana": {"Colombia": .62, "Chile": .10, "México": .08, "Brasil": .06, "Panamá": .04,
-                     "Rep. Dominicana": .04, "Uruguay": .03, "El Salvador": .03},
+EXPO = {  # Pesos verificados 2T26 (r3): Cibest cartera 6-K 2T26 (Banistmo vendido 30-jun-2026); SURA AM AUM y Suramericana primas LTM, presentación corporativa Grupo SURA 2T26
+    "Cibest": {"Colombia": 229573, "El Salvador": 16959, "Guatemala": 16736},
+    "AM": {"México": 321, "Colombia": 267, "Chile": 202, "Perú": 52, "Uruguay": 18},
+    "Suramericana": {"Colombia": .65, "Chile": .15, "México": .07, "Brasil": .05, "Panamá": .03, "Uruguay": .03, "Rep. Dominicana": .02},
 }
 BETA = {"Cibest": 0.70, "AM": 0.75, "Suramericana": 0.66}   # Damodaran global ene-2026: bancos 0,697; inversiones/gestión 0,748; seguros (gral 0,51 + vida 0,80)/2
 BETA_STABLE = 1.0
@@ -44,19 +42,20 @@ SHARES = 165834026 + 161871882
 CIBEST_SHARES_HELD = 235565920
 CIBEST_PRICE = 88000
 
-# Historias: ROE año 5, spread ROE terminal sobre Ke estable (None = absoluto), g libro 1-5, g terminal
+# Historias: (ROE año 5, ROE contable terminal, spread ROE inversión nueva sobre Ke estable o ("abs", x), g libro 1-5, g terminal)
 STORIES = {
- "Base":        {"p": .50, "g_hq": .045, "Cibest": (.19, .01, .06, .045), "AM": (.15, .00, .07, .045), "Suramericana": (.145, .00, .06, .045)},
- "Conservador": {"p": .25, "g_hq": .03,  "Cibest": (.16, -.02, .035, .03), "AM": (.12, -.03, .04, .03), "Suramericana": (.11, -.03, .035, .03)},
- "Optimista":   {"p": .15, "g_hq": .045, "Cibest": (.22, .03, .08, .05), "AM": (.18, .02, .10, .05), "Suramericana": (.17, .02, .08, .05)},
- "Disrupcion":  {"p": .10, "g_hq": .02,  "Cibest": (.09, ("abs", .08), .01, .02), "AM": (.08, ("abs", .07), .01, .02), "Suramericana": (.06, ("abs", .06), .01, .02)},
+ "Base":        {"p": .50, "g_hq": .045, "Cibest": (.19, .17, .01, .06, .045), "AM": (.15, .14, .00, .07, .045), "Suramericana": (.145, .135, .00, .06, .045)},
+ "Conservador": {"p": .25, "g_hq": .03,  "Cibest": (.16, .14, -.02, .035, .03), "AM": (.12, .10, -.03, .04, .03), "Suramericana": (.11, .10, -.03, .035, .03)},
+ "Optimista":   {"p": .15, "g_hq": .045, "Cibest": (.22, .19, .03, .08, .05), "AM": (.18, .16, .02, .10, .05), "Suramericana": (.17, .15, .02, .08, .05)},
+ "Disrupcion":  {"p": .10, "g_hq": .02,  "Cibest": (.09, .08, ("abs", .08), .01, .02), "AM": (.08, .07, ("abs", .07), .01, .02), "Suramericana": (.06, .06, ("abs", .06), .01, .02)},
 }
 
 def re_value(name, story, ke_ini=None, ke_st=None, roe_shift=0.0):
-    roe5, spread, g15, gT = STORIES[story][name]
+    roe5, roeT, spread, g15, gT = STORIES[story][name]
     k0 = ke(name) if ke_ini is None else ke_ini
     kS = ke(name, BETA_STABLE) if ke_st is None else ke_st
-    roeT = (spread[1] if isinstance(spread, tuple) else kS + spread) + roe_shift
+    roeT = roeT + roe_shift                                         # ROE contable terminal sobre el libro existente
+    roeN = spread[1] if isinstance(spread, tuple) else kS + spread  # ROE de la inversión nueva en crecimiento estable
     b0 = BOOK[name]; roe0 = NI[name] / b0
     book = b0; pv = 0.0; fac = 1.0; ddm = 0.0; divs = []
     for t in range(1, 11):
@@ -67,11 +66,12 @@ def re_value(name, story, ke_ini=None, ke_st=None, roe_shift=0.0):
         fac *= (1 + k)
         pv += (ni - k * book) / fac; ddm += div / fac; divs.append(div)
         book += reinv
-    tv_re = book * (roeT - kS) / (kS - gT); tv_ddm = book * (roeT - gT) / (kS - gT)
+    tv_ddm = book * roeT * (1 - gT / roeN) / (kS - gT)             # Damodaran: valor estable = NI11 × (1 − g/ROE nuevo)/(Ke − g)
+    tv_re = tv_ddm - book
     v_re = b0 + pv + tv_re / fac; v_ddm = ddm + tv_ddm / fac
     assert abs(v_re - v_ddm) < 1e-3 * abs(v_re), (name, story, v_re, v_ddm)
     v3 = v_re * (1 + k0) ** 3 - divs[0] * (1 + k0) ** 2 - divs[1] * (1 + k0) - divs[2]
-    return {"equity100": v_re, "attrib": v_re * STAKE[name], "ke_ini": k0, "ke_stable": kS, "roe_terminal": roeT, "year3": v3}
+    return {"equity100": v_re, "attrib": v_re * STAKE[name], "ke_ini": k0, "ke_stable": kS, "roe_terminal": roeT, "roe_new": roeN, "year3": v3}
 
 def holding_ke():
     w = {n: re_value(n, "Base")["attrib"] for n in BOOK}

@@ -7,7 +7,7 @@
  "company": "Grupo Argos S.A.",
  "analysisDate": "2026-10-09",
  "retrievedAt": "2026-10-09T20:29:33.163Z",
- "updatedAt": "2026-10-10T23:00:00.000Z",
+ "updatedAt": "2026-10-10T23:30:00.000Z",
  "instrument": {
   "ticker": "PFGRUPOARG.CL",
   "exchange": "BVC",
@@ -160,7 +160,7 @@
    "r2MinorityInterestsDeducted": true,
    "r2PricesVerifiedTwoSources": true,
    "r2IndependentPythonReplicaMatchesSheet": true,
-   "fcffEnginesOnHarmonizedRate": false
+   "fcffEnginesOnHarmonizedRate": true
   },
   "warnings": [
    "Los dos SOTP comparten NAV gerente de Odinsa/Pactia y gastos HQ: NO son estimaciones plenamente independientes.",
@@ -176,7 +176,7 @@
    "Celsia Core y Growth pueden tener flujos superpuestos y NCI a valor justo no auditados individualmente; EV no equivale a equity.",
    "r2 10-oct: Ke holding 17,97% (Rf COP 11,47% = TES 13,217% − spread 1,75%; ERP 4,20%; beta 0,90; CRP 2,72%) reemplaza 16% y 14,5% sin sustento; g de gastos HQ 4,5% nominal en vez de 2%.",
    "r2 10-oct: múltiplos sectoriales restan caja/deuda neta al 2T26 y minoritarios a libro (Cementos 0,64; Celsia 1,76 billones). Antes se usaba caja neta FY26 de consenso (6,02 billones) y no se restaban minoritarios.",
-   "El DCF FCFF opcional (8.294) sigue con la Rf sintética 8,86% del corte anterior; con el corte Colombia sería menor. Peso 0 en el Base."
+   "r3: DCF FCFF por partes recalculado con el corte Colombia (WACC Cementos 15,91%, Celsia 12,66%): Base 6.808 (antes 8.294), esperado 6.804; peso 0 en el Base. Motores secundarios (Odinsa, Pactia, Growth) conservan sus WACC de analista."
   ],
   "verifiedPreferentialRights": {
    "minimumPreferredDividendCOP": 4,
@@ -460,27 +460,27 @@
   "dcfComponents": [
    {
     "name": "Cementos Argos · DCF FCFF",
-    "enterpriseValue": 3886285.987827599,
+    "enterpriseValue": 3140390.1361405626,
     "metricLabel": "EV operativo DCF · Base · COP millones",
     "scenarios": {
-     "Base": 3886285.987827599,
-     "Conservadora": 2938901.9401487075,
-     "Optimista": 5169553.221828638,
-     "Disrupcion": 2126661.7096851896
+     "Base": 3140390.1361405626,
+     "Conservadora": 2430495.7986322315,
+     "Optimista": 4083380.494581117,
+     "Disrupcion": 1832221.3607659643
     },
-    "status": "CEMENTOS: DCF FCFF operativo 10 años, WACC 13,871154% fuente ERP/CRP Damodaran 05ene26 + Rf/beta/DV analistas; EV NO equity; NO adicionar caja Summit al equity de mercado SOTP Base."
+    "status": "CEMENTOS: DCF FCFF operativo 10 años, WACC 15,906% (r3: Rf COP 11,467% = TES − spread; ERP 4,20%; CRP 2,72% × λ 0,7; Kd 12,8%; D/V 18%). EV NO equity."
    },
    {
     "name": "Celsia · DCF FCFF",
-    "enterpriseValue": 6720315.1943190005,
+    "enterpriseValue": 5652946.036956072,
     "metricLabel": "EV operativo DCF · Base · COP millones",
     "scenarios": {
-     "Base": 6720315.1943190005,
-     "Conservadora": 5027421.977705404,
-     "Optimista": 8671907.28028128,
-     "Disrupcion": 3969728.755583845
+     "Base": 5652946.036956072,
+     "Conservadora": 4329343.193621953,
+     "Optimista": 7173079.427239475,
+     "Disrupcion": 3529849.3662820207
     },
-    "status": "CELSIA: DCF FCFF parcial WACC 11,4335%. No captura de modo completo vehículos de gestión de activos Growth. EV intrínseco total no reconciliable; SOLO diagnóstico. SOTP Base usa equity bursátil que sí incorpora todo el negocio."
+    "status": "CELSIA: DCF FCFF parcial, WACC 12,663% (r3: β 0,71; λ 0,94; D/V 50%). No captura vehículos Growth completos; diagnóstico."
    },
    {
     "name": "Odinsa · gestor de honorarios FCFF",
@@ -530,16 +530,16 @@
   "dcfStage": "MATURE_ERP_4.23_CRP_CO_2.85_JAN_2026_RECALCULATED_EIGHT_10Y_FCFF_WITH_SECONDARY_DIAGNOSTIC_CLASSIFICATION",
   "dcfEnterpriseScenariosCOPm": {
    "Cementos": {
-    "Base": 3886285.987827599,
-    "Conservadora": 2938901.9401487075,
-    "Optimista": 5169553.221828638,
-    "Disrupcion": 2126661.7096851896
+    "Base": 3140390.1361405626,
+    "Conservadora": 2430495.7986322315,
+    "Optimista": 4083380.494581117,
+    "Disrupcion": 1832221.3607659643
    },
    "Celsia": {
-    "Base": 6720315.1943190005,
-    "Conservadora": 5027421.977705404,
-    "Optimista": 8671907.28028128,
-    "Disrupcion": 3969728.755583845
+    "Base": 5652946.036956072,
+    "Conservadora": 4329343.193621953,
+    "Optimista": 7173079.427239475,
+    "Disrupcion": 3529849.3662820207
    },
    "GestorOdinsa": {
     "Base": 35705.93803081821,
@@ -582,17 +582,17 @@
   "navProportionalEconomic": 19769.53869228822,
   "navReferenceMethod": "Comparadores de NAV de mercado histórico; no son Base nueva ni DCF propio; el NAV PF usa descuento bursátil circular.",
   "cleanMasterSheetUrl": "https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit",
-  "conclusion": "Valor base condicionado COP 19.363 con SOTP económico 20.033 y sector 18.359 (r2: caja neta Cementos y deuda Celsia al 2T26, minoritarios restados, Ke holding 17,97 % del corte Colombia, precios 9-oct verificados). Contable 14.733 y FCFF previo 8.294 opcionales. Upside aritmético PF 17,35 %.",
+  "conclusion": "Valor base condicionado COP 19.363 con SOTP económico 20.033 y sector 18.359 (r2: caja neta Cementos y deuda Celsia al 2T26, minoritarios restados, Ke holding 17,97 % del corte Colombia, precios 9-oct verificados). Contable 14.733 y FCFF r3 6.808 (WACC corte Colombia) opcionales. Upside aritmético PF 17,35 %.",
   "extendedDcfWorkingSheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit",
   "dcfRateAudit": {
    "asOf": "2026-01-05",
    "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
-   "dateOfRecalculation": "2026-10-09",
+   "dateOfRecalculation": "2026-10-10",
    "method": "Ke COP nominal = Rf sintética COP + beta*ERP maduro Damodaran + lambda*CRP Colombia; WACC=Ke(1-D/V)+Kd(1-T)(D/V)",
-   "erpMature": 0.0423,
-   "crpColombia": 0.0285,
-   "rfSyntheticCOP": 0.088647,
-   "sourceStatus": "ERP/CRP verificados en tabla Damodaran publicada 05-ene-2026; Rf COP sintética, beta, lambda, D/V, Kd siguen como hipótesis",
+   "erpMature": 0.042,
+   "crpColombia": 0.0272018253,
+   "rfSyntheticCOP": null,
+   "sourceStatus": "r3: Rf COP = TES 13,217% (IRC 25-sep-2026) − spread 1,75% (Damodaran jul-2026), mismo corte que Grupo SURA y Davivienda; beta, lambda, D/V y Kd del analista sin cambios",
    "company": [
     {
      "business": "Cementos Argos",
@@ -602,9 +602,9 @@
      "kd": 0.128,
      "tax": 0.35,
      "debtOverMarketCapital": 0.18,
-     "wacc": 0.13871154,
+     "wacc": 0.15906022171819997,
      "tesAlternativeWacc": null,
-     "previousBaseWacc": 0.13771934
+     "previousBaseWacc": 0.13871154
     },
     {
      "business": "Celsia",
@@ -614,12 +614,13 @@
      "kd": 0.128,
      "tax": 0.35,
      "debtOverMarketCapital": 0.5,
-     "wacc": 0.114335,
+     "wacc": 0.126630451791,
      "tesAlternativeWacc": null,
-     "previousBaseWacc": 0.1136175
+     "previousBaseWacc": 0.114335
     }
    ],
-   "doNotCertify": "TES alternative must be recomputed with January 2026 risk premiums and actual TES 10-year comparable tenor; previous sensitivity obsoleted."
+   "doNotCertify": "TES alternative must be recomputed with January 2026 risk premiums and actual TES 10-year comparable tenor; previous sensitivity obsoleted.",
+   "rfCOP": 0.11467118776169417
   },
   "dcfBridgeAudit": {
    "asOf": "2026-06-30",
@@ -1060,22 +1061,22 @@
   "dcfPrimaryMethod": "FCFF",
   "dcfPrimaryDiscountRate": "WACC",
   "dcfPrimaryEquityValueCOPm": 5638596.557921719,
-  "dcfPrimaryIntrinsicPerShareCOP": 8294.102478144945,
+  "dcfPrimaryIntrinsicPerShareCOP": 6808.331519361185,
   "primaryIntrinsicValuationAvailable": true,
   "dcfFcffIntrinsicScenarios": [
    {
     "name": "Base",
     "weight": 0.5,
     "equityHoldingCOPtrillions": 5.638596557921719,
-    "enterpriseValueCementosCOPm": 3886285.987827599,
-    "enterpriseValueCelsiaCOPm": 6720315.1943190005,
-    "intrinsicPerPreferredShareCOP": 8294.102478144945,
-    "upsideVsPF": -0.49732712253667,
+    "enterpriseValueCementosCOPm": 3140390.1361405626,
+    "enterpriseValueCelsiaCOPm": 5652946.036956072,
+    "intrinsicPerPreferredShareCOP": 6808.331519361185,
+    "upsideVsPF": -0.5873738473114434,
     "breakdownCOPtrillions": {
-     "cementosConsolidatedEV": 3.8862859878275993,
+     "cementosConsolidatedEV": 3.1403901361405624,
      "cementosEquityGroup": 3.945577002167097,
      "argosUSFCFFAdditional": 0.5365813966959616,
-     "celsiaCoreEV": 6.720315194319,
+     "celsiaCoreEV": 5.652946036956072,
      "celsiaGrowthEV": 1.5274555520246182,
      "celsiaEquityGroup": 0.7310430100949106,
      "odinsaConcessionsEV": 2.0240620708048676,
@@ -1097,10 +1098,10 @@
     "name": "Conservadora",
     "weight": 0.25,
     "equityHoldingCOPtrillions": 1.038485579444496,
-    "enterpriseValueCementosCOPm": 2938901.9401487075,
-    "enterpriseValueCelsiaCOPm": 5027421.977705404,
-    "intrinsicPerPreferredShareCOP": 1527.5619969454044,
-    "upsideVsPF": -0.9074204850336118,
+    "enterpriseValueCementosCOPm": 2430495.7986322315,
+    "enterpriseValueCelsiaCOPm": 4329343.193621953,
+    "intrinsicPerPreferredShareCOP": 1114.1555951071691,
+    "upsideVsPF": -0.9324754184783534,
     "breakdownCOPtrillions": {
      "cementosConsolidatedEV": 2.9389019401487073,
      "cementosEquityGroup": 2.5779599915542053,
@@ -1127,10 +1128,10 @@
     "name": "Optimista",
     "weight": 0.2,
     "equityHoldingCOPtrillions": 12.049983255588305,
-    "enterpriseValueCementosCOPm": 5169553.221828638,
-    "enterpriseValueCelsiaCOPm": 8671907.28028128,
-    "intrinsicPerPreferredShareCOP": 17724.94182818738,
-    "upsideVsPF": 0.07423889867802314,
+    "enterpriseValueCementosCOPm": 4083380.494581117,
+    "enterpriseValueCelsiaCOPm": 7173079.427239475,
+    "intrinsicPerPreferredShareCOP": 15607.060773304474,
+    "upsideVsPF": -0.05411752889063792,
     "breakdownCOPtrillions": {
      "cementosConsolidatedEV": 5.169553221828638,
      "cementosEquityGroup": 4.99103386246687,
@@ -1157,10 +1158,10 @@
     "name": "Disrupción",
     "weight": 0.05,
     "equityHoldingCOPtrillions": 0,
-    "enterpriseValueCementosCOPm": 2126661.7096851896,
-    "enterpriseValueCelsiaCOPm": 3969728.755583845,
-    "intrinsicPerPreferredShareCOP": 0,
-    "upsideVsPF": -1,
+    "enterpriseValueCementosCOPm": 1832221.3607659643,
+    "enterpriseValueCelsiaCOPm": 3529849.3662820207,
+    "intrinsicPerPreferredShareCOP": 0.0,
+    "upsideVsPF": -1.0,
     "breakdownCOPtrillions": {
      "cementosConsolidatedEV": 2.1266617096851896,
      "cementosEquityGroup": 1.6285897678339727,
@@ -1310,7 +1311,7 @@
    "managerVsJmrDiscrepancyNote": "JMR 2T26 book+Oct8 listed, management Feb market/book; residual all balance liabilities differs from management net liability bridge and cannot be treated as like-for-like; not evidence to calibrate FCFF WACC.",
    "thesis": "External references corroborate the economic SOTP and PF analyst targets around COP20–21k, not a certified FCFF intrinsic value or one PF voting premium"
   },
-  "dcfPrimaryExpectedCOP": 8073.930103946301,
+  "dcfPrimaryExpectedCOP": 6804.11681311828,
   "dcfPrimaryEquityValueCOPtrillions": 5.638596557921719,
   "fcffWorkbookSheet": "Valuation output",
   "fcffComponentsBase": {
@@ -1525,22 +1526,22 @@
    "primarySheet": "CO 00 Panel",
    "spreadsheetId": "1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo",
    "sheetUrl": "https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit",
-   "synchronizedAt": "2026-10-10T23:00:00.000Z",
+   "synchronizedAt": "2026-10-10T23:30:00.000Z",
    "currency": "COP",
    "unit": "COP per economic preferred share",
    "status": "SOTP_ECONOMIC_AND_PEER_RELATIVE_HOLDING_BASE_CONDITIONAL_NOT_CERTIFIED",
    "method": "Holding look-through: EV FCFF por negocio al WACC propio -> LP FCP explícito, gestor GP por separado -> net debt atribuible -> suma patrimonial -> Valuation output; fuentes económicas condicionadas",
-   "dcfBaseCOP": 8294.102478144945,
-   "dcfConservativeCOP": 1527.5619969454044,
-   "dcfOptimisticCOP": 17724.94182818738,
+   "dcfBaseCOP": 6808.331519361185,
+   "dcfConservativeCOP": 1114.1555951071691,
+   "dcfOptimisticCOP": 15607.060773304474,
    "dcfDisruptionCOP": 0,
-   "dcfExpectedCOP": 8073.930103946301,
+   "dcfExpectedCOP": 6804.11681311828,
    "equityHoldingCOPm": 5638596.557921719,
    "sharesMillions": 679.832034,
    "priceCOP": 16500,
-   "priceToDCF": 1.9893653404304672,
+   "priceToDCF": 2.423501257698475,
    "multiplesWeightedBaseCOP": 18358.783560595024,
-   "dcf60Multiples40COP": 11902.782190367085,
+   "dcf60Multiples40COP": 11428.51233585472,
    "dcfWeight": 0.6,
    "multiplesWeight": 0.4,
    "inputs": [
@@ -1960,7 +1961,7 @@
     }
    ],
    "sotpCheck": {
-    "dcfBaseCOP": 8294.102478144945,
+    "dcfBaseCOP": 6808.331519361185,
     "hybridNAVBaseCOP": 20033.025229371746,
     "managementNAVFebCOP": 21800,
     "gapCOPPerShare": -10581.747186286386,
@@ -2092,7 +2093,7 @@
     {
      "id": "dcf",
      "name": "SOTP DCF FCFF Base",
-     "valueCOP": 8294.102478144945,
+     "valueCOP": 6808.331519361185,
      "selected": true,
      "weightPoints": 25
     },
@@ -2276,12 +2277,12 @@
  "reports": {
   "valuation": {
    "name": "PFGRUPOARG_Valoracion_SOTP_Sector_2026-10-10.md",
-   "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A. - preferencial\ncurrency: COP\nreport_type: valuation\nstatus: CONDITIONAL_SOTP_PLUS_PEER_EV_EBITDA_NOT_INTRINSIC_CERTIFIED\n---\n# Grupo Argos PF · Valoración SOTP económico y comparables sectoriales\n\n**Revisión 10 de octubre de 2026. Modelo condicionado; no certificado.**\n\n> **Revisión Damodaran r2 · 10-oct-2026.** Base 20.174 → **19.363**; esperado 19.716 → 18.913. Cambios: (1) costo del patrimonio de la holding con el mismo corte Colombia que Grupo SURA y Davivienda (Rf COP 11,47% = TES 13,217% − spread 1,75%; ERP 4,20%; beta 0,90; CRP 2,72% → Ke 17,97 %), en vez de 16% y 14,5% sin sustento; (2) SOTP de múltiplos con caja neta de Cementos y deuda neta de Celsia al 2T26 y resta de minoritarios a libro, como pide Damodaran al pasar de EV a patrimonio; (3) precios del 9-oct verificados en dos fuentes (ordinaria 21.000, CEMARGOS 11.500); (4) gastos de matriz con g 4,5% nominal y la misma convención de VP que SURA. El DCF FCFF opcional sigue con la tasa del corte anterior.\n\n## Índice\n[1. Identidad y alcance](#jmr-valuation-1) · [2. Fechas y fuentes](#jmr-valuation-2) · [3. Método patrimonial por participadas](#jmr-valuation-3) · [4. Cementos Argos](#jmr-valuation-4) · [5. Celsia](#jmr-valuation-5) · [6. Odinsa: LP/GP y valor privado](#jmr-valuation-6) · [7. Pactia: valuación inmueble y gestor](#jmr-valuation-7) · [8. Otros negocios, activos netos y matriz](#jmr-valuation-8) · [9. SOTP por múltiplos sectoriales](#jmr-valuation-9) · [10. Ponderación actual y métodos opcionales](#jmr-valuation-10) · [11. Cuatro historias](#jmr-valuation-11) · [12. Objetivos FY+3 y valor presente](#jmr-valuation-12) · [13. Sensibilidad y riesgos de datos](#jmr-valuation-13) · [14. Conclusión y estado de certificación](#jmr-valuation-14)\n\n<a id=\"jmr-valuation-1\"></a>\n## 1. Identidad y alcance\nGRUPOARGOS y PFGRUPOARG son clases diferentes de acciones de Grupo Argos S.A. El modelo calcula un patrimonio residual común por acción económica y compara PRECIOS separados: ordinaria COP 21.000, preferencial COP 16.500 al cierre del 09/10/2026 (StockAnalysis y Yahoo coinciden). Prima por voto NO derivada automáticamente del ratio entre los precios.\n\n<a id=\"jmr-valuation-2\"></a>\n## 2. Fechas y fuentes\nEEFF separados y participaciones al 30/06/2026 [fuente primaria](https://financialfilings.com/filings/grupo-argos-sa/interim-quarterly-report/2026/56572518/); precios de BVC al 09/10/2026; NAV Odinsa al 31/12/2025 presentado en Investor Day 2026; Pactia Colliers al 30/09/2025; comparables FY2026 estimativos. Se mezclan cortes por falta de un único valor razonable plenamente actualizado.\n\n<a id=\"jmr-valuation-3\"></a>\n## 3. Método patrimonial por participadas\nNo se suman EBITDA o FCFF de todas las subsidiarias para luego aplicar un WACC único. Se obtiene valor de EQUITY económico atribuible por unidad y se suman únicamente derechos propiedad de la matriz. SOTP mixto de mercado y referencias de peritos/gerencia COP **20.033**/acción; no equivale a DCF certificado.\n\n<a id=\"jmr-valuation-4\"></a>\n## 4. Cementos Argos\nBolsa BVC 11.500 × 671.439.556 títulos Grupo = **COP 7,7216 billones** en SOTP mixto. Método sector: peers Buzzi 5,15×, Dangote 6,87× y Huaxin 5,10× EV/EBITDA FY2026, promedio 5.707×. Consenso EBITDA FY26 COP 1.317.719 millones, caja neta al 30-jun-2026 COP 5.181.000 millones (caja e inversiones CP 8.060.000 − deuda 2.879.000) y minoritarios a libro COP 641.600 millones; equity estimado Grupo **COP 6,6663 billones**. Antes se usaba la caja neta FY26 de consenso (6,017 billones) y no se restaban minoritarios; caja realmente libre sin certificar. [Fuente](https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/).\n\n<a id=\"jmr-valuation-5\"></a>\n## 5. Celsia\nBolsa BVC 4.810 × 557.205.138 acciones en poder Grupo = **COP 2,6802 billones**. La posición marzo 566.360.307 menos venta 9.155.169 abril explica 557.205.138; no repetir venta. Método sector peers Enel Chile 6,52× y Engie Energía Chile 6,43×; promedio 6,475×, FY26 EBITDA estimado COP 1.749.114 millones, deuda neta oficial 2T26 COP 4.850.000 millones y minoritarios a libro COP 1.761.600 millones. Equity grupo aprox **COP 2,5972 billones**; minoritarios a valor justo y JV sin certificar. [Fuente](https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/).\n\n<a id=\"jmr-valuation-6\"></a>\n## 6. Odinsa: LP/GP y valor privado\n[Presentación gerencia Odinsa febrero 2026](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf) menciona rango NAV **COP 2,4 a 3,0 billones** para activos de Odinsa 2025, con componentes apoyados en Precia. Elegimos punto medio COP 2,7T como hipótesis, multiplicado por 94,99% para estimar equity atribuible **COP 2,56473 billones**. El libro por Odinsa junio era COP 1,79041T. Atención: distinguir equity corporativo Odinsa del fondo FCP LP50% y gestor GP99,89%, y no multiplicar dos veces las participaciones. La homologación de perímetros gerente/FCP sigue pendiente.\n\n<a id=\"jmr-valuation-7\"></a>\n## 7. Pactia: valuación inmueble y gestor\n[Presentación Pactia del Investor Day](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf) informa valor equity aprox COP 2,79T para FCP/gestor y **COP 1,03T atribuible al Grupo** basado en Colliers 2025. Usamos directamente 1,03T; no ×37,44% de nuevo y no sumar honorarios de gestor dos veces. Libro de inversión fondo junio COP 1,05701T. No es valoración independente nueva a octubre.\n\n<a id=\"jmr-valuation-8\"></a>\n## 8. Otros negocios, activos netos y matriz\nSator COP 159.627m, Summa 4.644m, otras asociadas 3.032m y residual patrimonial 154.583m siguen al libro; inversiones en desarrollo urbano y terrenos ya están recogidas en el residual, por lo que no se suma de nuevo NAV de terrenos. Se resta una sola vez oferta readquisición de septiembre COP 39.222m y VP de gastos HQ hipotéticos COP 660.012m con Ke holding 17,97 % (corte Colombia Damodaran), g 4,5% nominal, recurrencia 90%: este último no es guía publicada.\n\n<a id=\"jmr-valuation-9\"></a>\n## 9. SOTP por múltiplos sectoriales\nSe usa la misma valoración privada provisional de Odinsa/Pactia, pero las filiales cotizadas se estiman por EV/EBITDA de terceros, siguiendo puentes estimados EV → equity → propiedad económica. Resultado **COP 18.359 por acción**. Las dos rutas NO son independientes en las inversiones privadas y gastos de matriz; no confundir la convergencia matemática con corroboración externa.\n\n<a id=\"jmr-valuation-10\"></a>\n## 10. Ponderación actual y métodos opcionales\n| Método | Valor COP por acción | Peso inicial |\n|---|---:|---:|\n| SOTP mixto mercado + gerencial | 20.033 | 60 % |\n| SOTP EV/EBITDA de peers por filial | 18.359 | 40 % |\n| Libro NIIF proforma | 14.733 | Opcional 0 % |\n| FCFF previo — no certificado | 8.294 | Opcional 0 % |\n| P/B y dividend yield PF 2025 | 12.667 (media ponderada anterior) | Histórico, fuera de Base |\n| **VALOR BASE** | **19.363** | **100 %** |\n\nSe permite activar/desactivar métodos y rebalancear proporcionalmente los pesos en la hoja y en el visor. Los pares sectoriales elegidos no tienen el propósito de perseguir precios objetivo externos.\n\n<a id=\"jmr-valuation-11\"></a>\n## 11. Cuatro historias\n| Historia | Probabilidad | COP/acción |\n|---|---:|---:|\n| Conservadora | 25 % | 15.868 |\n| **Base** | **50 %** | **19.363** |\n| Optimista | 20 % | 23.866 |\n| Disrupción · deterioro fundamental | 5 % | 9.823 |\n| Esperado | 100 % | 18.913 |\n\nSon sensibilidades por unidad con factores de estrés, NO cuatro DCF totalmente auditados por concesión.\n\n<a id=\"jmr-valuation-12\"></a>\n## 12. Objetivos FY+3 y valor presente\nSupuestos SOLO ilustrativos: SOTP +3,5% anual y relativo +5% anual, Ke holding para VP 17,97 %. Objetivo ex-dividendo FY+3 **COP 21.828**; descontado al presente **COP 13.296**. Dividendo hipotético COP 750/año por 3 años con VP COP 1.632; paquete VP total **COP 14.928**. No decretado para 2027–29, no doble descontar y no mezclar FY+3 con valor Base al corte.\n\n<a id=\"jmr-valuation-13\"></a>\n## 13. Sensibilidad y riesgos de datos\nCon cash neta Cementos disponible solo al 70% de la estimada, relativo sectorial baja de COP 18.359 a COP **17.095**. Si Celsia usa EBITDA LTM deducido de deuda/3,22 y deuda 2Q26 en lugar de FY2026, relativo cae aprox COP **17.084** (usa deuda 2T26 y minoritarios). Odinsa desde NAV 2,4 a 3,0T mueve SOTP mixto a **19.614–20.452**. FCFF histórico 8.294 no es una contradicción matemática: sus presupuestos/perímetros incompletos impiden una comparación certificada.\n\n<a id=\"jmr-valuation-14\"></a>\n## 14. Conclusión y estado de certificación\n**Base condicional COP 19.363**; frente PF mercado 16.500, potencial aritmético **17,35 %**; frente ordinaria 21.000, **-7,79 %**. La convergencia entre dos rutas parcialmente comunes no permite dictaminar valor intrínseco. Permanecen pendientes: caja neta realmente libre, minoritarios FV, deuda de fondos, NAV actualizado 2T26, supuestos HQ, ROIC/capex FCFF operativos y derechos políticos. El modelo conserva el anterior Base COP 16.950 en el historial GitHub. [Libro de cálculo completo](https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit).\n",
+   "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A. - preferencial\ncurrency: COP\nreport_type: valuation\nstatus: CONDITIONAL_SOTP_PLUS_PEER_EV_EBITDA_NOT_INTRINSIC_CERTIFIED\n---\n# Grupo Argos PF · Valoración SOTP económico y comparables sectoriales\n\n**Revisión 10 de octubre de 2026. Modelo condicionado; no certificado.**\n\n> **Revisión Damodaran r2 · 10-oct-2026.** Base 20.174 → **19.363**; esperado 19.716 → 18.913. Cambios: (1) costo del patrimonio de la holding con el mismo corte Colombia que Grupo SURA y Davivienda (Rf COP 11,47% = TES 13,217% − spread 1,75%; ERP 4,20%; beta 0,90; CRP 2,72% → Ke 17,97 %), en vez de 16% y 14,5% sin sustento; (2) SOTP de múltiplos con caja neta de Cementos y deuda neta de Celsia al 2T26 y resta de minoritarios a libro, como pide Damodaran al pasar de EV a patrimonio; (3) precios del 9-oct verificados en dos fuentes (ordinaria 21.000, CEMARGOS 11.500); (4) gastos de matriz con g 4,5% nominal y la misma convención de VP que SURA. El DCF FCFF opcional se recalculó en r3 (nota siguiente).\n\n> **r3 · 10-oct-2026.** DCF FCFF por partes recalculado con el mismo corte: WACC Cementos 15,91% y Celsia 12,66% (antes 13,87% y 11,43% con Rf sintética 8,86%). DCF Base 6.808 (antes 8.294), esperado 6.804; sigue con peso 0. El Base 60/40 no cambia.\n\n## Índice\n[1. Identidad y alcance](#jmr-valuation-1) · [2. Fechas y fuentes](#jmr-valuation-2) · [3. Método patrimonial por participadas](#jmr-valuation-3) · [4. Cementos Argos](#jmr-valuation-4) · [5. Celsia](#jmr-valuation-5) · [6. Odinsa: LP/GP y valor privado](#jmr-valuation-6) · [7. Pactia: valuación inmueble y gestor](#jmr-valuation-7) · [8. Otros negocios, activos netos y matriz](#jmr-valuation-8) · [9. SOTP por múltiplos sectoriales](#jmr-valuation-9) · [10. Ponderación actual y métodos opcionales](#jmr-valuation-10) · [11. Cuatro historias](#jmr-valuation-11) · [12. Objetivos FY+3 y valor presente](#jmr-valuation-12) · [13. Sensibilidad y riesgos de datos](#jmr-valuation-13) · [14. Conclusión y estado de certificación](#jmr-valuation-14)\n\n<a id=\"jmr-valuation-1\"></a>\n## 1. Identidad y alcance\nGRUPOARGOS y PFGRUPOARG son clases diferentes de acciones de Grupo Argos S.A. El modelo calcula un patrimonio residual común por acción económica y compara PRECIOS separados: ordinaria COP 21.000, preferencial COP 16.500 al cierre del 09/10/2026 (StockAnalysis y Yahoo coinciden). Prima por voto NO derivada automáticamente del ratio entre los precios.\n\n<a id=\"jmr-valuation-2\"></a>\n## 2. Fechas y fuentes\nEEFF separados y participaciones al 30/06/2026 [fuente primaria](https://financialfilings.com/filings/grupo-argos-sa/interim-quarterly-report/2026/56572518/); precios de BVC al 09/10/2026; NAV Odinsa al 31/12/2025 presentado en Investor Day 2026; Pactia Colliers al 30/09/2025; comparables FY2026 estimativos. Se mezclan cortes por falta de un único valor razonable plenamente actualizado.\n\n<a id=\"jmr-valuation-3\"></a>\n## 3. Método patrimonial por participadas\nNo se suman EBITDA o FCFF de todas las subsidiarias para luego aplicar un WACC único. Se obtiene valor de EQUITY económico atribuible por unidad y se suman únicamente derechos propiedad de la matriz. SOTP mixto de mercado y referencias de peritos/gerencia COP **20.033**/acción; no equivale a DCF certificado.\n\n<a id=\"jmr-valuation-4\"></a>\n## 4. Cementos Argos\nBolsa BVC 11.500 × 671.439.556 títulos Grupo = **COP 7,7216 billones** en SOTP mixto. Método sector: peers Buzzi 5,15×, Dangote 6,87× y Huaxin 5,10× EV/EBITDA FY2026, promedio 5.707×. Consenso EBITDA FY26 COP 1.317.719 millones, caja neta al 30-jun-2026 COP 5.181.000 millones (caja e inversiones CP 8.060.000 − deuda 2.879.000) y minoritarios a libro COP 641.600 millones; equity estimado Grupo **COP 6,6663 billones**. Antes se usaba la caja neta FY26 de consenso (6,017 billones) y no se restaban minoritarios; caja realmente libre sin certificar. [Fuente](https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/).\n\n<a id=\"jmr-valuation-5\"></a>\n## 5. Celsia\nBolsa BVC 4.810 × 557.205.138 acciones en poder Grupo = **COP 2,6802 billones**. La posición marzo 566.360.307 menos venta 9.155.169 abril explica 557.205.138; no repetir venta. Método sector peers Enel Chile 6,52× y Engie Energía Chile 6,43×; promedio 6,475×, FY26 EBITDA estimado COP 1.749.114 millones, deuda neta oficial 2T26 COP 4.850.000 millones y minoritarios a libro COP 1.761.600 millones. Equity grupo aprox **COP 2,5972 billones**; minoritarios a valor justo y JV sin certificar. [Fuente](https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/).\n\n<a id=\"jmr-valuation-6\"></a>\n## 6. Odinsa: LP/GP y valor privado\n[Presentación gerencia Odinsa febrero 2026](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf) menciona rango NAV **COP 2,4 a 3,0 billones** para activos de Odinsa 2025, con componentes apoyados en Precia. Elegimos punto medio COP 2,7T como hipótesis, multiplicado por 94,99% para estimar equity atribuible **COP 2,56473 billones**. El libro por Odinsa junio era COP 1,79041T. Atención: distinguir equity corporativo Odinsa del fondo FCP LP50% y gestor GP99,89%, y no multiplicar dos veces las participaciones. La homologación de perímetros gerente/FCP sigue pendiente.\n\n<a id=\"jmr-valuation-7\"></a>\n## 7. Pactia: valuación inmueble y gestor\n[Presentación Pactia del Investor Day](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf) informa valor equity aprox COP 2,79T para FCP/gestor y **COP 1,03T atribuible al Grupo** basado en Colliers 2025. Usamos directamente 1,03T; no ×37,44% de nuevo y no sumar honorarios de gestor dos veces. Libro de inversión fondo junio COP 1,05701T. No es valoración independente nueva a octubre.\n\n<a id=\"jmr-valuation-8\"></a>\n## 8. Otros negocios, activos netos y matriz\nSator COP 159.627m, Summa 4.644m, otras asociadas 3.032m y residual patrimonial 154.583m siguen al libro; inversiones en desarrollo urbano y terrenos ya están recogidas en el residual, por lo que no se suma de nuevo NAV de terrenos. Se resta una sola vez oferta readquisición de septiembre COP 39.222m y VP de gastos HQ hipotéticos COP 660.012m con Ke holding 17,97 % (corte Colombia Damodaran), g 4,5% nominal, recurrencia 90%: este último no es guía publicada.\n\n<a id=\"jmr-valuation-9\"></a>\n## 9. SOTP por múltiplos sectoriales\nSe usa la misma valoración privada provisional de Odinsa/Pactia, pero las filiales cotizadas se estiman por EV/EBITDA de terceros, siguiendo puentes estimados EV → equity → propiedad económica. Resultado **COP 18.359 por acción**. Las dos rutas NO son independientes en las inversiones privadas y gastos de matriz; no confundir la convergencia matemática con corroboración externa.\n\n<a id=\"jmr-valuation-10\"></a>\n## 10. Ponderación actual y métodos opcionales\n| Método | Valor COP por acción | Peso inicial |\n|---|---:|---:|\n| SOTP mixto mercado + gerencial | 20.033 | 60 % |\n| SOTP EV/EBITDA de peers por filial | 18.359 | 40 % |\n| Libro NIIF proforma | 14.733 | Opcional 0 % |\n| FCFF previo — no certificado | 6.808 | Opcional 0 % |\n| P/B y dividend yield PF 2025 | 12.667 (media ponderada anterior) | Histórico, fuera de Base |\n| **VALOR BASE** | **19.363** | **100 %** |\n\nSe permite activar/desactivar métodos y rebalancear proporcionalmente los pesos en la hoja y en el visor. Los pares sectoriales elegidos no tienen el propósito de perseguir precios objetivo externos.\n\n<a id=\"jmr-valuation-11\"></a>\n## 11. Cuatro historias\n| Historia | Probabilidad | COP/acción |\n|---|---:|---:|\n| Conservadora | 25 % | 15.868 |\n| **Base** | **50 %** | **19.363** |\n| Optimista | 20 % | 23.866 |\n| Disrupción · deterioro fundamental | 5 % | 9.823 |\n| Esperado | 100 % | 18.913 |\n\nSon sensibilidades por unidad con factores de estrés, NO cuatro DCF totalmente auditados por concesión.\n\n<a id=\"jmr-valuation-12\"></a>\n## 12. Objetivos FY+3 y valor presente\nSupuestos SOLO ilustrativos: SOTP +3,5% anual y relativo +5% anual, Ke holding para VP 17,97 %. Objetivo ex-dividendo FY+3 **COP 21.828**; descontado al presente **COP 13.296**. Dividendo hipotético COP 750/año por 3 años con VP COP 1.632; paquete VP total **COP 14.928**. No decretado para 2027–29, no doble descontar y no mezclar FY+3 con valor Base al corte.\n\n<a id=\"jmr-valuation-13\"></a>\n## 13. Sensibilidad y riesgos de datos\nCon cash neta Cementos disponible solo al 70% de la estimada, relativo sectorial baja de COP 18.359 a COP **17.095**. Si Celsia usa EBITDA LTM deducido de deuda/3,22 y deuda 2Q26 en lugar de FY2026, relativo cae aprox COP **17.084** (usa deuda 2T26 y minoritarios). Odinsa desde NAV 2,4 a 3,0T mueve SOTP mixto a **19.614–20.452**. FCFF histórico 6.808 no es una contradicción matemática: sus presupuestos/perímetros incompletos impiden una comparación certificada.\n\n<a id=\"jmr-valuation-14\"></a>\n## 14. Conclusión y estado de certificación\n**Base condicional COP 19.363**; frente PF mercado 16.500, potencial aritmético **17,35 %**; frente ordinaria 21.000, **-7,79 %**. La convergencia entre dos rutas parcialmente comunes no permite dictaminar valor intrínseco. Permanecen pendientes: caja neta realmente libre, minoritarios FV, deuda de fondos, NAV actualizado 2T26, supuestos HQ, ROIC/capex FCFF operativos y derechos políticos. El modelo conserva el anterior Base COP 16.950 en el historial GitHub. [Libro de cálculo completo](https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit).\n",
    "importedAt": "2026-10-10T17:54:24.849Z"
   },
   "research": {
    "name": "PFGRUPOARG_Analisis_Fundamental_18_2026-10-10.md",
-   "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A. - preferencial\ncurrency: COP\nreport_type: fundamental\nstatus: CONDITIONAL_SOTP_PLUS_PEER_EV_EBITDA_NOT_INTRINSIC_CERTIFIED\n---\n# Análisis fundamental Grupo Argos · 18 apartados\n\n**Revisión 10 de octubre de 2026. Modelo condicionado; no certificado.**\n\n> **Revisión Damodaran r2 · 10-oct-2026.** Base 20.174 → **19.363**; esperado 19.716 → 18.913. Cambios: (1) costo del patrimonio de la holding con el mismo corte Colombia que Grupo SURA y Davivienda (Rf COP 11,47% = TES 13,217% − spread 1,75%; ERP 4,20%; beta 0,90; CRP 2,72% → Ke 17,97 %), en vez de 16% y 14,5% sin sustento; (2) SOTP de múltiplos con caja neta de Cementos y deuda neta de Celsia al 2T26 y resta de minoritarios a libro, como pide Damodaran al pasar de EV a patrimonio; (3) precios del 9-oct verificados en dos fuentes (ordinaria 21.000, CEMARGOS 11.500); (4) gastos de matriz con g 4,5% nominal y la misma convención de VP que SURA. El DCF FCFF opcional sigue con la tasa del corte anterior.\n\n## Índice\n[1. Resumen ejecutivo](#jmr-fundamental-1) · [2. Negocio y modelo económico](#jmr-fundamental-2) · [3. Participaciones y perímetros](#jmr-fundamental-3) · [4. Industria y contexto](#jmr-fundamental-4) · [5. Cementos Argos: economía](#jmr-fundamental-5) · [6. Celsia: negocios de energía](#jmr-fundamental-6) · [7. Odinsa, contratos y gestoras](#jmr-fundamental-7) · [8. Pactia y propiedad inmobiliaria](#jmr-fundamental-8) · [9. Desarrollo urbano y otros negocios](#jmr-fundamental-9) · [10. Ventajas competitivas y capital invertido](#jmr-fundamental-10) · [11. Gobierno, asignación de capital y recompras](#jmr-fundamental-11) · [12. Calidad de información y múltiplos](#jmr-fundamental-12) · [13. Damodaran, Buffett y Graham](#jmr-fundamental-13) · [14. Tesis alcista y catalizadores](#jmr-fundamental-14) · [15. Tesis bajista y riesgos](#jmr-fundamental-15) · [16. Escenarios y valor estimado](#jmr-fundamental-16) · [17. FY+3 y decisiones de seguimiento](#jmr-fundamental-17) · [18. Fuentes, limitaciones y control de calidad](#jmr-fundamental-18)\n\n<a id=\"jmr-fundamental-1\"></a>\n## 1. Resumen ejecutivo\nGrupo Argos PF es una exposición indirecta a participadas con perfiles industriales, energéticos, concesionales e inmobiliarios. Nuevo Base SOTP+sector **COP 19.363** (r2), con advertencias materiales de caja restringida, minoritarios y antigüedad de avalúos. No es un precio intrínseco certificado.\n\n<a id=\"jmr-fundamental-2\"></a>\n## 2. Negocio y modelo económico\nLa matriz asigna capital a empresas y vehículos; los dividendos, desinversiones y realizaciones de NAV son fuentes de retorno pero la realización puede ser lenta, gravada y limitada por deuda o convenios.\n\n<a id=\"jmr-fundamental-3\"></a>\n## 3. Participaciones y perímetros\nCementos y Celsia cotizadas; Odinsa contiene inversiones y gestoras concesionales; Pactia inmobiliario en FCP; terrenos/desarrollo urbano e inversiones menores. Separar matriz, LP y GP y evitar suma de contabilidad consolidada de negocios con riesgos heterogéneos.\n\n<a id=\"jmr-fundamental-4\"></a>\n## 4. Industria y contexto\nCemento depende de infraestructura, ciclo de construcción y márgenes; electricidad de tarifas, hidrología, capex y estructura de redes; concesiones de vida contractual e inversión adicional; inmobiliario del NOI/cap rate y liquidez; riesgo COP/TES influye en tasas.\n\n<a id=\"jmr-fundamental-5\"></a>\n## 5. Cementos Argos: economía\nBolsa por participación Grupo COP7,654T. Peers 2026 5,15× Buzzi, 6,87× Dangote, 5,10× Huaxin; FY26 EBITDA estimado 1.317.719m, net cash FY26 estimada -6.016.768m, equity atribuible grupo por peer 7,483T. No asumir 100% caja libre sin verificar restricciones. Fuente: https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/\n\n<a id=\"jmr-fundamental-6\"></a>\n## 6. Celsia: negocios de energía\nParticipación Grupo 557.205.138 acciones = posición marzo 566.360.307 menos venta 9.155.169 abril, no confundir con denominador de acciones económicas Celsia. Peers 6,52× Enel Chile y 6,43× Engie Energía Chile; equity estimado atribuible COP3,127T con FY26 EBITDA y net debt futuros, sin liquidar NCI FV. Fuente: https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/\n\n<a id=\"jmr-fundamental-7\"></a>\n## 7. Odinsa, contratos y gestoras\nRango management de NAV Odinsa dic2025 COP2,4–3,0T; punto medio2,7T ×94,99% genera valor grupo2,565T. Precia evalúa algunos activos pero otros gerencia; contratos deben proyectarse hasta reversión, CAPEX y capital calls. LP fondo 50% NO igual GP gestor 99,89%. Fuente: https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf\n\n<a id=\"jmr-fundamental-8\"></a>\n## 8. Pactia y propiedad inmobiliaria\nColliers 2025 contribuye al análisis del FCP; gerencia reporta equity FCP+gestor COP2,79T y 1,03T atribuible Grupo. Este último se usa directamente. Tasas de capitalización/NOI sin corte junio actualizado impiden tratar NAV como fair value certificado hoy. Fuente: https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf\n\n<a id=\"jmr-fundamental-9\"></a>\n## 9. Desarrollo urbano y otros negocios\nLos lotes y propiedad de inversión propios se encuentran en activo/patrimonio separado; no sumar su libro una segunda vez si ya está dentro residual de matriz. Sator, Summa y otras inversiones permanecen a libro por falta de comparables o flujos independientes fiables.\n\n<a id=\"jmr-fundamental-10\"></a>\n## 10. Ventajas competitivas y capital invertido\nPosibles ventajas proceden de infraestructura instalada, concesiones y capacidades de gestión; no afirmar ROIC agregado alto por patrimonio NIIF. Requiere ROIC y reinversión normalizados para cada negocio, junto con costo de capital distinto y moneda homogénea.\n\n<a id=\"jmr-fundamental-11\"></a>\n## 11. Gobierno, asignación de capital y recompras\nUna inversión en holding puede rendir más o menos que sus activos por gastos recurrentes, impuestos, descuentos de conglomerado, gobierno y capital calls. Recompra especial septiembre COP39.222m y reducción de 1.929.159 títulos proforma reflejados una sola vez; otras operaciones posjunio no certificadas. Fuente: https://www.grupoargos.com/noticias/grupo-argos-avanza-en-ace-1-0-con-una-readquisicion-de-acciones-cercana-a-cop-39-000-millones-en-terminos-alineados-con-las-condiciones-de-mercado-vigentes/\n\n<a id=\"jmr-fundamental-12\"></a>\n## 12. Calidad de información y múltiplos\nPER 2025 distorsionado por escisión Sura y operaciones extraordinarias. P/B PF diciembre2025 0,801× y yield 5,37% son un único corte histórico después de escisión, no una media 5/10 años y no sustentan 40% del Base. Se reemplazó ancla por EV/EBITDA peers de Cementos/Celsia FY2026, aunque privadas aún comparten NAV manager.\n\n<a id=\"jmr-fundamental-13\"></a>\n## 13. Damodaran, Buffett y Graham\nAplicar suma por componentes, descuento correcto de FCFF por unidad, EV→equity→propiedad, cierre finito de concesiones y eliminación de duplicidades. Precio vs valor contable requiere ROE, crecimiento y Ke; margen de seguridad no se deduce de solo un múltiplo histórico o un target de analista. Buffett/Graham exigen calidad, prudencia en beneficios recurrentes, riesgo de deuda y holgura sobre escenarios pesimistas.\n\n<a id=\"jmr-fundamental-14\"></a>\n## 14. Tesis alcista y catalizadores\nValor realizable de inversiones privadas mayor al NIIF, acceso a cash realmente distribuible de Cementos, monetización ordenada de concesiones/real estate, simplificación, eficiencia y recompra económicamente acrecitiva; no asumir tales catalizadores realizados.\n\n<a id=\"jmr-fundamental-15\"></a>\n## 15. Tesis bajista y riesgos\nFlujos privados inferiores a NAV, costo de capital alto COP, tensión de deuda de Celsia, disponibilidad restringida de caja en Cementos, horizonte/capex de concesiones, diferencia de derechos PF/Ord y descuento holding persistente. Con solo 70% cash net Cementos disponible, método sector baja a18.949 por acción.\n\n<a id=\"jmr-fundamental-16\"></a>\n## 16. Escenarios y valor estimado\nSOTP mixto 20.033 y sector peer 18.359; ponderación 60/40 **19.363** por acción. Libro 14.733 y FCFF previo 8.294 fuera de ponderación automática. Historias: Conservadora 15.868 (25%), Base 19.363 (50%), Optimista 23.866 (20%), Disrupción 9.823 (5%). Valor esperado 18.913. PF 16.500 margen aritmético 17,35 % y ordinaria 21.000 margen -7,79 %.\n\n<a id=\"jmr-fundamental-17\"></a>\n## 17. FY+3 y decisiones de seguimiento\nFY+3 ex-div COP 21.828, presente 13.296, más hipotéticos dividendos FY27–29 VP1.727 = paquete16.893; no tratar paquete FY+3 como target intrínseco FY2026. Vigilar actualización NAV gerente/Precia/Colliers, deuda neta libre/leases, minoritarios, EBIT FCFF y restricciones societarias.\n\n<a id=\"jmr-fundamental-18\"></a>\n## 18. Fuentes, limitaciones y control de calidad\nFuentes: [EEFF 2T26](https://financialfilings.com/filings/grupo-argos-sa/interim-quarterly-report/2026/56572518/), [Investor Day Odinsa](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf), [Investor Day Pactia](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf), [Cementos pares FY2026](https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/), [Celsia FY2026](https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/), [recompras](https://www.grupoargos.com/noticias/grupo-argos-avanza-en-ace-1-0-con-una-readquisicion-de-acciones-cercana-a-cop-39-000-millones-en-terminos-alineados-con-las-condiciones-de-mercado-vigentes/). Hoja [CO11 SOTP / CO12 peers / CO13 auditoría](https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit). Pruebas aritméticas PASS; la certificación financiera e independencia total permanecen PENDIENTES. Ninguna hoja maestra ha sido contaminada con otra emisora.\n",
+   "content": "---\nmarket: CO\nticker: PFGRUPOARG.CL\nanalysis_date: 2026-10-09\nrun_id: pfgrupoarg-20261009-clean-master\ncompany: Grupo Argos S.A. - preferencial\ncurrency: COP\nreport_type: fundamental\nstatus: CONDITIONAL_SOTP_PLUS_PEER_EV_EBITDA_NOT_INTRINSIC_CERTIFIED\n---\n# Análisis fundamental Grupo Argos · 18 apartados\n\n**Revisión 10 de octubre de 2026. Modelo condicionado; no certificado.**\n\n> **Revisión Damodaran r2 · 10-oct-2026.** Base 20.174 → **19.363**; esperado 19.716 → 18.913. Cambios: (1) costo del patrimonio de la holding con el mismo corte Colombia que Grupo SURA y Davivienda (Rf COP 11,47% = TES 13,217% − spread 1,75%; ERP 4,20%; beta 0,90; CRP 2,72% → Ke 17,97 %), en vez de 16% y 14,5% sin sustento; (2) SOTP de múltiplos con caja neta de Cementos y deuda neta de Celsia al 2T26 y resta de minoritarios a libro, como pide Damodaran al pasar de EV a patrimonio; (3) precios del 9-oct verificados en dos fuentes (ordinaria 21.000, CEMARGOS 11.500); (4) gastos de matriz con g 4,5% nominal y la misma convención de VP que SURA. El DCF FCFF opcional se recalculó en r3 (nota siguiente).\n\n> **r3 · 10-oct-2026.** DCF FCFF por partes recalculado con el mismo corte: WACC Cementos 15,91% y Celsia 12,66% (antes 13,87% y 11,43% con Rf sintética 8,86%). DCF Base 6.808 (antes 8.294), esperado 6.804; sigue con peso 0. El Base 60/40 no cambia.\n\n## Índice\n[1. Resumen ejecutivo](#jmr-fundamental-1) · [2. Negocio y modelo económico](#jmr-fundamental-2) · [3. Participaciones y perímetros](#jmr-fundamental-3) · [4. Industria y contexto](#jmr-fundamental-4) · [5. Cementos Argos: economía](#jmr-fundamental-5) · [6. Celsia: negocios de energía](#jmr-fundamental-6) · [7. Odinsa, contratos y gestoras](#jmr-fundamental-7) · [8. Pactia y propiedad inmobiliaria](#jmr-fundamental-8) · [9. Desarrollo urbano y otros negocios](#jmr-fundamental-9) · [10. Ventajas competitivas y capital invertido](#jmr-fundamental-10) · [11. Gobierno, asignación de capital y recompras](#jmr-fundamental-11) · [12. Calidad de información y múltiplos](#jmr-fundamental-12) · [13. Damodaran, Buffett y Graham](#jmr-fundamental-13) · [14. Tesis alcista y catalizadores](#jmr-fundamental-14) · [15. Tesis bajista y riesgos](#jmr-fundamental-15) · [16. Escenarios y valor estimado](#jmr-fundamental-16) · [17. FY+3 y decisiones de seguimiento](#jmr-fundamental-17) · [18. Fuentes, limitaciones y control de calidad](#jmr-fundamental-18)\n\n<a id=\"jmr-fundamental-1\"></a>\n## 1. Resumen ejecutivo\nGrupo Argos PF es una exposición indirecta a participadas con perfiles industriales, energéticos, concesionales e inmobiliarios. Nuevo Base SOTP+sector **COP 19.363** (r2), con advertencias materiales de caja restringida, minoritarios y antigüedad de avalúos. No es un precio intrínseco certificado.\n\n<a id=\"jmr-fundamental-2\"></a>\n## 2. Negocio y modelo económico\nLa matriz asigna capital a empresas y vehículos; los dividendos, desinversiones y realizaciones de NAV son fuentes de retorno pero la realización puede ser lenta, gravada y limitada por deuda o convenios.\n\n<a id=\"jmr-fundamental-3\"></a>\n## 3. Participaciones y perímetros\nCementos y Celsia cotizadas; Odinsa contiene inversiones y gestoras concesionales; Pactia inmobiliario en FCP; terrenos/desarrollo urbano e inversiones menores. Separar matriz, LP y GP y evitar suma de contabilidad consolidada de negocios con riesgos heterogéneos.\n\n<a id=\"jmr-fundamental-4\"></a>\n## 4. Industria y contexto\nCemento depende de infraestructura, ciclo de construcción y márgenes; electricidad de tarifas, hidrología, capex y estructura de redes; concesiones de vida contractual e inversión adicional; inmobiliario del NOI/cap rate y liquidez; riesgo COP/TES influye en tasas.\n\n<a id=\"jmr-fundamental-5\"></a>\n## 5. Cementos Argos: economía\nBolsa por participación Grupo COP7,654T. Peers 2026 5,15× Buzzi, 6,87× Dangote, 5,10× Huaxin; FY26 EBITDA estimado 1.317.719m, net cash FY26 estimada -6.016.768m, equity atribuible grupo por peer 7,483T. No asumir 100% caja libre sin verificar restricciones. Fuente: https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/\n\n<a id=\"jmr-fundamental-6\"></a>\n## 6. Celsia: negocios de energía\nParticipación Grupo 557.205.138 acciones = posición marzo 566.360.307 menos venta 9.155.169 abril, no confundir con denominador de acciones económicas Celsia. Peers 6,52× Enel Chile y 6,43× Engie Energía Chile; equity estimado atribuible COP3,127T con FY26 EBITDA y net debt futuros, sin liquidar NCI FV. Fuente: https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/\n\n<a id=\"jmr-fundamental-7\"></a>\n## 7. Odinsa, contratos y gestoras\nRango management de NAV Odinsa dic2025 COP2,4–3,0T; punto medio2,7T ×94,99% genera valor grupo2,565T. Precia evalúa algunos activos pero otros gerencia; contratos deben proyectarse hasta reversión, CAPEX y capital calls. LP fondo 50% NO igual GP gestor 99,89%. Fuente: https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf\n\n<a id=\"jmr-fundamental-8\"></a>\n## 8. Pactia y propiedad inmobiliaria\nColliers 2025 contribuye al análisis del FCP; gerencia reporta equity FCP+gestor COP2,79T y 1,03T atribuible Grupo. Este último se usa directamente. Tasas de capitalización/NOI sin corte junio actualizado impiden tratar NAV como fair value certificado hoy. Fuente: https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf\n\n<a id=\"jmr-fundamental-9\"></a>\n## 9. Desarrollo urbano y otros negocios\nLos lotes y propiedad de inversión propios se encuentran en activo/patrimonio separado; no sumar su libro una segunda vez si ya está dentro residual de matriz. Sator, Summa y otras inversiones permanecen a libro por falta de comparables o flujos independientes fiables.\n\n<a id=\"jmr-fundamental-10\"></a>\n## 10. Ventajas competitivas y capital invertido\nPosibles ventajas proceden de infraestructura instalada, concesiones y capacidades de gestión; no afirmar ROIC agregado alto por patrimonio NIIF. Requiere ROIC y reinversión normalizados para cada negocio, junto con costo de capital distinto y moneda homogénea.\n\n<a id=\"jmr-fundamental-11\"></a>\n## 11. Gobierno, asignación de capital y recompras\nUna inversión en holding puede rendir más o menos que sus activos por gastos recurrentes, impuestos, descuentos de conglomerado, gobierno y capital calls. Recompra especial septiembre COP39.222m y reducción de 1.929.159 títulos proforma reflejados una sola vez; otras operaciones posjunio no certificadas. Fuente: https://www.grupoargos.com/noticias/grupo-argos-avanza-en-ace-1-0-con-una-readquisicion-de-acciones-cercana-a-cop-39-000-millones-en-terminos-alineados-con-las-condiciones-de-mercado-vigentes/\n\n<a id=\"jmr-fundamental-12\"></a>\n## 12. Calidad de información y múltiplos\nPER 2025 distorsionado por escisión Sura y operaciones extraordinarias. P/B PF diciembre2025 0,801× y yield 5,37% son un único corte histórico después de escisión, no una media 5/10 años y no sustentan 40% del Base. Se reemplazó ancla por EV/EBITDA peers de Cementos/Celsia FY2026, aunque privadas aún comparten NAV manager.\n\n<a id=\"jmr-fundamental-13\"></a>\n## 13. Damodaran, Buffett y Graham\nAplicar suma por componentes, descuento correcto de FCFF por unidad, EV→equity→propiedad, cierre finito de concesiones y eliminación de duplicidades. Precio vs valor contable requiere ROE, crecimiento y Ke; margen de seguridad no se deduce de solo un múltiplo histórico o un target de analista. Buffett/Graham exigen calidad, prudencia en beneficios recurrentes, riesgo de deuda y holgura sobre escenarios pesimistas.\n\n<a id=\"jmr-fundamental-14\"></a>\n## 14. Tesis alcista y catalizadores\nValor realizable de inversiones privadas mayor al NIIF, acceso a cash realmente distribuible de Cementos, monetización ordenada de concesiones/real estate, simplificación, eficiencia y recompra económicamente acrecitiva; no asumir tales catalizadores realizados.\n\n<a id=\"jmr-fundamental-15\"></a>\n## 15. Tesis bajista y riesgos\nFlujos privados inferiores a NAV, costo de capital alto COP, tensión de deuda de Celsia, disponibilidad restringida de caja en Cementos, horizonte/capex de concesiones, diferencia de derechos PF/Ord y descuento holding persistente. Con solo 70% cash net Cementos disponible, método sector baja a18.949 por acción.\n\n<a id=\"jmr-fundamental-16\"></a>\n## 16. Escenarios y valor estimado\nSOTP mixto 20.033 y sector peer 18.359; ponderación 60/40 **19.363** por acción. Libro 14.733 y FCFF previo 6.808 fuera de ponderación automática. Historias: Conservadora 15.868 (25%), Base 19.363 (50%), Optimista 23.866 (20%), Disrupción 9.823 (5%). Valor esperado 18.913. PF 16.500 margen aritmético 17,35 % y ordinaria 21.000 margen -7,79 %.\n\n<a id=\"jmr-fundamental-17\"></a>\n## 17. FY+3 y decisiones de seguimiento\nFY+3 ex-div COP 21.828, presente 13.296, más hipotéticos dividendos FY27–29 VP1.727 = paquete16.893; no tratar paquete FY+3 como target intrínseco FY2026. Vigilar actualización NAV gerente/Precia/Colliers, deuda neta libre/leases, minoritarios, EBIT FCFF y restricciones societarias.\n\n<a id=\"jmr-fundamental-18\"></a>\n## 18. Fuentes, limitaciones y control de calidad\nFuentes: [EEFF 2T26](https://financialfilings.com/filings/grupo-argos-sa/interim-quarterly-report/2026/56572518/), [Investor Day Odinsa](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupoargos-Investor-Day-2026-Odinsa.pdf), [Investor Day Pactia](https://files.grupoargos.com/uploads-grupo-argos/2026/02/Grupo-Argos-Investor-Day-2026-Pactia.pdf), [Cementos pares FY2026](https://www.marketscreener.com/quote/stock/CEMENTOS-ARGOS-S-A-128580757/valuation/), [Celsia FY2026](https://www.marketscreener.com/quote/stock/CELSIA-S-A-E-S-P-209229015/valuation/), [recompras](https://www.grupoargos.com/noticias/grupo-argos-avanza-en-ace-1-0-con-una-readquisicion-de-acciones-cercana-a-cop-39-000-millones-en-terminos-alineados-con-las-condiciones-de-mercado-vigentes/). Hoja [CO11 SOTP / CO12 peers / CO13 auditoría](https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit). Pruebas aritméticas PASS; la certificación financiera e independencia total permanecen PENDIENTES. Ninguna hoja maestra ha sido contaminada con otra emisora.\n",
    "importedAt": "2026-10-10T17:54:24.849Z"
   }
  },
@@ -2501,7 +2502,7 @@
   "authorized": true,
   "publishedAt": "2026-10-09T20:29:33.163Z",
   "scope": "PFGRUPOARG_R2_20261010__SOTP60_SECTOR40_DAMODARAN_RATE_NCI_NOT_CERTIFIED",
-  "revisedAt": "2026-10-10T23:00:00.000Z",
+  "revisedAt": "2026-10-10T23:30:00.000Z",
   "workbookUrl": "https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit",
   "cleanMasterWorkbookUrl": "https://docs.google.com/spreadsheets/d/1cZbcnriKIfvQX2oPgOKZUKZudSd8EcOwlh9NvjUADDo/edit",
   "extendedDcfWorkingSheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit",

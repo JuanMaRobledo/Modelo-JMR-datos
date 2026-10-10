@@ -43,7 +43,7 @@
   "primaryReconciled": true,
   "valuationReady": true,
   "modelApproved": true,
-  "revision": "r2-20261010-damodaran",
+  "revision": "r3-20261010-damodaran",
   "checks": {
    "identity": true,
    "currency": true,
@@ -61,15 +61,17 @@
    "sectorPeerMultiplesDocumented": true,
    "multiplesHistoryFiveTenYears": false,
    "regulatoryCapital": false,
+   "regulatoryCapitalCibestChecked": true,
    "insuranceReservesSolvency": false,
-   "countryExposureWeightsVerified": false,
+   "countryExposureWeightsVerified": true,
+   "terminalValueNewInvestmentRule": true,
    "preferentialRightsValued": false,
    "fy3IdentityCheck": true
   },
   "warnings": [
    "Base JMR 60/40 = SOTP económico (Cibest a bolsa) + SOTP de múltiplos: es precio relativo, no valor intrínseco. El intrínseco Damodaran (RE) se publica aparte.",
-   "Capital regulatorio (CET1/RWA) de Cibest y solvencia/reservas de Suramericana no conciliados con dividendos distribuibles.",
-   "Pesos de exposición por país para la prima país son estimaciones del analista; sensibilidad 100% Colombia −215 COP en el RE.",
+   "Capital Cibest verificado (solvencia básica 12,55%, total 14,19%; payout implícito 69,5% compatible con solvencia constante). Solvencia y reservas de Suramericana no publicadas por país: pendiente.",
+   "r3: valor terminal Damodaran con la inversión nueva al Ke (no todo el libro); pesos por país verificados 2T26 (Banistmo vendido el 30-jun-2026).",
    "P/E sectorial = promedio de mediana de pares LatAm (UDM 9-oct) y Damodaran emergentes ene-2026; sin serie histórica homogénea postescisión.",
    "Pasivo PF 520.729m no se resta: las preferenciales están en el denominador económico, igual que en la calculadora del emisor.",
    "Recompras posteriores a 30-jun-2026 y posible emisión CDPQ (17.314.142 acciones) no incorporadas."
@@ -79,7 +81,7 @@
   "valuationCurrency": "COP",
   "riskfreeRate": 0.11467118776169417,
   "equityRiskPremium": 0.042,
-  "countryRiskExposure": "CRP Damodaran jul-2026 ponderado por país (estimado): Cibest 3,17%, SURA AM 1,99%, Suramericana 2,75%",
+  "countryRiskExposure": "CRP Damodaran jul-2026 ponderado por exposición 2T26 verificada: Cibest 3,09% (cartera), SURA AM 2,27% (AUM), Suramericana 2,49% (primas)",
   "beta": null,
   "betaBySubsidiary": {
    "Cibest": 0.7,
@@ -87,26 +89,26 @@
    "Suramericana": 0.66,
    "stable": 1.0
   },
-  "costOfEquity": 0.17115113428679007,
+  "costOfEquity": 0.17142640246684854,
   "costOfEquityBySubsidiary": {
    "Cibest": {
-    "initial": 0.1757965191946942,
-    "stable": 0.1883965191946942
+    "initial": 0.1749426163507035,
+    "stable": 0.1875426163507035
    },
    "SURA AM": {
-    "initial": 0.1660343388216942,
-    "stable": 0.1765343388216942
+    "initial": 0.16883993933797325,
+    "stable": 0.17933993933797326
    },
    "Suramericana": {
-    "initial": 0.16992271471269418,
-    "stable": 0.18420271471269417
+    "initial": 0.16725066262269417,
+    "stable": 0.18153066262269418
    }
   },
   "costOfDebt": null,
   "wacc": null,
   "terminalGrowth": 0.045,
   "terminalRoic": null,
-  "terminalRoe": "Base: Ke estable + 1pp Cibest (19,84%), = Ke estable AM (17,65%) y Suramericana (18,42%)",
+  "terminalRoe": "ROE contable terminal Base 17% / 14% / 13,5% sobre el libro existente; ROE de la inversión nueva = Ke estable +1pp Cibest, = Ke estable AM y Suramericana",
   "tesCop10y": 0.13217,
   "sovereignDefaultSpread": 0.01749881223830583,
   "costOfCapitalSource": "TES IRC 25-sep-2026; Damodaran ctrypremJuly26; betas Damodaran ene-2026"
@@ -117,114 +119,114 @@
    "probability": 0.5,
    "inputs": {
     "valuationMethod": "SOTP_ECONOMIC60_SECTOR_PE40",
-    "sotpEconomicCOP": 81413.98461289838,
-    "sotpMultiplesCOP": 115139.29612792395,
-    "intrinsicRECOP": 50782.925936753316
+    "sotpEconomicCOP": 74958.24131354301,
+    "sotpMultiplesCOP": 115145.73552124487,
+    "intrinsicRECOP": 42114.63779677229
    },
-   "value": 94904.1092189086
+   "value": 91033.23899662375
   },
   {
    "name": "Conservadora",
    "probability": 0.25,
    "inputs": {
     "valuationMethod": "SOTP_ECONOMIC60_SECTOR_PE40",
-    "sotpEconomicCOP": 64365.68604465876,
-    "sotpMultiplesCOP": 91692.28279252663,
-    "intrinsicRECOP": 38367.023715856696
+    "sotpEconomicCOP": 58507.630731846744,
+    "sotpMultiplesCOP": 90151.39152943203,
+    "intrinsicRECOP": 30543.447959326662
    },
-   "value": 75296.32474380592
+   "value": 71165.13505088087
   },
   {
    "name": "Optimista",
    "probability": 0.15,
    "inputs": {
     "valuationMethod": "SOTP_ECONOMIC60_SECTOR_PE40",
-    "sotpEconomicCOP": 100173.28487585559,
-    "sotpMultiplesCOP": 140890.25935628254,
-    "intrinsicRECOP": 64588.61427716247
+    "sotpEconomicCOP": 91916.10415233899,
+    "sotpMultiplesCOP": 140002.4708852409,
+    "intrinsicRECOP": 53761.404052138976
    },
-   "value": 116460.07466802637
+   "value": 111150.65084549975
   },
   {
    "name": "Disrupción · Deterioro fundamental",
    "probability": 0.1,
    "inputs": {
     "valuationMethod": "SOTP_ECONOMIC60_SECTOR_PE40",
-    "sotpEconomicCOP": 33053.14140145037,
-    "sotpMultiplesCOP": 50187.55575080573,
-    "intrinsicRECOP": 16372.943423276292
+    "sotpEconomicCOP": 35584.706893758506,
+    "sotpMultiplesCOP": 59528.99068031607,
+    "intrinsicRECOP": 16327.332572412795
    },
-   "value": 39906.90714119251
+   "value": 45162.42040838153
   }
  ],
  "valuationSummary": {
-  "base": 94904.1092189086,
-  "expected": 87735.83770972898,
+  "base": 91033.23899662375,
+  "expected": 84496.74292869521,
   "marketPrice": 58600,
   "priceDate": "2026-10-09",
   "scopeLabel": "Holding financiero: 60% SOTP económico (Cibest a bolsa + SURA AM y Suramericana por rendimientos excedentes) + 40% SOTP por P/E sectorial. Intrínseco Damodaran (RE) publicado aparte. No certificado: capital regulatorio, reservas, derechos por clase.",
   "sheetUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit",
-  "primaryValueCOP": 94904.1092189086,
+  "primaryValueCOP": 91033.23899662375,
   "primaryValueMethod": "SOTP_ECONOMIC_SECTOR_PEER_BLEND",
   "primaryValueLabel": "Base JMR 60/40: SOTP económico + múltiplos sectoriales",
   "baseIsIntrinsic": false,
-  "intrinsicDamodaranCOP": 50782.925936753316,
-  "intrinsicDamodaranExpectedCOP": 46308.80538124283,
+  "intrinsicDamodaranCOP": 42114.63779677229,
+  "intrinsicDamodaranExpectedCOP": 38390.12475327993,
   "dcfPrimaryMethod": "RESIDUAL_INCOME_DDM_PER_SUBSIDIARY",
-  "dcfPrimaryIntrinsicPerShareCOP": 50782.925936753316,
-  "dcfPrimaryExpectedCOP": 46308.80538124283,
+  "dcfPrimaryIntrinsicPerShareCOP": 42114.63779677229,
+  "dcfPrimaryExpectedCOP": 38390.12475327993,
   "dcfFcffIntrinsicScenarios": [
    {
     "name": "Base",
     "weight": 0.5,
-    "intrinsicPerPreferredShareCOP": 50782.925936753316,
-    "intrinsicPerShareCOP": 50782.925936753316,
-    "year3ExDividendCOP": 67405.30291898845,
+    "intrinsicPerPreferredShareCOP": 42114.63779677229,
+    "intrinsicPerShareCOP": 42114.63779677229,
+    "year3ExDividendCOP": 53555.64285223691,
     "method": "RE/DDM por participada"
    },
    {
     "name": "Conservadora",
     "weight": 0.25,
-    "intrinsicPerPreferredShareCOP": 38367.023715856696,
-    "intrinsicPerShareCOP": 38367.023715856696,
-    "year3ExDividendCOP": 43951.82177058611,
+    "intrinsicPerPreferredShareCOP": 30543.447959326662,
+    "intrinsicPerShareCOP": 30543.447959326662,
+    "year3ExDividendCOP": 31447.852815188195,
     "method": "RE/DDM por participada"
    },
    {
     "name": "Optimista",
     "weight": 0.15,
-    "intrinsicPerPreferredShareCOP": 64588.61427716247,
-    "intrinsicPerShareCOP": 64588.61427716247,
-    "year3ExDividendCOP": 92637.35255469935,
+    "intrinsicPerPreferredShareCOP": 53761.404052138976,
+    "intrinsicPerShareCOP": 53761.404052138976,
+    "year3ExDividendCOP": 75360.42371471363,
     "method": "RE/DDM por participada"
    },
    {
     "name": "Disrupción · Deterioro fundamental",
     "weight": 0.1,
-    "intrinsicPerPreferredShareCOP": 16372.943423276292,
-    "intrinsicPerShareCOP": 16372.943423276292,
-    "year3ExDividendCOP": 7535.027603705622,
+    "intrinsicPerPreferredShareCOP": 16327.332572412795,
+    "intrinsicPerShareCOP": 16327.332572412795,
+    "year3ExDividendCOP": 7485.92606305893,
     "method": "RE/DDM por participada"
    }
   ],
-  "sotpEconomicCOP": 81413.98461289838,
-  "sotpEconomicExpectedCOP": 75129.72068913726,
-  "sectorSotpMultiplesCOP": 115139.29612792395,
-  "sectorSotpMultiplesExpectedCOP": 106645.0132406166,
-  "multiplesWeightedToday": 115139.29612792395,
-  "multiplesWeightedYear3": 177233.71200802145,
-  "multiplesWeightedYear3PV": 110333.52751781729,
-  "combinedWeightedToday": 94904.1092189086,
-  "combinedWeightedYear3": 144729.02037218332,
-  "combinedWeightedYear3PV": 90098.34060880194,
+  "sotpEconomicCOP": 74958.24131354301,
+  "sotpEconomicExpectedCOP": 69451.9146519599,
+  "sectorSotpMultiplesCOP": 115145.73552124487,
+  "sectorSotpMultiplesExpectedCOP": 107063.98534379818,
+  "multiplesWeightedToday": 115145.73552124487,
+  "multiplesWeightedYear3": 177372.61333487183,
+  "multiplesWeightedYear3PV": 110342.17494283183,
+  "combinedWeightedToday": 91033.23899662375,
+  "combinedWeightedYear3": 138612.3068172967,
+  "combinedWeightedYear3PV": 86229.67841821071,
   "multiplesStatus": "P/E UDM por participada: promedio de mediana de pares LatAm (9-oct-2026) y Damodaran emergentes (ene-2026): Cibest 11,01×, SURA AM 12,89×, Suramericana 10,83×.",
   "combinedStatus": "Base canónica de holdings JMR: 60% SOTP económico + 40% SOTP de múltiplos; pesos editables. No es valor intrínseco.",
   "multiplesMethods": [
    {
     "name": "SOTP P/E sectorial por participada (pares LatAm + Damodaran EM)",
-    "today": 115139.29612792395,
-    "year3": 177233.71200802145,
-    "year3PV": 110333.52751781729,
+    "today": 115145.73552124487,
+    "year3": 177372.61333487183,
+    "year3PV": 110342.17494283183,
     "weight": 1,
     "status": "Cibest 11,01× (pares 12,95×, Damodaran 9,07×); SURA AM 12,89× (pares 9,22×, Damodaran 16,56×); Suramericana 10,83× (pares 11,55×, Damodaran 10,10×). Utilidad UDM del emisor."
    },
@@ -269,61 +271,61 @@
    {
     "name": "Base",
     "probability": 0.5,
-    "value": 94904.1092189086
+    "value": 91033.23899662375
    },
    {
     "name": "Conservadora",
     "probability": 0.25,
-    "value": 75296.32474380592
+    "value": 71165.13505088087
    },
    {
     "name": "Optimista",
     "probability": 0.15,
-    "value": 116460.07466802637
+    "value": 111150.65084549975
    },
    {
     "name": "Disrupción · Deterioro fundamental",
     "probability": 0.1,
-    "value": 39906.90714119251
+    "value": 45162.42040838153
    }
   ],
   "holdingScenarioTable": [
    {
     "name": "Base",
     "probability": 0.5,
-    "base6040COP": 94904.1092189086,
-    "sotpEconomicCOP": 81413.98461289838,
-    "sotpMultiplesCOP": 115139.29612792395,
-    "intrinsicRECOP": 50782.925936753316
+    "base6040COP": 91033.23899662375,
+    "sotpEconomicCOP": 74958.24131354301,
+    "sotpMultiplesCOP": 115145.73552124487,
+    "intrinsicRECOP": 42114.63779677229
    },
    {
     "name": "Conservadora",
     "probability": 0.25,
-    "base6040COP": 75296.32474380592,
-    "sotpEconomicCOP": 64365.68604465876,
-    "sotpMultiplesCOP": 91692.28279252663,
-    "intrinsicRECOP": 38367.023715856696
+    "base6040COP": 71165.13505088087,
+    "sotpEconomicCOP": 58507.630731846744,
+    "sotpMultiplesCOP": 90151.39152943203,
+    "intrinsicRECOP": 30543.447959326662
    },
    {
     "name": "Optimista",
     "probability": 0.15,
-    "base6040COP": 116460.07466802637,
-    "sotpEconomicCOP": 100173.28487585559,
-    "sotpMultiplesCOP": 140890.25935628254,
-    "intrinsicRECOP": 64588.61427716247
+    "base6040COP": 111150.65084549975,
+    "sotpEconomicCOP": 91916.10415233899,
+    "sotpMultiplesCOP": 140002.4708852409,
+    "intrinsicRECOP": 53761.404052138976
    },
    {
     "name": "Disrupción · Deterioro fundamental",
     "probability": 0.1,
-    "base6040COP": 39906.90714119251,
-    "sotpEconomicCOP": 33053.14140145037,
-    "sotpMultiplesCOP": 50187.55575080573,
-    "intrinsicRECOP": 16372.943423276292
+    "base6040COP": 45162.42040838153,
+    "sotpEconomicCOP": 35584.706893758506,
+    "sotpMultiplesCOP": 59528.99068031607,
+    "intrinsicRECOP": 16327.332572412795
    }
   ],
   "holdingSotp": {
    "assumptions": {
-    "holdingKe": 0.17115113428679007,
+    "holdingKe": 0.17142640246684854,
     "sotpEconomicWeight": 0.6,
     "sotpMultiplesWeight": 0.4,
     "cibestPriceCOP": 88000,
@@ -336,38 +338,38 @@
    "rfCOP": 0.11467118776169417,
    "erpMature": 0.042,
    "erpImpliedOct2026": 0.037,
-   "keHolding": 0.17115113428679007,
+   "keHolding": 0.17142640246684854,
    "bySubsidiary": {
     "Cibest": {
-     "initial": 0.1757965191946942,
-     "stable": 0.1883965191946942
+     "initial": 0.1749426163507035,
+     "stable": 0.1875426163507035
     },
     "SURA AM": {
-     "initial": 0.1660343388216942,
-     "stable": 0.1765343388216942
+     "initial": 0.16883993933797325,
+     "stable": 0.17933993933797326
     },
     "Suramericana": {
-     "initial": 0.16992271471269418,
-     "stable": 0.18420271471269417
+     "initial": 0.16725066262269417,
+     "stable": 0.18153066262269418
     }
    }
   },
   "valuationOutput": {
-   "dcfBaseCOP": 50782.925936753316,
-   "dcfExpectedCOP": 46308.80538124283,
-   "dcfConservativeCOP": 38367.023715856696,
-   "dcfOptimisticCOP": 64588.61427716247,
-   "dcfDisruptionCOP": 16372.943423276292,
-   "dcfYear3ExDividend": 67405.30291898845,
+   "dcfBaseCOP": 42114.63779677229,
+   "dcfExpectedCOP": 38390.12475327993,
+   "dcfConservativeCOP": 30543.447959326662,
+   "dcfOptimisticCOP": 53761.404052138976,
+   "dcfDisruptionCOP": 16327.332572412795,
+   "dcfYear3ExDividend": 53555.64285223691,
    "dcfLabel": "Intrínseco Damodaran · SOTP por rendimientos excedentes (RE/DDM)",
    "bookValueProformaCOP": 58058,
    "bookValueSeparatedCOP": 47652.23823795084,
    "bookLookThroughCOP": 54058.26596992569,
-   "marketSotpPrimaryCOP": 81413.98461289838,
+   "marketSotpPrimaryCOP": 74958.24131354301,
    "marketSotpLabel": "SOTP económico: Cibest a bolsa + SURA AM y Suramericana RE − matriz",
-   "sectorSotpMultiplesCOP": 115139.29612792395,
-   "base6040COP": 94904.1092189086,
-   "roeterminalKeSensitivityCOP": 49787.78185318446,
+   "sectorSotpMultiplesCOP": 115145.73552124487,
+   "base6040COP": 91033.23899662375,
+   "roeterminalKeSensitivityCOP": 49729.7916238962,
    "primarySheet": "CO · Ke y SOTP 60-40",
    "sheetUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit",
    "synchronizedAt": "2026-10-10T23:00:00.000Z",
@@ -376,46 +378,46 @@
     {
      "name": "Base",
      "weight": 0.5,
-     "valuePerPreferredShareCOP": 50782.925936753316,
+     "valuePerPreferredShareCOP": 42114.63779677229,
      "economicShares": 327705908,
-     "totalEquityCOPtrillions": 16.641864855000495,
+     "totalEquityCOPtrillions": 13.801215619282383,
      "componentEquityCOPtrillions": [
       {
        "company": "Grupo Cibest",
-       "equity": 10.691822063532605
+       "equity": 9.966758047544664
       },
       {
        "company": "SURA Asset Management",
-       "equity": 8.588922522965786
+       "equity": 7.185868621640738
       },
       {
        "company": "Suramericana",
-       "equity": 4.656282883288877
+       "equity": 3.94164133764855
       }
      ]
     },
     {
      "name": "Conservadora",
      "weight": 0.25,
-     "valuePerPreferredShareCOP": 38367.023715856696,
+     "valuePerPreferredShareCOP": 30543.447959326662,
      "economicShares": 327705908,
-     "totalEquityCOPtrillions": 12.57310034406235,
+     "totalEquityCOPtrillions": 10.00926834696189,
      "componentEquityCOPtrillions": []
     },
     {
      "name": "Optimista",
      "weight": 0.15,
-     "valuePerPreferredShareCOP": 64588.61427716247,
+     "valuePerPreferredShareCOP": 53761.404052138976,
      "economicShares": 327705908,
-     "totalEquityCOPtrillions": 21.166070488159292,
+     "totalEquityCOPtrillions": 17.617929730261082,
      "componentEquityCOPtrillions": []
     },
     {
      "name": "Disrupción · Deterioro fundamental",
      "weight": 0.1,
-     "valuePerPreferredShareCOP": 16372.943423276292,
+     "valuePerPreferredShareCOP": 16327.332572412795,
      "economicShares": 327705908,
-     "totalEquityCOPtrillions": 5.365510291157386,
+     "totalEquityCOPtrillions": 5.350563345860511,
      "componentEquityCOPtrillions": []
     }
    ],
@@ -423,26 +425,26 @@
     {
      "company": "Grupo Cibest",
      "title": "RE/DDM 10 años + terminal",
-     "method": "Ke 17,58% → 18,84%; ROE UDM 20,8%",
+     "method": "Ke 17,49% → 18,75%; ROE UDM 20,8%",
      "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
     },
     {
      "company": "SURA Asset Management",
      "title": "RE/DDM 10 años + terminal",
-     "method": "Ke 16,60% → 17,65%",
+     "method": "Ke 16,88% → 17,93%",
      "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
     },
     {
      "company": "Suramericana",
      "title": "RE/DDM 10 años + terminal",
-     "method": "Ke 16,99% → 18,42%",
+     "method": "Ke 16,73% → 18,15%",
      "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
     }
    ],
    "bridge": {
     "otherNetAssetsCOPm": 165883,
     "parentNetLiabilitiesCOPm": 6491851,
-    "corporateCostsPVCOPm": 969194.614786773,
+    "corporateCostsPVCOPm": 967084.3875515657,
     "cibestMarketValueCOPm": 20729800.96
    },
    "methodWeightPolicy": {
@@ -454,82 +456,90 @@
    "sensitivities": [
     {
      "driver": "Rf COP +1pp (todas las Ke)",
-     "deltaCOPperShare": -3101.39500929958,
-     "adjustedFCFFCOP": 47681.530927453736,
-     "deltaBase6040": -920.4822698824719,
-     "base6040": 93983.62694902613,
+     "deltaCOPperShare": -4281.428463368386,
+     "adjustedFCFFCOP": 37833.20933340391,
+     "deltaBase6040": -1316.7609722050547,
+     "base6040": 89716.4780244187,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "Rf COP −1pp (todas las Ke)",
-     "deltaCOPperShare": 3294.365344942802,
-     "adjustedFCFFCOP": 54077.29128169612,
-     "deltaBase6040": 958.9591894676996,
-     "base6040": 95863.0684083763,
+     "deltaCOPperShare": 4870.058129171994,
+     "adjustedFCFFCOP": 46984.69592594429,
+     "deltaBase6040": 1499.2287176480459,
+     "base6040": 92532.4677142718,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "ERP madura implícita oct-2026 3,70%",
-     "deltaCOPperShare": 1159.5133189344415,
-     "adjustedFCFFCOP": 51942.43925568776,
-     "deltaBase6040": 341.45744488041964,
-     "base6040": 95245.56666378902,
+     "deltaCOPperShare": 1958.708100107775,
+     "adjustedFCFFCOP": 44073.34589688007,
+     "deltaBase6040": 621.4273772057786,
+     "base6040": 91654.66637382953,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "CRP 100% Colombia en las tres",
-     "deltaCOPperShare": -214.9177187931491,
-     "adjustedFCFFCOP": 50568.00821796017,
-     "deltaBase6040": -530.1754529692553,
-     "base6040": 94373.93376593935,
+     "deltaCOPperShare": -227.7607926855344,
+     "adjustedFCFFCOP": 41886.87700408676,
+     "deltaBase6040": -599.7485274620558,
+     "base6040": 90433.4904691617,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
-     "driver": "ROE terminal +1pp (Base, tres participadas)",
-     "deltaCOPperShare": 2832.368016304783,
-     "adjustedFCFFCOP": 53615.2939530581,
-     "deltaBase6040": 1103.9627826896176,
-     "base6040": 96008.07200159822,
+     "driver": "ROE contable terminal +1pp (Base, tres participadas)",
+     "deltaCOPperShare": 2352.7656285349585,
+     "adjustedFCFFCOP": 44467.40342530725,
+     "deltaBase6040": 901.9570635992131,
+     "base6040": 91935.19606022297,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
-     "driver": "ROE terminal −1pp (Base, tres participadas)",
-     "deltaCOPperShare": -2832.305626813046,
-     "adjustedFCFFCOP": 47950.62030994027,
-     "deltaBase6040": -1103.9003931978805,
-     "base6040": 93800.20882571072,
+     "driver": "ROE contable terminal −1pp (Base, tres participadas)",
+     "deltaCOPperShare": -2352.720455446797,
+     "adjustedFCFFCOP": 39761.9173413255,
+     "deltaBase6040": -901.9118905110518,
+     "base6040": 90131.3271061127,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
-     "driver": "ROE terminal = Ke estable en las tres (sin spread)",
-     "deltaCOPperShare": -993.4108964641491,
-     "adjustedFCFFCOP": 49789.51504028917,
-     "deltaBase6040": -1.5000375507661374,
-     "base6040": 94902.60918135784,
+     "driver": "ROE inversión nueva = Ke estable en las tres (sin ventaja)",
+     "deltaCOPperShare": -139.47544965329143,
+     "adjustedFCFFCOP": 41975.162347119,
+     "deltaBase6040": -0.17801130627049133,
+     "base6040": 91033.06098531748,
+     "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
+    },
+    {
+     "driver": "ROE contable terminal = Ke estable (regla r2, sobre todo el libro)",
+     "deltaCOPperShare": 7613.405347432388,
+     "adjustedFCFFCOP": 49728.04314420468,
+     "deltaBase6040": 3764.5270448621013,
+     "base6040": 94797.76604148585,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "Gastos corporativos +20%",
-     "deltaCOPperShare": -591.5026803769215,
-     "adjustedFCFFCOP": 50191.423256376394,
-     "deltaBase6040": -591.5026803769142,
-     "base6040": 94312.60653853169,
+     "deltaCOPperShare": -590.2148017127329,
+     "adjustedFCFFCOP": 41524.42299505956,
+     "deltaBase6040": -590.2148017127329,
+     "base6040": 90443.02419491102,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "Precio Cibest −10%",
      "deltaCOPperShare": 0.0,
-     "adjustedFCFFCOP": 50782.925936753316,
-     "deltaBase6040": -3795.4398356467864,
-     "base6040": 91108.66938326182,
+     "adjustedFCFFCOP": 42114.637796772295,
+     "deltaBase6040": -3795.439835646772,
+     "base6040": 87237.79916097698,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     },
     {
      "driver": "P/E sector solo pares LatAm (sin Damodaran EM)",
      "deltaCOPperShare": 0.0,
-     "adjustedFCFFCOP": 50782.925936753316,
+     "adjustedFCFFCOP": 42114.637796772295,
      "deltaBase6040": 10.98382245200628,
-     "base6040": 94915.09304136061,
+     "base6040": 91044.22281907576,
      "scope": "Intrínseco RE y Base 60/40; univariante, no sumar"
     }
    ]
@@ -537,10 +547,10 @@
  },
  "reports": {
   "valuation": {
-   "content": "---\nmarket: CO\nticker: PFGRUPSURA.CL\nanalysis_date: 2026-10-10\nrun_id: pfgrupsura-20261010-damodaran-jmr\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r2\n---\n# Grupo SURA · Valoración Modelo JMR · Preferencial · revisión Damodaran r2\n\n**Base JMR 60/40 COP 94.904 por acción; valor intrínseco Damodaran (rendimientos excedentes) COP 50.783; precio de la clase COP 58.600 (9-oct-2026).**\n\n## Índice\n1. Resumen · 2. Historia · 3. Datos · 4. Supuestos y tasas · 5. Historias · 6. Múltiplos · 7. Resultados · 8. Intrínseco frente a múltiplos · 9. Sensibilidad · 10. Log de cambios · 11. Precio · 12. Decisión · 13. Fuentes · 14. Control\n\n## 1. Resumen\n- **Base JMR (regla canónica de holdings): COP 94.904** = 60% SOTP económico COP 81.414 + 40% SOTP de múltiplos COP 115.139. Esperado COP 87.736.\n- **Valor intrínseco Damodaran (RE/DDM por participada): COP 50.783**; esperado COP 46.309. Es el único valor de flujos; el Base 60/40 es precio relativo (Cibest a bolsa y P/E de pares).\n- Rango de historias del Base: COP 39.907 (Disrupción) a COP 116.460 (Optimista).\n\n## 2. Historia y visión externa\nHolding de tres franquicias financieras: Grupo Cibest (banca, 24,94%), SURA Asset Management (pensiones y gestión, 93,32%) y Suramericana (seguros, 81,13%). Cibest es líder del crédito colombiano con ROE UDM 20,8%; SURA AM y Suramericana tienen ROE de 12–14% con fuerte componente regulado. La matriz tiene deuda neta de COP 6,49 billones y gastos corporativos de COP 117.000 millones al año. Damodaran valora una holding sumando el valor de cada participación por su cuota económica y restando costos y deuda de la matriz; el descuento de holding que pone el mercado responde a esos costos y a la confianza en la asignación de capital ([Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)).\n\n## 3. Datos\nEstados separados 2T26 (puente de matriz), calculadora de valoración del emisor ago-2026 (patrimonio controlador, utilidad UDM y acciones de Cibest), precios BVC del 9-oct-2026. Patrimonio controlador: Cibest 38.123.672, SURA AM 10.449.483, Suramericana 6.537.339 COPm. Utilidad UDM: 7.934.717, 1.272.336 y 904.340 COPm. Acciones económicas 327.705.908 (165.834.026 ordinarias y 161.871.882 preferenciales). La utilidad de Cibest pasó de un proxy de 7.722.604 a la cifra del emisor, y su participación de 24,88% a 24,9365% (235.565.920 acciones).\n\n## 4. Supuestos y tasas\n| Supuesto | Valor | Fuente |\n|---|---|---|\n| Rf COP | 11,47% | TES 13,217% (IRC 25-sep-2026) − spread Colombia 1,75% (Damodaran) |\n| ERP madura | 4,20% | Damodaran jul-2026; implícita oct-2026 3,70% como sensibilidad |\n| CRP ponderado | Cibest 3,17% · AM 1,99% · Suramericana 2,75% | Damodaran jul-2026; pesos por país estimados |\n| Beta inicial → estable | 0,70 / 0,75 / 0,66 → 1,0 | Damodaran ene-2026 (bancos, gestión de activos, seguros) |\n| Ke inicial → estable | 17,58%→18,84% · 16,60%→17,65% · 16,99%→18,42% | CAPM con prima país; mismo Ke en las cuatro historias |\n| Ke holding | 17,12% | Promedio ponderado por valor; descuenta gastos y FY+3 |\n| ROE terminal Base | Ke estable +1pp Cibest; = Ke en AM y Suramericana | Regla Damodaran del modelo: sin ventaja ROE = Ke; ventaja durable, algo más |\n| g terminal | 4,5% nominal COP | Menor que Rf |\n| P/E sector | 11,01× / 12,89× / 10,83× | Mediana pares LatAm + Damodaran emergentes |\n\nDamodaran, en *Valuing Financial Service Firms*, valora a Goldman Sachs con rendimientos excedentes, fija el ROE estable igual al Ke y baja la beta hacia 1,2 en crecimiento estable; en Citi (2023) muestra que un banco cotiza sobre libro solo si ROE > Ke. El modelo anterior dejaba el ROE terminal 0,5–4 puntos por debajo del Ke en las tres participadas, lo que suponía destrucción de valor perpetua; ahora sigue la regla del modelo.\n\n## 5. Historias y probabilidades\nBase 50% (ROE se normaliza: Cibest 19% año 5), Conservadora 25% (ROE terminal 2–3pp bajo Ke, crecimiento 3–4%), Optimista 15% (ROE terminal 2–3pp sobre Ke), Disrupción 10% (ROE terminal 6–8%, crecimiento 1%). En el SOTP económico y en el de múltiplos, el valor de mercado y el de múltiplos de cada participada se escalan por la razón RE historia / RE Base.\n\n## 6. Múltiplos\nP/E UDM por participada con dos anclas: mediana de pares latinoamericanos del 9-oct-2026 (bancos: Credicorp, Santander Chile, Banco de Chile, Itaú, Banorte, Aval, Davivienda, Bradesco; pensiones y gestión: Habitat, Vinci; seguros: BB Seguridade, Porto, Caixa Seguridade, Quálitas) y el P/E agregado de Damodaran para emergentes (ene-2026). El P/B justificado (ROE−g)/(Ke−g) sale del mismo RE y no cuenta como ancla independiente. P/E histórico, P/FCFE, EV/EBITDA, EV/FCFF y P/OCF: N/D o no aplican.\n\n## 7. Resultados\n| Historia | Prob. | Base 60/40 | SOTP económico | SOTP múltiplos | Intrínseco RE |\n|---|---|---|---|---|---|\n| Base | 50% | 94.904 | 81.414 | 115.139 | 50.783 |\n| Conservadora | 25% | 75.296 | 64.366 | 91.692 | 38.367 |\n| Optimista | 15% | 116.460 | 100.173 | 140.890 | 64.589 |\n| Disrupción · Deterioro fundamental | 10% | 39.907 | 33.053 | 50.188 | 16.373 |\n| Esperado | 100% | 87.736 | 75.130 | 106.645 | 46.309 |\n\nPuente Base (COPm): Cibest a bolsa 20.729.801 + SURA AM RE 8.588.923 + Suramericana RE 4.656.283 + otros 165.883 − puente matriz 6.491.851 − VP gastos 969.195 = 26.679.844.\n\n| FY+3 (Ke 17,12%, dividendos 2.000/2.200/2.400 con VP 4.806) | Hoy | FY+3 exdiv | VP FY+3 exdiv |\n|---|---|---|---|\n| Base 60/40 | 94.904 | 144.729 | 90.098 |\n| SOTP económico | 81.414 | 123.059 | 76.608 |\n| SOTP múltiplos | 115.139 | 177.234 | 110.334 |\n| Intrínseco RE | 50.783 | 73.855 | 45.977 |\n\nControl: VP FY+3 + VP dividendos = valor de hoy (diferencia 0).\n\n## 8. Valor intrínseco frente a múltiplos\nLa brecha entre el intrínseco RE (50.783) y el Base 60/40 (94.904) tiene dos fuentes. (1) Cibest: a bolsa vale COP 20.729.801 millones para SURA, frente a 10.691.822 millones en el RE; con P/B 2,18× y ROE 20,8%, el mercado le exige un Ke cercano a 11–12%, frente al 17,6% del CAPM con prima país. (2) SURA AM y Suramericana a P/E de pares valen COP 23.244.431 millones frente a 13.245.205 millones en el RE. Damodaran no promedia valor y precio: los presenta por separado y pide entender la brecha. Aquí el promedio es una regla del Modelo JMR.\n\n## 9. Sensibilidad\n| Variable (univariante) | Δ intrínseco RE | Δ Base 60/40 |\n|---|---|---|\n| Rf COP +1pp (todas las Ke) | -3.101 | -920 |\n| Rf COP −1pp (todas las Ke) | 3.294 | 959 |\n| ERP madura implícita oct-2026 3,70% | 1.160 | 341 |\n| CRP 100% Colombia en las tres | -215 | -530 |\n| ROE terminal +1pp (Base, tres participadas) | 2.832 | 1.104 |\n| ROE terminal −1pp (Base, tres participadas) | -2.832 | -1.104 |\n| ROE terminal = Ke estable en las tres (sin spread) | -993 | -2 |\n| Gastos corporativos +20% | -592 | -592 |\n| Precio Cibest −10% | 0 | -3.795 |\n| P/E sector solo pares LatAm (sin Damodaran EM) | 0 | 11 |\n\n## 10. Log de cambios (r1 → r2)\n| Cambio | Antes | Después |\n|---|---|---|\n| Ke | Proxies 17,51/16,81/16,75%, Rf vacía | CAPM Damodaran con Rf 11,47%, beta sector y CRP; converge a beta 1 |\n| ROE terminal Base | 17/14/13,5% (< Ke) | Ke estable +1/0/0 pp |\n| Utilidad Cibest | 7.722.604 proxy | 7.934.717 emisor |\n| Participación Cibest | 24,88% | 24,9365% |\n| P/E sector | 9,27/9,45/11,07 (proxies sin pares) | 11,01/12,89/10,83 (pares + Damodaran) |\n| Precio ordinaria | 67.760 (Investing) | 67.480 (Yahoo y StockAnalysis) |\n| Valor principal | RE 43.286 | Base 60/40 94.904; RE 50.783 aparte |\n| Etiquetas | \"SOTP de mercado\" = NAV contable | NAV contable 54.058 y SOTP económico 81.414 separados |\n\n## 11. El precio al final\nPrecio preferencial COP 58.600 (9-oct-2026); la ordinaria cotiza a COP 67.480. Base 60/40 / precio − 1 = 62,0%; intrínseco RE / precio − 1 = -13,3%. Al precio de hoy (capitalización de ambas clases COP 20.676.172 millones), el mercado valora SURA AM y Suramericana juntas en unos COP 7.241.534 millones (≈ 3,8× su utilidad atribuible), frente a 23.244.431 millones a P/E de pares: un descuento de holding amplio. La brecha entre clases no se convierte en prima de voto en el valor.\n\n## 12. Registro de decisión\nSin recomendación automática. La opinión cambia si: el capital regulatorio limita los dividendos de Cibest; el ROE de SURA AM no supera 15%; el TES baja de forma sostenida (cada −1pp de Rf suma COP 3.294 al intrínseco); o la operación CDPQ/MRE se cierra a un precio distinto del valor intrínseco. Revisar con los estados del 3T26.\n\n## 13. Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Calculadora de valoración del emisor](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx)\n- [Damodaran · Valuing Financial Service Firms](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf)\n- [Damodaran · Good banks, bad banks (Citi, 2023)](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran · Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)\n- [Damodaran · participaciones cruzadas](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran · primas país jul-2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx)\n- [Precio de la clase](https://stockanalysis.com/quote/bvc/PFGRUPSURA/history/)\n\n[Hoja del modelo](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)\n\n## 14. Control de calidad\nAISLAMIENTO = OK. Réplica Python independiente = hoja (diferencia 0 en las cuatro historias). RE = DDM en 12 ramas; Ke > g en 12; probabilidades 100%; identidad FY+3 = 0. Moneda COP nominal en flujos y tasas. No certificado: capital regulatorio, solvencia de seguros, pesos de exposición país y derechos por clase.\n"
+   "content": "---\nmarket: CO\nticker: PFGRUPSURA.CL\nanalysis_date: 2026-10-10\nrun_id: pfgrupsura-20261010-damodaran-jmr\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r3\n---\n# Grupo SURA · Valoración Modelo JMR · Preferencial · revisión Damodaran r3\n\n**Base JMR 60/40 COP 91.033 por acción; valor intrínseco Damodaran (rendimientos excedentes) COP 42.115; precio de la clase COP 58.600 (9-oct-2026).**\n\n## Índice\n1. Resumen · 2. Historia · 3. Datos · 4. Supuestos y tasas · 5. Historias · 6. Múltiplos · 7. Resultados · 8. Intrínseco frente a múltiplos · 9. Sensibilidad · 10. Log de cambios · 11. Precio · 12. Decisión · 13. Fuentes · 14. Control\n\n## 1. Resumen\n- **Base JMR (regla canónica de holdings): COP 91.033** = 60% SOTP económico COP 74.958 + 40% SOTP de múltiplos COP 115.146. Esperado COP 84.497.\n- **Valor intrínseco Damodaran (RE/DDM por participada): COP 42.115**; esperado COP 38.390. Es el único valor de flujos; el Base 60/40 es precio relativo (Cibest a bolsa y P/E de pares).\n- Rango de historias del Base: COP 45.162 (Disrupción) a COP 111.151 (Optimista).\n\n## 2. Historia y visión externa\nHolding de tres franquicias financieras: Grupo Cibest (banca, 24,94%), SURA Asset Management (pensiones y gestión, 93,32%) y Suramericana (seguros, 81,13%). Cibest es líder del crédito colombiano con ROE UDM 20,8%; SURA AM y Suramericana tienen ROE de 12–14% con fuerte componente regulado. La matriz tiene deuda neta de COP 6,49 billones y gastos corporativos de COP 117.000 millones al año. Damodaran valora una holding sumando el valor de cada participación por su cuota económica y restando costos y deuda de la matriz; el descuento de holding que pone el mercado responde a esos costos y a la confianza en la asignación de capital ([Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)).\n\n## 3. Datos\nEstados separados 2T26 (puente de matriz), calculadora de valoración del emisor ago-2026 (patrimonio controlador, utilidad UDM y acciones de Cibest), precios BVC del 9-oct-2026. Patrimonio controlador: Cibest 38.123.672, SURA AM 10.449.483, Suramericana 6.537.339 COPm. Utilidad UDM: 7.934.717, 1.272.336 y 904.340 COPm. Acciones económicas 327.705.908 (165.834.026 ordinarias y 161.871.882 preferenciales). La utilidad de Cibest pasó de un proxy de 7.722.604 a la cifra del emisor, y su participación de 24,88% a 24,9365% (235.565.920 acciones).\n\n## 4. Supuestos y tasas\n| Supuesto | Valor | Fuente |\n|---|---|---|\n| Rf COP | 11,47% | TES 13,217% (IRC 25-sep-2026) − spread Colombia 1,75% (Damodaran) |\n| ERP madura | 4,20% | Damodaran jul-2026; implícita oct-2026 3,70% como sensibilidad |\n| CRP ponderado | Cibest 3,09% · AM 2,27% · Suramericana 2,49% | Damodaran jul-2026; pesos 2T26: cartera Cibest (Colombia 87,2%, El Salvador 6,5%, Guatemala 6,4%), AUM SURA AM (México 37%, Colombia 31%, Chile 23%), primas Suramericana (Colombia 65%, Chile 15%) |\n| Beta inicial → estable | 0,70 / 0,75 / 0,66 → 1,0 | Damodaran ene-2026 (bancos, gestión de activos, seguros) |\n| Ke inicial → estable | 17,49%→18,75% · 16,88%→17,93% · 16,73%→18,15% | CAPM con prima país; mismo Ke en las cuatro historias |\n| Ke holding | 17,14% | Promedio ponderado por valor; descuenta gastos y FY+3 |\n| ROE terminal Base | Contable 17% / 14% / 13,5% sobre el libro existente; inversión nueva rinde Ke estable (+1pp Cibest) | Damodaran: en estable la inversión nueva rinde el Ke; valor año 10 = NI11 × (1 − g/ROE nuevo)/(Ke − g) |\n| g terminal | 4,5% nominal COP | Menor que Rf |\n| P/E sector | 11,01× / 12,89× / 10,83× | Mediana pares LatAm + Damodaran emergentes |\n\nDamodaran, en *Valuing Financial Service Firms*, valora a Goldman Sachs con rendimientos excedentes y en crecimiento estable lleva el ROE al Ke y la beta hacia 1,2; en Citi (2023) muestra que un banco cotiza sobre libro solo si ROE > Ke. Aquí la regla se aplica a la inversión **nueva**: el libro existente conserva su ROE contable (SURA AM tiene 5,9 billones de plusvalía comprada, que no puede rendir el Ke) y la reinversión del estado estable rinde el Ke (Cibest +1pp por ventaja durable). Así el crecimiento terminal no destruye valor, sin inflar la utilidad del libro heredado.\n\n**Capital regulatorio (Cibest, 6-K 2T26):** solvencia básica 12,55% y total 14,19% sobre activos ponderados de COP 235.598.072 millones; mínimo básico con colchones 7,0%, holgura COP 13.075.693 millones. El dividendo implícito del Base (payout 69,5% años 1-5) mantiene la solvencia si los activos ponderados crecen al ritmo del libro (6%).\n\n## 5. Historias y probabilidades\nBase 50% (ROE se normaliza: Cibest 19% año 5), Conservadora 25% (ROE terminal 2–3pp bajo Ke, crecimiento 3–4%), Optimista 15% (ROE terminal 2–3pp sobre Ke), Disrupción 10% (ROE terminal 6–8%, crecimiento 1%). En el SOTP económico y en el de múltiplos, el valor de mercado y el de múltiplos de cada participada se escalan por la razón RE historia / RE Base.\n\n## 6. Múltiplos\nP/E UDM por participada con dos anclas: mediana de pares latinoamericanos del 9-oct-2026 (bancos: Credicorp, Santander Chile, Banco de Chile, Itaú, Banorte, Aval, Davivienda, Bradesco; pensiones y gestión: Habitat, Vinci; seguros: BB Seguridade, Porto, Caixa Seguridade, Quálitas) y el P/E agregado de Damodaran para emergentes (ene-2026). El P/B justificado (ROE−g)/(Ke−g) sale del mismo RE y no cuenta como ancla independiente. P/E histórico, P/FCFE, EV/EBITDA, EV/FCFF y P/OCF: N/D o no aplican. Contraste: la presentación corporativa del emisor (Bloomberg, 28-jul-2026) muestra medianas de 10,3× bancos, 10,5× gestores de activos y 12,3× aseguradoras, en el mismo rango que los P/E usados.\n\n## 7. Resultados\n| Historia | Prob. | Base 60/40 | SOTP económico | SOTP múltiplos | Intrínseco RE |\n|---|---|---|---|---|---|\n| Base | 50% | 91.033 | 74.958 | 115.146 | 42.115 |\n| Conservadora | 25% | 71.165 | 58.508 | 90.151 | 30.543 |\n| Optimista | 15% | 111.151 | 91.916 | 140.002 | 53.761 |\n| Disrupción · Deterioro fundamental | 10% | 45.162 | 35.585 | 59.529 | 16.327 |\n| Esperado | 100% | 84.497 | 69.452 | 107.064 | 38.390 |\n\nPuente Base (COPm): Cibest a bolsa 20.729.801 + SURA AM RE 7.185.869 + Suramericana RE 3.941.641 + otros 165.883 − puente matriz 6.491.851 − VP gastos 967.084 = 24.564.259.\n\n| FY+3 (Ke 17,14%, dividendos 2.000/2.200/2.400 con VP 4.804) | Hoy | FY+3 exdiv | VP FY+3 exdiv |\n|---|---|---|---|\n| Base 60/40 | 91.033 | 138.612 | 86.230 |\n| SOTP económico | 74.958 | 112.772 | 70.155 |\n| SOTP múltiplos | 115.146 | 177.373 | 110.342 |\n| Intrínseco RE | 42.115 | 59.977 | 37.311 |\n\nControl: VP FY+3 + VP dividendos = valor de hoy (diferencia 0).\n\n## 8. Valor intrínseco frente a múltiplos\nLa brecha entre el intrínseco RE (42.115) y el Base 60/40 (91.033) tiene dos fuentes. (1) Cibest: a bolsa vale COP 20.729.801 millones para SURA, frente a 9.966.758 millones en el RE; con P/B 2,18× y ROE 20,8%, el mercado le exige un Ke cercano a 11–12%, frente al 17,6% del CAPM con prima país. (2) SURA AM y Suramericana a P/E de pares valen COP 23.244.431 millones frente a 11.127.510 millones en el RE. Damodaran no promedia valor y precio: los presenta por separado y pide entender la brecha. Aquí el promedio es una regla del Modelo JMR.\n\n## 9. Sensibilidad\n| Variable (univariante) | Δ intrínseco RE | Δ Base 60/40 |\n|---|---|---|\n| Rf COP +1pp (todas las Ke) | -4.281 | -1.317 |\n| Rf COP −1pp (todas las Ke) | 4.870 | 1.499 |\n| ERP madura implícita oct-2026 3,70% | 1.959 | 621 |\n| CRP 100% Colombia en las tres | -228 | -600 |\n| ROE contable terminal +1pp (Base, tres participadas) | 2.353 | 902 |\n| ROE contable terminal −1pp (Base, tres participadas) | -2.353 | -902 |\n| ROE inversión nueva = Ke estable en las tres (sin ventaja) | -139 | -0 |\n| ROE contable terminal = Ke estable (regla r2, sobre todo el libro) | 7.613 | 3.765 |\n| Gastos corporativos +20% | -590 | -590 |\n| Precio Cibest −10% | 0 | -3.795 |\n| P/E sector solo pares LatAm (sin Damodaran EM) | 0 | 11 |\n\n## 10. Log de cambios (r1 → r3)\n| Cambio | Antes | Después |\n|---|---|---|\n| Ke | Proxies 17,51/16,81/16,75%, Rf vacía | CAPM Damodaran con Rf 11,47%, beta sector y CRP; converge a beta 1 |\n| Valor terminal | ROE 17/14/13,5% (< Ke) sobre todo el libro: crecimiento que destruye valor | ROE contable igual; inversión nueva rinde Ke (+1pp Cibest): NI11 × (1 − g/ROE nuevo)/(Ke − g) |\n| Exposición país | Pesos estimados (Cibest con Panamá 13%) | Verificados 2T26; Banistmo vendido el 30-jun-2026 |\n| Capital Cibest | No conciliado | Solvencia básica 12,55%; payout implícito 69,5% compatible |\n| Utilidad Cibest | 7.722.604 proxy | 7.934.717 emisor |\n| Participación Cibest | 24,88% | 24,9365% |\n| P/E sector | 9,27/9,45/11,07 (proxies sin pares) | 11,01/12,89/10,83 (pares + Damodaran) |\n| Precio ordinaria | 67.760 (Investing) | 67.480 (Yahoo y StockAnalysis) |\n| Valor principal | RE 43.286 | Base 60/40 91.033; RE 42.115 aparte (r2 publicó 94.904 / 50.783 con ROE = Ke sobre todo el libro) |\n| Etiquetas | \"SOTP de mercado\" = NAV contable | NAV contable 54.058 y SOTP económico 74.958 separados |\n\n## 11. El precio al final\nPrecio preferencial COP 58.600 (9-oct-2026); la ordinaria cotiza a COP 67.480. Base 60/40 / precio − 1 = 55,3%; intrínseco RE / precio − 1 = -28,1%. Al precio de hoy (capitalización de ambas clases COP 20.676.172 millones), el mercado valora SURA AM y Suramericana juntas en unos COP 7.239.424 millones (≈ 3,8× su utilidad atribuible), frente a 23.244.431 millones a P/E de pares: un descuento de holding amplio. La brecha entre clases no se convierte en prima de voto en el valor.\n\n## 12. Registro de decisión\nSin recomendación automática. La opinión cambia si: el capital regulatorio limita los dividendos de Cibest; el ROE de SURA AM no supera 15%; el TES baja de forma sostenida (cada −1pp de Rf suma COP 4.870 al intrínseco); o la operación CDPQ/MRE se cierra a un precio distinto del valor intrínseco. Revisar con los estados del 3T26.\n\n## 13. Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Calculadora de valoración del emisor](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx)\n- [Grupo Cibest 6-K resultados 2T26 (solvencia y cartera por país)](https://img.lalr.co/cms/2026/08/10230736/Grupo-Cibest-S.A.-6-K-PR-2T26.pdf)\n- [Presentación corporativa Grupo SURA 2T26 (AUM y primas por país)](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-presentacion-corporativa-2T-2026.pdf)\n- [Damodaran · Valuing Financial Service Firms](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf)\n- [Damodaran · Good banks, bad banks (Citi, 2023)](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran · Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)\n- [Damodaran · participaciones cruzadas](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran · primas país jul-2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx)\n- [Precio de la clase](https://stockanalysis.com/quote/bvc/PFGRUPSURA/history/)\n\n[Hoja del modelo](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)\n\n## 14. Control de calidad\nAISLAMIENTO = OK. Réplica Python independiente = hoja (diferencia 0 en las cuatro historias). RE = DDM en 12 ramas; Ke > g en 12; probabilidades 100%; identidad FY+3 = 0. Moneda COP nominal en flujos y tasas. Capital de Cibest verificado contra solvencia 2T26; pesos por país verificados. No certificado: solvencia de Suramericana, minoritarios de las filiales y derechos por clase.\n"
   },
   "research": {
-   "content": "---\nmarket: CO\nticker: PFGRUPSURA.CL\nanalysis_date: 2026-10-10\nrun_id: pfgrupsura-20261010-damodaran-jmr\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r2\n---\n# Grupo SURA · Análisis fundamental · Preferencial · revisión Damodaran r2\n\n**Datos 2T26 y calculadora del emisor; precios 9-oct-2026. Base JMR 60/40 COP 94.904; intrínseco Damodaran COP 50.783; precio COP 58.600.**\n\n## Índice\n1–18 secciones enlazadas abajo.\n\n## 1. Negocio y perímetro\nHolding financiera latinoamericana: banca (Cibest), pensiones y gestión de activos (SURA AM) y seguros (Suramericana). El valor para el accionista depende de los patrimonios regulados y de los dividendos que puedan subir a la matriz.\n\n## 2. Historia y reorganización\nLa escisión de 2025 y la creación de Grupo Cibest cambian el perímetro; no hay diez años homogéneos de utilidades.\n\n## 3. Segmentos y participaciones\nCibest 24,94% (235.565.920 acciones ordinarias), SURA AM 93,32%, Suramericana 81,13%. Se suman cuotas económicas y no se restan dos veces los minoritarios.\n\n## 4. Ventajas competitivas\nCibest: escala y fondeo de bajo costo justifican un ROE terminal 1pp sobre su Ke. SURA AM y Suramericana: marcas fuertes en mercados regulados con presión de comisiones; ROE terminal = Ke.\n\n## 5. Gestión y asignación de capital\nDividendos, desendeudamiento y la operación CDPQ/MRE (posible emisión de 17.314.142 acciones) definen el descuento de holding. Damodaran atribuye ese descuento a costos y a la confianza en la asignación de capital.\n\n## 6. Utilidad\nUDM del emisor: Cibest 7.934.717, SURA AM 1.272.336, Suramericana 904.340 COPm. El H1-2026 consolidado controlador fue ~COP 1,7 billones.\n\n## 7. Rentabilidad frente a costo del patrimonio\nROE UDM: Cibest 20,8% vs Ke 17,58%; SURA AM 12,2% vs 16,60%; Suramericana 13,8% vs 16,99%. Solo Cibest supera hoy su Ke.\n\n## 8. Matriz: deuda y gastos\nPuente neto COP 6.491.851 millones; gastos COP 117.000 millones/año, VP COP 969.195 millones al Ke holding 17,12%.\n\n## 9. Cibest\nA bolsa vale COP 20.729.801 millones para SURA (P/B 2,18×). Riesgos: cartera, CET1/RWA, cuatro países con El Salvador como mayor prima país.\n\n## 10. Suramericana\nReservas técnicas, siniestralidad y solvencia limitan los dividendos sostenibles; RE COP 4.656.283 millones atribuibles.\n\n## 11. SURA Asset Management\nRegulación previsional (reformas en Chile y Colombia), AUM y comisiones. Patrimonio con 5,9 billones de intangibles: el P/E es más útil que el P/B. RE COP 8.588.923 millones atribuibles.\n\n## 12. Valor con criterio Damodaran\nIntrínseco RE: Base COP 50.783, esperado COP 46.309. Base JMR 60/40: COP 94.904 (esperado 87.736). SOTP económico 81.414; SOTP múltiplos 115.139. NAV contable look-through 54.058; patrimonio consolidado 58.058.\n\n## 13. Cuatro historias\nBase 50%, Conservadora 25%, Optimista 15%, Disrupción 10%. Base 60/40: 94.904 / 75.296 / 116.460 / 39.907.\n\n## 14. Sensibilidad\nRf ±1pp: -3.101 / +3.294 en el RE. ROE terminal ±1pp: ±2.832. Precio Cibest −10%: -3.795 en el Base 60/40.\n\n## 15. Riesgo país\nPrima país ponderada por exposición estimada; la sensibilidad 100% Colombia mueve el RE en -215. No se suma el spread soberano dos veces: el TES se depura antes de añadir la prima país.\n\n## 16. Múltiplos\nP/E: Cibest 11,01×, SURA AM 12,89×, Suramericana 10,83× (pares LatAm + Damodaran emergentes). EV/EBITDA no aplica a financieras.\n\n## 17. Clases de acciones\nOrdinaria COP 67.480 y preferencial COP 58.600. El mínimo preferencial (COP 359,73) es menor que el dividendo ordinario (COP 2.000), así que no genera prima económica; el valor por acción es igual para ambas clases.\n\n## 18. Registro de decisión\nSin recomendación automática. Pendientes: CET1/RWA de Cibest, solvencia de Suramericana, pesos de exposición país verificados, comparables históricos y operación CDPQ/MRE.\n\n### Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Calculadora de valoración del emisor](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx)\n- [Damodaran · Valuing Financial Service Firms](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf)\n- [Damodaran · Good banks, bad banks (Citi, 2023)](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran · Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)\n- [Damodaran · participaciones cruzadas](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran · primas país jul-2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx)\n- [Precio de la clase](https://stockanalysis.com/quote/bvc/PFGRUPSURA/history/)\n\n[Hoja del modelo](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)\n"
+   "content": "---\nmarket: CO\nticker: PFGRUPSURA.CL\nanalysis_date: 2026-10-10\nrun_id: pfgrupsura-20261010-damodaran-jmr\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r3\n---\n# Grupo SURA · Análisis fundamental · Preferencial · revisión Damodaran r3\n\n**Datos 2T26 y calculadora del emisor; precios 9-oct-2026. Base JMR 60/40 COP 91.033; intrínseco Damodaran COP 42.115; precio COP 58.600.**\n\n## Índice\n1–18 secciones enlazadas abajo.\n\n## 1. Negocio y perímetro\nHolding financiera latinoamericana: banca (Cibest), pensiones y gestión de activos (SURA AM) y seguros (Suramericana). El valor para el accionista depende de los patrimonios regulados y de los dividendos que puedan subir a la matriz.\n\n## 2. Historia y reorganización\nLa escisión de 2025 y la creación de Grupo Cibest cambian el perímetro; no hay diez años homogéneos de utilidades.\n\n## 3. Segmentos y participaciones\nCibest 24,94% (235.565.920 acciones ordinarias), SURA AM 93,32%, Suramericana 81,13%. Se suman cuotas económicas y no se restan dos veces los minoritarios.\n\n## 4. Ventajas competitivas\nCibest: escala y fondeo de bajo costo justifican que su inversión nueva rinda 1pp sobre el Ke. SURA AM y Suramericana: marcas fuertes en mercados regulados con presión de comisiones; su inversión nueva rinde el Ke.\n\n## 5. Gestión y asignación de capital\nDividendos, desendeudamiento y la operación CDPQ/MRE (posible emisión de 17.314.142 acciones) definen el descuento de holding. Damodaran atribuye ese descuento a costos y a la confianza en la asignación de capital.\n\n## 6. Utilidad\nUDM del emisor: Cibest 7.934.717, SURA AM 1.272.336, Suramericana 904.340 COPm. El H1-2026 consolidado controlador fue ~COP 1,7 billones.\n\n## 7. Rentabilidad frente a costo del patrimonio\nROE UDM: Cibest 20,8% vs Ke 17,49%; SURA AM 12,2% vs 16,88%; Suramericana 13,8% vs 16,73%. Solo Cibest supera hoy su Ke.\n\n## 8. Matriz: deuda y gastos\nPuente neto COP 6.491.851 millones; gastos COP 117.000 millones/año, VP COP 967.084 millones al Ke holding 17,14%.\n\n## 9. Cibest\nA bolsa vale COP 20.729.801 millones para SURA (P/B 2,18×). Cartera 2T26: Colombia 87,2%, El Salvador 6,5%, Guatemala 6,4% (Banistmo vendido el 30-jun-2026). Solvencia básica 12,55%, total 14,19%.\n\n## 10. Suramericana\nReservas técnicas, siniestralidad y solvencia limitan los dividendos sostenibles; RE COP 3.941.641 millones atribuibles.\n\n## 11. SURA Asset Management\nRegulación previsional (reformas en Chile y Colombia), AUM y comisiones. Patrimonio con 5,9 billones de intangibles: el P/E es más útil que el P/B. RE COP 7.185.869 millones atribuibles.\n\n## 12. Valor con criterio Damodaran\nIntrínseco RE: Base COP 42.115, esperado COP 38.390. Base JMR 60/40: COP 91.033 (esperado 84.497). SOTP económico 74.958; SOTP múltiplos 115.146. NAV contable look-through 54.058; patrimonio consolidado 58.058.\n\n## 13. Cuatro historias\nBase 50%, Conservadora 25%, Optimista 15%, Disrupción 10%. Base 60/40: 91.033 / 71.165 / 111.151 / 45.162.\n\n## 14. Sensibilidad\nRf ±1pp: -4.281 / +4.870 en el RE. ROE contable terminal ±1pp: ±2.353. Precio Cibest −10%: -3.795 en el Base 60/40.\n\n## 15. Riesgo país\nPrima país ponderada por exposición verificada 2T26 (cartera, AUM y primas); la sensibilidad 100% Colombia mueve el RE en -228. No se suma el spread soberano dos veces: el TES se depura antes de añadir la prima país.\n\n## 16. Múltiplos\nP/E: Cibest 11,01×, SURA AM 12,89×, Suramericana 10,83× (pares LatAm + Damodaran emergentes). EV/EBITDA no aplica a financieras.\n\n## 17. Clases de acciones\nOrdinaria COP 67.480 y preferencial COP 58.600. El mínimo preferencial (COP 359,73) es menor que el dividendo ordinario (COP 2.000), así que no genera prima económica; el valor por acción es igual para ambas clases.\n\n## 18. Registro de decisión\nSin recomendación automática. Pendientes: solvencia de Suramericana por país, comparables históricos homogéneos y operación CDPQ/MRE.\n\n### Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Calculadora de valoración del emisor](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx)\n- [Grupo Cibest 6-K resultados 2T26 (solvencia y cartera por país)](https://img.lalr.co/cms/2026/08/10230736/Grupo-Cibest-S.A.-6-K-PR-2T26.pdf)\n- [Presentación corporativa Grupo SURA 2T26 (AUM y primas por país)](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-presentacion-corporativa-2T-2026.pdf)\n- [Damodaran · Valuing Financial Service Firms](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf)\n- [Damodaran · Good banks, bad banks (Citi, 2023)](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran · Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)\n- [Damodaran · participaciones cruzadas](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran · primas país jul-2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx)\n- [Precio de la clase](https://stockanalysis.com/quote/bvc/PFGRUPSURA/history/)\n\n[Hoja del modelo](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)\n"
   }
  },
  "sources": [
@@ -655,6 +665,76 @@
    "retrievedAt": "2026-10-10T23:00:00.000Z"
   },
   {
+   "role": "Calculadora de valoración Grupo SURA (UDM y acciones Cibest)",
+   "url": "https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · Valuing Financial Service Firms",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · Cash and cross holdings",
+   "url": "https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · primas país jul-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · ERP implícita oct-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · betas y P/E sector ene-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Precio Cibest ordinaria",
+   "url": "https://finance.yahoo.com/quote/CIBEST.CL/",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Calculadora de valoración Grupo SURA (UDM y acciones Cibest)",
+   "url": "https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · Valuing Financial Service Firms",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · Cash and cross holdings",
+   "url": "https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · primas país jul-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctrypremJuly26.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · ERP implícita oct-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Damodaran · betas y P/E sector ene-2026",
+   "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datacurrent.html",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Precio Cibest ordinaria",
+   "url": "https://finance.yahoo.com/quote/CIBEST.CL/",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
    "role": "precio clase",
    "url": "https://stockanalysis.com/quote/bvc/PFGRUPSURA/history/",
    "retrievedAt": "2026-10-10T23:00:00.000Z"
@@ -693,13 +773,23 @@
    "role": "Precio Cibest ordinaria",
    "url": "https://finance.yahoo.com/quote/CIBEST.CL/",
    "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Grupo Cibest 6-K 2T26 (solvencia, cartera por país)",
+   "url": "https://img.lalr.co/cms/2026/08/10230736/Grupo-Cibest-S.A.-6-K-PR-2T26.pdf",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
+  },
+  {
+   "role": "Presentación corporativa Grupo SURA 2T26 (AUM y primas por país)",
+   "url": "https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-presentacion-corporativa-2T-2026.pdf",
+   "retrievedAt": "2026-10-10T23:00:00.000Z"
   }
  ],
  "publication": {
   "authorized": true,
   "publishedAt": "2026-10-10T19:33:00.000Z",
   "revisedAt": "2026-10-10T23:00:00.000Z",
-  "scope": "r2-base-6040-condicionado-intrinseco-RE-aparte",
+  "scope": "r3-base-6040-condicionado-intrinseco-RE-aparte",
   "workbookUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
  }
 }
