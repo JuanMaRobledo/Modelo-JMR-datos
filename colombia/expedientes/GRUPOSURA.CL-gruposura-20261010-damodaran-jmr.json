@@ -1,0 +1,395 @@
+{
+  "schema": "jmr-colombia-dossier-v1",
+  "workflow": "colombia-v1",
+  "runId": "gruposura-20261010-damodaran-jmr",
+  "market": "CO",
+  "ticker": "GRUPOSURA.CL",
+  "company": "Grupo de Inversiones Suramericana S.A.",
+  "analysisDate": "2026-10-10",
+  "retrievedAt": "2026-10-10T19:33:00.000Z",
+  "updatedAt": "2026-10-10T19:33:00.000Z",
+  "instrument": {
+    "ticker": "GRUPOSURA.CL",
+    "exchange": "BVC",
+    "quoteCurrency": "COP",
+    "securityClass": "ordinary",
+    "economicRightsVerified": false,
+    "model": "holding",
+    "website": "https://www.gruposura.com/"
+  },
+  "quote": {
+    "price": 67760,
+    "currency": "COP",
+    "quotedAt": "2026-10-09T20:00:00.000Z",
+    "retrievedAt": "2026-10-10T19:33:00.000Z",
+    "source": "Investing cierre 9oct2026",
+    "kind": "historical-close-reference",
+    "ageDays": 1,
+    "sessionDate": "2026-10-09",
+    "history": []
+  },
+  "observations": [],
+  "coverage": {
+    "annualYears": 0,
+    "fields": {},
+    "reportingCurrencies": [
+      "COP"
+    ],
+    "ltmAvailable": false
+  },
+  "diagnostics": [],
+  "audit": {
+    "isolation": "ok",
+    "primaryReconciled": false,
+    "valuationReady": false,
+    "modelApproved": true,
+    "checks": {
+      "identity": true,
+      "currency": true,
+      "noInheritedAssumptions": true,
+      "sourceMasterClean": true,
+      "formulaMath": true,
+      "regulatoryCapital": false,
+      "relativeMultiplesComplete": false,
+      "bookBridge": true
+    },
+    "warnings": [
+      "Valor condicionado no certificado; 12 ramas RE/DDM concilian, no validan FCFE legal",
+      "Libro consolidado 58.058 diferente de separado 47.652 y NAV lookthrough 53.993",
+      "ROE terminal < Ke en 3 ramas; sensibilidad Ke de ROE 49.756, no valor Base",
+      "Múltiplos P/E proxy 91.406 sin muestra verificada",
+      "Pasivo contable PF 520.729m / derechos por clase y acuerdos CDPQ MRE siguen sin cerrar",
+      "No se ajustan recompras posteriores a 30-jun2026 sin número de acciones"
+    ]
+  },
+  "assumptions": {
+    "valuationCurrency": "COP",
+    "riskfreeRate": null,
+    "equityRiskPremium": 0.042,
+    "countryRiskExposure": "Ke subsidiarias nominal COP proxy; Rf/ERP/CRP a verificar por región",
+    "beta": null,
+    "costOfEquity": 0.1850087486,
+    "costOfDebt": 0.135,
+    "wacc": null,
+    "terminalGrowth": 0.045,
+    "terminalRoic": null,
+    "terminalRoe": "Cibest 17%, AM14%, seguros13,5% Base"
+  },
+  "scenarios": [
+    {
+      "name": "Base",
+      "probability": 0.5,
+      "inputs": {
+        "description": "Exceso retorno 10 años + crecimiento terminal",
+        "terminal": "Pendiente validación regulatoria"
+      },
+      "value": 43286.13284823076,
+      "year3ExDividend": 55675.064927097395
+    },
+    {
+      "name": "Conservadora",
+      "probability": 0.25,
+      "inputs": {
+        "description": "Exceso retorno 10 años + crecimiento terminal",
+        "terminal": "Pendiente validación regulatoria"
+      },
+      "value": 30940.078579952587,
+      "year3ExDividend": 32347.48949640852
+    },
+    {
+      "name": "Optimista",
+      "probability": 0.15,
+      "inputs": {
+        "description": "Exceso retorno 10 años + crecimiento terminal",
+        "terminal": "Pendiente validación regulatoria"
+      },
+      "value": 55682.61737103346,
+      "year3ExDividend": 78676.5540588822
+    },
+    {
+      "name": "Disrupción · Deterioro fundamental",
+      "probability": 0.1,
+      "inputs": {
+        "description": "Exceso retorno 10 años + crecimiento terminal",
+        "terminal": "Pendiente validación regulatoria"
+      },
+      "value": 16972.917669080678,
+      "year3ExDividend": 8783.10176484972
+    }
+  ],
+  "valuationSummary": {
+    "base": 43286.13284823076,
+    "expected": 39427.77044166662,
+    "marketPrice": 67760,
+    "priceDate": "2026-10-09",
+    "scopeLabel": "Holding SOTP rendimientos excedentes Base condicionado; no certificado por capital regulatorio",
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit",
+    "primaryValueCOP": 43286.13284823076,
+    "primaryValueMethod": "SOTP_RESIDUAL_INCOME_BASE",
+    "dcfPrimaryIntrinsicPerShareCOP": 43286.13284823076,
+    "dcfPrimaryExpectedCOP": 39427.77044166662,
+    "dcfFcffIntrinsicScenarios": [
+      {
+        "name": "Base",
+        "weight": 0.5,
+        "intrinsicPerPreferredShareCOP": 43286.13284823076,
+        "year3ExDividendCOP": 55675.064927097395
+      },
+      {
+        "name": "Conservadora",
+        "weight": 0.25,
+        "intrinsicPerPreferredShareCOP": 30940.078579952587,
+        "year3ExDividendCOP": 32347.48949640852
+      },
+      {
+        "name": "Optimista",
+        "weight": 0.15,
+        "intrinsicPerPreferredShareCOP": 55682.61737103346,
+        "year3ExDividendCOP": 78676.5540588822
+      },
+      {
+        "name": "Disrupción · Deterioro fundamental",
+        "weight": 0.1,
+        "intrinsicPerPreferredShareCOP": 16972.917669080678,
+        "year3ExDividendCOP": 8783.10176484972
+      }
+    ],
+    "multiplesWeightedToday": 91406.20643482126,
+    "multiplesWeightedYear3": 109759.25278247434,
+    "multiplesWeightedYear3PV": 70656.06451466367,
+    "combinedWeightedToday": 57722.154924207905,
+    "combinedWeightedYear3": 71900.32128371048,
+    "combinedWeightedYear3PV": 47904.89728411754,
+    "multiplesStatus": "Un solo P/E sectorial proxy; no peers homologados",
+    "combinedStatus": "70% SOTP Base+30% P/E solo sensibilidad no valor objetivo",
+    "multiplesMethods": [
+      {
+        "name": "P/E sectorial por partes",
+        "today": 91406.20643482126,
+        "year3": 109759.25278247434,
+        "year3PV": 70656.06451466367,
+        "weight": 1,
+        "status": "Proxy sin validación peers: 9,27x Cibest 9,45x AM 11,07x seguros"
+      },
+      {
+        "name": "P/E histórico homogéneo",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "P/B comparables financieros",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "P/FCFE distribuible",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "P/B fundamental",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "EV/EBITDA industrial",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "EV/FCFF industrial",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      },
+      {
+        "name": "P/OCF",
+        "today": null,
+        "year3": null,
+        "year3PV": null,
+        "weight": null,
+        "status": "No se dispone de evidencia suficiente o no aplica al holding financiero"
+      }
+    ],
+    "holdingSotp": {
+      "assumptions": {
+        "holdingKe": 0.1850087486
+      },
+      "method": "Residual Income / DDM per business; parent liabilities and corporate costs"
+    },
+    "valuationOutput": {
+      "dcfBaseCOP": 43286.13284823076,
+      "dcfExpectedCOP": 39427.77044166662,
+      "dcfConservativeCOP": 30940.078579952587,
+      "dcfOptimisticCOP": 55682.61737103346,
+      "dcfDisruptionCOP": 16972.917669080678,
+      "dcfYear3ExDividend": 55675.064927097395,
+      "bookValueProformaCOP": 58058,
+      "bookValueSeparatedCOP": 47652.23823795084,
+      "bookLookThroughCOP": 53992.53668597271,
+      "marketSotpPrimaryCOP": 53992.53668597271,
+      "roeterminalKeSensitivityCOP": 49755.90355835887,
+      "primarySheet": "Resumen",
+      "sheetUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit",
+      "synchronizedAt": "2026-10-10T19:33:00.000Z",
+      "status": "CONDICIONADO, no validado por FCFE/regulación",
+      "sotpScenarios": [
+        {
+          "name": "Base",
+          "weight": 0.5,
+          "valuePerPreferredShareCOP": 43286.13284823076,
+          "economicShares": 327705908,
+          "totalEquityCOPtrillions": 14.185121468838085,
+          "componentEquityCOPtrillions": [
+            {
+              "company": "Grupo Cibest",
+              "equity": 10.109640682777341
+            },
+            {
+              "company": "SURA Asset Management",
+              "equity": 7.287302437965536
+            },
+            {
+              "company": "Suramericana",
+              "equity": 3.9874132062206704
+            }
+          ]
+        },
+        {
+          "name": "Conservadora",
+          "weight": 0.25,
+          "valuePerPreferredShareCOP": 30940.078579952587,
+          "economicShares": 327705908,
+          "totalEquityCOPtrillions": 10.139246544634712,
+          "componentEquityCOPtrillions": []
+        },
+        {
+          "name": "Optimista",
+          "weight": 0.15,
+          "valuePerPreferredShareCOP": 55682.61737103346,
+          "economicShares": 327705908,
+          "totalEquityCOPtrillions": 18.247522685391093,
+          "componentEquityCOPtrillions": []
+        },
+        {
+          "name": "Disrupción · Deterioro fundamental",
+          "weight": 0.1,
+          "valuePerPreferredShareCOP": 16972.917669080678,
+          "economicShares": 327705908,
+          "totalEquityCOPtrillions": 5.562125396155327,
+          "componentEquityCOPtrillions": []
+        }
+      ],
+      "submodels": [
+        {
+          "company": "Grupo Cibest",
+          "title": "SOTP patrimonio y rendimiento excedente",
+          "method": "RE/DDM; Ke 0.1751132708",
+          "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
+        },
+        {
+          "company": "SURA Asset Management",
+          "title": "SOTP patrimonio y rendimiento excedente",
+          "method": "RE/DDM; Ke 0.1680769819",
+          "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
+        },
+        {
+          "company": "Suramericana",
+          "title": "SOTP patrimonio y rendimiento excedente",
+          "method": "RE/DDM; Ke 0.16745405296",
+          "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
+        }
+      ],
+      "bridge": {
+        "otherNetAssetsCOPm": 165883,
+        "parentNetLiabilitiesCOPm": 6491851,
+        "corporateCostsPVCOPm": 873266.8581254642
+      },
+      "methodWeightPolicy": {
+        "book": 0.6,
+        "baseSotp": 0.4,
+        "peProxy": 0,
+        "unverifiedMethods": 0
+      }
+    }
+  },
+  "reports": {
+    "valuation": {
+      "content": "---\nmarket: CO\nticker: GRUPOSURA.CL\nanalysis_date: 2026-10-10\nrun_id: gruposura-20261010-damodaran-jmr\nstatus: provisional\n---\n# Grupo SURA · Valoración Modelo JMR · Ordinaria\n\n**Precio histórico de la clase COP 67760 (9oct2026); SOTP Base COP43.286; esperado COP39.428.**\n\n## 1. Identidad y horizonte\n\nAcciones del Grupo de Inversiones Suramericana S.A., ordinaria y preferencial valoradas por separado en precio; EF 30jun2026, referencia bursátil 9oct2026, moneda COP. El SOTP NO está certificado por FCFE regulatorio.\n\n## 2. Holding y método\n\nTres negocios financieros valorados por separado con rendimiento excedente / DDM de 10 años: Grupo Cibest 24,88%, SURA Asset Management 93,32%, Suramericana 81,13%. El valor consolidado industrial no sirve como FCFF agregado.\n\n## 3. Criterios Damodaran\n\nValorar patrimonio de cada subsidiaria y multiplicar participación económica; no contar participaciones dos veces, ni restar deuda operativa bancaria o intereses minoritarios nuevamente. Puente deuda y costos de matriz separado. Adris, Tata y Citi aportan analogías metodológicas, no cifras objetivo de SURA.\n\n## 4. Información verificable\n\nEstados oficiales junio2026; beneficio controlador H1 ~COP1,7bn millones, ROE UDM grupo ~16,5%. Las utilidades de cada filial en el modelo son proxies sin UDM certificada: Cibest 7.722.604m, AM 1.272.336m, Suramericana 904.340m.\n\n## 5. Grupo Cibest\n\nParticipación 24,88%; equity atribuible Base COP 10.109.641m; ROE terminal 17%, Ke nominal COP 17,51%. Restricciones CET1/RWA/crediticias pendientes de conciliación con dividendos distribuibles.\n\n## 6. SURA Asset Management\n\nParticipación 93,32%; equity atribuible Base COP 7.287.302m; ROE terminal 14%, Ke 16,81%. Modelo de comisiones y crecimiento patrimonial requiere verificar balance y utilidad controladora propia.\n\n## 7. Suramericana\n\nParticipación 81,13%; equity atribuible Base COP 3.987.413m; ROE terminal 13,5%, Ke 16,75%. Reservas técnicas y solvencia pendientes de puente a dividendos.\n\n## 8. Matriz y consolidación\n\nSuma participadas Base COP 21.384.356m + otros netos 165.883m − deuda/puente matriz 6.491.851m − VP gasto corporativo 873.267m = equity 14.185.121m = COP 43.286/acción sobre 327.705.908 acciones. No sumar caja ni dividendos por cobrar dos veces.\n\n## 9. Costo de patrimonio y convergencia\n\nKe matriz 18,50%; subsidiarias Cibest 17,51%, AM 16,81%, seguros 16,75%, son proxies sectoriales por validar con ERP/Rf/CRP y exposición. Base supone ROE terminal < Ke en 3 negocios. Normalización ROE terminal = Ke arroja COP 49.756 como sensibilidad, no nuevo Base.\n\n## 10. Historias y probabilidades\n\nBase 50%=43.286 COP; Conservadora 25%=30.940; Optimista 15%=55.683; Disrupción 10%=16.973. Valor esperado COP 39.428. Base principal; esperado complementario.\n\n## 11. Patrimonio y NAV\n\nLibro oficial consolidado controlador COP 58.058/acción; libro separado COP 47.652 por acción; NAV libro look-through de participaciones COP 53.993. Libro separado vs consolidado es diferencia de alcance, no error contable. Combinado libro60%+SOTP40% COP 52.149; NAV60%+SOTP40% COP 49.710; ambos son referencias mixtas.\n\n## 12. Múltiplos presente y FY3\n\nP/E por participadas PROXY: presente COP 91.406; FY3 exdiv COP 109.759; paquete FY3 VP + distribuciones COP 70.656. SOTP Base FY3 exdiv COP 55.675; paquete a VP COP 38.154. Múltiplos por pares/históricos P/B y P/E no validados. Combinado ilustrativo SOTP70% P/E30% = COP 57.722 al presente. Un solo P/E no constituye tres anclas independientes.\n\n## 13. Derechos y operaciones\n\nOrdinarias 165.834.026; preferenciales 161.871.882. Mínimo preferencial COP359,73 versus dividendo referencia COP2.000; pasivo preferencial contable 520.729m exige puente por clase. CDPQ/MRE posibles adquisiciones/diluciones no ejecutadas sin conocer contraprestación; no agregar valor gratis. No incorporar recompras posteriores sin acciones confirmadas.\n\n## 14. Sensibilidad y decisión\n\nROE terminal ±1pp y Ke ±1pp cambian materialmente el SOTP. Actualizar capital regulatorio, derechos y utilidades normalizadas antes de precio objetivo certificado. Sin recomendación de compraventa. Documento auditado aritméticamente; no auditoría contable ni despliegue garantizado.\n\n### Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Estados consolidados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-consolidados-2026-2T.pdf)\n- [Indicadores acciones SURA](https://www.gruposura.com/relacion-con-inversionistas/accion/)\n- [Damodaran holdings](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran sector financiero](https://pages.stern.nyu.edu/~adamodar/pdfiles/country/finsvce.pdf)\n- [Damodaran Citi](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran Grupo Tata](https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/packet1bpg2.pdf)\n\n[Hoja auditada del holding](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)."
+    },
+    "research": {
+      "content": "---\nmarket: CO\nticker: GRUPOSURA.CL\nanalysis_date: 2026-10-10\nrun_id: gruposura-20261010-damodaran-jmr\nstatus: provisional\n---\n# Grupo SURA · Análisis fundamental · Ordinaria\n\n**Datos 2T2026. Precios 9oct2026; la valoración no está certificada.**\n\n## 1. Negocios y exposición\n\nHolding con franquicias de banca, seguros y gestión de activos/pensiones. El beneficio del accionista depende de flujo distribuible y de la estructura de propiedad.\n\n## 2. Historia y reorganización\n\nEscisión y cambios de perímetro desde 2025 impiden homologar diez años de utilidades sin ajustes.\n\n## 3. Segmentación\n\nCibest 24,88%, AM 93,32%, Suramericana 81,13%; se suman cuotas económicas y se excluyen NCI duplicados.\n\n## 4. Competencia y ventajas\n\nEscala, distribución y marca apoyan ROE; no equivalen automáticamente a ROE>Ke perpetuo.\n\n## 5. Gestión y capital\n\nLa administración asigna dividendos, adquisiciones y desendeudamiento. Las operaciones condicionales exigen contraprestación y financiación coherente.\n\n## 6. Ingresos y utilidad\n\nH1 grupo ~COP1,7 billones controlador; proxies de utilidad filial no representan LTM verificada. Periodicidad/alcance deben conciliarse.\n\n## 7. ROE y tasas\n\nKe Cibest17,51%, AM16,81%, seguros16,75%; Base terminales 17%,14%,13,5% por debajo de Ke.\n\n## 8. Deuda matriz\n\nPuente neto 6.491.851 COPm y costos corporativos normalizados VP 873.267 COPm, sin doble deuda bancaria.\n\n## 9. Banco Cibest\n\nRiesgo de mora, cartera, CET1, RWA, capital exigido, eventuales aportes y dilución.\n\n## 10. Aseguradora Suramericana\n\nRiesgo técnico, siniestros y reservas que limitan dividendos sostenibles.\n\n## 11. Gestora AM\n\nRiesgo de regulación previsional, AUM y comisiones con enfoque rentabilidad patrimonial.\n\n## 12. Valor con criterio Damodaran\n\nSOTP Base COP43.286, esperado COP39.428; convergencia ROE terminal=Ke COP49.756 como sensibilidad. NAV look-through COP53.993 y libro oficial COP58.058 no son valores intrínsecos por flujo. Múltiplos P/E proxy COP91.406 y combinado ilustrativo COP57.722; no se certifican peers. Año 3 exdiv SOTP55.675 y P/E109.759; paquetes VP38.154 y70.656. Base es prioritario.\n\n## 13. Cuatro historias\n\nBase 50%, Conservadora 25%, Optimista15%, Disrupción10%. Una historia explica ROE, crecimiento y costo de capital; no ajustarlos mecánicamente para acercarse al mercado.\n\n## 14. Sensibilidad\n\nTerminal = Ke incrementa SOTP +14,9%; también probar Ke, reinversión/capital y gasto corporativo.\n\n## 15. Riesgos país\n\nOperación multijurisdiccional requiere ERP madura, país y moneda de valoración sin doble conteo.\n\n## 16. Múltiplos\n\nP/E sectoriales ajustados: 9,27× Cibest; 9,45× AM; 11,07× seguros. No usar EV/EBITDA agregado de financiero.\n\n## 17. Clases\n\nPreferencial mínimo COP359,73 cuando exceda ordinario; dividendo común ejemplo COP2.000. Valorar diferencias de voto/mercado por separado sin inventar prima.\n\n## 18. Registro de decisión\n\nNo recomendar compra/venta automáticamente. Pendientes: capital CET1/RWA, reservas aseguradora, utilidad UDM de filiales, comparables y operaciones de minoritarios; revisiones posteriores deben quedar trazadas.\n\n### Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n- [Estados consolidados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-consolidados-2026-2T.pdf)\n- [Indicadores acciones SURA](https://www.gruposura.com/relacion-con-inversionistas/accion/)\n- [Damodaran holdings](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm)\n- [Damodaran sector financiero](https://pages.stern.nyu.edu/~adamodar/pdfiles/country/finsvce.pdf)\n- [Damodaran Citi](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n- [Damodaran Grupo Tata](https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/packet1bpg2.pdf)\n\n[Hoja auditada y fuentes adicionales](https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit)."
+    }
+  },
+  "sources": [
+    {
+      "role": "Estados separados 2T26",
+      "url": "https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Estados consolidados 2T26",
+      "url": "https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-consolidados-2026-2T.pdf",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Indicadores acciones SURA",
+      "url": "https://www.gruposura.com/relacion-con-inversionistas/accion/",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Damodaran holdings",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/a22.htm",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Damodaran sector financiero",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/country/finsvce.pdf",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Damodaran Citi",
+      "url": "https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "Damodaran Grupo Tata",
+      "url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/packet1bpg2.pdf",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "hoja JMR",
+      "url": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    },
+    {
+      "role": "precio clase",
+      "url": "https://www.investing.com/equities/gruposura-historical-data",
+      "retrievedAt": "2026-10-10T19:33:00.000Z"
+    }
+  ],
+  "publication": {
+    "authorized": true,
+    "publishedAt": "2026-10-10T19:33:00.000Z",
+    "revisedAt": "2026-10-10T19:33:00.000Z",
+    "scope": "condicionado-no-certificado",
+    "workbookUrl": "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
+  }
+}
