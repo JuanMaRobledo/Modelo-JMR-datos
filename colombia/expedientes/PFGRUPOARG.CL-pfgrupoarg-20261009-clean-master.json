@@ -7,7 +7,7 @@
   "company": "Grupo Argos S.A.",
   "analysisDate": "2026-10-09",
   "retrievedAt": "2026-10-09T20:29:33.163Z",
-  "updatedAt": "2026-10-10T11:05:14.896Z",
+  "updatedAt": "2026-10-10T11:43:25.953Z",
   "instrument": {
     "ticker": "PFGRUPOARG.CL",
     "exchange": "BVC",
@@ -264,7 +264,7 @@
     "expected": 17288.976220232154,
     "marketPrice": 16500,
     "priceDate": "2026-10-08",
-    "scopeLabel": "FCFF nominal COP 10 años · Base estimativa COP 9.779/PF, NO certificada; SOTP mercado $18.876 secundaria",
+    "scopeLabel": "FCFF 10 años por participadas → Valuation output (salida final) → Resumen/Presentación/Visor · No auditado externamente",
     "navReference": 17058.2195939812,
     "sheetUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
     "multiplesWeightedToday": 17315.801758700298,
@@ -980,7 +980,7 @@
         "equityHoldingCOPtrillions": 1.4806936720570567,
         "enterpriseValueCementosCOPm": 2938901.9401487075,
         "enterpriseValueCelsiaCOPm": 5027421.977705404,
-        "intrinsicPerPreferredShareCOP": 2178.0286865050207,
+        "intrinsicPerPreferredShareCOP": 2178.028686505021,
         "upsideVsPF": -0.8679982614239381,
         "breakdownCOPtrillions": {
           "cementosConsolidatedEV": 2.9389019401487073,
@@ -1374,6 +1374,51 @@
         "isIssuerEVSwapFCFF": false,
         "sourceComparability": "EV manager based on EBITDA multiples with different business perimeters, NOT independent FCFF and not guaranteed same debt and NCI allocation"
       }
+    },
+    "valuationOutput": {
+      "primarySheet": "Valuation output",
+      "spreadsheetId": "1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8",
+      "sheetUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
+      "synchronizedAt": "2026-10-10T11:43:25.948Z",
+      "currency": "COP",
+      "unit": "COP per economic preferred share",
+      "status": "DCF FCFF POR NEGOCIOS RECONCILIADO ARITMÉTICAMENTE · SUPUESTOS ECONÓMICOS DEL ANALISTA",
+      "method": "Suma de flujos FCFF descontados a WACC específico por participada; equity atribuible a holding neto de matriz",
+      "dcfBaseCOP": 9779.15248554802,
+      "dcfConservativeCOP": 2178.028686505021,
+      "dcfOptimisticCOP": 20467.12287735054,
+      "dcfDisruptionCOP": 0,
+      "dcfExpectedCOP": 9527.507989870373,
+      "equityHoldingCOPm": 6648181.125046266,
+      "sharesMillions": 679.832034,
+      "priceCOP": 16500,
+      "priceToDCF": 1.6872627790991384,
+      "multiplesWeightedBaseCOP": 17315.801758700298,
+      "dcf60Multiples40COP": 12793.812194808932,
+      "dcfWeight": 0.6,
+      "multiplesWeight": 0.4,
+      "inputs": [
+        "CO DCF FCFF 10 años",
+        "CO FCFF Estimación Integral",
+        "CO Múltiplos FY3"
+      ],
+      "outputs": [
+        "Resumen de Valoración",
+        "Presentación",
+        "Visor Modelo JMR Colombia"
+      ],
+      "formulas": {
+        "base": "'Valuation output'!B35",
+        "conservative": "'Valuation output'!B86",
+        "optimistic": "'Valuation output'!B137",
+        "disruption": "'Valuation output'!E174",
+        "expected": "'Valuation output'!B176"
+      },
+      "warnings": [
+        "No hay un WACC único del holding; cada operación usa su tasa de descuento.",
+        "P/B y dividend yield son hipótesis, no peers verificados.",
+        "EV/EBITDA y EV/FCFF de la holding figuran N/D hasta completar denominadores look-through."
+      ]
     }
   },
   "reports": {
@@ -1535,7 +1580,7 @@
     "authorized": true,
     "publishedAt": "2026-10-09T20:29:33.163Z",
     "scope": "FCFF_PRIMARY_INDICATIVE_NUMERIC_FOUR_SCENARIOS_UPDATED_REPORTS__NO_EXTERNAL_CERTIFICATION",
-    "revisedAt": "2026-10-10T11:05:14.896Z",
+    "revisedAt": "2026-10-10T11:43:25.953Z",
     "workbookUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
     "cleanMasterWorkbookUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
     "extendedDcfWorkingSheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit",
