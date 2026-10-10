@@ -360,7 +360,7 @@
         "name": "Fondo Odinsa infraestructura (LP Grupo) NIIF",
         "metricValue": 1274152.515,
         "metricLabel": "Valor razonable NIIF atribuible · COP millones",
-        "status": "50% de activos netos FCP menos eliminación de beneficios intragrupo. Valor contable basado en fair value NIIF, NO DCF adicional; concesiones individuales ya incluidas."
+        "status": "50% de activos netos FCP menos eliminación de beneficios intragrupo. Valor contable basado en fair value NIIF, NO DCF adicional; concesiones individuales ya incluidas. Referencia contable ALTERNATIVA y NO SUMABLE al DCF de distribuciones + NAV 2035."
       },
       {
         "name": "Fondo Pactia inmobiliario NIIF",
@@ -369,24 +369,24 @@
         "status": "Participación 37,44% ya aplicada. No sumar de nuevo los activos inmobiliarios del fondo ni una segunda venta Pactia."
       },
       {
-        "name": "Odinsa · FCFE real por concesiones",
+        "name": "Odinsa · VP distribuciones + NAV 2035 (proxy)",
         "metricValue": 2035640.7472195628,
-        "metricLabel": "VPN del flujo estimado atribuible Grupo · COP millones (NO flujo certificado)",
-        "status": "DFC FINITO 2027–35: hipotético flujo de distribuciones 820bn futuro y NAV 2035 gerencia 7.3T, descontados Ke18%; NIIF Feb2026 capital investments include contributions not public. No es DCF contrato a contrato.",
+        "metricLabel": "VPN de flujos hipotéticos y NAV de salida 2035 · COP millones, NO DCF concesión por concesión.",
+        "status": "DFC FINITO 2027–35: hipotético flujo de distribuciones 820bn futuro y NAV 2035 gerencia 7.3T, descontados Ke18%; NIIF Feb2026 capital investments include contributions not public. No es DCF contrato a contrato. Este valor sustituye, NO se SUMA, al FCP de Odinsa ni al DCF separado del gestor, porque el terminal gerencial incluye ambos.",
         "enterpriseValue": null
       },
       {
         "name": "Desarrollo urbano fuera de Pactia · FCFE",
         "metricValue": 994343.2352038608,
         "metricLabel": "VPN del flujo estimado atribuible Grupo · COP millones (NO flujo certificado)",
-        "status": "Net disposals manager 2027–30 215/256/273/291bn; 2031–38 taper analyst 270/250/220/190/160/120/80/40bn ×85% realization, discount Ke16%. No residual after 2038, not proven FCFE after taxes.",
+        "status": "Net disposals manager 2027–30 215/256/273/291bn; 2031–38 taper analyst 270/250/220/190/160/120/80/40bn ×85% realization, discount Ke16%. No residual after 2038, not proven FCFE after taxes. VPN monetizaciones SUSTITUYE inventario/inmuebles directos en look-through DCF; no adicionar valor stock a estas ventas.",
         "enterpriseValue": null
       },
       {
         "name": "Matriz holding · VP de gastos estructurales",
-        "metricValue": 607558.8085714285,
-        "metricLabel": "VP de COSTO de estructura · COP millones",
-        "status": "VPN costo estructura corporativa base COP 607.559 millones, sobre administración 1S (106.139 -58.884 mmM directo urbanismo) ×2 × 90% / (Ke 16%-g 2%). Ya es egreso negativo en SOTP y no se duplica la deuda residual."
+        "metricValue": -607558.8085714285,
+        "metricLabel": "COSTO FUTURO VP negativo COP millones (no activo)",
+        "status": "VPN costo estructura corporativa base COP 607.559 millones, sobre administración 1S (106.139 -58.884 mmM directo urbanismo) ×2 × 90% / (Ke 16%-g 2%). Ya es egreso negativo en SOTP y no se duplica la deuda residual. Esta partida se resta en la SOTP; importes negativos representan salidas."
       }
     ],
     "dcfStage": "MATURE_ERP_4.23_CRP_CO_2.85_JAN_2026_RECALCULATED_EIGHT_10Y_FCFF_WITH_SECONDARY_DIAGNOSTIC_CLASSIFICATION",
@@ -444,7 +444,7 @@
     "navProportionalEconomic": 19769.53869228822,
     "navReferenceMethod": "Comparadores de NAV de mercado histórico; no son Base nueva ni DCF propio; el NAV PF usa descuento bursátil circular.",
     "cleanMasterSheetUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
-    "conclusion": "Tres enfoques separados y verificados en hojas: 1) **DCF de flujos atribuibles por negocios** Base COP 13.838/PF, conservador 7.211, optimista 22.622, disrupción 3.576; esperado subjetivo 13.425. Éste requiere hipótesis materiales de reinversión y NO constituye dictamen de valor intrínseco certificado (Pactia por NIIF; Odinsa NAV futuro; Celsia FCFE 2026 proxy; capex/FX US). 2) **DCF de dividendos PF** Base COP 12.518 (dividendo COP750 2026 y ambición administración 2.3× al 2030; no cobros futuros aprobados). 3) **SOTP de mercado arbitraje** Base COP 18.876, comparador secundario actual. Precio última sesión verificada Oct8 2026 COP 16.500. No promediar métodos como si fueran independientes y plenamente comparables ni etiquetar como certificado.",
+    "conclusion": "Tres enfoques separados y verificados en hojas: 1) **DCF de flujos atribuibles por negocios** Base COP 13.838/PF, conservador 7.211, optimista 22.622, disrupción 3.576; esperado subjetivo 13.425. Éste requiere hipótesis materiales de reinversión y NO constituye dictamen de valor intrínseco certificado (Pactia por NIIF; Odinsa NAV futuro; Celsia FCFE 2026 proxy; capex/FX US). 2) **DCF de dividendos PF** Base COP 12.518 (dividendo COP750 2026 y ambición administración 2.3× al 2030; no cobros futuros aprobados). 3) **SOTP de mercado arbitraje** Base COP 18.876, comparador secundario actual. Precio última sesión verificada Oct8 2026 COP 16.500. No promediar métodos como si fueran independientes y plenamente comparables ni etiquetar como certificado. En el panel de componentes los enfoques alternativos de Odinsa LP NIIF y su DCF NAV2035 se muestran para comparación, NUNCA se suman entre sí; HQ es costo negativo.",
     "extendedDcfWorkingSheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit",
     "dcfRateAudit": {
       "asOf": "2026-01-05",
