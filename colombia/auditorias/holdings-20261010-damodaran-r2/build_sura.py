@@ -18,7 +18,7 @@ res = g("Resumen!B6:E16"); y3re = g("Resumen!B28:E31")[3]
 base1 = g("Base_1!B5:B8")
 NAMES = ["Base", "Conservadora", "Optimista", "Disrupción · Deterioro fundamental"]
 SHEET = "https://docs.google.com/spreadsheets/d/1Nb9_T6n8xbJikr68TN5MA5bIIiwm0aKrsF7m4MmOHyM/edit"
-NOW = "2026-10-10T23:00:00.000Z"
+NOW = "2026-10-11T00:30:00.000Z"
 _k = rb["'CO · Ke y SOTP 60-40'!C25:E28"]; CRPW = dict(zip(["Cibest", "AM", "Suramericana"], _k[0]))
 KE = {n: (_k[2][i], _k[3][i]) for i, n in enumerate(["Cibest", "AM", "Suramericana"])}
 CAP = [r[0] for r in rb["'CO · Ke y SOTP 60-40'!B121:B127"]]
@@ -35,15 +35,15 @@ def build(ticker, cls, price, price_src, price_url, older):
     d["instrument"]["economicRightsVerified"] = False
     d["quote"].update({"price": price, "source": price_src, "kind": "historical-close-reference", "quotedAt": "2026-10-09T20:00:00.000Z", "sessionDate": "2026-10-09"})
     d["audit"] = {"isolation": "ok", "primaryReconciled": True, "valuationReady": True, "modelApproved": True,
-      "revision": "r3-20261010-damodaran",
+      "revision": "r4-20261010-damodaran",
       "checks": {"identity": True, "currency": True, "noInheritedAssumptions": True, "sourceMasterClean": True, "formulaMath": True,
         "independentPythonReplicaMatchesSheet": True, "reEqualsDdm12Branches": True, "keAboveGrowth12Branches": True, "probabilitiesSum100": True,
         "costOfEquityDamodaranBuilt": True, "terminalRoeRuleApplied": True, "cibestMarketValueIncluded": True, "issuerLtmEarnings": True,
-        "sectorPeerMultiplesDocumented": True, "multiplesHistoryFiveTenYears": False, "regulatoryCapital": False, "regulatoryCapitalCibestChecked": True, "insuranceReservesSolvency": False,
+        "sectorPeerMultiplesDocumented": True, "multiplesHistoryFiveTenYears": False, "regulatoryCapital": True, "regulatoryCapitalCibestChecked": True, "insuranceReservesSolvency": True, "insuranceSolvencyChileBrazilPublic": False,
         "countryExposureWeightsVerified": True, "terminalValueNewInvestmentRule": True, "preferentialRightsValued": False, "fy3IdentityCheck": True},
       "warnings": [
         "Base JMR 60/40 = SOTP económico (Cibest a bolsa) + SOTP de múltiplos: es precio relativo, no valor intrínseco. El intrínseco Damodaran (RE) se publica aparte.",
-        "Capital Cibest verificado (solvencia básica 12,55%, total 14,19%; payout implícito 69,5% compatible con solvencia constante). Solvencia y reservas de Suramericana no publicadas por país: pendiente.",
+        "Capital Cibest verificado (solvencia básica 12,55%, total 14,19%; payout implícito 69,5%). Suramericana: Colombia Vida 1,57× y Generales 1,55× (jun-2026), México RCS 6,88× (dic-2025); Chile y Brasil sin cifra pública.",
         "r3: valor terminal Damodaran con la inversión nueva al Ke (no todo el libro); pesos por país verificados 2T26 (Banistmo vendido el 30-jun-2026).",
         "P/E sectorial = promedio de mediana de pares LatAm (UDM 9-oct) y Damodaran emergentes ene-2026; sin serie histórica homogénea postescisión.",
         "Pasivo PF 520.729m no se resta: las preferenciales están en el denominador económico, igual que en la calculadora del emisor.",
@@ -115,11 +115,15 @@ def build(ticker, cls, price, price_src, price_url, older):
     mcap = 165834026 * 67480 / 1e6 + 161871882 * 58600 / 1e6
     implied = mcap - esc["cibMkt"][0] + 6491851 - esc["hq"][0] - 165883
     earn_att = 1272336 * 0.9332 + 904340 * 0.8113
-    front = f"---\nmarket: CO\nticker: {ticker}\nanalysis_date: 2026-10-10\nrun_id: {d['runId']}\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r3\n---\n"
+    front = f"---\nmarket: CO\nticker: {ticker}\nanalysis_date: 2026-10-10\nrun_id: {d['runId']}\ncompany: Grupo de Inversiones Suramericana S.A.\ncurrency: COP\nstatus: condicionado\nrevision: r4\n---\n"
     srcs = ("\n### Fuentes\n- [Estados separados 2T26](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-estados-financieros-separados-2026-2T.pdf)\n"
             "- [Calculadora de valoración del emisor](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-calculadora-de-valoracion.xlsx)\n"
             "- [Grupo Cibest 6-K resultados 2T26 (solvencia y cartera por país)](https://img.lalr.co/cms/2026/08/10230736/Grupo-Cibest-S.A.-6-K-PR-2T26.pdf)\n"
             "- [Presentación corporativa Grupo SURA 2T26 (AUM y primas por país)](https://www.gruposura.com/wp-content/uploads/2026/08/sura-grupo-presentacion-corporativa-2T-2026.pdf)\n"
+            "- [Seguros de Vida Suramericana · EEFF jun-2026 (solvencia)](https://www.segurossura.com.co/Documentos/archivos-de-gestion/informacion-financiera/seguros-de-vida-suramericana/certificado_estados_financieros_seguros_de_vida_2026.pdf)\n"
+            "- [Seguros Generales Suramericana · EEFF jun-2026 (solvencia)](https://www.segurossura.com.co/Documentos/archivos-de-gestion/informacion-financiera/seguros-generales-suramericana/certificado_estados_financieros_seguros_generales_2026.pdf)\n"
+            "- [Seguros SURA México · RSCF 2025](https://www.segurossura.com.mx/wp-content/uploads/2026/05/Reporte-sobre-la-Solvencia-y-Condicion-Financiera-2025.pdf)\n"
+            "- [S&P · Suramericana jul-2026](https://suramericana.com/content/uploads/2026/08/suramericana-reporte-calificacion-de-riesgos-2025.pdf)\n"
             "- [Damodaran · Valuing Financial Service Firms](https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/finfirm09.pdf)\n"
             "- [Damodaran · Good banks, bad banks (Citi, 2023)](https://aswathdamodaran.blogspot.com/2023/05/good-bad-banks-and-good-bad-investments.html)\n"
             "- [Damodaran · Cash and cross holdings](https://aswathdamodaran.blogspot.com/2010/05/cash-and-cross-holdings.html)\n"
@@ -161,7 +165,7 @@ Estados separados 2T26 (puente de matriz), calculadora de valoración del emisor
 
 Damodaran, en *Valuing Financial Service Firms*, valora a Goldman Sachs con rendimientos excedentes y en crecimiento estable lleva el ROE al Ke y la beta hacia 1,2; en Citi (2023) muestra que un banco cotiza sobre libro solo si ROE > Ke. Aquí la regla se aplica a la inversión **nueva**: el libro existente conserva su ROE contable (SURA AM tiene 5,9 billones de plusvalía comprada, que no puede rendir el Ke) y la reinversión del estado estable rinde el Ke (Cibest +1pp por ventaja durable). Así el crecimiento terminal no destruye valor, sin inflar la utilidad del libro heredado.
 
-**Capital regulatorio (Cibest, 6-K 2T26):** solvencia básica {pc(CAP[1],2)} y total {pc(CAP[2],2)} sobre activos ponderados de COP {c0(CAP[0])} millones; mínimo básico con colchones 7,0%, holgura COP {c0(CAP[5])} millones. El dividendo implícito del Base (payout {pc(CAP[6])} años 1-5) mantiene la solvencia si los activos ponderados crecen al ritmo del libro (6%).
+**Capital regulatorio (Cibest, 6-K 2T26):** solvencia básica {pc(CAP[1],2)} y total {pc(CAP[2],2)} sobre activos ponderados de COP {c0(CAP[0])} millones; mínimo básico con colchones 7,0%, holgura COP {c0(CAP[5])} millones. El dividendo implícito del Base (payout {pc(CAP[6])} años 1-5) mantiene la solvencia si los activos ponderados crecen al ritmo del libro (6%).\n\n**Solvencia de Suramericana (r4):** Colombia Vida 1,57× (exceso COP 1,139 billones) y Generales 1,55× (exceso COP 254 mil millones; bajó de 1,96× por dividendos), jun-2026; México cobertura del RCS 6,88× (dic-2025); Panamá con capitalización ajustada por riesgo «la más fuerte» según AM Best (perspectiva negativa por rentabilidad, sep-2026). Chile, Brasil, Uruguay y Rep. Dominicana sin cifra pública; S&P (jul-2026) proyecta las filiales principales por encima de 1,5×. Payout implícito del Base de Suramericana 57,9%: financiable con la holgura de Colombia (65% de las primas).
 
 ## 5. Historias y probabilidades
 Base 50% (ROE se normaliza: Cibest 19% año 5), Conservadora 25% (ROE terminal 2–3pp bajo Ke, crecimiento 3–4%), Optimista 15% (ROE terminal 2–3pp sobre Ke), Disrupción 10% (ROE terminal 6–8%, crecimiento 1%). En el SOTP económico y en el de múltiplos, el valor de mercado y el de múltiplos de cada participada se escalan por la razón RE historia / RE Base.
@@ -216,7 +220,7 @@ Sin recomendación automática. La opinión cambia si: el capital regulatorio li
 {srcs}
 
 ## 14. Control de calidad
-AISLAMIENTO = OK. Réplica Python independiente = hoja (diferencia 0 en las cuatro historias). RE = DDM en 12 ramas; Ke > g en 12; probabilidades 100%; identidad FY+3 = 0. Moneda COP nominal en flujos y tasas. Capital de Cibest verificado contra solvencia 2T26; pesos por país verificados. No certificado: solvencia de Suramericana, minoritarios de las filiales y derechos por clase.
+AISLAMIENTO = OK. Réplica Python independiente = hoja (diferencia 0 en las cuatro historias). RE = DDM en 12 ramas; Ke > g en 12; probabilidades 100%; identidad FY+3 = 0. Moneda COP nominal en flujos y tasas. Capital de Cibest y solvencia de Suramericana (Colombia y México) verificados; pesos por país verificados. Sin cifra pública: solvencia de Suramericana en Chile y Brasil. No certificado: derechos por clase.
 """
     val = val.replace("\n### Fuentes", "\n## 13. Fuentes")
     research = front + f"""# Grupo SURA · Análisis fundamental · {lbl} · revisión Damodaran r3
@@ -254,7 +258,7 @@ Puente neto COP 6.491.851 millones; gastos COP 117.000 millones/año, VP COP {c0
 A bolsa vale COP {c0(esc['cibMkt'][0])} millones para SURA (P/B 2,18×). Cartera 2T26: Colombia 87,2%, El Salvador 6,5%, Guatemala 6,4% (Banistmo vendido el 30-jun-2026). Solvencia básica {pc(CAP[1],2)}, total {pc(CAP[2],2)}.
 
 ## 10. Suramericana
-Reservas técnicas, siniestralidad y solvencia limitan los dividendos sostenibles; RE COP {c0(esc['surRE'][0])} millones atribuibles.
+Solvencia jun-2026: Vida Colombia 1,57× y Generales Colombia 1,55×; México RCS 6,88× (dic-2025). México y Brasil con ROE < 6% (S&P); Panamá con pérdida 2025 y perspectiva negativa de AM Best. RE COP {c0(esc['surRE'][0])} millones atribuibles.
 
 ## 11. SURA Asset Management
 Regulación previsional (reformas en Chile y Colombia), AUM y comisiones. Patrimonio con 5,9 billones de intangibles: el P/E es más útil que el P/B. RE COP {c0(esc['amRE'][0])} millones atribuibles.
@@ -278,7 +282,7 @@ P/E: Cibest 11,01×, SURA AM 12,89×, Suramericana 10,83× (pares LatAm + Damoda
 Ordinaria COP 67.480 y preferencial COP 58.600. El mínimo preferencial (COP 359,73) es menor que el dividendo ordinario (COP 2.000), así que no genera prima económica; el valor por acción es igual para ambas clases.
 
 ## 18. Registro de decisión
-Sin recomendación automática. Pendientes: solvencia de Suramericana por país, comparables históricos homogéneos y operación CDPQ/MRE.
+Sin recomendación automática. Pendientes: solvencia de Suramericana en Chile y Brasil (sin cifra pública), comparables históricos homogéneos y operación CDPQ/MRE.
 {srcs}
 """
     d["reports"] = {"valuation": {"content": val}, "research": {"content": research}}
