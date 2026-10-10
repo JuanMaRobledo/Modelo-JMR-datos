@@ -7,7 +7,7 @@
   "company": "Grupo Argos S.A.",
   "analysisDate": "2026-10-09",
   "retrievedAt": "2026-10-09T20:29:33.163Z",
-  "updatedAt": "2026-10-10T13:44:28.990Z",
+  "updatedAt": "2026-10-10T13:47:44.582Z",
   "instrument": {
     "ticker": "PFGRUPOARG.CL",
     "exchange": "BVC",
@@ -58,7 +58,7 @@
     "isolation": "ok",
     "primaryReconciled": true,
     "valuationReady": true,
-    "modelApproved": true,
+    "modelApproved": false,
     "checks": {
       "identity": true,
       "currency": true,
@@ -682,7 +682,7 @@
     },
     "baseIsIntrinsic": false,
     "baseMethod": "SOTP_MERCADO_NIIF_COMPARADOR_NO_FCFF",
-    "valuationStatus": "Cálculo FCFF subyacente + original Valuation output completo; múltiplos look-through sin peers comparables aún no calculables",
+    "valuationStatus": "VALORACIÓN ESTIMATIVA · FCFF BASE COP8294 · PUENTE FCP ODINSA 50% EXPLÍCITO · EBIT DEL FONDO PENDIENTE DE FUENTE · NO CERTIFICADA",
     "sotpScenarios": [
       {
         "name": "Base",
@@ -979,7 +979,7 @@
       }
     ],
     "dcfDividendMethod": "TEN_YEAR_EXPLICIT_FORECAST_PF_DIVIDENDS_2027_TO_2036_AND_ROE_CONSTRAINED_GORDON_TERMINAL",
-    "dcfPrincipalInterpretation": "DCF PRINCIPAL EXCLUSIVAMENTE FCFF descontado a WACC, reconstruido con supuestos explícitos: COP9.779 Base/PF, COP2.178 conservadora, COP20.467 optimista, cero disrupción, esperado COP9.528. Este resultado es extremadamente sensible al flujo operativo normalizado, EBIT, reinversión y deuda en Celsia y Cementos. NAV arbitraje COP18.876 y manager COP21.800 son COMPARADORES no FCFF. No hay certificación externa por falta de desglose confiable de contratos de concesiones, valor minoritarios, FCP Pactia, caja excedente y valor voto.",
+    "dcfPrincipalInterpretation": "DCF PRINCIPAL EXCLUSIVAMENTE FCFF/WACC por participada; LP de fondo Odinsa 50% (presunción flujos FCP 100%), gestor Odinsa 99,89% separado; Base COP 8294 por PF, Conservadora 1528, Optimista 17725, Disrupción 0 y esperado 8074. Alternativa COP 9783 SI FCFF de concesiones ya correspondía al LP Grupo. DCF no certificado por falta de desglose concesión/CAPEX/deuda/valor minoritarios. FY+3 Conservador N/D por dividendos > DCF de hoy. NAV bolsa COP18876 y emisor COP21800 son comparadores NO FCFF.",
     "dcfLookthroughSensitivities": {
       "celsiaIndependentFairness2026PerShare": 9002,
       "celsiaIKGroupStockEquityCOPbn": 5098.375483614,
@@ -1000,7 +1000,7 @@
       "tesColombia10yGrossYield": 0.12891
     },
     "researchCompletion": {
-      "asOf": "2026-10-09",
+      "asOf": "2026-10-10",
       "allFourStoriesModeled": true,
       "independentLookthroughDcfNumericallyComplete": true,
       "pureIntrinsicDcfCertification": false,
@@ -1034,7 +1034,11 @@
       "fcffValuationReadyAsIndicative": true,
       "independentCFOAndROICCertification": false,
       "allFcffSegmentsCertified": false,
-      "fullyCertified": false
+      "fullyCertified": false,
+      "lpOdinsa50PctAndManagerSeparated": true,
+      "fcffActualFundAttributionProven": false,
+      "conservativeThreeYearPricePublished": false,
+      "primaryOutputAlwaysValuationOutput": true
     },
     "dcfPrimaryMethod": "FCFF",
     "dcfPrimaryDiscountRate": "WACC",
@@ -1291,7 +1295,7 @@
     },
     "dcfPrimaryExpectedCOP": 8073.930103946301,
     "dcfPrimaryEquityValueCOPtrillions": 5.638596557921719,
-    "fcffWorkbookSheet": "CO FCFF Estimación Integral",
+    "fcffWorkbookSheet": "Valuation output",
     "fcffComponentsBase": {
       "cementosConsolidatedEV": 3.8862859878275993,
       "cementosEquityGroup": 3.945577002167097,
@@ -1315,11 +1319,11 @@
       {
         "name": "Base",
         "weight": 0.5,
-        "equityHoldingCOPtrillions": 6.648181125046266,
+        "equityHoldingCOPtrillions": 5.638596557921719,
         "enterpriseValueCementosCOPm": 3886285.987827599,
         "enterpriseValueCelsiaCOPm": 6720315.1943190005,
-        "intrinsicPerPreferredShareCOP": 9779.15248554802,
-        "upsideVsPF": -0.4073240917849684,
+        "intrinsicPerPreferredShareCOP": 8294.102478144945,
+        "upsideVsPF": -0.49732712253667,
         "breakdownCOPtrillions": {
           "cementosConsolidatedEV": 3.8862859878275993,
           "cementosEquityGroup": 3.945577002167097,
@@ -1329,7 +1333,7 @@
           "celsiaEquityGroup": 0.7310430100949106,
           "odinsaConcessionsEV": 2.0240620708048676,
           "odinsaGP_EV": 0.09340749615395776,
-          "odinsaEquityGroup": 2.314920350435171,
+          "odinsaEquityGroup": 1.305335783310622,
           "pactiaFundEV": 2.389416503906249,
           "pactiaGP_EV": 0.05784813125027001,
           "pactiaEquityGroup": 0.6614416046876347,
@@ -1345,11 +1349,11 @@
       {
         "name": "Conservadora",
         "weight": 0.25,
-        "equityHoldingCOPtrillions": 1.4806936720570567,
+        "equityHoldingCOPtrillions": 1.038485579444496,
         "enterpriseValueCementosCOPm": 2938901.9401487075,
         "enterpriseValueCelsiaCOPm": 5027421.977705404,
-        "intrinsicPerPreferredShareCOP": 2178.0286865050207,
-        "upsideVsPF": -0.8679982614239381,
+        "intrinsicPerPreferredShareCOP": 1527.5619969454044,
+        "upsideVsPF": -0.9074204850336118,
         "breakdownCOPtrillions": {
           "cementosConsolidatedEV": 2.9389019401487073,
           "cementosEquityGroup": 2.5779599915542053,
@@ -1359,7 +1363,7 @@
           "celsiaEquityGroup": 0,
           "odinsaConcessionsEV": 0.8863661908449812,
           "odinsaGP_EV": 0.040417151227136974,
-          "odinsaEquityGroup": 0.9257638803958389,
+          "odinsaEquityGroup": 0.48355578778327774,
           "pactiaFundEV": 1.0665486683231364,
           "pactiaGP_EV": 0.026944767484757975,
           "pactiaEquityGroup": 0.05710820516256129,
@@ -1375,11 +1379,11 @@
       {
         "name": "Optimista",
         "weight": 0.2,
-        "equityHoldingCOPtrillions": 13.91420577583715,
+        "equityHoldingCOPtrillions": 12.049983255588305,
         "enterpriseValueCementosCOPm": 5169553.221828638,
         "enterpriseValueCelsiaCOPm": 8671907.28028128,
-        "intrinsicPerPreferredShareCOP": 20467.12287735054,
-        "upsideVsPF": 0.24043168953639626,
+        "intrinsicPerPreferredShareCOP": 17724.94182818738,
+        "upsideVsPF": 0.07423889867802314,
         "breakdownCOPtrillions": {
           "cementosConsolidatedEV": 5.169553221828638,
           "cementosEquityGroup": 4.99103386246687,
@@ -1389,7 +1393,7 @@
           "celsiaEquityGroup": 3.2936446238993002,
           "odinsaConcessionsEV": 3.7365554625152146,
           "odinsaGP_EV": 0.18881918333075548,
-          "odinsaEquityGroup": 3.87111173373554,
+          "odinsaEquityGroup": 2.006889213486699,
           "pactiaFundEV": 3.9086069151252367,
           "pactiaGP_EV": 0.13585003999242087,
           "pactiaEquityGroup": 1.325387449019099,
@@ -1482,9 +1486,10 @@
         "celsiaIssuerGrossOpsEV_COPtrillions": 16.108,
         "celsiaOurEV_COPtrillions": 6.720315194319,
         "celsiaEVgap_COPtrillions": 9.387684805681001,
-        "issuerEVSwapCounterfactualCOP": 21157.193566233444,
+        "issuerEVSwapCounterfactualCOP": null,
         "isIssuerEVSwapFCFF": false,
-        "sourceComparability": "EV manager based on EBITDA multiples with different business perimeters, NOT independent FCFF and not guaranteed same debt and NCI allocation"
+        "sourceComparability": "ARCHIVADO tras corregir derechos económicos LP FCP 50%; sustituir EV de emisor no equivale a un DCF y sin puente LP/NCI recalculado no dar precio por acción.",
+        "issuerEVSwapArchived": true
       },
       "odinsaLP50PctExplicit": true,
       "odinsaManagerVsLPSplit": true,
@@ -1503,7 +1508,7 @@
       "primarySheet": "Valuation output",
       "spreadsheetId": "1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8",
       "sheetUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
-      "synchronizedAt": "2026-10-10T13:44:28.990Z",
+      "synchronizedAt": "2026-10-10T13:47:44.582Z",
       "currency": "COP",
       "unit": "COP per economic preferred share",
       "status": "DCF FCFF ESTIMATIVO · ODINSA LP 50% EXPLÍCITO · EBITDA/FCFF POR CONTRATO PENDIENTE · AUDITORÍA ARITMÉTICA OK",
@@ -1997,7 +2002,7 @@
     "authorized": true,
     "publishedAt": "2026-10-09T20:29:33.163Z",
     "scope": "FCFF_PRIMARY_INDICATIVE_NUMERIC_FOUR_SCENARIOS_UPDATED_REPORTS__NO_EXTERNAL_CERTIFICATION",
-    "revisedAt": "2026-10-10T13:44:28.990Z",
+    "revisedAt": "2026-10-10T13:47:44.582Z",
     "workbookUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
     "cleanMasterWorkbookUrl": "https://docs.google.com/spreadsheets/d/1DziKCmzQOiYOMJFj_CXjpL7MgTB34tMWNyVYdul3Tz8/edit",
     "extendedDcfWorkingSheetUrl": "https://docs.google.com/spreadsheets/d/1jP7Czcw1zR2g4izjgnoYSS6cNB9mAZHAhFFXgopGRZo/edit",
@@ -2016,6 +2021,12 @@
     "forbidMarketNAVAsFCFF": true,
     "doNotForceExternalTargets": true,
     "intrinsicPerShareNullUntilAllFcffEquityVerified": false,
-    "publishConditionalPriceWithUnverifiedInputsExplicit": true
+    "publishConditionalPriceWithUnverifiedInputsExplicit": true,
+    "requiredLpOwnershipSeparateFromManager": true,
+    "mustResolveFcffFundGrossVsLPAttributed": true,
+    "forbidConservativeYear3TargetsWhenDividendPVExceedsDCF": true,
+    "forbidInventedMOS": true,
+    "perTickerMasterOutput": "Valuation output",
+    "noSotpFCFFSubstitution": true
   }
 }
