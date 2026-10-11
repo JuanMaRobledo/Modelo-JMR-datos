@@ -1166,5 +1166,17 @@
       "restaurantMargin2Q2026": 0.23
     },
     "detalle": "El FCF reportado está deprimido por growth capex, pero el DCF JMR no resta todo el capex reportado: modela reinversión como Δ ingresos / Sales-to-Capital. El Base ya asume eficiencia superior a la observada y a Restaurant/Dining."
+  },
+  "lecturaDamodaran": {
+    "fecha": "2026-10-11",
+    "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
+    "foso": "sin ventaja defendible",
+    "roicActual": 0.0461,
+    "dcfBase": 24.678204563820863,
+    "dcfSinFoso": 24.678204563820863,
+    "margenBase": 0.095186,
+    "margenIndustria": 0.1578786273430299,
+    "dcfMargenSectorial": 24.678156523104967,
+    "nota": "Contraste, no una historia: sin foso = ROIC terminal igual al costo de capital (supuesto por defecto de Damodaran); el margen sectorial es una prueba de estrés."
   }
 }

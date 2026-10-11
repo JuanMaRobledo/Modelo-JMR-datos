@@ -910,5 +910,17 @@
       "g3": false
     },
     "verificacion": "Cuatro DCF y esperado hoja/motor coinciden a menos de 0,000001 USD por acción."
+  },
+  "lecturaDamodaran": {
+    "fecha": "2026-10-11",
+    "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
+    "foso": "ventaja que se desvanece",
+    "roicActual": 0.15157267277813444,
+    "dcfBase": 185.55519627877027,
+    "dcfSinFoso": 151.51574076511577,
+    "margenBase": 0.130658,
+    "margenIndustria": 0.07409334745931717,
+    "dcfMargenSectorial": 117.30652997507835,
+    "nota": "Contraste, no una historia: sin foso = ROIC terminal igual al costo de capital (supuesto por defecto de Damodaran); el margen sectorial es una prueba de estrés."
   }
 }

@@ -959,5 +959,17 @@
     "fecha": "2026-10-08T10:48:56.540239+00:00",
     "nota": "DCF Base principal; esperado complementario; MOS35% sobre esperado. Cuatro DCF propios desde maestra nueva, corte30-sep2026; no casos técnicos heredados."
   },
-  "precioMOSValorEsperado": 325.16223324
+  "precioMOSValorEsperado": 325.16223324,
+  "lecturaDamodaran": {
+    "fecha": "2026-10-11",
+    "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
+    "foso": "ventaja durable",
+    "roicActual": 0.254,
+    "dcfBase": 570.7312305188628,
+    "dcfSinFoso": 378.6718936327171,
+    "margenBase": 0.5,
+    "margenIndustria": 0.3298251373604765,
+    "dcfMargenSectorial": 362.6081350285705,
+    "nota": "Contraste, no una historia: sin foso = ROIC terminal igual al costo de capital (supuesto por defecto de Damodaran); el margen sectorial es una prueba de estrés."
+  }
 }

@@ -994,5 +994,17 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 10.227189133402279
+  "precioMOSValorEsperado": 10.227189133402279,
+  "lecturaDamodaran": {
+    "fecha": "2026-10-11",
+    "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
+    "foso": "ventaja durable",
+    "roicActual": 0.2465,
+    "dcfBase": 18.270733146432395,
+    "dcfSinFoso": 14.779343809859084,
+    "margenBase": 0.2271,
+    "margenIndustria": 0.1848386743924957,
+    "dcfMargenSectorial": 11.233519975643471,
+    "nota": "Contraste, no una historia: sin foso = ROIC terminal igual al costo de capital (supuesto por defecto de Damodaran); el margen sectorial es una prueba de estrés."
+  }
 }
