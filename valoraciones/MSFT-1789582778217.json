@@ -8,8 +8,8 @@
   "posicion": null,
   "tipo": "Software",
   "mos": 0.35,
-  "precioMOS": 325.1622332165488,
-  "precioMOSMax": 325.1622332165488,
+  "precioMOS": 325.1622332213926,
+  "precioMOSMax": 325.1622332213926,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -463,27 +463,27 @@
   },
   "valorEsperado": {
     "fecha": "2026-10-07",
-    "valor": 500.2495895639213,
-    "valorBetaPropuesta": 491.2078261992998,
-    "betaHoja": 1.275007272,
+    "valor": 500.2495895713733,
+    "valorBetaPropuesta": 491.2078262026168,
+    "betaHoja": 1.275007271958341,
     "betaPropuesta": 1.359535362386038,
-    "dcfBase": 570.7312305111147,
+    "dcfBase": 570.7312305188626,
     "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 570.7312305111147,
+    "valorCentral": 570.7312305188626,
     "rango": {
-      "min": 130.36132794097279,
-      "max": 821.7202491766097
+      "min": 130.3613279469074,
+      "max": 821.7202491853573
     },
-    "dcfBaseTecnicoAnterior": 570.7312305,
-    "updatedAt": "2026-10-11T20:27:27.243394+00:00",
+    "dcfBaseTecnicoAnterior": 570.7312305188628,
+    "updatedAt": "2026-10-11T21:39:24.991571+00:00",
     "historias": [
       {
-        "nombre": "A · Base · IA rentable con inversión sostenida",
+        "nombre": "Base · IA rentable con inversión sostenida",
         "probabilidad": 0.5,
-        "valor": 570.7312305111147,
-        "valorBetaPropuesta": 560.2796660525078,
+        "valor": 570.7312305188626,
+        "valorBetaPropuesta": 560.2796660554759,
         "margen": 0.5,
         "crecimiento": 0.1626978817535607,
         "roicTerminal": 0.2056,
@@ -531,10 +531,10 @@
         "terminalGrowth": 0.0529
       },
       {
-        "nombre": "B · Conservadora · Adopción más lenta y capacidad cara",
+        "nombre": "Conservadora · Adopción más lenta y capacidad cara",
         "probabilidad": 0.25,
-        "valor": 314.35921655110076,
-        "valorBetaPropuesta": 308.9492799202755,
+        "valor": 314.35921655779066,
+        "valorBetaPropuesta": 308.94927992449124,
         "margen": 0.43,
         "crecimiento": 0.09070039754627102,
         "roicTerminal": 0.2056,
@@ -582,10 +582,10 @@
         "terminalGrowth": 0.0529
       },
       {
-        "nombre": "C · Tesis de disrupción · Deterioro de los fundamentales",
+        "nombre": "Tesis de disrupción · Deterioro de los fundamentales",
         "probabilidad": 0.1,
-        "valor": 130.36132794097279,
-        "valorBetaPropuesta": 128.55044882805305,
+        "valor": 130.3613279469074,
+        "valorBetaPropuesta": 128.55044883315944,
         "margen": 0.3,
         "crecimiento": 0.017538817555759367,
         "roicTerminal": "costo_capital",
@@ -641,10 +641,10 @@
         "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 0.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
       },
       {
-        "nombre": "D · Optimista · Monetización de agentes y utilización superior",
+        "nombre": "Optimista · Monetización de agentes y utilización superior",
         "probabilidad": 0.15,
-        "valor": 821.7202491766097,
-        "valorBetaPropuesta": 806.5041887344782,
+        "valor": 821.7202491853573,
+        "valorBetaPropuesta": 806.5041887362672,
         "margen": 0.54,
         "crecimiento": 0.20361152927028026,
         "roicTerminal": 0.2056,
@@ -1013,9 +1013,9 @@
     "nota": "Barato frente a su propia historia no equivale a infravalorado intrínsecamente. Esta capa es una lectura histórica independiente."
   },
   "precioMOSHoy": {
-    "conservador": 325.1622332165488,
-    "base": 325.1622332165488,
-    "optimista": 325.1622332165488
+    "conservador": 325.1622332213926,
+    "base": 325.1622332213926,
+    "optimista": 325.1622332213926
   },
   "cagr": {
     "conservador": -0.06677499009,
@@ -1036,14 +1036,14 @@
       "max": 250.1247948
     },
     "conMOS": {
-      "min": 325.1622332165488,
-      "max": 325.1622332165488,
+      "min": 325.1622332213926,
+      "max": 325.1622332213926,
       "base": "valor esperado; una cifra, sin escenarios"
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "baseMOS": "valorEsperado",
-  "savedAt": "2026-10-11T20:27:05.187Z",
+  "savedAt": "2026-10-11T21:39:09.133Z",
   "hojas": {
     "financieros": {
       "Income Statement": "<table><tbody><tr class=\"tbl-header-row\"><td>Income Statement</td><td>Jun '17</td><td>Jun '18</td><td>Jun '19</td><td>Jun '20</td><td>Jun '21</td><td>Jun '22</td><td>Jun '23</td><td>Jun '24</td><td>Jun '25</td><td>Jun '26</td><td>LTM</td></tr><tr><td>Total Revenues</td><td>$89,950</td><td>$110,360</td><td>$125,843</td><td>$143,015</td><td>$168,088</td><td>$198,270</td><td>$211,915</td><td>$245,122</td><td>$281,724</td><td>$331,839</td><td>$331,839</td></tr><tr><td>Total Revenues %Chg</td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">22.69%</td><td style=\"background:color-mix(in oklab, var(--positive) 33%, var(--surface)); color:var(--ink); font-weight:700;\">14.03%</td><td style=\"background:color-mix(in oklab, var(--positive) 32%, var(--surface)); color:var(--ink); font-weight:700;\">13.65%</td><td style=\"background:color-mix(in oklab, var(--positive) 42%, var(--surface)); color:var(--ink); font-weight:700;\">17.53%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">17.96%</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">6.88%</td><td style=\"background:color-mix(in oklab, var(--positive) 37%, var(--surface)); color:var(--ink); font-weight:700;\">15.67%</td><td style=\"background:color-mix(in oklab, var(--positive) 35%, var(--surface)); color:var(--ink); font-weight:700;\">14.93%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">17.79%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">17.79%</td></tr><tr><td>Cost of Sales</td><td>$34,261</td><td>$38,353</td><td>$42,910</td><td>$46,078</td><td>$52,232</td><td>$62,650</td><td>$65,863</td><td>$74,114</td><td>$87,831</td><td>$106,374</td><td>$106,374</td></tr><tr class=\"tbl-subtotal-row\"><td>Gross Profit</td><td>$55,689</td><td>$72,007</td><td>$82,933</td><td>$96,937</td><td>$115,856</td><td>$135,620</td><td>$146,052</td><td>$171,008</td><td>$193,893</td><td>$225,465</td><td>$225,465</td></tr><tr><td>Gross Profit Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">61.91%</td><td style=\"background:color-mix(in oklab, var(--positive) 32%, var(--surface)); color:var(--ink); font-weight:700;\">65.25%</td><td style=\"background:color-mix(in oklab, var(--positive) 35%, var(--surface)); color:var(--ink); font-weight:700;\">65.90%</td><td style=\"background:color-mix(in oklab, var(--positive) 45%, var(--surface)); color:var(--ink); font-weight:700;\">67.78%</td><td style=\"background:color-mix(in oklab, var(--positive) 51%, var(--surface)); color:var(--ink); font-weight:700;\">68.93%</td><td style=\"background:color-mix(in oklab, var(--positive) 48%, var(--surface)); color:var(--ink); font-weight:700;\">68.40%</td><td style=\"background:color-mix(in oklab, var(--positive) 51%, var(--surface)); color:var(--ink); font-weight:700;\">68.92%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">69.76%</td><td style=\"background:color-mix(in oklab, var(--positive) 50%, var(--surface)); color:var(--ink); font-weight:700;\">68.82%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">67.94%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">67.94%</td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td>$20,020</td><td>$22,223</td><td>$23,098</td><td>$24,709</td><td>$25,224</td><td>$27,725</td><td>$30,334</td><td>$32,065</td><td>$32,877</td><td>$34,666</td><td>$34,666</td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td>$8,778</td><td>$10,261</td><td>$11,682</td><td>$12,796</td><td>$11,686</td><td>$14,460</td><td>$13,861</td><td>$20,958</td><td>$29,433</td><td>$38,534</td><td>$38,534</td></tr><tr><td>Research &amp; Development Expenses</td><td>$13,037</td><td>$14,726</td><td>$16,876</td><td>$19,269</td><td>$20,716</td><td>$24,512</td><td>$27,195</td><td>$29,510</td><td>$32,488</td><td>$35,562</td><td>$35,562</td></tr><tr><td>Other Operating Expenses</td><td>-$8,472</td><td>-$10,261</td><td>-$11,682</td><td>-$12,796</td><td>-$11,686</td><td>-$14,460</td><td>-$13,861</td><td>-$20,958</td><td>-$29,433</td><td>-$38,534</td><td>-$38,534</td></tr><tr class=\"tbl-subtotal-row\"><td>Operating Profit</td><td>$22,326</td><td>$35,058</td><td>$42,959</td><td>$52,959</td><td>$69,916</td><td>$83,383</td><td>$88,523</td><td>$109,433</td><td>$128,528</td><td>$155,237</td><td>$155,237</td></tr><tr><td>Operating Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">24.82%</td><td style=\"background:color-mix(in oklab, var(--positive) 28%, var(--surface)); color:var(--ink); font-weight:700;\">31.77%</td><td style=\"background:color-mix(in oklab, var(--positive) 32%, var(--surface)); color:var(--ink); font-weight:700;\">34.14%</td><td style=\"background:color-mix(in oklab, var(--positive) 37%, var(--surface)); color:var(--ink); font-weight:700;\">37.03%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">41.59%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">42.06%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">41.77%</td><td style=\"background:color-mix(in oklab, var(--positive) 51%, var(--surface)); color:var(--ink); font-weight:700;\">44.64%</td><td style=\"background:color-mix(in oklab, var(--positive) 53%, var(--surface)); color:var(--ink); font-weight:700;\">45.62%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">46.78%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">46.78%</td></tr><tr class=\"tbl-subtotal-row\"><td>Interest and Investment Income</td><td>$1,387</td><td>$2,214</td><td>$2,762</td><td>$2,680</td><td>$2,131</td><td>$2,094</td><td>$2,994</td><td>$3,157</td><td>$2,647</td><td>$3,301</td><td>$3,301</td></tr><tr><td>Interest Expense</td><td>$2,222</td><td>$2,733</td><td>$2,686</td><td>$2,591</td><td>$2,346</td><td>$2,063</td><td>$1,968</td><td>$2,935</td><td>$2,385</td><td>$3,051</td><td>$3,051</td></tr><tr><td>Interest Expense, Net</td><td>-$835</td><td>-$519</td><td>$76</td><td>$89</td><td>-$215</td><td>$31</td><td>$1,026</td><td>$222</td><td>$262</td><td>$250</td><td>$250</td></tr><tr><td>Non-Operating Income</td><td>$1,658</td><td>$1,935</td><td>$653</td><td>-$12</td><td>$1,401</td><td>$302</td><td>-$238</td><td>-$1,868</td><td>-$5,163</td><td>$10,447</td><td>$10,447</td></tr><tr><td>Total Non-Operating Income</td><td>$823</td><td>$1,416</td><td>$729</td><td>$77</td><td>$1,186</td><td>$333</td><td>$788</td><td>-$1,646</td><td>-$4,901</td><td>$10,697</td><td>$10,697</td></tr><tr><td>Income Before Provision for Income Taxes</td><td>$23,149</td><td>$36,474</td><td>$43,688</td><td>$53,036</td><td>$71,102</td><td>$83,716</td><td>$89,311</td><td>$107,787</td><td>$123,627</td><td>$165,934</td><td>$165,934</td></tr><tr><td>Provision for Income Taxes</td><td>$1,945</td><td>$19,903</td><td>$4,448</td><td>$8,755</td><td>$9,831</td><td>$10,978</td><td>$16,950</td><td>$19,651</td><td>$21,795</td><td>$32,185</td><td>$32,185</td></tr><tr class=\"tbl-subtotal-row\"><td>Consolidated Net Income</td><td>$21,204</td><td>$16,571</td><td>$39,240</td><td>$44,281</td><td>$61,271</td><td>$72,738</td><td>$72,361</td><td>$88,136</td><td>$101,832</td><td>$133,749</td><td>$133,749</td></tr><tr><td>Net Income Attributable to Common Shareholders</td><td>$21,204</td><td>$16,571</td><td>$39,240</td><td>$44,281</td><td>$61,271</td><td>$72,738</td><td>$72,361</td><td>$88,136</td><td>$101,832</td><td>$133,749</td><td>$133,749</td></tr><tr><td>Basic EPS</td><td>2.71</td><td>2.13</td><td>5.06</td><td>5.76</td><td>8.05</td><td>9.65</td><td>9.68</td><td>11.80</td><td>13.64</td><td>17.95</td><td>17.95</td></tr><tr><td>Diluted EPS</td><td>2.71</td><td>2.13</td><td>5.06</td><td>5.76</td><td>8.05</td><td>9.65</td><td>9.68</td><td>11.80</td><td>13.64</td><td>17.95</td><td>17.95</td></tr><tr><td>Basic Weighted Average Shares Outstanding</td><td>7746.00</td><td>7700.00</td><td>7673.00</td><td>7610.00</td><td>7547.00</td><td>7496.00</td><td>7446.00</td><td>7431.00</td><td>7433.00</td><td>7429.00</td><td>7429.00</td></tr><tr><td>Diluted Weighted Average Shares Outstanding</td><td>7832.00</td><td>7794.00</td><td>7753.00</td><td>7683.00</td><td>7608.00</td><td>7540.00</td><td>7472.00</td><td>7469.00</td><td>7465.00</td><td>7453.00</td><td>7453.00</td></tr><tr><td>Shares Outstanding</td><td>7708.00</td><td>7677.00</td><td>7643.00</td><td>7571.00</td><td>7519.00</td><td>7464.00</td><td>7432.00</td><td>7434.00</td><td>7434.00</td><td>7427.00</td><td>7425.50</td></tr><tr class=\"tbl-subtotal-row\"><td>EBITDA</td><td>$31,104</td><td>$45,319</td><td>$54,641</td><td>$65,755</td><td>$81,602</td><td>$97,843</td><td>$102,384</td><td>$130,391</td><td>$157,961</td><td>$193,771</td><td>$193,771</td></tr><tr><td>Effective Tax Rate</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">8.40%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">54.57%</td><td style=\"background:color-mix(in oklab, var(--positive) 17%, var(--surface)); color:var(--ink); font-weight:700;\">10.18%</td><td style=\"background:color-mix(in oklab, var(--positive) 22%, var(--surface)); color:var(--ink); font-weight:700;\">16.51%</td><td style=\"background:color-mix(in oklab, var(--positive) 20%, var(--surface)); color:var(--ink); font-weight:700;\">13.83%</td><td style=\"background:color-mix(in oklab, var(--positive) 19%, var(--surface)); color:var(--ink); font-weight:700;\">13.11%</td><td style=\"background:color-mix(in oklab, var(--positive) 24%, var(--surface)); color:var(--ink); font-weight:700;\">18.98%</td><td style=\"background:color-mix(in oklab, var(--positive) 24%, var(--surface)); color:var(--ink); font-weight:700;\">18.23%</td><td style=\"background:color-mix(in oklab, var(--positive) 23%, var(--surface)); color:var(--ink); font-weight:700;\">17.63%</td><td style=\"background:color-mix(in oklab, var(--positive) 25%, var(--surface)); color:var(--ink); font-weight:700;\">19.40%</td><td style=\"background:color-mix(in oklab, var(--positive) 25%, var(--surface)); color:var(--ink); font-weight:700;\">19.40%</td></tr><tr><td>EBITDA Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">34.58%</td><td style=\"background:color-mix(in oklab, var(--positive) 26%, var(--surface)); color:var(--ink); font-weight:700;\">41.06%</td><td style=\"background:color-mix(in oklab, var(--positive) 30%, var(--surface)); color:var(--ink); font-weight:700;\">43.42%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">45.98%</td><td style=\"background:color-mix(in oklab, var(--positive) 38%, var(--surface)); color:var(--ink); font-weight:700;\">48.55%</td><td style=\"background:color-mix(in oklab, var(--positive) 40%, var(--surface)); color:var(--ink); font-weight:700;\">49.35%</td><td style=\"background:color-mix(in oklab, var(--positive) 38%, var(--surface)); color:var(--ink); font-weight:700;\">48.31%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">53.19%</td><td style=\"background:color-mix(in oklab, var(--positive) 51%, var(--surface)); color:var(--ink); font-weight:700;\">56.07%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">58.39%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">58.39%</td></tr></tbody></table>",
@@ -1140,7 +1140,7 @@
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-11T20:27:27.245865+00:00",
+    "fecha": "2026-10-11T21:39:24.994613+00:00",
     "baseAnterior": {
       "conservador": 314.3592166,
       "base": 570.7312305,
@@ -1148,7 +1148,7 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 325.1622332165488,
+  "precioMOSValorEsperado": 325.1622332213926,
   "lecturaDamodaran": {
     "fecha": "2026-10-11",
     "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
