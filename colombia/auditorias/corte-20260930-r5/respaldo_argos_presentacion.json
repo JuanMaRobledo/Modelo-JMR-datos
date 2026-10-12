@@ -1,0 +1,150 @@
+{
+ "CO 05 Multiples!A1:A2": [
+  [
+   "JMR COLOMBIA | HOLDINGS: BASE = SOTP + MÚLTIPLOS (selección independiente)"
+  ],
+  [
+   "HOLDINGS 2026: Base 60% SOTP ECONÓMICO MIXTO+ 40% SOTP MÚLTIPLOS sectoriales 2026. Independencia parcial: privados Odinsa/Pactia y HQ compartidos. NO intrínseco certificado."
+  ]
+ ],
+ "CO 05 Multiples!A6:D6": [
+  [
+   "DCF FCFF anterior · opcional, no certificado",
+   6880.522297,
+   "DCF FCFF r4: WACC del corte Colombia en todos los motores (misma tasa en las 4 historias), caja libre y minoritarios a valor justo",
+   "Fuente 1NAxSGF9... Valuation output B35; motores secundarios (Odinsa, Pactia, Growth) conservan sus WACC de analista"
+  ]
+ ],
+ "CO 05 Multiples!A11:C14": [
+  [
+   "SOTP ECONÓMICO MIXTO · PRINCIPAL",
+   1,
+   0.6
+  ],
+  [
+   "SOTP MÚLTIPLOS SECTORIALES · PRINCIPAL",
+   1,
+   0.4
+  ],
+  [
+   "Valor contable NIIF (OPCIONAL)",
+   0,
+   0.2
+  ],
+  [
+   "DCF FCFF anterior (OPCIONAL)",
+   0,
+   0.1
+  ]
+ ],
+ "CO 05 Multiples!G14": [
+  [
+   "FCFF anterior de subnegocios, valor subjetivo; inputs no recalc en esta copia, peso cero."
+  ]
+ ],
+ "CO 05 Multiples!A16": [
+  [
+   "VALOR BASE JMR POR ACCIÓN"
+  ]
+ ],
+ "CO 05 Multiples!A19:B20": [
+  [
+   "Margen vs ordinaria",
+   "=D16/B17-1"
+  ],
+  [
+   "Margen vs preferencial",
+   "=D16/B18-1"
+  ]
+ ],
+ "CO 00 Panel!A2": [
+  [
+   "Corte bolsa: 2026-10-09 | Información financiera: 2026-06-30 | COP por acción | Base = 60% SOTP económico + 40% SOTP múltiplos sectoriales | revisión Damodaran r2 10-oct-2026"
+  ]
+ ],
+ "CO 00 Panel!A5:D16": [
+  [
+   "SOTP ECONÓMICO CON REFERENCIAS EXTERNAS",
+   "='CO 11 SOTP economico'!G16",
+   "Cotizadas bolsa + Odinsa gerente/Precia + Pactia Colliers − HQ, cash",
+   "NO intrínseco independiente certificado; referencias 2025, 2Q2026 y octubre mezcladas"
+  ],
+  [
+   "DCF FCFF SOTP del expediente previo (opcional)",
+   "='CO 05 Multiples'!B6",
+   "FCFF r2 (WACC corte Colombia) / peso 0% por defecto",
+   "Concesiones y demás supuestos aún limitan valor intrínseco"
+  ],
+  [
+   "VALOR BASE PONDERADO",
+   "='CO 05 Multiples'!D16",
+   "SOTP económico 60% + múltiplos sectoriales 40%",
+   "Privadas comparten NAV gerente; cash Cementos y NCI no certificados; no 5/10 años P/B"
+  ],
+  [
+   "Precio mercado preferencial",
+   "='CO 01 Fuentes y datos'!B10",
+   "Cierre marcado 2026-10-09",
+   "Cotización no equivale valor razonable"
+  ],
+  [
+   "Precio mercado ordinaria",
+   "='CO 01 Fuentes y datos'!B11",
+   "Cierre marcado 2026-10-09",
+   "Premio derechos políticos / liquidez"
+  ],
+  [
+   "Margen base vs preferencial",
+   "='CO 05 Multiples'!B20",
+   "Upside relativo",
+   "Valor/precio -1, no retorno prometido"
+  ],
+  [
+   "Margen base vs ordinaria",
+   "='CO 05 Multiples'!B19",
+   "Upside relativo",
+   "Valor/precio -1"
+  ],
+  [
+   "ESCENARIO CONSERVADOR",
+   "='CO 03 Escenarios'!G13",
+   "Sensibilidad del Base combinado",
+   "25% probabilidad"
+  ],
+  [
+   "ESCENARIO BASE",
+   "='CO 03 Escenarios'!H13",
+   "SOTP + múltiplos ponderados",
+   "Historia Base coincide con valor ponderado JMR, no con NAV puro"
+  ],
+  [
+   "ESCENARIO OPTIMISTA",
+   "='CO 03 Escenarios'!I13",
+   "Sensibilidad del Base combinado",
+   "20% probabilidad"
+  ],
+  [
+   "ESCENARIO DISRUPCIÓN",
+   "='CO 03 Escenarios'!J13",
+   "Sensibilidad por deterioro fundamental",
+   "5% probabilidad; deterioro fundamental"
+  ],
+  [
+   "Valor esperado de escenarios",
+   "='CO 03 Escenarios'!G15",
+   "SOTP sensibilidades",
+   "No sustituye Base"
+  ]
+ ],
+ "CO 00 Panel!A25:B25": [
+  [
+   "ESTADO",
+   "r2 10-oct: precios 9-oct verificados, caja neta Cementos y deuda Celsia al 2T26, minoritarios restados, Ke holding con corte Colombia. NCI a libro, NAV privados 2025 y caja libre no certificados."
+  ]
+ ],
+ "CO 03 Escenarios!A2": [
+  [
+   "HISTORIAS SOBRE SOTP ECONÓMICO Y MÚLTIPLOS POR SUBNEGOCIO; C11/E11/F11 ajusta gastos de HQ cuando el residual es negativo. NO pronósticos independientes de flujos."
+  ]
+ ]
+}
