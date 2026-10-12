@@ -35,3 +35,18 @@ Antes (r2-r4, 9-11 oct): Banco 19.474 · Group 21.969 · SURA intrínseco 42.115
 - El Banco «sin foso» es una aproximación fuera de la hoja (valor terminal residual = 0).
 - Los informes de los expedientes llevan al inicio una nota r5 que manda sobre las cifras anteriores del cuerpo.
 - Archivos de respaldo de escrituras: `respaldo_*.json`.
+
+## r6 · 12-oct-2026 · ROE terminal = Ke y valoración de SURA con el prompt
+
+- **ROE terminal = Ke** (sin foso, regla de la cartera) aplicado al Base en las hojas, con respaldo en `respaldo_roe_ke.json`: Banco (`Terminal regulatorio`!J6:K9: TV RE = 0, TV DDM = libro FY10), Group (`Entradas cierre`!E42:E45 = Ke terminal) y SURA (`Supuestos`!D15:D26 e I15:I26 = Ke estable; Cibest ya sin +1pp).
+
+| Expediente | DCF Base r5 | DCF Base r6 | Esperado r6 | Compra MOS 35% | Precio 30-sep |
+| --- | --- | --- | --- | --- | --- |
+| PFDAVVNDA | 20.663 | **27.141** | 22.918 | 14.897 | 27.500 |
+| PFDAVIGRP | 23.160 | **27.892** | 25.713 | 16.713 | 39.600 |
+| PFGRUPSURA / GRUPOSURA | 45.136 | **51.511** | 49.519 | 32.187 | 58.840 / 69.000 |
+| PFGRUPOARG | 10.346 | 10.346 | 10.107 | 6.569 | 16.360 |
+
+- Con ROE = Ke el crecimiento terminal no crea valor (sensibilidad a g = 0 en SURA). Sensibilidades de SURA (`sura_sensibilidades_r6.json`): Rf ±1 pp −3.078/+3.253; ERP ±0,5 pp −1.114/+1.137.
+- **SURA con el prompt**: informes v4 (14 secciones) y v5 (18) generados por `JMR-valuation/scripts/co_informes_sura.py` desde UNA lectura de la hoja (`co_lector.py`); reemplazan los de r3 en los dos expedientes. Combinado secundario 40/60 también en `CO · Ponderaciones`.
+- **Ahorro de tokens**: núcleo `Modelo-JMR/docs/prompts/colombia-nucleo-v1.md` (2 KB frente a 55 KB por prompt) y habilidad `.claude/skills/valoracion-colombia`.

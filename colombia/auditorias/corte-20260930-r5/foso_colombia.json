@@ -1,50 +1,49 @@
 {
  "fecha": "2026-10-12",
- "regla": "Igual que reference/moat_2026-09-30.json de la cartera de EE.UU.: sin ventaja defendible → retorno terminal = costo de capital.",
+ "regla": "Igual que reference/moat_2026-09-30.json de la cartera de EE.UU.: sin ventaja defendible → retorno terminal = costo de capital. Aplicado al Base en r6.",
  "empresas": {
   "PFDAVVNDA.CL": {
    "ventaja": "sin ventaja defendible",
    "retornoTerminal": {
     "tipo": "ROE",
-    "modelo": 0.123,
+    "modelo": "= Ke",
     "costoCapital": 0.18207848126845605
    },
-   "dcfSinFoso": 26726.767149809788,
-   "metodoSinFoso": "aproximación: valor terminal residual = 0 (ROE terminal = Ke)",
+   "antes": 20663,
+   "metodoSinFoso": "Terminal regulatorio: TV RE = 0 y TV DDM = libro FY10 (J6:K9)",
    "preguntas": "(1) ROE ~12% < Ke 18,2%: falla; (2) escala y franquicia local, sin rentas por encima del costo; (3) no aplica",
-   "nota": "El modelo supone ROE terminal 12,3% < Ke 18,2% (destrucción de valor perpetua), más conservador que la regla de la cartera."
+   "nota": "ROE terminal = Ke desde r6; antes el modelo suponía 12,3% < Ke 18,2%.",
+   "dcfSinFoso": 27140.536317488408
   },
   "PFDAVIGRP.CL": {
    "ventaja": "sin ventaja defendible",
    "retornoTerminal": {
     "tipo": "ROE",
-    "modelo": 0.14,
+    "modelo": "= Ke",
     "costoCapital": 0.1816796694435953
    },
-   "dcfSinFoso": 27892.27900815021,
-   "metodoSinFoso": "hoja: 'Entradas cierre'!E42 = Ke terminal (celda restaurada)",
+   "antes": 23160,
+   "metodoSinFoso": "hoja: 'Entradas cierre'!E42:E45 = Ke terminal",
    "preguntas": "(1) ROE 12-15% < Ke 18,2%: falla; (2) sin ventaja identificable que dé rentas; (3) no aplica",
-   "nota": "ROE terminal Base 14% (guía 14-16% 2028-29) < Ke terminal 18,2%."
+   "nota": "ROE terminal = Ke desde r6; antes 14% (Base), 11%, 16% y 10%.",
+   "dcfSinFoso": 27892.27900815021
   },
   "PFGRUPSURA.CL": {
    "ventaja": "mixta: Cibest con ventaja de escala; SURA AM y Suramericana sin ventaja defendible",
    "retornoTerminal": {
     "tipo": "ROE",
-    "modelo": {
-     "Cibest": 0.17,
-     "SURA AM": 0.14,
-     "Suramericana": 0.135
-    },
+    "modelo": "= Ke estable en las tres y en las cuatro historias",
     "costoCapital": {
-     "Cibest": 0.1693,
-     "SURA AM": 0.1629,
-     "Suramericana": 0.1618
+     "Cibest": 0.1804,
+     "SURA AM": 0.1722,
+     "Suramericana": 0.1744
     }
    },
-   "dcfSinFoso": 51515.96019711213,
-   "metodoSinFoso": "hoja: 'Damodaran · ROE terminal Ke' (las tres a Ke)",
-   "preguntas": "Cibest: (1) ROE 20,8% > Ke 16,9%, (2) escala y costo de fondeo, (3) sin erosión visible → durable. SURA AM y Suramericana: (1) ROE 12-14% < Ke → falla",
-   "nota": "SURA AM y Suramericana con ROE terminal por debajo del Ke; la regla de la cartera los llevaría al Ke."
+   "antes": 45136,
+   "metodoSinFoso": "hoja: Supuestos!D15:D26 = Ke estable; inversión nueva = Ke (Cibest ya no +1pp)",
+   "preguntas": "Cibest: (1) ROE 20,8% > Ke 16,9%, (2) escala y costo de fondeo, (3) sin erosión visible → durable por regla, pero r6 aplica ROE = Ke por instrucción del analista. SURA AM y Suramericana: (1) ROE 12-14% < Ke → falla",
+   "nota": "ROE terminal = Ke en las tres participadas (r6); antes 17/14/13,5% (Base) y +1pp de Cibest.",
+   "dcfSinFoso": 51511.12879611367
   },
   "PFGRUPOARG.CL": {
    "ventaja": "sin ventaja defendible",
@@ -56,30 +55,28 @@
      "Celsia": 0.1283
     }
    },
-   "dcfSinFoso": 10346.341708834128,
+   "antes": 10346,
    "metodoSinFoso": "el DCF ya usa ROIC terminal = WACC",
    "preguntas": "(1) ROIC Cementos ~7% y Celsia ~8% < WACC en COP: falla; (2) cemento y generación/distribución sin ventaja demostrada",
-   "nota": "Sin foso en el Base: el valor ya es el de la regla."
+   "nota": "Sin foso en el Base: el valor ya es el de la regla.",
+   "dcfSinFoso": 10346.341708834128
   },
   "GRUPOSURA.CL": {
    "ventaja": "mixta: Cibest con ventaja de escala; SURA AM y Suramericana sin ventaja defendible",
    "retornoTerminal": {
     "tipo": "ROE",
-    "modelo": {
-     "Cibest": 0.17,
-     "SURA AM": 0.14,
-     "Suramericana": 0.135
-    },
+    "modelo": "= Ke estable en las tres y en las cuatro historias",
     "costoCapital": {
-     "Cibest": 0.1693,
-     "SURA AM": 0.1629,
-     "Suramericana": 0.1618
+     "Cibest": 0.1804,
+     "SURA AM": 0.1722,
+     "Suramericana": 0.1744
     }
    },
-   "dcfSinFoso": 51515.96019711213,
-   "metodoSinFoso": "hoja: 'Damodaran · ROE terminal Ke' (las tres a Ke)",
-   "preguntas": "Cibest: (1) ROE 20,8% > Ke 16,9%, (2) escala y costo de fondeo, (3) sin erosión visible → durable. SURA AM y Suramericana: (1) ROE 12-14% < Ke → falla",
-   "nota": "SURA AM y Suramericana con ROE terminal por debajo del Ke; la regla de la cartera los llevaría al Ke."
+   "antes": 45136,
+   "metodoSinFoso": "hoja: Supuestos!D15:D26 = Ke estable; inversión nueva = Ke (Cibest ya no +1pp)",
+   "preguntas": "Cibest: (1) ROE 20,8% > Ke 16,9%, (2) escala y costo de fondeo, (3) sin erosión visible → durable por regla, pero r6 aplica ROE = Ke por instrucción del analista. SURA AM y Suramericana: (1) ROE 12-14% < Ke → falla",
+   "nota": "ROE terminal = Ke en las tres participadas (r6); antes 17/14/13,5% (Base) y +1pp de Cibest.",
+   "dcfSinFoso": 51511.12879611367
   }
  }
 }

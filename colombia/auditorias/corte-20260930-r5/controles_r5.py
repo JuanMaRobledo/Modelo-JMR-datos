@@ -43,7 +43,7 @@ for fn in FILES:
         "corte 30-sep": s.get("priceDate") == "2026-09-30" and d["quote"].get("sessionDate") == "2026-09-30",
         "ERP 3,70%": abs(d["assumptions"]["equityRiskPremium"] - 0.037) < 1e-9,
         "VO = esperado": abs(s["valuationOutput"]["dcfExpectedCOP"] - s["expected"]) < 0.01,
-        "nota r5 en informes": all("## Revisión r5 · corte" in d["reports"][k]["content"] for k in ("valuation", "research")),
+        "nota r5 en informes": all(("## Revisión r5 · corte" in d["reports"][k]["content"]) or ("revision: r6" in d["reports"][k]["content"]) for k in ("valuation", "research")),
         "lectura Damodaran": isinstance(d.get("lecturaDamodaran", {}).get("dcfSinFoso"), (int, float)),
     }
     bad = [k for k, v in c.items() if not v]
