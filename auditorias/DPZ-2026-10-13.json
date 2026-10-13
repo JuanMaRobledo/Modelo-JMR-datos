@@ -1,0 +1,121 @@
+{
+  "run_manifest": {
+    "ticker": "DPZ",
+    "analysis_date": "2026-10-13",
+    "currency": "USD",
+    "units": "USD millones / acciones millones",
+    "market": "NASDAQ",
+    "run_id": "DPZ-20261013-Q3",
+    "sources": {
+      "financial_statements": {
+        "url": "https://ir.dominos.com/node/24936/html",
+        "publication_date": "2026-10-13",
+        "cutoff_date": "2026-09-06",
+        "method": "10-Q primario y SEC companyfacts: FY2025 + 36 semanas 2026 − 36 semanas 2025; balance puntual. Histórico 2016–2025."
+      },
+      "riskfree": {
+        "url": "https://fred.stlouisfed.org/series/DGS10",
+        "publication_date": "2026-10-09",
+        "cutoff_date": "2026-10-08",
+        "method": "Treasury nominal USD 10 años; última observación publicada al consultar el 13-oct-2026: 5,22%.",
+        "currency": "USD"
+      },
+      "erp": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/implpr.html",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-10-01",
+        "method": "ERP implícita ajustada por payout 4,20%; exposición geográfica agrega 0,12 pp aproximados, ERP total 4,32%. No tasa cash yield de 3,70%."
+      },
+      "beta": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Restaurant/Dining US beta desapalancada 0,783007382; reapalancar con deuda y equity de mercado de DPZ y marginal 24,1%."
+      },
+      "cost_of_debt": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Rating sintético por EBIT normalizado antes de lease económico / interés bruto; spread anual 0,8872% + Rf 5,22%. No rating de agencia actual ni yield de bono observado."
+      },
+      "analysis_price": {
+        "url": "https://stockanalysis.com/stocks/dpz/history/",
+        "publication_date": "2026-10-12",
+        "cutoff_date": "2026-10-12",
+        "method": "Cierre del 12-oct-2026 US$310,90; precio congelado de referencia. No precio intradía del 13-oct."
+      }
+    },
+    "limitations": [
+      "Cantidad de opciones: último saldo anual 424286; no reconciliación completa grants/forfeitures de 2026. Salvedad de valoración, no dato certificado actual.",
+      "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
+      "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios."
+    ],
+    "checksums": {
+      "facts.json": "e115762cca3f1ac00a9b1fcf7bd7ee7c1cf80343e230647936431c783dc1c8aa",
+      "dpz_2025.html": "b639591a73f5095abfc1dee14c72e2f5fdb883c524d1d923c0d62f2588bfff38",
+      "dpz_q3_2026.html": "13d1d8ab8fb1fa254fc5833f1d336607402e15c7d65dbc46042ceb296ba0cb6c",
+      "latest.json": "f51b37225b438f4e2c9e6d1f8f3b9144433c8d8ac9f2d5b0d869c13f394529fc"
+    }
+  },
+  "auditoria": {
+    "fecha": "2026-10-13",
+    "estado": "CORREGIDO CON SALVEDADES",
+    "ltmPeriodEnd": "2026-09-06",
+    "financialsPublicationDate": "2026-10-13",
+    "ltmFormula": "FY2025+YTD2026−YTD2025;36semanascomparables",
+    "gatesCriticos": "Sin desviaciones frente maestra12-oct",
+    "paridadCuatroHistorias": true,
+    "fuentes": {
+      "financial_statements": {
+        "url": "https://ir.dominos.com/node/24936/html",
+        "publication_date": "2026-10-13",
+        "cutoff_date": "2026-09-06",
+        "method": "10-Q primario y SEC companyfacts: FY2025 + 36 semanas 2026 − 36 semanas 2025; balance puntual. Histórico 2016–2025."
+      },
+      "riskfree": {
+        "url": "https://fred.stlouisfed.org/series/DGS10",
+        "publication_date": "2026-10-09",
+        "cutoff_date": "2026-10-08",
+        "method": "Treasury nominal USD 10 años; última observación publicada al consultar el 13-oct-2026: 5,22%.",
+        "currency": "USD"
+      },
+      "erp": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/implpr.html",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-10-01",
+        "method": "ERP implícita ajustada por payout 4,20%; exposición geográfica agrega 0,12 pp aproximados, ERP total 4,32%. No tasa cash yield de 3,70%."
+      },
+      "beta": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Restaurant/Dining US beta desapalancada 0,783007382; reapalancar con deuda y equity de mercado de DPZ y marginal 24,1%."
+      },
+      "cost_of_debt": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Rating sintético por EBIT normalizado antes de lease económico / interés bruto; spread anual 0,8872% + Rf 5,22%. No rating de agencia actual ni yield de bono observado."
+      },
+      "analysis_price": {
+        "url": "https://stockanalysis.com/stocks/dpz/history/",
+        "publication_date": "2026-10-12",
+        "cutoff_date": "2026-10-12",
+        "method": "Cierre del 12-oct-2026 US$310,90; precio congelado de referencia. No precio intradía del 13-oct."
+      }
+    },
+    "limitaciones": [
+      "Cantidad de opciones: último saldo anual 424286; no reconciliación completa grants/forfeitures de 2026. Salvedad de valoración, no dato certificado actual.",
+      "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
+      "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios."
+    ],
+    "excepcionesNoCriticas": [
+      "InputB13 normaliza gains yleases económico sinduplicar deuda",
+      "SyntheticF9/F10 elimina circularidad",
+      "VOfilas40/91/142/195 activa transiciónB120",
+      "FinancialsMultiplesnetborrowing sostenible vinculado reinversión",
+      "PE/PFCFE/POCF descuentan opciones sin duplicar acciones",
+      "Múltiplos3anclas limitado por pares no certificados"
+    ]
+  }
+}
