@@ -54,53 +54,42 @@
       "facts.json": "e115762cca3f1ac00a9b1fcf7bd7ee7c1cf80343e230647936431c783dc1c8aa",
       "dpz_2025.html": "b639591a73f5095abfc1dee14c72e2f5fdb883c524d1d923c0d62f2588bfff38",
       "dpz_q3_2026.html": "13d1d8ab8fb1fa254fc5833f1d336607402e15c7d65dbc46042ceb296ba0cb6c",
-      "latest.json": "c03c7349c088960c5c25e5cf3364198b1b489ae2af654ebf1bfc843fffbd69b4"
+      "latest.json": "004f1f6added2544de1ec82829678d7d82814b1d52e55105c97bd941d6527606"
     },
-    "revision_terminal": {
-      "method": "WACC estable ponderado, beta reapalancada1, ERP4,32%, pesoE68,7674%, pesoD31,2326%, Kdpost4,6354%; mantener estructura financiera madura. No100%equity implícito.",
-      "terminal_wacc": 0.08008157051481833,
-      "terminal_ke": 0.09540000000000001,
-      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
-      "old_published_base": 234.4982477310138,
-      "corrected_base": 304.4266376589291,
-      "decomposition_order_dependent": true,
-      "decomposition": [
-        {
-          "name": "Antes: inputs originales",
-          "value": 371.31034600665726,
-          "delta": 0
-        },
-        {
-          "name": "Datos, puente e impuestos actualizados",
-          "value": 373.2724949521944,
-          "delta": 1.9621489455371375
-        },
-        {
-          "name": "WACC inicial actualizado",
-          "value": 366.84415296898163,
-          "delta": -6.428341983212761
-        },
-        {
-          "name": "WACC terminal 8,99% → 9,42%",
-          "value": 327.34986199897463,
-          "delta": -39.494290970007
-        },
-        {
-          "name": "g terminal 5,29% → 3%",
-          "value": 238.81660068162049,
-          "delta": -88.53326131735415
-        },
-        {
-          "name": "Trayectoria y margen actuales",
-          "value": 234.4982477310138,
-          "delta": -4.3183529506066805
-        },
-        {
-          "name": "Política de capital y resto",
-          "value": 234.4982477310138,
-          "delta": 0
-        }
-      ]
+    "economics_terminal": {
+      "analysis_date": "2026-10-13",
+      "method": "Reglas Damodaran: nominal/coherente con moneda; límite economía yRf; maduración; reinversión g/ROIC; ROICexcedente sólo con foso",
+      "macro_reference": {
+        "real_gdp_long_run": 0.02,
+        "pce_long_run": 0.02,
+        "approximate_nominal": 0.0404,
+        "is_nominal_gdp_identity": false,
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "published": "2026-09-16"
+      },
+      "market_reference": {
+        "breakeven_10y": 0.0233,
+        "economic_date": "2026-10-09",
+        "source": "https://fred.stlouisfed.org/series/T10YIE",
+        "is_pure_inflation_forecast": false
+      },
+      "scenario_terminal_growth": {
+        "Base": 0.04,
+        "Conservadora": 0.02,
+        "Disrupcion": 0.01,
+        "Optimista": 0.04
+      },
+      "roic_anchor": {
+        "sector_adjusted_after_tax": 0.1836,
+        "applied_rounded": 0.184,
+        "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/roc.html",
+        "date": "2026-01-01",
+        "conditional_on_moat": true
+      },
+      "actual_base": 361.4033656651234,
+      "actual_expected": 311.76376460535005,
+      "rules_source": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "forecast_6_10": "Ingresos grupos convergen al terminal; consolidado=sumagrupos, crecimiento ponderado derivado"
     }
   },
   "auditoria": {
@@ -155,51 +144,41 @@
       "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
       "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios."
     ],
-    "revisionTerminal": {
-      "method": "WACC estable ponderado, beta reapalancada1, ERP4,32%, pesoE68,7674%, pesoD31,2326%, Kdpost4,6354%; mantener estructura financiera madura. No100%equity implícito.",
-      "terminal_wacc": 0.08008157051481833,
-      "terminal_ke": 0.09540000000000001,
-      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
-      "old_published_base": 234.4982477310138,
-      "corrected_base": 304.4266376589291,
-      "decomposition_order_dependent": true,
-      "decomposition": [
-        {
-          "name": "Antes: inputs originales",
-          "value": 371.31034600665726,
-          "delta": 0
-        },
-        {
-          "name": "Datos, puente e impuestos actualizados",
-          "value": 373.2724949521944,
-          "delta": 1.9621489455371375
-        },
-        {
-          "name": "WACC inicial actualizado",
-          "value": 366.84415296898163,
-          "delta": -6.428341983212761
-        },
-        {
-          "name": "WACC terminal 8,99% → 9,42%",
-          "value": 327.34986199897463,
-          "delta": -39.494290970007
-        },
-        {
-          "name": "g terminal 5,29% → 3%",
-          "value": 238.81660068162049,
-          "delta": -88.53326131735415
-        },
-        {
-          "name": "Trayectoria y margen actuales",
-          "value": 234.4982477310138,
-          "delta": -4.3183529506066805
-        },
-        {
-          "name": "Política de capital y resto",
-          "value": 234.4982477310138,
-          "delta": 0
-        }
-      ]
+    "revisionTerminal": null,
+    "fundamentoEconomicoTerminal": {
+      "analysis_date": "2026-10-13",
+      "method": "Reglas Damodaran: nominal/coherente con moneda; límite economía yRf; maduración; reinversión g/ROIC; ROICexcedente sólo con foso",
+      "macro_reference": {
+        "real_gdp_long_run": 0.02,
+        "pce_long_run": 0.02,
+        "approximate_nominal": 0.0404,
+        "is_nominal_gdp_identity": false,
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "published": "2026-09-16"
+      },
+      "market_reference": {
+        "breakeven_10y": 0.0233,
+        "economic_date": "2026-10-09",
+        "source": "https://fred.stlouisfed.org/series/T10YIE",
+        "is_pure_inflation_forecast": false
+      },
+      "scenario_terminal_growth": {
+        "Base": 0.04,
+        "Conservadora": 0.02,
+        "Disrupcion": 0.01,
+        "Optimista": 0.04
+      },
+      "roic_anchor": {
+        "sector_adjusted_after_tax": 0.1836,
+        "applied_rounded": 0.184,
+        "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/roc.html",
+        "date": "2026-01-01",
+        "conditional_on_moat": true
+      },
+      "actual_base": 361.4033656651234,
+      "actual_expected": 311.76376460535005,
+      "rules_source": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "forecast_6_10": "Ingresos grupos convergen al terminal; consolidado=sumagrupos, crecimiento ponderado derivado"
     },
     "excepcionesNoCriticas": [
       "WACCterminal ponderado estable8,0082%, beta1; noKe100%equity implícito",
