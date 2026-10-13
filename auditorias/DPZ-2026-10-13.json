@@ -54,7 +54,53 @@
       "facts.json": "e115762cca3f1ac00a9b1fcf7bd7ee7c1cf80343e230647936431c783dc1c8aa",
       "dpz_2025.html": "b639591a73f5095abfc1dee14c72e2f5fdb883c524d1d923c0d62f2588bfff38",
       "dpz_q3_2026.html": "13d1d8ab8fb1fa254fc5833f1d336607402e15c7d65dbc46042ceb296ba0cb6c",
-      "latest.json": "f51b37225b438f4e2c9e6d1f8f3b9144433c8d8ac9f2d5b0d869c13f394529fc"
+      "latest.json": "c03c7349c088960c5c25e5cf3364198b1b489ae2af654ebf1bfc843fffbd69b4"
+    },
+    "revision_terminal": {
+      "method": "WACC estable ponderado, beta reapalancada1, ERP4,32%, pesoE68,7674%, pesoD31,2326%, Kdpost4,6354%; mantener estructura financiera madura. No100%equity implícito.",
+      "terminal_wacc": 0.08008157051481833,
+      "terminal_ke": 0.09540000000000001,
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "old_published_base": 234.4982477310138,
+      "corrected_base": 304.4266376589291,
+      "decomposition_order_dependent": true,
+      "decomposition": [
+        {
+          "name": "Antes: inputs originales",
+          "value": 371.31034600665726,
+          "delta": 0
+        },
+        {
+          "name": "Datos, puente e impuestos actualizados",
+          "value": 373.2724949521944,
+          "delta": 1.9621489455371375
+        },
+        {
+          "name": "WACC inicial actualizado",
+          "value": 366.84415296898163,
+          "delta": -6.428341983212761
+        },
+        {
+          "name": "WACC terminal 8,99% → 9,42%",
+          "value": 327.34986199897463,
+          "delta": -39.494290970007
+        },
+        {
+          "name": "g terminal 5,29% → 3%",
+          "value": 238.81660068162049,
+          "delta": -88.53326131735415
+        },
+        {
+          "name": "Trayectoria y margen actuales",
+          "value": 234.4982477310138,
+          "delta": -4.3183529506066805
+        },
+        {
+          "name": "Política de capital y resto",
+          "value": 234.4982477310138,
+          "delta": 0
+        }
+      ]
     }
   },
   "auditoria": {
@@ -109,7 +155,54 @@
       "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
       "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios."
     ],
+    "revisionTerminal": {
+      "method": "WACC estable ponderado, beta reapalancada1, ERP4,32%, pesoE68,7674%, pesoD31,2326%, Kdpost4,6354%; mantener estructura financiera madura. No100%equity implícito.",
+      "terminal_wacc": 0.08008157051481833,
+      "terminal_ke": 0.09540000000000001,
+      "source_url": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "old_published_base": 234.4982477310138,
+      "corrected_base": 304.4266376589291,
+      "decomposition_order_dependent": true,
+      "decomposition": [
+        {
+          "name": "Antes: inputs originales",
+          "value": 371.31034600665726,
+          "delta": 0
+        },
+        {
+          "name": "Datos, puente e impuestos actualizados",
+          "value": 373.2724949521944,
+          "delta": 1.9621489455371375
+        },
+        {
+          "name": "WACC inicial actualizado",
+          "value": 366.84415296898163,
+          "delta": -6.428341983212761
+        },
+        {
+          "name": "WACC terminal 8,99% → 9,42%",
+          "value": 327.34986199897463,
+          "delta": -39.494290970007
+        },
+        {
+          "name": "g terminal 5,29% → 3%",
+          "value": 238.81660068162049,
+          "delta": -88.53326131735415
+        },
+        {
+          "name": "Trayectoria y margen actuales",
+          "value": 234.4982477310138,
+          "delta": -4.3183529506066805
+        },
+        {
+          "name": "Política de capital y resto",
+          "value": 234.4982477310138,
+          "delta": 0
+        }
+      ]
+    },
     "excepcionesNoCriticas": [
+      "WACCterminal ponderado estable8,0082%, beta1; noKe100%equity implícito",
       "InputB13 normaliza gains yleases económico sinduplicar deuda",
       "SyntheticF9/F10 elimina circularidad",
       "VOfilas40/91/142/195 activa transiciónB120",
