@@ -1,0 +1,31 @@
+{
+  "ticker": "NFLX",
+  "sheet": "https://docs.google.com/spreadsheets/d/1FmgmqjknJBdNDHnfEAwMTfhs0Z6GzkUsmUKckrHf5PI/edit",
+  "checks": 179,
+  "matchingWithinRounding": 177,
+  "historicalRestatements": [
+    2016,
+    2017
+  ],
+  "base": 60.10353915751299,
+  "expected": 53.900224165144714,
+  "mathematicalChecks": 16,
+  "multiples": "Condicionados; regla heredada mínimo 4 cierres, sin tres anclas independientes",
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm"
+  ],
+  "corrections": [
+    "precisión SEC LTM y acciones/RSU/opciones",
+    "puente deuda nominal",
+    "offsets de márgenes de resumen",
+    "comparabilidad P/E normalizado diluido",
+    "estadísticas de múltiplos sin negativos"
+  ],
+  "estimateLimitations": [
+    "g terminal nominal 5,29% no pronóstico",
+    "ROIC terminal sectorial",
+    "compromisos de arriendos FY2025",
+    "volatilidad y plazo de opciones son parámetros estimados"
+  ]
+}

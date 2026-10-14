@@ -1,0 +1,149 @@
+{
+  "ticker": "META",
+  "nombreActivo": "Meta Platforms, Inc.",
+  "fecha": "2026-10-11",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/13jYme_U6mJqf0eBL4f03xPe5OYUJCVimN136m6sSsls/edit",
+  "precio": 725.18,
+  "precioAnalisis": 725.18,
+  "tipo": "Crecimiento",
+  "mos": 0.35,
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.4,
+      "conservador": 389.693961221208,
+      "base": 793.3559028910827,
+      "optimista": 1260.1690957809265
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.19999999999999996,
+      "conservador": 475.3697194293987,
+      "base": 712.1329622647855,
+      "optimista": 1372.1351560065502
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.09999999999999998,
+      "conservador": 155.4168259815908,
+      "base": 174.96921422951158,
+      "optimista": 485.4956779627162
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.19999999999999996,
+      "conservador": 560.3017801573567,
+      "base": 999.0768684658597,
+      "optimista": 1574.0282717618054
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.04999999999999999,
+      "conservador": 170.05292302992626,
+      "base": 238.252978899502,
+      "optimista": 730.7986872486273
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0.04999999999999999,
+      "conservador": 234.35555166168237,
+      "base": 313.41396846474163,
+      "optimista": 604.2244075181771
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 398.77399073857373,
+    "base": 704.6645960937254,
+    "optimista": 1208.6010464006533
+  },
+  "valorEsperado": {
+    "valorCentral": 589.3272632337348,
+    "dcfBase": 589.3272632337348,
+    "valor": 524.4607918714876,
+    "historiaCentralId": "A",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.5,
+        "valor": 589.3272632337348,
+        "central": true,
+        "crecimiento": 0.15297407502811944,
+        "margen": 0.38,
+        "salesToCapital": 0.5,
+        "salesToCapital2": 0.9,
+        "roicTerminal": 0.24,
+        "terminalGrowth": 0.04
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.25,
+        "valor": 289.475725621136,
+        "central": false,
+        "crecimiento": 0.10298726840606043,
+        "margen": 0.3,
+        "salesToCapital": 0.45,
+        "salesToCapital2": 0.75,
+        "roicTerminal": 0.12,
+        "terminalGrowth": 0.03
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "valor": 170.14827678060124,
+        "central": false,
+        "crecimiento": 0.01698310520074453,
+        "margen": 0.22,
+        "salesToCapital": 0.35,
+        "salesToCapital2": 0.6,
+        "roicTerminal": 0.07,
+        "terminalGrowth": 0.02
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.15,
+        "valor": 936.0893411418406,
+        "central": false,
+        "crecimiento": 0.19705970073681112,
+        "margen": 0.43,
+        "salesToCapital": 0.65,
+        "salesToCapital2": 1.1,
+        "roicTerminal": 0.26,
+        "terminalGrowth": 0.045
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "version": 2,
+    "costoPatrimonio": 0.10417313126811645,
+    "dcfHoy": {
+      "conservador": 289.475725621136,
+      "base": 589.3272632337348,
+      "optimista": 936.0893411418406
+    },
+    "multiplesHoy": {
+      "conservador": 301.2216712191552,
+      "base": 480.02767335583206,
+      "optimista": 872.7500985603752
+    },
+    "ponderadoHoy": {
+      "conservador": 296.5232929799475,
+      "base": 523.7475093069932,
+      "optimista": 898.0857955929614
+    },
+    "metodos": []
+  },
+  "savedAt": "2026-10-14T18:57:47.547838+00:00",
+  "auditoria": {
+    "fecha": "2026-10-14",
+    "alcance": "Instantánea de la hoja existente para lectura a dos niveles; datos financieros no reestimados por esta migración."
+  },
+  "valorPresentePonderado": {
+    "conservador": 296.5232929799475,
+    "base": 523.7475093069932,
+    "optimista": 898.0857955929614
+  }
+}
