@@ -1,8 +1,10 @@
+> **Actualización de publicación, 14-oct-2026:** DCF Base USD 61,71, crecimiento estable 4,00%, ROIC terminal Base 15,00%; precio del análisis USD 70,46. Los cálculos vigentes son los de la hoja enlazada; conservar este archivo como respaldo metodológico.
+
 # Netflix: un negocio rentable que todavía debe justificar su precio
 
 Netflix ha superado una etapa en la que crecer significaba consumir caja de manera persistente. Hoy vende entretenimiento a escala mundial, tiene margen operativo elevado y puede financiar contenido y recompras con recursos del negocio. La cuestión de inversión es cuánto crecimiento queda por delante y cuánto capital habrá que reinvertir para conseguirlo. Una buena plataforma y una acción barata son conclusiones diferentes.
 
-Este análisis usa los estados al 30 de junio de 2026, la carta del segundo trimestre y un precio de referencia de USD 70,46 del 13 de octubre. Las proyecciones pertenecen al modelo JMR y no deben confundirse con la guía de Netflix. La auditoría del 14 de octubre confirma las principales cifras operativas, corrige diferencias de presentación y mantiene el DCF Base cerca de USD 60,10. Los múltiplos quedan como comparadores condicionados: conservaban una regla de selección antigua que todavía no equivale a una calibración independiente.
+Este análisis usa los estados al 30 de junio de 2026, la carta del segundo trimestre y un precio de referencia de USD 70,46 del 13 de octubre. Las proyecciones pertenecen al modelo JMR y no deben confundirse con la guía de Netflix. La auditoría del 14 de octubre confirma las principales cifras operativas, corrige diferencias de presentación y mantiene el DCF Base cerca de USD 61,71. Los múltiplos quedan como comparadores condicionados: conservaban una regla de selección antigua que todavía no equivale a una calibración independiente.
 
 ## 1. La tesis de inversión
 
@@ -72,19 +74,19 @@ La perpetuidad Base usa 5,29%, ligada a la convención nominal de la tasa libre 
 
 ## 11. Cuatro historias y cómo podrían fallar
 
-El Base, con probabilidad de juicio del 45%, combina monetización, expansión regional y margen cercano a 36,4%; arroja unos USD 60,10 por acción. La Conservadora, con 25%, supone menor expansión y margen cercano a 30,4%; su valor ronda USD 40,49. No es una predicción de caída bursátil: es el resultado de una historia operativa menos favorable.
+El Base, con probabilidad de juicio del 45%, combina monetización, expansión regional y margen cercano a 36,4%; arroja unos USD 61,71 por acción. La Conservadora, con 25%, supone menor expansión y margen cercano a 30,4%; su valor ronda USD 35,50. No es una predicción de caída bursátil: es el resultado de una historia operativa menos favorable.
 
-La Optimista, con 20%, necesita que publicidad y nuevos formatos amplíen el negocio con margen alrededor de 40,4%; obtiene aproximadamente USD 73,58. Es un resultado exigente, por lo que hay que buscar evidencia de monetización y eficiencia antes de elevar su peso. La Disrupción, con 10%, reduce mucho la expansión y el margen, elimina la prima de retorno estable y arroja cerca de USD 20,15. Su historia debe entenderse como deterioro y estancamiento de monetización: las ventas del modelo todavía no caen de manera sostenida. No debe describirse falsamente como una contracción ya incorporada en los flujos.
+La Optimista, con 20%, necesita que publicidad y nuevos formatos amplíen el negocio con margen alrededor de 40,4%; obtiene aproximadamente USD 81,06. Es un resultado exigente, por lo que hay que buscar evidencia de monetización y eficiencia antes de elevar su peso. La Disrupción, con 10%, reduce mucho la expansión y el margen, elimina la prima de retorno estable y arroja cerca de USD 20,15. Su historia debe entenderse como deterioro y estancamiento de monetización: las ventas del modelo todavía no caen de manera sostenida. No debe describirse falsamente como una contracción ya incorporada en los flujos.
 
-Las probabilidades suman 100% y son decisiones del analista. Su promedio, unos USD 53,90, complementa al Base y se muestra después de este. No lo sustituye ni reduce el abanico de incertidumbre a una sola cifra.
+Las probabilidades suman 100% y son decisiones del analista. Su promedio, unos USD 54,87, complementa al Base y se muestra después de este. No lo sustituye ni reduce el abanico de incertidumbre a una sola cifra.
 
 ## 12. Valoración frente al precio
 
-Con el precio de referencia de USD 70,46, el DCF Base de USD 60,10 queda aproximadamente 14,7% por debajo de la cotización. El escenario Optimista supera ese precio por un margen pequeño. Bajo estas hipótesis, el descuento de la acción frente a sus máximos no basta para demostrar un margen de seguridad.
+Con el precio de referencia de USD 70,46, el DCF Base de USD 61,71 queda aproximadamente 14,7% por debajo de la cotización. El escenario Optimista supera ese precio por un margen pequeño. Bajo estas hipótesis, el descuento de la acción frente a sus máximos no basta para demostrar un margen de seguridad.
 
 Aplicar un MOS de 25% al DCF Base sitúa el umbral en unos USD 45,08. Sobre el esperado probabilístico, el umbral sería aproximadamente USD 40,43; son dos convenciones distintas y deben mantenerse etiquetadas. El precio de compra no es una promesa de que el mercado vaya a ofrecerlo.
 
-Los múltiplos heredados producen un valor combinado secundario cercano a USD 70,30 y un objetivo de tres años cercano a USD 98,51. Esa aparente mayor oportunidad depende de la selección de múltiplos y de sus proyecciones. La auditoría encontró la antigua regla del mínimo positivo de cuatro cierres y bandas de ±10%, sin las tres anclas independientes exigidas hoy. Se conservan como comparadores históricos condicionados y no se utilizan para declarar confirmada una infravaloración. Tampoco se presenta el objetivo futuro como si fuera valor presente.
+Los múltiplos heredados producen un valor combinado secundario cercano a USD 71,26 y un objetivo de tres años cercano a USD 99,81. Esa aparente mayor oportunidad depende de la selección de múltiplos y de sus proyecciones. La auditoría encontró la antigua regla del mínimo positivo de cuatro cierres y bandas de ±10%, sin las tres anclas independientes exigidas hoy. Se conservan como comparadores históricos condicionados y no se utilizan para declarar confirmada una infravaloración. Tampoco se presenta el objetivo futuro como si fuera valor presente.
 
 ## 13. Qué aporta el criterio de inversión
 
@@ -112,7 +114,7 @@ El crecimiento y el margen futuro siguen siendo estimaciones. El ROIC estable us
 
 ## 17. Conclusión
 
-Netflix muestra rentabilidad operativa real y una plataforma capaz de generar caja. El desafío de la inversión consiste en sostener esa rentabilidad mientras crece y renueva su catálogo. El modelo Base concede crecimiento y mejora del margen, pero también cobra la reinversión y normaliza el retorno estable. Con esas condiciones, mantiene un valor de aproximadamente USD 60,10 y no identifica margen de seguridad frente a USD 70,46.
+Netflix muestra rentabilidad operativa real y una plataforma capaz de generar caja. El desafío de la inversión consiste en sostener esa rentabilidad mientras crece y renueva su catálogo. El modelo Base concede crecimiento y mejora del margen, pero también cobra la reinversión y normaliza el retorno estable. Con esas condiciones, mantiene un valor de aproximadamente USD 61,71 y no identifica margen de seguridad frente a USD 70,46.
 
 La conclusión cambiaría con evidencia de una monetización duradera mayor a la prevista, márgenes superiores sin deterioro de reinversión o una cotización que ofreciera más protección. También podría empeorar si el crecimiento dependiera cada vez más del precio mientras el uso se debilitara. La decisión final corresponde al inversor; el propósito del análisis es dejar claros los hechos, las condiciones y el costo de equivocarse.
 
