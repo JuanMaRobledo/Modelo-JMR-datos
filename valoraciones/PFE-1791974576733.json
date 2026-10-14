@@ -8,8 +8,8 @@
   "posicion": null,
   "tipo": "Biotech/Farma",
   "mos": 0.35,
-  "precioMOS": 7.2394496328591895,
-  "precioMOSMax": 7.2394496328591895,
+  "precioMOS": 7.8247337097903875,
+  "precioMOSMax": 7.8247337097903875,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -468,7 +468,7 @@
     "betaHoja": 1.1504593597840307,
     "betaPropuesta": 1.156574150368713,
     "dcfBase": 12.03805186121598,
-    "metodo": "DCF Base como valor intrínseco principal; Promedio de los 4 escenarios = suma de DCF × probabilidad como complemento.",
+    "metodo": "DCF Base como valor intrínseco principal; Promedio de los 4 escenarios = suma de DCF × probabilidad, solo informativo; las diferencias y el MOS se miden sobre el DCF Base.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 12.03805186121598,
@@ -780,9 +780,9 @@
     "nota": "Barato frente a su historia no equivale a infravalorado intrínsecamente."
   },
   "precioMOSHoy": {
-    "conservador": 7.2394496328591895,
-    "base": 7.2394496328591895,
-    "optimista": 7.2394496328591895
+    "conservador": 7.8247337097903875,
+    "base": 7.8247337097903875,
+    "optimista": 7.8247337097903875
   },
   "cagr": {
     "conservador": -0.1967527057,
@@ -791,25 +791,25 @@
   },
   "zonas": {
     "value": {
-      "min": 7.2394496329999996,
-      "max": 7.796330373999999
+      "min": 7.8247337097903875,
+      "max": 8.426636302851184
     },
     "deepValue": {
-      "min": 6.125688151,
-      "max": 6.682568892
+      "min": 6.620928523668789,
+      "max": 7.222831116729587
     },
     "historica": {
-      "min": 5.011926669,
-      "max": 5.56880741
+      "min": 5.417123337547191,
+      "max": 6.01902593060799
     },
     "conMOS": {
-      "min": 7.2394496328591895,
-      "max": 7.2394496328591895,
-      "base": "promedio de los 4 escenarios; una cifra, sin escenarios"
+      "min": 7.8247337097903875,
+      "max": 7.8247337097903875,
+      "base": "DCF Base; una cifra, sin escenarios"
     },
-    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: promedio de los 4 escenarios."
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: DCF Base."
   },
-  "baseMOS": "valorEsperado",
+  "baseMOS": "dcfBase",
   "savedAt": "2026-10-14T10:50:36.458Z",
   "hojas": {
     "financieros": {
@@ -882,6 +882,5 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El promedio de los 4 escenarios por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 7.2394496328591895,
   "precioReferenciaFuente": "Cierre del 30-sep-2026 (FMP; Yahoo Finance limitó las consultas); corte vigente de la cartera"
 }

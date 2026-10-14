@@ -8,8 +8,8 @@
   "posicion": null,
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 177.81065767477048,
-  "precioMOSMax": 177.81065767477048,
+  "precioMOS": 212.74847910635324,
+  "precioMOSMax": 212.74847910635324,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
@@ -475,7 +475,7 @@
     "betaHoja": 1.07,
     "betaPropuesta": 1.07,
     "dcfBase": 327.3053524713127,
-    "metodo": "DCF Base como valor intrínseco principal; Promedio de los 4 escenarios = suma de DCF × probabilidad como complemento.",
+    "metodo": "DCF Base como valor intrínseco principal; Promedio de los 4 escenarios = suma de DCF × probabilidad, solo informativo; las diferencias y el MOS se miden sobre el DCF Base.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 327.3053524713127,
@@ -675,9 +675,9 @@
   },
   "multiplesHistoricos": null,
   "precioMOSHoy": {
-    "conservador": 177.81065767477048,
-    "base": 177.81065767477048,
-    "optimista": 177.81065767477048
+    "conservador": 212.74847910635324,
+    "base": 212.74847910635324,
+    "optimista": 212.74847910635324
   },
   "cagr": {
     "conservador": -0.09536327236,
@@ -686,25 +686,25 @@
   },
   "zonas": {
     "value": {
-      "min": 177.81065770000004,
-      "max": 191.4884006
+      "min": 212.74847910635324,
+      "max": 229.11374672991886
     },
     "deepValue": {
-      "min": 150.45517190000004,
-      "max": 164.1329148
+      "min": 180.017943859222,
+      "max": 196.3832114827876
     },
     "historica": {
-      "min": 123.09968610000001,
-      "max": 136.777429
+      "min": 147.2874086120907,
+      "max": 163.65267623565634
     },
     "conMOS": {
-      "min": 177.81065767477048,
-      "max": 177.81065767477048,
-      "base": "promedio de los 4 escenarios; una cifra, sin escenarios"
+      "min": 212.74847910635324,
+      "max": 212.74847910635324,
+      "base": "DCF Base; una cifra, sin escenarios"
     },
-    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: promedio de los 4 escenarios."
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: DCF Base."
   },
-  "baseMOS": "valorEsperado",
+  "baseMOS": "dcfBase",
   "savedAt": "2026-10-11T20:23:26.693Z",
   "hojas": {
     "financieros": {
@@ -857,7 +857,7 @@
       },
       "valorEsperadoAntes": 251.91231005059035,
       "valorEsperadoAhora": 251.91257296712774,
-      "MOS": "Sobre el promedio de los 4 escenarios",
+      "MOS": "Sobre el DCF Base",
       "fuente": "Lecturas numéricas de las hojas vinculadas; DCF y múltiplos reproducidos con jmr_engine.js",
       "forward": "Retirada columna heredada Nov 26 (E); no se sustituye con un consenso inventado."
     },
@@ -883,7 +883,6 @@
     },
     "nota": "DCF Base es el valor intrínseco principal. El promedio de los 4 escenarios por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
   },
-  "precioMOSValorEsperado": 177.81065767477048,
   "lecturaDamodaran": {
     "fecha": "2026-10-11",
     "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",

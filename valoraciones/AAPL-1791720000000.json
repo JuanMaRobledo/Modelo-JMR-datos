@@ -8,15 +8,16 @@
   "posicion": null,
   "tipo": "Madura",
   "mos": 0.25,
-  "precioMOS": 102.04292928377397,
-  "precioMOSMax": 102.04292928377397,
+  "precioMOS": 110.81151265319946,
+  "precioMOSMax": 110.81151265319946,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.4,
       "conservador": 133.4836778286535,
       "base": 193.1497688196204,
-      "optimista": 260.857312424575
+      "optimista": 260.857312424575,
+      "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
       "nombre": "EV/EBITDA",
@@ -125,7 +126,8 @@
     "historiaCentralId": "A",
     "rango": {
       "max": 102.04292928377397
-    }
+    },
+    "metodo": "DCF Base como valor intrínseco principal; Promedio de los 4 escenarios = suma de DCF × probabilidad, solo informativo; las diferencias y el MOS se miden sobre el DCF Base."
   },
   "descuentoMultiples": {
     "version": 2,
@@ -451,12 +453,16 @@
       }
     }
   },
-  "crecimientoImplicito": null,
+  "crecimientoImplicito": {
+    "dcfHoy": 147.74868353759928,
+    "dcfFy3": 193.1497688196204,
+    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
+  },
   "multiplesHistoricos": null,
   "precioMOSHoy": {
-    "conservador": 102.04292928377397,
-    "base": 102.04292928377397,
-    "optimista": 102.04292928377397
+    "conservador": 110.81151265319946,
+    "base": 110.81151265319946,
+    "optimista": 110.81151265319946
   },
   "cagr": {
     "conservador": -0.18135387196235042,
@@ -477,11 +483,13 @@
       "max": 73.87434176879964
     },
     "conMOS": {
-      "min": null,
-      "max": null
-    }
+      "min": 110.81151265319946,
+      "max": 110.81151265319946,
+      "base": "DCF Base; una cifra, sin escenarios"
+    },
+    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: DCF Base."
   },
-  "baseMOS": "valorEsperado",
+  "baseMOS": "dcfBase",
   "savedAt": "2026-10-12T10:24:51.686361+00:00",
   "precioReferenciaFuente": "Yahoo y fuentes primarias citadas en informes; último cierre 09-oct-2026",
   "precioReferenciaConsultadoAt": "2026-10-11",
