@@ -131,5 +131,29 @@
     "conservador": 37.301395858782705,
     "base": 51.104402204577,
     "optimista": 68.14819078579703
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-10-14",
+    "precio": 70.46,
+    "precioFecha": "2026-10-13",
+    "dcfHoy": 51.104402204577,
+    "umbral": 0.02,
+    "dcfInverso": {
+      "gImplicito": 0.16168711532349145,
+      "gDcf": 0.0958,
+      "dif": 0.06588711532349145,
+      "lectura": "El precio exige aproximadamente 16,17% de crecimiento anual de ingresos durante los años 1–5, comparado con 9,58% del DCF Base (+6,59 pp). Es una condición matemática del precio, no un pronóstico de consenso."
+    },
+    "multiplos": [],
+    "metodo": "DCF inverso FCFF completo; ingresos años 1–5 uniformes, luego convergencia original; otros inputs Base fijos.",
+    "controles": {
+      "dcfBaseHoja": 51.104402204577,
+      "dcfBaseMotor": 51.104402204577,
+      "dcfInversoObjetivo": 70.46,
+      "dcfInversoRecalculado": 70.45999999999992,
+      "errorAbsoluto": 7.105427357601002e-14,
+      "validadoContraHoja": true,
+      "nota": "Valor de mercado y fecha fijados en la valoración; no recalcula cotización actual."
+    }
   }
 }
