@@ -122,18 +122,18 @@
   "auditoria": {
     "fecha": "2026-10-15",
     "estado": "PUBLICACIÓN DE REGISTRO · CONTROLES ARITMÉTICOS CONCILIADOS · CERTIFICACIÓN ECONÓMICA PENDIENTE",
-    "statusTecnico": "Hoja vigente y 4 DCF conciliados; DCF inverso anterior retirado por pertenecer a otro modelo. Vercel API 403, visualización en vivo no confirmada.",
+    "statusTecnico": "Base y 4 DCF conciliados; DCF inverso reproducido numéricamente (error <1e-6), CI Vercel success para PR#58; visual de producción pendiente por 403",
     "workflowRun": null,
     "hojaOrigen": "1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g",
     "fuentes": "https://github.com/JuanMaRobledo/JMR-valuation/blob/main/reference/fuentes/NFLX_manifest.json",
-    "controlIntegridad": "Base=60.27374299402483; Conservador=51.806217799889104; Optimista=80.66123906980927; Disrupción=17.013431712056608; EV=264076.27573063865; deuda=16639.720999999998; caja=9127.9; opciones+RSU=5590.616277818696; equity=250973.83845281997; acciones=4163.9; margen 13% a 11% primeros cinco años; STC=1.2031860037027624.",
+    "controlIntegridad": "Base=60.27374299402483; Conservador=51.806217799889104; Optimista=80.66123906980927; Disrupción=17.013431712056608; EV=264076.27573063865; deuda=16639.720999999998; caja=9127.9; opciones+RSU=5590.616277818696; equity=250973.83845281997; acciones=4163.9; margen 13% a 11% primeros cinco años; STC=1.2031860037027624. DCF inverso: precio=70.57, CAGR implícito=0.15207953383472383, CAGR Base=0.11997767803756854, delta anual=0.032101233807202194, error=1.169411234513973e-10.",
     "riesgos": [
       "Volatilidad 45% y vencimiento 4,79 años de opciones no certificados al 30-jun-2026.",
       "Auditar FCFF/contenido, arrendamientos y activos no operativos.",
       "Crecer 5,19% perpetuo con ROIC 12% y WACC 9,42% exige justificación económica.",
       "Disrupción extrema con parámetros aún no certificados.",
-      "DCF inverso del modelo antiguo US$66,40 invalidado para el nuevo Base; pendiente recálculo.",
-      "Vercel devuelve 403 al acceder al proyecto: despliegue visual no verificado."
+      "Vercel devuelve 403 al acceder al proyecto: despliegue visual no verificado.",
+      "DCF inverso validado aritméticamente, pero los supuestos macroeconómicos y de reinversión/ROIC/FCFF conservan sus salvedades."
     ],
     "estadoMultiples": "AUXILIARES NO APROBADOS EN PONDERACIÓN PUBLICADA; EXCLUIDOS HASTA VALIDAR ANCLAS",
     "editorial": [
@@ -158,7 +158,13 @@
         "persistente": 60.27374299402483,
         "esQuintoEscenario": false
       },
-      "validadoCentro": true
+      "validadoCentro": true,
+      "dcfInverso": {
+        "estado": "VALIDADO ARITMÉTICAMENTE",
+        "fecha": "2026-10-15",
+        "errorAbsoluto": 1.169411234513973e-10,
+        "hoja": "Crecimiento implícito"
+      }
     }
   },
   "valorPresentePonderado": {
@@ -166,7 +172,32 @@
     "base": 60.27374299402483,
     "optimista": 80.66123906980927
   },
-  "crecimientoImplicito": null,
+  "crecimientoImplicito": {
+    "fecha": "2026-10-15",
+    "precio": 70.57,
+    "precioFecha": null,
+    "precioReferencia": "Precio fijo usado en Input sheet!B23 al 15-oct-2026; cotización en tiempo real NO verificada",
+    "dcfHoy": 60.27374299402483,
+    "umbral": 0.02,
+    "dcfInverso": {
+      "gImplicito": 0.15207953383472383,
+      "gDcf": 0.11997767803756854,
+      "dif": 0.0321018557971553,
+      "incrementoTasaAnual": 0.032101233807202194,
+      "lectura": "Para justificar US$70.57 manteniendo el resto de las hipótesis del DCF Base actual, Netflix necesitaría aproximadamente 15.21% CAGR de ingresos en años 1–5 frente a 12.00% en el Base, aumentando cada tasa anual de crecimiento del quinquenio 3.2101 puntos porcentuales. Es una lectura implícita, no una predicción ni crecimiento perpetuo."
+    },
+    "metodo": "Se ajustan las cinco tasas de crecimiento de ingresos de años1–5 por el mismo delta; el crecimiento años6–10 converge a g terminal 5,19%; los FCFF años1–10, reinversión, valor terminal y puente a equity se recalculan en una hoja DCF aislada sin cambiar el Base.",
+    "controles": {
+      "dcfBaseHoja": 60.27374299402483,
+      "dcfBaseMotor": 60.27374299402483,
+      "dcfInversoObjetivo": 70.57,
+      "dcfInversoRecalculado": 70.57000000011693,
+      "errorAbsoluto": 1.169411234513973e-10,
+      "validadoContraHoja": true,
+      "hoja": "Crecimiento implícito!A4:H8; DCF inverso NFLX!B160:B169",
+      "fuente": "https://docs.google.com/spreadsheets/d/1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g/edit#gid=2026101506"
+    }
+  },
   "precioReferenciaConsultadoAt": "Fecha de precio no certificada: referencia fija de la hoja",
   "baseMOS": "dcfBase",
   "precioMOS": 45.205307245518625,
