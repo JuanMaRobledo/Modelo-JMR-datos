@@ -1026,7 +1026,7 @@
     "horizonte": 3,
     "modelo": "Se valora la cotización actual como múltiplo de métricas FY+3, capitalizando precio al costo de patrimonio y preservando el puente de EV a equity",
     "definicionDiferencia": "Cotización implícita FY+3 / DCF implícito FY+3 − 1",
-    "noLTM": true,
+    "noLTM": false,
     "metodos": [
       {
         "nombre": "EV/EBITDA",
@@ -1120,7 +1120,15 @@
       }
     ],
     "salvedades": [
-      "Precio al cierre del 15 de octubre, no feed en tiempo real"
-    ]
+      "Precio al cierre del 15 de octubre, no feed en tiempo real",
+      "Ratios LTM son otra base temporal y en DUOL el P/E incorpora impacto fiscal excepcional; no confundirlos con múltiplos FY+3 normalizados."
+    ],
+    "ratiosLTM": {
+      "EV/EBITDA": 29.62,
+      "P/E": 16.66,
+      "P/OCF": 15.17
+    },
+    "fuenteLTM": "https://stockanalysis.com/stocks/duol/financials/ratios/",
+    "fechaRatiosLTM": "2026-10-15, consulta intradía; los ratios pueden diferir de los de cierre"
   }
 }
