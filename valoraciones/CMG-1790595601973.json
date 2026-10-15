@@ -2,8 +2,8 @@
   "ticker": "CMG",
   "hojaGoogle": "https://docs.google.com/spreadsheets/d/1VUVN1cCm3Hj8bLrmsCZFYBCDIq3DncxHGHH_jbW8ZtU/edit",
   "nombreActivo": "CHIPOTLE MEXICAN GRILL INC",
-  "fecha": "Análisis del 30 de sept de 2026",
-  "precio": 30.79,
+  "fecha": "Revisión Modelo JMR 15-oct-2026 · información financiera 30-jun-2026",
+  "precio": 30.81,
   "precioAnalisis": 31.95,
   "posicion": {
     "acciones": 10,
@@ -11,95 +11,101 @@
     "primeraCompra": "2026-03-27",
     "compras": "Compras: 2026-03-27",
     "precioHoyHoja": 30.81,
-    "dcfBase": 26.38386594,
-    "dcfEsperado": 25.21970848,
-    "ponderadoBase": 28.13443402,
+    "dcfBase": 23.991434067319343,
+    "dcfEsperado": 22.40395210335119,
+    "ponderadoBase": 27.327629822477256,
     "fuente": "app Cartera, posiciones al 2026-10-06"
   },
   "tipo": "Madura",
   "mos": 0.35,
-  "precioMOS": 16.392810513971554,
-  "precioMOSMax": 16.392810513971554,
+  "precioMOS": 15.594432144,
+  "precioMOSMax": 15.594432144,
   "metodos": [
     {
-      "nombre": "DCF Damodaran",
+      "nombre": "DCF capitalizado FY+3",
       "peso": 0.4,
-      "conservador": 25.99608926,
-      "base": 33.67480872,
-      "optimista": 45.03690999,
-      "horizonte": "FY+3; capitalizado desde el DCF presente"
+      "conservador": 22.546791428517327,
+      "base": 30.542703449852418,
+      "optimista": 38.990699994778495,
+      "horizonte": "FY+3"
     },
     {
       "nombre": "EV/EBITDA",
-      "peso": 0.2,
-      "conservador": 32.68005625,
-      "base": 39.68789939,
-      "optimista": 50.07329686
+      "peso": 0.19999999999999996,
+      "conservador": 32.58131239494886,
+      "base": 40.596818637697176,
+      "optimista": 49.9745530039497,
+      "horizonte": "FY+3"
     },
     {
       "nombre": "EV/FCFF",
-      "peso": 0.1,
-      "conservador": 24.1811812,
-      "base": 27.19731041,
-      "optimista": 30.80284722
+      "peso": 0.09999999999999998,
+      "conservador": 24.421010678467518,
+      "base": 27.159725763749016,
+      "optimista": 31.71913999602895,
+      "horizonte": "FY+3"
     },
     {
       "nombre": "P/E",
-      "peso": 0.2,
-      "conservador": 34.7939829,
-      "base": 45.31603241,
-      "optimista": 63.22692274
+      "peso": 0.19999999999999996,
+      "conservador": 34.79398289588881,
+      "base": 46.37677892427148,
+      "optimista": 63.22692273520865,
+      "horizonte": "FY+3"
     },
     {
       "nombre": "P/FCFE",
-      "peso": 0.05,
-      "conservador": 26.62835877,
-      "base": 29.97423588,
-      "optimista": 33.96221949
+      "peso": 0.04999999999999999,
+      "conservador": 26.937550823324493,
+      "base": 30.074165858617825,
+      "optimista": 34.894999017915595,
+      "horizonte": "FY+3"
     },
     {
       "nombre": "P/OCF",
-      "peso": 0.05,
-      "conservador": 27.68315411,
-      "base": 31.97151665,
-      "optimista": 37.70593984
+      "peso": 0.04999999999999999,
+      "conservador": 27.883773159840928,
+      "base": 32.32567407927069,
+      "optimista": 38.310755794778416,
+      "horizonte": "FY+3"
     }
   ],
   "objetivoPonderado": {
-    "conservador": 29.0269373,
-    "base": 36.28772852,
-    "optimista": 47.3385006
+    "conservador": 27.676942897,
+    "base": 35.447765466,
+    "optimista": 45.068776886
   },
   "valorPresentePonderado": {
-    "conservador": 23.46776582,
-    "base": 28.13443402,
-    "optimista": 35.35910595
+    "conservador": 22.453623067,
+    "base": 27.327629822,
+    "optimista": 33.650088138
   },
   "descuentoMultiples": {
-    "version": 2,
+    "version": 3,
+    "fechaRecalculo": "2026-10-15",
     "horizontes": [
       1,
       2,
       3
     ],
     "horizonteAnios": 3,
-    "costoPatrimonio": 0.08473145825,
+    "costoPatrimonio": 0.08380318357753808,
     "criterio": "Promedio 1-3 años",
-    "formula": "VP_n = Precio FY+n / (1 + Ke)^n + suma(Dividendo FY+t / (1 + Ke)^t), t = 1..n",
+    "formula": "VP_n = Precio FY+n/(1+Ke)^n + suma(Dividendo_t/(1+Ke)^t)",
     "dcfHoy": {
-      "conservador": 20.3676683,
-      "base": 26.38386594,
-      "optimista": 35.28595531
+      "conservador": 17.71060839,
+      "base": 23.991434067,
+      "optimista": 30.627374217
     },
     "multiplesHoy": {
-      "conservador": 25.5344975,
-      "base": 29.30147941,
-      "optimista": 35.40787303
+      "conservador": 25.615632851,
+      "base": 29.551760326,
+      "optimista": 35.665230751
     },
     "ponderadoHoy": {
-      "conservador": 23.46776582,
-      "base": 28.13443402,
-      "optimista": 35.35910595
+      "conservador": 22.453623067,
+      "base": 27.327629822,
+      "optimista": 33.650088138
     },
     "pesoDcf": 0.4,
     "pesoMultiplos": 0.6,
@@ -107,235 +113,235 @@
       {
         "nombre": "EV/EBITDA",
         "peso": 0.2,
-        "pesoMultiplos": 0.3333333333,
+        "pesoMultiplos": 0.33333333333333337,
         "conservador": {
           "fy": [
-            30.43113448,
-            31.29204735,
-            32.68005625
+            30.332390624,
+            31.193303499,
+            32.581312395
           ],
           "vp": [
-            28.05407205,
-            26.59435785,
-            25.60448762
+            27.986991627,
+            26.555869514,
+            25.592770772
           ],
-          "consolidado": 26.7509725,
+          "consolidado": 26.711877304,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            32.83380599,
-            36.42762557,
-            39.68789939
+            33.070193323,
+            36.883198253,
+            40.596818638
           ],
           "vp": [
-            30.26906405,
-            30.95896216,
-            31.09506058
+            30.513098526,
+            31.399861194,
+            31.8889878
           ],
-          "consolidado": 30.77436226,
+          "consolidado": 31.26731584,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            36.74977621,
-            43.79237365,
-            50.07329686
+            36.651032355,
+            43.693629795,
+            49.974553004
           ],
           "vp": [
-            33.87914671,
-            37.21808428,
-            39.23191257
+            33.817055449,
+            37.197802132,
+            39.255241286
           ],
-          "consolidado": 36.77638119,
+          "consolidado": 36.756699622,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "EV/FCFF",
         "peso": 0.1,
-        "pesoMultiplos": 0.1666666667,
+        "pesoMultiplos": 0.16666666666666669,
         "conservador": {
           "fy": [
-            22.93869013,
-            23.33100033,
-            24.1811812
+            23.147042268,
+            23.554707274,
+            24.421010678
           ],
           "vp": [
-            21.14688382,
-            19.82845561,
-            18.94570652
+            21.357237752,
+            20.052885159,
+            19.182816233
           ],
-          "consolidado": 19.97368198,
+          "consolidado": 20.197646381,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            19.48685064,
-            24.67065228,
-            27.19731041
+            19.110347305,
+            23.227661425,
+            27.159725764
           ],
           "vp": [
-            17.96467733,
-            20.96699355,
-            21.30881271
+            17.632673159,
+            19.774460435,
+            21.334089532
           ],
-          "consolidado": 20.0801612,
+          "consolidado": 19.580407709,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            16.67347138,
-            25.71680262,
-            30.80284722
+            17.489174937,
+            26.540819341,
+            31.719139996
           ],
           "vp": [
-            15.37105912,
-            21.85609154,
-            24.13371367
+            16.136855107,
+            22.595059071,
+            24.915530386
           ],
-          "consolidado": 20.45362145,
+          "consolidado": 21.215814855,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/E",
         "peso": 0.2,
-        "pesoMultiplos": 0.3333333333,
+        "pesoMultiplos": 0.33333333333333337,
         "conservador": {
           "fy": [
-            32.76269893,
-            33.55836234,
-            34.7939829
+            32.762698926,
+            33.558362336,
+            34.793982896
           ],
           "vp": [
-            30.20351136,
-            28.5204444,
-            27.26072739
+            30.229380594,
+            28.569320697,
+            27.33083363
           ],
-          "consolidado": 28.66156105,
+          "consolidado": 28.709844974,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            37.82475504,
-            41.85119992,
-            45.31603241
+            38.174984256,
+            42.434260617,
+            46.376778924
           ],
           "vp": [
-            34.87015588,
-            35.56832745,
-            35.50464485
+            35.223170437,
+            36.125660364,
+            36.429173195
           ],
-          "consolidado": 35.31437606,
+          "consolidado": 35.926001332,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
             46.64256494,
             55.57709614,
-            63.22692274
+            63.226922735
           ],
           "vp": [
-            42.99918158,
-            47.23363627,
-            49.53764303
+            43.03601027,
+            47.314581896,
+            49.665038675
           ],
-          "consolidado": 46.59015363,
+          "consolidado": 46.671876947,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/FCFE",
         "peso": 0.05,
-        "pesoMultiplos": 0.08333333333,
+        "pesoMultiplos": 0.08333333333333334,
         "conservador": {
           "fy": [
-            25.40747103,
-            25.79950932,
-            26.62835877
+            25.687917335,
+            26.093977939,
+            26.937550823
           ],
           "vp": [
-            23.42282123,
-            21.92638197,
-            20.86304495
+            23.701644103,
+            22.214648515,
+            21.159570094
           ],
-          "consolidado": 22.07074938,
+          "consolidado": 22.358620904,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            22.57333476,
-            27.50743446,
-            29.97423588
+            22.332256953,
+            26.294933211,
+            30.074165859
           ],
           "vp": [
-            20.8100674,
-            23.37790644,
-            23.48450522
+            20.605454285,
+            22.385728246,
+            23.623395634
           ],
-          "consolidado": 22.55749302,
+          "consolidado": 22.204859388,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            20.30440284,
-            28.97769302,
-            33.96221949
+            21.144744761,
+            29.825674416,
+            34.894999018
           ],
           "vp": [
-            18.71836821,
-            24.62744381,
-            26.60904932
+            19.509764394,
+            25.391562582,
+            27.410182258
           ],
-          "consolidado": 23.31828711,
+          "consolidado": 24.103836412,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/OCF",
         "peso": 0.05,
-        "pesoMultiplos": 0.08333333333,
+        "pesoMultiplos": 0.08333333333333334,
         "conservador": {
           "fy": [
-            25.92359,
-            26.64986229,
-            27.68315411
+            26.105557392,
+            26.840928046,
+            27.88377316
           ],
           "vp": [
-            23.89862468,
-            22.64907649,
-            21.68946624
+            24.086990874,
+            22.850551331,
+            21.902832092
           ],
-          "consolidado": 22.74572247,
+          "consolidado": 22.946791433,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            25.46195901,
-            29.54848408,
-            31.97151665
+            25.40282599,
+            28.914650721,
+            32.325674079
           ],
           "vp": [
-            23.473053,
-            25.11254538,
-            25.04935414
+            23.438596947,
+            24.615978605,
+            25.391965699
           ],
-          "consolidado": 24.54498418,
+          "consolidado": 24.482180417,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            26.01125521,
-            33.04807517,
-            37.70593984
+            26.556134446,
+            33.597907855,
+            38.310755795
           ],
           "vp": [
-            23.97944211,
-            28.08676362,
-            29.54221568
+            24.502727846,
+            28.602987079,
+            30.09327492
           ],
-          "consolidado": 27.20280714,
+          "consolidado": 27.732996615,
           "chequeo": "OK"
         }
       }
@@ -343,54 +349,54 @@
     "consolidado": {
       "conservador": {
         "fy": [
-          29.16531458,
-          29.87608425,
-          31.04750266
+          29.205659789,
+          29.920915323,
+          31.097043875
         ],
         "vp": [
-          26.88712893,
-          25.39096489,
-          24.32539869
+          26.947383281,
+          25.472644251,
+          24.426871022
         ],
-        "consolidado": 25.5344975
+        "consolidado": 25.615632851
       },
       "base": {
         "fy": [
-          30.80360326,
-          34.95937709,
-          38.02967505
+          30.911373989,
+          34.911228522,
+          38.717806809
         ],
         "vp": [
-          28.39744623,
-          29.71113312,
-          29.79585887
+          28.521206117,
+          29.721059496,
+          30.413015365
         ],
-        "consolidado": 29.30147941
+        "consolidado": 29.551760326
       },
       "optimista": {
         "fy": [
-          34.43599712,
-          42.57810438,
-          48.87289435
+          34.654468188,
+          42.799010391,
+          49.120828147
         ],
         "vp": [
-          31.74610348,
-          36.18610606,
-          38.29140956
+          31.974872111,
+          36.43618366,
+          38.584636483
         ],
-        "consolidado": 35.40787303
+        "consolidado": 35.665230751
       }
     },
     "chequeo": {
       "multiplosFY3SinDescontar": {
-        "conservador": 31.04750266,
-        "base": 38.02967505,
-        "optimista": 48.87289435
+        "conservador": 31.097043875,
+        "base": 38.717806809,
+        "optimista": 49.120828147
       },
       "multiplosVP3": {
-        "conservador": 24.32539869,
-        "base": 29.79585887,
-        "optimista": 38.29140956
+        "conservador": 24.426871022,
+        "base": 30.413015365,
+        "optimista": 38.584636483
       },
       "resultado": {
         "conservador": "OK",
@@ -400,265 +406,246 @@
     }
   },
   "crecimientoImplicito": {
-    "fecha": "2026-10-06",
+    "fecha": "2026-10-15",
     "umbral": 0.02,
-    "precio": 30.79,
+    "precio": 31.95,
+    "precioFecha": "2026-09-30",
     "dcfInverso": {
-      "gImplicito": 0.10873878793701974,
-      "gDcf": 0.07200000000000002,
-      "dif": 0.03673878793701972,
-      "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
+      "gImplicito": 0.13482915290955444,
+      "gDcf": 0.07997685125644804,
+      "dif": 0.054852301653106394,
+      "lectura": "El precio fijo US$31,95 exige +5.49 puntos de CAGR frente a crecimiento Base para años 1-5 con otros drivers constantes."
     },
     "multiplos": [
       {
         "metodo": "EV/EBITDA",
         "multiplo": 18.66,
-        "gImplicito": 0.06097696019029098,
-        "gDcf": 0.05413901209411175,
-        "dif": 0.006837948096179228,
-        "multiploDcf": 14.346703929973389,
-        "difValor": 0.17856346925010946,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
+        "gImplicito": 0.060643768319238574,
+        "gDcf": 0.054056698622977344,
+        "dif": 0.00658706969626123,
+        "lectura": "Revisar: diferencia en valor frente al DCF FY+3 de 32.9%",
+        "multiploDcf": 14.401553717326944,
+        "difValor": 0.3291822285591861,
+        "aplica": true
       },
       {
         "metodo": "EV/FCFF",
         "multiplo": 32.19,
-        "gImplicito": 0.05170170220007254,
-        "gDcf": 0.05413901209411175,
-        "dif": -0.0024373098940392163,
-        "multiploDcf": 34.865573800693774,
-        "difValor": -0.19235442014800153,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
+        "gImplicito": 0.050896940627280646,
+        "gDcf": 0.054056698622977344,
+        "dif": -0.003159757995696698,
+        "lectura": "Consistente con DCF",
+        "multiploDcf": 35.746571060663946,
+        "difValor": -0.11076222154524928,
+        "aplica": true
       },
       {
         "metodo": "P/E",
         "multiplo": 29.28,
-        "gImplicito": 0.0507733697079797,
-        "gDcf": 0.03895073521054888,
-        "dif": 0.011822634497430824,
-        "multiploDcf": 21.75826847496068,
-        "difValor": 0.34569531733167547,
-        "aplica": true,
-        "lectura": "Revisar: el múltiplo vale 35% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
+        "gImplicito": 0.049839828955669796,
+        "gDcf": 0.03209863404964754,
+        "dif": 0.01774119490602226,
+        "lectura": "Revisar: diferencia en valor frente al DCF FY+3 de 51.8%",
+        "multiploDcf": 19.283149406990148,
+        "difValor": 0.5184241630874875,
+        "aplica": true
       },
       {
         "metodo": "P/FCFE",
         "multiplo": 29.61,
-        "gImplicito": 0.04929429855227671,
-        "gDcf": 0.053074889997070905,
-        "dif": -0.0037805914447941943,
-        "multiploDcf": 33.26560484044117,
-        "difValor": -0.10989142863853874,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
+        "gImplicito": 0.048396349746190864,
+        "gDcf": 0.048922024160868764,
+        "dif": -0.0005256744146778999,
+        "lectura": "Consistente con DCF",
+        "multiploDcf": 30.071306163624847,
+        "difValor": -0.015340409928147891,
+        "aplica": true
       },
       {
         "metodo": "P/OCF",
         "multiplo": 19.4,
-        "gImplicito": 0.051440137402250036,
-        "gDcf": 0.053074889997070905,
-        "dif": -0.0016347525948208694,
-        "multiploDcf": 20.43354077708088,
-        "difValor": -0.05058060119664354,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
+        "gImplicito": 0.050787338032193666,
+        "gDcf": 0.048922024160868764,
+        "dif": 0.0018653138713249015,
+        "lectura": "Consistente con DCF",
+        "multiploDcf": 18.329964147819716,
+        "difValor": 0.058376319972647694,
+        "aplica": true
       }
     ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (33,67 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 8,5%, WACC años 4-10 8,4%, ROE FY+3 94,5%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
-    "dcfHoy": 26.38386594,
-    "dcfFy3": 33.67480872,
-    "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3",
-    "parametros": {
-      "ke": 0.08473145824671362,
-      "wacc": 0.08437339223424689,
-      "roe": 0.9445962686561619,
-      "fcffEbitda": 0.41148624175770515,
-      "fcfeOcf": 0.6142542988498353
-    }
+    "nota": "Múltiplos FY+3: m de cada pestaña fila 19, métrica FY+3 H20, precio FY+3 H23, acciones 1342,6M, DCF capitalizado Resumen D6=30.5427. Múltiplo implícito DCF = M +(DCF FY+3 - precio múltiplo FY+3)×acciones/métrica. Crecimiento implícito con modelo Gordon y Ke/WACC/ROE/ratios de FCFF. Parámetros: Ke=0.083803, WACC promedio años 4–10=0.083544, ROE FY+3=0.944596.",
+    "dcfHoy": 23.991434067319343,
+    "dcfFy3": 30.542703449852418,
+    "metodo": "DCF inverso FCFF exacto diez años y comparables Gordon frente al DCF FY+3"
   },
   "valorEsperado": {
-    "fecha": "2026-09-30",
-    "valor": 25.21970848303316,
-    "valorBetaPropuesta": 25.238126020886753,
-    "betaHoja": 0.8603096823436112,
-    "betaPropuesta": 0.8570053965643366,
-    "dcfBase": 26.383865942102908,
-    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
+    "fecha": "2026-10-15",
+    "valor": 22.40395210335119,
+    "valorBetaPropuesta": null,
+    "betaHoja": 0.8622482047983262,
+    "betaPropuesta": null,
+    "dcfBase": 23.991434067319343,
+    "metodo": "DCF Base principal; el esperado es la suma de 4 DCF × probabilidad subjetiva",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 26.383865942102908,
+    "valorCentral": 23.991434067319343,
     "rango": {
-      "min": 9.605742744432082,
-      "max": 35.28595531379266
+      "min": 9.663813926345828,
+      "max": 30.627374217192195
     },
     "dcfBaseTecnicoAnterior": 26.383865942102908,
-    "updatedAt": "2026-10-06T14:24:17.239275+00:00",
+    "updatedAt": "2026-10-15",
     "historias": [
       {
-        "nombre": "Base · Crece por aperturas con comparables bajas",
-        "probabilidad": 0.4,
-        "valor": 26.383865942102908,
-        "valorBetaPropuesta": 26.403095917123903,
-        "margen": 0.17333017873513118,
-        "crecimiento": 0.07197383796645984,
-        "roicTerminal": 0.184,
         "id": "A",
         "central": true,
+        "nombre": "Base · Crece por aperturas con comparables bajas",
+        "probabilidad": 0.4,
+        "valor": 23.991434067319343,
+        "margen": 0.17333017873513118,
+        "crecimiento": 0.07997685125644804,
+        "roicTerminal": 0.184,
+        "salesToCapital": 1.56,
+        "salesToCapital2": 1.51,
+        "terminalGrowth": 0.0425,
+        "crecimientoAnios": [
+          0.09000000000000008,
+          0.08500000000000019,
+          0.08000000000000007,
+          0.07500000000000018,
+          0.07000000000000006
+        ],
         "crecimientoPorGrupo": {
           "Chipotle": [
-            0.08,
-            0.08,
-            0.07,
-            0.07,
-            0.06
+            0.09000000000000008,
+            0.08500000000000019,
+            0.08000000000000007,
+            0.07500000000000018,
+            0.07000000000000006
           ]
-        },
-        "salesToCapital": 1.51,
-        "salesToCapital2": 1.51,
-        "crecimientoAnios": [
-          0.08000000000000007,
-          0.08000000000000007,
-          0.07000000000000006,
-          0.07000000000000006,
-          0.06000000000000005
-        ],
-        "terminalGrowth": 0.0529
+        }
       },
       {
+        "id": "B",
+        "central": false,
         "nombre": "Conservadora · Tráfico débil y margen presionado",
         "probabilidad": 0.35,
-        "valor": 20.367668303462445,
-        "valorBetaPropuesta": 20.382645323490138,
+        "valor": 17.710608390479205,
         "margen": 0.1533301787351312,
         "crecimiento": 0.049980951689844844,
         "roicTerminal": 0.184,
-        "id": "B",
-        "central": false,
-        "crecimientoPorGrupo": {
-          "Chipotle": [
-            0.06,
-            0.05,
-            0.05,
-            0.05,
-            0.04
-          ]
-        },
-        "salesToCapital": 1.51,
+        "salesToCapital": 1.56,
         "salesToCapital2": 1.51,
+        "terminalGrowth": 0.0425,
         "crecimientoAnios": [
-          0.06000000000000005,
+          0.05999999999999983,
           0.050000000000000044,
           0.050000000000000044,
           0.050000000000000044,
           0.040000000000000036
         ],
-        "terminalGrowth": 0.0529
-      },
-      {
-        "nombre": "Disrupción · Deterioro de los fundamentales",
-        "probabilidad": 0.05,
-        "valor": 9.605742744432082,
-        "valorBetaPropuesta": 9.613147957315952,
-        "margen": 0.13333017873513117,
-        "crecimiento": 0.02598828880504489,
-        "roicTerminal": "costo_capital",
-        "id": "C",
-        "central": false,
         "crecimientoPorGrupo": {
           "Chipotle": [
-            0.03,
-            0.03,
-            0.03,
-            0.02,
-            0.02
+            0.05999999999999983,
+            0.050000000000000044,
+            0.050000000000000044,
+            0.050000000000000044,
+            0.040000000000000036
           ]
-        },
-        "salesToCapital": 1.51,
-        "salesToCapital2": 1.51,
-        "crecimientoAnios": [
-          0.030000000000000027,
-          0.030000000000000027,
-          0.030000000000000027,
-          0.020000000000000018,
-          0.020000000000000018
-        ],
-        "terminalGrowth": 0.020000000000000018,
-        "descripcion": "Crisis de marca o saturación: el tráfico cae",
-        "crecimientoAnios6a10": [
-          0.020000000000000018,
-          0.020000000000000018,
-          0.020000000000000018,
-          0.020000000000000018,
-          0.020000000000000018
-        ],
-        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 2.00% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+        }
       },
       {
+        "id": "C",
+        "central": false,
         "nombre": "Optimista · Vuelve el tráfico",
         "probabilidad": 0.2,
-        "valor": 35.28595531379266,
-        "valorBetaPropuesta": 35.311521964749225,
+        "valor": 30.627374217192195,
         "margen": 0.19333017873513117,
         "crecimiento": 0.10197455133279387,
         "roicTerminal": 0.184,
-        "id": "D",
-        "central": false,
-        "crecimientoPorGrupo": {
-          "Chipotle": [
-            0.11,
-            0.11,
-            0.1,
-            0.1,
-            0.09
-          ]
-        },
-        "salesToCapital": 1.51,
+        "salesToCapital": 1.56,
         "salesToCapital2": 1.51,
+        "terminalGrowth": 0.0425,
         "crecimientoAnios": [
-          0.1100000000000001,
+          0.10999999999999988,
           0.1100000000000001,
           0.10000000000000009,
           0.10000000000000009,
           0.09000000000000008
         ],
-        "terminalGrowth": 0.0529
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.10999999999999988,
+            0.1100000000000001,
+            0.10000000000000009,
+            0.10000000000000009,
+            0.09000000000000008
+          ]
+        }
+      },
+      {
+        "id": "D",
+        "central": false,
+        "nombre": "Disrupción · Deterioro de los fundamentales: Crisis de marca o saturación: el tráfico cae",
+        "probabilidad": 0.05,
+        "valor": 9.663813926345828,
+        "margen": 0.13333017873513117,
+        "crecimiento": 0.02598828880504489,
+        "roicTerminal": 0.0889,
+        "salesToCapital": 1.56,
+        "salesToCapital2": 1.51,
+        "terminalGrowth": 0.020000000000000018,
+        "crecimientoAnios": [
+          0.029999999999999805,
+          0.030000000000000027,
+          0.030000000000000027,
+          0.020000000000000018,
+          0.020000000000000018
+        ],
+        "crecimientoPorGrupo": {
+          "Chipotle": [
+            0.029999999999999805,
+            0.030000000000000027,
+            0.030000000000000027,
+            0.020000000000000018,
+            0.020000000000000018
+          ]
+        }
       }
     ]
   },
   "precioMOSHoy": {
-    "conservador": 16.392810513971554,
-    "base": 16.392810513971554,
-    "optimista": 16.392810513971554
+    "conservador": 15.594432144,
+    "base": 15.594432144,
+    "optimista": 15.594432144
   },
   "cagr": {
-    "conservador": -0.03147660114,
-    "base": 0.04334908716,
-    "optimista": 0.1400254461
+    "conservador": -0.046730382,
+    "base": 0.035235923,
+    "optimista": 0.121506091
   },
   "zonas": {
     "value": {
-      "max": 18.46870616,
-      "min": 17.14951286
+      "min": 15.594432144,
+      "max": 16.794003847
     },
     "deepValue": {
-      "max": 15.83031957,
-      "min": 14.51112627
+      "min": 13.195288737,
+      "max": 14.39486044
     },
     "historica": {
-      "max": 13.19193297,
-      "min": 11.87273967
+      "min": 10.79614533,
+      "max": 11.995717034
     },
     "conMOS": {
-      "min": 16.392810513971554,
-      "max": 16.392810513971554,
-      "base": "valor esperado; una cifra, sin escenarios"
+      "min": 15.594432144,
+      "max": 15.594432144,
+      "base": "dcfBase"
     },
-    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
+    "descripcion": "Bandas de compra 65–70%,55–60%,45–50% del DCF Base presente. DCF primero; múltiplos secundarios."
   },
-  "baseMOS": "valorEsperado",
-  "savedAt": "2026-10-06T14:23:58.835Z",
+  "baseMOS": "dcfBase",
+  "savedAt": "2026-10-15T20:55:00Z",
   "hojas": {
     "financieros": {
       "Income Statement": "<table><tbody><tr class=\"tbl-header-row\"><td>Income Statement</td><td>Dec '16</td><td>Dec '17</td><td>Dec '18</td><td>Dec '19</td><td>Dec '20</td><td>Dec '21</td><td>Dec '22</td><td>Dec '23</td><td>Dec '24</td><td>Dec '25</td><td>LTM</td><td>Sin consenso verificado</td></tr><tr><td>Total Revenues</td><td>$3,904</td><td>$4,476</td><td>$4,865</td><td>$5,586</td><td>$5,985</td><td>$7,547</td><td>$8,635</td><td>$9,872</td><td>$11,314</td><td>$11,926</td><td>$12,424</td><td></td></tr><tr><td>Total Revenues %Chg</td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">14.65%</td><td style=\"background:color-mix(in oklab, var(--positive) 23%, var(--surface)); color:var(--ink); font-weight:700;\">8.68%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">14.83%</td><td style=\"background:color-mix(in oklab, var(--positive) 20%, var(--surface)); color:var(--ink); font-weight:700;\">7.13%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">26.11%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">14.41%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">14.33%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">14.61%</td><td style=\"background:color-mix(in oklab, var(--positive) 17%, var(--surface)); color:var(--ink); font-weight:700;\">5.41%</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">4.18%</td><td></td></tr><tr><td>Cost of Sales</td><td>$3,406</td><td>$3,720</td><td>$3,954</td><td>$4,444</td><td>$4,944</td><td>$5,840</td><td>$6,573</td><td>$7,286</td><td>$8,296</td><td>$8,899</td><td>$9,426</td><td></td></tr><tr class=\"tbl-subtotal-row\"><td>Gross Profit</td><td>$498</td><td>$756</td><td>$911</td><td>$1,143</td><td>$1,041</td><td>$1,707</td><td>$2,062</td><td>$2,586</td><td>$3,018</td><td>$3,026</td><td>$2,998</td><td></td></tr><tr><td>Gross Profit Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">12.76%</td><td style=\"background:color-mix(in oklab, var(--positive) 27%, var(--surface)); color:var(--ink); font-weight:700;\">16.89%</td><td style=\"background:color-mix(in oklab, var(--positive) 32%, var(--surface)); color:var(--ink); font-weight:700;\">18.73%</td><td style=\"background:color-mix(in oklab, var(--positive) 37%, var(--surface)); color:var(--ink); font-weight:700;\">20.45%</td><td style=\"background:color-mix(in oklab, var(--positive) 28%, var(--surface)); color:var(--ink); font-weight:700;\">17.40%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">22.62%</td><td style=\"background:color-mix(in oklab, var(--positive) 47%, var(--surface)); color:var(--ink); font-weight:700;\">23.88%</td><td style=\"background:color-mix(in oklab, var(--positive) 54%, var(--surface)); color:var(--ink); font-weight:700;\">26.20%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">26.67%</td><td style=\"background:color-mix(in oklab, var(--positive) 51%, var(--surface)); color:var(--ink); font-weight:700;\">25.38%</td><td style=\"background:color-mix(in oklab, var(--positive) 48%, var(--surface)); color:var(--ink); font-weight:700;\">24.13%</td><td></td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td>$276</td><td>$296</td><td>$375</td><td>$452</td><td>$466</td><td>$607</td><td>$564</td><td>$634</td><td>$697</td><td>$652</td><td>$701</td><td></td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td>$146</td><td>$163</td><td>$202</td><td>$213</td><td>$239</td><td>$255</td><td>$287</td><td>$319</td><td>$335</td><td>$361</td><td>$378</td><td></td></tr><tr><td>Research &amp; Development Expenses</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td></td></tr><tr><td>Other Operating Expenses</td><td>$41</td><td>$26</td><td>$75</td><td>$34</td><td>$46</td><td>$41</td><td>$51</td><td>$75</td><td>$69</td><td>$77</td><td>$98</td><td></td></tr><tr class=\"tbl-subtotal-row\"><td>Operating Profit</td><td>$35</td><td>$271</td><td>$258</td><td>$444</td><td>$290</td><td>$805</td><td>$1,160</td><td>$1,558</td><td>$1,916</td><td>$1,936</td><td>$1,820</td><td></td></tr><tr><td>Operating Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">0.89%</td><td style=\"background:color-mix(in oklab, var(--positive) 28%, var(--surface)); color:var(--ink); font-weight:700;\">6.05%</td><td style=\"background:color-mix(in oklab, var(--positive) 26%, var(--surface)); color:var(--ink); font-weight:700;\">5.31%</td><td style=\"background:color-mix(in oklab, var(--positive) 33%, var(--surface)); color:var(--ink); font-weight:700;\">7.95%</td><td style=\"background:color-mix(in oklab, var(--positive) 25%, var(--surface)); color:var(--ink); font-weight:700;\">4.85%</td><td style=\"background:color-mix(in oklab, var(--positive) 39%, var(--surface)); color:var(--ink); font-weight:700;\">10.67%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">13.44%</td><td style=\"background:color-mix(in oklab, var(--positive) 52%, var(--surface)); color:var(--ink); font-weight:700;\">15.78%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">16.94%</td><td style=\"background:color-mix(in oklab, var(--positive) 53%, var(--surface)); color:var(--ink); font-weight:700;\">16.23%</td><td style=\"background:color-mix(in oklab, var(--positive) 49%, var(--surface)); color:var(--ink); font-weight:700;\">14.65%</td><td></td></tr><tr class=\"tbl-subtotal-row\"><td>Interest and Investment Income</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td></td></tr><tr><td>Interest Expense</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td></td></tr><tr><td>Interest Expense, Net</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td></td></tr><tr><td>Non-Operating Income</td><td>$4</td><td>$5</td><td>$10</td><td>$14</td><td>$4</td><td>$8</td><td>$21</td><td>$63</td><td>$94</td><td>$74</td><td>$50</td><td></td></tr><tr><td>Total Non-Operating Income</td><td>$4</td><td>$5</td><td>$10</td><td>$14</td><td>$4</td><td>$8</td><td>$21</td><td>$63</td><td>$94</td><td>$74</td><td>$50</td><td></td></tr><tr><td>Income Before Provision for Income Taxes</td><td>$39</td><td>$276</td><td>$268</td><td>$458</td><td>$294</td><td>$813</td><td>$1,182</td><td>$1,621</td><td>$2,010</td><td>$2,010</td><td>$1,870</td><td></td></tr><tr><td>Provision for Income Taxes</td><td>$16</td><td>$100</td><td>$92</td><td>$108</td><td>$62</td><td>$160</td><td>$282</td><td>$392</td><td>$476</td><td>$474</td><td>$450</td><td></td></tr><tr class=\"tbl-subtotal-row\"><td>Consolidated Net Income</td><td>$23</td><td>$176</td><td>$177</td><td>$350</td><td>$356</td><td>$653</td><td>$899</td><td>$1,229</td><td>$1,534</td><td>$1,536</td><td>$1,419</td><td></td></tr><tr><td>Net Income Attributable to Common Shareholders</td><td>$23</td><td>$176</td><td>$177</td><td>$350</td><td>$356</td><td>$653</td><td>$899</td><td>$1,229</td><td>$1,534</td><td>$1,536</td><td>$1,419</td><td></td></tr><tr><td>Basic EPS</td><td>0.02</td><td>0.12</td><td>0.13</td><td>0.25</td><td>0.25</td><td>0.46</td><td>0.64</td><td>0.89</td><td>1.12</td><td>1.15</td><td>1.06</td><td></td></tr><tr><td>Diluted EPS</td><td>0.02</td><td>0.12</td><td>0.13</td><td>0.25</td><td>0.25</td><td>0.46</td><td>0.64</td><td>0.89</td><td>1.11</td><td>1.14</td><td>1.06</td><td></td></tr><tr><td>Basic Weighted Average Shares Outstanding</td><td>1463.20</td><td>1424.50</td><td>1391.20</td><td>1387.00</td><td>1395.80</td><td>1406.60</td><td>1392.50</td><td>1377.80</td><td>1368.30</td><td>1337.30</td><td>1337.30</td><td></td></tr><tr><td>Diluted Weighted Average Shares Outstanding</td><td>1488.50</td><td>1428.00</td><td>1398.10</td><td>1414.80</td><td>1420.80</td><td>1425.50</td><td>1403.10</td><td>1385.50</td><td>1376.60</td><td>1342.60</td><td>1342.60</td><td></td></tr><tr><td>Shares Outstanding</td><td>1488.50</td><td>1428.00</td><td>1398.10</td><td>1414.80</td><td>1420.80</td><td>1425.50</td><td>1403.10</td><td>1385.50</td><td>1376.60</td><td>1342.60</td><td>1265.40</td><td></td></tr><tr class=\"tbl-subtotal-row\"><td>EBITDA</td><td>$181</td><td>$434</td><td>$460</td><td>$657</td><td>$529</td><td>$1,060</td><td>$1,447</td><td>$1,877</td><td>$2,251</td><td>$2,297</td><td>$2,198</td><td></td></tr><tr><td>Effective Tax Rate</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">40.79%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">36.08%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">34.23%</td><td style=\"background:color-mix(in oklab, var(--positive) 22%, var(--surface)); color:var(--ink); font-weight:700;\">23.59%</td><td style=\"background:color-mix(in oklab, var(--positive) 18%, var(--surface)); color:var(--ink); font-weight:700;\">21.10%</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">19.66%</td><td style=\"background:color-mix(in oklab, var(--positive) 23%, var(--surface)); color:var(--ink); font-weight:700;\">23.90%</td><td style=\"background:color-mix(in oklab, var(--positive) 24%, var(--surface)); color:var(--ink); font-weight:700;\">24.18%</td><td style=\"background:color-mix(in oklab, var(--positive) 23%, var(--surface)); color:var(--ink); font-weight:700;\">23.68%</td><td style=\"background:color-mix(in oklab, var(--positive) 22%, var(--surface)); color:var(--ink); font-weight:700;\">23.58%</td><td style=\"background:color-mix(in oklab, var(--positive) 23%, var(--surface)); color:var(--ink); font-weight:700;\">24.08%</td><td></td></tr><tr><td>EBITDA Margin</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">4.63%</td><td style=\"background:color-mix(in oklab, var(--positive) 28%, var(--surface)); color:var(--ink); font-weight:700;\">9.70%</td><td style=\"background:color-mix(in oklab, var(--positive) 28%, var(--surface)); color:var(--ink); font-weight:700;\">9.46%</td><td style=\"background:color-mix(in oklab, var(--positive) 34%, var(--surface)); color:var(--ink); font-weight:700;\">11.76%</td><td style=\"background:color-mix(in oklab, var(--positive) 26%, var(--surface)); color:var(--ink); font-weight:700;\">8.83%</td><td style=\"background:color-mix(in oklab, var(--positive) 40%, var(--surface)); color:var(--ink); font-weight:700;\">14.04%</td><td style=\"background:color-mix(in oklab, var(--positive) 47%, var(--surface)); color:var(--ink); font-weight:700;\">16.76%</td><td style=\"background:color-mix(in oklab, var(--positive) 53%, var(--surface)); color:var(--ink); font-weight:700;\">19.02%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">19.90%</td><td style=\"background:color-mix(in oklab, var(--positive) 53%, var(--surface)); color:var(--ink); font-weight:700;\">19.26%</td><td style=\"background:color-mix(in oklab, var(--positive) 49%, var(--surface)); color:var(--ink); font-weight:700;\">17.70%</td><td></td></tr></tbody></table>",
@@ -691,9 +678,9 @@
       "Cualitativo": "<table><tbody><tr><td colspan=\"1\" class=\"qual-title\">PERFIL CORPORATIVO &amp; RESUMEN DE NEGOCIO</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"4\" xml:space=\"preserve\" class=\"qual-title\">  1. DATOS GENERALES DE LA EMPRESA</td></tr><tr><td>Nombre de la Empresa</td><td colspan=\"3\">Chipotle Mexican Grill, Inc.</td></tr><tr><td>Director Ejecutivo (CEO)</td><td colspan=\"3\">Scott Boatwright — CEO desde noviembre de 2024 (antes Director de Operaciones).</td></tr><tr><td>Sector Industrial</td><td colspan=\"3\">Restaurantes de comida rápida casual (Damodaran: Restaurant/Dining)</td></tr><tr><td>Sitio Web Oficial</td><td colspan=\"3\">https://www.chipotle.com  |  IR: https://ir.chipotle.com</td></tr><tr><td>Ticker</td><td>CHIPOTLE MEXICAN GRILL INC (NYSE:CMG)</td><td colspan=\"2\">$31.95</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"4\" xml:space=\"preserve\" class=\"qual-title\">  2. DESCRIPCIÓN OPERATIVA Y SEGMENTOS DE NEGOCIO</td></tr><tr><td>Segmento / Área</td><td colspan=\"3\">Descripción</td></tr><tr><td>Visión General de la Empresa</td><td colspan=\"3\">Chipotle opera restaurantes propios (sin franquicias en EE.UU.) de comida mexicana rápida-casual: al 30-jun-2026 tenía 4.186 restaurantes propios (4.074 en EE.UU. y 112 en el exterior) y 15 operados por socios internacionales. Ingresos LTM US$12.424M con margen operativo de 14,6%; en el 2T 2026 facturó US$3.300M (+9,3%) con ventas comparables de +2,2% (10-Q 2T 2026).</td></tr><tr><td>Restaurantes propios en EE.UU.</td><td colspan=\"3\">Prácticamente todos los ingresos: menú corto (burritos, bowls, tacos, ensaladas) preparado en línea a la vista, con alta rotación. Crecimiento = aperturas (~8% de unidades nuevas por año, mayoría con Chipotlane) + ventas comparables.</td></tr><tr><td>Canal digital y Chipotlanes</td><td colspan=\"3\">Las ventas digitales fueron 38,3% de los ingresos de comida y bebida en el 2T 2026 (35,5% un año antes); las Chipotlanes (ventanilla para retirar pedidos digitales) mejoran la economía de los locales nuevos.</td></tr><tr><td>Internacional</td><td colspan=\"3\">112 restaurantes propios (Canadá y Europa) y 15 de socios en Medio Oriente y Asia: opcionalidad de largo plazo, aún inmaterial en ingresos.</td></tr><tr><td>Asignación de capital</td><td colspan=\"3\">Sin deuda financiera; recompras de US$1.332M en el 1S 2026 a un precio promedio de US$34,35 por acción y US$1.679M de autorización remanente al 30-jun-2026.</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">ANÁLISIS DE PERSPECTIVAS: BULLS VS. BEARS</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"4\" class=\"qual-title\">PERSPECTIVA ALCISTA (BULLS SAY) - ARGUMENTOS A FAVOR</td></tr><tr><td>Pilar / Tema</td><td colspan=\"3\">Argumento</td></tr><tr><td>Economía unitaria y crecimiento de unidades</td><td colspan=\"3\">Modelo 100% propio con locales rentables: el crecimiento de ~8% anual en unidades no requiere franquiciados ni deuda y se financia con flujo operativo (US$2.328M LTM).</td></tr><tr><td>Pista de crecimiento en EE.UU. y exterior</td><td colspan=\"3\">La compañía apunta a duplicar su base de restaurantes en Norteamérica en el largo plazo; hoy tiene ~4.200.</td></tr><tr><td>Recompras a precios deprimidos</td><td colspan=\"3\">US$2.783M de recompras LTM con la acción a la mitad de su máximo reduce la base de acciones (1.265M LTM vs 1.377M a fin de 2024).</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"4\" class=\"qual-title\">PERSPECTIVA BAJISTA (BEARS SAY) - RIESGOS Y DESAFÍOS</td></tr><tr><td>Pilar de Riesgo</td><td colspan=\"3\">Riesgo</td></tr><tr><td>Desaceleración del tráfico</td><td colspan=\"3\">Ventas comparables de solo +2,2% en el 2T 2026 (tráfico +1,0%) tras un 2025 débil: el consumidor de ingresos medios gasta menos en restaurantes.</td></tr><tr><td>Presión de costos y márgenes</td><td colspan=\"3\">Aranceles e inflación de alimentos, empaques y salarios: el margen operativo LTM (14,6%) está por debajo del 16,9% de 2024.</td></tr><tr><td>Competencia en fast-casual</td><td colspan=\"3\">Cadenas como CAVA, Sweetgreen y la oferta de valor de McDonald's y Taco Bell compiten por el mismo cliente.</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Fuentes: estados financieros del modelo (SEC EDGAR, XBRL, CIK 0001058090: 10-K 2025 presentado el 04-feb-2026, https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; 10-Q del 2T 2026 presentado el 31-jul-2026, https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm); ventas comparables, restaurantes, ventas digitales y recompras del mismo 10-Q. Acciones anteriores a 2024 reescaladas por el split 50:1 de jun-2024. Damodaran Online (industria 'Restaurant/Dining'); UST 10 años y precio de CMG vía yfinance (cierre del 25-sep-2026).</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">ACONTECIMIENTOS Y NOTICIAS RECIENTES</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Periodo del Reporte: 23 de junio de 2026 – 21 de julio de 2026</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"4\" class=\"qual-title\">1. RESUMEN DE TITULARES Y NOTICIAS CLAVE</td></tr><tr><td>Categoría / Tema</td><td></td><td></td><td>Detalle Corto</td></tr><tr><td>M&amp;A / Estratégico</td><td></td><td></td><td>Ver sección detallada abajo</td></tr><tr><td>Análisis de Wall St.</td><td></td><td></td><td>Ver sección detallada abajo</td></tr><tr><td>Alianzas / Clientes</td><td></td><td></td><td>Ver sección detallada abajo</td></tr><tr><td>Ciberseguridad</td><td></td><td></td><td>Ver sección detallada abajo</td></tr><tr><td>Análisis de Wall St.</td><td></td><td></td><td>Ver sección detallada abajo</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">2. ANÁLISIS Y DESARROLLO DETALLADO DE LOS EVENTOS</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Evento / Noticia</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Adquisición de Topaz Labs</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Degradación de Morgan Stanley y BofA</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Acuerdo Comercial con Disney</td></tr></tbody></table><table class=\"qual-section-sep\"><tbody><tr><td colspan=\"1\" class=\"qual-title\">Boletín de Ciberseguridad</td></tr></tbody></table><table class=\"qual-section-sep\"><tr><td class=\"qual-title\" colspan=\"2\">GOBIERNO CORPORATIVO</td></tr><tr><td>Estructura del Directorio</td><td class=\"gov-value\"></td></tr><tr><td>Propiedad y Accionistas Principales</td><td class=\"gov-value\"></td></tr><tr><td>Remuneración e Incentivos Ejecutivos</td><td class=\"gov-value\"></td></tr><tr><td>Derechos de Accionistas / Estructura Dual de Acciones</td><td class=\"gov-value\"></td></tr><tr><td>Historial de Gobernanza y Controversias</td><td class=\"gov-value\"></td></tr></table>"
     }
   },
-  "analisisFundamental": null,
-  "precioReferenciaFuente": "Precio guardado en la actualización del 6-oct-2026; fecha de cotización no registrada",
-  "precioReferenciaConsultadoAt": null,
+  "analisisFundamental": "<article class=\"jmr-fundamental\" data-version=\"2026-10-15\"><h1>Chipotle: cuántos restaurantes puede abrir sin diluir el valor de cada dólar invertido</h1>\n<p>Modelo JMR · 15 de octubre de 2026 · estados financieros al 30 de junio de 2026 · USD por acción</p>\n<h2>NIVEL 1 · ARTÍCULO PARA COMPARTIR</h2>\n<h2>La tesis en un minuto</h2>\n<p>Chipotle es una cadena de restaurantes con marca reconocible, operaciones mayoritariamente propias y todavía una pista de aperturas. Su desafío no es únicamente crecer: cada restaurante debe aportar ganancias suficientes sobre el capital invertido, especialmente cuando alimentos y salarios encarecen las operaciones. Una buena empresa puede ser una inversión deficiente si la cotización presupone demasiado crecimiento perpetuo.</p>\n<p>DCF Base revisado: US$23,99 por acción. Cuatro escenarios: Conservador US$17,71; Base US$23,99; Optimista US$30,63; Disrupción US$9,66. Promedio con probabilidades subjetivas 35%/40%/20%/5%: US$22,40. Precio congelado del análisis anterior: US$31,95 al 30 de septiembre de 2026; no es una cotización en tiempo real. Con un margen de seguridad requerido del 35%, el precio máximo indicativo sobre Base es US$15,59.</p>\n<h2>Un negocio de aperturas y recurrencia</h2>\n<p>A junio de 2026 Chipotle tenía más de 4.200 restaurantes y esperaba inaugurar 350–370 unidades en el año, incluidos establecimientos operados por socios internacionales. El valor económico surge de sumar tiendas bien ubicadas, incrementar frecuencia de visita y mantener atractivo el menú. Chipotlanes, fidelización, ventas digitales y mejora de la experiencia son catalizadores; la expansión también exige inversiones y compromisos de alquiler que no pueden desaparecer del DCF.</p>\n<p>En el segundo trimestre de 2026, los ingresos subieron 9,3% y las ventas comparables 2,2%; el margen operativo bajó a 15,7% desde 18,2% un año antes. Estas cifras apoyan un crecimiento de ingresos superior al de locales existentes, pero no justifican extrapolar un crecimiento de doble dígito indefinidamente. La guía de ventas comparables para el conjunto de 2026 seguía siendo de un solo dígito bajo.</p>\n<h2>Crecimiento: 8% compuesto no equivale a 8% cada año</h2>\n<p>El Base ahora modela crecimiento de ingresos de 9,0%, 8,5%, 8,0%, 7,5% y 7,0% durante los cinco años explícitos iniciales. El compuesto quinquenal es 8,0%. Desde el sexto año la tasa se reduce gradualmente hasta 4,25% en el décimo año, nivel que se conserva en la perpetuidad. Las aperturas y las ventas comparables sostienen el primer tramo; con una base creciente y mayor madurez, mantener los mismos porcentajes se vuelve más difícil.</p>\n<h2>Márgenes y reinversión: no es suficiente vender más</h2>\n<p>Los ingresos LTM de la hoja ascienden a US$12.424 millones; EBIT contable LTM aproximadamente US$1.820 millones, con margen sin ajustar de 14,65%. El modelo ajusta arrendamientos y parte de un EBIT operativo normalizado mayor. El margen objetivo del Base queda en 17,33%, hipótesis de recuperación cuya plausibilidad depende de alimentos, mano de obra, costos de apertura y escala; no es una guía formal de la empresa.</p>\n<p>La reinversión del FCFF se obtiene de los ingresos incrementales divididos por Sales-to-Capital. Para años 1–5 el modelo utiliza 1,56×, aproximación marginal histórica de la compañía pendiente de conciliación económica; para años 6–10, 1,51×, agregado sectorial estadounidense de Restaurant/Dining según Damodaran (enero de 2026). Así, el crecimiento exige capital: un Sales-to-Capital mayor equivale a menos reinversión necesaria para crear cada dólar de ventas adicionales.</p>\n<h2>Costo de capital, ROIC y crecimiento perpetuo</h2>\n<p>La tasa libre de riesgo usada en el DCF pasó a 5,19%, Treasury estadounidense a diez años del 14 de octubre de 2026. Con ERP de 3,70%, beta bottom-up recalculada, pasivos de arrendamientos tratados como deuda y estructura de mercado, el WACC inicial arroja 7,95%. El costo de capital terminal resulta 8,89%. El costo financiero no se fija discrecionalmente para forzar un precio de mercado; falta verificar el supuesto de calificación crediticia A2/A utilizado en el conversor.</p>\n<p>El ROIC del modelo, corregido por el patrimonio contable realmente informado, resulta alrededor de 22,00% en el año base. El ROIC terminal se conserva en 18,40%, cercano al 18,94% agregado del sector: no equivale a igualdad con WACC y supone una ventaja económica de 9,51 puntos porcentuales en el largo plazo. Su permanencia es una hipótesis relevante, no una certeza. El crecimiento terminal 4,25% nominal se escogió como aproximación sostenible de economía real e inflación de largo plazo; la tasa Treasury 5,19% es un techo de contraste, no una orden de crecer a ese ritmo eternamente.</p>\n<h2>Cuatro futuros posibles, una sola referencia central</h2>\n<p>En el escenario conservador, la demanda por restaurante se debilita y la recuperación de márgenes es menor. En el Base, las aperturas compensan la moderación de comparables y la productividad mejora gradualmente. En el optimista, el tráfico se recupera y la escala sostiene mayor margen. En disrupción, la marca pierde relevancia o sufre una crisis; el retorno incremental tiende al costo de capital y el valor cae drásticamente. Las probabilidades son decisiones del analista, no frecuencias observadas.</p>\n<p>El valor por acción Base baja desde US$26,38 a US$23,99. La reducción no prueba empeoramiento de la empresa: nace principalmente de normalizar el crecimiento perpetuo desde 5,29% a 4,25%, pese a una mejora en los años de crecimiento explícito y una pequeña reducción del WACC. El promedio probabilístico de US$22,40 es útil para explorar resultados, pero no reemplaza el DCF Base como referencia principal del Modelo JMR.</p>\n<h2>Duración de la ventaja y precio que exige el mercado</h2>\n<p>La duración del retorno sobre capital es especialmente importante: si las rentas extraordinarias terminan al finalizar el año diez, el valor indicativo cae a US$17,83. Si el ROIC marginal converge al WACC durante cinco o diez años adicionales, el valor es US$18,71 o US$19,35, respectivamente. Con la ventaja terminal perpetua del Base, se mantiene US$23,99. Son sensibilidades, no un quinto escenario.</p>\n<p>Usando como precio objetivo US$31,95, el DCF inverso requiere aproximadamente 13,48% de crecimiento compuesto de ingresos en los primeros cinco años, frente al 8,0% del Base, si el resto de inputs se mantiene constante. Esa tasa implícita es una condición matemática del precio fijo, no un pronóstico sobre la próxima cotización.</p>\n<h2>Qué podría cambiar la tesis</h2>\n<p>La evidencia decisiva será si Chipotle conserva retornos elevados en restaurantes nuevos y la recuperación del tráfico compensa inflación de alimentos y salarios. La presentación de resultados del tercer trimestre está programada para el 28 de octubre de 2026; no debe atribuirse ninguna cifra a ese trimestre antes de conocerse. Un ROIC marginal persistentemente alto, crecimiento de comparables y márgenes verificados justificarían revisar al alza los flujos. Si aparecen saturación, aumento duradero de costos o inversiones menos productivas, el escenario conservador ganaría peso.</p>\n<p>Conclusión: a las hipótesis Base revisadas, el precio fijo de US$31,95 no ofrecía margen de seguridad frente a un valor intrínseco de US$23,99. La decisión no debe basarse solo en la marca ni en extrapolar rentas perpetuas: los retornos futuros del capital y la reinversión son la prueba del negocio. Esta valoración es una propuesta técnica con salvedades de reconciliación, no una recomendación personalizada ni una certificación económica.</p>\n<h2>NIVEL 2 · SUPUESTOS, CÁLCULOS Y CONTROLES</h2>\n<h2>Ficha de inputs y fórmulas</h2>\n<p>Fuente de verdad: CMG — Valoración JMR vigente. Input sheet: B15 patrimonio corregido US$2.199,79M; B27 crecimiento año 1 9%; B29 CAGR geométrico años 2–5 7,74855%; B32 Sales-to-Capital años 1–5 1,56×; B33 años 6–10 1,51×; B35 Rf 5,19%; B49/B50 mantener ROIC terminal 18,40%; B68=Yes y B69 crecimiento terminal 4,25%. Escenarios e historias C24:G24 genera 9/8,5/8/7,5/7% y VO referencia la historia. No se escribieron cifras fijas sobre las fórmulas de Valuation output.</p>\n<p>DCF Base, modelo FCFF: ingresos LTM US$12.423,8M; PV flujos explícitos US$10.728,57M; PV terminal US$24.274,39M; valor operativo US$35.002,96M; deuda incluyendo valor convertido de leases US$5.419,20M; caja e inversiones circulantes US$677,90M; activos no operativos US$97,10M; equity US$30.358,76M; acciones 1.265,4M; valor intrínseco por acción US$23,9914. Tasa fiscal marginal 24,5%, ROIC terminal 18,4%, terminal g 4,25%, WACC terminal 8,89%.</p>\n<p>La fórmula explícita es FCFF(t)=EBIT(t)×(1−impuesto(t))−reinversión(t). El modelo original adelanta la reinversión para financiar el crecimiento del año siguiente. La perpetuidad se calcula con FCFF del año 11 dividido por WACC terminal menos g; reinversión terminal = NOPAT terminal × g / ROIC terminal. Los años 1–10 se descuentan por factores WACC acumulados. El valor de la deuda y las participaciones se descuentan una sola vez antes de dividir por acciones.</p>\n<h2>WACC y rendimiento económico</h2>\n<p>En Cost of capital worksheet se conserva modo Detailed, ERP por regiones 3,70%, beta sectorial desapalancada ~0,78 y beta apalancada ~0,86, con pesos aproximados 88,38% equity y 11,63% deuda lease-inclusive. Tras actualización de Rf, el costo del equity es ~8,38%, costo de deuda antes de impuestos ~6,20%, costo de deuda después de impuestos ~4,76% y WACC 7,9526%. El benchmark sectorial de Damodaran de enero de 2026 informa beta sectorial 0,92 y WACC 7,16%; esa media no reemplaza el cálculo específico de CMG.</p>\n<p>Control de ROIC: el Input sheet anterior restaba US$630,8M al patrimonio de junio 2026 pese a que Balance Sheet!L35 ya reflejaba US$2.199,79M. Se eliminó esa deducción duplicada. El ROIC del año base cambia desde ~24,88% a 22,00% y el ROIC proyectado del año diez es ~23,07%. El terminal 18,40% implica convergencia más baja, pero por encima del WACC. Corresponde comprobar ROIC incremental tienda por tienda y que el capital lease-inclusive no incorpore dos veces pasivos por arrendamiento.</p>\n<h2>Sensibilidad y DCF inverso</h2>\n<p>En la pestaña Anexo Work 15-oct-2026 se recalcularon matrices de 5×5 para WACC terminal × g, ROIC terminal × g y crecimiento inicial × margen EBIT objetivo. Centro de todas: US$23,9914. Con g=4,25%, el valor sería ~US$32,24 con WACC terminal 7,89% y ~US$18,89 con WACC 9,89%, ajustando también la curva de descuento. Si el ROIC terminal fuera 16,0% en lugar de 18,4%, el DCF Base ceteris paribus sería US$23,25. El DCF inverso del precio fijo US$31,95 requiere  +5,49 puntos porcentuales por año sobre cada crecimiento 1–5, equivalente a CAGR de ingresos ~13,48%.</p>\n<h2>Salvedades antes de publicación</h2>\n<p>La hoja conserva estado económico CONDICIONAL: el 10-Q registra pasivos por arrendamientos de aproximadamente US$5.419,20M a junio 2026, frente a US$5.419,20M del conversor tras actualizar tasas. Este convertidor toma compromisos del 10-K anterior y debe conciliarse con contratos ya reconocidos; evitar EBIT y deuda duplicados. El patrimonio contable fue corregido, pero también deben revisarse el capital operativo, instrumentos de compensación basados en acciones y la calificación A2/A empleada como proxy. Los valores secundarios por múltiplos y el historial de precio deben citar su fecha de corte. No está verificada la sincronización del artículo y visor de producción; la hoja y este análisis no implican publicación en la app.</p>\n<h2>Fuentes y enlaces para profundizar</h2>\n<p><a href=\"https://docs.google.com/spreadsheets/d/1VUVN1cCm3Hj8bLrmsCZFYBCDIq3DncxHGHH_jbW8ZtU/edit\" target=\"_blank\" rel=\"noopener\">Abrir hoja vigente CMG</a></p>\n<p><a href=\"https://ir.chipotle.com/2026-07-29-CHIPOTLE-RAISES-FULL-YEAR-COMPARABLE-SALES-GUIDANCE-ON-STRONG-Q2-MOMENTUM\" target=\"_blank\" rel=\"noopener\">Resultados oficiales del segundo trimestre de 2026</a></p>\n<p><a href=\"https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm\" target=\"_blank\" rel=\"noopener\">Formulario 10-Q presentado a la SEC</a></p>\n<p><a href=\"https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&amp;type=daily_treasury_yield_curve\" target=\"_blank\" rel=\"noopener\">Treasury 10 años al 14 de octubre de 2026</a></p>\n<p><a href=\"https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/mgnroc.html\" target=\"_blank\" rel=\"noopener\">Damodaran: Sales-to-Capital y ROIC sectoriales</a></p>\n<p><a href=\"https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.html\" target=\"_blank\" rel=\"noopener\">Damodaran: costo de capital sectorial</a></p><p><a href=\"https://docs.google.com/document/d/1Tm11OR9UIZW67PQbbkGNa2HOic8O_QZe2nqqWWcSZt0/edit\" target=\"_blank\" rel=\"noopener\">Leer documento nativo</a></p></article>",
+  "precioReferenciaFuente": "StockAnalysis: 15-oct-2026 12:15 EDT; cotización observada, no precio congelado de valoración",
+  "precioReferenciaConsultadoAt": "2026-10-15T12:15:00-04:00",
   "auditoria": {
     "multiplosV3": {
       "fecha": "2026-09-29",
@@ -847,36 +834,69 @@
     "prompts20261002": {
       "fecha": "2026-10-02",
       "cambio": "Dividendos descontados año a año (VP_n = Precio_n/(1+Ke)^n + suma Div_t/(1+Ke)^t); DCF capitalizado a FY+3 desde el DCF de las historias; dos tablas de horizontes (presente y FY+3) con múltiplos solos y DCF + múltiplos."
+    },
+    "revisionCMG_20261015": {
+      "fecha": "2026-10-15",
+      "dcfAnterior": 26.383865942102908,
+      "dcfBase": 23.991434067319343,
+      "dcfEsperado": 22.40395210335119,
+      "precioMOS": 15.594432144,
+      "leaseSEC": 5419.196,
+      "leaseDCF": 5419.196000000001,
+      "wacc": 0.0795263530283948,
+      "gTerminal": 0.0425,
+      "roicTerminal": 0.184,
+      "hoja": "https://docs.google.com/spreadsheets/d/1VUVN1cCm3Hj8bLrmsCZFYBCDIq3DncxHGHH_jbW8ZtU/edit",
+      "articulo": "https://docs.google.com/document/d/1Tm11OR9UIZW67PQbbkGNa2HOic8O_QZe2nqqWWcSZt0/edit",
+      "control": "DCF 4 escenarios; leases ASC842 una sola vez; rating sintético; matriz WACC/g; DCF inverso; múltiplos FY+3; conciliación numérica hoja/repositorio",
+      "salvedad": "Certificación económica de ROIC/arrendamientos EBIT/instrumentos patrimoniales pendiente; auditoría del usuario posterior"
     }
   },
   "escenariosDCF": {
-    "version": 1,
+    "version": 3,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-06T14:24:17.242426+00:00",
+    "fecha": "2026-10-15",
     "baseAnterior": {
       "conservador": 20.3676683,
       "base": 26.38386594,
       "optimista": 35.28595531
     },
-    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
+    "nota": "Cuatro escenarios activos Base/Conservador/Optimista/Disrupción. La ventaja competitiva es sensibilidad complementaria, no quinto escenario."
   },
-  "precioMOSValorEsperado": 16.392810513971554,
+  "precioMOSValorEsperado": 14.562568867,
   "precioReferenciaAnterior": {
     "fuente": "Input sheet!D1 (Google Sheets; puede tener retraso)",
     "consultadoAt": "2026-09-30T19:10:22+00:00"
   },
   "lecturaDamodaran": {
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "fuente": "scripts/lectura_damodaran.py; reference/moat_2026-09-30.json",
     "foso": "ventaja durable",
-    "roicActual": 0.2324,
-    "dcfBase": 26.383865942102908,
-    "dcfSinFoso": 17.191658286954976,
+    "roicActual": 0.22000722225740543,
+    "dcfBase": 23.991434067319343,
+    "dcfSinFoso": 17.82787260931921,
     "margenBase": 0.18333,
     "margenIndustria": 0.1578786273430299,
-    "dcfMargenSectorial": 23.61694770955209,
-    "nota": "Contraste, no una historia: sin foso = ROIC terminal igual al costo de capital (supuesto por defecto de Damodaran); el margen sectorial es una prueba de estrés."
+    "dcfMargenSectorial": null,
+    "nota": "Moat: sensibilidad separada. ROIC terminal 18,4%; WACC terminal 8,89%. Valor de margen sectorial histórico pendiente de refrescar.",
+    "roicTerminal": 0.184
+  },
+  "corteFinanciero": "2026-06-30",
+  "precioReferenciaFecha": "2026-10-15",
+  "enlaceArticulo": "https://docs.google.com/document/d/1Tm11OR9UIZW67PQbbkGNa2HOic8O_QZe2nqqWWcSZt0/edit",
+  "enlaceFichaTecnica": "https://docs.google.com/spreadsheets/d/1VUVN1cCm3Hj8bLrmsCZFYBCDIq3DncxHGHH_jbW8ZtU/edit",
+  "publicacion": {
+    "fecha": "2026-10-15",
+    "version": "CMG-JMR-2026-10-15",
+    "estado": "PUBLICADA CON SALVEDADES; PENDIENTE AUDITORÍA DEL INVERSOR Y COMPROBACIÓN VISUAL",
+    "incertidumbres": [
+      "Ajuste EBIT por leases estimado con conversor",
+      "Activos no operativos por certificar",
+      "Riesgo de dilución de SBC/PSUs no certificado",
+      "Calificación A2/A sintética (no rating externo)",
+      "g y ROIC terminal son hipótesis del analista"
+    ]
   }
 }
