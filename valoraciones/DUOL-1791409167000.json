@@ -7,62 +7,62 @@
   "precioAnalisis": 142.4,
   "tipo": "Crecimiento",
   "mos": 0.35,
-  "precioMOS": 65.5624415413263,
-  "precioMOSMax": 65.5624415413263,
+  "precioMOS": 70.38155570454285,
+  "precioMOSMax": 70.38155570454285,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.6,
-      "conservador": 111.3889418,
-      "base": 150.194506,
-      "optimista": 193.634148,
-      "horizonte": "FY+3; capitalizado desde el DCF presente"
+      "horizonte": "FY+3; capitalizado desde DCF presente",
+      "conservador": "Conservador",
+      "base": "Base",
+      "optimista": "Optimista"
     },
     {
       "nombre": "EV/EBITDA",
-      "peso": 0.1,
-      "conservador": 154.9589543,
-      "base": 221.7703858,
-      "optimista": 296.540741
+      "peso": 0,
+      "conservador": 114.18793006730945,
+      "base": 151.3340459625972,
+      "optimista": 205.1567215166608
     },
     {
       "nombre": "EV/FCFF",
-      "peso": 0.15,
-      "conservador": 101.4750657,
-      "base": 131.3603913,
-      "optimista": 163.5326095
+      "peso": 0.3,
+      "conservador": 162.38858400620188,
+      "base": 230.47207936416206,
+      "optimista": 314.1147186442951
     },
     {
       "nombre": "P/E",
-      "peso": 0.05,
-      "conservador": 87.19337246,
-      "base": 134.8439916,
-      "optimista": 195.3833131
+      "peso": 0.10000000000000002,
+      "conservador": 94.04341247644177,
+      "base": 118.4401896802494,
+      "optimista": 137.3727906218582
     },
     {
       "nombre": "P/FCFE",
-      "peso": 0.05,
-      "conservador": 80.01081751,
-      "base": 110.5871763,
-      "optimista": 142.0485796
+      "peso": 0,
+      "conservador": 91.89421386211625,
+      "base": 140.52223416431667,
+      "optimista": 207.72909896903815
     },
     {
       "nombre": "P/OCF",
-      "peso": 0.05,
-      "conservador": 80.68362532,
-      "base": 112.5852401,
-      "optimista": 145.6629584
+      "peso": 0,
+      "conservador": 73.70150381051656,
+      "base": 99.84489896454284,
+      "optimista": 121.36076060758627
     }
   ],
   "objetivoPonderado": {
-    "conservador": 109.9449111,
-    "base": 149.8986213,
-    "optimista": 194.5191969
+    "conservador": 105.91520316952982,
+    "base": 140.38470789806482,
+    "optimista": 185.07877999345777
   },
   "valorPresentePonderado": {
-    "conservador": 79.34313246,
-    "base": 103.8834371,
-    "optimista": 129.9123774
+    "conservador": 76.95457551656119,
+    "base": 98.33945359198918,
+    "optimista": 125.69252734548496
   },
   "descuentoMultiples": {
     "version": 2,
@@ -72,259 +72,259 @@
       3
     ],
     "horizonteAnios": 3,
-    "costoPatrimonio": 0.1180598564,
+    "costoPatrimonio": 0.11805640156748579,
     "criterio": "Promedio 1-3 años",
     "formula": "VP_n = Precio FY+n / (1 + Ke)^n + suma(Dividendo FY+t / (1 + Ke)^t), t = 1..n",
     "dcfHoy": {
-      "conservador": 79.69790667,
-      "base": 107.4629809,
-      "optimista": 138.5437011
+      "conservador": 81.70131802132707,
+      "base": 108.27931646852745,
+      "optimista": 146.78937203752818
     },
     "multiplesHoy": {
-      "conservador": 78.81097115,
-      "base": 98.51412142,
-      "optimista": 116.9653918
+      "conservador": 69.83446175941239,
+      "base": 83.42965927718178,
+      "optimista": 94.04726030742017
     },
     "ponderadoHoy": {
-      "conservador": 79.34313246,
-      "base": 103.8834371,
-      "optimista": 129.9123774
+      "conservador": 76.95457551656119,
+      "base": 98.33945359198918,
+      "optimista": 125.69252734548496
     },
     "pesoDcf": 0.6,
     "pesoMultiplos": 0.4,
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "peso": 0.1,
-        "pesoMultiplos": 0.25,
+        "peso": 0,
+        "pesoMultiplos": 0,
         "conservador": {
           "fy": [
-            125.2754475,
-            142.2739072,
-            154.9589543
+            129.71728358088532,
+            147.81337569090786,
+            162.38858400620188
           ],
           "vp": [
-            112.0471742,
-            113.8138592,
-            110.8719059
+            116.02033976016334,
+            118.24595963838028,
+            116.18882431009197
           ],
-          "consolidado": 112.2443131,
+          "consolidado": 116.8183745695452,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            147.0485554,
-            188.4272749,
-            221.7703858
+            153.55316255814165,
+            195.74359810629025,
+            230.47207936416206
           ],
           "vp": [
-            131.5211833,
-            150.7348448,
-            158.6749566
+            137.33937066400597,
+            156.58860027355055,
+            164.90247822224677
           ],
-          "consolidado": 146.9769949,
+          "consolidado": 152.94348305326778,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            165.2883236,
-            235.9606131,
-            296.540741
+            177.14757821724916,
+            249.8892369634417,
+            314.1147186442951
           ],
           "vp": [
-            147.8349506,
-            188.7597558,
-            212.1725543
+            158.4424345398791,
+            199.90337471105008,
+            224.74867972481434
           ],
-          "consolidado": 182.9224202,
+          "consolidado": 194.36482965858116,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "EV/FCFF",
-        "peso": 0.15,
-        "pesoMultiplos": 0.375,
+        "peso": 0.3,
+        "pesoMultiplos": 0.7499999999999999,
         "conservador": {
           "fy": [
-            89.05509022,
-            91.07637795,
-            101.4750657
+            85.11028775377143,
+            85.47416290285986,
+            94.04341247644177
           ],
           "vp": [
-            79.65145131,
-            72.85773094,
-            72.60460676
+            76.12342958230822,
+            68.37658885397877,
+            67.28794143145858
           ],
-          "consolidado": 75.03792967,
+          "consolidado": 70.59598662258186,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            91.1283687,
-            107.266439,
-            131.3603913
+            85.31174148363537,
+            98.34407124329104,
+            118.4401896802494
           ],
           "vp": [
-            81.50580506,
-            85.80918046,
-            93.9873208
+            76.30361166398274,
+            78.6721027413995,
+            84.74380433963816
           ],
-          "consolidado": 87.10076877,
+          "consolidado": 79.90650624834014,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            83.69105061,
-            119.0279931,
-            163.5326095
+            74.89923398943547,
+            102.83418135095519,
+            137.3727906218582
           ],
           "vp": [
-            74.85381943,
-            95.21798836,
-            117.0062884
+            66.99056852984224,
+            82.26404681331475,
+            98.29005611589389
           ],
-          "consolidado": 95.69269873,
+          "consolidado": 82.5148904863503,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/E",
-        "peso": 0.05,
-        "pesoMultiplos": 0.125,
+        "peso": 0.10000000000000002,
+        "pesoMultiplos": 0.25000000000000006,
         "conservador": {
           "fy": [
-            76.93552711,
-            78.43183988,
-            87.19337246
+            79.84640375134659,
+            81.85841432106004,
+            91.89421386211625
           ],
           "vp": [
-            68.81163532,
-            62.74256855,
-            62.38616822
+            71.41536298115552,
+            65.48410595879021,
+            65.75019256976628
           ],
-          "consolidado": 64.6467907,
+          "consolidado": 67.54988716990401,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            94.60564747,
-            111.4379548,
-            134.8439916
+            98.99284391308883,
+            116.14685627543813,
+            140.52223416431667
           ],
           "vp": [
-            84.61590578,
-            89.1462387,
-            96.47980924
+            88.54011637901581,
+            92.91375976683683,
+            100.5434789452677
           ],
-          "consolidado": 90.08065124,
+          "consolidado": 93.99911836370677,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            113.3131892,
-            150.8981153,
-            195.3833131
+            121.70545883094067,
+            160.56733121210152,
+            207.72909896903815
           ],
           "vp": [
-            101.3480527,
-            120.7129064,
-            139.7952149
+            108.85448950546036,
+            128.44871498944102,
+            148.62990481698822
           ],
-          "consolidado": 120.6187246,
+          "consolidado": 128.64436977062985,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/FCFE",
-        "peso": 0.05,
-        "pesoMultiplos": 0.125,
+        "peso": 0,
+        "pesoMultiplos": 0,
         "conservador": {
           "fy": [
-            67.59237709,
-            69.58952146,
-            80.01081751
+            64.12489245123848,
+            64.72496460054082,
+            73.70150381051656
           ],
           "vp": [
-            60.45506124,
-            55.66904114,
-            57.24710697
+            57.35389767576757,
+            51.77789571462925,
+            52.73333177966892
           ],
-          "consolidado": 57.79040312,
+          "consolidado": 53.955041723355244,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            70.31932537,
-            86.56676859,
-            110.5871763
+            65.53384131857406,
+            79.14358557621456,
+            99.84489896454284
           ],
           "vp": [
-            62.8940615,
-            69.25021038,
-            79.12424978
+            58.6140745911363,
+            63.312330037378395,
+            71.43889759890446
           ],
-          "consolidado": 70.42284056,
+          "consolidado": 64.45510074247305,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            64.30510128,
-            98.87872007,
-            142.0485796
+            57.672494177036825,
+            86.2025400792942,
+            121.36076060758627
           ],
           "vp": [
-            57.51490039,
-            79.09931581,
-            101.634635
+            51.5828129029819,
+            68.95926723341226,
+            86.83346910541101
           ],
-          "consolidado": 79.41628372,
+          "consolidado": 69.12518308060173,
           "chequeo": "OK"
         }
       },
       {
         "nombre": "P/OCF",
-        "peso": 0.05,
-        "pesoMultiplos": 0.125,
+        "peso": 0,
+        "pesoMultiplos": 0,
         "conservador": {
           "fy": [
-            68.3562199,
-            70.60043889,
-            80.68362532
+            71.08332587864795,
+            72.49259859327273,
+            81.77166751166082
           ],
           "vp": [
-            61.13824721,
-            56.47773765,
-            57.72849564
+            63.57758497602714,
+            57.991753772447666,
+            58.50752359348584
           ],
-          "consolidado": 58.44816017,
+          "consolidado": 60.02562078065355,
           "chequeo": "OK"
         },
         "base": {
           "fy": [
-            72.94624134,
-            89.08175873,
-            112.5852401
+            75.96685763204542,
+            90.42840232776818,
+            111.76219235047895
           ],
           "vp": [
-            65.24359221,
-            71.2621094,
-            80.55384866
+            67.94546100316752,
+            72.3398214933685,
+            79.96570578523283
           ],
-          "consolidado": 72.35318342,
+          "consolidado": 73.41699609392295,
           "chequeo": "OK"
         },
         "optimista": {
           "fy": [
-            68.84931422,
-            103.1242705,
-            145.6629584
+            71.74016562241248,
+            101.61732101535917,
+            138.24404939253301
           ],
           "vp": [
-            61.57927397,
-            82.49559902,
-            104.2206944
+            64.16506852591215,
+            81.29059757398936,
+            98.91344065276932
           ],
-          "consolidado": 82.76518913,
+          "consolidado": 81.45636891755696,
           "chequeo": "OK"
         }
       }
@@ -332,54 +332,54 @@
     "consolidado": {
       "conservador": {
         "fy": [
-          91.32503622,
-          97.04984357,
-          107.7788651
+          83.79431675316522,
+          84.5702257574099,
+          93.50611282286039
         ],
         "vp": [
-          81.68170577,
-          77.63628231,
-          77.11492537
+          74.94641293202004,
+          67.65346813018164,
+          66.9035042160355
         ],
-        "consolidado": 78.81097115
+        "consolidado": 69.83446175941239
       },
       "base": {
         "fy": [
-          100.6691789,
-          123.2175436,
-          149.4547942
+          88.73201709099874,
+          102.79476750132781,
+          123.96070080126623
         ],
         "vp": [
-          90.03916767,
-          98.56947369,
-          106.9337229
+          79.362737842741,
+          82.23251699775884,
+          88.69372299104555
         ],
-        "consolidado": 98.51412142
+        "consolidado": 83.42965927718178
       },
       "optimista": {
         "fy": [
-          103.5146755,
-          147.7382889,
-          195.8467702
+          86.60079019981177,
+          117.26746881624177,
+          154.9618677086532
         ],
         "vp": [
-          92.58419831,
-          118.1851622,
-          140.1268148
+          77.45654877374676,
+          93.81021385734631,
+          110.87501829116746
         ],
-        "consolidado": 116.9653918
+        "consolidado": 94.04726030742017
       }
     },
     "chequeo": {
       "multiplosFY3SinDescontar": {
-        "conservador": 107.7788651,
-        "base": 149.4547942,
-        "optimista": 195.8467702
+        "conservador": 93.50611282286039,
+        "base": 123.96070080126623,
+        "optimista": 154.9618677086532
       },
       "multiplosVP3": {
-        "conservador": 77.11492537,
-        "base": 106.9337229,
-        "optimista": 140.1268148
+        "conservador": 66.9035042160355,
+        "base": 88.69372299104555,
+        "optimista": 110.87501829116746
       },
       "resultado": {
         "conservador": "OK",
@@ -389,73 +389,18 @@
     }
   },
   "crecimientoImplicito": {
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-15",
     "umbral": 0.02,
-    "precio": 150.27,
+    "precio": 142.4,
     "dcfInverso": {
-      "gImplicito": 0.19284858160458318,
-      "gDcf": 0.110144752708737,
-      "dif": 0.08270382889584618,
-      "lectura": "El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador."
+      "gImplicito": 0.19373482941988773,
+      "gDcf": 0.12,
+      "dif": 0.07373482941988774,
+      "deltaAnual": 0.07373213091852024,
+      "lectura": "El precio de análisis exige 19,37% de CAGR 1–5 frente a 12% Base, ceteris paribus."
     },
-    "multiplos": [
-      {
-        "metodo": "EV/EBITDA",
-        "multiplo": 24.16,
-        "gImplicito": 0.08137679511482496,
-        "gDcf": 0.06711046146356278,
-        "dif": 0.014266333651262175,
-        "multiploDcf": 14.948708234725558,
-        "difValor": 0.4765545802966653,
-        "aplica": true,
-        "lectura": "Revisar: el múltiplo vale 48% más que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
-      },
-      {
-        "metodo": "EV/FCFF",
-        "multiplo": 24.4,
-        "gImplicito": 0.061840949132540464,
-        "gDcf": 0.06711046146356278,
-        "dif": -0.005269512331022318,
-        "multiploDcf": 27.899363517632427,
-        "difValor": -0.12539816018732242,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
-      },
-      {
-        "metodo": "P/E",
-        "multiplo": 20.01,
-        "gImplicito": 0.08263055553337595,
-        "gDcf": 0.08701622370476787,
-        "dif": -0.004385668171391924,
-        "multiploDcf": 22.28791976725563,
-        "difValor": -0.10220423399954282,
-        "aplica": true,
-        "lectura": "Coherente con el DCF."
-      },
-      {
-        "metodo": "P/FCFE",
-        "multiplo": 21.07,
-        "gImplicito": 0.0674001438736175,
-        "gDcf": 0.08030838083621122,
-        "dif": -0.01290823696259373,
-        "multiploDcf": 28.61632196946651,
-        "difValor": -0.26370691444967675,
-        "aplica": true,
-        "lectura": "Revisar: el múltiplo vale 26% menos que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
-      },
-      {
-        "metodo": "P/OCF",
-        "multiplo": 19.86,
-        "gImplicito": 0.06825916173989383,
-        "gDcf": 0.08030838083621122,
-        "dif": -0.012049219096317398,
-        "multiploDcf": 26.494262359975913,
-        "difValor": -0.2504037391128916,
-        "aplica": true,
-        "lectura": "Revisar: el múltiplo vale 25% menos que el DCF en FY+3 (a este nivel de múltiplo la fórmula de crecimiento casi no distingue la diferencia)."
-      }
-    ],
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (150,19 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 11,8%, WACC años 4-10 10,5%, ROE FY+3 23,9%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.",
+    "multiplos": [],
+    "nota": "Cálculo inverso basado en el motor FCFF del Anexo Work; inversos de múltiplos históricos no recalculados.",
     "dcfHoy": 107.4629809,
     "dcfFy3": 150.194506,
     "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3",
@@ -469,129 +414,124 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 100.86529467896352,
-    "valorBetaPropuesta": 95.9937464559604,
+    "valor": 103.35739062946048,
     "betaHoja": 1.3519790462139802,
-    "betaPropuesta": 1.6077654171030633,
-    "dcfBase": 107.46298088898017,
-    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
+    "dcfBase": 108.27931646852745,
+    "metodo": "DCF Base principal; promedio de probabilidades complementario. Certificación económica pendiente.",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
-    "valorCentral": 107.46298088898017,
+    "valorCentral": 108.27931646852745,
     "rango": {
-      "min": 48.73736394250897,
-      "max": 138.54370108566764
+      "min": 48.48494305785721,
+      "max": 146.78937203752818
     },
     "dcfBaseTecnicoAnterior": 107.46298088898018,
-    "updatedAt": "2026-10-07T15:39:17.434345+00:00",
+    "updatedAt": "2026-10-15",
     "historias": [
       {
         "nombre": "Base · La audiencia que creció en 2026 vuelve a pagar desde 2027",
         "probabilidad": 0.45,
-        "valor": 107.46298088898017,
-        "valorBetaPropuesta": 102.12550975834758,
+        "valor": 108.27931646852745,
         "margen": 0.28037250955577625,
-        "crecimiento": 0.1101073927783065,
+        "crecimiento": 0.1200000000000001,
         "roicTerminal": "costo_capital",
         "id": "A",
         "central": true,
         "crecimientoPorGrupo": {
           "Suscripciones": [
-            0.13,
-            0.13,
-            0.12,
-            0.11,
-            0.1
+            0.16415066481768514,
+            0.12049265188024694,
+            0.11972111091165427,
+            0.1208333782105826,
+            0.12118351646966286
           ],
           "Publicidad": [
-            0.04,
-            0.12,
-            0.12,
-            0.1,
-            0.09
+            0.040000000000000036,
+            0.1200000000000001,
+            0.1200000000000001,
+            0.10000000000000009,
+            0.09000000000000008
           ],
           "Duolingo English Test": [
             0,
-            0.02,
-            0.02,
-            0.02,
-            0.02
+            0.020000000000000018,
+            0.020000000000000018,
+            0.020000000000000018,
+            0.020000000000000018
           ],
           "Compras en la app y otros": [
-            -0.1,
-            0.04,
-            0.05,
-            0.05,
-            0.05
+            -0.09999999999999987,
+            0.040000000000000036,
+            0.050000000000000044,
+            0.050000000000000044,
+            0.050000000000000044
           ]
         },
-        "salesToCapital": 2.25,
-        "salesToCapital2": 2,
+        "salesToCapital": 1.67,
+        "salesToCapital2": 1.4,
         "crecimientoAnios": [
-          0.11074918646430332,
-          0.12319626349230561,
-          0.11521138795582808,
-          0.10540889796078612,
-          0.09615802767046167
+          0.14000000000000012,
+          0.11505506688363787,
+          0.11505506688363765,
+          0.11505506688363765,
+          0.11505506688363787
         ],
         "terminalGrowth": 0.0529
       },
       {
         "nombre": "Conservadora · Más usuarios que pagan menos",
         "probabilidad": 0.25,
-        "valor": 79.6979066701521,
-        "valorBetaPropuesta": 76.33193918633425,
+        "valor": 81.70131802132707,
         "margen": 0.2303725095557762,
-        "crecimiento": 0.06397941159031317,
+        "crecimiento": 0.0800000000000003,
         "roicTerminal": "costo_capital",
         "id": "B",
         "central": false,
         "crecimientoPorGrupo": {
           "Suscripciones": [
-            0.1,
-            0.08,
-            0.07,
-            0.06,
-            0.05
+            0.12122214291540923,
+            0.08405292791900942,
+            0.0817254410271544,
+            0.0819262029497283,
+            0.0814061097890304
           ],
           "Publicidad": [
-            0.02,
-            0.06,
-            0.06,
-            0.05,
-            0.05
+            0.020000000000000018,
+            0.06000000000000005,
+            0.06000000000000005,
+            0.050000000000000044,
+            0.050000000000000044
           ],
           "Duolingo English Test": [
-            -0.03,
-            -0.03,
-            -0.03,
-            -0.03,
-            -0.03
+            -0.030000000000000027,
+            -0.030000000000000027,
+            -0.030000000000000027,
+            -0.030000000000000027,
+            -0.029999999999999916
           ],
           "Compras en la app y otros": [
             -0.12,
-            -0.05,
+            -0.050000000000000044,
             0,
             0,
             0
           ]
         },
-        "salesToCapital": 2.25,
-        "salesToCapital2": 2,
+        "salesToCapital": 1.67,
+        "salesToCapital2": 1.4,
         "crecimientoAnios": [
-          0.08182275664147354,
-          0.07137617408182506,
-          0.06462768753171177,
-          0.055502320409563266,
-          0.046914164089848276
+          0.10000000000000009,
+          0.07505707852143773,
+          0.07505707852143773,
+          0.07505707852143773,
+          0.07505707852143795
         ],
         "terminalGrowth": 0.0529
       },
       {
-        "nombre": "Disrupción · Deterioro de los fundamentales",
+        "nombre": "Disrupción · Deterioro de los fundamentales: Los asistentes de IA enseñan idiomas gratis y el hábito se rompe",
         "probabilidad": 0.1,
-        "valor": 48.73736394250897,
-        "valorBetaPropuesta": 47.551355276201654,
+        "valor": 48.48494305785721,
         "margen": 0.1403725095557762,
         "crecimiento": -0.023126236085462937,
         "roicTerminal": "costo_capital",
@@ -599,42 +539,42 @@
         "central": false,
         "crecimientoPorGrupo": {
           "Suscripciones": [
-            0.06,
+            0.06000000000000005,
             0,
-            -0.04,
-            -0.05,
-            -0.05
+            -0.040000000000000036,
+            -0.050000000000000044,
+            -0.050000000000000044
           ],
           "Publicidad": [
             0,
-            -0.05,
-            -0.05,
-            -0.05,
-            -0.05
+            -0.050000000000000044,
+            -0.050000000000000044,
+            -0.050000000000000044,
+            -0.050000000000000044
           ],
           "Duolingo English Test": [
-            -0.08,
-            -0.1,
-            -0.1,
-            -0.1,
-            -0.1
+            -0.07999999999999996,
+            -0.09999999999999998,
+            -0.09999999999999998,
+            -0.10000000000000009,
+            -0.09999999999999998
           ],
           "Compras en la app y otros": [
-            -0.15,
-            -0.1,
-            -0.08,
-            -0.05,
-            -0.05
+            -0.15000000000000013,
+            -0.09999999999999998,
+            -0.07999999999999996,
+            -0.050000000000000044,
+            -0.050000000000000044
           ]
         },
         "salesToCapital": 5.21494478862988,
-        "salesToCapital2": 2,
+        "salesToCapital2": 1.4,
         "crecimientoAnios": [
-          0.043259190813640824,
-          -0.009503092695924198,
-          -0.0434371913339654,
-          -0.05136156161551497,
-          -0.05129175184599344
+          0.0432591908136406,
+          -0.009503092695924087,
+          -0.04343719133396562,
+          -0.05136156161551486,
+          -0.051291751845993216
         ],
         "terminalGrowth": 0,
         "descripcion": "Los asistentes de IA enseñan idiomas gratis y el hábito se rompe",
@@ -650,65 +590,64 @@
       {
         "nombre": "Optimista · Cien millones de usuarios diarios que se monetizan",
         "probabilidad": 0.2,
-        "valor": 138.54370108566764,
-        "valorBetaPropuesta": 130.99573370250135,
+        "valor": 146.78937203752818,
         "margen": 0.32037250955577623,
-        "crecimiento": 0.1499879206569117,
+        "crecimiento": 0.16999999999999993,
         "roicTerminal": "costo_capital",
         "id": "D",
         "central": false,
         "crecimientoPorGrupo": {
           "Suscripciones": [
-            0.15,
-            0.19,
-            0.17,
-            0.15,
-            0.13
+            0.22589603556570692,
+            0.16771011524684676,
+            0.1686102620753771,
+            0.1701562019827878,
+            0.1710010559547257
           ],
           "Publicidad": [
-            0.08,
-            0.18,
-            0.16,
-            0.14,
-            0.12
+            0.08000000000000007,
+            0.17999999999999994,
+            0.15999999999999992,
+            0.14000000000000012,
+            0.1200000000000001
           ],
           "Duolingo English Test": [
-            0.02,
-            0.04,
-            0.04,
-            0.04,
-            0.04
+            0.020000000000000018,
+            0.040000000000000036,
+            0.040000000000000036,
+            0.040000000000000036,
+            0.040000000000000036
           ],
           "Compras en la app y otros": [
             0,
-            0.1,
-            0.1,
-            0.08,
-            0.08
+            0.10000000000000009,
+            0.10000000000000009,
+            0.08000000000000007,
+            0.08000000000000007
           ]
         },
-        "salesToCapital": 2.25,
-        "salesToCapital2": 2,
+        "salesToCapital": 1.67,
+        "salesToCapital2": 1.4,
         "crecimientoAnios": [
-          0.13499333625618126,
-          0.18167048962455,
-          0.1635914500113067,
-          0.14460840966073385,
-          0.12595034307285546
+          0.19999999999999996,
+          0.16261792804463937,
+          0.16261792804463915,
+          0.16261792804463937,
+          0.16261792804463937
         ],
         "terminalGrowth": 0.0529
       }
     ]
   },
   "precioMOSHoy": {
-    "conservador": 65.5624415413263,
-    "base": 65.5624415413263,
-    "optimista": 65.5624415413263
+    "conservador": 53.10585671386259,
+    "base": 70.38155570454285,
+    "optimista": 95.41309182439332
   },
   "cagr": {
-    "conservador": -0.08260779056,
-    "base": 0.01725355524,
-    "optimista": 0.1095600876
+    "conservador": -0.09395568835718393,
+    "base": -0.004739874977641612,
+    "optimista": 0.09131187153481513
   },
   "zonas": {
     "value": {
@@ -724,13 +663,13 @@
       "min": 48.3583414
     },
     "conMOS": {
-      "min": 65.5624415413263,
-      "max": 65.5624415413263,
-      "base": "valor esperado; una cifra, sin escenarios"
+      "min": 70.38155570454285,
+      "max": 70.38155570454285,
+      "base": "DCF Base × (1 − MOS)"
     },
-    "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
+    "descripcion": "MOS vigente sobre el DCF Base. Las otras bandas heredadas de FY+3 son históricas y no deben presentarse como límites actuales."
   },
-  "baseMOS": "valorEsperado",
+  "baseMOS": "dcfBase",
   "savedAt": "2026-10-07T21:39:27Z",
   "hojas": {
     "financieros": {
@@ -766,7 +705,7 @@
     }
   },
   "analisisFundamental": null,
-  "precioReferenciaFuente": "Precio guardado en la actualización del 6-oct-2026; fecha de cotización no registrada",
+  "precioReferenciaFuente": "150,27 USD: último dato de mercado archivado, NO cotización actual. Precio fijo del análisis: 142,40 USD (30-sep-2026).",
   "auditoria": {
     "fecha": "2026-09-26",
     "guardadaOriginal": "2026-09-26T18:28:53.618Z",
@@ -896,22 +835,43 @@
       "percentiles": "N/D por muestra inferior a tres; serie fiscal retrospectiva",
       "impuestoExtraordinarioFy2025": "P/E FY2025 excluido por beneficio fiscal no recurrente",
       "fuenteHoja": "https://docs.google.com/spreadsheets/d/1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc/edit?gid=117248599#gid=117248599"
+    },
+    "sincronizacion20261015": {
+      "fecha": "2026-10-15",
+      "sourceSheet": "https://docs.google.com/spreadsheets/d/1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc/edit",
+      "corte": "2026-09-30",
+      "dcfBase": 108.27931646852745,
+      "esperado": 103.35739062946048,
+      "precioFijo": 142.4,
+      "mosBase": 70.38155570454285,
+      "ponderadoPresente": 98.33945359198918,
+      "crecimientoInverso": 0.19373482941988773,
+      "status": "Aritmética conciliada; certificación de fuentes y gates pendientes",
+      "gates": [
+        "PENDIENTE",
+        "PENDIENTE",
+        "PENDIENTE",
+        "PENDIENTE"
+      ],
+      "cacheHojaHistorica": "Los bloques HTML del campo hojas requieren regeneración de lectura nativa; no usarlos como prueba actual",
+      "noModifica": "Datos, fórmulas o hipótesis del spreadsheet"
     }
   },
   "escenariosDCF": {
-    "version": 1,
+    "version": 2,
     "fuente": "valorEsperado.historias",
     "principal": "valorEsperado.valorCentral",
     "central": "A",
-    "fecha": "2026-10-07T15:39:17.438979+00:00",
+    "fecha": "2026-10-15",
     "baseAnterior": {
-      "conservador": 79.69790667,
-      "base": 107.4629809,
-      "optimista": 138.5437011
+      "conservador": 79.6979066701521,
+      "base": 107.46298088898017,
+      "optimista": 138.54370108566764
     },
-    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
+    "nota": "15-oct-2026: DCF Base principal, esperado complementario; pendientes gates de calidad.",
+    "sourceSheet": "1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc"
   },
-  "precioMOSValorEsperado": 65.5624415413263,
+  "precioMOSValorEsperado": 67.18230390914931,
   "posicion": {
     "acciones": 7.44245,
     "costoPromedio": 106.3442,
