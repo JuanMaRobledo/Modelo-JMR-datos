@@ -675,13 +675,13 @@
       "valoracion": "Cada ancla histórica se aplica a la métrica Base de FY+3 y luego se trae a valor presente con Ke. No entra al DCF ni al ponderado principal."
     },
     "pesos_relativos": {
-      "P/E": 1.0
+      "P/E": 1
     },
     "metodos": [
       {
         "nombre": "EV/EBITDA",
         "aplica": false,
-        "peso_original": 0.0,
+        "peso_original": 0,
         "actual": 7.3355804654784285,
         "estadisticas": {
           "n": 3,
@@ -698,7 +698,7 @@
           "max": 16.02
         },
         "descuento_vs_mediana": -0.4641650500015757,
-        "percentil_actual": 0.0,
+        "percentil_actual": 0,
         "precios": {},
         "excluidos": [
           [
@@ -716,7 +716,7 @@
       {
         "nombre": "EV/FCFF",
         "aplica": false,
-        "peso_original": 0.0,
+        "peso_original": 0,
         "actual": null,
         "estadisticas": {
           "n": 4,
@@ -769,7 +769,7 @@
           "max": 39.67
         },
         "descuento_vs_mediana": -0.40238083987740814,
-        "percentil_actual": 0.0,
+        "percentil_actual": 0,
         "precios": {
           "min": {
             "multiplo": 25.9,
@@ -813,7 +813,7 @@
       {
         "nombre": "P/FCFE",
         "aplica": false,
-        "peso_original": 0.0,
+        "peso_original": 0,
         "actual": null,
         "estadisticas": {
           "n": 4,
@@ -849,7 +849,7 @@
       {
         "nombre": "P/OCF",
         "aplica": false,
-        "peso_original": 0.0,
+        "peso_original": 0,
         "actual": null,
         "estadisticas": {
           "n": 4,
@@ -979,6 +979,13 @@
         }
       },
       "detalle": "Supuestos del DCF revisados (crecimiento, margen, sales-to-capital, beta y/o ROIC después del año 10). Celdas, valores anteriores y motivos: reference/revision_dcf_2026-09-30/ en JMR-valuation; cada celda cambiada tiene una nota en la hoja."
+    },
+    "marketMultiplesFY3": {
+      "fecha": "2026-10-15",
+      "estado": "N/D · FCFE_BANCO",
+      "motivo": "Banco: priorizar FCFE/P-E/P-B y no EV/FCFF industriales",
+      "comparacionHomogenea": "NO PUBLICAR CIFRAS SIN BASE ECONÓMICA",
+      "precioMercadoLTM": "N/D hasta fuente y fecha válida"
     }
   },
   "escenariosDCF": {
