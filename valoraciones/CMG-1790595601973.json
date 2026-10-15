@@ -1022,7 +1022,7 @@
     "horizonte": 3,
     "modelo": "Se valora la cotización actual como múltiplo de métricas FY+3, capitalizando precio al costo de patrimonio y preservando el puente de EV a equity",
     "definicionDiferencia": "Cotización implícita FY+3 / DCF implícito FY+3 − 1",
-    "noLTM": true,
+    "noLTM": false,
     "metodos": [
       {
         "nombre": "EV/EBITDA",
@@ -1117,7 +1117,15 @@
     ],
     "salvedades": [
       "Acciones DCF vs múltiplos FY+3 aún no conciliadas",
-      "Precio al cierre del 15 de octubre, no feed en tiempo real"
-    ]
+      "Precio al cierre del 15 de octubre, no feed en tiempo real",
+      "Ratios LTM son otra base temporal y en DUOL el P/E incorpora impacto fiscal excepcional; no confundirlos con múltiplos FY+3 normalizados."
+    ],
+    "ratiosLTM": {
+      "EV/EBITDA": 19.1,
+      "P/E": 28.29,
+      "P/OCF": 16.63
+    },
+    "fuenteLTM": "https://stockanalysis.com/stocks/cmg/financials/ratios/",
+    "fechaRatiosLTM": "2026-10-15 (ratios de StockAnalysis/S&P Global)"
   }
 }
