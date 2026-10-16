@@ -39,7 +39,13 @@
       "optionSwitch": "No",
       "optionValueUSDMillion": 0,
       "waccStatus": null,
-      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+      "pending": "Migrar guardas canónicas sin sobrescribir hipótesis ni escenarios; resolver documentación y conciliaciones específicas. Comprobación visual autenticada en producción pendiente.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 15.594432143757574,
+      "numericAudit": "PASS",
+      "numericChecks": 150,
+      "visualLocal": "PASS",
+      "status": "PUBLICADO; CONTROLES DE PLANTILLA PENDIENTES"
     },
     {
       "ticker": "DUOL",
@@ -49,7 +55,13 @@
       "optionSwitch": "Yes",
       "optionValueUSDMillion": 79.45327702397478,
       "waccStatus": "CÁLCULO LISTO",
-      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+      "pending": "Migrar guardas canónicas sin sobrescribir hipótesis ni escenarios; resolver documentación y conciliaciones específicas. Comprobación visual autenticada en producción pendiente.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 70.38155570454285,
+      "numericAudit": "PASS",
+      "numericChecks": 150,
+      "visualLocal": "PASS",
+      "status": "PUBLICADO; CONTROLES DE PLANTILLA PENDIENTES"
     },
     {
       "ticker": "NKE",
@@ -59,7 +71,13 @@
       "optionSwitch": "Yes",
       "optionValueUSDMillion": 90.68355506506332,
       "waccStatus": null,
-      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+      "pending": "Migrar guardas canónicas sin sobrescribir hipótesis ni escenarios; resolver documentación y conciliaciones específicas. Comprobación visual autenticada en producción pendiente.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 21.83363951120867,
+      "numericAudit": "PASS",
+      "numericChecks": 150,
+      "visualLocal": "PASS",
+      "status": "PUBLICADO; CONTROLES DE PLANTILLA PENDIENTES"
     },
     {
       "ticker": "NFLX",
@@ -69,7 +87,13 @@
       "optionSwitch": "Yes",
       "optionValueUSDMillion": 5448.593305978697,
       "waccStatus": "CÁLCULO CONCILIADO; VALORACIÓN NO CERTIFICADA",
-      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+      "pending": "Migrar guardas canónicas sin sobrescribir hipótesis ni escenarios; resolver documentación y conciliaciones específicas. Comprobación visual autenticada en producción pendiente.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 46.5944923853168,
+      "numericAudit": "PASS",
+      "numericChecks": 148,
+      "visualLocal": "PASS",
+      "status": "PUBLICADO; CONTROLES DE PLANTILLA PENDIENTES"
     }
   ],
   "previousBulkSync": {
@@ -135,7 +159,7 @@
     "No reemplazar cards ni conservar HTML antiguo como si reflejara últimas hojas.",
     "No confundir Option value cero con ausencia de coste SBC; ADBE incorpora12.2M RSU/PSU al denominador401.4M."
   ],
-  "updatedAt": "2026-10-16T14:44:18.482349+00:00",
+  "updatedAt": "2026-10-16T15:12:29.724780+00:00",
   "officialVerificationRun": "https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/38917900764",
   "sourceDataCommitBeforePublication": "0c226b6ef28a90cdc19c93d6bd938e379c9e3523",
   "access": {
@@ -144,8 +168,9 @@
     "productionVisual": "Pendiente de sesión autenticada; no equivale a un fallo de hosting"
   },
   "pendingSummary": [
-    "CMG, DUOL, NKE y NFLX: completar auditorías del modelo y revisión visual; valores publicados ya coinciden.",
-    "33 tickers en remainingNotVerifiedForOptionValue: revisar hojas y option value, regenerar y publicar solo si procede.",
-    "Verificación visual autenticada en producción para ADBE y PYPL."
-  ]
+    "CMG, DUOL, NKE y NFLX: auditoría numérica y visual local completadas; controles canónicos/documentación pendientes detallados en auditorias/cuatro-activos-2026-10-16/resumen.json.",
+    "33 tickers: revisar option value y recalcular/publicar cuando proceda.",
+    "Revisión visual autenticada en producción pendiente."
+  ],
+  "fourAssetAuditRun": "https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/38921709636"
 }
