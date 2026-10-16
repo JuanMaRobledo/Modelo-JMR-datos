@@ -411,7 +411,7 @@
       "gImplicito": 0.010265453338630603,
       "gDcf": 0.09990908189157444,
       "precioReconstruido": 251.66999992299313,
-      "errorAbsoluto": 7.700685955569497e-08,
+      "errorAbsoluto": 7.700685955569497e-8,
       "estado": "VIGENTE"
     },
     "alerta": "Condición matemática del precio congelado, no pronóstico."
@@ -1108,5 +1108,19 @@
     "metodoPrincipal": "DCF Base",
     "baseMOS": "dcfBase",
     "hojaGoogle": "https://docs.google.com/spreadsheets/d/1MhEO0NxlQ7ufHGQODjowcaCBDEyef4PxsC9ANLT2VBo/edit"
+  },
+  "reportSchema": "jmr-report-contract-v1-20261016",
+  "reportIntegrity": {
+    "version": "2026-10-16",
+    "origin": "hoja original del propio emisor",
+    "addedTables": [],
+    "existingTablesKept": true,
+    "financialDataUnchanged": true,
+    "sensitivities": [
+      "Sensibilidad DCF"
+    ],
+    "missingSource": [],
+    "baseFromPriorJSON": 392.9600099404326,
+    "validation": "presentation-only; matrices no reconciladas aún con la auditoría financiera oficial"
   }
 }
