@@ -48,7 +48,7 @@
 - Capital E79,71% /D20,29%, Kd input6,19% pretax, después de impuestos4,64%; WACC **8,205%**. WACC terminal8,99%, g terminal3%.
 - El input Kd6,19 implica spread~110bps sobre Treasury de fecha del corte, a comparar con **84bps benchmark investment-grade** reportado el 12-oct-2026 por Reuters. El 10-Q declara issuer investment grade, sus emisiones mayo2026 cupón4,55%/4,95%/5,55% y tipo efectivo4,87%/5,11%/5,66% al momento de emisión. **Esos cupones no son automáticamente rendimientos de mercado a octubre.**
 - Diversas capturas web de bonos PYPL muestran rendimientos indicativos, pero no una cotización fijada a 15-oct-2026. Se mantiene el costo6,19% como hipótesis prudente identificada, no como dato de mercado comprobado.
-- `Cost of capital worksheet!B84=PENDIENTE: Kd mercado específico` hasta fijar la fuente/corte de spread del emisor o adoptar formalmente un spread de analista como estimación, que debe distinguirse de comprobación de mercado.
+- `Cost of capital worksheet!B35='Input sheet'!B35+0,011`: Rf 5,09% + spread conservador 110pb. Decisión del analista: **84pb IG de Reuters 12-oct-2026 +26pb de prudencia**, PYPL inversión grado según 10-Q. `Cost of capital worksheet!B84=VALIDADO` verifica método Detailed y conciliación de pesos/tasas; **no representa cotización del bono PYPL en 15-oct**.
 
 ## 6. Disrupción — CORREGIDA Y VALIDADA CUANTITATIVAMENTE
 
@@ -65,4 +65,4 @@
 Antes de regenerar JSON para app con `JMR-valuation/scripts/desde_cero.sh app`, se necesita respaldo de tratamiento económico de las inversiones privadas (B85), premios dilutivos (B108) y costo de deuda con fuente/fecha (Cost B84); además ejecutar el validador real de `JMR-valuation/scripts/audit_dcf_certificado.py` contra manifiesto PYPL y hoja de trabajo.
 Como no existe manifiesto PYPL en `JMR-valuation/reference/fuentes/` (solo template y NFLX), **este gate no se ha ejecutado**. No inventar estado PASS.
 No sobrescribir `valoraciones/PYPL-1790205796042.json` ni `analisis/PYPL-research-1790205847031-vcqtg.json` con campos parciales o tablas cacheadas obsoletas; su contenido actualmente presenta DCF anterior distinto.
-**ESTADO: PREPARADO, NO PUBLICADO.** Integrar sólo tras pasar controles y certificar consistencia hoja/visor/informe/bitácora/PDF.
+**ESTADO: PREPARADO, NO PUBLICADO. Costo de capital validado como estimación de analista; quedan B85, B108 y validador integrado.** Integrar sólo tras pasar controles y certificar consistencia hoja/visor/informe/bitácora/PDF.
