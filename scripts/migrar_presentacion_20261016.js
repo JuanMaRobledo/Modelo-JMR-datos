@@ -8,6 +8,8 @@ async function (items) {
     for(let i=0;i+6<rows.length;i++){
       const title=(rows[i]||[]).filter(Boolean).join(" ");
       if(!/×|sensibilidad|sensitivity/i.test(title)||((rows[i]||[]).filter(Boolean).length>2))continue;
+      const head=rows[i+1]||[];
+      if(head.slice(1,6).filter(v=>String(v||"").trim()).length<4)continue;
       const block=rows.slice(i+2,i+7);
       if(block.length!==5||!block.every(r=>r&&r.slice(1,6).every(v=>v!==""&&v!==undefined)))continue;
       const parsed=String(block[2]?.[3]??"").replace(/[$%\s]/g,"").replace(",",".");
@@ -73,7 +75,7 @@ async function (items) {
         note:"Sensibilidad en HTML es lectura de hoja fuente, no recalculada. Verificar vigencia DCF antes de interpretar."};
       const payload=JSON.stringify(d,null,2)+"\n";
       if(payload.length>900000){results.push({ticker,status:"EXCEDE_900KB",length:payload.length,wouldAdd:added});continue;}
-      if(!added.length&&d.reportSchema==="jmr-report-contract-v1-20261016"&&d.reportIntegrity.addedTables?.length===0) {
+      if(!added.length && already.size>0 && f.result.content.includes('"reportSchema"')) {
         results.push({ticker,status:"YA_COMPLETO",savedTabs:already.size});continue;
       }
       const u=await retry(()=>tools.mcp__GitHub__update_file({repository_full_name:repo,path:"valoraciones/"+file,ref:undefined,
