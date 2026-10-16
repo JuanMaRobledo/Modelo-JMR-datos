@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-16",
+  "window": "2026-10-15 America/Bogota",
+  "appModified": false,
+  "publicationAuthorized": true,
+  "sourceDataCommit": "fac50cfd0b7588c0c47d2b46cc6860f310122447",
+  "reviewed": [
+    {
+      "ticker": "PYPL",
+      "sheetId": "1LI1LHXYFiCqg5i1_DDzs53Rd4eKv4zhDex2pxSvKuCs",
+      "baseSheet": 97.25286358076588,
+      "basePublished": 119.6983740847194,
+      "optionSwitch": "Yes",
+      "optionValueUSDMillion": 0.6811160412842924,
+      "waccStatus": "VALIDADO",
+      "pending": "Regeneración integral, auditoría estricta de fórmulas maestras, publicación y verificación E2E"
+    },
+    {
+      "ticker": "ADBE",
+      "sheetId": "1MhEO0NxlQ7ufHGQODjowcaCBDEyef4PxsC9ANLT2VBo",
+      "baseSheet": 392.9600099404326,
+      "basePublished": 484.92412993819903,
+      "optionSwitch": "No",
+      "optionValueUSDMillion": 0,
+      "waccStatus": "VALIDADO",
+      "pending": "Completar manifiesto fuentes, regeneración integral y publicación; conservar ROIC25/g3.5"
+    },
+    {
+      "ticker": "CMG",
+      "sheetId": "1VUVN1cCm3Hj8bLrmsCZFYBCDIq3DncxHGHH_jbW8ZtU",
+      "baseSheet": 23.991434067319343,
+      "basePublished": 23.991434067319343,
+      "optionSwitch": "No",
+      "optionValueUSDMillion": 0,
+      "waccStatus": null,
+      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+    },
+    {
+      "ticker": "DUOL",
+      "sheetId": "1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc",
+      "baseSheet": 108.27931646852745,
+      "basePublished": 108.27931646852745,
+      "optionSwitch": "Yes",
+      "optionValueUSDMillion": 79.45327702397478,
+      "waccStatus": "CÁLCULO LISTO",
+      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+    },
+    {
+      "ticker": "NKE",
+      "sheetId": "1OITWNynG7R3PKC1sITOOazW9jzXgFWFda6qNbbOnYZI",
+      "baseSheet": 33.59021463262872,
+      "basePublished": 33.59021463262872,
+      "optionSwitch": "Yes",
+      "optionValueUSDMillion": 90.68355506506332,
+      "waccStatus": null,
+      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+    },
+    {
+      "ticker": "NFLX",
+      "sheetId": "1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g",
+      "baseSheet": 71.68383443894892,
+      "basePublished": 71.68383443894892,
+      "optionSwitch": "Yes",
+      "optionValueUSDMillion": 5448.593305978697,
+      "waccStatus": "CÁLCULO CONCILIADO; VALORACIÓN NO CERTIFICADA",
+      "pending": "Valores coinciden; controles del modelo certificado y validación visual pendientes"
+    }
+  ],
+  "previousBulkSync": {
+    "analyses": 39,
+    "synchronized": 38,
+    "sheetsReread": false,
+    "recalculation": false
+  },
+  "remainingNotVerifiedForOptionValue": [
+    "AAPL",
+    "ADSK",
+    "AFYA",
+    "AMZN",
+    "BSX",
+    "CELH",
+    "DPZ",
+    "EPAM",
+    "GOOG",
+    "GRUPOARGOS",
+    "GRUPOSURA",
+    "INTU",
+    "LULU",
+    "MCD",
+    "META",
+    "MP",
+    "MSFT",
+    "MU",
+    "NU",
+    "NVDA",
+    "NVO",
+    "ONON",
+    "P911",
+    "PAGS",
+    "PFDAVIGRP.CL",
+    "PFDAVVNDA",
+    "PFE",
+    "PFGRUPOARG",
+    "PFGRUPSURA",
+    "PLTR",
+    "SHAK",
+    "UBER",
+    "ZTS"
+  ],
+  "backups": {
+    "principle": "Conservar hoja vigente e identidad/enlaces; archivar anteriores y respaldos antes de sustituir; no borrar archivos ni fórmulas.",
+    "moved": [
+      "1cUQPbb6X5BZPc_P-uoISjfR16Q0GlsVXw8adc2ewWXs",
+      "15yVY504i2yumc7210ZFhkoua_lsYDV3gNX_fUzGvTTA",
+      "1YKAWWRcNA-IJ833x9ozqXh2ztKSCjbKmLvhaXQPCj0s",
+      "1OB8DjV9Rh5QAz3kNzHC0JbB7Yqa4aNQqxUVP2xQf__E",
+      "19WcSOKymo4gR6lnKiLB1gAitYFFwfI3xl08E4BDzLDw"
+    ],
+    "CMG": "respaldo ya archivado; no movido"
+  },
+  "preflight": {
+    "PYPL": "20/20 CERTIFICADO en snapshot de lectura con conector y manifest PR90; certifica estructura/entradas, no exactitud de fuentes ni publicación",
+    "ADBE": "16 controles aprobados sin manifiesto; evidencia pendiente",
+    "others": "No certificar con gate industrial actual sin migrar controles; NFLX usa pestañas especiales y no probabilidades aprobadas"
+  },
+  "blockers": [
+    "Credenciales de service account del publicador ausentes en el entorno actual; no ejecutar desde_cero.sh app ni afirmar publicación.",
+    "Vercel GET project modelo-jmr scope juanmarobledos-projects responde403 not authorized; no se puede certificar producción.",
+    "Control estricto de fórmulas maestras y regeneración del JSON completo siguen pendientes, incluso si preflight snapshot pasa."
+  ],
+  "warnings": [
+    "ADBE final es392.96000994 con ROIC25%;381.02 es revisión intermedia.",
+    "No reemplazar cards ni conservar HTML antiguo como si reflejara últimas hojas.",
+    "No confundir Option value cero con ausencia de coste SBC; ADBE incorpora12.2M RSU/PSU al denominador401.4M."
+  ]
+}
