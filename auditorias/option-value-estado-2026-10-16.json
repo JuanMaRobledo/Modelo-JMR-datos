@@ -1,7 +1,7 @@
 {
   "date": "2026-10-16",
   "window": "2026-10-15 America/Bogota",
-  "appModified": false,
+  "appModified": true,
   "publicationAuthorized": true,
   "sourceDataCommit": "fac50cfd0b7588c0c47d2b46cc6860f310122447",
   "reviewed": [
@@ -9,21 +9,27 @@
       "ticker": "PYPL",
       "sheetId": "1LI1LHXYFiCqg5i1_DDzs53Rd4eKv4zhDex2pxSvKuCs",
       "baseSheet": 97.25286358076588,
-      "basePublished": 119.6983740847194,
+      "basePublished": 97.25286358076588,
       "optionSwitch": "Yes",
       "optionValueUSDMillion": 0.6811160412842924,
       "waccStatus": "VALIDADO",
-      "pending": "Regeneración integral, auditoría estricta de fórmulas maestras, publicación y verificación E2E"
+      "pending": "Comprobar visualmente en producción con sesión privada del usuario; visor local y auditorías oficiales aprobados.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 63.21436132749782,
+      "status": "PUBLICADO EN DATOS"
     },
     {
       "ticker": "ADBE",
       "sheetId": "1MhEO0NxlQ7ufHGQODjowcaCBDEyef4PxsC9ANLT2VBo",
       "baseSheet": 392.9600099404326,
-      "basePublished": 484.92412993819903,
+      "basePublished": 392.9600099404326,
       "optionSwitch": "No",
       "optionValueUSDMillion": 0,
       "waccStatus": "VALIDADO",
-      "pending": "Completar manifiesto fuentes, regeneración integral y publicación; conservar ROIC25/g3.5"
+      "pending": "Comprobar visualmente en producción con sesión privada del usuario; visor local y auditorías oficiales aprobados.",
+      "baseMOS": "dcfBase",
+      "mosPublished": 255.4240064612812,
+      "status": "PUBLICADO EN DATOS"
     },
     {
       "ticker": "CMG",
@@ -119,18 +125,27 @@
     "CMG": "respaldo ya archivado; no movido"
   },
   "preflight": {
-    "PYPL": "20/20 CERTIFICADO en snapshot de lectura con conector y manifest PR90; certifica estructura/entradas, no exactitud de fuentes ni publicación",
-    "ADBE": "16 controles aprobados sin manifiesto; evidencia pendiente",
+    "PYPL": "CERTIFICADO, fallos0; fórmulas críticas desviaciones0 y gates0",
+    "ADBE": "CERTIFICADO, fallos0; fórmulas críticas desviaciones0 y gates0",
     "others": "No certificar con gate industrial actual sin migrar controles; NFLX usa pestañas especiales y no probabilidades aprobadas"
   },
-  "blockers": [
-    "Credenciales de service account del publicador ausentes en el entorno actual; no ejecutar desde_cero.sh app ni afirmar publicación.",
-    "Vercel GET project modelo-jmr scope juanmarobledos-projects responde403 not authorized; no se puede certificar producción.",
-    "Control estricto de fórmulas maestras y regeneración del JSON completo siguen pendientes, incluso si preflight snapshot pasa."
-  ],
+  "blockers": [],
   "warnings": [
     "ADBE final es392.96000994 con ROIC25%;381.02 es revisión intermedia.",
     "No reemplazar cards ni conservar HTML antiguo como si reflejara últimas hojas.",
     "No confundir Option value cero con ausencia de coste SBC; ADBE incorpora12.2M RSU/PSU al denominador401.4M."
+  ],
+  "updatedAt": "2026-10-16T14:44:18.482349+00:00",
+  "officialVerificationRun": "https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/38917900764",
+  "sourceDataCommitBeforePublication": "0c226b6ef28a90cdc19c93d6bd938e379c9e3523",
+  "access": {
+    "google": "Lectura200 en hojas vigentes y plantilla IA",
+    "vercel": "Proyecto accesible; perímetro validado y acceso privado preservado",
+    "productionVisual": "Pendiente de sesión autenticada; no equivale a un fallo de hosting"
+  },
+  "pendingSummary": [
+    "CMG, DUOL, NKE y NFLX: completar auditorías del modelo y revisión visual; valores publicados ya coinciden.",
+    "33 tickers en remainingNotVerifiedForOptionValue: revisar hojas y option value, regenerar y publicar solo si procede.",
+    "Verificación visual autenticada en producción para ADBE y PYPL."
   ]
 }
