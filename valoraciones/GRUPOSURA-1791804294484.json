@@ -8,15 +8,15 @@
   "posicion": null,
   "tipo": "Financiera",
   "mos": 0.35,
-  "precioMOS": 32112.924613590232,
-  "precioMOSMax": 32112.924613590232,
+  "precioMOS": 33610.07566247069,
+  "precioMOSMax": 33610.07566247069,
   "metodos": [
     {
       "nombre": "DCF Damodaran",
       "peso": 0.4,
-      "conservador": 70524.9197,
-      "base": 80146.97318,
-      "optimista": 91231.10701,
+      "conservador": 70524.91970442743,
+      "base": 80146.97318176203,
+      "optimista": 91231.10701005133,
       "horizonte": "FY+3; capitalizado desde el DCF presente"
     },
     {
@@ -53,17 +53,33 @@
       "conservador": 7894.976945,
       "base": 5326.705709,
       "optimista": 5003.856056
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "conservador": 57145.53796496609,
+      "base": 82677.70122696031,
+      "optimista": 107690.07881905613,
+      "estado": "ANCLA HISTÓRICA INICIAL"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": 49645.58378656486,
+      "base": 55521.91152046068,
+      "optimista": 68444.09895996145,
+      "estado": "PROVISIONAL · CONCILIAR EQUITY POR HISTORIA"
     }
   ],
   "objetivoPonderado": {
-    "conservador": 57581.73909,
-    "base": 69450.99632,
-    "optimista": 97504.50133
+    "conservador": 57581.73909376725,
+    "base": 69450.9963235541,
+    "optimista": 97504.50132571848
   },
   "valorPresentePonderado": {
-    "conservador": 38667.45354,
-    "base": 45155.2425,
-    "optimista": 61215.7522
+    "conservador": 38667.45353706082,
+    "base": 45155.24250134126,
+    "optimista": 61215.75220391152
   },
   "descuentoMultiples": {
     "version": 2,
@@ -77,19 +93,19 @@
     "criterio": "Promedio 1-3 años",
     "formula": "VP_n = Precio FY+n / (1 + Ke)^n + suma(Dividendo FY+t / (1 + Ke)^t), t = 1..n",
     "dcfHoy": {
-      "conservador": 45500.02218,
-      "base": 51707.80871,
-      "optimista": 58858.87442
+      "conservador": 45500.022180498156,
+      "base": 51707.80871149337,
+      "optimista": 58858.874422059685
     },
     "multiplesHoy": {
-      "conservador": 34112.40777,
-      "base": 40786.86503,
-      "optimista": 62787.00406
+      "conservador": 34112.407774769265,
+      "base": 40786.86502790651,
+      "optimista": 62787.00405847941
     },
     "ponderadoHoy": {
-      "conservador": 38667.45354,
-      "base": 45155.2425,
-      "optimista": 61215.7522
+      "conservador": 38667.45353706082,
+      "base": 45155.24250134126,
+      "optimista": 61215.75220391152
     },
     "pesoDcf": 0.4,
     "pesoMultiplos": 0.6,
@@ -328,6 +344,102 @@
           "consolidado": 893.8216728,
           "chequeo": "OK"
         }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "pesoMultiplos": 0,
+        "estado": "ANCLA HISTÓRICA INICIAL",
+        "conservador": {
+          "fy": [
+            48244.20868028026,
+            52552.25008523509,
+            57145.53796496609
+          ],
+          "vp": [
+            41687.08456882064,
+            39454.39424812253,
+            37459.21785493275
+          ],
+          "consolidado": 39533.56555729197,
+          "chequeo": "NO PONDERADO · ANCLA HISTÓRICA INICIAL"
+        },
+        "base": {
+          "fy": [
+            67612.90141349199,
+            74918.29562013097,
+            82677.70122696031
+          ],
+          "vp": [
+            58423.27641534444,
+            56153.83305641566,
+            53931.60803425694
+          ],
+          "consolidado": 56169.57250200568,
+          "chequeo": "NO PONDERADO · ANCLA HISTÓRICA INICIAL"
+        },
+        "optimista": {
+          "fy": [
+            86988.87751215741,
+            97151.29946818459,
+            107690.07881905613
+          ],
+          "vp": [
+            75165.7617068209,
+            72753.93729504119,
+            70068.65207481767
+          ],
+          "consolidado": 72662.78369222659,
+          "chequeo": "NO PONDERADO · ANCLA HISTÓRICA INICIAL"
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "pesoMultiplos": 0,
+        "estado": "PROVISIONAL · CONCILIAR EQUITY POR HISTORIA",
+        "conservador": {
+          "fy": [
+            41402.95013487299,
+            45447.90989694875,
+            49645.58378656486
+          ],
+          "vp": [
+            35775.6574495666,
+            34149.99235631365,
+            32620.529872016083
+          ],
+          "consolidado": 34182.0598926321,
+          "chequeo": "NO PONDERADO · PROVISIONAL · CONCILIAR EQUITY POR HISTORIA"
+        },
+        "base": {
+          "fy": [
+            45560.77064206038,
+            50317.40012116646,
+            55521.91152046068
+          ],
+          "vp": [
+            39368.36670621039,
+            37785.76041821943,
+            36411.71521973015
+          ],
+          "consolidado": 37855.28078138666,
+          "chequeo": "NO PONDERADO · PROVISIONAL · CONCILIAR EQUITY POR HISTORIA"
+        },
+        "optimista": {
+          "fy": [
+            55351.39296400369,
+            61425.837325475375,
+            68444.09895996145
+          ],
+          "vp": [
+            47828.294060829045,
+            46079.791075525216,
+            44748.62389799595
+          ],
+          "consolidado": 46218.90301145007,
+          "chequeo": "NO PONDERADO · PROVISIONAL · CONCILIAR EQUITY POR HISTORIA"
+        }
       }
     ],
     "consolidado": {
@@ -463,17 +575,17 @@
   },
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 49404.499405523435,
+    "valor": 50830.39081958935,
     "valorBetaPropuesta": 54061.06650351981,
     "betaHoja": 0.71,
     "betaPropuesta": 0.43132886190848446,
     "dcfBase": 51707.80871149337,
-    "metodo": "DCF Base como valor intrínseco principal; DCF esperado = suma de DCF × probabilidad como complemento.",
+    "metodo": "Promedio de Conservador, Base y Optimista; disrupción separada",
     "escenariosUnificados": true,
     "historiaCentralId": "A",
     "valorCentral": 51707.80871149337,
     "rango": {
-      "min": 36571.47667893017,
+      "min": 45500.022180498156,
       "max": 58858.874422059685
     },
     "dcfBaseTecnicoAnterior": 51707.80871149337,
@@ -486,7 +598,7 @@
         "valorBetaPropuesta": 56639.4078690004,
         "margen": 0.135,
         "crecimiento": 0.07946939206996695,
-        "roicTerminal": "costo_capital",
+        "roicTerminal": 0.1756,
         "id": "A",
         "central": true,
         "crecimientoPorGrupo": {
@@ -528,7 +640,9 @@
           0.07805484061261825,
           0.0777536151023348
         ],
-        "terminalGrowth": 0.0883
+        "terminalGrowth": 0.0883,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5
       },
       {
         "nombre": "Conservadora · Reformas previsionales y siniestralidad recortan el ROE a 11%",
@@ -537,7 +651,7 @@
         "valorBetaPropuesta": 49724.57995080435,
         "margen": 0.11,
         "crecimiento": 0.052974089116267775,
-        "roicTerminal": "costo_capital",
+        "roicTerminal": 0.1756,
         "id": "B",
         "central": false,
         "crecimientoPorGrupo": {
@@ -579,16 +693,18 @@
           0.056272373016846844,
           0.05629488001630789
         ],
-        "terminalGrowth": 0.0883
+        "terminalGrowth": 0.0883,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.3333333333333333
       },
       {
-        "nombre": "Disrupción · Choque regulatorio, de crédito y de mercado",
+        "nombre": "Disrupción · Choque regulatorio, de crédito y de mercado: Reforma que recorta comisiones, siniestralidad alta y menores dividendos de Cibest",
         "probabilidad": 0.1,
         "valor": 36571.47667893017,
         "valorBetaPropuesta": 39957.48771957605,
         "margen": 0.07,
         "crecimiento": 0.02606662653165248,
-        "roicTerminal": "costo_capital",
+        "roicTerminal": 0.1756,
         "id": "C",
         "central": false,
         "crecimientoPorGrupo": {
@@ -639,7 +755,9 @@
           0.046340635819760445,
           0.046340635819760445
         ],
-        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 4.63% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa."
+        "criterioTerminal": "Estabilización del negocio residual, sin recuperación: g = 4.63% (crecimiento del año 5, sin superar el terminal de la hoja y con piso de 0%). Hipótesis del analista, no guía de la empresa.",
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0
       },
       {
         "nombre": "Optimista · Se cumple la guía de ROE de 15-16%",
@@ -648,7 +766,7 @@
         "valorBetaPropuesta": 64401.40136847148,
         "margen": 0.16,
         "crecimiento": 0.09238238034586654,
-        "roicTerminal": "costo_capital",
+        "roicTerminal": 0.1756,
         "id": "D",
         "central": false,
         "crecimientoPorGrupo": {
@@ -690,15 +808,30 @@
           0.08804081267353658,
           0.08774197581825804
         ],
-        "terminalGrowth": 0.0883
+        "terminalGrowth": 0.0883,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.16666666666666666
       }
-    ]
+    ],
+    "tipoPromedio": "ponderado_renormalizado",
+    "escenariosPromedio": [
+      "B",
+      "A",
+      "D"
+    ],
+    "disrupcionEnPromedio": false,
+    "disrupcionSeparada": {
+      "titulo": "¿Qué pasaría si todo fallara?",
+      "historiaId": "C",
+      "valor": 36571.47667893017,
+      "incluidaEnPromedio": false
+    }
   },
   "multiplesHistoricos": null,
   "precioMOSHoy": {
-    "conservador": 32112.924613590232,
-    "base": 32112.924613590232,
-    "optimista": 32112.924613590232
+    "conservador": 33610.07566247069,
+    "base": 33610.07566247069,
+    "optimista": 33610.07566247069
   },
   "cagr": {
     "conservador": -0.05150167601,
@@ -725,7 +858,7 @@
     },
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
-  "baseMOS": "valorEsperado",
+  "baseMOS": "dcfBase",
   "savedAt": "2026-10-12T11:29:15.916Z",
   "hojas": {
     "financieros": {
@@ -749,7 +882,9 @@
       "Anexo Work 15-oct-2026": "<table class=\"jmr-sheet\" data-sheet=\"Anexo Work 15-oct-2026\"><tbody><tr data-row=\"1\"><td>GRUPOSURA · sensibilidad del método FCFE</td></tr><tr data-row=\"2\"><td>Instantánea calculada 14-oct-2026; sincronizada 15-oct. Recalcular las matrices si cambia el modelo.</td></tr><tr data-row=\"3\"><td>Fuente</td><td>https://github.com/JuanMaRobledo/Modelo-JMR-datos/tree/d0b135c6b0b638f81d97c88414b40cc3ca6fdba2/auditorias/work-analisis-2026-10-14</td></tr><tr data-row=\"4\"><td>DCF Base · instantánea</td><td>51.707,8087</td></tr><tr data-row=\"5\"><td>DCF Base · hoja actual</td><td>51.707,8087</td></tr><tr data-row=\"6\"><td>Vigencia del valor Base</td><td>COINCIDE</td></tr><tr data-row=\"7\"><td>Precio fijo de la instantánea</td><td>67.480,0000</td></tr><tr data-row=\"8\"><td>Vigencia del precio</td><td>COINCIDE</td></tr><tr data-row=\"11\"><td>Ke terminal × crecimiento perpetuo</td></tr><tr data-row=\"12\"><td>Filas / columnas</td><td>7.830%</td><td>8.330%</td><td>8.830%</td><td>9.330%</td><td>9.830%</td></tr><tr data-row=\"13\"><td>15.560%</td><td>60.938,3922</td><td>61.573,8915</td><td>62.304,0921</td><td>63.151,7962</td><td>64.147,7648</td></tr><tr data-row=\"14\"><td>16.560%</td><td>55.799,0166</td><td>56.045,1753</td><td>56.323,4152</td><td>56.640,3926</td><td>57.004,7424</td></tr><tr data-row=\"15\"><td>17.560%</td><td>51.711,4998</td><td>51.709,6559</td><td>51.707,8087</td><td>51.705,9582</td><td>51.704,1045</td></tr><tr data-row=\"16\"><td>18.560%</td><td>48.381,8339</td><td>48.217,5074</td><td>48.036,4775</td><td>47.836,0302</td><td>47.612,8298</td></tr><tr data-row=\"17\"><td>19.560%</td><td>45.616,2671</td><td>45.343,5057</td><td>45.045,4908</td><td>44.718,5198</td><td>44.358,1294</td></tr><tr data-row=\"19\"><td>Centro = Base de instantánea</td><td>TRUE</td></tr><tr data-row=\"23\"><td>ROE terminal × crecimiento perpetuo</td></tr><tr data-row=\"24\"><td>Filas / columnas</td><td>7.830%</td><td>8.330%</td><td>8.830%</td><td>9.330%</td><td>9.830%</td></tr><tr data-row=\"25\"><td>10.536%</td><td>25.878,0258</td><td>24.481,7585</td><td>22.925,7695</td><td>21.180,9487</td><td>19.210,6539</td></tr><tr data-row=\"26\"><td>14.048%</td><td>38.794,7628</td><td>38.095,7072</td><td>37.316,7891</td><td>36.443,4535</td><td>35.457,3792</td></tr><tr data-row=\"27\"><td>17.560%</td><td>51.711,4998</td><td>51.709,6559</td><td>51.707,8087</td><td>51.705,9582</td><td>51.704,1045</td></tr><tr data-row=\"28\"><td>21.072%</td><td>64.628,2368</td><td>65.323,6046</td><td>66.098,8283</td><td>66.968,4630</td><td>67.950,8298</td></tr><tr data-row=\"29\"><td>24.584%</td><td>77.544,9739</td><td>78.937,5533</td><td>80.489,8479</td><td>82.230,9678</td><td>84.197,5551</td></tr><tr data-row=\"31\"><td>Centro = Base de instantánea</td><td>TRUE</td></tr><tr data-row=\"35\"><td>Cambio de crecimiento patrimonial años 1–5 × ROE explícito</td></tr><tr data-row=\"36\"><td>Filas / columnas</td><td>-4.000%</td><td>-2.000%</td><td>0.000%</td><td>2.000%</td><td>4.000%</td></tr><tr data-row=\"37\"><td>9.500%</td><td>42.005,2654</td><td>41.183,9061</td><td>40.311,0751</td><td>39.383,6765</td><td>38.398,4531</td></tr><tr data-row=\"38\"><td>11.500%</td><td>47.159,6977</td><td>46.602,0429</td><td>46.009,4419</td><td>45.379,7927</td><td>44.710,8839</td></tr><tr data-row=\"39\"><td>13.500%</td><td>52.314,1299</td><td>52.020,1797</td><td>51.707,8087</td><td>51.375,9089</td><td>51.023,3147</td></tr><tr data-row=\"40\"><td>15.500%</td><td>57.468,5621</td><td>57.438,3165</td><td>57.406,1755</td><td>57.372,0252</td><td>57.335,7455</td></tr><tr data-row=\"41\"><td>17.500%</td><td>62.622,9943</td><td>62.856,4533</td><td>63.104,5424</td><td>63.368,1414</td><td>63.648,1763</td></tr><tr data-row=\"43\"><td>Centro = Base de instantánea</td><td>TRUE</td></tr><tr data-row=\"46\"><td>DCF INVERSO · hipótesis condicional</td></tr><tr data-row=\"47\"><td>Estado</td><td>SIN SOLUCIÓN EN EL RANGO ENSAYADO</td></tr><tr data-row=\"48\"><td>Rango de delta anual</td><td>-0,5000</td><td>3,0000</td></tr><tr data-row=\"49\"><td>Lectura</td><td>No se fuerza una raíz. Contrastar ROE o rentabilidad manteniendo trazabilidad.</td></tr><tr data-row=\"58\"><td>Método</td><td>Recalcular 10 años y terminal; ningún múltiplo participa en estas matrices.</td></tr><tr data-row=\"59\"><td>Crecimiento</td><td>Delta común años 1–5; años 6–10 absorben 80/60/40/20/0% del delta y 20/40/60/80/100% del cambio de g terminal.</td></tr><tr data-row=\"60\"><td>Reinversión</td><td>FCFF: NOPAT menos reinversión; g/ROIC terminal. FCFE: patrimonio necesario y ROE; descuento al Ke.</td></tr><tr data-row=\"61\"><td>Alcance</td><td>Verificación aritmética contra hoja. No certifica estados, contratos ni plausibilidad de hipótesis.</td></tr><tr data-row=\"62\"><td>Unidades</td><td>Valores por acción en la moneda del modelo; tasas como fracción.</td></tr></tbody></table>",
       "Option value": "<table class=\"jmr-sheet\" data-sheet=\"Option value\"><tbody><tr data-row=\"1\"><td>TICKER</td><td>Grupo de Inversiones Suramericana S.A. (ordinaria) (BVC:GRUPOSURA)</td><td>Precio</td><td> $ 67.480,00 </td></tr><tr data-row=\"2\"><td>Note: This worksheet is the most finicky of all of the worksheets in this spreadsheet. If you start to get errors, here is a quick fix. Go into cell B12 and replace the contents with a number (say 5), and then undo your action. The spreadsheet will fix itself magically.</td></tr><tr data-row=\"4\"><td>Valuing Options or Warrants</td></tr><tr data-row=\"5\"><td>Enter the current stock price =</td><td> $ 67.480,00 </td></tr><tr data-row=\"6\"><td>Enter the strike price on the option =</td></tr><tr data-row=\"7\"><td>Enter the expiration of the option =</td><td>7,00</td></tr><tr data-row=\"8\"><td>Enter the standard deviation in stock prices =</td><td>35,00%</td><td>(volatility)</td></tr><tr data-row=\"9\"><td>Enter the annualized dividend yield on stock =</td></tr><tr data-row=\"10\"><td>Enter the treasury bond rate =</td><td>11,25%</td></tr><tr data-row=\"11\"><td>Enter the number of warrants (options) outstanding =</td></tr><tr data-row=\"12\"><td>Enter the number of shares outstanding =</td><td>327,71</td></tr><tr data-row=\"14\"><td>Do not input any numbers below this line</td></tr><tr data-row=\"15\"><td>Dilution-adjusted Black-Scholes</td></tr><tr data-row=\"16\"><td>Stock Price=</td><td>$67.480,00</td><td># Warrants issued=</td></tr><tr data-row=\"17\"><td>Strike Price=</td><td></td><td># Shares outstanding=</td><td>328</td></tr><tr data-row=\"18\"><td>Adjusted S =</td><td>$67.480,00</td><td>T.Bond rate=</td><td>11,25%</td></tr><tr data-row=\"19\"><td>Adjusted K =</td><td></td><td>Variance=</td><td>0,1225</td></tr><tr data-row=\"20\"><td>Expiration (in years) =</td><td>7,00</td><td>Annualized dividend yield=</td></tr><tr data-row=\"21\"><td></td><td></td><td>Div. Adj. interest rate=</td><td>11,25%</td></tr><tr data-row=\"23\"><td>d1 = </td><td>0,0000</td></tr><tr data-row=\"24\"><td>N (d1) =</td><td>0,5000</td></tr><tr data-row=\"26\"><td>d2 = </td><td>-0,9260</td></tr><tr data-row=\"27\"><td>N (d2) =</td><td>0,1772</td></tr><tr data-row=\"29\"><td>Value per option = </td><td> $ 33.740,00 </td></tr><tr data-row=\"30\"><td>Value of all options outstanding =</td><td>$0,00 </td></tr></tbody></table>",
       "Cost of capital worksheet": "<table class=\"jmr-sheet\" data-sheet=\"Cost of capital worksheet\"><tbody><tr data-row=\"1\"><td>Grupo de Inversiones Suramericana S.A. (ordinaria) (BVC:GRUPOSURA)</td><td></td><td>Precio</td><td>$ 67.480,00</td></tr><tr data-row=\"2\"><td>You can use this spreadsheet to compute your cost of capital. You can either use the built-in data to compute key inputs (beta, equity risk premium, default spread) or enter them directly. If you choose to use the built in ERP data, you can update the ERP numbers to reflect a more current mature market premuum (since the spreadsheet uses the start of the year numbers).</td></tr><tr data-row=\"4\"><td>Estimation of Current Cost of Capital</td><td></td><td></td><td></td><td></td><td></td><td>Operating Countries ERP calculator</td></tr><tr data-row=\"5\"><td>There are four ways in whch you can estimate your cost of capital. In the first, you can directly input a cost of captial. In the second, you can work through your company&#39;s cost of capital inputs in detail, entering business, geogaphical mix and debt, and I will help you estimate a cost of capital. In the third, you can look up the cost of capital for the industry or industries your firm belongs to and in the fourth, you can use a crosssectional distribution  of costs of capital for companies at the start of the year to make your estimate.</td><td></td><td></td><td></td><td></td><td></td><td>Country</td><td>Revenues</td><td>ERP</td><td>Weight</td><td>Weighted ERP</td></tr><tr data-row=\"6\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td><td></td><td>The last two rows in each of country/region risk premium tables is set aside for your input to provide you with flexibility to enter some numbers directly. For instance, assume that you have a company that breaks its revenues down into three countries and then puts the rest into &quot;Rest of the World&quot;. You can enter the &quot;Rest of the World&quot; in one of these two rows and enter an equity risk premium for the rest of the world. The easiest way to do that is to go into the country equity risk premium worksheet and change the GDP for the three countries that you have data for to zero and compute the global weighted average ERP for the remaining countries. With the regional worksheet, you can use the last two rows to enter the data for an individual country (usually the domestic country) that might be broken out though the rest of the revenues are broken down by region. You can look up the ERP for the country in the country ERP worksheet.</td></tr><tr data-row=\"7\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"8\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"9\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"10\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"11\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"12\"><td>Which approach will you be using?</td><td>Detailed</td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"13\"><td>If direct input, enter cost of capital to use</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"14\"><td>Cost of capital based upon approach =</td><td>13,36%</td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"16\"><td>Approach 1: Detailed Cost of Capital</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td><td></td><td>0,00%</td></tr><tr data-row=\"17\"><td>Inputs</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td></tr><tr data-row=\"18\"><td>Equity</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>0,00%</td></tr><tr data-row=\"19\"><td>Number of Shares outstanding =</td><td>327,71</td><td></td><td></td><td></td><td></td><td>Total</td><td>$0</td><td></td><td>0,00%</td><td>0,00%</td></tr><tr data-row=\"20\"><td>Current Market Price per share =</td><td> $ 67.480,00 </td><td></td><td></td><td></td><td></td><td>Operating Regions ERP calculator</td></tr><tr data-row=\"21\"><td></td><td></td><td></td><td></td><td></td><td></td><td>Region</td><td>Revenues</td><td>ERP</td><td>Weight</td><td>Weighted ERP</td></tr><tr data-row=\"22\"><td>Approach for estimating beta</td><td>Direct Input</td><td></td><td></td><td></td><td></td><td>Africa</td><td></td><td>11,42%</td><td></td><td>0,0000%</td></tr><tr data-row=\"23\"><td>If direct input, enter levered beta (or regression beta)</td><td>0,71</td><td></td><td></td><td></td><td></td><td>Asia</td><td></td><td>5,19%</td><td></td><td>0,0000%</td></tr><tr data-row=\"24\"><td>Unlevered beta =</td><td>0,54</td><td></td><td></td><td></td><td></td><td>Australia &amp; New Zealand</td><td></td><td>3,70%</td><td></td><td>0,0000%</td></tr><tr data-row=\"25\"><td>Riskfree Rate =</td><td>11,25%</td><td></td><td></td><td></td><td></td><td>Caribbean</td><td></td><td>11,19%</td><td></td><td>0,0000%</td></tr><tr data-row=\"26\"><td>What approach do you want to use to input ERP?</td><td>Will Input</td><td></td><td></td><td></td><td></td><td>Central and South America</td><td></td><td>7,93%</td><td></td><td>0,0000%</td></tr><tr data-row=\"27\"><td>Direct input for ERP (if you choose &quot;will input&quot;</td><td>6,31%</td><td></td><td></td><td></td><td></td><td>Eastern Europe</td><td></td><td>7,05%</td><td></td><td>0,0000%</td></tr><tr data-row=\"28\"><td>Equity Risk Premium used in cost of equity =</td><td>6,31%</td><td></td><td></td><td></td><td></td><td>Middle East</td><td></td><td>5,71%</td><td></td><td>0,0000%</td></tr><tr data-row=\"29\"><td></td><td></td><td></td><td></td><td></td><td></td><td>North America</td><td></td><td>3,70%</td><td></td><td>0,0000%</td></tr><tr data-row=\"30\"><td>Debt</td><td></td><td></td><td></td><td></td><td></td><td>Western Europe</td><td></td><td>4,74%</td><td></td><td>0,0000%</td></tr><tr data-row=\"31\"><td>Book Value of Straight Debt =</td><td> $ 10.613.167,00 </td><td></td><td></td><td></td><td></td><td>EMEA</td><td></td><td>5,34%</td><td></td><td>0,0000%</td></tr><tr data-row=\"32\"><td>Interest Expense on Debt =</td><td> $ 1.408.725,00 </td><td></td><td></td><td></td><td></td><td>Fuera de EE.UU. sin desglose</td><td></td><td>5,50%</td><td></td><td>0,0000%</td></tr><tr data-row=\"33\"><td>Average Maturity =</td><td>3</td><td></td><td></td><td></td><td></td><td>Total</td><td>0</td><td></td><td>0,00%</td><td>0,0000%</td></tr><tr data-row=\"34\"><td>Approach for estimating pre-tax cost of debt</td><td>Direct Input</td></tr><tr data-row=\"35\"><td>If direct input, input the pre-tax cost of debt</td><td>13,000%</td><td></td><td></td><td></td><td></td><td>Multi Business (US Industry Averages)</td></tr><tr data-row=\"36\"><td>If actual rating, input the rating</td><td></td><td></td><td></td><td></td><td></td><td>Business</td><td>Revenues</td><td>EV/Sales</td><td>Estimated Value</td><td>Unlevered Beta</td><td>Cost of capital</td></tr><tr data-row=\"37\"><td>If synethetic rating, input the type of company</td><td></td><td></td><td></td><td></td><td></td><td>Insurance (Life)</td><td> $ 235,00 </td><td>1,2838</td><td> $ 301,70 </td><td>0,5317</td><td>5,60%</td></tr><tr data-row=\"38\"><td>Pre-tax Cost of Debt =</td><td>13,00%</td><td></td><td></td><td></td><td></td><td>Insurance (General)</td><td> $ 235,00 </td><td>4,3240</td><td> $ 1.016,15 </td><td>0,5781</td><td>6,34%</td></tr><tr data-row=\"39\"><td>Tax Rate =</td><td>35%</td><td></td><td></td><td></td><td></td><td>Investments &amp; Asset Management</td><td> $ 322,00 </td><td>5,4860</td><td> $ 1.766,51 </td><td>0,5881</td><td>6,13%</td></tr><tr data-row=\"40\"><td></td><td></td><td></td><td></td><td></td><td></td><td>Bank (Money Center)</td><td> $ 442,00 </td><td>8,3096</td><td> $ 3.672,82 </td><td>0,4439</td><td>4,98%</td></tr><tr data-row=\"41\"><td>Book Value of Convertible Debt =</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"42\"><td>Interest Expense on Convertible =</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"43\"><td>Maturity of Convertible Bond =</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"44\"><td>Market Value of Convertible =</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"45\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td><td>The costt of capital  is in US dollars, using the riskfree rate at the start of the year. It will be adjusted for the difference in riskfree rates to make it more current and to change currencies.</td></tr><tr data-row=\"46\"><td>Debt value of operating leases =</td><td> $ -   </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"47\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"48\"><td>Preferred Stock</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td>0,0000</td><td>0,00%</td></tr><tr data-row=\"49\"><td>Number of Preferred Shares =</td><td>0</td><td></td><td></td><td></td><td></td><td>Company</td><td> $ 1.234,00 </td><td></td><td> $ 6.757,18 </td><td>0,5057</td><td>5,52%</td></tr><tr data-row=\"50\"><td>Current Market Price per Share=</td><td>1</td></tr><tr data-row=\"51\"><td>Annual Dividend per Share =</td><td>0</td><td></td><td></td><td></td><td></td><td>Multi Business (Global Industry Averages)</td></tr><tr data-row=\"52\"><td></td><td></td><td></td><td></td><td></td><td></td><td>Business</td><td>Revenues</td><td>EV/Sales</td><td>Estimated Value</td><td>Unlevered Beta</td><td>Cost of capital</td></tr><tr data-row=\"53\"><td>Output</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"54\"><td>Estimating Market Value of Straight Debt =</td><td></td><td> $ 10.681.671,81 </td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"55\"><td>Estimated Value of Straight Debt in Convertible =</td><td></td><td> $ -   </td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"56\"><td>Value of Debt in Operating leases =</td><td></td><td> $ -   </td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"57\"><td>Estimated Value of Equity in Convertible =</td><td></td><td> $ -   </td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"58\"><td>Levered Beta for equity =</td><td></td><td>0,71</td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"59\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"60\"><td></td><td>Equity</td><td>Debt </td><td>Preferred Stock</td><td>Capital</td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"61\"><td>Market Value</td><td> $ 22.113.594,67 </td><td> $ 10.681.672 </td><td> $ -   </td><td> $ 32.795.266 </td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td><td>The cost of capital  is in US dollars, using the riskfree rate at the start of the year. It will be adjusted for the difference in riskfree rates to make it more current and to change currencies.</td></tr><tr data-row=\"62\"><td>Weight in Cost of Capital</td><td>67,43%</td><td>32,57%</td><td>0,00%</td><td>100,00%</td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"63\"><td>Cost of Component</td><td>15,73%</td><td>8,45%</td><td>0,00%</td><td>13,36%</td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"64\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td> $ -   </td><td></td><td>0,00%</td></tr><tr data-row=\"65\"><td></td><td></td><td></td><td></td><td></td><td></td><td>Company</td><td> $ -   </td><td></td><td> $ -   </td></tr><tr data-row=\"66\"><td>Approach 2: industry average cost of capital, adjusted for riskfre rate differences</td></tr><tr data-row=\"67\"><td>Industry </td><td>Single Business(US)</td></tr><tr data-row=\"68\"><td>Cost of capital, adjusted for riskfree rate difference</td><td>11,67%</td></tr><tr data-row=\"70\"><td>Approach 3: Uae histogram of costs of capital of all publicly traded firms</td></tr><tr data-row=\"71\"><td>Which grouping (US, Emerging Markets, Global)</td><td>US</td></tr><tr data-row=\"72\"><td>Which risk grouping does your company fall in?</td><td>Median</td></tr><tr data-row=\"73\"><td>Cost of capital based upon decile/group chosen</td><td>7,79%</td></tr><tr data-row=\"75\"><td>Region</td><td>First Decile</td><td>First Quartile</td><td>Median</td><td>Third Quartile</td><td>Ninth Decile</td></tr><tr data-row=\"76\"><td>Emerging</td><td>6,65%</td><td>7,63%</td><td>8,95%</td><td>10,69%</td><td>12,55%</td></tr><tr data-row=\"77\"><td>Europe</td><td>5,99%</td><td>6,83%</td><td>8,22%</td><td>9,57%</td><td>11,02%</td></tr><tr data-row=\"78\"><td>Global</td><td>6,28%</td><td>7,24%</td><td>8,65%</td><td>10,03%</td><td>11,66%</td></tr><tr data-row=\"79\"><td>Japan</td><td>6,30%</td><td>7,07%</td><td>8,24%</td><td>9,43%</td><td>10,73%</td></tr><tr data-row=\"80\"><td>US</td><td>5,26%</td><td>6,41%</td><td>7,79%</td><td>9,16%</td><td>9,88%</td></tr><tr data-row=\"81\"><td>These costs of capital are all in US dollars and reflect the US dollar  riskfree rate at the start of the year. Once you make your choice, though, I will adjust the rate by the difference in riskfree rates, effectively converting currency and bringing it up to date. </td></tr></tbody></table>",
-      "Crecimiento implícito": "<table class=\"jmr-sheet\" data-sheet=\"Crecimiento implícito\"><tbody><tr data-row=\"1\"><td>CRECIMIENTO IMPLÍCITO · chequeo de coherencia (criterio Damodaran)</td></tr><tr data-row=\"2\"><td>Calculado el 2026-10-12 con scripts/implied_growth.py (escenario Base). Alerta: más de 2 pp de diferencia en crecimiento, o más de 25% en valor frente al DCF llevado a FY+3.</td></tr><tr data-row=\"4\"><td>Concepto</td><td>Valor</td><td>Crecimiento implícito</td><td>Crecimiento del DCF</td><td>Diferencia</td><td>Lectura</td><td>Múltiplo que implica el DCF</td><td>Diferencia de valor</td></tr><tr data-row=\"5\"><td>Precio de hoy (DCF inverso, crecimiento años 1-5)</td><td>69.000,00</td><td>23,8%</td><td>7,9%</td><td>15,9%</td><td>El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador.</td></tr><tr data-row=\"7\"><td>EV/EBITDA Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>-2,1x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Holding de seguros, pensiones y participaciones: los pasivos con asegurados y afiliados son parte del negocio y el valor</td><td>—</td><td>—</td></tr><tr data-row=\"8\"><td>EV/FCFF Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>-4,1x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Igual que EV/EBITDA: el FCFF no se separa de la financiación en una holding financiera; peso 0%.</td><td>—</td><td>—</td></tr><tr data-row=\"9\"><td>P/E Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>7,9x</td><td>—</td><td>—</td><td>—</td><td>Coherente con el DCF.</td><td>10,4x</td><td>-22,2%</td></tr><tr data-row=\"10\"><td>P/FCFE Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>1,7x</td><td>—</td><td>—</td><td>—</td><td>No aplica: El flujo operativo de una aseguradora refleja reservas técnicas y movimientos de inversiones, no lo distribuible; peso 0</td><td>—</td><td>—</td></tr><tr data-row=\"11\"><td>P/OCF Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>1,6x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Igual que P/FCFE; peso 0%.</td><td>—</td><td>—</td></tr><tr data-row=\"13\"><td>Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (80.146,97 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 15,7%, WACC años 4-10 15,2%, ROE FY+3 11,0%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.</td></tr></tbody></table>"
+      "Crecimiento implícito": "<table class=\"jmr-sheet\" data-sheet=\"Crecimiento implícito\"><tbody><tr data-row=\"1\"><td>CRECIMIENTO IMPLÍCITO · chequeo de coherencia (criterio Damodaran)</td></tr><tr data-row=\"2\"><td>Calculado el 2026-10-12 con scripts/implied_growth.py (escenario Base). Alerta: más de 2 pp de diferencia en crecimiento, o más de 25% en valor frente al DCF llevado a FY+3.</td></tr><tr data-row=\"4\"><td>Concepto</td><td>Valor</td><td>Crecimiento implícito</td><td>Crecimiento del DCF</td><td>Diferencia</td><td>Lectura</td><td>Múltiplo que implica el DCF</td><td>Diferencia de valor</td></tr><tr data-row=\"5\"><td>Precio de hoy (DCF inverso, crecimiento años 1-5)</td><td>69.000,00</td><td>23,8%</td><td>7,9%</td><td>15,9%</td><td>El precio supone más crecimiento que el DCF: mercado optimista o DCF conservador.</td></tr><tr data-row=\"7\"><td>EV/EBITDA Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>-2,1x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Holding de seguros, pensiones y participaciones: los pasivos con asegurados y afiliados son parte del negocio y el valor</td><td>—</td><td>—</td></tr><tr data-row=\"8\"><td>EV/FCFF Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>-4,1x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Igual que EV/EBITDA: el FCFF no se separa de la financiación en una holding financiera; peso 0%.</td><td>—</td><td>—</td></tr><tr data-row=\"9\"><td>P/E Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>7,9x</td><td>—</td><td>—</td><td>—</td><td>Coherente con el DCF.</td><td>10,4x</td><td>-22,2%</td></tr><tr data-row=\"10\"><td>P/FCFE Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>1,7x</td><td>—</td><td>—</td><td>—</td><td>No aplica: El flujo operativo de una aseguradora refleja reservas técnicas y movimientos de inversiones, no lo distribuible; peso 0</td><td>—</td><td>—</td></tr><tr data-row=\"11\"><td>P/OCF Base FY+3 (crecimiento perpetuo después de FY+3)</td><td>1,6x</td><td>—</td><td>—</td><td>—</td><td>No aplica: Igual que P/FCFE; peso 0%.</td><td>—</td><td>—</td></tr><tr data-row=\"13\"><td>Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (80.146,97 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 15,7%, WACC años 4-10 15,2%, ROE FY+3 11,0%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1.</td></tr></tbody></table>",
+      "PV": "<table class=\"jmr-table\"><tbody><tr data-row=\"1\"><td>P/V · VALORACIÓN POR HISTORIA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>Precio / ventas (equity), no EV/ventas. Ancla histórica inicial; justificar por márgenes, crecimiento y riesgo.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Precio al corte</td><td data-value=\"67480\">67.480,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>CONTROLES Y FUENTES</td><td>Conservador</td><td>Base</td><td>Optimista</td></tr><tr data-row=\"6\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Patrimonio común LTM</td><td data-value=\"21112628\">$21.112.628</td><td></td><td></td></tr><tr data-row=\"7\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Otros movimientos de equity FY+1</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"8\"><td>Múltiplo P/V</td><td data-value=\"0.817671775522023\">0,82×</td><td data-value=\"0.4606801384562284\">0,46×</td><td data-value=\"0.46829403327539243\">0,47×</td><td data-value=\"0.813948818045002\">0,81×</td><td data-value=\"0.46639055957060144\">0,47×</td><td data-value=\"0.46639055957060144\">0,47×</td><td data-value=\"0.46639055957060144\">0,47×</td><td></td><td data-value=\"0.46639055957060144\">0,47×</td><td></td><td>Otros movimientos de equity FY+2</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"9\"><td>Ventas</td><td data-value=\"29185794\">29.185.794,00</td><td data-value=\"35529207\">35.529.207,00</td><td data-value=\"36326664\">36.326.664,00</td><td data-value=\"28706719\">28.706.719,00</td><td data-value=\"32084309.372868236\">32.084.309,37</td><td data-value=\"33787613.6942234\">33.787.613,69</td><td data-value=\"35688160.404446825\">35.688.160,40</td><td></td><td></td><td></td><td>Otros movimientos de equity FY+3</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"10\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"46399.43876542111\">46.399,44</td><td data-value=\"48862.710255516795\">48.862,71</td><td data-value=\"51611.22822038864\">51.611,23</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td>Peso inicial</td><td data-value=\"0\">0,00</td><td></td><td></td></tr><tr data-row=\"12\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"48244.20868028026\">48.244,21</td><td data-value=\"52552.25008523509\">52.552,25</td><td data-value=\"57145.53796496609\">57.145,54</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.2850591481879037\">-28,51%</td><td data-value=\"-0.22121739648436434\">-22,12%</td><td data-value=\"-0.15314851859860568\">-15,31%</td><td></td><td></td><td></td><td>Estado</td><td>CALCULADO · ANCLA HISTÓRICA INICIAL</td><td></td><td></td></tr><tr data-row=\"14\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.2850591481879037\">-28,51%</td><td data-value=\"-0.11751339754326262\">-11,75%</td><td data-value=\"-0.053902814493016926\">-5,39%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>P/BV no positivo</td><td>No interpretable; no se reemplaza por cero ni se pondera.</td><td></td><td></td></tr><tr data-row=\"16\"><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Tesis por escenario</td><td>El múltiplo también depende de crecimiento, margen/ROE, riesgo y régimen. P25/mediana/P75 son una referencia inicial, no una regla universal.</td><td></td><td></td></tr><tr data-row=\"18\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/V</td><td data-value=\"0.817671775522023\">0,82×</td><td data-value=\"0.4606801384562284\">0,46×</td><td data-value=\"0.46829403327539243\">0,47×</td><td data-value=\"0.813948818045002\">0,81×</td><td data-value=\"0.6411214256601971\">0,64×</td><td data-value=\"0.6411214256601971\">0,64×</td><td data-value=\"0.6411214256601971\">0,64×</td><td></td><td data-value=\"0.6411214256601971\">0,64×</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>Ventas</td><td data-value=\"29185794\">29.185.794,00</td><td data-value=\"35529207\">35.529.207,00</td><td data-value=\"36326664\">36.326.664,00</td><td data-value=\"28706719\">28.706.719,00</td><td data-value=\"33083003.56124861\">33.083.003,56</td><td data-value=\"35829833.20008894\">35.829.833,20</td><td data-value=\"38805041.849053\">38.805.041,85</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"65768.13149863284\">65.768,13</td><td data-value=\"71228.75579041267\">71.228,76</td><td data-value=\"77143.39148238287\">77.143,39</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"67612.90141349199\">67.612,90</td><td data-value=\"74918.29562013097\">74.918,30</td><td data-value=\"82677.70122696031\">82.677,70</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.0019694933831058137\">0,20%</td><td data-value=\"0.1102296327820238\">11,02%</td><td data-value=\"0.22521786050622872\">22,52%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.0019694933831058137\">0,20%</td><td data-value=\"0.053674348545139416\">5,37%</td><td data-value=\"0.07005090755731991\">7,01%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/V</td><td data-value=\"0.817671775522023\">0,82×</td><td data-value=\"0.4606801384562284\">0,46×</td><td data-value=\"0.46829403327539243\">0,47×</td><td data-value=\"0.813948818045002\">0,81×</td><td data-value=\"0.8148795574142572\">0,81×</td><td data-value=\"0.8148795574142572\">0,81×</td><td data-value=\"0.8148795574142572\">0,81×</td><td></td><td data-value=\"0.8148795574142572\">0,81×</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>Ventas</td><td data-value=\"29185794\">29.185.794,00</td><td data-value=\"35529207\">35.529.207,00</td><td data-value=\"36326664\">36.326.664,00</td><td data-value=\"28706719\">28.706.719,00</td><td data-value=\"33696973.31377461\">33.696.973,31</td><td data-value=\"36988800.62600773\">36.988.800,63</td><td data-value=\"40429576.6494129\">40.429.576,65</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"85144.10759729827\">85.144,11</td><td data-value=\"93461.75963846629\">93.461,76</td><td data-value=\"102155.76907447868\">102.155,77</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"86988.87751215741\">86.988,88</td><td data-value=\"97151.29946818459\">97.151,30</td><td data-value=\"107690.07881905613\">107.690,08</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.2891060686448934\">28,91%</td><td data-value=\"0.4397050899256756\">43,97%</td><td data-value=\"0.5958814288538252\">59,59%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.2891060686448934\">28,91%</td><td data-value=\"0.19987711451034662\">19,99%</td><td data-value=\"0.1686026683667865\">16,86%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"39\"><td>VALOR PRESENTE · CADA DIVIDENDO EN SU FECHA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"40\"><td>Escenario</td><td>VP FY+1</td><td>VP FY+2</td><td>VP FY+3</td><td>Consolidado elegido</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"41\"><td>Conservador</td><td data-value=\"41687.08456882064\">41.687,08</td><td data-value=\"39454.39424812253\">39.454,39</td><td data-value=\"37459.21785493275\">37.459,22</td><td data-value=\"39533.56555729197\">39.533,57</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"42\"><td>Base</td><td data-value=\"58423.27641534444\">58.423,28</td><td data-value=\"56153.83305641566\">56.153,83</td><td data-value=\"53931.60803425694\">53.931,61</td><td data-value=\"56169.57250200568\">56.169,57</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"43\"><td>Optimista</td><td data-value=\"75165.7617068209\">75.165,76</td><td data-value=\"72753.93729504119\">72.753,94</td><td data-value=\"70068.65207481767\">70.068,65</td><td data-value=\"72662.78369222659\">72.662,78</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "PBV": "<table class=\"jmr-table\"><tbody><tr data-row=\"1\"><td>P/BV · VALORACIÓN POR HISTORIA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>Precio / patrimonio contable común. Denominadores no positivos: no interpretable. Justificar por ROE, crecimiento y riesgo.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Precio al corte</td><td data-value=\"67480\">67.480,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>CONTROLES Y FUENTES</td><td>Conservador</td><td>Base</td><td>Optimista</td></tr><tr data-row=\"6\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Patrimonio común LTM</td><td data-value=\"21112628\">$21.112.628</td><td></td><td></td></tr><tr data-row=\"7\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Otros movimientos de equity FY+1</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"8\"><td>Múltiplo P/BV</td><td data-value=\"0.6669420020031401\">0,67×</td><td data-value=\"0.5046240141663212\">0,50×</td><td data-value=\"0.5948891226263531\">0,59×</td><td data-value=\"1.0833519063211106\">1,08×</td><td data-value=\"0.5723228455113452\">0,57×</td><td data-value=\"0.5723228455113452\">0,57×</td><td data-value=\"0.5723228455113452\">0,57×</td><td></td><td data-value=\"0.5723228455113452\">0,57×</td><td></td><td>Otros movimientos de equity FY+2</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"9\"><td>Patrimonio común proyectado</td><td data-value=\"35781822\">35.781.822,00</td><td data-value=\"32435238\">32.435.238,00</td><td data-value=\"28596186\">28.596.186,00</td><td data-value=\"21568061\">21.568.061,00</td><td data-value=\"22290763.370726865\">22.290.763,37</td><td data-value=\"23530555.26666874\">23.530.555,27</td><td data-value=\"24856400.52657821\">24.856.400,53</td><td></td><td></td><td></td><td>Otros movimientos de equity FY+3</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"10\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"39558.18022001384\">39.558,18</td><td data-value=\"41758.370067230455\">41.758,37</td><td data-value=\"44111.27404198741\">44.111,27</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td>Peso inicial</td><td data-value=\"0\">0,00</td><td></td><td></td></tr><tr data-row=\"12\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"41402.95013487299\">41.402,95</td><td data-value=\"45447.90989694875\">45.447,91</td><td data-value=\"49645.58378656486\">49.645,58</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.3864411657546979\">-38,64%</td><td data-value=\"-0.32649807503039785\">-32,65%</td><td data-value=\"-0.26429188223822087\">-26,43%</td><td></td><td></td><td></td><td>Estado</td><td>PROVISIONAL · CONCILIAR EQUITY POR HISTORIA</td><td></td><td></td></tr><tr data-row=\"14\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.3864411657546979\">-38,64%</td><td data-value=\"-0.17932836958403264\">-17,93%</td><td data-value=\"-0.09724788201537782\">-9,72%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>P/BV no positivo</td><td>No interpretable; no se reemplaza por cero ni se pondera.</td><td></td><td></td></tr><tr data-row=\"16\"><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Tesis por escenario</td><td>El múltiplo también depende de crecimiento, margen/ROE, riesgo y régimen. P25/mediana/P75 son una referencia inicial, no una regla universal.</td><td></td><td></td></tr><tr data-row=\"18\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/BV</td><td data-value=\"0.6669420020031401\">0,67×</td><td data-value=\"0.5046240141663212\">0,50×</td><td data-value=\"0.5948891226263531\">0,59×</td><td data-value=\"1.0833519063211106\">1,08×</td><td data-value=\"0.6309155623147467\">0,63×</td><td data-value=\"0.6309155623147467\">0,63×</td><td data-value=\"0.6309155623147467\">0,63×</td><td></td><td data-value=\"0.6309155623147467\">0,63×</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>Patrimonio común proyectado</td><td data-value=\"35781822\">35.781.822,00</td><td data-value=\"32435238\">32.435.238,00</td><td data-value=\"28596186\">28.596.186,00</td><td data-value=\"21568061\">21.568.061,00</td><td data-value=\"22345954.160327215\">22.345.954,16</td><td data-value=\"23834385.83892505\">23.834.385,84</td><td data-value=\"25551757.692545254\">25.551.757,69</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"43716.00072720123\">43.716,00</td><td data-value=\"46627.86029144816\">46.627,86</td><td data-value=\"49987.60177588323\">49.987,60</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"45560.77064206038\">45.560,77</td><td data-value=\"50317.40012116646\">50.317,40</td><td data-value=\"55521.91152046068\">55.521,91</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.3248255684341971\">-32,48%</td><td data-value=\"-0.2543360977894715\">-25,43%</td><td data-value=\"-0.1772093728443883\">-17,72%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.3248255684341971\">-32,48%</td><td data-value=\"-0.13648167233663855\">-13,65%</td><td data-value=\"-0.0629492514671196\">-6,29%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Periodo</td><td>Dec &#x27;22</td><td>Dec &#x27;23</td><td>Dec &#x27;24</td><td>Dec &#x27;25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Capitalización bursátil</td><td data-value=\"23864400.000000004\">23.864.400,00</td><td data-value=\"16367600\">16.367.600,00</td><td data-value=\"17011560\">17.011.560,00</td><td data-value=\"23365800\">23.365.800,00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/BV</td><td data-value=\"0.6669420020031401\">0,67×</td><td data-value=\"0.5046240141663212\">0,50×</td><td data-value=\"0.5948891226263531\">0,59×</td><td data-value=\"1.0833519063211106\">1,08×</td><td data-value=\"0.7710444780826328\">0,77×</td><td data-value=\"0.7710444780826328\">0,77×</td><td data-value=\"0.7710444780826328\">0,77×</td><td></td><td data-value=\"0.7710444780826328\">0,77×</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>Patrimonio común proyectado</td><td data-value=\"35781822\">35.781.822,00</td><td data-value=\"32435238\">32.435.238,00</td><td data-value=\"28596186\">28.596.186,00</td><td data-value=\"21568061\">21.568.061,00</td><td data-value=\"22379883.941662576\">22.379.883,94</td><td data-value=\"24149003.684825245\">24.149.003,68</td><td data-value=\"26312888.035217904\">26.312.888,04</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"53506.62304914454\">53.506,62</td><td data-value=\"57736.29749575708\">57.736,30</td><td data-value=\"62909.78921538401\">62.909,79</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"1844.7699148591485\">1.844,77</td><td data-value=\"3689.539829718297\">3.689,54</td><td data-value=\"5534.309744577446\">5.534,31</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"55351.39296400369\">55.351,39</td><td data-value=\"61425.837325475375\">61.425,84</td><td data-value=\"68444.09895996145\">68.444,10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.17973632240658433\">-17,97%</td><td data-value=\"-0.08971788195798203\">-8,97%</td><td data-value=\"0.014287180793738141\">1,43%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.17973632240658433\">-17,97%</td><td data-value=\"-0.04591294000913204\">-4,59%</td><td data-value=\"0.004739891529827123\">0,47%</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"39\"><td>VALOR PRESENTE · CADA DIVIDENDO EN SU FECHA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"40\"><td>Escenario</td><td>VP FY+1</td><td>VP FY+2</td><td>VP FY+3</td><td>Consolidado elegido</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"41\"><td>Conservador</td><td data-value=\"35775.6574495666\">35.775,66</td><td data-value=\"34149.99235631365\">34.149,99</td><td data-value=\"32620.529872016083\">32.620,53</td><td data-value=\"34182.0598926321\">34.182,06</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"42\"><td>Base</td><td data-value=\"39368.36670621039\">39.368,37</td><td data-value=\"37785.76041821943\">37.785,76</td><td data-value=\"36411.71521973015\">36.411,72</td><td data-value=\"37855.28078138666\">37.855,28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"43\"><td>Optimista</td><td data-value=\"47828.294060829045\">47.828,29</td><td data-value=\"46079.791075525216\">46.079,79</td><td data-value=\"44748.62389799595\">44.748,62</td><td data-value=\"46218.90301145007\">46.218,90</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
     },
     "analisis": {
       "Tesis de Inversión y Supuestos": "<table><tr><td colspan=\"1\" class=\"qual-title\">[TICKER] ([Nombre completo de la empresa]) — Tesis de Inversión: De la Historia a los Números</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" class=\"qual-title\">Metodología Damodaran (NYU Stern) | Precio al día del análisis: [$XX,XX] ([mes-año]) | WACC: [X,XX%]</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" class=\"qual-title\">1. LA HISTORIA</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"2\" class=\"qual-title\">[Un párrafo con la tensión central de la tesis: qué mejora/deterioro ya está demostrado en los datos reales (últimos trimestres/años) vs. cuál es la apuesta o el riesgo hacia adelante. Específico a esta empresa — no genérico.]</td></tr><tr class=\"qual-wide\"><td colspan=\"1\">Caso alcista (Bull)</td><td colspan=\"1\">Caso bajista (Bear)</td></tr><tr class=\"qual-wide\"><td colspan=\"1\">[Argumento alcista #1, con un dato real citado — cifra y período.]</td><td colspan=\"1\">[Argumento bajista #1, con un dato real citado — cifra y período.]</td></tr><tr class=\"qual-wide\"><td colspan=\"1\">[Argumento alcista #2, con dato real.]</td><td colspan=\"1\">[Argumento bajista #2, con dato real.]</td></tr><tr class=\"qual-wide\"><td colspan=\"1\">[Argumento alcista #3, con dato real.]</td><td colspan=\"1\">[Argumento bajista #3, con dato real.]</td></tr><tr class=\"qual-wide\"><td colspan=\"1\">[Argumento alcista #4, con dato real.]</td><td colspan=\"1\">[Argumento bajista #4, con dato real.]</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"10\" class=\"qual-title\">2. DE LA HISTORIA A LOS NÚMEROS — LOS TRES ESCENARIOS</td></tr><tr><td>Supuesto</td><td>Conservador</td><td>Base</td><td>Optimista</td><td colspan=\"6\">Justificación (dato real)</td></tr><tr><td>Crecimiento Ingresos — Año 1</td><td>[X%]</td><td>[X%]</td><td>[X%]</td><td colspan=\"6\">[Ancla cada valor a un dato real: crecimiento reciente reportado, guía de la empresa, o tesis de riesgo/upside concreta — no un número arbitrario.]</td></tr><tr><td>Crecimiento Ingresos — Años 2-5</td><td>[X%]</td><td>[X%]</td><td>[X%]</td><td colspan=\"6\">[Justificación.]</td></tr><tr><td>Margen Operativo — Año 1</td><td>[X%]</td><td>[X%]</td><td>[X%]</td><td colspan=\"6\">[Debe compararse contra el nivel actual AJUSTADO de 'Valuation output'!B6 (con R&amp;D capitalizado si aplica), no el margen GAAP crudo.]</td></tr><tr><td>Margen Objetivo (convergencia)</td><td>[X%]</td><td>[X%]</td><td>[X%]</td><td colspan=\"6\">[Ancla en comparables de negocio maduro del mismo tipo de modelo, no en el promedio de una industria genérica que puede estar distorsionado.]</td></tr><tr><td>Años de convergencia de margen</td><td>[N]</td><td>[N]</td><td>[N]</td><td colspan=\"6\">[Más corto si la mejora de margen YA está en marcha y demostrada en los últimos resultados; más largo si es una promesa todavía no evidenciada.]</td></tr><tr><td>Sales-to-Capital (años 1-5 / 6-10)</td><td>[X,Xx]</td><td>[X,Xx]</td><td>[X,Xx]</td><td colspan=\"6\">[Más bajo (más intensivo en capital) si la empresa está invirtiendo fuerte en activos propios; más alto (asset-light) si el modelo es de plataforma/software puro.]</td></tr><tr><td>Costo de Capital (WACC)</td><td>[X,XX%]</td><td>[X,XX%]</td><td>[X,XX%]</td><td colspan=\"6\">[De 'Cost of capital worksheet'. Verificar Direct Input vs. Synthetic Rating según si la empresa tiene deuda real con cobertura de intereses relevante.]</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"10\" class=\"qual-title\">3. RESULTADO DEL DCF POR ESCENARIO</td></tr><tr><td>Escenario</td><td>Valor DCF hoy / acción</td><td>Precio objetivo ponderado (3 años)</td><td>DCF vs. precio del análisis</td><td colspan=\"6\">Ponderado vs. precio del análisis</td></tr><tr><td>Conservador</td><td>153,509.60</td><td>57,581.74</td><td>+127.5%</td><td colspan=\"6\">-14.7%</td></tr><tr><td>Base</td><td>155,957.51</td><td>69,451.00</td><td>+131.1%</td><td colspan=\"6\">+2.9%</td></tr><tr><td>Optimista</td><td>171,038.72</td><td>97,504.50</td><td>+153.5%</td><td colspan=\"6\">+44.5%</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" [categoría=\"\" elegida=\"\" en=\"\" resumen=\"\" de=\"\" valoración!g3]\"=\"\" —=\"\" justificar=\"\" por=\"\" qué=\"\" esa=\"\" categoría=\"\" calza=\"\" con=\"\" el=\"\" perfil=\"\" la=\"\" empresa.\"=\"\" class=\"qual-title\">*Precio Objetivo Ponderado combina el DCF ([XX]%) con 5 múltiplos de mercado derivados de forma consistente con cada escenario del DCF, usando la ponderación de la categoría \"[categoría elegida en Resumen de Valoración!G3]\" — justificar por qué esa categoría calza con el perfil de la empresa.</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"10\" class=\"qual-title\">4. AJUSTES METODOLÓGICOS APLICADOS (sobre la plantilla ya corregida)</td></tr><tr><td>#</td><td>Ajuste</td><td colspan=\"8\">Razón</td></tr><tr><td>1</td><td direct=\"\" input\"=\"\" a=\"\" \"synthetic=\"\" rating\".]\"=\"\">[Ej.: Costo de deuda de \"Direct Input\" a \"Synthetic Rating\".]</td><td colspan=\"8\">[Razón basada en un dato real de la empresa — p. ej. cobertura de intereses.]</td></tr><tr><td>2</td><td>[Ej.: Categoría de ponderación en Resumen de Valoración!G3.]</td><td colspan=\"8\">[Razón — perfil de rentabilidad/madurez de la empresa.]</td></tr><tr><td>3</td><td>[Cualquier supuesto de crecimiento/margen recalibrado desde el valor heredado de la plantilla.]</td><td colspan=\"8\">[Razón basada en dato real.]</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" class=\"qual-title\">5. CONCLUSIÓN</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" class=\"qual-title\">[Un párrafo: al precio actual, qué sugiere el modelo en cada escenario (margen de seguridad/potencial), y cuál es la variable clave a monitorear hacia adelante — la que decidiría entre el caso bull y el caso bear.]</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"10\" class=\"qual-title\">ORIGEN DE LOS MÚLTIPLOS (prompt de valoración v3, 2026-10-12)</td></tr><tr><td>Método</td><td>Aplica</td><td>A · historia</td><td>B · peers (ajustada)</td><td>C · justificado (Cons/Base/Opt)</td><td>Conservador</td><td>Base</td><td>Optimista</td><td>Regla y excepciones</td><td>Celdas</td></tr><tr><td>EV/EBITDA</td><td>No</td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\">Holding de seguros, pensiones y participaciones: los pasivos con asegurados y afiliados son parte del negocio y el valor empresa no tiene sentido; peso 0%.</td></tr><tr><td>EV/FCFF</td><td>No</td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\">Igual que EV/EBITDA: el FCFF no se separa de la financiación en una holding financiera; peso 0%.</td></tr><tr><td>P/E</td><td>Sí</td><td>mediana Dec '25, Columna 12 (etapa actual) = 9,1x</td><td>mediana 11,8x (n=4: PFAVAL.CL 11,0x, CIBEST.CL 11,3x, GRUPOARGOS.CL 76,9x, PFCORFICOL.CL 12,3x) × 0,90 = 10,6x</td><td>1,8x / 2,0x / 5,1x</td><td>7.29</td><td>7.92</td><td>11.24</td><td>Base = 0,75 × promedio(A,B) 9,9x + 0,25 × C. Cons = Base × 0,92 y Opt = Base × 2,00 (dispersión P25/P75 de historia y peers y justificado por escenario). Rango de anclas 2,0x-10,6x: dentro. Único método con peso: en una holding financiera el resultado distribuible se mide con la utilidad.</td><td>PE!J8/J19/J30</td></tr><tr><td>P/FCFE</td><td>No</td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\">El flujo operativo de una aseguradora refleja reservas técnicas y movimientos de inversiones, no lo distribuible; peso 0%.</td></tr><tr><td>P/OCF</td><td>No</td><td></td><td></td><td></td><td></td><td></td><td></td><td colspan=\"2\">Igual que P/FCFE; peso 0%.</td></tr></table><table class=\"qual-section-sep\"><tr><td colspan=\"1\" class=\"qual-title\">Criterios: A: la escisión de Cibest y la deconsolidación de EPS Suramericana cambian el perímetro en 2025; los cierres 2021-2024 (con salud consolidada, Bancolombia como asociada y una ganancia extraordinaria en 2024) no representan la etapa actual. Se usa la mediana de los cierres depurados como referencia propia y se avisa que es una serie corta. B: holdings y bancos colombianos listados (Grupo Aval PF, Cibest, Grupo Argos, Corficolombiana PF), datos de yfinance al 12-oct-2026. Muestra pequeña y heterogénea: no hay pares listados puros de seguros y pensiones latinoamericanos en la BVC. Ajuste −10%: Grupo SURA combina seguros y pensiones con menor ROE contable (12,1%) que los bancos de la muestra y una matriz endeudada. λ = 0,25: el P/E justificado de Damodaran es muy bajo porque el ROE converge al Ke, pero la referencia de mercado y de la historia propia pesan más en un múltiplo secundario.</td></tr></table>",
@@ -806,9 +941,15 @@
       "base": 51707.80871,
       "optimista": 58858.87442
     },
-    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte."
+    "nota": "DCF Base es el valor intrínseco principal. El esperado por probabilidades es complementario. Desde el 2-oct-2026 'Valuation output' calcula las cuatro historias (Base, Conservador, Optimista y Disrupción); ya no hay casos técnicos aparte.",
+    "valores": {
+      "conservador": 45500.022180498156,
+      "base": 51707.80871149337,
+      "optimista": 58858.874422059685,
+      "disrupcion": 36571.47667893017
+    }
   },
-  "precioMOSValorEsperado": 32112.924613590232,
+  "precioMOSValorEsperado": 33039.75403273308,
   "currency": "COP",
   "market": "BVC",
   "reportSchema": "jmr-report-contract-v1-20261016",
@@ -824,5 +965,60 @@
     ],
     "requiresEconomicReview": true,
     "sensitivities": "RECUPERADA, REQUIERE CONCILIAR"
+  },
+  "multiplesAdicionales": {
+    "version": "historias-3-multiplos-7-20261017",
+    "metodos": [
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "estado": "ANCLA HISTÓRICA INICIAL",
+        "fy3": {
+          "conservador": 57145.53796496609,
+          "base": 82677.70122696031,
+          "optimista": 107690.07881905613
+        },
+        "vp": {
+          "conservador": 39533.56555729197,
+          "base": 56169.57250200568,
+          "optimista": 72662.78369222659
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "estado": "PROVISIONAL · CONCILIAR EQUITY POR HISTORIA",
+        "fy3": {
+          "conservador": 49645.58378656486,
+          "base": 55521.91152046068,
+          "optimista": 68444.09895996145
+        },
+        "vp": {
+          "conservador": 34182.0598926321,
+          "base": 37855.28078138666,
+          "optimista": 46218.90301145007
+        }
+      }
+    ],
+    "nota": "No altera pesos, DCF ni MOS. Otros movimientos de equity iniciales 0 son hipótesis explícitas provisionales por historia."
+  },
+  "contratoHistoriasMultiplos": {
+    "version": "historias-3-multiplos-7-20261017",
+    "promedio": [
+      "conservador",
+      "base",
+      "optimista"
+    ],
+    "disrupcionSeparada": true,
+    "supuestosCompartidosPorHistoria": true,
+    "metodos": [
+      "EV/EBITDA",
+      "EV/FCFF",
+      "P/E",
+      "P/FCFE",
+      "P/OCF",
+      "P/V",
+      "P/BV"
+    ]
   }
 }
