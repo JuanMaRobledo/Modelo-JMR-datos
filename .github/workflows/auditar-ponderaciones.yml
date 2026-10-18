@@ -1,0 +1,25 @@
+name: Control JMR de ponderaciones
+on:
+  pull_request:
+    paths:
+      - 'valoraciones/**'
+      - 'scripts/auditar_ponderaciones.cjs'
+      - '.github/workflows/auditar-ponderaciones.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'valoraciones/**'
+      - 'scripts/auditar_ponderaciones.cjs'
+      - '.github/workflows/auditar-ponderaciones.yml'
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/auditar_ponderaciones.cjs
