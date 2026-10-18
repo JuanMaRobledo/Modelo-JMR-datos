@@ -60,7 +60,7 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 | MP | 80 % | 0 % | No calculable | 3 | Conciliar esquema |
 | MSFT | 60 % | 40 % | -29.9 % | 0 | Mantener provisional |
 | MU | N/D | 60 % | No calculable | 0 | Conciliar esquema |
-| NFLX | 60 % | 40 % | No calculable | 5 | Conciliar esquema |
+| NFLX | 60 % | 40 % | +27,2 % | 5 | Conciliado en hoja; auditar pares |
 | NKE | 40 % | 60 % | -8.4 % | 0 | Mantener provisional |
 | NU | 60 % | 40 % | +16.4 % | 0 | Mantener provisional |
 | NVDA | 60 % | 40 % | +43.4 % | 0 | Revisar anclas y pares |
@@ -78,7 +78,7 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 | UBER | 60 % | 40 % | -2.9 % | 0 | Mantener provisional |
 | ZTS | 40 % | 60 % | -10.5 % | 0 | Mantener provisional |
 
-**Nota**: NFLX refleja ahora el 60/40 comprobado en la hoja nativa y conciliado en la rama; GRUPOARGOS y PFGRUPOARG conservan metadatos históricos no aplicables, a la espera de un SOTP terminado. En META, MU y P911 el peso DCF debe leerse del arreglo `metodos` antes de considerar una normalización; su ausencia en `descuentoMultiples.pesoDcf` no implica necesariamente un defecto económico.
+**Nota**: NFLX refleja ahora el 60/40 comprobado en la hoja nativa y conciliado en main mediante PR #84; GRUPOARGOS y PFGRUPOARG conservan metadatos históricos no aplicables, a la espera de un SOTP terminado. En META, MU y P911 el peso DCF debe leerse del arreglo `metodos` antes de considerar una normalización; su ausencia en `descuentoMultiples.pesoDcf` no implica necesariamente un defecto económico.
 
 ## Puertas de publicación por emisor
 
@@ -90,4 +90,4 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 6. Ejecutar pruebas de paridad registro ⇔ hoja ⇔ artículo ⇔ visor y auditoría visual accesible. Republicar **solo** si hubo corrección económica o editorial verificada; registrar SHA y ruta del respaldo.
 7. Dejar constancia de que una brecha grande **no** debe desaparecer por manipular el peso del método.
 
-**Estado al 18-oct-2026:** los 38 expedientes han pasado una revisión **estructural**; solo NFLX tiene una sincronización estructural y editorial con la hoja vigente preparada en esta rama. Los restantes no se alteran; sus certificaciones económicas y posibles republicaciones continúan pendientes.
+**Estado al 18-oct-2026:** los 38 expedientes han pasado una revisión **estructural**; solo NFLX tuvo una sincronización estructural y editorial con la hoja vigente, integrada mediante PR #84. Los restantes no se alteran; sus certificaciones económicas y posibles republicaciones continúan pendientes.
