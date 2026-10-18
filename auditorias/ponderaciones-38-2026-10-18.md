@@ -6,7 +6,7 @@
 
 - **38 valoraciones; 798 matrices esperadas**, con 723 centros conciliados y 75 N/D. N/D no es necesariamente un error: puede expresar denominador no interpretable.
 - **11 brechas materiales** con diferencia absoluta de VP3 de múltiplos ponderados respecto a DCF Base superior al 30 %: AAPL, AFYA, AMZN, CELH, EPAM, MCD, NVDA, NVO, PFE, PLTR y SHAK.
-- **7 esquemas que exigen conciliación particular**: GRUPOARGOS, PFGRUPOARG, MP, NFLX, META, MU y P911.
+- **7 expedientes especiales**: NFLX (ahora conciliado con Sheets, pares pendientes), GRUPOARGOS, PFGRUPOARG, MP, META, MU y P911.
 - **20 restantes**: conservar sin republicar mientras se valida la calidad económica y editorial.
 - Los métodos P/V y P/BV siguen calculados, con peso 0 salvo decisión individual sustentada. No sustituir P/BV por un número si el patrimonio común es negativo o no conciliado.
 - El promedio contempla Conservador, Base y Optimista. Disrupción se muestra fuera del promedio; DCF Base conserva primacía en el MOS.
@@ -19,7 +19,7 @@ Se calcula solo si el expediente tiene DCF Base positivo, métodos coincidentes 
 
 ## Cambios propuestos en esta rama, con respaldo
 
-**Netflix (NFLX).** La selección guardada informaba 40 % de múltiplos (EV/EBITDA, EV/FCFF, P/E y P/FCFE), pero los métodos con pesos efectivos de la valoración eran DCF 100 %, P/V 0 % y P/BV 0 %. Se corrigió exclusivamente la representación de **pesos vigentes** y se añadieron notas de transparencia al análisis. Los cuatro métodos permanecen documentados en el respaldo anterior. Se corrigió la frase `MOS25%` de la sección de cálculos publicada a `MOS de 35%`, conservando el umbral USD 46,59 y el DCF Base USD 71,68. **No hay recálculo económico**, no se han habilitado múltiplos ni cambiado el MOS, precio, escenarios o fichas originales.
+**Netflix (NFLX).** Al auditar la hoja nativa Google vigente (18-oct-2026), se encontró que el JSON de publicación antiguo tenía **100 % DCF**, mientras que la hoja contiene **60 % DCF y 40 % múltiplos**. También comprobamos que los HTML de las hojas ya exportados en el JSON sí reflejaban 60/40, por lo que la primera corrección que consideraba 100 % como vigente era errónea. Se rectificó y concilió el registro estructurado y el análisis con la hoja: **DCF Base intrínseco US$71,68; múltiplos Base descontados US$87,60; mezcla secundaria Base US$78,05; objetivo FY+3 US$108,33; MOS 35 % sobre DCF Base → US$46,59**. Las 16 matrices conciliadas y cinco N/D permanecen. Se conservan sin cambio los supuestos del DCF, el MOS, el precio y las historias. Los comparables y el fundamento económico de los múltiplos siguen siendo provisionales.
 
 Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `respaldos/ponderaciones-2026-10-18/NFLX-analisis-previo.json`. Además, el historial Git conserva versiones integrales.
 
@@ -60,7 +60,7 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 | MP | 80 % | 0 % | No calculable | 3 | Conciliar esquema |
 | MSFT | 60 % | 40 % | -29.9 % | 0 | Mantener provisional |
 | MU | N/D | 60 % | No calculable | 0 | Conciliar esquema |
-| NFLX | 100 % | 40 % | No calculable | 5 | Conciliar esquema |
+| NFLX | 60 % | 40 % | No calculable | 5 | Conciliar esquema |
 | NKE | 40 % | 60 % | -8.4 % | 0 | Mantener provisional |
 | NU | 60 % | 40 % | +16.4 % | 0 | Mantener provisional |
 | NVDA | 60 % | 40 % | +43.4 % | 0 | Revisar anclas y pares |
@@ -78,7 +78,7 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 | UBER | 60 % | 40 % | -2.9 % | 0 | Mantener provisional |
 | ZTS | 40 % | 60 % | -10.5 % | 0 | Mantener provisional |
 
-**Nota**: porcentajes en la columna de múltiplos para NFLX, GRUPOARGOS y PFGRUPOARG son **metadatos anteriores en el inventario de corte**, no una mezcla validada/aplicada. En NFLX la corrección se encuentra en esta misma rama. En META, MU y P911 el peso DCF debe leerse del arreglo `metodos` antes de considerar una normalización; su ausencia en `descuentoMultiples.pesoDcf` no implica necesariamente un defecto económico.
+**Nota**: NFLX refleja ahora el 60/40 comprobado en la hoja nativa y conciliado en la rama; GRUPOARGOS y PFGRUPOARG conservan metadatos históricos no aplicables, a la espera de un SOTP terminado. En META, MU y P911 el peso DCF debe leerse del arreglo `metodos` antes de considerar una normalización; su ausencia en `descuentoMultiples.pesoDcf` no implica necesariamente un defecto económico.
 
 ## Puertas de publicación por emisor
 
@@ -90,4 +90,4 @@ Respaldos: `respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json` y `res
 6. Ejecutar pruebas de paridad registro ⇔ hoja ⇔ artículo ⇔ visor y auditoría visual accesible. Republicar **solo** si hubo corrección económica o editorial verificada; registrar SHA y ruta del respaldo.
 7. Dejar constancia de que una brecha grande **no** debe desaparecer por manipular el peso del método.
 
-**Estado al 18-oct-2026:** los 38 expedientes han pasado una revisión **estructural**; solo NFLX tiene una corrección editorial/metadatos preparada en esta rama. Los restantes no se alteran; sus certificaciones económicas y posibles republicaciones continúan pendientes.
+**Estado al 18-oct-2026:** los 38 expedientes han pasado una revisión **estructural**; solo NFLX tiene una sincronización estructural y editorial con la hoja vigente preparada en esta rama. Los restantes no se alteran; sus certificaciones económicas y posibles republicaciones continúan pendientes.
