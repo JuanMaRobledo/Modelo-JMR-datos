@@ -9,11 +9,46 @@
   "mos": 0.35,
   "metodos": [
     {
-      "nombre": "DCF Damodaran · FCFF (valor presente)",
-      "peso": 1,
-      "conservador": 50.24353646219275,
-      "base": 71.68383443894892,
-      "optimista": 103.08016291545503
+      "nombre": "DCF Damodaran · FCFF (FY+3)",
+      "peso": 0.6,
+      "conservador": 68.4778436687117,
+      "base": 97.69922170940126,
+      "optimista": 140.48985757165795
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.10000000000000002,
+      "conservador": 98.12502999786862,
+      "base": 120.680141476116,
+      "optimista": 152.150536079576
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.15,
+      "conservador": 107.57264019615862,
+      "base": 127.67294748317046,
+      "optimista": 161.57826903855002
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.05000000000000001,
+      "conservador": 93.73889407106037,
+      "base": 115.28580422911394,
+      "optimista": 145.34948916426538
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.10000000000000002,
+      "conservador": 107.86453246333444,
+      "base": 127.24269244168394,
+      "optimista": 161.14011109388608
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 107.66915648543745,
+      "base": 127.28323704258051,
+      "optimista": 161.15411753720144
     },
     {
       "nombre": "P/V",
@@ -33,9 +68,9 @@
     }
   ],
   "objetivoPonderado": {
-    "conservador": 50.24353646219275,
-    "base": 71.68383443894892,
-    "optimista": 103.08016291545503
+    "conservador": 82.50850318032414,
+    "base": 108.32704875135202,
+    "optimista": 147.12719407433673
   },
   "valorEsperado": {
     "valorCentral": 71.68383443894892,
@@ -154,20 +189,269 @@
     }
   },
   "descuentoMultiples": {
-    "version": 3,
-    "costoPatrimonio": null,
+    "version": 4,
+    "horizontes": [
+      1,
+      2,
+      3
+    ],
+    "horizonteAnios": 3,
+    "costoPatrimonio": 0.10872360019412268,
+    "criterio": "Promedio 1-3 años",
+    "formula": "(objetivo FY+n + dividendos) / (1+Ke)^n; consolidado = media de VP1, VP2 y VP3",
     "dcfHoy": {
       "conservador": 50.24353646219275,
       "base": 71.68383443894892,
       "optimista": 103.08016291545503
     },
-    "multiplesHoy": null,
-    "ponderadoHoy": {
-      "conservador": 50.24353646219275,
-      "base": 71.68383443894892,
-      "optimista": 103.08016291545503
+    "multiplesHoy": {
+      "conservador": 75.26403638911108,
+      "base": 87.6045115538154,
+      "optimista": 105.70786905429733
     },
+    "ponderadoHoy": {
+      "conservador": 60.25173643296009,
+      "base": 78.0521052848955,
+      "optimista": 104.13124537099196
+    },
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
     "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0.10000000000000002,
+        "pesoMultiplos": 0.25000000000000006,
+        "conservador": {
+          "fy": [
+            77.84948539853795,
+            88.01365701000742,
+            98.12502999786862
+          ],
+          "vp": [
+            70.21541291707649,
+            71.59842724411469,
+            71.99625832850678
+          ],
+          "consolidado": 71.27003282989932,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "base": {
+          "fy": [
+            89.87554215020752,
+            105.10858970370545,
+            120.680141476116
+          ],
+          "vp": [
+            81.06217107173646,
+            85.50502238279421,
+            88.5453858309538
+          ],
+          "consolidado": 85.03752642849481,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "optimista": {
+          "fy": [
+            103.00392122957432,
+            126.06540246649345,
+            152.150536079576
+          ],
+          "vp": [
+            92.90315567517432,
+            102.55322700056622,
+            111.63583135356885
+          ],
+          "consolidado": 102.36407134310313,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0.15,
+        "pesoMultiplos": 0.37499999999999994,
+        "conservador": {
+          "fy": [
+            85.7127903976337,
+            96.61814467534167,
+            107.57264019615862
+          ],
+          "vp": [
+            77.30762688070004,
+            78.59811121372032,
+            78.92815515888631
+          ],
+          "consolidado": 78.2779644177689,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "base": {
+          "fy": [
+            95.42412209757954,
+            111.33442560565658,
+            127.67294748317046
+          ],
+          "vp": [
+            86.06664643998923,
+            90.5696915944026,
+            93.67614469783989
+          ],
+          "consolidado": 90.10416091074391,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "optimista": {
+          "fy": [
+            109.71665910811754,
+            133.99968813833223,
+            161.57826903855002
+          ],
+          "vp": [
+            98.9576293757142,
+            109.0077068473084,
+            118.55314386375319
+          ],
+          "consolidado": 108.83949336225861,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.05000000000000001,
+        "pesoMultiplos": 0.12500000000000003,
+        "conservador": {
+          "fy": [
+            74.13058568759016,
+            84.0291059061879,
+            93.73889407106037
+          ],
+          "vp": [
+            66.86119577017291,
+            68.35702582984507,
+            68.77806440533254
+          ],
+          "consolidado": 67.9987620017835,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "base": {
+          "fy": [
+            85.58215310578925,
+            100.35011742391832,
+            115.28580422911394
+          ],
+          "vp": [
+            77.18980013666612,
+            81.63404209528342,
+            84.58745483256652
+          ],
+          "consolidado": 81.13709902150535,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "optimista": {
+          "fy": [
+            98.08338449222619,
+            120.35817411562283,
+            145.34948916426538
+          ],
+          "vp": [
+            88.46513637398274,
+            97.91044100885478,
+            106.64576989188436
+          ],
+          "consolidado": 97.67378242490729,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0.10000000000000002,
+        "pesoMultiplos": 0.25000000000000006,
+        "conservador": {
+          "fy": [
+            85.64921839572973,
+            96.76397639389448,
+            107.86453246333444
+          ],
+          "vp": [
+            77.25028887337989,
+            78.71674418552719,
+            79.14232223809272
+          ],
+          "consolidado": 78.36978509899994,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "base": {
+          "fy": [
+            94.74862998202927,
+            110.81769369273538,
+            127.24269244168394
+          ],
+          "vp": [
+            85.45739439968631,
+            90.14933419159868,
+            93.36045813840975
+          ],
+          "consolidado": 89.65572890989824,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "optimista": {
+          "fy": [
+            109.0028282579177,
+            133.45961789469493,
+            161.14011109388608
+          ],
+          "vp": [
+            98.31379817190935,
+            108.56836389350545,
+            118.2316587893191
+          ],
+          "consolidado": 108.37127361824463,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoMultiplos": 0,
+        "conservador": {
+          "fy": [
+            85.67995206205715,
+            96.65952616901725,
+            107.66915648543745
+          ],
+          "vp": [
+            77.2780087364026,
+            78.6317747378237,
+            78.99897105260862
+          ],
+          "consolidado": 78.30291817561164,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "base": {
+          "fy": [
+            94.99835180597947,
+            110.93878962325165,
+            127.28323704258051
+          ],
+          "vp": [
+            85.68262801418362,
+            90.2478447917166,
+            93.39020650699663
+          ],
+          "consolidado": 89.77355977096562,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        },
+        "optimista": {
+          "fy": [
+            109.26756007425034,
+            133.57650312215023,
+            161.15411753720144
+          ],
+          "vp": [
+            98.55256986964022,
+            108.66344911934623,
+            118.24193559138702
+          ],
+          "consolidado": 108.48598486012447,
+          "chequeo": "VP3 conciliado con hoja nativa"
+        }
+      },
       {
         "nombre": "P/V",
         "peso": 0,
@@ -265,9 +549,13 @@
         }
       }
     ],
-    "pesoDcf": 1,
-    "pesoMultiplos": 0,
-    "nota": "DCF Base como única referencia principal; cuatro escenarios FCFF a diez años. Múltiplos excluidos hasta validar."
+    "consolidado": {
+      "conservador": 75.26403638911108,
+      "base": 87.6045115538154,
+      "optimista": 105.70786905429733
+    },
+    "chequeo": "Concilia con hoja nativa, sensibilidad 16 OK y 5 N/D",
+    "nota": "Mezcla secundaria 60% DCF y 40% múltiplos; DCF Base permanece intrínseco principal y único referente MOS. Pares sin certificación económica."
   },
   "savedAt": "2026-10-15T18:39:08.731Z",
   "auditoria": {
@@ -287,7 +575,7 @@
       "Disrupción sigue siendo un estrés no certificado, sin convergencia STC revisada.",
       "GitHub/Vercel CI no certifican verificación visual en producción: acceso del proyecto restringido (403)."
     ],
-    "estadoMultiples": "AUXILIARES NO APROBADOS EN PONDERACIÓN PUBLICADA; EXCLUIDOS HASTA VALIDAR ANCLAS",
+    "estadoMultiples": "MEZCLA SECUNDARIA DE HOJA 60/40; comparables y múltiplos pendientes de certificación",
     "editorial": [
       "Artículo 18 secciones, Base DCFUS$71,68",
       "Nivel 2 con transición años6–10, FCFF/ROIC y DCF inverso",
@@ -357,18 +645,20 @@
       "dcfChanged": false
     },
     "ponderaciones20261018": {
-      "tipo": "CORRECCION_METADATOS",
-      "soloSelector": true,
-      "fuenteSHA": "178574b42bbb48a214169855d384b0331a7f3db7",
-      "documento": "auditorias/ponderaciones-38-2026-10-18.json",
-      "respaldo": "respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json",
-      "nota": "No cambia metodos, DCF, MOS, hojas, escenarios ni precio. Selector anterior mostraba ponderaciones no aplicadas."
+      "tipo": "CONCILIACION_HOJA",
+      "fuente": "1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g",
+      "pesoDcf": 0.6,
+      "pesoMultiplos": 0.4,
+      "baseDCF": 71.68383443894892,
+      "baseMultiplosVP": 87.6045115538154,
+      "baseMezclaVP": 78.0521052848955,
+      "calidadEconomica": "PENDIENTE DE REVISION DE PARES"
     }
   },
   "valorPresentePonderado": {
-    "conservador": 50.24353646219275,
-    "base": 71.68383443894892,
-    "optimista": 103.08016291545503
+    "conservador": 60.25173643296009,
+    "base": 78.0521052848955,
+    "optimista": 104.13124537099196
   },
   "crecimientoImplicito": {
     "fecha": "2026-10-15",
@@ -580,88 +870,88 @@
     ],
     "disrupcionFuera": true,
     "sourceSheet": "1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g",
-    "lastExport": "2026-10-17",
+    "lastExport": "2026-10-18",
     "controlesOK": 16,
     "noDisponibles": 5,
-    "seleccion": "Pesos de valoración original y elegibilidad documentados; actualizar comparables al volver a valorar"
+    "seleccion": "Selección de la hoja: 60% DCF / 40% múltiplos; 16 matrices conciliadas y 5 N/D, pares por auditar"
   },
   "seleccionMultiples": {
-    "version": "ponderacion-real-publicada-20261018",
+    "version": "pesos-conciliados-hoja-20261018",
     "noReponderaDCF": true,
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "rol": "Seleccionado",
+        "criterio": "EBITDA normalizado, contenido, CapEx, leases y pares",
         "control": "OK",
-        "pesoRelativo": 0,
-        "pesoValido": 0,
-        "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "pesoRelativo": 0.25000000000000006,
+        "pesoValido": 0.25000000000000006,
+        "pesoVigente": 0.10000000000000002,
+        "estado": "VIGENTE EN HOJA · PARES POR CERTIFICAR"
       },
       {
         "nombre": "EV/FCFF",
-        "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "rol": "Seleccionado",
+        "criterio": "FCFF después de reinversión de contenido; contrastar pares",
         "control": "OK",
-        "pesoRelativo": 0,
-        "pesoValido": 0,
-        "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "pesoRelativo": 0.37499999999999994,
+        "pesoValido": 0.37499999999999994,
+        "pesoVigente": 0.15,
+        "estado": "VIGENTE EN HOJA · PARES POR CERTIFICAR"
       },
       {
         "nombre": "P/E",
-        "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "rol": "Seleccionado",
+        "criterio": "Utilidad GAAP normalizada, SBC, impuestos y amortización de contenido",
         "control": "OK",
-        "pesoRelativo": 0,
-        "pesoValido": 0,
-        "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "pesoRelativo": 0.12500000000000003,
+        "pesoValido": 0.12500000000000003,
+        "pesoVigente": 0.05000000000000001,
+        "estado": "VIGENTE EN HOJA · PARES POR CERTIFICAR"
       },
       {
         "nombre": "P/FCFE",
-        "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "rol": "Seleccionado",
+        "criterio": "FCFE sostenible, necesidades de capital y deuda",
         "control": "OK",
-        "pesoRelativo": 0,
-        "pesoValido": 0,
-        "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "pesoRelativo": 0.25000000000000006,
+        "pesoValido": 0.25000000000000006,
+        "pesoVigente": 0.10000000000000002,
+        "estado": "VIGENTE EN HOJA · PARES POR CERTIFICAR"
       },
       {
         "nombre": "P/OCF",
         "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "criterio": "OCF no resta CapEx; solo diagnóstico",
         "control": "OK",
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "estado": "NO PONDERADO"
       },
       {
         "nombre": "P/V",
         "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "criterio": "Margen, crecimiento, tamaño y riesgo comparables; peso 0",
         "control": "N/D",
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "estado": "NO PONDERADO"
       },
       {
         "nombre": "P/BV",
         "rol": "No ponderar",
-        "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
+        "criterio": "ROE, Ke y patrimonio común conciliados; peso 0",
         "control": "N/D",
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
+        "estado": "NO PONDERADO"
       }
     ],
-    "fuente": "metodos ponderados publicados y descuentoMultiples.pesoDcf",
+    "fuente": "Google Sheets Resumen!A5:E12 y Descuento de múltiplos!A4:J43",
     "fecha": "2026-10-18",
-    "advertencia": "Se conserva el selector previo en respaldos. La valoración vigente utiliza 100% DCF; los múltiplos se mantienen como sensibilidad y pendientes de validación económica."
+    "advertencia": "Pesos aplicados en hoja: 60% DCF / 40% múltiplos, con revisión de comparables y anclas aún pendiente. DCF Base y MOS invariantes."
   }
 }
