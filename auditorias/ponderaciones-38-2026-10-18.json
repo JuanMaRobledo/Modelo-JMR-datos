@@ -1,7 +1,7 @@
 {
   "fecha": "2026-10-18",
   "alcance": "Primera pasada estructural sobre 38 JSON publicados de Modelo-JMR-datos/main; sin lectura en vivo ni recálculo económico de Google Sheets",
-  "metodologia": "BrechaVP3Pct = (suma de VP3 Base de múltiplos seleccionados con peso positivo / suma de sus pesos) / descuentoMultiples.dcfHoy.base - 1; no se usa cuando faltan datos, DCF o compatibilidad de esquema. N/D es matriz no disponible y no es fallo por sí solo. Umbral ±30% prioriza auditoría, NO certifica ni invalida valoración.",
+  "metodologia": "BrechaVP3Pct = (suma de VP3 Base de múltiplos seleccionados con peso positivo / suma de sus pesos) / descuentoMultiples.dcfHoy.base - 1; no se usa cuando faltan datos, DCF o compatibilidad de esquema. N/D es matriz no disponible y no es fallo por sí solo. Umbral ±30% prioriza auditoría, NO certifica ni invalida valoración. Netflix: fila actualizada mediante contraste directo de Sheets; la brecha 26,3% usa el VP3 relativo ponderado de los cuatro métodos activos frente al DCF Base, distinta del consolidado de 1–3 años.",
   "regla": "Sin cambios en DCF, MOS, escenarios, precio ni ponderaciones en esta revisión. Republicar solo después de revalidar comparables, anclas, esquema, hojas, análisis y respaldo.",
   "resumen": {
     "empresas": 38,
@@ -225,13 +225,13 @@
     },
     {
       "ticker": "NFLX",
-      "pesoDcf": 1,
+      "pesoDcf": 0.6,
       "pesoMultiples": 0.4,
-      "brechaVP3Pct": null,
+      "brechaVP3Pct": 26.3,
       "matricesND": 5,
-      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE10 (metadatos; no aplicados)",
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE10",
       "clasificacion": "BLOQUEO_O_MIGRACION",
-      "observacion": "Métodos ponderados reales: DCF 100%, P/V 0%, P/BV 0%; selector histórico señala 40% en cuatro métodos que no están en la valoración activa"
+      "observacion": "Hoja vigente 18-oct-2026: 60% DCF y 40% múltiplos. JSON y análisis conciliados en rama; VP DCF Base US$71,68; VP múltiplos US$87,60; mezcla secundaria US$78,05; MOS 35% sobre DCF Base. Anclas y pares no certificados."
     },
     {
       "ticker": "NKE",
@@ -393,5 +393,19 @@
       "clasificacion": "MANTENER_EN_REVISION",
       "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
     }
-  ]
+  ],
+  "datosVigentesVerificados": {
+    "NFLX": {
+      "fechaHoja": "2026-10-18",
+      "dcfBase": 71.68383443894892,
+      "multiplesBase": 87.6045115538154,
+      "mezclaBase": 78.0521052848955,
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "objetivoFY3Base": 108.32704875135202,
+      "mos": 0.35,
+      "umbralMOS": 46.5944923853168,
+      "estado": "Conciliado estructuralmente en rama; pendiente revisión de pares e integración"
+    }
+  }
 }
