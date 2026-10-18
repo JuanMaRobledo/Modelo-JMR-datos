@@ -1,0 +1,397 @@
+{
+  "fecha": "2026-10-18",
+  "alcance": "Primera pasada estructural sobre 38 JSON publicados de Modelo-JMR-datos/main; sin lectura en vivo ni recálculo económico de Google Sheets",
+  "metodologia": "BrechaVP3Pct = (suma de VP3 Base de múltiplos seleccionados con peso positivo / suma de sus pesos) / descuentoMultiples.dcfHoy.base - 1; no se usa cuando faltan datos, DCF o compatibilidad de esquema. N/D es matriz no disponible y no es fallo por sí solo. Umbral ±30% prioriza auditoría, NO certifica ni invalida valoración.",
+  "regla": "Sin cambios en DCF, MOS, escenarios, precio ni ponderaciones en esta revisión. Republicar solo después de revalidar comparables, anclas, esquema, hojas, análisis y respaldo.",
+  "resumen": {
+    "empresas": 38,
+    "matricesEsperadas": 798,
+    "matricesDisponibles": 723,
+    "matricesND": 75,
+    "brechaMaterial": 11,
+    "especiales": 7,
+    "mantenerEnRevision": 20
+  },
+  "entradas": [
+    {
+      "ticker": "AAPL",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 49.2,
+      "matricesND": 3,
+      "seleccion": "EV/EBITDA30 P/E30",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "EV/FCFF N/D; revisar pares, recompra y margen"
+    },
+    {
+      "ticker": "ADBE",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 12.2,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA27 P/E13",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "ADSK",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -4.5,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "AFYA",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -32.4,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "AMZN",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 34.2,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA30 P/E30",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "BSX",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 4.8,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "CELH",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 128.8,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Resultados afectados por terminaciones de distribución; historia normalizada corta"
+    },
+    {
+      "ticker": "CMG",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 26.8,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "DPZ",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 2.8,
+      "matricesND": 3,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "DUOL",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": -18.1,
+      "matricesND": 0,
+      "seleccion": "EV/FCFF30 P/E10",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Pesos P/E y EV/FCFF coinciden con criterios del dossier; comprobar estado de las historias"
+    },
+    {
+      "ticker": "EPAM",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -40.7,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "GOOG",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -9.5,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "GRUPOARGOS",
+      "pesoDcf": null,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": null,
+      "matricesND": 21,
+      "seleccion": "EV/EBITDA30 P/E30",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "SOTP/DCF incompleto; 21 matrices N/D; pesos sugeridos no aplicados"
+    },
+    {
+      "ticker": "GRUPOSURA",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -21.1,
+      "matricesND": 8,
+      "seleccion": "P/E60",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Holding financiera: SOTP principal; P/E secundario y comparables colombianos limitados"
+    },
+    {
+      "ticker": "INTU",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -29.8,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "LULU",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -4.2,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "MCD",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": 57.3,
+      "matricesND": 3,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "P/BV N/D; no forzar patrimonio contable negativo o no representativo"
+    },
+    {
+      "ticker": "META",
+      "pesoDcf": null,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": null,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "Esquema de descuento contiene dos métodos; peso DCF consta en metodos, pero no en descuentoMultiples.pesoDcf"
+    },
+    {
+      "ticker": "MP",
+      "pesoDcf": 0.8,
+      "pesoMultiples": 0,
+      "brechaVP3Pct": null,
+      "matricesND": 3,
+      "seleccion": "ninguno",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "0,80 DCF; faltante 0,20 sin método aplicable; no renormalizar silenciosamente"
+    },
+    {
+      "ticker": "MSFT",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": -29.9,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "MU",
+      "pesoDcf": null,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": null,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA50 P/E10",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "Esquema de descuento contiene dos métodos; peso DCF consta en metodos, pero no en descuentoMultiples.pesoDcf"
+    },
+    {
+      "ticker": "NFLX",
+      "pesoDcf": 1,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": null,
+      "matricesND": 5,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE10 (metadatos; no aplicados)",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "Métodos ponderados reales: DCF 100%, P/V 0%, P/BV 0%; selector histórico señala 40% en cuatro métodos que no están en la valoración activa"
+    },
+    {
+      "ticker": "NKE",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -8.4,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "NU",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 16.4,
+      "matricesND": 0,
+      "seleccion": "P/E40",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "NVDA",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 43.4,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "NVO",
+      "pesoDcf": 0.55,
+      "pesoMultiples": 0.45,
+      "brechaVP3Pct": 52.6,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA5 EV/FCFF20 P/E5 P/FCFE10 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "ONON",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 12.9,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "P911",
+      "pesoDcf": null,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": null,
+      "matricesND": 0,
+      "seleccion": "P/E60",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "Esquema de descuento contiene dos métodos; peso DCF consta en metodos, pero no en descuentoMultiples.pesoDcf"
+    },
+    {
+      "ticker": "PAGS",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -1.2,
+      "matricesND": 0,
+      "seleccion": "P/E38 P/FCFE22",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "PFDAVVNDA",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -26,
+      "matricesND": 0,
+      "seleccion": "P/E60",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "PFE",
+      "pesoDcf": 0.55,
+      "pesoMultiples": 0.45,
+      "brechaVP3Pct": 87.1,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA5 EV/FCFF20 P/E5 P/FCFE10 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Brecha 87%; revisar anclas y márgenes sin aproximarlas artificialmente al DCF"
+    },
+    {
+      "ticker": "PFGRUPOARG",
+      "pesoDcf": null,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": null,
+      "matricesND": 21,
+      "seleccion": "EV/EBITDA30 P/E30",
+      "clasificacion": "BLOQUEO_O_MIGRACION",
+      "observacion": "SOTP/DCF incompleto; 21 matrices N/D; pesos sugeridos no aplicados"
+    },
+    {
+      "ticker": "PFGRUPSURA",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -21.1,
+      "matricesND": 8,
+      "seleccion": "P/E60",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Holding financiera: SOTP principal; P/E secundario y comparables colombianos limitados"
+    },
+    {
+      "ticker": "PLTR",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 152,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE5 P/OCF5",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Peeres alto crecimiento; exigir consistencia utilidad neta proyectada vs EBITDA y evitar anclas de etapa previa"
+    },
+    {
+      "ticker": "PYPL",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -29.2,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "SHAK",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": 310,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 P/E10 P/OCF10",
+      "clasificacion": "BRECHA_MATERIAL",
+      "observacion": "Negocio en expansión con FCFF/FCFE inestables; pares tienen mayor ROIC; revisar ajuste de pares"
+    },
+    {
+      "ticker": "UBER",
+      "pesoDcf": 0.6,
+      "pesoMultiples": 0.4,
+      "brechaVP3Pct": -2.9,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA10 EV/FCFF15 P/E5 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    },
+    {
+      "ticker": "ZTS",
+      "pesoDcf": 0.4,
+      "pesoMultiples": 0.6,
+      "brechaVP3Pct": -10.5,
+      "matricesND": 0,
+      "seleccion": "EV/EBITDA20 EV/FCFF10 P/E20 P/FCFE5 P/OCF5",
+      "clasificacion": "MANTENER_EN_REVISION",
+      "observacion": "Validación matemática; comparables y anclas pendientes de certificación económica"
+    }
+  ]
+}
