@@ -355,6 +355,14 @@
       "previousMOS": 0.25,
       "currentMOS": 0.35,
       "dcfChanged": false
+    },
+    "ponderaciones20261018": {
+      "tipo": "CORRECCION_METADATOS",
+      "soloSelector": true,
+      "fuenteSHA": "178574b42bbb48a214169855d384b0331a7f3db7",
+      "documento": "auditorias/ponderaciones-38-2026-10-18.json",
+      "respaldo": "respaldos/ponderaciones-2026-10-18/NFLX-selector-previo.json",
+      "nota": "No cambia metodos, DCF, MOS, hojas, escenarios ni precio. Selector anterior mostraba ponderaciones no aplicadas."
     }
   },
   "valorPresentePonderado": {
@@ -578,48 +586,48 @@
     "seleccion": "Pesos de valoración original y elegibilidad documentados; actualizar comparables al volver a valorar"
   },
   "seleccionMultiples": {
-    "version": "ponderacion-vigente-auditada-20261017",
+    "version": "ponderacion-real-publicada-20261018",
     "noReponderaDCF": true,
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "rol": "Seleccionado",
+        "rol": "No ponderar",
         "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
         "control": "OK",
-        "pesoRelativo": 0.25000000000000006,
-        "pesoValido": 0.25000000000000006,
-        "pesoVigente": 0.10000000000000002,
-        "estado": "SELECCIÓN VIGENTE · REVISAR PARES"
+        "pesoRelativo": 0,
+        "pesoValido": 0,
+        "pesoVigente": 0,
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "EV/FCFF",
-        "rol": "Seleccionado",
+        "rol": "No ponderar",
         "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
         "control": "OK",
-        "pesoRelativo": 0.37499999999999994,
-        "pesoValido": 0.37499999999999994,
-        "pesoVigente": 0.15,
-        "estado": "SELECCIÓN VIGENTE · REVISAR PARES"
+        "pesoRelativo": 0,
+        "pesoValido": 0,
+        "pesoVigente": 0,
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "P/E",
-        "rol": "Seleccionado",
+        "rol": "No ponderar",
         "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
         "control": "OK",
-        "pesoRelativo": 0.12500000000000003,
-        "pesoValido": 0.12500000000000003,
-        "pesoVigente": 0.05000000000000001,
-        "estado": "SELECCIÓN VIGENTE · REVISAR PARES"
+        "pesoRelativo": 0,
+        "pesoValido": 0,
+        "pesoVigente": 0,
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "P/FCFE",
-        "rol": "Seleccionado",
+        "rol": "No ponderar",
         "criterio": "NFLX: bloquear matrices sin dividendos/fuentes; solo centro validado.",
         "control": "OK",
-        "pesoRelativo": 0.25000000000000006,
-        "pesoValido": 0.25000000000000006,
-        "pesoVigente": 0.10000000000000002,
-        "estado": "SELECCIÓN VIGENTE · REVISAR PARES"
+        "pesoRelativo": 0,
+        "pesoValido": 0,
+        "pesoVigente": 0,
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "P/OCF",
@@ -629,7 +637,7 @@
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO"
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "P/V",
@@ -639,7 +647,7 @@
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO"
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       },
       {
         "nombre": "P/BV",
@@ -649,10 +657,11 @@
         "pesoRelativo": 0,
         "pesoValido": 0,
         "pesoVigente": 0,
-        "estado": "NO PONDERADO"
+        "estado": "NO PONDERADO · AUDITORÍA PENDIENTE"
       }
     ],
-    "fuente": "Resumen de Valoración y controles de sensibilidad nativos",
-    "fecha": "2026-10-17"
+    "fuente": "metodos ponderados publicados y descuentoMultiples.pesoDcf",
+    "fecha": "2026-10-18",
+    "advertencia": "Se conserva el selector previo en respaldos. La valoración vigente utiliza 100% DCF; los múltiplos se mantienen como sensibilidad y pendientes de validación económica."
   }
 }
