@@ -3,7 +3,7 @@
   "hojaGoogle": "https://docs.google.com/spreadsheets/d/1LI1LHXYFiCqg5i1_DDzs53Rd4eKv4zhDex2pxSvKuCs/edit",
   "nombreActivo": "PayPal Holdings, Inc.",
   "fecha": "Análisis del 15 de oct de 2026",
-  "precio": 56.7,
+  "precio": 57.16,
   "precioAnalisis": 57.16,
   "posicion": null,
   "tipo": "Madura",
@@ -517,10 +517,10 @@
       {
         "metodo": "EV/EBITDA",
         "multiplo": 9.12,
+        "multiploDcf": 13.329161872783718,
         "gImplicito": 0.018485056226827057,
         "gDcf": 0.03871093940965993,
         "dif": -0.020225883182832874,
-        "multiploDcf": 13.329161872783718,
         "difValor": -0.315698646625145,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 32% por debajo del DCF en FY+3."
@@ -528,10 +528,10 @@
       {
         "metodo": "EV/FCFF",
         "multiplo": 13.31,
+        "multiploDcf": 22.24063318385419,
         "gImplicito": 0.009564186719827842,
         "gDcf": 0.03871093940965993,
         "dif": -0.02914675268983209,
-        "multiploDcf": 22.24063318385419,
         "difValor": -0.3994868063885413,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 40% por debajo del DCF en FY+3."
@@ -539,10 +539,10 @@
       {
         "metodo": "P/E",
         "multiplo": 16.91,
+        "multiploDcf": 19.432159419520115,
         "gImplicito": 0.03741743440329546,
         "gDcf": 0.045468107443969355,
         "dif": -0.008050673040673896,
-        "multiploDcf": 19.432159419520115,
         "difValor": -0.12841673429400002,
         "aplica": true,
         "lectura": "Coherente con el DCF."
@@ -550,10 +550,10 @@
       {
         "metodo": "P/FCFE",
         "multiplo": 10.78,
+        "multiploDcf": 19.74017493963555,
         "gImplicito": -0.0015086244541933805,
         "gDcf": 0.038507002976358305,
         "dif": -0.04001562743055168,
-        "multiploDcf": 19.74017493963555,
         "difValor": -0.4490923365147119,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 45% por debajo del DCF en FY+3."
@@ -561,10 +561,10 @@
       {
         "metodo": "P/OCF",
         "multiplo": 9.74,
+        "multiploDcf": 19.180072747737913,
         "gImplicito": -0.007856726309567097,
         "gDcf": 0.03850700297635831,
         "dif": -0.04636372928592541,
-        "multiploDcf": 19.180072747737913,
         "difValor": -0.48696219162990717,
         "aplica": true,
         "lectura": "Revisar: el múltiplo supone menos crecimiento que el DCF. En valor, 49% por debajo del DCF en FY+3."
@@ -572,8 +572,7 @@
     ],
     "dcfFy3": 126.33245642101268,
     "metodo": "v2: múltiplo frente al múltiplo que implica el DCF en FY+3, ambos por la misma fórmula",
-    "alertas": 4,
-    "nota": "Múltiplos: cada múltiplo Base se compara con el múltiplo que implica el DCF llevado a FY+3 (126,33 por acción, con la misma métrica, deuda neta, acciones y dividendos de la hoja); los dos pasan por la misma fórmula de crecimiento perpetuo (Ke 9,1%, WACC años 4-10 8,5%, ROE FY+3 30,0%, FCFF/EBITDA y FCFE/OCF de FY+3), así que el sesgo de la fórmula se cancela. Diferencia de valor = precio FY+3 con el múltiplo (+ dividendos) ÷ DCF llevado a FY+3 − 1."
+    "alertas": 4
   },
   "valorEsperado": {
     "valor": 94.16320610705883,
@@ -1040,7 +1039,7 @@
     }
   },
   "baseMOS": "dcfBase",
-  "savedAt": "2026-10-18T22:40:56.451Z",
+  "savedAt": "2026-10-18T22:47:02.089Z",
   "hojas": {
     "financieros": {
       "Income Statement": "<table><tbody><tr><td>Income Statement</td><td>Dec '16</td><td>Dec '17</td><td>Dec '18</td><td>Dec '19</td><td>Dec '20</td><td>Dec '21</td><td>Dec '22</td><td>Dec '23</td><td>Dec '24</td><td>Dec '25</td><td>LTM</td></tr><tr><td>Total Revenues</td><td>$10,842</td><td>$13,094</td><td>$15,451</td><td>$17,772</td><td>$21,454</td><td>$25,371</td><td>$27,518</td><td>$29,771</td><td>$31,797</td><td>$33,172</td><td>$34,128</td></tr><tr><td>Total Revenues %Chg</td><td></td><td>20.77%</td><td>18.00%</td><td>15.02%</td><td>20.72%</td><td>18.26%</td><td>8.46%</td><td>8.19%</td><td>6.81%</td><td>4.32%</td><td>2.88%</td></tr><tr><td>Cost of Sales</td><td>$3,346</td><td>$4,419</td><td>$5,581</td><td>$6,790</td><td>$7,934</td><td>$10,315</td><td>$12,173</td><td>$14,385</td><td>$15,697</td><td>$15,987</td><td>$16,865</td></tr><tr><td>Gross Profit</td><td>$7,496</td><td>$8,675</td><td>$9,870</td><td>$10,982</td><td>$13,520</td><td>$15,056</td><td>$15,345</td><td>$15,386</td><td>$16,100</td><td>$17,185</td><td>$17,263</td></tr><tr><td>Gross Profit Margin</td><td>69.14%</td><td>66.25%</td><td>63.88%</td><td>61.79%</td><td>63.02%</td><td>59.34%</td><td>55.76%</td><td>51.68%</td><td>50.63%</td><td>51.81%</td><td>50.58%</td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td>$1,997</td><td>$2,283</td><td>$2,764</td><td>$3,112</td><td>$3,931</td><td>$4,559</td><td>$4,356</td><td>$3,868</td><td>$4,148</td><td>$4,262</td><td>$4,285</td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td>$724</td><td>$805</td><td>$776</td><td>$912</td><td>$1,189</td><td>$1,265</td><td>$1,317</td><td>$1,072</td><td>$1,032</td><td>$963</td><td>$963</td></tr><tr><td>Research &amp; Development Expenses</td><td>$834</td><td>$953</td><td>$1,071</td><td>$2,085</td><td>$2,642</td><td>$3,038</td><td>$3,253</td><td>$2,973</td><td>$2,979</td><td>$3,103</td><td>$3,247</td></tr><tr><td>Other Operating Expenses</td><td>$5,701</td><td>$2,507</td><td>$3,065</td><td>$2,154</td><td>$2,469</td><td>$1,932</td><td>$2,582</td><td>$2,445</td><td>$2,616</td><td>$2,792</td><td>$2,822</td></tr><tr><td>Operating Profit</td><td>$1,586</td><td>$2,127</td><td>$2,194</td><td>$2,719</td><td>$3,289</td><td>$4,262</td><td>$3,837</td><td>$5,028</td><td>$5,325</td><td>$6,065</td><td>$5,946</td></tr><tr><td>Operating Margin</td><td>14.63%</td><td>16.24%</td><td>14.20%</td><td>15.30%</td><td>15.33%</td><td>16.80%</td><td>13.94%</td><td>16.89%</td><td>16.75%</td><td>18.28%</td><td>17.42%</td></tr><tr><td>Interest and Investment Income</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Interest Expense</td><td>-$3</td><td>-$7</td><td>-$77</td><td>-$115</td><td>-$209</td><td>-$232</td><td>-$304</td><td>-$347</td><td>-$382</td><td>-$441</td><td>-$461</td></tr><tr><td>Interest Expense, Net</td><td>$3</td><td>$7</td><td>$77</td><td>$115</td><td>$209</td><td>$232</td><td>$304</td><td>$347</td><td>$382</td><td>$441</td><td>$461</td></tr><tr><td>Non-Operating Income</td><td>$48</td><td>$80</td><td>$259</td><td>$394</td><td>$1,985</td><td>$69</td><td>-$167</td><td>$730</td><td>$386</td><td>$668</td><td>$378</td></tr><tr><td>Total Non-Operating Income</td><td>$45</td><td>$73</td><td>$182</td><td>$279</td><td>$1,776</td><td>-$163</td><td>-$471</td><td>$383</td><td>$4</td><td>$227</td><td>-$83</td></tr><tr><td>Income Before Provision for Income Taxes</td><td>$1,631</td><td>$2,200</td><td>$2,376</td><td>$2,998</td><td>$5,065</td><td>$4,099</td><td>$3,366</td><td>$5,411</td><td>$5,329</td><td>$6,292</td><td>$5,863</td></tr><tr><td>Provision for Income Taxes</td><td>$230</td><td>$405</td><td>$319</td><td>$539</td><td>$863</td><td>-$70</td><td>$947</td><td>$1,165</td><td>$1,182</td><td>$1,059</td><td>$961</td></tr><tr><td>Consolidated Net Income</td><td>$1,401</td><td>$1,795</td><td>$2,057</td><td>$2,459</td><td>$4,202</td><td>$4,169</td><td>$2,419</td><td>$4,246</td><td>$4,147</td><td>$5,233</td><td>$4,902</td></tr><tr><td>Net Income Attributable to Common Shareholders</td><td>$1,401</td><td>$1,795</td><td>$2,057</td><td>$2,459</td><td>$4,202</td><td>$4,169</td><td>$2,419</td><td>$4,246</td><td>$4,147</td><td>$5,233</td><td>$4,902</td></tr><tr><td>Basic EPS</td><td>1.16</td><td>1.49</td><td>1.74</td><td>2.09</td><td>3.58</td><td>3.55</td><td>2.10</td><td>3.85</td><td>4.03</td><td>5.46</td><td>5.34</td></tr><tr><td>Diluted EPS</td><td>1.15</td><td>1.47</td><td>1.71</td><td>2.07</td><td>3.54</td><td>3.52</td><td>2.09</td><td>3.84</td><td>3.99</td><td>5.41</td><td>5.30</td></tr><tr><td>Basic Weighted Average Shares Outstanding</td><td>1210.00</td><td>1203.00</td><td>1184.00</td><td>1174.00</td><td>1173.00</td><td>1174.00</td><td>1154.00</td><td>1103.00</td><td>1029.00</td><td>959.00</td><td>918.00</td></tr><tr><td>Diluted Weighted Average Shares Outstanding</td><td>1218.00</td><td>1221.00</td><td>1203.00</td><td>1188.00</td><td>1187.00</td><td>1186.00</td><td>1158.00</td><td>1107.00</td><td>1039.00</td><td>968.00</td><td>924.50</td></tr><tr><td>Shares Outstanding</td><td>1207.00</td><td>1200.00</td><td>1174.00</td><td>1173.00</td><td>1172.00</td><td>1168.00</td><td>1136.00</td><td>1072.00</td><td>993.00</td><td>920.00</td><td>855.46</td></tr><tr><td>EBITDA</td><td>$2,310</td><td>$2,932</td><td>$2,970</td><td>$3,631</td><td>$4,478</td><td>$5,527</td><td>$5,154</td><td>$6,100</td><td>$6,357</td><td>$7,028</td><td>$6,909</td></tr><tr><td>Effective Tax Rate</td><td>14.10%</td><td>18.41%</td><td>13.43%</td><td>17.98%</td><td>17.04%</td><td>-1.71%</td><td>28.13%</td><td>21.53%</td><td>22.18%</td><td>16.83%</td><td>16.39%</td></tr><tr><td>EBITDA Margin</td><td>21.31%</td><td>22.39%</td><td>19.22%</td><td>20.43%</td><td>20.87%</td><td>21.78%</td><td>18.73%</td><td>20.49%</td><td>19.99%</td><td>21.19%</td><td>20.24%</td></tr></tbody></table>",
