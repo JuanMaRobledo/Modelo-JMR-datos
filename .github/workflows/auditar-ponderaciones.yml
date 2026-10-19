@@ -5,12 +5,16 @@ on:
       - 'valoraciones/**'
       - 'auditorias/ponderaciones-38-2026-10-18.json'
       - 'scripts/auditar_ponderaciones.cjs'
+      - 'scripts/auditar_integridad.cjs'
+      - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
   push:
     branches: [main]
     paths:
       - 'valoraciones/**'
       - 'scripts/auditar_ponderaciones.cjs'
+      - 'scripts/auditar_integridad.cjs'
+      - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
 permissions:
   contents: read
@@ -24,3 +28,4 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/auditar_ponderaciones.cjs
+      - run: node --test scripts/tests/auditar_ponderaciones.test.cjs
