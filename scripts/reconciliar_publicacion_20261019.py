@@ -74,9 +74,9 @@ def counter(ledger):return {'controlesOK':sum(x['estado']=='OK' for x in ledger)
 def money(n,currency):
  if not finite(n):return 'N/D'
  s=f'{n:,.2f}'.translate(str.maketrans(',.','.,'))
- return ('COP ' if currency=='COP' else 'US$ ')+s
+ return ('COP ' if currency=='COP' else '€ ' if currency=='EUR' else 'US$ ')+s
 def block(a):
- t=a['ticker'];curr='COP' if t.startswith(('GRUPO','PF')) else 'USD';base=a['valorPrincipal'];h=a.get('valoracionHolding');dm=a.get('descuentoMultiples') or {};sel=a.get('seleccionMultiples') or {};s=a['sensibilidadMultiples'];eco=s.get('economica',{})
+ t=a['ticker'];curr=a.get('currency') or ('COP' if t.startswith(('GRUPO','PF')) else 'USD');base=a['valorPrincipal'];h=a.get('valoracionHolding');dm=a.get('descuentoMultiples') or {};sel=a.get('seleccionMultiples') or {};s=a['sensibilidadMultiples'];eco=s.get('economica',{})
  rows=[]
  for m in sel.get('metodos',[]):
   ss=m.get('salida') or {};fmt=lambda n:f'{n:.2f}×' if finite(n) else 'N/D'
@@ -136,7 +136,7 @@ def main(review):
      x[k]={'fy':fy,'vp':vp,'consolidado':cons,'chequeo':check};out[k]=fy[2]
     dm['metodos'].append(x);newmethods.append(out)
    a['metodos']=newmethods;a['descuentoMultiples']=dm
-   a['objetivoPonderado']=trio(l,'Descuento de múltiplos',50);a['valorPresentePonderado']=dm['ponderadoHoy']
+   a['objetivoPonderado']={k:num(l,'Descuento de múltiplos',c+'50') if num(l,'Descuento de múltiplos',c+'50') is not None else num(l,'Resumen de Valoración',c+'12') for k,c in zip(SCEN,'CDE')};a['valorPresentePonderado']=dm['ponderadoHoy']
    dm['vp3']={k:sum(x['peso']*x[k]['vp'][2] for x in dm['metodos'] if x['peso']>0)/total if total and all(finite(x[k]['vp'][2]) for x in dm['metodos'] if x['peso']>0) else None for k in SCEN}
    dm['consolidado']={k:{'fy':[sum(x['peso']*x[k]['fy'][n] for x in dm['metodos'] if x['peso']>0)/total for n in range(3)] if total else [None]*3,'vp':[sum(x['peso']*x[k]['vp'][n] for x in dm['metodos'] if x['peso']>0)/total for n in range(3)] if total else [None]*3,'consolidado':dm['multiplesHoy'][k]} for k in SCEN}
    dm['chequeo']={'multiplosFY3SinDescontar':trio(l,'Descuento de múltiplos',47),'multiplosVP3':trio(l,'Descuento de múltiplos',48),'resultado':{k:value(l,'Descuento de múltiplos',c+'49') for k,c in zip(SCEN,'CDE')}}
@@ -163,7 +163,7 @@ def main(review):
   if t in ['GRUPOSURA','PFGRUPSURA']:conclusion='La hoja aún presenta un modelo consolidado financiero. Falta SOTP atribuible por participaciones; no se reclasifica este resultado como SOTP ni se da por validado.'
   a['revisionPorEmpresa']={'fecha':'2026-10-19','alcance':'Integridad nativa y revisión de evidencia existente; sin alterar supuestos DCF ni forzar múltiplos para aproximarlos al DCF','conclusion':conclusion,'fuentesExpediente':decision.get('fuentes',[]),'expediente':f'JuanMaRobledo/JMR-valuation/reference/multiplos_v3/{t}_decision_resultado.json' if d else None,'pendientesEconomicos':True,'estado':'CONCILIADO_CON_SALVEDADES'}
   for tab in l['sheets']:
-   if tab not in ['Input sheet'] and tab in a['hojas']['valoracion'] or tab in ['Resumen de Valoración','Descuento de múltiplos','Sensibilidad por múltiplo','Sensibilidad económica múltiplos']:
+   if tab not in ['Input sheet'] and tab in a['hojas']['valoracion'] or tab in TABS+['Financials Multiples','Resumen de Valoración','Descuento de múltiplos','Sensibilidad por múltiplo','Sensibilidad económica múltiplos']:
     a['hojas']['valoracion'][tab]=table(l,tab)
   a['controlPublicacion']={'version':VERSION,'fecha':STAMP,'fuenteHoja':l['id'],'dcfPrincipalSinCambios':True,'mosConciliado':True,'matricesPrecio':counts['controlesOK'],'matricesPrecioND':counts['noDisponibles'],'matricesEconomicas':eco['controlesOK'],'matricesEconomicasND':eco['noDisponibles'],'comparablesValidados':False,'verificacionVisual':'PENDIENTE'}
   newblock=block(a);a['analisisFundamental']=prepend(a.get('analisisFundamental',''),newblock)
