@@ -8,7 +8,7 @@
   "posicion": null,
   "tipo": "Holding · PRELIMINAR",
   "mos": 0.35,
-  "precioMOS": 7119,
+  "precioMOS": 7395,
   "precioMOSMax": null,
   "metodos": [
     {
@@ -34,11 +34,11 @@
   "crecimientoImplicito": null,
   "valorEsperado": {
     "fecha": "2026-09-30",
-    "valor": 10952,
+    "valor": 11377,
     "metodo": "SOTP con DCF por negocio (Cementos Argos en dólares); PRELIMINAR",
     "estado": "PRELIMINAR",
     "rango": {
-      "min": 10952,
+      "min": 11377,
       "max": 15873,
       "nota": "mínimo: DCF por negocio; máximo: NAV a precios de mercado con 15% de descuento de holding"
     },
@@ -47,7 +47,7 @@
         "id": "A",
         "nombre": "Base · SOTP con DCF por negocio",
         "probabilidad": 0.45,
-        "valor": 11360,
+        "valor": 11785,
         "central": true,
         "incluidaEnPromedio": true
       },
@@ -55,7 +55,7 @@
         "id": "B",
         "nombre": "Conservadora · demanda de cemento débil y energía sin crecimiento real",
         "probabilidad": 0.3,
-        "valor": 10285,
+        "valor": 10708,
         "central": false,
         "incluidaEnPromedio": true
       },
@@ -63,7 +63,7 @@
         "id": "C",
         "nombre": "Disrupción · recesión y choque regulatorio en energía",
         "probabilidad": 0.1,
-        "valor": 8899,
+        "valor": 9326,
         "central": false,
         "incluidaEnPromedio": false
       },
@@ -71,13 +71,19 @@
         "id": "D",
         "nombre": "Optimista · ciclo de infraestructura y energía renovable",
         "probabilidad": 0.15,
-        "valor": 12431,
+        "valor": 12858,
         "central": false,
         "incluidaEnPromedio": true
       }
     ],
-    "valorCentral": 11360,
-    "valorEsperadoProbabilistico": 10952.05
+    "valorCentral": 11785,
+    "valorEsperadoProbabilistico": 11376.95,
+    "historiasValor": {
+      "base": 11785,
+      "conservadora": 10708,
+      "disrupcion": 9326,
+      "optimista": 12858
+    }
   },
   "multiplesHistoricos": null,
   "precioMOSHoy": null,
@@ -149,7 +155,7 @@
     "estado": "PRELIMINAR",
     "nota": "SOTP con DCF por negocio, preliminar. El rango llega hasta el NAV de mercado con 15% de descuento de holding."
   },
-  "precioMOSValorEsperado": 7119,
+  "precioMOSValorEsperado": 7395,
   "currency": "COP",
   "market": "BVC",
   "precioReferenciaConsultadoAt": "2026-09-30T20:00:00+00:00",
@@ -167,8 +173,8 @@
       "disrupcion": 11359.439917870599
     },
     "valorContable": 14732.595035231894,
-    "ponderado": 10952,
-    "umbralMOS": 7119,
+    "ponderado": 11377,
+    "umbralMOS": 7395,
     "nota": "Cotizadas a precios heredados del corte; no cotizadas a libro. Sensibilidades, no escenarios probabilísticos certificados.",
     "dcfEstado": "DCF por negocio PRELIMINAR; rango hasta NAV de mercado con descuento de holding",
     "pendientes": [
@@ -213,12 +219,12 @@
     "dcfPorNegocio": {
       "version": 1,
       "corteFinanciero": "2026-06-30",
-      "valorEsperadoCOP": 10952,
+      "valorEsperadoCOP": 11377,
       "escenarios": {
-        "base": 11360,
-        "conservadora": 10285,
-        "disrupcion": 8899,
-        "optimista": 12431
+        "base": 11785,
+        "conservadora": 10708,
+        "disrupcion": 9326,
+        "optimista": 12858
       },
       "cementoEnDolares": true,
       "comparacion": {
@@ -229,11 +235,11 @@
         "patrimonio_controladora_consolidado": 14063,
         "precio_ordinaria": 21860,
         "precio_preferencial": 16360,
-        "sotp_dcf_cop": 9706,
+        "sotp_dcf_cop": 10158,
         "sotp_multiplos": {
-          "mercado_actual_8,1x_6,5x": 18108,
-          "global_Damodaran_12,4x_10,1x": 26452,
-          "global_con_descuento_35%_emergente": 18170
+          "mercado_actual_8,1x_6,5x": 18604,
+          "global_Damodaran_12,4x_10,1x": 26948,
+          "global_con_descuento_35%_emergente": 18666
         }
       },
       "supuestos": {
@@ -241,13 +247,13 @@
         "ERP": 0.0711,
         "Kd": 0.14,
         "WACC_por_negocio": {
-          "cemento": 0.1699,
+          "cemento": 0.169,
           "energia": 0.1275,
           "odinsa": 0.1628,
           "carbon": 0.1727
         },
         "Ke_por_negocio": {
-          "cemento": 0.1843,
+          "cemento": 0.1855,
           "energia": 0.1686,
           "odinsa": 0.17,
           "carbon": 0.1809
@@ -259,7 +265,7 @@
           "carbon": 0.9027
         },
         "D_E": {
-          "cemento": 0.18315018315018314,
+          "cemento": 0.2109157509157509,
           "energia": 1.1297071129707112,
           "odinsa": 0.1,
           "carbon": 0.1
@@ -269,7 +275,7 @@
         "impuesto": 0.35,
         "ROIC_terminal": "= WACC",
         "deuda_neta_COPm": {
-          "cemento": -4571000.0,
+          "cemento": -5181000.0,
           "energia": 4850000.0,
           "carbon": 0.0
         },
@@ -281,15 +287,20 @@
         "nota_deuda": "Celsia reportada; Cementos Argos derivada (consolidada − Celsia − matriz separada 456.000)"
       },
       "noConfirmado": [
-        "Caja neta de Cementos Argos (derivada: consolidada − Celsia − matriz; no publicada por la filial)",
-        "Deuda bruta de Cementos Argos y Odinsa (estimada)",
         "Prima país de Cementos Argos en dólares (2,8%, estimación)",
         "Crecimiento en dólares y márgenes por historia (supuestos propios)",
         "TES a 10 años de 13,00% (prensa), sin dato oficial del 30-sep",
         "Minoritarios internos de Celsia y Cementos Argos no descontados",
-        "Precios de cotización heredados del corte, sin recontrastar"
+        "Precios de cotización heredados del corte, sin recontrastar",
+        "Deuda bruta, caja y minoritarios de Celsia S.A. (solo la deuda neta está confirmada)",
+        "Deuda bruta de Odinsa"
       ],
-      "lectura": "El DCF por negocio valora a Cementos Argos en 4,2 veces EBITDA frente a 8,1 del mercado; el valor es un piso conservador, no un esperado certificado."
+      "lectura": "El DCF por negocio valora a Cementos Argos en 4,1 veces EBITDA en dólares frente a ~7,6 del mercado; es un piso conservador, no un esperado certificado.",
+      "confirmadoFuenteOficial": [
+        "Cementos Argos 30-jun-2026 (estados intermedios revisados por KPMG, Superfinanciera): efectivo 7.768.164, otros activos financieros 291.866, obligaciones 889.459, bonos 1.867.153, arrendamientos 122.414, utilidad operativa 1S26 321.265 (COP millones)",
+        "Celsia: deuda neta 4,85 billones y 3,22 veces EBITDA (comunicado de resultados 2T26)",
+        "Grupo Argos: deuda neta separada 1,1 billones y segmentos (Circular Externa 012 del 2T26)"
+      ]
     }
   },
   "reportSchema": "jmr-report-contract-v1-20261016",
