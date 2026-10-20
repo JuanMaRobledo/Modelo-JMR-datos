@@ -495,7 +495,7 @@ Los umbrales son **criterios del auditor**, no guías oficiales ni de la compañ
 
 **Registro de versión.** `prompt_version: auditoria-economica-jmr-v1.0` · versión de la auditoría: NKE-auditoria-narrativa-2026-10-20 v1.0 · hoja/JSON auditados: `NKE-1790205121370.json` (guardado 2026-10-19T17:10:43Z), hoja `1OITWNynG7R3PKC1sITOOazW9jzXgFWFda6qNbbOnYZI` · commit auditado del repositorio: `10ce1316e0f2578085e5f67d838fb754d21bbd3f` · fecha de corte de la valoración: 19-oct-2026 (precio del análisis 1-oct-2026) · fecha de la auditoría: 20-oct-2026 · versiones previas de esta auditoría: ninguna para NKE (la auditoría `PYPL.md` es de otra empresa y se conserva sin cambios).
 
-**Publicación.** Ruta: `Modelo-JMR-datos/auditorias/narrativas/NKE.md`. Estado al momento de este commit: **publicación en curso, aún no verificada**; se actualizará en un commit posterior tras verificar la escritura. `PYPL.md` se conserva sin cambios.
+**Publicación.** Ruta: `Modelo-JMR-datos/auditorias/narrativas/NKE.md`. Commit de publicación: `fe5fd952daba1011adf07a44cbb0d625c0a14007` (rama `main`, 20-oct-2026). Verificación: tras el push, `git ls-remote` devolvió ese commit y la lectura de `origin/main:auditorias/narrativas/NKE.md` mostró 18 títulos H2; el único cambio frente al commit anterior es este archivo, y `PYPL.md` quedó intacto. Acceso desde la app/visor: **no verificado** (sin acceso al visor).
 
 ### Control de entrega
 
