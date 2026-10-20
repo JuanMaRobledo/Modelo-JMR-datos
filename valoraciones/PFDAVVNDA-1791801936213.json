@@ -2,7 +2,7 @@
   "ticker": "PFDAVVNDA",
   "hojaGoogle": "https://docs.google.com/spreadsheets/d/1sRI4gHG9cK66HlrbIwz7vMrQlUKFC3b7IQmcrtwUdMo/edit",
   "nombreActivo": "Banco Davivienda S.A. (acción preferencial)",
-  "fecha": "Análisis del 30 de sept de 2026",
+  "fecha": "Valoración JMR del 20-oct-2026 · precio referencial 30-sep-2026",
   "precio": 27500,
   "precioAnalisis": 27500,
   "posicion": null,
@@ -507,10 +507,11 @@
     "umbral": 0.02,
     "precio": 27500,
     "dcfInverso": {
-      "tipo": "crecimiento terminal condicional",
+      "tipo": "Tasa terminal g implícita · FCFE bancario",
+      "gImplicito": 0.08336380338246584,
       "gDcf": 0.0883,
-      "gImplicito": null,
-      "lectura": "Se calcula por la fórmula inversa FCFE Base, manteniendo constantes flujos explícitos y FCFE terminal."
+      "dif": -0.0049361966175341665,
+      "lectura": "El precio de COP 27.500 es consistente con g terminal ~8,34% frente a g base 8,83%, conservando flujos explícitos, FCFE terminal y Ke terminal fijos; no representa un pronóstico del crecimiento real del banco."
     },
     "multiplos": [
       {
@@ -569,7 +570,7 @@
         "lectura": "No aplica: Igual que P/FCFE: el flujo operativo bancario no es comparable; peso 0%."
       }
     ],
-    "nota": "No usar g implícito industrial histórico. El nuevo inverso específico FCFE conserva FCFE terminal y varía g de perpetuidad.",
+    "nota": "Cálculo inverso de la perpetuidad del FCFE, no de FCFF. PV explícito y FCFE terminal fijos; despejar g en precio acc. = [PV FCFE explícitos + FCFE11/(Ke-g) × DF10]/acciones.",
     "dcfHoy": 28324.218633215223,
     "dcfFy3": 44221.793966388366,
     "metodo": "DCF inverso completo sin calibración; múltiplos frente al DCF capitalizado FY+3"
@@ -847,7 +848,7 @@
     "descripcion": "Value, Deep Value e histórica son bandas heredadas del objetivo FY+3; no son umbrales de valor intrínseco presente. MOS vigente: valor esperado."
   },
   "baseMOS": "dcfBase",
-  "savedAt": "2026-10-20T16:30:00Z",
+  "savedAt": "2026-10-20T16:48:53.963Z",
   "hojas": {
     "financieros": {
       "Income Statement": "<table><tbody><tr class=\"tbl-header-row\"><td>Income Statement</td><td>—</td><td>— 2</td><td>— 3</td><td>— 4</td><td>— 5</td><td>Dec '21</td><td>Dec '22</td><td>Dec '23</td><td>Dec '24</td><td>Dec '25</td><td>LTM</td></tr><tr><td>Total Revenues</td><td></td><td></td><td></td><td></td><td></td><td>$12,215,658</td><td>$17,700,733</td><td>$24,420,056</td><td>$22,259,116</td><td>$21,771,835</td><td>$23,740,848</td></tr><tr><td>Total Revenues %Chg</td><td></td><td></td><td></td><td></td><td></td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">44.90%</td><td style=\"background:color-mix(in oklab, var(--positive) 46%, var(--surface)); color:var(--ink); font-weight:700;\">37.96%</td><td style=\"background:color-mix(in oklab, var(--negative) 11%, var(--surface)); color:var(--ink); font-weight:700;\">-8.85%</td><td style=\"background:color-mix(in oklab, var(--negative) 3%, var(--surface)); color:var(--ink); font-weight:700;\">-2.19%</td><td style=\"background:color-mix(in oklab, var(--positive) 11%, var(--surface)); color:var(--ink); font-weight:700;\">9.04%</td></tr><tr><td>Cost of Sales</td><td></td><td></td><td></td><td></td><td></td><td>$6,406,651</td><td>$10,455,713</td><td>$18,956,668</td><td>$16,610,009</td><td>$13,660,173</td><td>$14,168,234</td></tr><tr class=\"tbl-subtotal-row\"><td>Gross Profit</td><td></td><td></td><td></td><td></td><td></td><td>$5,809,007</td><td>$7,245,020</td><td>$5,463,388</td><td>$5,649,107</td><td>$8,111,662</td><td>$9,572,614</td></tr><tr><td>Gross Profit Margin</td><td></td><td></td><td></td><td></td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">47.55%</td><td style=\"background:color-mix(in oklab, var(--positive) 44%, var(--surface)); color:var(--ink); font-weight:700;\">40.93%</td><td style=\"background:color-mix(in oklab, var(--positive) 15%, var(--surface)); color:var(--ink); font-weight:700;\">22.37%</td><td style=\"background:color-mix(in oklab, var(--positive) 20%, var(--surface)); color:var(--ink); font-weight:700;\">25.38%</td><td style=\"background:color-mix(in oklab, var(--positive) 39%, var(--surface)); color:var(--ink); font-weight:700;\">37.26%</td><td style=\"background:color-mix(in oklab, var(--positive) 44%, var(--surface)); color:var(--ink); font-weight:700;\">40.32%</td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td></td><td></td><td></td><td></td><td></td><td>$4,191,587</td><td>$4,902,150</td><td>$5,562,982</td><td>$5,769,612</td><td>$6,154,290</td><td>$6,886,559</td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td></td><td></td><td></td><td></td><td></td><td>$308,468</td><td>$345,286</td><td>$377,322</td><td>$447,386</td><td>$482,139</td><td>$504,597</td></tr><tr><td>Research &amp; Development Expenses</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Other Operating Expenses</td><td></td><td></td><td></td><td></td><td></td><td>-$464,076</td><td>-$321,984</td><td>$516,887</td><td>-$504,371</td><td>-$745,571</td><td>-$539,411</td></tr><tr class=\"tbl-subtotal-row\"><td>Operating Profit</td><td></td><td></td><td></td><td></td><td></td><td>$1,773,028</td><td>$2,319,568</td><td>-$993,803</td><td>-$63,520</td><td>$2,220,804</td><td>$2,720,869</td></tr><tr><td>Operating Margin</td><td></td><td></td><td></td><td></td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">14.51%</td><td style=\"background:color-mix(in oklab, var(--positive) 50%, var(--surface)); color:var(--ink); font-weight:700;\">13.10%</td><td style=\"background:color-mix(in oklab, var(--negative) 15%, var(--surface)); color:var(--ink); font-weight:700;\">-4.07%</td><td style=\"background:color-mix(in oklab, var(--negative) 1%, var(--surface)); color:var(--ink); font-weight:700;\">-0.29%</td><td style=\"background:color-mix(in oklab, var(--positive) 39%, var(--surface)); color:var(--ink); font-weight:700;\">10.20%</td><td style=\"background:color-mix(in oklab, var(--positive) 43%, var(--surface)); color:var(--ink); font-weight:700;\">11.46%</td></tr><tr class=\"tbl-subtotal-row\"><td>Interest and Investment Income</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Interest Expense</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Interest Expense, Net</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Non-Operating Income</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Total Non-Operating Income</td><td></td><td></td><td></td><td></td><td></td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Income Before Provision for Income Taxes</td><td></td><td></td><td></td><td></td><td></td><td>$1,773,028</td><td>$2,319,568</td><td>-$993,803</td><td>-$63,520</td><td>$2,220,804</td><td>$2,720,869</td></tr><tr><td>Provision for Income Taxes</td><td></td><td></td><td></td><td></td><td></td><td>$511,864</td><td>$703,623</td><td>-$621,471</td><td>$26,135</td><td>$606,196</td><td>$885,195</td></tr><tr class=\"tbl-subtotal-row\"><td>Consolidated Net Income</td><td></td><td></td><td></td><td></td><td></td><td>$1,261,164</td><td>$1,615,945</td><td>-$372,332</td><td>-$89,655</td><td>$1,614,608</td><td>$1,835,674</td></tr><tr><td>Net Income Attributable to Common Shareholders</td><td></td><td></td><td></td><td></td><td></td><td>$1,261,164</td><td>$1,615,945</td><td>-$372,332</td><td>-$89,655</td><td>$1,614,608</td><td>$1,835,674</td></tr><tr><td>Basic EPS</td><td></td><td></td><td></td><td></td><td></td><td>2792.22</td><td>3577.71</td><td>-824.34</td><td>-183.84</td><td>3310.86</td><td>3764.17</td></tr><tr><td>Diluted EPS</td><td></td><td></td><td></td><td></td><td></td><td>2792.22</td><td>3577.71</td><td>-824.34</td><td>-183.84</td><td>3310.86</td><td>3764.17</td></tr><tr><td>Basic Weighted Average Shares Outstanding</td><td></td><td></td><td></td><td></td><td></td><td>451.70</td><td>451.70</td><td>451.70</td><td>487.70</td><td>487.70</td><td>487.70</td></tr><tr><td>Diluted Weighted Average Shares Outstanding</td><td></td><td></td><td></td><td></td><td></td><td>451.70</td><td>451.70</td><td>451.70</td><td>487.70</td><td>487.70</td><td>487.70</td></tr><tr><td>Shares Outstanding</td><td></td><td></td><td></td><td></td><td></td><td>451.70</td><td>451.70</td><td>451.70</td><td>487.70</td><td>487.70</td><td>487.67</td></tr><tr class=\"tbl-subtotal-row\"><td>EBITDA</td><td></td><td></td><td></td><td></td><td></td><td>$2,081,496</td><td>$2,664,854</td><td>-$616,481</td><td>$383,866</td><td>$2,702,943</td><td>$3,225,466</td></tr><tr><td>Effective Tax Rate</td><td></td><td></td><td></td><td></td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 25%, var(--surface)); color:var(--ink); font-weight:700;\">28.87%</td><td style=\"background:color-mix(in oklab, var(--positive) 27%, var(--surface)); color:var(--ink); font-weight:700;\">30.33%</td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">62.53%</td><td style=\"background:color-mix(in oklab, var(--negative) 36%, var(--surface)); color:var(--ink); font-weight:700;\">-41.14%</td><td style=\"background:color-mix(in oklab, var(--positive) 24%, var(--surface)); color:var(--ink); font-weight:700;\">27.30%</td><td style=\"background:color-mix(in oklab, var(--positive) 29%, var(--surface)); color:var(--ink); font-weight:700;\">32.53%</td></tr><tr><td>EBITDA Margin</td><td></td><td></td><td></td><td></td><td></td><td style=\"background:color-mix(in oklab, var(--positive) 55%, var(--surface)); color:var(--ink); font-weight:700;\">17.04%</td><td style=\"background:color-mix(in oklab, var(--positive) 49%, var(--surface)); color:var(--ink); font-weight:700;\">15.06%</td><td style=\"background:color-mix(in oklab, var(--negative) 8%, var(--surface)); color:var(--ink); font-weight:700;\">-2.52%</td><td style=\"background:color-mix(in oklab, var(--positive) 6%, var(--surface)); color:var(--ink); font-weight:700;\">1.72%</td><td style=\"background:color-mix(in oklab, var(--positive) 40%, var(--surface)); color:var(--ink); font-weight:700;\">12.41%</td><td style=\"background:color-mix(in oklab, var(--positive) 44%, var(--surface)); color:var(--ink); font-weight:700;\">13.59%</td></tr></tbody></table>",
@@ -1526,7 +1527,7 @@
   "revisionPorEmpresa": {
     "fecha": "2026-10-20",
     "alcance": "Valoración personal Base, cuatro escenarios FCFE bancario, patrimonio atribuible 2023-25, capital RWA/CET1, P/E y P/BV, dos horizontes y sensibilidades",
-    "conclusion": "FCFE recalculado con RWA del reporte oficial 2T26, metas CET1 y reconocimiento 90% de retención definidos por el analista. Datos históricos respaldados por EEFF; supuestos de futuro son del Modelo JMR. No es auditoría externa.",
+    "conclusion": "FCFE recalculado con RWA del reporte oficial 2T26, metas CET1 y reconocimiento 90% de retención definidos por el analista. Datos históricos respaldados por EEFF; supuestos de futuro son del Modelo JMR. No es auditoría externa. Inverso g terminal del FCFE: 8,34% por precio histórico de COP 27.500.",
     "fuentesExpediente": [
       "https://ir.davivienda.com/estados-financieros/",
       "https://ir.davivienda.com/wp-content/uploads/2025/03/Estados-Financieros-Consolidados-2024.pdf",
@@ -1546,7 +1547,7 @@
     "matricesEconomicas": 12,
     "matricesEconomicasND": 9,
     "comparablesValidados": false,
-    "verificacionVisual": "PENDIENTE",
+    "verificacionVisual": "NO VERIFICABLE DESDE ESTE ENTORNO · ARCHIVO COMPROBADO EN REPOSITORIO",
     "datosHistoricosPatrimonioVerificados": true,
     "capitalRegulatorioNominal": true,
     "supuestosCapital": {
@@ -1556,6 +1557,20 @@
       "cet1Disrupcion": 0.13,
       "recognition": 0.9
     },
-    "criterio": "Valoración personal definitiva a la fecha, modificable por el usuario; sin auditoría externa"
+    "criterio": "Valoración personal definitiva a la fecha, modificable por el usuario; sin auditoría externa",
+    "validacionCET1Objetivos": {
+      "base": 0.1225,
+      "conservador": 0.125,
+      "optimista": 0.12,
+      "disrupcion": 0.13
+    },
+    "validacionSolvenciaTotalAnio10": {
+      "base": 0.14103814207173454,
+      "conservador": 0.14653837307603493,
+      "optimista": 0.13678555310241736,
+      "disrupcion": 0.15784189745950297
+    },
+    "sensibilidadDcfCentroCero": true,
+    "validacionPesos": true
   }
 }
