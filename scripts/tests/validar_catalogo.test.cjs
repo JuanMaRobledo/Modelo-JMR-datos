@@ -1,0 +1,1 @@
+const test=require('node:test'),assert=require('node:assert/strict');const {validate}=require('../validar_catalogo.cjs');test('biblioteca vacía para empezar desde cero',()=>assert.deepEqual(validate(),{valoraciones:0,analisis:0,auditorias:0}));
