@@ -5,6 +5,10 @@ on:
       - 'valoraciones/**'
       - 'auditorias/ponderaciones-38-2026-10-18.json'
       - 'scripts/auditar_ponderaciones.cjs'
+      - 'scripts/validar_catalogo.cjs'
+      - 'catalogo.json'
+      - 'analisis/**'
+      - 'auditorias/**'
       - 'scripts/auditar_integridad.cjs'
       - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
@@ -13,6 +17,10 @@ on:
     paths:
       - 'valoraciones/**'
       - 'scripts/auditar_ponderaciones.cjs'
+      - 'scripts/validar_catalogo.cjs'
+      - 'catalogo.json'
+      - 'analisis/**'
+      - 'auditorias/**'
       - 'scripts/auditar_integridad.cjs'
       - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
@@ -27,5 +35,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node scripts/auditar_ponderaciones.cjs
-      - run: node --test scripts/tests/auditar_ponderaciones.test.cjs
+      - run: node scripts/validar_catalogo.cjs
+      - run: node --test scripts/tests/validar_catalogo.test.cjs

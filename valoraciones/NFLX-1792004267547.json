@@ -1,0 +1,267 @@
+{
+  "ticker": "NFLX",
+  "nombreActivo": "Netflix, Inc.",
+  "fecha": "2026-10-15",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g/edit",
+  "precio": 70.57,
+  "precioAnalisis": 70.57,
+  "tipo": "Crecimiento",
+  "mos": 0.25,
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran · FCFF (valor presente)",
+      "peso": 1,
+      "conservador": 50.24353646219275,
+      "base": 71.68383443894892,
+      "optimista": 103.08016291545503
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 50.24353646219275,
+    "base": 71.68383443894892,
+    "optimista": 103.08016291545503
+  },
+  "valorEsperado": {
+    "valorCentral": 71.68383443894892,
+    "dcfBase": 71.68383443894892,
+    "valor": null,
+    "historiaCentralId": "A",
+    "escenariosUnificados": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "valor": 71.68383443894892,
+        "crecimiento": 0.13,
+        "crecimientoFinalQuintoAnio": 0.11,
+        "margen": 0.34,
+        "salesToCapital": 1.2031860037027624,
+        "salesToCapital6a10Input": 1.1194115480602491,
+        "terminalGrowth": 0.0519,
+        "roicTerminal": 0.2,
+        "central": true,
+        "probabilidad": null,
+        "horizonteAnios": 10,
+        "salesToCapitalAno10": 0.7843137254901961,
+        "roicMarginalAno10": 0.2
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador",
+        "valor": 50.24353646219275,
+        "crecimiento": 0.08755231457649404,
+        "crecimientoFinalQuintoAnio": 0.08755231457649404,
+        "margen": 0.34,
+        "salesToCapital": 1.2031860037027624,
+        "salesToCapital6a10Input": 1.0566664500210334,
+        "terminalGrowth": 0.0519,
+        "roicTerminal": 0.12,
+        "central": false,
+        "probabilidad": null,
+        "horizonteAnios": 10,
+        "salesToCapitalAno10": 0.47058823529411764,
+        "roicMarginalAno10": 0.12
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "valor": 103.08016291545503,
+        "crecimiento": 0.17732941075833808,
+        "crecimientoFinalQuintoAnio": 0.17732941075833808,
+        "margen": 0.34,
+        "salesToCapital": 1.2031860037027624,
+        "salesToCapital6a10Input": 1.158627234334759,
+        "terminalGrowth": 0.0519,
+        "roicTerminal": 0.25,
+        "central": false,
+        "probabilidad": null,
+        "horizonteAnios": 10,
+        "salesToCapitalAno10": 0.9803921568627451,
+        "roicMarginalAno10": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "valor": 17.013431712056608,
+        "crecimiento": 0.04,
+        "crecimientoFinalQuintoAnio": -0.01,
+        "margen": 0.204,
+        "salesToCapital": 0.9,
+        "salesToCapital6a10Input": 1.2031860037027624,
+        "terminalGrowth": 0.008,
+        "roicTerminal": 0.0942,
+        "central": false,
+        "probabilidad": null,
+        "horizonteAnios": 10,
+        "salesToCapitalAno10": 1.2031860037027624,
+        "roicMarginalAno10": 0.0942
+      }
+    ],
+    "pesosAprobados": false,
+    "nota": "Sin probabilidades justificadas, no calcular ni publicar promedio ponderado. El valor principal es el DCF Base.",
+    "sensibilidadDuracionVentaja": {
+      "sinVentaja": 51.10349729564979,
+      "cincoAnios": 53.79277709940327,
+      "diezAnios": 55.79647540165648,
+      "persistente": 71.68383443894892,
+      "esQuintoEscenario": false
+    }
+  },
+  "descuentoMultiples": {
+    "version": 3,
+    "costoPatrimonio": null,
+    "dcfHoy": {
+      "conservador": 50.24353646219275,
+      "base": 71.68383443894892,
+      "optimista": 103.08016291545503
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": {
+      "conservador": 50.24353646219275,
+      "base": 71.68383443894892,
+      "optimista": 103.08016291545503
+    },
+    "metodos": [],
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "nota": "DCF Base como única referencia principal; cuatro escenarios FCFF a diez años. Múltiplos excluidos hasta validar."
+  },
+  "savedAt": "2026-10-15T18:39:08.731Z",
+  "auditoria": {
+    "fecha": "2026-10-15",
+    "estado": "CÁLCULOS RECONCILIADOS · CONVERGENCIA ROIC MARGINAL INPUT SHEET · CERTIFICACIÓN ECONÓMICA PENDIENTE",
+    "statusTecnico": "Cuatro DCF, moat e inverso conciliados con hoja actual; datos JSON publicables. Verificación visual de app no posible por Vercel 403",
+    "workflowRun": null,
+    "hojaOrigen": "1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g",
+    "fuentes": "https://github.com/JuanMaRobledo/JMR-valuation/blob/main/reference/fuentes/NFLX_manifest.json",
+    "controlIntegridad": "ROIC marginal Base20%, Optimista25%, Conservador12%, DisrupciónWACC9,42%; STC Base años1–5=1.2031860037027624; año10 Base=0.7843137254901961; Optimista=0.9803921568627451; Conservador=0.47058823529411764; ROIC promedio/contable año10 Base=0.2947069744442732, no igual a marginal20%. EV=311586.75549815805; opcionesRSU=5590.616277818696; deuda=16639.720999999998; caja=9127.9; equity=298484.31822033937; acciones=4163.9; perShare=71.68383443894892",
+    "riesgos": [
+      "ROIC marginal 20%/25% en Base/Optimista es hipótesis, no rendimiento contable histórico.",
+      "Sales-to-Capital decrece a 0,7843× Base y 0,9804× Optimista en año10; su viabilidad requiere auditar monetización y capitalización de contenido.",
+      "Volatilidad45% y vencimiento opciones4,79 años no certificados al corte Q2; evitar doble dilución.",
+      "Arrendamientos, tratamiento contable del contenido y otros activos operativos requieren auditoría.",
+      "Crecimiento nominal USD perpetuo5,19% debe revisarse frente a economía y tasas de descuento.",
+      "Disrupción sigue siendo un estrés no certificado, sin convergencia STC revisada.",
+      "GitHub/Vercel CI no certifican verificación visual en producción: acceso del proyecto restringido (403)."
+    ],
+    "estadoMultiples": "AUXILIARES NO APROBADOS EN PONDERACIÓN PUBLICADA; EXCLUIDOS HASTA VALIDAR ANCLAS",
+    "editorial": [
+      "Artículo 18 secciones, Base DCFUS$71,68",
+      "Nivel 2 con transición años6–10, FCFF/ROIC y DCF inverso",
+      "No hay quinto escenario ni promedio probabilístico aprobado"
+    ],
+    "documentos": {
+      "nivel1": "https://docs.google.com/document/d/1o2AJ4RlhTblIj5kFciYUlD-tcbvM0Wo5JqZkBZHsSbo/edit",
+      "nivel2": "https://docs.google.com/document/d/18w7aaQgOMd5Y63wqG8d7ECUR4NDBHkuwUqtN-3Uu9zs/edit"
+    },
+    "sensibilidad": {
+      "tipo": "DCF Base actual y ventaja competitiva independiente",
+      "matrices": [
+        "Escenarios JMR NFLX!A4:M8",
+        "Duración ventaja · FCFF!A4:C8",
+        "Crecimiento implícito!A4:H8"
+      ],
+      "resultados": {
+        "sinVentaja": 51.10349729564979,
+        "cincoAnios": 53.79277709940327,
+        "diezAnios": 55.79647540165648,
+        "persistente": 71.68383443894892,
+        "esQuintoEscenario": false
+      },
+      "validadoCentro": true,
+      "dcfInverso": {
+        "estado": "VALIDADO ARITMÉTICAMENTE",
+        "errorAbsoluto": 9.800515954339062e-10,
+        "hoja": "Crecimiento implícito"
+      }
+    }
+  },
+  "valorPresentePonderado": {
+    "conservador": 50.24353646219275,
+    "base": 71.68383443894892,
+    "optimista": 103.08016291545503
+  },
+  "crecimientoImplicito": {
+    "fecha": "2026-10-15",
+    "precio": 70.57,
+    "precioFecha": null,
+    "precioReferencia": "Precio fijo usado en Input sheet B23; no cotización en tiempo real certificada",
+    "dcfHoy": 71.68383443894892,
+    "umbral": 0.02,
+    "dcfInverso": {
+      "gImplicito": 0.11691625603338784,
+      "gDcf": 0.11997767803756854,
+      "dif": -0.0030614220041806917,
+      "incrementoTasaAnual": -0.003061360820100287,
+      "lectura": "El precio de referencia US$70,57 requiere ingresos creciendo 11,69% CAGR en los primeros cinco años para la nueva trayectoria de ROIC marginal (Base20%), comparado con 12,00% del DCF Base. El ajuste común a CADA tasa anual es -0,31% puntos porcentuales. No representa la tasa g perpetua ni guía de Netflix."
+    },
+    "metodo": "Se sumó el mismo delta a las tasas de crecimiento de ventas años1–5; se respetó la convergencia años6–10 de crecimiento, ROIC marginal terminal 20%, Sales-to-Capital de 1,20× años1–5 y rampa STC años6–10 procedente de Input sheet. Se recomputaron FCFF10 años + perpetuidad, WACC, puente equity y opciones en hoja aislada.",
+    "controles": {
+      "dcfBaseHoja": 71.68383443894892,
+      "dcfBaseMotor": 71.68383443894892,
+      "dcfInversoObjetivo": 70.57,
+      "dcfInversoRecalculado": 70.56999999901994,
+      "errorAbsoluto": 9.800515954339062e-10,
+      "validadoContraHoja": true,
+      "hoja": "Crecimiento implícito!B5:H8 / DCF inverso NFLX!B160:B169",
+      "fuente": "https://docs.google.com/spreadsheets/d/1Vb_ZQX797XGRoKR3RnffD-jDKxqVl5T1A3MFqnScZ3g/edit#gid=2026101506"
+    }
+  },
+  "precioReferenciaConsultadoAt": "Precio fijado en Input sheet, fecha de cotización no certificada",
+  "baseMOS": "dcfBase",
+  "precioMOS": 53.762875829211694,
+  "precioMOSMax": 53.762875829211694,
+  "precioMOSHoy": {
+    "conservador": 53.762875829211694,
+    "base": 53.762875829211694,
+    "optimista": 53.762875829211694
+  },
+  "escenariosDCF": {
+    "base": 71.68383443894892,
+    "conservador": 50.24353646219275,
+    "optimista": 103.08016291545503,
+    "disrupcion": 17.013431712056608,
+    "metodo": "FCFF diez años más perpetuidad",
+    "sensibilidadMoat": {
+      "sinVentaja": 51.10349729564979,
+      "cincoAnios": 53.79277709940327,
+      "diezAnios": 55.79647540165648,
+      "persistente": 71.68383443894892,
+      "esQuintoEscenario": false
+    },
+    "convergenciaROIC": {
+      "metodo": "ROIC incremental=SalesToCapital x EBIT margin incremental(34%) x (1-tasa marginal(25%))",
+      "fuente": "Input sheet!B50 y B129:B153",
+      "startFade": 6,
+      "finishFade": 10,
+      "roicMarginalBase": 0.2,
+      "roicMarginalOptimista": 0.25,
+      "roicMarginalConservador": 0.12,
+      "roicContableAno10": 0.2947069744442732,
+      "stcBaseAno10": 0.7843137254901961,
+      "stcOptimistaAno10": 0.9803921568627451,
+      "stcConservadorAno10": 0.47058823529411764
+    }
+  },
+  "historialValoracionAnterior": {
+    "base": 66.39550087146223,
+    "hoja": "https://docs.google.com/spreadsheets/d/1FmgmqjknJBdNDHnfEAwMTfhs0Z6GzkUsmUKckrHf5PI/edit",
+    "estado": "expediente alternativo desde cero, no vigente",
+    "fecha": "2026-10-14"
+  },
+  "detalleCrecimientoBaseAnual": [
+    0.13,
+    0.125,
+    0.12,
+    0.115,
+    0.11
+  ],
+  "historicoAntesConvergencia": {
+    "fecha": "2026-10-15",
+    "base": 60.27374299402483,
+    "conservador": 51.806217799889104,
+    "optimista": 80.66123906980927,
+    "disrupcion": 17.013431712056608,
+    "nota": "Valoración anterior ROIC marginal terminal12%, STC1,20× años1–10. No es valor vigente; guardada solo para trazabilidad."
+  }
+}

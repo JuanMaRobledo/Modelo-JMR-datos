@@ -1,0 +1,1 @@
+const test=require('node:test'),assert=require('node:assert/strict');const {validate}=require('../validar_catalogo.cjs');test('solo pareja NFLX seleccionada y ninguna auditoría',()=>assert.deepEqual(validate(),{valoraciones:1,analisis:1,auditorias:0,dcfBase:71.68383443894892,fecha:'2026-10-15'}));
