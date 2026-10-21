@@ -296,13 +296,38 @@ Todas las cifras en US$ M, ejercicios cerrados en diciembre; fuente: hoja, pesta
 
 **Lectura.** En 19 de 25 celdas de la matriz 13.3 el valor está por debajo del precio de US$69,58; el valor lo supera sólo con +2 pp de crecimiento y margen de ~38% o más, o con +4 pp de crecimiento y margen de ~34% o más. El DCF inverso (sección 10) es consistente con esto.
 
-### 13.4 Múltiplos: primera familia, valor por acción (múltiplo real × denominador FY+3 real, ±20%)
+### 13.4 Múltiplos: primera familia, valor por acción (múltiplo real × denominador FY+3 real)
 
-Las matrices de la hoja están pobladas para los siete métodos con la rejilla 0,8–1,2 sobre el múltiplo y sobre el fundamental, valor presente de FY+3 por acción, Base [MODELO, Nivel 2]. Valores centrales (múltiplo y fundamental en 1,0): EV/EBITDA US$115,52; EV/FCFF US$83,57; P/E US$119,28; P/FCFE US$88,06; P/OCF US$80,03; P/V US$83,70; P/BV US$169,32. Extremos de cada rejilla: EV/EBITDA US$73,15 a US$167,30; EV/FCFF US$52,70 a US$121,29; P/E US$76,34 a US$171,76; P/FCFE US$56,36 a US$126,81; P/OCF US$51,22 a US$115,25; P/V US$53,57 a US$120,52; P/BV US$108,37 a US$243,82. Fecha: 21-oct-2026.
+Pestaña «Sensibilidad por múltiplo» de la hoja, regenerada el 21-oct-2026 con ejes reales: 21 matrices (siete métodos × Conservador, Base y Optimista), 0 errores y centro idéntico al VP a 3 años del método en las 21 (control «OK») [MODELO]. Eje vertical: múltiplo de salida real (veces, ±20% del elegido); eje horizontal: fundamental FY+3 real (US$ millones); celda: valor presente por acción con el puente de la hoja. Las 21 matrices completas están en el Nivel 2. Base:
 
-### 13.5 Múltiplos: segunda familia, múltiplo justificado (ejes propios del método)
+| Método | Múltiplo real (eje vertical) | Fundamental FY+3, US$ M (eje horizontal) | Valor por acción, mínimo a máximo | Centro (VP a 3 años) |
+|---|---|---|---|---:|
+| EV/EBITDA | 23,87× a 35,81× | 18.188 a 27.282 | US$73,15 a US$167,30 | US$115,52 |
+| EV/FCFF | 25,20× a 37,80× | 12.551 a 18.827 | US$52,70 a US$121,29 | US$83,57 |
+| P/E | 30,76× a 46,14× | 14.307 a 21.460 | US$76,34 a US$171,76 | US$119,28 |
+| P/FCFE | 24,34× a 36,52× | 13.346 a 20.018 | US$56,36 a US$126,81 | US$88,06 |
+| P/OCF | 23,18× a 34,76× | 12.740 a 19.111 | US$51,22 a US$115,25 | US$80,03 |
+| P/V | 6,00× a 9,01× | 51.429 a 77.144 | US$53,57 a US$120,52 | US$83,70 |
+| P/BV | 10,04× a 15,07× | 62.197 a 93.296 | US$108,37 a US$243,82 | US$169,32 |
 
-**N/D.** La pestaña «Relativa v2 · Sensibilidad» no contiene esta familia poblada (el Nivel 2 lo declara). Implicación: no es posible mostrar cuánto cambia el múltiplo justificado ante variaciones de crecimiento, ROE y costo de capital propios de cada método. Evidencia necesaria: poblar la pestaña con la formulación del contrato `contrato-historias-multiplos-20261017.md`. Efecto sobre el dictamen: **Auditoría condicionada**.
+**Lectura.** En las matrices de EV/EBITDA, P/E y P/BV todas las celdas superan el DCF Base (US$61,04). En EV/FCFF, P/FCFE, P/OCF y P/V sólo quedan por debajo las esquinas en que múltiplo y fundamental caen a la vez 10%–20% (entre una y tres celdas por matriz; mínimos US$52,70, US$56,36, US$51,22 y US$53,57). La brecha de H4 se ve en que el DCF solo se alcanza con múltiplos y fundamentales a la baja.
+
+### 13.5 Múltiplos: segunda familia, múltiplo económicamente justificado (soporte; no desplegada)
+
+La pestaña «Sensibilidad económica múltiplos» de la hoja tiene las 21 matrices (el ratio justificado en veces, con g terminal sostenible, ROIC, WACC, Ke, ROE o conversión en los ejes); se reinstaló el 21-oct-2026 porque tenía errores de fórmula (#ERROR!) y ahora tiene 0 errores y 0 N/D [MODELO]. **Se conserva en la hoja como soporte del múltiplo C y no se despliega en la app ni en el análisis** (decisión del usuario). Centros Base, que el auditor compara con el ancla C y con el múltiplo elegido [INFERENCIA]:
+
+| Método | Centro justificado (Base) | Ancla C del informe | Múltiplo Base elegido |
+|---|---:|---:|---:|
+| EV/EBITDA | 10,31× | 19,3× | 29,8× |
+| EV/FCFF | 27,03× | 27,9× | 31,5× |
+| P/E | 15,28× | 21,0× | 38,5× |
+| P/FCFE | 19,84× | 23,3× | 30,4× |
+| P/OCF | 20,78× | 24,4× | 29,0× |
+| P/V | 4,25× | N/D | 7,5× |
+| P/BV | 3,51× | N/D | 12,6× |
+
+El centro justificado de la pestaña es menor que el ancla C en todos los métodos con ancla, y mucho menor en EV/EBITDA y P/E. Las definiciones no son idénticas (la pestaña usa estado estable con g terminal 5,29%, ROIC 11,04% y WACC terminal 8,99%; el ancla C parte de ROE y conversiones de FY+3), pero el sentido es el mismo: el múltiplo justificado por fundamentos sostenibles es mucho menor que el elegido por ciclo (H4, H19).
+
 
 *Diferencia entre simulado y direccional:* las matrices 13.1–13.4 son simulaciones realmente ejecutadas en la hoja; la prueba de tasa terminal del auditor y la interpolación de la sección 5 son direccionales con script propio.
 
@@ -330,7 +355,8 @@ Artefactos examinados: hoja (`Input sheet`, estados, LTM, `Valuation output`, `E
 | H6 | Medio | Dato | MOS 35% da US$39,08 (sobre esperado) y US$39,68 (sobre DCF Base) en el mismo informe | US$0,60 por acción | Ajustar | Declarar una base única; este prompt exige el principal (DCF Base) | Sí | Abierto |
 | H7 | Medio | Fórmula | Aportes por historia suman US$56,40; la fila total dice US$60,12; `valor_esperado_igual_suma` = falso en el registro | Etiquetado | Ajustar | Mostrar el esperado de tres (US$60,12) y el de cuatro (US$56,40) por separado | No | Abierto |
 | H8 | Medio | Supuesto | P/BV: patrimonio por acción FY+3 ≈ US$18,05 vs ~US$7,24 hoy; no resta recompras; anclas provisionales | Peso 0 hoy; sobrestimaría si se activara | Investigar | Conciliar equity por historia con recompras, SBC y OCI antes de dar peso | Sí | Abierto |
-| H9 | Medio | Dato | Segunda familia de matrices (múltiplo justificado) no poblada | Auditoría condicionada | Investigar | Poblar «Relativa v2 · Sensibilidad» con el contrato 17-oct-2026 | No | Abierto |
+| H9 | Bajo | Presentación | La pestaña «Sensibilidad por múltiplo» tenía ejes 0,8–1,2 en lugar de múltiplos y fundamentales reales, y la pestaña económica tenía #ERROR! | Ya corregido el 21-oct-2026: ejes reales, 21/21 centros OK, 0 errores | Mantener | La familia económica queda en la hoja sin desplegar | No | Cerrado |
+| H19 | Medio | Supuesto | Centros justificados de la pestaña (EV/EBITDA 10,3×, P/E 15,3×) muy por debajo del ancla C (19,3×, 21,0×) y del múltiplo elegido | Refuerza H4 | Investigar | Conciliar las dos definiciones de múltiplo justificado antes de usar C como ancla | Sí | Abierto |
 | H10 | Bajo | Dato | DCF inverso: 11,4% (informe) frente a 11,0% (Nivel 2) con el mismo precio, beta y margen | Presentación | Investigar | Unificar la definición (tasa uniforme vs trayectoria) | No | Abierto |
 | H11 | Medio | Supuesto | Avisos del flujo: capital nuevo rinde 31% en Disrupción (ROIC terminal = WACC 9%) y 55% en Optimista (ROIC terminal 11%): más del doble | Disrupción y Optimista con ventas/capital posiblemente altos | Investigar | Revisar ventas/capital de las historias C y D y mostrar «= costo de capital» en vez de 0,00% | Sí | Abierto |
 | H12 | Alto (histórico) | Fórmula/proceso | Paso de corrección no idempotente multiplicó acciones ×100; detectado antes de publicar | Habría reducido el valor ~100x | Mantener (corregido) | Añadir prueba de idempotencia al paso | No | Cerrado, verificar |
@@ -340,7 +366,7 @@ Artefactos examinados: hoja (`Input sheet`, estados, LTM, `Valuation output`, `E
 | H16 | Medio | Dato | Hechos del 3T26 (20-oct): guía de publicidad ~US$2.700 M (antes ~US$3.000 M), FCF 2026 ~US$12.000 M (antes ~US$12.500 M), margen 4T26 26,0% | No incorporado; el año 1 sigue alcanzable pero con menos colchón | Investigar | Incorporar en el próximo ciclo de valoración y revisar el supuesto de publicidad | Sí | Abierto |
 | H17 | Bajo | Dato | Fuente de consenso secundaria (cobertura de mercado) para movimientos de precio y expectativas; no se contrastó con fuente primaria | Contexto, no cifras del modelo | Mantener | Marcar [NO VERIFICADO] las citas de consenso | No | Abierto |
 
-*Separación:* H4, H6, H7, H14 y H10 son errores de dato o de presentación; H1, H2, H3, H8, H11, H15 son hipótesis discutibles; H12 es un error de proceso ya corregido. Las alternativas con efecto numérico (H1 y H3) son direccionales del auditor y no se aplicaron a la hoja.
+*Separación:* H4, H6, H7, H9, H14 y H10 son errores de dato o de presentación; H1, H2, H3, H8, H11, H15 y H19 son hipótesis discutibles; H12 es un error de proceso ya corregido. Las alternativas con efecto numérico (H1 y H3) son direccionales del auditor y no se aplicaron a la hoja.
 
 ## 16. Catalizadores, señales de refutación y seguimiento
 
@@ -360,7 +386,7 @@ Próximos reportes: la fecha del resultado del 4T26 y del 10-K 2026 no está con
 
 ## 17. Dictamen económico y resumen para escuchar
 
-**Dictamen: Plausible con reservas** (no es «Sostenible» por las razones de H1, H2, H4 y la segunda familia de matrices no poblada).
+**Dictamen: Plausible con reservas** (no es «Sostenible» por las razones de H1, H2, H4, H19).
 
 - **Consistencia matemática: conforme.** El DCF Base se reproduce con un script independiente: US$60,89 frente a US$61,04 (−0,25%); las sensibilidades quedan dentro de 0,3%. Las diferencias de presentación (H6, H7) no cambian el valor.
 - **Trazabilidad documental: con reservas.** Las cifras de estados, tasas y acciones se concilian con fuentes primarias; los peers y el consenso son fuentes secundarias, y el cargo de Brasil, la composición del WACC terminal y los denominadores FY+3 de los métodos no se verificaron celda por celda.
@@ -368,7 +394,7 @@ Próximos reportes: la fecha del resultado del 4T26 y del 10-K 2026 no está con
 - **Supuesto más frágil:** el margen objetivo de 36,35% sostenido durante diez años con un uso por miembro casi plano. **Más defendible:** el año 1 (ingresos +11,1%, margen 31,85%), alineado con la guía de 2026. **Motor principal del precio:** crecimiento de los años 1–5 y margen, con un tercer factor en el terminal.
 - **Precio frente al valor:** US$69,58 es 14,0% sobre el DCF Base (US$61,04) y 15,7% sobre el esperado (US$60,12): no hay margen de seguridad frente al principal; la compra con MOS de 35% estaría cerca de US$39,68.
 - **Decisión analítica sugerida:** conservar la hipótesis Base, revisar la tasa terminal, el salto del ROIC y los múltiplos (H1, H2, H4) y volver a valorar con los hechos del 3T26 (H16).
-- **Auditoría condicionada:** por la segunda familia de matrices (N/D), la independencia limitada, los denominadores FY+3 no re-verificados y la falta de precio de hoy.
+- **Auditoría condicionada:** por la independencia limitada, los denominadores FY+3 de EV/EBITDA y EV/FCFF no re-verificados y la falta de precio de hoy.
 
 **Resumen oral (≈120 palabras).** Netflix vale hoy, según el modelo, unos sesenta y un dólares por acción, y el precio de cierre de septiembre fue sesenta y nueve con cincuenta y ocho: catorce por ciento por encima. Recalculamos el valor por otro camino y llegamos a sesenta con ochenta y nueve, así que las matemáticas cuadran. La historia que sostiene el valor es que los ingresos crezcan once por ciento este año y el margen suba hasta treinta y seis por ciento; ningún año anterior pasó de treinta. Las reservas son la tasa de descuento de largo plazo, la caída brusca del retorno después del año diez y unos múltiplos muy generosos. Dictamen: plausible con reservas. No se modificó la valoración.
 
@@ -387,7 +413,7 @@ Próximos reportes: la fecha del resultado del 4T26 y del 10-K 2026 no está con
 | Yahoo Finance (yfinance) | https://finance.yahoo.com/quote/DIS/ (y SPOT, ROKU) | 30-sep-2026 | 21-oct-2026 | Múltiplos de peers, precio del 30-sep | Fuente secundaria; no reconciliada con estados de cada par |
 | Serie DGS10 (Tesoro EE.UU.) | `reference/corte_vigente.json` del repositorio | 30-sep-2026 | 21-oct-2026 | Rf 5,29% | Archivo local, no consultado de nuevo |
 
-**Lo no verificado y pruebas no ejecutadas.** Composición de la tasa terminal (peso de deuda, beta terminal): N/D. Cargo de Brasil (US$619 M) contra la nota del 10-Q: [NO VERIFICADO] por esta auditoría. Denominadores FY+3 de EV/EBITDA y EV/FCFF: N/D. Segunda familia de matrices: N/D. Precio de hoy: N/D. Pruebas direccionales no ejecutadas en la hoja: tasa terminal alternativa, tasa de impuesto +2 pp, año 1 en 10,5%, patrimonio de P/BV con recompras. Cotizaciones y expectativas de terceros mencionadas en el análisis: [NO VERIFICADO] contra fuente primaria.
+**Lo no verificado y pruebas no ejecutadas.** Composición de la tasa terminal (peso de deuda, beta terminal): N/D. Cargo de Brasil (US$619 M) contra la nota del 10-Q: [NO VERIFICADO] por esta auditoría. Denominadores FY+3 de EV/EBITDA y EV/FCFF: N/D. Precio de hoy: N/D. Pruebas direccionales no ejecutadas en la hoja: tasa terminal alternativa, tasa de impuesto +2 pp, año 1 en 10,5%, patrimonio de P/BV con recompras. Cotizaciones y expectativas de terceros mencionadas en el análisis: [NO VERIFICADO] contra fuente primaria.
 
 **Registro de versión.**
 - `prompt_version: auditoria-economica-jmr-v1.0` (el archivo del prompt lleva la etiqueta v1.1 del 20-oct-2026; el campo de versión de salida es el exigido por la plantilla).
