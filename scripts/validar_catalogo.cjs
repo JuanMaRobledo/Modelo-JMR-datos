@@ -3,6 +3,7 @@ const fs=require('node:fs'),path=require('node:path'),assert=require('node:asser
 const root=path.join(__dirname,'..');
 function inventory(dir){if(!fs.existsSync(dir))return [];return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?inventory(path.join(dir,x.name)):[path.relative(root,path.join(dir,x.name)).replaceAll('\\','/')]).filter(x=>!/\.gitkeep$/.test(x)).sort();}
 function validate(){const c=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));for(const group of ['valoraciones','analisis','auditorias'])assert.deepEqual(inventory(path.join(root,group)),c[group].slice().sort(),'Inventario inesperado: '+group);
+if(c.valoraciones.length===0){assert.equal(c.analisis.length,0,'Análisis sin valoración');return {valoraciones:0,analisis:0,auditorias:c.auditorias.length};}
 const v=JSON.parse(fs.readFileSync(path.join(root,c.valoraciones[0]),'utf8')),a=JSON.parse(fs.readFileSync(path.join(root,c.analisis[0]),'utf8'));
 assert.equal(v.ticker,'NFLX');assert.equal(a.ticker,'NFLX');assert.equal(v.fecha,'2026-10-15');assert.equal(a.date,'2026-10-15');
 assert.equal(v.descuentoMultiples.dcfHoy.base,71.68383443894892);assert.deepEqual(a.linkedValuation.descuentoMultiples.dcfHoy,v.descuentoMultiples.dcfHoy);assert.equal(a.linkedValuation.sourcePath,c.valoraciones[0]);assert.equal(a.remotePath,c.analisis[0]);
