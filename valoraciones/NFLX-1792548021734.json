@@ -1279,13 +1279,14 @@
         }
       ],
       "sensibilidadesIlustrativas": {
-        "s2c_1_00": 49.767,
-        "s2c_1_39": 52.0284,
-        "s2c_1_80": 53.349,
-        "roicTerminalIgualWacc": 48.2876,
-        "opciones_plazo3_5": 52.0944,
-        "opciones_plazo5_5": 51.9691,
-        "nota": "S2C cambia solo la reinversión explícita; ROIC solo terminal; opciones Black-Scholes aproximadas en USD por acción. No reemplazan corrida certificada del modelo completo."
+        "crp0": 62.87811346023949,
+        "crp05": 56.90146613082062,
+        "crp1": 51.93355991408432,
+        "salesToCapital1": 54.59711740974273,
+        "salesToCapital139": 56.90146613082062,
+        "salesToCapital18": 58.247310825467245,
+        "roicTerminalIgualWacc": 51.51393138685177,
+        "estado": "Recalculado con WACC9.16%; sustituyen escenarios previos hechos con WACC9.64%, no prueba de inputs"
       },
       "capitalYCrecimiento": {
         "cagrBase0_5": 0.09990908189157444,
@@ -1294,7 +1295,7 @@
         "supuestoNoGuia": "El 12% año 1 desde LTM Sep26 no equivale a la proyección oficial FY2026."
       },
       "control": "",
-      "dictamen": "DCF Base US$52.03 matemáticamente conciliado desde flujos; certificación económica PENDIENTE por Rf/ERP, S/C, ROIC y pares."
+      "dictamen": "DCF56.90 matemáticamente conciliado; WACC reconstruido de fuentes Treasury/Damodaran; 0.50pp prima geográfica y Kd5.85% sujetos a validación."
     },
     "reconstruccionWacc": {
       "fecha": "2026-10-22",
@@ -1332,7 +1333,26 @@
         "Kd5.85% sin cotización individual de bonos en el expediente; conservar supuesto",
         "Beta sectorial global de muestra Damodaran 2026 se aplica con tamaño muestra733"
       ],
-      "controles": "Historia Base, conservadora, optimista y disrupción quedaron LISTO tras recálculo; validar publicado en tests CI."
+      "controles": "Historia Base, conservadora, optimista y disrupción quedaron LISTO tras recálculo; validar publicado en tests CI.",
+      "sensibilidades": {
+        "fecha": "2026-10-22",
+        "metodo": "FCFF 10 años descontado; cambio de spread geográfico mueve Ke=Rf+beta*(ERPmadura+CRP), WACC E/D y descuento terminal; S2C modifica solo reinversión explícita Δventas/S2C; ROIC terminal mueve FCFF perpetuo",
+        "valoresPorAccionUSD": {
+          "crp0": 62.87811346023949,
+          "crp05": 56.90146613082062,
+          "crp1": 51.93355991408432,
+          "salesToCapital1": 54.59711740974273,
+          "salesToCapital139": 56.90146613082062,
+          "salesToCapital18": 58.247310825467245,
+          "roicTerminalIgualWacc": 51.51393138685177
+        },
+        "control": {
+          "reproduccionDCFBase": 56.90146613082062,
+          "waccBase": 0.09164473900451407,
+          "keBase": 0.09435470180993674
+        },
+        "advertencia": "Sensibilidades reproducidas independientemente desde flujos de la hoja; otras hipótesis fijas. Una prima país de 0% no significa que no exista exposición geográfica; 0.50 pp analista no certificada."
+      }
     }
   },
   "escenariosDCF": {
