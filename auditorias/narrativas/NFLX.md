@@ -44,6 +44,18 @@ La contratesis adversa combina desaceleración más intensa, erosión del margen
 | Precio | 21-oct-2026 | US$65,04 | Yahoo histórico declarado | No sustituir con «precio hoy» |
 | Acciones | LTM, millones | 4.106,33 | Income Statement | Debe revisarse conversión de split y dilución de opciones |
 
+### Puentes LTM de contenido que requieren conciliación
+
+En el control reproducido a partir de la hoja publicada «Fuentes SEC y LTM» aparecen **tres partidas con diferencias materiales** al usar la identidad FY2025 + 9M2026 − 9M2025. Puede haber cambios de definición, reclasificación o errores de fuente: **todavía no se ha establecido la causa**.
+
+| Partida (USD millones) | FY2025 + 9M2026 − 9M2025 | LTM registrado | Diferencia absoluta |
+|---|---:|---:|---:|
+| Adiciones de contenido | 11.890,97 | 13.916,68 | 2.025,71 |
+| Amortización de contenido | 6.182,28 | 9.216,25 | 3.033,97 |
+| Cambio de pasivos de contenido en CFO | 1.872,52 | −694,01 | 2.566,53 |
+
+**Control bloqueante:** recuperar los cuatro períodos y la definición de cada renglón desde los estados/notas, y determinar si la fila reportada es comparable o se presenta con distinto perímetro. No reescribir automáticamente el LTM ni el FCFF mientras no se explique. Los demás puentes que concilian aritméticamente tampoco quedan certificados contra SEC solo por conciliar.
+
 **Jerarquía:** documento regulatorio / estado original → normalización y fuente por línea → hoja/JSON → supuestos del analista. El registro publicado no reemplaza el documento regulatorio. No mezclar unidades USD millones con US$/acción, ni saldos de balance con flujos LTM.
 
 ## 4. Historia financiera: diez años y punto de partida
@@ -184,6 +196,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | NFLX-08 | Medio | Presentación/matrices | 14 controles de sensibilidad de historias relativas N/D | No describirlos como probados; completar solo con ejes reales y centros | Abierto |
 | NFLX-09 | Medio | Contabilidad/normalización | I+D elegible no aislada; FCFF/OCF con aproximaciones; partidas N/P | Separar datos reportados, ajustes y no disponibles | Abierto |
 | NFLX-10 | Medio | Documento | Sin validación nueva de todas las fuentes originales y de 18 bloques económicos | Completar evidencia y validar manualmente esta estructura ampliada | Abierto |
+| NFLX-11 | **Alto** | LTM/flujo | Tres líneas de contenido no concilian FY2025+9M2026−9M2025 (diferencias > US$2.000 millones cada una) | Reconstruir línea, corte, definición y notas SEC; revisar impacto en reinversión/FCFF | Abierto |
 
 Ningún hallazgo se marca resuelto por haber añadido una sección textual. Propuestas de corrección **no** equivalen a autorización para cambiar los datos.
 
