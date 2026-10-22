@@ -1,12 +1,12 @@
-"use strict";
+'use strict';
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const root=path.join(__dirname,'..');
-function inventory(dir){if(!fs.existsSync(dir))return [];return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?inventory(path.join(dir,x.name)):[path.relative(root,path.join(dir,x.name)).replaceAll('\\','/')]).filter(x=>!/\.gitkeep$/.test(x)).sort();}
-function validate(){const c=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));for(const group of ['valoraciones','analisis','auditorias'])assert.deepEqual(inventory(path.join(root,group)),c[group].slice().sort(),'Inventario inesperado: '+group);
-if(c.valoraciones.length===0){assert.equal(c.analisis.length,0,'Análisis sin valoración');return {valoraciones:0,analisis:0,auditorias:c.auditorias.length};}
-const v=JSON.parse(fs.readFileSync(path.join(root,c.valoraciones[0]),'utf8')),a=JSON.parse(fs.readFileSync(path.join(root,c.analisis[0]),'utf8'));
-assert.equal(v.ticker,'NFLX');assert.equal(a.ticker,'NFLX');assert.equal(v.fecha,'2026-10-15');assert.equal(a.date,'2026-10-15');
-assert.equal(v.descuentoMultiples.dcfHoy.base,71.68383443894892);assert.deepEqual(a.linkedValuation.descuentoMultiples.dcfHoy,v.descuentoMultiples.dcfHoy);assert.equal(a.linkedValuation.sourcePath,c.valoraciones[0]);assert.equal(a.remotePath,c.analisis[0]);
-assert.equal(v.baseMOS,'dcfBase');assert.ok(Math.abs(v.precioMOS-v.descuentoMultiples.dcfHoy.base*(1-v.mos))<1e-8);assert.equal((a.html.match(/<h2\b/g)||[]).length,18);assert.equal(c.auditorias.length,0);
-return {valoraciones:c.valoraciones.length,analisis:c.analisis.length,auditorias:0,dcfBase:v.descuentoMultiples.dcfHoy.base,fecha:v.fecha};}
+function validate(root=path.join(__dirname,'..')){
+ const c=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
+ const inventory=dir=>fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(e=>e.isDirectory()?inventory(dir+'/'+e.name):e.name==='.gitkeep'?[]:[dir+'/'+e.name]).sort();
+ for(const group of ['valoraciones','analisis','auditorias'])assert.deepEqual(inventory(group),c[group].slice().sort(),'Inventario: '+group);
+ const vals=c.valoraciones.map(p=>({path:p,record:JSON.parse(fs.readFileSync(path.join(root,p)))}));
+ for(const p of c.analisis){const a=JSON.parse(fs.readFileSync(path.join(root,p))),v=vals.find(x=>x.path===a.linkedValuation?.sourcePath);assert.ok(v,'Análisis sin valoración');assert.equal(a.ticker,v.record.ticker);assert.equal(a.date,v.record.fecha);assert.equal(a.remotePath,p);assert.deepEqual(a.linkedValuation.descuentoMultiples,v.record.descuentoMultiples);assert.equal((a.articleHtml.match(/<h2>/g)||[]).length,18);}
+ for(const {record:v} of vals){require('./auditar_integridad.cjs').validateRecord(v);assert.ok(c.auditorias.includes('auditorias/narrativas/'+v.ticker+'.md'));assert.ok(v.salvedades.length);}
+ return {valoraciones:vals.length,analisis:c.analisis.length,auditorias:c.auditorias.length};
+}
 module.exports={validate};if(require.main===module)console.log(JSON.stringify(validate(),null,2));

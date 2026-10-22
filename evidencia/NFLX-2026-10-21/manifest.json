@@ -1,0 +1,46 @@
+{
+  "ticker": "NFLX",
+  "analysis_date": "2026-10-21",
+  "currency": "USD",
+  "units": "USD millions; shares millions; USD/share",
+  "market": "NASDAQ",
+  "sources": {
+    "financial_statements": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+      "method": "Estados consolidados y notas10-Q; LTM FY2025+9M2026−9M2025",
+      "publication_date": "2026-10-21",
+      "cutoff_date": "2026-09-30"
+    },
+    "riskfree": {
+      "url": "https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "method": "Treasury10y5,13% menos spreadEEUU0,22% =4,91%",
+      "publication_date": "2026-10-21",
+      "cutoff_date": "2026-10-21",
+      "currency": "USD"
+    },
+    "erp": {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "method": "ERP payout ajustado4,20% + spreadEEUU0,22%; CRP adicional50pb es juicio",
+      "publication_date": "2026-10-01",
+      "cutoff_date": "2026-10-01"
+    },
+    "beta": {
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/BetasGlobal.html",
+      "method": "Entertainment global beta desapalancada ajustada caja0,98 redondeada, reapalancada con D/E mercado",
+      "publication_date": "2026-01-01",
+      "cutoff_date": "2026-01-01"
+    },
+    "cost_of_debt": {
+      "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+      "method": "Kd estimado5,85% anclado en notas deuda; no yield cotizado exacto",
+      "publication_date": "2026-10-21",
+      "cutoff_date": "2026-09-30"
+    },
+    "analysis_price": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NFLX?interval=1d",
+      "method": "Cierre histórico21oct2026:65,04USD; contrasteInvesting65,05 diferencia1centavo",
+      "publication_date": "2026-10-21",
+      "cutoff_date": "2026-10-21"
+    }
+  }
+}
