@@ -13,7 +13,7 @@
 | Valor intrínseco principal | **US$48,34** por acción |
 | Promedio ordinario de historias | **US$47,62**, secundario, tres historias con probabilidades renormalizadas |
 | MOS definido por el analista | 35%; umbral sobre DCF Base **US$31,42** |
-| Expediente | [Ver valoración publicada](../../valoraciones/NFLX-1792548021734.json) y [hoja vinculada](https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit) |
+| Expediente | [Ver valoración publicada](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/valoraciones/NFLX-1792548021734.json) y [hoja vinculada](https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit) |
 | Alcance de esta auditoría | Lectura del JSON, tablas financieras publicadas, salvedades, manifiesto de fuentes y controles históricos declarados |
 | Fuera del alcance verificado | Nueva descarga y conciliación independiente de cada fuente SEC; ejecución completa de las fórmulas de la hoja original; certificación de comparables; cierre fiscal exacto de todas las hipótesis |
 
@@ -217,7 +217,7 @@ Netflix presenta una historia económica en la que el crecimiento se modera, per
 | US Treasury | [Tasas Treasury](https://home.treasury.gov/resource-center-data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026) | 21-oct-2026 declarado | Rf y moneda USD | Selección plazo/spread por revisar |
 | Damodaran | [ERP](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm), [betas sectoriales](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/BetasGlobal.html) | Corte ERP oct2026; beta ene2026 declarado | ERP y beta | Homogeneidad sector/país e interacción CRP pendientes |
 | Precio histórico | [Yahoo chart](https://query1.finance.yahoo.com/v8/finance/chart/NFLX?interval=1d) | 21-oct-2026 declarado | US$65,04 | Precio de corte, no cotización actual |
-| Valoración/hojas | [Expediente JSON](../../valoraciones/NFLX-1792548021734.json) · [Google Sheets](https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit) | 21-oct-2026 | Fórmulas, escenarios, matrices y supuestos | Datos publicados sin auditoría completa en vivo de fórmulas |
-| Antecedente preservado | [Narrativa anterior](../historicas/NFLX-2026-10-21-auditoria-previa.md) | 21-oct-2026 | Detalle original de 124 pruebas, opciones, WBD y ajustes | Registro histórico, no reemplaza esta conclusión |
+| Valoración/hojas | [Expediente JSON](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/valoraciones/NFLX-1792548021734.json) · [Google Sheets](https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit) | 21-oct-2026 | Fórmulas, escenarios, matrices y supuestos | Datos publicados sin auditoría completa en vivo de fórmulas |
+| Antecedente preservado | [Narrativa anterior](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/auditorias/historicas/NFLX-2026-10-21-auditoria-previa.md) | 21-oct-2026 | Detalle original de 124 pruebas, opciones, WBD y ajustes | Registro histórico, no reemplaza esta conclusión |
 
 **Versión de auditoría:** ampliación narrativa basada en el prompt `auditoria-economica-jmr-v1.2` y el expediente NFLX fechado 21-oct-2026. **Estado: AUDITORÍA CONDICIONADA**, por verificación económica y documental pendiente. Las pruebas anteriores de 124 controles, 28 fórmulas críticas y lectura de matrices siguen referidas a su corrida original; no se ejecutaron nuevamente por el mero acto de editar este Markdown. El texto permanece editable y versionado en GitHub. **No se modificó la valoración.**
