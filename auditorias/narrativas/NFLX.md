@@ -1,5 +1,3 @@
-| NFLX-02 | Medio | Ajuste fiscal WBD | Netflix recibió US$2.800 millones fuera de EBIT; el impuesto específico no está desglosado en 10-Q | Mantener 25% como hipótesis de NI normalizada, sin atribuir ese porcentaje a declaración SEC; DCF EBIT directo no incluye pago | Abierto como divulgación, no como error DCF |
-
 **Dictamen: PLAUSIBLE CON RESERVAS — AUDITORÍA CONDICIONADA.** Corte de la valoración: 21 de octubre de 2026; estados a septiembre de 2026. Este informe amplía la narración y los contrastes que ya existen en el expediente. Las conciliaciones que identifica como *registradas* corresponden a verificaciones anteriores, no a una nueva lectura independiente de todos los documentos de origen. **No se modificó la valoración.**
 
 
@@ -192,7 +190,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | ID | Severidad | Tipo | Evidencia y efecto | Acción propuesta | Estado |
 |---|---|---|---|---|---|
 | NFLX-01 | Resuelto — presentación | Etiquetas de márgenes/CAGR | Referencia histórica EBIT 21,30% no activa; año 1 32%, objetivo 34%; CAGR 1–5 9,99% y 2–5 9,49% | Etiquetas aclaradas; DCF posteriormente recalculado por nueva hipótesis de crecimiento | Cerrado |
-| NFLX-02 | Alto | Fuente/ajuste | Tratamiento fiscal WBD al 25% estimado, sin efecto fiscal exacto | Reconstruir ingreso no recurrente y nota fiscal | Abierto |
+| NFLX-02 | Medio | Ajuste fiscal WBD | Netflix recibió US$2.800 millones fuera de EBIT; el impuesto específico no está desglosado en 10-Q | Mantener 25% como hipótesis de NI normalizada, sin atribuir ese porcentaje a declaración SEC; DCF EBIT directo no incluye pago | Abierto como divulgación, no como error DCF |
 | NFLX-03 | Alto | Comparables | Siete pares/métricas sin homogeneidad certificada, ancla C sin control universal | Revisar A/B/C por método, ROIC, growth, margen, deuda y denominador | Abierto |
 | NFLX-04 | Medio | Riesgo | CRP 50 pb y Kd 5,85% estimados; potencial solapamiento de prima país | Revisar construcción fechada de WACC y alternativas | Abierto |
 | NFLX-05 | Medio | Reinversión | S/C 1,39 tomado de agregado sectorial para margen incremental | Comparar serie propia, inversión en contenido e incremental ROIC | Abierto |
@@ -201,9 +199,35 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | NFLX-08 | Medio | Presentación/matrices | 14 controles de sensibilidad de historias relativas N/D | No describirlos como probados; completar solo con ejes reales y centros | Abierto |
 | NFLX-09 | Medio | Contabilidad/normalización | I+D elegible no aislada; FCFF/OCF con aproximaciones; partidas N/P | Separar datos reportados, ajustes y no disponibles | Abierto |
 | NFLX-10 | Medio | Documento | Sin validación nueva de todas las fuentes originales y de 18 bloques económicos | Completar evidencia y validar manualmente esta estructura ampliada | Abierto |
-| NFLX-11 | **Alto** | LTM/flujo | tres líneas que el validador interpretó con encabezado temporal equivocado (diferencias > US$2.000 millones cada una) | Reconstruir línea, corte, definición y notas SEC; revisar impacto en reinversión/FCFF | Abierto |
+| NFLX-11 | **Cerrado — falso positivo** | LTM/flujo | El validador confundió las filas históricas 2016–2025 con el bloque FY/9M/LTM. Las 34 filas válidas concilian aritméticamente; se verificaron tres partidas de contenido con SEC | Se corrigió código y pruebas automáticas; no cambiar FCFF ni datos históricos | Cerrado |
+| NFLX-12 | **Alto** | Riesgo / fuentes | Treasury US 10Y 21-oct-2026 = 5,13% frente a Rf activa 4,91%; ERP4,92% incorpora ancla enero2026 de 4,42% y prima país0,50pp. | Verificar fecha y geografía de Rf/ERP/CRP y revalorar WACC de forma conjunta antes de cambiar el DCF principal | Abierto |
+| NFLX-13 | **Cerrado — presentación** | Hoja de tesis | «Tesis de Inversión y Supuestos» conservaba casillas [TICKER]/[XX] y filas sin completar | Se completó con historias, cifras ligadas por fórmula a tres escenarios y advertencias sobre descuentos | Cerrado |
+| NFLX-14 | Medio | Auditoría independiente | 124 pruebas históricas no reejecutadas desde crecimiento Base 9,99% | Reproducir 124 controles económicos, contables, hipótesis y reportes en esta versión | Abierto |
 
 Ningún hallazgo se marca resuelto por haber añadido una sección textual. Propuestas de corrección **no** equivalen a autorización para cambiar los datos.
+
+### Sensibilidades de hipótesis sin alterar el DCF principal
+
+Son simulaciones económicas **aisladas** sobre la estructura publicada; no reemplazan una corrida íntegra del DCF con un conjunto nuevo de supuestos.
+
+| Variable | Caso | Valor indicativo US$/acción |
+|---|---|---:|
+| Ventas/capital incremental | 1,00 en años 1–10 | **49,77** |
+| Ventas/capital incremental | 1,39 (actual) | **52,03** |
+| Ventas/capital incremental | 1,80 en años 1–10 | **53,35** |
+| ROIC terminal | Convergencia a WACC 9,64% | **48,29** |
+| ROIC terminal | Mantener 12,00% (actual) | **52,03** |
+| Vida residual opciones | 3,5 años, Black–Scholes indicativo | **52,09** |
+| Vida residual opciones | 4,5 años (actual) | **52,03** |
+| Vida residual opciones | 5,5 años, Black–Scholes indicativo | **51,97** |
+
+El S/C se modifica únicamente en la reinversión explícita **Δingresos/S/C** de años 1–10, dejando inmóvil la reinversión terminal, los impuestos, EBIT y descuento; se vuelve a descontar el cambio anual. ROIC terminal: reinversión = NOPAT × g/ROIC; se mantiene el resto. Opciones: Black–Scholes con S=65,04, strike=41,24, volatilidad=36,96%, Rf=4,91% y 120,175117 millones de opciones; no es precio observable de las opciones.
+
+**Costo de capital:** el [Treasury estadounidense](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=202610&type=daily_treasury_yield_curve) reporta **5,13% a 10 años el 21-oct-2026**. «Origen de los Supuestos» pide explícitamente ese vencimiento y fecha; la hoja usa 4,91%. Además, el ERP de 4,92% procede de un dato Maduro/Estados Unidos 4,42% identificado como enero 2026 y 0,50 pp de prima adicional. No se cambió Rf en el DCF sin auditar y fechar coherentemente ERP, exposición geográfica y riesgo de deuda. El resultado US$52,03 **no está certificado como valor con tasas de mercado del 21-oct-2026**.
+
+**Crecimiento y márgenes:** la [guía trimestral Netflix Q3 2026](https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf) prevé ingresos FY2026 US$51.100 millones (+13%) y margen EBIT 31,5%. El «año 1» del DCF comienza desde LTM septiembre2026 y no coincide con FY2026. Crecer 12/11/10/9/8% es una hipótesis del analista, no guía oficial.
+
+**Comparables:** la pestaña «Sector» conserva encabezados pero ninguna fila de empresas y denominadores certificados. El hecho de calcular siete precios no equivale a certificar los múltiplos; las alternativas de 0% peso también deben informarse, pero no mezclarse indiscriminadamente.
 
 ## 16. Catalizadores, señales de refutación y seguimiento
 
