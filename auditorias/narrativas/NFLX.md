@@ -203,6 +203,31 @@ El DCF inverso recalculado contrasta crecimiento Base 9,99% con el **13,59%** ne
 
 La corrida actual registra **21 centros matemáticos conciliados**: 7 Base históricos y 14 matrices nuevas Conservador/Optimista (5 niveles de múltiplo en veces ×5 niveles de fundamental FY+3 en USD millones, 350 celdas añadidas). Los 14/14 controles nuevos arrojan OK; falta validar los anclajes A/B/C de los múltiplos y la calidad de los pares. Ejes exigidos: múltiplo real en veces y denominador económico FY+3 en sus unidades, con resultado valor por acción descontado; el eje fraccional 0,8–1,2, solo, no cumple el contrato editorial. La familia económica A/B/C requiere revisión de centros antes de tratarla como evidencia.
 
+
+### Reparación de la sensibilidad integral: de centro «OK» a celdas verificadas
+
+La pestaña «Sensibilidad 7 metodos x historias» tenía **14 matrices 5×5** de escenarios Conservador y Optimista. Antes del control exhaustivo, las celdas de centro aparecían «OK» pero **448 celdas estaban en #ERROR!**. La causa raíz fueron **112 fórmulas** que usaban separador decimal de formato inglés (0.8, 0.9, 1.1 y 1.2) dentro de Google Sheets con locale es_ES. Se sustituyó únicamente la sintaxis decimal por 0,8/0,9/1,1/1,2, conservando ejes económicos y enlaces a los siete métodos.
+
+**Resultado de la auditoría posterior:** **14 matrices completas, 350/350 resultados numéricos, 0 celdas con error**; cada centro de matriz coincide con el valor presente de su método e historia dentro de tolerancia de redondeo. Se agregó una prueba automática que inspecciona las 350 salidas, confirma monotonicidad de precios respecto al múltiplo, y rechaza grillas no numéricas aunque su centro sea correcto. Los siete múltiplos Base mantienen sus controles separados. Esto cierra la salvedad de ejecución matemática de matrices, **no** la de selección y homogeneidad de comparables.
+
+### Riesgo geográfico y deuda: conciliaciones SEC adicionales
+
+Los ingresos regionales LTM septiembre de 2026 se reconstruyeron de manera trazable desde FY2025 + 9M2026 − 9M2025:
+
+| Región | LTM USD millones | Peso |
+|---|---:|---:|
+| UCAN | 21.644,45 | 43,52% |
+| EMEA | 16.011,25 | 32,19% |
+| LATAM | 6.101,89 | 12,27% |
+| APAC | 5.977,04 | 12,02% |
+| **Total** | **49.734,63** | **100,00%** |
+
+Fuentes: [10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm) y [10-Q septiembre 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), nota 2. La SEC **no publica participación por país**, por lo que no es posible certificar un costo país medio solo a partir de estas cuatro regiones. El 0,50pp geográfico se mantiene como **hipótesis del analista** y se presenta con sensibilidad (0,00pp: 62,88; 0,50pp: 56,90; 1,00pp: 51,93 US$/acción); no declarar riesgo «exacto».
+
+La [nota 7 de deuda del 10-Q](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm) confirma **13 tramos**, principal US$15.337 millones y valor razonable US$15.158 millones. Los bonos USD de vencimiento 2034, 2036 y 2054 generan yields *aproximados, no cotizaciones observables el 21-oct*, de 5,80%, 5,96% y 6,24% por fórmula de cupón, precio y plazo (ponderado ≈5,98%). Estos tramos tienen cobertura de swaps a SOFR sobre parte del nocional, por lo que los cupones no equivalen al costo efectivo de todo el capital prestado. Los bonos emitidos en EUR no deben mezclarse sin conversión/hedge. **Kd5,85% queda económicamente plausible pero no certificable como yield exacto agregado al 21-oct.**
+
+Se mantuvo una sola pestaña canónica «Evidencia deuda y geografía» y se añadió el puente regional LTM como anexo; se descartó una pestaña duplicada para evitar confusión.
+
 ## 14. Coherencia de hojas, cálculos y presentación
 
 El expediente previo declara 124 controles numéricos, 28 fórmulas críticas, 20 preflight estructurales y cero errores almacenados en 7.528 celdas de fórmula. Ese éxito **no certifica fuentes SEC ni razonabilidad de supuestos**. Corrigió tratamientos de BPA básico/diluido, faltantes no convertidos en cero, referencias de industria, partidas de tecnología/desarrollo y desfase inicial. El informe previo también confirma que el valor principal es DCF Base y que disrupción permanece aislada.
@@ -222,7 +247,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | NFLX-05 | Medio | Reinversión | S/C modelo1,39 concilia contra rotación Netflix LTM1,3740 y referencia global Entertainment1,3914; ambas son rotación total, no inversión marginal comprobada | Mantener1,39 razonable en Base y sensibilidad S/C1,00/1,80; comparar desembolsos de contenido futuros | Hipótesis sustentada; eficiencia incremental abierta |
 | NFLX-06 | Medio | Opciones | Plazo 4,5 años supuesto vs dato anterior 4,79 | Sensibilidad en expediente; localizar nota exacta Sep2026 | Abierto |
 | NFLX-07 | Medio | Terminal | ROIC terminal12% cercano a ROC Entertainment global11,04% (Damodaran 2026) y menor que NFLX LTM38,58%; no prueba persistencia ni homogeneidad de capital contenido | Mantener supuesto con sensibilidad ROIC terminal=WACC9,16%→DCF51,51 | Hipótesis sustentada; persistencia abierta |
-| NFLX-08 | **Cerrado — matrices reproducidas** | Presentación/matrices | Se crearon 14 matrices Conservador/Optimista adicionales en la hoja «Sensibilidad 7 metodos x historias», con múltiplo real y fundamental FY+3; los 14 centros coinciden con el VP oficial | 21/21 centros disponibles (7 Base +14 nuevos); no afirmar que esto certifica comparables | Cerrado como control algebraico |
+| NFLX-08 | **Cerrado — 350 celdas contrastadas** | Sensibilidades de múltiplos | Auditoría ulterior encontró **448 errores en la grilla pese a 14 centros OK**. Origen: 112 fórmulas con punto decimal (0.8/0.9/1.1/1.2) no admitidas en es_ES | Reescritas con coma y verificadas 14 matrices ×25 celdas; 350 numéricas, 0 errores; prueba CI que recorre TODA la grilla | Cerrado como ejecución aritmética, no certificación de comparables |
 | NFLX-09 | Medio | Contabilidad/normalización | I+D elegible no aislada; FCFF/OCF con aproximaciones; partidas N/P | Separar datos reportados, ajustes y no disponibles | Abierto |
 | NFLX-10 | Medio | Documento | Sin validación nueva de todas las fuentes originales y de 18 bloques económicos | Completar evidencia y validar manualmente esta estructura ampliada | Abierto |
 | NFLX-11 | **Cerrado — falso positivo** | LTM/flujo | El validador confundió las filas históricas 2016–2025 con el bloque FY/9M/LTM. Las 34 filas válidas concilian aritméticamente; se verificaron tres partidas de contenido con SEC | Se corrigió código y pruebas automáticas; no cambiar FCFF ni datos históricos | Cerrado |
