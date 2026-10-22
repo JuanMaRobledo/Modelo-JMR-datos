@@ -1,4 +1,4 @@
-# Auditoría económica narrativa — Netflix, Inc. (NFLX)
+| NFLX-02 | Medio | Ajuste fiscal WBD | Netflix recibió US$2.800 millones fuera de EBIT; el impuesto específico no está desglosado en 10-Q | Mantener 25% como hipótesis de NI normalizada, sin atribuir ese porcentaje a declaración SEC; DCF EBIT directo no incluye pago | Abierto como divulgación, no como error DCF |
 
 **Dictamen: PLAUSIBLE CON RESERVAS — AUDITORÍA CONDICIONADA.** Corte de la valoración: 21 de octubre de 2026; estados a septiembre de 2026. Este informe amplía la narración y los contrastes que ya existen en el expediente. Las conciliaciones que identifica como *registradas* corresponden a verificaciones anteriores, no a una nueva lectura independiente de todos los documentos de origen. **No se modificó la valoración.**
 
@@ -47,19 +47,21 @@ La contratesis adversa combina desaceleración más intensa, erosión del margen
 | Precio | 21-oct-2026 | US$65,04 | Yahoo histórico declarado | No sustituir con «precio hoy» |
 | Acciones | LTM, millones | 4.106,33 | Income Statement | Debe revisarse conversión de split y dilución de opciones |
 
-### Puentes LTM de contenido que requieren conciliación
+### Conciliación SEC corregida: falso positivo de la auditoría anterior
 
-En el control reproducido a partir de la hoja publicada «Fuentes SEC y LTM» aparecen **tres partidas con diferencias materiales** al usar la identidad FY2025 + 9M2026 − 9M2025. Puede haber cambios de definición, reclasificación o errores de fuente: **todavía no se ha establecido la causa**.
+**Revisión del 22-oct-2026:** las tres diferencias de contenido difundidas en la primera auditoría fueron un **error del propio validador**, no de la fuente contable: se aplicó el puente FY2025 + 9M2026 − 9M2025 a filas 37–39 que contienen una serie histórica de 2016–2025, **sin ese encabezado temporal**. El validador ahora exige columnas identificadas y enlace SEC en la fuente de cada fila; solo usa las filas 3–36 del bloque LTM.
 
-| Partida (USD millones) | FY2025 + 9M2026 − 9M2025 | LTM registrado | Diferencia absoluta |
-|---|---:|---:|---:|
-| Adiciones de contenido | 11.890,97 | 13.916,68 | 2.025,71 |
-| Amortización de contenido | 6.182,28 | 9.216,25 | 3.033,97 |
-| Cambio de pasivos de contenido en CFO | 1.872,52 | −694,01 | 2.566,53 |
+| Flujo de contenido (USD millones) | FY2025 | 9M2025 | 9M2026 | LTM calculado | Contraste |
+|---|---:|---:|---:|---:|---|
+| Adiciones de contenido | −17.096,617 | −12.039,405 | −14.934,230 | **−19.991,442** | Coincide |
+| Amortización de contenido | 16.422,166 | 11.657,930 | 12.764,663 | **17.528,899** | Coincide |
+| Cambio de pasivos de contenido en CFO | −610,838 | −601,043 | −43,070 | **−52,865** | Coincide |
 
-**Control bloqueante:** recuperar los cuatro períodos y la definición de cada renglón desde los estados/notas, y determinar si la fila reportada es comparable o se presenta con distinto perímetro. No reescribir automáticamente el LTM ni el FCFF mientras no se explique. Los demás puentes que concilian aritméticamente tampoco quedan certificados contra SEC solo por conciliar.
+Fuentes primarias contrastadas: [Netflix FY2025 10-K SEC](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm) (estado de flujo) y [Netflix 9M2026 10-Q SEC](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm) (ambos nueve meses). Los **34 puentes** del bloque específico son aritméticamente reproducibles. La revisión de fuente primaria se realizó para estas tres partidas; no afirmar que todas las demás filas ya fueron verificadas una por una contra SEC.
 
-**Jerarquía:** documento regulatorio / estado original → normalización y fuente por línea → hoja/JSON → supuestos del analista. El registro publicado no reemplaza el documento regulatorio. No mezclar unidades USD millones con US$/acción, ni saldos de balance con flujos LTM.
+**Conclusión:** NFLX-11 se cierra como falsa alerta de conciliación. No modificar los importes LTM, no ajustar el FCFF por las diferencias ficticias y conservar el hallazgo como aprendizaje del validador. Las dudas económicas sobre la capitalización y amortización de contenido siguen siendo relevantes, aunque estos puentes sean correctos.
+
+**Jerarquía:** documento regulatorio → normalización por línea y período → hoja/JSON → supuestos del analista. No mezclar unidades USD millones con US$/acción ni saldos de balance con flujos LTM.
 
 ## 4. Historia financiera: diez años y punto de partida
 
@@ -199,7 +201,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | NFLX-08 | Medio | Presentación/matrices | 14 controles de sensibilidad de historias relativas N/D | No describirlos como probados; completar solo con ejes reales y centros | Abierto |
 | NFLX-09 | Medio | Contabilidad/normalización | I+D elegible no aislada; FCFF/OCF con aproximaciones; partidas N/P | Separar datos reportados, ajustes y no disponibles | Abierto |
 | NFLX-10 | Medio | Documento | Sin validación nueva de todas las fuentes originales y de 18 bloques económicos | Completar evidencia y validar manualmente esta estructura ampliada | Abierto |
-| NFLX-11 | **Alto** | LTM/flujo | Tres líneas de contenido no concilian FY2025+9M2026−9M2025 (diferencias > US$2.000 millones cada una) | Reconstruir línea, corte, definición y notas SEC; revisar impacto en reinversión/FCFF | Abierto |
+| NFLX-11 | **Alto** | LTM/flujo | tres líneas que el validador interpretó con encabezado temporal equivocado (diferencias > US$2.000 millones cada una) | Reconstruir línea, corte, definición y notas SEC; revisar impacto en reinversión/FCFF | Abierto |
 
 Ningún hallazgo se marca resuelto por haber añadido una sección textual. Propuestas de corrección **no** equivalen a autorización para cambiar los datos.
 
@@ -218,7 +220,7 @@ Los umbrales de «señal favorable/adversa» son **criterios propuestos para seg
 
 ## 17. Dictamen económico y resumen para escuchar
 
-**Tesis: plausible con reservas.** Matemáticamente, el expediente contiene controles técnicos anteriores y las conciliaciones básicas reproducibles; documentalmente faltan confirmaciones de ajustes y fuentes; económicamente hay hipótesis exigentes de margen, reinversión y rentabilidad terminal. La aparente discrepancia del margen quedó aclarada al verificar qué celdas alimentan el DCF; siguen abiertos los puentes LTM de contenido, las fuentes y los supuestos económicos. El supuesto Base actualizado supone mayor monetización que la anterior trayectoria, pero sigue por debajo del ritmo histórico de cinco años; los más frágiles son sostenibilidad del margen 34%, intensidad de capital marginal y ROIC terminal. El mercado al precio fechado US$65,04 supera el DCF Base US$52,03 en alrededor de **25,01%**; se trata de una comparación de supuestos a una fecha, no recomendación de operar.
+**Tesis: plausible con reservas.** Matemáticamente, el expediente contiene controles técnicos anteriores y las conciliaciones básicas reproducibles; documentalmente faltan confirmaciones de ajustes y fuentes; económicamente hay hipótesis exigentes de margen, reinversión y rentabilidad terminal. La aparente discrepancia del margen quedó aclarada al verificar qué celdas alimentan el DCF; siguen abiertos la consistencia de fuentes restantes, la vigencia del WACC y los supuestos económicos. El supuesto Base actualizado supone mayor monetización que la anterior trayectoria, pero sigue por debajo del ritmo histórico de cinco años; los más frágiles son sostenibilidad del margen 34%, intensidad de capital marginal y ROIC terminal. El mercado al precio fechado US$65,04 supera el DCF Base US$52,03 en alrededor de **25,01%**; se trata de una comparación de supuestos a una fecha, no recomendación de operar.
 
 ### Resumen para escuchar
 
@@ -238,6 +240,6 @@ Netflix presenta una historia económica en la que el crecimiento se modera, per
 
 **Aclaración editorial del 22-oct-2026:** comprobadas las referencias Input B27–B30, escenario Base y proyección Valuation output. No se reemplazó un supuesto económico por el dato histórico. Se sincronizaron las etiquetas de márgenes y los dos CAGR con el JSON de la app.
 
-**Revisión del 22-oct-2026:** ajuste explícito de revenue growth Base a 12/11/10/9/8%; actualización automática de FCFF, escenarios, múltiples siete métodos, matrices y valor principal desde Sheets. No modifica el margen EBIT ni cierra salvedades de fuentes o comparables.
+**Revisión del 22-oct-2026:** fuentes SEC del contenido contrastadas y falso error LTM descartado. Nueva discrepancia Rf contra 10Y Treasury oficial (5,13% vs 4,91%) señalada y pendiente de revisión integral del WACC. Ajuste explícito de revenue growth Base a 12/11/10/9/8%; actualización automática de FCFF, escenarios, múltiples siete métodos, matrices y valor principal desde Sheets. No modifica el margen EBIT ni cierra salvedades de fuentes o comparables.
 
 **Versión de auditoría:** ampliación narrativa basada en el prompt `auditoria-economica-jmr-v1.2` y el expediente NFLX fechado 21-oct-2026. **Estado: AUDITORÍA CONDICIONADA**, por verificación económica y documental pendiente. Las pruebas anteriores de 124 controles, 28 fórmulas críticas y lectura de matrices siguen referidas a su corrida original; no se ejecutaron nuevamente por el mero acto de editar este Markdown. El texto permanece editable y versionado en GitHub. **No se modificó la valoración.**
