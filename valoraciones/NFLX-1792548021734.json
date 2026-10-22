@@ -1235,14 +1235,14 @@
         {
           "codigo": "NFLX-08",
           "estado": "CERRADO CONTROLES DE SENSIBILIDAD",
-          "detalle": "14 matrices nuevas de Conservador y Optimista, cinco múltiplos y cinco fundamentales absolutos cada una; 14/14 centros verificados contra valor presente FY+3; 21 centros incluyendo Base."
+          "detalle": "Reapertura detectó 448 errores en 14 matrices pese a centros OK; reparadas 112 fórmulas de decimal es_ES. 350/350 celdas, 14 centros y monotonicidad de método revisados por CI."
         }
       ],
       "salvedadesAbiertas": [
         {
           "codigo": "NFLX-03",
           "severidad": "ALTA",
-          "detalle": "Siete múltiplos calculados y 21 matrices con centros OK; peer universes/denominadores no homologados, sector sin data numérica."
+          "detalle": "Siete métodos valorados y 21 centros; tras reparar 112 fórmulas, matrices Conservador/Optimista 350/350 celdas verificadas. La selección B por comparables DIS/CMCSA/WBD/ROKU/SPOT no es homóloga por streaming; se preserva N/D, sin mezclarlos en anclas usadas."
         },
         {
           "codigo": "NFLX-05",
@@ -1262,22 +1262,22 @@
         {
           "codigo": "NFLX-06",
           "severidad": "MEDIA",
-          "detalle": "4.5 años plazo opciones estimado; SEC 2025 4.79y, 10Q Sep2026 cantidad/strike sin plazo."
+          "detalle": "SEC Q3 2026 confirma opciones 120.175.117 y strike41,24, pero NO plazo restante ponderado; 4,5 años continúa supuesto con sensibilidad 3,5–5,5 años. No inventar vida exacta."
         },
         {
           "codigo": "NFLX-09",
           "severidad": "MEDIA",
-          "detalle": "I+D tecnológica no aislada, componentes CFO/FCFF no plenamente auditados."
+          "detalle": "Tecnología/desarrollo está expensada en EBIT y no se capitalizó indiscriminadamente como I+D; cuantía elegible por proyectos no desglosada, por lo que comparar con FCFF ajustado requiere puente económico y no suponer dato 0."
         },
         {
           "codigo": "NFLX-10",
           "severidad": "MEDIA",
-          "detalle": "Fuentes contables distintas de 3 filas contenido no revisadas 1 a 1 en nueva corrida."
+          "detalle": "34/34 puentes de FY2025+9M2026−9M2025 correctos en hoja; las tres líneas de contenido y las exposiciones regionales, deuda y leases fueron cotejadas con SEC. El resto de 10 años originales y 124 controles de fuente necesitan auditoría documental por partida."
         },
         {
           "codigo": "NFLX-14",
           "severidad": "MEDIA",
-          "detalle": "124 controles independientes originales no reejecutados tras alterar growth."
+          "detalle": "La corrida vigente superó 333 identidades aritméticas independientes en cuatro escenarios y 350 celdas de múltiples en CI 39865612329; la revisión de 124 controles originales de fuentes primarias SEC y estados 2016–2025 sigue sin repetirse íntegramente."
         },
         {
           "codigo": "NFLX-04",
@@ -2193,6 +2193,31 @@
       "fuente": "Fuentes SEC y LTM K40:K41 y L40:L41, respaldadas por 10-K2025/10-Q2026",
       "convencion": "Leases operativos ya reconocidos en gastos del EBIT; no sumar lease liability como deuda en puente EV→equity sin recalcular rentas/EBIT simultáneamente",
       "clasificacion": "Hipótesis de presentación y no doble conteo, no se hizo ajuste DCF"
+    },
+    "dictamenFinalParcial": {
+      "fecha": "2026-10-22",
+      "principalUSD": 56.90146613082062,
+      "metodo": "DCF FCFF Base",
+      "wacc": 0.09164473900451407,
+      "controlesAprobados": {
+        "historiaCuatroDCF": 333,
+        "matrices5x5": 350,
+        "puentesLTM": 34,
+        "metodosMultiplesCalculados": 7,
+        "centrosMatriz": 21
+      },
+      "controlesPendientes": [
+        "Fuentes históricas completas SEC 124",
+        "Países dentro de UCAN EMEA LATAM APAC para CRP",
+        "Comparables de streaming homólogos y métricas EV atribuibles",
+        "Intensidad marginal de capital futura vs rotación LTM",
+        "Persistencia ROIC terminal 12%",
+        "Vida exacta opciones 9M2026",
+        "Impuesto específico cuota WBD",
+        "I+D elegible por proyectos"
+      ],
+      "veredicto": "MATEMÁTICAMENTE CONCILIADO; ECONÓMICAMENTE SUJETO A SALVEDADES",
+      "testWorkflow": "https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39866062420"
     }
   },
   "escenariosDCF": {
