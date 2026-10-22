@@ -2,6 +2,9 @@
 
 **Dictamen: PLAUSIBLE CON RESERVAS — AUDITORÍA CONDICIONADA.** Corte de la valoración: 21 de octubre de 2026; estados a septiembre de 2026. Este informe amplía la narración y los contrastes que ya existen en el expediente. Las conciliaciones que identifica como *registradas* corresponden a verificaciones anteriores, no a una nueva lectura independiente de todos los documentos de origen. **No se modificó la valoración.**
 
+
+**Actualización del 22-oct-2026 — crecimiento autorizado por el analista:** el Base pasa de 10/9/8/7/6 % (CAGR 7,99 %) a **12/11/10/9/8 %** (CAGR **9,99 %**). En la hoja viva recalculada, el DCF Base pasa de US$48,34 a **US$52,03** (+7,64%); múltiplos Base de US$50,60 a **US$51,57**; promedio ordinario a **US$49,67**. Los años 6–10, margen EBIT 32→34%, impuestos, S/C, WACC y terminal **no cambiaron**. El cambio de crecimiento es un supuesto sujeto a corroboración; los 124 controles independientes pertenecen a la corrida previa y **no se reejecutaron** en este corte.
+
 ## 1. Ficha de auditoría y alcance
 
 | Campo | Registro examinado |
@@ -10,9 +13,9 @@
 | Método principal | DCF FCFF, con valor intrínseco **Base** como referencia |
 | Fecha y precio del análisis | 21-oct-2026; **US$65,04** por acción (precio histórico declarado, no cotización en vivo) |
 | Corte contable | 30-sep-2026, LTM de resultados y flujos; balances de fecha puntual |
-| Valor intrínseco principal | **US$48,34** por acción |
-| Promedio ordinario de historias | **US$47,62**, secundario, tres historias con probabilidades renormalizadas |
-| MOS definido por el analista | 35%; umbral sobre DCF Base **US$31,42** |
+| Valor intrínseco principal | **US$52,03** por acción |
+| Promedio ordinario de historias | **US$49,67**, secundario, tres historias con probabilidades renormalizadas |
+| MOS definido por el analista | 35%; umbral sobre DCF Base **US$33,82** |
 | Expediente | [Ver valoración publicada](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/valoraciones/NFLX-1792548021734.json) y [hoja vinculada](https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit) |
 | Alcance de esta auditoría | Lectura del JSON, tablas financieras publicadas, salvedades, manifiesto de fuentes y controles históricos declarados |
 | Fuera del alcance verificado | Nueva descarga y conciliación independiente de cada fuente SEC; ejecución completa de las fórmulas de la hoja original; certificación de comparables; cierre fiscal exacto de todas las hipótesis |
@@ -21,7 +24,7 @@ Una comprobación contable no equivale a certificar una hipótesis económica. *
 
 ## 2. Resumen ejecutivo y relato económico central
 
-El DCF Base plantea un negocio de contenidos por suscripción que puede seguir aumentando ingresos por una combinación de monetización, precio, alcance comercial y eficiencia. El escenario no presupone que el crecimiento de ingresos de los mejores años se repita: proyecta un CAGR aproximado de **7,99%** en los primeros cinco años, inferior al ritmo LTM documentado. La tesis es que una desaceleración comercial puede coexistir con un margen más alto si los ingresos adicionales requieren proporcionalmente menos gasto operativo.
+El DCF Base plantea un negocio de contenidos por suscripción que puede seguir aumentando ingresos por una combinación de monetización, precio, alcance comercial y eficiencia. El escenario no presupone que el crecimiento de ingresos de los mejores años se repita: proyecta un CAGR aproximado de **9,99%** en los primeros cinco años, inferior al ritmo LTM documentado. La tesis es que una desaceleración comercial puede coexistir con un margen más alto si los ingresos adicionales requieren proporcionalmente menos gasto operativo.
 
 El riesgo es que contenido, competencia, publicidad, expansión geográfica y condiciones de licencias exijan costos e inversión mayores que los incorporados. Que Netflix tenga escala no prueba por sí solo que el margen objetivo **34,00%** sea sostenible, ni que un ROIC terminal de **12,00%** compense correctamente toda reinversión futura. Esta es la historia que más importa comprobar.
 
@@ -76,11 +79,11 @@ El flujo de caja libre publicado se presenta en su hoja, pero la definición de 
 
 ## 5. Crecimiento de ingresos: de la historia a la proyección
 
-**Historia económica:** la proyección Base propone desacelerar tras años de expansión. La hoja de supuestos registra **10,00% para el año 1**, **7,99% como CAGR de los años 1–5** y **7,49% como CAGR de los años 2–5**. Las tasas anuales reales del DCF son 10%, 9%, 8%, 7% y 6%. La etiqueta anterior que llamaba al 7,99% «años 2–5» era incorrecta. La justificación debe desagregar precio, volumen/cuentas monetizadas, publicidad y mezcla; no hay en este expediente una conciliación granular por segmento verificada independientemente.
+**Historia económica:** la proyección Base propone desacelerar tras años de expansión. La hoja de supuestos registra **12,00% para el año 1**, **9,99% como CAGR de los años 1–5** y **9,49% como CAGR de los años 2–5**. Las tasas anuales reales del DCF son 12%, 11%, 10%, 9% y 8%. La etiqueta anterior que llamaba al 9,99% «años 2–5» era incorrecta. La justificación debe desagregar precio, volumen/cuentas monetizadas, publicidad y mezcla; no hay en este expediente una conciliación granular por segmento verificada independientemente.
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto |
 |---|---|---|---|---|---|---|
-| Crecimiento ingresos 1–5 | FY CAGR 3A 12,64%; 5A 12,57%; 9A 19,89%; LTM 14,65% | Año 1 10%; promedio años 1–5 7,99%; historia A | N/D: pares homogéneos y fuente fechada no confirmados | Monetización sostiene expansión mientras maduran mercados | Usuarios/monetización por debajo de meta, descuentos, rotación o costos de captación | Sensibilidad crecimiento disponible en hoja; recomputación completa aquí N/D |
+| Crecimiento ingresos 1–5 | FY CAGR 3A 12,64%; 5A 12,57%; 9A 19,89%; LTM 14,65% | Año 1 12%; promedio años 1–5 9,99%; historia A | N/D: pares homogéneos y fuente fechada no confirmados | Monetización sostiene expansión mientras maduran mercados | Usuarios/monetización por debajo de meta, descuentos, rotación o costos de captación | Sensibilidad crecimiento disponible en hoja; recomputación completa aquí N/D |
 
 **Seis preguntas:** valor y horizonte identificados; contraste histórico realizado; mecanismo plausible pero no demostrado; deben ocurrir monetización y retención suficientes; lo refutarían caídas de crecimiento orgánico o mayor churn; el impacto cuantitativo independiente necesita reejecutar el modelo variando únicamente crecimiento y su reinversión asociada.
 
@@ -92,7 +95,7 @@ El EBIT LTM publicado es **US$15.564,87 millones** sobre ventas de **US$49.734,6
 |---|---|---|---|---|---|---|
 | EBIT / ventas | 3A 25,61%; 5A 23,10%; 10A 16,84%; LTM 31,30% | Año 1 Base 32%; meta Base 34%; referencia histórica 21,30% **no activa** | N/D peer mediana certificada | Escala y mezcla deben superar costos incrementales | Contenido/marketing consumen apalancamiento operativo | Sensibilidad al margen, impuestos y reinversión del DCF, por confirmar con nueva corrida |
 
-**Seis preguntas:** se conocen valores y cortes; histórico reconstruido; causalidad por demostrar; requiere contención de costos de contenido/tecnología; se refuta ante erosión del margen subyacente; el efecto por acción requiere sensibilidad de FCFF ejecutada. La referencia 21,30% no alimenta las historias. La utilidad normalizada por el evento WBD usa una tasa fiscal hipotética de 25%; no se atribuye a crecimiento operativo.
+**Seis preguntas:** se conocen valores y cortes; histórico reconstruido; causalidad por demostrar; requiere contención de costos de contenido/tecnología; se refuta ante erosión del margen subyacente; el efecto por acción requiere sensibilidad de FCFF ejecutada. La referencia 21,30% no alimenta las historias; el nuevo crecimiento Base fue decidido por el analista, manteniendo margen y demás supuestos. La utilidad normalizada por el evento WBD usa una tasa fiscal hipotética de 25%; no se atribuye a crecimiento operativo.
 
 ## 7. Reinversión, Sales-to-Capital, ROIC/ROE y asignación de capital
 
@@ -116,7 +119,7 @@ El expediente declara Rf USD **4,91%**, beta sectorial desapalancada **0,98**, r
 
 ## 9. Convergencia y valor terminal
 
-El crecimiento a perpetuidad Base es **4,00%**, inferior a la Rf **4,91%** declarada. El centro publicado de WACC terminal de la matriz es aproximadamente **9,64%**, superior a g; esta relación es necesaria, no suficiente, para una perpetuidad sostenible. Según la auditoría anterior el valor presente terminal representa **54,56%** del valor operativo Base; ese porcentaje es **evidencia histórica declarada**, no una suma de FCFF reejecutada en esta revisión.
+El crecimiento a perpetuidad Base es **4,00%**, inferior a la Rf **4,91%** declarada. El centro publicado de WACC terminal de la matriz es aproximadamente **9,64%**, superior a g; esta relación es necesaria, no suficiente, para una perpetuidad sostenible. Según la auditoría anterior el valor presente terminal representa **55,77%** del valor operativo Base; ese porcentaje es **evidencia histórica declarada**, no una suma de FCFF reejecutada en esta revisión.
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto |
 |---|---|---|---|---|---|---|
@@ -126,11 +129,11 @@ El crecimiento a perpetuidad Base es **4,00%**, inferior a la Rf **4,91%** decla
 
 ## 10. Validación independiente del valor intrínseco
 
-El DCF Base es **US$48,33563427** por acción (mostrar **US$48,34**). El umbral MOS 35% es **US$31,41816227**, de modo que la multiplicación Base×0,65 **concilia**. El DCF llevado a FY+3 que muestra la tabla de métodos es **US$64,22** para la historia Base; esto **no** es otro valor presente sino la capitalización con Ke a tres años. El DCF inverso publicado indica que el precio del análisis **US$65,04** exige CAGR 1–5 cerca de **16,12%** al mantener los demás supuestos Base fijos, frente al **7,99%** de Base (diferencia **8,13 puntos porcentuales**).
+El DCF Base es **US$52,02842282** por acción (mostrar **US$52,03**). El umbral MOS 35% es **US$33,81847483**, de modo que la multiplicación Base×0,65 **concilia**. El DCF llevado a FY+3 que muestra la tabla de métodos es **US$69,13** para la historia Base; esto **no** es otro valor presente sino la capitalización con Ke a tres años. El DCF inverso publicado indica que el precio del análisis **US$65,04** exige CAGR 1–5 cerca de **16,12%** al mantener los demás supuestos Base fijos, frente al **9,99%** de Base (diferencia **6,13 puntos porcentuales**).
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto |
 |---|---|---|---|---|---|---|
-| DCF FCFF Base | Flujos y estados 2016–2025 + LTM; reconfirmación SEC N/D | Valor Base US$48,34; MOS US$31,42; FY+3 US$64,22 | Método FCFF/WACC Damodaran | Márgenes y reinversión explican valor operativo | Valores de flujos/terminal o puente EV→equity mal vinculados | 124 pruebas históricas declaradas, no una nueva reproducción integral del FCFF por año |
+| DCF FCFF Base | Flujos y estados 2016–2025 + LTM; reconfirmación SEC N/D | Valor Base US$52,03; MOS US$33,82; FY+3 US$69,13 | Método FCFF/WACC Damodaran | Márgenes y reinversión explican valor operativo | Valores de flujos/terminal o puente EV→equity mal vinculados | 124 pruebas históricas declaradas, no una nueva reproducción integral del FCFF por año |
 
 **Seis preguntas:** método, valor y fecha identificados; flujos históricos existen; precio actual no justifica flujos; supuestos exigen crecimiento/margen/reinversión coherentes; falsadores incluyen fallos de datos de origen y descuento; la pantalla integral reproduce las conciliaciones que admite el JSON, pero **no certifica todas las fórmulas originales**.
 
@@ -139,10 +142,10 @@ El DCF Base es **US$48,33563427** por acción (mostrar **US$48,34**). El umbral 
 | Historia | Crecimiento CAGR 1–5 | Margen EBIT objetivo | S/C | ROIC terminal | g terminal | DCF por acción | Probabilidad original |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | Conservador (B) | 5,00% | 30,00% | 1,15 | 9,64% | 3,00% | US$33,61 | 25% |
-| **Base (A)** | **7,99%** | **34,00%** | **1,39** | **12,00%** | **4,00%** | **US$48,34** | **50%** |
+| **Base (A)** | **9,99%** | **34,00%** | **1,39** | **12,00%** | **4,00%** | **US$52,03** | **50%** |
 | Optimista (D) | 11,58% | 36,00% | 1,80 | 15,00% | 4,50% | US$68,59 | 15% |
 
-El promedio **ordinario** es (50%×48,335634 + 25%×33,606494 + 15%×68,588818) / 90% = **US$47,62**. Es secundario frente al Base. El 10% restante **no** se inventa ni redistribuye fuera de esa normalización.
+El promedio **ordinario** es (50%×52,028423 + 25%×33,606494 + 15%×68,588818) / 90% = **US$49,67**. Es secundario frente al Base. El 10% restante **no** se inventa ni redistribuye fuera de esa normalización.
 
 ### ¿Qué pasaría si todo fallara?
 
@@ -156,21 +159,21 @@ Las probabilidades 50/25/10/15 suman 100%, pero el expediente no demuestra una c
 
 | Método | Peso global | FY+3 Base | VP Base (criterio solo 3 años) | Estado A/B/C |
 |---|---:|---:|---:|---|
-| EV/EBITDA | 0% | 91,89 | 69,16 | A histórico disponible; B peers no certificados; C por verificar |
-| EV/FCFF | 15% | 69,54 | 52,34 | A disponible; B no certificado; C por verificar |
-| P/E | 15% | 76,63 | 57,67 | A disponible; B no certificado; C por verificar |
-| P/FCFE | 15% | 60,10 | 45,23 | A disponible; B no certificado; C por verificar |
-| P/OCF | 9% | 52,73 | 39,69 | OCF económico normalizado, no confundir con FCF |
-| P/V | 6% | 77,55 | 58,37 | Denominador ventas, no margen/FCFF |
-| P/BV | 0% | 87,46 | 65,82 | Patrimonio común y relevancia sectorial sujetos a revisión |
+| EV/EBITDA | 0% | 96,48 | 72,61 | A histórico disponible; B peers no certificados; C por verificar |
+| EV/FCFF | 15% | 68,92 | 51,87 | A disponible; B no certificado; C por verificar |
+| P/E | 15% | 81,11 | 61,04 | A disponible; B no certificado; C por verificar |
+| P/FCFE | 15% | 59,68 | 44,92 | A disponible; B no certificado; C por verificar |
+| P/OCF | 9% | 52,66 | 39,63 | OCF económico normalizado, no confundir con FCF |
+| P/V | 6% | 81,90 | 61,64 | Denominador ventas, no margen/FCFF |
+| P/BV | 0% | 89,55 | 67,40 | Patrimonio común y relevancia sectorial sujetos a revisión |
 
-El valor relativo agregado Base hoy declarado es **US$50,60**, frente a DCF Base **US$48,34**. Los múltiplos no definen por sí mismos el valor intrínseco. El peso global DCF es 40% y los relativos 60%; se requiere comprobar la adecuación de cada denominador, las acciones diluidas, el puente EV→equity y la ausencia de doble conteo de dividendos. Los anclajes A (historia), B (pares), C (fundamentos) deben justificarse individualmente y no calibrarse para igualar el DCF. **N/D de B o C no significa que la fórmula aritmética de FY+3 esté rota.**
+El valor relativo agregado Base hoy declarado es **US$51,57**, frente a DCF Base **US$52,03**. Los múltiplos no definen por sí mismos el valor intrínseco. El peso global DCF es 40% y los relativos 60%; se requiere comprobar la adecuación de cada denominador, las acciones diluidas, el puente EV→equity y la ausencia de doble conteo de dividendos. Los anclajes A (historia), B (pares), C (fundamentos) deben justificarse individualmente y no calibrarse para igualar el DCF. **N/D de B o C no significa que la fórmula aritmética de FY+3 esté rota.**
 
 ## 13. Sensibilidades económicas y escenarios alternativos
 
-La hoja publicada incluye sensibilidad DCF Base frente a **WACC terminal × crecimiento perpetuo**, **ROIC terminal × g** y **margen sostenible × desplazamiento de crecimiento 1–5**. El centro visible de la primera matriz (**WACC terminal 9,64% y g 4,00%**) devuelve aproximadamente **US$48,34**, pero no se volvió a ejecutar cada combinación de flujos desde la hoja fuente aquí.
+Las matrices de Google Sheets se recalcularon de forma automática con la nueva trayectoria (sin repetir la contrastación independiente de las 75 celdas). La hoja publicada incluye sensibilidad DCF Base frente a **WACC terminal × crecimiento perpetuo**, **ROIC terminal × g** y **margen sostenible × desplazamiento de crecimiento 1–5**. El centro visible de la primera matriz (**WACC terminal 9,64% y g 4,00%**) devuelve aproximadamente **US$52,03**, pero no se volvió a ejecutar cada combinación de flujos desde la hoja fuente aquí.
 
-El DCF inverso contrasta crecimiento Base 7,99% con el **16,12%** necesario para justificar US$65,04 **bajo el conjunto de premisas restante fijo**. La diferencia no prueba por sí sola un precio erróneo; obliga a narrar qué aceleración adicional de monetización sería necesaria.
+El DCF inverso contrasta crecimiento Base 9,99% con el **16,12%** necesario para justificar US$65,04 **bajo el conjunto de premisas restante fijo**. La diferencia no prueba por sí sola un precio erróneo; obliga a narrar qué aceleración adicional de monetización sería necesaria.
 
 La corrida registra **7 centros Base** de múltiplos contrastados y **14** combinaciones de sensibilidad Conservador/Optimista como N/D. Existen proyecciones de precios para esas historias, pero **no** se declara que sus matrices completas fueron auditadas. Ejes exigidos: múltiplo real en veces y denominador económico FY+3 en sus unidades, con resultado valor por acción descontado; el eje fraccional 0,8–1,2, solo, no cumple el contrato editorial. La familia económica A/B/C requiere revisión de centros antes de tratarla como evidencia.
 
@@ -178,7 +181,7 @@ La corrida registra **7 centros Base** de múltiplos contrastados y **14** combi
 
 El expediente previo declara 124 controles numéricos, 28 fórmulas críticas, 20 preflight estructurales y cero errores almacenados en 7.528 celdas de fórmula. Ese éxito **no certifica fuentes SEC ni razonabilidad de supuestos**. Corrigió tratamientos de BPA básico/diluido, faltantes no convertidos en cero, referencias de industria, partidas de tecnología/desarrollo y desfase inicial. El informe previo también confirma que el valor principal es DCF Base y que disrupción permanece aislada.
 
-**Control de interpretación resuelto:** el 21,30% de margen en Input B30 es una referencia histórica que **no alimenta** el DCF. La historia Base activa conserva margen inicial 32,00% y objetivo 34,00%. La tasa de crecimiento Base anual del año 2 es 9%, distinta del CAGR 1–5 7,99% y del CAGR 2–5 7,49%. Se corrigieron las etiquetas en la hoja y el visor sin cambiar números. Los restantes controles económicos y de LTM continúan pendientes.
+**Control de interpretación resuelto:** el 21,30% de margen en Input B30 es una referencia histórica que **no alimenta** el DCF. La historia Base activa conserva margen inicial 32,00% y objetivo 34,00%. La tasa de crecimiento Base anual del año 2 es 11%, distinta del CAGR 1–5 9,99% y del CAGR 2–5 9,49%. Las etiquetas ya se aclararon y posteriormente el analista elevó deliberadamente la trayectoria de crecimiento. Las cifras de DCF y múltiplos sí se recalcularon. Los restantes controles económicos y de LTM continúan pendientes.
 
 Control adicional: fecha del precio del análisis separada del precio de hoy; MOS solo sobre Base; datos financiero/estadístico en nivel 2; matrices con unidades; enlaces a hoja, JSON y auditoría. Se inspeccionó el registro publicado, no se afirma sincronización bidireccional comprobada.
 
@@ -186,7 +189,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 
 | ID | Severidad | Tipo | Evidencia y efecto | Acción propuesta | Estado |
 |---|---|---|---|---|---|
-| NFLX-01 | Resuelto — presentación | Etiquetas de márgenes/CAGR | Referencia histórica EBIT 21,30% no activa; año 1 32%, objetivo 34%; CAGR 1–5 7,99% y 2–5 7,49% | Etiquetas y registros sincronizados con las fórmulas vivas, DCF sin cambios | Cerrado |
+| NFLX-01 | Resuelto — presentación | Etiquetas de márgenes/CAGR | Referencia histórica EBIT 21,30% no activa; año 1 32%, objetivo 34%; CAGR 1–5 9,99% y 2–5 9,49% | Etiquetas aclaradas; DCF posteriormente recalculado por nueva hipótesis de crecimiento | Cerrado |
 | NFLX-02 | Alto | Fuente/ajuste | Tratamiento fiscal WBD al 25% estimado, sin efecto fiscal exacto | Reconstruir ingreso no recurrente y nota fiscal | Abierto |
 | NFLX-03 | Alto | Comparables | Siete pares/métricas sin homogeneidad certificada, ancla C sin control universal | Revisar A/B/C por método, ROIC, growth, margen, deuda y denominador | Abierto |
 | NFLX-04 | Medio | Riesgo | CRP 50 pb y Kd 5,85% estimados; potencial solapamiento de prima país | Revisar construcción fechada de WACC y alternativas | Abierto |
@@ -204,7 +207,7 @@ Ningún hallazgo se marca resuelto por haber añadido una sección textual. Prop
 
 | Indicador | Observado en expediente (fecha) | Señal favorable para revisar | Señal adversa | Fuente y frecuencia |
 |---|---|---|---|---|
-| Crecimiento de ingresos LTM | 14,65%, sep2026 | Crecimiento sostenido suficiente para primera proyección 10% | Caída persistente bajo la trayectoria Base | Estado trimestral, comparar LTM homogéneo |
+| Crecimiento de ingresos LTM | 14,65%, sep2026 | Crecimiento sostenido suficiente para primera proyección 12% | Caída persistente bajo la trayectoria Base | Estado trimestral, comparar LTM homogéneo |
 | Margen EBIT LTM | 31,30%, sep2026 | Expansión sostenible hacia 34% con normalización documentada | Reversión de margen tras mayores costos de contenido/marketing | 10-Q / reportes trimestrales |
 | ROIC LTM | 38,58%, sep2026 | Retorno económico compatible con reinversión eficiente | Deterioro material por capital de contenido/adquisiciones | Estados + reconstrucción anual |
 | Margen FCF LTM publicado | 22,87%, sep2026 | Conversión a caja que acompañe el EBIT | Brecha caja-beneficio persistente o SBC/capex subestimado | Cash Flow Statement cada trimestre |
@@ -215,11 +218,11 @@ Los umbrales de «señal favorable/adversa» son **criterios propuestos para seg
 
 ## 17. Dictamen económico y resumen para escuchar
 
-**Tesis: plausible con reservas.** Matemáticamente, el expediente contiene controles técnicos anteriores y las conciliaciones básicas reproducibles; documentalmente faltan confirmaciones de ajustes y fuentes; económicamente hay hipótesis exigentes de margen, reinversión y rentabilidad terminal. La aparente discrepancia del margen quedó aclarada al verificar qué celdas alimentan el DCF; siguen abiertos los puentes LTM de contenido, las fuentes y los supuestos económicos. El supuesto defendible es la moderación del crecimiento respecto del mejor pasado; los más frágiles son sostenibilidad del margen 34%, intensidad de capital marginal y ROIC terminal. El mercado al precio fechado US$65,04 supera el DCF Base US$48,34 en alrededor de **34,56%**; se trata de una comparación de supuestos a una fecha, no recomendación de operar.
+**Tesis: plausible con reservas.** Matemáticamente, el expediente contiene controles técnicos anteriores y las conciliaciones básicas reproducibles; documentalmente faltan confirmaciones de ajustes y fuentes; económicamente hay hipótesis exigentes de margen, reinversión y rentabilidad terminal. La aparente discrepancia del margen quedó aclarada al verificar qué celdas alimentan el DCF; siguen abiertos los puentes LTM de contenido, las fuentes y los supuestos económicos. El supuesto Base actualizado supone mayor monetización que la anterior trayectoria, pero sigue por debajo del ritmo histórico de cinco años; los más frágiles son sostenibilidad del margen 34%, intensidad de capital marginal y ROIC terminal. El mercado al precio fechado US$65,04 supera el DCF Base US$52,03 en alrededor de **25,01%**; se trata de una comparación de supuestos a una fecha, no recomendación de operar.
 
 ### Resumen para escuchar
 
-Netflix presenta una historia económica en la que el crecimiento se modera, pero la eficiencia operativa puede sostener el valor. Su valoración principal, el DCF Base, es de unos cuarenta y ocho dólares por acción; el precio del análisis era sesenta y cinco. El modelo exige un margen operativo objetivo de treinta y cuatro por ciento. La hoja también mostraba veintiuno coma tres por ciento, pero es una referencia histórica, no la hipótesis activa. Las fórmulas muestran margen inicial de treinta y dos y objetivo de treinta y cuatro por ciento. El crecimiento implícito que justificaría el precio del análisis es considerablemente mayor que el crecimiento Base proyectado. Las pruebas anteriores avalan diversas conciliaciones, pero no certifican las fuentes, la selección de comparables ni las ventajas competitivas de largo plazo. Por eso la valoración se mantiene **con reservas** y sin modificación de sus cifras.
+Netflix presenta una historia económica en la que el crecimiento se modera, pero la eficiencia operativa puede sostener el valor. Su valoración principal, el DCF Base, es de unos cincuenta y dos dólares por acción; el precio del análisis era sesenta y cinco. El modelo exige un margen operativo objetivo de treinta y cuatro por ciento. La hoja también mostraba veintiuno coma tres por ciento, pero es una referencia histórica, no la hipótesis activa. Las fórmulas muestran margen inicial de treinta y dos y objetivo de treinta y cuatro por ciento. El crecimiento implícito que justificaría el precio del análisis es considerablemente mayor que el crecimiento Base proyectado. Las pruebas anteriores avalan diversas conciliaciones, pero no certifican las fuentes, la selección de comparables ni las ventajas competitivas de largo plazo. Por eso la valoración se mantiene **con reservas** y sin modificación de sus cifras.
 
 ## 18. Fuentes primarias, limitaciones y registro de versión
 
@@ -234,5 +237,7 @@ Netflix presenta una historia económica en la que el crecimiento se modera, per
 | Antecedente preservado | [Narrativa anterior](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/auditorias/historicas/NFLX-2026-10-21-auditoria-previa.md) | 21-oct-2026 | Detalle original de 124 pruebas, opciones, WBD y ajustes | Registro histórico, no reemplaza esta conclusión |
 
 **Aclaración editorial del 22-oct-2026:** comprobadas las referencias Input B27–B30, escenario Base y proyección Valuation output. No se reemplazó un supuesto económico por el dato histórico. Se sincronizaron las etiquetas de márgenes y los dos CAGR con el JSON de la app.
+
+**Revisión del 22-oct-2026:** ajuste explícito de revenue growth Base a 12/11/10/9/8%; actualización automática de FCFF, escenarios, múltiples siete métodos, matrices y valor principal desde Sheets. No modifica el margen EBIT ni cierra salvedades de fuentes o comparables.
 
 **Versión de auditoría:** ampliación narrativa basada en el prompt `auditoria-economica-jmr-v1.2` y el expediente NFLX fechado 21-oct-2026. **Estado: AUDITORÍA CONDICIONADA**, por verificación económica y documental pendiente. Las pruebas anteriores de 124 controles, 28 fórmulas críticas y lectura de matrices siguen referidas a su corrida original; no se ejecutaron nuevamente por el mero acto de editar este Markdown. El texto permanece editable y versionado en GitHub. **No se modificó la valoración.**
