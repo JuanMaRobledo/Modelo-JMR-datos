@@ -1301,7 +1301,7 @@
         "crecimientoFY2026Guia": 0.13,
         "supuestoNoGuia": "El 12% año 1 desde LTM Sep26 no equivale a la proyección oficial FY2026."
       },
-      "control": "34 puentes LTM conciliados; 21 centros de sensibilidad múltiplos validados; 13 bonos SEC y 4 regiones documentados; diez FCFF y puente EV-equity reproducidos; no equiparar con certificación económica universal.",
+      "control": "CI actual: 333 identidades de cuatro DCF y 350 celdas 14 matrices; 34 puentes LTM. 124 controles históricos originales contra SEC NO reejecutados íntegramente.",
       "dictamen": "DCF56.90 matemáticamente conciliado; WACC reconstruido de fuentes Treasury/Damodaran; 0.50pp prima geográfica y Kd5.85% sujetos a validación."
     },
     "reconstruccionWacc": {
@@ -1472,7 +1472,8 @@
       "totalCeldas": 350,
       "erroresAntes": 448,
       "erroresDespues": 0,
-      "estado": "RECALCULADO Y VERIFICADO NUMÉRICAMENTE; repetir test en CI sobre snapshot publicado"
+      "estado": "APROBADO CI: 350/350 resultados numéricos en 14 matrices, cero errores, 14 centros, monotonicidad",
+      "prueba": "https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39865612329"
     },
     "replayDCF4Historias": {
       "fecha": "2026-10-22",
@@ -2173,7 +2174,17 @@
         }
       ],
       "precision": "Full precision API, USD millones, shares millones, USD/share",
-      "status": "PENDIENTE: comprobar con prueba CI independiente antes de cerrar"
+      "status": "APROBADO CI: 333 identidades (4×83 + 1 promedio) sobre cuatro escenarios completos",
+      "validacion": {
+        "tipo": "Independent arithmetic replay",
+        "identidades": 333,
+        "escenarios": 4,
+        "añosPorEscenario": 10,
+        "terminales": 4,
+        "prueba": "https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39865612329",
+        "resultado": "success",
+        "limite": "No reemplaza revisión contable SEC original ni certifica supuestos económicos"
+      }
     }
   },
   "escenariosDCF": {
