@@ -609,7 +609,7 @@
       "base": "DCF Base"
     }
   },
-  "savedAt": "2026-10-22T20:00:28.120Z",
+  "savedAt": "2026-10-22T20:07:04.862Z",
   "reportSchema": "jmr-report-contract-v2-20261017",
   "estado": "CALCULADA_CON_SALVEDADES",
   "salvedades": [
@@ -1208,7 +1208,7 @@
       "estado": "Conciliado con Descuento de múltiplos fila50 y Resumen de Valoración fila12; pesos canónicos no modificados."
     },
     "revisionDocumental22102026": {
-      "estado": "RECONSTRUCCIÓN WACC COMPLETADA; salvedades económicas de CRP y Kd vigentes",
+      "estado": "TÉCNICAMENTE RECONCILIADO CON RESERVAS ECONÓMICAS Y DE FUENTES",
       "fecha": "2026-10-22",
       "fuentesPrimarias": {
         "fy2025": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
@@ -1278,6 +1278,11 @@
           "codigo": "NFLX-14",
           "severidad": "MEDIA",
           "detalle": "124 controles independientes originales no reejecutados tras alterar growth."
+        },
+        {
+          "codigo": "NFLX-04",
+          "severidad": "MEDIA",
+          "detalle": "CRP geográfica 0,50 pp no certificable por país con UCAN/EMEA/LATAM/APAC; Kd5,85% corroborado como hipótesis de largo plazo por bonos USD2034/2036, no rendimiento exacto consolidado al 21-oct. Mantener sensibilidad0/50/100pb."
         }
       ],
       "sensibilidadesIlustrativas": {
@@ -1296,7 +1301,7 @@
         "crecimientoFY2026Guia": 0.13,
         "supuestoNoGuia": "El 12% año 1 desde LTM Sep26 no equivale a la proyección oficial FY2026."
       },
-      "control": "",
+      "control": "34 puentes LTM conciliados; 21 centros de sensibilidad múltiplos validados; 13 bonos SEC y 4 regiones documentados; diez FCFF y puente EV-equity reproducidos; no equiparar con certificación económica universal.",
       "dictamen": "DCF56.90 matemáticamente conciliado; WACC reconstruido de fuentes Treasury/Damodaran; 0.50pp prima geográfica y Kd5.85% sujetos a validación."
     },
     "reconstruccionWacc": {
