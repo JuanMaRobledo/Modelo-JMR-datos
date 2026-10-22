@@ -38,9 +38,9 @@ La contratesis adversa combina desaceleración más intensa, erosión del margen
 | Ingresos LTM | Sep2026, USD millones | 49.734,63 | FY2025 + 9M2026 − 9M2025 | Puente reproducible desde hoja de fuentes |
 | EBIT operativo LTM | Sep2026, USD millones | 15.564,87 | Income Statement y Márgenes | Consistencia con margen reportado; ajustes por revisar |
 | ROIC LTM | Sep2026 | 38,58% | Eficiencia de capital | Ratio publicado, denominador económico sin nueva revisión |
-| Rf | 21-oct-2026, USD | 4,91% | Treasury menos spread declarado | Hipótesis/metodología por verificar |
+| Rf | 21-oct-2026, USD | 4,91% ajustada | UST10Y5,13% menos 0,22pp default USA | Conciliada conforme Damodaran Oct2026 |
 | Beta sectorial desapalancada | Año de referencia 2026 | 0,98 | Damodaran, Entertainment Global | Reapalancamiento y fecha requieren auditoría independiente |
-| ERP/CRP | Corte indicado en fuente | ERP madura ajustada Oct1 3,92% + CRP geográfica analista 0,50 pp | Manifiesto de fuentes | Riesgo de solapamiento no descartado |
+| ERP/CRP | Corte indicado en fuente | ERP madura ajustada Oct1 3,92% + CRP geográfica analista 0,50 pp | Manifiesto de fuentes | Prima geográfica extra de 0,50pp aún sin ponderación de países; no duplicar USA22pb |
 | Deuda (Kd) | Corte sep2026 | 5,85% | Notas de deuda / estimación | No es cotización observable exacta |
 | Precio | 21-oct-2026 | US$65,04 | Yahoo histórico declarado | No sustituir con «precio hoy» |
 | Acciones | LTM, millones | 4.106,33 | Income Statement | Debe revisarse conversión de split y dilución de opciones |
@@ -238,16 +238,16 @@ Son simulaciones económicas **aisladas** sobre la estructura publicada; no reem
 
 | Variable | Caso | Valor indicativo US$/acción |
 |---|---|---:|
-| Ventas/capital incremental | 1,00 en años 1–10 | **49,77** |
-| Ventas/capital incremental | 1,39 (actual) | **52,03** |
-| Ventas/capital incremental | 1,80 en años 1–10 | **53,35** |
-| ROIC terminal | Convergencia a WACC 9,16% | **48,29** |
-| ROIC terminal | Mantener 12,00% (actual) | **52,03** |
-| Vida residual opciones | 3,5 años, Black–Scholes indicativo | **52,09** |
-| Vida residual opciones | 4,5 años (actual) | **52,03** |
-| Vida residual opciones | 5,5 años, Black–Scholes indicativo | **51,97** |
+| Ventas/capital incremental | 1,00 en años 1–10 | **54,60** |
+| Ventas/capital incremental | 1,39 (actual) | **56,90** |
+| Ventas/capital incremental | 1,80 en años 1–10 | **58,25** |
+| ROIC terminal | Convergencia a WACC 9,16% | **51,51** |
+| ROIC terminal | Mantener 12,00% (actual) | **56,90** |
+| Vida residual opciones | 3,5 años, Black–Scholes indicativo | **56,97** |
+| Vida residual opciones | 4,5 años (actual) | **56,90** |
+| Vida residual opciones | 5,5 años, Black–Scholes indicativo | **56,84** |
 
-El S/C se modifica únicamente en la reinversión explícita **Δingresos/S/C** de años 1–10, dejando inmóvil la reinversión terminal, los impuestos, EBIT y descuento; se vuelve a descontar el cambio anual. ROIC terminal: reinversión = NOPAT × g/ROIC; se mantiene el resto. Opciones: Black–Scholes con S=65,04, strike=41,24, volatilidad=36,96%, Rf=4,91% y 120,175117 millones de opciones; no es precio observable de las opciones.
+El S/C se modifica únicamente en la reinversión explícita **Δingresos/S/C** de años 1–10, dejando inmóvil la reinversión terminal, los impuestos, EBIT y descuento; se vuelve a descontar el cambio anual. ROIC terminal: reinversión = NOPAT × g/ROIC; se mantiene el resto. Opciones: Black–Scholes con S=65,04, strike=41,24, volatilidad=36,96%, Rf=4,91% y 120,175117 millones de opciones; valor recalculado por diferencia respecto al caso de 4,5 años, manteniendo otros inputs sin cambios; no es precio observable de las opciones.
 
 **Costo de capital corregido (22-oct-2026):** el Treasury10Y del 21-oct-2026 fue **5,13%**; el default spread soberano estadounidense **0,22pp** se deduce de Treasury para obtener Rf USD libre de default **4,91%**, como indica Damodaran. Su ERP implícita de octubre de 2026 es **3,70% sobre Treasury** o **3,92% ajustada a la Rf neta**. Se suma **0,50pp de riesgo geográfico supuesto**, por lo que la ERP efectiva Netflix es **4,42%**. Beta global Entertainment sin apalancar0,9821, reapalancada1,0239, Ke9,44%, WACC9,16%; Kd5,85% y la CRP siguen pendientes de corroboración independiente.
 
