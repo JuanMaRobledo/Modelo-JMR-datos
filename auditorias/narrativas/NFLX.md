@@ -228,6 +228,14 @@ La [nota 7 de deuda del 10-Q](https://www.sec.gov/Archives/edgar/data/1065280/00
 
 Se mantuvo una sola pestaña canónica «Evidencia deuda y geografía» y se añadió el puente regional LTM como anexo; se descartó una pestaña duplicada para evitar confusión.
 
+### Reproducción independiente actual del FCFF y del valor por acción
+
+Se almacenaron valores numéricos completos, sin redondeo, de «Valuation output» para los cuatro escenarios: Base, Conservador, Optimista y Disrupción. Una prueba externa al motor de hojas toma esos datos y ejecuta **333 identidades aritméticas**: diez años por historia de ingresos=previo×(1+g), EBIT=ventas×margen, NOPAT, reinversión por sales-to-capital por tramos 1–5/6–10, FCFF, WACC acumulado y su PV; además perpetuidad, descuento terminal, deuda/caja/opciones/acciones y el promedio ordinario excluyendo disrupción.
+
+**Resultado: éxito en [ejecución CI 39865612329](https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39865612329)**. El DCF central reproducido es **US$56,90** y se conservan los cuatro casos.
+
+**Límite metodológico:** 333 ecuaciones aritméticas sobre inputs de la misma hoja **no equivalen** a 333 pruebas independientes de SEC ni a reejecutar la certificación histórica de 124 controles de procedencia, flujos, signos y notas. Esa deuda documental permanece separada. Sin este matiz, el informe transmitiría una seguridad injustificada.
+
 ## 14. Coherencia de hojas, cálculos y presentación
 
 El expediente previo declara 124 controles numéricos, 28 fórmulas críticas, 20 preflight estructurales y cero errores almacenados en 7.528 celdas de fórmula. Ese éxito **no certifica fuentes SEC ni razonabilidad de supuestos**. Corrigió tratamientos de BPA básico/diluido, faltantes no convertidos en cero, referencias de industria, partidas de tecnología/desarrollo y desfase inicial. El informe previo también confirma que el valor principal es DCF Base y que disrupción permanece aislada.
@@ -253,7 +261,7 @@ Control adicional: fecha del precio del análisis separada del precio de hoy; MO
 | NFLX-11 | **Cerrado — falso positivo** | LTM/flujo | El validador confundió las filas históricas 2016–2025 con el bloque FY/9M/LTM. Las 34 filas válidas concilian aritméticamente; se verificaron tres partidas de contenido con SEC | Se corrigió código y pruebas automáticas; no cambiar FCFF ni datos históricos | Cerrado |
 | NFLX-12 | **Cerrado — reconstrucción de tasa** | Rf/ERP/beta | Rf USD 4,91%=Treasury10Y5,13%−default soberano USA0,22pp (ajuste Damodaran); ERP madura ajustada Oct1 3,92%, beta G33 Global Entertainment0,9821; Ke9,44%, WACC9,16%, DCF Base56,90 | Actualizar ERP y beta en hoja, enlazar WACC terminal dinámicamente, recalcular cuatro DCF, 7 múltiplos y controles | Cerrado metodológicamente; CRP/Kd son salvedades separadas |
 | NFLX-13 | **Cerrado — presentación** | Hoja de tesis | «Tesis de Inversión y Supuestos» conservaba casillas [TICKER]/[XX] y filas sin completar | Se completó con historias, cifras ligadas por fórmula a tres escenarios y advertencias sobre descuentos | Cerrado |
-| NFLX-14 | Medio | Controles independientes | Flujos FCFF de diez años, descuento y puente de EV a equity se recalcularon independientemente en esta versión; prueba CI de siete múltiplos se actualizará | Las 124 pruebas exhaustivas originales no se han repetido íntegramente con esta tasa; mantener salvedad documental | Parcial |
+| NFLX-14 | **Parcial — 333 identidades aprobadas** | Independencia matemática | Se ejecutó y aprobó un replay numérico de **333 controles independientes** en los cuatro DCF (10 años, impuestos, reinversión, descuento, FCFF, terminal, puente EV→equity, probabilidades). El test conserva precisión sin redondear de Sheets. | [CI ejecución aprobada](https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39865612329). Los 124 controles históricos originales de fuentes SEC/formularios no se han reejecutado íntegramente; no declarar certificado su alcance documental | Matemática actual aprobada; fuentes históricas parcialmente pendientes |
 
 Ningún hallazgo se marca resuelto por haber añadido una sección textual. Propuestas de corrección **no** equivalen a autorización para cambiar los datos.
 
