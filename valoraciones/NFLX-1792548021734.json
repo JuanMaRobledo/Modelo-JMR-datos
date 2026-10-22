@@ -15,13 +15,13 @@
   "mos": 0.35,
   "valorPrincipal": 52.028422816333226,
   "metodoPrincipal": "DCF",
-  "baseMOS": 52.028422816333226,
+  "baseMOS": "dcfBase",
   "precioMOS": 33.8184748306166,
   "precioMOSMax": 33.8184748306166,
   "precioMOSHoy": {
-    "conservador": 31.418162272634994,
-    "base": 31.418162272634994,
-    "optimista": 31.418162272634994
+    "conservador": 33.8184748306166,
+    "base": 33.8184748306166,
+    "optimista": 33.8184748306166
   },
   "precioMOSValorEsperado": 32.28633596444737,
   "metodos": [
@@ -1165,14 +1165,14 @@
     },
     "aclaracionSupuestos": {
       "fecha": "2026-10-22",
-      "tipo": "Conciliacion semantica sin cambio de supuestos ni DCF",
+      "tipo": "Primero se aclaró qué margen era activo; luego se elevó deliberadamente el crecimiento Base y se recalculó el DCF el 22-oct-2026.",
       "ebitMargenReferencia": 0.21302392609324988,
       "ebitMargenAnio1": 0.32,
       "ebitMargenObjetivoBase": 0.34,
-      "cagr1a5": 0.07990739787951462,
-      "cagr2a5": 0.07494185688011479,
+      "cagr1a5": 0.09990908189157444,
+      "cagr2a5": 0.0949429189823141,
       "revision": "Input sheet, Supuestos Recomendados, Origen de los Supuestos y Valuation output",
-      "valorDCFNoModificado": true
+      "valorDCFNoModificado": false
     },
     "ajusteCrecimientoBase": {
       "fecha": "2026-10-22",
