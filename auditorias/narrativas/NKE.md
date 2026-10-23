@@ -2,9 +2,11 @@
 
 ## 1. Ficha de auditoría y alcance
 
-NIKE, Inc.; NKE Class B, NYSE; moneda USD; estados y acciones en millones. Método principal DCF FCFF Base. Revisión y auditoría 23-oct-2026 con datos/precio al 22-oct-2026, estados 31-ago-2026 y cotización congelada 22-oct-2026 de US$38,32. [Hoja examinada](https://docs.google.com/spreadsheets/d/1cFiWggFYuulRV11TDf6u9EY_CNWPBzWWsNiQ1qkrcxY/edit?usp=drivesdk), archivo`valoracion_resultados.json`, artículo`02_Analisis_NKE.md`. Revisión`NKE-JMR-20261023-R2`, SHA-256`1ff2ff5a7197fb89c712dca6ab264d3a6093ede83942c95d5859b8d1fbca0d6e`.
+[OBSERVADO] NIKE, Inc.; NKE Class B, NYSE; USD; estados y acciones en millones. Método principal: DCF FCFF Base. Corte de información/precio 22-oct-2026; estados 31-ago-2026; auditoría 23-oct-2026. Cotización fija 38,32 del 22-oct; no se obtuvo otra cotización para mezclar períodos. [Hoja de valoración](https://docs.google.com/spreadsheets/d/1cFiWggFYuulRV11TDf6u9EY_CNWPBzWWsNiQ1qkrcxY/edit), [resultados congelados](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/documentos/NKE-20261023-R3/valoracion_resultados.json), [artículo revisado](https://modelo-jmr.vercel.app/research.html?id=research-20261023-r2).
 
-Esta es una ejecución separada, posterior a la redacción del análisis, por el mismo asistente. Se usa una implementación aritmética independiente, sin un segundo escritor concurrente. Se comprobaron las salidas oficiales y sus dependencias; no se afirma haber certificado todas las 64 pestañas ni ejecutado los controles del repositorio con credenciales externas. **Estado: Con reservas; auditoría condicionada. No se modificó la valoración.**
+Revisión **NKE-JMR-20261023-R3**, SHA-256 **ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545**. ReglasJMRv 5 y nuevos encabezados de análisis/auditoría del 23-oct-2026, fijados al commit 7e6ee50dca69a05839cd819ef33ba813ef0aa2f4. El prompt de valoración v 5 no cambió materialmente respecto a la revisión previa.
+
+Esta fase se ejecuta después de valoración y análisis, por el mismo asistente en ejecución separada, sin otro escritor concurrente. Se emplea una ecuación de auditoría distinta del script de valoración. Se examinan cuatro DCF,75celdas DCF,24centros numéricos de múltiplos,4bloques N/D,registros y rangos usados de 64pestañas. No acredita todas las celdas de las cuadrículas ni auditoría contable. **Estado integral CON HALLAZGOS. Dictamen: Con reservas; auditoría condicionada. No se modificó la valoración ni el artículo durante esta fase.**
 
 ## 2. Resumen ejecutivo y relato económico central
 
@@ -20,36 +22,50 @@ La matemática concilia. La incertidumbre normal del pronóstico está expresada
 
 | Dato | Valor | Período/perímetro | Tipo | Documento/URL/fecha | Hoja/celda | Verificación |
 |---|---|---|---|---|---|---|
-| Ingresos LTM | 45.891 | FY26+Q1FY27−Q1FY26 | OBSERVADO/CÁLCULO | SEC10K15-jul y 10Q2-oct-2026 | Input B12 | Conciliado |
-| EBIT núcleo LTM | 3.758 | Ventas−COGS−SG&A | CÁLCULO | Mismos documentos; estados consolidados | Input B13 / Income L12 | Conciliado; distinto de EBITNike 3.853 |
-| Caja+inversiones CP | 8.368 | 31-ago-2026 | OBSERVADO | 10Q balance y Nota 3 | Input B19 | Conciliado |
-| Deuda contable total | 11.072 | 7.893financiera+3.179leases | OBSERVADO/CÁLCULO | 10Q balance | Input B16/B78 | Sin doble deuda |
-| Deuda mercado total | 9.879 | 6.700bonos+3.179leases | OBSERVADO/CÁLCULO | 10Q Nota 3 | Cost C54/C61 | Usada en WACC; puente contable diferenciado |
-| Acciones | 1.485,31 m | Portada 28-sep-2026, clases A+B | OBSERVADO | 10Q portada | Input B22 | Correctas; no promedio diluido |
-| Precio | 38,32 | Cierre 22-oct-2026 | OBSERVADO | Yahoochart; fuente secundaria de mercado | Input B23 | Fechado y congelado |
-| Rf/ERP | 5,29%/3,70% | Mismo corte mensual 1-oct-2026 | OBSERVADO | Damodaran ERPOct 26.xlsx | Input B35 / Country B2 | Conserva precisión 3,70% |
-| Prima país | 0,87 pp adicionales | Proxy por región, no ventas-país | HIPÓTESIS/CÁLCULO | ctryprem 2026 + mezcla Nike LTM | Cost B27 | Provisional como aproximación |
-| Opciones | 76,8 m;K96,44;vida 4,85 | Detalle 31-may;vida desplazada 3 meses | OBSERVADO/HIPÓTESIS | 10KNota 11 /10QNota 5–6 | Input B39:B42 | Salvedad temporal |
+| Ingresos LTM | 45.891 | FY 26+Q 1FY 27−Q 1FY 26 | OBSERVADO/CÁLCULO | SEC 10K 15-jul y 10Q 2-oct-2026 | Input B 12 | Conciliado |
+| EBIT núcleo LTM | 3.758 | Ventas−COGS−SG&A | CÁLCULO | Mismos documentos; estados consolidados | Input B 13 / Income L 12 | Conciliado; distinto de EBITNike 3.853 |
+| Caja+inversiones CP | 8.368 | 31-ago-2026 | OBSERVADO | 10Q balance y Nota 3 | Input B 19 | Conciliado |
+| Deuda contable total | 11.072 | 7.893financiera+3.179leases | OBSERVADO/CÁLCULO | 10Q balance | Input B 16/B 78 | Sin doble deuda |
+| Deuda mercado total | 9.879 | 6.700bonos+3.179leases | OBSERVADO/CÁLCULO | 10Q Nota 3 | Cost C 54/C 61 | Usada en WACC; puente contable diferenciado |
+| Acciones | 1.485,31 m | Portada 28-sep-2026, clases A+B | OBSERVADO | 10Q portada | Input B 22 | Correctas; no promedio diluido |
+| Precio | 38,32 | Cierre 22-oct-2026 | OBSERVADO | Yahoochart; fuente secundaria de mercado | Input B 23 | Fechado y congelado |
+| Rf/ERP | 5,29%/3,70% | Mismo corte mensual 1-oct-2026 | OBSERVADO | Damodaran ERPOct 26.xlsx | Input B 35 / Country B 2 | Conserva precisión 3,70% |
+| Prima país | 0,87 pp adicionales | Proxy por región, no ventas-país | HIPÓTESIS/CÁLCULO | ctryprem 2026 + mezcla Nike LTM | Cost B 27 | Provisional como aproximación |
+| Opciones | 76,8 m;K 96,44;vida 4,85 | Detalle 31-may;vida desplazada 3 meses | OBSERVADO/HIPÓTESIS | 10KNota 11 /10QNota 5–6 | Input B 39:B 42 | Salvedad temporal |
 | Pares | 5candidatos,4P/E numéricos | Fechas de estados no idénticas | OBSERVADO/CÁLCULO | Companyfacts por emisor + cierres 22-oct | Ancla B | No certificada como ajuste homogéneo |
 
 Cada observación original conserva etiqueta XBRL, accession, publicación, período y unidad en`observations.json`. El manifiesto protege la identidad de las fuentes descargadas. Las series históricas usan comparativos reexpresados disponibles al corte; las anclas no se presentan como un backtest sin información futura.
 
 ## 4. Historia financiera: diez años y punto de partida
 
-Margen núcleo: media 3 a 9,49%,5 a 10,86%,10 a 11,64%;LTM 8,19%.
+[OBSERVADO/CÁLCULO] Se conservan diez ejercicios FY 2017–FY 2026 más LTM 31-ago-2026, con interpretación y tablas completas en Nivel 2. La rentabilidad reciente está por debajo del régimen histórico; no se usa el máximo como estado normal automático.
 
-Se revisaron 10ejercicios FY2017–FY2026 más LTM. Los estados completos resumidos están en Nivel 2. El flujo OCF−capex es distinto de FCFF. La adopción ASC842 limita la comparación directa de capital invertido de los primeros años con los posteriores; I+D tampoco está capitalizado. No se presenta un ROIC de diez años homogéneo que no fue reconstruido.
+| Métrica | LTM /últimoFY | Media 3FY | Media 5FY | Media 10FY | Definición y límite |
+|---|---:|---:|---:|---:|---|
+| Crecimiento anual ingresos | −1,18% LTMinteranual | −3,12% | 1,03% | 3,94% | Medias de variaciones anuales, no CAGR |
+| Margen bruto | 43,07% | 43,40% | 43,94% | 44,10% | Ventas menosCOGS /ventas |
+| Margen EBIT núcleo | 8,19% | 9,49% | 10,86% | 11,64% | No incluye otros resultados |
+| Margen OCF−capex | 4,59% | 8,22% | 8,73% | 9,18% | No FCFFniFCFE |
+| ROIC núcleo /capitalfinal | 16,63% | 24,86% | 29,31% | N/Dhomogéneo | Impuestoefectivo,leases;sinI+Dcapitalizado |
+| Ventas /capitalfinal | 2,56× | 3,10× | 3,15× | N/Dhomogéneo | Capital=patrimonio+deuda+leases−caja |
+| Quick ratio | 1,19× | 1,34× | 1,45× | 1,49× | Caja+inversionesCP+AR /pasivoscorrientes |
+| Deuda neta/EBITDA | 0,60× | 0,30× | 0,22× | 0,10× | Leasesincluidos;preASC 842nolaplenaequivalencia |
+| OCF/utilidadneta | 0,90× | 1,12× | 1,08× | 1,25× | SBCseañadeaOCF,peroesun costoeconómico |
 
-El balance cuadra por identidad activos=pasivos+patrimonio. El detalle de algunas cuentas auxiliares históricas permanece N/D. Una reclasificación no debe tratarse como cambio económico; tampoco debe mezclarse una cifra reexpresada con una afirmación sobre lo que el mercado sabía en la fecha original.
+Fuente:10-K/10-Q y serieSECnormalizada. Las medias excluyen LTM. ASC 842 y la falta de I+D separado impiden afirmar un ROIC homogéneo de diez años. Pandemia, fiscalidad extraordinaria FY 2018, recompras y mezcla comercial afectan la comparación. La subida deROE no prueba mayor productividad si reduce su denominador la recompra.
+
+[CÁLCULO] LTMventas=46.398+11.213−11.720=45.891. ComparadorLTMprevio=46.309+11.720−11.589=46.440. El−1,09%deR 2 comparabaLTMconFY;R 3corrige a−1,18% interanual. Las acciones promedio no son flujos sumables: R 3 reconstruye aproximadamente 1.481,56m básicas y 1.482,31m diluidas por duración de 365/92días. Son aproximaciones desde cifras redondeadas, distintas de 1.485,31m acciones de cierre utilizadas en DCF.
+
+El balance concilia activos=pasivos+patrimonio. Inventarios 7.846 e inversionesCPFY 2017 de 2.371 se recuperaron de fuentes accesibles. Se completó el módulo histórico con observaciones fechadas del paquete; los faltantes iniciales de clases/EV siguen N/D. No se presenta ese módulo como un backtest sin información futura.
 
 ## 5. Crecimiento de ingresos: de la historia a la proyección
 
-La Base proyecta contracción inicial y recuperación diferenciada por región. Norteamérica se estabiliza antes que China y Converse. La trayectoria tiene CAGR1–51,23%; no es cinco años creciendo a una tasa constante. El escenario no puede justificarse por la cotización, que se incorpora después de formular la historia.
+La Base proyecta contracción inicial y recuperación diferenciada por región. Norteamérica se estabiliza antes que China y Converse. La trayectoria tiene CAGR 1–51,23%; no es cinco años creciendo a una tasa constante. El escenario no puede justificarse por la cotización, que se incorpora después de formular la historia.
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Tasas C29:G29; diez años C29:L29; CAGR no redondeado 1,23%. |
-| b. ¿Comparación histórica? | FY2025−9,84%, FY2026+0,19%, Q1FY2027−4,33% reportado. |
+| a. ¿Valor, año, unidad y celda? | Tasas C 29:G 29; diez años C 29:L 29; CAGR no redondeado 1,23%. |
+| b. ¿Comparación histórica? | FY 2025−9,84%, FY 2026+0,19%, Q 1FY 2027−4,33% reportado. |
 | c. ¿Mecanismo causal? | Renovación de producto, menor liquidación y recuperación de distribución. |
 | d. ¿Qué debe ocurrir? | Mayorista mejora rotación y China deja de deteriorarse antes del crecimiento estable. |
 | e. ¿Qué lo refuta? | Envíos crecientes sin venta final; descuentos y China permanecen débiles. |
@@ -57,7 +73,7 @@ La Base proyecta contracción inicial y recuperación diferenciada por región. 
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Ingresos 1–5 | Historia irregular;LTM45.891 m | −7,18%,+1,24%,+4,13%,+4,48%,+3,98%; Escenarios C29:G29 | Sector Shoe globalcrecimiento 5 a 6,38%; guía FY2027caída dígitoalto | Recuperación modesta después del ajuste | Plausible; ventana rolling diferente del FY oficial | Prueba±1 pp arriba |
+| Ingresos 1–5 | Historia irregular;LTM 45.891 m | −7,18%,+1,24%,+4,13%,+4,48%,+3,98%; Escenarios C 29:G 29 | Sector Shoe globalcrecimiento 5 a 6,38%; guía FY 2027caída dígitoalto | Recuperación modesta después del ajuste | Plausible; ventana rolling diferente del FY oficial | Prueba±1 pp arriba |
 
 
 ## 6. Márgenes operativos y normalización de beneficios
@@ -68,7 +84,7 @@ Margen núcleo: media 3 a 9,49%,5 a 10,86%,10 a 11,64%;LTM 8,19%.
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Input B28:5,67%ajustado; objetivo Base Escenarios D5:12,42%, equivalente 12%núcleo. |
+| a. ¿Valor, año, unidad y celda? | Input B 28:5,67%ajustado; objetivo Base Escenarios D 5:12,42%, equivalente 12%núcleo. |
 | b. ¿Comparación histórica? | La media reciente es menor que la de diez años; Nike sí ha superado 12% antes. |
 | c. ¿Mecanismo causal? | Mejor precio/mezcla, menores liquidaciones, disciplina de SG&A y ahorro Pace neto. |
 | d. ¿Qué debe ocurrir? | Los ahorros no se reinvierten íntegramente ni se destruye innovación al recortar. |
@@ -77,7 +93,7 @@ Margen núcleo: media 3 a 9,49%,5 a 10,86%,10 a 11,64%;LTM 8,19%.
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Margen año 5 yestable | Margen núcleo: media 3 a 9,49%,5 a 10,86%,10 a 11,64%;LTM 8,19%. | Base 12%núcleo/12,42%ajustado; Valuation C46 | Shoe global 8,80%sin ajustar; no comparación idéntica con I+D | Escala de marca rentable y reducción de descuentos | Objetivo superior a industria; requiere ejecución, no solo reputación | ±1 pp mueve aproximadamente US$3poracción |
+| Margen año 5 yestable | Margen núcleo: media 3 a 9,49%,5 a 10,86%,10 a 11,64%;LTM 8,19%. | Base 12%núcleo/12,42%ajustado; Valuation C 46 | Shoe global 8,80%sin ajustar; no comparación idéntica con I+D | Escala de marca rentable y reducción de descuentos | Objetivo superior a industria; requiere ejecución, no solo reputación | ±1 pp mueve aproximadamente US$3poracción |
 
 El reintegro arancelario 986 m compensó costos del mismo FY. Restar solo el reintegro generaría una normalización incompleta. El anuncio Pace es 2,5 bn de ahorros acumulados antes de cargos/reinversión; no se sumó como 2,5 bn de flujo anual.
 
@@ -89,82 +105,82 @@ Capital invertido LTM aproximado=15.220+11.072−8.368=17.924,00 m. NOPATajustad
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Escenarios E5:2,11; F5:1,59; G5:15,29%terminal. |
+| a. ¿Valor, año, unidad y celda? | Escenarios E 5:2,11; F 5:1,59; G 5:15,29%terminal. |
 | b. ¿Comparación histórica? | Ventas/capital de cierre aproximadas 2,56; cambios de arrendamientos afectan serie. |
 | c. ¿Mecanismo causal? | La reinversión financia crecimiento y mantiene la productividad del capital. |
 | d. ¿Qué debe ocurrir? | La recuperación comercial se convierte en ventas sin inventarios estructuralmente mayores. |
-| e. ¿Qué lo refuta? | Mucho capital nuevo con poco crecimiento o ahorro que exige inversión no modelada. |
-| f. ¿Impacto si está equivocado? | ROICterminal=WACC lleva a US$28,42; efecto I+D no cuantificable sin serie. |
+| e. ¿Qué lo refuta? | Mucho capital nuevo con poco crecimiento o ahorro que exige inversión no mode lada. |
+| f. ¿Impacto si está equivocado? | ROIC terminal=WACC lleva a US$28,42; efecto I+D no cuantificable sin serie. |
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| S/C y ROIC | LTM ajustado aproximado 17,48%; no ROIC10 a homogéneo | S/C2,11→1,59; ROICestable 15,29% | Shoe global S/C2,11 y ROICajustado 15,29% | Convergen margen, eficiencia, impuesto yretorno | Reserva: falta I+D; activo económico no inventado | Escenario sin exceso terminal arriba |
+| S/C y ROIC | LTM ajustado aproximado 17,48%; no ROIC 10 a homogéneo | S/C 2,11→1,59; ROICestable 15,29% | Shoe global S/C 2,11 y ROICajustado 15,29% | Convergen margen, eficiencia, impuesto yretorno | Reserva: falta I+D; activo económico no inventado | Escenario sin exceso terminal arriba |
 
-No se confunde margen×S/C marginal con el ROIC contable de activos existentes. Recompras y dividendos son distribución, no inversión operativa. Las correcciones de margen y transición temporal de S/C ocurrieron en Valoración R2 antes del congelamiento; esta auditoría no la modifica.
+No se confunde margen×S/C marginal con el ROIC contable de activos existentes. Recompras y dividendos son distribución, no inversión operativa. Las correcciones de margen y transición temporal de S/C ocurrieron en Valoración R 2 antes del congelamiento; esta auditoría no la modifica.
 
 ## 8. Costo del capital y riesgo
 
 El costo de capital se calcula con beta bottom-up global porque las ventas no se concentran mayoritariamente en Estados Unidos. El riesgo de producto se incorpora en las historias. No se añade otra penalización genérica por las mismas dificultades operativas.
 
-Ke 9,90%; WACC9,10%; betaapalancada 1,01; beta U0,89; Kd 6%[juicio]. El riesgo país utiliza proxies regionales y un incremento sobre el componente estadounidense de la tabla anual. La exposición exacta a cada país no está disponible.
+Ke 9,90%; WACC 9,10%; betaapalancada 1,01; beta U 0,89; Kd 6%[juicio]. El riesgo país utiliza proxies regionales y un incremento sobre el componente estadounidense de la tabla anual. La exposición exacta a cada país no está disponible.
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Cost B63/E63; Input B35; maduro Country B2; costo terminal Input B47. |
+| a. ¿Valor, año, unidad y celda? | Cost B 63/E 63; Input B 35; maduro Country B 2; costo terminal Input B 47. |
 | b. ¿Comparación histórica? | Se usa corte mensual coherente, no una media histórica de tasas para el descuento actual. |
 | c. ¿Mecanismo causal? | Beta sectorialreapalancada y pesos de deuda/patrimonio de mercado. |
 | d. ¿Qué debe ocurrir? | La mezcla geográfica y costo marginal no se apartan materialmente de los proxies. |
 | e. ¿Qué lo refuta? | Desglose país, spread o estructura financiera contradicen las aproximaciones. |
-| f. ¿Impacto si está equivocado? | WACCinicial−1 pp:US$37,22; +1 pp:US$32,98; beta OLS:US$34,94. |
+| f. ¿Impacto si está equivocado? | WACC inicial−1 pp:US$37,22; +1 pp:US$32,98; beta OLS:US$34,94. |
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Tasas ybeta | Beta OLSsemanal 5 a 1,02;260 observaciones | Rf 5,29% /ERPtotal 4,57% /WACC9,10% | Damodaranenero 2026 y ERP1-oct-2026 | Primapaísregional porventas, conpesos demercado | Kd ydetalle-país sonjuicios explícitos | Pruebasnuméricas arriba |
+| Tasas ybeta | Beta OLSsemanal 5 a 1,02;260 observaciones | Rf 5,29% /ERPtotal 4,57% /WACC 9,10% | Damodaranenero 2026 y ERP 1-oct-2026 | Primapaísregional porventas, conpesos demercado | Kd ydetalle por país sonjuicios explícitos | Pruebasnuméricas arriba |
 
 
 ## 9. Convergencia y valor terminal
 
-El terminal representa 64,80% delvaloroperativo Base. g 4%nominal USD respeta Rf 5,29% y WACCterminal 8,99%. No se infiere que 4%sea una predicción cierta; es la regla de corte JMR aplicada en la misma moneda.
+El terminal representa 64,80% del valoroperativo Base. g 4%nominal USD respeta Rf 5,29% y WACC terminal 8,99%. No se infiere que 4%sea una predicción cierta; es la regla de corte JMR aplicada en la misma moneda.
 
-La ventaja de marca puede sobrevivir, pero tiene que seguir produciendo retorno. El ROICterminal 15,29% es inferior al mejor régimen histórico de Nike y superior a WACC. La reserva económica es la duración de esa ventaja, además de la diferencia contable I+D. La sensibilidad a ROIC no certifica la hipótesis.
+La ventaja de marca puede sobrevivir, pero tiene que seguir produciendo retorno. El ROIC terminal 15,29% es inferior al mejor régimen histórico de Nike y superior a WACC. La reserva económica es la duración de esa ventaja, además de la diferencia contable I+D. La sensibilidad a ROIC no certifica la hipótesis.
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Input B69:g 4%; B47:WACC8,99%; Escenarios G5:ROIC15,29%. |
+| a. ¿Valor, año, unidad y celda? | Input B 69:g 4%; B 47:WACC 8,99%; Escenarios G 5:ROIC 15,29%. |
 | b. ¿Comparación histórica? | Industria global ajustada como ancla; no elmejor dato Nike. |
 | c. ¿Mecanismo causal? | Se reinvierteg/ROIC y S/Cconverge hacia ROIC/[margen×(1−t)×(1+g)]. El retorno marginal relaciona reinversión_t y ΔNOPAT_(t+1); no obliga al ROIC agregado del capital existente a igualarse inmediatamente. |
 | d. ¿Qué debe ocurrir? | La rentabilidad de marca permanece por encima de un negocio sin ventaja. |
 | e. ¿Qué lo refuta? | La competencia elimina poder deprecio oeleva capital requerido. |
-| f. ¿Impacto si está equivocado? | Valor sinexceso terminal US$28,42; matriz WACC×g mantiene el WACCinicial yrecalcula transición. |
+| f. ¿Impacto si está equivocado? | Valor sin exceso terminal US$28,42; matriz WACC×g mantiene el WACC inicial yrecalcula transición. |
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Convergencia terminal | No puede observarse unresultado perpetuo | g 4%; reinversiónterminal 1.495,46 m | ROICindustria 15,29% | FCFF11incluye capitalnecesario; no crecimiento gratuito | Moatdurablees juicio; sensibilidad explícita | PVterminal/EV64,80% |
+| Convergencia terminal | No puede observarse unresultado perpetuo | g 4%; reinversiónterminal 1.495,46 m | ROICindustria 15,29% | FCFF 11incluye capitalnecesario; no crecimiento gratuito | Moatdurablees juicio; sensibilidad explícita | PVterminal/EV 64,80% |
 
 
 ## 10. Validación independiente del valor intrínseco
 
-La implementación independiente reproduce cuatro DCF de la hoja con error inferior a 0,001poracción. Base: VPexplícito 19.308,41 m+VPterminal 35.539,64 m=EV54.848,05 m. Después se suman 8.368 m decaja y se restan 11.072 m dedeuda contable y 123,37 m de opciones; dividido por 1.485,31macciones resulta US$35,02.
+La implementación independiente reproduce cuatro DCF de la hoja con error inferior a 0,001poracción. Base: VPexplícito 19.308,41 m+VPterminal 35.539,64 m=EV 54.848,05 m. Después se suman 8.368 m decaja y se restan 11.072 m dedeuda contable y 123,37 m de opciones; dividido por 1.485,31macciones resulta US$35,02.
 
-El WACC usa deuda demercado 9.879 m, mientras elpuente utiliza la convencióncontable de laplantilla. Se cuantificó la alternativa: deuda demercado en elpuente lleva a US$35,83, diferencia US$0,80. Conviene homogeneizar esa convención en un cambio metodológico explícito, en vez deocultarla como prudencia.
+El WACC usa deuda demercado 9.879 m, mientras elpuente utiliza la convencióncontable de la plantilla. Se cuantificó la alternativa: deuda demercado en elpuente lleva a US$35,83, diferencia US$0,80. Conviene homogeneizar esa convención en un cambio metodológico explícito, en vez deocultarla como prudencia.
 
 | Pregunta obligatoria | Respuesta |
 |---|---|
-| a. ¿Valor, año, unidad y celda? | Valuationoutput B18:B35; opciones B30; acciones Input B22. |
-| b. ¿Comparación histórica? | Se contrasta histórico, pero elvalor sale de flujos futuros y supuestoscongelados. |
+| a. ¿Valor, año, unidad y celda? | Valuationoutput B 18:B 35; opciones B 30; acciones Input B 22. |
+| b. ¿Comparación histórica? | Se contrasta histórico, pero el valor sale de flujos futuros y supuestoscongelados. |
 | c. ¿Mecanismo causal? | FCFFdescontado yterminal económico, puente alpatrimoniocomún. |
 | d. ¿Qué debe ocurrir? | Todos losreclamos están contabilizados unavez y lasunidadescoinciden. |
-| e. ¿Qué lo refuta? | Doble deuda, acciones deunasolaclase, opciones duplicadas oterminal sinreinversión. |
+| e. ¿Qué lo refuta? | Doble deuda, acciones de unasolaclase, opciones duplicadas oterminal sinreinversión. |
 | f. ¿Impacto si está equivocado? | Reproducciónporhistoria y raíz inversa conservadas enaudit_checks.json. |
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| DCF Base | R1base 35,43; R2corrige trayectoria y convención de reinversión | B35=35,02 | Motor propio independiente y Google Sheets | Suma flujosperpetuidadreclamos/acciones | Reserva documental enopciones, no error deigualdad | 47 controles aprobadosenalcance;4hallazgos |
+| DCF Base | R 1base 35,43; R 2corrige trayectoria y convención de reinversión | B 35=35,02 | Motor propio independiente y Google Sheets | Suma flujosperpetuidadreclamos/acciones | Reserva documental enopciones, no error deigualdad | 53 controles aprobados en alcance;5 hallazgos |
 
 
 ## 11. Cuatro historias y probabilidades
 
-| Historia | Crecimiento CAGR1–5 | Margen núcleoobjetivo | S/Caño 10 /ROICterminal | WACCinicial/terminal | gterminal | Valor USD/acción | Probabilidad | Confirmación/refutación |
+| Historia | Crecimiento CAGR 1–5 | Margen núcleoobjetivo | S/Caño 10 /ROIC terminal | WACC inicial/terminal | gterminal | Valor USD/acción | Probabilidad | Confirmación/refutación |
 |---|---|---|---|---|---|---|---|---|
 | Base | 1,23% | 12,00% | 1,59 / 15,29% | 9,10% / 8,99% | 4,00% | 35,02 | 40,00% | Recuperación gradual de producto y distribución |
 | Conservadora | -1,58% | 9,00% | 1,66 / 12,14% | 9,10% / 8,99% | 4,00% | 21,53 | 25,00% | China retrasa la recuperación y el canal sigue ajustándose |
@@ -189,51 +205,59 @@ Disrupción US$8,50;20%. Caída de 12%,7%,3%, posterior estabilidad; gterminal 0
 | PV | 3,79 | N/D | 0,92 | 0,92 | 44.906,61 | 27,82 | 25,05 | 0,00% |
 | PBV | 11,57 | N/D | 2,45 | 2,45 | 16.839,11 | 27,82 | 25,05 | 0,00% |
 
-Elconsolidado US$25,98 es secundario.60%EV/EBITDA y 40%P/E reflejan dos perspectivas útiles; no se cuentan EV/FCFF, P/Vy P/BV como confirmacionesadicionales cuando son transformaciones del mismo techo C. P/OCF conserva eladdback SBC, sudefinición no equivalea FCFF.
+El consolidado US$25,98 es secundario.60%EV/EBITDA y 40%P/E reflejan dos perspectivas útiles; no se cuentan EV/FCFF, P/Vy P/BV como confirmacionesadicionales cuando son transformaciones del mismo techo C. P/OCF conserva eladdback SBC, su definición no equivalea FCFF.
 
-La ancla B no está certificada:UAA tiene variasclases, DECK carece de D&Aconciliada enlaextracción y los EV de pares conservanlímites debalance. Una diferencia>25% frente alos pares exige explicación, pero la explicación no sustituye la conciliación. La Optimista tiene múltiplos porencima de losactuales; su justificación es uncrecimiento FY+3 superior y margen 15% núcleo. Esa historia exige validación futura; no se declara que elmercado deba conceder ese múltiplo.
+El ancla B no está certificada:UAA tiene variasclases, DECK carece de D&Aconciliada en laextracción y los EV de pares conservanlímites debalance. Una diferencia>25% frente alos pares exige explicación, pero la explicación no sustituye la conciliación. La Optimista tiene múltiplos porencima de losactuales; su justificación es uncrecimiento FY+3 superior y margen 15% núcleo. Esa historia exige validación futura; no se declara que el mercado deba conceder ese múltiplo.
 
-P/FCFE seleccionado permanece N/D porque loshistóricos antes denueva financiación no son un FCFEcompleto. Se excluye delponderado. Elajustepor tasas, techos C y centros se recalcularon en la valoración, sin factores genéricos Toro 0,8/0,9/1,1.
+P/FCFE seleccionado permanece N/D porque loshistóricos antes denueva financiación no son un FCFEcompleto. Se excluye delponderado. El ajuste por tasas, techos C y centros se recalcularon en la valoración, sin factores genéricos Toro 0,8/0,9/1,1.
 
 ## 13. Sensibilidades económicas y escenarios alternativos
 
-Las tres matrices DCFBase concilian con US$35,02. La familia WACCterminal×g conserva el WACCinicial, recalcula sutransición ylosdescuentos. La familia ROIC×g recalculaeficiencia yreinversión; crecimiento×margen añade undelta común alas tasas 1–5, preserva laforma yconverge alterminal.
+[MODELO] Las tres matrices del DCF Base tienen centro 35,02. Se reprodujeron sus 75celdas con ecuaciones independientes: WACC terminal×g recalcula transición y descuento; ROIC terminal×g recalcula capital/reinversión; crecimiento×margen desplaza las cinco tasas originales y recalcula toda la trayectoria.
 
-El DCF inverso encuentra unaraíz en[−50 pp,+80 pp]:delta 1.87 pp; CAGRimplícito 3,10% frente a Base 1,23%. Reconstruye US$38,32 con error<0,001. No utiliza unmultiplicador de calibración hoja/motor.
+El inverso central encuentra una raíz en−50pp a+80pp, añade 1,87pp comunes y produce CAGR 3,10% frente a 1,23% Base; recompone 38,32 con error inferior a 0,001. Las alternativas congeladas deValoración con márgenes núcleo 11% y 13% ybetas bottom-up/OLS están reproducidas en sección 12 del artículo. Exigen CAGR aproximadamente 5,01%/5,06% y 1,42%/1,46%, respectivamente. No son nuevasvaloracionesoficiales ni una probabilidad revelada del mercado.
 
-Múltiplos:28 bloques Base,26matricesnuméricas y 2N/D correspondientes alaancla JMRP/FCFE. Hay dos anclas ydosfamilias por método. Loscentros de las 26matricescalculadas concilian; los ejes usanveces, USDmillones omárgenes/deltas económicos identificados. Las 21matricesheredadas porhistorias seocultaron para que no compitan con la salidavigente. Los N/D no se contabilizan comocentros validados.
+Múltiplos:28bloques Base,24numéricos y 4N/D,todosP/FCFE. Se retiró también el ancla observada que utilizaba un flujo sin financiación conciliada. Dos anclas y dosfamilias por método: múltiplo real en veces frente a fundamentalFY+3 o driver económico que recalcula el denominador. Los 24centros coinciden con el valor relativo específico del método/ancla; losN/Dno secuentan como validación. Las matrices Conservadora/Optimista heredadas permanecen fuera de la familia oficial.
+
+[HIPÓTESIS] La prueba más importante eserosión del retorno terminal:35,02→28,42 conROIC=WACC. La diferencia cuantifica dependencia delmoat; no demuestra que Nike carezca de él. La prueba de margen ±1pp produce 32,08/37,97 yla de crecimiento ±1pp 33,39/36,75. No se suman esos efectos como independientes.
 
 ## 14. Coherencia de hojas, cálculos y presentación
 
-Se revisaron las salidas oficiales de Input, Valuation output, Escenarios, Resumen, Múltiplos JMR, matrices, opciones, inverso y sensibilidad. Tras la autorización del usuario se publicaron juntos valoración, análisis y auditoría de NKE-JMR-20261023-R2. La lectura de los tres registros publicados confirma el mismo hash de resultados, DCF Base US$35,02 y MOS35% US$22,77. El despliegue de producción está READY. Esto verifica la revisión publicada; no implica republicación editorial automática al editar la hoja.
+[OBSERVADO] Hoja,resultado congelado,artículo ydictamen se identifican como **NKE-JMR-20261023-R3** y comparten **ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545**. El paquete para publicación conserva las rutas estables del visor/análisis y vincula su expedienteR 3. El nombre histórico de un archivo terminadoR 2no define su revisión vigente; la determina revisionId. La evidencia originalR 2no se elimina.
 
-Fueroncorregidos durante Valoración:promediosimple en vez deponderado;omisión de interés deleasesya reconocidos;circularidad de opciones;instrucciones demúltiploslegadas;transición S/C→ROICterminal;tasafiscal yprimer año frente ala guía;signos de salidas de caja;descuentos dedividendos poraño. Notas yselectores nativos seconservaron en la copia. Elperfil Madura conserva unselectoractivo conpesosespecíficos para NKE.
+En controles previos a esta auditoría se corrigieron:comparador de crecimientoLTM, suma inválida de promedios de acciones, inversiónCPFY 2017 ausente, anclaobservadaP/FCFE no conciliada y auxiliares históricos vacíos. Estos últimos originaban 45errores deMEDIAN/AVERAGE sobre rangos sin datos. Se incorporaron observaciones históricas ya trazadas y se dejóFCFE N/D donde no corresponde usarFCF; no se rellenaron errores con cero. La relectura de los rangos usados de 64pestañas devuelve cero erroresdecelda en ese alcance. El DCF y el relativo ponderado permanecen 35,02 y 25,98.
 
-Las matrices oficiales se recalculan con fórmulas. Elinverso guarda laraíz deestaejecución yrecalcula el precio implícito:si cambian losinputs, elresidual lo marca«RECÁLCULO REQUERIDO». No seafirma un Goal Seekautomático. Algunas pestañasauxiliaresheredadas no quedaroncertificadas por completo; nopuedenpresentarse como evidencia deuncontrolexterno no ejecutado.
+Se comprobó semánticamente la ampliación del artículo respecto alR 2,que era demasiado breve en negocio,gobierno,competencia,calidadfinanciera,filosofías y seguimiento. ElR 3tiene 18secciones,subsecciones obligatorias,Porter de 5fuerzas,Síntesis final de 3párrafos,tabla por estado financiero/ratios ymatriz de 30apartados/subapartados. El recuadroBase aparece primero;Nivel 1conserva el artículo yNivel 2contiene cálculos. No se usa el conteo de títulos para validar la evidencia.
 
-El registro `reference/plantillas.json` del repositorio, fechado 21-oct-2026, todavía apunta a la plantilla IA del 11-oct. Esta entrega fija explícitamente el ID de la plantilla vacía del 22-oct identificada en Drive y el ID distinto de su copia. El registro global no fue modificado; un proceso automático posterior debe usar este expediente y no sustituirlo silenciosamente por la referencia antigua.
+La actualización incorporó los 8-K deagosto/septiembre:DavidDenton es CFO actual ycontroller interino,existe autorización adicional de 16maccionesESPP yelconsejo aumentóa 12conAlexandreArnault. La autorización deacciones no se sumócomo emisión realizada. Limitaciones editoriales identificadas:TAM/cuota homogénea,economíaunitaria/retención,ROIC 10añoscomparable,I+D,desglose deopciones ypares. Los apartados están desarrollados con alcance explícito,pero esas limitaciones impiden calificarlos de evidencia plenamente resuelta.
+
+No se afirma una prueba visual autenticada delvisoryPDF. El cierre de publicación requiere leer de nuevo lasrutas,y contrastar revisión,huella y cifras delcontenido servido. Un despliegueREADYpor sí solo no sustituye esa comprobación de datos.
 
 ## 15. Hallazgos priorizados y propuestas de corrección
 
 | ID | Severidad | Tipo | Evidencia | Impacto | Mantener/ajustar/investigar | Propuesta y alternativa | Requiere aprobación | Estado |
 |---|---|---|---|---|---|---|---|---|
-| H01 | Alto | Dato/comparabilidad | I+D existe en SG&A, sin serie anualseparada | Valoraciónsinactivo I+D; ROICnohomogéneo conindustriaajustada | Investigar | Obtener desgloseo documentar modelo sincapitalización; no imputar 0 | No para investigar | Abierto |
-| H02 | Medio | Dato | Opciones 31-may frente acorte 22-oct;10Q84,0 m antidilutivos agregados | Pruebailustrativa 84 m al mismo K/vida:US$35,02; noes límite real | Investigar | Reconstruir concesiones/expiraciones/RSUystrikes actualizados | No para investigar | Abierto |
-| H03 | Medio | Método/dato | P/FCFEhistórico incluye financiación no reconstruida | Ancla JMRN/D; peso 0;2 matrices N/D | Mantenerexclusión | Reconciliar deuda y definiciones antes de darle peso | Sí si se cambia elpeso | Abierto |
-| H04 | Medio | Comparables | Cobertura yhomogeneidad insuficientes para Bajustada | Paresindicativos; sin prima/descuento cuantitativo certificado | Investigar | Conciliar clases, EV, moneda, arrendamientos ycrecimiento | No para investigar | Abierto |
-| J01 | Medio | Juicio | ROICterminal 15,29%>WACC8,99% | Sinexceso:US$28,42 | Revisar con evidencia | Conservar comohipótesis refutable; revisar sidemanda/preciofallan | Sí para cambiar latesis | Incertidumbredepronóstico |
-| J02 | Bajo | Convención | Deudamercadoen WACC ycontableenpuente | Alternativa US$35,83; delta US$0,80 | Ajustarmétodoenrevisiónexplícita | Definir convención uniforme; no corregirsilenciosamente durantedictamen | Sí para nueva revisión | Explicado |
-| J03 | Medio | Juicio | Prima paísproxy y Kd 6% | WACCinicial±1 pp:US$32,98–37,22 | Investigar | Refinar país ycurva crédito con mismafecha | Sí para nuevas entradas | Explicado |
+| H 01 | Alto | Comparabilidad | I+D en gastos,sin serie separada | ROIC no plenamente homogéneo con industria;impacto no cuantificable sin serie | Investigar | Obtener desglose y vida útil,o mantener modelo sin capitalización explícito | No para investigar | Límite documental abierto |
+| H 02 | Medio | Dato | Opcionesmayo frente a corteoctubre | Reclamo patrimonial 123,37;no límite exacto con agregado 84m | Investigar | Movimientos por opción,ejercicio,plazo yRSU | No para investigar | Límite documental abierto |
+| H 03 | Medio | Definición | FCFE histórico no concilia financiación | Peso 0;cuatro matricesN/D;DCF yponderado sin efecto | Mantener exclusión | Conciliar financiación antes de restituir anclas | Nueva revisión si se da peso | Presentación corregida;fuente limitada |
+| H 04 | Medio | Pares | AnclaBno completamente homologada | Contraste indicativo,no cuantificación independiente certificada | Investigar | Conciliar EV,clases,D&A,moneda,leases yriesgo | No para investigar | Límite documental abierto |
+| H 05 | Alto | Control operativo | Script legado intentado,no completado en este entorno | Impide estadoVALIDADO integral | Completar entorno yregistro | Conectar módulos,registro de hoja nueva yautenticación;no alterar las pruebas | No para verificación autorizada | CON HALLAZGOS |
+| J 01 | Medio | Juicio | ROIC terminal 15,29%>WACC 8,99% pese a erosión reciente | Sinexceso terminal 28,42 vs 35,02 | Revisar con hechos | Exigir recuperación de preferencia yretorno;alternativa terminalsin exceso | Nueva revisión dehistoria | Hipótesis refutable |
+| J 02 | Bajo | Convención | DeudamercadoenWACC,contableenpuente | Alternativa 35,83;diferencia 0,80 | Homogeneizar método | Regla explícita para puente,no recorte oculto | Cambio metodológico explícito | Explicado |
+| J 03 | Medio | Juicio | Kd 6% yprimapaísregionalproxy | WACC inicial±1pp:32,98–37,22 | Investigar | Países yspreadmarginal almismocorte | Nuevaentrada documentada | Explicado |
+| C 01 | Medio | Cálculo auxiliar | LTMcomparado conFY ypromedios deacciones sumados | YoY−1,18%;EPSaprox 2,09;DCFsin cambio | Mantener corrección | Duración de períodos ydenominador correctos | Autorizado por revisión | Cerrado enValoraciónR 3 |
+| C 02 | Medio | Presentación/fórmula auxiliar |45errores por módulo histórico vacío | Cero errores en rangos reexportados;sin cambioDCF | Mantener | Histórico trazado yFCF≠FCFE | Autorizado por revisión | Cerrado enValoraciónR 3 |
+| C 03 | Medio | Completitud | R 2no desarrollaba mínimos del nuevo prompt | Podía omitir riesgos yhechos de gobierno | Mantener ampliación | Artículo íntegro ymatriz de 30apartados | Autorizado | Cerrado con límites documentales |
 
-No se requiere que un pronóstico futuro se convierta en un hecho observado para usarlo como juicio. Los hallazgos de cobertura se mantienen diferenciados de las incertidumbres económicas normales. El informe no declara «validado» el conjunto mientras existan datos/definiciones materiales pendientes.
+Los hallazgos documentales no se confunden con incertidumbre normal del pronóstico. La auditoría no modifica inputs para lograr un dictamen favorable. Las correcciones cerradas ocurrieron en el componente responsable antes del congelamiento final del artículo; la presente fase solo verifica yrecomienda.
 
 ## 16. Catalizadores, señales de refutación y seguimiento
 
 | Métrica | Nivel observado | Señal favorable propuesta | Señal adversa propuesta | Fuente | Frecuencia |
 |---|---|---|---|---|---|
-| Ingresos Q1FY27 | −4% reportado;−5%neutral FX | Dos trimestres creciendo con volumen | Dos trimestres≤−5%neutral FX | 10Q/IR | Trimestral |
+| Ingresos Q 1FY 27 | −4% reportado;−5%neutral FX | Dos trimestres creciendo con volumen | Dos trimestres≤−5%neutral FX | 10Q/IR | Trimestral |
 | Digital | −13%neutral FX | Estabilización sin mayores descuentos | Persistencia de caída≥10% | 10Q | Trimestral |
-| China | 1.180 m Q1vs 1.512 m | Caída<5%y margenmejora | Ventasymargen siguen deteriorándose | 10Q | Trimestral |
+| China | 1.180 m Q 1vs 1.512 m | Caída<5%y margenmejora | Ventasy margen siguen deteriorándose | 10Q | Trimestral |
 | Margenbruto | 42,8%;+60pb | Mejora sin partidasúnicas | Ahorro logístico compensadopor descuentos | 10Q | Trimestral |
 | Pace | 2,5 bn acumulados;1 bn cargos | Ahorro netocaja observable | Máscargos/reinversión absorbenbeneficio | 8K/IR | Trimestral |
 | Retorno | ROICsujetoabasecontable | Mejora operativa sin expansión improductiva de capital | Inventarios yactivoscrecen másqueventas | Estados | Trimestral |
@@ -242,35 +266,33 @@ Los umbrales son criterios del auditor; no se presentan como guía de Nike. No s
 
 ## 17. Dictamen económico y resumen para escuchar
 
-**Tesis: Plausible con reservas.** Consistencia matemática:validada en los cuatro DCF, las sensibilidadesoficiales yel inverso examinados. Trazabilidad:conhallazgos por I+D, opciones ydefiniciones de ciertosmúltiplos/pares. Razonabilidadeconómica:elprimer añoseanclaenlaguía yla recuperaciónesposible, pero la rentabilidadterminalrequiere sosteneruna ventaja que no estádemostrada para siempre.
+**Dictamen económico: Plausible con reservas. Estado integral: CON HALLAZGOS.**
 
-El supuesto másfrágil es la duracióndel exceso de ROIC; el másdefendible es partir decontracción yuna tasa fiscalnormalizada coherente conlaguía. Se publica esta revisión como versión vigente de NKE con reservas explícitas. Los datos identificados siguen pendientes para una certificación integral. **No se modificó el cálculo durante la auditoría. La publicación posterior conserva este dictamen.**
+**Consistencia matemática:**53comprobaciones validadas en el alcance:cuatroDCF,75celdasDCF,inverso,centrosrelativos,puentes,auxiliares ycontroleseditoriales. Loscinco registros conhallazgos corresponden aI+D, opciones,pares,financiaciónFCFE ypuerta legada no completada;no son cincoerrores deDCF. Los bloquesN/Dse verifican como ausencias,no como resultadosnuméricos.
+
+**Trazabilidad documental:** estadosrecientes yfuenteshistóricas están identificados,pero quedan límites explícitos. **Razonabilidad económica:** recuperación gradual es defendible,con evidencia favorable ycontraria; la persistencia delmoat esmás frágil que el punto de partida contable. LaBaseexige recuperación de margen por producto/mezcla/costos,no solo el retorno automático de ventas a su máximo. Clasificar la empresa en declive para laprevia ymantener ventaja durable enBase no es imposible,pero requiere distinguir faseactual de resultados yfranquicia de largo plazo.
+
+Decisión analítica:conservar el cálculo como estimación revisable conhallazgos,seguir señales de demanda/calidaddecaja yrevisar formalmente el retorno terminal si continúa la erosión. No se emite recomendación decompra/venta. **No se modificó la valoración ni el artículo durante la auditoría.**
 
 ### Resumen oral
 
-Nike tiene una marca y una distribución valiosas, pero su recuperación todavía debe verse en ventas rentables y caja. Esta revisión calcula un valor base de 35,02 dólares por acción y un precio con margen de seguridad de 22,77. La matemática de la hoja, los escenarios, las sensibilidades y el DCF inverso coincide. El resultado depende sobre todo de recuperar margen y conservar retornos superiores al costo del capital. La auditoría mantiene reservas por el gasto de investigación no separado, el detalle de opciones posterior a mayo y algunos múltiplos y comparables. Es una valoración calculada y revisable, con incertidumbres visibles. La versión publicada conserva este dictamen y las cuatro salvedades documentales.
+Nike conserva una marca y una distribución valiosas, pero la recuperación debe aparecer en ventas rentables y caja. La revisión mantiene un valor base de 35,02dólares y un precio con margen de seguridad de 22,77. Los cuatro escenarios,las sensibilidades yel inverso concilian con la hoja. Se corrigieron comparaciones LTM,acciones promedio yel uso de un flujo sin financiación como FCFE. El análisis amplía los dieciocho apartados e incorpora los cambios recientes de equipo ygobierno. El resultado depende de recuperar margen yconservar retornos superiores al costo del capital. Persisten límites en investigación ydesarrollo,opciones ycomparables,además de una puerta decontrol legada no completada. El dictamen es plausible con reservas,con hallazgos visibles ysin certificación integral.
 
 ## 18. Fuentes primarias, limitaciones y registro de versión
 
-- **F1** [NIKE10-K FY2026,15-jul-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F2** [NIKE10-Q31-ago-2026,2-oct-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F3** [Resultados y guía Q1FY2027,1-oct-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000184/q1fy27exhibit991er.htm). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F4** [Damodaran, ERP octubre 2026](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F5** [Damodaran, beta global enero 2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/betaGlobal.xls). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F6** [Damodaran, ROIC global enero 2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/rocGlobal.xls). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F7** [Damodaran, ventas/capital global enero 2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/capexGlobal.xls). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F8** [Damodaran, riesgo país 2026](https://pages.stern.nyu.edu/~adamodar/pc/datasets/ctryprem.xlsx). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F9** [SEC Companyfacts NKE, consulta 22-oct-2026](https://data.sec.gov/api/xbrl/companyfacts/CIK0000320187.json). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F10** [Yahoo Finance, cierres NKE hasta 22-oct-2026](https://query1.finance.yahoo.com/v8/finance/chart/NKE?range=10y&interval=1d). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F12** [NIKE, transcripción oficial Q1FY2027,1-oct-2026](https://investors.nike.com/financial-information/financial-results/transcript/9591/q1-2027-transcript). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F13** [Damodaran, crecimiento y reinversión, clase de valoración](https://pages.stern.nyu.edu/~adamodar/podcasts/valUGspr20/session10slides.pdf). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
-- **F11** [Reglas JMR v 4,21-oct-2026](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md). Consulta 22-oct-2026; documento conservado y SHA-256 en el manifiesto.
+`prompt_version: auditoria-economica-jmr-v1.2` conampliación editorial 23-oct-2026;ReglasJMRv 5;protocolooptimizado 1.1. Prompts fijados al commit 7e6ee50dca69a05839cd819ef33ba813ef0aa2f4. Revisiónauditada **NKE-JMR-20261023-R3**;huella **ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545**. La ejecución separada yorden de congelamiento constan en`fases_ejecucion.json`.
 
-Ficha cuantitativa:`valoracion_resultados.json`. Observaciones originales:`observations.json`. Fuentes descargadas y manifiesto con hashes incluidos. Tres prompts originales separados en`prompts/`; protocolo optimizado 1.0 y reglas JMRv 4 identificados. **Publicada con salvedades.**
+- [10-KFY 2026,15-jul-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm):negocio,estados,compromisos ypolíticas.
+- [10-Q 31-ago,2-oct-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm):LTM,segmentos,caja,deuda ycontingencias.
+- [Guía/Pace,1-oct-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000184/q1fy27exhibit991er.htm):ancla temporal ycostos.
+- [Proxy,15-jul-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000089/nke-20260715.htm)y 8-Kde 10-ago/10-sep/16-sep:remuneración,gobierno,cambiodeCFO/controlleryESPP. Accesiones enbibliografía del artículo.
+- [SEC Companyfacts](https://data.sec.gov/api/xbrl/companyfacts/CIK0000320187.json):observaciones yperíodos;archivodel 22-oct,no se incorporanhechos posterioresalcorte.
+- [DamodaranERP 1-oct](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx),betaGlobal,rocGlobal,capexGlobal yctrypremenero 2026:tasas yreferencias. Cadaarchivo yURL figuran enbibliografíadel análisis.
+- [AdidasFY 2025](https://report.adidas-group.com/2025/en/) y[OnQ 2,11-ago-2026](https://investors.on-running.com/news/news-details/2026/On-Reports-Results-for-the-Second-Quarter-and-Six-Month-Period-Ended-June-30-2026/default.aspx):contraste decompetencia,márgenes ymezcla,sin homologación automática.
+- [TheBaseRateBook,26-sep-2016](https://josephnoko.com/wp-content/uploads/2024/04/The-Base-Rate-Book-Michael-Mauboussin.pdf):Exhibit 4,cohorte>25bnreales 2015;bandas defrecuencia,no probabilidadesNike.
+- [ReglasJMRv 5](https://github.com/JuanMaRobledo/Modelo-JMR/blob/7e6ee50dca69a05839cd819ef33ba813ef0aa2f4/modelo/REGLAS_VIGENTES.md):método ycompletitud.
 
-Auditoría`prompt_version:auditoria-economica-jmr-v1.2`; reglas JMRv 4; procesooptimizado 1.0. Valoraciónauditada`NKE-JMR-20261023-R2` yhash`1ff2ff5a7197fb89c712dca6ab264d3a6093ede83942c95d5859b8d1fbca0d6e`. Artículode 18 secciones, valoración y JSONcongelados antes deldictamen. Archivoscacheados yhashes en`audit_checks.json`; pasostécnicos ypendientes en`fases_ejecucion.json` y`README.md`.
+Consulta derevisión 23-oct-2026;documentos originales reutilizados con susperíodos yprocedencia. Datosdescargados,análisis previo ynuevo,registrodecontroles,exportaciónnativa yhuellas se conservan. El resultadoR 2 anterior queda como antecedente,sin emitirle retroactivamenteun dictamenR 3.
 
-La publicación posterior fue autorizada por el usuario y verificada mediante lectura de los tres registros publicados y del despliegue de producción. Pasaron17 pruebas del motor/sincronización, los cuatro DCF,75 celdas de sensibilidad DCF y el contrato del catálogo. No se declara ejecutado controles_todas.sh ni certificadas todas las pestañas legadas. No se presenta la lectura de registros como una prueba visual del navegador autenticado o de la descarga PDF.
+Limitaciones deejecución:`controles_todas.sh NKE`se intentó yno completó por componentes/registro delentorno legado;log incluido. No se afirma una ejecución deproducción validada deesecontrol. Tampoco una prueba visual de sesiónautenticada ni latarjetaPDF. Las verificaciones depublicación porrutas,revisionId,huella yDCF se registran por separado después deescribir elpaquete,con autorización vigente. Ruta prevista:`Modelo-JMR-datos/auditorias/narrativas/NKE.md`. Elestadofinanciero integral permaneceCON HALLAZGOS aunque lasrutas estén sincronizadas.
 
-
-> **Publicación autorizada23-oct-2026.** Revisión `NKE-JMR-20261023-R2`, resultado congelado SHA-256`1ff2ff5a7197fb89c712dca6ab264d3a6093ede83942c95d5859b8d1fbca0d6e`. DCF BaseUS$35,02; MOS35%US$22,77; conserva las cuatro salvedades. La auditoría previa permanece separada de la publicación.

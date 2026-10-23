@@ -1,0 +1,411 @@
+{
+  "revisionId": "NKE-JMR-20261023-R3",
+  "resultsSha256": "ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545",
+  "stage": "Auditoría separada posterior al análisis;sin modificar valoración ni artículo",
+  "status": "CON HALLAZGOS",
+  "math_status": "VALIDADO en alcance reproducido",
+  "economic_status": "Plausible con reservas",
+  "documentary_status": "CON HALLAZGOS",
+  "checks": [
+    {
+      "id": "IDENTITY",
+      "status": "VALIDADO",
+      "evidence": "Resultados congelados antes del artículo; SHA-256 idéntico.",
+      "value": null
+    },
+    {
+      "id": "DCF-Base",
+      "status": "VALIDADO",
+      "evidence": "Ecuación de auditoría independiente frente a copia nativa.",
+      "value": {
+        "independent": 35.023476792006896,
+        "native": 35.02347679200689,
+        "error": 7.105427357601002e-15
+      }
+    },
+    {
+      "id": "DCF-Conservadora",
+      "status": "VALIDADO",
+      "evidence": "Ecuación de auditoría independiente frente a copia nativa.",
+      "value": {
+        "independent": 21.529705777426603,
+        "native": 21.529705777426607,
+        "error": 3.552713678800501e-15
+      }
+    },
+    {
+      "id": "DCF-Disrupción",
+      "status": "VALIDADO",
+      "evidence": "Ecuación de auditoría independiente frente a copia nativa.",
+      "value": {
+        "independent": 8.495268767147314,
+        "native": 8.495268767147312,
+        "error": 1.7763568394002505e-15
+      }
+    },
+    {
+      "id": "DCF-Optimista",
+      "status": "VALIDADO",
+      "evidence": "Ecuación de auditoría independiente frente a copia nativa.",
+      "value": {
+        "independent": 50.70274578590675,
+        "native": 50.702745785906735,
+        "error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "id": "SENS-1",
+      "status": "VALIDADO",
+      "evidence": "25celdas contrastadas con motor independiente.",
+      "value": {
+        "max_error": 1.4210854715202004e-14,
+        "center": 35.023476792006896
+      }
+    },
+    {
+      "id": "SENS-2",
+      "status": "VALIDADO",
+      "evidence": "25celdas contrastadas con motor independiente.",
+      "value": {
+        "max_error": 1.4210854715202004e-14,
+        "center": 35.023476792006896
+      }
+    },
+    {
+      "id": "SENS-3",
+      "status": "VALIDADO",
+      "evidence": "25celdas contrastadas con motor independiente.",
+      "value": {
+        "max_error": 1.4210854715202004e-14,
+        "center": 35.023476792006896
+      }
+    },
+    {
+      "id": "INVERSE",
+      "status": "VALIDADO",
+      "evidence": "Raíz aditiva recompone precio fechado sin factor de calibración.",
+      "value": null
+    },
+    {
+      "id": "MULT-0",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVEBITDA/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-1",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVEBITDA/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-2",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVEBITDA/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-3",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVEBITDA/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-4",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVFCFF/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-5",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVFCFF/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-6",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVFCFF/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-7",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;EVFCFF/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-8",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PE/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-9",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PE/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-10",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PE/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-11",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PE/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-ND-12",
+      "status": "VALIDADO",
+      "evidence": "Ausencia explícita;FCFE no se sustituye por FCF;ancla JMR",
+      "value": null
+    },
+    {
+      "id": "MULT-ND-13",
+      "status": "VALIDADO",
+      "evidence": "Ausencia explícita;FCFE no se sustituye por FCF;ancla JMR",
+      "value": null
+    },
+    {
+      "id": "MULT-ND-14",
+      "status": "VALIDADO",
+      "evidence": "Ausencia explícita;FCFE no se sustituye por FCF;ancla Observado",
+      "value": null
+    },
+    {
+      "id": "MULT-ND-15",
+      "status": "VALIDADO",
+      "evidence": "Ausencia explícita;FCFE no se sustituye por FCF;ancla Observado",
+      "value": null
+    },
+    {
+      "id": "MULT-16",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;POCF/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-17",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;POCF/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-18",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;POCF/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-19",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;POCF/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-20",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PV/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-21",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PV/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-22",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PV/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-23",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PV/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-24",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PBV/JMR/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-25",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PBV/JMR/Económica",
+      "value": null
+    },
+    {
+      "id": "MULT-26",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PBV/Observado/Tradicional",
+      "value": null
+    },
+    {
+      "id": "MULT-27",
+      "status": "VALIDADO",
+      "evidence": "Centro nativo contra precio del método/ancla;PBV/Observado/Económica",
+      "value": null
+    },
+    {
+      "id": "LTM-REVENUE",
+      "status": "VALIDADO",
+      "evidence": "Flujo LTM por acumulados comparables.",
+      "value": null
+    },
+    {
+      "id": "LTM-GROWTH",
+      "status": "VALIDADO",
+      "evidence": "LTM contra LTM previo;corrección de comparador FY.",
+      "value": null
+    },
+    {
+      "id": "LTM-SHARES",
+      "status": "VALIDADO",
+      "evidence": "Promedios reconstruidos por días,no sumados;aproximación reconocida.",
+      "value": null
+    },
+    {
+      "id": "BRIDGE",
+      "status": "VALIDADO",
+      "evidence": "Puente al patrimonio;clasesA+B;leases una vez.",
+      "value": null
+    },
+    {
+      "id": "MOS",
+      "status": "VALIDADO",
+      "evidence": "MOS35% sobreBase.",
+      "value": null
+    },
+    {
+      "id": "AVERAGE",
+      "status": "VALIDADO",
+      "evidence": "Promedio ordinario de3historias;disrupción aparte.",
+      "value": null
+    },
+    {
+      "id": "PROB",
+      "status": "VALIDADO",
+      "evidence": "Previa declive40/25/15/20;sin ajuste no documentado.",
+      "value": null
+    },
+    {
+      "id": "G-TERMINAL",
+      "status": "VALIDADO",
+      "evidence": "g4%nominalUSD≤Rf;WACC>g;disrupción g0 explícito.",
+      "value": null
+    },
+    {
+      "id": "MARGIN-PATH",
+      "status": "VALIDADO",
+      "evidence": "Cuatro intervalos de año1a5,ningún salto doble.",
+      "value": null
+    },
+    {
+      "id": "S2C-TERMINAL",
+      "status": "VALIDADO",
+      "evidence": "S/Ctemporal coherente con inversión_t yΔNOPAT_t+1.",
+      "value": null
+    },
+    {
+      "id": "REINV-CONTINUITY",
+      "status": "VALIDADO",
+      "evidence": "Continuidad año10–11sin crecimiento gratuito.",
+      "value": null
+    },
+    {
+      "id": "NATIVE-ERRORS",
+      "status": "VALIDADO",
+      "evidence": "64pestañas en los límites usados/exportados;45errores auxiliares previos resueltos;no certifica todas las celdas de la cuadrícula.",
+      "value": []
+    },
+    {
+      "id": "EDITORIAL-STRUCTURE",
+      "status": "VALIDADO",
+      "evidence": "18secciones exactas,subsecciones ymarcos independientes.",
+      "value": null
+    },
+    {
+      "id": "EDITORIAL-REQUIRED",
+      "status": "VALIDADO",
+      "evidence": "Porter con5filas ySíntesis con3párrafos sustantivos.",
+      "value": null
+    },
+    {
+      "id": "EDITORIAL-CURRENT",
+      "status": "VALIDADO",
+      "evidence": "8-Kcompletan equipo,gobierno yplanempleados;ya no se presenta Friend como CFOactual.",
+      "value": null
+    },
+    {
+      "id": "EDITORIAL-COVERAGE",
+      "status": "VALIDADO",
+      "evidence": "30apartados/subapartados localizados;límites documentales diferenciados de trabajo pendiente.",
+      "value": null
+    },
+    {
+      "id": "DOC-RD",
+      "status": "CON HALLAZGOS",
+      "evidence": "Falta serie deI+D separada;ROIC/sector no plenamente homogéneos. No es gasto cero.",
+      "value": null
+    },
+    {
+      "id": "DOC-OPTIONS",
+      "status": "CON HALLAZGOS",
+      "evidence": "Detalle completo al31-may;agregado84m de10-Qno desglosa opciones/RSU.",
+      "value": null
+    },
+    {
+      "id": "DOC-PEERS",
+      "status": "CON HALLAZGOS",
+      "evidence": "AnclaBdepares no completamente homologada enEV,D&Ayclases;no se certifica contraste independiente.",
+      "value": null
+    },
+    {
+      "id": "DOC-FCFE",
+      "status": "CON HALLAZGOS",
+      "evidence": "Financiación neta histórica no reconciliada. Método y4matrices N/D,peso0;presentación errónea previa resuelta.",
+      "value": null
+    },
+    {
+      "id": "LEGACY-GATE",
+      "status": "CON HALLAZGOS",
+      "evidence": "controles_todas.sh se intentó en este entorno,pero no completó módulos,registro externo yautenticación. No hay certificación integral deese script.",
+      "value": null
+    }
+  ],
+  "impacts": {
+    "roic_terminal_equals_wacc": 28.415468007752658,
+    "beta_regression": 34.94068724943569,
+    "market_debt_bridge": 35.82667675736575,
+    "margin_target_minus_1pp": 32.078949350549756,
+    "margin_target_plus_1pp": 37.97204237103089,
+    "growth_delta_minus_1pp": 33.38544519110965,
+    "growth_delta_plus_1pp": 36.748339513076736,
+    "initial_wacc_minus_1pp": 37.216979559704804,
+    "initial_wacc_plus_1pp": 32.97659448365987,
+    "options_n_84m_bound": 35.01568989427174
+  },
+  "native_errors": [],
+  "executed": {
+    "dcf_histories": 4,
+    "dcf_sensitivity_cells": 75,
+    "multiple_numeric_centers": 24,
+    "multiple_explicit_nd": 4,
+    "bounded_native_tabs": 64,
+    "engine_regression_tests": 8
+  },
+  "limitations": [
+    "No certificación integral del script legado ni cuadrículas completas",
+    "Sin sesión autenticada para prueba visual deapp/PDF;publicación se verificará por rutas ydatos servidos",
+    "Opciones,país,pares,I+D yTAM/cuota con límites explícitos"
+  ],
+  "completedAt": "2026-10-23T19:28:31.679640+00:00"
+}

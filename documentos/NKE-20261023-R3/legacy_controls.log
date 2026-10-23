@@ -1,0 +1,61 @@
+== probabilidades (previa + ajustes)
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/probabilidades.py", line 22, in <module>
+    P = json.loads((ROOT / "reference" / "probabilidades_prior.json").read_text())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/594af64735ab/nke_r3/legacy/reference/probabilidades_prior.json'
+== supuestos (razonabilidad)
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/controles_supuestos.py", line 29, in <module>
+    import probabilidades as pr  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/probabilidades.py", line 22, in <module>
+    P = json.loads((ROOT / "reference" / "probabilidades_prior.json").read_text())
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/594af64735ab/nke_r3/legacy/reference/probabilidades_prior.json'
+== consistencia (hoja = app = motor)
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/consistencia_migracion.py", line 180, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/consistencia_migracion.py", line 174, in main
+    output.write_text(json.dumps(filas, ensure_ascii=False, indent=1),encoding='utf-8')
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/594af64735ab/nke_r3/legacy/reference/consistencia_migracion_2026-10-23.json'
+== NKE: integridad y estados
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/integridad_hojas.py", line 29, in <module>
+    from jmr_valuation.io.sheets_auth import get_gspread_client  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'jmr_valuation'
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/estados_completos.py", line 26, in <module>
+    from jmr_valuation.io.sheets_auth import get_gspread_client  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'jmr_valuation'
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/inputs_completos.py", line 15, in <module>
+    import model_steps as ms
+ModuleNotFoundError: No module named 'model_steps'
+Traceback (most recent call last):
+  File "/workspace/scratch/594af64735ab/nke_r3/legacy/scripts/candados.py", line 15, in <module>
+    import model_steps as ms
+ModuleNotFoundError: No module named 'model_steps'
+CONTROLES con fallas: probabilidades supuestos consistencia integridad NKE estados NKE entradas NKE candados NKE

@@ -19,7 +19,7 @@ function validateRecord(j){
    assert.ok(METHODS.includes(aliases[m.method]));assert.ok(['JMR','Observado'].includes(m.anchor));assert.ok(['Tradicional','Económica'].includes(m.family));
    assert.equal(m.x.length,5);assert.equal(m.y.length,5);assert.equal(m.values.length,5);assert.ok(m.values.every(r=>r.length===5));
    assert.equal(c.metodo,aliases[m.method]);assert.equal(c.escenario,'base');assert.equal(c.ancla,m.anchor);assert.equal(c.familia,m.family);
-   if(m.expected==null){assert.equal(m.method,'PFCFE');assert.equal(m.anchor,'JMR');assert.ok(m.values.flat().every(v=>v===null));assert.equal(c.estado,'N/D');nd++;}
+   if(m.expected==null){assert.equal(m.method,'PFCFE');assert.ok(m.anchor==='JMR'||(m.anchor==='Observado'&&typeof m.unavailable_reason==='string'&&m.unavailable_reason.includes('financiación')),'Ancla observada N/D requiere causa financiera documentada');assert.ok(m.values.flat().every(v=>v===null));assert.equal(c.estado,'N/D');nd++;}
    else{assert.ok(m.values.flat().every(finite));assert.ok(near(m.values[2][2],m.expected));assert.ok(near(c.centro,m.expected));assert.equal(c.estado,'OK');ok++;}
   }
   assert.equal(ok,s.controlesOK);assert.equal(nd,s.noDisponibles);assert.equal(ok+nd,28);assert.equal(s.errores,0);
@@ -36,4 +36,5 @@ function validateRecord(j){
 }
 function main(){const root=path.join(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8')),files=catalog.valoraciones.map(p=>path.basename(p));let ok=0,nd=0,total=0;for(const file of files){const j=JSON.parse(fs.readFileSync(path.join(root,'valoraciones',file),'utf8'));try{validateRecord(j);}catch(e){e.message=j.ticker+': '+e.message;throw e;}ok+=j.sensibilidadMultiples.controlesOK;nd+=j.sensibilidadMultiples.noDisponibles;total+=j.sensibilidadMultiples.contract==='base-two-anchors-two-families-v1'?28:21;}assert.equal(ok+nd,total);console.log(JSON.stringify({estado:'OK',empresas:files.length,matricesOK:ok,matricesND:nd,mosSobrePrincipal:true},null,2));}
 module.exports={validateRecord,validateLedger};if(require.main===module)main();
+
 
