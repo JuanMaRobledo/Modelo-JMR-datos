@@ -5,6 +5,27 @@
 > Identificador financiero: NFLX-2026-10-22-SEC9M26-JMR-review-001. Identificador editorial conjunto: NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001.
 > Corte SEC 30-sep-2026; precio histórico del análisis US$65,04 del 21-oct-2026, no cotización actual.
 
+### Actualización operativa verificable — 23-oct-2026
+
+**Respuesta de la auditoría: SÍ, es posible valorar NFLX con salvedades y publicar una estimación de valor intrínseco; NO es correcto certificar como exhaustiva la extracción SEC nueva ni presentar US$69,94 como valor indiscutible.** Esta es una valoración para investigación financiera propia, con hipótesis explícitas, no una opinión de auditoría financiera externa. El DCF FCFF Base y su identificador financiero se mantienen sin cambios; este apéndice corrige el registro de limitaciones técnicas y de publicación.
+
+| Componente | Evidencia contrastada | Situación y tratamiento |
+|---|---|---|
+| 10-Q SEC a septiembre 2026 | Fuente primaria publicada; activos de contenido netos US$34.605,48 M, deuda y acciones observables | **Apto como fuente primaria**, cotejando cada concepto utilizado con contexto, corte, unidad y escala |
+| Valoración existente | DCF Base US$69,94; escenario ROIC terminal=WACC US$56,08; MOS 35% US$45,46 | **Utilizable con salvedades económicas**; valor central no equivale a certeza |
+| Historias de crecimiento | 20 valores de crecimiento de los años 1–5 coinciden con la corrida JMR; supuestos editables, no forzar fórmulas artificiales | Corregida la clasificación de entradas manuales en el detector de integridad |
+| Controles de archivos de auditoría | Catálogo público excluye archivos históricos; workflow «Control JMR de ponderaciones» ha pasado | Incidencia de inventario **resuelta**, separada de la exactitud económica |
+| Nuevo extractor SEC — PR JMR-valuation #137 | 22 pruebas aisladas aprobadas; caché enlazada a SHA-256 y URL de origen; bloqueos de faltantes y conflictos | **No integrado ni probado como importación completa a Sheets**. No emplear su resultado como certificación financiera |
+| Cobertura del extractor nuevo | 294 combinaciones partida/período sin valor en el expediente previo | **Pendiente de clasificar por materialidad y fuente**: no son 294 errores demostrados de la valoración vigente ni pueden llenarse con ceros |
+| Control integral NFLX | Ejecuciones del release gate han fallado por detecciones de entradas legítimas o rótulos; detector corregido para números fijos documentados y para excluir textos | Exigir corrida íntegra verde **sobre la versión exacta** antes de certificar una nueva liberación financiera |
+| Análisis fundamental editorial | 25 puntos de control: 18 sustentados, siete limitados por evidencia | Se puede publicar como **análisis completo en estructura y honesto en límites**, no como cobertura documental absoluta |
+
+**Salvedades económicas que permanecen abiertas, ordenadas por su posible efecto:** (1) demostrar la persistencia del ROIC terminal 21,52% frente al WACC 9,16% y la industria 11,04%; (2) verificar que Sales-to-Capital Base 2,00x y la reinversión neta representen realmente el costo de renovación y monetización del contenido; (3) recalcular y justificar pares y anclas de los siete múltiplos, en particular EV/FCFF, P/FCFE y tratamiento del EBITDA de contenido; (4) atribuir la prima país extra de 0,50 puntos porcentuales y el costo de deuda a fuentes y exposición geográfica; (5) normalizar el cobro extraordinario WBD de US$2.800 M y confirmar el impuesto aplicable; (6) comprobar opciones/SBC, arrendamientos, acciones promedio ajustadas por split y efecto neto de recompras; (7) recuperar proxy e incentivos de directivos, TAM geográfico monetizable, cohortes/retención y publicidad comparables, si la información pública existe.
+
+**Criterio operativo de publicación:** el registro de valoración existente puede mostrarse y utilizarse con estas advertencias porque su hipótesis base es explícita y reproducible. **No debe sustituirse por un recálculo procedente del extractor nuevo** hasta confirmar cobertura material, preservación de fórmulas y validaciones de Sheets, DCF, múltiplos y control integral. Un problema de CI no prueba por sí solo un DCF incorrecto; un CI verde tampoco demuestra que todos los supuestos económicos sean plausibles. La incertidumbre se muestra en la auditoría, no se oculta ni se convierte en datos inventados.
+
+**Fuentes y trazabilidad de esta actualización:** [SEC 10-Q Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [carta Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm), [PR #137](https://github.com/JuanMaRobledo/JMR-valuation/pull/137), [pruebas SEC aprobadas](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40017974176), [workflow de liberación](https://github.com/JuanMaRobledo/JMR-valuation/actions/workflows/nflx-final-gate-20261022.yml). Revisión financiera: `NFLX-2026-10-22-SEC9M26-JMR-review-001`; revisión editorial original v5 preservada. Actualización limitada a auditoría y controles, sin modificación del DCF.
+
 ## 1. Ficha de auditoría y alcance
 
 Emisor: Netflix, Inc. (NFLX, NASDAQ), servicio de entretenimiento y publicidad, USD, millones USD salvo valor por acción. Método intrínseco: FCFF descontado a WACC. Corte financiero: 30-sep-2026, diez años FY2016–2025 más LTM; valoración económica del 22-oct-2026 y revisión editorial del 23-oct-2026. Precio de análisis histórico: US$65,04, 21-oct-2026, no una cotización vigente.
@@ -284,7 +305,7 @@ Una publicación del próximo 10-Q sí justificaría reauditar los hechos cambia
 
 Resumen para escuchar: Netflix tiene un negocio sólido y rentable, pasó de ventas US$8.831M en 2016 a US$45.183M en 2025 y LTM US$49.735M. El margen EBIT avanzó hasta 31,30% en el LTM, y el DCF Base del Modelo JMR vale US$69,94 por acción. El problema decisivo es la permanencia de un ROIC terminal21,52% cuando hay competidores gratuitos, pagos elevados por contenido y una referencia industrial cercana al 11,04%. Si el ROIC terminal converge al WACC, la sensibilidad del modelo marca US$56,08. La mejora contable es un hecho; el foso perpetuo es una hipótesis.
 
-El nuevo análisis conserva los 18 apartados, incorpora la historia de diez años, la economía del contenido, geografías, Porter, asignación de capital, escenarios, cinco filosofías y tablero de vigilancia. Su matriz verifica25 temas,18 resueltos con evidencia y7 limitados. La auditoría NO autocertifica estos7 como terminados ni afirma ejecución nueva de la suite integral.
+El nuevo análisis conserva los 18 apartados, incorpora la historia de diez años, la economía del contenido, geografías, Porter, asignación de capital, escenarios, cinco filosofías y tablero de vigilancia. Su matriz verifica25 temas,18 resueltos con evidencia y7 limitados. La auditoría NO autocertifica estos7 como terminados; la actualización operativa al principio del documento registra ejecuciones posteriores y sus resultados independientes.
 
 **Lectura ordenada:** DCF Base69,94 principal; promedio tres66,81 complementario; disrupción15,55 aparte; precio con MOS35%=45,46; múltiplos VP59,47 secundarios. El precio de análisis65,04 corresponde al21-oct y no es una observación de ahora. No es recomendación mecánica de compra, venta o mantenimiento.
 
@@ -294,7 +315,7 @@ El nuevo análisis conserva los 18 apartados, incorpora la historia de diez año
 
 Revisión financiera fija: NFLX-2026-10-22-SEC9M26-JMR-review-001. Nueva revisión de artículo/auditoría: NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001. Fecha auditoría 23-oct-2026. La auditoría anterior está preservada en auditorias/archivo/NFLX-auditoria-2026-10-22.md y no se mezcla con las cifras nuevas. Se publica solo la narrativa de auditoría y el artículo: la valoración, inputs, fuente SEC y escenarios no cambian.
 
-**Limitaciones formales:** no se obtuvo TAM regional monetizable por fuente homogénea, proxy completo individual2026, resultados por cohortes/título, desglose país que certifique la prima extra50pb, anclas de peers de igual fecha ni evidencia de que ROIC terminal21,52% persista indefinidamente. No se ejecutó otra vez el control histórico completo, ni debe interpretarse el recuento de secciones como control financiero. El juicio queda expuesto y se indica qué evidencia levantaría cada reserva.
+**Limitaciones formales:** no se obtuvo TAM regional monetizable por fuente homogénea, proxy completo individual2026, resultados por cohortes/título, desglose país que certifique la prima extra50pb, anclas de peers de igual fecha ni evidencia de que ROIC terminal21,52% persista indefinidamente. Hubo nuevas ejecuciones del control histórico, algunas fallidas por clasificación de celdas en el detector. El resultado de la nueva puerta financiera debe verificarse en GitHub; el recuento de secciones no constituye certificación financiera. El juicio queda expuesto y se indica qué evidencia levantaría cada reserva.
 
 **Fin de la auditoría independiente de NFLX según prompt 3 v1.2 y reglas JMR v5.**
 
