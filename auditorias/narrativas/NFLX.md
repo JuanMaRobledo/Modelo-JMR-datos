@@ -298,6 +298,28 @@ En reinversión, el **Sales-to-Capital 1,39** se aproxima al **LTM propio 1,3740
 
 **Múltiplos:** las 21 matrices cubren Cons/Base/Opt, pero la comparabilidad económica A/B/C y el método B de pares siguen pendientes. En ningún lugar la creación de matrices se equipara a certificación de peers; en la hoja de evidencia se muestran candidatos cualitativos, no targets inventados.
 
+### Reanudación — control primario SEC de riesgos y dilución (22-oct-2026)
+
+Se relee directamente el [10-Q de Netflix de septiembre 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm). Estos son controles adicionales concretos, **no** una nueva certificación global de toda la serie histórica:
+
+| Partida | 9M2026 / saldo Sep2026 | Conciliación o límite de uso |
+|---|---:|---|
+| UCAN, ingresos | US$16.305,180 millones (43,27%) | EE. UU. y Canadá agregados |
+| EMEA, ingresos | US$12.138,506 millones (32,21%) | Europa, Medio Oriente y África agregados |
+| LATAM, ingresos | US$4.683,951 millones (12,43%) | Múltiples países; CRP no identificable por país |
+| APAC, ingresos | US$4.556,234 millones (12,09%) | Múltiples países |
+| **Ingresos consolidados** | **US$37.683,871 millones** | **Suma de cuatro regiones exacta** |
+| Opciones pendientes | **120.175.117** | 127.679.804 iniciales + 6.571.326 concedidas − 14.023.403 ejercidas − 52.610 expiradas |
+| Precio de ejercicio ponderado | **US$41,24** | Dato SEC, no supuesto |
+| Plazo contractual general de opciones | **10 años** | No equivale al plazo residual promedio; **4,5 años del Black–Scholes siguen estimados** |
+| Lease corriente + no corriente | **US$435,730m + US$1.816,507m = US$2.252,237m** | Arrendamientos ya en balance; no agregar deuda sin rehacer EBIT y FCFF |
+
+**Conclusión para CRP:** Damodaran prefiere riesgo por ubicación de ingresos/operaciones, no por incorporación. Los pesos regionales son observados, pero no permiten asignar las primas de países individuales de UCAN/EMEA/LATAM/APAC. Por tanto **0,50 puntos adicionales de CRP es una hipótesis razonable a analizar, no certificable desde esta divulgación**. Usar escenarios 0/0,50/1,00 pp en vez de etiquetar un número arbitrario como tasa exacta. No se cambia el WACC9,16% ni el DCF Base US$56,90 en ausencia de nueva evidencia.
+
+**Conclusión para Kd:** Nota 7 informa 13 tramos de deuda, parte denominados en EUR; Nota 8 incluye swaps de tasas por US$2.400 millones. El 5,85% de Kd puede conservarse como hipótesis de financiación de largo plazo, pero no se ha calculado un rendimiento de deuda de mercado ponderado por bono a la fecha 21-oct-2026 y por moneda consistente. **Salvedad de costo de deuda permanece**.
+
+**Integridad de fuentes:** se consideran comprobadas estas notas del 10-Q y la reconciliación LTM ya examinada. No se afirma que los informes SEC 2016–2025 ni cada múltiplo por comparables estén certificados por esta verificación puntual.
+
 ## 16. Catalizadores, señales de refutación y seguimiento
 
 | Indicador | Observado en expediente (fecha) | Señal favorable para revisar | Señal adversa | Fuente y frecuencia |
