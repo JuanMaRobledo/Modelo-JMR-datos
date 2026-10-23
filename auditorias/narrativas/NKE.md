@@ -205,7 +205,7 @@ Múltiplos:28 bloques Base,26matricesnuméricas y 2N/D correspondientes alaancla
 
 ## 14. Coherencia de hojas, cálculos y presentación
 
-Se revisaron salidasoficiales de Input, Valuationoutput, Escenarios, Resumen, Múltiplos JMR, matrices, opciones, inverso y sensibilidad. La revisióncongelada coincide enhoja, JSON yartículo. No secomparó con la app porque no está autorizada lapublicación; no seafirma sincronización automática conella.
+Se revisaron las salidas oficiales de Input, Valuation output, Escenarios, Resumen, Múltiplos JMR, matrices, opciones, inverso y sensibilidad. Tras la autorización del usuario se publicaron juntos valoración, análisis y auditoría de NKE-JMR-20261023-R2. La lectura de los tres registros publicados confirma el mismo hash de resultados, DCF Base US$35,02 y MOS35% US$22,77. El despliegue de producción está READY. Esto verifica la revisión publicada; no implica republicación editorial automática al editar la hoja.
 
 Fueroncorregidos durante Valoración:promediosimple en vez deponderado;omisión de interés deleasesya reconocidos;circularidad de opciones;instrucciones demúltiploslegadas;transición S/C→ROICterminal;tasafiscal yprimer año frente ala guía;signos de salidas de caja;descuentos dedividendos poraño. Notas yselectores nativos seconservaron en la copia. Elperfil Madura conserva unselectoractivo conpesosespecíficos para NKE.
 
@@ -244,11 +244,11 @@ Los umbrales son criterios del auditor; no se presentan como guía de Nike. No s
 
 **Tesis: Plausible con reservas.** Consistencia matemática:validada en los cuatro DCF, las sensibilidadesoficiales yel inverso examinados. Trazabilidad:conhallazgos por I+D, opciones ydefiniciones de ciertosmúltiplos/pares. Razonabilidadeconómica:elprimer añoseanclaenlaguía yla recuperaciónesposible, pero la rentabilidadterminalrequiere sosteneruna ventaja que no estádemostrada para siempre.
 
-El supuesto másfrágil es la duracióndel exceso de ROIC; el másdefendible es partir decontracción yuna tasa fiscalnormalizada coherente conlaguía. La decisión analíticasugerida es conservar estosresultados comorevisiónpreparada, explicitar reservas yrefinar los datos identificadosantes depretender una certificaciónintegral. **No se modificó el cálculo durante la auditoría. La publicación posterior conserva este dictamen.**
+El supuesto másfrágil es la duracióndel exceso de ROIC; el másdefendible es partir decontracción yuna tasa fiscalnormalizada coherente conlaguía. Se publica esta revisión como versión vigente de NKE con reservas explícitas. Los datos identificados siguen pendientes para una certificación integral. **No se modificó el cálculo durante la auditoría. La publicación posterior conserva este dictamen.**
 
 ### Resumen oral
 
-Nike tiene una marca y una distribución valiosas, pero su recuperación todavía debe verse en ventas rentables y caja. Esta revisión calcula un valor base de 35,02 dólares por acción y un precio con margen de seguridad de 22,77. La matemática de la hoja, los escenarios, las sensibilidades y el DCF inverso coincide. El resultado depende sobre todo de recuperar margen y conservar retornos superiores al costo del capital. La auditoría mantiene reservas por el gasto de investigación no separado, el detalle de opciones posterior a mayo y algunos múltiplos y comparables. Es una valoración calculada y revisable, con incertidumbres visibles. No es una garantía sobre el precio futuro y no se ha publicado en la aplicación.
+Nike tiene una marca y una distribución valiosas, pero su recuperación todavía debe verse en ventas rentables y caja. Esta revisión calcula un valor base de 35,02 dólares por acción y un precio con margen de seguridad de 22,77. La matemática de la hoja, los escenarios, las sensibilidades y el DCF inverso coincide. El resultado depende sobre todo de recuperar margen y conservar retornos superiores al costo del capital. La auditoría mantiene reservas por el gasto de investigación no separado, el detalle de opciones posterior a mayo y algunos múltiplos y comparables. Es una valoración calculada y revisable, con incertidumbres visibles. La versión publicada conserva este dictamen y las cuatro salvedades documentales.
 
 ## 18. Fuentes primarias, limitaciones y registro de versión
 
@@ -270,7 +270,7 @@ Ficha cuantitativa:`valoracion_resultados.json`. Observaciones originales:`obser
 
 Auditoría`prompt_version:auditoria-economica-jmr-v1.2`; reglas JMRv 4; procesooptimizado 1.0. Valoraciónauditada`NKE-JMR-20261023-R2` yhash`1ff2ff5a7197fb89c712dca6ab264d3a6093ede83942c95d5859b8d1fbca0d6e`. Artículode 18 secciones, valoración y JSONcongelados antes deldictamen. Archivoscacheados yhashes en`audit_checks.json`; pasostécnicos ypendientes en`fases_ejecucion.json` y`README.md`.
 
-No ejecutado durante la auditoría previa:certificación completa de todaslaspestañas legadas, controles_todas.shcon accesoexterno, publicación, navegación enapp, validación de app/valoración/auditoría publicadas. Esas pruebas no se declaran aprobadas. La falta depublicación es intencional porinstrucción delusuario.
+La publicación posterior fue autorizada por el usuario y verificada mediante lectura de los tres registros publicados y del despliegue de producción. Pasaron17 pruebas del motor/sincronización, los cuatro DCF,75 celdas de sensibilidad DCF y el contrato del catálogo. No se declara ejecutado controles_todas.sh ni certificadas todas las pestañas legadas. No se presenta la lectura de registros como una prueba visual del navegador autenticado o de la descarga PDF.
 
 
 > **Publicación autorizada23-oct-2026.** Revisión `NKE-JMR-20261023-R2`, resultado congelado SHA-256`1ff2ff5a7197fb89c712dca6ab264d3a6093ede83942c95d5859b8d1fbca0d6e`. DCF BaseUS$35,02; MOS35%US$22,77; conserva las cuatro salvedades. La auditoría previa permanece separada de la publicación.

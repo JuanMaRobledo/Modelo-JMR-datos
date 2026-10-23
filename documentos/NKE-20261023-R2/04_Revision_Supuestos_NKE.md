@@ -71,7 +71,7 @@ El ROIC agregado proyectado del año 10 es 21,69%, calculado sobre todo el capit
 
 Se reprodujeron independientemente los cuatro DCF y las 75 celdas de sensibilidad DCF. Las 26 matrices numéricas de múltiplos mantienen su centro; los dos bloques JMR de P/FCFE permanecen N/D. El inverso se resolvió otra vez: CAGR implícito 1–5 de 3,10% frente a 1,23% Base para reconstruir el precio congelado US$38,32. Los históricos/LTM conservan exactamente su hash de R1.
 
-La auditoría registra **47 controles aprobados en el alcance y 4 hallazgos abiertos**: I+D no separado, opciones posteriores a mayo sin detalle completo, financiación histórica para P/FCFE y homogeneidad de comparables. No se ejecutaron controles de publicación ni se modificó la app. Valoración, análisis y auditoría se generan en fases separadas sobre el mismo resultado congelado.
+La auditoría registra **47 controles aprobados en el alcance y 4 hallazgos abiertos**: I+D no separado, opciones posteriores a mayo sin detalle completo, financiación histórica para P/FCFE y homogeneidad de comparables. La revisión fue publicada posteriormente por autorización del usuario, con controles específicos R2 e identidad verificada de los tres registros. Valoración, análisis y auditoría se generan en fases separadas sobre el mismo resultado congelado.
 
 ## 7. Fuentes
 
