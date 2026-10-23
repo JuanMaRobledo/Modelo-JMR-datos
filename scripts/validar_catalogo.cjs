@@ -39,11 +39,26 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    assert.equal((a.articleHtml.match(/<h2>/g) || []).length, 18);
+    const headings = [...a.articleHtml.matchAll(/<h2(?:\\s[^>]*)?>(.*?)<\\/h2>/gs)]
+      .map(x => x[1].replace(/<[^>]*>/g, '').trim());
+    // Nivel 1: exactamente 18 encabezados numerados 1..18 en orden.
+    // Notas posteriores/no numeradas no sustituyen una sección del artículo.
+    const editorial = headings.filter(h => /^[0-9]{1,2}\\.\\s/.test(h));
+    assert.deepEqual(editorial.map(h => Number(h.match(/^([0-9]+)/)[1])),
+      Array.from({length: 18}, (_, i) => i + 1),
+      'Análisis: faltan o sobran secciones principales numeradas 1–18');
     if (a.controlCobertura) {
-      assert.equal(a.controlCobertura.entradas.length, 25,
-        'Cobertura editorial v5 debe documentar 25 puntos');
-      assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
+      if (Array.isArray(a.controlCobertura.entradas)) {
+        assert.equal(a.controlCobertura.entradas.length, 25,
+          'Cobertura editorial v5 debe documentar 25 puntos');
+        assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
+      } else {
+        // Contrato editorial v5 de META R4-A2: 18 secciones + nivel 2 + 3 sensibilidades + 4 historias.
+        assert.equal(a.controlCobertura.secciones, 18, 'Faltan secciones editoriales');
+        assert.equal(a.controlCobertura.nivel2, true, 'Falta nivel 2');
+        assert.equal(a.controlCobertura.matricesDCF, 3, 'Faltan matrices DCF');
+        assert.equal(a.controlCobertura.escenarios, 4, 'Faltan historias');
+      }
       assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
     }
   }
