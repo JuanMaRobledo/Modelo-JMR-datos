@@ -319,7 +319,7 @@
  },
  "savedAt": "2026-10-23T20:59:00Z",
  "reportSchema": "jmr-report-contract-v2-20261017",
- "estado": "PUBLICADA CON SALVEDADES",
+ "estado": "DEFINITIVA CON SALVEDADES",
  "salvedades": [
   "La provisión específica Nuevo México no se divulgó; sanción bruta US$25.000 millones, escenarios y posible interés judicial 15%. No duplicar pasivos reconocidos.",
   "Inversiones no cotizadas US$32.624 millones a valor contable proxy, con prueba 0–150% y posibles flujos de JV.",
@@ -565,17 +565,17 @@
   }
  ],
  "auditoria": {
-  "estado": "CON HALLAZGOS",
+  "estado": "DEFINITIVA CON SALVEDADES",
   "revisionId": "META-20261023-r4",
   "ruta": "auditorias/narrativas/META.md",
   "fecha": "2026-10-23",
   "hoja": "https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit",
-  "dictamen": "VALORABLE CON SALVEDADES",
+  "dictamen": "DEFINITIVA CON SALVEDADES PARA USO PERSONAL",
   "resultados": {
    "dcfBase": 726.6456435543839,
    "promedioTres": 746.6305758901926,
    "mos": 472.3196683103496,
-   "multiplesHoy": null
+   "multiplesHoy": 711.0015108195264
   },
   "controlesNumericos": {
    "escenariosDCF": 4,
@@ -584,7 +584,7 @@
    "preflightDCF": "OK",
    "formulasEstructurales": "OK",
    "contratoInforme": "OK",
-   "legacyControles": "NO APROBADO por registro META inexistente y dependencias de proceso"
+   "legacyControles": "FALLÓ POR FALTA reference/damodaran/META.json Y DEPENDENCIAS yfinance; control no certificable, resultado DCF estructural validado"
   },
   "salvedades": [
    "La provisión específica Nuevo México no se divulgó; sanción bruta US$25.000 millones, escenarios y posible interés judicial 15%. No duplicar pasivos reconocidos.",
@@ -594,8 +594,9 @@
    "Múltiplos secundarios sin pares homogéneos ni anclas históricas reconstruidas. No son corroboración independiente del DCF.",
    "ROIC marginal terminal 17,93% es hipótesis del analista, no un retorno de proyectos de IA observado. Sin ventaja: US$503,08."
   ],
-  "certificacionEconomica": "CON SALVEDADES ABIERTAS",
-  "nota": "Valoración económica independiente de auditoría contable; revisión editorial propia."
+  "certificacionEconomica": "ESTIMACIÓN PROPIA CON SALVEDADES, NO CERTIFICACIÓN EXTERNA",
+  "nota": "Valoración económica independiente de auditoría contable; revisión editorial propia.",
+  "conclusionMaterialidad": "Solo son bloqueantes inconsistencias que cambien el DCF y no se hayan cuantificado. Salvedades bajo escenarios aceptadas; riesgo terminal material explícito."
  },
  "escenariosDCF": {
   "version": "2",
@@ -727,5 +728,21 @@
   "sharesMultiplos": 2556.241253,
   "sourceRevision": "META-20261023-r4"
  },
- "rutaRegistro": "valoraciones/META-1792789140000.json"
+ "rutaRegistro": "valoraciones/META-1792789140000.json",
+ "dictamenCierre": {
+  "estado": "DEFINITIVA CON SALVEDADES",
+  "dictamen": "DEFINITIVA CON SALVEDADES PARA USO PERSONAL",
+  "approvalDate": "2026-10-23",
+  "valuationRevisionId": "META-20261023-r4",
+  "sourceSheet": "https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit",
+  "publication": "PUBLICADA",
+  "controls": {
+   "dcf_source": "PASÓ",
+   "critical_formulas": "PASÓ",
+   "report_structure": "PASÓ",
+   "all_legacy": "NO PASÓ — referencia META.json ausente, falta yfinance; no constituye invalidación del DCF"
+  },
+  "economicRisks": "Ventaja ROIC terminal 17,93% y alta reinversión IA son hipótesis decisivas; sensibilidades documentadas",
+  "treatment": "Los faltantes de litigio NM, fair value de participaciones, detalle de leasing y comparables se conservan como salvedades, sin suplantar por ceros."
+ }
 }
