@@ -282,7 +282,7 @@ El supuesto más frágil es la productividad del capital nuevo y su persistencia
 
 ### Resumen para escuchar
 
-Meta mantiene un negocio publicitario rentable y una distribución difícil de replicar. El modelo revisado conserva crecimiento fuerte al principio y después lo desacelera. También reconoce inversión elevada y flujo económico negativo inicial. El cambio principal consiste en ligar el retorno estable a una referencia sectorial y recalcular la reinversión que depende de ese retorno. Los cuatro escenarios y las matrices coinciden con la hoja, pero eso comprueba la matemática, no la rentabilidad futura de todos los proyectos. Siguen abiertas la conciliación de obligaciones legales y arrendamientos y la justificación de algunos múltiplos. El análisis completo identifica esas limitaciones. La revisión queda preparada, con hallazgos y sin publicar; no constituye una recomendación de comprar o vender.
+Meta mantiene un negocio publicitario rentable y una distribución difícil de replicar. El modelo revisado conserva crecimiento fuerte al principio y después lo desacelera. También reconoce inversión elevada y flujo económico negativo inicial. El cambio principal consiste en ligar el retorno estable a una referencia sectorial y recalcular la reinversión que depende de ese retorno. Los cuatro escenarios y las matrices coinciden con la hoja, pero eso comprueba la matemática, no la rentabilidad futura de todos los proyectos. Siguen abiertas la conciliación de obligaciones legales y arrendamientos y la justificación de algunos múltiplos. El análisis completo identifica esas limitaciones. La revisión queda preparada, con hallazgos y publicada con salvedades; no constituye una recomendación de comprar o vender.
 
 ## 18. Fuentes primarias, limitaciones y registro de versión
 
@@ -302,7 +302,7 @@ Todos fueron consultados el23-oct-2026. Los límites de cada fuente se identific
 
 **Registro:**auditoría META-R4; prompt_version: auditoria-economica-jmr-v1.2 con actualización editorial23-oct; hoja R4, JSONMETA_resultados_R4 yartículo de esta entrega. No hay commit de publicación ni escritura en Modelo-JMR-datos.
 
-**Control de entrega:**18H2 exactos; seis preguntas y tabla por supuesto en5–10; datos, crecimiento, margen, capital, tasas, terminal, DCF, siete relativos, sensibilidad e inverso; cuatro historias, promedio ordinario, Disrupción aparte y MOS sobre Base; hallazgos, señales, dictamen y resumen oral. Las anclas y familias relativas no verificadas permanecen identificadas. No se ejecutó auditoría por otra persona, controles integrales del repositorio, render nativo ni comprobación en app. **Auditoría condicionada, no publicada.**
+**Control de entrega:**18H2 exactos; seis preguntas y tabla por supuesto en5–10; datos, crecimiento, margen, capital, tasas, terminal, DCF, siete relativos, sensibilidad e inverso; cuatro historias, promedio ordinario, Disrupción aparte y MOS sobre Base; hallazgos, señales, dictamen y resumen oral. Las anclas y familias relativas no verificadas permanecen identificadas. No se ejecutó auditoría por otra persona, controles integrales del repositorio, render nativo ni comprobación en app. **Auditoría condicionada, publicada con salvedades y controles técnicos documentados.**
 
 
 ---
