@@ -1,3 +1,50 @@
+# Auditoría JMR R4 — NIKE, Inc. (NKE) · PUBLICADA CON HALLAZGOS
+
+## 1. Dictamen y control de versiones
+
+**Dictamen: PUBLICABLE CON SALVEDADES; NO «VALIDADO INTEGRAL».** Revisión `NKE-JMR-20261023-R4`. Corte financiero 31-ago-2026; precio congelado 22-oct-2026 de US$38,32. Hoja revisada: [NKE R4](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit). Artículo: [Análisis Nivel 1 y Nivel 2](https://modelo-jmr.vercel.app/research.html?id=research-20261023-r2). DCF Base: **US$35,02**, MOS35%: **US$22,77**. El hash `ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545` representa el **resultado del motor DCF R3 conservado sin cambios**, no todos los datos de la copia R4. No hay nuevo DCF recomputado por motor independiente en R4; las cuatro historias y 75 sensibilidades tienen pruebas heredadas de R3, no re-certificación integral.
+
+**Integridad de publicación R4**: `revisionId` del registro de valoración, artículo, auditoría, manifiesto y catálogo coinciden en R4; la hoja editable corresponde al ID 1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw. La fecha de análisis no cambia el último dato disponible. El usuario autorizó expresamente publicar con análisis y auditoría.
+
+## 2. Hallazgos resueltos con documentos de NIKE
+
+| Prueba reproducible | Resultado R4 | Materialidad DCF | Evidencia |
+|---|---|---|---|
+| Compras/vencimientos de inversiones FY2022–2026+LTM | 6 conciliaciones exactas de flujo de inversión; residuo 0 USDm | No modifica FCFF proyectado | Pestaña «Control SEC · flujos 2022-LTM», filas 8–14; 10-K/10-Q oficiales |
+| Deuda neta, emisiones, recompras y dividendos | 6 conciliaciones exactas de financiación; residuo 0 USDm | No modifica WACC ni puente debt/leases | Misma pestaña filas 15–22; notas fuente en «Cash Flow Statement» |
+| FCFE histórico | FY2023 4.368; FY2024 6.617; FY2025 2.268; FY2026 2.184; LTM 2.105 USDm, antes de ajuste SBC | No entra en DCF FCFF; P/FCFE sigue peso 0 | «FCFE · conciliación SEC», fórmula OCF + capex firmado + deuda neta |
+| Comparables EV por clases económicas y balance | DECK 7,92×; CROX 7,94×; LULU 4,87×; COLM 9,62× (EV/EBITDA incluyendo leases) | Contraste secundario sin cambio automático del múltiplo publicado | «Pares · conciliación SEC», fuentes SEC trimestrales |
+| CapEx, OCF y deuda puente | El DCF FCFF Base US$35,02 y MOS US$22,77 permanecen idénticos tras correcciones de filas auxiliares | Directo, probado por lectura nativa de R4 | «Presentación» B5/B7 y «Valuation output» |
+| Opciones, arrendamientos, WACC | Option value B30 = US$123,37m; leases activados; costo de capital «Detailed — Damodaran», control «VALIDADO» mecánico | Valor de opciones ~0,083 USD/acción; WACC específico base ~9,10% | «Input sheet» B17:B18; «Option value» B30; «Cost of capital worksheet» B84:B85 |
+
+Las doce pruebas contables de R4 son **comprobaciones de suma de caja**, no nuevas validaciones de supuestos económicos, descuento o valor terminal. El DCF y el margen se mantienen por elección metodológica justificada por resultados de R3; las correcciones de FCFE son auxiliares y no se utilizaron silenciosamente para cambiar el valor principal.
+
+## 3. Materialidad: qué limita la certificación y qué no
+
+**Material para el valor intrínseco:** la convergencia de ROIC marginal terminal (15,29%) frente a WACC (~9,10%) es una hipótesis central. El DCF pasaría de 35,02 a **US$28,42** con ROIC terminal=WACC; el resultado cambia ~US$6,61/acción. La ventaja competitiva no está demostrada por los flujos y debe permanecer como sensibilidad fundamental. Los márgenes proyectados y crecimiento se mantienen como juicio, no hecho.
+
+**Hallazgos documentales no bloqueantes del DCF Base:**
+
+- I+D no segregada del SG&A en los 10-K: no se asigna cero ni se capitaliza un gasto inventado. ROIC ajustado industrial no es plenamente homogéneo. Afecta comparabilidad y puede influir en hipótesis de largo plazo, pero no se cuantifica efecto sin datos.
+- Detalle de opciones entre mayo y agosto 2026: 76,8m opciones divulgadas mayo, strike medio 96,44, vida proxy 4,85 años. Los 84m instrumentos antidilutivos del 10-Q mezclan clases distintas. El valor reconocido en modelo es 123,37m (0,083 USD/acción); estrés simple de reclasificación 84m de opciones de iguales términos desplaza ~0,0078 USD/acción, **supuesto ilustrativo y no cota de otras estructuras**.
+- P/FCFE: flujos históricos SEC reconstruidos, pero costos SBC y anclas/matrices sin homologación económica completa. Método P/FCFE **ponderación cero** y **cuatro sensibilidades N/D**; por definición no modifica el DCF Base.
+- Comparables: EV y acciones económicas corregidos; EBITDA de arrendamientos no homogéneo, otras diferencias USGAAP/IFRS. Valoración por múltiplos es secundaria; R4 distingue *indicativo* de *certificado*. No usar el promedio de pares como valor sin conciliar denominadores.
+- Tres filas de flujo de capital de trabajo (cuentas por pagar, impuestos por pagar, ingresos diferidos) se publican agregadas dentro de otras variaciones de pasivos y permanecen **N/D explícito**. OCF oficial sí concilia, por lo que imputarlas individualmente no es necesario para FCFF.
+- Estado del control heredado: el intento real de `controles_todas.sh` contra R3 terminó en **FALLO**, aunque probabilidades y supuestos aprobaron, y M1/M2/M3 de consistencia pasaron tras actualizar contrato. Restaron fallas de integridad sobre POCF!H33, históricos y tres «candados» M34:M36 de una plantilla anterior. **No se ha ejecutado satisfactoriamente contra R4; no confundir con validación.** Logs: [última corrida diagnóstica R3](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40020134229).
+
+**Estado de cierre:** valoración DCF publicable según materialidad; auditoría **CON HALLAZGOS**, estado técnico integral **PENDIENTE**. Quedan pendientes únicamente: (1) sensibilidad económica de I+D/ROIC sin fuente segregada, (2) stock options post-mayo por concesión, (3) homologación de múltiplos y FCFE de peso cero, y (4) ejecución satisfactoria del gate sobre R4. Estos límites se muestran y no impiden ocultamente acceso a los datos.
+
+## 4. Fuentes y registros de revisión
+
+- [10-K FY2026 de NIKE](https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm).
+- [10-Q NIKE al 31-ago-2026](https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm).
+- [Hoja oficial R4, datos SEC y pruebas reproducibles](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
+- [Resultado de motor R3 congelado (histórico, DCF conservado)](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/documentos/NKE-20261023-R3/valoracion_resultados.json).
+
+---
+
+## Evidencia histórica de auditoría R3 — conserva controles previos, NO es nueva ejecución sobre R4
+
 # Auditoría económica narrativa — NIKE, Inc. (NKE)
 
 ## 1. Ficha de auditoría y alcance
