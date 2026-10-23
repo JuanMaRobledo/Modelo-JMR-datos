@@ -608,9 +608,9 @@
       "base": "DCF Base"
     }
   },
-  "savedAt": "2026-10-22T20:07:04.862Z",
+  "savedAt": "2026-10-23T10:45:00Z",
   "reportSchema": "jmr-report-contract-v2-20261017",
-  "estado": "CALCULADA_CON_SALVEDADES_PUBLICACION_EN_PREPARACION",
+  "estado": "PUBLICADA_DEFINITIVA_CON_SALVEDADES",
   "salvedades": [
     "ROIC terminal 21,52%: hipótesis de ventaja durable frente a sector 11,04% y WACC9,16%; no observación.",
     "CRP adicional 50pb es juicio del analista; tasa macro Sep30 8,99% no es el WACC específico Oct21 9,16%.",
@@ -918,7 +918,7 @@
     }
   },
   "auditoria": {
-    "estado": "CON_SALVEDADES",
+    "estado": "DEFINITIVA_CON_SALVEDADES",
     "ruta": "auditorias/narrativas/NFLX.md",
     "revisionId": "NFLX-2026-10-22-SEC9M26-JMR-review-001",
     "fecha": "2026-10-22",
@@ -1862,6 +1862,17 @@
       "totalCeldas": 350,
       "erroresDespues": 0,
       "estado": "CENTROS Y MATRICES REVISADOS"
+    },
+    "controlPublicacion": {
+      "fecha": "2026-10-23",
+      "fuente": "Google Sheets (13 pestañas principales, lectura directa)",
+      "candados": 18,
+      "de": 18,
+      "erroresFormulaEnPestanasCentrales": 0,
+      "replayDCF": 333,
+      "revisionIdentica": "VALORACION_ANALISIS_AUDITORIA",
+      "controlCompleto": "PENDIENTE CORRIDA POST-REPARACION (las anteriores registraron fallas ya corregidas)",
+      "nota": "No equivale a la certificación sin salvedades ni a una prueba CI completamente verde."
     }
   },
   "escenariosDCF": {
