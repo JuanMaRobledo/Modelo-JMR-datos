@@ -130,7 +130,7 @@ Las anclas históricas y descuentos adicionales no están suficientemente susten
 
 Históricos de los tres estados iguales antes/después en los rangos conservados. Cuatro DCF reproducidos con error máximo inferior a 0,001 US$/acción;75 celdas de sensibilidad también; centros, inverso y probabilidades comprobados. El escaneo de las salidas DCF leídas no mostró errores de fórmula. Estos controles no equivalen acontroles_todas.sh aprobado, ni acreditan la economía de todos los contratos o reclamaciones.
 
-La sanción Nuevo México 25.000 M, el acuerdo 18.590 M, las provisiones y garantías necesitan conciliación para evitar tanto omisiones como doble deducción. El valor de inversiones privadas usa libros como proxy y hay una estimación heredada de leases financieros. Por esas razones la entrega permanece CON HALLAZGOS y sin publicar.
+La sanción Nuevo México 25.000 M, el acuerdo 18.590 M, las provisiones y garantías necesitan conciliación para evitar tanto omisiones como doble deducción. El valor de inversiones privadas usa libros como proxy y hay una estimación heredada de leases financieros. Por esas razones la entrega permanece CON HALLAZGOS y publicada con salvedades.
 
 ## 10. Fuentes y continuidad
 
