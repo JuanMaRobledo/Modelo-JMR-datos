@@ -1,13 +1,13 @@
 # NFLX · cierre cuantitativo de los cinco hallazgos JMR v6 (23-oct-2026)
 
-**Estado de esta revisión:** DOCUMENTO DE EVIDENCIA Y COPIA DE VALORACIÓN ACTUALIZADA; **NO PUBLICACIÓN OFICIAL NUEVA**. Valor anterior publicado US$69,94. Valor revisado de la [copia Google Sheets](https://docs.google.com/spreadsheets/d/15QDfNDg_2TG90sFFFvUyeYvI6rL9-AwfwUHI7XmHgPQ/edit), DCF Base US$61,115426. La copia modifica solamente 11 entradas/ajustes de la calculadora de costo de capital y anotaciones de 3 conceptos, con todas las historias y sensibilidades recalculadas por fórmulas nativas. La copia sigue siendo un expediente candidato: no sustituye por sí misma registro JSON, HTML del análisis ni auditoría publicada en app.
+**Estado de esta revisión:** DOCUMENTO DE EVIDENCIA Y COPIA DE VALORACIÓN ACTUALIZADA; **NO PUBLICACIÓN OFICIAL NUEVA**. Valor anterior publicado US$69,94. Valor revisado de la [copia Google Sheets](https://docs.google.com/spreadsheets/d/15QDfNDg_2TG90sFFFvUyeYvI6rL9-AwfwUHI7XmHgPQ/edit), DCF Base US$61,115425. La copia modifica solamente 11 entradas/ajustes de la calculadora de costo de capital y anotaciones de 3 conceptos, con todas las historias y sensibilidades recalculadas por fórmulas nativas. La copia sigue siendo un expediente candidato: no sustituye por sí misma registro JSON, HTML del análisis ni auditoría publicada en app.
 
 ## Identidad y fuentes
 
 - Corte contable 30-sep-2026; precio histórico US$65,04 del 21-oct-2026; moneda USD, todas las cifras de estado financiero en millones de USD, acciones en millones; beta bottom-up global Entertainment de tabla de referencia y costo de deuda heredado US$/deuda de bonos. No se actualiza la cotización al 23-oct sin fuente homogénea.
 - [Netflix SEC 10-Q 30-sep-2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm) notas 2 (ventas/regiones), 5 (leases), 10 (opciones/RSU), MD&A tecnología.
 - [Netflix SEC 10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm) notas 2 y 10; plazo de opciones 4,79 años al 31-dic-2025.
-- [Damodaran, publicación del 8-oct-2026, ERP a septiembre 30](https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html): ERP **3,70% respecto a Treasury10Y 5,29%**, o **3,92% respecto al Rf USD 5,07% descontando spread USA 0,22 pp**. La hoja usa Rf USD 4,91%, obtenido al 21-oct-2026 descontando el mismo spread 0,22 pp del Treasury 5,13%; por coherencia la prima madura usada es **3,92%**, nunca 3,70%. El corte de tasa libre, la cotización y las ventas deben mantenerse fechados por separado.
+- [Damodaran, publicación del 8-oct-2026, ERP a septiembre 30](https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html?m=0): ERP **3,70% respecto a Treasury10Y 5,29%**, o **3,92% respecto al Rf USD 5,07% descontando spread USA 0,22 pp**. La hoja usa Rf USD 4,91%, obtenido al 21-oct-2026 descontando el mismo spread 0,22 pp del Treasury 5,13%; por coherencia la prima madura usada es **3,92%**, nunca 3,70%. El corte de tasa libre, la cotización y las ventas deben mantenerse fechados por separado.
 
 ## 1. Geografía / prima de riesgo / WACC — MATERIAL, CORREGIDO EN COPIA
 
@@ -21,7 +21,7 @@
 | APAC | 5.353,717 | 3.932,907 | 4.556,234 | 5.977,044 | 12,02% |
 | **Total** | 45.183,036 | 33.132,274 | 37.683,871 | **49.734,633** | 100% |
 
-La suma de los cuatro LTM tiene diferencia máxima de 0,001 millón por redondeo. La copia introduce APAC `H23`, LATAM `H26`, UCAN `H29`, EMEA `H31`; usa `B26 = Operating regions`. Las primas `I23/I26/I29/I31` se reexpresan como `3,92% + CRP por región` obtenida por diferencia contra el ERP maduro de la tabla anual, evitando mezclar maduro de octubre y enero. Los CRP de enero son un **proxy por región, no por país** (EMEA 1,64 pp); sus límites deberán considerarse en sensibilidad cuando se obtenga desglose país.
+Los cuatro LTM suman exactamente 49.734,633 millones de USD, el total LTM del estado de resultados; las pequeñas variaciones de las tasas están por debajo del redondeo mostrado. La copia introduce APAC `H23`, LATAM `H26`, UCAN `H29`, EMEA `H31`; usa `B26 = Operating regions`. Las primas `I23/I26/I29/I31` se reexpresan como `3,92% + CRP por región` obtenida por diferencia contra el ERP maduro de la tabla anual, evitando mezclar maduro de octubre y enero. Los CRP de enero son un **proxy por región, no por país** (EMEA 1,64 pp); sus límites deberán considerarse en sensibilidad cuando se obtenga desglose país.
 
 **Resultado directamente re-leído de la copia:**
 - ERP geográfica total `K33=B28` = **5,1466404%** = madura ajustada 3,92% + CRP LTM 1,2266404 pp. El dato anterior B27=4,42% incluía una CRP arbitraria de solo 0,50 pp.
@@ -32,13 +32,13 @@ La suma de los cuatro LTM tiene diferencia máxima de 0,001 millón por redondeo
 | Historia | Valor por acción actualizado (USD) |
 |---|---:|
 | Conservadora | 40,116805 |
-| Base | **61,115426** |
+| Base | **61,115425** |
 | Optimista | 80,280502 |
 | Disrupción | 14,389163 |
 | Promedio condicionado tres ordinarias | 58,425723 |
 | Precio mecánico con MOS 35% (solo Base) | 39,725027 |
 
-La copia regeneró automáticamente la sensibilidad de WACC × g (centro US$61,115426), y sus cuatro historias están LISTO. La revisión de 2026-10-22 sigue publicada; **no declarar el nuevo valor oficial** hasta integrar la copia, publicar JSON+análisis+auditoría de la misma revisión y correr el gate total.
+La copia regeneró automáticamente la sensibilidad de WACC × g (centro US$61,115425), y sus cuatro historias están LISTO. La revisión de 2026-10-22 sigue publicada; **no declarar el nuevo valor oficial** hasta integrar la copia, publicar JSON+análisis+auditoría de la misma revisión y correr el gate total.
 
 ## 2. Opciones y RSU — NO BLOQUEANTE PARA PLAZO ESTIMADO, SIN CAMBIAR EL VALOR EN LA COPIA
 
