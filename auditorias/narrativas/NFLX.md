@@ -6,11 +6,11 @@
 
 ## 1. Ficha de auditoría
 
-Revisión NFLX-2026-10-22-SEC9M26-JMR-review-001, NFLX, USD, estados septiembre26, precio referencia65,04 fecha21-oct; hoja https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit. Auditoría condicionada, no certificación externa.
+Revisión NFLX-2026-10-22-SEC9M26-JMR-review-001, NFLX, USD, estados septiembre26, precio referencia65,04 fecha21-oct; hoja https://docs.google.com/spreadsheets/d/11yN171o8R61n4RhZnmuZuiSyIn_DGkfTmjo7wMKqaZI/edit. Auditoría de la versión definitiva del analista con salvedades económicas expresas; no constituye certificación externa ni garantía de precio.
 
 ## 2. Dictamen
 
-**Plausible con reservas, CON HALLAZGOS.** DCF69,94 vs valor público viejo56,90; no publicar como VALIDADO.
+**Plausible con reservas.** DCF Base US$69,94, sustentado en la hoja de la revisión común; el valor de US$56,90 pertenece exclusivamente a la revisión histórica sustituida. El dictamen económico tiene reservas sobre ROIC, prima adicional por país y calibración de múltiplos, aunque los cálculos estén conciliados.
 
 ## 3. Fuentes y procedencia
 
@@ -198,11 +198,11 @@ Cons45,02/27,5%, Base69,94/45%, Opt93,00/17,5%, Disrupción15,55/10%. Normalizad
 
 **Pruebas observadas en esta revisión:** 18/18 candados de Google Sheets en estados aceptados, incluyendo los tres candados `Financials Multiples!M34:M36` restaurados; cuatro historias `LISTO`, siete métodos con ponderación 100% y 21 centros de sensibilidades que igualan resultados de sus tablas. DCF inverso reproduce US$65,04 con residuo despreciable. El puente EV→equity es reproducible de dos maneras.
 
-**Control documental:** `NFLX-2026-10-22-SEC9M26-JMR-review-001` en JSON, análisis Nivel1/Nivel2 y auditoría; histórico SEC hasta 30-sep y precio de 21-oct. La capa pública anterior mostraba DCF US$56,90, que se reemplaza exclusivamente cuando terminan las comprobaciones y se integra la rama de producción.
+**Control documental:** `NFLX-2026-10-22-SEC9M26-JMR-review-001` en JSON, análisis Nivel1/Nivel2 y auditoría; histórico SEC hasta 30-sep y precio de 21-oct. La capa pública anterior mostraba DCF US$56,90; esta revisión usa exclusivamente US$69,94. El cambio debe integrarse junto al análisis y los datos de cálculo, nunca por separado.
 
-**Pendiente antes de declarar certificado:** ejecutar `bash scripts/controles_todas.sh NFLX` en un entorno con credenciales sobre el motor del modelo y corroborar la publicación en GitHub Pages. Las salvedades económicas ROIC/CRP/ciclo no se convierten en controles aprobados por la mera existencia del informe.
+**Trazabilidad de publicación:** el resultado íntegro de `bash scripts/controles_todas.sh NFLX` debe ser satisfactorio en la ejecución de GitHub Actions vinculada a esta revisión; distinguir siempre entre validación aritmética y juicio económico. El enlace del control queda documentado en la PR de publicación. Las salvedades económicas ROIC/CRP/ciclo no se convierten en controles aprobados por la mera existencia del informe.
 
-## 18. Conclusión y tareas que bloquean publicación
+## 18. Conclusión y salvedades de la valoración
 
 **Dictamen: PLAUSIBLE CON RESERVAS.** Los estados SEC 2016–2025 y el LTM a septiembre se conservaron. Crecimiento Base 9,99% CAGR, EBIT objetivo36%, S/C2,00→1,60 y ROIC terminal21,52% dan valor intrínseco por DCF **US$69,94** y MOS35% **US$45,46**. Valor presente por múltiplos **US$59,47**, promedio ordinario de historias **US$66,81**, disrupción **US$15,55** aparte. No confundir esos resultados.
 
