@@ -518,7 +518,8 @@
         ]
       }
     ],
-    "metodo": "Ponderado probabilidades A45/B27,5/D17,5 renormalizadas sobre90%; Disrupción excluida"
+    "metodo": "Ponderado probabilidades A45/B27,5/D17,5 renormalizadas sobre90%; Disrupción excluida",
+    "disrupcionEnPromedio": false
   },
   "crecimientoImplicito": {
     "fecha": "2026-10-22",
@@ -1949,7 +1950,7 @@
     "disrupcionSeparada": true
   },
   "contratoHistoriasMultiplos": {
-    "version": "2026-10-22",
+    "version": "historias-3-multiplos-7-20261017",
     "revisionId": "NFLX-2026-10-22-SEC9M26-JMR-review-001",
     "promedio": "ponderado tres historias; sin Disrupción",
     "disrupcionSeparada": true,
@@ -1957,5 +1958,19 @@
     "metodos": 7
   },
   "expedienteCompleto": "https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/expedientes/NFLX-2026-10-21.zip",
-  "revisionId": "NFLX-2026-10-22-SEC9M26-JMR-review-001"
+  "revisionId": "NFLX-2026-10-22-SEC9M26-JMR-review-001",
+  "multiplesAdicionales": {
+    "metodos": [
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "objetivo": "P/Ventas ya ponderado 10% entre los siete; entrada adicional peso0 para no duplicar"
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "objetivo": "P/Valor libro diagnóstico peso0"
+      }
+    ]
+  }
 }
