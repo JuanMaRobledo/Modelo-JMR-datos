@@ -39,11 +39,11 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    const headings = [...a.articleHtml.matchAll(/<h2(?:\\s[^>]*)?>(.*?)<\\/h2>/gs)]
+    const headings = [...a.articleHtml.matchAll(/<h2[^>]*>(.*?)<[/]h2>/gs)]
       .map(x => x[1].replace(/<[^>]*>/g, '').trim());
     // Nivel 1: exactamente 18 encabezados numerados 1..18 en orden.
     // Notas posteriores/no numeradas no sustituyen una sección del artículo.
-    const editorial = headings.filter(h => /^[0-9]{1,2}\\.\\s/.test(h));
+    const editorial = headings.filter(h => /^[0-9]{1,2}[.] /.test(h));
     assert.deepEqual(editorial.map(h => Number(h.match(/^([0-9]+)/)[1])),
       Array.from({length: 18}, (_, i) => i + 1),
       'Análisis: faltan o sobran secciones principales numeradas 1–18');
