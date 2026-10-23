@@ -1,0 +1,586 @@
+{
+  "revision": "NKE-JMR-20261023-R2",
+  "stage": "Auditoría posterior a valoración y análisis; sin modificar valoración",
+  "status": "CON HALLAZGOS",
+  "math_status": "VALIDADO en alcance comprobado",
+  "sources_status": "CON HALLAZGOS",
+  "economic_status": "Plausible con reservas",
+  "checks": [
+    {
+      "id": "MAT-01",
+      "status": "VALIDADO",
+      "evidence": "Escaneo de las celdas del DCF, entradas, resumen, inverso y matrices oficiales.",
+      "value": []
+    },
+    {
+      "id": "DCF-Base",
+      "status": "VALIDADO",
+      "evidence": "Reproducción independiente frente a Escenarios e historias!H5",
+      "value": {
+        "independent": 35.023476792006896,
+        "native": 35.02347679200689,
+        "error": 7.105427357601002e-15
+      }
+    },
+    {
+      "id": "DCF-Conservadora",
+      "status": "VALIDADO",
+      "evidence": "Reproducción independiente frente a Escenarios e historias!H6",
+      "value": {
+        "independent": 21.529705777426603,
+        "native": 21.529705777426607,
+        "error": 3.552713678800501e-15
+      }
+    },
+    {
+      "id": "DCF-Disrupción",
+      "status": "VALIDADO",
+      "evidence": "Reproducción independiente frente a Escenarios e historias!H7",
+      "value": {
+        "independent": 8.495268767147314,
+        "native": 8.495268767147312,
+        "error": 1.7763568394002505e-15
+      }
+    },
+    {
+      "id": "DCF-Optimista",
+      "status": "VALIDADO",
+      "evidence": "Reproducción independiente frente a Escenarios e historias!H8",
+      "value": {
+        "independent": 50.70274578590675,
+        "native": 50.702745785906735,
+        "error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "id": "SENS-1",
+      "status": "VALIDADO",
+      "evidence": "Las25celdas de la matriz concilian con el motor independiente; centroD8",
+      "value": {
+        "center": 35.023476792006896,
+        "max_error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "id": "SENS-2",
+      "status": "VALIDADO",
+      "evidence": "Las25celdas de la matriz concilian con el motor independiente; centroD19",
+      "value": {
+        "center": 35.023476792006896,
+        "max_error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "id": "SENS-3",
+      "status": "VALIDADO",
+      "evidence": "Las25celdas de la matriz concilian con el motor independiente; centroD30",
+      "value": {
+        "center": 35.023476792006896,
+        "max_error": 1.4210854715202004e-14
+      }
+    },
+    {
+      "id": "INV-01",
+      "status": "VALIDADO",
+      "evidence": "Delta aditivo común, conservando forma de trayectoria y convergencia terminal.",
+      "value": 0.0
+    },
+    {
+      "id": "PROB-01",
+      "status": "VALIDADO",
+      "evidence": "Previa de declive40/25/15/20; sin ajustes no acreditados.",
+      "value": null
+    },
+    {
+      "id": "AVG-01",
+      "status": "VALIDADO",
+      "evidence": "Promedio condicionado de Base, Conservadora y Optimista. Denominador0,80.",
+      "value": null
+    },
+    {
+      "id": "LTM-01",
+      "status": "VALIDADO",
+      "evidence": "Ingresos46.398+11.213−11.720=45.891. No anualización del trimestre.",
+      "value": null
+    },
+    {
+      "id": "LTM-02",
+      "status": "VALIDADO",
+      "evidence": "EBIT núcleo3.797+888−927=3.758; EBIT reportado por Nike3.853 incluye otros resultados.",
+      "value": null
+    },
+    {
+      "id": "TERM-01",
+      "status": "VALIDADO",
+      "evidence": "g4%≤Rf5,29%; WACC terminal8,98748%>g.",
+      "value": null
+    },
+    {
+      "id": "SHEET-01",
+      "status": "VALIDADO",
+      "evidence": "Copia nueva:64pestañas frente a61originales; se añadieron inverso y salidas de múltiplos. Maestra intacta.",
+      "value": null
+    },
+    {
+      "id": "MOS-01",
+      "status": "VALIDADO",
+      "evidence": "MOS35% solo sobreDCF Base.",
+      "value": null
+    },
+    {
+      "id": "MULT-MAT-1",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVEBITDA / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-2",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVEBITDA / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-3",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVEBITDA / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-4",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVEBITDA / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-5",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVFCFF / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-6",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVFCFF / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-7",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVFCFF / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-8",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, EVFCFF / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-9",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PE / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-10",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PE / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-11",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PE / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-12",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PE / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-15",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PFCFE / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-16",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PFCFE / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-17",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, POCF / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-18",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, POCF / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-19",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, POCF / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-20",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, POCF / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-21",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PV / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-22",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PV / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-23",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PV / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-24",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PV / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-25",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PBV / JMR / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-26",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PBV / JMR / Económica",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-27",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PBV / Observado / Tradicional",
+      "value": 0
+    },
+    {
+      "id": "MULT-MAT-28",
+      "status": "VALIDADO",
+      "evidence": "Centro Base, PBV / Observado / Económica",
+      "value": 0
+    },
+    {
+      "id": "MARGEN-R2",
+      "status": "VALIDADO",
+      "evidence": "La trayectoria del año1 al año5 contiene cuatro incrementos iguales; primer año y objetivo se conservan.",
+      "value": null
+    },
+    {
+      "id": "S2C-R2",
+      "status": "VALIDADO",
+      "evidence": "S/C marginal y ROIC incremental usan reinversión_t para crecimiento de NOPAT_(t+1).",
+      "value": null
+    },
+    {
+      "id": "TERM-R2",
+      "status": "VALIDADO",
+      "evidence": "Reinversión11/Reinversión10=1+g al entrar en régimen estable; no hay salto de convención temporal.",
+      "value": null
+    },
+    {
+      "id": "HIST-R2",
+      "status": "VALIDADO",
+      "evidence": "Los estados históricos normalizados y LTM permanecen idénticos al hash de R1 conservado en la ficha de revisión.",
+      "value": null
+    },
+    {
+      "id": "ND-01",
+      "status": "CON HALLAZGOS",
+      "evidence": "P/FCFE: ancla histórica no reconstruida incluyendo flujos de deuda. Métrica histórica antes de nueva financiación no se declara FCFE verificado.",
+      "value": null
+    },
+    {
+      "id": "DOC-01",
+      "status": "CON HALLAZGOS",
+      "evidence": "I+D de Nike existe, pero no se obtuvo una serie pública separada de gasto para capitalizar. EBIT conserva gasto; ROIC sin activo I+D no es directamente homogéneo con industria ajustada.",
+      "value": null
+    },
+    {
+      "id": "DOC-02",
+      "status": "CON HALLAZGOS",
+      "evidence": "Último detalle completo de opciones31-may-2026. 10Q informa84,0m instrumentos antidilutivos agregados, sin reconciliación detallada por opciones/RSU. Se usa76,8m de mayo, K96,44, vida restante4,85, sigma33,1%.",
+      "value": null
+    },
+    {
+      "id": "DOC-03",
+      "status": "CON HALLAZGOS",
+      "evidence": "Comparables:5candidatos revisados. UAA excluido por clases de acciones; D&A deDECK no conciliada; balances deEV de los demás no completamente reconciliados. No se certifica anclaB ajustada.",
+      "value": null
+    },
+    {
+      "id": "PUB-01",
+      "status": "VALIDADO",
+      "evidence": "No se realizaron escrituras en la app, repositorios, rama publicada ni despliegue. Guardar la copia de trabajo no equivale a publicar.",
+      "value": null
+    }
+  ],
+  "impacts": {
+    "roic_terminal_equals_wacc": 28.415468007752658,
+    "beta_regression": 34.94068724943569,
+    "market_debt_bridge": 35.82667675736575,
+    "margin_target_minus_1pp": 32.078949350549756,
+    "margin_target_plus_1pp": 37.97204237103089,
+    "growth_delta_minus_1pp": 33.38544519110965,
+    "growth_delta_plus_1pp": 36.748339513076736,
+    "initial_wacc_minus_1pp": 37.216979559704804,
+    "initial_wacc_plus_1pp": 32.97659448365987,
+    "options_n_84m_bound": 35.01568989427174
+  },
+  "errors": [],
+  "source_manifest": [
+    {
+      "file": ".COLM_companyfacts.json.gymfoU",
+      "size": 3145728,
+      "sha256": "2a29bb1f7b957a44498908654940dd3cb2b3bfdbd3025ab109c5a1e615ac2d29"
+    },
+    {
+      "file": "COLM_companyfacts.json",
+      "size": 3506523,
+      "sha256": "41c86dc8f1831bd5fb6fdaddb41d81ff3fa803ee288eb69b5dfb0678f8182610"
+    },
+    {
+      "file": "COLM_prices.json",
+      "size": 28027,
+      "sha256": "7588ad43cfd887a56ebd2dbb56111a2e154326f0f15589a5137481bda9454dc3"
+    },
+    {
+      "file": "CROX_companyfacts.json",
+      "size": 3518686,
+      "sha256": "a1df742d55b2bf3f619f2e2a96a6183fd1d05d10eac013f70f23c82c20444337"
+    },
+    {
+      "file": "CROX_prices.json",
+      "size": 27830,
+      "sha256": "67c54e642252a50f4010a91496a09f0d40d3ff0a61aaf8748e0bc2fa49e718ff"
+    },
+    {
+      "file": "DECK_companyfacts.json",
+      "size": 3007990,
+      "sha256": "4b5b5238bd4a48c7a7685ec5a86501fb7ae19943f2a8fc09843380076fd3dc1e"
+    },
+    {
+      "file": "DECK_prices.json",
+      "size": 27786,
+      "sha256": "8ffbe7999d2f6a250b291a52f61a09ce14e38e9ee32c1c3775d75b8eb7d0856c"
+    },
+    {
+      "file": "ERPOct26.xlsx",
+      "size": 1509431,
+      "sha256": "54c311b7908d9d91ee04810ce29a0d6dffe82d73a90ebe17352510091db72f0b"
+    },
+    {
+      "file": "LULU_companyfacts.json",
+      "size": 2968163,
+      "sha256": "89f7c4fd2ad8016bb521a2a2999da6515819d628d61ea81c773d838ba2addfaf"
+    },
+    {
+      "file": "LULU_prices.json",
+      "size": 28191,
+      "sha256": "9b7a03ea0d35671c1043dbadb587a32cd2f76bb401334e482c82884757425f37"
+    },
+    {
+      "file": "NKE_2017_10K.html",
+      "size": 3397227,
+      "sha256": "9b188c9db653c63854378e368d9ff0dcc12966e0c4d19ce5832ac504d361fd11"
+    },
+    {
+      "file": "NKE_2018_10K.html",
+      "size": 3219692,
+      "sha256": "5b60e2a6b4582404bcf1aa11312131fe65127a6e399193a51eff70804d8f333b"
+    },
+    {
+      "file": "NKE_2019_10K.html",
+      "size": 2727160,
+      "sha256": "d910fe12fb05cba3dabf6b04d11802a2b2304959c9b2b2d6840c7f237099e553"
+    },
+    {
+      "file": "NKE_2020_10K.html",
+      "size": 3944836,
+      "sha256": "bb9e116fa4ed59aa711d0a88343a833192cfc2bb650fcc8500c9dea22d94eedb"
+    },
+    {
+      "file": "NKE_2021_10K.html",
+      "size": 3575511,
+      "sha256": "7ed8923c1d3e83c14e795a20848a49297e797e097e6d299bc44986965278e2c5"
+    },
+    {
+      "file": "NKE_2022_10K.html",
+      "size": 3436962,
+      "sha256": "5227aea44a951445f11811904bd09c60f7ec5e5e602f89424157890482d44201"
+    },
+    {
+      "file": "NKE_2023_10K.html",
+      "size": 2688227,
+      "sha256": "47f7bf2b2f0fee1473c51169415ea63bb0c7e72cadca3c602f985abea9ab7f0d"
+    },
+    {
+      "file": "NKE_2024_10K.html",
+      "size": 2651215,
+      "sha256": "8ff471418cb7a11108ddf2035ac5f620bffa2d1163b42c2926ebe00431f0fb30"
+    },
+    {
+      "file": "NKE_2025_10K.html",
+      "size": 2790660,
+      "sha256": "05af399ca1cee4d777343fb6dde2e26bbe641e229d92032c00b272f0730649a2"
+    },
+    {
+      "file": "NKE_2026_10K.html",
+      "size": 2824477,
+      "sha256": "163ca929addb0762fd2e96944b501f0fcc42e5b2134cfd6c23565435e8c077ea"
+    },
+    {
+      "file": "NKE_2026_10K.html.facts.json",
+      "size": 498608,
+      "sha256": "8af6aabcb0bc322216902b73d6206309321e9a68c44205159c7474e0ff9aa37e"
+    },
+    {
+      "file": "NKE_2026_10K.pdf",
+      "size": 3889634,
+      "sha256": "6e0e3096ccf9d8f8514c8067dc2e2b26605b5364612918ba3373b70e2b59c93b"
+    },
+    {
+      "file": "NKE_2026_10K.txt",
+      "size": 464964,
+      "sha256": "1ecbe1472396cd350bb2acfab060bcfbf4eec2bff866bed1888ee895324882d0"
+    },
+    {
+      "file": "NKE_2027Q1_10Q.html",
+      "size": 1353277,
+      "sha256": "94c1a958d0eba87a3f93045b09a996996592d2b2197a77a5d1d0bc76f11a8d3b"
+    },
+    {
+      "file": "NKE_2027Q1_10Q.html.facts.json",
+      "size": 248630,
+      "sha256": "4d020114c2f9fa2ce5d59944d414fcc6e9674d8dd8453ae44d3f0c11f5ab9029"
+    },
+    {
+      "file": "NKE_2027Q1_10Q.txt",
+      "size": 124779,
+      "sha256": "4faee235cfc541998f4105f4a7e619868eaca390e483889a41ab9643c74ca0a5"
+    },
+    {
+      "file": "NKE_Q1FY27_release.html",
+      "size": 274216,
+      "sha256": "7b90b34ae114c1062ff82d4ae2662d362c67c3b69d55fdbf092599f3aeb22baf"
+    },
+    {
+      "file": "NKE_companyfacts.json",
+      "size": 3051424,
+      "sha256": "d7aeceae21e6649e163d195729849349b27d909ab1a6eb4630a7c0c227acd890"
+    },
+    {
+      "file": "NKE_prices.json",
+      "size": 269971,
+      "sha256": "184bacc85784b21810a63c029f83aa82ff70cb519b247bacf4b8fb5636fc2c6f"
+    },
+    {
+      "file": "NKE_submissions.json",
+      "size": 159211,
+      "sha256": "9cd2909f8f9a68c63b4acdf2636d4a4b25ab05069a86b1972de871fd4b91eb5c"
+    },
+    {
+      "file": "SPX_prices.json",
+      "size": 128723,
+      "sha256": "77bb28c2a039bf48c35fc4c4dc8c29a09ce2ea404d7459887106fe98f79eb73f"
+    },
+    {
+      "file": "UAA_companyfacts.json",
+      "size": 3186274,
+      "sha256": "7739c891031f21efaff7135aaf080be236f685c75db0823ee51fce6c9fea7fb4"
+    },
+    {
+      "file": "UAA_prices.json",
+      "size": 27793,
+      "sha256": "27fe3591dcea372bea159c96ba4b35bff3103ed47e32c8a8f285db7fefe9640a"
+    },
+    {
+      "file": "beta_global.xls",
+      "size": 82944,
+      "sha256": "10c33f46df2a35fa7e4e8c4386c01f9da636fc2ab3e1e98307a52a947c9ab52b"
+    },
+    {
+      "file": "ctryprem.xlsx",
+      "size": 379527,
+      "sha256": "b5200e8abcb09f55a4a56c9493657d7556af30ede0d10928c403e352627109c9"
+    },
+    {
+      "file": "downloads.json",
+      "size": 1127,
+      "sha256": "f7fa783f94a8ad0ff2179edf72c712551704d5e1e27340830af89c84af1aee5f"
+    },
+    {
+      "file": "downloads2.json",
+      "size": 929,
+      "sha256": "96d5f11941487a5546c6494562dea705ea0f539bbe7ddbffcdc7dc0742a8380c"
+    },
+    {
+      "file": "downloads_extra.json",
+      "size": 2463,
+      "sha256": "59777320d06cefa89b405dec7153e44d4233ee385d4a01ddbe6321ca149f1978"
+    },
+    {
+      "file": "margin_global.xls",
+      "size": 78336,
+      "sha256": "89fe631c20f3494bb8afbd6f4407bc2000e3c94e58603da1f2d1f3acd1113e79"
+    },
+    {
+      "file": "nke-20260804.htm",
+      "size": 24375,
+      "sha256": "2449bcd58336483f5a1f9990de285978241b3a3df89fe8ffaa11defebfed5dff"
+    },
+    {
+      "file": "nke-20260908.htm",
+      "size": 60003,
+      "sha256": "1d4096899badb4698ae7d22663ec6fee2e7ea0fa486e5f2320a255a4468af2f4"
+    },
+    {
+      "file": "nke-20260915.htm",
+      "size": 29783,
+      "sha256": "8c6aff6d2d1717ccdbf7a53458d84665678973ce9c5e59357fb3125ae6880eae"
+    },
+    {
+      "file": "nke-20261001.htm",
+      "size": 30623,
+      "sha256": "c58f62e949de9615ac59f5b6ef7fc36394158e03494f258e69e5507e28201832"
+    },
+    {
+      "file": "roc_global.xls",
+      "size": 60928,
+      "sha256": "080830f04ff829800327e4c03827f541b57c97bd5f5304ea15e68e222df63643"
+    },
+    {
+      "file": "s2c_global.xls",
+      "size": 58880,
+      "sha256": "2470cd4d62a330575132c1bf7d9ccc001a56dbd97bd374fa7ceec7930eb30955"
+    }
+  ],
+  "not_executed": [
+    "scripts/controles_todas.sh con credenciales y registro externo",
+    "Certificación de todas las61pestañas heredadas",
+    "Prueba de publicación o sincronización en app; fuera del alcance solicitado"
+  ]
+}
