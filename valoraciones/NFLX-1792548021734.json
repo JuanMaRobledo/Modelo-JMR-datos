@@ -2218,6 +2218,64 @@
       ],
       "veredicto": "MATEMÁTICAMENTE CONCILIADO; ECONÓMICAMENTE SUJETO A SALVEDADES",
       "testWorkflow": "https://github.com/JuanMaRobledo/Modelo-JMR/actions/runs/39866062420"
+    },
+    "reanudacionControlPrimario": {
+      "fecha": "2026-10-22",
+      "alcance": "Verificación independiente de partidas del 10-Q Sep2026; no equivale a auditar todos los históricos 2016-2025",
+      "documento": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+      "regionesNueveMeses2026": {
+        "unidad": "USD millones",
+        "ingresos": {
+          "UCAN": 16305.18,
+          "EMEA": 12138.506,
+          "LATAM": 4683.951,
+          "APAC": 4556.234
+        },
+        "total": 37683.871,
+        "participaciones": {
+          "UCAN": 0.4326832559213463,
+          "EMEA": 0.3221140949134445,
+          "LATAM": 0.12429590898450958,
+          "APAC": 0.1209067401806996
+        },
+        "source": "Nota 2 Revenue Recognition, 9M Sep2026",
+        "reconciliado": true,
+        "limite": "UCAN agrupa EE.UU. y Canadá; EMEA, LATAM y APAC son regiones multi-país sin desglose país. No permite obtener una CRP exacta ponderada por ingresos de todos los países."
+      },
+      "opciones": {
+        "saldoDic2025": 127679804,
+        "otorgadas2026": 6571326,
+        "ejercidas2026": 14023403,
+        "expiradas2026": 52610,
+        "saldoSep2026": 120175117,
+        "strikeUsd": 41.24,
+        "plazoContratoGeneral": "10 años",
+        "plazoRemanentePromedio": "No reportado en la tabla trimestral",
+        "plazoModeloHipotesis": 4.5,
+        "reconciliado": true,
+        "source": "Nota 10 Stockholders' Equity, Stock Option Activity"
+      },
+      "arrendamientos": {
+        "corrienteUSDmm": 435.73,
+        "noCorrienteUSDmm": 1816.507,
+        "totalUSDmm": 2252.237,
+        "fuente": "Nota 5 Balance Sheet Components, Leases",
+        "reconciliado": true,
+        "tratamiento": "Pasivos de arrendamiento no deben sumarse otra vez al EV-deuda sin capitalizar y ajustar también EBIT/FCFF; preservado tratamiento gasto operativo, advertencia contra doble conteo"
+      },
+      "deuda": {
+        "costoPreimpuestosModelo": 0.0585,
+        "valorJustoUSDmm": 15158,
+        "fuente": "Nota 7 Debt y Nota 8 Hedging Activities, 13 tramos y derivados de tasas",
+        "evidencia": "Precio razonable de deuda a Sep2026, $2.4bn de swaps a SOFR, tramos en EUR; Kd5.85% es ancla estimada de largo plazo no YTM efectivo de toda deuda al 21Oct2026",
+        "estado": "Estimado, no certificado"
+      },
+      "conclusiones": [
+        "El desglose SEC por región es real, pero no certifica prima geográfica adicional de0.50pp sin ponderar países",
+        "El roll-forward de opciones y el pasivo lease están conciliados con SEC",
+        "Mantener valor DCF56.90 hasta completar evidencia que justifique cambiar premisas financieras",
+        "El análisis de peers y revisión por partida de 2016–2025 mantienen salvedades"
+      ]
     }
   },
   "escenariosDCF": {
