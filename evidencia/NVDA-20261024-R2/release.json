@@ -1,0 +1,260 @@
+{
+  "revisionId": "NVDA-20261024-R2",
+  "sourceSheetId": "1gbtwORZsvjhZNCV8xlNDloHYEeE09cEbXmPZOoLJ8gY",
+  "cutoff": "2026-10-23",
+  "dcfBase": 381.79006728063933,
+  "mos35": 248.16354373241558,
+  "ordinaryAverage": 388.5230120762598,
+  "controls": {
+    "revision": "NVDA-20261024-R2",
+    "passed": 19,
+    "failed": 0,
+    "controls": [
+      {
+        "id": "Balance10FYyLTM",
+        "passed": true,
+        "evidence": "FY2017incluye31deequitytemporal; sin plug."
+      },
+      {
+        "id": "LTM",
+        "passed": true,
+        "evidence": "FY2026+H1FY2027−H1FY2026"
+      },
+      {
+        "id": "4DCF",
+        "passed": true,
+        "evidence": "ReproducciónPython independiente; flujos/tasas/terminal/puente10años."
+      },
+      {
+        "id": "WACC",
+        "passed": true,
+        "evidence": "Detailed, pesosmercado y fuentes RF/ERP mismo corte."
+      },
+      {
+        "id": "R&Dactual",
+        "passed": true,
+        "evidence": "CohortesLTM y vida3años."
+      },
+      {
+        "id": "Leases",
+        "passed": true,
+        "evidence": "5494ya reconocido; cero conversión incremental."
+      },
+      {
+        "id": "Shares",
+        "passed": true,
+        "evidence": "24100básicas+168RSU; sin otra resta de opciones."
+      },
+      {
+        "id": "Puente",
+        "passed": true,
+        "evidence": "Líquidos99369+privados51157−compra11900−deuda38860."
+      },
+      {
+        "id": "200sensibilidades",
+        "passed": true,
+        "evidence": {
+          "maxError": 2.2737367544323206e-13,
+          "cells": 200
+        }
+      },
+      {
+        "id": "8centros",
+        "passed": true,
+        "evidence": "Mismo DCFBase."
+      },
+      {
+        "id": "Inverse",
+        "passed": true,
+        "evidence": "Deltaaditivo; precio210.96corte23oct."
+      },
+      {
+        "id": "NoErrores",
+        "passed": true,
+        "evidence": "Rangos activos y 7métodos; reparados indicadores históricos secundarios."
+      },
+      {
+        "id": "18candadosnativos",
+        "passed": true,
+        "evidence": [
+          {
+            "sheet": "Financials Multiples",
+            "cell": "M34",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Financials Multiples",
+            "cell": "M35",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Financials Multiples",
+            "cell": "M36",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B81",
+            "value": "CONCILIADO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B85",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B92",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B108",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B109",
+            "value": "NO APLICA"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B110",
+            "value": "NO APLICA"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B112",
+            "value": "NO APLICA"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B113",
+            "value": "NO APLICA"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B114",
+            "value": "NO APLICA"
+          },
+          {
+            "sheet": "Cost of capital worksheet",
+            "cell": "B84",
+            "value": "VALIDADO"
+          },
+          {
+            "sheet": "Escenarios e historias",
+            "cell": "K5",
+            "value": "LISTO"
+          },
+          {
+            "sheet": "Escenarios e historias",
+            "cell": "K6",
+            "value": "LISTO"
+          },
+          {
+            "sheet": "Escenarios e historias",
+            "cell": "K7",
+            "value": "LISTO"
+          },
+          {
+            "sheet": "Escenarios e historias",
+            "cell": "K8",
+            "value": "LISTO"
+          },
+          {
+            "sheet": "Input sheet",
+            "cell": "B111",
+            "value": "VALIDADO"
+          }
+        ]
+      },
+      {
+        "id": "CohortesI+D",
+        "passed": true,
+        "evidence": "Δactivo=gasto−amortización en4historias,13años de conciliación; DCF10años."
+      },
+      {
+        "id": "Normalizacion",
+        "passed": true,
+        "evidence": "Uplift estable no perpetúa4.18pp; GAAP se deriva poraño."
+      },
+      {
+        "id": "PruebaNativa",
+        "passed": true,
+        "evidence": "InputB28+1pp; estados cambian; fórmula original restaurada."
+      },
+      {
+        "id": "MOS",
+        "passed": true,
+        "evidence": "Sobre DCFBase."
+      },
+      {
+        "id": "Historias",
+        "passed": true,
+        "evidence": "PromedioC/B/Orenormaliza85%; Disrupciónseparada."
+      },
+      {
+        "id": "63preciosrelativos",
+        "passed": true,
+        "evidence": "7métodos×3historias×3horizontes; Ke11.4931 y dividendos anuales."
+      }
+    ],
+    "scope": "Controles propios +18estados nativos. Los scripts centrales se registran separadamente.",
+    "capturedAt": "2026-10-24T16:13:25.879764+00:00",
+    "source": "Google Sheets get_spreadsheet_cells R2; valores/formulas/formatos"
+  },
+  "engine": {
+    "revision": "NVDA-20261024-R2",
+    "dcfScenarios": 4,
+    "multiplePrices": 63,
+    "maxMultiplePriceError": 5.684341886080802e-14,
+    "baseMultipleMatrices": 28,
+    "baseMultipleSensitivityCells": 700,
+    "engineSource": "Modelo-JMR/docs/jmr_engine.js con corrección de denominador LTM; sin calibración de precios"
+  },
+  "appCommit": "39185d0831c92c66c709d45f263b5a6ef9211f05",
+  "centralScriptsCommit": "596276eb337c45edf84cf53d29a7ceec848fb40e",
+  "scope": "Valores y fórmulas reales capturados; las limitaciones de transporte y revisión se documentan en central_controls.log y auditoría.",
+  "centralControl": {
+    "result": "CONTROLES: sin fallas",
+    "online": {
+      "ticker": "NVDA",
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "I1": true,
+      "I1a": true,
+      "I1b": true,
+      "informe": "NVDA_Valoracion_Modelo_JMR_2026-10-24.md",
+      "H1": true,
+      "H1_detalle": {
+        "fuente": "Escenarios e historias!H5/H10",
+        "baseHoja": 381.790067280639,
+        "promedioHoja": 388.5230120762596,
+        "dcfTecnicoB35": 381.790067280639
+      },
+      "H2": true,
+      "H2_detalle": {
+        "hoja": [
+          121.54,
+          295.83,
+          460.6
+        ],
+        "registro": [
+          121.54,
+          295.83,
+          460.6
+        ]
+      },
+      "H3": true,
+      "H3_detalle": []
+    },
+    "scope": "Captura real identificada, rangos y criterios centrales sin cambios; historial y hojas de referencia no capturadas quedan fuera."
+  },
+  "productionUIVerification": {
+    "status": 401,
+    "verified": false,
+    "limitation": "Autenticación de producción; contenido verificado por separado en fuente publicada."
+  }
+}
