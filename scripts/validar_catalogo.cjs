@@ -94,6 +94,44 @@ function validate(root = path.join(__dirname, '..')) {
       }
       assert.ok(u.metodos.every(x=>x.control==='SIN CAMBIOS'),'Cambio no documentado de supuesto');
       assert.equal(v.auditoria.unificacionMultiples.resultado,'OK');
+      // El Visor toma los ejes en las filas FY+3 de cada pestaña real.
+      // Un HTML sin identificadores de fila deja vacías las grillas, aunque
+      // las cifras y fórmulas de la hoja nativa sean correctas.
+      const methodTabs=['EVEBITDA','EVFCFF','PE','PFCFE','POCF','PV','PBV'];
+      for(const tab of methodTabs){
+        const source=v.hojas.valoracion[tab]||'';
+        for(const row of [8,9,19,20,30,31])
+          assert.ok(source.includes('data-row="'+row+'"'),
+            'Ejes FY+3 ausentes en '+v.ticker+'/'+tab+'/'+row);
+      }
+      const source=v.hojas.valoracion['Sensibilidad por múltiplo']||'';
+      const entries=Array.from(source.matchAll(/<tr data-row="([0-9]+)">([\\s\\S]*?)<\\/tr>/g),
+        m=>({row:Number(m[1]),html:m[2]}));
+      const lookup=new Map(entries.map(x=>[x.row,x.html]));
+      assert.ok(entries.length>=69,'No hay 7 bloques de grillas Base');
+      const parseCells=html=>Array.from((html||'').matchAll(/<td(?: [^>]*)?>([\\s\\S]*?)<\\/td>/g),
+        m=>m[1].replace(/<[^>]*>/g,'').trim());
+      let numeric=0,nd=0;
+      for(let i=0;i<7;i++){
+        const at=76+10*i,title=parseCells(lookup.get(at))[0]||'';
+        const middle=lookup.get(at+5),status=parseCells(lookup.get(at+8))[8];
+        assert.ok(title.startsWith('BASE · '),'Historia ajena en matriz de '+v.ticker+' '+i);
+        assert.ok(lookup.has(at+2)&&middle&&lookup.has(at+8),'Matriz Base incompleta');
+        if(status==='N/D'){
+          assert.equal(v.ticker,'NKE','N/D no permitido NFLX');
+          assert.equal(i,3,'P/FCFE es la única excepción de NKE');
+          nd++;
+        } else {
+          assert.equal(status,'OK','Control de matriz '+v.ticker+' '+i);
+          const cells=parseCells(middle),prices=cells.slice(1,6);
+          assert.equal(prices.length,5);
+          assert.ok(prices.every(x=>/^[0-9.,]+$/.test(x)),'Precio de sensibilidad no numérico');
+          numeric++;
+        }
+      }
+      assert.equal(numeric,v.ticker==='NKE'?6:7);
+      assert.equal(nd,v.ticker==='NKE'?1:0);
+      assert.equal(v.auditoria.sensibilidadMultiplosBase20261023.matricesPublicadas,7);
 
       // La vista de la app no puede mostrar una grilla ajena ni antigua.
       // Matrices relativas únicamente Base, 7 métodos con 5×5 precios,
