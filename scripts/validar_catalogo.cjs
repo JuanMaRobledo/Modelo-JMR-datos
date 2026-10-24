@@ -101,9 +101,9 @@ function validate(root = path.join(__dirname, '..')) {
       const relHtml=v.hojas.valoracion['Sensibilidad por múltiplo'];
       assert.ok(typeof relHtml==='string','No está publicada la sensibilidad Base '+v.ticker);
       const cellsByRow=new Map();
-      for (const match of relHtml.matchAll(/<tr data-row="(\\d+)">([\\s\\S]*?)<\\/tr>/g)) {
+      for (const match of relHtml.matchAll(/<tr data-row="(\d+)">([\s\S]*?)<\/tr>/g)) {
         const id=Number(match[1]),cells=Array.from(
-          match[2].matchAll(/<td([^>]*)>([\\s\\S]*?)<\\/td>/g),
+          match[2].matchAll(/<td([^>]*)>([\s\S]*?)<\/td>/g),
           x=>({
             text:x[2].replace(/<[^>]+>/g,'').trim(),
             numeric:(()=>{const z=x[1].match(/data-value="([^"]+)"/);return z?Number(z[1]):null;})()
