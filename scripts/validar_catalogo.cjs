@@ -67,6 +67,34 @@ function validate(root = path.join(__dirname, '..')) {
     }
   }
   for (const {record: v} of vals) {
+    // Regla única de los siete múltiplos para NFLX v7 y NKE R4.
+    // Control de precios y pesos, con excepción NKE P/FCFE explícita;
+    // no permitir que el ponderado relativo reemplace el DCF principal.
+    if (['NFLX','NKE'].includes(v.ticker)) {
+      const u=v.multiplesUnificados;
+      assert.ok(u && u.revisionId===v.revisionId,'Múltiplos sin revisión vigente: '+v.ticker);
+      assert.equal(u.metodos.length,7);
+      assert.equal(u.preciosDescontados.length,7);
+      assert.equal(u.control,'7/7 métodos trazados al motor original; suma de pesos 100%; 21/21 supuestos originales preservados');
+      assert.ok(Math.abs(u.pesosRelativosSuman-1)<1e-8,'Pesos 7 métodos');
+      assert.ok(Math.abs(u.valorIntrinsecoDCFBase-v.valorPrincipal)<1e-8,'DCF modificado por múltiplos');
+      assert.ok(v.hojas.valoracion['Financials Multiples'].includes('SUPUESTOS · 7 MÉTODOS'),'Nueva tabla fuera del Nivel 2');
+      const scs=[['cons','conservador'],['base','base'],['opt','optimista']];
+      for (const [short,long] of scs) {
+        const total=u.preciosDescontados.reduce((s,m)=>{
+          if(typeof m[short]==='number'&&Number.isFinite(m[short]))return s+m[short]*m.peso;
+          assert.equal(v.ticker,'NKE','N/D inesperado en múltiplo '+m.metodo);
+          assert.equal(m.metodo,'P/FCFE','Solo P/FCFE NKE puede quedar N/D');
+          assert.equal(m[short],'N/D');
+          assert.equal(m.peso,0,'N/D con peso positivo');
+          return s;
+        },0);
+        assert.ok(Math.abs(total-u.ponderadoRelativo[long])<1e-7,
+          'Múltiplos históricos no concilian: '+v.ticker+'/'+long);
+      }
+      assert.ok(u.metodos.every(x=>x.control==='SIN CAMBIOS'),'Cambio no documentado de supuesto');
+      assert.equal(v.auditoria.unificacionMultiples.resultado,'OK');
+    }
     require('./auditar_integridad.cjs').validateRecord(v);
     assert.ok(c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md'));
     assert.ok(v.salvedades.length);
