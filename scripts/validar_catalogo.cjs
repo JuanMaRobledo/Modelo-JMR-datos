@@ -47,12 +47,23 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    assert.equal((a.articleHtml.match(/<h2>/g) || []).length, 18);
-    if (a.controlCobertura) {
-      assert.equal(a.controlCobertura.entradas.length, 25,
-        'Cobertura editorial v5 debe documentar 25 puntos');
-      assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
-      assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
+    if(a.ticker==='META' && a.revisionId==='META-20261023-r4'){
+      const headings=Array.from(a.articleHtml.matchAll(/<h2>([\\s\\S]*?)<\\/h2>/g),m=>m[1].replace(/<[^>]+>/g,'').trim());
+      assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');
+      assert.ok(headings.filter(h=>!/^[0-9]+[.] /.test(h)).every(h=>/^Adenda /.test(h)),'META: h2 extra no identificado como adenda');
+      assert.equal(a.controlCobertura?.secciones,18);
+      assert.equal(a.controlCobertura?.matricesDCF,8);
+      assert.equal(a.controlCobertura?.centrosDCFValidados,8);
+      assert.ok(a.calculationHtml?.length>1000,'META: falta nivel 2');
+      assert.ok(a.editorialRevisionId,'META: falta revisión editorial');
+    } else {
+      assert.equal((a.articleHtml.match(/<h2>/g) || []).length, 18);
+      if (a.controlCobertura) {
+        assert.equal(a.controlCobertura.entradas.length, 25,
+          'Cobertura editorial v5 debe documentar 25 puntos');
+        assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
+        assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
+      }
     }
   }
   for (const {record: v} of vals) {
