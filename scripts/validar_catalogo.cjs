@@ -94,6 +94,60 @@ function validate(root = path.join(__dirname, '..')) {
       }
       assert.ok(u.metodos.every(x=>x.control==='SIN CAMBIOS'),'Cambio no documentado de supuesto');
       assert.equal(v.auditoria.unificacionMultiples.resultado,'OK');
+
+      // La vista de la app no puede mostrar una grilla ajena ni antigua.
+      // Matrices relativas únicamente Base, 7 métodos con 5×5 precios,
+      // reconciliadas contra VP FY+3 (sin confundirlo con VP ponderado 1–3).
+      const relHtml=v.hojas.valoracion['Sensibilidad por múltiplo'];
+      assert.ok(typeof relHtml==='string','No está publicada la sensibilidad Base '+v.ticker);
+      const cellsByRow=new Map();
+      for (const match of relHtml.matchAll(/<tr data-row="(\\d+)">([\\s\\S]*?)<\\/tr>/g)) {
+        const id=Number(match[1]),cells=Array.from(
+          match[2].matchAll(/<td([^>]*)>([\\s\\S]*?)<\\/td>/g),
+          x=>({
+            text:x[2].replace(/<[^>]+>/g,'').trim(),
+            numeric:(()=>{const z=x[1].match(/data-value="([^"]+)"/);return z?Number(z[1]):null;})()
+          })
+        );
+        assert.ok(!cellsByRow.has(id),'Fila de grilla duplicada '+id);
+        cellsByRow.set(id,cells);
+      }
+      const METHODS=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF','P/V','P/BV'];
+      let verified=0,unavailable=0;
+      for(let i=0;i<METHODS.length;i++){
+        const row=76+10*i,head=cellsByRow.get(row),axis=cellsByRow.get(row+2),ctl=cellsByRow.get(row+8);
+        assert.ok(head?.[0]?.text.includes('BASE')&&head[0].text.includes(METHODS[i]),
+          'No es grilla Base del método '+METHODS[i]);
+        assert.equal(axis?.[0]?.text,'Múltiplo / Fundamental');
+        assert.ok(ctl&&ctl.length>=9);
+        const center=cellsByRow.get(row+5)?.[3];
+        assert.ok(center,'Centro inexistente '+METHODS[i]);
+        const numeric=center.numeric;
+        if(v.ticker==='NKE'&&METHODS[i]==='P/FCFE'){
+          assert.equal(center.text,'N/D');
+          assert.equal(ctl[8].text,'N/D');
+          assert.equal(ctl[7].text,'N/D');
+          unavailable++;continue;
+        }
+        assert.equal(ctl[8].text,'OK','Método relativo no validado: '+METHODS[i]);
+        assert.ok(Number.isFinite(numeric)&&numeric>0,'Precio de centro inválido: '+METHODS[i]);
+        assert.ok(Math.abs(numeric-ctl[6].numeric)<1e-8,'Centro no coincide con VP FY+3: '+METHODS[i]);
+        assert.ok(Math.abs(numeric-ctl[7].numeric)<1e-8,'Centro fuera del motor relativo: '+METHODS[i]);
+        for(let r=row+3;r<=row+7;r++){
+          const cells=cellsByRow.get(r);
+          assert.ok(cells&&cells.slice(1,6).every(x=>Number.isFinite(x.numeric)),
+            'Matriz incompleta '+METHODS[i]+' / fila '+r);
+        }
+        verified++;
+      }
+      assert.equal(verified,v.ticker==='NKE'?6:7);
+      assert.equal(unavailable,v.ticker==='NKE'?1:0);
+      for(const method of ['EVEBITDA','EVFCFF','PE','PFCFE','POCF','PV','PBV']){
+        const html=v.hojas.valoracion[method];
+        assert.ok(typeof html==='string' && html.includes('data-row="19"'),
+          'Faltan las filas de ejes económicos reales '+method);
+      }
+
     }
     require('./auditar_integridad.cjs').validateRecord(v);
     assert.ok(c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md'));
