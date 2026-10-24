@@ -105,11 +105,11 @@ function validate(root = path.join(__dirname, '..')) {
             'Ejes FY+3 ausentes en '+v.ticker+'/'+tab+'/'+row);
       }
       const source=v.hojas.valoracion['Sensibilidad por múltiplo']||'';
-      const entries=Array.from(source.matchAll(/<tr data-row="([0-9]+)">([\\s\\S]*?)<\\/tr>/g),
+      const entries=Array.from(source.matchAll(/<tr data-row="([0-9]+)">([\s\S]*?)<\/tr>/g),
         m=>({row:Number(m[1]),html:m[2]}));
       const lookup=new Map(entries.map(x=>[x.row,x.html]));
       assert.ok(entries.length>=69,'No hay 7 bloques de grillas Base');
-      const parseCells=html=>Array.from((html||'').matchAll(/<td(?: [^>]*)?>([\\s\\S]*?)<\\/td>/g),
+      const parseCells=html=>Array.from((html||'').matchAll(/<td(?: [^>]*)?>([\s\S]*?)<\/td>/g),
         m=>m[1].replace(/<[^>]*>/g,'').trim());
       let numeric=0,nd=0;
       for(let i=0;i<7;i++){
