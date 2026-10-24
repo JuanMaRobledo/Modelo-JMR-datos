@@ -47,7 +47,7 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    if(a.ticker==='META' && a.revisionId==='META-20261023-r4'){
+    if(a.ticker==='META' && a.revisionId?.startsWith('META-20261023-r4')){
       const headings=a.articleHtml.split('<h2>').slice(1).map(h=>h.split('</h2>')[0].replace(/<[^>]+>/g,'').trim());
       assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');
       assert.ok(headings.filter(h=>!/^[0-9]+[.] /.test(h)).every(h=>/^Adenda /.test(h)),'META: h2 extra no identificado como adenda');
@@ -92,7 +92,9 @@ function validate(root = path.join(__dirname, '..')) {
         assert.ok(Math.abs(total-u.ponderadoRelativo[long])<1e-7,
           'Múltiplos históricos no concilian: '+v.ticker+'/'+long);
       }
-      assert.ok(u.metodos.every(x=>x.control==='SIN CAMBIOS'),'Cambio no documentado de supuesto');
+      assert.ok(u.metodos.every(x=>x.control==='CALCULADO'),'Método incompleto');
+      assert.equal(v.cierreMultiplos?.methodsCalculated,7);
+      assert.ok(u.preciosDescontados.every(x=>['cons','base','opt'].every(k=>Number.isFinite(x[k]))),'Los siete métodos deben tener tres precios');
       assert.equal(v.auditoria.unificacionMultiples.resultado,'OK');
 
       // La vista de la app no puede mostrar una grilla ajena ni antigua.
@@ -123,12 +125,6 @@ function validate(root = path.join(__dirname, '..')) {
         const center=cellsByRow.get(row+5)?.[3];
         assert.ok(center,'Centro inexistente '+METHODS[i]);
         const numeric=center.numeric;
-        if(v.ticker==='NKE'&&METHODS[i]==='P/FCFE'){
-          assert.equal(center.text,'N/D');
-          assert.equal(ctl[8].text,'N/D');
-          assert.equal(ctl[7].text,'N/D');
-          unavailable++;continue;
-        }
         assert.equal(ctl[8].text,'OK','Método relativo no validado: '+METHODS[i]);
         assert.ok(Number.isFinite(numeric)&&numeric>0,'Precio de centro inválido: '+METHODS[i]);
         assert.ok(Math.abs(numeric-ctl[6].numeric)<1e-8,'Centro no coincide con VP FY+3: '+METHODS[i]);
@@ -140,8 +136,8 @@ function validate(root = path.join(__dirname, '..')) {
         }
         verified++;
       }
-      assert.equal(verified,v.ticker==='NKE'?6:7);
-      assert.equal(unavailable,v.ticker==='NKE'?1:0);
+      assert.equal(verified,7);
+      assert.equal(unavailable,0);
       for(const method of ['EVEBITDA','EVFCFF','PE','PFCFE','POCF','PV','PBV']){
         const html=v.hojas.valoracion[method];
         assert.ok(typeof html==='string' && html.includes('data-row="19"'),

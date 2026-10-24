@@ -1,3 +1,43 @@
+# NFLX · Cierre de múltiplos y correspondencia de entrega
+
+Fecha: 2026-10-23. Revisión vigente: `NFLX-20261023-JMR-v7-ROIC-SMOOTH20-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit).
+
+**Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$52,14; precio con MOS 35%: US$33,89.**
+
+Cada entrada y salida proviene de las fórmulas de Financials Multiples y del descuento de la misma hoja. Las comprobaciones independientes reproducen precio, dividendos y descuento. Un peso cero conserva los tres resultados. Este cierre no transforma las reservas económicas anteriores en una certificación integral.
+
+| Método | Conservador VP | Base VP | Optimista VP | Peso relativo |
+|---|---:|---:|---:|---:|
+| EV/EBITDA | 31,83 | 42,85 | 74,36 | 0,00% |
+| EV/FCFF | 48,98 | 65,32 | 85,94 | 35,00% |
+| P/E | 39,42 | 55,14 | 70,52 | 35,00% |
+| P/FCFE | 36,73 | 49,38 | 64,85 | 10,00% |
+| P/OCF | 41,04 | 56,65 | 75,24 | 10,00% |
+| P/V | 39,43 | 55,11 | 70,55 | 10,00% |
+| P/BV | 52,51 | 67,65 | 82,53 | 0,00% |
+
+Se conectaron 21 celdas de múltiplos de salida a Financials Multiples y sus entradas aplicadas, preservando los precios de las tres historias. El DCF mantiene el horizonte de 20 años.
+
+## Reservas que permanecen
+
+- Múltiplos capados con ancla C anterior; están calculados pero su justificación actual no se certificó de nuevo.
+- Contenido, reinversión marginal, opciones y arrendamientos requieren salvedades económicas explícitas.
+- La fecha de referencia del precio US$65,04 es 21-oct-2026; no cotización de hoy.
+- Fila Unlevered Free Cash Flow histórica SEC no directamente declarada: marcación N/P en lugar de cifras estimadas no verificadas; FCF reportado y derivado preservado.
+- ROIC Base terminal15%, Conservadora11,5%, Optimista18% y Disrupción=WACC, tras convergencia explícita y suavizada de diez años adicionales: hipótesis económica de moat moderado, no hecho observado.
+- ERP por 4 regiones LTM Sep2026 5,14664%, WACC Detailed9,86851%, Ke10,17945%; primas regionales EMEA son proxies, no datos por país.
+- I+D tecnológica no se capitaliza por falta de desglose; sensibilidad 3–5 años documentada.
+- Leases ASC842 sin capitalización duplicada; opciones descuentan Black-Scholes convencional (sin ajuste dilutivo real), con rango de plazo auditado.
+- Múltiplos por ancla C son secundarios y conservan reservas; DCF inverso debe rehacerse para 20 años.
+
+El control integral legado `controles_todas.sh` no se declara aprobado por este cierre. Su estado y los límites de certificación permanecen registrados; las verificaciones realizadas aquí son las descritas en el expediente de múltiplos.
+
+Evidencia reproducible: [NFLX.json](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/evidencia/cierre-siete-multiplos-20261023/NFLX.json). Valoración, análisis y este cierre comparten revisión.
+
+---
+
+## Auditoría anterior conservada como historial; los pendientes P/FCFE anteriores quedan sustituidos por el cierre anterior
+
 # Auditoría económica narrativa — Netflix, Inc. (NFLX)
 
 > **ACTUALIZACIÓN VIGENTE 23-oct-2026, v7 ROIC de 20 años.** DCF Base **US$52,14**, Conservadora **US$32,07**, Optimista **US$72,09**, Disrupción **US# Auditoría económica narrativa — Netflix, Inc. (NFLX)
@@ -405,4 +445,3 @@ Revisión financiera fija: NFLX-20261023-JMR-v7-ROIC-SMOOTH20. Nueva revisión d
 **Limitaciones formales:** no se obtuvo TAM regional monetizable por fuente homogénea ni se cuantificó impacto de incentivos del proxy2026, resultados por cohortes/título, desglose país que certifique la prima extra50pb, anclas de peers de igual fecha ni evidencia de que ROIC terminal15,00% persista indefinidamente. Hubo nuevas ejecuciones del control histórico, algunas fallidas por clasificación de celdas en el detector. El resultado de la nueva puerta financiera debe verificarse en GitHub; el recuento de secciones no constituye certificación financiera. El juicio queda expuesto y se indica qué evidencia levantaría cada reserva.
 
 **Fin de la auditoría independiente de NFLX según prompt 3 v1.2 y reglas JMR v5.**
-

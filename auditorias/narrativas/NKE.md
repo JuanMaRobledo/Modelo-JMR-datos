@@ -1,3 +1,41 @@
+# NKE · Cierre de múltiplos y correspondencia de entrega
+
+Fecha: 2026-10-23. Revisión vigente: `NKE-JMR-20261023-R4-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
+
+**Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$35,02; precio con MOS 35%: US$22,77.**
+
+Cada entrada y salida proviene de las fórmulas de Financials Multiples y del descuento de la misma hoja. Las comprobaciones independientes reproducen precio, dividendos y descuento. Un peso cero conserva los tres resultados. Este cierre no transforma las reservas económicas anteriores en una certificación integral.
+
+| Método | Conservador VP | Base VP | Optimista VP | Peso relativo |
+|---|---:|---:|---:|---:|
+| EV/EBITDA | 15,16 | 26,60 | 73,76 | 60,00% |
+| EV/FCFF | 15,16 | 26,60 | 56,64 | 0,00% |
+| P/E | 14,70 | 25,05 | 57,08 | 40,00% |
+| P/FCFE | 14,52 | 22,80 | 25,51 | 0,00% |
+| P/OCF | 14,52 | 23,25 | 52,09 | 0,00% |
+| P/V | 14,70 | 25,05 | 57,08 | 0,00% |
+| P/BV | 14,70 | 25,05 | 57,08 | 0,00% |
+
+P/FCFE: históricos normalizados = OCF + capex firmado + financiación neta − SBC; la fila de FCFE reportado permanece preservada. Proyecciones = FCFF − interés neto después de impuestos + financiación neta, explícitamente cero. SBC sigue como gasto en EBIT y no se resta por segunda vez. Se restauraron las fórmulas FY+3 sustituidas por N/D. El techo del ancla C limita g al 4% estable y no perpetúa la recuperación de corto plazo. Los múltiplos de salida son 11,66×, 17,62× y 17,62×; el peso cero obedece a volatilidad de caja, sin efecto en DCF ni ponderado.
+
+Se mantiene la convención publicada Solo 3 años en la entrada C6 del descuento. Las sensibilidades de P/FCFE Base y sus anclas calculan resultados; las matrices de otras historias no se presentan.
+
+## Reservas que permanecen
+
+- NIKE no divulga I+D separada del SG&A; capitalización exacta imposible. Registro como limitación de ROIC y contraste sectorial, no como ausencia de gasto.
+- Opciones: 76,8 millones detalladas al 31-may-2026; datos Q1FY27 de instrumentos mixtos (84 millones) no sustituyen opciones; valor de opciones reconocido US$123,37m; sensibilidad máxima examinada ~US$0,008/acción.
+- P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,52 / US$22,80 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios.
+- Comparables DECK/CROX/LULU/COLM recomputados con EV caja, leases y acciones económicas; homogeneización IFRS/USGAAP de EBITDA y arrendamientos aún limitada. UAA excluida.
+- 12/12 conciliaciones de inversión y financiación FY2022-LTM cerradas; 3 desgloses no publicados de pasivos operativos marcados N/D sin afectar FCFF; controles_todas.sh previo FALLIDO en R3 (nueve filas, tres candados legados), no hay gate integral R4 certificado.
+
+El control integral legado `controles_todas.sh` no se declara aprobado por este cierre. Su estado y los límites de certificación permanecen registrados; las verificaciones realizadas aquí son las descritas en el expediente de múltiplos.
+
+Evidencia reproducible: [NKE.json](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/evidencia/cierre-siete-multiplos-20261023/NKE.json). Valoración, análisis y este cierre comparten revisión.
+
+---
+
+## Auditoría anterior conservada como historial; los pendientes P/FCFE anteriores quedan sustituidos por el cierre anterior
+
 # Auditoría JMR R4 — NIKE, Inc. (NKE) · PUBLICADA CON HALLAZGOS
 
 ## 1. Dictamen y control de versiones
@@ -342,4 +380,3 @@ Nike conserva una marca y una distribución valiosas, pero la recuperación debe
 Consulta derevisión 23-oct-2026;documentos originales reutilizados con susperíodos yprocedencia. Datosdescargados,análisis previo ynuevo,registrodecontroles,exportaciónnativa yhuellas se conservan. El resultadoR 2 anterior queda como antecedente,sin emitirle retroactivamenteun dictamenR 3.
 
 Limitaciones deejecución:`controles_todas.sh NKE`se intentó yno completó por componentes/registro delentorno legado;log incluido. No se afirma una ejecución deproducción validada deesecontrol. Tampoco una prueba visual de sesiónautenticada ni latarjetaPDF. Las verificaciones depublicación porrutas,revisionId,huella yDCF se registran por separado después deescribir elpaquete,con autorización vigente. Ruta prevista:`Modelo-JMR-datos/auditorias/narrativas/NKE.md`. Elestadofinanciero integral permaneceCON HALLAZGOS aunque lasrutas estén sincronizadas.
-

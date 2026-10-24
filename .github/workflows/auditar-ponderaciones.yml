@@ -10,6 +10,8 @@ on:
       - 'analisis/**'
       - 'auditorias/**'
       - 'scripts/auditar_integridad.cjs'
+      - 'scripts/verificar_cierre_multiplos.py'
+      - 'evidencia/cierre-siete-multiplos-20261023/**'
       - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
   push:
@@ -22,6 +24,8 @@ on:
       - 'analisis/**'
       - 'auditorias/**'
       - 'scripts/auditar_integridad.cjs'
+      - 'scripts/verificar_cierre_multiplos.py'
+      - 'evidencia/cierre-siete-multiplos-20261023/**'
       - 'scripts/tests/**'
       - '.github/workflows/auditar-ponderaciones.yml'
 permissions:
@@ -37,3 +41,4 @@ jobs:
           node-version: '22'
       - run: node scripts/validar_catalogo.cjs
       - run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/nke_r3_release.test.cjs
+      - run: python3 scripts/verificar_cierre_multiplos.py

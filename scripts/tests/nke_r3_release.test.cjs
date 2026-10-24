@@ -18,7 +18,7 @@ test('NKE R4: catálogo, libro, artículo, auditoría y manifiesto usan una revi
   assert.ok(an, 'No hay análisis NKE vigente');
   const analisis = read(an);
   for (const ref of [val, rel, fase, analisis]) {
-    assert.equal(ref.revisionId, 'NKE-JMR-20261023-R4');
+    assert.equal(ref.revisionId, 'NKE-JMR-20261023-R4-M7');
   }
   assert.equal(val.reviewManifest.resultsSha256, rel.resultsSha256);
   assert.equal(fase.resultsSha256, rel.resultsSha256);

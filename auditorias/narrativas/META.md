@@ -1,3 +1,38 @@
+# META · Cierre de múltiplos y correspondencia de entrega
+
+Fecha: 2026-10-23. Revisión vigente: `META-20261023-r4-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit).
+
+**Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$726,65; precio con MOS 35%: US$472,32.**
+
+Cada entrada y salida proviene de las fórmulas de Financials Multiples y del descuento de la misma hoja. Las comprobaciones independientes reproducen precio, dividendos y descuento. Un peso cero conserva los tres resultados. Este cierre no transforma las reservas económicas anteriores en una certificación integral.
+
+| Método | Conservador VP | Base VP | Optimista VP | Peso relativo |
+|---|---:|---:|---:|---:|
+| EV/EBITDA | 466,66 | 726,70 | 994,37 | 35,00% |
+| EV/FCFF | 316,72 | 194,33 | 447,36 | 0,00% |
+| P/E | 487,18 | 741,45 | 938,31 | 45,00% |
+| P/FCFE | 203,52 | 112,23 | 268,61 | 0,00% |
+| P/OCF | 462,54 | 670,96 | 1.000,01 | 0,00% |
+| P/V | 427,05 | 615,01 | 984,53 | 20,00% |
+| P/BV | 550,77 | 716,13 | 1.263,27 | 0,00% |
+
+## Reservas que permanecen
+
+- La provisión específica Nuevo México no se divulgó; sanción bruta US$25.000 millones, escenarios y posible interés judicial 15%. No duplicar pasivos reconocidos.
+- Inversiones no cotizadas US$32.624 millones a valor contable proxy, con prueba 0–150% y posibles flujos de JV.
+- Pasivo financiero de leasing US$1.184 millones usado como proxy, no acreditado al 30-sep; no sustituir por activo ROU financiero.
+- Compromisos de infraestructura e IA pueden solaparse y no se descuentan otra vez como deuda; vigilar CAPEX multianual.
+- Múltiplos secundarios sin pares homogéneos ni anclas históricas reconstruidas. No son corroboración independiente del DCF.
+- ROIC marginal terminal 17,93% es hipótesis del analista, no un retorno de proyectos de IA observado. Sin ventaja: US$503,08.
+
+El control integral legado `controles_todas.sh` no se declara aprobado por este cierre. Su estado y los límites de certificación permanecen registrados; las verificaciones realizadas aquí son las descritas en el expediente de múltiplos.
+
+Evidencia reproducible: [META.json](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/evidencia/cierre-siete-multiplos-20261023/META.json). Valoración, análisis y este cierre comparten revisión.
+
+---
+
+## Auditoría anterior conservada como historial; los pendientes P/FCFE anteriores quedan sustituidos por el cierre anterior
+
 > **Adenda de sensibilidades DCF · 23-oct-2026, misma revisión META-20261023-r4.** El anexo vigente `Sensibilidad DCF` contiene **8 matrices de 5×5 y 200 precios por acción**, sin interpolación de múltiplos. Se comprobó que los **8 centros son US$726,6456435543839**, idénticos a `Valuation output!B35` de la hoja R4. El valor terminal descontado representa **76,89% del valor presente operativo** (no del patrimonio por acción); el ROIC terminal incremental **17,93%** y WACC terminal **8,99%** son hipótesis económicas materiales, no observaciones SEC. El estrés TV 80–120% no cambia la tasa de g. Las sensibilidades de siete múltiplos se exponen solo para Base y los cálculos de Conservador/Optimista permanecen en la hoja. Esta conciliación numérica no significa certificación externa ni elimina las salvedades previas.
 
 ## Dictamen vigente de cierre — 23 de octubre de 2026
