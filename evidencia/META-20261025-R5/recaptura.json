@@ -1,0 +1,68 @@
+{
+ "ticker": "META",
+ "revision_id": "META-20261025-R5",
+ "revision_anterior": "META-20261023-r4-M7",
+ "sheet_id": "1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg",
+ "estado": "CANDIDATA_NO_CERTIFICADA",
+ "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
+ "foto_antes": {
+  "archivo": "META_resultados_hoja_antes.json",
+  "data_sha256": "714a5fdfd247eef9fa19576b1a27556e4c4792eb3ecd8904eecdb0dc484f40c0",
+  "captured_at": "2026-10-25T23:41:04.564257+00:00",
+  "nota": "tomada del respaldo de Drive anterior a AUD-04/06"
+ },
+ "foto_despues": {
+  "archivo": "META_resultados_hoja.json",
+  "data_sha256": "9f10f207f04a02e2cbb661ab0e8e938f5ecc484048fdbb6de8382fabb52c41ca",
+  "captured_at": "2026-10-25T23:41:08.882952+00:00"
+ },
+ "repositorio_fotos": "JuanMaRobledo/JMR-valuation: reference/revisiones/Recaptura-NKE-NVDA-2026-10-25/",
+ "verificacion": "jmr_recaptura_verificar.py: 0 fallas",
+ "archivos_regenerados": [
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/analisis_fundamental.md",
+   "cifras_texto": 15
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/auditoria.md",
+   "cifras_texto": 15
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/hojas_financieras_fuente.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/hojas_valoracion_fuente.json",
+   "cifras_json": 72,
+   "cifras_texto": 54
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/valoracion.md",
+   "cifras_texto": 15
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/valoraciones/META-20261025-R5.json",
+   "cifras_json": 135,
+   "cifras_texto": 91
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/analisis/META-research-20261025-r5.json",
+   "cifras_json": 270,
+   "cifras_texto": 121
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/auditorias/narrativas/META-20261025-R5.md",
+   "cifras_texto": 30
+  }
+ ],
+ "no_reejecutado": [
+  "controles centrales y consistencia independiente (cierre técnico)",
+  "engine_verification de la app",
+  "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
+  "nivel visual de la app"
+ ],
+ "pruebas_fijadas_a_la_revision_anterior": [
+  "scripts/tests/nke_r3_release.test.cjs fija NKE-JMR-20261023-R4-M7; hay que actualizarla al publicar"
+ ]
+}
