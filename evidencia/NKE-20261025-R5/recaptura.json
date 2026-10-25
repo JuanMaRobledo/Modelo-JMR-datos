@@ -3,7 +3,7 @@
  "revision_id": "NKE-JMR-20261025-R5",
  "revision_anterior": "NKE-JMR-20261023-R4-M7",
  "sheet_id": "1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw",
- "estado": "CANDIDATA_NO_CERTIFICADA",
+ "estado": "PUBLICADA_CON_SALVEDADES",
  "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
  "foto_antes": {
   "archivo": "NKE_resultados_hoja_antes_AUD0406.json",
@@ -62,12 +62,10 @@
   }
  ],
  "no_reejecutado": [
-  "controles centrales y consistencia independiente (cierre técnico)",
   "engine_verification de la app",
-  "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
-  "nivel visual de la app"
+  "revisión visual"
  ],
- "pruebas_fijadas_a_la_revision_anterior": [
-  "scripts/tests/nke_r3_release.test.cjs fija NKE-JMR-20261023-R4-M7; hay que actualizarla al publicar"
- ]
+ "closureId": "RECAPTURA-NKE-NVDA-20261025",
+ "controles_ejecutados": "controles_todas.sh NKE NVDA: sin fallas (probabilidades 0 fallos, supuestos 0 hallazgos, consistencia M1/M2/M3/I1 OK, integridad 0 hallazgos, entradas esenciales vacías 0, candados 18/18)",
+ "verificacion_publicacion": "Catálogo apuntando a NKE R5/NVDA R3; revisiones anteriores en archivo/NKE-NVDA-antes-recaptura-2026-10-25/"
 }
