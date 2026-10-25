@@ -1,3 +1,23 @@
+# Auditoría JMR · NVDA · cierre técnico del 25-oct-2026
+
+**Revisión financiera: NVDA-20261024-R2** · cierre CIERRE-NKE-NVDA-20261025.
+
+**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$381,79**, precio con MOS del 35% **US$248,16**. No se cambiaron supuestos, probabilidades, pesos ni cifras de valoración.
+
+Se completó `controles_todas.sh NKE NVDA` sin fallas sobre lecturas nuevas de valores y fórmulas de las hojas activas. Ambas tienen 18/18 candados listos y cero entradas esenciales vacías. Consistencia M1/M2/M3/H1/H2/H3 e informe aprobados; descuento, terminal y puente de cuatro DCF por hoja reproducidos con error cero. [Evidencia, capturas y alcance](https://github.com/JuanMaRobledo/JMR-valuation/tree/22a06f7938738ae5851127a3101819212d57afb2/reference/revisiones/Cierre-NKE-NVDA-2026-10-25).
+
+Se confirmó la revisión R2, que normaliza I+D prospectiva y mantiene el calendario de diez años. No se sustituyó por la R1 ni por la prueba alternativa de USD384,50. 
+
+**Salvedades vigentes:** CAGR Base36,28% y escala año5 son hipótesis exigentes; no las certifica un TAM independiente. ROIC marginal estable27,23% requiere ventaja durable; prueba sin moat USD286.10. I+D/ventas7,79% y vida3años son juicios; GAAP año5≈56,23%,58% es referencia estable. Múltiplos secundarios comparten techo fundamental; no son siete confirmaciones independientes. Serie ROIC histórica ajustada3/5/10años N/D; límites de geografía por sede, concesiones y pares explícitos. Controles centrales ejecutados sobre captura directa de valores y fórmulas; historial Drive y comparación con hojas no capturadas no certificados.
+
+**Límite del cierre:** controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera. La vista autenticada de producción no se verificó; no se cambió su protección. Las hipótesis de crecimiento, márgenes, reinversión y ROIC permanecen sujetas a escenarios y sensibilidad, no se presentan como hechos certificados.
+
+### Antecedente de auditoría conservado · no es el dictamen técnico vigente
+
+Las referencias siguientes a controles pendientes o fallidos describen la situación anterior a este cierre. Las reservas económicas/documentales continúan salvo corrección expresamente indicada arriba.
+
+---
+
 # Auditoría económica narrativa — NVIDIA (NVDA)
 
 Revisión auditada: **NVDA-20261024-R2**. Informe de auditoría: **NVDA-AUD-20261024-R2**. Corte de valoración y precio: **23 de octubre de 2026**. Emisión: **24 de octubre de 2026**. Moneda: USD; cifras financieras en millones salvo indicación. Dictamen técnico del expediente: **consistente en los controles ejecutados**. Tesis económica: **Exigente**. Estado técnico: controles ejecutados según el registro adjunto; publicación autorizada. Las limitaciones de evidencia y las reservas económicas permanecen explícitas.
@@ -252,3 +272,4 @@ El despliegue de la app está READY en producción con commit39185d0831c92c66c70
 - Mauboussin y Callahan, The Base Rate Book, 26-sep-2016; marco de tasas base, no predicción específica de NVIDIA. Damodaran, notas de múltiplos en dos etapas: fundamento de anclas, no validación del valor resultante.
 
 `prompt_version: auditoria-economica-jmr-v1.2`; reglas prevalentes: REGLAS_VIGENTES v9,24-oct-2026; auditoría NVDA-AUD-20261024-R2. El código central usado se fija al commit596276eb337c45edf84cf53d29a7ceec848fb40e; la captura nativa está fechada y conserva origen, ID y rangos. El historial de revisiones de Drive no se capturó y no se certifica. Los commits de publicación de datos y la comprobación posterior se adjuntan en el comprobante de publicación. No se certifican noticias futuras, una fecha de resultados no confirmada ni un registro completo de concesiones. Fuentes, cálculos y manifiesto permiten reproducir el expediente; el manifiesto no acredita una auditoría externa.
+
