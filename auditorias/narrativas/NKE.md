@@ -1,6 +1,6 @@
 # Auditoría JMR · NKE · cierre técnico del 25-oct-2026
 
-**Revisión financiera: NKE-JMR-20261023-R4-M7** · cierre CIERRE-NKE-NVDA-20261025.
+**Revisión financiera: NKE-JMR-20261025-R5** · cierre CIERRE-NKE-NVDA-20261025.
 
 **Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$35,02**, precio con MOS del 35% **US$22,77**. No se cambiaron supuestos, probabilidades, pesos ni cifras de valoración.
 
@@ -20,7 +20,7 @@ Las referencias siguientes a controles pendientes o fallidos describen la situac
 
 # NKE · Cierre de múltiplos y correspondencia de entrega
 
-Fecha: 2026-10-23. Revisión vigente: `NKE-JMR-20261023-R4-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
+Fecha: 2026-10-23. Revisión vigente: `NKE-JMR-20261025-R5`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
 
 **Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$35,02; precio con MOS 35%: US$22,77.**
 
@@ -31,7 +31,7 @@ Cada entrada y salida proviene de las fórmulas de Financials Multiples y del de
 | EV/EBITDA | 15,16 | 26,60 | 73,76 | 60,00% |
 | EV/FCFF | 15,16 | 26,60 | 56,64 | 0,00% |
 | P/E | 14,70 | 25,05 | 57,08 | 40,00% |
-| P/FCFE | 14,52 | 22,80 | 25,51 | 0,00% |
+| P/FCFE | 14,46 | 22,74 | 25,44 | 0,00% |
 | P/OCF | 14,52 | 23,25 | 52,09 | 0,00% |
 | P/V | 14,70 | 25,05 | 57,08 | 0,00% |
 | P/BV | 14,70 | 25,05 | 57,08 | 0,00% |
@@ -44,7 +44,7 @@ Se mantiene la convención publicada Solo 3 años en la entrada C6 del descuento
 
 - NIKE no divulga I+D separada del SG&A; capitalización exacta imposible. Registro como limitación de ROIC y contraste sectorial, no como ausencia de gasto.
 - Opciones: 76,8 millones detalladas al 31-may-2026; datos Q1FY27 de instrumentos mixtos (84 millones) no sustituyen opciones; valor de opciones reconocido US$123,37m; sensibilidad máxima examinada ~US$0,008/acción.
-- P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,52 / US$22,80 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios.
+- P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,46 / US$22,74 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios.
 - Comparables DECK/CROX/LULU/COLM recomputados con EV caja, leases y acciones económicas; homogeneización IFRS/USGAAP de EBITDA y arrendamientos aún limitada. UAA excluida.
 - 12/12 conciliaciones de inversión y financiación FY2022-LTM cerradas; 3 desgloses no publicados de pasivos operativos marcados N/D sin afectar FCFF; controles_todas.sh previo FALLIDO en R3 (nueve filas, tres candados legados), no hay gate integral R4 certificado.
 
