@@ -1,0 +1,73 @@
+{
+ "ticker": "NKE",
+ "revision_id": "NKE-JMR-20261025-R6",
+ "revision_anterior": "NKE-JMR-20261025-R5",
+ "sheet_id": "1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw",
+ "estado": "CANDIDATA_NO_CERTIFICADA",
+ "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
+ "foto_antes": {
+  "archivo": "NKE_resultados_hoja_antes.json",
+  "data_sha256": "1e2288ce1582adab06eecb1080df129f46e45c84303752af651a0c1b451cf211",
+  "captured_at": "2026-10-25T23:22:29.353908+00:00",
+  "nota": "tomada del respaldo de Drive anterior a AUD-04/06"
+ },
+ "foto_despues": {
+  "archivo": "NKE_resultados_hoja.json",
+  "data_sha256": "057e2228e44c7c1fd0a4884c25e17e9dd5adfd9ff971f1e9e1fb9c038559f812",
+  "captured_at": "2026-10-25T23:34:09.927590+00:00"
+ },
+ "repositorio_fotos": "JuanMaRobledo/JMR-valuation: reference/revisiones/Recaptura-NKE-NVDA-2026-10-25/",
+ "verificacion": "jmr_recaptura_verificar.py: 0 fallas",
+ "archivos_regenerados": [
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/01_Valoracion_NKE.md",
+   "cifras_texto": 9
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/02_Analisis_NKE.md",
+   "cifras_texto": 13
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/03_Auditoria_NKE.md",
+   "cifras_texto": 10
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/audit_checks.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/fases_ejecucion.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/NKE-20261025-R6/resultado_y_fuentes.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/valoraciones/NKE-20261025-R6.json",
+   "cifras_json": 315,
+   "cifras_texto": 131
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/analisis/NKE-research-20261025-r6.json",
+   "cifras_json": 198,
+   "cifras_texto": 184
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/auditorias/narrativas/NKE-20261025-R6.md",
+   "cifras_texto": 27
+  }
+ ],
+ "no_reejecutado": [
+  "controles centrales y consistencia independiente (cierre técnico)",
+  "engine_verification de la app",
+  "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
+  "nivel visual de la app"
+ ],
+ "pruebas_fijadas_a_la_revision_anterior": [
+  "scripts/tests/nke_r3_release.test.cjs fija NKE-JMR-20261023-R4-M7; hay que actualizarla al publicar"
+ ]
+}

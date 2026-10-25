@@ -1,0 +1,59 @@
+{
+  "revisionId": "NKE-JMR-20261025-R6",
+  "resultsSha256": "ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545",
+  "originalEngineRevision": "NKE-JMR-20261023-R3",
+  "valuation": {
+    "completedAt": "2026-10-23",
+    "state": "DCF R3 heredado sin cambios + datos SEC y tablas R4 actualizadas",
+    "outputs": [
+      "resultado_y_fuentes.json",
+      "01_Valoracion_NKE.md"
+    ],
+    "nativeSheet": "https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit",
+    "options": 123.37011153656897,
+    "materiality": "FCFE peso 0 y pares secundarios; no altera base"
+  },
+  "analysis": {
+    "completedAt": "2026-10-23",
+    "consumedResultsSha256": "ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545",
+    "output": "02_Analisis_NKE.md",
+    "h2": 18,
+    "coverage": 25,
+    "remoteArticle": "analisis/NKE-research-20261023-r2.json"
+  },
+  "audit": {
+    "status": "CON HALLAZGOS",
+    "completedAt": "2026-10-23",
+    "consumedResultsSha256": "ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545",
+    "checksR4SecReconciliation": 12,
+    "passedR4SecReconciliation": 12,
+    "findings": [
+      "I+D",
+      "Opciones",
+      "P/FCFE",
+      "Pares",
+      "controles_todas.sh"
+    ],
+    "source": "03_Auditoria_NKE.md"
+  },
+  "publication": {
+    "status": "PUBLICADA",
+    "authorizedBy": "Solicitud explícita del usuario 23-oct-2026: Publica la con análisis y auditoría.",
+    "verificationStatus": "PENDIENTE",
+    "evidence": "catalogo.json; CI catálogo/ponderaciones y dos niveles publicados"
+  },
+  "cierreMultiplos": {
+    "revisionId": "NKE-JMR-20261025-R6",
+    "sourceRevisionId": "NKE-JMR-20261023-R4",
+    "date": "2026-10-23",
+    "sourceSheetId": "1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw",
+    "methodsCalculated": 7,
+    "scenariosCalculated": 21,
+    "horizonPricesChecked": 63,
+    "presentValuesChecked": 63,
+    "dcfBase": 35.02347679200689,
+    "evidencePath": "evidencia/cierre-siete-multiplos-20261023/NKE.json",
+    "status": "CÁLCULO COMPLETO; SALVEDADES ECONÓMICAS CONSERVADAS",
+    "scope": "Cálculo de múltiplos y correspondencia de las tres piezas. No certificación integral de fuentes, contabilidad o todos los supuestos del DCF."
+  }
+}
