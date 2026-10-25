@@ -21,12 +21,12 @@
 | Activos de contenido (no corrientes) | 7.274,50 | 10.371,06 | 14.951,14 | 24.504,57 | 25.383,95 | 30.919,54 | 32.736,71 | 31.658,06 | 32.452,46 | 32.778,39 | 34.605,48 |
 | Caja e inversiones | 1.733,78 | 2.822,80 | 3.812,04 | 5.043,79 | 8.238,87 | 6.055,11 | 6.081,86 | 7.139,49 | 9.586,34 | 9.062,36 | 8.222,95 |
 | Deuda financiera | 3.364,31 | 6.499,43 | 10.360,06 | 14.759,26 | 16.308,97 | 15.392,90 | 14.353,08 | 14.543,26 | 15.582,80 | 14.462,84 | 15.132,39 |
-| Pasivo por arrendamiento operativo | 0,00 | 0,00 | 0,00 | 1.613,23 | 2.201,85 | 2.723,68 | 2.578,49 | 2.430,11 | 2.412,17 | 2.513,00 | 2.252,24 |
+| Pasivo por arrendamiento operativo | n.d. | n.d. | n.d. | 1.613,23 | 2.201,85 | 2.723,68 | 2.578,49 | 2.430,11 | 2.412,17 | 2.513,00 | 2.252,24 |
 | Patrimonio | 2.679,80 | 3.581,96 | 5.238,77 | 7.582,16 | 11.065,24 | 15.849,25 | 20.777,40 | 20.588,31 | 24.743,57 | 26.615,49 | 29.286,25 |
-| Capital invertido (patrimonio + deuda + arrendamientos − caja) | 4.310,33 | 7.258,59 | 11.786,78 | 18.910,87 | 21.337,20 | 27.910,71 | 31.627,11 | 30.422,20 | 33.152,20 | 34.528,97 | 38.447,93 |
+| Capital invertido (patrimonio + deuda + arrendamientos − caja) | n.d. | n.d. | n.d. | 18.910,87 | 21.337,20 | 27.910,71 | 31.627,11 | 30.422,20 | 33.152,20 | 34.528,97 | 38.447,93 |
 | ROE | 6,97 % | 15,60 % | 23,12 % | 24,62 % | 24,96 % | 32,28 % | 21,62 % | 26,27 % | 35,21 % | 41,26 % | 50,42 % |
-| ROIC después de impuestos (tasa efectiva) | 6,31 % | 13,31 % | 13,45 % | 12,47 % | 18,55 % | 19,44 % | 15,20 % | 19,92 % | 27,47 % | 33,31 % | 33,77 % |
-| Ventas/capital | 2,05 | 1,61 | 1,34 | 1,07 | 1,17 | 1,06 | 1,00 | 1,11 | 1,18 | 1,31 | 1,29 |
+| ROIC después de impuestos (tasa efectiva) | n.d. | n.d. | n.d. | 12,47 % | 18,55 % | 19,44 % | 15,20 % | 19,92 % | 27,47 % | 33,31 % | 33,77 % |
+| Ventas/capital | n.d. | n.d. | n.d. | 1,07 | 1,17 | 1,06 | 1,00 | 1,11 | 1,18 | 1,31 | 1,29 |
 | Liquidez corriente | 1,25 | 1,40 | 1,49 | 0,90 | 1,25 | 0,95 | 1,17 | 1,12 | 1,22 | 1,19 | 1,07 |
 | Deuda neta / EBITDA | 3,73 | 4,04 | 3,88 | 3,59 | 1,72 | 1,46 | 1,39 | 1,01 | 0,56 | 0,40 | 0,43 |
 | EBIT / intereses | 2,53 | 3,52 | 3,82 | 4,16 | 5,97 | 8,09 | 7,98 | 9,94 | 14,49 | 17,16 | 18,17 |
@@ -35,7 +35,7 @@
 | Recompras | 0,00 | 0,00 | 0,00 | 0,00 | 0,00 | 600,02 | 0,00 | 6.045,35 | 6.263,75 | 9.127,17 | 12.861,27 |
 | Compensación en acciones | 173,68 | 182,21 | 320,66 | 405,38 | 415,18 | 403,22 | 575,45 | 339,37 | 272,59 | 368,45 | 540,06 |
 
-Definiciones: margen de flujo libre = (flujo operativo − capex) / ingresos; ROE = utilidad neta / patrimonio final; ROIC = EBIT × (1 − tasa efectiva) / capital invertido final con arrendamientos operativos (ASC 842 desde 2019). Acciones y BPA ajustados por el desdoblamiento 10:1 del 14-nov-2025. El LTM incluye la comisión de terminación WBD de 2.800 M USD (fuera del EBIT).
+Definiciones: margen de flujo libre = (flujo operativo − capex) / ingresos; ROE = utilidad neta / patrimonio final; ROIC = EBIT × (1 − tasa efectiva) / capital invertido final. Una partida ausente se muestra como n.d., nunca como cero; los ajustes por splits, contenido y arrendamientos dependen del expediente SEC específico de cada empresa.
 
 ### Promedios simples
 
@@ -45,8 +45,8 @@ Definiciones: margen de flujo libre = (flujo operativo − capex) / ingresos; RO
 | Margen bruto | 45,36 % | 43,42 % | 39,16 % |
 | Margen operativo | 25,61 % | 23,10 % | 16,84 % |
 | ROE | 34,24 % | 31,33 % | 25,19 % |
-| ROIC después de impuestos (tasa efectiva) | 26,90 % | 23,07 % | 17,94 % |
-| Ventas/capital | 1,20 | 1,13 | 1,29 |
+| ROIC después de impuestos (tasa efectiva) | 26,90 % | 23,07 % | 20,91 % |
+| Ventas/capital | 1,20 | 1,13 | 1,13 |
 | Liquidez corriente | 1,17 | 1,13 | 1,19 |
 | Deuda neta / EBITDA | 0,66 | 0,96 | 2,18 |
 | EBIT / intereses | 13,86 | 11,53 | 7,77 |
@@ -494,6 +494,5 @@ Réplica: error 0,000000 frente a la hoja. Precio 69,58: delta -0,36 pp; CAGR im
 | 11,71× | 64,49 | 72,56 | 80,62 | 88,68 | 96,74 |
 
 Familia económica (múltiplo justificado por g, ROIC, WACC/Ke): no se despliega; sus centros son el ancla C de `anclas.json` (regla del 21-oct-2026). Conservadora, Optimista y Disrupción no tienen matrices.
-
 
 

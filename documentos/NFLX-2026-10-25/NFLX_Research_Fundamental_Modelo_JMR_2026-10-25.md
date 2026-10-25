@@ -186,8 +186,8 @@ Las definiciones son las del Nivel 2 de esta revisión, que cambian dos cosas fr
 | Margen de flujo libre | 20,9% (2025); 22,9% LTM | 19,7% | 12,8% | 0,3% | Sube | Media: LTM con comisión de WBD |
 | ROA | 19,8% (2025); 25,2% LTM | n.d. | n.d. | n.d. | Sube | Utilidad neta / activo total final |
 | ROE | 41,3% (2025); 50,4% LTM | 34,2% | 31,3% | 25,2% | Sube | Media: recompras reducen el patrimonio y la comisión infla el LTM |
-| ROIC | 33,3% (2025); 33,8% LTM | 26,9% | 23,1% | 17,9% | Sube | Media: sin capitalizar contenido ni I+D; con I+D capitalizado la hoja da 30,1% |
-| Rotación del capital invertido (ingresos / capital invertido) | 1,31 veces (2025); 1,29 LTM | 1,20 | 1,13 | 1,29 | Estable | Media |
+| ROIC | 33,3% (2025); 33,8% LTM | 26,9% | 23,1% | 20,9% (7 obs., 2019-2025) | Sube | Media: sin capitalizar contenido ni I+D; con I+D capitalizado la hoja da 30,1%; 2016-2018 n.d. porque el pasivo por arrendamientos no está reportado y no se rellena con cero |
+| Rotación del capital invertido (ingresos / capital invertido) | 1,31 veces (2025); 1,29 LTM | 1,20 | 1,13 | 1,13 (7 obs., 2019-2025) | Estable | Media: 2016-2018 n.d. |
 | Liquidez corriente | 1,07 | 1,17 | 1,13 | 1,19 | Baja ligeramente | Alta |
 | Prueba ácida | n.d. | n.d. | n.d. | n.d. | n.d. | Netflix no separa cuentas por cobrar en el balance (van en «otros activos corrientes»); no se estima |
 | Deuda neta / EBITDA | 0,43 veces | 0,66 | 0,96 | 2,18 | Baja | Alta; sin arrendamientos |

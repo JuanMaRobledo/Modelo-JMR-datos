@@ -91,9 +91,9 @@ La importación de las 785 celdas está postverificada una a una. No se usaron c
 |---|---:|---:|---:|---:|---:|---|
 | Crecimiento de ingresos | +13,7% (9M26) | 15,85% | 12,72% | 12,69% | 21,28% | 6,46% (2022) – 35,08% (2018) |
 | Margen operativo GAAP | 31,30% | 29,49% | 25,61% | 23,10% | 16,84% | 4,30% – 29,49% |
-| ROIC después de impuestos (con arrendamientos) | 33,77% | 33,31% | 26,90% | 23,07% | 17,94% | 6,31% – 33,31% |
+| ROIC después de impuestos (con arrendamientos) | 33,77% | 33,31% | 26,90% | 23,07% | 20,91% (7 obs.) | 12,47% – 33,31% (2019-2025) |
 | ROE | 50,42% (con la comisión de WBD) | 41,26% | 34,24% | 31,33% | 25,19% | 6,97% – 41,26% |
-| Ventas/capital | 1,29 | 1,31 | 1,20 | 1,13 | 1,29 | 1,00 – 2,05 |
+| Ventas/capital | 1,29 | 1,31 | 1,20 | 1,13 | 1,13 (7 obs.) | 1,00 – 1,31 (2019-2025) |
 | Margen de flujo libre | 22,87% | 20,94% | 19,74% | 12,78% | 0,33% | −18,07% – 20,94% |
 | Deuda neta / EBITDA | 0,43 | 0,40 | 0,66 | 0,96 | 2,18 | 0,40 – 4,04 |
 | Acciones diluidas promedio (M) | 4.267,91 | 4.343,86 | 4.410,48 | 4.459,61 | 4.472,49 | Máximo 4.553,72 (2021) |
@@ -104,6 +104,8 @@ Hay tres regímenes:
 - **2016-2019:** crecimiento financiado con deuda y flujo libre negativo.
 - **2020-2022:** transición, con 2022 como año de crisis (+6,5%).
 - **2023-LTM:** monetización (cuentas compartidas, anuncios y precio) con apalancamiento operativo.
+
+Para 2016-2018 el pasivo por arrendamientos operativos no está reportado (ASC 842 rige desde 2019), así que el capital invertido, el ROIC y ventas/capital de esos años son n.d. y los promedios de 10 años usan siete observaciones; no se sustituye con cero.
 
 Los límites de homogeneidad son cuatro:
 - ASC 842 incorpora los arrendamientos al balance desde 2019.
@@ -172,7 +174,7 @@ El año 1 parte del margen LTM ajustado por I+D: 33,09% (31,30% GAAP + 893,33 / 
 
 **Seis preguntas.**
 - (a) **Valor:** 1,3 / 0,9 en 'Escenarios e historias'!E5:F5. Input!B32:B33 (1,20) no está activo, porque las historias lo sustituyen.
-- (b) **Histórico:** ventas/capital de 1,20 (3 años), 1,13 (5 años) y 1,29 (10 años); el LTM es 1,29 y el marginal 2022→LTM, 2,66.
+- (b) **Histórico:** ventas/capital de 1,20 (3 años), 1,13 (5 años) y 1,13 (siete años con dato, 2019-2025); el LTM es 1,29 y el marginal 2022→LTM, 2,66.
 - (c) **Mecanismo:** el crecimiento futuro pide contenido local, deporte y tecnología publicitaria.
 - (d) **Qué tendría que ocurrir:** que el gasto de contenido en efectivo se mantenga en ~1,1 veces la amortización.
 - (e) **Qué lo refutaría:** un gasto de contenido de ≥ 1,2 veces sin crecimiento adicional.
@@ -180,7 +182,7 @@ El año 1 parte del margen LTM ajustado por I+D: 33,09% (31,30% GAAP + 893,33 / 
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Ventas/capital | 1,20 / 1,13 / 1,29; LTM 1,29; marginal 2,66 | 1,3 (años 1-5), 0,9 (años 6-10) | Entertainment (Damodaran ene-2026): referencia sectorial, menor | Reinvertir en contenido sostiene el crecimiento | Más deporte en vivo | ±20%: −2,6% / +1,7% |
+| Ventas/capital | 1,20 / 1,13 / 1,13; LTM 1,29; marginal 2,66 | 1,3 (años 1-5), 0,9 (años 6-10) | Entertainment (Damodaran ene-2026): referencia sectorial, menor | Reinvertir en contenido sostiene el crecimiento | Más deporte en vivo | ±20%: −2,6% / +1,7% |
 | ROIC del capital nuevo | ROIC medio 27-34% desde 2024 | ≈38% → ≈26% → 20,58% | ROIC de Entertainment 11,04% | Escala de contenido | Competencia por la atención | Ver §9 |
 
 **Juicio [INFERENCIA].** *Razonable y algo prudente*: un 1,3 frente a un marginal de 2,66 incluye reposición de contenido. La corrección desde el borrador de 1,6 (rendimiento ~49% con salto abrupto) mejoró la coherencia.
@@ -259,7 +261,7 @@ Impacto calculado con la plantilla y con la réplica [MODELO]:
 
 | Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| ROIC terminal | 26,9% / 23,1% / 17,9%; hoja 30,13% | 20,58%; Input!B50 | Entertainment global 11,04% | Ventaja de escala duradera | Atención que migra; la regla literal da 11,04% | 11,04%: −13,9%; WACC: −20,8% |
+| ROIC terminal | 26,9% / 23,1% / 20,9%; hoja 30,13% | 20,58%; Input!B50 | Entertainment global 11,04% | Ventaja de escala duradera | Atención que migra; la regla literal da 11,04% | 11,04%: −13,9%; WACC: −20,8% |
 | g terminal | n.a. | 4,0%; Input!B69 | Inflación ~2,3% + real ~1,7% | Economía nominal en USD | — | ±0,5 pp: −4,5% / +5,5% |
 
 ## 10. Validación independiente del valor intrínseco
