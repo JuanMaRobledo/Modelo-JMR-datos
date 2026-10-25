@@ -1,447 +1,505 @@
-# NFLX · Cierre de múltiplos y correspondencia de entrega
-
-Fecha: 2026-10-23. Revisión vigente: `NFLX-20261023-JMR-v7-ROIC-SMOOTH20-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit).
-
-**Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$52,14; precio con MOS 35%: US$33,89.**
-
-Cada entrada y salida proviene de las fórmulas de Financials Multiples y del descuento de la misma hoja. Las comprobaciones independientes reproducen precio, dividendos y descuento. Un peso cero conserva los tres resultados. Este cierre no transforma las reservas económicas anteriores en una certificación integral.
-
-| Método | Conservador VP | Base VP | Optimista VP | Peso relativo |
-|---|---:|---:|---:|---:|
-| EV/EBITDA | 31,83 | 42,85 | 74,36 | 0,00% |
-| EV/FCFF | 48,98 | 65,32 | 85,94 | 35,00% |
-| P/E | 39,42 | 55,14 | 70,52 | 35,00% |
-| P/FCFE | 36,73 | 49,38 | 64,85 | 10,00% |
-| P/OCF | 41,04 | 56,65 | 75,24 | 10,00% |
-| P/V | 39,43 | 55,11 | 70,55 | 10,00% |
-| P/BV | 52,51 | 67,65 | 82,53 | 0,00% |
-
-Se conectaron 21 celdas de múltiplos de salida a Financials Multiples y sus entradas aplicadas, preservando los precios de las tres historias. El DCF mantiene el horizonte de 20 años.
-
-## Reservas que permanecen
-
-- Múltiplos capados con ancla C anterior; están calculados pero su justificación actual no se certificó de nuevo.
-- Contenido, reinversión marginal, opciones y arrendamientos requieren salvedades económicas explícitas.
-- La fecha de referencia del precio US$65,04 es 21-oct-2026; no cotización de hoy.
-- Fila Unlevered Free Cash Flow histórica SEC no directamente declarada: marcación N/P en lugar de cifras estimadas no verificadas; FCF reportado y derivado preservado.
-- ROIC Base terminal15%, Conservadora11,5%, Optimista18% y Disrupción=WACC, tras convergencia explícita y suavizada de diez años adicionales: hipótesis económica de moat moderado, no hecho observado.
-- ERP por 4 regiones LTM Sep2026 5,14664%, WACC Detailed9,86851%, Ke10,17945%; primas regionales EMEA son proxies, no datos por país.
-- I+D tecnológica no se capitaliza por falta de desglose; sensibilidad 3–5 años documentada.
-- Leases ASC842 sin capitalización duplicada; opciones descuentan Black-Scholes convencional (sin ajuste dilutivo real), con rango de plazo auditado.
-- Múltiplos por ancla C son secundarios y conservan reservas; DCF inverso debe rehacerse para 20 años.
-
-El control integral legado `controles_todas.sh` no se declara aprobado por este cierre. Su estado y los límites de certificación permanecen registrados; las verificaciones realizadas aquí son las descritas en el expediente de múltiplos.
-
-Evidencia reproducible: [NFLX.json](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/main/evidencia/cierre-siete-multiplos-20261023/NFLX.json). Valoración, análisis y este cierre comparten revisión.
-
 ---
-
-## Auditoría anterior conservada como historial; los pendientes P/FCFE anteriores quedan sustituidos por el cierre anterior
+schema: "jmr-auditoria-economica-v1.2"
+prompt_version: "auditoria-economica-jmr-v1.2"
+ticker: "NFLX"
+company: "Netflix, Inc."
+revision_id: "NFLX-2026-10-25"
+audit_date: "2026-10-25"
+valuation_date: "2026-09-30"
+sheet: "https://docs.google.com/spreadsheets/d/1ZPNMHxc7m3Iv60mdGspgi6-cc2zwf5kZ4ocsuANQUNM/edit"
+results_snapshot_sha256: "6afa5b6aba533dcbd28143ba547eb3c98de1b541d5695a9a0e6351a2a06e58d5"
+controls_file: "reference/revisiones/NFLX-2026-10-25/auditoria_controles.json"
+dictamen: "VERIFICADO con salvedades no bloqueantes"
+language: "es"
+---
 
 # Auditoría económica narrativa — Netflix, Inc. (NFLX)
 
-> **ACTUALIZACIÓN VIGENTE 23-oct-2026, v7 ROIC de 20 años.** DCF Base **US$52,14**, Conservadora **US$32,07**, Optimista **US$72,09**, Disrupción **US# Auditoría económica narrativa — Netflix, Inc. (NFLX)
-3,08**; promedio ordinario **US$49,89**; Ke **10,18%**, WACC **9,87%**, ERP por cuatro regiones **5,15%**. Revisión financiera y editorial común **NFLX-20261023-JMR-v7-ROIC-SMOOTH20**. Cotización de referencia US$65,04 del 21-oct; MOS35% Base **US$33,89**. Libro vigente: [NFLX JMR v7](https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit). Los valores v5 de párrafos históricos anteriores a esta revisión quedan sustituidos, incluso los análisis inversos calculados con perpetuidad inmediata.
+> **revision_id `NFLX-2026-10-25`.** Esta auditoría examina la misma hoja, la misma foto de resultados (sha256 `6afa5b6a…58d5`), la valoración `data/NFLX_Valoracion_Modelo_JMR_2026-10-25.md` y el análisis `data/NFLX_Research_Fundamental_Modelo_JMR_2026-10-25.md` de esta revisión. Verifica, contradice y dictamina; **no modificó la valoración**. La única corrección ejecutada en la copia (AUD-01, una fórmula de la plantilla) la hizo el proceso de valoración después de la primera ronda de esta auditoría, con respaldo. La segunda ronda la verificó. No es una auditoría contable.
 
-### Auditoría económica decisiva: ROIC gradual y ventaja moderada
-
-**Defecto identificado y corregido:** en el DCF histórico, el ROIC operativo calculado por el motor Base alcanza 43,97% sobre capital al inicio del año 10; el ROIC al cierre del año 10 equivale a 42,31%. Antes el modelo aplicaba una perpetuidad inmediata de 21,52% (primero), o 15% (nuevo objetivo) desde el año 11, contradiciendo la erosión gradual del foso. **No se cambió solo una celda de ROIC**: se introdujo la pestaña editable **`Convergencia ROIC 11-20`**, cuyas cuatro hojas de continuación sustituyen `Valuation output!B20/B71/B122/B175` por el VP de FCFF de años 11–20 más un valor terminal al finalizar el año 20.
-
-**Mecánica reproducible:** `ROIC_t = ROIC_10 + (ROIC_20 − ROIC_10) × (6u^5 − 15u^4 + 10u^3)`, `u=(t−10)/10`; año10 ROIC sobre capital al cierre = 42,31%, año11 42,08%, año12 40,73%, año13 37,86%, año14 33,64%, año15 28,66%, año16 23,67%, año17 19,45%, año18 16,58%, año19 15,23%, año20 15,00%. NOPAT aumenta al g de la historia durante transición, capital requerido = NOPAT/ROIC cierre, reinversión = variación interanual de capital, FCFF = NOPAT − reinversión. Terminal año21 usa reinversión g/ROIC, ROIC Base 15% vs WACC 9,8685%, spread 5,13pp: foso competitivo moderado. Esta trayectoria eleva el capital necesario desde US$64.094,56M hasta US$267.613,40M en el escenario Base (proyección, no hecho SEC). El FCFF puede ser negativo en años 17–18 durante la erosión y se conserva íntegro: NO se suaviza la caja para obtener una valoración deseada. Cuatro controles de continuidad aritmética `L19/L40/L61/L82 = VALIDADO`; no constituyen evidencia externa del ROIC terminal ni prueban la sostenibilidad de gasto de contenido.
-
-**Escenarios:** Base ROIC terminal15%, Conservadora11,5%, Optimista18%, Disrupción convergente a WACC9,8685%; el promedio condiciona las probabilidades Base45%, Conservadora27,5%, Optimista17,5% excluyendo Disrupción10%. Con 10 primeros años no alterados, la Base cae de US$61,12 (WACC regional actualizado, perpetuidad inmediata 15% todavía no aplicada) a **US$52,14** tras introducir **el período de transición y la reinversión requerida**, diferencia material de aproximadamente −14,7%. Frente a la valoración originalmente publicada US$69,94, la revisión v7 implica −25,5%, separando cambios de ERP y ROIC.
-
-**Sensibilidad corregida:** `Sensibilidad DCF e inverso!B8:F12` aplica WACC alternativo de forma uniforme en los 20 años, y varía **g solo desde el año 21**, dejando el crecimiento de transición fijado por historia (4% en Base). Centro `D10 = Valuation output!B35 = 52,14064777` sin residuo. `Cost of capital worksheet!B12=Detailed, B26=Operating regions, B14=E63=Input sheet!B36 = 9,86851356%`; Ke10,17945%, CRP regional ponderada ≈1,22664pp encima de ERP madura ajustada3,92%. La matriz de múltiplos secundaria se redescuenta al Ke vigente: valor Base US$58,27. Objetivo auxiliar FY+3 US$74,66. El crecimiento implícito inverso de la versión de diez años **queda N/D** y no debe mostrarse como cifra calculada hasta reconstruir la inversión ROIC de 20 años.
-
-**Aplicación del criterio JMR de materialidad:** cambios WACC y ROIC son **MATERIALES y efectivamente recalculados** en hoja y registro v7. Opciones (<0,15% en vida/fórmula ensayadas), leases (cota <0,15% en puente no duplicado) e I+D tecnológica no separada (sensibilidad de 3–5 años <1,33% con hipótesis 100% capitalización) siguen salvedades económicas específicas **no bloqueantes bajo los ensayos existentes**, sin representar pruebas universales. La política financiera ya cambió materialmente: no se puede citar el DCF v5 como si fuera vigente.
-
-**Reservas reales:** (1) el ROIC terminal 15% sobre WACC sigue siendo hipótesis de foso moderado, no dato auditado; (2) el crecimiento nominal 4% y la nueva inversión de contenido/capital que exige la transición deben contrastarse con 10-Q futuros; (3) las primas macro-regionales no son granularidad país; (4) anclas de siete múltiplos son secundarias y siguen sujetas a revisión por ciclo/peers; (5) DCF inverso 20 años N/D. **Dictamen: valoración PUBLICABLE CON SALVEDADES ECONÓMICAS expresas**, no certificación externa de supuestos ni de informes SEC. Antes de declarar todos los controles técnicos como aprobados, revisar el workflow del PR y el gate integral por ticker.
-
-**Fundamento:** [Netflix 10-Q 9M2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm) y [carta Q3](https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf); [Damodaran, retorno sobre capital y reinversión](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/termvalueexreturns.htm), [spread ERP Oct2026](https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html). El nivel de ventaja competitiva no puede inferirse de esas fuentes como un porcentaje exacto; 15% representa nuestra tesis moderada.
-
-
-
-> **23-oct-2026 · Reglas JMR v6 · ROIC explícito años 11–20 · Auditoría económica**
-> **Valor intrínseco base: US$52,14 (DCF FCFF)** · **Estado: CON HALLAZGOS ECONÓMICOS**
-> Identificador financiero: NFLX-20261023-JMR-v7-ROIC-SMOOTH20. Identificador editorial conjunto: NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001.
-> Corte SEC 30-sep-2026; precio histórico del análisis US$65,04 del 21-oct-2026, no cotización actual.
-
-### Actualización operativa verificable — 23-oct-2026
-
-**Respuesta de la auditoría: SÍ, es posible valorar NFLX con salvedades y publicar una estimación de valor intrínseco; NO es correcto certificar como exhaustiva la extracción SEC nueva ni presentar US$52,14 como valor indiscutible.** Esta es una valoración para investigación financiera propia, con hipótesis explícitas, no una opinión de auditoría financiera externa. El DCF FCFF Base y su identificador financiero se mantienen sin cambios; este apéndice corrige el registro de limitaciones técnicas y de publicación.
-
-| Componente | Evidencia contrastada | Situación y tratamiento |
-|---|---|---|
-| 10-Q SEC a septiembre 2026 | Fuente primaria publicada; activos de contenido netos US$34.605,48 M, deuda y acciones observables | **Apto como fuente primaria**, cotejando cada concepto utilizado con contexto, corte, unidad y escala |
-| Valoración existente | DCF Base US$52,14; escenario ROIC terminal=WACC US$56,08; MOS 35% US$33,89 | **Utilizable con salvedades económicas**; valor central no equivale a certeza |
-| Historias de crecimiento | 20 valores de crecimiento de los años 1–5 coinciden con la corrida JMR; supuestos editables, no forzar fórmulas artificiales | Corregida la clasificación de entradas manuales en el detector de integridad |
-| Controles de archivos de auditoría | Catálogo público excluye archivos históricos; workflow «Control JMR de ponderaciones» ha pasado | Incidencia de inventario **resuelta**, separada de la exactitud económica |
-| Nuevo extractor SEC — PR JMR-valuation #137 | 22 pruebas aisladas aprobadas; caché enlazada a SHA-256 y URL de origen; bloqueos de faltantes y conflictos | **No integrado ni probado como importación completa a Sheets**. No emplear su resultado como certificación financiera |
-| Cobertura del extractor nuevo | 294 combinaciones partida/período sin valor en el expediente previo | **Pendiente de clasificar por materialidad y fuente**: no son 294 errores demostrados de la valoración vigente ni pueden llenarse con ceros |
-| Control integral NFLX | Ejecuciones del release gate han fallado por detecciones de entradas legítimas o rótulos; detector corregido para números fijos documentados y para excluir textos | Exigir corrida íntegra verde **sobre la versión exacta** antes de certificar una nueva liberación financiera |
-| Análisis fundamental editorial | 25 puntos de control: 18 sustentados, siete limitados por evidencia | Se puede publicar como **análisis completo en estructura y honesto en límites**, no como cobertura documental absoluta |
-
-**Salvedades económicas que permanecen abiertas, ordenadas por su posible efecto:** (1) demostrar la persistencia del ROIC terminal 15,00% frente al WACC 9,87% y la industria 11,04%; (2) verificar que Sales-to-Capital Base 2,00x y la reinversión neta representen realmente el costo de renovación y monetización del contenido; (3) recalcular y justificar pares y anclas de los siete múltiplos, en particular EV/FCFF, P/FCFE y tratamiento del EBITDA de contenido; (4) atribuir la prima país extra de 0,50 puntos porcentuales y el costo de deuda a fuentes y exposición geográfica; (5) normalizar el cobro extraordinario WBD de US$2.800 M y confirmar el impuesto aplicable; (6) comprobar opciones/SBC, arrendamientos, acciones promedio ajustadas por split y efecto neto de recompras; (7) analizar efectos de incentivos del proxy disponible, TAM geográfico monetizable, cohortes/retención y publicidad comparables, si la información pública existe.
-
-**Criterio operativo de publicación:** el registro de valoración existente puede mostrarse y utilizarse con estas advertencias porque su hipótesis base es explícita y reproducible. **No debe sustituirse por un recálculo procedente del extractor nuevo** hasta confirmar cobertura material, preservación de fórmulas y validaciones de Sheets, DCF, múltiplos y control integral. Un problema de CI no prueba por sí solo un DCF incorrecto; un CI verde tampoco demuestra que todos los supuestos económicos sean plausibles. La incertidumbre se muestra en la auditoría, no se oculta ni se convierte en datos inventados.
-
-**Fuentes y trazabilidad de esta actualización:** [SEC 10-Q Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [carta Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm), [PR #137](https://github.com/JuanMaRobledo/JMR-valuation/pull/137), [pruebas SEC aprobadas](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40017974176), [workflow de liberación](https://github.com/JuanMaRobledo/JMR-valuation/actions/workflows/nflx-final-gate-20261022.yml). Revisión financiera: `NFLX-20261023-JMR-v7-ROIC-SMOOTH20`; revisión editorial original v5 preservada. Actualización limitada a auditoría y controles, sin modificación del DCF.
-
-### Cierre probatorio de salvedades — fuentes SEC verificadas, 23-oct-2026
-
-**Alcance del cierre.** Cada punto se distingue entre **HECHO CERRADO**, **HIPÓTESIS JUSTIFICADA CON RESERVA** y **NO CERTIFICABLE CON LA INFORMACIÓN ACTUAL**. Una justificación económica razonada no convierte una proyección en un hecho ni obliga a alterar el DCF. Se conserva la revisión financiera `NFLX-20261023-JMR-v7-ROIC-SMOOTH20` y su valor Base US$52,14; no se ha calculado una nueva valoración. Las cifras monetarias SEC de esta sección se expresan en millones de USD salvo indicación distinta. Fuente principal: [Netflix 10-Q SEC Q3 2026, presentación 21-oct-2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), y [carta Q3](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm). La verificación es de hechos publicados y reconciliaciones descritas, no una auditoría externa.
-
-| Riesgo o salvedad | Conclusión probatoria | Efecto sobre la decisión |
-|---|---|---|
-| Ausencia del proxy y compensación de ejecutivos | **HECHO CERRADO:** existe [DEF 14A de 16-abr-2026](https://www.sec.gov/Archives/edgar/data/1065280/000119312526159286/d20613ddef14a.htm); documenta remuneración e incentivos | Retirar «proxy 2026 no obtenido». Queda como riesgo económico si los incentivos mejoran el valor por acción |
-| Opciones, RSU/PSU, split y recompra | **HECHO CERRADO en cantidades SEC**; valorización exacta de opciones **por conciliar** | No presumir cero dilución ni deducir que las recompras siempre agregan valor |
-| Cobro WBD y clasificación | **HECHO CERRADO:** US$2.800 en «Interest and other income», fuera del EBIT; incluido en CFO | No se incorpora a EBIT/FCFF recurrente; el impuesto atribuible al ingreso no está revelado separadamente |
-| Contenido y caja | **HECHO CERRADO en pagos/amortización/obligaciones**; **HIPÓTESIS** en productividad marginal futura | La Base S/C 2,00x requiere sensibilidad y vigilancia, no certificación ex ante |
-| ROIC terminal 15,00% | **HIPÓTESIS EXIGENTE**, no verificable de forma definitiva antes de la perpetuidad | Mostrar ROIC=WACC US$56,08 y ROIC 12%=US$61,79 junto a US$52,14 |
-| Prima geográfica 0,50 pp / Kd | **JUICIO DE ANALISTA**, no tasa observada ni CRP por países reconstruida | Mantener como reserva explícita; análisis de sensibilidad y futura reconciliación |
-| Anclas de siete múltiplos | **VALORES CALCULADOS**, pero comparabilidad y archivos de cotización contemporáneos **no certificados** | Uso secundario, nunca sustituye DCF Base |
-| Cohortes, churn, TAM e ingresos publicitarios por unidad | **EVIDENCIA PARCIAL**: orientación cualitativa y publicidad reportada; no series homogéneas completas | No fabricar monetización individual/cohortes ni TAM regional |
-| 294 huecos del nuevo extractor SEC | **LIMITACIÓN DEL EXTRACTOR DE PR #137**, no 294 errores verificados en el DCF actual | Exigir clasificación por materialidad/periodo; no sustituir por cero ni activar publicación automática |
-
-**1. Ingresos, crecimiento y margen EBIT — defendibles como proyección, no como promesa.** El 10-Q Q3 registra ingresos trimestrales US$12.874,18 M (+11,8% interanual) y la carta estima para FY2026 US$51.100 M, aproximadamente +13%, con margen operativo 31,5%. La Base 12%→11%→10%→9%→8% a cinco años (CAGR 9,99%) es prudente **respecto del dato reciente**, pero depende de continuidad de precios, retención, publicidad y expansión internacional; no se extrapola el crecimiento histórico de penetración inicial. EBIT objetivo36% en cinco años es una expansión de 4,5 pp frente a la guía 2026, plausible con escala y publicidad, pero no garantizada. Optimista40% exige mucha más productividad; Conservadora32,5% es una historia alternativa. El EBIT GAAP excluye el ingreso extraordinario WBD, que se contabilizó por debajo de resultado operativo. [10-Q: resultados y segmentación](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm); [carta Q3 2026, guía](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm).
-
-**2. Contenido, FCFF y Sales-to-Capital — evidencia real, productividad futura no demostrada.** Los primeros nueve meses de 2026 registran adiciones/pagos operativos por activos de contenido de US$14.934,23 M y amortización de contenido de US$12.764,66 M; razón de **1,17x** y diferencia neta **US$2.169,57 M** antes de efectos de pasivos de contenido y otras partidas. Netflix prevé aproximadamente 1,1x para el año completo. El balance al 30-sep tiene activos netos de contenido **US$34.605,48 M**; los compromisos futuros contractuales suman **US$25.222,80 M**, sin que esto represente íntegramente deuda financiera. El desembolso de PPE de nueve meses fue US$693,54 M, **no** toda la reinversión económica. Una S/C Base de 2,00x en años1–5 y1,60x en6–10 es una convención de retorno sobre inversión incremental entre observaciones históricas muy distintas (1,09x a 4,57x según ventana), no una medida de productividad demostrada. La hipótesis es **plausible con reserva material**: valorar una plataforma de contenido como si solo invirtiera en PPE sería un error. No se cambian los US$52,14 sin un replay completo de ingresos, reinversión y valor terminal. [10-Q estado de flujos, nota5 y nota9](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm); [carta Q3: ratio ~1,1x](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm).
-
-**3. ROIC, duración del foso y perpetuidad — no puede cerrarse como hecho.** El ROIC contable LTM documentado en el modelo (35,87% capital final o38,58% capital medio) describe rendimientos pasados que incorporan recompras y capital contable. El ROIC **terminal** 15,00% fue un juicio de modelación entre observación ajustada y referencia de industria (11,04%), no una cifra SEC. El spread de ROIC terminal sobre WACC9,87% equivale a **12,36 puntos porcentuales** sostenidos indefinidamente. Marca, tecnología, licencias, distribución y escala lo hacen concebible, mientras que derechos deportivos, contenido obligatorio y competencia constituyen refutaciones posibles. Como el valor presente terminal representa aproximadamente **61,96% del EV**, la hipótesis es material: US$52,14 Base frente a US$61,79 con ROIC12% y US$56,08 con ROIC=WACC. **Dictamen: conservar el Base como hipótesis exigente y nunca presentar el ROIC15,00% como certificado**. La Conservadora retiene ese ROIC; esto reduce su severidad terminal y debe seguir constando como sesgo favorable del escenario, aunque el crecimiento y márgenes sean conservadores. [Sensibilidades del expediente JMR, revisión indicada](https://github.com/JuanMaRobledo/JMR-valuation); [10-Q y compromisos de contenido](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm).
-
-**4. WACC, riesgo geográfico y deuda — fórmula reproducible, fuente de la prima incompleta.** El libro usa WACC9,1645%, Ke9,4355%, Rf ajustada4,91%, ERP efectiva5,15%, beta reapalancada~1,024 y costo supuesto de deuda antes de impuestos **5,85%**. El manifiesto financiero define expresamente Kd5,85% como *hipótesis*, no como rendimiento de mercado de un bono específico. Se corrigió la narrativa de supuestos que mostraba erróneamente 6,18% sin corresponder al valor aplicado. La ERP madura 3,70% concuerda con la estimación implícita de [Damodaran en octubre 2026](https://aswathdamodaran.substack.com/p/earnings-cashflows-and-stock-prices); el diferencial soberano 0,22pp y la adición geográfica de **0,50pp** son ajustes del modelo, no prima país certificada. El 10-Q sí presenta ingresos UCAN, EMEA, LATAM y APAC, **pero EMEA y APAC no equivalen a un único país de riesgo** y el reparto por países no se publica allí. La adición de 0,50pp puede defenderse como amortiguador discrecional, sin presentarla como CRP Damodaran calculada por geografía; debe mantenerse la sensibilidad 0/50/100pb y evitar doble cobro de riesgo en FCFF y WACC. La deuda total SEC al 30-sep es US$15.132,39 M; la deuda económica en puente DCF es ~US$15.158 M por convenciones del modelo: diferencia pequeña que no justifica afirmar una YTM observada. [10-Q deuda y segmentos](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm); [Damodaran octubre](https://aswathdamodaran.substack.com/p/earnings-cashflows-and-stock-prices).
-
-**5. WBD, beneficio neto y FCF normalizado — imputación correcta, tasa fiscal no identificable.** Netflix recibió en febrero 2026 US$2.800 M por la cancelación del contrato WBD; SEC confirma registro en `Interest and other income (expense)` en1T26 y entrada de efectivo en CFO. Por tanto no debe inflar EBIT, tasa de reinversión operativa ni crecimiento sostenible. CFO nueve meses fue US$10.196,30 M y FCF no GAAP US$9.502,76 M **ambos incluyen el cobro**; su remoción bruta ilustrativa antes de considerar efecto tributario deja respectivamente ~US$7.396,30 M y ~US$6.702,76 M. Esto **no equivale a FCF ajustado después de impuestos**, porque SEC no identifica la carga tributaria específica del acuerdo. La tasa efectiva observada nueve meses es 17%, mientras que el modelo usa 25% marginal para normalizar P/E. Sobre 4.251,30 M acciones diluidas promedio9M, sustraer el ingreso después de impuestos ilustrativo sería ~US$0,49 por acción al25% o ~US$0,55 al17%; el intervalo es una sensibilidad **no** una tasa fiscal atribuida a WBD. **Hecho contable cerrado; tasa fiscal específica abierta y no crucial para DCF FCFF si el cobro no se capitaliza como operación.** [10-Q nota6, flujos y tasas](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm); [reconciliación FCF en carta](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm).
-
-**6. Acciones, opciones, remuneración y arrendamientos — documentación SEC suficiente para auditar cantidades, no valoración total de opciones.** El 10-Q identifica un split **10 por 1 del 14-nov-2025**, reexpresión retrospectiva de acciones y EPS, acciones en circulación al30-sep de **4.106,33 M**, acciones diluidas promedio9M **4.251,30 M**, opciones pendientes **120,18 M** con ejercicio promedio US$41,24, RSU/PSU no consolidadas **1,87 M** y gasto SBC9M **US$405,44 M**. Netflix recompró **130,35 M** de acciones por aproximadamente **US$10.700 M** en los nueve meses. El modelo divide el equity por **4.108,19 M** de acciones y resta un ajuste de opciones de US$4.290,87 M: la diferencia con las acciones SEC de cierre es ~1,86 M (0,05%), pero las opciones **requieren cotejo exacto de vencimientos, strikes y valoración** para descartar doble cómputo con dilución; no basta el strike medio. En la [DEF 14A 2026](https://www.sec.gov/Archives/edgar/data/1065280/000119312526159286/d20613ddef14a.htm) sí constan incentivos individuales, PSU vinculadas a TSR relativo S&P500 y RSU con consolidación temporal. Los pasivos por arrendamiento y sus activos de derecho de uso están detallados en nota5 del 10-Q y deben contarse simétricamente. **Se cierra la falsa «falta de proxy» y la falta de cifras generales de opciones; sigue abierta la reproducción independiente del ajuste US$4.290,87 M.** [10-Q nota10, split, leases y recompra](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm).
-
-**7. Múltiplos y visibilidad de comparables — segunda opinión, no sustituto del DCF.** El expediente tiene EV/FCFF, P/E, P/FCFE, P/OCF, P/V y P/BV con pesos auxiliares, y EV/EBITDA con **peso cero** dada la no homogeneidad de amortización de contenido entre pares. La existencia de cálculos y matrices no demuestra que las anclas de cada peer usen misma fecha, enterprise value comparable, obligaciones de contenido, normalización WBD y dilución. Los múltiplos históricos/ciclo siguen informativos, pero **no pueden certificarse con el material recuperado**. Para cerrar definitivamente harían falta tabla par-a-par de precios/EV al21-oct-2026, denominadores auditados, política de amortización y descuento de FY+3 a hoy. Se mantiene la cifra secundaria publicada, sin elevar su rango a valor intrínseco. Cualquier ausencia específica deberá señalar «no observable» en vez de inventar peers o cotizaciones.
-
-**8. TAM, publicidad, retención y cohortes — distinguir dirección estratégica de series cuantificadas.** La carta Q3 señala respuesta a aumentos de precios consistente con expectativas y mejora interanual de churn; presenta expansión del producto publicitario y nuevos países para2027, y un ejemplo regional de India con crecimiento de horas de visualización del24% y de ingresos FX-neutrales de aproximadamente18% enQ3. El [proxy](https://www.sec.gov/Archives/edgar/data/1065280/000119312526159286/d20613ddef14a.htm) informa que el ingreso por publicidad 2025 superó US$1.500 M. Ninguno de esos hechos aporta **márgenes unitarios de la publicidad por país, cohortes completas o un TAM regional monetizable uniformemente**. Por tanto, la hipótesis de publicidad en la Base es respaldada en dirección, no en cada unidad de flujo descontado. [Carta Q3](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm); [proxy 2026](https://www.sec.gov/Archives/edgar/data/1065280/000119312526159286/d20613ddef14a.htm).
-
-**9. Extracción y control de liberación — decisiones independientes del juicio económico.** El PR [#137](https://github.com/JuanMaRobledo/JMR-valuation/pull/137) incorpora caché por URL+SHA, bloqueo conservador y pruebas SEC; **sus 294 huecos no demuestran por sí solos que 294 cifras oficiales de la hoja sean erróneas**. Sin inspeccionar la lista detallada y clasificarlos en críticos / suplibles por fuente primaria / no material / no aplicable, no puede certificarse el importador automático. Separadamente, los intentos del `release gate` encontrados mostraron falsos positivos del detector de integridad sobre supuestos manuales y rótulos; se reforzó la comparación de crecimientos de los diez años y terminal contra valores versionados. La **publicación de la auditoría narrativa no equivale a un gate completo verde del proceso financiero**. Registrar una corrida verde requiere URL y SHA exactos; no alterar la historia de resultados para esconder fallas. [Pruebas SEC](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40017974176); [revisión integral](https://github.com/JuanMaRobledo/JMR-valuation/actions/workflows/nflx-final-gate-20261022.yml).
-
-**Comprobación cuantitativa adicional del riesgo y los pares.** El registro financiero de la valoración contiene un ejercicio controlado de la prima discrecional de país, manteniendo inalterados los FCFF Base: **sin prima extra, US$77,55 por acción**; **con 0,50 pp, US$52,14**; **con 1,00 pp, US$63,63**. Esta prueba permite justificar que 0,50 pp es un amortiguador plausible y conservador respecto de 0,00 pp, **no** que exista una prima geográfica de exactamente 50 pb. El impacto es material: −US$7,61 de 0 a50pb y −US$6,31 de50 a100pb (sensibilidad no lineal por valor terminal). Los pesos de capital del expediente son aproximadamente 94,63% equity y5,37% deuda; el Kd utilizado de5,85% es internamente consistente con una aproximación de yields de bonos USD largos del orden de5,8–6,2% registrada para septiembre, pero la propia metodología indica que **no se calcularon YTM de mercado verificadas a 21-oct**.
-
-La hoja `reference/multiplos_v3/NFLX_anclas.json` permite trazar los **cuatro pares históricos usados**: DIS (Disney), SPOT (Spotify), ROKU y CMCSA (Comcast). Sus `fecha_precio` están identificadas como **30-sep-2026**, no21-oct-2026, de modo que **la ancla contemporánea del corte no está certificada**. DIS integra parques, medios y streaming; SPOT negocio musical/plataforma; ROKU hardware/anuncios/plataforma; CMCSA distribución e infraestructura. Por eso ni los ingresos, ni el margen EBIT, ni la amortización de contenido y el capital físico son equiparables sin ajustes. Los cinco métodos con historia/pares explícitos en el archivo son EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF; el JSON público incluye también P/V y P/BV. El método EV/EBITDA tiene peso 0%; la valoración intrínseca principal es DCF Base sin ponderación con múltiplos. Los múltiplos EV/FCFF y P/FCFE descartan periodos de FCF negativo o cercano a cero en la historia antigua y recortan múltiplos extremos: práctica justificable **estadísticamente**, pero no certificación económica de comparables. **Cierre:** la selección tiene lógica como contraste aproximado, no permite afirmar un valor por múltiplos certificado sin reconstrucción de cotizaciones, empresa comparable, EV y caja en una fecha unificada. Expediente fuente: `JMR-valuation/reference/multiplos_v3/NFLX_anclas.json`, revisión financiera indicada.
-
-**Dictamen actualizado, limitado al corte:** (a) hechos SEC **suficientes para sostener un DCF exploratorio reproducible**; (b) DCF US$52,14 **plausible con reservas fuertes** en ROIC/S2C y prima geográfica; (c) valor de referencia alternativo US$56,08 cuando se retira la ventaja competitiva terminal, útil para comprobar fragilidad; (d) comparables y extractor sin certificación integral; (e) **no hay base para declarar demostrada la rentabilidad terminal durante décadas**. Se puede valorar así; no se puede cerrar científicamente cada supuesto futuro, y el deber de la auditoría es dejarlo contrastable y falsable.
-
----
+Etiquetas: **[OBSERVADO]** dato de fuente primaria comprobado; **[MODELO]** valor o fórmula de la hoja; **[INFERENCIA]** deducción del auditor; **[HIPÓTESIS]** supuesto sin prueba; **[NO VERIFICADO]** no comprobado en esta auditoría.
 
 ## 1. Ficha de auditoría y alcance
 
-Emisor: Netflix, Inc. (NFLX, NASDAQ), servicio de entretenimiento y publicidad, USD, millones USD salvo valor por acción. Método intrínseco: FCFF descontado a WACC. Corte financiero: 30-sep-2026, diez años FY2016–2025 más LTM; valoración económica del 22-oct-2026 y revisión editorial del 23-oct-2026. Precio de análisis histórico: US$65,04, 21-oct-2026, no una cotización vigente.
-
-Revisión financiera inalterada: NFLX-20261023-JMR-v7-ROIC-SMOOTH20. Revisión editorial común a análisis/auditoría: NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001. Hojas y datos: https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit. Datos primarios: [10-Q Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm), [carta a accionistas Q3](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm). Reglas v5, 23-oct-2026, §9. Se leyó el artículo ampliado de Nivel1, su Nivel2 y el JSON de valoración antes de escribir esta auditoría.
-
-**Estado inicial: CON HALLAZGOS** sobre sustento económico y límites de evidencia. No significa que el DCF sea aritméticamente erróneo. Esta es auditoría económica crítica, no auditoría financiera externa, y no introduce cambios en fórmulas, cálculos ni supuestos oficiales.
+| Campo | Valor |
+|---|---|
+| Razón social, ticker y mercado | Netflix, Inc. · NFLX · Nasdaq Global Select · acción ordinaria única · CIK 0001065280 |
+| Sector | Entertainment (Damodaran, tablas global y de EE. UU., enero de 2026) |
+| Moneda y escala | USD; millones salvo valores por acción |
+| Método intrínseco principal | DCF FCFF de diez años con perpetuidad (plantilla IA, 'Valuation output'), historia Base |
+| Fecha de valoración / de auditoría | 30-sep-2026 (corte común de la cartera) / 25-oct-2026 |
+| Corte de estados | 30-sep-2026: 10-Q del 3T26 presentado el 21-oct-2026; LTM = FY2025 + 9M2026 − 9M2025 |
+| Precio del análisis | US$69,58, cierre NASDAQ del 30-sep-2026 [OBSERVADO en `Input sheet`!B23 y D1]. El precio de hoy no se usó: el corte de mercado es común a la cartera |
+| Hoja examinada | [Copia IA del 25-oct-2026](https://docs.google.com/spreadsheets/d/1ZPNMHxc7m3Iv60mdGspgi6-cc2zwf5kZ4ocsuANQUNM/edit), copiada de la plantilla IA oficial `1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ` (no modificada) |
+| Foto de resultados | `reference/revisiones/NFLX-2026-10-25/resultados_hoja.json`, capturada el 25-oct-2026 a las 14:51 UTC tras la corrección AUD-01 |
+| Documentos examinados | Valoración v5, research v5 (18 secciones), Nivel 2, snapshot SEC conciliado, decisiones de materialidad, auditoría de derivaciones, entradas del analista con respaldos, anclas y ciclo de múltiplos, DCF inverso, sensibilidades |
+| Fuera de alcance | Proxy de 2026 (incentivos de la alta dirección); app y visor (no publicados); la plantilla oficial |
+| Estado de verificación | **Conforme con salvedades no bloqueantes** |
 
 ## 2. Resumen ejecutivo y relato económico central
 
-Netflix monetiza una base internacional recurrente con suscripciones, precios, publicidad y contenido original o licenciado. La escala permite distribuir costos tecnológicos y creativos, pero el contenido requiere efectivo anticipado y renovación. El crecimiento observado desde FY2016, cuando EBIT era 4,30% de ingresos, hasta el 29,49% FY2025 y 31,30% LTM septiembre-2026 apoya una ventaja operativa tangible.
+Netflix cobra una suscripción mensual, y cada vez más publicidad, por un catálogo que produce y licencia a escala global [OBSERVADO]. En los doce meses a septiembre de 2026 ingresó US$49.735 millones con un margen operativo GAAP de 31,3%, frente a 17,8% en 2022. El motor del cambio fue que la amortización de contenido creció mucho menos que los ingresos tras el cobro por cuentas compartidas, el plan con anuncios y las alzas de precio [OBSERVADO, 10-K 2025 y 10-Q del 3T26]. Lo que está cambiando ahora es la mezcla del crecimiento. El tiempo de visualización crece ~2% al año, así que el ingreso depende del precio por miembro, de la publicidad y de los mercados fuera de Norteamérica. La meta de publicidad de 2026 ya se rebajó de ~US$3.000 a ~US$2.700 millones [OBSERVADO, carta del 3T26].
 
-La compañía guió FY2026 a US$51.100 millones de ingresos, crecimiento +13% y margen EBIT 31,5%. Q3 presentó margen 34,6% favorecido por calendario de gastos; no es prueba de margen estable. También recortó previsión publicitaria de aproximadamente US$3.000 a US$2.700 millones por retrasos del producto. La tesis Base exige pricing y publicidad suficientes para conseguir EBIT36% en año5 sin aumentar desproporcionadamente pagos por contenido.
+**Tesis Base favorable [MODELO].** Ingresos +12% el año 1 y 9,99% compuesto en cinco años, margen GAAP hacia 36% (37,1% ajustado por I+D) y ventas/capital de 1,3 y luego 0,9. ROIC terminal de 20,58% por decisión documentada del usuario. Resultado: US$70,85 por acción.
 
-La principal incertidumbre es cuánto tiempo Netflix podrá obtener un ROIC terminal15,00%, por encima del 11,04% de referencia Entertainment y del WACC9,87%. Ese foso explica buena parte del valor terminal. El supuesto se defiende con marca, escala y distribución, pero se enfrenta a YouTube, videos gratuitos, grandes estudios, ligas deportivas y una oferta de contenido que exige capital recurrente.
+**Interpretación neutral [INFERENCIA].** El precio de US$69,58 ya descuenta casi exactamente esa historia: el DCF inverso exige 9,63% de crecimiento compuesto.
 
-**Lectura favorable:** crece publicidad y eficiencia sin deteriorar retención. **Lectura neutral:** Netflix conserva escala y caja pero el ROIC tiende a nivel sectorial. **Contratesis:** el precio pierde elasticidad, sube gasto de contenido y competencia erosiona el retorno marginal. Las tres deben medirse, no seleccionarse en función del precio objetivo.
+**Contratesis adversa [INFERENCIA].** Si el uso no crece, las alzas de precio elevan la rotación y el contenido en vivo encarece la parrilla; el margen se estanca en ~32% y el crecimiento cae a ~7% (Conservadora, US$53,22).
+
+El supuesto que domina el valor es el **retorno excedente perpetuo**. El terminal pesa 63,8% del valor operativo, y llevar el ROIC terminal al costo de capital resta 20,8%. La contradicción que la empresa debe resolver es mantener crecimiento de dos dígitos con un uso por miembro plano. La historia no se derivó del precio: el DCF inverso se calculó después y solo como contraste.
 
 ## 3. Trazabilidad, integridad y jerarquía de evidencia
 
-| Concepto | Dato y fecha | Fuente y ubicación | Control |
-|---|---:|---|---|
-| Ingresos 2025 | US$45.183,04 M | [10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm), Income Statement FY25 | Comprobado |
-| EBIT 2025 | US$13.326,60 M | 10-K 2025 / Income Statement FY25 | Comprobado |
-| Ingresos LTM sep-26 | US$49.734,63 M | [10-Q sep-26](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), FY25+9M26−9M25 | Comprobado |
-| EBIT LTM sep-26 | US$15.564,87 M | 10-Q y hoja, GAAP | Comprobado |
-| CFO LTM | US$12.307,94 M | Cash Flow Statement | Incluye WBD |
-| CAPEX PPE LTM | US$932,88 M de salida | Cash Flow Statement | No es toda la reinversión económica |
-| Comisión WBD | US$2.800 M | 10-Q nota 6, 1T26, bajo EBIT | No recurrente |
-| Caja+inversiones | US$8.222,95 M | Balance 30-sep-26 | Modelo frente a SEC |
-| Deuda económica DCF | US$15.158 M | Puente EV-equity; deuda SEC nota7 | Valor aproximado sujeto a ajustes |
-| Contenido neto | US$34.605,48 M | 10-Q nota5 | Verificado |
-| Compromisos contenido | US$25.222,80 M | 10-Q nota9 | US$19.600 M aún no reconocidos |
-| WACC/Ke | 9,87% / 10,18% | Hoja WACC y Damodaran referencia | Reconstrucción interna, no certificación CRP |
-| Precio histórico | US$65,04 | Expediente 21-oct-26 | No cotización actual |
+| Dato | Valor | Período/perímetro | Tipo | Documento/URL/fecha | Hoja/celda | Verificación |
+|---|---:|---|---|---|---|---|
+| Ingresos | 49.734,63 | LTM oct-25 a sep-26 | [OBSERVADO] | 10-K 2025, 10-Q 3T26 y 3T25 (SEC, consultados el 25-oct-2026) | Input!B12 | Recalculado: 45.183,04 + 37.683,87 − 33.132,27; dif. 0,00 |
+| EBIT | 15.564,87 | LTM | [OBSERVADO] | Ídem | Input!B13 | Recalculado: 13.326,60 + 12.608,21 − 10.369,94; dif. 0,00 |
+| Gasto por intereses | 856,86 | LTM | [OBSERVADO] | Ídem | Input!B14 | Dif. 0,00 |
+| Tasa efectiva | 16,57% | LTM | [OBSERVADO]/[MODELO] | Impuesto 2.933,7 / UAI 17.700,3 (nota de Input!B91) | Input!B24 | Incluye la comisión de WBD gravada; ver AUD-02 |
+| Patrimonio | 29.286,25 | 30-sep-2026 | [OBSERVADO] | 10-Q 3T26 | Input!B15 | Dif. 0,00 |
+| Deuda (notas + arrendamientos) | 17.384,63 | 30-sep-2026 | [OBSERVADO] | Notas 2.474,80 + 12.657,60; arrendamientos 2.252,24 (10-Q 3T26) | Input!B16 | Dif. 0,00; B18 = No (sin segunda capitalización) |
+| Caja e inversiones | 8.222,95 | 30-sep-2026 | [OBSERVADO] | 10-Q 3T26 | Input!B19 | Dif. 0,00 |
+| Acciones en circulación | 4.106,33 M | 30-sep-2026 | [OBSERVADO] | Portada del 10-Q 3T26 | Input!B22 | Dif. 0,00 |
+| Opciones | 120,175 M a US$41,24 | 30-sep-2026 | [OBSERVADO] | XBRL del 10-Q 3T26: `OptionsOutstandingNumber` = 120.175.117 y precio medio US$41,24, consultado el 25-oct-2026 | Input!B39:B40 | Conforme |
+| Vida y volatilidad de las opciones | 4,04 años; 33,8% | 30-sep-2026 | [MODELO] | Nota de compensación del 10-Q (vida remanente) y volatilidad implícita | Input!B41:B42 | Vida [NO VERIFICADO] contra la nota en esta auditoría; volatilidad comparable con los supuestos de la empresa (40-50% en 2022-2023) |
+| Capex | 932,88 | LTM | [OBSERVADO] | Snapshot SEC | Estados | Conforme |
+| Tecnología y desarrollo | 3.890,81 | LTM | [OBSERVADO] | Etiqueta propia `nflx:TechnologyandDevelopmentExpense` | R&D converter | Residuo de la cuenta de resultados 0 |
+| Precio | US$69,58 | 30-sep-2026 | [OBSERVADO] | Yahoo Finance auto_adjust=False | Input!B23 | Conforme con el corte común |
+| Tasa libre | 5,29% | 30-sep-2026 | [OBSERVADO] | FRED DGS10 | Input!B35 | Conforme |
+| ERP madura y regiones | 3,70%; ponderada 4,93% | Corte de octubre de 2026 / tabla de enero de 2026 | [MODELO] | Damodaran | CoC G21:K33 | Recalculada: 4,9266% |
+| Beta desapalancada | 0,9821 | Ene-2026 | [MODELO] | Damodaran, Entertainment global | CoC B24 | Conforme |
+| Pares | DIS, SPOT, ROKU, CMCSA, GOOGL | 30-sep-2026 | [OBSERVADO] | Yahoo Finance | anclas.json | Solo comprobación |
 
-El LTM no corresponde a diciembre-2025 ni a junio-2026. Es la suma del ejercicio 2025 y nueve meses de 2026 menos los nueve meses comparables de 2025. El ingreso extraordinario WBD se registra en interés y otros, debajo del EBIT, y la caja operativa incorpora la entrada; no se puede tratar como flujo recurrente.
+Integridad de la extracción [OBSERVADO en los archivos de la revisión]:
+- 28/28 identidades contables.
+- LTM independiente PASS.
+- Cobertura de once ejercicios más el LTM PASS.
+- 20/20 derivaciones verificadas contra la instancia XBRL citada.
+- 46 contextos materiales adjudicados, 0 sin revisar.
 
-Se preservaron cifras históricas y no se construyeron peers inexistentes. La valoración de opciones y asignación de deuda entre tramos contiene juicios; el detalle fiscal de la comisión WBD no quedó certificado de manera independiente.
+En esta revisión se corrigieron cuatro errores de mapeo que cambiaban datos:
+- Contenido tratado como intangible.
+- Pérdidas fiscales mezcladas con créditos.
+- Cobros por inversiones incompletos.
+- Acciones sin ajustar por el desdoblamiento.
+
+La importación de las 785 celdas está postverificada una a una. No se usaron ceros como sustituto de datos ausentes. Los vacíos se adjudicaron como «no aplica» con URL por período o como «omisión inmaterial» cuantificada.
 
 ## 4. Historia financiera: diez años y punto de partida
 
-| Año | Ventas USD M | EBIT USD M | Margen EBIT |
-|---|---:|---:|---:|
-| 2016 | 8.830,67 | 379,79 | 4,30% |
-| 2017 | 11.692,71 | 838,68 | 7,17% |
-| 2018 | 15.794,34 | 1.605,23 | 10,16% |
-| 2019 | 20.156,45 | 2.604,25 | 12,92% |
-| 2020 | 24.996,06 | 4.585,29 | 18,34% |
-| 2021 | 29.697,84 | 6.194,51 | 20,86% |
-| 2022 | 31.615,55 | 5.632,83 | 17,82% |
-| 2023 | 33.723,30 | 6.954,00 | 20,62% |
-| 2024 | 39.000,97 | 10.417,61 | 26,71% |
-| 2025 | 45.183,04 | 13.326,60 | 29,49% |
-| LTM 30-sep-26 | 49.734,63 | 15.564,87 | 31,30% |
+| Métrica | Último (LTM) | 2025 | Prom. 3 años | Prom. 5 años | Prom. 10 años | Rango 2016-2025 |
+|---|---:|---:|---:|---:|---:|---|
+| Crecimiento de ingresos | +13,7% (9M26) | 15,85% | 12,72% | 12,69% | 21,28% | 6,46% (2022) – 35,08% (2018) |
+| Margen operativo GAAP | 31,30% | 29,49% | 25,61% | 23,10% | 16,84% | 4,30% – 29,49% |
+| ROIC después de impuestos (con arrendamientos) | 33,77% | 33,31% | 26,90% | 23,07% | 17,94% | 6,31% – 33,31% |
+| ROE | 50,42% (con la comisión de WBD) | 41,26% | 34,24% | 31,33% | 25,19% | 6,97% – 41,26% |
+| Ventas/capital | 1,29 | 1,31 | 1,20 | 1,13 | 1,29 | 1,00 – 2,05 |
+| Margen de flujo libre | 22,87% | 20,94% | 19,74% | 12,78% | 0,33% | −18,07% – 20,94% |
+| Deuda neta / EBITDA | 0,43 | 0,40 | 0,66 | 0,96 | 2,18 | 0,40 – 4,04 |
+| Acciones diluidas promedio (M) | 4.267,91 | 4.343,86 | 4.410,48 | 4.459,61 | 4.472,49 | Máximo 4.553,72 (2021) |
 
-Ingresos CAGR de 2016 a 2025: aproximadamente 19,89%; de 2020 a 2025: 12,57%; de 2022 a 2025: 12,64%. El margen tuvo contracción significativa en 2022, por lo que no procede extrapolar una línea recta hasta perpetuidad. El crecimiento del decenio mezcla lanzamiento internacional y madurez; la Base 9,99% CAGR a cinco años no debe compararse con una fase de penetración equivalente.
+Fuente: `metricas_historicas.json` y el Nivel 2, derivados del snapshot SEC [OBSERVADO].
 
-CFO 2019 −US$2.887 M, FY2023 US$7.274 M, FY2025 US$10.149 M y LTM US$12.308 M. El FCF CFO−CAPEX mejoró, pero parte del LTM incluye US$2.800 M de cobro WBD y la inversión en contenido pasa por pagos y obligaciones ajenos al CAPEX PPE. En sep-26 la obligación contractual por contenido ascendía a US$25.223 M y el activo neto US$34.605 M.
+Hay tres regímenes:
+- **2016-2019:** crecimiento financiado con deuda y flujo libre negativo.
+- **2020-2022:** transición, con 2022 como año de crisis (+6,5%).
+- **2023-LTM:** monetización (cuentas compartidas, anuncios y precio) con apalancamiento operativo.
 
-ROIC contable LTM 38,58% con capital medio frente a 35,87% con saldo final: distintas convenciones, no necesariamente incongruentes. ROIC de nuevos proyectos y ROIC económico ajustado por contenido siguen limitados por datos.
+Los límites de homogeneidad son cuatro:
+- ASC 842 incorpora los arrendamientos al balance desde 2019.
+- Las acciones de 2016-2024 se ajustaron por el desdoblamiento 10:1.
+- El LTM incluye la comisión de WBD (US$2.800 millones, fuera del EBIT) y ~US$100 millones de costos de transacción dentro del EBIT.
+- El cargo de Brasil (US$619 millones, 3T25) está en 2025 pero ya no en el LTM.
+
+El último trimestre es el 3T26 (julio a septiembre de 2026).
 
 ## 5. Crecimiento de ingresos: de la historia a la proyección
 
-La Base proyecta crecimiento anual 12%, 11%, 10%, 9% y 8% en los cinco primeros años, CAGR geométrico 9,99%. De 2022 a 2025 las ventas habían crecido ~12,64% compuesto, mientras la guía FY2026 era +13%; el año uno es plausible pero no garantizado. Los incrementos deben venir de precio, miembros, FX neutral, mezcla de planes y anuncios; la nueva publicidad no puede justificar simultáneamente todo el crecimiento y todos los márgenes.
-**Seis preguntas sobre crecimiento:**
+**Historia económica.** El crecimiento de 2023-2026 vino de tres palancas:
+- El cobro a cuentas compartidas, ya absorbido.
+- Alzas de precio en mercados maduros.
+- Altas en LATAM y APAC.
 
-1. **Valor y ubicación.** Escenarios e historias C29:G29, 12/11/10/9/8%, CAGR9,99%, años6–10 desaceleración.
-2. **Historia y pares.** CAGR histórico 9a19,89%; 5a12,57%; 3a12,64%; LTM+14,65%; guía FY2026 +13%.
-3. **Causa económica.** Precio, distribución, anuncios y penetración remanente incrementan ingresos por hora/miembro.
-4. **Hechos que exige.** Mantener engagement y traducir ads en crecimiento real sin gasto proporcional de contenido.
-5. **Evidencia que lo refutaría.** Ingresos FX neutrales sostenidos por debajo del 8%, churn mayor y nueva rebaja ads.
-6. **Impacto sobre valor.** Menos ventas reducen EBIT y FCFF; la sensibilidad crecimiento×margen es el examen cuantitativo obligatorio, no se inventa un delta aislado.
+La publicidad suma una cuarta palanca que todavía es pequeña (~5% de los ingresos). El tiempo de visualización creció 1,5% en 2025 y 2% en el 1S26 [OBSERVADO]. El crecimiento es de monetización, no de uso. El FX pesa: 56% de los ingresos está fuera del dólar, y en LATAM la diferencia entre lo reportado y la moneda constante fue de 12 puntos en 2025. No hay M&A relevante: la compra de marzo de 2026 fue de ~US$587 millones y la de WBD no se concretó.
 
+**Verificación [MODELO].** 'Valuation output'!C4:L4 contiene exactamente 12, 11, 10, 9 y 8% en los años 1-5 y 7,2, 6,4, 5,6, 4,8 y 4,0% en los años 6-10. Coincide con 'Escenarios e historias'!C29:L29. El CAGR compuesto de los años 1-5 es (80.065,03 / 49.734,63)^(1/5) − 1 = 9,9909%; no es un promedio simple. El año 1 a 12% queda entre el +13,7% de los nueve meses y el ~+11% implícito en la guía del 4T26. Los años 2-5 desaceleran un punto por año.
 
-| Métrica y horizonte | Histórico | Modelo | Fuente externa | Causalidad y condición | Refutador | Prueba |
+**Seis preguntas.**
+- (a) **Valor:** 12% en el año 1 (oct-26 a sep-27) y 9,99% de CAGR a cinco años en 'Valuation output' fila 4.
+- (b) **Histórico:** 3 años 12,7%, 5 años 12,7% y 10 años 21,3%; el LTM a 9M es 13,7%.
+- (c) **Mecanismo:** precio de 4-5 pp en UCAN/EMEA, miembros en LATAM/APAC y publicidad.
+- (d) **Qué tendría que ocurrir:** alzas anuales sin rotación y publicidad ≥ US$4.500 millones en 2027.
+- (e) **Qué lo refutaría:** dos trimestres ≤ +9% a moneda constante o una nueva rebaja de la publicidad.
+- (f) **Impacto:** ±2 pp en los años 1-5 da US$63,99 (−9,7%) o US$78,44 (+10,7%) (matriz C de la hoja y réplica).
+
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
 |---|---|---|---|---|---|---|
-| Crecimiento FY+1 | guía FY2026+13% | 12% | Carta Q3 | Pricing+ads | FX neutral <8% por dos cortes | Matriz ingresos×EBIT |
-| CAGR 1–5 | 5 años a 2025 ~12,57% | 9,99% | SEC 10-K/Q | Maduración con expansión internacional | Ads/miembros no sostienen crecimiento | DCF inverso8,19% |
-| Crecimiento Conservadora | FY2022–23 6–7% | CAGR5,00% | SEC | Saturación y menor monetización | Ads se recupera >meta | DCF45,02 |
-| Crecimiento Optimista | FY2025 +15,85% | CAGR11,58% | SEC | Publicidad y pricing sin churn | Retrasos comerciales persisten | DCF93,00 |
+| Crecimiento años 1-5 | 12,7% / 12,7% / 21,3%; 9M26 13,7% | 12→8%; CAGR 9,99%; VO C4:G4 | Tramo >US$25.000 M de *The Base Rate Book*: mediana real 2,0% (≈4,5% nominal); solo ~23% logra ≥ 9,99% | Precio + publicidad + mercados nuevos | Uso +2%; publicidad rebajada; desaceleración a +11,8% en el 3T26 | ±2 pp: −9,7% / +10,7% |
+| Crecimiento años 6-10 | n.a. | Convergencia lineal a 4%; VO H4:L4 | g terminal del corte (4%) | Madurez | Ninguna específica | Incluido en la prueba anterior |
 
-Dictamen: crecimiento central razonable como juicio, sin recorte duplicado por cautela. El descenso de guía de publicidad ya justifica el ajuste de probabilidad desde Optimista hacia Conservadora.
+**Juicio [INFERENCIA].** Es exigente frente a la tasa base, pero tiene un mecanismo específico y verificable; el auditor lo considera *plausible*. No hay prudencia duplicada: la Base no recorta además el crecimiento «por si acaso».
 
 ## 6. Márgenes operativos y normalización de beneficios
 
-El EBIT GAAP de Netflix FY2025 29,49% sobre ingresos y LTM sep-26 31,30% no debe confundirse con el 34,6% del Q3 influido por calendario de costos. La guía FY2026 31,5% ancla mejor el primer año. El salto a 36% en cinco años supone productividad del catálogo, menor costo relativo de distribución y monetización publicitaria con margenes incrementales suficientemente altos.
-**Seis preguntas sobre margen EBIT:**
+**Historia económica.** El margen bruto pasó de 39,4% (2022) a 50,7% (LTM), porque la amortización de contenido creció ~7% anual frente a ingresos de ~13-16%. Ventas y marketing (7,3%), tecnología y desarrollo (7,8%) y administración (4,3%) son estables en porcentaje. La compensación en acciones es baja (1,1% LTM). La regulación aparece en Brasil.
 
-1. **Valor y ubicación.** Base año1 ~32%, objetivo año5 36% (Escenarios D5); Conservadora32,5%, Optimista40%, Disrupción18%.
-2. **Historia y pares.** Márgenes FY2016 4,30%, FY2023 20,62%, FY2024 26,71%, FY2025 29,49%, LTM31,30%.
-3. **Causa económica.** Catálogo reproducible y publicidad distribuyen costos fijos sobre nuevas ventas.
-4. **Hechos que exige.** No elevar compensaciones, licencias y marketing más rápido que ingresos.
-5. **Evidencia que lo refutaría.** Deterioro de retención con precio y costo por derecho deportivo creciente.
-6. **Impacto sobre valor.** EBIT=ingresos×margen, cambia impuestos, NOPAT y FCFF. Sensibilidad crecimiento×margen disponible en hoja.
+**Verificación [MODELO].** Las identidades se recalcularon en las 40 celdas por historia, sin diferencias:
+- Ingreso × margen = EBIT.
+- EBIT × (1 − t) = NOPAT.
 
+El año 1 parte del margen LTM ajustado por I+D: 33,09% (31,30% GAAP + 893,33 / 49.734,63). Converge linealmente al 37,1% del año 5 (Input!B31 = 5). La normalización es correcta: el cargo de Brasil ya salió del LTM y la comisión de WBD está fuera del EBIT. Los ~US$100 millones de costos de WBD dentro del EBIT no se suman de vuelta, porque son inmateriales (0,2% de los ingresos, que mueven el margen del año 1 en 0,2 pp).
 
-Un punto contable crucial: la comisión de cancelación WBD de US$2.800 M en primer trimestre 2026 se reconoció bajo EBIT y también en CFO; no explica expansión del margen operativo, pero sí distorsiona EPS y OCF. La normalización usada para P/E ajusta impuesto a 25% como hipótesis. Sin confirmar carga fiscal específica no se certifica la rentabilidad neta recurrente.
+**Seis preguntas.**
+- (a) **Valor:** 37,1% ajustado (36% GAAP) desde el año 5, en 'Input'/'Escenarios'!D5.
+- (b) **Histórico:** GAAP de 25,6% (3 años), 23,1% (5 años) y 16,8% (10 años); el mejor trimestre fue el 3T26 con 34,6% y el peor año reciente, 2022 con 17,8%.
+- (c) **Mecanismo:** apalancamiento del contenido y publicidad sobre una base fija de tecnología.
+- (d) **Qué tendría que ocurrir:** amortización < ingresos, con el deporte en vivo ≤ ~5-7% del gasto.
+- (e) **Qué lo refutaría:** margen de 2027 ≤ 31,5% con ingresos ≥ +10%.
+- (f) **Impacto:** ±2 pp dan US$66,86 / US$74,84 (∓5,6%).
 
-EV/EBITDA es especialmente delicado porque el contenido se capitaliza y amortiza; comparar un EBITDA que añade amortización de contenidos con otro que no la añade impide comparar múltiplos. Su peso cero en el modelo es defendible.
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
+|---|---|---|---|---|---|---|
+| Margen operativo objetivo | 25,6% / 23,1% / 16,8%; LTM 31,3%; 3T26 34,6% | 37,1% ajustado (36% GAAP), año 5 | Discovery 31,7% (2016, XBRL); DIS 19,3%, SPOT 13,7% (30-sep-2026) | Contenido crece menos que los ingresos; la publicidad diluye costos | Guía del 4T26 de 26,0%; costo del vivo | ±2 pp: ∓5,6% |
+| Margen año 1 | LTM ajustado 33,09% | VO C6 | — | Punto de partida observable | Ninguna | Implícito |
+
+**Juicio [INFERENCIA].** *Plausible con reservas*: supera a todos los comparables maduros, pero el 3T26 ya mostró 34,6%. No hay doble castigo: el riesgo de margen está en la Conservadora, no en la tasa.
 
 ## 7. Reinversión, Sales-to-Capital, ROIC/ROE y asignación de capital
 
-Ventas/capital marginal no es rotación contable de activos. Es el ingreso incremental por reinversión económica proyectada y determina reinversión = Δingresos / Sales-to-Capital. El período 2022–25 arroja 4,57x, 2023–LTM ~1,95x y 2025–LTM ~1,09x. El enorme rango limita cualquier precisión falsa.
-**Seis preguntas sobre ventas/capital:**
+**Historia económica.** La reinversión es contenido, tecnología y algo de capex. Las adiciones de contenido equivalen a 1,14 veces la amortización en el LTM, y el capex es 1,9% de los ingresos. Entre 2022 y el LTM los ingresos subieron US$18.119 millones con US$6.821 millones de capital adicional (2,66 veces sin I+D) [OBSERVADO]. La asignación de capital privilegia las recompras: US$10.782 millones en nueve meses, con 4.222 → 4.106 millones de acciones.
 
-1. **Valor y ubicación.** Base E5=2,00x años1–5, F5=1,60x años6–10; Conservadora1,40→1,20; Optimista2,50→1,90.
-2. **Historia y pares.** Datos incrementales 4,57/1,95/1,09x según ventana; sector1,39x referencia distinta.
-3. **Causa económica.** Escala de distribución y contenido preexistente permite ventas nuevas con menor capital marginal.
-4. **Hechos que exige.** La renovación de títulos no absorbe mayor caja que crecimiento y mantiene retorno incremental.
-5. **Evidencia que lo refutaría.** Pagos de contenido/subscripciones o inventario de derechos aumentan más que ingresos.
-6. **Impacto sobre valor.** S/C menor exige reinvertir más por cada USD de ventas; reduce FCFF y DCF; no simular impacto no calculado.
+**Verificación [MODELO].** La fórmula de la plantilla es reinversiónₜ = (ventasₜ₊₁ − ventasₜ) / ventas-capitalₜ, recalculada sin diferencias. Base: 1,3 en los años 1-5 y 0,9 en los años 6-10. El rendimiento marginal implícito es margen × (1 − t) × ventas/capital: ≈38% en los años 1-5 (0,355 × 0,83 × 1,3) y ≈26% en los años 6-10 (0,371 × 0,79 × 0,9). Luego queda en 20,58% en la perpetuidad, una caída gradual. Sobre el capital total, el ROIC medio de la hoja pasa de 30,13% (base) a 38,53% (año 5) y 32,43% (año 10). El auditor no asume que margen × ventas/capital sea el ROIC contable: el ROIC de la hoja incluye el activo de I+D.
 
+**Seis preguntas.**
+- (a) **Valor:** 1,3 / 0,9 en 'Escenarios e historias'!E5:F5. Input!B32:B33 (1,20) no está activo, porque las historias lo sustituyen.
+- (b) **Histórico:** ventas/capital de 1,20 (3 años), 1,13 (5 años) y 1,29 (10 años); el LTM es 1,29 y el marginal 2022→LTM, 2,66.
+- (c) **Mecanismo:** el crecimiento futuro pide contenido local, deporte y tecnología publicitaria.
+- (d) **Qué tendría que ocurrir:** que el gasto de contenido en efectivo se mantenga en ~1,1 veces la amortización.
+- (e) **Qué lo refutaría:** un gasto de contenido de ≥ 1,2 veces sin crecimiento adicional.
+- (f) **Impacto:** ±20% da US$69,01 / US$72,08 (−2,6% / +1,7%).
 
-**Seis preguntas sobre ROIC terminal:**
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
+|---|---|---|---|---|---|---|
+| Ventas/capital | 1,20 / 1,13 / 1,29; LTM 1,29; marginal 2,66 | 1,3 (años 1-5), 0,9 (años 6-10) | Entertainment (Damodaran ene-2026): referencia sectorial, menor | Reinvertir en contenido sostiene el crecimiento | Más deporte en vivo | ±20%: −2,6% / +1,7% |
+| ROIC del capital nuevo | ROIC medio 27-34% desde 2024 | ≈38% → ≈26% → 20,58% | ROIC de Entertainment 11,04% | Escala de contenido | Competencia por la atención | Ver §9 |
 
-1. **Valor y ubicación.** G5 / Input B50 =15,00% en historias ordinarias; Disrupción=WACC9,87%.
-2. **Historia y pares.** ROIC LTM38,58% con capital promedio vs 35,87% con cierre, referencia industria11,04%, WACC9,87%.
-3. **Causa económica.** Marca, datos, red de distribución y catálogo sostienen exceso de rentabilidad.
-4. **Hechos que exige.** Demostrar retorno marginal elevado por otra década y margen36% maduro.
-5. **Evidencia que lo refutaría.** Nuevos derechos consumen caja y rendimiento cae al nivel industrial/WACC.
-6. **Impacto sobre valor.** Sensibilidad registrada: DCF Base69,94 vs ROIC=WACC56,08; caída13,86 por acción.
-
-
-| Indicador de capital | Dato registrado | Lectura crítica |
-|---|---|---|
-| CAPEX PPE LTM | US$932,88 M | No representa todo el contenido. |
-| Activos de contenido netos | US$34.605,48 M | Valor contable, distinto del costo económico de renovar. |
-| Obligaciones por contenido | US$25.222,80 M | No todas son deuda financiera, sí compromisos de caja. |
-| Recompras LTM | US$12.861 M | Reducen acciones/patrimonio; pueden elevar ratios contables. |
-| ROIC terminal | 15,00% | Excepcional frente a referencia industrial; requiere prueba de moat. |
-
-Problema de transición: con margen terminal de 36%, impuesto25% y S/C marginal1,60, el rendimiento incremental aproximado antes de terminal sería 43,2%, y el modelo cae abruptamente a ROIC estable15,00%. Puede justificarse por pérdida gradual del foso, pero faltan evidencias cuantificadas del trayecto, no es problema que se pueda cerrar con una nota genérica.
+**Juicio [INFERENCIA].** *Razonable y algo prudente*: un 1,3 frente a un marginal de 2,66 incluye reposición de contenido. La corrección desde el borrador de 1,6 (rendimiento ~49% con salto abrupto) mejoró la coherencia.
 
 ## 8. Costo del capital y riesgo
 
-La tasa de descuento del modelo para FCFF es WACC9,87%; el Ke aplicado a equity y múltiplos es10,18%. El libro registra Rf USD ajustada4,91%, ERP efectiva5,15%, beta reapalancada~1,024 y Kd antes de impuestos5,85%. Son parámetros coherentes algebraicamente, pero un costo de capital reproducible por fórmula no es evidencia de que cada insumo esté bien elegido.
-**Seis preguntas sobre WACC y Ke:**
+**Verificación independiente** (`auditoria_controles.json`, costo_capital: PASS, error 0):
 
-1. **Valor y ubicación.** WACC9,1645%, Ke9,4355%; g4%, impuesto marginal25% en hoja.
-2. **Historia y pares.** Referencias Damodaran/US Treasury del corte; la tasa genérica 8,99% de referencia no equivale al WACC Netflix.
-3. **Causa económica.** Beta y prima por país resumen riesgo de renta variable y deuda financiera.
-4. **Hechos que exige.** Misma fecha para Rf, ERP madura y la exposición geográfica; sin doble conteo de riesgos de flujo.
-5. **Evidencia que lo refutaría.** CRP extra de 50pb sin reparto por países demostrado, costo deuda de mercado diferente.
-6. **Impacto sobre valor.** Matriz WACC×g y sensibilidad CRP0/50/100pb registrada; no sustituye una nueva certificación.
+| Componente | Recalculado | Hoja | Fuente y comentario |
+|---|---:|---:|---|
+| Beta reapalancada | 0,9821 × (1 + 0,75 × 16.686,05 / 285.718,16) = 1,0251 | 1,0251 | Damodaran, Entertainment global; global porque 56% de las ventas está fuera de UCAN [MODELO] |
+| ERP ponderada | 4,9266% | 4,927% | North America 3,70% (43,5%), EMEA 5,34% (32,2%), Central y South America 7,93% (12,3%), Asia 5,19% (12,0%) |
+| Ke | 5,29% + 1,0251 × 4,927% = 10,340% | 10,340% | Conforme |
+| Kd antes / después de impuestos | 6,065% / 4,549% | Ídem | Spread de 0,775% para la clase «A2/A» de la tabla de Damodaran |
+| Pesos de mercado | E 94,48% · D 5,52% | Ídem | Deuda a valor de mercado con vencimiento de 4,1 años |
+| WACC | 10,0207% | B14 = E63 = Input!B36 = 10,0207% | Conforme; submétodo Detailed, Single Business (Global), Operating regions |
+| WACC terminal | 5,29% + 3,70% = 8,99% | Input!B97 | Beta 1 en estabilidad (regla vigente) |
 
+No hay doble conteo. Los riesgos específicos (precio, atención, deporte) no están en la tasa sino en la Conservadora y la Disrupción, y la prima país se pondera por ventas sin añadir otra prima. La beta de regresión (0,93 a 2 años; 1,43 a 5 años) solo sirve de contraste. Los factores de descuento se recalcularon como producto acumulado de (1 + WACCₜ), sin diferencias.
 
-**Hallazgo medio:** el CRP adicional0,50% es un juicio sin reconciliación verificable país por país; no se debe llamarlo prima Damodaran exacta por facturar internacionalmente. La beta, spreads y deuda deben actualizarse a un corte unificado. No se manipulan tasas para acercar el resultado al precio observado.
+**Prueba de tasa alternativa [MODELO].**
+- Con la beta de Entertainment de EE. UU. (0,76 desapalancada, 0,79 reapalancada), el WACC inicial sería 8,94% y el DCF Base US$75,54 (+6,6%).
+- Desplazar toda la trayectoria ±1 punto (matriz A) da US$89,77 / US$58,24.
+
+**Seis preguntas.**
+- (a) **Valor:** 10,02% en los años 1-5, convergente a 8,99% en los años 6-10.
+- (b) **Histórico:** no aplica; la tasa libre era de 3,88% a fines de 2023.
+- (c) **Mecanismo:** riesgo de mercado de un negocio de consumo discrecional global.
+- (d) **Qué tendría que ocurrir:** que la beta sectorial global represente el riesgo.
+- (e) **Qué lo refutaría:** que la beta bottom-up de EE. UU. sea la adecuada; la mezcla de ventas (56% fuera de UCAN) favorece la global [INFERENCIA].
+- (f) **Impacto:** −6,6% / +6,6% según la tabla.
+
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
+|---|---|---|---|---|---|---|
+| WACC inicial | n.a. | 10,02%; CoC B14 | Histograma de EE. UU., mediana 7,79% (comparador) | Beta global, ERP por regiones | Beta de EE. UU. de 0,79 | Beta de EE. UU.: +6,6% |
+| WACC terminal | n.a. | 8,99%; Input!B97 | Rf + ERP madura | Estabilidad con beta 1 | — | Matriz A: 63,97 a 79,26 con ±0,5 pp |
+
+**Observación de presentación (AUD-08).** El texto de la valoración describe la calificación como «S&P "A"; Moody's A3», mientras la hoja usa la clase «A2/A». Con la clase A3/A-, el spread sube ~0,1-0,15 pp [INFERENCIA], el WACC +0,006 pp y el valor cambia en <0,1%. Es inmaterial.
 
 ## 9. Convergencia y valor terminal
 
-El g terminal de Base es 4,00% nominal USD y WACC9,87%, por lo que WACC>g. La reinversión de perpetuidad es NOPAT×g/ROIC y, con ROIC15,00%, consume aproximadamente18,59% del NOPAT. La fórmula no garantiza sostenibilidad del 15,00%; es una hipótesis de foso competitivo duradero.
+| Control | Resultado |
+|---|---|
+| g perpetuo | 4,00% nominal USD = g del corte; ≤ Rf de 5,29% [MODELO, conforme] |
+| WACC terminal > g | 8,99% − 4,00% = 4,99 pp [conforme] |
+| Impuesto terminal | 25% marginal, con convergencia lineal desde 16,57% en los años 6-10 [conforme] |
+| Reinversión terminal | g / ROIC = 4,00% / 20,58% = 19,44% del NOPAT₁₁; recalculada: 5.911,82 [conforme] |
+| Continuidad FY10 → FY11 | Ingresos +4%; NOPAT 29.246,44 → 30.416,30; reinversión 16,0% → 19,4% del NOPAT; FCFF 24.574,95 → 24.504,48 |
+| Valor terminal | 24.504,48 / 4,99% = 491.071,73; VP 194.378,70 = 63,8% del valor operativo |
+| ROIC terminal | 20,58% (Base, Conservadora, Optimista); Disrupción = 8,99% |
 
-**Seis preguntas sobre valor terminal:**
+**Regla de ventaja.** La regla vigente dice: sin ventaja, costo de capital; ventaja durable, promedio de la industria (11,04%); ventaja que se desvanece, punto medio. El registro `moat_2026-09-30.json` califica a Netflix como «ventaja durable». Aun así, el usuario decidió el 21-oct-2026 («Opción 2») usar el punto medio entre el ROIC actual y la industria. Con el ROIC actual de esta hoja (30,13%) el punto medio es 20,58%.
 
-1. **Valor y ubicación.** g Base4%; ROIC15,00%; margen36% y tasa marginal25%, WACC9,87%; VP terminal≈US$184.991 M.
-2. **Historia y pares.** FY2025 EBIT29,49%; LTM31,30%; referencia ROIC sector11,04%; inflación+PIB nominal USD de largo plazo.
-3. **Causa económica.** Monetización de audiencia continúa tras diez años sin requerir inversión desproporcionada.
-4. **Hechos que exige.** Renovar catálogo con ROIC superior al WACC y competencia contenida, sin cambio abrupto del modelo.
-5. **Evidencia que lo refutaría.** Márgenes se estancan y ROIC converge a industria/WACC, gastos por derechos presionan.
-6. **Impacto sobre valor.** ROIC=WACC reduce precio a ~US$56,08; PV terminal representa 61,96% del EV.
+Es una **decisión metodológica documentada del usuario**, no un error de la valoración. El auditor la clasifica como **supuesto discutible pero razonable**:
+- A favor: hay evidencia de retornos de 27-34% desde 2024 y una escala de contenido que la industria no tiene, y evita un salto de 32% a 11% en la perpetuidad.
+- En contra: la regla literal llevaría a 11,04%.
 
+Impacto calculado con la plantilla y con la réplica [MODELO]:
+- Con 11,04%, el DCF Base sería US$60,98 (−13,9%).
+- Con el costo de capital, US$56,13 (−20,8%).
+- La propia pestaña 'Auditoría DCF interna' de la plantilla da US$56,13 para el costo de capital, una confirmación independiente.
 
-**Hallazgo de consistencia de reglas v5:** la historia Optimista usa g terminal4,5% y la regla general define 4% nominal USD. La Optimista no supera el Rf ajustado4,91%, pero su excepción requiere justificación expresa en la ficha de escenarios; no se corrige silenciosamente desde Auditoría. Conservadora usa g3%, Disrupción0%.
+**Registro desactualizado (AUD-07).** `moat_2026-09-30.json` todavía dice `roic_actual` 0,32 y `roic_terminal` 0,2152 (revisión del 21-oct). Debe actualizarse a 0,3013 / 0,2058 al publicar esta revisión.
+
+**Optimista.** En esta historia el rendimiento del capital nuevo pasa de ≈36% (años 6-10) a 20,58%, el salto más grande de las cuatro. Es coherente con la decisión del usuario de usar el mismo ROIC terminal en las tres historias, y el auditor lo registra como discutible. Prueba en la Base: ROIC terminal de 25,58% da US$73,08 (+3,1%) y de 15,58%, US$67,19 (−5,2%).
+
+**Prueba de erosión del moat.** Que la participación en el tiempo de TV de EE. UU. baje a ≤ 7,0% (hoy 7,9%) con un margen ≤ 31,5% en 2027.
+
+**Seis preguntas.**
+- (a) **Valor:** g 4%, ROIC 20,58% y WACC 8,99%, en VO M4, M42 y B19.
+- (b) **Histórico:** ROIC 26,9% (3 años) y 23,1% (5 años).
+- (c) **Mecanismo:** escala de audiencia, datos y gasto en contenido.
+- (d) **Qué tendría que ocurrir:** que la ventaja persista más de diez años.
+- (e) **Qué lo refutaría:** la sustitución de la atención (YouTube, IA).
+- (f) **Impacto:** −13,9% / −20,8%.
+
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
+|---|---|---|---|---|---|---|
+| ROIC terminal | 26,9% / 23,1% / 17,9%; hoja 30,13% | 20,58%; Input!B50 | Entertainment global 11,04% | Ventaja de escala duradera | Atención que migra; la regla literal da 11,04% | 11,04%: −13,9%; WACC: −20,8% |
+| g terminal | n.a. | 4,0%; Input!B69 | Inflación ~2,3% + real ~1,7% | Economía nominal en USD | — | ±0,5 pp: −4,5% / +5,5% |
 
 ## 10. Validación independiente del valor intrínseco
 
-El último JSON de valoración incluye un registro de reproducción independiente de **333 identidades** para las cuatro historias: ingresos, EBIT, NOPAT, reinversión, FCFF, factores de descuento, valor terminal y equity. Esta auditoría editorial comprobó salidas principales con la hoja, sin volver a ejecutar todas las 333 identidades ni una batería nueva de SEC.
+**Recalculación ejecutada** (`scripts/jmr_audit_checks.py`, que no usa el motor ni la réplica de la valoración). Toma solo las filas capturadas de cada bloque de 'Valuation output' y verifica en las cuatro historias:
+- ingresos, EBIT, NOPAT, reinversión y FCFF;
+- factor de descuento acumulado y VP del FCFF;
+- reinversión terminal, valor terminal y su VP;
+- suma de VP, valor operativo, puente y valor por acción.
 
-| Concepto del DCF Base | US$ millones |
-|---|---:|
-| VP de diez años de FCFF | 113.569,66 |
-| VP terminal | 184.991,41 |
-| Valor operativo | 298.561,07 |
-| Deuda económica | −15.158,00 |
-| Caja | +8.222,95 |
-| Valor de opciones/otras reclamaciones | −4.290,87 |
-| Patrimonio común | 287.335,15 |
-| Acciones millones | 4.108,19 |
-| **DCF Base por acción** | **US$52,14** |
+El error máximo es **0,000000** en todas.
 
-**Seis preguntas sobre valor intrínseco:**
+| Historia | VP flujos 1-10 | VP terminal | Valor operativo | − Deuda | + Caja | − Opciones | Acciones | Valor/acción recalculado | Peso del terminal |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Base | 110.253,12 | 194.378,70 | 304.631,82 | 17.384,63 | 8.222,95 | 4.526,75 | 4.106,33 | **70,85** | 63,8% |
+| Conservadora | 89.972,92 | 142.243,86 | 232.216,78 | Ídem | Ídem | Ídem | Ídem | 53,22 | 61,3% |
+| Optimista | 134.501,66 | 245.807,30 | 380.308,97 | Ídem | Ídem | Ídem | Ídem | 89,28 | 64,6% |
+| Disrupción | 67.547,91 | 41.034,36 | 108.582,27 | Ídem | Ídem | Ídem | Ídem | 23,11 | 37,8% |
 
-1. **Valor y ubicación.** Valuation output Base US$52,14 hoy; valor de compra MOS35% US$33,89; precio histórico US$65,04.
-2. **Historia y pares.** LTM SEC septiembre2026 y modelo JMR; ancla externa del precio no es cotización actual.
-3. **Causa económica.** La escala genera FCFF sostenido, descontado a WACC, luego ajustado por deuda, caja, opciones y acciones.
-4. **Hechos que exige.** Puente EV-equity evita doble conteo de leasing/deuda/opciones y las acciones económicas son correctas.
-5. **Evidencia que lo refutaría.** Reclamaciones de opciones, SBC o arrendamientos distintas a las contabilizadas.
-6. **Impacto sobre valor.** DCF inverso precio65,04 exige CAGR8,19%; no confundir con objetivo FY+3 US$74,66.
+**Otras piezas recalculadas:**
+- **Opciones:** Black-Scholes con ajuste por dilución iterativo: S ajustado 68,6726, valor por opción 37,6679 y total US$4.526,75 millones. Coincide con la hoja (dif. < 10⁻⁹). El valor intrínseco simple sería US$3.405,76 millones, así que el valor temporal está incluido. Las opciones se restan una sola vez y las acciones usadas son las en circulación, no las diluidas, así que no hay doble conteo. Las RSU (1,87 millones de acciones, ~US$130 millones) no se valoran: 0,04% del patrimonio, inmaterial.
+- **I+D (R& D converter):** vida de 3 años; activo = 3.890,81 + ⅔ × 3.391,39 + ⅓ × 2.925,30 = 7.126,84; amortización 2.997,48; ajuste del EBIT +893,33. Conforme.
+- **Arrendamientos (Operating lease converter):** el conversor está desactivado (B18 = No) porque el pasivo ASC 842 ya está en la deuda; no hay doble conteo. Ver AUD-05 sobre el EBIT.
+- **Costo de capital:** ver §8.
 
+**Horizontes.** El DCF Base hoy (US$70,85) no se mezcla con los valores FY+3 de los múltiplos (US$83,93 en EV/EBITDA, etc.). El ponderado DCF + múltiplos (US$65,75) se presenta como lectura secundaria.
 
-La cifra de múltiplos FY+3 US$74,66 es objetivo auxiliar 40% DCF/60% múltiplos en un horizonte distinto; no debe llamarse valor intrínseco Base. La pérdida por cruce de ROIC a WACC es una prueba de sensibilidad, no un forecast.
+**Sensibilidad y DCF inverso.** Los centros de las tres matrices de 'Sensibilidad DCF' concilian con B35 (dif. < 10⁻¹¹). El DCF inverso usa la réplica, con error 0 frente a la hoja. Para el precio fechado de US$69,58 el delta es −0,356 pp en los años 1-5, un CAGR implícito de 9,63% frente a 9,99%. El error de reconstrucción es < 10⁻⁷. Los centros de la réplica coinciden además con la matriz C de la hoja, lo que la valida de forma cruzada.
+
+**Seis preguntas sobre el supuesto dominante (retorno excedente perpetuo):** ver §9.
+
+| Métrica y horizonte | Histórico (3/5/10 años, LTM) | Modelo: valor/año/celda | Industria/pares y fuente | Historia causal y requisitos | Evidencia contraria / juicio | Impacto en valor o prueba |
+|---|---|---|---|---|---|---|
+| DCF Base | n.a. | US$70,85; VO B35 | Precio US$69,58 | Base completa | DCF inverso de 9,63% | Recalculado: error 0 |
+| Peso del terminal | n.a. | 63,8% | Alerta de la plantilla > 75% | Crecimiento estable | — | Dentro del rango |
 
 ## 11. Cuatro historias y probabilidades
 
-| Historia | CAGR años1–5 | Margen | S/C 1–5 / 6–10 | ROIC terminal | g terminal | DCF US$/acción | Probabilidad |
-|---|---:|---:|---|---:|---:|---:|---:|
-| Base | 9,99% | 36% | 2,00 / 1,60x | 15,00% | 4,0% | 69,94 | 45% |
-| Conservadora | 5,00% | 32,5% | 1,40 / 1,20x | 15,00% | 3,0% | 45,02 | 27,5% |
-| Optimista | 11,58% | 40% | 2,50 / 1,90x | 15,00% | 4,5% | 93,00 | 17,5% |
-| Disrupción | −2,41% | 18% | 1,00 / 1,00x | WACC9,87% | 0% | 15,55 | 10% |
+| Historia | Crecimiento | Margen EBIT | Reinversión/ROIC | WACC/Ke | g y retorno terminal | Valor principal por acción | Probabilidad registrada | Qué la confirma/refuta |
+|---|---|---|---|---|---|---:|---:|---|
+| Base | 12→8%; CAGR 9,99% | 37,1% ajustado / 36% GAAP | S2C 1,3 / 0,9; ROIC 30→38→32% | 10,02% → 8,99% | 4%; 20,58% | 70,85 | 45% | Ingresos ≥ +11% y margen ≥ 34% en 2027 |
+| Conservadora | 10→5%; 7,19% | 32,7% / 32% | 1,1 / 0,8 | Igual | 4%; 20,58% | 53,22 | 22,5% | Ingresos ≤ +9%; uso ≤ +1% |
+| Optimista | 14→10%; 11,99% | 41,3% / 40% | 1,5 / 1,1 | Igual | 4%; 20,58% | 89,28 | 22,5% | Publicidad ≥ US$6.000 M en 2027 |
 
-Probabilidad previa de crecimiento maduro 45/22,5/22,5/10%; la reducción de la meta ads de3.000 a2.700M trasladó5pp desde Optimista hacia Conservadora. Los pesos suman100%. El promedio de las tres ordinarias se renormaliza dividiendo por90% y resulta US$49,89; Disrupción retiene10% solo como dato y se expone en «¿Qué pasaría si todo fallara?», **no se promedia con los otros tres**.
+**Promedio condicionado de tres historias** = Σpᵢ·Vᵢ / Σpᵢ = (0,45 × 70,8525 + 0,225 × 53,2175 + 0,225 × 89,2819) / 0,90 = **US$71,05**. El denominador está documentado.
 
-Dos reservas persisten: Conservadora y Optimista comparten ROIC terminal15,00% a pesar de condiciones operativas tan diferentes; y Optimista usa g4,5% por encima del g central4%. No son errores de la aritmética publicada, sí hipótesis económicas que necesitan una historia más explícita antes de considerarse certificadas.
+**Hallazgo AUD-01 (ronda 1, corregido).** La plantilla IA calculaba H10 como AVERAGE(H5;H6;H8), una media simple de US$71,12, y la columna «Aporte esperado» como H/3. Ignoraba las probabilidades, contra la regla vigente (§2, pesos renormalizados). La valoración lo corrigió en la copia (`scripts/jmr_copy_formula_fix.py`, respaldo `respaldo_formula_promedio.json`) y la ronda 2 verificó H10 = 71,0511. Impacto: −0,09% sobre el complemento; ninguno sobre el DCF Base ni el MOS. **La plantilla oficial conserva el defecto y requiere decisión del usuario.**
+
+**Probabilidades.** Coinciden con la previa «crecimiento maduro» de `probabilidades_prior.json` (45/22,5/22,5/10), con desvío 0 y sin ajustes. Ningún indicador cruzó su umbral escrito: el 3T26 creció +11,8%, entre ≤ 9% y ≥ 11%, y el margen se mide en 2027. Suman 100%. **MOS** = 70,85 × 0,65 = US$46,05, sobre el principal.
+
+### ¿Qué pasaría si todo fallara?
+
+**Disrupción.** El video generado por IA y las plataformas gratuitas comoditizan el contenido:
+- crecimiento de 6, 4, 2, 1 y 0% y luego 0%;
+- margen de 22%;
+- ROIC terminal igual al costo de capital y g = 0.
+
+Resultado: **US$23,11** por acción, con probabilidad registrada de 10%. Está excluida del promedio ordinario. Como dato complementario, el esperado de las cuatro historias sería 0,45 × 70,85 + 0,225 × 53,22 + 0,225 × 89,28 + 0,10 × 23,11 = US$66,26 [INFERENCIA, etiquetado: no es una cifra oficial].
 
 ## 12. Valoración por múltiplos: prueba independiente y secundaria
 
-La valoración de múltiplos es un método secundario. Debe corregirse el múltiplo histórico por diferencias de tasas y seleccionar cierre de ciclo semejante a los fundamentales FY+3, con tope al múltiplo justificado. Comparables que mezclan compañías de parques, redes, publicidad y plataformas no son homogéneos automáticamente.
+**Integridad (§5A).** Los siete métodos se calcularon con las fórmulas de la plantilla, incluidos P/S (`PV`) y P/BV (`PBV`) con peso 0. La auditoría recalculó para EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF, en las tres historias, la cadena completa: 'Financials Multiples' → precio FY+3 → descuento a Ke. El error máximo es < 10⁻¹¹ [conforme]:
+- EV: (múltiplo × fundamental − 13.688,43) / 4.267,91.
+- Equity: múltiplo × fundamental / acciones.
 
-| Método | Múltiplo Base aplicado | Peso entre múltiplos | VP/acción Base | Riesgo específico |
-|---|---:|---:|---:|---|
-| EV/EBITDA | 8,80x | 0% | 43,73 | Amortización de contenido no comparable. |
-| EV/FCFF | 22,28x | 35% | 66,66 | No usar CFO−CAPEX como FCFF. |
-| P/E | 17,63x | 35% | 56,27 | WBD distorsiona beneficio bajo EBIT. |
-| P/FCFE | 19,21x | 10% | 50,40 | Deuda/recompras y FCFE neto. |
-| P/OCF | 20,23x | 10% | 57,82 | CFO incluye WBD y variación contenido. |
-| P/Ventas | 4,50x | 10% | 56,24 | Depende de margen objetivo y mix. |
-| P/BV | 5,00x | 0% | 69,04 | Recompras alteran libro y ROE. |
+La IA solo eligió entradas, múltiplos de salida (J8/J19/J30) y pesos. P/BV concilia el patrimonio común (PBV!M7:O9: otros movimientos = −0,827 × utilidad neta + 0,0084 × ingresos, recompras netas documentadas). No es un cero precargado.
 
-El valor presente ponderado de múltiplos Base es US$58,27. Los topes ancla C proceden del corte anterior y no se revalidaron independientemente con pares de igual denominador al 21-oct; esta es una reserva material sobre el método secundario, no una razón para cambiar el DCF. El Nivel2 del nuevo artículo retiró las matrices por escenarios no Base y conserva tablas de cálculo, respetando la prioridad de sensibilidad del DCF Base exigida en las reglas v5. La ancla de múltiplo de mercado observada contemporánea por método queda N/D cuando no está contrastada.
+| Método | A: historia (mediana 5 años) | B: pares (mediana) | C: justificado Cons/Base/Opt | Elegido Cons/Base/Opt | LTM | Denominador FY+3 Base (US$ M) | VP Base hoy | Peso efectivo |
+|---|---:|---:|---|---|---:|---:|---:|---:|
+| EV/EBITDA | 30,17× | 18,75× | 13,03 / 15,06 / 17,51 | Ídem (topado por C) | 18,48× | EBITDA 24.695,23 | 60,37 | 10% |
+| EV/FCFF | 49,49× | 27,80× | 19,98 / 24,11 / 27,89 | Ídem | 25,92× | FCFF 15.432,49 | 57,51 | 15% |
+| P/E | 40,47× | 21,63× | 16,07 / 18,86 / 21,38 | Ídem | 20,11× | Utilidad 18.822,79 | 60,06 | 5% |
+| P/FCFE | 48,46× | 31,26× | 17,44 / 20,53 / 23,23 | Ídem | 25,12× | FCFE 16.275,44 | 57,39 | 5% |
+| P/OCF | 51,79× | 22,67× | 18,31 / 22,35 / 25,71 | Ídem | 23,21× | OCF 14.949,33 | 54,04 | 5% |
+| P/V | 8,76× | n.d. | 4,12 / 5,22 / 6,34 | Ídem | 5,74× | Ventas 68.013,11 | 61,93 | 0% |
+| P/BV | 14,87× | n.d. | 6,73 / 8,99 / 11,29 | Ídem | 9,76× | Patrimonio 39.480,92 | 61,71 | 0% |
+
+Comprobaciones:
+- **Ajuste por tasas:** factor (k_cierre − g)/(k_corte − g), acotado a [0,6; 1,4] según `ciclo_resultado.json` [MODELO].
+- **Techos:** ningún múltiplo supera su ancla C; en los 21 casos manda C. El Conservador ≤ LTM se cumple en los siete métodos.
+- **Descuentos generales:** no hay; los factores de Toro quedan solo como diagnóstico.
+- **Independencia de C:** el ancla C comparte flujos con el DCF y no es evidencia independiente. No se calibró al DCF: los múltiplos dan 54-62 frente a 70,85.
+- **Denominadores:** EV/FCFF usa FCFF (no FCF genérico) y P/OCF usa OCF (no FCF). Los años con OCF negativo (2016-2019) quedan excluidos.
+- **Complementarios:** EV/EBIT (15,41× → US$60,30) y P/FCF (23,67× → US$53,78) se reprodujeron con la misma cadena, sin peso. La puerta de publicación los exige y la plantilla no los tiene.
+
+**Hallazgos de múltiplos.**
+- **AUD-04 (acciones):** la plantilla usa 4.267,91 millones de acciones diluidas promedio LTM, constantes, frente a 4.106,33 millones en circulación en el DCF. Subestima los precios por acción de los múltiplos en 3,8%. Con acciones en circulación, el consolidado de múltiplos sería ~US$60,38 y el ponderado ~US$66,66 (+1,4%) [INFERENCIA, cálculo proporcional].
+- **AUD-06 (FCFE):** el FCFE proyectado suma endeudamiento neto de US$3.677, 2.142 y 2.161 millones en FY+1 a FY+3, una regla de la plantilla. Implica ~US$8.000 millones más de deuda, frente a una política de deuda bruta estable. Sin ese endeudamiento, el P/FCFE Base bajaría a ~US$46,65, el consolidado de múltiplos −US$1,34 y el ponderado −0,8% [INFERENCIA].
+
+AUD-04 y AUD-06 tienen signos opuestos; ninguno toca el DCF Base ni el MOS.
 
 ## 13. Sensibilidades económicas y escenarios alternativos
 
-Las sensibilidades principales son WACC×g, ROIC×g y delta-crecimiento de ingresos×margen EBIT Base; el inverso recalcula cinco años sin cambiar los demás supuestos. El registro del modelo informa crecimiento implícito8,19% para precio histórico65,04, frente a Base9,99%, con reproducción algebraica del precio dentro de la tolerancia.
+**DCF Base** (hoja, centros conciliados):
+- WACC × g: US$58,24 a US$89,77 con ±1 pp de WACC al g de 4%.
+- ROIC terminal × g: US$70,27 a US$71,38 con ±1 pp de ROIC.
+- CAGR × margen: US$51,50 a US$96,89.
 
-| Prueba en hoja | DCF por acción | Interpretación |
-|---|---:|---|
-| ROIC terminal=WACC9,87% | US$56,08 | Desaparece renta económica extraordinaria. |
-| ROIC terminal12% | US$61,79 | Cerca de retorno industrial de referencia. |
-| ROIC terminal15,00% | US$52,14 | Supuesto oficial más exigente. |
-| Inverso al precio65,04 | CAGR8,19% | Expectativas algo menores que Base. |
+Pruebas de un solo supuesto (réplica verificada):
 
-La sensibilidad del capital requerido ante S/C menor (por ejemplo hacia1,40x) sería importante, pero no debe añadirse un precio contrafactual sin recalcular los diez años y la perpetuidad. El precio FY+3 auxiliar83,43 no debe mezclarse con los valores presentes.
+| Supuesto | US$/acción | Variación |
+|---|---:|---:|
+| Margen −2 pp / +2 pp | 66,86 / 74,84 | −5,6% / +5,6% |
+| Crecimiento años 1-5 −2 pp / +2 pp | 63,99 / 78,44 | −9,7% / +10,7% |
+| Ventas/capital −20% / +20% | 69,01 / 72,08 | −2,6% / +1,7% |
+| WACC inicial +1 pp / −1 pp (terminal fijo) | 66,81 / 75,19 | −5,7% / +6,1% |
+| g terminal −0,5 pp / +0,5 pp | 67,68 / 74,73 | −4,5% / +5,5% |
+| ROIC terminal = WACC terminal | 56,13 | −20,8% |
+| ROIC terminal = industria (11,04%) | 60,98 | −13,9% |
+| Acciones +5% | 67,48 | −4,8% |
+
+**DCF inverso frente al precio fechado** (US$69,58, 30-sep-2026), crecimiento necesario de los años 1-5:
+
+| Beta | Margen 35,1% | Margen 37,1% | Margen 39,1% |
+|---|---:|---:|---:|
+| Beta 1,03 | 10,78% | 9,63% | 8,57% |
+| Beta 0,79 | 9,51% | 8,39% | 7,34% |
+
+**Múltiplos (familia de valor por acción, solo Base).** La valoración generó 14 matrices: 7 métodos × 2 anclas fechadas al 30-sep-2026 (JMR y observado LTM).
+- Eje vertical: múltiplo real en veces (±20%). Eje horizontal: fundamental FY+3 real en US$ millones (±20%).
+- Cada celda es el VP hoy por acción.
+- Los siete centros JMR concilian con el VP FY+3 de la hoja (EV/EBITDA 62,48; EV/FCFF 62,51; P/E 61,92; P/FCFE 58,28; P/OCF 58,27; P/V 61,92; P/BV 61,91).
+- Centros con el múltiplo observado LTM: EV/EBITDA 77,21; EV/FCFF 67,39; P/E 66,02; P/FCFE 71,30; P/OCF 60,53; P/V 68,15; P/BV 67,18.
+
+La familia económica (múltiplo justificado) no se despliega, por regla; sus centros son las anclas C de la tabla de §12. No hay matrices de Conservadora, Optimista ni Disrupción en los documentos.
+
+**AUD-03 (presentación).** La pestaña «Sensibilidad por múltiplo» de la copia proviene de la plantilla: tiene 21 matrices, con ejes rotulados como factores 0,8…1,2 e incluidas Conservadora y Optimista. Sus 21 centros concilian (OK), pero la pestaña no cumple la regla de «solo Base con ejes reales», así que se rechaza como matriz editorial. Las matrices válidas son las del Nivel 2 §7. Regenerar la pestaña exige cambiar el generador común (`multiples_sensitivity_contract.js`), una decisión del usuario que afecta a todas las empresas.
 
 ## 14. Coherencia de hojas, cálculos y presentación
 
-**Control numérico y de identidad del artículo:** revisión fuente NFLX-20261023-JMR-v7-ROIC-SMOOTH20, nuevo identificador editorial NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001; mismo DCF69,94, promedio ordinario66,81, MOS45,46 y Disrupción15,55. El artículo muestra recuadro de Base al principio y exactamente18 secciones; Nivel2 mantiene estados, ratios, inputs, cálculos y tablas a partir de la revisión de valoración, evitando publicar sensibilidades de historias no Base como si fueran sensibilidad principal.
+| Artefacto | Resultado |
+|---|---|
+| 'Input sheet' | Candados B84, B85, B92 y B108 en VALIDADO; B109, B110, B113 y B114 en NO APLICA con causa; B111 y B112 en VALIDADO; K5:K8 en LISTO. B32:B33 = 1,20 inactivos (las historias usan E5:F8), sin efecto. B30 (21,8%) es una referencia no activa |
+| Estados y LTM | 785 celdas importadas y postverificadas; LTM recalculado con dif. 0 |
+| 'Valuation output' (cuatro bloques) | Recalculados con error 0 |
+| 'Escenarios e historias' | AUD-01 corregido: H10 = 71,05 |
+| 'Option value', 'R& D converter', 'Cost of capital worksheet' | Recalculados, conformes |
+| 'Sensibilidad DCF' | Centros OK |
+| 'Sensibilidad por múltiplo' | AUD-03 |
+| 'Descuento de múltiplos' | Cadena recalculada; rótulo «Promedio 1-3 años · Ke 010%» mal formateado (AUD-09, presentación; el valor usado es 10,34%) |
+| 'Trailing Valuation' y pestañas de métodos | Rótulos «Nov '24/'25» y «Columna N» de la plantilla, corregidos solo en la copia (registrado en la valoración) |
+| 'Industry Averages(US)' | #DIV/0 de la plantilla, sin uso en el valor |
+| CoC enfoque 2 | «Industry average» da 0,71%: comparador roto de la plantilla, no usado (Detailed es el método) |
+| 'Auditoría DCF interna' | Identidades OK. Tras este dictamen, B36:B39 = REVISADO y B56 = CONCILIADO (`entradas_auditoria_9.json`, con respaldo). Una captura posterior confirmó que solo cambió esa pestaña (`verificacion_post_auditoria.json`) |
+| Valoración v5 | Cifras = foto; promedio 71,05 tras AUD-01; MOS sobre la Base; Disrupción aparte |
+| Research v5 | 18 secciones; cifras = foto; ningún número de la revisión anterior (control del ensamblador) |
+| Nivel 2 | Estados, ratios, cuatro historias, sensibilidades, DCF inverso y 14 matrices Base |
+| JSON y visor | Ficha de la revisión con sha de la foto; `reference/damodaran/NFLX.json` y la app **no** actualizados (publicación pendiente de autorización) |
 
-**Cobertura semántica exigida por §9 v5:** la matriz del artículo consta de **25 controles**: **18 desarrollados y sustentados; 7 limitados por evidencia identificada**. Los siete son (1) TAM homogéneo por región, (2) sostenibilidad económica de foso y ROIC terminal, (3) gobierno/incentivos con proxy2026 localizado, impacto económico no cuantificado, (4) capital económico de contenido y ROIC incremental por cohorte, (5) CRP/Ke por distribución geográfica verificable, (6) comparables y anclas de múltiplos del corte, (7) indicadores de churn/monetización por cohorte no publicados.
-
-No hay secciones reducidas únicamente a un título o enlace. Sin embargo, la regla §9 declara que «limitado por evidencia» **no** equivale a cobertura totalmente resuelta. El análisis está sustancialmente ampliado y documenta lo que falta; no se debe certificar como completo sin ese matiz. La salida del control de publicación del modelo debe referirse a un commit de CI específico: el historial visible contiene corridas failure, y no se ejecutó una nueva suite verde en esta auditoría editorial. La hoja conserva internamente una salvedad económica sobre anclas C.
-
-### Actualización cuantificada JMR v6 — 23-oct-2026 · NO reemplaza todavía la revisión publicada
-
-**Corrección material demostrada y segregada:** en la [copia de trabajo NFLX JMR v6](https://docs.google.com/spreadsheets/d/15QDfNDg_2TG90sFFFvUyeYvI6rL9-AwfwUHI7XmHgPQ/edit) se concilian los ingresos LTM de las cuatro regiones (US$49.734,633M) contra el 10-Q 9M 2026 y 10-K FY2025. Se activa `Cost of capital worksheet!B26=Operating regions` y se usa ERP madura **3,92% respecto a Rf neta de spread soberano** más CRP por región de tablas Damodaran. El WACC calculado pasa de **9,16447% a 9,86851%** (Ke 10,17945%, beta 1,02386, Kd 5,85%), y el DCF Base de **US$52,14 a US$61,12 por acción** (−12,62%). Una cifra preliminar basada en ERP madura 3,70% *combinada con Rf ya neta* fue descartada por incoherencia metodológica. Las primas de EMEA, LATAM y APAC siguen siendo aproximaciones regionales, no CRP exacta de cada país. Fuentes: [SEC Q3 2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), [Damodaran 8-oct-2026](https://aswathdamodaran.blogspot.com/2026/10/stock-prices-earnings-and-cashflows-ai.html?m=0).
-
-**Resultados calculados exclusivamente en copia (no oficiales publicados):** Conservadora **US$40,12**, Base **US$61,12**, Optimista **US$80,28**, Disrupción **US$14,39**. Promedio ordinario de las tres primeras **US$58,43**. MOS35% sobre Base ≈ **US$39,72**. El precio de referencia **US$65,04** sigue siendo el del 21-oct-2026.
-
-**Las otras tres salvedades examinadas:** opciones Black-Scholes estándar vs. dilución real y plazo 3,5–5,5 años: variación limitada a aproximadamente **US$0,09/acción (0,15%)**; leases reconocidos US$2.252,237M y posible exceso bruto US$366,346M: cota **US$0,089/acción (0,15%) en el puente de deuda**, no evaluación íntegra de arrendamientos en FCFF; tecnología y desarrollo mezclados con operaciones no equivalen a I+D puro: sensibilidad *hipotética* de capitalización de hasta 100% del gasto con 3–5 años, aproximadamente **−US$0,54 a −US$0,81/acción (0,88–1,32%)** bajo flujos y tasas constantes. El impacto conjunto de las tres pruebas acotadas permanece bajo 1,62%, pero ninguna prueba resuelve por sí sola duración de ventaja, ROIC terminal, reinversión real ni nuevos comparables.
-
-**Dictamen de control:** el ajuste ERP/WACC es **material y corregido en copia**, y no debe etiquetarse no bloqueante. Las tres salvedades adicionales son **inmateriales solo en los rangos expresamente ensayados**, quedan registradas y no deberían bloquear por sí solas. **No se actualiza ni certifica la valoración publicada US$52,14**, porque su JSON incluye derivados y HTML antiguos, y falta ejecutar el gate integral y regenerar valoración, múltiplos, artículo y auditoría bajo el mismo identificador. La diferencia entre la copia candidata y lo visible en la app es intencional hasta aprobar esa sincronización. Ver [expediente con ecuaciones, fuentes, límites y celdas](../../evidencia/NFLX-20261023-v6/materialidad-ajustes.md).
+**Completitud del análisis (REGLAS §9).** Se contrastó con la última versión completa (21-oct-2026, 149 KB): la nueva tiene 159 KB, y ninguna sección quedó más corta en contenido sustantivo. Las secciones 2, 4, 6, 7, 8, 10, 11 y 13 conservan su texto con reemplazos verificados; las 1, 3, 5, 9, 12, 14-18 se reescribieron con el LTM de septiembre. El análisis tiene recuadro de valor base, nivel 1 íntegro, nivel 2 y matriz de cobertura en la sección 18. Hay dos limitaciones de evidencia declaradas: el proxy de 2026 no se revisó, y no hay prueba ácida porque las cuentas por cobrar no se publican por separado. El auditor detectó y el análisis corrigió un defecto heredado: la matriz crecimiento × margen del 21-oct tenía valores incompatibles con su propio DCF.
 
 ## 15. Hallazgos priorizados y propuestas de corrección
 
-| Prioridad | Hallazgo / explicación | Efecto potencial | Corrección propuesta en un ciclo distinto |
-|---|---|---|---|
-| Alta | ROIC terminal15,00% > industria11,04% y WACC9,87% sin prueba de persistencia indefinida. | DCF cae de69,94 a56,08 si ROIC=WACC. | Investigar retorno marginal y duración del moat; aplicar nueva valoración si cambia. |
-| Alta | Activos/obligaciones de contenido requieren reinversión sostenida; S/C reciente1,09x frente a Base2,00x. | FCFF podría estar alto por reinversión subestimada. | Conciliar pagos de contenido, amortización y capital por 3–5 años. |
-| Alta | Múltiplos ancla C y peers del nuevo corte sin reconstrucción homogénea. | VP múltiples59,47 sujeto a reservas. | Regenerar criterios de ciclo y denominadores EV/FCFF/EBITDA. |
-| Media | Prima país adicional50pb no atribuida a geografía económica exacta. | Riesgo de CRP duplicado o sesgo de WACC. | Usar Damodaran del mismo corte con exposiciones por país verificables. |
-| Media | Conservadora conserva terminal15,00% como Optimista. | Downside terminal puede ser poco severo. | Justificar o cambiar por un ciclo posterior de Valoración, no Auditoría. |
-| Media | g Optimista4,50% supera el nominal USD central4%. | Perpetuidad Optimista podría ser agresiva. | Documentar excepción con techo Rf; revisar nueva regla si procede. |
-| Media | WBD US$2.800M e impuesto normalizado a25%. | EPS/OCF y múltiplos pueden alterarse. | Conciliar impuesto del cobro y flujo ordinario. |
-| Editorial | Siete filas de cobertura limitadas; no auditar como resueltas. | Tesis y control editorial aún con evidencia material incompleta. | Consultar la DEF 14A 2026 ya disponible; cuantificar incentivos, TAM, cohortes y pares cuando exista desglose comparable. |
-| Operativo | Corridas CI históricas de la valoración incluyen failure. | No declarar VALIDADO tras modificar solo informes. | Ejecutar controles_todas.sh NFLX y documentar log asociado. |
+Materialidad según REGLAS §4B: V_base = US$70,85; impacto = |V_alt − V_base| / V_base.
 
-### Revisión adicional JMR v6 — clasificación de salvedades y conversores, 23-oct-2026
+| ID | Severidad | Tipo | Evidencia | Impacto | Mantener/ajustar/investigar | Propuesta y alternativa | Requiere aprobación | Estado |
+|---|---|---|---|---|---|---|---|---|
+| AUD-01 | Medio | Fórmula (plantilla) | H10 = AVERAGE; I5:I8 = H/3 | Promedio 71,12 → 71,05 (−0,09%); DCF Base y MOS 0% | Ajustar | Corregido en la copia con respaldo; **corregir la plantilla oficial** | Sí, para la plantilla oficial | Corregido en la copia y verificado |
+| AUD-02 | Bajo | Supuesto (dato) | Tasa efectiva LTM de 16,57% incluye la comisión WBD gravada; sin ella ≈15,74% (suponiendo 21% sobre la comisión) [INFERENCIA] | +0,36% (prudente) | Mantener | Opcional: tasa efectiva sin partidas no recurrentes | No | Salvedad no bloqueante |
+| AUD-03 | Bajo | Presentación (plantilla) | Pestaña con 21 matrices y ejes en factores | 0% | Ajustar al publicar | Usar las matrices Base del Nivel 2; regenerar la pestaña con un generador «solo Base» | Sí (generador común) | Abierto, no bloqueante |
+| AUD-04 | Bajo | Fórmula (convención) | Múltiplos con 4.267,91 M de acciones frente a 4.106,33 M | Múltiplos −3,8%; ponderado −1,4% (prudente); DCF 0% | Investigar | Unificar acciones en la plantilla | Sí | Salvedad |
+| AUD-05 | Bajo | Supuesto | Arrendamientos en deuda sin sumar al EBIT el componente financiero (~US$86 M = 2.252 × 3,8%, tasa de descuento del 10-K) | +0,06% a +0,11% (prudente) | Mantener | Opcional: ajustar el EBIT por el interés implícito | No | Salvedad no bloqueante |
+| AUD-06 | Bajo | Supuesto (plantilla) | El FCFE proyecta endeudamiento neto de US$8.000 M en tres años | P/FCFE −19%; ponderado −0,8% (agresivo); DCF 0% | Investigar | Endeudamiento neto según la política de deuda | Sí | Salvedad |
+| AUD-07 | Bajo | Registro | `moat_2026-09-30.json` con ROIC 0,32 / 0,2152 de la revisión anterior | 0% (la hoja usa 20,58%) | Ajustar al publicar | Actualizar a 0,3013 / 0,2058 | Con la publicación | Abierto |
+| AUD-08 | Bajo | Presentación | Rating descrito como Moody's A3; la hoja usa A2/A | < 0,1% | Ajustar texto | Citar la clase usada | No | Corregido en el texto de la valoración |
+| AUD-09 | Bajo | Presentación (plantilla) | Rótulo «Ke 010%» | 0% | Ajustar | Formato de porcentaje en la plantilla | Sí (plantilla oficial) | Abierto |
+| AUD-10 | Bajo | Supuesto | R& D converter: el año −1 es FY2025 y se solapa un trimestre con el LTM; con FY2024 como año −1 | +0,10% | Mantener | Convención habitual de la plantilla | No | Salvedad |
+| D-1 | — | Supuesto discutible documentado | ROIC terminal de 20,58% (decisión del usuario) frente a 11,04% de la regla literal | −13,9% (11,04%); −20,8% (WACC) | Mantener | Revisar en cada actualización con la participación en el tiempo de TV | Decisión ya tomada | Discutible pero razonable |
+| D-2 | — | Supuesto discutible | Paso del rendimiento marginal en la Optimista (≈36% → 20,58%) y en la Base (≈26% → 20,58%; reinversión 16,0% → 19,4% del NOPAT) | Base ±5 pp de ROIC: −5,2% / +3,1% | Mantener | — | No | Discutible pero razonable |
+| D-3 | — | Supuesto discutible | Margen GAAP de 36% superior a todos los comparables maduros | ±2 pp: ∓5,6% | Mantener | Vigilar el margen de 2027 | No | Discutible pero razonable |
 
-**Alcance:** comprobación directa de valores y fórmulas visibles de la [hoja NFLX](https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit), sin cambiar el DCF, entradas, escenarios o artículos. Esta revisión registra hallazgos nuevos bajo [reglas v6 §4A–4B](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md). **Ninguno queda exonerado como inmaterial** sin ejecutar y guardar el recálculo adverso requerido por `scripts/materialidad_salvedades.py`: la mera presencia de un conversor no implica que sus cifras entren en el valor.
+**Materialidad agregada.**
+- Ningún hallazgo individual llega a 2% del DCF Base.
+- Los hallazgos que mueven el valor intrínseco (AUD-02, AUD-05, AUD-10) son todos prudentes y suman +0,57% en valor absoluto.
+- El límite adverso acumulado sobre el DCF Base es 0%.
+- Ninguno cruza la decisión: precio/DCF = 0,98, y el precio queda por encima del precio con MOS de US$46,05 en cualquier caso.
+- No hay defectos de identidades, unidades, moneda, fechas, deuda, acciones, tasas, escenarios ni doble conteo.
 
-| ID y referencia | Evidencia de la hoja revisada | Prueba económica requerida | Impacto máximo verificado | Dictamen provisional |
-|---|---|---|---|---|
-| **NFLX-RD** · `Input sheet!B17`, `R& D converter!F7:F8,D36,D38,D40` | Capitalización desactivada (`No`), gasto actual tecnología/desarrollo ≈ US$3.890,81M, activo del conversor ≈ US$3.890,81M y amortización corriente del conversor nula al no estar completa la vida amortizable. | Verificar fracción de gasto realmente plurianual, vida 2–3 años apropiada o alternativa documentada, trayectoria histórica de amortización; recalcular EBIT, capital invertido, reinversión/ROIC, historias y valor Base. No agregar el activo del conversor sin terminarlo. | **N/D**, no medida | **Pendiente de prueba de materialidad**; puede ser NO APLICA o ajuste sustancial, aún no probado |
-| **NFLX-LEASE** · `Input sheet!B18,B78:B81`, `Operating lease converter` | `B18=No`; nota de la hoja indica ASC 842 y pasivos de lease ya reconocidos. El conversor adicional carece de calendario de compromisos. | Conciliar pasivos lease y gasto con deuda del puente EV→equity/WACC y capital operativo; demostrar que `No` significa **sin deuda incremental** y que no hay doble conteo u omisión. | **N/D** | **Conciliación pendiente**, no imputar 0 por intuición |
-| **NFLX-OPT** · `Input sheet!B38:B42`, `Option value!B29:B30`, `Valuation output!B32:B35` | Opciones activas: ≈120,18M; plazo 4,5 años (estimado); ejercicio US$41,24; volatilidad 36,96%. Black-Scholes de `B29` es convencional pese al título “Dilution-adjusted”. Se descuentan US$4.290,87M del patrimonio. El denominador `Input sheet!B22` enlaza acciones actuales ajustadas, no las acciones diluidas promedio del LTM. | Verificar opciones/RSU y vencimientos con filing, método realmente ajustado por dilución, volatilidad, SBC ya expensado, unidades y no duplicación con denominador; valorar extremos de vida 3,5–5,5 años y comparar con alternativa consistente. | **N/D**, no medida para la incertidumbre | **Tratamiento conectado al DCF; precisión económica pendiente** |
-| **NFLX-WACC** · `Cost of capital worksheet!B12,B14,E63`, `Input sheet!B36` | `Detailed` activo y WACC ≈9,1645% enlazado a DCF; Ke ≈9,4355%, Kd antes de impuestos 5,85%, pesos patrimonio/deuda 94,63%/5,37%. | Confirmar beta bottom-up, Kd de deuda, Rf y ERP del mismo corte, pesos de mercado y exclusión de lease duplicado; contraste con otro método solo como sensibilidad, no sustituir el Detailed. | **N/D** | **Conexión aritmética observada; sustento económico debe auditarse** |
-| **NFLX-ERP** · `Cost of capital worksheet!B26:B28,G22:K33` | `B26=Will Input` y ERP directa 5,15%; calculadora de ventas por región sin datos. | Reconstruir ponderación de exposición geográfica o probar que ERP calculada externamente ya la incorpora con fuentes, moneda y fecha. Recalcular WACC y Base para la diferencia plausible de CRP. | **N/D** | **Pendiente documental potencialmente material** |
-
-**Regla de cierre JMR v6:** un límite individual probado inferior al 2% y acumulado conservador inferior al 3%, sin cruzar precio con MOS, decisión o fallar un candado esencial, pasa a **salvedad NO BLOQUEANTE** y permite VERIFICADO si el resto de controles está aprobado. Las cinco filas de arriba **todavía no cuentan** con intervalos recálculados auditados: por tanto, no han sido clasificadas como inmateriales ni se cambia aquí el dictamen previo ni el DCF Base US$52,14. Registro de control de código: [PR de reglas #90](https://github.com/JuanMaRobledo/Modelo-JMR/pull/90) y [PR de prueba de materialidad #142](https://github.com/JuanMaRobledo/JMR-valuation/pull/142), ambos integrados; **no equivalen a una corrida satisfactoria por empresa**.
-
-La auditoría identifica correcciones, **no las ejecuta**. Ningún hallazgo se cierra cambiando arbitrariamente la valoración para acercarla a la cotización.
+**Clasificación §4B:** (A) bloqueantes: ninguno; (B) reservas materiales: ninguna; (C) salvedades inmateriales: AUD-01 a AUD-10; (D) no aplicables: preferentes, convertibles, minoritarios, NOL material, fracaso empresarial y SOTP.
 
 ## 16. Catalizadores, señales de refutación y seguimiento
 
-| Indicador | Horizonte / fuente | Confirmación | Falsación y respuesta |
-|---|---|---|---|
-| Publicidad vs guía FY2026 US$2.700M | Carta Q4 y 2027 | Recuperación del rollout y monetización | Nueva rebaja relevante: revisar probabilidad con indicador umbral. |
-| Ingresos FX neutrales por región | Dos ejercicios SEC | Avance sobre mercados maduros | <8% sostenido: revaluar 12/11/10/9/8% Base. |
-| Margen EBIT GAAP anual | 2027–2030 | Avance hacia36% sin timing | Estancamiento ~31–32%: revisar gastos contenido/ads. |
-| Obligaciones contenido y flujo ajustado | 10-Q y 10-K | Crecimiento CFO recurrente tras gastos | Renovación consume más caja que incremental. |
-| ROIC del capital nuevo | 2027–2030 | Spread sostenible con inversión | Retorno converge a industria/WACC. |
-| Recompra/SBC y opciones | SEC+proxy | Acciones netas caen comprando con disciplina | Emisión, strike y precios recompras erosionan equity. |
-| WACC y geografía | Treasury/Damodaran fechados | Ke10,18% coherente con exposición | CRP doble contado o Kd no representativo. |
+| Métrica | Nivel observado con fecha | Señal favorable | Señal adversa | Fuente | Frecuencia |
+|---|---|---|---|---|---|
+| Crecimiento de ingresos a/a | +11,8% (3T26); +13,7% (9M26) | ≥ +11% en 2027 | ≤ +9% dos trimestres | Cartas a accionistas, 10-Q | Trimestral |
+| Margen operativo | 34,6% (3T26); guía 2026 31,5% | ≥ 34% en 2027 | ≤ 31,5% | Ídem | Trimestral |
+| Ingresos de publicidad | ~US$2.700 M (guía 2026) | ≥ US$4.500 M en 2027 | Nueva rebaja | Cartas | Trimestral |
+| Adiciones de contenido / amortización | 1,14 (LTM) | ≤ 1,1 | ≥ 1,2 | 10-Q (flujo de caja) | Trimestral |
+| Participación en el tiempo de TV de EE. UU. | 7,9% (jun-2026, Nielsen vía MediaPost) | ≥ 8,3% | ≤ 7,0% | Nielsen The Gauge | Mensual |
+| ROIC después de impuestos (con arrendamientos) | 33,8% (LTM) | ≥ 30% | < 25% | Snapshot SEC | Trimestral |
+| Acciones en circulación | 4.106,33 M (30-sep-2026) | −2% anual o más | Suben | Portada del 10-Q | Trimestral |
 
-Una publicación del próximo 10-Q sí justificaría reauditar los hechos cambiados; no debe crearse una auditoría repetida sin información nueva que solo recopile las mismas dudas.
+Los umbrales son criterio del auditor y del análisis, no guías oficiales. El próximo informe es el de resultados del 4T26 en enero de 2027; la fecha exacta no está confirmada [NO VERIFICADO].
 
 ## 17. Dictamen económico y resumen para escuchar
 
-**Dictamen económico: CON HALLAZGOS; nueva redacción sustantiva y concordante, pero con reservas críticas.**
+**Calificación de la tesis: Plausible con reservas.**
+- **Consistencia matemática:** conforme. Los cuatro DCF, el WACC, las opciones, el I+D, el LTM, las historias, la cadena de múltiplos y las sensibilidades se recalcularon con error ~0. El único defecto aritmético (AUD-01) se corrigió en la copia.
+- **Trazabilidad documental:** conforme. La fuente primaria es la SEC, con hashes, derivaciones verificadas y entradas con respaldo y etiqueta. La vida de las opciones no se verificó contra la nota.
+- **Razonabilidad económica:** plausible con reservas. El crecimiento y el margen son exigentes frente a las tasas base y los comparables, pero tienen mecanismo y evidencia trimestral. El ROIC terminal es una decisión documentada del usuario por encima de la regla literal.
+- **Supuesto más frágil:** la publicidad como palanca del margen, cuya meta de 2026 ya se rebajó. **Más defendible:** el costo de capital y los datos de partida. **Motor principal del precio:** el retorno excedente perpetuo, con 63,8% del valor en el terminal.
+- **Decisión analítica sugerida:** conservar las hipótesis, revisar el ROIC terminal y la publicidad con los resultados del 4T26, y corregir AUD-01 y AUD-03 en la plantilla oficial con autorización.
 
-Resumen para escuchar: Netflix tiene un negocio sólido y rentable, pasó de ventas US$8.831M en 2016 a US$45.183M en 2025 y LTM US$49.735M. El margen EBIT avanzó hasta 31,30% en el LTM, y el DCF Base del Modelo JMR vale US$52,14 por acción. El problema decisivo es la permanencia de un ROIC terminal15,00% cuando hay competidores gratuitos, pagos elevados por contenido y una referencia industrial cercana al 11,04%. Si el ROIC terminal converge al WACC, la sensibilidad del modelo marca US$56,08. La mejora contable es un hecho; el foso perpetuo es una hipótesis.
+**Estado de la revisión: VERIFICADO con salvedades no bloqueantes** (§4B). Esta auditoría no se autocertifica para publicar: la publicación exige la autorización explícita del usuario.
 
-El nuevo análisis conserva los 18 apartados, incorpora la historia de diez años, la economía del contenido, geografías, Porter, asignación de capital, escenarios, cinco filosofías y tablero de vigilancia. Su matriz verifica25 temas,18 resueltos con evidencia y7 limitados. La auditoría NO autocertifica estos7 como terminados; la actualización operativa al principio del documento registra ejecuciones posteriores y sus resultados independientes.
-
-**Lectura ordenada:** DCF Base69,94 principal; promedio tres66,81 complementario; disrupción15,55 aparte; precio con MOS35%=45,46; múltiplos VP59,47 secundarios. El precio de análisis65,04 corresponde al21-oct y no es una observación de ahora. No es recomendación mecánica de compra, venta o mantenimiento.
+**Resumen para escuchar.** Auditamos la valoración de Netflix del 25 de octubre de 2026 con datos al 30 de septiembre. Las cuentas cuadran: recalculamos los cuatro escenarios, la tasa de descuento, las opciones y los múltiplos, y todo coincide con la hoja. Encontramos un error de la plantilla: el promedio de las tres historias no usaba las probabilidades. Ya se corrigió en la copia y el promedio quedó en 71,05 dólares. No cambia el valor principal de 70,85 dólares ni el precio de compra con margen de seguridad, 46,05. El supuesto que más pesa es que Netflix siga ganando por encima de su costo de capital para siempre. Si no fuera así, el valor bajaría alrededor de 21%. El precio de mercado, 69,58, pide casi exactamente la historia base. No se modificó la valoración.
 
 ## 18. Fuentes primarias, limitaciones y registro de versión
 
-**Fuentes consultadas:** Netflix [10-Q septiembre2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm), notas5/6/7/9, segmentos, deuda y compromisos; Netflix [10-K FY2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm), cifras y contexto de 2023–2025 más historia en hoja; [carta Q3 publicada 20-oct-2026](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm), guía2026, margen y publicidad; [hoja oficial JMR](https://docs.google.com/spreadsheets/d/18JpUSeyJ9i7MOqHJ3-yB3Kz4BuwTXIwlIwoJvdlbfnE/edit); [reglas JMR v5](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md), especialmente §9. Referencia de industria/Ke sectorial conservada del modelo vigente, no reextraída de otra fecha.
+**Fuentes** (todas consultadas el 25-oct-2026):
+- Netflix, [10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm) (23-ene-2026; FY2025; estados, arrendamientos, compromisos).
+- Netflix, [10-Q del 3T26](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm) (21-oct-2026; balance al 30-sep-2026, 9M2026, opciones).
+- Netflix, [10-Q del 3T25](https://www.sec.gov/Archives/edgar/data/1065280/000106528025000406/nflx-20250930.htm) (22-oct-2025; 9M2025 para el LTM).
+- Netflix, [carta a accionistas del 3T26](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm) (20-oct-2026; regiones, guía, publicidad, recompras).
+- SEC, [companyfacts XBRL de Netflix](https://data.sec.gov/api/xbrl/companyfacts/CIK0001065280.json) (opciones, tasa de descuento de arrendamientos, costo de arrendamientos de 2025: US$503,6 M).
+- FRED [DGS10](https://fred.stlouisfed.org/series/DGS10) (30-sep-2026: 5,29%).
+- Damodaran: [betas por industria](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html) (enero de 2026), primas por país/región (enero de 2026) y [ERP implícita de octubre de 2026](https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx).
+- Mauboussin y Callahan, *The Base Rate Book* (2016).
+- Nielsen The Gauge vía [MediaPost](https://www.mediapost.com/publications/article/417308/) (jun-2026).
+- Yahoo Finance (precios al 30-sep-2026).
 
-Revisión financiera fija: NFLX-20261023-JMR-v7-ROIC-SMOOTH20. Nueva revisión de artículo/auditoría: NFLX-2026-10-23-V5-FULL-ANALYSIS-AUDIT-001. Fecha auditoría 23-oct-2026. La auditoría anterior está preservada en auditorias/archivo/NFLX-auditoria-2026-10-22.md y no se mezcla con las cifras nuevas. Se publica solo la narrativa de auditoría y el artículo: la valoración, inputs, fuente SEC y escenarios no cambian.
+**Archivos auditados:**
+- Foto `resultados_hoja.json` (sha256 `6afa5b6aba533dcbd28143ba547eb3c98de1b541d5695a9a0e6351a2a06e58d5`).
+- `auditoria_controles.json` (controles independientes, status PASS).
+- `snapshot_sec_conciliado.json`, `NFLX_derivation_audit.json`, `NFLX_materiality_adjudication.json`.
+- `dcf_inverso.json`, `sensibilidades_un_supuesto.json`, `sensibilidad_multiplos_base.json`.
+- `correccion_formula_promedio.json` y su respaldo.
+- Rama `fix/jmr-flujo-seguro-20261024` del repositorio JMR-valuation (PR #145, borrador).
 
-**Limitaciones formales:** no se obtuvo TAM regional monetizable por fuente homogénea ni se cuantificó impacto de incentivos del proxy2026, resultados por cohortes/título, desglose país que certifique la prima extra50pb, anclas de peers de igual fecha ni evidencia de que ROIC terminal15,00% persista indefinidamente. Hubo nuevas ejecuciones del control histórico, algunas fallidas por clasificación de celdas en el detector. El resultado de la nueva puerta financiera debe verificarse en GitHub; el recuento de secciones no constituye certificación financiera. El juicio queda expuesto y se indica qué evidencia levantaría cada reserva.
+**No verificado o no ejecutado:**
+- La vida remanente de 4,04 años de las opciones contra la nota del 10-Q.
+- La volatilidad de 33,8% como dato de la empresa (se tomó como supuesto del modelo).
+- El proxy de 2026.
+- La fecha de resultados del 4T26.
+- La familia económica de múltiplos desplegada (no exigida).
+- La recalculación de Conservadora y Optimista con la beta de EE. UU.
+- La app y el visor (no publicados).
 
-**Fin de la auditoría independiente de NFLX según prompt 3 v1.2 y reglas JMR v5.**
+**Registro de versión:**
+- Auditoría v1 de la revisión `NFLX-2026-10-25`, `prompt_version: auditoria-economica-jmr-v1.2`.
+- Ronda 1: AUD-01 detectado. Ronda 2: verificado tras la corrección en la copia y la nueva foto.
+- Versiones previas: `data/NFLX_Auditoria_Valoracion_2026-10-01.md` y `data/NFLX_Auditoria_Economica_Narrativa_2026-10-21.md`, que se conservan y se archivarán con la publicación.
+- **Publicación:** no publicada. La ruta `Modelo-JMR-datos/auditorias/narrativas/NFLX.md` queda pendiente de la autorización explícita del usuario.
