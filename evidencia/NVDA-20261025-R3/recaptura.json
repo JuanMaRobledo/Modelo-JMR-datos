@@ -1,0 +1,132 @@
+{
+ "ticker": "NVDA",
+ "revision_id": "NVDA-20261025-R3",
+ "revision_anterior": "NVDA-20261024-R2",
+ "sheet_id": "1gbtwORZsvjhZNCV8xlNDloHYEeE09cEbXmPZOoLJ8gY",
+ "estado": "CANDIDATA_NO_CERTIFICADA",
+ "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
+ "foto_antes": {
+  "archivo": "NVDA_resultados_hoja_antes_AUD0406.json",
+  "data_sha256": "bd97c9144a4e8f444669235be4899b57c0952cd64f1f9ec003e7961974816f42",
+  "captured_at": "2026-10-25T22:25:38.541037+00:00",
+  "nota": "tomada del respaldo de Drive anterior a AUD-04/06"
+ },
+ "foto_despues": {
+  "archivo": "NVDA_resultados_hoja.json",
+  "data_sha256": "90f6e0afffc33ed340e7fcae0ed4586ff42025233aeb53fdcdbbad12785331b9",
+  "captured_at": "2026-10-25T22:20:17.101339+00:00"
+ },
+ "repositorio_fotos": "JuanMaRobledo/JMR-valuation: reference/revisiones/Recaptura-NKE-NVDA-2026-10-25/",
+ "verificacion": "jmr_recaptura_verificar.py: 0 fallas (residuales por método, matrices MD vs registro, linkedValuation, hash); control negativo sobre la carpeta publicada vieja: fallas detectadas",
+ "archivos_regenerados": [
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/01_Valoracion_NVDA_JMR_R3.md",
+   "cifras_texto": 42
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/02_Analisis_NVDA_JMR_R3.md",
+   "cifras_texto": 3
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/03_Auditoria_NVDA_JMR_R3.md",
+   "cifras_texto": 2
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/04_Calculos_y_Fuentes_NVDA_R3.md",
+   "cifras_texto": 43
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/assumptions.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/data.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/engine_verification.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/matrices.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/multiple_matrices.json",
+   "cifras_json": 42,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/multiples-inputs.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/multiples-results.json",
+   "cifras_json": 12,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/normalization-log.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/peers.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/provenance.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/regression.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/results.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/scenarios.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/documentos/NVDA-20261025-R3/verification.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/valoraciones/NVDA-20261025-R3.json",
+   "cifras_json": 74,
+   "cifras_texto": 101
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/analisis/NVDA-research-20261025-r3.json",
+   "cifras_json": 60,
+   "cifras_texto": 80
+  },
+  {
+   "archivo": "../Modelo-JMR-datos/auditorias/narrativas/NVDA-20261025-R3.md",
+   "cifras_texto": 2
+  }
+ ],
+ "no_reejecutado": [
+  "controles centrales y consistencia independiente (cierre técnico)",
+  "engine_verification de la app",
+  "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
+  "nivel visual de la app"
+ ],
+ "pruebas_fijadas_a_la_revision_anterior": [
+  "scripts/tests/nke_r3_release.test.cjs fija NKE-JMR-20261023-R4-M7; hay que actualizarla al publicar"
+ ]
+}

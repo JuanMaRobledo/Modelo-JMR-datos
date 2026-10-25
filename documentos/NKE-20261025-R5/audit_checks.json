@@ -1,0 +1,77 @@
+{
+  "revisionId": "NKE-JMR-20261023-R4",
+  "dcfMotorRevisionId": "NKE-JMR-20261023-R3",
+  "resultsSha256": "ba82dff650baffc66557e69c85f1faca69688b1c6d7b9e4894ec974233ca9545",
+  "status": "CON HALLAZGOS",
+  "verificationStatus": "PENDIENTE",
+  "dcf_status": "CONSERVADO DE R3, MATEMÁTICA ANTERIOR REPRODUCIDA",
+  "runOnR4": "NO",
+  "nativeSheetId": "1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw",
+  "previousAuditSummary": {
+    "status": "CON HALLAZGOS",
+    "math_status": "VALIDADO en alcance reproducido",
+    "numericChecks": 58
+  },
+  "independentReconciliation": {
+    "years": [
+      "FY2022",
+      "FY2023",
+      "FY2024",
+      "FY2025",
+      "FY2026",
+      "LTM 2026-08"
+    ],
+    "investingDifferences": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "financingDifferences": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "status": "CONCILIADO 12/12",
+    "sourceTab": "Control SEC · flujos 2022-LTM"
+  },
+  "fcfeBeforeSBC": {
+    "FY2023": 4368,
+    "FY2024": 6617,
+    "FY2025": 2268,
+    "FY2026": 2184,
+    "LTM": 2105,
+    "weight": 0
+  },
+  "optionValueUSDm": 123.37011153656897,
+  "dcfBase": 35.023476792006896,
+  "mos35": 22.765259914804485,
+  "materiality": {
+    "material": [
+      {
+        "item": "ROIC terminal vs WACC",
+        "valueBase": 35.023476792006896,
+        "valueNoAdvantage": 28.415468007752658
+      }
+    ],
+    "documentary": [
+      "I+D sin serie segregada",
+      "Concesiones de opciones Q1FY27 agregadas, no strike-wise",
+      "Comparables aún sin ajuste lease/IFRS uniforme",
+      "P/FCFE peso cero; matrices cuatro N/D",
+      "Tres partidas de pasivos CF no segregadas",
+      "Controles_todas.sh no pasado en R4"
+    ]
+  },
+  "sourceLinks": [
+    "https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm",
+    "https://www.sec.gov/Archives/edgar/data/320187/000032018726000193/nke-20260831.htm",
+    "https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40020134229"
+  ],
+  "notes": "La publicación expresa limitaciones; no afirmación de auditoría integral. Resultados SHA pertenece a motor R3 y DCF congelado."
+}

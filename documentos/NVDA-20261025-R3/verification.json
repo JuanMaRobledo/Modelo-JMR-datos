@@ -1,0 +1,201 @@
+{
+ "revision": "NVDA-20261024-R2",
+ "passed": 19,
+ "failed": 0,
+ "controls": [
+  {
+   "id": "Balance10FYyLTM",
+   "passed": true,
+   "evidence": "FY2017incluye31deequitytemporal; sin plug."
+  },
+  {
+   "id": "LTM",
+   "passed": true,
+   "evidence": "FY2026+H1FY2027−H1FY2026"
+  },
+  {
+   "id": "4DCF",
+   "passed": true,
+   "evidence": "ReproducciónPython independiente; flujos/tasas/terminal/puente10años."
+  },
+  {
+   "id": "WACC",
+   "passed": true,
+   "evidence": "Detailed, pesosmercado y fuentes RF/ERP mismo corte."
+  },
+  {
+   "id": "R&Dactual",
+   "passed": true,
+   "evidence": "CohortesLTM y vida3años."
+  },
+  {
+   "id": "Leases",
+   "passed": true,
+   "evidence": "5494ya reconocido; cero conversión incremental."
+  },
+  {
+   "id": "Shares",
+   "passed": true,
+   "evidence": "24100básicas+168RSU; sin otra resta de opciones."
+  },
+  {
+   "id": "Puente",
+   "passed": true,
+   "evidence": "Líquidos99369+privados51157−compra11900−deuda38860."
+  },
+  {
+   "id": "200sensibilidades",
+   "passed": true,
+   "evidence": {
+    "maxError": 2.2737367544323206e-13,
+    "cells": 200
+   }
+  },
+  {
+   "id": "8centros",
+   "passed": true,
+   "evidence": "Mismo DCFBase."
+  },
+  {
+   "id": "Inverse",
+   "passed": true,
+   "evidence": "Deltaaditivo; precio210.96corte23oct."
+  },
+  {
+   "id": "NoErrores",
+   "passed": true,
+   "evidence": "Rangos activos y 7métodos; reparados indicadores históricos secundarios."
+  },
+  {
+   "id": "18candadosnativos",
+   "passed": true,
+   "evidence": [
+    {
+     "sheet": "Financials Multiples",
+     "cell": "M34",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Financials Multiples",
+     "cell": "M35",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Financials Multiples",
+     "cell": "M36",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B81",
+     "value": "CONCILIADO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B85",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B92",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B108",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B109",
+     "value": "NO APLICA"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B110",
+     "value": "NO APLICA"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B112",
+     "value": "NO APLICA"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B113",
+     "value": "NO APLICA"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B114",
+     "value": "NO APLICA"
+    },
+    {
+     "sheet": "Cost of capital worksheet",
+     "cell": "B84",
+     "value": "VALIDADO"
+    },
+    {
+     "sheet": "Escenarios e historias",
+     "cell": "K5",
+     "value": "LISTO"
+    },
+    {
+     "sheet": "Escenarios e historias",
+     "cell": "K6",
+     "value": "LISTO"
+    },
+    {
+     "sheet": "Escenarios e historias",
+     "cell": "K7",
+     "value": "LISTO"
+    },
+    {
+     "sheet": "Escenarios e historias",
+     "cell": "K8",
+     "value": "LISTO"
+    },
+    {
+     "sheet": "Input sheet",
+     "cell": "B111",
+     "value": "VALIDADO"
+    }
+   ]
+  },
+  {
+   "id": "CohortesI+D",
+   "passed": true,
+   "evidence": "Δactivo=gasto−amortización en4historias,13años de conciliación; DCF10años."
+  },
+  {
+   "id": "Normalizacion",
+   "passed": true,
+   "evidence": "Uplift estable no perpetúa4.18pp; GAAP se deriva poraño."
+  },
+  {
+   "id": "PruebaNativa",
+   "passed": true,
+   "evidence": "InputB28+1pp; estados cambian; fórmula original restaurada."
+  },
+  {
+   "id": "MOS",
+   "passed": true,
+   "evidence": "Sobre DCFBase."
+  },
+  {
+   "id": "Historias",
+   "passed": true,
+   "evidence": "PromedioC/B/Orenormaliza85%; Disrupciónseparada."
+  },
+  {
+   "id": "63preciosrelativos",
+   "passed": true,
+   "evidence": "7métodos×3historias×3horizontes; Ke11.4931 y dividendos anuales."
+  }
+ ],
+ "scope": "Controles propios +18estados nativos. Los scripts centrales se registran separadamente.",
+ "capturedAt": "2026-10-24T16:13:25.879764+00:00",
+ "source": "Google Sheets get_spreadsheet_cells R2; valores/formulas/formatos",
+ "heredado_de_revision": "NVDA-20261024-R2",
+ "nota": "Controles de la revisión anterior (DCF idéntico). No re-ejecutados para NVDA-20261025-R3."
+}
