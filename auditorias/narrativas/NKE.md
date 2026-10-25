@@ -1,20 +1,20 @@
-# Auditoría JMR · NKE · cierre técnico del 25-oct-2026
+# Auditoría JMR · NKE · recaptura del 25-oct-2026
 
-**Revisión financiera: NKE-JMR-20261025-R5** · cierre CIERRE-NKE-NVDA-20261025.
+**Revisión financiera: NKE-JMR-20261025-R5** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
 
-**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$35,02**, precio con MOS del 35% **US$22,77**. No se cambiaron supuestos, probabilidades, pesos ni cifras de valoración.
+**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$35,02**, precio con MOS del 35% **US$22,77**; idénticos a la revisión anterior. No se cambiaron supuestos, probabilidades ni pesos.
 
-Se completó `controles_todas.sh NKE NVDA` sin fallas sobre lecturas nuevas de valores y fórmulas de las hojas activas. Ambas tienen 18/18 candados listos y cero entradas esenciales vacías. Consistencia M1/M2/M3/H1/H2/H3 e informe aprobados; descuento, terminal y puente de cuatro DCF por hoja reproducidos con error cero. [Evidencia, capturas y alcance](https://github.com/JuanMaRobledo/JMR-valuation/tree/22a06f7938738ae5851127a3101819212d57afb2/reference/revisiones/Cierre-NKE-NVDA-2026-10-25).
+**Qué cambió:** se migraron en la hoja AUD-04 (una sola base de acciones y opciones restadas una vez) y AUD-06 (endeudamiento del FCFE de Damodaran) solo en las celdas con la fórmula vieja exacta de la plantilla; las celdas con fórmula propia de la empresa no se tocaron. P/FCFE (peso 0) pasa de 18,91 / 29,76 / 33,35 a 18,82 / 29,68 / 33,27; el precio ponderado no cambia.
 
-Se cerraron los metadatos omitidos de P/V y P/BV y la etiqueta obsoleta de P/FCFE. La guarda IF de empresa vacía de C46 referencia correctamente el margen Base; se corrigió el falso positivo del control, con pruebas negativas para otro escenario, aritmética o guarda distinta. El cálculo P/FCFE ya estaba completo y conserva peso cero. 
+**Controles ejecutados:** `controles_todas.sh NKE NVDA` sin fallas (probabilidades, supuestos, consistencia M1/M2/M3/I1, integridad, entradas esenciales y candados 18/18) y verificador de la recaptura con 0 fallas. [Registro de la corrida y evidencia](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-NKE-NVDA-2026-10-25).
 
 **Salvedades vigentes:** NIKE no divulga I+D separada del SG&A; capitalización exacta imposible. Registro como limitación de ROIC y contraste sectorial, no como ausencia de gasto. Opciones: 76,8 millones detalladas al 31-may-2026; datos Q1FY27 de instrumentos mixtos (84 millones) no sustituyen opciones; valor de opciones reconocido US$123,37m; sensibilidad máxima examinada ~US$0,008/acción. P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,52 / US$22,80 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios. Comparables DECK/CROX/LULU/COLM recomputados con EV caja, leases y acciones económicas; homogeneización IFRS/USGAAP de EBITDA y arrendamientos aún limitada. UAA excluida. 12/12 conciliaciones de inversión y financiación cerradas; tres desgloses no publicados de pasivos operativos permanecen N/D sin afectar FCFF. El control técnico R4 se completó el 25-oct-2026 sobre captura directa identificada.
 
-**Límite del cierre:** controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera. La vista autenticada de producción no se verificó; no se cambió su protección. Las hipótesis de crecimiento, márgenes, reinversión y ROIC permanecen sujetas a escenarios y sensibilidad, no se presentan como hechos certificados.
+**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos `verification.json` y `engine_verification.json` de la carpeta de documentos son de la revisión anterior y están rotulados como heredados. Controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera.
 
 ### Antecedente de auditoría conservado · no es el dictamen técnico vigente
 
-Las referencias siguientes a controles pendientes o fallidos describen la situación anterior a este cierre. Las reservas económicas/documentales continúan salvo corrección expresamente indicada arriba.
+Las referencias siguientes describen la situación anterior a esta recaptura. Las reservas económicas/documentales conservadas siguen vigentes.
 
 ---
 

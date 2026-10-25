@@ -1,20 +1,20 @@
-# Auditoría JMR · NVDA · cierre técnico del 25-oct-2026
+# Auditoría JMR · NVDA · recaptura del 25-oct-2026
 
-**Revisión financiera: NVDA-20261025-R3** · cierre CIERRE-NKE-NVDA-20261025.
+**Revisión financiera: NVDA-20261025-R3** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
 
-**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$381,79**, precio con MOS del 35% **US$248,16**. No se cambiaron supuestos, probabilidades, pesos ni cifras de valoración.
+**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$381,79**, precio con MOS del 35% **US$248,16**; idénticos a la revisión anterior. No se cambiaron supuestos, probabilidades ni pesos.
 
-Se completó `controles_todas.sh NKE NVDA` sin fallas sobre lecturas nuevas de valores y fórmulas de las hojas activas. Ambas tienen 18/18 candados listos y cero entradas esenciales vacías. Consistencia M1/M2/M3/H1/H2/H3 e informe aprobados; descuento, terminal y puente de cuatro DCF por hoja reproducidos con error cero. [Evidencia, capturas y alcance](https://github.com/JuanMaRobledo/JMR-valuation/tree/22a06f7938738ae5851127a3101819212d57afb2/reference/revisiones/Cierre-NKE-NVDA-2026-10-25).
+**Qué cambió:** se migraron en la hoja AUD-04 (una sola base de acciones y opciones restadas una vez) y AUD-06 (endeudamiento del FCFE de Damodaran) solo en las celdas con la fórmula vieja exacta de la plantilla; las celdas con fórmula propia de la empresa no se tocaron. P/FCFE pasa de 166,40 / 408,49 / 637,51 a 160,41 / 382,56 / 586,67 y el precio objetivo ponderado de 197,50 / 499,26 / 824,17 a 197,20 / 497,97 / 821,62.
 
-Se confirmó la revisión R2, que normaliza I+D prospectiva y mantiene el calendario de diez años. No se sustituyó por la R1 ni por la prueba alternativa de USD384,50. 
+**Controles ejecutados:** `controles_todas.sh NKE NVDA` sin fallas (probabilidades, supuestos, consistencia M1/M2/M3/I1, integridad, entradas esenciales y candados 18/18) y verificador de la recaptura con 0 fallas. [Registro de la corrida y evidencia](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-NKE-NVDA-2026-10-25).
 
 **Salvedades vigentes:** CAGR Base36,28% y escala año5 son hipótesis exigentes; no las certifica un TAM independiente. ROIC marginal estable27,23% requiere ventaja durable; prueba sin moat USD286.10. I+D/ventas7,79% y vida3años son juicios; GAAP año5≈56,23%,58% es referencia estable. Múltiplos secundarios comparten techo fundamental; no son siete confirmaciones independientes. Serie ROIC histórica ajustada3/5/10años N/D; límites de geografía por sede, concesiones y pares explícitos. Controles centrales ejecutados sobre captura directa de valores y fórmulas; historial Drive y comparación con hojas no capturadas no certificados.
 
-**Límite del cierre:** controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera. La vista autenticada de producción no se verificó; no se cambió su protección. Las hipótesis de crecimiento, márgenes, reinversión y ROIC permanecen sujetas a escenarios y sensibilidad, no se presentan como hechos certificados.
+**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos `verification.json` y `engine_verification.json` de la carpeta de documentos son de la revisión anterior y están rotulados como heredados. Controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera.
 
 ### Antecedente de auditoría conservado · no es el dictamen técnico vigente
 
-Las referencias siguientes a controles pendientes o fallidos describen la situación anterior a este cierre. Las reservas económicas/documentales continúan salvo corrección expresamente indicada arriba.
+Las referencias siguientes describen la situación anterior a esta recaptura. Las reservas económicas/documentales conservadas siguen vigentes.
 
 ---
 
