@@ -1,5 +1,7 @@
 # Auditoría económica narrativa — Adobe Inc. (ADBE)
 
+**Análisis fundamental vinculado:** [ADBE en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=ADBE) · registro `analisis/ADBE-research-1790475622244-a6a92.json` (revisión del 26-oct-2026).
+
 ## 1. Ficha de auditoría y alcance
 
 | Campo | Contenido |

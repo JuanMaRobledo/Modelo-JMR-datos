@@ -1,5 +1,7 @@
 # Auditoría económica narrativa — Microsoft Corporation (MSFT)
 
+**Análisis fundamental vinculado:** [MSFT en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=MSFT) · registro `analisis/MSFT-research-1788905155892-deskj.json` (revisión del 26-oct-2026).
+
 ## 1. Ficha de auditoría y alcance
 
 | Campo | Contenido |

@@ -1,5 +1,7 @@
 # Auditoría económica narrativa — PayPal Holdings, Inc. (PYPL)
 
+**Análisis fundamental vinculado:** [PYPL en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=PYPL) · registro `analisis/PYPL-research-1790205847031-vcqtg.json` (revisión del 26-oct-2026).
+
 ## 1. Ficha de auditoría y alcance
 
 | Campo | Contenido |
