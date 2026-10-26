@@ -72,9 +72,40 @@ def verify_snapshot_release(record, analysis, evidence, audit):
     return {'ticker':record['ticker'],'revisionId':revision,'methods':7,'scenarios':21,
             'pricesAndDiscountsReplayed':count,'criterion':criterion,'dcfBase':record['valorPrincipal'],'ok':True}
 
+def verify_recaptura(record,analysis):
+    """Registros regenerados por recaptura (campo evidenciaRecaptura): la evidencia de múltiplos de la revisión anterior ya no aplica.
+    Se verifica la evidencia propia de la recaptura (foto de la hoja, hashes, estado) y la coherencia interna de los valores
+    descontados y ponderados del registro. No repite la reproducción año a año del cierre de múltiplos."""
+    ev=ROOT/record['evidenciaRecaptura']
+    rec=json.loads((ev/'recaptura.json').read_text()); man=json.loads((ev/'manifiesto_candidato.json').read_text())
+    revision=record['revisionId']
+    assert revision==rec['revision_id']==analysis['revisionId']==analysis['valoracionRevisionId']==record['auditoria']['revisionId']
+    assert record['resultsSha256']==rec['foto_despues']['data_sha256']==man['resultados_sha256']
+    assert record['publicationStatus']=='PUBLICADA' and rec['estado']=='PUBLICADA_CON_SALVEDADES'
+    for path,h in man['artifacts'].items():
+        assert hashlib.sha256((ROOT/path).read_bytes()).hexdigest()==h['sha256'],path
+    d=record['descuentoMultiples']
+    assert [m['nombre'] for m in d['metodos']]==METHODS
+    for sc in SCENARIOS:
+        for m in d['metodos']:
+            x=m[sc]
+            assert len(x['vp'])==len(x['fy'])==3 and all(math.isfinite(a) for a in x['vp']+x['fy'])
+            assert equal(x['consolidado'],x['vp'][-1] if d['criterio']=='Solo 3 años' else sum(x['vp'])/3)
+        tot=sum(m['peso']*m[sc]['consolidado'] for m in d['metodos'])
+        esperado=tot+(d.get('pesoDcf') or 0)*d['dcfHoy'][sc]
+        assert equal(record['valorPresentePonderado'][sc],esperado)
+    for key in ('linkedValuation','linkedValuationAtResearch'):
+        assert analysis[key]['revisionId']==revision
+        assert analysis[key]['descuentoMultiples']==record['descuentoMultiples']
+    return {'ticker':record['ticker'],'revisionId':revision,'recaptura':True,'dcfBase':record['valorPrincipal'],
+            'scope':'Recaptura: evidencia propia, hashes y coherencia interna de descuentos y ponderados; no reproduce año a año el cierre de múltiplos','ok':True}
+
+
 def verify(ticker):
     record=json.loads(next((ROOT/'valoraciones').glob(ticker+'*.json')).read_text())
     analysis=json.loads(next((ROOT/'analisis').glob(ticker+'*.json')).read_text())
+    if record.get('evidenciaRecaptura'):
+        return verify_recaptura(record,analysis)
     evidence=json.loads((ROOT/record['cierreMultiplos']['evidencePath']).read_text())
     audit=(ROOT/'auditorias/narrativas'/f'{ticker}.md').read_text()
     if evidence.get('schema')=='jmr-reviewed-snapshot-release-v1':
