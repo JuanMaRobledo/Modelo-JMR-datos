@@ -123,3 +123,17 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Para unificar se eliminaron columnas sobrantes de «Tesis de Inversión y Supuestos» (10→8) y «Escenarios e historias» (21→14) sin respaldo previo (H-15).
 - Auditoría v1.3: `MSFT-auditoria-v1.3.md` (con reservas; H-01…H-15; H-01 ROIC terminal, H-02 ventas/capital, H-03 arrendamientos firmados no iniciados por US$329.100 M).
 - Pendiente: releer 10-K FY17-FY23 (D&A), deuda por arrendamientos financieros anterior a FY25, 10-Q del 1T FY27 (28-oct-2026).
+
+## CELH · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+- Hoja `1tHDLsh4yBF9NQkRLNqfTU6GPM5trOWsB5xIjpALLOIw` reiniciada y unificada. Base 24,20 · Conservadora 16,58 · Disrupción 5,85 · Optimista 35,95 · esperado 25,23 · MOS 15,73 · precio 27,35.
+- Preferentes de PepsiCo (mezzanine, 1.760) dentro del patrimonio; deducidas a valor de liquidación (1.135). EBIT normalizado con 441,6 de partidas de una vez.
+- Publicado en la app (PR #156). Auditoría v1.3: `CELH-auditoria-v1.3.md` (H-01…H-13).
+
+## DUOL · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+- Hoja `1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc` reiniciada y unificada (61 pestañas, 21.258 fórmulas, 122 selectores; candados 15/15; inputs completos).
+- Valores: Base 103,27 · Conservadora 76,38 · Disrupción 45,74 · Optimista 133,35 · esperado 104,11 · MOS 67,12 · precio 142,40. Probabilidades 40/22,5/15/22,5. Múltiplos consolidados 46,09 / 52,33 / 57,33 (brecha de la Base −49 %).
+- Publicado en la app (PR #158). Auditoría v1.3: `DUOL-auditoria-v1.3.md` (H-01…H-13; H-01 capital nuevo rinde 39-54 % frente a ROIC terminal de 9 %; H-02 compensación en acciones).
+- Pendiente: releer I+D semestral 1S22-1S25 contra el XBRL; calendario de arrendamientos con el 10-Q; estados de pares.
+
+## Análisis recuperados (PR #157)
+- Los 30 análisis fundamentales del 20-oct-2026 de los estudios aún no rehechos están de nuevo en `analisis/`, marcados «recuperado, pendiente de rehacer y auditar». Se reemplazan al publicar cada empresa.
