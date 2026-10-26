@@ -37,3 +37,20 @@ Base). Las otras 58 ediciones están en `Financials Multiples` (12) y en las pes
 `Resumen de Valoración` (1): las copias referencian celdas propias donde la maestra referencia otras. Decidir si la maestra adopta esos cambios (entonces se
 actualiza la plantilla) o si la hoja de NFLX vuelve a la fórmula de la maestra (REGLAS §5A: no reconstruir fórmulas por empresa).
 NKE, NVDA y META siguen en la cola de `unificacion_hojas.py` (tarda ~20 min por hoja); NKE y META tienen 7 pestañas añadidas y NVDA 2.
+
+## Resultado completo · unificación de las 4 hojas accesibles (26-oct)
+Informes en `unificacion/<T>.json`. **Selectores: 122 de 122 conservados en las cuatro** (NFLX, NVDA, NKE, META). Ninguna hoja está unificada:
+
+| Hoja | Pestañas añadidas | Fórmulas de la maestra perdidas (de 21.265) | Editadas | Dónde |
+|---|---:|---:|---:|---|
+| NFLX | 0 | 336 | 233 | Sensibilidad por múltiplo (Base 9 columnas), métodos y Financials Multiples |
+| NVDA | 2 | 6.436 | 8.594 | Motor sensibilidad DCF; Trailing Valuation; Income Statement |
+| NKE | 7 | 4.069 | 11.227 | Motor sensibilidad DCF; Income Statement; Financials Multiples |
+| META | 7 | 110 | 2.499 | Motor sensibilidad DCF; Financials Multiples; Income Statement |
+
+Las pestañas añadidas **no se pueden borrar**: 13 (NVDA), 24 (NKE) y 170 (META) fórmulas editadas las citan. Unificar estas hojas exige rehacerlas desde la maestra.
+
+## Bloqueo decisivo: Drive
+La cuenta de servicio `jmr-valuation-bot@jmr-valuation-508617.iam.gserviceaccount.com` **no puede crear archivos** (Drive responde `storageQuotaExceeded`) y **no tiene permiso sobre las hojas de las otras 29 empresas** (archivadas el 24-oct). Con autorización completa no se puede saltar eso; hace falta una de estas acciones de una persona con acceso a Drive:
+- **A (recomendada):** para cada empresa, abrir la maestra (`1OYhz6ulMNNUAs-aW8q9FatOJgmfKAVTBAOmRMhqZzaY`) → Archivo → Hacer una copia, llamarla «Modelo JMR - <TICKER> - <fecha>», compartirla con el correo de la cuenta de servicio como Editor y pasar el ID. Con el ID se ejecuta `bash scripts/valorar.sh <T> <ID> "<pares>" "<industria>"`.
+- **B:** compartir con la cuenta de servicio (Editor) las hojas antiguas de la carpeta «Valoraciones antiguas»; luego se reinician en el sitio con `reset_from_master.py --sheet-id ... --allow-destructive-reset` tras respaldar sus fórmulas en JSON.
