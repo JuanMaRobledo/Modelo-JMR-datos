@@ -107,3 +107,11 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Múltiplos por ciclo (7 métodos) aplicados; consolidados 37,92 / 43,83 / 53,53.
 - Publicado en la app (registro, análisis, sección Damodaran). Auditoría v1.3: `NVO-auditoria-v1.3.md` (Plausible con reservas; H-01…H-12).
 - Pendientes: `refrescar_seccion` informa FALLOS 3 (chequeos legacy, como PYPL); regenerar la sección Damodaran de PYPL con el generador corregido (matriz centrada en la Base); verificar patentes en el 20-F (H-08).
+
+## ADBE · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+
+- Hoja `1MhEO0NxlQ…` reiniciada (aprobación expresa) y UNIFICADA (61 pestañas). Estados SEC 2016-2025 + LTM al 28-ago-2026 (10-Q del 3T FY26); balance LTM reescrito; acciones 400,9 M (portada + RSU esperadas); I+D a 3 años; arrendamientos como deuda.
+- DCF: Base 399,02 · Conservadora 250,15 · Disrupción 167,70 · Optimista 487,73 · esperado 385,65 · MOS 259,36 · precio 239,94. Probabilidades 50/20/20/10 (madura estable). ROIC terminal 29,3 %; ventas/capital 1,22.
+- Múltiplos por ciclo (7 métodos); consolidados 204,57 / 222,71 / 359,24 (brecha de la Base −44 %).
+- Publicado en la app (registro, análisis, sección Damodaran). Auditoría v1.3: `ADBE-auditoria-v1.3.md` (Plausible con reservas; H-01…H-13; H-06: capital nuevo rinde >2× el ROIC terminal en Conservadora y Disrupción).
+- Pendiente: repetir `unificacion_hojas.py` tras la restauración posterior a la publicación; PSU en acciones; vencimientos y rating en el 10-K.
