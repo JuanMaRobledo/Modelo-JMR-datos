@@ -1,6 +1,6 @@
 # Revisión una a una · 33 empresas · 26-oct-2026
 
-Generado por `scripts/auditar_registro.py` contra `REGLAS_VIGENTES` v10. Solo lee el repositorio: no consulta la SEC ni las hojas, así que **ningún estado es VERIFICADO**. Contraste con fuentes hecho hasta ahora: AAPL (`AAPL-fuentes.md`).
+Generado por `scripts/auditar_registro.py` contra `REGLAS_VIGENTES` v10. Solo lee el repositorio: no consulta la SEC ni las hojas, así que **ningún estado es VERIFICADO**. El contraste con la SEC (ingresos LTM, activos, patrimonio, deuda) está en [`SEC.md`](SEC.md); AAPL además en `AAPL-fuentes.md`. Un contraste de fuentes no convierte el estado en VERIFICADO: falta la hoja, las acciones diluidas, los arrendamientos y el recálculo con las reglas del 21-oct.
 
 | # | Empresa | Estado preliminar | Alta | Media | Baja | Hallazgos de prioridad alta |
 | # | Empresa | Estado preliminar | Alta | Media | Baja | Hallazgos de prioridad alta |
