@@ -40,7 +40,7 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/validar_catalogo.cjs
-      - run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/nke_r3_release.test.cjs
+      - run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/publicacion_recaptura.test.cjs
       - run: python3 scripts/verificar_cierre_multiplos.py
 
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
