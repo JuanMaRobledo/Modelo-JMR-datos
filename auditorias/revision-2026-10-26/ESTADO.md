@@ -54,3 +54,14 @@ Las pestañas añadidas **no se pueden borrar**: 13 (NVDA), 24 (NKE) y 170 (META
 La cuenta de servicio `jmr-valuation-bot@jmr-valuation-508617.iam.gserviceaccount.com` **no puede crear archivos** (Drive responde `storageQuotaExceeded`) y **no tiene permiso sobre las hojas de las otras 29 empresas** (archivadas el 24-oct). Con autorización completa no se puede saltar eso; hace falta una de estas acciones de una persona con acceso a Drive:
 - **A (recomendada):** para cada empresa, abrir la maestra (`1OYhz6ulMNNUAs-aW8q9FatOJgmfKAVTBAOmRMhqZzaY`) → Archivo → Hacer una copia, llamarla «Modelo JMR - <TICKER> - <fecha>», compartirla con el correo de la cuenta de servicio como Editor y pasar el ID. Con el ID se ejecuta `bash scripts/valorar.sh <T> <ID> "<pares>" "<industria>"`.
 - **B:** compartir con la cuenta de servicio (Editor) las hojas antiguas de la carpeta «Valoraciones antiguas»; luego se reinician en el sitio con `reset_from_master.py --sheet-id ... --allow-destructive-reset` tras respaldar sus fórmulas en JSON.
+
+## Actualización · carpeta compartida (26-oct, tarde)
+Se compartió con la cuenta de servicio la carpeta **AAA Finanzas** (`1IS-H1WlSq71AWZXAE6r3LOhJXegSwLkz`). Ahora se ven sus 263 elementos
+(documentos fuente, `.md` de valoraciones antiguas, plantillas y respaldos), pero **ninguna de las hojas de las 29 empresas antiguas**: los IDs
+de `reference/multiplos_v3/*_anclas.json` y de `hojaGoogle` siguen dando `PermissionError` (existen, pero no están compartidas con la cuenta).
+Las dos carpetas donde `REGLAS` §10 dice que están archivadas dan 404 para la cuenta:
+- Valoraciones antiguas: `https://drive.google.com/drive/folders/10HZCGoZ4hKVqtg6ekcyYHsm8IHPZOBVLq`
+- Revisiones sustituidas: `https://drive.google.com/drive/folders/1M2sWqAR60HBIBx0JbRn057kawpD9ZsZG`
+Falta compartir esas dos carpetas (Editor) con `jmr-valuation-bot@jmr-valuation-508617.iam.gserviceaccount.com`. La cuenta sigue sin poder crear archivos
+nuevos (cuota de Drive 0), así que la vía es reiniciar las hojas antiguas en el sitio (Opción B).
+Nota de seguridad: dentro de AAA Finanzas hay un archivo `jmr-valuation-508617-64baa7fd0964.json` (parece la clave de la cuenta de servicio) y una carpeta `credentials`.
