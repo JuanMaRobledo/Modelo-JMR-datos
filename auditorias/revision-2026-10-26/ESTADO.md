@@ -115,3 +115,11 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Múltiplos por ciclo (7 métodos); consolidados 204,57 / 222,71 / 359,24 (brecha de la Base −44 %).
 - Publicado en la app (registro, análisis, sección Damodaran). Auditoría v1.3: `ADBE-auditoria-v1.3.md` (Plausible con reservas; H-01…H-13; H-06: capital nuevo rinde >2× el ROIC terminal en Conservadora y Disrupción).
 - Pendiente: repetir `unificacion_hojas.py` tras la restauración posterior a la publicación; PSU en acciones; vencimientos y rating en el 10-K.
+
+## MSFT · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+- Hoja `1wIgB2zfjmPk_DdnaFsoJfKHMiIR_p4795ebvbGSOi1E` reiniciada con la aprobación del usuario y unificada (61 pestañas, 21.258 fórmulas, 122 selectores; candados 15/15, inputs y estados completos sin hallazgos).
+- Valores: Base 440,73 · Conservadora 257,57 · Disrupción 122,84 · Optimista 621,31 · esperado 440,09 · MOS 286,48 · precio 512,90. Probabilidades 45/22,5/22,5/10. Múltiplos consolidados 210,56 / 279,36 / 352,67 (el tope del múltiplo justificado deja la Base 37 % bajo el DCF).
+- Correcciones de datos: depreciación y amortización redondeada del importador sustituida por la línea del flujo de caja (solo FY24-FY26 verificadas en el 10-K); arrendamientos financieros separados en FY25-FY26; selectores B71:B72 del costo de capital.
+- Para unificar se eliminaron columnas sobrantes de «Tesis de Inversión y Supuestos» (10→8) y «Escenarios e historias» (21→14) sin respaldo previo (H-15).
+- Auditoría v1.3: `MSFT-auditoria-v1.3.md` (con reservas; H-01…H-15; H-01 ROIC terminal, H-02 ventas/capital, H-03 arrendamientos firmados no iniciados por US$329.100 M).
+- Pendiente: releer 10-K FY17-FY23 (D&A), deuda por arrendamientos financieros anterior a FY25, 10-Q del 1T FY27 (28-oct-2026).
