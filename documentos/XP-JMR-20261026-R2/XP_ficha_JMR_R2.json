@@ -1,0 +1,368 @@
+{
+  "schema": "jmr-financial-adapter-r2",
+  "revision_id": "XP-JMR-20261026-R2",
+  "ticker": "XP",
+  "fecha_corte": "2026-10-26",
+  "financial_cutoff": "2026-06-30",
+  "industria_damodaran": "Investment Banking & Brokerage",
+  "emisor": "XP Inc.",
+  "market": "NASDAQ",
+  "share_class": "A",
+  "currency_flows": "BRL million",
+  "currency_value": "USD per share",
+  "method": "FCFE / excess returns at Ke",
+  "status": "PENDIENTE_VALIDACION_INTEGRAL",
+  "publication_authorized": false,
+  "base_value_usd": 13.530630645337256,
+  "mos_fraction": 0.35,
+  "mos_value_usd": 8.794909919469216,
+  "average_three_usd": 13.215802034780568,
+  "histories": [
+    {
+      "id": "A",
+      "name": "Base · expansión con normalización fiscal",
+      "prob": 0.45,
+      "growth": [
+        0.08,
+        0.1,
+        0.09,
+        0.08,
+        0.07
+      ],
+      "margin5": 0.31,
+      "marginT": 0.295,
+      "tax5": 0.12,
+      "taxT": 0.2,
+      "roe5": 0.22,
+      "roeT": 0.1777,
+      "gT": 0.05
+    },
+    {
+      "id": "B",
+      "name": "Conservadora · presión competitiva y menor retorno",
+      "prob": 0.225,
+      "growth": [
+        0.02,
+        0.04,
+        0.05,
+        0.05,
+        0.05
+      ],
+      "margin5": 0.28,
+      "marginT": 0.27,
+      "tax5": 0.12,
+      "taxT": 0.2,
+      "roe5": 0.18,
+      "roeT": null,
+      "gT": 0.05
+    },
+    {
+      "id": "C",
+      "name": "Disrupción · Deterioro de los fundamentales",
+      "prob": 0.1,
+      "growth": [
+        -0.15,
+        -0.05,
+        0,
+        0.01,
+        0.02
+      ],
+      "margin5": 0.2,
+      "marginT": 0.18,
+      "tax5": 0.12,
+      "taxT": 0.2,
+      "roe5": 0.15,
+      "roeT": null,
+      "gT": 0.02
+    },
+    {
+      "id": "D",
+      "name": "Optimista · mayor monetización y escala",
+      "prob": 0.225,
+      "growth": [
+        0.14,
+        0.15,
+        0.14,
+        0.12,
+        0.1
+      ],
+      "margin5": 0.34,
+      "marginT": 0.32,
+      "tax5": 0.12,
+      "taxT": 0.2,
+      "roe5": 0.23,
+      "roeT": 0.1777,
+      "gT": 0.05
+    }
+  ],
+  "results": [
+    {
+      "id": "A",
+      "value_usd": 13.530630645337256,
+      "cagr5": 0.08395210813944431,
+      "prob": 0.45,
+      "terminal_weight_equity": 0.4294502893477182
+    },
+    {
+      "id": "B",
+      "value_usd": 10.426239201742682,
+      "cagr5": 0.041934171916735874,
+      "prob": 0.225,
+      "terminal_weight_equity": 0.3740089369199937
+    },
+    {
+      "id": "C",
+      "value_usd": 6.988718918095333,
+      "cagr5": -0.03614253496118747,
+      "prob": 0.1,
+      "terminal_weight_equity": 0.19731054343940757
+    },
+    {
+      "id": "D",
+      "value_usd": 15.375707646705077,
+      "cagr5": 0.12985744111448927,
+      "prob": 0.225,
+      "terminal_weight_equity": 0.5334865365518099
+    }
+  ],
+  "inputs": {
+    "revenue0": 19122.419,
+    "ebt0": 5726.543,
+    "net_income0": 5313.855,
+    "parent_income0": 5316.803,
+    "equity0": 24831.073,
+    "shares_basic_m": 507.483079,
+    "rsu_psu_m": 17.672287,
+    "vesting_fraction": 0.95,
+    "rf_usd": 0.0507,
+    "erp_mature": 0.039174804210012876,
+    "beta": 0.98,
+    "crp_brazil": 0.0324,
+    "country_repricing": 0.02,
+    "inflation_brl": 0.03,
+    "inflation_usd": 0.023,
+    "fx_brl_per_usd": 5.5007,
+    "price_usd": 15.37,
+    "price_timestamp": "2026-10-26 13:57 America/New_York",
+    "fx_timestamp": "2026-10-26 13:09:51 BRT",
+    "reg_rwa0": 99904.171,
+    "reg_cet1_0": 7675.252,
+    "reg_cet1_target": 0.0768,
+    "rwa_revenue_growth_multiplier": 1.0,
+    "cet1_allocation": 0.5,
+    "mos": 0.35
+  },
+  "industrial_fields": {
+    "s2c": null,
+    "roic": null,
+    "wacc": null,
+    "reason": "Financiera: FCFE/ROE/Ke y restricciones regulatorias; no deuda operativa restada dos veces"
+  },
+  "iyd": {
+    "status": "PENDIENTE",
+    "life": null,
+    "reason": "Falta desglose de desarrollo y vida útil; softwareIFRSya capitalizado"
+  },
+  "leases": {
+    "status": "IFRS16 reconocido; conversororiginalno certificado"
+  },
+  "options": {
+    "status": "RSU/PSU incluidos; condicionesPSUpendientes",
+    "black_scholes": "N/A a simpleRSU deejercicio cero; no fórmula ficticia"
+  },
+  "capital_bridge": {
+    "status": "NO_VERIFICADO",
+    "proxy_allocation": 0.5,
+    "reason": "No reemplaza puente legal de libro a CET1/Tier1/total y transferencias"
+  },
+  "indicators": [
+    [
+      "Activos clientes",
+      "BRL 1.535bn; +12% interanual",
+      "Crecimiento >10% y captación positiva",
+      "<5% dos trimestres",
+      "ER26; trimestral"
+    ],
+    [
+      "Take rate",
+      "1,20%",
+      "≥1,20% con mix rentable",
+      "<1,10% dos trimestres",
+      "ER26; trimestral"
+    ],
+    [
+      "Clientes activos",
+      "4,772m; +1%",
+      ">3% anual sin mayor subsidio",
+      "Cae y sube coste de captación",
+      "ER26; trimestral"
+    ],
+    [
+      "Captación neta",
+      "BRL 28bn trimestral",
+      ">20bn trimestre",
+      "Negativa dos trimestres",
+      "ER26; trimestral"
+    ],
+    [
+      "Margen EBT",
+      "29,95% LTM IFRS; 32% 2Q gerencial",
+      "≥30% IFRS comparable",
+      "<27% dos trimestres",
+      "FS26; trimestral"
+    ],
+    [
+      "ROE",
+      "23,72% FY25 medio; 22,5% 2Q ajustado",
+      "≥20% medio homogéneo",
+      "<Ke BRL de forma persistente",
+      "20F25 / ER26; trimestral"
+    ],
+    [
+      "CET1 regulatorio",
+      "7,68%; holgura 0,68 pp reportada",
+      "Holgura crece sin emisión",
+      "<0,5 pp de holgura",
+      "Pilar KM1; trimestral"
+    ],
+    [
+      "Fiscalidad",
+      "7,21% ETR LTM",
+      "Convergencia ordenada ≤20%",
+      ">25% sin compensación",
+      "FS26; trimestral"
+    ],
+    [
+      "Crédito expandido",
+      "BRL 77,9bn; +16%",
+      "Rentabilidad neta cubre capital/pérdidas",
+      "Pérdidas crecen más que ingresos",
+      "ER26 y notas IFRS; trimestral"
+    ],
+    [
+      "Capital por acción",
+      "SBC + recompras + dividendos",
+      "Libro y FCFE por acción crecen",
+      "Distribuir exige emisión recurrente",
+      "FS26 / 20-F; semestral"
+    ]
+  ],
+  "ajustes_prob": [],
+  "blockers": [
+    "F1",
+    "F2",
+    "F5"
+  ],
+  "sources": [
+    [
+      "20F25",
+      "XP, 20-F FY2025; publicado 29-04-2026, estados consolidados y notas",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000207097926000182/xp-20251231.htm"
+    ],
+    [
+      "FS26",
+      "XP, estados IFRS 1H26, publicado 17-08-2026; resultados, balance, flujos y notas",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000095010326012482/dp251887_ex9901.htm"
+    ],
+    [
+      "ER26",
+      "XP, release 2Q26, publicado 17-08-2026; cifras gerenciales y conciliación",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000095010326012481/dp251884_6k-ex9901.htm"
+    ],
+    [
+      "Pilar",
+      "XP, Pilar 3 2T26, KM1 página 5, capital prudencial",
+      "https://www.xpi.com.br/documentos/pilar-3-gerenciamento-de-riscos-e-capital-2t26/"
+    ],
+    [
+      "20F23",
+      "XP, 20-F FY2023; publicado 26-04-2024",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000162828024018424/xp-20231231.htm"
+    ],
+    [
+      "20F21",
+      "XP, 20-F FY2021; publicado 13-04-2022",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000162828022009080/xp-20211231.htm"
+    ],
+    [
+      "20F19",
+      "XP, 20-F FY2019; publicado 29-04-2020; selección 2016 redondeada",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000095010320008430/dp126764_20f.htm"
+    ],
+    [
+      "Cancel",
+      "XP, cancelación de acciones en tesorería, 17-08-2026",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000095010326012480/dp251885_ex9901.htm"
+    ],
+    [
+      "Resale",
+      "XP, prospecto de reventa, 10-09-2026",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000119312526387869/d142311d424b7.htm"
+    ],
+    [
+      "Board",
+      "XP, cambio de director, 16-10-2026",
+      "https://www.sec.gov/Archives/edgar/data/1787425/000119312526424071/d79350dex991.htm"
+    ],
+    [
+      "ERP",
+      "Damodaran, ERPOct26.xlsx; observación mensual 30-09-2026, no tasa diaria de octubre",
+      "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx"
+    ],
+    [
+      "CRP",
+      "Damodaran, primas por país, corte enero 2026, Brasil Ba1",
+      "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html"
+    ],
+    [
+      "Beta",
+      "Damodaran, betas globales, enero 2026; Investment Banking & Brokerage",
+      "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/BetasGlobal.html"
+    ],
+    [
+      "ROE",
+      "Damodaran, ROE por industria EEUU, enero 2026; referencia de brokerage, no universo Brasil",
+      "https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/roe.html"
+    ],
+    [
+      "PTAX",
+      "Banco Central do Brasil, PTAX de venta, 26-10-2026 13:09:51 BRT",
+      "https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarDia(dataCotacao=@dataCotacao)?@dataCotacao=%2710-26-2026%27&$format=json"
+    ],
+    [
+      "BTG",
+      "BTG Pactual, información institucional e inversores, consultada 26-10-2026",
+      "https://institucional.btgpactual.com/en"
+    ],
+    [
+      "Itau",
+      "Itaú, relaciones con inversores, consultada 26-10-2026",
+      "https://www.itau.com.br/relacoes-com-investidores/en/"
+    ],
+    [
+      "Nu",
+      "Nu, inversores, consultada 26-10-2026",
+      "https://nu.com/en/investors"
+    ],
+    [
+      "BaseRates",
+      "Mauboussin, Callahan y Majd, The Base Rate Book, 26-09-2016; original alojado en copia pública",
+      "https://josephnoko.com/wp-content/uploads/2024/04/The-Base-Rate-Book-Michael-Mauboussin.pdf"
+    ],
+    [
+      "Price",
+      "Stock Analysis, XP; referencia intradía congelada 26-10-2026 13:57 Nueva York, USD 15,37",
+      "https://stockanalysis.com/stocks/xp/"
+    ],
+    [
+      "Reuters",
+      "Reuters, contexto de volatilidad política de Brasil, 26-10-2026; no fuente de prima de riesgo numérica",
+      "https://www.reuters.com/business/analysts-forecast-brazil-market-falls-after-lula-turnaround-win-2026-10-26/"
+    ],
+    [
+      "Rules",
+      "JMR, reglas vigentes v9, 24-10-2026 y prompts vigentes consultados 26-10-2026",
+      "https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md"
+    ]
+  ]
+}
