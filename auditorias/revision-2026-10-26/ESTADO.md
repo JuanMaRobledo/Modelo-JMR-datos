@@ -137,3 +137,11 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 
 ## Análisis recuperados (PR #157)
 - Los 30 análisis fundamentales del 20-oct-2026 de los estudios aún no rehechos están de nuevo en `analisis/`, marcados «recuperado, pendiente de rehacer y auditar». Se reemplazan al publicar cada empresa.
+
+## ONON · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+- Hoja `1nlN8qDy9BipM5IWwGE5Fgf6VKpyYQScLXIPvqtAE9Oo` alineada con la maestra (`unificar_hoja.py`, 61 pestañas, UNIFICADA; candados 15/15; inputs completos). La primera pasada con `reset_from_master` dejó 67 pestañas y hubo que repetir.
+- Valores: Base 34,18 · Conservadora 21,37 · Disrupción 12,63 · Optimista 47,85 · esperado 34,40 · MOS 22,21 · precio 29,61. Probabilidades 40/22,5/15/22,5. Múltiplos consolidados 13,43 / 15,99 / 19,27 (brecha de la Base −53 %).
+- Corrección de datos: el pasivo de arrendamiento NIIF 16 de largo plazo (fila 26) se había puesto en cero por error; con él el Base bajó de 35,52 a 34,18.
+- Publicado en la app (PR #159). Auditoría v1.3: `ONON-auditoria-v1.3.md` (H-01…H-13; H-02 EV/FCFF de 7× sobre un flujo deprimido; H-04 tipos de cambio escritos a mano; H-08 LTM sin XBRL).
+- DUOL: la frase de la sección 12 con el precio con margen de seguridad se corrigió para aplicarse al DCF Base (PR #160).
+- Método: para reiniciar una hoja usar `unificar_hoja.py --confirmar-reinicio` (no `reset_from_master`).
