@@ -1,5 +1,7 @@
 # Auditoría económica narrativa — Novo Nordisk A/S (NVO)
 
+**Análisis fundamental vinculado:** [NVO en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=NVO) · registro `analisis/NVO-research-1790596929135-a90uu.json` (revisión del 26-oct-2026).
+
 ## 1. Ficha de auditoría y alcance
 
 | Campo | Contenido |
