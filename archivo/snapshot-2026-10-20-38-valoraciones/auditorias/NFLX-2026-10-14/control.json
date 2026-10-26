@@ -1,0 +1,43 @@
+{
+  "ticker": "NFLX",
+  "sheet": "https://docs.google.com/spreadsheets/d/1FmgmqjknJBdNDHnfEAwMTfhs0Z6GzkUsmUKckrHf5PI/edit",
+  "checks": 179,
+  "matchingWithinRounding": 177,
+  "historicalRestatements": [
+    2016,
+    2017
+  ],
+  "base": 61.70723988305712,
+  "expected": 54.869918298665695,
+  "mathematicalChecks": 16,
+  "multiples": "Condicionados; regla heredada mínimo 4 cierres, sin tres anclas independientes",
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000212/nflx-20260630.htm"
+  ],
+  "corrections": [
+    "precisión SEC LTM y acciones/RSU/opciones",
+    "puente deuda nominal",
+    "offsets de márgenes de resumen",
+    "comparabilidad P/E normalizado diluido",
+    "estadísticas de múltiplos sin negativos"
+  ],
+  "estimateLimitations": [
+    "g terminal 4% es supuesto, no pronóstico de Netflix",
+    "ROIC terminal Base 15%, Conservadora WACC y Optimista 20% estimados",
+    "múltiplos requieren tres anclas independientes",
+    "arrendamientos y gastos de contenido: conciliar en actualización trimestral",
+    "precio de referencia 13-oct-2026, estados 2T2026"
+  ],
+  "valuationNow": 71.25782678971342,
+  "valuationFY3": 99.80533866520919,
+  "republished": "2026-10-14",
+  "publicationVersion": "nflx-damodaran-20261014-r2",
+  "assumptions": {
+    "gStable": 0.04,
+    "roicTerminalBase": 0.15,
+    "roicTerminalConservative": 0.08990000000000001,
+    "roicTerminalOptimistic": 0.2,
+    "waccTerminal": 0.08990000000000001
+  }
+}

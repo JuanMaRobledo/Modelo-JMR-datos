@@ -1,0 +1,334 @@
+{
+ "NKE": {
+  "sheet_id": "1OITWNynG7R3PKC1sITOOazW9jzXgFWFda6qNbbOnYZI",
+  "gates_pendientes": [
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "B14",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "B24",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "B28",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "B38",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "B84",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Cost of capital worksheet",
+    "celda": "C55",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Escenarios e historias",
+    "celda": "K5",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Escenarios e historias",
+    "celda": "K6",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Escenarios e historias",
+    "celda": "K7",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Escenarios e historias",
+    "celda": "K8",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B108",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B109",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B110",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B111",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B112",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B113",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B114",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B81",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B85",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Input sheet",
+    "celda": "B92",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B135",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B137",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B188",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B190",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B33",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B35",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B84",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   },
+   {
+    "hoja": "Valuation output",
+    "celda": "B86",
+    "causa": "EMPRESA_FORMULA_DIFERENTE_O_AUSENTE"
+   }
+  ],
+  "pestanas_faltantes": [
+   "Entradas históricas auxiliares"
+  ],
+  "desviaciones": {
+   "Input sheet": 10,
+   "Valuation output": 8,
+   "Cost of capital worksheet": 6,
+   "Escenarios e historias": 4
+  },
+  "detalle": {
+   "Input sheet": [
+    {
+     "celda": "B81",
+     "tipo": "valor",
+     "maestra": "=IF(B18=\"No\";\"NO APLICA\";IF(B18<>\"Yes\";\"PENDIENTE\";IF(AND(ISNUMBER(B78);ISNUMBER('Operating lease converter'!C29);ISNUMBER('Balance Sheet'!L21);ISNUMBER('Balance Sheet'!L26);B78>=0;B78<='Operating lease converter'!C29;B78<='Balance Sheet'!L21+'Balance Sheet'!L26);\"CONCILIADO\";\"REVISAR\")))",
+     "empresa": ""
+    },
+    {
+     "celda": "B85",
+     "tipo": "valor",
+     "maestra": "=IF(AND(ISNUMBER(B82);ISNUMBER(B83);ISNUMBER(B84);B83>=0;B83<=B82;B84>=0;B86=\"Sin solapamiento\";LEN(B87)>=12);\"VALIDADO\";\"PENDIENTE\")",
+     "empresa": ""
+    },
+    {
+     "celda": "B92",
+     "tipo": "valor",
+     "maestra": "=IF(AND(ISNUMBER(B25);B25>=0;B25<=1;LEN(B91)>=12;OR(AND(B89=\"Convergencia Damodaran\";ISNUMBER(B24);B24>=0;B24<=1);AND(B89=\"Normalizada\";ISNUMBER(B90);B90>=0;B90<=1));IF(B60=\"Yes\";LEN(B94)>=15;TRUE));\"VALIDADO\";\"PENDIENTE\")",
+     "empresa": ""
+    },
+    {
+     "celda": "B108",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(COUNTIF(B109:B114;\"NO APLICA\")+COUNTIF(B109:B114;\"VALIDADO\")=6;\"VALIDADO\";\"PENDIENTE\"))",
+     "empresa": ""
+    },
+    {
+     "celda": "B109",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(B62=\"No\";\"NO APLICA\";IF(B62<>\"Yes\";\"REVISAR\";IF(AND(ISNUMBER(B63);B63>=0);\"VALIDADO\";\"REVISAR\"))))",
+     "empresa": ""
+    },
+    {
+     "celda": "B110",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(B52=\"No\";\"NO APLICA\";IF(B52<>\"Yes\";\"REVISAR\";IF(AND(ISNUMBER(B53);B53>=0;B53<=1;OR(B54=\"V\";B54=\"B\");ISNUMBER(B55);B55>=0;B55<=1);\"VALIDADO\";\"REVISAR\"))))",
+     "empresa": ""
+    },
+    {
+     "celda": "B111",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(B17=\"No\";\"NO APLICA\";IF(B17<>\"Yes\";\"REVISAR\";IF(AND(ISNUMBER('R& D converter'!F7);'R& D converter'!F7>=1;'R& D converter'!F7<=10;MOD('R& D converter'!F7;1)=0);IF(AND(COUNT(INDEX('Income Statement'!B10:L10;1;12-'R& D converter'!F7):'Income Statement'!L10)='R& D converter'!F7;ISNUMBER('R& D converter'!D36);ISNUMBER('R& D converter'!D40));\"VALIDADO\";\"REVISAR\");\"REVISAR\"))))",
+     "empresa": ""
+    },
+    {
+     "celda": "B112",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(B38=\"No\";\"NO APLICA\";IF(B38<>\"Yes\";\"REVISAR\";IF(AND(COUNT(B39:B42)=4;B39>0;B40>=0;B41>0;B42>0;ISNUMBER('Option value'!B9);'Option value'!B9>=0;'Option value'!B9<1;ISNUMBER('Option value'!B30);'Option value'!B30>=0);\"VALIDADO\";\"REVISAR\"))))",
+     "empresa": ""
+    },
+    {
+     "celda": "B113",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(AND(ISNUMBER(B76);B76=0;OR('Cost of capital worksheet'!B49=0;'Cost of capital worksheet'!B49=\"\"));\"NO APLICA\";IF(AND(ISNUMBER(B76);B76>0;ISNUMBER('Cost of capital worksheet'!B49);'Cost of capital worksheet'!B49>0;ISNUMBER('Cost of capital worksheet'!B50);'Cost of capital worksheet'!B50>0;ISNUMBER('Cost of capital worksheet'!B51);'Cost of capital worksheet'!B51>=0;ABS(B76-'Cost of capital worksheet'!D61)<=MAX(0,01;B76*0,005));\"VALIDADO\";\"REVISAR\")))",
+     "empresa": ""
+    },
+    {
+     "celda": "B114",
+     "tipo": "valor",
+     "maestra": "=IF($A$1=\"\";\"PENDIENTE\";IF(OR('Cost of capital worksheet'!B41=\"\";'Cost of capital worksheet'!B41=0);\"NO APLICA\";IF(AND(ISNUMBER('Cost of capital worksheet'!B41);'Cost of capital worksheet'!B41>0;COUNT('Cost of capital worksheet'!B42:B44)=3;'Cost of capital worksheet'!B42>=0;'Cost of capital worksheet'!B43>0;'Cost of capital worksheet'!B44>0;OR(B116=\"Incluida en balance y gastos\";B116=\"Excluida del balance y gastos\");LEN(B117)>=20;IF(B116=\"Incluida en balance y gastos\";AND(ISNUMBER(B16);B16>='Cost of capital worksheet'!B41;ISNUMBER(B14);B14>='Cost of capital worksheet'!B42);TRUE);ISNUMBER('Cost of capital worksheet'!C55);'Cost of capital worksheet'!B44>='Cost of capital worksheet'!C55);\"VALIDADO\";\"REVISAR\")))",
+     "empresa": ""
+    }
+   ],
+   "Valuation output": [
+    {
+     "celda": "B33",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$5=\"LISTO\";B31-B32-N('Input sheet'!$B$76);\"\")",
+     "empresa": "=B31-B32-N('Input sheet'!$B$76)"
+    },
+    {
+     "celda": "B35",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$5=\"LISTO\";B33/B34;\"\")",
+     "empresa": "=B33/B34"
+    },
+    {
+     "celda": "B84",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$6=\"LISTO\";B82-B83-N('Input sheet'!$B$76);\"\")",
+     "empresa": "=B82-B83-N('Input sheet'!$B$76)"
+    },
+    {
+     "celda": "B86",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$6=\"LISTO\";B84/B85;\"\")",
+     "empresa": "=B84/B85"
+    },
+    {
+     "celda": "B135",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$8=\"LISTO\";B133-B134-N('Input sheet'!$B$76);\"\")",
+     "empresa": "=B133-B134-N('Input sheet'!$B$76)"
+    },
+    {
+     "celda": "B137",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$8=\"LISTO\";B135/B136;\"\")",
+     "empresa": "=B135/B136"
+    },
+    {
+     "celda": "B188",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$7=\"LISTO\";B186-B187-N('Input sheet'!$B$76);\"\")",
+     "empresa": "=B186-B187-N('Input sheet'!$B$76)"
+    },
+    {
+     "celda": "B190",
+     "tipo": "formula",
+     "maestra": "=IF('Escenarios e historias'!$K$7=\"LISTO\";B188/B189;\"\")",
+     "empresa": "=B188/B189"
+    }
+   ],
+   "Cost of capital worksheet": [
+    {
+     "celda": "B14",
+     "tipo": "formula",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"\";IF(B84=\"VALIDADO\";E63;\"\"))",
+     "empresa": "=IF(B12=\"I will input\";B13;IF(B12=\"Detailed\";E63;IF(B12=\"Industry Average\";B68;B73)))"
+    },
+    {
+     "celda": "B24",
+     "tipo": "formula",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(B22=\"Direct Input\";B23/(1+(1-B39)*(C61/B61));IF(B22=\"Single Business(US)\";VLOOKUP('Input sheet'!B9;'Industry Averages(US)'!A3:G96;7;FALSE);IF(B22=\"Multibusiness(US)\";K49;IF(B22=\"Single Business(Global)\";VLOOKUP('Input sheet'!B10;'Industry Averages (Global)'!A3:G96;7;FALSE);IF(B22=\"Multibusiness(Global)\";K65;\"\")))));\"\"))",
+     "empresa": "=IF(B22=\"Direct Input\";B23/(1+(1-B39)*(C61/B61));IF(B22=\"Single Business(US)\";VLOOKUP('Input sheet'!B9;'Industry Averages(US)'!A3:G96;7);IF(B22=\"Multibusiness(US)\";K49;IF(B22=\"Single Business(Global)\";VLOOKUP('Input sheet'!B10;'Industry Averages (Global)'!A3:G96;7);'Cost of capital worksheet'!K65))))"
+    },
+    {
+     "celda": "B28",
+     "tipo": "formula",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(B26=\"Will Input\";B27;IF(B26=\"Country of Incorporation\";VLOOKUP('Input sheet'!B8;'Country equity risk premiums'!A6:E196;4;FALSE);IF(B26=\"Operating regions\";K33;IF(B26=\"Operating countries\";K19;\"\"))));\"\"))",
+     "empresa": "=IF(B26=\"Will Input\";B27;IF(B26=\"Country of Incorporation\";VLOOKUP('Input sheet'!B8;'Country equity risk premiums'!A6:E196;4);IF(B26=\"Operating regions\";'Cost of capital worksheet'!K33;'Cost of capital worksheet'!K19)))"
+    },
+    {
+     "celda": "B38",
+     "tipo": "formula",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(B34=\"Direct Input\";B35;IF(B34=\"Synthetic Rating\";'Synthetic rating'!D17;IF(B34=\"Actual Rating\";B25+VLOOKUP(B36;'Synthetic rating'!G43:H57;2;FALSE);\"\")));\"\"))",
+     "empresa": "=IF(B34=\"Direct Input\";B35;IF(B34=\"Synthetic Rating\";'Synthetic rating'!D17;B25+VLOOKUP('Cost of capital worksheet'!B36;'Synthetic rating'!G43:H57;2)))"
+    },
+    {
+     "celda": "C55",
+     "tipo": "formula",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(B41);B41=0);0;IFERROR(IF(AND(ISNUMBER(B41);B41>0;COUNT(B42:B44)=3;B38>0;B43>0);B42*(1-(1+B38)^(-B43))/B38+B41/(1+B38)^B43;\"\");\"\")))",
+     "empresa": "=B42*(1-(1+B38)^(-B43))/B38+B41/(1+B38)^B43"
+    },
+    {
+     "celda": "B84",
+     "tipo": "valor",
+     "maestra": "=IF('Input sheet'!$A$1=\"\";\"PENDIENTE\";IF(AND(B12=\"Detailed\";OR(B22=\"Direct Input\";B22=\"Single Business(US)\";B22=\"Single Business(Global)\";B22=\"Multibusiness(US)\";B22=\"Multibusiness(Global)\");OR(B26=\"Will Input\";B26=\"Country of Incorporation\";B26=\"Operating regions\";B26=\"Operating countries\");OR(B34=\"Direct Input\";B34=\"Synthetic Rating\";B34=\"Actual Rating\");ISNUMBER(B25);B25>=0;ISNUMBER(B24);B24>0;ISNUMBER(B28);B28>0;ISNUMBER(C58);C58>0;ISNUMBER(B38);B38>=0;ISNUMBER(B39);B39>=0;B39<=1;ISNUMBER(B61);B61>0;ISNUMBER(C54);C54>=0;ISNUMBER(C55);C55>=0;ISNUMBER(C56);C56>=0;ISNUMBER(C61);C61>=0;ISNUMBER(D61);D61>=0;ISNUMBER(E61);E61>0;ISNUMBER(E62);ABS(E62-1)<0,000001;ISNUMBER(E63);E63>0;E63<1;IF(D61>0;AND(ISNUMBER(D63);D63>0);TRUE);IF(B26=\"Will Input\";AND(ISNUMBER(B27);B27>0);TRUE);IF(B22=\"Direct Input\";AND(ISNUMBER(B23);B23>0);TRUE);IF(B34=\"Direct Input\";AND(ISNUMBER(B35);B35>0);TRUE));\"VALIDADO\";\"PENDIENTE\"))",
+     "empresa": ""
+    }
+   ],
+   "Escenarios e historias": [
+    {
+     "celda": "K5",
+     "tipo": "valor",
+     "maestra": "=IF(AND(COUNT('Input sheet'!B12;'Input sheet'!B13;'Input sheet'!B15;'Input sheet'!B16;'Input sheet'!B19;'Input sheet'!B20;'Input sheet'!B21;'Input sheet'!B22;'Input sheet'!B24;'Input sheet'!B25;'Input sheet'!B28;'Input sheet'!B31;'Input sheet'!B35;'Input sheet'!B36;'Input sheet'!B76)=15;COUNT(C29:L29)=10;COUNT(D5:G5)=4;ISNUMBER(J5);MIN(E5:G5)>0;OR(N5=\"\";AND(ISNUMBER(N5);N5>0;LEN(M5)>=15));IF(J5>=0;G5>J5;TRUE);'Input sheet'!$B$85=\"VALIDADO\";MIN(C29:L29)>-1;'Input sheet'!B17<>\"\";'Input sheet'!B18<>\"\";'Input sheet'!B38<>\"\";'Input sheet'!B46<>\"\";'Input sheet'!B52<>\"\";'Input sheet'!B54<>\"\";'Input sheet'!B55<>\"\";'Input sheet'!B57<>\"\";'Input sheet'!B60<>\"\";'Input sheet'!B62<>\"\";'Input sheet'!B65<>\"\";'Input sheet'!B68<>\"\";'Input sheet'!B71<>\"\";'Input sheet'!B12>0;'Input sheet'!B22>0;'Input sheet'!B31>=1;'Input sheet'!B31<=10;OR('Input sheet'!$B$89=\"Normalizada\";AND('Input sheet'!$B$24>=0;'Input sheet'!$B$24<=1));'Input sheet'!$B$92=\"VALIDADO\";'Input sheet'!$B$108=\"VALIDADO\";OR(AND(MIN('Escenarios e historias'!C29:L29)>=0;'Escenarios e historias'!J5>=0);AND(OR('Input sheet'!$B$98=\"Sin liberación\";'Input sheet'!$B$98=\"Liberación demostrada\");LEN('Input sheet'!$C$98)>=20));OR('Escenarios e historias'!J5<='Input sheet'!$B$96;LEN('Input sheet'!$G$98)>=20);ISNUMBER('Input sheet'!$B$96);ISNUMBER('Input sheet'!$B$97);'Input sheet'!$B$97>'Escenarios e historias'!J5;'Input sheet'!B25>=0;'Input sheet'!B25<=1;'Cost of capital worksheet'!$B$84=\"VALIDADO\";OR('Input sheet'!$B$18=\"No\";'Input sheet'!$B$81=\"CONCILIADO\");IF('Input sheet'!B46=\"Yes\";'Input sheet'!B47;IF('Input sheet'!B65=\"Yes\";'Input sheet'!B66;'Input sheet'!B35)+'Country equity risk premiums'!B2)>J5);\"LISTO\";\"PENDIENTE\")",
+     "empresa": ""
+    },
+    {
+     "celda": "K6",
+     "tipo": "valor",
+     "maestra": "=IF(AND(COUNT('Input sheet'!B12;'Input sheet'!B13;'Input sheet'!B15;'Input sheet'!B16;'Input sheet'!B19;'Input sheet'!B20;'Input sheet'!B21;'Input sheet'!B22;'Input sheet'!B24;'Input sheet'!B25;'Input sheet'!B28;'Input sheet'!B31;'Input sheet'!B35;'Input sheet'!B36;'Input sheet'!B76)=15;COUNT(C53:L53)=10;COUNT(D6:G6)=4;ISNUMBER(J6);MIN(E6:G6)>0;OR(N6=\"\";AND(ISNUMBER(N6);N6>0;LEN(M6)>=15));IF(J6>=0;G6>J6;TRUE);'Input sheet'!$B$85=\"VALIDADO\";MIN(C53:L53)>-1;'Input sheet'!B17<>\"\";'Input sheet'!B18<>\"\";'Input sheet'!B38<>\"\";'Input sheet'!B46<>\"\";'Input sheet'!B52<>\"\";'Input sheet'!B54<>\"\";'Input sheet'!B55<>\"\";'Input sheet'!B57<>\"\";'Input sheet'!B60<>\"\";'Input sheet'!B62<>\"\";'Input sheet'!B65<>\"\";'Input sheet'!B68<>\"\";'Input sheet'!B71<>\"\";'Input sheet'!B12>0;'Input sheet'!B22>0;'Input sheet'!B31>=1;'Input sheet'!B31<=10;OR('Input sheet'!$B$89=\"Normalizada\";AND('Input sheet'!$B$24>=0;'Input sheet'!$B$24<=1));'Input sheet'!$B$92=\"VALIDADO\";'Input sheet'!$B$108=\"VALIDADO\";OR(AND(MIN('Escenarios e historias'!C53:L53)>=0;'Escenarios e historias'!J6>=0);AND(OR('Input sheet'!$B$99=\"Sin liberación\";'Input sheet'!$B$99=\"Liberación demostrada\");LEN('Input sheet'!$C$99)>=20));OR('Escenarios e historias'!J6<='Input sheet'!$B$96;LEN('Input sheet'!$G$99)>=20);ISNUMBER('Input sheet'!$B$96);ISNUMBER('Input sheet'!$B$97);'Input sheet'!$B$97>'Escenarios e historias'!J6;'Input sheet'!B25>=0;'Input sheet'!B25<=1;'Cost of capital worksheet'!$B$84=\"VALIDADO\";OR('Input sheet'!$B$18=\"No\";'Input sheet'!$B$81=\"CONCILIADO\");IF('Input sheet'!B46=\"Yes\";'Input sheet'!B47;IF('Input sheet'!B65=\"Yes\";'Input sheet'!B66;'Input sheet'!B35)+'Country equity risk premiums'!B2)>J6);\"LISTO\";\"PENDIENTE\")",
+     "empresa": ""
+    },
+    {
+     "celda": "K7",
+     "tipo": "valor",
+     "maestra": "=IF(AND(COUNT('Input sheet'!B12;'Input sheet'!B13;'Input sheet'!B15;'Input sheet'!B16;'Input sheet'!B19;'Input sheet'!B20;'Input sheet'!B21;'Input sheet'!B22;'Input sheet'!B24;'Input sheet'!B25;'Input sheet'!B28;'Input sheet'!B31;'Input sheet'!B35;'Input sheet'!B36;'Input sheet'!B76)=15;COUNT(C77:L77)=10;COUNT(D7:G7)=4;ISNUMBER(J7);MIN(E7:G7)>0;OR(N7=\"\";AND(ISNUMBER(N7);N7>0;LEN(M7)>=15));IF(J7>=0;G7>J7;TRUE);'Input sheet'!$B$85=\"VALIDADO\";MIN(C77:L77)>-1;'Input sheet'!B17<>\"\";'Input sheet'!B18<>\"\";'Input sheet'!B38<>\"\";'Input sheet'!B46<>\"\";'Input sheet'!B52<>\"\";'Input sheet'!B54<>\"\";'Input sheet'!B55<>\"\";'Input sheet'!B57<>\"\";'Input sheet'!B60<>\"\";'Input sheet'!B62<>\"\";'Input sheet'!B65<>\"\";'Input sheet'!B68<>\"\";'Input sheet'!B71<>\"\";'Input sheet'!B12>0;'Input sheet'!B22>0;'Input sheet'!B31>=1;'Input sheet'!B31<=10;OR('Input sheet'!$B$89=\"Normalizada\";AND('Input sheet'!$B$24>=0;'Input sheet'!$B$24<=1));'Input sheet'!$B$92=\"VALIDADO\";'Input sheet'!$B$108=\"VALIDADO\";OR(AND(MIN('Escenarios e historias'!C77:L77)>=0;'Escenarios e historias'!J7>=0);AND(OR('Input sheet'!$B$100=\"Sin liberación\";'Input sheet'!$B$100=\"Liberación demostrada\");LEN('Input sheet'!$C$100)>=20));OR('Escenarios e historias'!J7<='Input sheet'!$B$96;LEN('Input sheet'!$G$100)>=20);ISNUMBER('Input sheet'!$B$96);ISNUMBER('Input sheet'!$B$97);'Input sheet'!$B$97>'Escenarios e historias'!J7;'Input sheet'!B25>=0;'Input sheet'!B25<=1;'Cost of capital worksheet'!$B$84=\"VALIDADO\";OR('Input sheet'!$B$18=\"No\";'Input sheet'!$B$81=\"CONCILIADO\");IF('Input sheet'!B46=\"Yes\";'Input sheet'!B47;IF('Input sheet'!B65=\"Yes\";'Input sheet'!B66;'Input sheet'!B35)+'Country equity risk premiums'!B2)>J7);\"LISTO\";\"PENDIENTE\")",
+     "empresa": ""
+    },
+    {
+     "celda": "K8",
+     "tipo": "valor",
+     "maestra": "=IF(AND(COUNT('Input sheet'!B12;'Input sheet'!B13;'Input sheet'!B15;'Input sheet'!B16;'Input sheet'!B19;'Input sheet'!B20;'Input sheet'!B21;'Input sheet'!B22;'Input sheet'!B24;'Input sheet'!B25;'Input sheet'!B28;'Input sheet'!B31;'Input sheet'!B35;'Input sheet'!B36;'Input sheet'!B76)=15;COUNT(C101:L101)=10;COUNT(D8:G8)=4;ISNUMBER(J8);MIN(E8:G8)>0;OR(N8=\"\";AND(ISNUMBER(N8);N8>0;LEN(M8)>=15));IF(J8>=0;G8>J8;TRUE);'Input sheet'!$B$85=\"VALIDADO\";MIN(C101:L101)>-1;'Input sheet'!B17<>\"\";'Input sheet'!B18<>\"\";'Input sheet'!B38<>\"\";'Input sheet'!B46<>\"\";'Input sheet'!B52<>\"\";'Input sheet'!B54<>\"\";'Input sheet'!B55<>\"\";'Input sheet'!B57<>\"\";'Input sheet'!B60<>\"\";'Input sheet'!B62<>\"\";'Input sheet'!B65<>\"\";'Input sheet'!B68<>\"\";'Input sheet'!B71<>\"\";'Input sheet'!B12>0;'Input sheet'!B22>0;'Input sheet'!B31>=1;'Input sheet'!B31<=10;OR('Input sheet'!$B$89=\"Normalizada\";AND('Input sheet'!$B$24>=0;'Input sheet'!$B$24<=1));'Input sheet'!$B$92=\"VALIDADO\";'Input sheet'!$B$108=\"VALIDADO\";OR(AND(MIN('Escenarios e historias'!C101:L101)>=0;'Escenarios e historias'!J8>=0);AND(OR('Input sheet'!$B$101=\"Sin liberación\";'Input sheet'!$B$101=\"Liberación demostrada\");LEN('Input sheet'!$C$101)>=20));OR('Escenarios e historias'!J8<='Input sheet'!$B$96;LEN('Input sheet'!$G$101)>=20);ISNUMBER('Input sheet'!$B$96);ISNUMBER('Input sheet'!$B$97);'Input sheet'!$B$97>'Escenarios e historias'!J8;'Input sheet'!B25>=0;'Input sheet'!B25<=1;'Cost of capital worksheet'!$B$84=\"VALIDADO\";OR('Input sheet'!$B$18=\"No\";'Input sheet'!$B$81=\"CONCILIADO\");IF('Input sheet'!B46=\"Yes\";'Input sheet'!B47;IF('Input sheet'!B65=\"Yes\";'Input sheet'!B66;'Input sheet'!B35)+'Country equity risk premiums'!B2)>J8);\"LISTO\";\"PENDIENTE\")",
+     "empresa": ""
+    }
+   ]
+  }
+ }
+}

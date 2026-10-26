@@ -1,0 +1,194 @@
+{
+  "run_manifest": {
+    "ticker": "DPZ",
+    "analysis_date": "2026-10-13",
+    "currency": "USD",
+    "units": "USD millones / acciones millones",
+    "market": "NASDAQ",
+    "run_id": "DPZ-20261013-Q3",
+    "sources": {
+      "financial_statements": {
+        "url": "https://ir.dominos.com/node/24936/html",
+        "publication_date": "2026-10-13",
+        "cutoff_date": "2026-09-06",
+        "method": "10-Q primario y SEC companyfacts: FY2025 + 36 semanas 2026 − 36 semanas 2025; balance puntual. Histórico 2016–2025."
+      },
+      "riskfree": {
+        "url": "https://fred.stlouisfed.org/series/DGS10",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Treasury nominal USD 10 años, cierre del 30-sep-2026: 5,29%. Es el corte vigente del modelo: misma fecha que la prima de Damodaran de octubre.",
+        "currency": "USD"
+      },
+      "erp": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Prima madura de Damodaran (octubre de 2026) 3,70%, calculada con el Treasury y los precios del 30-sep; la exposición regional de ingresos agrega 0,12 pp: ERP total 3,82% ('Operating regions')."
+      },
+      "beta": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Restaurant/Dining US beta desapalancada 0,783007382; reapalancar con deuda y equity de mercado de DPZ y marginal 24,1%."
+      },
+      "cost_of_debt": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Rating sintético por EBIT normalizado antes de lease económico / interés bruto; spread anual 0,8872% + Rf 5,29%. No rating de agencia actual ni yield de bono observado."
+      },
+      "analysis_price": {
+        "url": "https://stockanalysis.com/stocks/dpz/history/",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Cierre del 30-sep-2026 US$299,61 (corte vigente, mismo día de la tasa libre y la prima). Precio fijo del corte en Input sheet D1; no precio intradía."
+      }
+    },
+    "limitations": [
+      "Cantidad de opciones: último saldo anual 424286; no reconciliación completa grants/forfeitures de 2026. Salvedad de valoración, no dato certificado actual.",
+      "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
+      "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios."
+    ],
+    "checksums": {
+      "facts.json": "e115762cca3f1ac00a9b1fcf7bd7ee7c1cf80343e230647936431c783dc1c8aa",
+      "dpz_2025.html": "b639591a73f5095abfc1dee14c72e2f5fdb883c524d1d923c0d62f2588bfff38",
+      "dpz_q3_2026.html": "13d1d8ab8fb1fa254fc5833f1d336607402e15c7d65dbc46042ceb296ba0cb6c",
+      "latest.json": "004f1f6added2544de1ec82829678d7d82814b1d52e55105c97bd941d6527606"
+    },
+    "economics_terminal": {
+      "analysis_date": "2026-10-13",
+      "method": "Reglas Damodaran: nominal/coherente con moneda; límite economía yRf; maduración; reinversión g/ROIC; ROICexcedente sólo con foso",
+      "macro_reference": {
+        "real_gdp_long_run": 0.02,
+        "pce_long_run": 0.02,
+        "approximate_nominal": 0.0404,
+        "is_nominal_gdp_identity": false,
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "published": "2026-09-16"
+      },
+      "market_reference": {
+        "breakeven_10y": 0.0233,
+        "economic_date": "2026-10-09",
+        "source": "https://fred.stlouisfed.org/series/T10YIE",
+        "is_pure_inflation_forecast": false
+      },
+      "scenario_terminal_growth": {
+        "Base": 0.04,
+        "Conservadora": 0.018,
+        "Disrupcion": 0.01,
+        "Optimista": 0.04
+      },
+      "roic_anchor": {
+        "sector_adjusted_after_tax": 0.1836,
+        "applied_rounded": 0.184,
+        "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/roc.html",
+        "date": "2026-01-01",
+        "conditional_on_moat": true
+      },
+      "actual_base": 409.2507,
+      "actual_expected": 351.64,
+      "rules_source": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "forecast_6_10": "Ingresos grupos convergen al terminal; consolidado=sumagrupos, crecimiento ponderado derivado"
+    }
+  },
+  "auditoria": {
+    "fecha": "2026-10-13",
+    "estado": "CORREGIDO CON SALVEDADES",
+    "ltmPeriodEnd": "2026-09-06",
+    "financialsPublicationDate": "2026-10-13",
+    "ltmFormula": "FY2025+YTD2026−YTD2025;36semanascomparables",
+    "gatesCriticos": "Sin desviaciones frente maestra12-oct",
+    "paridadCuatroHistorias": true,
+    "fuentes": {
+      "financial_statements": {
+        "url": "https://ir.dominos.com/node/24936/html",
+        "publication_date": "2026-10-13",
+        "cutoff_date": "2026-09-06",
+        "method": "10-Q primario y SEC companyfacts: FY2025 + 36 semanas 2026 − 36 semanas 2025; balance puntual. Histórico 2016–2025."
+      },
+      "riskfree": {
+        "url": "https://fred.stlouisfed.org/series/DGS10",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Treasury nominal USD 10 años, cierre del 30-sep-2026: 5,29%. Es el corte vigente del modelo: misma fecha que la prima de Damodaran de octubre.",
+        "currency": "USD"
+      },
+      "erp": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Prima madura de Damodaran (octubre de 2026) 3,70%, calculada con el Treasury y los precios del 30-sep; la exposición regional de ingresos agrega 0,12 pp: ERP total 3,82% ('Operating regions')."
+      },
+      "beta": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Restaurant/Dining US beta desapalancada 0,783007382; reapalancar con deuda y equity de mercado de DPZ y marginal 24,1%."
+      },
+      "cost_of_debt": {
+        "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+        "publication_date": "2026-01-01",
+        "cutoff_date": "2026-01-01",
+        "method": "Rating sintético por EBIT normalizado antes de lease económico / interés bruto; spread anual 0,8872% + Rf 5,29%. No rating de agencia actual ni yield de bono observado."
+      },
+      "analysis_price": {
+        "url": "https://stockanalysis.com/stocks/dpz/history/",
+        "publication_date": "2026-10-01",
+        "cutoff_date": "2026-09-30",
+        "method": "Cierre del 30-sep-2026 US$299,61 (corte vigente, mismo día de la tasa libre y la prima). Precio fijo del corte en Input sheet D1; no precio intradía."
+      }
+    },
+    "limitaciones": [
+      "Cantidad de opciones: último saldo anual 424286; no reconciliación completa grants/forfeitures de 2026. Salvedad de valoración, no dato certificado actual.",
+      "Múltiplos de pares actuales no certificados: valoración relativa usa sólo ancla histórica depurada, con excepción al protocolo de tres anclas.",
+      "Beta y spreads sectoriales anuales conservan corte enero; no se presentan como datos diarios.",
+      "Corte alineado al vigente del 30-sep-2026 el 13-oct-2026: tasa libre 5,29%, prima 3,82% (3,70% madura + 0,12 regional) y precio US$299,61; los estados financieros son los del 10-Q 3T2026 (LTM al 06-sep-2026)."
+    ],
+    "revisionTerminal": null,
+    "fundamentoEconomicoTerminal": {
+      "analysis_date": "2026-10-13",
+      "method": "Reglas Damodaran: nominal/coherente con moneda; límite economía yRf; maduración; reinversión g/ROIC; ROICexcedente sólo con foso",
+      "macro_reference": {
+        "real_gdp_long_run": 0.02,
+        "pce_long_run": 0.02,
+        "approximate_nominal": 0.0404,
+        "is_nominal_gdp_identity": false,
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+        "published": "2026-09-16"
+      },
+      "market_reference": {
+        "breakeven_10y": 0.0233,
+        "economic_date": "2026-10-09",
+        "source": "https://fred.stlouisfed.org/series/T10YIE",
+        "is_pure_inflation_forecast": false
+      },
+      "scenario_terminal_growth": {
+        "Base": 0.04,
+        "Conservadora": 0.018,
+        "Disrupcion": 0.01,
+        "Optimista": 0.04
+      },
+      "roic_anchor": {
+        "sector_adjusted_after_tax": 0.1836,
+        "applied_rounded": 0.184,
+        "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/roc.html",
+        "date": "2026-01-01",
+        "conditional_on_moat": true
+      },
+      "actual_base": 409.2507,
+      "actual_expected": 351.64,
+      "rules_source": "https://pages.stern.nyu.edu/~adamodar/pdfiles/papers/termvalue.pdf",
+      "forecast_6_10": "Ingresos grupos convergen al terminal; consolidado=sumagrupos, crecimiento ponderado derivado"
+    },
+    "excepcionesNoCriticas": [
+      "WACC terminal ponderado estable 7,70%, beta1; noKe100%equity implícito",
+      "InputB13 normaliza gains yleases económico sinduplicar deuda",
+      "SyntheticF9/F10 elimina circularidad",
+      "VOfilas40/91/142/195 activa transiciónB120",
+      "FinancialsMultiplesnetborrowing sostenible vinculado reinversión",
+      "PE/PFCFE/POCF descuentan opciones sin duplicar acciones",
+      "Múltiplos3anclas limitado por pares no certificados"
+    ]
+  }
+}
