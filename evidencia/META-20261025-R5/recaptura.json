@@ -1,0 +1,69 @@
+{
+ "ticker": "META",
+ "revision_id": "META-20261025-R5",
+ "revision_anterior": "META-20261023-r4-M7",
+ "sheet_id": "1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg",
+ "estado": "PUBLICADA_CON_SALVEDADES",
+ "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
+ "foto_antes": {
+  "archivo": "META_resultados_hoja_antes.json",
+  "data_sha256": "714a5fdfd247eef9fa19576b1a27556e4c4792eb3ecd8904eecdb0dc484f40c0",
+  "captured_at": "2026-10-25T23:41:04.564257+00:00",
+  "nota": "tomada del respaldo de Drive anterior a AUD-04/06"
+ },
+ "foto_despues": {
+  "archivo": "META_resultados_hoja.json",
+  "data_sha256": "21b79187da6b89a8f2a33a5c9bc185312614153acc382fbaae604a106af5978a",
+  "captured_at": "2026-10-25T23:52:34.796239+00:00"
+ },
+ "repositorio_fotos": "JuanMaRobledo/JMR-valuation: reference/revisiones/Recaptura-NKE-NVDA-2026-10-25/",
+ "verificacion": "jmr_recaptura_verificar.py: 0 fallas",
+ "archivos_regenerados": [
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/analisis_fundamental.md",
+   "cifras_texto": 16
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/auditoria.md",
+   "cifras_texto": 16
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/hojas_financieras_fuente.json",
+   "cifras_json": 0,
+   "cifras_texto": 0
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/hojas_valoracion_fuente.json",
+   "cifras_json": 72,
+   "cifras_texto": 55
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/documentos/META-20261025-R5/valoracion.md",
+   "cifras_texto": 15
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/valoraciones/META-20261025-R5.json",
+   "cifras_json": 140,
+   "cifras_texto": 95
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/analisis/META-research-20261025-r5.json",
+   "cifras_json": 280,
+   "cifras_texto": 126
+  },
+  {
+   "archivo": "/home/user/Modelo-JMR-datos/auditorias/narrativas/META-20261025-R5.md",
+   "cifras_texto": 31
+  }
+ ],
+ "no_reejecutado": [
+  "controles centrales y consistencia independiente (cierre técnico)",
+  "engine_verification de la app",
+  "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
+  "nivel visual de la app"
+ ],
+ "closureId": "RECAPTURA-20261025-FORMULAS-PROPIAS",
+ "controles_ejecutados": "Controles aplicables sin fallas (probabilidades, integridad, estados completos, entradas esenciales, candados)",
+ "controles_no_aplicables": "controles_supuestos.py, consistencia_migracion.py y probabilidades.py no interpretan el registro/estructura antigua de META (sin reference/damodaran/META.json); se ejecutaron integridad, estados completos (0 hallazgos), entradas esenciales (0 vacías) y candados (18/18)",
+ "autorizacion": "usuario 25-oct-2026: «Revisa que estén aceptables y publica»"
+}

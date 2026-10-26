@@ -47,7 +47,7 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    if(a.ticker==='META' && a.revisionId?.startsWith('META-20261023-r4')){
+    if(a.ticker==='META' && /^META-/.test(a.revisionId||'')){
       const headings=a.articleHtml.split('<h2>').slice(1).map(h=>h.split('</h2>')[0].replace(/<[^>]+>/g,'').trim());
       assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');
       assert.ok(headings.filter(h=>!/^[0-9]+[.] /.test(h)).every(h=>/^Adenda /.test(h)),'META: h2 extra no identificado como adenda');
