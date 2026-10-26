@@ -80,6 +80,16 @@ Receta que funcionó (por empresa), con los scripts de JMR-valuation:
 6. `candados.py T` = 15/15.
 Resultado de la hoja (precio 52,53): Base 114,85 · Conservadora 83,44 · Disrupción 49,69 · Optimista 145,03 · promedio de tres historias 114,57
 (la versión publicada del 15-oct daba 97,25 / 66,30 / 37,13 / 131,33: cambian el balance a jun-2026, la tasa libre, el impuesto normalizado y g terminal 4 %).
-Pendiente de PYPL: el motor JS (`damodaran_stories.py`) no reproduce la hoja de la maestra del 22-oct (Base 113,72 frente a 114,85; Conservadora 69,3 frente a 83,4),
-así que `valorar.sh` aborta antes de regenerar la app; hace falta alinear el motor con las fórmulas de la maestra, y luego la sección 12, el análisis y la auditoría v1.3.
+Pendiente de PYPL: sección 12, análisis completo y auditoría v1.3, y la publicación en la app (`valorar.sh PYPL ID --autorizar-publicacion`, que requiere tu autorización expresa).
 Cola de las demás: igual receta, en orden de peso en cartera. Colombia queda en pausa.
+
+## Motor alineado (26-oct, noche)
+El motor JS (`docs/jmr_engine.js`) **no necesitó cambios**: con las entradas correctas reproduce las cuatro historias de la hoja de PYPL al decimal
+(Base 105,1309 · Conservadora 67,0588 · Disrupción 47,9770 · Optimista 132,4000). Las diferencias anteriores venían de entradas heredadas y de pasos que pisaban la maestra:
+- `Input sheet!B46 = Yes` (heredado) fijaba el costo de capital terminal igual al inicial (8,38 %); debe ser No (tasa libre + prima madura = 8,99 %).
+- Faltaba el ROIC terminal por historia (`Escenarios e historias!N6:N7`, igual al costo de capital terminal en Conservadora y Disrupción).
+- `Resumen de Valoración!C25`, `Input!B23` y otros se escribían como valores; el precio vive solo en `Input sheet!D1`.
+- La maestra del 22-oct exige ceros explícitos (`Balance Sheet` filas 7 y 21, `Entradas históricas auxiliares` filas 3 a 5) para calcular totales, TEV y medianas de múltiplos.
+`valorar.sh` ahora ejecuta `restaurar_formulas_maestra.py --auto` (paso 2d) antes de los controles. Resultado en PYPL: UNIFICADA (informe `unificacion/PYPL.json`),
+15/15 candados, `controles_todas.sh`: sin fallas. Valores (precio 52,53): Base 105,13 · Conservadora 67,06 · Disrupción 47,98 · Optimista 132,40.
+Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explícitos» y la revisión de `B46`; la industria sale de la hoja publicada, no de la ficha.
