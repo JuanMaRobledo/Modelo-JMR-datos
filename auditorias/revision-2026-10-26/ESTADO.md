@@ -65,3 +65,21 @@ Las dos carpetas donde `REGLAS` §10 dice que están archivadas dan 404 para la 
 Falta compartir esas dos carpetas (Editor) con `jmr-valuation-bot@jmr-valuation-508617.iam.gserviceaccount.com`. La cuenta sigue sin poder crear archivos
 nuevos (cuota de Drive 0), así que la vía es reiniciar las hojas antiguas en el sitio (Opción B).
 Nota de seguridad: dentro de AAA Finanzas hay un archivo `jmr-valuation-508617-64baa7fd0964.json` (parece la clave de la cuenta de servicio) y una carpeta `credentials`.
+
+## PYPL · primera hoja unificada (26-oct, tarde)
+`unificacion/PYPL.json`: **UNIFICADA** — 61 de 61 pestañas, 21.265 de 21.265 fórmulas de la maestra intactas, 122 de 122 selectores, 15 de 15 candados listos.
+Hoja: `1LI1LHXYFiCqg5i1_DDzs53Rd4eKv4zhDex2pxSvKuCs` (reiniciada desde la maestra; respaldo en `JMR-valuation/reference/backups/unificar/`).
+Receta que funcionó (por empresa), con los scripts de JMR-valuation:
+1. `unificar_hoja.py --sheet-id ID --ticker T --confirmar-reinicio` (respaldo, pestañas, fórmulas y selectores de la maestra).
+2. `desde_cero.sh datos T ID "<pares>" "<industria>"` (importa la SEC; la industria sale de la hoja publicada, no de la ficha: la de PYPL era un error).
+3. `portar_entradas_respaldo.py --ticker T --sheet-id ID` y completar a mano los campos nuevos (Input filas 76 en adelante) con su fuente.
+4. Corregir con el 10-Q más reciente lo que el importador deja viejo (balance LTM, deuda corriente, cambio neto en efectivo).
+5. `unificacion_hojas.py` → `restaurar_formulas_maestra.py` → `unificacion_hojas.py`: **el importador y `build_story_sheet.py` pisan fórmulas de la maestra**
+   (en PYPL: 192 perdidas y 913 editadas en Income Statement, Balance, Cash Flow, Trailing Valuation, Salud Financiera, Eficiencia de capital, Márgenes y Por acción);
+   la restauración las devuelve y los totales se recalculan solos (activos 82.737, pasivos 62.917 y patrimonio 19.820 concilian con el 10-Q).
+6. `candados.py T` = 15/15.
+Resultado de la hoja (precio 52,53): Base 114,85 · Conservadora 83,44 · Disrupción 49,69 · Optimista 145,03 · promedio de tres historias 114,57
+(la versión publicada del 15-oct daba 97,25 / 66,30 / 37,13 / 131,33: cambian el balance a jun-2026, la tasa libre, el impuesto normalizado y g terminal 4 %).
+Pendiente de PYPL: el motor JS (`damodaran_stories.py`) no reproduce la hoja de la maestra del 22-oct (Base 113,72 frente a 114,85; Conservadora 69,3 frente a 83,4),
+así que `valorar.sh` aborta antes de regenerar la app; hace falta alinear el motor con las fórmulas de la maestra, y luego la sección 12, el análisis y la auditoría v1.3.
+Cola de las demás: igual receta, en orden de peso en cartera. Colombia queda en pausa.
