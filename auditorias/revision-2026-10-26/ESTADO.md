@@ -99,3 +99,11 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - **Entregables (borradores, sin publicar):** `JMR-valuation/data/PYPL_Research_Fundamental_Modelo_JMR_2026-10-26.md` (18 secciones), `PYPL_Nivel2_Datos_Modelo_JMR_2026-10-26.md` y la auditoría v1.3 en `PYPL-auditoria-v1.3.md` (esta carpeta). Dictamen: **Plausible con reservas** (H-01 ERP del resto del mundo y H-07 industria; agregado conservador 12 %, neto ≈ +3-4 %). Ruta de publicación prevista `auditorias/narrativas/PYPL.md`, solo con autorización.
 - **Pendiente de PYPL:** publicar en la app (`valorar.sh PYPL ID --autorizar-publicacion`), escribir `justificacion_salto` de la Base (H-11), trazar opciones y desglose de ingresos por país (H-01, H-02).
 - **Siguiente:** NVO (20-F; requiere aprobación explícita para reiniciar su hoja `1_w85o-Cv_4GzFB4nq5fGqrMSVoYf-Ltafuol3ir5TMw`), luego el resto en orden de peso en cartera.
+
+## NVO · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+
+- Hoja `1_w85o-…` rehecha desde la maestra y UNIFICADA (61 pestañas, 21.258 fórmulas). Estados IFRS 2019-2025 + LTM ajustado (sin 340B ni deterioro 2T26) en US$ con FRED; I+D 2016-2018 de los 6-K.
+- DCF: Base 45,43 · Conservadora 31,61 · Disrupción 20,17 · Optimista 57,57 · esperado 43,39 · MOS 29,53 · precio 37,91. Probabilidades 40/25/20/15 (etapa declive). ROIC terminal 11,1 %; ventas/capital 0,50.
+- Múltiplos por ciclo (7 métodos) aplicados; consolidados 37,92 / 43,83 / 53,53.
+- Publicado en la app (registro, análisis, sección Damodaran). Auditoría v1.3: `NVO-auditoria-v1.3.md` (Plausible con reservas; H-01…H-12).
+- Pendientes: `refrescar_seccion` informa FALLOS 3 (chequeos legacy, como PYPL); regenerar la sección Damodaran de PYPL con el generador corregido (matriz centrada en la Base); verificar patentes en el 20-F (H-08).
