@@ -1,6 +1,6 @@
 # META · Cierre de múltiplos y correspondencia de entrega
 
-Fecha: 2026-10-23. Revisión vigente: `META-20261025-R5`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit).
+Fecha: 2026-10-23. Revisión vigente: `META-20261023-r4-M7`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit).
 
 **Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$726,65; precio con MOS 35%: US$472,32.**
 
@@ -10,11 +10,11 @@ Cada entrada y salida proviene de las fórmulas de Financials Multiples y del de
 |---|---:|---:|---:|---:|
 | EV/EBITDA | 466,66 | 726,70 | 994,37 | 35,00% |
 | EV/FCFF | 316,72 | 194,33 | 447,36 | 0,00% |
-| P/E | 487,02 | 741,29 | 938,14 | 45,00% |
-| P/FCFE | 203,36 | 112,07 | 268,44 | 0,00% |
-| P/OCF | 462,38 | 670,80 | 999,85 | 0,00% |
-| P/V | 426,88 | 614,85 | 984,37 | 20,00% |
-| P/BV | 550,60 | 715,97 | 1.263,10 | 0,00% |
+| P/E | 487,18 | 741,45 | 938,31 | 45,00% |
+| P/FCFE | 203,52 | 112,23 | 268,61 | 0,00% |
+| P/OCF | 462,54 | 670,96 | 1.000,01 | 0,00% |
+| P/V | 427,05 | 615,01 | 984,53 | 20,00% |
+| P/BV | 550,77 | 716,13 | 1.263,27 | 0,00% |
 
 ## Reservas que permanecen
 
@@ -234,11 +234,11 @@ Disrupción conserva10% de probabilidad, US$210,26, g1% y ROIC=WACC8,99%. No lib
 |---|---|---|---|---|---|---|
 | EV/EBITDA | 11,90× | 726,70 | 9,74× / 466,66 | 14,28× / 994,37 | 15,91× | 35,00% |
 | EV/FCFF | 26,23× | 194,33 | 20,18× / 316,72 | 39,16× / 447,36 | N/D | 0,00% |
-| P/E | 18,73× | 741,29 | 15,61× / 487,02 | 20,70× / 938,14 | 22,04× | 45,00% |
-| P/FCFE | 15,79× | 112,07 | 13,15× / 203,36 | 24,43× / 268,44 | N/D | 0,00% |
-| P/OCF | 9,73× | 670,80 | 8,58× / 462,38 | 12,75× / 999,85 | 12,46× | 0,00% |
-| P/V | 5,13× | 614,85 | 4,52× / 426,88 | 7,34× / 984,37 | 6,86× | 20,00% |
-| P/BV | 3,45× | 715,97 | 2,92× / 550,60 | 5,77× / 1.263,10 | 6,09× | 0,00% |
+| P/E | 18,73× | 741,45 | 15,61× / 487,18 | 20,70× / 938,31 | 22,04× | 45,00% |
+| P/FCFE | 15,79× | 112,23 | 13,15× / 203,52 | 24,43× / 268,61 | N/D | 0,00% |
+| P/OCF | 9,73× | 670,96 | 8,58× / 462,54 | 12,75× / 1.000,01 | 12,46× | 0,00% |
+| P/V | 5,13× | 615,01 | 4,52× / 427,05 | 7,34× / 984,53 | 6,86× | 20,00% |
+| P/BV | 3,45× | 716,13 | 2,92× / 550,77 | 5,77× / 1.263,27 | 6,09× | 0,00% |
 
 [NO VERIFICADO] Ancla A cita años sin reconstrucción suficiente; ancla B de pares está vacía; ancla C terminal no acredita el techo FY+3. No se validó íntegramente el ajuste por tasas acotado0,6–1,4. Los factores adicionales88/90/85% Base carecen de soporte suficiente y pueden introducir prudencia duplicada.
 

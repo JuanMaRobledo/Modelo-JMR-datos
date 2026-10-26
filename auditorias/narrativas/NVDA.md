@@ -1,26 +1,25 @@
-# Auditoría JMR · NVDA · recaptura del 25-oct-2026
+# Auditoría JMR · NVDA · recaptura del 2026-10-26
 
-**Revisión financiera: NVDA-20261025-R3** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
+**Revisión financiera: NVDA-20261025-R4** · cierre RECAPTURA-20261025-FORMULAS-PROPIAS · sustituye a NVDA-20261025-R3.
 
-**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$381,79**, precio con MOS del 35% **US$248,16**; idénticos a la revisión anterior. No se cambiaron supuestos, probabilidades ni pesos.
+**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** Sin cambios de supuestos, probabilidades ni pesos.
 
-**Qué cambió:** se migraron en la hoja AUD-04 (una sola base de acciones y opciones restadas una vez) y AUD-06 (endeudamiento del FCFE de Damodaran) solo en las celdas con la fórmula vieja exacta de la plantilla; las celdas con fórmula propia de la empresa no se tocaron. P/FCFE pasa de 166,40 / 408,49 / 637,51 a 160,41 / 382,56 / 586,67 y el precio objetivo ponderado de 197,50 / 499,26 / 824,17 a 197,20 / 497,97 / 821,62.
+**Qué cambió:** se migraron a la plantilla las fórmulas propias de la hoja; solo cambian los valores a un año de P/FCFE (precio y VP de FY+1); precio objetivo ponderado, DCF Base y MOS idénticos.
 
-**Controles ejecutados:** `controles_todas.sh NKE NVDA` sin fallas (probabilidades, supuestos, consistencia M1/M2/M3/I1, integridad, entradas esenciales y candados 18/18) y verificador de la recaptura con 0 fallas. [Registro de la corrida y evidencia](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-NKE-NVDA-2026-10-25).
+**Controles ejecutados:** `controles_todas.sh` sin fallas y verificador de la recaptura con 0 fallas. [Registro](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-Publicacion-20261025).
 
 **Salvedades vigentes:** CAGR Base36,28% y escala año5 son hipótesis exigentes; no las certifica un TAM independiente. ROIC marginal estable27,23% requiere ventaja durable; prueba sin moat USD286.10. I+D/ventas7,79% y vida3años son juicios; GAAP año5≈56,23%,58% es referencia estable. Múltiplos secundarios comparten techo fundamental; no son siete confirmaciones independientes. Serie ROIC histórica ajustada3/5/10años N/D; límites de geografía por sede, concesiones y pares explícitos. Controles centrales ejecutados sobre captura directa de valores y fórmulas; historial Drive y comparación con hojas no capturadas no certificados.
 
-**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos `verification.json` y `engine_verification.json` de la carpeta de documentos son de la revisión anterior y están rotulados como heredados. Controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera.
+**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos de verificación de la carpeta de documentos son de la revisión anterior y están rotulados como heredados.
 
 ### Antecedente de auditoría conservado · no es el dictamen técnico vigente
 
-Las referencias siguientes describen la situación anterior a esta recaptura. Las reservas económicas/documentales conservadas siguen vigentes.
+Lo que sigue describe la situación anterior a esta recaptura; las reservas económicas/documentales siguen vigentes.
 
 ---
-
 # Auditoría económica narrativa — NVIDIA (NVDA)
 
-Revisión auditada: **NVDA-20261025-R3**. Informe de auditoría: **NVDA-AUD-20261024-R2**. Corte de valoración y precio: **23 de octubre de 2026**. Emisión: **24 de octubre de 2026**. Moneda: USD; cifras financieras en millones salvo indicación. Dictamen técnico del expediente: **consistente en los controles ejecutados**. Tesis económica: **Exigente**. Estado técnico: controles ejecutados según el registro adjunto; publicación autorizada. Las limitaciones de evidencia y las reservas económicas permanecen explícitas.
+Revisión auditada: **NVDA-20261025-R4**. Informe de auditoría: **NVDA-AUD-20261024-R2**. Corte de valoración y precio: **23 de octubre de 2026**. Emisión: **24 de octubre de 2026**. Moneda: USD; cifras financieras en millones salvo indicación. Dictamen técnico del expediente: **consistente en los controles ejecutados**. Tesis económica: **Exigente**. Estado técnico: controles ejecutados según el registro adjunto; publicación autorizada. Las limitaciones de evidencia y las reservas económicas permanecen explícitas.
 
 ## 1. Ficha de auditoría y alcance
 
@@ -196,7 +195,7 @@ El DCF inverso reproduce el precio fechado de210,96 con delta común−12,544765
 Aunque son opcionales por§8 de las reglas vigentes, R2 completa28matrices relativas: siete métodos, anclas JMR y múltiplo observado normalizado de NVDA, y familias Tradicional y Económica. Todas son Base, de5×5precios presentes en USD/acción. Tradicional cruza múltiplo real y fundamental FY+3; Económica cruza múltiplo y delta de crecimiento inicial que recalcula Financials Multiples. El centro JMR replica el VP FY+3 de cada método; el observado replica su propia ancla y no debe coincidir con el DCF. Hay28centros conciliados,700celdas numéricas y cero N/D. La hoja las identifica como captura calculada y muestra una alerta si cambian las entradas; no se atribuye actualización automática al inverso ni a estas tablas congeladas.
 ## 14. Coherencia de hojas, cálculos y presentación
 
-Valoración, artículo completo de18secciones, nivel2, cuatro historias y auditoría usan NVDA-20261025-R3 y el mismo corte. Pasan19/19controles propios;18/18estados nativos y cero entradas esenciales faltantes. La perturbación nativa Input!B28+1punto produce Base382,226540788 y el centro reproduce ese cambio; al restaurar la fórmula vuelve a381,790067281. El inverso advierte que debe recalcularse tras una modificación.
+Valoración, artículo completo de18secciones, nivel2, cuatro historias y auditoría usan NVDA-20261025-R4 y el mismo corte. Pasan19/19controles propios;18/18estados nativos y cero entradas esenciales faltantes. La perturbación nativa Input!B28+1punto produce Base382,226540788 y el centro reproduce ese cambio; al restaurar la fórmula vuelve a381,790067281. El inverso advierte que debe recalcularse tras una modificación.
 
 Se comprobó sustantivamente el artículo: negocio y segmentos, industria, cinco fuerzas, calidad por estado, ventaja, cinco pares, gobierno y capital, catalizadores, ocho riesgos, FODA, seis argumentos por lado, cuatro historias, tasas base, DCF y siete múltiplos, cinco filosofías, noticias, seguimiento, preguntas abiertas y fuentes. La sección 18 del artículo registra ubicación y límites; Nivel 1 contiene el texto completo y Nivel 2 las tablas financieras. La cobertura histórica de ROIC y algunos datos de pares conserva límites explícitos; un título no los resuelve.
 

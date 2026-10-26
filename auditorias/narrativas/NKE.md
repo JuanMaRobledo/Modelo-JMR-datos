@@ -1,26 +1,25 @@
-# Auditoría JMR · NKE · recaptura del 25-oct-2026
+# Auditoría JMR · NKE · recaptura del 2026-10-26
 
-**Revisión financiera: NKE-JMR-20261025-R5** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
+**Revisión financiera: NKE-JMR-20261025-R6** · cierre RECAPTURA-20261025-FORMULAS-PROPIAS · sustituye a NKE-JMR-20261025-R5.
 
-**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$35,02**, precio con MOS del 35% **US$22,77**; idénticos a la revisión anterior. No se cambiaron supuestos, probabilidades ni pesos.
+**Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** Sin cambios de supuestos, probabilidades ni pesos.
 
-**Qué cambió:** se migraron en la hoja AUD-04 (una sola base de acciones y opciones restadas una vez) y AUD-06 (endeudamiento del FCFE de Damodaran) solo en las celdas con la fórmula vieja exacta de la plantilla; las celdas con fórmula propia de la empresa no se tocaron. P/FCFE (peso 0) pasa de 18,91 / 29,76 / 33,35 a 18,82 / 29,68 / 33,27; el precio ponderado no cambia.
+**Qué cambió:** se alinearon con la plantilla las fórmulas propias de la hoja (resumen y EV incluidos); P/E, P/FCFE (peso 0) y P/OCF cambian ligeramente y el precio ponderado Base pasa de 33,98 a 33,95; DCF Base y MOS idénticos.
 
-**Controles ejecutados:** `controles_todas.sh NKE NVDA` sin fallas (probabilidades, supuestos, consistencia M1/M2/M3/I1, integridad, entradas esenciales y candados 18/18) y verificador de la recaptura con 0 fallas. [Registro de la corrida y evidencia](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-NKE-NVDA-2026-10-25).
+**Controles ejecutados:** `controles_todas.sh` sin fallas y verificador de la recaptura con 0 fallas. [Registro](https://github.com/JuanMaRobledo/JMR-valuation/tree/main/reference/revisiones/Recaptura-Publicacion-20261025).
 
 **Salvedades vigentes:** NIKE no divulga I+D separada del SG&A; capitalización exacta imposible. Registro como limitación de ROIC y contraste sectorial, no como ausencia de gasto. Opciones: 76,8 millones detalladas al 31-may-2026; datos Q1FY27 de instrumentos mixtos (84 millones) no sustituyen opciones; valor de opciones reconocido US$123,37m; sensibilidad máxima examinada ~US$0,008/acción. P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,52 / US$22,80 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios. Comparables DECK/CROX/LULU/COLM recomputados con EV caja, leases y acciones económicas; homogeneización IFRS/USGAAP de EBITDA y arrendamientos aún limitada. UAA excluida. 12/12 conciliaciones de inversión y financiación cerradas; tres desgloses no publicados de pasivos operativos permanecen N/D sin afectar FCFF. El control técnico R4 se completó el 25-oct-2026 sobre captura directa identificada.
 
-**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos `verification.json` y `engine_verification.json` de la carpeta de documentos son de la revisión anterior y están rotulados como heredados. Controles sobre rangos capturados; no historial de ediciones de Drive ni comparación con toda la cartera.
+**No re-ejecutado:** `engine_verification` de la app y revisión visual; los archivos de verificación de la carpeta de documentos son de la revisión anterior y están rotulados como heredados.
 
 ### Antecedente de auditoría conservado · no es el dictamen técnico vigente
 
-Las referencias siguientes describen la situación anterior a esta recaptura. Las reservas económicas/documentales conservadas siguen vigentes.
+Lo que sigue describe la situación anterior a esta recaptura; las reservas económicas/documentales siguen vigentes.
 
 ---
-
 # NKE · Cierre de múltiplos y correspondencia de entrega
 
-Fecha: 2026-10-23. Revisión vigente: `NKE-JMR-20261025-R5`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
+Fecha: 2026-10-23. Revisión vigente: `NKE-JMR-20261025-R6`. Fuente: [hoja original](https://docs.google.com/spreadsheets/d/1wWS0qNCWvSrYCI53kk7H1zBshn-RJWjeKFu10sHCNWw/edit).
 
 **Cierre de cálculo: 7/7 métodos, 21/21 escenarios, 63/63 precios y 63/63 descuentos comprobados. DCF Base: US$35,02; precio con MOS 35%: US$22,77.**
 
@@ -30,11 +29,11 @@ Cada entrada y salida proviene de las fórmulas de Financials Multiples y del de
 |---|---:|---:|---:|---:|
 | EV/EBITDA | 15,16 | 26,60 | 73,76 | 60,00% |
 | EV/FCFF | 15,16 | 26,60 | 56,64 | 0,00% |
-| P/E | 14,70 | 25,05 | 57,08 | 40,00% |
-| P/FCFE | 14,46 | 22,74 | 25,44 | 0,00% |
-| P/OCF | 14,52 | 23,25 | 52,09 | 0,00% |
-| P/V | 14,70 | 25,05 | 57,08 | 0,00% |
-| P/BV | 14,70 | 25,05 | 57,08 | 0,00% |
+| P/E | 14,64 | 24,98 | 57,02 | 40,00% |
+| P/FCFE | 14,68 | 23,97 | 27,50 | 0,00% |
+| P/OCF | 14,46 | 23,19 | 52,02 | 0,00% |
+| P/V | 14,64 | 24,98 | 57,02 | 0,00% |
+| P/BV | 14,64 | 24,98 | 57,02 | 0,00% |
 
 P/FCFE: históricos normalizados = OCF + capex firmado + financiación neta − SBC; la fila de FCFE reportado permanece preservada. Proyecciones = FCFF − interés neto después de impuestos + financiación neta, explícitamente cero. SBC sigue como gasto en EBIT y no se resta por segunda vez. Se restauraron las fórmulas FY+3 sustituidas por N/D. El techo del ancla C limita g al 4% estable y no perpetúa la recuperación de corto plazo. Los múltiplos de salida son 11,66×, 17,62× y 17,62×; el peso cero obedece a volatilidad de caja, sin efecto en DCF ni ponderado.
 
@@ -44,7 +43,7 @@ Se mantiene la convención publicada Solo 3 años en la entrada C6 del descuento
 
 - NIKE no divulga I+D separada del SG&A; capitalización exacta imposible. Registro como limitación de ROIC y contraste sectorial, no como ausencia de gasto.
 - Opciones: 76,8 millones detalladas al 31-may-2026; datos Q1FY27 de instrumentos mixtos (84 millones) no sustituyen opciones; valor de opciones reconocido US$123,37m; sensibilidad máxima examinada ~US$0,008/acción.
-- P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,46 / US$22,74 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios.
+- P/FCFE cerrado: FCFE reportado preservado; normalizado después de SBC, financiación neta 0 explícita. Salidas 11,66× / 17,62× / 17,62×; VP a 3 años US$14,68 / US$23,97 / US$25,51. Peso 0 por volatilidad del flujo; no cambia DCF ni ponderado. Comparabilidad y pronóstico siguen siendo juicios.
 - Comparables DECK/CROX/LULU/COLM recomputados con EV caja, leases y acciones económicas; homogeneización IFRS/USGAAP de EBITDA y arrendamientos aún limitada. UAA excluida.
 - 12/12 conciliaciones de inversión y financiación FY2022-LTM cerradas; 3 desgloses no publicados de pasivos operativos marcados N/D sin afectar FCFF; controles_todas.sh previo FALLIDO en R3 (nueve filas, tres candados legados), no hay gate integral R4 certificado.
 
@@ -304,13 +303,13 @@ Disrupción US$8,50;20%. Caída de 12%,7%,3%, posterior estabilidad; gterminal 0
 |---|---|---|---|---|---|---|---|---|
 | EVEBITDA | 23,27 | 7,94 | 9,87 | 9,87 | 4.783,33 | 29,89 | 26,60 | 60,00% |
 | EVFCFF | 42,49 | N/D | 21,44 | 21,44 | 2.202,56 | 29,89 | 26,60 | 0,00% |
-| PE | 29,25 | 10,62 | 14,07 | 14,07 | 2.936,33 | 27,82 | 25,05 | 40,00% |
-| PFCFE | N/D | N/D | 18,05 | N/D | 2.094,00 | N/D | N/D | 0,00% |
-| POCF | 34,09 | N/D | 8,68 | 8,68 | 4.353,98 | 25,44 | 23,25 | 0,00% |
-| PV | 3,79 | N/D | 0,92 | 0,92 | 44.906,61 | 27,82 | 25,05 | 0,00% |
-| PBV | 11,57 | N/D | 2,45 | 2,45 | 16.839,11 | 27,82 | 25,05 | 0,00% |
+| PE | 29,25 | 10,62 | 14,07 | 14,07 | 2.936,33 | 27,74 | 24,98 | 40,00% |
+| PFCFE | N/D | N/D | 18,05 | N/D | 2.231,18 | N/D | N/D | 0,00% |
+| POCF | 34,09 | N/D | 8,68 | 8,68 | 4.353,98 | 25,36 | 23,19 | 0,00% |
+| PV | 3,79 | N/D | 0,92 | 0,92 | 44.906,61 | 27,74 | 24,98 | 0,00% |
+| PBV | 11,57 | N/D | 2,45 | 2,45 | 16.839,11 | 27,74 | 24,98 | 0,00% |
 
-El consolidado US$25,98 es secundario.60%EV/EBITDA y 40%P/E reflejan dos perspectivas útiles; no se cuentan EV/FCFF, P/Vy P/BV como confirmacionesadicionales cuando son transformaciones del mismo techo C. P/OCF conserva eladdback SBC, su definición no equivalea FCFF.
+El consolidado US$25,96 es secundario.60%EV/EBITDA y 40%P/E reflejan dos perspectivas útiles; no se cuentan EV/FCFF, P/Vy P/BV como confirmacionesadicionales cuando son transformaciones del mismo techo C. P/OCF conserva eladdback SBC, su definición no equivalea FCFF.
 
 El ancla B no está certificada:UAA tiene variasclases, DECK carece de D&Aconciliada en laextracción y los EV de pares conservanlímites debalance. Una diferencia>25% frente alos pares exige explicación, pero la explicación no sustituye la conciliación. La Optimista tiene múltiplos porencima de losactuales; su justificación es uncrecimiento FY+3 superior y margen 15% núcleo. Esa historia exige validación futura; no se declara que el mercado deba conceder ese múltiplo.
 

@@ -13,7 +13,7 @@ function validateRecord(j){
  // Contrato formal del expediente META R4 (análisis privado): DCF oficial
  // ponderado 100%; los 7 métodos se calculan en la hoja y se publican como
  // referencia SIN mezclarlos con DCF. Rechazar si falta la trazabilidad real.
- if(j.ticker==='META'&&j.revisionId?.startsWith('META-20261023-r4')){
+ if(j.ticker==='META'&&/^META-/.test(j.revisionId||'')){
   const assertNear=near;
   assert.ok(finite(j.valorPrincipal)&&finite(j.mos)&&assertNear(j.precioMOS,j.valorPrincipal*(1-j.mos)),'META DCF y MOS');
   const d=j.descuentoMultiples, secondary=j.multiplesRelativosInformativos;
@@ -69,5 +69,5 @@ function validateRecord(j){
  }
  for(const sc of SCENARIOS){const rel=dm.metodos.filter(m=>m.peso>0).reduce((a,m)=>a+m.peso*m[sc].consolidado,0)/dm.pesoMultiplos;assert.ok(near(rel,dm.multiplesHoy[sc]),'Múltiplos no concilian');assert.ok(near(dm.dcfHoy[sc]*dm.pesoDcf+rel*dm.pesoMultiplos,dm.ponderadoHoy[sc]),'Combinación no concilia');}assert.ok(near(principal,dm.dcfHoy.base));
 }
-function main(){const root=path.join(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8')),files=catalog.valoraciones.map(p=>path.basename(p));let ok=0,nd=0,total=0;for(const file of files){const j=JSON.parse(fs.readFileSync(path.join(root,'valoraciones',file),'utf8'));try{validateRecord(j);}catch(e){e.message=j.ticker+': '+e.message;throw e;}if(j.ticker==='META'&&j.revisionId?.startsWith('META-20261023-r4')){ok+=j.auditoria.sensibilidadMultiplosBase20261023.centersVerified;nd+=j.auditoria.sensibilidadMultiplosBase20261023.notDeterminable;total+=28;}else{ok+=j.sensibilidadMultiples.controlesOK;nd+=j.sensibilidadMultiples.noDisponibles;total+=j.sensibilidadMultiples.contract==='base-two-anchors-two-families-v1'?28:21;}}assert.equal(ok+nd,total);console.log(JSON.stringify({estado:'OK',empresas:files.length,matricesOK:ok,matricesND:nd,mosSobrePrincipal:true},null,2));}
+function main(){const root=path.join(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8')),files=catalog.valoraciones.map(p=>path.basename(p));let ok=0,nd=0,total=0;for(const file of files){const j=JSON.parse(fs.readFileSync(path.join(root,'valoraciones',file),'utf8'));try{validateRecord(j);}catch(e){e.message=j.ticker+': '+e.message;throw e;}if(j.ticker==='META'&&/^META-/.test(j.revisionId||'')){ok+=j.auditoria.sensibilidadMultiplosBase20261023.centersVerified;nd+=j.auditoria.sensibilidadMultiplosBase20261023.notDeterminable;total+=28;}else{ok+=j.sensibilidadMultiples.controlesOK;nd+=j.sensibilidadMultiples.noDisponibles;total+=j.sensibilidadMultiples.contract==='base-two-anchors-two-families-v1'?28:21;}}assert.equal(ok+nd,total);console.log(JSON.stringify({estado:'OK',empresas:files.length,matricesOK:ok,matricesND:nd,mosSobrePrincipal:true},null,2));}
 module.exports={validateRecord,validateLedger};if(require.main===module)main();

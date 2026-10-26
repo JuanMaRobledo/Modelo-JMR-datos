@@ -205,7 +205,7 @@ Disrupción conserva10% de probabilidad, US$210,26, g1% y ROIC=WACC8,99%. No lib
 
 [NO VERIFICADO] Ancla A cita años sin reconstrucción suficiente; ancla B de pares está vacía; ancla C terminal no acredita el techo FY+3. No se validó íntegramente el ajuste por tasas acotado0,6–1,4. Los factores adicionales88/90/85% Base carecen de soporte suficiente y pueden introducir prudencia duplicada.
 
-EV/EBITDA omite la inversión necesaria; P/E depende de normalización fiscal y operativa; P/V exige margen sostenible. Los otros cuatro métodos tienen peso cero por transitoriedad de flujos, SBC o intangibles. El consolidado mecánico US$711,00 no es una prueba independiente del DCF. [Modelo JMR META R4, 23-oct-2026](https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit)
+EV/EBITDA omite la inversión necesaria; P/E depende de normalización fiscal y operativa; P/V exige margen sostenible. Los otros cuatro métodos tienen peso cero por transitoriedad de flujos, SBC o intangibles. El consolidado mecánico US$710,89 no es una prueba independiente del DCF. [Modelo JMR META R4, 23-oct-2026](https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit)
 
 ## 13. Sensibilidades económicas y escenarios alternativos
 

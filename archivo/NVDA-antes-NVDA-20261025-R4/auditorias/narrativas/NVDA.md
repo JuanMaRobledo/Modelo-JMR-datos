@@ -1,6 +1,6 @@
 # Auditoría JMR · NVDA · recaptura del 25-oct-2026
 
-**Revisión financiera: NVDA-20261025-R4** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
+**Revisión financiera: NVDA-20261025-R3** · cierre RECAPTURA-NKE-NVDA-20261025 · sustituye a la revisión anterior.
 
 **Dictamen vigente: VERIFICADO CON SALVEDADES en el alcance documentado.** DCF Base **US$381,79**, precio con MOS del 35% **US$248,16**; idénticos a la revisión anterior. No se cambiaron supuestos, probabilidades ni pesos.
 
@@ -20,7 +20,7 @@ Las referencias siguientes describen la situación anterior a esta recaptura. La
 
 # Auditoría económica narrativa — NVIDIA (NVDA)
 
-Revisión auditada: **NVDA-20261025-R4**. Informe de auditoría: **NVDA-AUD-20261024-R2**. Corte de valoración y precio: **23 de octubre de 2026**. Emisión: **24 de octubre de 2026**. Moneda: USD; cifras financieras en millones salvo indicación. Dictamen técnico del expediente: **consistente en los controles ejecutados**. Tesis económica: **Exigente**. Estado técnico: controles ejecutados según el registro adjunto; publicación autorizada. Las limitaciones de evidencia y las reservas económicas permanecen explícitas.
+Revisión auditada: **NVDA-20261025-R3**. Informe de auditoría: **NVDA-AUD-20261024-R2**. Corte de valoración y precio: **23 de octubre de 2026**. Emisión: **24 de octubre de 2026**. Moneda: USD; cifras financieras en millones salvo indicación. Dictamen técnico del expediente: **consistente en los controles ejecutados**. Tesis económica: **Exigente**. Estado técnico: controles ejecutados según el registro adjunto; publicación autorizada. Las limitaciones de evidencia y las reservas económicas permanecen explícitas.
 
 ## 1. Ficha de auditoría y alcance
 
@@ -196,7 +196,7 @@ El DCF inverso reproduce el precio fechado de210,96 con delta común−12,544765
 Aunque son opcionales por§8 de las reglas vigentes, R2 completa28matrices relativas: siete métodos, anclas JMR y múltiplo observado normalizado de NVDA, y familias Tradicional y Económica. Todas son Base, de5×5precios presentes en USD/acción. Tradicional cruza múltiplo real y fundamental FY+3; Económica cruza múltiplo y delta de crecimiento inicial que recalcula Financials Multiples. El centro JMR replica el VP FY+3 de cada método; el observado replica su propia ancla y no debe coincidir con el DCF. Hay28centros conciliados,700celdas numéricas y cero N/D. La hoja las identifica como captura calculada y muestra una alerta si cambian las entradas; no se atribuye actualización automática al inverso ni a estas tablas congeladas.
 ## 14. Coherencia de hojas, cálculos y presentación
 
-Valoración, artículo completo de18secciones, nivel2, cuatro historias y auditoría usan NVDA-20261025-R4 y el mismo corte. Pasan19/19controles propios;18/18estados nativos y cero entradas esenciales faltantes. La perturbación nativa Input!B28+1punto produce Base382,226540788 y el centro reproduce ese cambio; al restaurar la fórmula vuelve a381,790067281. El inverso advierte que debe recalcularse tras una modificación.
+Valoración, artículo completo de18secciones, nivel2, cuatro historias y auditoría usan NVDA-20261025-R3 y el mismo corte. Pasan19/19controles propios;18/18estados nativos y cero entradas esenciales faltantes. La perturbación nativa Input!B28+1punto produce Base382,226540788 y el centro reproduce ese cambio; al restaurar la fórmula vuelve a381,790067281. El inverso advierte que debe recalcularse tras una modificación.
 
 Se comprobó sustantivamente el artículo: negocio y segmentos, industria, cinco fuerzas, calidad por estado, ventaja, cinco pares, gobierno y capital, catalizadores, ocho riesgos, FODA, seis argumentos por lado, cuatro historias, tasas base, DCF y siete múltiplos, cinco filosofías, noticias, seguimiento, preguntas abiertas y fuentes. La sección 18 del artículo registra ubicación y límites; Nivel 1 contiene el texto completo y Nivel 2 las tablas financieras. La cobertura histórica de ROIC y algunos datos de pares conserva límites explícitos; un título no los resuelve.
 

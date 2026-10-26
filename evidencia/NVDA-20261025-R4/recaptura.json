@@ -3,7 +3,7 @@
  "revision_id": "NVDA-20261025-R4",
  "revision_anterior": "NVDA-20261025-R3",
  "sheet_id": "1gbtwORZsvjhZNCV8xlNDloHYEeE09cEbXmPZOoLJ8gY",
- "estado": "CANDIDATA_NO_CERTIFICADA",
+ "estado": "PUBLICADA_CON_SALVEDADES",
  "origen": "AUD-04 y AUD-06 migrados en la hoja el 25-oct-2026 (JMR-valuation #154); recaptura preparada en #155 y #156",
  "foto_antes": {
   "archivo": "NVDA_resultados_hoja_antes.json",
@@ -126,7 +126,8 @@
   "compuerta publicacion_gate.py (requiere manifiesto CERTIFIED con instantánea SEC; no aplica a este flujo)",
   "nivel visual de la app"
  ],
- "pruebas_fijadas_a_la_revision_anterior": [
-  "scripts/tests/nke_r3_release.test.cjs fija NKE-JMR-20261023-R4-M7; hay que actualizarla al publicar"
- ]
+ "closureId": "RECAPTURA-20261025-FORMULAS-PROPIAS",
+ "controles_ejecutados": "controles_todas.sh: sin fallas (probabilidades, supuestos, consistencia, integridad, entradas esenciales, candados)",
+ "controles_no_aplicables": null,
+ "autorizacion": "usuario 25-oct-2026: «Revisa que estén aceptables y publica»"
 }
