@@ -153,3 +153,10 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Balance del LTM reescrito con el 10-Q del 2T26 (el importador repetía diciembre). Penumbra (~US$14.500 M) no está en la valoración (H-03).
 - Publicado en la app (PR #161). Auditoría v1.3: `BSX-auditoria-v1.3.md` (H-01…H-13).
 - Análisis recuperados aún delgados que hay que escribir de nuevo al rehacerlos: EPAM, SHAK, ZTS, PAGS, DPZ, AAPL, INTU, MU, GRUPOARGOS/SURA y los preferentes.
+
+## EPAM · hoja rehecha, análisis, auditoría y publicación (27-oct)
+- Hoja `1txQTjdUuzsnCem_4O1szofY7uAp5xLc3uda3l_iIcR0` reiniciada con `unificar_hoja.py` y UNIFICADA (61 pestañas; candados 15/15; inputs completos).
+- Valores: Base 157,05 · Conservadora 118,64 · Disrupción 87,49 · Optimista 204,43 · esperado 159,04 · MOS 102,08 · precio 108,36. Probabilidades 50/20/10/20. Múltiplos consolidados 88,39 / 104,03 / 123,15 (brecha de la Base −34 %).
+- ROIC terminal igual al costo de capital (B49 = No): la hoja anterior aplicaba 12,1 % (Base ~173); con una sola entrada B50 la hoja no podía reproducir las historias Conservadora y Disrupción del motor. Ventas/capital 3,27 / 2,83 heredado (H-03).
+- Balance del LTM reescrito con el 10-Q del 2T26. Análisis reescrito (el recuperado tenía ~1.350 palabras en las secciones 2-11); competidores y dirección marcados como no verificados.
+- Publicado en la app (PR #162). Auditoría v1.3: `EPAM-auditoria-v1.3.md` (H-01…H-13).
