@@ -1,0 +1,431 @@
+{
+ "ticker": "SHAK",
+ "empresa": "Shake Shack Inc.",
+ "fecha": "2026-10-27",
+ "fecha_corte": "2026-09-30",
+ "industria_damodaran": "Restaurant/Dining",
+ "segmentos": {
+  "Ventas de Shacks propios": 1495.6,
+  "Licencias (regalías y fees)": 56.7
+ },
+ "margen_ltm": 0.0357,
+ "margen_max_hist": 0.1036,
+ "arrendamientos": {
+  "vp": 665.34,
+  "ajuste_ebit": 23.3,
+  "margen_pp": 0.015,
+  "capital_ventas": 0.4286,
+  "cierre": "2026-07-01",
+  "informe": "10-Q"
+ },
+ "riesgo": {
+  "beta_propuesta": null,
+  "texto": "La beta desapalancada de Restaurant/Dining es 0,78 en la tabla de EE.UU. de Damodaran (enero de 2026); la hoja la reapalanca con la deuda a valor de mercado de SHAK (convertible de US$229 millones al 1-jul-2026 más los arrendamientos): ~0,99. Se usa la tabla de EE.UU. porque las ventas de los locales propios (96% de los ingresos) son 100% estadounidenses. La prima de mercado madura es 3,70% (octubre de 2026) y 3,77% con la mezcla de regiones (licencias fuera de EE.UU.). La tasa libre de riesgo es 5,29% (UST a 10 años, 30-sep-2026). El riesgo propio (concentración en carne, consumidor discrecional de ingreso medio-alto, dependencia de las aperturas) es diversificable o se puede modelar en los flujos y va en las historias Conservadora y Disrupción, no en la tasa. Como SHAK paga 0% sobre el convertible, el costo de la deuda antes de impuestos de 6,3% se fijó como entrada directa (el rating sintético y el conversor de arrendamientos se referencian en círculo)."
+ },
+ "historias": [
+  {
+   "id": "A",
+   "nombre": "Base · Crece por unidades propias con margen de Shack recuperándose",
+   "tesis": "base",
+   "prob": 0.4,
+   "margen": 0.1,
+   "s2c": 3.2,
+   "roic_terminal": 0.0899,
+   "crec": {
+    "Ventas de Shacks propios": [
+     0.132,
+     0.125,
+     0.115,
+     0.105,
+     0.095
+    ],
+    "Licencias (regalías y fees)": [
+     0.08,
+     0.09,
+     0.09,
+     0.08,
+     0.08
+    ]
+   },
+   "tesis_que": "SHAK abre ~60 locales propios por año con una clase madura de comparables de 2-4%; los ingresos crecen 13% el primer año y 9-10% en el quinto. El margen del local se sostiene en 22-23% y el margen operativo pasa de 5% (con arrendamientos) a 11,5% en siete años por apalancamiento de G&A y depreciación. El crecimiento después del año 10 no crea valor porque el ROIC terminal es el costo de capital.",
+   "tesis_contraste": "Comparables ≥ +3% con tráfico ≥ 0%, volumen semanal ≥ US$80 mil, margen del local ≥ 22% y G&A ≤ 12% de los ingresos en 2027."
+  },
+  {
+   "id": "B",
+   "nombre": "Conservadora · La carne y el consumidor frenan aperturas y margen",
+   "tesis": "conservadora",
+   "prob": 0.225,
+   "margen": 0.065,
+   "s2c": 3.0,
+   "roic_terminal": 0.0899,
+   "crec": {
+    "Ventas de Shacks propios": [
+     0.1,
+     0.08,
+     0.07,
+     0.06,
+     0.055
+    ],
+    "Licencias (regalías y fees)": [
+     0.05,
+     0.05,
+     0.05,
+     0.05,
+     0.05
+    ]
+   },
+   "tesis_que": "La carne en máximos y la guerra de valor obligan a proteger el precio: el margen del local baja a ~20%, SHAK abre ~40 locales por año y los comparables se quedan en 1-2%. El margen operativo llega a 8% en lugar de 11,5%.",
+   "tesis_contraste": "Margen del local ≤ 21% dos trimestres, aperturas guiadas por debajo de 50 o comparables ≤ +1% con tráfico negativo."
+  },
+  {
+   "id": "C",
+   "nombre": "Disrupción · Deterioro de la marca y del valor percibido",
+   "tesis": "disrupcion",
+   "prob": 0.15,
+   "margen": 0.025,
+   "s2c": 3.0,
+   "roic_terminal": 0.0899,
+   "terminal": "estabilizacion",
+   "crec": {
+    "Ventas de Shacks propios": [
+     0.06,
+     0.03,
+     0.01,
+     0.0,
+     0.0
+    ],
+    "Licencias (regalías y fees)": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "tesis_que": "La marca pierde valor percibido frente a cadenas más baratas y a fast casual de mayor volumen: las ventas propias dejan de crecer en el año 4, el margen se queda en ~4% con arrendamientos y las licencias se estancan. El capital nuevo rinde menos que el costo de capital y el valor del patrimonio es cero después de la deuda, los arrendamientos y el pasivo del acuerdo de impuestos.",
+   "tesis_contraste": "Comparables negativos tres trimestres, cierre neto de locales propios, volumen semanal por debajo de US$70 mil o deterioros de locales recurrentes sobre US$30 millones al año."
+  },
+  {
+   "id": "D",
+   "nombre": "Optimista · Escala tipo cadena líder con AUV y márgenes en alza",
+   "tesis": "optimista",
+   "prob": 0.225,
+   "margen": 0.13,
+   "s2c": 3.8,
+   "roic_terminal": 0.137,
+   "crec": {
+    "Ventas de Shacks propios": [
+     0.145,
+     0.145,
+     0.14,
+     0.135,
+     0.13
+    ],
+    "Licencias (regalías y fees)": [
+     0.12,
+     0.12,
+     0.11,
+     0.1,
+     0.1
+    ]
+   },
+   "tesis_que": "El volumen semanal sube sobre US$80 mil, SHAK abre por encima de la meta con costos de construcción por debajo de US$1,9 millones y el margen operativo llega a 14,5% con arrendamientos (13% reportado). Se reconoce una ventaja competitiva que se desvanece: el ROIC terminal es el punto medio entre el costo de capital y el promedio de la industria.",
+   "tesis_contraste": "Comparables ≥ +5%, AWS ≥ US$85 mil, margen del local ≥ 25% y G&A ≤ 10% de los ingresos."
+  }
+ ],
+ "margenes_inverso": [
+  0.09,
+  0.1,
+  0.11
+ ],
+ "historia": "En cinco a diez años Shake Shack es una cadena de hamburguesas «fine casual» de unos 1.000 locales propios en EE.UU. (hoy 373 propios y 286 con licencia a fines de 2025; la meta declarada es llegar a ~1.500 propios), con restaurantes que venden ~US$4 millones al año cada uno y una pequeña línea de licencias internacionales que cobra regalías. El crecimiento sale de abrir 60-65 locales propios por año (~16% de la base actual) más comparables de un dígito bajo; el margen operativo GAAP sube de 3,6% a ~10% porque el margen del local (22-23% de las ventas) aguanta mientras el gasto general y la depreciación pesan menos sobre un negocio más grande; y hay que reinvertir mucho: cada local nuevo cuesta ~US$2,3 millones (~US$1,9 millones neto de incentivos del arrendador) más el arrendamiento, es decir ~US$1,35 de ventas por dólar de capital con los arrendamientos. El riesgo principal es que la carne, el consumidor y la competencia en valor frenen las aperturas o el margen antes de que el apalancamiento operativo llegue: SHAK no ha ganado más que su costo de capital de forma sostenida, así que crecer más no crea valor por sí solo.",
+ "filtro": [
+  [
+   "Abre 60-65 locales propios por año (45 en 2025) y llega a ~1.100 locales propios hacia 2036 sin deteriorar el retorno de cada local",
+   "Sí",
+   "Sí: 45 aperturas en 2025, la mayor clase de su historia, y 33 abiertas en el primer semestre de 2026 con meta de 60-65 ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm); [Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm)); el costo neto de construcción bajó ~20% en 2025",
+   "Plausible, no probable en el ritmo completo: exige sitios de calidad fuera del Noreste (donde ya está cerca de un tercio de la base) y construir al costo actual con carne en máximos"
+  ],
+  [
+   "Los comparables crecen 2-4% (tráfico +/-0 a +2%, precio 1-3%) mientras la base de locales maduros se amplía",
+   "Sí",
+   "Sí: +3,5% en el 2T26 con tráfico +2,0% (cuarto trimestre seguido de tráfico positivo) y 22 trimestres seguidos de comparables positivos ([Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm)); pero +2,3% en 2025 con tráfico −0,8% ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm))",
+   "Probable en 2-3%; el 4-5% de la Optimista exige subir el volumen promedio semanal (US$78 mil, plano desde 2024) por encima de US$80 mil"
+  ],
+  [
+   "El margen operativo GAAP pasa de 3,6% (LTM) a ~10% en siete años",
+   "Sí",
+   "Parcialmente: el margen del local fue 22,6% en 2025 y 23,0% en el 2T26 ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm); [Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm)), pero el GAAP solo fue 4,3% en 2025 por G&A (12,2% de los ingresos), depreciación (7,4%) y preapertura; el máximo histórico de 10,4% fue en 2016 con una base ocho veces menor",
+   "Plausible: la guía de 2026 (G&A 12-13% de los ingresos, EBITDA ajustado US$225-235 M) implica un EBIT GAAP de ~4%; llegar a 10% exige que G&A, depreciación y preapertura pasen de ~21% a ~16% de los ingresos con el margen del local sin caer"
+  ],
+  [
+   "SHAK reinvierte de forma que el capital nuevo rinde cerca de su costo de capital (~9%) y no más",
+   "Sí",
+   "Sí: ROIC con arrendamientos ~5% en 2025-2026 y tres años de pérdida operativa (2020-2022) ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm)); el costo neto de US$1,9 millones por local y ventas de US$4 millones dan un rendimiento de caja del local cercano a 45% (cálculo propio: 22,6% × US$4,0 millones / US$1,9 millones), pero antes de G&A, preapertura e impuestos",
+   "Probable: el modelo de local es bueno, el de empresa todavía no ganó más que su costo de capital; la Optimista supone que sí lo gana"
+  ]
+ ],
+ "tasas_base_nota": "Con ingresos LTM de US$1.552 millones (~US$1.098 millones de 2015 ajustados por inflación) SHAK está en el tramo de US$700-1.250 millones de The Base Rate Book (Exhibit 4), donde la mediana real del crecimiento compuesto de ventas a 5 años es 6,4% y la media 7,9% (más ~2,5% de inflación para compararla con cifras nominales: ~9% la mediana). La Base ({cagrA} compuesto) queda sobre esa mediana porque SHAK crece por unidades a ~16% de su base: ~{tbA} de las empresas de su tamaño lograron al menos ese crecimiento. Lo justifican tres hechos específicos: 45 aperturas propias en 2025 y 33 en el primer semestre de 2026, un costo neto de construcción ~20% más bajo en 2025 y la meta declarada de 60-65 aperturas en 2026. No se va más lejos porque el crecimiento por unidades es el más fácil de verificar y el que más rápido se agota: la Optimista, con {cagrD}, solo la logró ~{tbD} de empresas de ese tamaño.",
+ "crecimiento": {
+  "texto": "Los ingresos LTM (julio 2025-junio 2026) suman US$1.552 millones: ventas de Shacks propios US$1.495,6 millones (96,3%) e ingresos por licencias US$56,7 millones (3,7%) (cálculo propio: 2025 + 1S26 − 1S25, [Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm); [Shake Shack, 10-Q del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm)). Las ventas de todo el sistema (propios más licenciados, que no son ingresos) fueron US$2.228,8 millones en 2025 (+15,9%) y US$625,8 millones en el 2T26 (+13,8%), con 703 locales ([Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm)). El crecimiento de las ventas propias es casi todo unidades: 16 aperturas en el 2T26 (récord para un segundo trimestre) elevaron las ventas de Shacks 17,5% mientras el volumen promedio semanal (AWS) se mantuvo en US$78 mil, igual que un año antes; el comparable fue +3,5% (tráfico +2,0%, precio y mezcla +1,5%) con unos 90 puntos básicos del Mundial de fútbol en junio. La Base crece {g1A} el primer año y {cagrA} compuesto en cinco años (13,2% propios en el año 1, bajando a 9,5% en el año 5, y 8% en licencias); la Conservadora, {cagrB}; la Disrupción, {cagrC}; la Optimista, {cagrD}. Licencias: 40-45 aperturas en 2026 (récord), con Panamá, Vietnam y casinos de PENN por abrir y presión en Emiratos por el conflicto en Medio Oriente ([Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm)).",
+  "tabla": {
+   "cols": [
+    "Partida",
+    "2024",
+    "2025",
+    "LTM jun-26 (cálculo propio)",
+    "Variación reciente",
+    "Peso LTM"
+   ],
+   "align": [
+    "l",
+    "r",
+    "r",
+    "r",
+    "r",
+    "r"
+   ],
+   "rows": [
+    [
+     "Ventas de Shacks propios (US$ M)",
+     "1.207,6",
+     "1.391,2",
+     "1.495,6",
+     "+17,5% (2T26)",
+     "96,3%"
+    ],
+    [
+     "Ingresos por licencias (US$ M)",
+     "45,0",
+     "54,1",
+     "56,7",
+     "+7,1% (2T26)",
+     "3,7%"
+    ],
+    [
+     "Ingresos totales (US$ M)",
+     "1.252,6",
+     "1.445,3",
+     "1.552,3",
+     "+17,2% (2T26)",
+     "100%"
+    ],
+    [
+     "Ventas del sistema (no son ingresos, US$ M)",
+     "1.923,0",
+     "2.228,8",
+     "—",
+     "+13,8% (2T26)",
+     "—"
+    ],
+    [
+     "Locales propios / con licencia (fin de período)",
+     "329 / 250",
+     "373 / 286",
+     "703 en total (2T26)",
+     "+15,2% unidades",
+     "—"
+    ],
+    [
+     "Volumen promedio semanal (US$ miles)",
+     "76",
+     "76",
+     "78 (2T26)",
+     "plano",
+     "—"
+    ]
+   ]
+  }
+ },
+ "margenes": {
+  "texto": "El margen operativo GAAP LTM es 3,6% (EBIT de US$55,4 millones), tras 0,2% en 2024 y 4,3% en 2025; el máximo de la serie fue 10,4% en 2016. El margen del local (non-GAAP) es mucho mejor: 22,6% de las ventas de Shacks en 2025, 23,0% en el 2T26 (−90 pb por la carne, que subió a doble dígito en el trimestre y es ~35% de la canasta de alimentos y papel) y guía de 22-23% para 2026 ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm); [Shake Shack, carta a accionistas del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm); [Shake Shack, actualización de guía, 2-jun-2026](https://www.sec.gov/Archives/edgar/data/1620533/000110465926069246/tm2616608d1_ex99-1.htm)). La brecha entre 23% y 3,6% son costos de empresa: gasto general (G&A US$176 millones en 2025, 12,2% de los ingresos; guía de 12-13% para 2026), depreciación (7,4%), preapertura (US$18 millones) y deterioros. La Base parte de {margenY1} el primer año (el LTM con arrendamientos) y llega a {mA} en {conv} años ({mrepA} reportado, +{arr_pp} pp por el ajuste de arrendamientos): requiere que el margen del local se sostenga en ~22-23% y que G&A, depreciación y preapertura pasen de ~21% a ~16% de los ingresos, algo que Project Catalyst (punto de venta, lealtad, IA; [8-K del 1-abr-2026](https://www.sec.gov/Archives/edgar/data/1620533/000110465926038234/tm2610761d1_8k.htm)) promete pero todavía no demuestra. La Conservadora ({mB}) supone que la carne y el valor mantienen el margen del local en ~20%; la Disrupción ({mC}), que la marca pierde valor percibido; la Optimista ({mD}), que la escala lleva a SHAK cerca del margen de una cadena líder. No se excluyen del EBIT los costos de transición ejecutiva, litigios ni deterioros: se repiten cada año (US$5,2 millones de deterioros en 2025; US$32,4 millones en 2024)."
+ },
+ "reinversion": {
+  "texto": "La Base usa ventas/capital {s2c1}× en los años 1–5 (con los arrendamientos capitalizados, ~US${cap1} de capital por dólar de ventas nuevas) y {s2c2}× en los años 6–10. En 2025 SHAK invirtió US$166 millones en capex para 45 locales (US$2,3 millones por local, US$1,9 millones neto de incentivos del arrendador; rango de US$1,6 a 4,1 millones) y en el LTM US$203 millones; además, cada local nuevo agrega un arrendamiento operativo (US$688,9 millones en balance al 1-jul-2026; [Shake Shack, 10-Q del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm)). No hay adquisiciones. El rendimiento del capital nuevo de la Base (11,5% de margen × 74% después de impuestos × {s2c1}) es ~11,5% con el margen objetivo, y al final del año 10 el ROIC terminal es el costo de capital ({roicT}): sin una ventaja competitiva que se vea en el ROIC de los últimos tres años, el crecimiento terminal no crea valor. En los años 1–3 el flujo libre es negativo (−US$72, −US$31 y +US$2 millones): la expansión consume más caja de la que el negocio genera hoy, cubierta con los US$308 millones de caja.",
+  "tabla": {
+   "cols": [
+    "Partida",
+    "Valor",
+    "Fuente",
+    "Lectura"
+   ],
+   "align": [
+    "l",
+    "r",
+    "l",
+    "l"
+   ],
+   "rows": [
+    [
+     "Capex 2025 / LTM",
+     "US$166 M / US$203 M",
+     "10-K 2025; 10-Q del 2T26",
+     "~1,6 veces la D&A (US$107 M)"
+    ],
+    [
+     "Costo de construcción por local (2025)",
+     "US$2,3 M bruto; US$1,9 M neto",
+     "10-K 2025",
+     "−20% frente a 2024"
+    ],
+    [
+     "Aperturas propias: 2025 / meta 2026",
+     "45 / 60-65",
+     "10-K 2025; carta del 2T26",
+     "~16% de la base"
+    ],
+    [
+     "Arrendamientos operativos capitalizados",
+     "US$665 M (VP del conversor)",
+     "Hoja ('Operating lease converter')",
+     "+1,5 pp de margen y 0,43 de ventas/capital"
+    ],
+    [
+     "Rendimiento del capital nuevo (Base)",
+     "~11,5% → 9% terminal",
+     "Hoja: margen × (1 − t) × ventas/capital",
+     "Converge al costo de capital"
+    ]
+   ]
+  }
+ },
+ "prob_texto": "Base (40%) es la trayectoria central: ~60 aperturas propias por año, comparables de 2-4% y un margen operativo que sube a ~10% en siete años. Conservadora (22,5%) es lo que muestran hoy la carne en máximos y la guerra de valor: aperturas que se enfrían a ~40 por año, comparables de 1-2% y margen que se queda en 6,5%. Disrupción (15%) es un deterioro de la marca y del valor percibido: ventas propias que dejan de crecer en el año 4 y margen de 2,5%. Optimista (22,5%) exige aperturas por encima de la meta de 60-65, comparables de 4-5% y un margen de 13%. Son juicio del analista, no frecuencias publicadas.",
+ "premortem": [
+  "La carne sigue subiendo (hoy mid-teens en la canasta) y SHAK protege el valor sin subir precios: el margen del local baja de 23% a ~20% y la Base queda en la Conservadora.",
+  "Las aperturas más allá del Noreste rinden menos que las maduras (por ejemplo, ventas por local de US$3,3 millones en vez de US$4,0 millones): el rendimiento del capital nuevo cae bajo el costo de capital y cada local destruye valor.",
+  "Project Catalyst (POS, lealtad, IA) sobrepasa el presupuesto y el G&A no baja de 12% de los ingresos: el margen operativo se queda en 5-6%.",
+  "La competencia por valor (hamburguesas de cadenas grandes y fast casual) lleva el tráfico a negativo en 2027 y obliga a descuentos.",
+  "El convertible de US$250 millones vence en marzo de 2028 y el mercado de crédito está cerrado: SHAK paga en efectivo y reduce la caja de US$308 millones a menos de la mitad mientras sigue abriendo locales."
+ ],
+ "contra": "el comparable de 2025 fue +2,3% con tráfico negativo (−0,8%) y el volumen promedio semanal está plano desde 2024 en US$76-78 mil ([Shake Shack, 10-K 2025, 26-feb-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm)); la guía de 2026 se recortó en junio (margen del local de 23,0-23,5% a 22,0-23,0%, EBITDA ajustado de US$230-245 millones a US$225-235 millones) por la carne y la competencia ([Shake Shack, actualización de guía, 2-jun-2026](https://www.sec.gov/Archives/edgar/data/1620533/000110465926069246/tm2616608d1_ex99-1.htm)); el flujo libre LTM es negativo (−US$12 millones) porque el capex (US$203 millones) supera el flujo operativo (US$192 millones) ([Shake Shack, 10-Q del 2T26, 5-ago-2026](https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm)); y la empresa cambió de CFO dos veces en seis meses ([8-K del 25-nov-2025](https://www.sec.gov/Archives/edgar/data/1620533/000110465925115689/tm2532117d1_8k.htm); [8-K del 7-may-2026](https://www.sec.gov/Archives/edgar/data/1620533/000110465926056664/tm2613751d1_ex99-1.htm)).",
+ "indicadores": [
+  [
+   "Comparables (same-Shack sales)",
+   "+3,5% (2T26), tráfico +2,0%",
+   "≥ +3% con tráfico ≥ 0% en 2027",
+   "≤ +1% o tráfico negativo dos trimestres"
+  ],
+  [
+   "Volumen promedio semanal (AWS)",
+   "US$78 mil (2T26), plano a/a",
+   "≥ US$80 mil",
+   "≤ US$75 mil"
+  ],
+  [
+   "Margen del local (restaurant-level profit)",
+   "23,0% (2T26); guía 2026 22-23%",
+   "≥ 23% con la carne alta",
+   "≤ 21%"
+  ],
+  [
+   "Aperturas propias por año",
+   "45 (2025); 33 en 1S26; guía 60-65",
+   "≥ 60 y la cartera 2027 cubierta",
+   "≤ 50 o desarrollo diferido"
+  ],
+  [
+   "Gasto general (G&A) / ingresos",
+   "11,1% ajustado en el 2T26; guía 12-13%",
+   "≤ 11% en 2027",
+   "≥ 13%"
+  ],
+  [
+   "Costo neto de construcción por local",
+   "~US$1,9 M (2025)",
+   "≤ US$1,9 M",
+   "≥ US$2,3 M"
+  ],
+  [
+   "Inflación de la carne (canasta de alimentos)",
+   "Mid-teens a/a en el 2T26",
+   "Baja a un dígito",
+   "Sigue en doble dígito en 2027"
+  ],
+  [
+   "Caja y vencimiento del convertible",
+   "US$308 M de caja; US$250 M vencen en mar-2028",
+   "Refinancia o convierte sin usar caja",
+   "Paga en efectivo y la caja cae bajo US$150 M"
+  ]
+ ],
+ "precio_lectura": "El precio exige mucho más que la Base: con el margen de la Base (11,5% con arrendamientos), el DCF inverso pide un crecimiento de los ingresos de los años 1-5 de ~33% anual, frente a {cagrA} de la Base y una mediana de ~6,4% real en empresas de su tamaño. ¿Qué sabe el mercado que yo no? Puede estar pagando un ROIC terminal mayor que el costo de capital (es decir, una marca con ventaja que en esta valoración no se concede porque el ROIC no la demuestra), un margen de 15% o más como el de Chipotle, o el valor de una opción de crecer mucho más allá de los 1.500 locales de la meta. En sentido contrario, el mercado puede estar subestimando que cada local cuesta US$1,9 millones y que el flujo libre de la empresa es negativo hasta el año 3. No se convierte en recomendación.",
+ "frase": "Cadena de hamburguesas fine casual con 373 locales propios que abre 60-65 por año; margen operativo de 3,6% a ~10% y ROIC en el costo de capital",
+ "confianza": "Media-baja: el modelo del local está documentado, pero el margen de la empresa y el retorno del capital nuevo todavía no se han demostrado",
+ "cambiaria": "El volumen promedio semanal, el margen del local con la carne alta, el ritmo de aperturas y el G&A después de Project Catalyst",
+ "revision": "Resultados del 3T26 (primera semana de noviembre de 2026)",
+ "fuentes": [
+  [
+   "Shake Shack, 10-K 2025 (26-feb-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm"
+  ],
+  [
+   "Shake Shack, 10-Q del 2T26 (5-ago-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm"
+  ],
+  [
+   "Shake Shack, carta a accionistas del 2T26 (5-ago-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000033/a2q26shareholderletter.htm"
+  ],
+  [
+   "Shake Shack, actualización de guía del 2T26 (2-jun-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000110465926069246/tm2616608d1_ex99-1.htm"
+  ],
+  [
+   "Shake Shack, 8-K de Project Catalyst (1-abr-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000110465926038234/tm2610761d1_8k.htm"
+  ],
+  [
+   "Shake Shack, 8-K del nombramiento de la CFO (7-may-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000110465926056664/tm2613751d1_ex99-1.htm"
+  ],
+  [
+   "Shake Shack, 8-K de la salida de la CFO (25-nov-2025)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000110465925115689/tm2532117d1_8k.htm"
+  ],
+  [
+   "Shake Shack, 8-K del voto de accionistas (11-jun-2026)",
+   "https://www.sec.gov/Archives/edgar/data/1620533/000110465926072950/tm2617505d1_8k.htm"
+  ],
+  [
+   "Damodaran, ERP implícita de octubre de 2026",
+   "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx"
+  ],
+  [
+   "Damodaran, betas por industria (enero de 2026)",
+   "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html"
+  ],
+  [
+   "Mauboussin y Callahan, The Base Rate Book (2016)",
+   "https://www.credit-suisse.com/media/assets/corporate/docs/about-us/research/publications/the-base-rate-book-integrating-the-past-to-better-anticipate-the-future.pdf"
+  ]
+ ],
+ "justificacion": [
+  [
+   "Crecimiento: aperturas propias y un comparable modesto.",
+   "La Base crece {g1A} el primer año y {cagrA} compuesto en cinco años. Detrás hay 60-65 locales propios por año (guía de 2026, 33 abiertos al 2T26; carta del 5-ago-2026), 278 locales comparables con ventas que crecen ~3% y una línea de licencias que crece 8-9%. La visión externa dice que ~{tbA} de las empresas de su tamaño lograron al menos ese crecimiento; la Base no extrapola el 15% de 2025 (que incluye una semana 53) ni supone el 4% de la Disrupción. Alternativas: más aperturas que la meta de 60-65 exigen sitios y capital que hoy no se ven; menos (~40) es la Conservadora ({cagrB}). Sensibilidad: ±2 puntos de crecimiento en los años 1-5 llevan el DCF Base a {s_g_lo} y {s_g_hi}. Obligaría a revisarlo que el volumen promedio semanal caiga bajo US$75 mil o que la meta anual de aperturas baje de 60."
+  ],
+  [
+   "Margen: el local sostiene el 22-23%; la empresa tiene que ganar escala.",
+   "La Base parte de {margenY1} (LTM con arrendamientos) y llega a {mA} ({mrepA} reportado) en {conv} años. El margen del local fue 22,6% en 2025 y 23,0% en el 2T26; lo que falta son G&A (12,2%) y depreciación (7,4%) sobre ingresos que crecen 12% al año, y el efecto de que Project Catalyst reduzca costos de empresa. La Conservadora ({mB}) supone una carne cara y una guerra de valor persistentes; la Disrupción ({mC}), pérdida de marca. Sensibilidad: ±2 puntos de margen dan {s_m_lo} y {s_m_hi}, la palanca más fuerte del modelo después de la tasa."
+  ],
+  [
+   "Reinversión: mucho capital por dólar de ventas.",
+   "El ventas/capital es {s2c1} en los años 1-5 (~US${cap1} de capital por dólar de ventas nuevas, incluido el capital arrendado) y {s2c2} en los años 6-10. Un local nuevo cuesta US$2,3 millones (US$1,9 millones neto) para ventas de ~US$4 millones, pero el capital que financia esas ventas incluye el arrendamiento capitalizado. Con ±20% en el ventas/capital el DCF Base va de {s_s_lo} a {s_s_hi}. Un ventas/capital mayor supondría locales más baratos o más productivos de lo que el historial muestra."
+  ],
+  [
+   "Descuento y largo plazo: costo de capital en el terminal.",
+   "El costo de capital pasa de {wacc0} en el año 1 a {waccT} en el terminal, con una beta de {beta} (Restaurant/Dining, EE.UU.) y una prima de {erp}; el crecimiento terminal es {tgA} y el ROIC terminal es {roicT}: como el ROIC con arrendamientos no ha superado el costo de capital de forma sostenida (tres años de pérdida operativa en 2020-2022), no se reconoce una ventaja competitiva defendible y el crecimiento después del año 10 no crea valor. El terminal vale {terminal} del valor de las operaciones: la valoración es sensible a lo que ocurra después del año 10. ±1 punto en la tasa lleva el DCF Base a {s_k_hi} y {s_k_lo}."
+  ]
+ ],
+ "prob_regla": {
+  "version": "2026-10-21b",
+  "etapa": "crecimiento_alto",
+  "previa": {
+   "Base": 0.4,
+   "Conservadora": 0.225,
+   "Optimista": 0.225,
+   "Disrupción": 0.15
+  },
+  "texto": "Probabilidades de la regla del 2026-10-21b: previa de la etapa «crecimiento alto» Base 40%, Conservadora 22,5%, Optimista 22,5%, Disrupción 15%, sin ajustes por indicadores (ninguno cruzó aún su umbral). No son frecuencias estadísticas."
+ }
+}
