@@ -1,3 +1,15 @@
+**Estado de publicación (2026-10-27): PUBLICADO CON SALVEDADES · revisión PYPL-REC-20261027-R1.** Estudio recuperado con corte del 30-sep-2026; sin cambios de supuestos, probabilidades ni pesos. Valoración, análisis fundamental y esta auditoría corresponden a la misma hoja de Google y a la misma revisión.
+
+**Controles ejecutados el 27-oct-2026:** siete múltiplos con fórmula y resultado numérico (`verificar_multiplos_hoja.py`), fórmulas contra la maestra del 22-oct (`audit_master_formulas.py`), consistencia hoja = registro = análisis (`consistencia_migracion.py --hoja`), candados vigentes, probabilidades.
+
+**Salvedades vigentes:**
+- Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
+- Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
+- Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
+- Control S4: múltiplos de salida Optimista de EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF superan 90-130% el actual sin justificacion_salto.
+
+---
+
 # Auditoría económica narrativa — PayPal Holdings, Inc. (PYPL)
 
 **Análisis fundamental vinculado:** [PYPL en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=PYPL) · registro `analisis/PYPL-research-1790205847031-vcqtg.json` (revisión del 26-oct-2026).

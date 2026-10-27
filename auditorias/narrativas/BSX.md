@@ -1,3 +1,15 @@
+**Estado de publicación (2026-10-27): PUBLICADO CON SALVEDADES · revisión BSX-REC-20261027-R1.** Estudio recuperado con corte del 30-sep-2026; sin cambios de supuestos, probabilidades ni pesos. Valoración, análisis fundamental y esta auditoría corresponden a la misma hoja de Google y a la misma revisión.
+
+**Controles ejecutados el 27-oct-2026:** siete múltiplos con fórmula y resultado numérico (`verificar_multiplos_hoja.py`), fórmulas contra la maestra del 22-oct (`audit_master_formulas.py`), consistencia hoja = registro = análisis (`consistencia_migracion.py --hoja`), candados vigentes, probabilidades.
+
+**Salvedades vigentes:**
+- Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
+- Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
+- Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
+- Control de integridad de hojas con 1 hallazgo(s) frente al motor legado, sin diagnóstico económico concluyente.
+
+---
+
 # Auditoría económica narrativa — Boston Scientific Corporation (BSX)
 
 **Análisis fundamental vinculado:** [BSX en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=BSX) · registro `analisis/BSX-research-1790597191582-gnvjr.json` (revisión del 2026-10-26).
