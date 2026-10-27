@@ -1,0 +1,102 @@
+{
+  "schema": "jmr-snapshot-crecimiento-6a10-1",
+  "ticker": "NVO",
+  "revisionPublicada": "NVO-REC-20261027-R1",
+  "fechaCorte": "2026-09-30",
+  "capturadoEl": "2026-10-27",
+  "moneda": "USD",
+  "unidad": "tasa_decimal",
+  "estado": "snapshot_factual_de_hoja_no_aprobacion_de_supuestos",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1_w85o-Cv_4GzFB4nq5fGqrMSVoYf-Ltafuol3ir5TMw/edit",
+  "ubicacion": "Escenarios e historias: H29:L29 (A), H53:L53 (B), H77:L77 (C), H101:L101 (D)",
+  "escenarios": [
+    {
+      "id": "A",
+      "nombre": "Base",
+      "celda": "H29:L29",
+      "hoja": [
+        -0.03,
+        -0.05,
+        -0.02,
+        0.02,
+        0.03
+      ],
+      "ficha": [
+        -0.04,
+        -0.06,
+        -0.03,
+        0.01,
+        0.02
+      ]
+    },
+    {
+      "id": "B",
+      "nombre": "Conservadora",
+      "celda": "H53:L53",
+      "hoja": [
+        -0.06,
+        -0.08,
+        -0.04,
+        0,
+        0.01
+      ],
+      "ficha": [
+        -0.08,
+        -0.1,
+        -0.05,
+        0.01,
+        0.02
+      ]
+    },
+    {
+      "id": "C",
+      "nombre": "Disrupción",
+      "celda": "H77:L77",
+      "hoja": [
+        -0.1,
+        -0.12,
+        -0.06,
+        -0.02,
+        0
+      ],
+      "ficha": [
+        -0.1,
+        -0.12,
+        -0.06,
+        -0.02,
+        0
+      ]
+    },
+    {
+      "id": "D",
+      "nombre": "Optimista",
+      "celda": "H101:L101",
+      "hoja": [
+        -0.01,
+        -0.02,
+        0.01,
+        0.03,
+        0.035
+      ],
+      "ficha": [
+        -0.02,
+        -0.03,
+        0,
+        0.03,
+        0.035
+      ]
+    }
+  ],
+  "notas": [
+    "El campo hoja proviene de celdas reales de la revisión del corte. No debe reemplazarse silenciosamente por la ficha.",
+    "El campo ficha es la referencia anterior de JMR-valuation/reference/damodaran/NVO.json.",
+    "Los DCF Base y las historias publicados concilian exactamente con Google Sheets; discrepancias de valores de entrada documentales no cambian la revisión publicada.",
+    "No se ha demostrado qué cambio económico motivó las diferencias entre hoja y ficha; la ficha no debe prevalecer automáticamente en futuras regeneraciones."
+  ],
+  "requerimientosParaRecalcular": [
+    "Usar una copia de la hoja",
+    "Revisar ficha contra snapshot y narrativa",
+    "Elegir y documentar cuál curva es vigente antes de recalcular",
+    "Mantener revisión anterior como respaldo"
+  ]
+}
