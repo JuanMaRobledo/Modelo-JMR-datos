@@ -7,8 +7,9 @@
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula; 5 con resultado y 2 N/A del paso 6.1; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
 - EV/FCFF y P/FCFE no aplican (paso 6.1, marcados «No» en Resumen de Valoración!F8 y F10): FCFF negativo en FY+1 y FY+2 de Conservador y Base y múltiplo histórico de P/FCFE de 282x por FCFE casi nulo; peso 0, sin precio y sin valor inventado.
-- Regla H3 pendiente: P/OCF Optimista 20,34x supera 0,92 veces el promedio histórico (19,82x); corregirlo exige cambiar `POCF!J30` y requiere autorización.
 - Errores informativos #NUM! en EVEBITDA!B39:B41 y EVFCFF!B39:B41 (MEDIAN de múltiplos históricos sin datos numéricos); fórmulas idénticas a la maestra, no alimentan ningún precio.
+
+**Salvedades resueltas (27-oct-2026):** H3: múltiplo de salida P/OCF Optimista 20,34x → 19,82x (0,92 × mediana 10 años 21,54x; `POCF!J30` de la hoja). Efecto: múltiplos Optimista 140,48 → 139,38 y valor presente ponderado Optimista 83,10 → 82,66; DCF, Conservador, Base, MOS y pesos sin cambio. Versión anterior en `archivo/SHAK-antes-salvedades-20261027/`.
 
 ---
 
@@ -230,7 +231,7 @@ Siete métodos (EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF, P/V y P/BV; los dos últ
 | P/FCFE | 122,17× | N/D× | 48,40× | 30,81× | 8 % |
 | P/OCF | 21,54× | 13,11× | 16,82× | 15,13× | 8 % |
 
-Resultado: múltiplos consolidados de US$72,94 (Conservador), US$99,69 (Base) y US$140,48 (Optimista), frente a DCF de US$7,29, US$24,13 y US$44,84. Lectura del 3-oct-2026: EV/FCFF y P/FCFE no aplican (FCFF proyectado negativo en FY+1-FY+2; el FCFE solo es positivo por deuda nueva; revisado el 5-oct-2026) y su peso pasa a EV/EBITDA, P/E y P/OCF. Los múltiplos aplicables quedan muy por encima del DCF y la brecha no es un error de cálculo: A es el múltiplo de la propia acción desde 2025 (historia corta, casi el precio de mercado) y B son peers con ROIC de 20-40%, mientras el ROIC de Shake Shack con arrendamientos es ~5% y en el DCF el crecimiento apenas crea valor (ROIC terminal = costo de capital). El DCF es el método más confiable para esta empresa; los múltiplos dicen cuánto paga hoy el mercado por restaurantes en expansión. Pendiente del analista (paso 6.5): ajustar la mediana de peers por margen y ROIC (hoy solo se ajusta +10% por crecimiento) o subir λ; no se movió para acercarlo al DCF.
+Resultado: múltiplos consolidados de US$72,94 (Conservador), US$99,69 (Base) y US$139,38 (Optimista), frente a DCF de US$7,29, US$24,13 y US$44,84. Lectura del 3-oct-2026: EV/FCFF y P/FCFE no aplican (FCFF proyectado negativo en FY+1-FY+2; el FCFE solo es positivo por deuda nueva; revisado el 5-oct-2026) y su peso pasa a EV/EBITDA, P/E y P/OCF. Los múltiplos aplicables quedan muy por encima del DCF y la brecha no es un error de cálculo: A es el múltiplo de la propia acción desde 2025 (historia corta, casi el precio de mercado) y B son peers con ROIC de 20-40%, mientras el ROIC de Shake Shack con arrendamientos es ~5% y en el DCF el crecimiento apenas crea valor (ROIC terminal = costo de capital). El DCF es el método más confiable para esta empresa; los múltiplos dicen cuánto paga hoy el mercado por restaurantes en expansión. Pendiente del analista (paso 6.5): ajustar la mediana de peers por margen y ROIC (hoy solo se ajusta +10% por crecimiento) o subir λ; no se movió para acercarlo al DCF.
 
 La Base de los múltiplos (US$99,69) queda 313 % por encima del DCF Base (US$24,13): los múltiplos (EV/EBITDA de ~14,5×) describen lo que el mercado paga por restaurantes en expansión y no el retorno del capital, y el EV/EBITDA ignora el capex de expansión. Es una brecha de método, no un error de cálculo. Ver H-03.
 
