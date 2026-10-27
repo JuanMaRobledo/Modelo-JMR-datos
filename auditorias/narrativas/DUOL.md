@@ -8,9 +8,10 @@
 - Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
-- Control de integridad de hojas con 1 hallazgo(s) frente al motor legado, sin diagnóstico económico concluyente.
 
 **Salvedades resueltas (27-oct-2026):** H3: múltiplo de salida EV/FCFF Conservador 16,61x → 14,07x (el actual LTM; `EVFCFF!J8` de la hoja). Efecto: múltiplos Conservador 46,09 → 43,42 y valor presente ponderado Conservador 64,27 → 63,20 (objetivo FY+3 89,18 → 87,70); DCF, Base, Optimista, MOS y pesos sin cambio. S1: márgenes 23/28/32% justificados con evidencia en la base del modelo (margen LTM 24,0%; `reference/damodaran/DUOL.json`, `justificacion_supuestos.S1`); sin cambio de cifras. Versión anterior en `archivo/DUOL-antes-salvedades-20261027/`.
+
+**Salvedad resuelta (27-oct-2026):** Integridad de hojas: los hallazgos eran la comparación con el motor legado (30-sep) y registros sin `escenariosDCF`; con `escenariosDCF` (historias A-D) tomado de la hoja, `integridad_hojas.py` da 0 hallazgos en las ocho (27-oct-2026).
 
 ---
 

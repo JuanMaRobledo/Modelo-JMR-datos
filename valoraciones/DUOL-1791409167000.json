@@ -1069,8 +1069,7 @@
     "salvedades": [
       "Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.",
       "Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.",
-      "Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.",
-      "Control de integridad de hojas con 1 hallazgo(s) frente al motor legado, sin diagnóstico económico concluyente."
+      "Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella."
     ],
     "ajustesSalvedades": "H3: múltiplo de salida EV/FCFF Conservador 16,61x → 14,07x (el actual LTM; `EVFCFF!J8` de la hoja). Efecto: múltiplos Conservador 46,09 → 43,42 y valor presente ponderado Conservador 64,27 → 63,20 (objetivo FY+3 89,18 → 87,70); DCF, Base, Optimista, MOS y pesos sin cambio. S1: márgenes 23/28/32% justificados con evidencia en la base del modelo (margen LTM 24,0%; `reference/damodaran/DUOL.json`, `justificacion_supuestos.S1`); sin cambio de cifras."
   },
@@ -1142,8 +1141,7 @@
   "salvedades": [
     "Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.",
     "Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.",
-    "Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.",
-    "Control de integridad de hojas con 1 hallazgo(s) frente al motor legado, sin diagnóstico económico concluyente."
+    "Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella."
   ],
   "ajustesSalvedades": {
     "fecha": "2026-10-27",
@@ -1499,5 +1497,70 @@
       }
     ],
     "advertencia": "Pesos y múltiplos de salida leídos de la hoja vigente. Los pares y anclas no se presumen homogéneos ni actuales."
+  },
+  "escenariosDCF": {
+    "version": "2",
+    "principal": "DCF Base",
+    "central": "A",
+    "fecha": "2026-09-30",
+    "revisionId": "DUOL-REC-20261027-R1",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · La audiencia que creció en 2026 vuelve a pagar desde 2027",
+        "probabilidad": 0.4,
+        "crecimiento": 0.1101073927783065,
+        "margen": 0.28037250955577625,
+        "salesToCapital": 2.25,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.08990000000000001,
+        "terminalGrowth": 0.04,
+        "valor": 103.26786826500786,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.47058823529411764
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · Más usuarios que pagan menos",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06397941159031317,
+        "margen": 0.2303725095557762,
+        "salesToCapital": 2.25,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.08990000000000001,
+        "terminalGrowth": 0.04,
+        "valor": 76.3821375874798,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.2647058823529412
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · Deterioro de los fundamentales: Los asistentes de IA enseñan idiomas gratis y el hábito se rompe",
+        "probabilidad": 0.15,
+        "crecimiento": -0.023126236085462937,
+        "margen": 0.1403725095557762,
+        "salesToCapital": 5.21494478862988,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.08990000000000001,
+        "terminalGrowth": 0,
+        "valor": 45.73795675961556,
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · Cien millones de usuarios diarios que se monetizan",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1499879206569117,
+        "margen": 0.32037250955577623,
+        "salesToCapital": 2.25,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.08990000000000001,
+        "terminalGrowth": 0.04,
+        "valor": 133.35371317152405,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.2647058823529412
+      }
+    ]
   }
 }

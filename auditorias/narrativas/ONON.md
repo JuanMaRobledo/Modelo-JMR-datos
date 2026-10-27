@@ -10,7 +10,8 @@
 - Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
-- Control de integridad de hojas con 12 hallazgo(s) frente al motor legado, sin diagnóstico económico concluyente.
+
+**Salvedad resuelta (27-oct-2026):** Integridad de hojas: los hallazgos eran la comparación con el motor legado (30-sep) y registros sin `escenariosDCF`; con `escenariosDCF` (historias A-D) tomado de la hoja, `integridad_hojas.py` da 0 hallazgos en las ocho (27-oct-2026).
 
 ---
 

@@ -92,6 +92,10 @@ def main(tickers):
                 controles.append({'metodo': m, 'escenario': k, 'centro': centro, 'vp3Original': original, 'estado': 'OK', 'formulaErrors': []})
         ok = sum(c['estado'] == 'OK' for c in controles)
         a['valorPrincipal'] = base
+        hist = (a.get('valorEsperado') or {}).get('historias') or []
+        if hist and not (a.get('escenariosDCF') or {}).get('historias'):  # convención de historias A-D (valor = H5:H8 de 'Escenarios e historias')
+            a['escenariosDCF'] = {'version': '2', 'principal': 'DCF Base', 'central': 'A', 'fecha': (a.get('valorEsperado') or {}).get('fecha') or a.get('fecha'),
+                                  'revisionId': a.get('revisionId'), 'historias': copy.deepcopy(hist)}
         a['metodoPrincipal'] = 'DCF FCFF'
         a['sensibilidadMultiples'] = {'version': 'matrices-por-bloque-20261027', 'methods': 7, 'scenarios': SCEN, 'disrupcionFuera': True, 'sourceSheet': sid,
                                       'lastExport': '2026-10-27', 'controlesOK': ok, 'noDisponibles': 21 - ok, 'errores': 0, 'controles': controles,

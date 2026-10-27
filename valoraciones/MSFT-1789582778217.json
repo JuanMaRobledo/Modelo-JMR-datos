@@ -1592,5 +1592,70 @@
       }
     ],
     "advertencia": "Pesos y múltiplos de salida leídos de la hoja vigente. Los pares y anclas no se presumen homogéneos ni actuales."
+  },
+  "escenariosDCF": {
+    "version": "2",
+    "principal": "DCF Base",
+    "central": "A",
+    "fecha": "2026-09-30",
+    "revisionId": "MSFT-REC-20261027-R1",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · IA rentable con inversión sostenida",
+        "probabilidad": 0.45,
+        "crecimiento": 0.1626978817535607,
+        "margen": 0.4999998481339003,
+        "salesToCapital": 0.5999825182413489,
+        "salesToCapital2": 1.05,
+        "roicTerminal": 0.2,
+        "terminalGrowth": 0.04,
+        "valor": 440.7320047393561,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · Adopción más lenta y capacidad cara",
+        "probabilidad": 0.225,
+        "crecimiento": 0.09070039754627102,
+        "margen": 0.4299998481339003,
+        "salesToCapital": 0.5999825182413489,
+        "salesToCapital2": 1.05,
+        "roicTerminal": 0.14495,
+        "terminalGrowth": 0.04,
+        "valor": 257.57255931066555,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Tesis de disrupción · Deterioro de los fundamentales",
+        "probabilidad": 0.1,
+        "crecimiento": 0.017538817555759367,
+        "margen": 0.2999998481339003,
+        "salesToCapital": 0.5500234095751028,
+        "salesToCapital2": 1.05,
+        "roicTerminal": 0.08990000000000001,
+        "terminalGrowth": 0,
+        "valor": 122.83763022551285,
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · Monetización de agentes y utilización superior",
+        "probabilidad": 0.225,
+        "crecimiento": 0.20361152927028048,
+        "margen": 0.5399998481339002,
+        "salesToCapital": 0.7000242119014666,
+        "salesToCapital2": 1.05,
+        "roicTerminal": 0.24,
+        "terminalGrowth": 0.04,
+        "valor": 621.311532319034,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      }
+    ]
   }
 }
