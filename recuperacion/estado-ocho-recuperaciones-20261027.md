@@ -40,3 +40,11 @@ Pestañas de cálculo y de los siete múltiplos: **0 desviaciones** en las ocho.
 | PYPL | conforme | No publicable: candados, integridad, S4 |
 
 Se conservan las versiones; no se archivó ni se borró nada.
+
+## Actualización 27-oct-2026 (tarde): publicación con salvedades
+Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige estados presentes en la maestra vigente; 15/15 en ADBE y NKE) y regenerar los registros desde sus hojas, las ocho se publican **con salvedades** (`PUBLICADO_CON_SALVEDADES`, revisión `<T>-REC-20261027-R1`):
+- `migrar_registro_una.py` por empresa: ONON pasa M1/M2/H1; DUOL y CELH concilian P/S y P/BV con la hoja (140,59/132,98 y 51,51/38,74; sin cambio en DCF, pesos ni ponderados). Consistencia hoja = registro = análisis: solo DUOL y MSFT conservan H3 (múltiplo de salida EV/FCFF), registrada como salvedad.
+- `scripts/completar_contrato_registro.py`: añade `valorPrincipal` (= DCF Base de la hoja, verificado), `seleccionMultiples` y `sensibilidadMultiples` leídos de la hoja; 7/7 matrices Base concilian con su VP FY+3. Conservadora/Optimista sin matriz por regla vigente (§8).
+- Cada registro contiene el DCF y los siete múltiplos con tres escenarios (pesos 100 %); P/V y P/BV con peso 0 y estado provisional.
+- Fecha ISO `2026-09-30` (texto original en `fechaTexto`); `validar_catalogo` y `auditar_integridad` aprobados con 13 empresas.
+- Salvedades de cada registro: corte 30-sep-2026 sin actualizar supuestos; candados 21-oct no aplicables; hallazgos de integridad frente al motor legado (ADBE 4, BSX 1, DUOL 1, ONON 12); DUOL H3 y S1; MSFT H3; PYPL S4.
