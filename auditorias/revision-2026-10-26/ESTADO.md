@@ -145,3 +145,11 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Publicado en la app (PR #159). Auditoría v1.3: `ONON-auditoria-v1.3.md` (H-01…H-13; H-02 EV/FCFF de 7× sobre un flujo deprimido; H-04 tipos de cambio escritos a mano; H-08 LTM sin XBRL).
 - DUOL: la frase de la sección 12 con el precio con margen de seguridad se corrigió para aplicarse al DCF Base (PR #160).
 - Método: para reiniciar una hoja usar `unificar_hoja.py --confirmar-reinicio` (no `reset_from_master`).
+
+## BSX · hoja rehecha, análisis, auditoría y publicación (26-oct, noche)
+- Hoja `1LVn63SMyvovWzNjbF5Jdi-v0EFUPXLqp4A6n8gwbKHc` reiniciada con `unificar_hoja.py` y UNIFICADA (61 pestañas; candados 15/15; inputs completos).
+- Valores: Base 33,12 · Conservadora 26,31 · Disrupción 20,62 · Optimista 40,25 · esperado 33,20 · MOS 21,53 · precio 43,65. Probabilidades 45/22,5/10/22,5. Múltiplos consolidados 28,73 / 33,14 / 37,49 (brecha de la Base +0,1 %).
+- El análisis recuperado de BSX era un esqueleto (~800 palabras fuera de la sección 12); se reescribieron las secciones 1-11 y 13-16 con datos de la hoja, el 10-Q y la ficha. Los competidores en campo pulsado están marcados como no verificados.
+- Balance del LTM reescrito con el 10-Q del 2T26 (el importador repetía diciembre). Penumbra (~US$14.500 M) no está en la valoración (H-03).
+- Publicado en la app (PR #161). Auditoría v1.3: `BSX-auditoria-v1.3.md` (H-01…H-13).
+- Análisis recuperados aún delgados que hay que escribir de nuevo al rehacerlos: EPAM, SHAK, ZTS, PAGS, DPZ, AAPL, INTU, MU, GRUPOARGOS/SURA y los preferentes.
