@@ -1,0 +1,92 @@
+{
+  "tipo": "reconciliacion_sin_modificar_supuestos",
+  "fecha": "2026-10-27",
+  "corte": "2026-09-30",
+  "totalEstudios": 8,
+  "totalHistorias": 32,
+  "resultado": "32/32 H5:H8 concilian sin diferencia con valorEsperado.historias A-D de la valoración activa. B35 = valorPrincipal en 8/8.",
+  "advertencia": "Los conteos de integridad legacy de 27-oct quedan como resultados históricos hasta re-ejecutar el detector corregido. El algoritmo anterior trataba incorrectamente escenariosDCF.historias como campo obligatorio, aunque el contrato activo usa valorEsperado.historias. La cifra de precio del día del análisis que difiere del corte NO es precio de hoy.",
+  "casos": [
+    {
+      "ticker": "ADBE",
+      "precioCorte": 239.94,
+      "precioAnalisisRegistrado": 251.67,
+      "fechaLegado": "15-oct-2026",
+      "dcfBase": 399.01857106448915,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": true
+    },
+    {
+      "ticker": "BSX",
+      "precioCorte": 43.65,
+      "precioAnalisisRegistrado": 43.65,
+      "fechaLegado": null,
+      "dcfBase": 33.11565659754027,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    },
+    {
+      "ticker": "CELH",
+      "precioCorte": 27.35,
+      "precioAnalisisRegistrado": 27.35,
+      "fechaLegado": null,
+      "dcfBase": 24.202477933097512,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    },
+    {
+      "ticker": "DUOL",
+      "precioCorte": 142.4,
+      "precioAnalisisRegistrado": 142.4,
+      "fechaLegado": null,
+      "dcfBase": 103.26786826500786,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    },
+    {
+      "ticker": "MSFT",
+      "precioCorte": 512.9,
+      "precioAnalisisRegistrado": 512.9,
+      "fechaLegado": null,
+      "dcfBase": 440.7320047393561,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    },
+    {
+      "ticker": "NVO",
+      "precioCorte": 37.91,
+      "precioAnalisisRegistrado": 37.91,
+      "fechaLegado": null,
+      "dcfBase": 45.429771411701374,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    },
+    {
+      "ticker": "ONON",
+      "precioCorte": 29.61,
+      "precioAnalisisRegistrado": 30.2,
+      "fechaLegado": "guardado 6-oct-2026, sin fecha de cotización corroborada",
+      "dcfBase": 34.17559144171808,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": true
+    },
+    {
+      "ticker": "PYPL",
+      "precioCorte": 52.53,
+      "precioAnalisisRegistrado": 52.53,
+      "fechaLegado": null,
+      "dcfBase": 105.13091417697915,
+      "escenariosCoinciden": 4,
+      "valorBaseCoincide": true,
+      "requiereCorreccionPrecio": false
+    }
+  ],
+  "prueba": "Comparación de celdas efectivas de la hoja nativa Google 'Escenarios e historias'!H5:H8 y 'Valuation output'!B35 contra el JSON del catálogo, sin modificar hojas."
+}
