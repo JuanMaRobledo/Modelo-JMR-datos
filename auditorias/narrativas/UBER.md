@@ -6,9 +6,10 @@
 - Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
-- Regla H3 pendiente: P/E Base 15,16x y Optimista 15,61x, P/FCFE Optimista 23,10x y P/OCF Optimista 22,96x superan el límite de la regla; corregirlos exige cambiar celdas de salida de la hoja y requiere autorización.
 - S1: márgenes Base 22% y Optimista 26% sostenidos con evidencia escrita (margen consolidado 13,4% en el 2T26; Movilidad 30,1%, Delivery 20,1%); hipótesis del analista, no hecho demostrado.
 - Errores informativos #NUM! en EVEBITDA!B39:B41 y EVFCFF!B39:B41 (MEDIAN de múltiplos históricos sin datos numéricos); fórmulas idénticas a la maestra, no alimentan ningún precio.
+
+**Salvedades resueltas (27-oct-2026):** H3: múltiplos de salida P/E Conservador 14,10x → 11,86x, Base 15,16x → 11,86x y Optimista 15,61x → 13,98x; P/FCFE Optimista 23,10x → 16,96x; P/OCF Optimista 22,96x → 16,39x (límites 0,78/0,92 × mediana de 10 años; `PE!J8/J19/J30`, `PFCFE!J30`, `POCF!J30`). Efecto: múltiplos Conservador 46,55 → 45,09, Base 55,58 → 53,03, Optimista 76,29 → 66,53; valor presente ponderado Conservador 44,19 → 43,61, Base 66,20 → 65,18, Optimista 91,13 → 87,23; DCF, MOS y pesos sin cambio. Versión anterior en `archivo/UBER-antes-salvedades-20261027/`.
 
 ---
 
@@ -229,13 +230,13 @@ Siete métodos (EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF, P/V y P/BV; los dos últ
 |---|---:|---:|---:|---:|---:|
 | EV/EBITDA | N/D× | 19,93× | 27,98× | 11,79× | 33 % |
 | EV/FCFF | N/D× | 14,66× | 9,37× | 24,85× | 17 % |
-| P/E | 15,20× | 15,16× | 23,17× | 17,83× | 33 % |
+| P/E | 15,20× | 11,86× | 23,17× | 17,83× | 33 % |
 | P/FCFE | 18,44× | 13,83× | 9,96× | 19,63× | 8 % |
 | P/OCF | 17,82× | 13,42× | 9,24× | 19,39× | 8 % |
 
-Resultado: múltiplos consolidados de US$46,55 (Conservador), US$55,58 (Base) y US$76,29 (Optimista), frente a DCF de US$42,62, US$73,27 y US$101,02. Lectura del 30-sep-2026: el DCF (valor intrínseco) da US$88,85 por acción y los múltiplos, US$83,89 hoy: 6% por debajo del DCF, dentro del rango de ±25%. Ambos métodos cuentan una historia parecida; el DCF manda y los múltiplos son precio relativo.
+Resultado: múltiplos consolidados de US$45,09 (Conservador), US$53,03 (Base) y US$66,53 (Optimista), frente a DCF de US$42,62, US$73,27 y US$101,02. Lectura del 30-sep-2026: el DCF (valor intrínseco) da US$88,85 por acción y los múltiplos, US$83,89 hoy: 6% por debajo del DCF, dentro del rango de ±25%. Ambos métodos cuentan una historia parecida; el DCF manda y los múltiplos son precio relativo.
 
-La Base de los múltiplos (US$55,58) queda 24 % por debajo del DCF Base (US$73,27): la regla por ciclo lleva los múltiplos al nivel actual y el DCF supone que el margen sube de 12 % a 22 %. Los saltos de la Optimista en P/FCFE y P/OCF (+67 % y +71 %) superan además el tope diagnóstico del caso toro. Ver H-10.
+La Base de los múltiplos (US$53,03) queda 28 % por debajo del DCF Base (US$73,27): la regla por ciclo lleva los múltiplos al nivel actual y el DCF supone que el margen sube de 12 % a 22 %. Los saltos de la Optimista en P/FCFE y P/OCF (+67 % y +71 %) superan además el tope diagnóstico del caso toro. Ver H-10.
 
 ## 13. Sensibilidades económicas y escenarios alternativos
 
