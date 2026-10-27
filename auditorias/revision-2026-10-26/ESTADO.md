@@ -160,3 +160,10 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - ROIC terminal igual al costo de capital (B49 = No): la hoja anterior aplicaba 12,1 % (Base ~173); con una sola entrada B50 la hoja no podía reproducir las historias Conservadora y Disrupción del motor. Ventas/capital 3,27 / 2,83 heredado (H-03).
 - Balance del LTM reescrito con el 10-Q del 2T26. Análisis reescrito (el recuperado tenía ~1.350 palabras en las secciones 2-11); competidores y dirección marcados como no verificados.
 - Publicado en la app (PR #162). Auditoría v1.3: `EPAM-auditoria-v1.3.md` (H-01…H-13).
+
+## UBER · hoja rehecha, análisis, auditoría y publicación (27-oct)
+- Hoja `1R3V8gISxXCYIujVFSITu0svVBC3AsN4GF_pQHHLs5dw` reiniciada con `unificar_hoja.py` y UNIFICADA (61 pestañas; candados 15/15; inputs completos).
+- Valores: Base 73,27 · Conservadora 42,62 · Disrupción 21,52 · Optimista 101,02 · esperado 72,50 · MOS 47,63 · precio 68,51. Probabilidades 40/22,5/15/22,5. Múltiplos consolidados 46,55 / 55,58 / 76,29 (brecha de la Base −24 %).
+- Balance del LTM reescrito con el 10-Q del 2T26; inversiones (8.759) y método de la participación (3.773) como activo no operativo (12.532); conversores de I+D y arrendamientos, NOL, regiones y beta heredados de la hoja anterior. Costo de la deuda como entrada directa (6,4 %): la calificación sintética dejaba la celda vacía por circularidad con el conversor.
+- Delivery Hero (~US$13.700 M) y las flotas autónomas no están en la valoración (H-02). P/FCFE y P/OCF de la Optimista saltan 67-71 % (justificado en la hoja; H-10).
+- Publicado en la app (PR #163). Auditoría v1.3: `UBER-auditoria-v1.3.md` (H-01…H-14).
