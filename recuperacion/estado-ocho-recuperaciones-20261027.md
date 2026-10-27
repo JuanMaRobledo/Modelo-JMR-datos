@@ -55,3 +55,6 @@ Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige es
 - **MSFT H3:** `EVFCFF!J19` (EV/FCFF Base) 30,04x → 26,30x (0,78 × mediana 10 años 33,73x). Múltiplos Base 279,36 → 275,52; VP ponderado Base 343,91 → 341,60; DCF y MOS sin cambio.
 - **PYPL S4:** `justificacion_salto` por método en `PYPL_ciclo.json` (Optimista dentro de la regla del ciclo y del tope); sin cambio de cifras ni de hoja.
 - Registros, análisis (tablas y textos con las cifras afectadas) y auditorías de DUOL y MSFT sincronizados con la hoja; versiones anteriores en `archivo/<T>-antes-salvedades-20261027/`. `validar_catalogo`, `auditar_integridad`, `consistencia_migracion --hoja` (H1-H3 OK), `controles_supuestos` (0 hallazgos) y 7/7 múltiplos con fórmula aprobados.
+
+## Integridad de hojas (27-oct-2026)
+Los hallazgos de `integridad_hojas.py` eran la comparación con el motor legado del 30-sep y registros sin `escenariosDCF`. Con `escenariosDCF` (historias A-D, tomado de la hoja) en los ocho registros, `integridad_hojas.py` da **0 hallazgos en ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON y PYPL**; la salvedad de integridad se retira de registros, análisis y auditorías.
