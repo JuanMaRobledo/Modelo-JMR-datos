@@ -1,3 +1,17 @@
+**Estado de publicación (2026-10-27): PUBLICADO CON SALVEDADES · revisión SHAK-REC-20261027-R1.** Estudio recuperado con corte del 30-sep-2026; sin cambios de supuestos, probabilidades ni pesos. Valoración, análisis fundamental y esta auditoría corresponden a la misma hoja de Google y a la misma revisión.
+
+**Controles ejecutados el 27-oct-2026:** siete múltiplos con fórmula y resultado numérico (`verificar_multiplos_hoja.py`), fórmulas contra la maestra del 22-oct (`audit_master_formulas.py`), consistencia hoja = registro = análisis (`consistencia_migracion.py --hoja`), candados vigentes, probabilidades.
+
+**Salvedades vigentes:**
+- Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
+- Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula; 5 con resultado y 2 N/A del paso 6.1; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
+- Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
+- EV/FCFF y P/FCFE no aplican (paso 6.1, marcados «No» en Resumen de Valoración!F8 y F10): FCFF negativo en FY+1 y FY+2 de Conservador y Base y múltiplo histórico de P/FCFE de 282x por FCFE casi nulo; peso 0, sin precio y sin valor inventado.
+- Regla H3 pendiente: P/OCF Optimista 20,34x supera 0,92 veces el promedio histórico (19,82x); corregirlo exige cambiar `POCF!J30` y requiere autorización.
+- Errores informativos #NUM! en EVEBITDA!B39:B41 y EVFCFF!B39:B41 (MEDIAN de múltiplos históricos sin datos numéricos); fórmulas idénticas a la maestra, no alimentan ningún precio.
+
+---
+
 # Auditoría económica narrativa — Shake Shack Inc. (SHAK)
 
 **Análisis fundamental vinculado:** [SHAK en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=SHAK) · registro `analisis/SHAK-research-1790597619437-xvczr.json` (revisión del 2026-10-26).
