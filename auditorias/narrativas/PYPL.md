@@ -6,7 +6,8 @@
 - Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
-- Control S4: múltiplos de salida Optimista de EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF superan 90-130% el actual sin justificacion_salto.
+
+**Salvedades resueltas (27-oct-2026):** S4: justificado el salto de los múltiplos de salida Optimista (EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF) con la regla del ciclo y sus cierres de referencia (`PYPL_ciclo.json`, `justificacion_salto`); sin cambio de cifras ni de la hoja. Versión anterior en `archivo/PYPL-antes-salvedades-20261027/`.
 
 ---
 

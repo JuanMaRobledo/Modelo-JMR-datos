@@ -6,7 +6,8 @@
 - Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
 - Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
 - Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
-- Regla H3 incumplida: EV/FCFF Base 30,0x supera 0,78 veces el promedio histórico (26,3x).
+
+**Salvedades resueltas (27-oct-2026):** H3: múltiplo de salida EV/FCFF Base 30,04x → 26,30x (0,78 × mediana 10 años 33,73x; `EVFCFF!J19` de la hoja). Efecto: múltiplos Base 279,36 → 275,52 y valor presente ponderado Base 343,91 → 341,60 (objetivo FY+3 499,32 → 495,02); DCF, MOS, Conservador, Optimista y pesos sin cambio. Versión anterior en `archivo/MSFT-antes-salvedades-20261027/`.
 
 ---
 
@@ -256,7 +257,7 @@ Siete métodos (EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF, P/V y P/BV; los dos últ
 | P/FCFE | 8 % | 35,2× | 57,5× | 16,2× | 23,3× | 24,0× | 23,3× | 19,6× |
 | P/OCF | 8 % | 23,5× | 21,0× | 8,1× | 9,4× | 12,9× | 9,4× | 8,9× |
 
-Resultado: múltiplos consolidados de US$210,56 (Conservador), US$279,36 (Base) y US$352,67 (Optimista), frente a DCF de US$257,57, US$440,73 y US$621,31; la brecha de la Base es −37 %. Las tres anclas (historia, peers y justificado) discrepan mucho: la historia propia de Microsoft cotizó a 15-25 veces el EBITDA, los peers (Salesforce, Intuit, Adobe, ServiceNow, Oracle, Alphabet) a unas 16 veces y los fundamentos de la Base, con FCFF de solo 26 % del EBITDA en FY+3 por la reinversión, justifican 7,8 veces. Dado el tope del ancla C, la Base queda igual al múltiplo justificado en los cinco métodos: en la práctica el múltiplo repite el DCF y no lo contrasta (H-13). El orden Cons. < Base < Opt. se rompe de forma leve en EV/FCFF y P/FCFE (Base y Optimista casi iguales) porque el tope de la Optimista es similar al de la Base.
+Resultado: múltiplos consolidados de US$210,56 (Conservador), US$275,52 (Base) y US$352,67 (Optimista), frente a DCF de US$257,57, US$440,73 y US$621,31; la brecha de la Base es −37 %. Las tres anclas (historia, peers y justificado) discrepan mucho: la historia propia de Microsoft cotizó a 15-25 veces el EBITDA, los peers (Salesforce, Intuit, Adobe, ServiceNow, Oracle, Alphabet) a unas 16 veces y los fundamentos de la Base, con FCFF de solo 26 % del EBITDA en FY+3 por la reinversión, justifican 7,8 veces. Dado el tope del ancla C, la Base queda igual al múltiplo justificado en los cinco métodos: en la práctica el múltiplo repite el DCF y no lo contrasta (H-13). El orden Cons. < Base < Opt. se rompe de forma leve en EV/FCFF y P/FCFE (Base y Optimista casi iguales) porque el tope de la Optimista es similar al de la Base.
 
 P/V y P/BV (peso 0): Base 9,49× y 8,65×; la Optimista queda por debajo de la Base (5,80× y 6,91×) porque el ciclo elige cierres de crecimiento mayor, que son los de 2022; son informativos. Los múltiplos son precio relativo, no valor intrínseco; no se inventa un resultado de Disrupción.
 
@@ -303,7 +304,7 @@ Presentación: los rótulos «Jun '17» a «Jun '26» son ejercicios terminados 
 | H-10 | Media | Beta del sector de software (1,25) puede subestimar el riesgo de la infraestructura de Azure | +0,1 de beta ≈ +0,5 pp de costo del patrimonio | Beta mixta software + nube (peers: AMZN, GOOGL, ORCL) |
 | H-11 | Media | Deuda con arrendamientos financieros separada solo desde FY25: TEV y múltiplos históricos anteriores la subestiman | Series EV/EBITDA y EV/FCFF de FY17-FY24 más bajas de lo real | Cargar la deuda por arrendamientos financieros de FY17-FY24 |
 | H-12 | Media | RPO sin OpenAI, puestos de Copilot y guía de FY27 provienen del comunicado y de una fuente secundaria; el 10-K completo no se releyó | Indicadores de la tesis sin verificación primaria | Leer notas de RPO, concentración y la llamada |
-| H-13 | Media | El tope del múltiplo justificado hace que los múltiplos repitan el DCF; los múltiplos consolidados (US$279,36) quedan 37 % por debajo del DCF y 45 % por debajo del precio | Los múltiplos aportan poca información independiente | Mostrar también la lectura histórica sin tope (EV/EBITDA 20×) como sensibilidad |
+| H-13 | Media | El tope del múltiplo justificado hace que los múltiplos repitan el DCF; los múltiplos consolidados (US$275,52) quedan 37 % por debajo del DCF y 46 % por debajo del precio | Los múltiplos aportan poca información independiente | Mostrar también la lectura histórica sin tope (EV/EBITDA 20×) como sensibilidad |
 | H-14 | Media | Probabilidades por regla de ciclo, sin ajustar por indicadores | Cambian el esperado, no la Base | Revisar con los resultados del 1T FY27 |
 | H-15 | Baja | Se eliminaron columnas sobrantes de dos pestañas sin respaldo previo para unificar | Posible pérdida de notas auxiliares de la carga | Reconstruir las notas si el usuario las necesita |
 
