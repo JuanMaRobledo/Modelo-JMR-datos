@@ -33,6 +33,36 @@ def cell(grid, a):
     return v if v != '' else None
 
 
+def sincronizar_cinco_metodos(a, dm):
+    """Lleva a la copia del registro las cifras de EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF que calcula 'Descuento de múltiplos'."""
+    d = a['descuentoMultiples']
+    pesos_m = sum(x['peso'] for x in d['metodos'])
+    for mi, m in enumerate(METHODS[:5]):
+        x = next(z for z in d['metodos'] if z['nombre'] == m)
+        y = next(z for z in a['metodos'] if z['nombre'] == m)
+        for si, k in enumerate(SCEN):
+            r = [11, 20, 29][si] + mi
+            fy = [cell(dm, f'{c}{r}') for c in 'DEF']
+            vp = [cell(dm, f'{c}{r}') for c in 'GHI']
+            if not all(fin(v) for v in fy + vp):
+                continue
+            x[k].update(fy=fy, vp=vp, consolidado=cell(dm, f'J{r}'))
+            y[k] = fy[2]
+    act = [z for z in d['metodos'] if z['peso'] > 0]
+    d['vp3'] = {k: sum(z['peso'] * z[k]['vp'][2] for z in act) / pesos_m for k in SCEN}
+    for k in SCEN:
+        d['consolidado'][k] = {'fy': [sum(z['peso'] * z[k]['fy'][n] for z in act) / pesos_m for n in range(3)],
+                               'vp': [sum(z['peso'] * z[k]['vp'][n] for z in act) / pesos_m for n in range(3)], 'consolidado': d['multiplesHoy'][k]}
+    d['chequeo'] = {'multiplosFY3SinDescontar': {k: cell(dm, f'{c}47') for k, c in zip(SCEN, 'CDE')},
+                    'multiplosVP3': {k: cell(dm, f'{c}48') for k, c in zip(SCEN, 'CDE')},
+                    'resultado': {k: cell(dm, f'{c}49') for k, c in zip(SCEN, 'CDE')}}
+    for k, c in zip(SCEN, 'CDE'):
+        v = cell(dm, f'{c}50')
+        if fin(v):
+            a['objetivoPonderado'][k] = v
+    a['valorPresentePonderado'] = d['ponderadoHoy']
+
+
 def main(tickers):
     gc = get_gspread_client()
     for t in tickers:
@@ -40,9 +70,10 @@ def main(tickers):
         a = json.load(open(p))
         sid = re.search(r'/d/([\w-]+)', a['hojaGoogle'])[1]
         sh = gc.open_by_key(sid)
-        rng = ["'Sensibilidad por múltiplo'!A1:I230", "'Resumen de Valoración'!A1:E40"] + [f"'{x}'!A1:J45" for x in TABS]
+        rng = ["'Sensibilidad por múltiplo'!A1:I230", "'Resumen de Valoración'!A1:E40"] + [f"'{x}'!A1:J45" for x in TABS] + ["'Descuento de múltiplos'!A1:K50"]
         vr = sh.values_batch_get(rng, params={'valueRenderOption': 'UNFORMATTED_VALUE'})['valueRanges']
-        sens, resumen, tabs = vr[0].get('values', []), vr[1].get('values', []), [x.get('values', []) for x in vr[2:]]
+        sens, resumen, tabs = vr[0].get('values', []), vr[1].get('values', []), [x.get('values', []) for x in vr[2:9]]
+        sincronizar_cinco_metodos(a, vr[9].get('values', []))
         base = cell(resumen, 'D32')
         dcf = (a.get('valorEsperado') or {}).get('dcfBase')
         if not near(base, dcf):

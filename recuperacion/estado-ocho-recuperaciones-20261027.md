@@ -48,3 +48,10 @@ Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige es
 - Cada registro contiene el DCF y los siete múltiplos con tres escenarios (pesos 100 %); P/V y P/BV con peso 0 y estado provisional.
 - Fecha ISO `2026-09-30` (texto original en `fechaTexto`); `validar_catalogo` y `auditar_integridad` aprobados con 13 empresas.
 - Salvedades de cada registro: corte 30-sep-2026 sin actualizar supuestos; candados 21-oct no aplicables; hallazgos de integridad frente al motor legado (ADBE 4, BSX 1, DUOL 1, ONON 12); DUOL H3 y S1; MSFT H3; PYPL S4.
+
+## Resolución de salvedades H3, S1 y S4 (27-oct-2026)
+- **DUOL H3:** `EVFCFF!J8` (EV/FCFF Conservador) 16,61x → 14,07x (el actual LTM). Múltiplos Cons 46,09 → 43,42; VP ponderado Cons 64,27 → 63,20; DCF, Base, Optimista, MOS y pesos sin cambio.
+- **DUOL S1:** evidencia escrita en `JMR-valuation/reference/damodaran/DUOL.json` (`justificacion_supuestos.S1`): márgenes en base del modelo con I+D como inversión (LTM 24,0%), comparable Match Group; sin cambio de cifras.
+- **MSFT H3:** `EVFCFF!J19` (EV/FCFF Base) 30,04x → 26,30x (0,78 × mediana 10 años 33,73x). Múltiplos Base 279,36 → 275,52; VP ponderado Base 343,91 → 341,60; DCF y MOS sin cambio.
+- **PYPL S4:** `justificacion_salto` por método en `PYPL_ciclo.json` (Optimista dentro de la regla del ciclo y del tope); sin cambio de cifras ni de hoja.
+- Registros, análisis (tablas y textos con las cifras afectadas) y auditorías de DUOL y MSFT sincronizados con la hoja; versiones anteriores en `archivo/<T>-antes-salvedades-20261027/`. `validar_catalogo`, `auditar_integridad`, `consistencia_migracion --hoja` (H1-H3 OK), `controles_supuestos` (0 hallazgos) y 7/7 múltiplos con fórmula aprobados.
