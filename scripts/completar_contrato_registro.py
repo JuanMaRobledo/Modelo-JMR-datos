@@ -87,6 +87,10 @@ def main(tickers):
                     continue
                 r = 76 + mi * 10
                 centro, original = cell(sens, f'D{r + 5}'), cell(sens, f'G{r + 8}')
+                if not fin(centro) and not fin(original):  # método que no aplica (paso 6.1): sin precio ni matriz
+                    controles.append({'metodo': m, 'escenario': k, 'centro': None, 'vp3Original': None, 'estado': 'N/D', 'formulaErrors': [],
+                                      'motivo': 'No aplica (paso 6.1): sin resultado en la hoja'})
+                    continue
                 if not (fin(centro) and fin(original) and near(centro, original)):
                     raise SystemExit(f'{t}: matriz Base {m} no concilia (centro {centro} vs VP FY+3 {original})')
                 controles.append({'metodo': m, 'escenario': k, 'centro': centro, 'vp3Original': original, 'estado': 'OK', 'formulaErrors': []})

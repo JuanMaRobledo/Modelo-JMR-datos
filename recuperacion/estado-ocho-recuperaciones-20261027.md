@@ -58,3 +58,11 @@ Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige es
 
 ## Integridad de hojas (27-oct-2026)
 Los hallazgos de `integridad_hojas.py` eran la comparación con el motor legado del 30-sep y registros sin `escenariosDCF`. Con `escenariosDCF` (historias A-D, tomado de la hoja) en los ocho registros, `integridad_hojas.py` da **0 hallazgos en ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON y PYPL**; la salvedad de integridad se retira de registros, análisis y auditorías.
+
+## EPAM, SHAK y UBER (27-oct-2026)
+Publicadas con salvedades, revisión `<T>-REC-20261027-R1`, con el mismo procedimiento (registro desde la hoja, contrato de integridad, `escenariosDCF`, catálogo, auditoría con estado).
+- **EPAM:** 7/7 múltiplos, consistencia hoja = registro OK (H1–H3), integridad 0 hallazgos, sin salvedades adicionales.
+- **SHAK:** 5 de 7 con resultado y 2 N/A del paso 6.1 (EV/FCFF y P/FCFE marcados «No» en `Resumen de Valoración!F8/F10`; peso 0; JMR-valuation#174 acepta esa excepción solo con marca y sin precio). H3 pendiente: P/OCF Optimista 20,34x > 19,82x (cambiar `POCF!J30`).
+- **UBER:** 7/7 múltiplos. H3 pendiente: P/E Base 15,16x y Optimista 15,61x, P/FCFE Optimista 23,10x, P/OCF Optimista 22,96x. S1 sostenido con evidencia escrita (JMR-valuation#175), como hipótesis del analista.
+- SHAK y UBER: seis celdas con `#NUM!` informativas (`EVEBITDA!B39:B41`, `EVFCFF!B39:B41`: MEDIAN de múltiplos históricos sin datos); fórmulas idénticas a la maestra; no alimentan precios.
+- Los cambios de celdas para cerrar H3 de SHAK y UBER no se aplicaron: la herramienta de edición de hojas denegó la escritura (autorización específica pendiente).

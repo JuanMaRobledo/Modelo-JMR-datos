@@ -1,3 +1,17 @@
+**Estado de publicación (2026-10-27): PUBLICADO CON SALVEDADES · revisión UBER-REC-20261027-R1.** Estudio recuperado con corte del 30-sep-2026; sin cambios de supuestos, probabilidades ni pesos. Valoración, análisis fundamental y esta auditoría corresponden a la misma hoja de Google y a la misma revisión.
+
+**Controles ejecutados el 27-oct-2026:** siete múltiplos con fórmula y resultado numérico (`verificar_multiplos_hoja.py`), fórmulas contra la maestra del 22-oct (`audit_master_formulas.py`), consistencia hoja = registro = análisis (`consistencia_migracion.py --hoja`), candados vigentes, probabilidades.
+
+**Salvedades vigentes:**
+- Estudio recuperado: precio y corte de información del 30-sep-2026; no incorpora resultados posteriores ni actualiza supuestos.
+- Siete múltiplos calculados por las fórmulas originales de la hoja (7/7 con fórmula y resultado numérico; fórmulas de cálculo y múltiplos idénticas a la maestra del 22-oct-2026); P/V y P/BV con peso 0 y estado provisional.
+- Candados de la plantilla del 21-oct (Financials Multiples!M34:M36) no aplican a la maestra vigente; se exigen solo los presentes en ella.
+- Regla H3 pendiente: P/E Base 15,16x y Optimista 15,61x, P/FCFE Optimista 23,10x y P/OCF Optimista 22,96x superan el límite de la regla; corregirlos exige cambiar celdas de salida de la hoja y requiere autorización.
+- S1: márgenes Base 22% y Optimista 26% sostenidos con evidencia escrita (margen consolidado 13,4% en el 2T26; Movilidad 30,1%, Delivery 20,1%); hipótesis del analista, no hecho demostrado.
+- Errores informativos #NUM! en EVEBITDA!B39:B41 y EVFCFF!B39:B41 (MEDIAN de múltiplos históricos sin datos numéricos); fórmulas idénticas a la maestra, no alimentan ningún precio.
+
+---
+
 # Auditoría económica narrativa — Uber Technologies, Inc. (UBER)
 
 **Análisis fundamental vinculado:** [UBER en la app](https://juanmarobledo.github.io/Modelo-JMR/research.html?ticker=UBER) · registro `analisis/UBER-research-1789655244618-k9n7u.json` (revisión del 2026-10-26).
