@@ -167,3 +167,10 @@ Aviso para las demás: la receta de arriba incluye ahora el paso «ceros explíc
 - Balance del LTM reescrito con el 10-Q del 2T26; inversiones (8.759) y método de la participación (3.773) como activo no operativo (12.532); conversores de I+D y arrendamientos, NOL, regiones y beta heredados de la hoja anterior. Costo de la deuda como entrada directa (6,4 %): la calificación sintética dejaba la celda vacía por circularidad con el conversor.
 - Delivery Hero (~US$13.700 M) y las flotas autónomas no están en la valoración (H-02). P/FCFE y P/OCF de la Optimista saltan 67-71 % (justificado en la hoja; H-10).
 - Publicado en la app (PR #163). Auditoría v1.3: `UBER-auditoria-v1.3.md` (H-01…H-14).
+
+## SHAK · hoja rehecha, análisis, auditoría y publicación (27-oct)
+- Hoja `1j6U5KtzbnRDyI6mQDgJD4pNq15flN9k8RvdXGfUrG1o` reiniciada con `unificar_hoja.py` y UNIFICADA (61 pestañas; candados 15/15; inputs completos).
+- Valores: Base 24,13 · Conservadora 7,29 · Disrupción 0,00 · Optimista 44,84 · esperado 25,15 · MOS 15,68 · precio 58,68. Probabilidades 40/22,5/15/22,5. Múltiplos consolidados 72,94 / 99,69 / 140,48 (brecha de la Base +313 %; el precio supera a las tres historias centrales).
+- EV/FCFF y P/FCFE no aplican (paso 6.1; `Resumen de Valoración`!F8 y F10 = «No»); EV/EBITDA sin ancla C (no calculable): se corrigieron `multiples_by_cycle.py` y `apply_multiples_v3.py` (clave `ancla_c_excluir` en `<T>_ciclo.json` y métodos «no aplica» de la decisión).
+- Balance del LTM reescrito con el 10-Q del 2T26 (1-jul-2026). Análisis reescrito (el recuperado tenía ~1.250 palabras en las secciones 2-11).
+- Publicado en la app (PR #164). Auditoría v1.3: `SHAK-auditoria-v1.3.md` (H-01…H-12).
