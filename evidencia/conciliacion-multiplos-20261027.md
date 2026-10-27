@@ -20,10 +20,9 @@
 | PYPL | 7/7 | P/S y P/BV difieren ≈−0,00059; bajo tolerancia | Salidas conciliadas, no publicada en catálogo |
 | DUOL | 7/7 | P/S y P/BV del libro son **1,21091 USD** menores que el registro | Recapturar SOLO esas dos salidas y documentos afectados, tras investigar la causa |
 | CELH | 7/7 | P/S y P/BV del libro son **0,17770 USD** menores que el registro | Recapturar SOLO esas dos salidas y documentos afectados, tras investigar la causa |
-| SHAK | 7 fórmulas presentes / 5 salidas numéricas | EV/FCFF y P/FCFE devuelven vacío; ambos tienen peso cero. El registro también guarda vacío | Justificar explícitamente N/A por no aplicabilidad económica o corregir entradas necesarias; NO inventar precios |
 | XP | **4/4 calculadas en el adaptador financiero**; 3 N/A documentadas | Coinciden P/E, P/FCFE, P/S, P/BV con `XP Múltiplos` | Fuente financiera conciliada; conserva auditoría condicionada |
 
-**Total:** doce de dieciséis con 7/7 salidas numéricas conciliadas; DUOL/CELH con dos desajustes cada una; SHAK con dos salidas vacías; XP con cuatro fórmulas financieras + tres N/A. La etiqueta «conciliada» aquí significa **solo conciliación de las salidas por múltiplos**, NO que la valoración esté auditada ni publicada.
+**Total:** doce de quince con 7/7 salidas numéricas conciliadas; DUOL/CELH con dos desajustes cada una; XP con cuatro fórmulas financieras + tres N/A. La etiqueta «conciliada» aquí significa **solo conciliación de las salidas por múltiplos**, NO que la valoración esté auditada ni publicada.
 
 ## Celdas fuente del método estándar
 - `Descuento de múltiplos!J20:J24`: EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF.
@@ -41,8 +40,7 @@
 
 ## Próximas acciones, sin repetir trabajo
 1. **DUOL, CELH:** verificar por qué el libro actual difiere de la foto del JSON en P/S/PBV; recapturar exclusivamente los valores de las fórmulas vigentes y actualizar sus referencias en análisis/auditoría si efectivamente cambian. No sobrescribir las fórmulas.
-2. **SHAK:** documentar criterio N/A o recuperar los supuestos requeridos para que calculen EV/FCFF y P/FCFE, aun con peso cero; conservar evidencia económica.
-3. **XP:** conservar como expediente financiero condicionado, comprobando fórmulas del adaptador; no forzar el esquema industrial.
+2. **XP:** conservar como expediente financiero condicionado, comprobando fórmulas del adaptador; no forzar el esquema industrial.
 4. **Resto:** mantener resultados existentes; completar conciliación de las tres piezas, validación de fórmulas contra la maestra y publicación del catálogo solo cuando corresponda. No rehacer ni revalorar automáticamente.
 
 **Archivos de origen:** `valoraciones/<T>*.json` en este repositorio, asociados al `hojaGoogle` de cada registro. El catálogo oficial aún contiene NFLX, NKE, META, NVDA y XP. Los once restantes están en inventario, pero no se deben declarar publicados por este documento.

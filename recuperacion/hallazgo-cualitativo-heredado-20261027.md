@@ -1,8 +1,8 @@
 # Depuración editorial de Cualitativo · 27-oct-2026
 
-**Ámbito:** 16 valoraciones activas del `catalogo.json`; análisis mediante lectura de la propiedad `hojas.analisis.Cualitativo` de cada JSON de valoración. Resultado: **12 de 16** conservan rótulos específicos de un caso externo heredado de la plantilla (Topaz Labs, acuerdo Disney, Digital Experience, segmentos Digital Media/Publishing y otra fecha Morningstar).
+**Ámbito:** 15 valoraciones activas del `catalogo.json`; análisis mediante lectura de la propiedad `hojas.analisis.Cualitativo` de cada JSON de valoración. Resultado: **11 de 15** conservan rótulos específicos de un caso externo heredado de la plantilla (Topaz Labs, acuerdo Disney, Digital Experience, segmentos Digital Media/Publishing y otra fecha Morningstar).
 
-**Afectadas:** NFLX, ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON, PYPL, EPAM, SHAK y UBER. **Sin esos rótulos en el campo consultado:** NKE, META, NVDA y XP (en NKE/META/NVDA la pestaña no está publicada en ese campo; por tanto no se afirma que haya sido auditada fuera de él).
+**Afectadas:** NFLX, ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON, PYPL, EPAM y UBER. **Sin esos rótulos en el campo consultado:** NKE, META, NVDA y XP (en NKE/META/NVDA la pestaña no está publicada en ese campo; por tanto no se afirma que haya sido auditada fuera de él).
 
 **Causa comprobada:** las tres plantillas oficiales Maestra, IA y Manual del 22-oct contienen idénticos rótulos en la pestaña `Cualitativo` (p. ej. A13:A15, A24, A29:A30, A32, A35, A42:A43, A47:A50). El problema estaba en el origen editorial, no en DCF, proyecciones, Financials Multiples o ajustes del capital.
 

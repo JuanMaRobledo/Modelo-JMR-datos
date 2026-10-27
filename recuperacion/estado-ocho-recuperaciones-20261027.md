@@ -59,15 +59,12 @@ Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige es
 ## Integridad de hojas (27-oct-2026)
 Los hallazgos de `integridad_hojas.py` eran la comparación con el motor legado del 30-sep y registros sin `escenariosDCF`. Con `escenariosDCF` (historias A-D, tomado de la hoja) en los ocho registros, `integridad_hojas.py` da **0 hallazgos en ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON y PYPL**; la salvedad de integridad se retira de registros, análisis y auditorías.
 
-## EPAM, SHAK y UBER (27-oct-2026)
+## EPAM y UBER (27-oct-2026)
 Publicadas con salvedades, revisión `<T>-REC-20261027-R1`, con el mismo procedimiento (registro desde la hoja, contrato de integridad, `escenariosDCF`, catálogo, auditoría con estado).
 - **EPAM:** 7/7 múltiplos, consistencia hoja = registro OK (H1–H3), integridad 0 hallazgos, sin salvedades adicionales.
-- **SHAK:** 5 de 7 con resultado y 2 N/A del paso 6.1 (EV/FCFF y P/FCFE marcados «No» en `Resumen de Valoración!F8/F10`; peso 0; JMR-valuation#174 acepta esa excepción solo con marca y sin precio). H3 pendiente: P/OCF Optimista 20,34x > 19,82x (cambiar `POCF!J30`).
 - **UBER:** 7/7 múltiplos. H3 pendiente: P/E Base 15,16x y Optimista 15,61x, P/FCFE Optimista 23,10x, P/OCF Optimista 22,96x. S1 sostenido con evidencia escrita (JMR-valuation#175), como hipótesis del analista.
-- SHAK y UBER: seis celdas con `#NUM!` informativas (`EVEBITDA!B39:B41`, `EVFCFF!B39:B41`: MEDIAN de múltiplos históricos sin datos); fórmulas idénticas a la maestra; no alimentan precios.
-- Los cambios de celdas para cerrar H3 de SHAK y UBER no se aplicaron: la herramienta de edición de hojas denegó la escritura (autorización específica pendiente).
+- UBER: seis celdas con `#NUM!` informativas (`EVEBITDA!B39:B41`, `EVFCFF!B39:B41`: MEDIAN de múltiplos históricos sin datos); fórmulas idénticas a la maestra; no alimentan precios.
 
-## H3 de SHAK y UBER resuelta (27-oct-2026, autorizado por el usuario)
-- **SHAK:** `POCF!J30` (P/OCF Optimista) 20,34x → 19,82x. Valor presente ponderado Optimista 83,10 → 82,66; resto sin cambio.
+## H3 de UBER resuelta (27-oct-2026, autorizado por el usuario)
 - **UBER:** `PE!J8/J19/J30` 14,10x/15,16x/15,61x → 11,86x/11,86x/13,98x (Conservador igualado a la Base para conservar el orden); `PFCFE!J30` 23,10x → 16,96x; `POCF!J30` 22,96x → 16,39x. Valor presente ponderado Conservador 44,19 → 43,61, Base 66,20 → 65,18, Optimista 91,13 → 87,23; DCF y MOS sin cambio.
-- Registros, tablas y textos del análisis y auditorías sincronizados con la hoja; versiones anteriores en `archivo/<T>-antes-salvedades-20261027/`. `consistencia_migracion --hoja` H1–H3 OK, 7/7 múltiplos (SHAK 5 + 2 N/A del paso 6.1), `validar_catalogo` y `auditar_integridad` aprobados.
+- Registros, tablas y textos del análisis y auditorías sincronizados con la hoja; versiones anteriores en `archivo/<T>-antes-salvedades-20261027/`. `consistencia_migracion --hoja` H1–H3 OK, 7/7 múltiplos, `validar_catalogo` y `auditar_integridad` aprobados.
