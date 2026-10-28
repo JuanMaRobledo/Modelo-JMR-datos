@@ -55,9 +55,9 @@ Permanecen los libros CELH.xlsx y CELH.xlsm y PDFs/documentos de origen por clas
 - App: 0cf5c63359c5655c8704e246e05b784b228304fc.
 - Motor: b5d9e53597445f453c2fa3b03c907fb43fa96bd0; referencia residual de hoja retirada en 636ec858337f5bb04dc97750fac3778b49d24fb6.
 
-## Autorizaciones pendientes y alcance
+## Autorizaciones recibidas y alcance
 A. Mantenimiento mínimo de fórmulas oficiales para preferentes participantes y reclamaciones convertibles, con pruebas de regresión y respaldo intacto. La regla vigente exige fórmulas intactas; no se introdujo una excepción silenciosa.
-B. Para eliminar las copias anteriores accesibles por Git: preparar una reescritura selectiva de las referencias afectadas en los tres repositorios, preservando contenidos de otras empresas, plantillas y fuentes contables. Cambiarán los SHA de commits afectados y descendientes y requerirá force-with-lease coordinado. La purga de forks y cachés ajenos puede requerir intervención de GitHub. No ejecutarla sin autorización expresa.
+B. Para eliminar las copias anteriores accesibles por Git: preparar una reescritura selectiva de las referencias afectadas en los tres repositorios, preservando contenidos de otras empresas, plantillas y fuentes contables. Cambiarán los SHA de commits afectados y descendientes y requerirá force-with-lease coordinado. La purga de forks y cachés ajenos puede requerir intervención de GitHub. Autorizada expresamente el 28-oct-2026: «Autorizo ambas». Todavía no ejecutada.
 
 ## Controles pendientes / publicación
 La valoración de cuatro escenarios, los siete múltiplos compatibles, matrices conciliadas, DCF inverso y artículo completo todavía no están terminados. No hay resultados nuevos publicables ni dictamen económico.
@@ -74,3 +74,15 @@ scripts/unificacion_hojas.py no se encontró en main del motor en esta revisión
 - Damodaran prima octubre 2026: https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm
 - Precio obtenido de nuevo: cierre 27-oct-2026 USD28,00; https://stockanalysis.com/stocks/celh/history/ (confirmación cruzada MarketBeat/Investing).
 No se reutilizaron parámetros ni textos de estudios anteriores de CELH.
+
+
+## Continuación autorizada 28-oct-2026
+El usuario autorizó ambas acciones. NO volver a solicitar estas mismas autorizaciones.
+PREF-01 aplicado a la copia nueva y a Maestra/IA/Manual: 49 fórmulas existentes ajustadas y 96 celdas nuevas de puente/etiquetas. Se comprobaron 145 celdas en cada plantilla y se preservaron 61 pestañas y dimensiones.
+54 aserciones nativas PASS en las tres historias ordinarias (con preferentes, sin preferentes y falta de información). Celdas temporales restauradas; fixtures retirados de la copia. No equivale a controles completos de publicación.
+Respaldos nuevos intactos: Maestra 1Mf0UVGV3_xWnXTzOC4qpmXqTPSLtjjaaIcIlostwHBk; IA 1KIVD-elUrABeRS_Vfh0X7eTHhpjl_CWBLbmf98E6Hqw; Manual 1sYLe0ds_AShb0fsjzUxbx4dpx2xlGcL-nTN9kFijU0Q.
+Motor commit 0824cee06fdb128e4ed38f0007569d5493aa694a contiene spec/regresión/registro. Reglas v13 en app commit 31f949c9fcad044ada3c63a73e035b6e9285d8d8.
+PREF-01 separa NI común, FCFE menos pagos preferentes y puente patrimonial; NO resuelve aún valor de mercado/coste esperado de preferentes convertibles ni WACC.
+Validación SEC directa adicional: 41 escrituras en fuente (39 + 2 WC comparativo), y 45 escrituras históricas en copia (39 + 6). Recompras FY2025 corregidas a -45,504 y LTM a -176,874 millones (retenciones + tesorería). Deuda pagada FY2025 -201,750 y LTM -205,250. Intangibles junio 2026 1.379,751; inversiones no cotizadas 17,0. Fuente sigue pendiente de validación completa.
+Inventario Git local aislado: app 1.080 commits / 103 ramas / 124 refs PR; datos 1.245 commits / 97 ramas / 180 refs PR. Contenido objetivo detectado en 634 y 944 commits respectivamente. Inventarios NO modifican referencias. PR refs administradas por GitHub no son ramas normales. Clonación local del motor privado falla por falta de autenticación Git; conector sigue funcionando.
+Se depuraron referencias colectivas residuales en nueve archivos compartidos de main de datos: siete Markdown/Python y dos JSON. Los recuentos afectados se ajustaron a siete empresas/28 historias; no se reutilizó su contenido para la valoración nueva. Catálogo editorial app main ya limpio; hallazgo adicional solo histórico.

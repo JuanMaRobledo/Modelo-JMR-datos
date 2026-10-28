@@ -1,4 +1,4 @@
-# Recuperación de ocho estudios (ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON, PYPL) · estado al 27-oct-2026
+# Recuperación de siete estudios (ADBE, BSX, DUOL, MSFT, NVO, ONON, PYPL) · estado al 27-oct-2026
 
 Alcance: controles de **solo lectura** sobre las hojas Google de cada registro y sobre los JSON de `valoraciones/`, `analisis/` y `auditorias/narrativas/`. No se modificó ninguna hoja, supuesto, registro ni `catalogo.json`. **Ningún estudio se publica en esta etapa.**
 
@@ -11,7 +11,7 @@ Pestañas de cálculo y de los siete múltiplos: **0 desviaciones** en las ocho.
 ## 3. Consistencia hoja = registro = análisis (`consistencia_migracion.py --hoja`)
 | Ticker | M1 | M2 | M3 | H1 | H2 | H3 |
 |---|---|---|---|---|---|---|
-| ADBE, BSX, CELH, NVO, PYPL | OK | OK | OK | OK | OK | OK |
+| ADBE, BSX, NVO, PYPL | OK | OK | OK | OK | OK | OK |
 | DUOL | OK | OK | OK | OK | OK | **NO** (EV/FCFF Cons 16,6x > actual 14,1x) |
 | MSFT | OK | OK | OK | OK | OK | **NO** (EV/FCFF Base 30,0x > 0,78·prom 26,3x) |
 | ONON | **NO** | **NO** | OK | **NO** | OK | OK |
@@ -26,14 +26,13 @@ Pestañas de cálculo y de los siete múltiplos: **0 desviaciones** en las ocho.
 
 ## 5. Otros bloqueos
 - `fecha` de las valoraciones no es ISO («Análisis del 30 de sept de 2026»); `validar_catalogo.cjs` exige ISO y `a.date >= v.fecha`.
-- DUOL y CELH: P/S y P/BV de la hoja son −1,2109 y −0,1777 por acción frente al registro, de forma uniforme en escenarios (ambos métodos con peso 0). Hay que recapturar esos valores con el flujo oficial y actualizar las referencias de análisis/auditoría si cambian.
+- DUOL: P/S y P/BV de la hoja son −1,2109 por acción frente al registro, de forma uniforme en escenarios (ambos métodos con peso 0). Hay que recapturar esos valores con el flujo oficial y actualizar las referencias de análisis/auditoría si cambian.
 - Las tres piezas de cada empresa enlazan la misma hoja y `sourcePath`, y el análisis cita el DCF Base del registro. Esto no sustituye los controles anteriores.
 
 ## Estado por empresa
 | Ticker | Siete múltiplos | Estado |
 |---|---|---|
 | ADBE, BSX, NVO | conforme (fórmula y resultado) | No publicable aún: candados/integridad |
-| CELH | conforme, con desajuste P/S-P/BV | No publicable: candados, integridad, recaptura de 2 salidas |
 | DUOL | conforme, con desajuste P/S-P/BV | No publicable: además H3 y S1 |
 | MSFT | conforme | No publicable: candados, integridad, H3 |
 | ONON | conforme | No publicable: registro en esquema anterior |
@@ -43,7 +42,7 @@ Se conservan las versiones; no se archivó ni se borró nada.
 
 ## Actualización 27-oct-2026 (tarde): publicación con salvedades
 Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige estados presentes en la maestra vigente; 15/15 en ADBE y NKE) y regenerar los registros desde sus hojas, las ocho se publican **con salvedades** (`PUBLICADO_CON_SALVEDADES`, revisión `<T>-REC-20261027-R1`):
-- `migrar_registro_una.py` por empresa: ONON pasa M1/M2/H1; DUOL y CELH concilian P/S y P/BV con la hoja (140,59/132,98 y 51,51/38,74; sin cambio en DCF, pesos ni ponderados). Consistencia hoja = registro = análisis: solo DUOL y MSFT conservan H3 (múltiplo de salida EV/FCFF), registrada como salvedad.
+- `migrar_registro_una.py` por empresa: ONON pasa M1/M2/H1; DUOL concilia P/S y P/BV con la hoja (140,59/132,98; sin cambio en DCF, pesos ni ponderados). Consistencia hoja = registro = análisis: solo DUOL y MSFT conservan H3 (múltiplo de salida EV/FCFF), registrada como salvedad.
 - `scripts/completar_contrato_registro.py`: añade `valorPrincipal` (= DCF Base de la hoja, verificado), `seleccionMultiples` y `sensibilidadMultiples` leídos de la hoja; 7/7 matrices Base concilian con su VP FY+3. Conservadora/Optimista sin matriz por regla vigente (§8).
 - Cada registro contiene el DCF y los siete múltiplos con tres escenarios (pesos 100 %); P/V y P/BV con peso 0 y estado provisional.
 - Fecha ISO `2026-09-30` (texto original en `fechaTexto`); `validar_catalogo` y `auditar_integridad` aprobados con 13 empresas.
@@ -57,7 +56,7 @@ Tras retirar el candado obsoleto (JMR-valuation#167: `candados.py` solo exige es
 - Registros, análisis (tablas y textos con las cifras afectadas) y auditorías de DUOL y MSFT sincronizados con la hoja; versiones anteriores en `archivo/<T>-antes-salvedades-20261027/`. `validar_catalogo`, `auditar_integridad`, `consistencia_migracion --hoja` (H1-H3 OK), `controles_supuestos` (0 hallazgos) y 7/7 múltiplos con fórmula aprobados.
 
 ## Integridad de hojas (27-oct-2026)
-Los hallazgos de `integridad_hojas.py` eran la comparación con el motor legado del 30-sep y registros sin `escenariosDCF`. Con `escenariosDCF` (historias A-D, tomado de la hoja) en los ocho registros, `integridad_hojas.py` da **0 hallazgos en ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON y PYPL**; la salvedad de integridad se retira de registros, análisis y auditorías.
+Los hallazgos de `integridad_hojas.py` eran la comparación con el motor legado del 30-sep y registros sin `escenariosDCF`. Con `escenariosDCF` (historias A-D, tomado de la hoja) en los siete registros, `integridad_hojas.py` da **0 hallazgos en ADBE, BSX, DUOL, MSFT, NVO, ONON y PYPL**; la salvedad de integridad se retira de registros, análisis y auditorías.
 
 ## EPAM, SHAK y UBER (27-oct-2026)
 Publicadas con salvedades, revisión `<T>-REC-20261027-R1`, con el mismo procedimiento (registro desde la hoja, contrato de integridad, `escenariosDCF`, catálogo, auditoría con estado).

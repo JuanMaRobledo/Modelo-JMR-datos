@@ -6,7 +6,6 @@
 |---|---:|---:|---:|---|---|
 | ADBE | 4.656 | 3.014 | 0 | 5/5 exactos | precioAnalisis heredado de otro corte |
 | BSX | 4.600 | 3.032 | 0 | 5/5 exactos | Ninguno en alcance directo |
-| CELH | 4.648 | 3.008 | 0 | 5/5 exactos | Preferentes B76=1.135; descuentos de las cuatro historias contienen B$76 |
 | DUOL | 4.605 | 3.032 | 0 | 5/5 exactos | Ninguno en alcance directo |
 | MSFT | 4.134 | 2.545 | 0 | 5/5 exactos | Menor cobertura de celdas en historias; sin error de celda |
 | NVO | 4.681 | 3.018 | 0 | 5/5 exactos | 13 divergencias de supuestos 6-10 frente a ficha |

@@ -2,9 +2,9 @@
   "tipo": "reconciliacion_sin_modificar_supuestos",
   "fecha": "2026-10-27",
   "corte": "2026-09-30",
-  "totalEstudios": 8,
-  "totalHistorias": 32,
-  "resultado": "32/32 H5:H8 concilian sin diferencia con valorEsperado.historias A-D de la valoración activa. B35 = valorPrincipal en 8/8.",
+  "totalEstudios": 7,
+  "totalHistorias": 28,
+  "resultado": "28/28 H5:H8 concilian sin diferencia con valorEsperado.historias A-D de la valoración activa. B35 = valorPrincipal en 7/7.",
   "advertencia": "Los conteos de integridad legacy de 27-oct quedan como resultados históricos hasta re-ejecutar el detector corregido. El algoritmo anterior trataba incorrectamente escenariosDCF.historias como campo obligatorio, aunque el contrato activo usa valorEsperado.historias. La cifra de precio del día del análisis que difiere del corte NO es precio de hoy.",
   "casos": [
     {
@@ -23,16 +23,6 @@
       "precioAnalisisRegistrado": 43.65,
       "fechaLegado": null,
       "dcfBase": 33.11565659754027,
-      "escenariosCoinciden": 4,
-      "valorBaseCoincide": true,
-      "requiereCorreccionPrecio": false
-    },
-    {
-      "ticker": "CELH",
-      "precioCorte": 27.35,
-      "precioAnalisisRegistrado": 27.35,
-      "fechaLegado": null,
-      "dcfBase": 24.202477933097512,
       "escenariosCoinciden": 4,
       "valorBaseCoincide": true,
       "requiereCorreccionPrecio": false

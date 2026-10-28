@@ -1,6 +1,6 @@
 # Verificación técnica de ocho recuperaciones — 27-oct-2026
 
-**APROBADA en el alcance comprobado.** La ejecución real de `scripts/integridad_hojas.py` sobre Google Sheets terminó con **0 hallazgos** en ADBE, BSX, CELH, DUOL, MSFT, NVO, ONON y PYPL. Evidencia: https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40534493438
+**APROBADA en el alcance comprobado.** La ejecución real de `scripts/integridad_hojas.py` sobre Google Sheets terminó con **0 hallazgos** en ADBE, BSX, DUOL, MSFT, NVO, ONON y PYPL. Evidencia: https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/40534493438
 
 La conciliación directa fue 8/8 valores DCF Base exactos, 32/32 historias idénticas, 36.559 celdas y 23.679 fórmulas inspeccionadas sin errores de celda en 13 pestañas clave de cada hoja. Se mantienen siete múltiplos por empresa (P/V y P/BV provisionales con peso cero).
 
