@@ -1,6 +1,7 @@
 # CELH — Reinicio independiente — control técnico y punto de continuación
 Fecha: 2026-10-28. Revisión de preparación: CELH-20261028-R1.
 Estado: EN PREPARACIÓN / NO PUBLICADO. No es auditoría económica independiente.
+Actualización 28-oct-2026: ambas autorizaciones recibidas. PREF-01 ya aplicado y probado; reescritura Git todavía NO ejecutada. Las secciones antiguas «propuesta» describen el estado previo; prevalece el apartado de continuación al final.
 
 ## Identidad de los entregables nuevos
 - Fuente contable protegida: https://docs.google.com/spreadsheets/d/1O0tCafCwsCvt8bYnFtKR0SNtjkahEeqm5j192XzkrXs/edit
@@ -86,3 +87,8 @@ PREF-01 separa NI común, FCFE menos pagos preferentes y puente patrimonial; NO 
 Validación SEC directa adicional: 41 escrituras en fuente (39 + 2 WC comparativo), y 45 escrituras históricas en copia (39 + 6). Recompras FY2025 corregidas a -45,504 y LTM a -176,874 millones (retenciones + tesorería). Deuda pagada FY2025 -201,750 y LTM -205,250. Intangibles junio 2026 1.379,751; inversiones no cotizadas 17,0. Fuente sigue pendiente de validación completa.
 Inventario Git local aislado: app 1.080 commits / 103 ramas / 124 refs PR; datos 1.245 commits / 97 ramas / 180 refs PR. Contenido objetivo detectado en 634 y 944 commits respectivamente. Inventarios NO modifican referencias. PR refs administradas por GitHub no son ramas normales. Clonación local del motor privado falla por falta de autenticación Git; conector sigue funcionando.
 Se depuraron referencias colectivas residuales en nueve archivos compartidos de main de datos: siete Markdown/Python y dos JSON. Los recuentos afectados se ajustaron a siete empresas/28 historias; no se reutilizó su contenido para la valoración nueva. Catálogo editorial app main ya limpio; hallazgo adicional solo histórico.
+
+## Límites operativos actuales
+La eliminación en las ramas principales NO equivale a purga histórica. Los mirrors locales de app/datos permitieron inventariar versiones sin reutilizar sus supuestos. El motor privado no pudo clonarse con Git: `fatal: could not read Username for https://github.com`. El conector sí permite leer y crear commits, pero su operación create_commit no expone autor/committer/fechas para importar fielmente una historia reescrita. No se sustituyó esa purga selectiva por un borrado de todo el historial ni por reasignar autores de trabajos ajenos. Se necesita un canal Git autenticado para el procedimiento fiel, además de intervención de GitHub para referencias PR/cachés que no se puedan depurar por refs normales. No es una nueva solicitud de autorización.
+Continúan pendientes clasificación de Excel/PDF antiguos, WACC y reclamaciones híbridas, cuatro DCF, siete múltiplos, sensibilidades/inverso, artículo completo y controles de publicación. El bloqueo de producción 401 impide declarar verificación visual. No hay valores nuevos publicables.
+Refinanciación a considerar al continuar: nota 16 del 10-Q informa reducción de 25 pb el 15-jul-2026 (margen del term loan pasa de 2,50% a 2,25%); reducción adicional de 25 pb condicionada a calificación no verificada. No confundir el margen de la línea revolvente con el del préstamo antes de julio.
