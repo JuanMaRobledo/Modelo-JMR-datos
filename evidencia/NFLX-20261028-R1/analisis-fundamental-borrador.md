@@ -1,7 +1,7 @@
 # Netflix, Inc. (NFLX) — Análisis fundamental JMR desde cero
 **Revisión:** NFLX-20261028-R1 · **Fecha de preparación:** 28-oct-2026 · **Último balance:** 30-sep-2026 · **Precio y Treasury:** 27-oct-2026 · **Estado:** EN REVISIÓN TÉCNICA, no auditado económicamente.
 
-> **Valor intrínseco base: US$59,11 por acción** (DCF de FCFF, historia Base). **Precio observado:** US$62,52 (cierre del 27-oct-2026). **Precio con margen de seguridad del 35%:** US$38,42. **Conservadora:** US$43,23; **Optimista:** US$70,13; **Disrupción:** US$23,72 (separada). **Media ordinaria ponderada**, sin Disrupción: US$57,90. Son valores de la [nueva hoja de cálculo](https://docs.google.com/spreadsheets/d/11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c/edit), sujetos a las comprobaciones técnicas aún pendientes. El DCF Base, y no el ponderado por métodos, es el valor intrínseco JMR.
+> **Valor intrínseco base: US$68,93 por acción** (DCF de FCFF, historia Base). **Precio observado:** US$62,52 (cierre del 27-oct-2026). **Precio con margen de seguridad del 35%:** US$44,80. **Conservadora:** US$43,23; **Optimista:** US$81,98; **Disrupción:** US$23,72 (separada). **Media ordinaria ponderada**, sin Disrupción: US$65,77. Son valores de la [nueva hoja de cálculo](https://docs.google.com/spreadsheets/d/11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c/edit), sujetos a las comprobaciones técnicas aún pendientes. El DCF Base, y no el ponderado por métodos, es el valor intrínseco JMR.
 
 **No se reutilizaron las proyecciones, las historias ni las conclusiones de valoraciones archivadas.** Se reutilizaron únicamente los estados históricos y los hechos provenientes de la SEC, transferidos a una copia nueva de la plantilla IA vigente. Moneda USD; importes financieros en millones de USD excepto por acción. El dato LTM corresponde a los doce meses terminados el 30-sep-2026. La carta de resultados publicada el 20-oct-2026 es un hecho posterior al corte contable, pero anterior al corte de mercado de esta nueva revisión.
 
@@ -14,7 +14,7 @@ Los ingresos pasaron de US$8.831 millones en 2016 a US$45.183 millones en 2025, 
 
 La dirección comunicó para 2026 una expectativa de ingresos de US$51.100 millones, crecimiento anual cercano a 13%, y margen de operación de 31,5%. El trimestre de septiembre mostró margen de 34,6%, beneficiado en parte por el calendario de costos; no se debe sustituir con ese dato el margen anual. La publicidad está creciendo, aunque el objetivo de 2026 fue reducido a aproximadamente US$2.700 millones desde alrededor de US$3.000 millones por demoras en herramientas del producto publicitario. [Carta 3T26](https://ir.netflix.net/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf).
 
-La principal tesis favorable es que poder de precios, publicidad y mejoras de distribución permiten crecer más rápido que el costo de contenido. La hipótesis contraria es que la competencia por tiempo de pantalla limita la retención y eleva el costo de adquirir atención. El DCF Base del expediente incorpora crecimiento de ventas decreciente, margen EBIT objetivo de 35%, ventas/capital de 1,20 y ventaja competitiva que converge al rendimiento sectorial terminal de 11,04%. **No se deduce una recomendación automática de compra o venta del precio observado**: el usuario registra su decisión en la aplicación.
+La principal tesis favorable es que poder de precios, publicidad y mejoras de distribución permiten crecer más rápido que el costo de contenido. La hipótesis contraria es que la competencia por tiempo de pantalla limita la retención y eleva el costo de adquirir atención. El DCF Base del expediente incorpora crecimiento de ventas decreciente, margen EBIT objetivo de 35%, ventas/capital de 1,20 y ventaja competitiva que converge gradualmente hacia un ROIC terminal de 20,585%, punto medio entre ROIC ajustado propio de 30,13% y referencia sectorial 11,04%, por una ventaja moderada persistente. **No se deduce una recomendación automática de compra o venta del precio observado**: el usuario registra su decisión en la aplicación.
 
 ## 2. Modelo de negocio y economía unitaria
 El servicio principal es streaming de series, películas y eventos en vivo. Netflix paga por producir, adquirir, licenciar y distribuir obras; cobra mensualmente a los miembros y vende inventario de publicidad en planes con anuncios. Los consumidores pueden cancelar con facilidad. La contratación por suscripción da visibilidad de ingresos a corto plazo, pero la retención futura depende de oferta y experiencia continua. No existe contrato multianual que garantice el ingreso de cada cliente.
@@ -47,7 +47,7 @@ La utilidad neta LTM de US$14.767 millones también está inflada por el ingreso
 ## 6. Ventaja competitiva y duración
 Netflix tiene ventajas acumulativas de marca, amplitud global de oferta, redes de entrega, experiencia de usuario, datos para recomendación y capacidad de financiar producciones que viajan entre países. La audiencia y el catálogo de una plataforma de gran tamaño pueden hacer más eficiente la monetización de un contenido global. La expansión del margen observada respalda cierta ventaja de escala, aunque no demuestra por sí misma una prima perpetua sobre el costo de capital.
 
-El contrapeso es que los creadores y las audiencias no son cautivos. Derechos costosos, cambios en gustos, producción de éxitos imprevistos y sustitutos abundantes reducen el poder de exclusión. La propia administración señala que el contenido debe seguir renovándose. El uso de ROIC terminal sectorial global Entertainment de 11,04% supone que las rentas extraordinarias se disipan hasta una referencia competitiva, aunque permite un diferencial positivo frente al WACC terminal de 8,69%. Este juicio es distinto de declarar inexistente la ventaja hoy: implica convergencia durante el horizonte explícito, y exige auditar que la trayectoria de ROIC no caiga de forma artificial al entrar en perpetuidad.
+El contrapeso es que los creadores y las audiencias no son cautivos. Derechos costosos, cambios en gustos, producción de éxitos imprevistos y sustitutos abundantes reducen el poder de exclusión. La propia administración señala que el contenido debe seguir renovándose. Se ha elegido para la Base el ROIC terminal de 20,585%, derivado como punto medio entre el ROIC LTM ajustado de 30,13% y Entertainment Global 11,04%, siguiendo la regla de foso moderado del Modelo JMR y la decisión del usuario del 21-oct-2026. El margen de retorno restante sobre WACC terminal 8,69% es una hipótesis exigente de duración de la ventaja, no una cifra histórica observada. Este juicio es distinto de declarar inexistente la ventaja hoy: implica convergencia durante el horizonte explícito, y exige auditar que la trayectoria de ROIC no caiga de forma artificial al entrar en perpetuidad.
 
 La evidencia que invalidaría una ventaja durable es el deterioro repetido de retención o monetización por miembro pese a mayor gasto en contenido; evidencia que la fortalecería sería crecimiento de ingresos por precios/publicidad sin aceleración proporcional de costos ni deterioro de satisfacción. No se atribuye una ventaja permanente solo por popularidad de títulos recientes.
 
@@ -80,16 +80,16 @@ Los inversores deberían verificar en los próximos cuatro trimestres ingresos e
 ## 11. Bulls say / Bears say
 **Bulls say:** Netflix es una plataforma global con ingresos recurrentes, fortaleza de marca, distribución propia y capacidad de diferenciar contenido. El aumento del margen GAAP de 20,6% (2023) a 31,3% LTM demuestra apalancamiento en ingresos, mientras la publicidad y nuevas geografías permiten monetización adicional. La dirección sostiene que las subidas de precio de 2026 produjeron respuesta y retención consistentes con su experiencia.
 
-**Bears say:** la expansión de márgenes podría ser más lenta de lo esperado si la competencia captura tiempo de visualización. La guía reducida de publicidad muestra que no toda nueva línea monetiza al ritmo previsto. El crecimiento 2026 ya se modera frente a la expansión histórica, y el contenido debe reponerse constantemente. Los beneficios y el flujo libre LTM no son íntegramente recurrentes por la comisión de WBD. El rango entre 43,23 y 70,13 USD de DCF ordinario confirma sensibilidad material a la economía futura, no errores de redondeo.
+**Bears say:** la expansión de márgenes podría ser más lenta de lo esperado si la competencia captura tiempo de visualización. La guía reducida de publicidad muestra que no toda nueva línea monetiza al ritmo previsto. El crecimiento 2026 ya se modera frente a la expansión histórica, y el contenido debe reponerse constantemente. Los beneficios y el flujo libre LTM no son íntegramente recurrentes por la comisión de WBD. El rango entre 43,23 y 81,98 USD de DCF ordinario confirma sensibilidad material a la economía futura, no errores de redondeo.
 
 **Balance:** la tesis de calidad de plataforma tiene evidencia; lo discutible es cuánto crecimiento y margen conservará frente a un WACC inicial 9,72%. Los argumentos de ambas partes se reflejan en historias independientes, no en un único descuento arbitrario.
 
 ## 12. Valoración con criterio Damodaran
-**Historia Base:** crecimiento anual de ventas ~11% en el año 1 y desaceleración hasta 4% terminal; CAGR años 1–5 9,09%; margen objetivo de EBIT 35%; ventas/capital 1,20 para los años 1–5 y 6–10; impuestos desde 16,57% efectivo hasta 25% marginal; WACC inicial 9,72%, terminal 8,69%; ROIC terminal 11,04%. El DCF FCFF Base, con deuda, caja, derechos de opción y acciones básicas reconciliadas, da **US$59,11**. No es el valor ponderado FY+3 ni el promedio de métodos.
+**Historia Base:** crecimiento anual de ventas ~11% en el año 1 y desaceleración hasta 4% terminal; CAGR años 1–5 9,09%; margen objetivo de EBIT 35%; ventas/capital 1,20 para los años 1–5 y 6–10; impuestos desde 16,57% efectivo hasta 25% marginal; WACC inicial 9,72%, terminal 8,69%; ROIC terminal 20,585%. El DCF FCFF Base, con deuda, caja, derechos de opción y acciones básicas reconciliadas, da **US$68,93**. No es el valor ponderado FY+3 ni el promedio de métodos.
 
-**Conservadora:** crecimiento 6,60% compuesto en los cinco primeros años, margen 31%, sales-to-capital 1,00 y 1,15 por etapas, ROIC terminal 9,50%, resultado **US$43,23**. **Optimista:** CAGR 10,99%, margen 37,5%, sales-to-capital 1,40/1,30, ROIC terminal 11,04%, resultado **US$70,13**. **Disrupción:** ingresos inicialmente débiles y CAGR años 1–5 de -0,63%, margen 23%, sales-to-capital 0,85/1,00, crecimiento terminal 2,5% y ROIC terminal 8,69%, resultado **US$23,72**.
+**Conservadora:** crecimiento 6,60% compuesto en los cinco primeros años, margen 31%, sales-to-capital 1,00 y 1,15 por etapas, ROIC terminal 9,50%, resultado **US$43,23**. **Optimista:** CAGR 10,99%, margen 37,5%, sales-to-capital 1,40/1,30, ROIC terminal 20,585%, resultado **US$81,98**. **Disrupción:** ingresos inicialmente débiles y CAGR años 1–5 de -0,63%, margen 23%, sales-to-capital 0,85/1,00, crecimiento terminal 2,5% y ROIC terminal 8,69%, resultado **US$23,72**.
 
-La previa probabilística de la etapa «crecimiento maduro» es 45% Base, 22,5% Conservadora, 22,5% Optimista y 10% Disrupción. El promedio ordinario renormaliza a 90% las tres primeras y da **US$57,90**; la disrupción no se incluye en ese promedio. Con el precio observado de 62,52 USD, el mercado cotiza aproximadamente 5,77% por encima del DCF Base y el potencial aritmético de valor al precio es -5,45%. El precio de compra con MOS 35% sobre la Base es **US$38,42**. Esta regla es del método JMR, no una recomendación automática.
+La previa probabilística de la etapa «crecimiento maduro» es 45% Base, 22,5% Conservadora, 22,5% Optimista y 10% Disrupción. El promedio ordinario renormaliza a 90% las tres primeras y da **US$65,77**; la disrupción no se incluye en ese promedio. Con el precio observado de 62,52 USD, el mercado cotiza aproximadamente 9,30% por debajo del DCF Base y el potencial aritmético de valor frente al precio es +10,25%. El precio de compra con MOS 35% sobre la Base es **US$44,80**. Esta regla es del método JMR, no una recomendación automática.
 
 Los siete métodos de múltiplos se calculan con fórmulas de la hoja, aunque con pesos distintos: EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF; además P/S y P/BV. En la Base los valores presentes secundarios por acción son aprox. US$76,44, US$53,03, US$72,01, US$50,03, US$54,45, US$59,95 y US$93,99, respectivamente. P/BV (93,99) está **provisional** por recompras futuras no reconciliadas y tiene peso cero; P/S también tiene peso cero por comparabilidad y variación del margen. El ponderado de los métodos no sustituye al DCF. La hoja incluye matrices DCF Base por WACC–g, ROIC–g y crecimiento–margen con conciliación central al valor Base.
 
@@ -119,11 +119,11 @@ Durante octubre el mercado reaccionó negativamente a la desaceleración y a la 
 **Modelo:** registrar el spread WACC–g y valor presente terminal/valor operativo. El principal riesgo de sensibilidad es sobreestimar que el margen y retorno sobre capital pueden sostenerse cuando el negocio madure.
 
 ## 16. Preguntas abiertas y límites
-¿Cuál proporción de «technology and development» constituye inversión separable y qué vida amortizable le corresponde? La SEC no desglosa de forma suficiente innovación versus mantenimiento: el modelo capitaliza el total como proxy, pero la prueba alternativa sin capitalización reduce la Base de 59,11 a 58,30 USD (-1,38%); extender amortización de tres a cinco años la eleva a 59,30 USD (+0,31%). Las cifras provienen de una copia de control y no sustituye evidencia de costos elegibles.
+¿Cuál proporción de «technology and development» constituye inversión separable y qué vida amortizable le corresponde? La SEC no desglosa de forma suficiente innovación versus mantenimiento: el modelo capitaliza el total como proxy, pero la prueba alternativa sin capitalización reduce la Base de 68,93 a 68,11 USD (-1,18%); extender amortización de tres a cinco años la eleva a 69,11 USD (+0,27%). Las cifras provienen de una copia de control y no sustituye evidencia de costos elegibles.
 
 ¿Cuál es el vencimiento promedio remanente y volatilidad específica de las 120,175 millones de opciones? Se usa vencimiento ilustrativo de 5 años y σ proxy de sector global 47,54%. Con vencimiento 3 años, el Base se mueve +0,15 USD; con 7 años y σ 60%, -0,23 USD. Deben actualizarse si surge documentación mejor; no es correcto considerar esta sensibilidad una certificación de la vida efectiva de las opciones.
 
-¿Qué política de recompra y emisiones financiará el equity futuro? La pestaña P/BV usa movimientos de patrimonio cero como supuesto de trabajo, pese a que recompras observadas son materiales; por ello P/BV no participa en el ponderado y su cifra debe leerse con reserva. También falta confirmar que la transición al ROIC terminal sectorial sea suficientemente gradual para una ventaja moderada; una convergencia terminal muy abrupta puede cambiar materialmente el valor y merece revisión visual antes del dictamen económico independiente.
+¿Qué política de recompra y emisiones financiará el equity futuro? La pestaña P/BV usa movimientos de patrimonio cero como supuesto de trabajo, pese a que recompras observadas son materiales; por ello P/BV no participa en el ponderado y su cifra debe leerse con reserva. También falta confirmar que la transición al ROIC terminal de punto medio 20,585% sea suficientemente gradual para una ventaja moderada; una convergencia terminal muy abrupta puede cambiar materialmente el valor y merece revisión visual antes del dictamen económico independiente.
 
 ## 17. Fuentes y trazabilidad
 1. Netflix, [Formulario 10-K 2025](https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm), cifras históricas y notas.
@@ -162,17 +162,17 @@ El FCF reportado no deduce por separado adiciones netas de activos de contenido 
 ## 2.2 Puente operativo a patrimonio, historia Base
 | Concepto | Millones USD |
 |---|---:|
-| Valor operativo DCF | 256.322,85 |
+| Valor operativo DCF | 296.640,52 |
 | Menos deuda y arrendamientos ya reconocidos | (17.384,63) |
 | Más caja e inversiones de corto plazo | 8.222,95 |
 | Más activos no operativos verificados | 0,00 |
-| Patrimonio antes de opciones | 247.161,17 |
+| Patrimonio antes de opciones | 287.478,84 |
 | Menos derechos económicos de opciones | (4.432,34) |
-| Patrimonio atribuible a acciones comunes | 242.728,83 |
+| Patrimonio atribuible a acciones comunes | 283.046,50 |
 | Acciones básicas a la fecha (millones) | 4.106,33 |
-| **Valor intrínseco por acción** | **US$59,11** |
+| **Valor intrínseco por acción** | **US$68,93** |
 
-Verificación aritmética: 256.322,85 − 17.384,63 + 8.222,95 − 4.432,34 = 242.728,83; dividido por 4.106,33 millones ≈ 59,11 USD. Ni la deuda ASC 842 ni opciones se deducen otra vez por la misma vía.
+Verificación aritmética: 296.640,52 − 17.384,63 + 8.222,95 − 4.432,34 = 283.046,50; dividido por 4.106,33 millones ≈ 68,93 USD. Ni la deuda ASC 842 ni opciones se deducen otra vez por la misma vía.
 
 ## 2.3 Historias DCF
 | Supuesto | Conservadora | Base | Optimista | Disrupción |
@@ -182,9 +182,9 @@ Verificación aritmética: 256.322,85 − 17.384,63 + 8.222,95 − 4.432,34 = 24
 | Margen EBIT destino | 31,0% | 35,0% | 37,5% | 23,0% |
 | Ventas/capital años 1–5 | 1,00 | 1,20 | 1,40 | 0,85 |
 | Ventas/capital años 6–10 | 1,15 | 1,20 | 1,30 | 1,00 |
-| ROIC terminal | 9,50% | 11,04% | 11,04% | 8,69% |
+| ROIC terminal | 9,50% | 20,585% | 20,585% | 8,69% |
 | g terminal | 4,0% | 4,0% | 4,0% | 2,5% |
-| **DCF hoy USD/acción** | **43,23** | **59,11** | **70,13** | **23,72** |
+| **DCF hoy USD/acción** | **43,23** | **68,93** | **81,98** | **23,72** |
 
 Las trayectorias anuales completas C29:L29, C53:L53, C77:L77 y C101:L101 están calculadas en la pestaña «Escenarios e historias» y fluyen a «Valuation output»; la salida escrita aquí corresponde a esa revisión.
 
@@ -194,7 +194,7 @@ Rf USD 10a = 4,99% (27-oct-2026); ERP madura del corte mensual de octubre = 3,70
 No se usa la beta del sector como resultado definitivo de riesgo país ni se multiplica indiscriminadamente la ERP por distintas primas geográficas. El costo de capital y el valor terminal son sensibles a cambios de tasas y a supuestos de permanencia del riesgo competitivo.
 
 ## 2.5 Ajustes económicos especiales
-**I+D/tecnología:** «technology and development» LTM ≈US$3.890,81 millones; capitalización proxy a 3 años con activo de investigación resultante ≈US$7.126,84 millones y ajuste EBIT +US$893,33 millones. La SEC advierte que esta cuenta contiene salarios, pruebas, mejoras, mantenimiento e infraestructura, por lo que no constituye un desglose puro de investigación amortizable. La alternativa sin capitalizar produce Base 58,30 USD (-1,38% frente a 59,11); con amortización cinco años, 59,30 USD (+0,31%).
+**I+D/tecnología:** «technology and development» LTM ≈US$3.890,81 millones; capitalización proxy a 3 años con activo de investigación resultante ≈US$7.126,84 millones y ajuste EBIT +US$893,33 millones. La SEC advierte que esta cuenta contiene salarios, pruebas, mejoras, mantenimiento e infraestructura, por lo que no constituye un desglose puro de investigación amortizable. La alternativa sin capitalizar produce Base 68,11 USD (-1,18% frente a 68,93); con amortización cinco años, 69,11 USD (+0,27%).
 
 **Leases:** al cierre había US$2.252,24 millones de pasivos de arrendamiento reconocidos; están incluidos en el puente de deuda de US$17.384,63 millones y no se ejecuta conversión adicional por no duplicar ASC 842. La etiqueta «No» en la conversión significa «no arrendamientos incrementales fuera de balance reconocidos en este modelo», no ausencia de contratos.
 
@@ -216,22 +216,22 @@ No se usa la beta del sector como resultado definitivo de riesgo país ni se mul
 Se calcula el valor presente de cada múltiplo en horizontes FY+1, +2 y +3 usando Ke y dividendos fechados. Los cinco métodos originales se obtienen de Financials Multiples y Descuento de múltiplos. P/S y P/BV se obtienen de PV y PBV; su cálculo no crea una justificación para darles peso. La selección equivale a **60% DCF principal y 40% múltiplos como contraste del precio ponderado secundario**, sin alterar que el DCF es el valor intrínseco JMR.
 
 ## 2.7 Sensibilidades recalculadas solo para la Base
-**Matriz 1: WACC inicial × g terminal (USD/acción, centro 59,11)**
+**Matriz 1: WACC inicial × g terminal (USD/acción, centro 68,93)**
 
 | WACC \ g | 3,0% | 3,5% | 4,0% | 4,5% | 5,0% |
 |---|---:|---:|---:|---:|---:|
-| 8,72% | 68,25 | 71,30 | 75,07 | 79,90 | 86,40 |
-| 9,22% | 61,43 | 63,58 | 66,15 | 69,33 | 73,39 |
-| **9,72%** | 55,80 | 57,33 | **59,11** | 61,24 | 63,85 |
-| 10,22% | 51,07 | 52,16 | 53,40 | 54,84 | 56,55 |
-| 10,72% | 47,03 | 47,82 | 48,68 | 49,65 | 50,77 |
+| 8,72% | 76,02 | 81,64 | 88,75 | 98,05 | 110,76 |
+| 9,22% | 68,14 | 72,40 | 77,66 | 84,31 | 93,01 |
+| **9,72%** | 61,64 | 64,94 | **68,93** | 73,84 | 80,06 |
+| 10,22% | 56,20 | 58,80 | 61,88 | 65,60 | 70,18 |
+| 10,72% | 51,57 | 53,65 | 56,07 | 58,94 | 62,41 |
 
-**Matriz 2:** ROIC terminal × g terminal; **matriz 3:** crecimiento explícito años 1–5 × margen EBIT destino. Las dos se encuentran en la pestaña «Sensibilidad DCF», con cada centro conciliado al DCF Base 59,11. No hay matrices conservadoras u optimistas de múltiplos. Todas las celdas son salidas de la hoja, no precios de terceros.
+**Matriz 2:** ROIC terminal × g terminal; **matriz 3:** crecimiento explícito años 1–5 × margen EBIT destino. Las dos se encuentran en la pestaña «Sensibilidad DCF», con cada centro conciliado al DCF Base 68,93. No hay matrices conservadoras u optimistas de múltiplos. Todas las celdas son salidas de la hoja, no precios de terceros.
 
 ## 2.8 DCF inverso y riesgos de modelo
-**DCF inverso recalculado y reproducido:** se reprodujo el valor Base de la hoja en un motor FCFF independiente con discrepancia inferior a US$0,000001 por acción. Se resolvió por bisección/Brent un desplazamiento aditivo común `delta = +1,13544 puntos porcentuales` a las tasas de crecimiento de ingresos de los años 1–5; la trayectoria Base original (11%, 10%, 9%, 8%, 7,5%) pasa a aproximadamente (12,135%, 11,135%, 10,135%, 9,135%, 8,635%). La tasa decrece después hacia el crecimiento terminal 4,0% en años 6–10 y se recalculan ventas, margen EBIT, impuestos, reinversión, descuentos y perpetuidad. El CAGR Base a cinco años es 9,0925%; el **CAGR implícito de mercado es 10,2280%**. Con las otras variables Base fijas, el valor resultante del motor es US$62,5200 por acción, igual al cierre 27-oct-2026. No es una previsión de la administración: es una condición algebraica para reproducir el precio del mercado. El control de publicación exige además comparar este resultado con el motor original y ausencia de errores en toda la hoja.
+**DCF inverso actualizado y reproducido:** después de corregir ROIC terminal de Base a 20,585%, se reconstruyó el FCFF a 10 años con discrepancia inferior a US$0,000001 por acción respecto de la hoja (valor inicial US$68,929381). Se resolvió una raíz aplicando **delta = −1,89322 puntos porcentuales** a cada tasa anual de ingresos de años 1–5; la trayectoria Base original (11%, 10%, 9%, 8%, 7,5%) se convierte en (9,1068%, 8,1068%, 7,1068%, 6,1068%, 5,6068%). Años 6–10 mantienen convergencia al 4,0% terminal, disminuyendo gradualmente la perturbación de tasas de crecimiento. Las demás hipótesis Base, margen, reinversión prospectiva, impuestos, WACC, opciones y deuda se mantienen inalteradas. El **CAGR implícito a cinco años es 7,1991%**, frente al 9,0925% del Base. El motor reconstruye el precio de cierre del 27-oct de **US$62,5200** (tolerancia menor a 0,001 USD). La tasa implícita no es guía de Netflix ni pronóstico independiente; es la condición matemática del precio de mercado bajo los otros supuestos Base.
 
-La evaluación de convergencia desde ROIC explícito hacia el ROIC de 11,04% en fase terminal merece un examen adicional. El resultado Base es una estimación condicional a esa trayectoria y no una garantía. El efecto de ajustar duración de ventaja competitiva debe acotarse antes del dictamen económico independiente.
+La evaluación de convergencia desde ROIC explícito hacia el ROIC de 20,585% en fase terminal merece un examen adicional. El resultado Base es una estimación condicional a esa trayectoria y no una garantía. El efecto de ajustar duración de ventaja competitiva debe acotarse antes del dictamen económico independiente.
 
 ## 2.9 Control y próxima puerta
 La nueva revisión tiene estados financieros y fórmulas, cuatro DCF con señal LISTO y sensibilidades centrales que reproducen el valor principal. Las excepciones de I+D y opciones se probaron por separado en una copia no publicable. P/BV aún tiene patrimonio futuro provisional con peso cero. Debe ejecutarse integralmente la prueba automatizada del repositorio (unificación de hojas, siete métodos, 18 candados, integridad de datos, probabilidades, hoja↔JSON↔visor y profundidad editorial) antes de la publicación EN_REVISION. **Ningún resultado histórico archivado debe pasar a vigente de forma automática**.
