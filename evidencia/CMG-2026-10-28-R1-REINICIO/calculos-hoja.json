@@ -1,0 +1,190 @@
+{
+  "ticker": "CMG",
+  "revisionId": "CMG-2026-10-28-R1-REINICIO",
+  "estado": "PREPARACION",
+  "publicationStatus": "NO_PUBLICADO",
+  "validationStatus": "PENDIENTE_AUDITORIA_ECONOMICA",
+  "alcance": "Cálculos de la hoja y comprobaciones técnicas parciales; no es artículo completo, dictamen ni manifiesto certificado.",
+  "sheetId": "1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc",
+  "fechaCorte": "2026-09-30",
+  "precioCorte": 31.95,
+  "resultados": {
+    "dcf": [
+      {
+        "id": "A",
+        "hoja": 24.93692709950013,
+        "motor": 24.936927099500128,
+        "diff": -3.552713678800501e-15
+      },
+      {
+        "id": "B",
+        "hoja": 11.061540741256145,
+        "motor": 11.061540741256145,
+        "diff": 0
+      },
+      {
+        "id": "C",
+        "hoja": 3.71743855716925,
+        "motor": 3.71743855716925,
+        "diff": 0
+      },
+      {
+        "id": "D",
+        "hoja": 32.22738518923514,
+        "motor": 32.22738518923514,
+        "diff": 0
+      }
+    ],
+    "promedioOrdinario": 23.29069503237289,
+    "mosBase": 16.209002614675086,
+    "waccInicial": 0.07992657926629897,
+    "waccTerminal": 0.08990000000000001,
+    "gTerminal": 0.04,
+    "ROICterminal": 0.1836043629376828,
+    "multiplesPresente": [
+      {
+        "method": "EV/EBITDA",
+        "conservador": 14.559824099448862,
+        "base": 22.96705038270827,
+        "optimista": 31.34669421684808
+      },
+      {
+        "method": "EV/FCFF",
+        "conservador": 14.204703087418148,
+        "base": 21.226596915442368,
+        "optimista": 27.942510268707213
+      },
+      {
+        "method": "P/E",
+        "conservador": 23.235108975230208,
+        "base": 40.65676633961003,
+        "optimista": 50.218076185348444
+      },
+      {
+        "method": "P/FCFE",
+        "conservador": 18.818030480534187,
+        "base": 27.525241855318342,
+        "optimista": 34.690768403173514
+      },
+      {
+        "method": "P/OCF",
+        "conservador": 18.820764167646825,
+        "base": 28.378056889416627,
+        "optimista": 36.32906381048029
+      },
+      {
+        "method": "P/S",
+        "conservador": 22.9480830179301,
+        "base": 42.28953344033652,
+        "optimista": 53.735316937862116
+      },
+      {
+        "method": "P/BV",
+        "conservador": 18.195019596952402,
+        "base": 33.7832516782669,
+        "optimista": 42.76649253821052
+      }
+    ],
+    "multiplosConsolidados": 27.86426312968578,
+    "ponderadoComplementario": 26.69332871761152,
+    "inverso": {
+      "method": "crecimientoImplicitoDCF del motor existente; crecimiento uniforme años 1–5, margen objetivo 17%, restantes insumos constantes",
+      "value": 0.14357307704117506,
+      "price": 31.95
+    },
+    "pesoVPterminal": 0.6884064778649019
+  },
+  "tecnico": {
+    "formulaCount": 21265,
+    "formulaDiffs": 0,
+    "validationCount": 122,
+    "validationDiffs": 0,
+    "sheets": 61,
+    "identityChecks": 66,
+    "identityFailures": [],
+    "nativeEngine": "d7304051fde8f023ef31e038f8431f739f8421b1",
+    "nativeCases": [
+      {
+        "id": "A",
+        "hoja": 24.93692709950013,
+        "motor": 24.936927099500128,
+        "diff": -3.552713678800501e-15
+      },
+      {
+        "id": "B",
+        "hoja": 11.061540741256145,
+        "motor": 11.061540741256145,
+        "diff": 0
+      },
+      {
+        "id": "C",
+        "hoja": 3.71743855716925,
+        "motor": 3.71743855716925,
+        "diff": 0
+      },
+      {
+        "id": "D",
+        "hoja": 32.22738518923514,
+        "motor": 32.22738518923514,
+        "diff": 0
+      }
+    ],
+    "sensibilidadCentros": [
+      {
+        "cell": "Sensibilidad DCF!D8",
+        "base": 24.93692709950013,
+        "check": "OK"
+      },
+      {
+        "cell": "Sensibilidad DCF!D19",
+        "base": 24.93692709950013,
+        "check": "OK"
+      },
+      {
+        "cell": "Sensibilidad DCF!D30",
+        "base": 24.93692709950013,
+        "check": "OK"
+      }
+    ]
+  },
+  "correcciones": [
+    "4 fórmulas de ROIC de Escenarios e historias restauradas de la maestra, además de las 1.062 del turno previo.",
+    "Utilidad e impuestos exactos de FY2022–FY2025; LTM a partir de estados, no comunicados redondeados.",
+    "Segundo split indebido en acciones promedio 2022/2023 eliminado; acciones LTM ponderadas por días.",
+    "Acciones al cierre fiscal 2023/2024/2025 tomadas del estado de patrimonio, no portadas del año siguiente.",
+    "Etiquetas LTM fechadas en estados y LTM normalizado en valoración; Input D12=0,5.",
+    "Vencimiento de deuda recta sin emitir =0, evita volver a descontar pasivos ASC842 ya a valor presente; plazo de leases sigue documentado.",
+    "MOS H14 se completó con la fórmula del sistema porque estaba vacía aunque Resumen la referenciaba.",
+    "Conversor, impuestos, opciones/RSU, inversiones y método WACC documentados en notas; casos con guardas LISTO no equivalen a dictamen económico.",
+    "Siete múltiplos de salida aplicados con ciclo, tasas y C, cargando precisión completa; pesos propios sin cambiar fórmulas."
+  ],
+  "salvedades": [
+    "Kd y volatilidad son proxies de fuente documentada, no mediciones spot del corte.",
+    "RSU/PSU se tratan como reclamación separada de SOSARs en B21, con cero económico aproximado por ejercicio 0,01; requiere materialidad y revisión del vesting.",
+    "Valor contable de participaciones privadas se usa como proxy, no como fair value reportado.",
+    "Calendario de leases al cierre FY2025 frente a balance de junio; contratos sin iniciar requieren revisión de su efecto incremental.",
+    "Financials Multiples conserva todas las fórmulas originales, incluidos promedios de D&A/capex/otros y acciones constantes. No se ejecutó shak_financials_multiples.py con valores de otra firma ni se sobrescribieron esos cálculos.",
+    "El constructor build_story_sheet.py legado borraría/reconstruiría fórmulas; no se ejecutó. Se diligenciaron entradas vacías originales y se preservó motor nativo. La fila MOS vacía se completó con la fórmula que ya usa el sistema.",
+    "Los scripts de motor deben respetar s2c_6a10 de cada historia al reejecutarse; el motor nativo se concilió tomando E:F de cada caso directamente."
+  ],
+  "pendientes": [
+    "Ejecutar scripts Python: estados_completos, candados, integridad_hojas, inputs_completos, controles_supuestos, consistencia_migracion y probabilidades en entorno autenticado. El entorno de ejecución está indisponible; no se simula una corrida exitosa.",
+    "Recuperar o conciliar el control unificacion_hojas.py ausente en la rama; la comparación por conector sí verificó fórmulas/validaciones/estructura y 66 identidades.",
+    "Revisar la ventana histórica, pares con fecha y materialidad de proxies; no se presenta historia depurada de diez años ni comparables actualizados.",
+    "Completar textos de la hoja, estadísticas y escaneo semántico de restos de otras empresas.",
+    "Artículo de 18 secciones, Nivel 1 y Nivel 2: NO CREADO. No sustituirlo por este avance.",
+    "Verificar la interpretación de las matrices de WACC de la plantilla y completar sensibilidad terminal explícita requerida; tres centros existentes concilian.",
+    "Exportar con el sistema existente, preparar registro/analysisSchema y actualizar catálogo solo después de controles técnicos aprobados.",
+    "Generar evidencias de app local, expediente, lector y visor con Playwright al restablecer el entorno. No se ha declarado publicación real ni modificado main.",
+    "Puerta publicacion_gate.py: no ejecutada ni saltada; no hay manifiesto certificado y no se inventará uno.",
+    "Auditoría económica posterior a revisión visual del usuario; no se ejecutó audit_report.py."
+  ],
+  "codeCommits": [
+    "edf8e5d63e2df6ff74c0d7eb955c42955caf7ba0",
+    "103cad1bce8a21dee96b2cb571199db7a827ebbd"
+  ],
+  "deletedFilesThisTurn": [],
+  "oldValuationsRead": false,
+  "personalFolderPreserved": "14qnWfkDeJezc_-RdaE3n7ADdhMlosYQQ",
+  "publicationAuthorization": "El usuario solicitó completar el reinicio y publicar preliminarmente EN_REVISION; esa autorización no se trata como aprobación de controles ni de fusión a main."
+}

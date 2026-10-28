@@ -1,0 +1,1262 @@
+[
+  [
+    "Input sheet",
+    "D1",
+    31.95,
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026."
+  ],
+  [
+    "Input sheet",
+    "B4",
+    "=DATE(2026;9;30)",
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026."
+  ],
+  [
+    "Input sheet",
+    "B35",
+    0.0529,
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026."
+  ],
+  [
+    "Input sheet",
+    "B68",
+    "Yes",
+    "Selector Yes permitido. Regla vigente §4 y corte: crecimiento terminal explícito 4%, con techo en Rf 5,29%."
+  ],
+  [
+    "Input sheet",
+    "B69",
+    0.04,
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026. Supuesto de política JMR, no guía de Chipotle."
+  ],
+  [
+    "Resumen de Valoración",
+    "C25",
+    31.95,
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026."
+  ],
+  [
+    "Resumen de Valoración",
+    "G4",
+    0.35,
+    "Reglas vigentes §1: MOS de 35% exclusivamente sobre DCF Base; no sobre promedio ni ponderado."
+  ],
+  [
+    "Trailing Valuation",
+    "L3",
+    "='Input sheet'!D1",
+    "Corte oficial 30-sep-2026. Fuente: JMR-valuation/reference/corte_vigente.json, rama ccr-e19723cb-q1m72p; cierre CMG US$31,95, Treasury 10 años 5,29%, prima madura 3,70% de https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx. Se conserva este corte sin cotizaciones posteriores. Consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "I21",
+    1228.737,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "I22",
+    "=I21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "I20",
+    391.769,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "I3",
+    "='Income Statement'!I21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "I6",
+    "=I13-SUM(I3:I5;I7:I12)",
+    "Otros ajustes no monetarios = CFO reportado menos utilidad, D&A, SBC y movimientos operativos de filas 7–12. Residual de clasificación, no partida reportada individual. 10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "J21",
+    1534.11,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "J22",
+    "=J21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "J20",
+    476.12,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "J3",
+    "='Income Statement'!J21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "J6",
+    "=J13-SUM(J3:J5;J7:J12)",
+    "Otros ajustes no monetarios = CFO reportado menos utilidad, D&A, SBC y movimientos operativos de filas 7–12. Residual de clasificación, no partida reportada individual. 10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "K21",
+    1535.761,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "K22",
+    "=K21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "K20",
+    473.758,
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "K3",
+    "='Income Statement'!K21",
+    "10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "K6",
+    "=K13-SUM(K3:K5;K7:K12)",
+    "Otros ajustes no monetarios = CFO reportado menos utilidad, D&A, SBC y movimientos operativos de filas 7–12. Residual de clasificación, no partida reportada individual. 10-K FY2025, estados de resultados comparativos 2023–2025 (US$ millones); https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. Corrección de dato XBRL redondeado frente al estado primario, consulta 28-oct-2026."
+  ],
+  [
+    "Income Statement",
+    "L21",
+    "=K21-822,726+706,371",
+    "LTM a 30-jun-2026 = FY2025 − 1S2025 + 1S2026. NI 1S25 822,726 y 1S26 706,371; impuesto 256,189 y 232,706 US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
+  ],
+  [
+    "Income Statement",
+    "L22",
+    "=L21",
+    "LTM a 30-jun-2026 = FY2025 − 1S2025 + 1S2026. NI 1S25 822,726 y 1S26 706,371; impuesto 256,189 y 232,706 US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
+  ],
+  [
+    "Income Statement",
+    "L20",
+    "=K20-256,189+232,706",
+    "LTM a 30-jun-2026 = FY2025 − 1S2025 + 1S2026. NI 1S25 822,726 y 1S26 706,371; impuesto 256,189 y 232,706 US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
+  ],
+  [
+    "Cash Flow Statement",
+    "L3",
+    "='Income Statement'!L21",
+    "LTM a 30-jun-2026 = FY2025 − 1S2025 + 1S2026. NI 1S25 822,726 y 1S26 706,371; impuesto 256,189 y 232,706 US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
+  ],
+  [
+    "Cash Flow Statement",
+    "L6",
+    "=L13-SUM(L3:L5;L7:L12)",
+    "Residual de clasificación no monetaria; LTM a 30-jun-2026 = FY2025 − 1S2025 + 1S2026. NI 1S25 822,726 y 1S26 706,371; impuesto 256,189 y 232,706 US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm"
+  ],
+  [
+    "Input sheet",
+    "B17",
+    "No",
+    "Juicio contable: el 10-K no presenta una línea separable de I+D recurrente; software/capex operativo ya se reconoce en PP&E y gastos. No crear un activo adicional de I+D sin conciliar tecnología incluida en esas líneas. Fuente: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, políticas contables y estado de resultados."
+  ],
+  [
+    "Input sheet",
+    "B18",
+    "Yes",
+    "Se diligencia el conversor con nota 9 del 10-K. B16 conserva la fórmula maestra que incluye ASC 842; B78 identifica el solapamiento del conversor para que solo B79 incremental entre adicionalmente. No se elimina deuda reconocida ni se capitaliza dos veces. Fuentes: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 9; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance."
+  ],
+  [
+    "Input sheet",
+    "B25",
+    0.25,
+    "Supuesto marginal nominal USD: 21% federal + aproximadamente 4 pp estatal/local neto, anclado en la conciliación fiscal FY2025 (21% y 4,0 pp). Se eliminan créditos/discretos en perpetuidad. No es una tasa marginal legal única de todos los estados. Fuente: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 6."
+  ],
+  [
+    "Input sheet",
+    "B38",
+    "Yes",
+    "Hay SOSARs y RSU/PSU. Se cargan SOSARs de junio de 2026 (más recientes que los datos de diciembre de 2025 del prompt). La integración separada de RSU/PSU queda PENDIENTE; no se valida la valoración con ese componente omitido. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 7."
+  ],
+  [
+    "Input sheet",
+    "B39",
+    12.824,
+    "Millones de SOSARs en circulación al 30-jun-2026: 12.824.000. No incluye las 4.175.000 RSU ni 1.864.000 PSU; no deben mezclarse al mismo strike. Pendiente integración separada. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 7."
+  ],
+  [
+    "Input sheet",
+    "B40",
+    39.28,
+    "Precio medio de ejercicio de SOSARs al 30-jun-2026; no corresponde a RSU/PSU. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 7."
+  ],
+  [
+    "Input sheet",
+    "B41",
+    4.1,
+    "Vida contractual media restante de SOSARs al 30-jun-2026 (años). Es dato al balance, sin actualización mecánica al corte hasta conciliar altas/bajas; salvedad de fecha pendiente. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 7."
+  ],
+  [
+    "Input sheet",
+    "B42",
+    0.352,
+    "Proxy de volatilidad: 35,2%, supuesto de valoración de concesiones SOSARs FY2025 reportado por Chipotle; no se presenta como volatilidad observada al corte ni como cotización de opciones. Pendiente sensibilidad/actualización. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 8."
+  ],
+  [
+    "Input sheet",
+    "B46",
+    "No",
+    "Reglas vigentes §4: costo de capital terminal = tasa libre del corte + prima madura, beta terminal 1. Se conserva B47 y su fórmula de plantilla."
+  ],
+  [
+    "Input sheet",
+    "B52",
+    "No",
+    "Sin ajuste separado de probabilidad de fracaso: EBIT y CFO positivos, ausencia de deuda financiera y liquidez líquida reportada. Disrupción se modelará como historia separada, sin doble penalización. Juicio pendiente de completar escenarios. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balances y nota 12."
+  ],
+  [
+    "Input sheet",
+    "B60",
+    "No",
+    "La tasa efectiva converge a la marginal; no se mantiene indefinidamente una ventaja por créditos fiscales. Regla JMR §4."
+  ],
+  [
+    "Input sheet",
+    "B65",
+    "No",
+    "Tasa libre del corte conservada en perpetuidad; regla JMR y corte 30-sep-2026."
+  ],
+  [
+    "Input sheet",
+    "B89",
+    "Convergencia Damodaran",
+    "Se conserva B24 como tasa efectiva LTM calculada desde el estado corregido; transición al marginal B25. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota fiscal; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, estado de resultados. No se normaliza la tasa inicial con un dato inventado."
+  ],
+  [
+    "Input sheet",
+    "B91",
+    "Efectiva inicial = impuesto LTM / resultado antes de impuestos LTM desde estados primarios. Marginal 25% es supuesto sustentado en 21% federal + ~4 pp estatal neto FY2025; créditos, SBC y discretos explican diferencia. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm.",
+    "Método y conciliación fiscal, consulta 28-oct-2026."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B12",
+    "Detailed",
+    "Método obligatorio JMR §4A; pesos y componentes calculados por las fórmulas de la hoja."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B22",
+    "Single Business(US)",
+    "Un negocio principal de restaurantes propios fast casual. Beta desapalancada de Restaurant/Dining US, Damodaran enero 2026, desde Industry Averages(US), sin escribir beta manual. EE.UU. concentra la gran mayoría de las ventas. Fuente segmentos https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B26",
+    "Operating regions",
+    "Distribución por exposición de ventas LTM. EE.UU. (segmento US) se asigna a North America. Residuo internacional sin reparto de ingresos públicos por país se registra en la categoría existente 'Fuera de EE.UU. sin desglose'; su ERP es proxy pendiente de sensibilidad, no datos de ventas inventados. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 13; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, segmentos."
+  ],
+  [
+    "Cost of capital worksheet",
+    "H29",
+    "=11679,417-5822,874+6289,189",
+    "Ingresos US LTM (US$M) = FY2025 US 11.679,417 − 1S25 US 5.822,874 + 1S26 US 6.289,189. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 13; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, segmento US."
+  ],
+  [
+    "Cost of capital worksheet",
+    "H32",
+    "='Input sheet'!B12-H29",
+    "Residuo internacional LTM calculado desde ingresos consolidados menos US; incluye Canadá, Europa y socios internacionales. No se infiere porcentaje por conteo de locales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 13; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, segmentos."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B33",
+    0,
+    "No hay deuda financiera recta. B16 de la maestra incluye arrendamientos ASC842 ya valorados a presente, y el conversor solo agrega pasivos incrementales. Por eso esta casilla de vencimiento de deuda recta no toma los 14,1 años de plazo contractual de leases: hacerlo descontaría nuevamente el pasivo ya reconocido en C54. Cero = sin descuento adicional de esa obligación a valor presente; el plazo de leases sigue documentado en el conversor y las fuentes. Fuente: 10-Q 30-jun-2026, balance/nota de deuda, y 10-K FY2025 nota 9. Conciliar C61 con B16 + B79."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B34",
+    "Direct input",
+    "Se usa temporalmente una tasa de deuda documentada como proxy para leases; no se atribuye una calificación crediticia inexistente. Requiere sensibilidad antes de cerrar. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 9."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B35",
+    0.0548,
+    "Proxy inicial, no tasa spot observada al corte: descuento medio de arrendamientos 5,48% al 31-dic-2025. Debe contrastarse con costo de nueva deuda/sensibilidad; esta carga no certifica WACC. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 9."
+  ],
+  [
+    "Option value",
+    "B9",
+    0,
+    "Dividend yield nulo: Chipotle no ha pagado dividendos ni espera hacerlo en el futuro próximo. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 8."
+  ],
+  [
+    "Resumen de Valoración",
+    "G3",
+    "Madura",
+    "Categoría para ponderaciones: crecimiento maduro, no crecimiento joven. Expansión de restaurantes propios con EBIT y FCF positivos; las comparables no explican todo el crecimiento. Esta clasificación no fija el crecimiento de las historias ni pesos individuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm."
+  ],
+  [
+    "Operating lease converter",
+    "B5",
+    544.367,
+    "Costo fijo de arrendamiento operativo FY2025 (US$M), no costo total incluyendo componentes variables. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 9."
+  ],
+  [
+    "Operating lease converter",
+    "B8",
+    521.413,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Operating lease converter",
+    "B9",
+    569.2,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Operating lease converter",
+    "B10",
+    553.401,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Operating lease converter",
+    "B11",
+    536.731,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Operating lease converter",
+    "B12",
+    513.146,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Operating lease converter",
+    "B13",
+    4780.639,
+    "Pagos futuros al 31-dic-2025 (US$M): 2026–2030 y posteriores, nota 9 de https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm. No incluye US$834,442M firmados sin iniciar; ese compromiso requiere tratamiento separado. No se presenta como calendario de junio de 2026."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L17",
+    9268.794,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L18",
+    3528.195,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L19",
+    0,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L20",
+    287.252,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L21",
+    0,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L22",
+    4493.334,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L23",
+    "=844,524+701,968",
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L24",
+    105.004,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L25",
+    216.347,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L26",
+    40.402,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L27",
+    2503.429,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L28",
+    0,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L29",
+    21.939,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L30",
+    1132.271,
+    "Saldo inicial del periodo LTM, 30-jun-2025, US$M. Fuente primaria: https://www.sec.gov/Archives/edgar/data/1058090/000105809025000056/cmg-20250630.htm, balance y nota de deuda. No se usa diciembre de 2025 como inicio del LTM. Ausencia de deuda financiera/intangibles separables conforme al balance; leases se conservan por separado."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L3",
+    46.622,
+    "Inventario al cierre 30-jun-2026, US$M. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "K3",
+    49.508,
+    "Inventario 31-dic-2025. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, balance."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "J3",
+    48.942,
+    "Inventario 31-dic-2024. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, balance comparativo."
+  ],
+  [
+    "Input sheet",
+    "B21",
+    "=(3,649+0,880)*(D1-0,01)",
+    "Otras reclamaciones sobre equity en el campo disponible B21 (sin minoritarios societarios): RSU 3,649M + PSU 0,880M que la compañía espera que consoliden, al 30-jun-2026. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 7. Valoración analítica del derecho prácticamente sin ejercicio: precio de corte menos US$0,01 por unidad. Los SOSARs se valoran aparte en Option value; B22 conserva acciones comunes sin diluir. Se mantiene SBC en gastos. La diferencia frente al valor límite de strike cero está acotada a US$0,01/unidad; pendiente medir contra DCF Base. El saldo contractual máximo de RSU/PSU (4,175M + 1,864M) será sensibilidad, no se mezcla con el strike de SOSARs."
+  ],
+  [
+    "Input sheet",
+    "B78",
+    "='Operating lease converter'!C29",
+    "Solapamiento del conversor: los compromisos de la nota 9 FY2025 corresponden a contratos ASC842 ya reconocidos. La hoja calcula VP US$5.134,776M frente a US$5.419,196M reconocidos a junio. Se preserva B16 de la maestra; solo B79 incremental debe agregarse y por esta conciliación es cero. No se resta por segunda vez el mismo pasivo. El calendario FY2025 no es una nueva medición de junio y no incluye compromisos firmados sin iniciar; queda salvedad temporal/de alcance. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 9; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance."
+  ],
+  [
+    "Input sheet",
+    "B54",
+    "B",
+    "Parámetro inactivo: B52=No; no se aplica ajuste por fracaso ni se estima una recuperación."
+  ],
+  [
+    "Input sheet",
+    "B55",
+    0,
+    "Parámetro inactivo: B52=No. No representa una estimación observada de recuperación."
+  ],
+  [
+    "Input sheet",
+    "B57",
+    "No",
+    "Se conserva el rezago estándar del motor para reinversión; el valor del parámetro inactivo no se fuerza a una cifra para cambiar el resultado."
+  ],
+  [
+    "Input sheet",
+    "B62",
+    "No",
+    "No se aplica un NOL consolidado a beneficios de EE.UU. El emisor sí reporta NOL extranjeros US$205,074M y estatales US$68,896M, con reservas de valuación, que no equivalen a una pérdida federal utilizable contra todos los flujos. El no reconocimiento de beneficio adicional requiere sensibilidad/seguimiento, no significa ausencia de NOL. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 6."
+  ],
+  [
+    "Input sheet",
+    "B63",
+    0,
+    "Sin crédito fiscal adicional de NOL en este modelo consolidado (B62=No). No se afirma que los NOL jurídicos sean cero. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, nota 6."
+  ],
+  [
+    "Input sheet",
+    "B76",
+    0,
+    "No hay preferentes emitidas ni reclamación de dividendos preferentes en el balance consolidado consultado. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance; 10-Q junio 2025 explícitamente sin acciones preferentes emitidas."
+  ],
+  [
+    "Input sheet",
+    "B83",
+    "='Balance Sheet'!L14",
+    "Valor contable de inversiones a largo plazo excluido del capital operativo, US$97,079M según balance de junio de 2026. No todo este saldo es caja: incluye inversiones privadas. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, notas 4–5."
+  ],
+  [
+    "Input sheet",
+    "B84",
+    "=B83+28,524",
+    "Estimación provisional de activos no operativos: inversiones a largo plazo US$97,079M + inversiones por método patrimonial en otros activos US$28,524M. Se usa valor contable como proxy explícito del analista para activos privados sin precio observable; NO es valor razonable reportado ni se declara validación económica. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, notas 4–5. Pendiente sensibilidad entre cero y un valor alternativo sustentado y verificar reclasificación del capital operativo de las inversiones incluidas en otros activos."
+  ],
+  [
+    "Input sheet",
+    "B86",
+    "Sin solapamiento",
+    "Caja B19 comprende solo caja/inversiones corrientes; B84 corresponde a inversiones LP y método patrimonial fuera de B19. Sus rentas se clasifican en resultados no operativos; no se proyectan ingresos de estas inversiones como ventas de restaurantes. Valoración económica y rango de estas participaciones siguen pendientes. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, notas 4–5 y resultados."
+  ],
+  [
+    "Input sheet",
+    "B87",
+    "Conciliación provisional: B19 = caja 228,199 + inversiones corrientes 449,658 US$M; B83 = LP 97,079; B84 añade 28,524 de inversiones por método patrimonial en otros activos. La caja restringida no se suma como libre. Proxy contable, no fair value confirmado. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, notas 4–5. Pendiente materialidad y reconciliar exclusión de esos otros activos del capital operativo.",
+    "Fuente y método explícitos; no es dictamen de valoración de participaciones."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B41",
+    0,
+    "Sin deuda convertible. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 12 y balance. Celdas 42–44 inactivas para convertibles inexistentes."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B42",
+    0,
+    "No aplica: sin convertible, B41=0."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B43",
+    0,
+    "No aplica: sin convertible, B41=0. Cero técnico, no vencimiento de deuda existente."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B44",
+    0,
+    "No aplica: sin convertible, B41=0; no es precio de una emisión existente."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B49",
+    0,
+    "Sin acciones preferentes emitidas. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B50",
+    0,
+    "No aplica: sin acciones preferentes emitidas; no hay cotización de preferentes."
+  ],
+  [
+    "Cost of capital worksheet",
+    "B51",
+    0,
+    "No aplica: sin acciones preferentes emitidas; no hay cupón/dividendo preferente."
+  ],
+  [
+    "Input sheet",
+    "B31",
+    5,
+    "Supuesto del analista: convergencia del margen a cinco años. Se conserva la mecánica común de la plantilla; comprobar senda por historia en Valuation output. No es guía de Chipotle."
+  ],
+  [
+    "Input sheet",
+    "B49",
+    "Yes",
+    "ROIC terminal con ventaja identificable, criterio de tres preguntas de REGLAS_VIGENTES y moat_2026-09-30. Base e historia Optimista conservan ventaja; Conservadora y Disrupción la pierden mediante N6/N7."
+  ],
+  [
+    "Input sheet",
+    "B50",
+    0.1836043629376828,
+    "ROIC terminal Base = referencia Restaurant/Dining US de la tabla Damodaran vigente en la hoja (18,3604%), superior al coste terminal 8,99% e inferior al ROIC LTM de la hoja (20,1673%). Los ROIC de 2023/24/25 con leases en deuda son 21,4400%/23,2290%/21,7074%. Criterio durable provisional: marca desde 1993 y recuperación de crisis; la presión actual de margen exige vigilancia, sin evidencia suficiente de pérdida estructural de cuota. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; Industry Averages(US) de Damodaran ene-2026."
+  ],
+  [
+    "Input sheet",
+    "B71",
+    "No",
+    "No se modela un gravamen adicional de repatriación sin evidencia; se excluye la caja restringida de B19 y no se trata la inversión privada como caja. Juicio provisional sujeto a materialidad de la localización fiscal del efectivo. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, balance/nota de liquidez."
+  ],
+  [
+    "Input sheet",
+    "B98",
+    "Sin liberación",
+    "Una caída de ventas no acredita venta de locales, reducción de capex contractual ni liberación permanente de capital. La reinversión negativa no se autoriza automáticamente."
+  ],
+  [
+    "Input sheet",
+    "B99",
+    "Sin liberación",
+    "Una caída de ventas no acredita venta de locales, reducción de capex contractual ni liberación permanente de capital. La reinversión negativa no se autoriza automáticamente."
+  ],
+  [
+    "Input sheet",
+    "B100",
+    "Sin liberación",
+    "Una caída de ventas no acredita venta de locales, reducción de capex contractual ni liberación permanente de capital. La reinversión negativa no se autoriza automáticamente."
+  ],
+  [
+    "Input sheet",
+    "B101",
+    "Sin liberación",
+    "Una caída de ventas no acredita venta de locales, reducción de capex contractual ni liberación permanente de capital. La reinversión negativa no se autoriza automáticamente."
+  ],
+  [
+    "Escenarios e historias",
+    "B5",
+    0.45,
+    "Previa por etapa Crecimiento maduro: Base 45%, Conservadora 22,5%, Optimista 22,5%, Disrupción 10%. Sin ajustes: no se ha acreditado cruce de un umbral escrito; pendiente ejecución de probabilidades.py."
+  ],
+  [
+    "Escenarios e historias",
+    "D5",
+    0.17,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "E5",
+    2,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "F5",
+    1.8,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "L5",
+    "Aperturas rentables y recuperación gradual de productividad",
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "M5",
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes).",
+    "Narrativa propia y fuentes de esta revisión; no es un resultado calculado."
+  ],
+  [
+    "Escenarios e historias",
+    "N5",
+    0.1836043629376828,
+    "Referencia sectorial sostenible 18,3604%; no supera ROIC observado LTM. Coherente con B50."
+  ],
+  [
+    "Escenarios e historias",
+    "C29",
+    0.11,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "D29",
+    0.105,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "E29",
+    0.1,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "F29",
+    0.095,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "G29",
+    0.09,
+    "Juicio Base: aperturas ~8–9% sobre la base de restaurantes más comparables positivos bajos; el crecimiento se desacelera conforme aumenta la base. Margen GAAP recupera 17% en cinco años, cercano al mejor nivel reciente, sin asumir un margen de franquiciador. Sales/Capital 2,0x y 1,8x recogen construcción, mantenimiento y menor eficiencia marginal al expandirse. No es guía del emisor. Evidencia: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm (objetivo 7.000 locales, AUV, costes/capex) y https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm (350–370 aperturas, comparables +2,2%, presión de costes)."
+  ],
+  [
+    "Escenarios e historias",
+    "B6",
+    0.225,
+    "Previa por etapa Crecimiento maduro: Base 45%, Conservadora 22,5%, Optimista 22,5%, Disrupción 10%. Sin ajustes: no se ha acreditado cruce de un umbral escrito; pendiente ejecución de probabilidades.py."
+  ],
+  [
+    "Escenarios e historias",
+    "D6",
+    0.14,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "E6",
+    1.6,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "F6",
+    1.5,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "L6",
+    "Menor tráfico y aperturas de menor retorno",
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "M6",
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm.",
+    "Narrativa propia y fuentes de esta revisión; no es un resultado calculado."
+  ],
+  [
+    "Escenarios e historias",
+    "N6",
+    0.0899,
+    "Historia de erosión: ROIC terminal igual al coste de capital terminal del corte, 8,99%."
+  ],
+  [
+    "Escenarios e historias",
+    "C53",
+    0.06,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "D53",
+    0.05,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "E53",
+    0.05,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "F53",
+    0.045,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "G53",
+    0.04,
+    "Juicio Conservadora: las nuevas unidades compensan comparables débiles sin repetir el ritmo de la Base; salarios, carne y promociones limitan margen GAAP a 14%. Menor productividad del capital y pérdida de retornos excedentes en perpetuidad. Costes y tráfico se modelan en flujos, no en un WACC adicional. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "B7",
+    0.1,
+    "Previa por etapa Crecimiento maduro: Base 45%, Conservadora 22,5%, Optimista 22,5%, Disrupción 10%. Sin ajustes: no se ha acreditado cruce de un umbral escrito; pendiente ejecución de probabilidades.py."
+  ],
+  [
+    "Escenarios e historias",
+    "D7",
+    0.09,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "E7",
+    1.2,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "F7",
+    1.2,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "L7",
+    "Nueva crisis de confianza y deterioro operativo persistente",
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "M7",
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido.",
+    "Narrativa propia y fuentes de esta revisión; no es un resultado calculado."
+  ],
+  [
+    "Escenarios e historias",
+    "N7",
+    0.0899,
+    "Historia de erosión: ROIC terminal igual al coste de capital terminal del corte, 8,99%."
+  ],
+  [
+    "Escenarios e historias",
+    "C77",
+    -0.08,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "D77",
+    -0.03,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "E77",
+    0,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "F77",
+    0.02,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "G77",
+    0.04,
+    "Prueba de estrés, no previsión: una crisis de seguridad alimentaria/confianza o deterioro de la propuesta de valor provoca caída inicial de ventas, recuperación lenta y margen GAAP de 9%. Sin liberación automática de capital ante caída de ventas; los compromisos de locales y mantenimiento persisten. Terminal sin ventaja (ROIC = coste). Se presenta fuera del promedio ordinario. Riesgos en https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; no se afirma que este desenlace haya sucedido."
+  ],
+  [
+    "Escenarios e historias",
+    "B8",
+    0.225,
+    "Previa por etapa Crecimiento maduro: Base 45%, Conservadora 22,5%, Optimista 22,5%, Disrupción 10%. Sin ajustes: no se ha acreditado cruce de un umbral escrito; pendiente ejecución de probabilidades.py."
+  ],
+  [
+    "Escenarios e historias",
+    "D8",
+    0.19,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "E8",
+    2.4,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "F8",
+    2.1,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "L8",
+    "Chipotlane, tráfico y escala elevan el retorno de nuevas unidades",
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "M8",
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm.",
+    "Narrativa propia y fuentes de esta revisión; no es un resultado calculado."
+  ],
+  [
+    "Escenarios e historias",
+    "N8",
+    0.1836043629376828,
+    "Referencia sectorial sostenible 18,3604%; no supera ROIC observado LTM. Coherente con B50."
+  ],
+  [
+    "Escenarios e historias",
+    "C101",
+    0.14,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "D101",
+    0.13,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "E101",
+    0.12,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "F101",
+    0.11,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Escenarios e historias",
+    "G101",
+    0.1,
+    "Juicio Optimista: crecimiento de unidades y mayor AUV conviven; Chipotlane, mezcla digital, velocidad y escala mejoran productividad. Margen GAAP 19% exige superar el mejor reciente, con apalancamiento real de costes; no se traslada íntegro el margen del restaurante a la firma. Mejora de Sales/Capital 2,4x/2,1x, sin crecimiento gratis. ROIC terminal vuelve al promedio sectorial, no se perpetúan retornos extraordinarios actuales. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000063/cmg-20260729xex991.htm."
+  ],
+  [
+    "Input sheet",
+    "C98",
+    "La expansión exige capital; no se supone liberación de capital por crecimiento más lento. Mantener el tratamiento de reinversión no negativa del motor.",
+    "Justificación por historia del tratamiento del capital; requisito del candado terminal/reinversión, no aprobación manual."
+  ],
+  [
+    "Input sheet",
+    "C99",
+    "La expansión exige capital; no se supone liberación de capital por crecimiento más lento. Mantener el tratamiento de reinversión no negativa del motor.",
+    "Justificación por historia del tratamiento del capital; requisito del candado terminal/reinversión, no aprobación manual."
+  ],
+  [
+    "Input sheet",
+    "C100",
+    "Caídas de ventas por crisis de confianza no demuestran venta de activos ni liberación de capital; se mantiene reinversión mínima no negativa y mantenimiento. No se financia el estrés con una devolución ficticia de capital.",
+    "Justificación por historia del tratamiento del capital; requisito del candado terminal/reinversión, no aprobación manual."
+  ],
+  [
+    "Input sheet",
+    "C101",
+    "La expansión exige capital; no se supone liberación de capital por crecimiento más lento. Mantener el tratamiento de reinversión no negativa del motor.",
+    "Justificación por historia del tratamiento del capital; requisito del candado terminal/reinversión, no aprobación manual."
+  ],
+  [
+    "Escenarios e historias",
+    "A14",
+    "Precio con MOS · 35% sobre DCF Base",
+    "Rótulo del cálculo previsto por build_story_sheet.py en fila 14; no se cambia estructura de pestañas."
+  ],
+  [
+    "Escenarios e historias",
+    "H14",
+    "=IF(ISNUMBER(H11);H11*(1-'Resumen de Valoración'!G4);\"\")",
+    "Mecánica del sistema: DCF Base H11 × (1 − MOS de Resumen G4). Esta celda estaba vacía aunque Resumen B19 la referencia; se completa con fórmula, nunca con un resultado manual."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "I4",
+    0,
+    "Sin participaciones no controladoras consolidadas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "I5",
+    0,
+    "Sin preferentes emitidas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "J4",
+    0,
+    "Sin participaciones no controladoras consolidadas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "J5",
+    0,
+    "Sin preferentes emitidas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "K4",
+    0,
+    "Sin participaciones no controladoras consolidadas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "K5",
+    0,
+    "Sin preferentes emitidas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L4",
+    0,
+    "Sin participaciones no controladoras consolidadas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Entradas históricas auxiliares",
+    "L5",
+    0,
+    "Sin preferentes emitidas en los balances y estados de patrimonio de 2023–2025 y junio de 2026 consultados. Las participaciones que Chipotle tiene en otras firmas no son minoritarios sobre Chipotle. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Se limita esta entrada a los períodos con fuente primaria consultada."
+  ],
+  [
+    "Income Statement",
+    "I27",
+    1371.296,
+    "Acciones comunes al cierre del año, millones, no acciones de la portada del ejercicio siguiente. Para 2023 = emitidas 1.874,139M − tesorería 502,843M; 2024 y 2025, acciones emitidas tras retiro de tesorería. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, estado de patrimonio y balance. Todas en base split 50:1."
+  ],
+  [
+    "Income Statement",
+    "J27",
+    1358.751,
+    "Acciones comunes al cierre del año, millones, no acciones de la portada del ejercicio siguiente. Para 2023 = emitidas 1.874,139M − tesorería 502,843M; 2024 y 2025, acciones emitidas tras retiro de tesorería. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, estado de patrimonio y balance. Todas en base split 50:1."
+  ],
+  [
+    "Income Statement",
+    "K27",
+    1304.36,
+    "Acciones comunes al cierre del año, millones, no acciones de la portada del ejercicio siguiente. Para 2023 = emitidas 1.874,139M − tesorería 502,843M; 2024 y 2025, acciones emitidas tras retiro de tesorería. Fuente https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, estado de patrimonio y balance. Todas en base split 50:1."
+  ],
+  [
+    "Income Statement",
+    "H25",
+    1392.543,
+    "FY2022, millones de acciones básicas, ya reexpresadas por split 50:1 en el 10-K FY2024. Se elimina una segunda multiplicación por 50 del importador. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Income Statement",
+    "H26",
+    1403.077,
+    "FY2022, millones de acciones diluidas, ya reexpresadas; no multiplicar por 50 otra vez. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Income Statement",
+    "I25",
+    1377.768,
+    "FY2023, millones de acciones básicas, comparativo ya reexpresado por split en 10-K FY2025. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm"
+  ],
+  [
+    "Income Statement",
+    "I26",
+    1385.5,
+    "FY2023, millones de acciones diluidas, comparativo ya reexpresado; no aplicar nuevamente el split. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm"
+  ],
+  [
+    "Income Statement",
+    "L25",
+    "=(K25*365-1349,737*181+1287,792*181)/365",
+    "LTM de acciones PROMEDIO ponderadas por días, no suma/resta de promedios como flujos: FY2025 × 365 días − 1S25 × 181 días + 1S26 × 181 días, dividido por 365. Valores en millones. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm, estado de resultados; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 10."
+  ],
+  [
+    "Income Statement",
+    "L26",
+    "=(K26*365-1355,478*181+1290,462*181)/365",
+    "LTM diluido ponderado por días. No confundir acciones promedio con acciones al corte B22, ni volver a restar derechos ya diluidos en el denominador del DCF. https://www.sec.gov/Archives/edgar/data/1058090/000105809026000009/cmg-20251231.htm; https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm, nota 10."
+  ],
+  [
+    "Income Statement",
+    "L2",
+    "LTM Jun '26",
+    "Periodo LTM terminado el 30-jun-2026; balance al 30-jun-2026. Etiqueta fechada requerida por Input sheet!D12. Fuentes SEC 10-K FY2025 y 10-Q 2T2026."
+  ],
+  [
+    "Balance Sheet",
+    "L2",
+    "LTM Jun '26",
+    "Periodo LTM terminado el 30-jun-2026; balance al 30-jun-2026. Etiqueta fechada requerida por Input sheet!D12. Fuentes SEC 10-K FY2025 y 10-Q 2T2026."
+  ],
+  [
+    "Cash Flow Statement",
+    "L2",
+    "LTM Jun '26",
+    "Periodo LTM terminado el 30-jun-2026; balance al 30-jun-2026. Etiqueta fechada requerida por Input sheet!D12. Fuentes SEC 10-K FY2025 y 10-Q 2T2026."
+  ],
+  [
+    "Trailing Valuation",
+    "L2",
+    "LTM",
+    "Serie de valoración histórica: columna L corresponde al LTM a junio de 2026, precio del corte 30-sep-2026. Se conserva la etiqueta LTM que reconoce el selector histórico."
+  ],
+  [
+    "EVEBITDA",
+    "J8",
+    10.989338976508185,
+    "EV/EBITDA, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (10.989338976508185x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "EVEBITDA",
+    "J19",
+    13.90090774445925,
+    "EV/EBITDA, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (13.90090774445925x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "EVEBITDA",
+    "J30",
+    16.851323205518305,
+    "EV/EBITDA, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (16.851323205518305x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "EVFCFF",
+    "J8",
+    23.72873934182652,
+    "EV/FCFF, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (23.72873934182652x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "EVFCFF",
+    "J19",
+    35.68039924887254,
+    "EV/FCFF, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (35.68039924887254x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "EVFCFF",
+    "J30",
+    40.155891174715,
+    "EV/FCFF, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (40.155891174715x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "PE",
+    "J8",
+    21.97695468824643,
+    "P/E, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (21.97695468824643x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PE",
+    "J19",
+    32.64036003334002,
+    "P/E, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (32.64036003334002x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PE",
+    "J30",
+    36.770532454690745,
+    "P/E, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (36.770532454690745x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PFCFE",
+    "J8",
+    23.2358994085231,
+    "P/FCFE, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (23.2358994085231x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PFCFE",
+    "J19",
+    34.592082803958945,
+    "P/FCFE, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (34.592082803958945x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "PFCFE",
+    "J30",
+    38.78671469075954,
+    "P/FCFE, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (38.78671469075954x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "POCF",
+    "J8",
+    14.637598375907528,
+    "P/OCF, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (14.637598375907528x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "POCF",
+    "J19",
+    21.892135838878637,
+    "P/OCF, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (21.892135838878637x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "POCF",
+    "J30",
+    25.584593557680854,
+    "P/OCF, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (25.584593557680854x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "PV",
+    "J8",
+    2.48018850885837,
+    "P/S, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (2.48018850885837x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PV",
+    "J19",
+    4.148560075439756,
+    "P/S, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (4.148560075439756x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "PV",
+    "J30",
+    5.022699533155966,
+    "P/S, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (5.022699533155966x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. El salto >25% frente al LTM se sustenta en crecimiento FY+3 superior al LTM y recuperación del margen, no en acercarse al precio: Base 10% y Optimista 12% de crecimiento FY+3 frente al 4,18% LTM; márgenes convergen a 17% y 19% desde 14,65%. Revisar cumplimiento de hitos. No es un precio objetivo de terceros."
+  ],
+  [
+    "PBV",
+    "J8",
+    5.1887930654460535,
+    "P/BV, Conservador: mínimo entre selección por ciclo (Dec '25, crecimiento por debajo del observado: mínimo histórico ajustado, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (5.1887930654460535x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PBV",
+    "J19",
+    8.904677208973514,
+    "P/BV, Base: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (8.904677208973514x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "PBV",
+    "J30",
+    10.761140915590193,
+    "P/BV, Optimista: mínimo entre selección por ciclo (Dec '23, cierre más cercano, factores de tasas {\"Dec '23\":0.898,\"Dec '24\":0.984,\"Dec '25\":0.884,\"LTM\":1}), ancla C de la misma historia (10.761140915590193x) y, solo Conservador, múltiplo LTM. Fórmulas/fuentes de ancla C en multiples_anchors.py; P/S = P/E justificado × margen neto FY+3 y P/BV = P/E justificado × utilidad FY+3 / patrimonio FY+3. Se carga precisión completa para no redondear por encima del tope C. No es un precio objetivo de terceros."
+  ],
+  [
+    "Resumen de Valoración",
+    "K6",
+    0.4,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. Bloque DCF, complemento de ponderación. El valor principal y MOS siguen siendo DCF Base. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Resumen de Valoración",
+    "K7",
+    0.15,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. 25% del bloque relativo: EBITDA facilita comparar rentabilidad operativa, pero omite mantenimiento y capex de expansión; no domina. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Resumen de Valoración",
+    "K8",
+    0.18,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. 30% del bloque relativo: FCFF recoge el capital que exigen restaurantes y mantenimiento; mayor peso relativo por intensidad de reinversión. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Resumen de Valoración",
+    "K9",
+    0.15,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. 25% del bloque relativo: beneficios positivos, sin intereses financieros relevantes; exigir SBC y fiscalidad coherentes. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Resumen de Valoración",
+    "K10",
+    0.06,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. 10% del bloque relativo: FCFE refleja caja al común, sujeto a la hipótesis mecánica de financiación/recompras de la plantilla. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Resumen de Valoración",
+    "K11",
+    0.06,
+    "Pesos propios CMG dentro de la categoría Madura en esta copia, no cambio global. 10% del bloque relativo: OCF comprueba conversión, pero omite capex, por lo que pesa menos. P/S y P/BV se calculan con peso cero: ventas omiten la economía del margen y valor libro está distorsionado por recompras/activos de marca no reconocidos."
+  ],
+  [
+    "Income Statement",
+    "H20",
+    282.43,
+    "Impuesto FY2022 exacto desde 10-K FY2024 comparativo, US$M; reemplaza agregado redondeado. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Income Statement",
+    "H21",
+    899.101,
+    "Utilidad FY2022 exacta desde estado primario. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Income Statement",
+    "H22",
+    "=H21",
+    "Utilidad común FY2022, sin participación minoritaria reportada. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Cash Flow Statement",
+    "H3",
+    "='Income Statement'!H21",
+    "Utilidad FY2022 vinculada a resultados corregidos. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ],
+  [
+    "Cash Flow Statement",
+    "H6",
+    "=H13-SUM(H3:H5;H7:H12)",
+    "Residual de clasificación de otros ajustes, conserva CFO reportado y las restantes entradas, no una partida individual informada. https://www.sec.gov/Archives/edgar/data/1058090/000105809025000014/cmg-20241231.htm"
+  ]
+]

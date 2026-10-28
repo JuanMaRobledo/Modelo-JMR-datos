@@ -1,19 +1,51 @@
-# CMG · reinicio: avance técnico parcial
+# CMG · reinicio: cálculos cargados, entrega incompleta
 
-Revisión prevista: `CMG-2026-10-28-R1-REINICIO`. Registro de trabajo: 27-oct-2026. Rama: `ccr-e19723cb-q1m72p`.
+Revisión: `CMG-2026-10-28-R1-REINICIO`. Rama: `ccr-e19723cb-q1m72p`.
 
-**Estado: PENDIENTE. La auditoría económica está PENDIENTE. Este archivo no es un dictamen ni certificación.**
+**Estado: PREPARACION. Auditoría económica PENDIENTE. No es un dictamen ni una publicación EN_REVISION comprobada.**
 
-Hoja de trabajo: https://docs.google.com/spreadsheets/d/1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc/edit
+Hoja: https://docs.google.com/spreadsheets/d/1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc/edit
 
-Se restauraron 1.062 fórmulas. Comparación posterior: 1.312 fórmulas de la maestra en los rangos de 12 pestañas, cero diferencias, excepto la exclusión expresa de Resumen de Valoración!C25. No es una certificación del libro completo. Se añadieron 22 fórmulas de FCF en Cash Flow Statement!B38:L39, donde la maestra no tenía fórmulas, con notas de definición.
+## Resultados provisionales de las fórmulas
 
-Código: split 50:1 mediante dataclasses.replace, sin mutar AnnualSeries; carga de estados y refresco parcial conservan fórmulas existentes. Pruebas aisladas aprobadas. El refresco completo contra Sheets no se ha ejecutado.
+| Concepto | US$ por acción |
+|---|---:|
+| DCF Base | 24,936927 |
+| Conservadora | 11,061541 |
+| Optimista | 32,227385 |
+| Disrupción | 3,717439 |
+| Promedio ordinario (sin Disrupción) | 23,290695 |
+| Precio con MOS 35% sobre Base | 16,209003 |
 
-Bloqueo de ejecución: gspread ya se instaló, pero no hay cuenta de servicio configurada. get_gspread_client() falla al resolver una ruta de credenciales vacía como '.'. El conector de Sheets sí funcionó para restauración y lectura de comprobación. El script unificacion_hojas.py citado en las reglas no está en esta rama (404).
+Precio al corte 30-sep-2026: US$31,95. WACC inicial 7,992658%; terminal 8,99%; g 4%. El inverso del motor existente exige ~14,3573% anual uniforme en años 1–5 con margen objetivo 17% y el resto constante. VP terminal / VP operativo ~68,84%.
 
-No se ha aplicado el corte: el C25 aún es 27,98 y debe fijarse en 31,95 al continuar. No hay DCF Base oficial nuevo, historias, siete múltiplos, artículo, registro EN_REVISION ni prueba local de app completados. No se ejecutó audit_report.py ni se generó manifiesto de auditoría.
+Los siete múltiplos ya calculan por historia. Base, valor presente consolidado: EV/EBITDA 22,967050; EV/FCFF 21,226597; P/E 40,656766; P/FCFE 27,525242; P/OCF 28,378057; P/S 42,289533; P/BV 33,783252. P/S y P/BV tienen peso cero justificado. No usar el ponderado como valor principal ni base del MOS.
 
-No hubo eliminaciones en esta sesión; no se consultaron valoraciones antiguas. La carpeta personal CMG de Drive se conserva. No se puede afirmar eliminación definitiva de los archivos retirados previamente: pueden permanecer en historial de Git, papelera de Drive y referencias de terceros.
+## Comprobaciones realizadas
 
-Evidencia detallada y cambios anteriores de las celdas en `evidencia/CMG-2026-10-28-R1-REINICIO/restauracion-formulas-parcial.json`.
+- Comparación de las 61 pestañas: 21.265 fórmulas originales, cero diferencias salvo exclusión expresa de C25; 122 validaciones conservadas. No se hicieron cambios de pestañas, dimensiones ni orden.
+- 66 identidades contables/relaciones de cálculo sobre las once columnas, cero fallos a tolerancia de US$0,005M.
+- Las cuatro historias concilian con el código nativo de `Modelo-JMR/docs/jmr_engine.js`, diferencia máxima menor de US$0,000001/acción.
+- Tres matrices de sensibilidad existentes: centros iguales al DCF Base, controles de centro OK. Falta verificar/completar el alcance preciso de la matriz de WACC terminal exigida.
+- No se ejecutaron los verificadores Python ni Playwright: el entorno de ejecución está indisponible. Los conectores permitieron aplicar entradas, leer resultados y ejecutar el motor JS original.
+
+## Correcciones adicionales
+
+Se corrigieron utilidades/impuestos redondeados, un segundo split indebido en 2022–2023 y el LTM de acciones promedio (ponderado por días, no suma/resta de promedios). Las acciones al cierre fiscal no se toman de la portada posterior. Se preservó B16 de la maestra y se concilió el solapamiento de leases; el vencimiento de deuda recta no usa el plazo contractual de arrendamientos, evitando descontar su pasivo una segunda vez. El MOS faltante en H14 se completó con fórmula.
+
+Se registraron `reference/damodaran/CMG.json`, ciclo de vida, moat y decisiones de los siete métodos. `scripts/cmg_entradas.py` reproduce 210 entradas/notas y comprueba contra la maestra antes de escribir. La carga de estados prioriza 10-K/10-Q sobre comunicados redondeados, evita doble split y pondera acciones LTM por días. Los cambios Python no pudieron ejecutarse en este entorno; la comprobación del motor original JS sí se realizó.
+
+## Continuación obligatoria
+
+1. Ejecutar controles técnicos Python en un entorno autenticado. Recuperar/conciliar `unificacion_hojas.py`, que no existe en esta rama; no afirmar una corrida exitosa.
+2. Revisar materialidad de Kd/volatilidad proxy, vesting y tratamiento separado de RSU/PSU, participaciones privadas, compromisos de leases sin iniciar y conciliación del capital operativo.
+3. Completar textos, estadísticas, comprobación de restos de plantilla y alcance de sensibilidades. `Financials Multiples` conserva los promedios y acciones constantes de la maestra como supuestos provisionales; no se copiaron supuestos de SHAK.
+4. Crear el artículo completo de 18 secciones y dos niveles: **todavía NO está creado**.
+5. Exportar valoración y análisis, preparar registro de la misma revisión y catálogo EN_REVISION después de controles aprobados. La puerta no se ha saltado ni se ha inventado manifiesto.
+6. Verificar app local con Playwright (expediente/lector/visor), y solo entonces pedir autorización para fusionar a main.
+
+**No ejecutar ciegamente `build_story_sheet.py` sobre esta copia:** su camino legado limpia y reconstruye fórmulas, contrario a REGLAS_VIGENTES §11. Los cuatro DCF ya son los de la maestra; se cargaron sus entradas vacías y se preservaron sus fórmulas. El motor `damodaran_stories.py` ahora admite `s2c_6a10` para que cada historia conserve su segunda etapa; el constructor legado no se ha ejecutado.
+
+No hubo eliminaciones en este turno ni consulta de valoraciones antiguas. Se conserva la carpeta personal CMG. La eliminación previa no es purga del historial Git ni de la papelera Drive, y permanecen referencias legítimas de terceros/mercado/transacciones del usuario.
+
+Evidencia: `calculos-hoja.json`, `controles-tecnicos-conector.json`, `entradas-reproducibles.json`, `motor-hoja.json`, `snapshot-valores.json` en esta carpeta.
