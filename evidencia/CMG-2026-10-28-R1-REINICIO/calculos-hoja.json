@@ -4,7 +4,7 @@
   "estado": "PREPARACION",
   "publicationStatus": "NO_PUBLICADO",
   "validationStatus": "PENDIENTE_AUDITORIA_ECONOMICA",
-  "alcance": "Cálculos de la hoja y comprobaciones técnicas parciales; no es artículo completo, dictamen ni manifiesto certificado.",
+  "alcance": "Cálculos de hoja conciliados con motor nativo, textos de hoja y borradores de artículo 18 secciones/Nivel2; no es dictamen ni publicación certificada.",
   "sheetId": "1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc",
   "fechaCorte": "2026-09-30",
   "precioCorte": 31.95,
@@ -145,7 +145,78 @@
         "base": 24.93692709950013,
         "check": "OK"
       }
-    ]
+    ],
+    "sensibilidadMultiplesBase": [
+      {
+        "method": "EV/EBITDA",
+        "row": 81,
+        "center": 24.51483864621291,
+        "vp": 24.51483864621291,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "EV/FCFF",
+        "row": 91,
+        "center": 24.51483864621291,
+        "vp": 24.51483864621291,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "P/E",
+        "row": 101,
+        "center": 42.93755286703225,
+        "vp": 42.93755286703225,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "P/FCFE",
+        "row": 111,
+        "center": 30.488397591047427,
+        "vp": 30.488397591047427,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "P/OCF",
+        "row": 121,
+        "center": 30.488397591047427,
+        "vp": 30.488397591047427,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "P/S",
+        "row": 131,
+        "center": 42.93755286703225,
+        "vp": 42.93755286703225,
+        "check": "OK",
+        "pass": true
+      },
+      {
+        "method": "P/BV",
+        "row": 141,
+        "center": 42.93755286703225,
+        "vp": 42.93755286703225,
+        "check": "OK",
+        "pass": true
+      }
+    ],
+    "contentPreflight": {
+      "entries": 172,
+      "formulaConflicts": [],
+      "temporaryAverages": 36,
+      "temporaryCellsCleared": true,
+      "sourceNote": "Writes restricted to userEnteredValue/note, never validation/style."
+    },
+    "waccSensitivity": {
+      "initialAndTerminalShiftTogether": true,
+      "shift": -0.01,
+      "native": 32.82543587349285,
+      "sheet": 32.82543587349286
+    }
   },
   "correcciones": [
     "4 fórmulas de ROIC de Escenarios e historias restauradas de la maestra, además de las 1.062 del turno previo.",
@@ -165,26 +236,40 @@
     "Calendario de leases al cierre FY2025 frente a balance de junio; contratos sin iniciar requieren revisión de su efecto incremental.",
     "Financials Multiples conserva todas las fórmulas originales, incluidos promedios de D&A/capex/otros y acciones constantes. No se ejecutó shak_financials_multiples.py con valores de otra firma ni se sobrescribieron esos cálculos.",
     "El constructor build_story_sheet.py legado borraría/reconstruiría fórmulas; no se ejecutó. Se diligenciaron entradas vacías originales y se preservó motor nativo. La fila MOS vacía se completó con la fórmula que ya usa el sistema.",
-    "Los scripts de motor deben respetar s2c_6a10 de cada historia al reejecutarse; el motor nativo se concilió tomando E:F de cada caso directamente."
+    "Los scripts de motor deben respetar s2c_6a10 de cada historia al reejecutarse; el motor nativo se concilió tomando E:F de cada caso directamente.",
+    "8-K 5-ago-2026: guía 29-jul no incluía posible impacto financiero de investigación. Base asume ausencia de daño duradero como juicio del analista.",
+    "Inventario agregado de 8-K incompleto, con fuentes individuales consultadas.",
+    "Sensibilidad DCF de tasa mueve inicial y terminal conjuntamente; siete centros relativos Base concilian con VP FY3."
   ],
   "pendientes": [
-    "Ejecutar scripts Python: estados_completos, candados, integridad_hojas, inputs_completos, controles_supuestos, consistencia_migracion y probabilidades en entorno autenticado. El entorno de ejecución está indisponible; no se simula una corrida exitosa.",
-    "Recuperar o conciliar el control unificacion_hojas.py ausente en la rama; la comparación por conector sí verificó fórmulas/validaciones/estructura y 66 identidades.",
-    "Revisar la ventana histórica, pares con fecha y materialidad de proxies; no se presenta historia depurada de diez años ni comparables actualizados.",
-    "Completar textos de la hoja, estadísticas y escaneo semántico de restos de otras empresas.",
-    "Artículo de 18 secciones, Nivel 1 y Nivel 2: NO CREADO. No sustituirlo por este avance.",
-    "Verificar la interpretación de las matrices de WACC de la plantilla y completar sensibilidad terminal explícita requerida; tres centros existentes concilian.",
-    "Exportar con el sistema existente, preparar registro/analysisSchema y actualizar catálogo solo después de controles técnicos aprobados.",
-    "Generar evidencias de app local, expediente, lector y visor con Playwright al restablecer el entorno. No se ha declarado publicación real ni modificado main.",
-    "Puerta publicacion_gate.py: no ejecutada ni saltada; no hay manifiesto certificado y no se inventará uno.",
-    "Auditoría económica posterior a revisión visual del usuario; no se ejecutó audit_report.py."
+    "Ejecutar controles Python oficiales en entorno autenticado: estados_completos, candados, integridad_hojas, inputs_completos, controles_supuestos, consistencia_migracion y probabilidades. No se simula ejecución.",
+    "Recuperar/conciliar unificacion_hojas.py, ausente en la rama; auditar_profundidad.py no se encontró en Modelo-JMR-datos/scripts. Comparación por conector y controles editoriales JS no sustituyen scripts oficiales.",
+    "Completar inventario agregado de 8-K hasta el corte; documentos individuales de julio/agosto/septiembre sí consultados.",
+    "Concluir revisión de materialidad de proxies documentados: Kd, volatilidad, vesting RSU/PSU, inversiones privadas y leases sin iniciar; no hacer dictamen independiente antes de revisión visual.",
+    "La matriz DCF de tasa desplaza inicial y terminal; una matriz exclusivamente terminal no está disponible sin alterar la plantilla. Documentar/conciliar requisito con regla de conservación.",
+    "Exportar por sistema existente, completar registro de valoración y vinculación del análisis, migrar/normalizar y actualizar catálogo. Borrador de análisis con articleHtml/calculationHtml guardado solo en evidencia; no activo.",
+    "Ejecutar tests/cmg_reinicio_smoke.py preparado en Modelo-JMR: requiere primero registro/catálogo y runtime. No se ha probado la app local ni la real.",
+    "publicacion_gate.py: no ejecutada ni saltada; no hay manifiesto certificado. No fabricar certificado ni presentar salto no ocurrido como hecho.",
+    "Auditoría económica pendiente y diferida; no se ejecutó audit_report.py. Sin PR ni merge a main."
   ],
   "codeCommits": [
     "edf8e5d63e2df6ff74c0d7eb955c42955caf7ba0",
-    "103cad1bce8a21dee96b2cb571199db7a827ebbd"
+    "103cad1bce8a21dee96b2cb571199db7a827ebbd",
+    "c0fc2ac3994ae9e9417534755d9edf6e55d8eb88",
+    "0d1c658f00cd5117c0680ac70bce14c749bafcf9"
   ],
   "deletedFilesThisTurn": [],
   "oldValuationsRead": false,
   "personalFolderPreserved": "14qnWfkDeJezc_-RdaE3n7ADdhMlosYQQ",
-  "publicationAuthorization": "El usuario solicitó completar el reinicio y publicar preliminarmente EN_REVISION; esa autorización no se trata como aprobación de controles ni de fusión a main."
+  "publicationAuthorization": "El usuario solicitó completar el reinicio y publicar preliminarmente EN_REVISION; esa autorización no se trata como aprobación de controles ni de fusión a main.",
+  "appCommit": "50374bfc99c3f49d45fab33f07ed7d92867a97f3",
+  "article": {
+    "status": "BORRADOR_COMPLETO_EN_PREPARACION",
+    "sections": 18,
+    "sourcePath": "JMR-valuation/data/CMG_Research_Fundamental_Modelo_JMR_2026-10-28.md",
+    "level2": "JMR-valuation/data/CMG_Nivel2_Calculos_2026-10-28.md",
+    "primarySources": 16,
+    "officialDepthCheckRun": false
+  },
+  "runtimeError": "No usable execution environment is available. Wait for an environment to become available before using this tool."
 }

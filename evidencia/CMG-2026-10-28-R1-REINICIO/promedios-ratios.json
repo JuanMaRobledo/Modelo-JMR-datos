@@ -1,0 +1,492 @@
+{
+  "definitions": [
+    [
+      "Crecimiento ingresos",
+      "Income Statement",
+      4,
+      "Tasa LTM frente a FY2025; no crecimiento interanual LTM"
+    ],
+    [
+      "Margen bruto",
+      "Márgenes",
+      3,
+      "Ingresos menos costes de restaurante"
+    ],
+    [
+      "Margen operativo GAAP",
+      "Márgenes",
+      4,
+      "EBIT/ventas"
+    ],
+    [
+      "Margen FCF",
+      "Márgenes",
+      9,
+      "CFO menos capex/ventas"
+    ],
+    [
+      "ROA",
+      "Eficiencia de capital",
+      4,
+      "Utilidad/activos promedio"
+    ],
+    [
+      "ROE",
+      "Eficiencia de capital",
+      5,
+      "Utilidad/patrimonio promedio, recompras elevan ratio"
+    ],
+    [
+      "ROIC con arrendamientos",
+      "Eficiencia de capital",
+      3,
+      "NOPAT/capital promedio, ASC842 desde 2019"
+    ],
+    [
+      "Rotación de activos",
+      "Eficiencia de capital",
+      16,
+      "Ventas/activos promedio"
+    ],
+    [
+      "Current ratio",
+      "Salud Financiera",
+      5,
+      "Incluye renta corriente"
+    ],
+    [
+      "Quick ratio",
+      "Salud Financiera",
+      6,
+      "Sin inventarios y otros activos corrientes"
+    ],
+    [
+      "Deuda neta/EBITDA",
+      "Salud Financiera",
+      19,
+      "Arrendamientos incluidos, cambio ASC842 en 2019"
+    ],
+    [
+      "Cobertura EBITDA/intereses",
+      "Salud Financiera",
+      21,
+      "N/A: sin intereses financieros"
+    ]
+  ],
+  "ledger": [
+    {
+      "label": "Crecimiento ingresos",
+      "years": 3,
+      "formula": "=IF(COUNT('Income Statement'!I4:K4)=0;\"N/A\";AVERAGE('Income Statement'!I4:K4))",
+      "cell": "J28"
+    },
+    {
+      "label": "Crecimiento ingresos",
+      "years": 5,
+      "formula": "=IF(COUNT('Income Statement'!G4:K4)=0;\"N/A\";AVERAGE('Income Statement'!G4:K4))",
+      "cell": "K28"
+    },
+    {
+      "label": "Crecimiento ingresos",
+      "years": 10,
+      "formula": "=IF(COUNT('Income Statement'!B4:K4)=0;\"N/A\";AVERAGE('Income Statement'!B4:K4))",
+      "cell": "L28"
+    },
+    {
+      "label": "Margen bruto",
+      "years": 3,
+      "formula": "=IF(COUNT('Márgenes'!I3:K3)=0;\"N/A\";AVERAGE('Márgenes'!I3:K3))",
+      "cell": "J29"
+    },
+    {
+      "label": "Margen bruto",
+      "years": 5,
+      "formula": "=IF(COUNT('Márgenes'!G3:K3)=0;\"N/A\";AVERAGE('Márgenes'!G3:K3))",
+      "cell": "K29"
+    },
+    {
+      "label": "Margen bruto",
+      "years": 10,
+      "formula": "=IF(COUNT('Márgenes'!B3:K3)=0;\"N/A\";AVERAGE('Márgenes'!B3:K3))",
+      "cell": "L29"
+    },
+    {
+      "label": "Margen operativo GAAP",
+      "years": 3,
+      "formula": "=IF(COUNT('Márgenes'!I4:K4)=0;\"N/A\";AVERAGE('Márgenes'!I4:K4))",
+      "cell": "J30"
+    },
+    {
+      "label": "Margen operativo GAAP",
+      "years": 5,
+      "formula": "=IF(COUNT('Márgenes'!G4:K4)=0;\"N/A\";AVERAGE('Márgenes'!G4:K4))",
+      "cell": "K30"
+    },
+    {
+      "label": "Margen operativo GAAP",
+      "years": 10,
+      "formula": "=IF(COUNT('Márgenes'!B4:K4)=0;\"N/A\";AVERAGE('Márgenes'!B4:K4))",
+      "cell": "L30"
+    },
+    {
+      "label": "Margen FCF",
+      "years": 3,
+      "formula": "=IF(COUNT('Márgenes'!I9:K9)=0;\"N/A\";AVERAGE('Márgenes'!I9:K9))",
+      "cell": "J31"
+    },
+    {
+      "label": "Margen FCF",
+      "years": 5,
+      "formula": "=IF(COUNT('Márgenes'!G9:K9)=0;\"N/A\";AVERAGE('Márgenes'!G9:K9))",
+      "cell": "K31"
+    },
+    {
+      "label": "Margen FCF",
+      "years": 10,
+      "formula": "=IF(COUNT('Márgenes'!B9:K9)=0;\"N/A\";AVERAGE('Márgenes'!B9:K9))",
+      "cell": "L31"
+    },
+    {
+      "label": "ROA",
+      "years": 3,
+      "formula": "=IF(COUNT('Eficiencia de capital'!I4:K4)=0;\"N/A\";AVERAGE('Eficiencia de capital'!I4:K4))",
+      "cell": "J32"
+    },
+    {
+      "label": "ROA",
+      "years": 5,
+      "formula": "=IF(COUNT('Eficiencia de capital'!G4:K4)=0;\"N/A\";AVERAGE('Eficiencia de capital'!G4:K4))",
+      "cell": "K32"
+    },
+    {
+      "label": "ROA",
+      "years": 10,
+      "formula": "=IF(COUNT('Eficiencia de capital'!B4:K4)=0;\"N/A\";AVERAGE('Eficiencia de capital'!B4:K4))",
+      "cell": "L32"
+    },
+    {
+      "label": "ROE",
+      "years": 3,
+      "formula": "=IF(COUNT('Eficiencia de capital'!I5:K5)=0;\"N/A\";AVERAGE('Eficiencia de capital'!I5:K5))",
+      "cell": "J33"
+    },
+    {
+      "label": "ROE",
+      "years": 5,
+      "formula": "=IF(COUNT('Eficiencia de capital'!G5:K5)=0;\"N/A\";AVERAGE('Eficiencia de capital'!G5:K5))",
+      "cell": "K33"
+    },
+    {
+      "label": "ROE",
+      "years": 10,
+      "formula": "=IF(COUNT('Eficiencia de capital'!B5:K5)=0;\"N/A\";AVERAGE('Eficiencia de capital'!B5:K5))",
+      "cell": "L33"
+    },
+    {
+      "label": "ROIC con arrendamientos",
+      "years": 3,
+      "formula": "=IF(COUNT('Eficiencia de capital'!I3:K3)=0;\"N/A\";AVERAGE('Eficiencia de capital'!I3:K3))",
+      "cell": "J34"
+    },
+    {
+      "label": "ROIC con arrendamientos",
+      "years": 5,
+      "formula": "=IF(COUNT('Eficiencia de capital'!G3:K3)=0;\"N/A\";AVERAGE('Eficiencia de capital'!G3:K3))",
+      "cell": "K34"
+    },
+    {
+      "label": "ROIC con arrendamientos",
+      "years": 10,
+      "formula": "=IF(COUNT('Eficiencia de capital'!B3:K3)=0;\"N/A\";AVERAGE('Eficiencia de capital'!B3:K3))",
+      "cell": "L34"
+    },
+    {
+      "label": "Rotación de activos",
+      "years": 3,
+      "formula": "=IF(COUNT('Eficiencia de capital'!I16:K16)=0;\"N/A\";AVERAGE('Eficiencia de capital'!I16:K16))",
+      "cell": "J35"
+    },
+    {
+      "label": "Rotación de activos",
+      "years": 5,
+      "formula": "=IF(COUNT('Eficiencia de capital'!G16:K16)=0;\"N/A\";AVERAGE('Eficiencia de capital'!G16:K16))",
+      "cell": "K35"
+    },
+    {
+      "label": "Rotación de activos",
+      "years": 10,
+      "formula": "=IF(COUNT('Eficiencia de capital'!B16:K16)=0;\"N/A\";AVERAGE('Eficiencia de capital'!B16:K16))",
+      "cell": "L35"
+    },
+    {
+      "label": "Current ratio",
+      "years": 3,
+      "formula": "=IF(COUNT('Salud Financiera'!I5:K5)=0;\"N/A\";AVERAGE('Salud Financiera'!I5:K5))",
+      "cell": "J36"
+    },
+    {
+      "label": "Current ratio",
+      "years": 5,
+      "formula": "=IF(COUNT('Salud Financiera'!G5:K5)=0;\"N/A\";AVERAGE('Salud Financiera'!G5:K5))",
+      "cell": "K36"
+    },
+    {
+      "label": "Current ratio",
+      "years": 10,
+      "formula": "=IF(COUNT('Salud Financiera'!B5:K5)=0;\"N/A\";AVERAGE('Salud Financiera'!B5:K5))",
+      "cell": "L36"
+    },
+    {
+      "label": "Quick ratio",
+      "years": 3,
+      "formula": "=IF(COUNT('Salud Financiera'!I6:K6)=0;\"N/A\";AVERAGE('Salud Financiera'!I6:K6))",
+      "cell": "J37"
+    },
+    {
+      "label": "Quick ratio",
+      "years": 5,
+      "formula": "=IF(COUNT('Salud Financiera'!G6:K6)=0;\"N/A\";AVERAGE('Salud Financiera'!G6:K6))",
+      "cell": "K37"
+    },
+    {
+      "label": "Quick ratio",
+      "years": 10,
+      "formula": "=IF(COUNT('Salud Financiera'!B6:K6)=0;\"N/A\";AVERAGE('Salud Financiera'!B6:K6))",
+      "cell": "L37"
+    },
+    {
+      "label": "Deuda neta/EBITDA",
+      "years": 3,
+      "formula": "=IF(COUNT('Salud Financiera'!I19:K19)=0;\"N/A\";AVERAGE('Salud Financiera'!I19:K19))",
+      "cell": "J38"
+    },
+    {
+      "label": "Deuda neta/EBITDA",
+      "years": 5,
+      "formula": "=IF(COUNT('Salud Financiera'!G19:K19)=0;\"N/A\";AVERAGE('Salud Financiera'!G19:K19))",
+      "cell": "K38"
+    },
+    {
+      "label": "Deuda neta/EBITDA",
+      "years": 10,
+      "formula": "=IF(COUNT('Salud Financiera'!B19:K19)=0;\"N/A\";AVERAGE('Salud Financiera'!B19:K19))",
+      "cell": "L38"
+    },
+    {
+      "label": "Cobertura EBITDA/intereses",
+      "years": 3,
+      "formula": "=IF(COUNT('Salud Financiera'!I21:K21)=0;\"N/A\";AVERAGE('Salud Financiera'!I21:K21))",
+      "cell": "J39"
+    },
+    {
+      "label": "Cobertura EBITDA/intereses",
+      "years": 5,
+      "formula": "=IF(COUNT('Salud Financiera'!G21:K21)=0;\"N/A\";AVERAGE('Salud Financiera'!G21:K21))",
+      "cell": "K39"
+    },
+    {
+      "label": "Cobertura EBITDA/intereses",
+      "years": 10,
+      "formula": "=IF(COUNT('Salud Financiera'!B21:K21)=0;\"N/A\";AVERAGE('Salud Financiera'!B21:K21))",
+      "cell": "L39"
+    }
+  ],
+  "values": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.11447529314339049,
+      0.14972137456715667,
+      0.13349930041158242
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.2608180750379055,
+      0.2494910367378335,
+      0.2109720167073467
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.16316966602150207,
+      0.14611091408368176,
+      0.09809656492307056
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.12628146138790663,
+      0.11756824164885019,
+      0.08553121200208069
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.1702651399078503,
+      0.14931261307915628,
+      0.11935944979985437
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.46094601457258677,
+      0.41415222910608884,
+      0.3044775818376959
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.221254520083605,
+      0.1971298122764496,
+      0.17724552320986875
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.3137082872276054,
+      1.2814601021994625,
+      1.495380023942865
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.4435627760242635,
+      1.437495561460234,
+      1.6131421119300875
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.2414578480178733,
+      1.2323145729766036,
+      1.3852862454605552
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.5353063436457592,
+      1.7738954897277412,
+      1.1090588162464492
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "N/A",
+      "N/A",
+      "N/A"
+    ]
+  ],
+  "cellsCleared": true
+}

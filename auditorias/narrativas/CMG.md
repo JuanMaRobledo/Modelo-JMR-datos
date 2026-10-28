@@ -1,7 +1,7 @@
-# CMG · Auditoría PENDIENTE
+# CMG · auditoría PENDIENTE
 
-Revisión `CMG-2026-10-28-R1-REINICIO`.
+Revisión CMG-2026-10-28-R1-REINICIO. No es dictamen, auditoría económica ni manifiesto certificado.
 
-**Auditoría económica independiente PENDIENTE. Este archivo no es un dictamen.**
+La valoración, textos y borradores18secciones/Nivel2 se reconstruyeron desde la nueva hoja y fuentes primarias. Existen controles técnicos por conector y motor nativo, descritos en [evidencia](../../evidencia/CMG-2026-10-28-R1-REINICIO/CONTINUAR.md), que no sustituyen los controles oficiales ni la revisión económica independiente. Artículo y análisis siguen en PREPARACION, sin registro/catálogo activo.
 
-Cálculos provisionales y comprobaciones técnicas en [la evidencia de esta revisión](../../evidencia/CMG-2026-10-28-R1-REINICIO/CONTINUAR.md). No se ejecutó audit_report.py, no hay manifiesto certificado y no se declara VERIFICADO. La revisión visual y las observaciones del usuario preceden a la auditoría económica. La valoración y el artículo aún no se han publicado en la app.
+No se ejecutó audit_report.py. No hay certificado fabricado ni salto del gate realizado. Kd/volatilidad proxy, RSU/PSU, privadas y leases requieren revisión posterior. Inventario agregado8-Ky matriz exclusivamente terminal pendientes. Python/Playwright indisponibles; prueba local preparada, no ejecutada. No se ha publicado ni comprobado producción; appreal lee main.
