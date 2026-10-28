@@ -1,0 +1,58 @@
+{
+  "ticker": "MELI",
+  "revision": "MELI-20261028-R1",
+  "type": "DCF_inverse_base",
+  "financialCutoff": "2026-06-30",
+  "stockPriceDate": "2026-10-27",
+  "stockPrice": 1680.51,
+  "hypothesis": "Delta aditivo uniforme años 1–5; transición delta a 0 lineal en años 6–10, g terminal fijo; resto de variables Base fija",
+  "deltaGrowthFirstFive": 0.11918555758331187,
+  "deltaPp": 11.918555758331188,
+  "baseCagr": 0.15545577635975283,
+  "impliedCagr": 0.2746920128013062,
+  "baseSheet": 986.6489727259561,
+  "baseReproduced": 986.648972725956,
+  "baseError": -1.1368683772161603e-13,
+  "root": 1680.5100000000002,
+  "rootError": 2.2737367544323206e-13,
+  "assumptions": {
+    "NOLGross": 557.6,
+    "taxShieldYear1": 158.82502879078694,
+    "margin": [
+      0.08941362060144392,
+      0.10243830042960281,
+      0.10895064034368224,
+      0.1154629802577617,
+      0.12197532017184112,
+      0.12848766008592058,
+      0.135,
+      0.135,
+      0.135,
+      0.135
+    ],
+    "rate": [
+      0.10837569815596583,
+      0.10837569815596583,
+      0.10837569815596583,
+      0.10837569815596583,
+      0.10837569815596583,
+      0.10710055852477267,
+      0.1058254188935795,
+      0.10455027926238634,
+      0.10327513963119318,
+      0.10200000000000002
+    ],
+    "terminal": {
+      "g": 0.04,
+      "margin": 0.135,
+      "tax": 0.33,
+      "roic": 0.137,
+      "wacc": 0.102
+    },
+    "bridge": -6425,
+    "shares": 50.696802
+  },
+  "status": "REPRODUCIDO",
+  "source": "Hoja Valuation output C3:M35; todas las formulas existentes intactas",
+  "auditoriaEconomica": "PENDIENTE"
+}
