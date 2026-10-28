@@ -77,7 +77,329 @@
     "base": 58.722964097303134,
     "optimista": 71.88741309967173
   },
-  "descuentoMultiples": "Costo de patrimonio 10,07%; promedio FY+1/2/3 a valor presente",
+  "descuentoMultiples": {
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "criterio": "Promedio 1-3 años",
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0.11428571428571431,
+        "conservador": {
+          "fy": [
+            63.34571225028689,
+            67.00826088141248,
+            71.09409309818844
+          ],
+          "vp": [
+            57.55014860907987,
+            55.307852764656865,
+            53.31153604742094
+          ],
+          "consolidado": 55.38984580705255
+        },
+        "base": {
+          "fy": [
+            83.46601510242074,
+            93.04861899961197,
+            102.28182715296963
+          ],
+          "vp": [
+            75.82962448938703,
+            76.80126676758354,
+            76.69837362902604
+          ],
+          "consolidado": 76.4430882953322
+        },
+        "optimista": {
+          "fy": [
+            103.62746376815808,
+            119.3582896098749,
+            134.5468863752405
+          ],
+          "vp": [
+            94.14648171096266,
+            98.51696822377045,
+            100.89306819281525
+          ],
+          "consolidado": 97.8521727091828
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0.17142857142857143,
+        "conservador": {
+          "fy": [
+            42.514232420375606,
+            46.08110658156285,
+            50.116311987060705
+          ],
+          "vp": [
+            38.62456205601345,
+            38.03481875997339,
+            37.58086581640438
+          ],
+          "consolidado": 38.08008221079708
+        },
+        "base": {
+          "fy": [
+            54.991416244662226,
+            64.65369961242334,
+            74.37015733117298
+          ],
+          "vp": [
+            49.960195641967026,
+            53.364424801034865,
+            55.768167939598094
+          ],
+          "consolidado": 53.030929460866666
+        },
+        "optimista": {
+          "fy": [
+            67.03255345023139,
+            81.4738786690854,
+            95.77095438702776
+          ],
+          "vp": [
+            60.89967695784232,
+            67.24760837428715,
+            71.81604637741748
+          ],
+          "consolidado": 66.65444390318231
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.057142857142857155,
+        "conservador": {
+          "fy": [
+            59.66792974422149,
+            63.09840411083965,
+            66.83233205603804
+          ],
+          "vp": [
+            54.20885016508015,
+            52.080701667862414,
+            50.115756798780595
+          ],
+          "consolidado": 52.13510287724105
+        },
+        "base": {
+          "fy": [
+            78.6983409010995,
+            87.68804636611655,
+            96.22861887460371
+          ],
+          "vp": [
+            71.49814964983354,
+            72.37671137623693,
+            72.15923658863984
+          ],
+          "consolidado": 72.01136587157009
+        },
+        "optimista": {
+          "fy": [
+            97.79124930315602,
+            112.60578103805358,
+            126.74843049902753
+          ],
+          "vp": [
+            88.84422844323957,
+            92.94352481589992,
+            95.04521721896913
+          ],
+          "consolidado": 92.2776568260362
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0.057142857142857155,
+        "conservador": {
+          "fy": [
+            44.23160385402878,
+            47.761311744226816,
+            51.754790483321685
+          ],
+          "vp": [
+            40.18480943050377,
+            39.4216408999405,
+            38.80951649059896
+          ],
+          "consolidado": 39.471988940347735
+        },
+        "base": {
+          "fy": [
+            52.1455850734192,
+            60.97527536629039,
+            69.85551072386235
+          ],
+          "vp": [
+            47.37473245900871,
+            50.328295465114444,
+            52.382756650722115
+          ],
+          "consolidado": 50.02859485828176
+        },
+        "optimista": {
+          "fy": [
+            67.02749576538223,
+            81.02166073927249,
+            94.87718183389389
+          ],
+          "vp": [
+            60.895082005724056,
+            66.87435286294217,
+            71.14583053235727
+          ],
+          "consolidado": 66.30508846700782
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "conservador": {
+          "fy": [
+            46.07745511280184,
+            49.816262655969105,
+            54.02839612339792
+          ],
+          "vp": [
+            41.861781880239946,
+            41.11777389862226,
+            40.51443181839055
+          ],
+          "consolidado": 41.16466253241759
+        },
+        "base": {
+          "fy": [
+            56.7275300132055,
+            66.35459757849463,
+            76.06470277217275
+          ],
+          "vp": [
+            51.53747059606595,
+            54.76832654445812,
+            57.038861698038545
+          ],
+          "consolidado": 54.44821961285421
+        },
+        "optimista": {
+          "fy": [
+            69.64983034608667,
+            84.15310811856081,
+            98.56890866518219
+          ],
+          "vp": [
+            63.27749652852527,
+            69.45901374379173,
+            73.91415655589398
+          ],
+          "consolidado": 68.88355560940366
+        }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "conservador": {
+          "fy": [
+            51.2431993620389,
+            54.905780797236794,
+            58.54481706606555
+          ],
+          "vp": [
+            46.5549069341578,
+            45.3186040096805,
+            43.90117363332324
+          ],
+          "consolidado": 45.25822819238718
+        },
+        "base": {
+          "fy": [
+            66.14060400917317,
+            72.86260366702643,
+            79.51738332830116
+          ],
+          "vp": [
+            60.089332878327234,
+            60.139960396782925,
+            59.62793339031053
+          ],
+          "consolidado": 59.95240888847356
+        },
+        "optimista": {
+          "fy": [
+            81.03800865630743,
+            90.89209680338747,
+            101.00896063438964
+          ],
+          "vp": [
+            73.62375882249665,
+            75.02129799144143,
+            75.74388548055056
+          ],
+          "consolidado": 74.79631409816288
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "conservador": {
+          "fy": [
+            61.96162231832704,
+            83.35422121172675,
+            105.99146275352594
+          ],
+          "vp": [
+            56.29269047272022,
+            68.79962162052821,
+            79.48012895388428
+          ],
+          "consolidado": 68.19081368237757
+        },
+        "base": {
+          "fy": [
+            83.72526088969886,
+            114.60089182377749,
+            148.44715667385165
+          ],
+          "vp": [
+            76.0651516159143,
+            94.59026645841591,
+            111.31650463879174
+          ],
+          "consolidado": 93.99064090437399
+        },
+        "optimista": {
+          "fy": [
+            105.55139670624925,
+            146.15324442318249,
+            191.80603837617787
+          ],
+          "vp": [
+            95.8943920677611,
+            120.63321771534822,
+            143.83015639403615
+          ],
+          "consolidado": 120.11925539238182
+        }
+      }
+    ],
+    "dcfHoy": {
+      "conservador": 41.49803254313943,
+      "base": 56.53647108954618,
+      "optimista": 67.02660069179477
+    },
+    "multiplesHoy": {
+      "conservador": 45.23243286629788,
+      "base": 62.00270367187374,
+      "optimista": 79.17863177442236
+    },
+    "ponderadoHoy": {
+      "conservador": 42.99179267240281,
+      "base": 58.72296412247721,
+      "optimista": 71.8874131248458
+    }
+  },
   "valorEsperado": {
     "valor": 55.39939385169263,
     "tipoPromedio": "ponderado condicional A/B/D; C excluida",
@@ -165,7 +487,17 @@
       "Cash Flow Statement": "<table><thead><tr><th>NFLX</th><th></th><th>Precio</th><th>62.52</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Operating Activities</td><td>Dec-16</td><td>Dec-17</td><td>Dec-18</td><td>Dec-19</td><td>Dec-20</td><td>Dec-21</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>LTM Sep-26</td></tr><tr><td>Net Income</td><td>186.68</td><td>558.93</td><td>1,211.24</td><td>1,866.92</td><td>2,761.4</td><td>5,116.23</td><td>4,491.92</td><td>5,407.99</td><td>8,711.63</td><td>10,981.2</td><td>14,766.65</td></tr><tr><td>Depreciation &amp; Amortization</td><td>57.53</td><td>71.91</td><td>83.16</td><td>103.58</td><td>115.71</td><td>208.41</td><td>336.68</td><td>356.95</td><td>328.91</td><td>333.39</td><td>392.19</td></tr><tr><td>Share-Based Compensation Expense</td><td>173.68</td><td>182.21</td><td>320.66</td><td>405.38</td><td>415.18</td><td>403.22</td><td>575.45</td><td>339.37</td><td>272.59</td><td>368.45</td><td>540.06</td></tr><tr><td>Other Adjustments</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Trade Receivables</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Accounts Payable</td><td>32.25</td><td>74.56</td><td>199.2</td><td>96.06</td><td>-41.61</td><td>145.12</td><td>-158.54</td><td>93.5</td><td>121.35</td><td>-8.04</td><td>6.86</td></tr><tr><td>Changes in Accrued Expenses</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Income Taxes Payable</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Unearned Revenue</td><td>96.75</td><td>177.97</td><td>142.28</td><td>163.85</td><td>193.25</td><td>91.35</td><td>27.36</td><td>178.71</td><td>77.84</td><td>254.92</td><td>54.96</td></tr><tr><td>Changes in Other Operating Activities</td><td>-2,020.86</td><td>-2,851.53</td><td>-4,637.01</td><td>-5,523.1</td><td>-1,016.85</td><td>-5,571.72</td><td>-3,246.61</td><td>897.79</td><td>-2,150.97</td><td>-1,780.64</td><td>-3,452.78</td></tr><tr><td>Cash from Operating Activities</td><td>-1,473.98</td><td>-1,785.95</td><td>-2,680.48</td><td>-2,887.32</td><td>2,427.08</td><td>392.61</td><td>2,026.26</td><td>7,274.3</td><td>7,361.36</td><td>10,149.27</td><td>12,307.94</td></tr><tr><td>Investing Activities</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Capital Expenditure</td><td>-107.65</td><td>-173.3</td><td>-173.95</td><td>-253.04</td><td>-497.92</td><td>-524.59</td><td>-407.73</td><td>-348.55</td><td>-439.54</td><td>-688.22</td><td>-932.88</td></tr><tr><td>Proceeds from Sale of Property, Plant &amp; Equipment</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Purchases of Investments</td><td>-187.19</td><td>-74.82</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-911.28</td><td>-504.86</td><td>-1,742.25</td><td>-169.97</td><td>-61</td></tr><tr><td>Proceeds from Sale of Investments</td><td>422.73</td><td>342.86</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1,395.17</td><td>0</td><td>1,917.07</td><td>8.45</td></tr><tr><td>Payments for Business Acquisitions</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-788.35</td><td>-757.39</td><td>0</td><td>0</td><td>-17.19</td><td>-602.94</td></tr><tr><td>Proceeds from Business Divestments</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Other Investing Activities</td><td>-78.12</td><td>-60.41</td><td>-165.17</td><td>-134.03</td><td>-7.43</td><td>-26.92</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cash from Investing Activities</td><td>49.77</td><td>34.33</td><td>-339.12</td><td>-387.06</td><td>-505.35</td><td>-1,339.85</td><td>-2,076.39</td><td>541.75</td><td>-2,181.78</td><td>1,041.69</td><td>-1,588.36</td></tr><tr><td>Financing Activities</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Issuance of Short-Term Debt</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Net Issuance / (Repayments) of Short-Term Debt</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Issuance of Long-Term Debt</td><td>1,000</td><td>3,020.51</td><td>3,961.85</td><td>4,469.31</td><td>1,009.46</td><td>0</td><td>0</td><td>0</td><td>1,794.46</td><td>0</td><td>992.55</td></tr><tr><td>Repayments of Long-Term Debt</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-500</td><td>-700</td><td>0</td><td>-400</td><td>-1,833.45</td><td>0</td></tr><tr><td>Net Issuance / (Repayments) of Long-Term Debt</td><td>1,000</td><td>3,020.51</td><td>3,961.85</td><td>4,469.31</td><td>1,009.46</td><td>-500</td><td>-700</td><td>0</td><td>1,394.46</td><td>-1,833.45</td><td>992.55</td></tr><tr><td>Issuance of Common Shares</td><td>36.98</td><td>88.38</td><td>124.5</td><td>72.49</td><td>235.41</td><td>174.41</td><td>35.75</td><td>169.99</td><td>832.89</td><td>666.97</td><td>260.05</td></tr><tr><td>Repurchases of Common Shares</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-600.02</td><td>0</td><td>-6,045.35</td><td>-6,263.75</td><td>-9,127.17</td><td>-12,861.28</td></tr><tr><td>Net Issuance / (Repurchases) of Common Shares</td><td>36.98</td><td>88.38</td><td>124.5</td><td>72.49</td><td>235.41</td><td>-425.61</td><td>35.75</td><td>-5,875.36</td><td>-5,430.86</td><td>-8,460.2</td><td>-12,601.23</td></tr><tr><td>Common Share Dividends Paid</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Other Financing Activities</td><td>54.65</td><td>-31.9</td><td>-37.83</td><td>-36.13</td><td>-7.56</td><td>-224.17</td><td>0</td><td>-75.45</td><td>-38.03</td><td>-51.97</td><td>-124.14</td></tr><tr><td>Cash from Financing Activities</td><td>1,091.63</td><td>3,076.99</td><td>4,048.53</td><td>4,505.66</td><td>1,237.31</td><td>-1,149.78</td><td>-664.25</td><td>-5,950.8</td><td>-4,074.43</td><td>-10,345.62</td><td>-11,732.82</td></tr><tr><td>Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Free Cash Flow</td><td>-1,581.64</td><td>-1,959.25</td><td>-2,854.42</td><td>-3,140.36</td><td>1,929.15</td><td>-131.98</td><td>1,618.53</td><td>6,925.75</td><td>6,921.83</td><td>9,461.05</td><td>11,375.06</td></tr><tr><td>NOPAT</td><td>272.16</td><td>711.48</td><td>1,585.31</td><td>2,357.6</td><td>3,957.62</td><td>5,426.71</td><td>4,806.72</td><td>6,060.39</td><td>9,106.72</td><td>11,502.57</td><td>12,985.14</td></tr><tr><td>Levered Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Unlevered Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Net Change in Cash</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
     },
     "valoracion": {
-      "escenarios": "<table><tr><th>Escenario</th><th>DCF/acción</th></tr><tr><td>Base</td><td>US$56.54</td></tr><tr><td>Conservadora</td><td>US$41.50</td></tr><tr><td>Disrupción</td><td>US$23.23</td></tr><tr><td>Optimista</td><td>US$67.03</td></tr></table>"
+      "escenarios": "<table><tr><th>Escenario</th><th>DCF/acción</th></tr><tr><td>Base</td><td>US$56.54</td></tr><tr><td>Conservadora</td><td>US$41.50</td></tr><tr><td>Disrupción</td><td>US$23.23</td></tr><tr><td>Optimista</td><td>US$67.03</td></tr></table>",
+      "Financials Multiples": "<h2>SUPUESTOS · 7 MÉTODOS</h2><p>Fuente motor nativo; supuestos de salida J8/J19/J30, revisión 2026-10-28.</p><table><tr><td>EV/EBITDA</td><td>15,00</td><td>19,00</td><td>23,00</td></tr><tr><td>EV/FCFF</td><td>$ 17,00</td><td>$ 22,50</td><td>$ 27,00</td></tr><tr><td>P/E</td><td>18,0</td><td>23,0</td><td>28,0</td></tr><tr><td>P/FCFE</td><td>18,00</td><td>22,00</td><td>28,00</td></tr><tr><td>P/OCF</td><td>18</td><td>23,00</td><td>28</td></tr><tr><td>P/V</td><td>4,00×</td><td>5,00×</td><td>6,00×</td></tr><tr><td>P/BV</td><td>6,00×</td><td>8,00×</td><td>10,00×</td></tr></table>",
+      "EVEBITDA": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>NFLX</td><td></td><td>Precio</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>⚠️ Advertencia: Las celdas en VERDE, AMARILLO y ROJO son para entrada manual de datos.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Price today:</td><td data-value=\"62.52\">62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>--- FORECASTED SUMMARY ---</td><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"6\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"7\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"8\"><td>Múltiplo EV/EBITDA (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"23.81661004957691\">23,82x</td><td data-value=\"30.16514574137698\">30,17x</td><td data-value=\"36.2607429461869\">36,26x</td><td data-value=\"29.559563518338816\">29,56x</td><td data-value=\"15\">15,00x</td><td data-value=\"15\">15,00x</td><td data-value=\"15\">15,00x</td><td></td><td data-value=\"15\">15,00</td><td></td><td></td><td></td></tr><tr data-row=\"9\"><td>EBITDA</td><td data-value=\"5969.513\">$ 5.969,51</td><td data-value=\"7310.95\">$ 7.310,95</td><td data-value=\"10746.528\">$ 10.746,53</td><td data-value=\"13659.991999999998\">$ 13.659,99</td><td data-value=\"18247.476981626936\">$ 18.247,48</td><td data-value=\"19250.118202626152\">$ 19.250,12</td><td data-value=\"20368.635447096756\">$ 20.368,64</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"10\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"63.34571225028689\">$ 63,35</td><td data-value=\"67.00826088141248\">$ 67,01</td><td data-value=\"71.09409309818844\">$ 71,09</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"63.34571225028689\">$ 63,35</td><td data-value=\"67.00826088141248\">$ 67,01</td><td data-value=\"71.09409309818844\">$ 71,09</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.013207169710282851\">1,32%</td><td data-value=\"0.07178920155810108\">7,18%</td><td data-value=\"0.1371416042576525\">13,71%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.013207169710282907\">1,32%</td><td data-value=\"0.03527252525994373\">3,53%</td><td data-value=\"0.04377009497922035\">4,38%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td>--- FORECASTED SUMMARY ---</td><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"18\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo EV/EBITDA (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"23.81661004957691\">23,82x</td><td data-value=\"30.16514574137698\">30,17x</td><td data-value=\"36.2607429461869\">36,26x</td><td data-value=\"29.559563518338816\">29,56x</td><td data-value=\"19\">19,00x</td><td data-value=\"19\">19,00x</td><td data-value=\"19\">19,00x</td><td></td><td data-value=\"19\">19,00</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>EBITDA</td><td data-value=\"5969.513\">$ 5.969,51</td><td data-value=\"7310.95\">$ 7.310,95</td><td data-value=\"10746.528\">$ 10.746,53</td><td data-value=\"13659.991999999998\">$ 13.659,99</td><td data-value=\"18754.35134222769\">$ 18.754,35</td><td data-value=\"20825.366847555328\">$ 20.825,37</td><td data-value=\"22820.870100603923\">$ 22.820,87</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"83.46601510242074\">$ 83,47</td><td data-value=\"93.04861899961197\">$ 93,05</td><td data-value=\"102.28182715296963\">$ 102,28</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"83.46601510242074\">$ 83,47</td><td data-value=\"93.04861899961197\">$ 93,05</td><td data-value=\"102.28182715296963\">$ 102,28</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.33502903234838033\">33,50%</td><td data-value=\"0.4883016474666022\">48,83%</td><td data-value=\"0.6359857190174284\">63,60%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.3350290323483802\">33,50%</td><td data-value=\"0.21995969091876244\">22,00%</td><td data-value=\"0.17831073975228584\">17,83%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>--- FORECASTED SUMMARY ---</td><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo EV/EBITDA (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"23.81661004957691\">23,82x</td><td data-value=\"30.16514574137698\">30,17x</td><td data-value=\"36.2607429461869\">36,26x</td><td data-value=\"29.559563518338816\">29,56x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td></td><td data-value=\"23\">23,00</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>EBITDA</td><td data-value=\"5969.513\">$ 5.969,51</td><td data-value=\"7310.95\">$ 7.310,95</td><td data-value=\"10746.528\">$ 10.746,53</td><td data-value=\"13659.991999999998\">$ 13.659,99</td><td data-value=\"19092.26758262818\">$ 19.092,27</td><td data-value=\"21900.784870863987\">$ 21.900,78</td><td data-value=\"24612.494798161493\">$ 24.612,49</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"103.62746376815808\">$ 103,63</td><td data-value=\"119.3582896098749\">$ 119,36</td><td data-value=\"134.5468863752405\">$ 134,55</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"103.62746376815808\">$ 103,63</td><td data-value=\"119.3582896098749\">$ 119,36</td><td data-value=\"134.5468863752405\">$ 134,55</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.6575090174049596\">65,75%</td><td data-value=\"0.9091217148092594\">90,91%</td><td data-value=\"1.1520615223167063\">115,21%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.6575090174049596\">65,75%</td><td data-value=\"0.3817097071415758\">38,17%</td><td data-value=\"0.29107526522797866\">29,11%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "EVFCFF": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>NFLX</td><td></td><td>Precio</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>⚠️ Advertencia: Las celdas en VERDE, AMARILLO y ROJO son para entrada manual de datos.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Price today:</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>--- FORECASTED SUMMARY ---</td><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"6\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"7\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"8\"><td>Múltiplo EV/FCFF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"38.773092173391944\">38,77x</td><td data-value=\"31.60777904775496\">31,61x</td><td data-value=\"44.65871604072672\">44,66x</td><td data-value=\"34.56140414877425\">34,56x</td><td data-value=\"17\">17,00x</td><td data-value=\"17\">17,00x</td><td data-value=\"17\">17,00x</td><td></td><td data-value=\"17\">$ 17,00</td><td></td><td></td><td></td></tr><tr data-row=\"9\"><td>FCFF</td><td data-value=\"3666.810030809116\">$ 3.666,81</td><td data-value=\"6977.265689079924\">$ 6.977,27</td><td data-value=\"8725.667101952331\">$ 8.725,67</td><td data-value=\"11683.072812836528\">$ 11.683,07</td><td data-value=\"11068.900558883372\">$ 11.068,90</td><td data-value=\"11930.473956578935\">$ 11.930,47</td><td data-value=\"12905.172102491963\">$ 12.905,17</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"10\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"42.514232420375606\">$ 42,51</td><td data-value=\"46.08110658156285\">$ 46,08</td><td data-value=\"50.116311987060705\">$ 50,12</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"42.514232420375606\">$ 42,51</td><td data-value=\"46.08110658156285\">$ 46,08</td><td data-value=\"50.116311987060705\">$ 50,12</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.31998988451094684\">-32,00%</td><td data-value=\"-0.2629381544855591\">-26,29%</td><td data-value=\"-0.19839552164010393\">-19,84%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.3199898845109468\">-32,00%</td><td data-value=\"-0.14147693943934103\">-14,15%</td><td data-value=\"-0.07106203697772406\">-7,11%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td>--- FORECASTED SUMMARY ---</td><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"18\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo EV/FCFF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"38.773092173391944\">38,77x</td><td data-value=\"31.60777904775496\">31,61x</td><td data-value=\"44.65871604072672\">44,66x</td><td data-value=\"34.56140414877425\">34,56x</td><td data-value=\"22.5\">22,50x</td><td data-value=\"22.5\">22,50x</td><td data-value=\"22.5\">22,50x</td><td></td><td data-value=\"22.5\">$ 22,50</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>FCFF</td><td data-value=\"3666.810030809116\">$ 3.666,81</td><td data-value=\"6977.265689079924\">$ 6.977,27</td><td data-value=\"8725.667101952331\">$ 8.725,67</td><td data-value=\"11683.072812836528\">$ 11.683,07</td><td data-value=\"10640.297450452359\">$ 10.640,30</td><td data-value=\"12403.696760459628\">$ 12.403,70</td><td data-value=\"14176.983072277668\">$ 14.176,98</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"54.991416244662226\">$ 54,99</td><td data-value=\"64.65369961242334\">$ 64,65</td><td data-value=\"74.37015733117298\">$ 74,37</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"54.991416244662226\">$ 54,99</td><td data-value=\"64.65369961242334\">$ 64,65</td><td data-value=\"74.37015733117298\">$ 74,37</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.12041880606746284\">-12,04%</td><td data-value=\"0.03412827275149288\">3,41%</td><td data-value=\"0.1895418639023188\">18,95%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.1204188060674628\">-12,04%</td><td data-value=\"0.016920976650345754\">1,69%</td><td data-value=\"0.059562494155074086\">5,96%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>--- FORECASTED SUMMARY ---</td><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Enterprise Value</td><td data-value=\"142173.56330688\">$ 142.173,56</td><td data-value=\"220535.87225792\">$ 220.535,87</td><td data-value=\"389677.089372\">$ 389.677,09</td><td data-value=\"403783.401184\">$ 403.783,40</td><td data-value=\"265889.17345556006\">$ 265.889,17</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo EV/FCFF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"38.773092173391944\">38,77x</td><td data-value=\"31.60777904775496\">31,61x</td><td data-value=\"44.65871604072672\">44,66x</td><td data-value=\"34.56140414877425\">34,56x</td><td data-value=\"27\">27,00x</td><td data-value=\"27\">27,00x</td><td data-value=\"27\">27,00x</td><td></td><td data-value=\"27\">$ 27,00</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>FCFF</td><td data-value=\"3666.810030809116\">$ 3.666,81</td><td data-value=\"6977.265689079924\">$ 6.977,27</td><td data-value=\"8725.667101952331\">$ 8.725,67</td><td data-value=\"11683.072812836528\">$ 11.683,07</td><td data-value=\"10698.204675703102\">$ 10.698,20</td><td data-value=\"12894.530150511524\">$ 12.894,53</td><td data-value=\"15068.917274872229\">$ 15.068,92</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"67.03255345023139\">$ 67,03</td><td data-value=\"81.4738786690854\">$ 81,47</td><td data-value=\"95.77095438702776\">$ 95,77</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"67.03255345023139\">$ 67,03</td><td data-value=\"81.4738786690854\">$ 81,47</td><td data-value=\"95.77095438702776\">$ 95,77</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.07217775832103945\">7,22%</td><td data-value=\"0.3031650458906812\">30,32%</td><td data-value=\"0.5318450797669186\">53,18%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.07217775832103945\">7,22%</td><td data-value=\"0.14156254576377947\">14,16%</td><td data-value=\"0.15275836400914522\">15,28%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "PE": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>NFLX</td><td></td><td>Precio</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>⚠️ Advertencia: Las celdas en VERDE, AMARILLO y ROJO son para entrada manual de datos.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Price today:</td><td data-value=\"62.52\">62,5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>--- FORECASTED SUMMARY ---</td><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"6\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"7\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"8\"><td>Múltiplo P/E (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"29.235547464044362\">29,24x</td><td data-value=\"38.96123814169775\">38,96x</td><td data-value=\"43.765450852084996\">43,77x</td><td data-value=\"36.04978391562089\">36,05x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td></td><td data-value=\"18\">18,0</td><td></td><td></td><td></td></tr><tr data-row=\"9\"><td>Net Income</td><td data-value=\"4491.924\">$ 4.491,92</td><td data-value=\"5407.99\">$ 5.407,99</td><td data-value=\"8711.631\">$ 8.711,63</td><td data-value=\"10981.201\">$ 10.981,20</td><td data-value=\"13858.239064119303\">$ 13.858,24</td><td data-value=\"14640.830494742731\">$ 14.640,83</td><td data-value=\"15492.648552592938\">$ 15.492,65</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"10\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"59.66792974422149\">$ 59,67</td><td data-value=\"63.09840411083965\">$ 63,10</td><td data-value=\"66.83233205603804\">$ 66,83</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"59.66792974422149\">$ 59,67</td><td data-value=\"63.09840411083965\">$ 63,10</td><td data-value=\"66.83233205603804\">$ 66,83</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.04561852616408372\">-4,56%</td><td data-value=\"0.009251505291741033\">0,93%</td><td data-value=\"0.06897524081954634\">6,90%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.045618526164083684\">-4,56%</td><td data-value=\"0.0046151030577537\">0,46%</td><td data-value=\"0.022482496280224806\">2,25%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td>--- FORECASTED SUMMARY ---</td><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"18\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/E (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"29.235547464044362\">29,24x</td><td data-value=\"38.96123814169775\">38,96x</td><td data-value=\"43.765450852084996\">43,77x</td><td data-value=\"36.04978391562089\">36,05x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td></td><td data-value=\"23\">23,0</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>Net Income</td><td data-value=\"4491.924\">$ 4.491,92</td><td data-value=\"5407.99\">$ 5.407,99</td><td data-value=\"8711.631\">$ 8.711,63</td><td data-value=\"10981.201\">$ 10.981,20</td><td data-value=\"14243.190149233731\">$ 14.243,19</td><td data-value=\"15848.175384509392\">$ 15.848,18</td><td data-value=\"17372.97425920724\">$ 17.372,97</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"78.6983409010995\">$ 78,70</td><td data-value=\"87.68804636611655\">$ 87,69</td><td data-value=\"96.22861887460371\">$ 96,23</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"78.6983409010995\">$ 78,70</td><td data-value=\"87.68804636611655\">$ 87,69</td><td data-value=\"96.22861887460371\">$ 96,23</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.25877064781029263\">25,88%</td><td data-value=\"0.4025599226826063\">40,26%</td><td data-value=\"0.5391653690755551\">53,92%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.2587706478102927\">25,88%</td><td data-value=\"0.18429722733890008\">18,43%</td><td data-value=\"0.15459169092824454\">15,46%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>--- FORECASTED SUMMARY ---</td><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Realized At</td><td>Dec '22</td><td>Dec '23</td><td>Nov '24</td><td>Nov '25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/E (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"29.235547464044362\">29,24x</td><td data-value=\"38.96123814169775\">38,96x</td><td data-value=\"43.765450852084996\">43,77x</td><td data-value=\"36.04978391562089\">36,05x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td></td><td data-value=\"28\">28,0</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>Net Income</td><td data-value=\"4491.924\">$ 4.491,92</td><td data-value=\"5407.99\">$ 5.407,99</td><td data-value=\"8711.631\">$ 8.711,63</td><td data-value=\"10981.201\">$ 10.981,20</td><td data-value=\"14499.824205976674\">$ 14.499,82</td><td data-value=\"16672.441898970435\">$ 16.672,44</td><td data-value=\"18746.525035350664\">$ 18.746,53</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"97.79124930315602\">$ 97,79</td><td data-value=\"112.60578103805358\">$ 112,61</td><td data-value=\"126.74843049902753\">$ 126,75</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"97.79124930315602\">$ 97,79</td><td data-value=\"112.60578103805358\">$ 112,61</td><td data-value=\"126.74843049902753\">$ 126,75</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.5641594578239926\">56,42%</td><td data-value=\"0.801116139444235\">80,11%</td><td data-value=\"1.0273261436184824\">102,73%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.5641594578239926\">56,42%</td><td data-value=\"0.34205668264952016\">34,21%</td><td data-value=\"0.2656332435708195\">26,56%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "PFCFE": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>NFLX</td><td></td><td>Precio</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>⚠️ Advertencia: Las celdas en VERDE, AMARILLO y ROJO son para entrada manual de datos.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Price today:</td><td data-value=\"62.52\">62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>--- FORECASTED SUMMARY ---</td><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"6\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"7\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"8\"><td>Múltiplo P/FCFE (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"49.518594495603516\">49,52x</td><td data-value=\"33.31327803169237\">33,31x</td><td data-value=\"39.20481354959702\">39,20x</td><td data-value=\"42.437752592581965\">42,44x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td></td><td data-value=\"18\">18,00</td><td></td><td></td><td></td></tr><tr data-row=\"9\"><td>FCFE</td><td data-value=\"2652.0110000000004\">$ 2.652,01</td><td data-value=\"6324.865000000002\">$ 6.324,87</td><td data-value=\"9725.041999999998\">$ 9.725,04</td><td data-value=\"9328.248999999998\">$ 9.328,25</td><td data-value=\"10336.762128005535\">$ 10.336,76</td><td data-value=\"11141.99162464685\">$ 11.141,99</td><td data-value=\"12053.020801837129\">$ 12.053,02</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"10\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"44.23160385402878\">$ 44,23</td><td data-value=\"47.761311744226816\">$ 47,76</td><td data-value=\"51.754790483321685\">$ 51,75</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"44.23160385402878\">$ 44,23</td><td data-value=\"47.761311744226816\">$ 47,76</td><td data-value=\"51.754790483321685\">$ 51,75</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.29252073170139503\">-29,25%</td><td data-value=\"-0.23606347178140094\">-23,61%</td><td data-value=\"-0.1721882520262047\">-17,22%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.29252073170139503\">-29,25%</td><td data-value=\"-0.1259653735585763\">-12,60%</td><td data-value=\"-0.0610469828302862\">-6,10%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td>--- FORECASTED SUMMARY ---</td><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"18\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/FCFE (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"49.518594495603516\">49,52x</td><td data-value=\"33.31327803169237\">33,31x</td><td data-value=\"39.20481354959702\">39,20x</td><td data-value=\"42.437752592581965\">42,44x</td><td data-value=\"22\">22,00x</td><td data-value=\"22\">22,00x</td><td data-value=\"22\">22,00x</td><td></td><td data-value=\"22\">22,00</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>FCFE</td><td data-value=\"2652.0110000000004\">$ 2.652,01</td><td data-value=\"6324.865000000002\">$ 6.324,87</td><td data-value=\"9725.041999999998\">$ 9.725,04</td><td data-value=\"9328.248999999998\">$ 9.328,25</td><td data-value=\"9934.504744597183\">$ 9.934,50</td><td data-value=\"11582.576833919211\">$ 11.582,58</td><td data-value=\"13240.083219079856\">$ 13.240,08</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"52.1455850734192\">$ 52,15</td><td data-value=\"60.97527536629039\">$ 60,98</td><td data-value=\"69.85551072386235\">$ 69,86</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"52.1455850734192\">$ 52,15</td><td data-value=\"60.97527536629039\">$ 60,98</td><td data-value=\"69.85551072386235\">$ 69,86</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.16593753881287274\">-16,59%</td><td data-value=\"-0.024707687679296434\">-2,47%</td><td data-value=\"0.11733062578154749\">11,73%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.16593753881287276\">-16,59%</td><td data-value=\"-0.012431110088666486\">-1,24%</td><td data-value=\"0.03767312178561655\">3,77%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>--- FORECASTED SUMMARY ---</td><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/FCFE (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"49.518594495603516\">49,52x</td><td data-value=\"33.31327803169237\">33,31x</td><td data-value=\"39.20481354959702\">39,20x</td><td data-value=\"42.437752592581965\">42,44x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td></td><td data-value=\"28\">28,00</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>FCFE</td><td data-value=\"2652.0110000000004\">$ 2.652,01</td><td data-value=\"6324.865000000002\">$ 6.324,87</td><td data-value=\"9725.041999999998\">$ 9.725,04</td><td data-value=\"9328.248999999998\">$ 9.328,25</td><td data-value=\"9988.18141934566\">$ 9.988,18</td><td data-value=\"12040.488638029263\">$ 12.040,49</td><td data-value=\"14072.463108400932\">$ 14.072,46</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"67.02749576538223\">$ 67,03</td><td data-value=\"81.02166073927249\">$ 81,02</td><td data-value=\"94.87718183389389\">$ 94,88</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"67.02749576538223\">$ 67,03</td><td data-value=\"81.02166073927249\">$ 81,02</td><td data-value=\"94.87718183389389\">$ 94,88</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.07209686125051541\">7,21%</td><td data-value=\"0.2959318736287986\">29,59%</td><td data-value=\"0.5175492935683602\">51,75%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.07209686125051551\">7,21%</td><td data-value=\"0.1383900358088166\">13,84%</td><td data-value=\"0.14916115097797844\">14,92%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "POCF": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>NFLX</td><td></td><td>Precio</td><td data-value=\"62.52\">$ 62,52</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>⚠️ Advertencia: Las celdas en VERDE, AMARILLO y ROJO son para entrada manual de datos.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Price today:</td><td data-value=\"62.52\"> $ 62,52 </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>--- FORECASTED SUMMARY ---</td><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"6\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"7\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"8\"><td>Múltiplo P/OCF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"34.928973095714056\">34,93x</td><td data-value=\"31.573328365051964\">31,57x</td><td data-value=\"43.47357372213836\">43,47x</td><td data-value=\"33.40697292394995\">33,41x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td data-value=\"18\">18,00x</td><td></td><td data-value=\"18\">18</td><td></td><td></td><td></td></tr><tr data-row=\"9\"><td>OCF</td><td data-value=\"3759.740000000001\">$ 3.759,74</td><td data-value=\"6673.417000000001\">$ 6.673,42</td><td data-value=\"8770.119999999999\">$ 8.770,12</td><td data-value=\"11849.918999999998\">$ 11.849,92</td><td data-value=\"10757.854730060255\">$ 10.757,85</td><td data-value=\"11610.785966773561\">$ 11.610,79</td><td data-value=\"12571.69667589557\">$ 12.571,70</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"10\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"46.07745511280184\">$ 46,08</td><td data-value=\"49.816262655969105\">$ 49,82</td><td data-value=\"54.02839612339792\">$ 54,03</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"46.07745511280184\">$ 46,08</td><td data-value=\"49.816262655969105\">$ 49,82</td><td data-value=\"54.02839612339792\">$ 54,03</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.26299655929619575\">-26,30%</td><td data-value=\"-0.20319477517643791\">-20,32%</td><td data-value=\"-0.1358221989219783\">-13,58%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.2629965592961958\">-26,30%</td><td data-value=\"-0.10736052920366435\">-10,74%</td><td data-value=\"-0.04749403959226717\">-4,75%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td>--- FORECASTED SUMMARY ---</td><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"18\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/OCF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"34.928973095714056\">34,93x</td><td data-value=\"31.573328365051964\">31,57x</td><td data-value=\"43.47357372213836\">43,47x</td><td data-value=\"33.40697292394995\">33,41x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td data-value=\"23\">23,00x</td><td></td><td data-value=\"23\">23,00</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>OCF</td><td data-value=\"3759.740000000001\">$ 3.759,74</td><td data-value=\"6673.417000000001\">$ 6.673,42</td><td data-value=\"8770.119999999999\">$ 8.770,12</td><td data-value=\"11849.918999999998\">$ 11.849,92</td><td data-value=\"10320.611459717491\">$ 10.320,61</td><td data-value=\"12039.38871681653\">$ 12.039,39</td><td data-value=\"13772.991172366761\">$ 13.772,99</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"56.7275300132055\">$ 56,73</td><td data-value=\"66.35459757849463\">$ 66,35</td><td data-value=\"76.06470277217275\">$ 76,06</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"56.7275300132055\">$ 56,73</td><td data-value=\"66.35459757849463\">$ 66,35</td><td data-value=\"76.06470277217275\">$ 76,06</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"-0.09264987182972649\">-9,26%</td><td data-value=\"0.061333934396907076\">6,13%</td><td data-value=\"0.2166459176611124\">21,66%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"-0.0926498718297265\">-9,26%</td><td data-value=\"0.0302106262298536\">3,02%</td><td data-value=\"0.06754961372843327\">6,75%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>--- FORECASTED SUMMARY ---</td><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Realized At</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1 (Estimate)</td><td>FY+2 (Estimate)</td><td>FY+3 (Estimate)</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Market Cap</td><td data-value=\"131323.85730688\">$ 131.323,86</td><td data-value=\"210701.98625792\">$ 210.701,99</td><td data-value=\"381268.458372\">$ 381.268,46</td><td data-value=\"395869.923184\">$ 395.869,92</td><td data-value=\"256727.49545556\">$ 256.727,50</td><td></td><td></td><td></td><td>Cambiar múltiplo</td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/OCF (histórico al cierre fiscal · objetivo FY+1..FY+3)</td><td data-value=\"34.928973095714056\">34,93x</td><td data-value=\"31.573328365051964\">31,57x</td><td data-value=\"43.47357372213836\">43,47x</td><td data-value=\"33.40697292394995\">33,41x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td data-value=\"28\">28,00x</td><td></td><td data-value=\"28\">28</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>OCF</td><td data-value=\"3759.740000000001\">$ 3.759,74</td><td data-value=\"6673.417000000001\">$ 6.673,42</td><td data-value=\"8770.119999999999\">$ 8.770,12</td><td data-value=\"11849.918999999998\">$ 11.849,92</td><td data-value=\"10372.758577027063\">$ 10.372,76</td><td data-value=\"12499.729476866873\">$ 12.499,73</td><td data-value=\"14613.871448190906\">$ 14.613,87</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Implied Target Stock Price</td><td></td><td></td><td></td><td></td><td data-value=\"69.64983034608667\">$ 69,65</td><td data-value=\"84.15310811856081\">$ 84,15</td><td data-value=\"98.56890866518219\">$ 98,57</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Cumulative Dividends/Share</td><td></td><td></td><td></td><td></td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td data-value=\"0\">$ 0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Total Target Price + Dividends</td><td></td><td></td><td></td><td></td><td data-value=\"69.64983034608667\">$ 69,65</td><td data-value=\"84.15310811856081\">$ 84,15</td><td data-value=\"98.56890866518219\">$ 98,57</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Total Return</td><td></td><td></td><td></td><td></td><td data-value=\"0.11404079248379191\">11,40%</td><td data-value=\"0.34601900381575185\">34,60%</td><td data-value=\"0.5765980272741873\">57,66%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Total IRR (Annualized Return)</td><td></td><td></td><td></td><td></td><td data-value=\"0.11404079248379184\">11,40%</td><td data-value=\"0.16018059103561622\">16,02%</td><td data-value=\"0.1638767507447696\">16,39%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "PV": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>P/V · VALORACIÓN POR HISTORIA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>Precio / ventas (equity), no EV/ventas. Ancla histórica inicial; justificar por márgenes, crecimiento y riesgo.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Precio al corte</td><td data-value=\"62.52\"> $ 62,52 </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>CONTROLES Y FUENTES</td><td>Conservador</td></tr><tr data-row=\"6\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Patrimonio común LTM</td><td data-value=\"29286.253\">29.286,25</td></tr><tr data-row=\"7\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Otros movimientos de equity FY+1</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"8\"><td>Múltiplo P/V</td><td data-value=\"4.153774244220961\">4,15×</td><td data-value=\"6.2479652051197725\">6,25×</td><td data-value=\"9.775872176396861\">9,78×</td><td data-value=\"8.761472407122001\">8,76×</td><td data-value=\"4\">4,00×</td><td data-value=\"4\">4,00×</td><td data-value=\"4\">4,00×</td><td></td><td data-value=\"4\">4,00×</td><td></td><td>Otros movimientos de equity FY+2</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"9\"><td>Ventas</td><td data-value=\"31615.55\">31.615,55</td><td data-value=\"33723.297\">33.723,30</td><td data-value=\"39000.966\">39.000,97</td><td data-value=\"45183.036\">45.183,04</td><td data-value=\"53713.403640000004\">53.713,40</td><td data-value=\"57473.34189480001\">57.473,34</td><td data-value=\"61209.109117962005\">61.209,11</td><td></td><td></td><td></td><td>Otros movimientos de equity FY+3</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"10\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"51.2431993620389\">51,24</td><td data-value=\"54.905780797236794\">54,91</td><td data-value=\"58.54481706606555\">58,54</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td>Peso inicial</td><td data-value=\"0\">0</td></tr><tr data-row=\"12\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"51.2431993620389\">51,24</td><td data-value=\"54.905780797236794\">54,91</td><td data-value=\"58.54481706606555\">58,54</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.18037109145811103\">-18,0%</td><td data-value=\"-0.1217885349130392\">-12,2%</td><td data-value=\"-0.0635825805171858\">-6,4%</td><td></td><td></td><td></td><td>Estado</td><td>CALCULADO · ANCLA HISTÓRICA INICIAL</td></tr><tr data-row=\"14\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.18037109145811103\">-18,0%</td><td data-value=\"-0.06287062521391384\">-6,3%</td><td data-value=\"-0.021659960092215935\">-2,2%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>P/BV no positivo</td><td>No interpretable; no se reemplaza por cero ni se pondera.</td></tr><tr data-row=\"16\"><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Tesis por escenario</td><td>El múltiplo también depende de crecimiento, margen/ROE, riesgo y régimen. P25/mediana/P75 son una referencia inicial, no una regla universal.</td></tr><tr data-row=\"18\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/V</td><td data-value=\"4.153774244220961\">4,15×</td><td data-value=\"6.2479652051197725\">6,25×</td><td data-value=\"9.775872176396861\">9,78×</td><td data-value=\"8.761472407122001\">8,76×</td><td data-value=\"5\">5,00×</td><td data-value=\"5\">5,00×</td><td data-value=\"5\">5,00×</td><td></td><td data-value=\"5\">5,00×</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>Ventas</td><td data-value=\"31615.55\">31.615,55</td><td data-value=\"33723.297\">33.723,30</td><td data-value=\"39000.966\">39.000,97</td><td data-value=\"45183.036\">45.183,04</td><td data-value=\"55205.442630000005\">55.205,44</td><td data-value=\"60725.98689300001\">60.725,99</td><td data-value=\"66191.32571337001\">66.191,33</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"66.14060400917317\">66,14</td><td data-value=\"72.86260366702643\">72,86</td><td data-value=\"79.51738332830116\">79,52</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"66.14060400917317\">66,14</td><td data-value=\"72.86260366702643\">72,86</td><td data-value=\"79.51738332830116\">79,52</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.05791113258434377\">5,8%</td><td data-value=\"0.16542872148154886\">16,5%</td><td data-value=\"0.27187113448978173\">27,2%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.05791113258434377\">5,8%</td><td data-value=\"0.07955024036936265\">8,0%</td><td data-value=\"0.0834637121844386\">8,3%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/V</td><td data-value=\"4.153774244220961\">4,15×</td><td data-value=\"6.2479652051197725\">6,25×</td><td data-value=\"9.775872176396861\">9,78×</td><td data-value=\"8.761472407122001\">8,76×</td><td data-value=\"6\">6,00×</td><td data-value=\"6\">6,00×</td><td data-value=\"6\">6,00×</td><td></td><td data-value=\"6\">6,00×</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>Ventas</td><td data-value=\"31615.55\">31.615,55</td><td data-value=\"33723.297\">33.723,30</td><td data-value=\"39000.966\">39.000,97</td><td data-value=\"45183.036\">45.183,04</td><td data-value=\"56200.13529\">56.200,14</td><td data-value=\"62944.15152480001\">62.944,15</td><td data-value=\"69868.00819252801\">69.868,01</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"81.03800865630743\">81,04</td><td data-value=\"90.89209680338747\">90,89</td><td data-value=\"101.00896063438964\">101,01</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"81.03800865630743\">81,04</td><td data-value=\"90.89209680338747\">90,89</td><td data-value=\"101.00896063438964\">101,01</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.29619335662679824\">29,6%</td><td data-value=\"0.45380833018853917\">45,4%</td><td data-value=\"0.6156263697119264\">61,6%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.29619335662679824\">29,6%</td><td data-value=\"0.2057397439698747\">20,6%</td><td data-value=\"0.17340241485036723\">17,3%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "PBV": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>P/BV · VALORACIÓN POR HISTORIA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>Precio / patrimonio contable común. Denominadores no positivos: no interpretable. Justificar por ROE, crecimiento y riesgo.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td>Precio al corte</td><td data-value=\"62.52\"> $ 62,52 </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td>CONSERVADOR</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>CONTROLES Y FUENTES</td><td>Conservador</td></tr><tr data-row=\"6\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Patrimonio común LTM</td><td data-value=\"29286.253\">29.286,25</td></tr><tr data-row=\"7\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Otros movimientos de equity FY+1</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"8\"><td>Múltiplo P/BV</td><td data-value=\"6.320514163772456\">6,32×</td><td data-value=\"10.234057849126348\">10,23×</td><td data-value=\"15.408791237415366\">15,41×</td><td data-value=\"14.873667662377635\">14,87×</td><td data-value=\"6\">6,00×</td><td data-value=\"6\">6,00×</td><td data-value=\"6\">6,00×</td><td></td><td data-value=\"6\">6,00×</td><td></td><td>Otros movimientos de equity FY+2</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"9\"><td>Patrimonio común proyectado</td><td data-value=\"20777.401\">20.777,40</td><td data-value=\"20588.313\">20.588,31</td><td data-value=\"24743.567\">24.743,57</td><td data-value=\"26615.488\">26.615,49</td><td data-value=\"43144.4920641193\">43.144,49</td><td data-value=\"57785.32255886203\">57.785,32</td><td data-value=\"73277.97111145497\">73.277,97</td><td></td><td></td><td></td><td>Otros movimientos de equity FY+3</td><td data-value=\"0\">0,00</td></tr><tr data-row=\"10\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"61.96162231832704\">61,96</td><td data-value=\"83.35422121172675\">83,35</td><td data-value=\"105.99146275352594\">105,99</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"11\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td>Peso inicial</td><td data-value=\"0\">0</td></tr><tr data-row=\"12\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"61.96162231832704\">61,96</td><td data-value=\"83.35422121172675\">83,35</td><td data-value=\"105.99146275352594\">105,99</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"-0.008931184927590596\">-0,9%</td><td data-value=\"0.33324090229889225\">33,3%</td><td data-value=\"0.6953209013679771\">69,5%</td><td></td><td></td><td></td><td>Estado</td><td>PROVISIONAL · CONCILIAR EQUITY POR HISTORIA</td></tr><tr data-row=\"14\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"-0.008931184927590596\">-0,9%</td><td data-value=\"0.15466051387362012\">15,5%</td><td data-value=\"0.19238720036570744\">19,2%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>P/BV no positivo</td><td>No interpretable; no se reemplaza por cero ni se pondera.</td></tr><tr data-row=\"16\"><td>BASE</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"17\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td>Tesis por escenario</td><td>El múltiplo también depende de crecimiento, margen/ROE, riesgo y régimen. P25/mediana/P75 son una referencia inicial, no una regla universal.</td></tr><tr data-row=\"18\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"19\"><td>Múltiplo P/BV</td><td data-value=\"6.320514163772456\">6,32×</td><td data-value=\"10.234057849126348\">10,23×</td><td data-value=\"15.408791237415366\">15,41×</td><td data-value=\"14.873667662377635\">14,87×</td><td data-value=\"8\">8,00×</td><td data-value=\"8\">8,00×</td><td data-value=\"8\">8,00×</td><td></td><td data-value=\"8\">8,00×</td><td></td><td></td><td></td></tr><tr data-row=\"20\"><td>Patrimonio común proyectado</td><td data-value=\"20777.401\">20.777,40</td><td data-value=\"20588.313\">20.588,31</td><td data-value=\"24743.567\">24.743,57</td><td data-value=\"26615.488\">26.615,49</td><td data-value=\"43529.44314923373\">43.529,44</td><td data-value=\"59377.61853374312\">59.377,62</td><td data-value=\"76750.59279295037\">76.750,59</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"21\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"83.72526088969886\">83,73</td><td data-value=\"114.60089182377749\">114,60</td><td data-value=\"148.44715667385165\">148,45</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"22\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"83.72526088969886\">83,73</td><td data-value=\"114.60089182377749\">114,60</td><td data-value=\"148.44715667385165\">148,45</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.3391756380310118\">33,9%</td><td data-value=\"0.8330277003163384\">83,3%</td><td data-value=\"1.3743947004774735\">137,4%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.3391756380310118\">33,9%</td><td data-value=\"0.35389353359720954\">35,4%</td><td data-value=\"0.33408746860798866\">33,4%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td>OPTIMISTA</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"28\"><td>Periodo</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>FY+1</td><td>FY+2</td><td>FY+3</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"29\"><td>Capitalización bursátil</td><td data-value=\"131323.85730688\">131.323,86</td><td data-value=\"210701.98625792\">210.701,99</td><td data-value=\"381268.458372\">381.268,46</td><td data-value=\"395869.923184\">395.869,92</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"30\"><td>Múltiplo P/BV</td><td data-value=\"6.320514163772456\">6,32×</td><td data-value=\"10.234057849126348\">10,23×</td><td data-value=\"15.408791237415366\">15,41×</td><td data-value=\"14.873667662377635\">14,87×</td><td data-value=\"10\">10,00×</td><td data-value=\"10\">10,00×</td><td data-value=\"10\">10,00×</td><td></td><td data-value=\"10\">10,00×</td><td></td><td></td><td></td></tr><tr data-row=\"31\"><td>Patrimonio común proyectado</td><td data-value=\"20777.401\">20.777,40</td><td data-value=\"20588.313\">20.588,31</td><td data-value=\"24743.567\">24.743,57</td><td data-value=\"26615.488\">26.615,49</td><td data-value=\"43786.077205976675\">43.786,08</td><td data-value=\"60458.51910494711\">60.458,52</td><td data-value=\"79205.04414029777\">79.205,04</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"32\"><td>Precio objetivo sin dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"105.55139670624925\">105,55</td><td data-value=\"146.15324442318249\">146,15</td><td data-value=\"191.80603837617787\">191,81</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"33\"><td>Dividendos acumulados por acción</td><td></td><td></td><td></td><td></td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td data-value=\"0\">0,00</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Precio + dividendos</td><td></td><td></td><td></td><td></td><td data-value=\"105.55139670624925\">105,55</td><td data-value=\"146.15324442318249\">146,15</td><td data-value=\"191.80603837617787\">191,81</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td>Retorno total</td><td></td><td></td><td></td><td></td><td data-value=\"0.6882820970289387\">68,8%</td><td data-value=\"1.337703845540347\">133,8%</td><td data-value=\"2.0679148812568435\">206,8%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"36\"><td>Rentabilidad anualizada</td><td></td><td></td><td></td><td></td><td data-value=\"0.6882820970289387\">68,8%</td><td data-value=\"0.5289551483089185\">52,9%</td><td data-value=\"0.453051817474027\">45,3%</td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"37\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"38\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>",
+      "Sensibilidad por múltiplo": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"76\"><td>BASE · EV/EBITDA · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"77\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"78\"><td>Múltiplo / Fundamental</td><td data-value=\"18256.69608048314\">18256,69608</td><td data-value=\"20538.78309054353\">20538,78309</td><td data-value=\"22820.870100603923\">22820,8701</td><td data-value=\"25102.957110664316\">25102,95711</td><td data-value=\"27385.044120724706\">27385,04412</td><td></td><td></td><td></td></tr><tr data-row=\"79\"><td data-value=\"15.200000000000001\">15,2</td><td data-value=\"48.19327399719491\">48,193274</td><td data-value=\"54.527740582046256\">54,52774058</td><td data-value=\"60.86220716689763\">60,86220717</td><td data-value=\"67.19667375174899\">67,19667375</td><td data-value=\"73.53114033660036\">73,53114034</td><td></td><td></td><td></td></tr><tr data-row=\"80\"><td data-value=\"17.1\">17,1</td><td data-value=\"54.52774058204626\">54,52774058</td><td data-value=\"61.65401549000404\">61,65401549</td><td data-value=\"68.78029039796183\">68,7802904</td><td data-value=\"75.90656530591963\">75,90656531</td><td data-value=\"83.0328402138774\">83,03284021</td><td></td><td></td><td></td></tr><tr data-row=\"81\"><td data-value=\"19\">19</td><td data-value=\"60.86220716689763\">60,86220717</td><td data-value=\"68.78029039796182\">68,7802904</td><td data-value=\"76.69837362902604\">76,69837363</td><td data-value=\"84.61645686009025\">84,61645686</td><td data-value=\"92.53454009115444\">92,53454009</td><td></td><td></td><td></td></tr><tr data-row=\"82\"><td data-value=\"20.900000000000002\">20,9</td><td data-value=\"67.19667375174899\">67,19667375</td><td data-value=\"75.90656530591961\">75,90656531</td><td data-value=\"84.61645686009025\">84,61645686</td><td data-value=\"93.32634841426088\">93,32634841</td><td data-value=\"102.03623996843149\">102,03624</td><td></td><td></td><td></td></tr><tr data-row=\"83\"><td data-value=\"22.8\">22,8</td><td data-value=\"73.53114033660036\">73,53114034</td><td data-value=\"83.0328402138774\">83,03284021</td><td data-value=\"92.53454009115445\">92,53454009</td><td data-value=\"102.03623996843152\">102,03624</td><td data-value=\"111.53793984570854\">111,5379398</td><td></td><td></td><td></td></tr><tr data-row=\"84\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"76.69837362902604\">76,69837363</td><td data-value=\"76.69837362902604\">76,69837363</td><td>OK</td></tr><tr data-row=\"85\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"86\"><td>BASE · EV/FCFF · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"87\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"88\"><td>Múltiplo / Fundamental</td><td data-value=\"11341.586457822135\">11341,58646</td><td data-value=\"12759.2847650499\">12759,28477</td><td data-value=\"14176.983072277668\">14176,98307</td><td data-value=\"15594.681379505435\">15594,68138</td><td data-value=\"17012.379686733202\">17012,37969</td><td></td><td></td><td></td></tr><tr data-row=\"89\"><td data-value=\"18\">18</td><td data-value=\"34.79794235596101\">34,79794236</td><td data-value=\"39.45799248565814\">39,45799249</td><td data-value=\"44.11804261535527\">44,11804262</td><td data-value=\"48.778092745052405\">48,77809275</td><td data-value=\"53.43814287474953\">53,43814287</td><td></td><td></td><td></td></tr><tr data-row=\"90\"><td data-value=\"20.25\">20,25</td><td data-value=\"39.45799248565814\">39,45799249</td><td data-value=\"44.70054888156741\">44,70054888</td><td data-value=\"49.943105277476675\">49,94310528</td><td data-value=\"55.18566167338596\">55,18566167</td><td data-value=\"60.42821806929523\">60,42821807</td><td></td><td></td><td></td></tr><tr data-row=\"91\"><td data-value=\"22.5\">22,5</td><td data-value=\"44.11804261535528\">44,11804262</td><td data-value=\"49.943105277476675\">49,94310528</td><td data-value=\"55.768167939598094\">55,76816794</td><td data-value=\"61.59323060171951\">61,5932306</td><td data-value=\"67.41829326384092\">67,41829326</td><td></td><td></td><td></td></tr><tr data-row=\"92\"><td data-value=\"24.750000000000004\">24,75</td><td data-value=\"48.77809274505241\">48,77809275</td><td data-value=\"55.18566167338596\">55,18566167</td><td data-value=\"61.59323060171951\">61,5932306</td><td data-value=\"68.00079953005307\">68,00079953</td><td data-value=\"74.40836845838663\">74,40836846</td><td></td><td></td><td></td></tr><tr data-row=\"93\"><td data-value=\"27\">27</td><td data-value=\"53.43814287474953\">53,43814287</td><td data-value=\"60.42821806929523\">60,42821807</td><td data-value=\"67.41829326384091\">67,41829326</td><td data-value=\"74.40836845838662\">74,40836846</td><td data-value=\"81.3984436529323\">81,39844365</td><td></td><td></td><td></td></tr><tr data-row=\"94\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"55.768167939598094\">55,76816794</td><td data-value=\"55.768167939598094\">55,76816794</td><td>OK</td></tr><tr data-row=\"95\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"96\"><td>BASE · P/E · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"97\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"98\"><td>Múltiplo / Fundamental</td><td data-value=\"13898.379407365792\">13898,37941</td><td data-value=\"15635.676833286516\">15635,67683</td><td data-value=\"17372.97425920724\">17372,97426</td><td data-value=\"19110.271685127966\">19110,27169</td><td data-value=\"20847.569111048688\">20847,56911</td><td></td><td></td><td></td></tr><tr data-row=\"99\"><td data-value=\"18.400000000000002\">18,4</td><td data-value=\"45.89052479921051\">45,8905248</td><td data-value=\"51.72801630797258\">51,72801631</td><td data-value=\"57.56550781673466\">57,56550782</td><td data-value=\"63.40299932549674\">63,40299933</td><td data-value=\"69.24049083425881\">69,24049083</td><td></td><td></td><td></td></tr><tr data-row=\"100\"><td data-value=\"20.7\">20,7</td><td data-value=\"51.728016307972574\">51,72801631</td><td data-value=\"58.2951942553299\">58,29519426</td><td data-value=\"64.86237220268724\">64,8623722</td><td data-value=\"71.42955015004459\">71,42955015</td><td data-value=\"77.99672809740191\">77,9967281</td><td></td><td></td><td></td></tr><tr data-row=\"101\"><td data-value=\"23\">23</td><td data-value=\"57.56550781673465\">57,56550782</td><td data-value=\"64.86237220268725\">64,8623722</td><td data-value=\"72.15923658863984\">72,15923659</td><td data-value=\"79.45610097459245\">79,45610097</td><td data-value=\"86.75296536054502\">86,75296536</td><td></td><td></td><td></td></tr><tr data-row=\"102\"><td data-value=\"25.3\">25,3</td><td data-value=\"63.40299932549673\">63,40299933</td><td data-value=\"71.42955015004459\">71,42955015</td><td data-value=\"79.45610097459243\">79,45610097</td><td data-value=\"87.4826517991403\">87,4826518</td><td data-value=\"95.50920262368815\">95,50920262</td><td></td><td></td><td></td></tr><tr data-row=\"103\"><td data-value=\"27.599999999999998\">27,6</td><td data-value=\"69.2404908342588\">69,24049083</td><td data-value=\"77.99672809740191\">77,9967281</td><td data-value=\"86.75296536054502\">86,75296536</td><td data-value=\"95.50920262368815\">95,50920262</td><td data-value=\"104.26543988683125\">104,2654399</td><td></td><td></td><td></td></tr><tr data-row=\"104\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"72.15923658863984\">72,15923659</td><td data-value=\"72.15923658863984\">72,15923659</td><td>OK</td></tr><tr data-row=\"105\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"106\"><td>BASE · P/FCFE · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"107\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"108\"><td>Múltiplo / Fundamental</td><td data-value=\"10592.066575263885\">10592,06658</td><td data-value=\"11916.07489717187\">11916,0749</td><td data-value=\"13240.083219079856\">13240,08322</td><td data-value=\"14564.091540987842\">14564,09154</td><td data-value=\"15888.099862895826\">15888,09986</td><td></td><td></td><td></td></tr><tr data-row=\"109\"><td data-value=\"17.6\">17,6</td><td data-value=\"33.23357763894316\">33,23357764</td><td data-value=\"37.48895075267181\">37,48895075</td><td data-value=\"41.74432386640047\">41,74432387</td><td data-value=\"45.99969698012913\">45,99969698</td><td data-value=\"50.25507009385778\">50,25507009</td><td></td><td></td><td></td></tr><tr data-row=\"110\"><td data-value=\"19.8\">19,8</td><td data-value=\"37.48895075267182\">37,48895075</td><td data-value=\"42.27624550561655\">42,27624551</td><td data-value=\"47.0635402585613\">47,06354026</td><td data-value=\"51.850835011506035\">51,85083501</td><td data-value=\"56.63812976445077\">56,63812976</td><td></td><td></td><td></td></tr><tr data-row=\"111\"><td data-value=\"22\">22</td><td data-value=\"41.74432386640047\">41,74432387</td><td data-value=\"47.06354025856129\">47,06354026</td><td data-value=\"52.382756650722115\">52,38275665</td><td data-value=\"57.70197304288293\">57,70197304</td><td data-value=\"63.02118943504375\">63,02118944</td><td></td><td></td><td></td></tr><tr data-row=\"112\"><td data-value=\"24.200000000000003\">24,2</td><td data-value=\"45.99969698012914\">45,99969698</td><td data-value=\"51.850835011506035\">51,85083501</td><td data-value=\"57.70197304288294\">57,70197304</td><td data-value=\"63.55311107425984\">63,55311107</td><td data-value=\"69.40424910563675\">69,40424911</td><td></td><td></td><td></td></tr><tr data-row=\"113\"><td data-value=\"26.4\">26,4</td><td data-value=\"50.25507009385778\">50,25507009</td><td data-value=\"56.63812976445076\">56,63812976</td><td data-value=\"63.02118943504375\">63,02118944</td><td data-value=\"69.40424910563674\">69,40424911</td><td data-value=\"75.78730877622971\">75,78730878</td><td></td><td></td><td></td></tr><tr data-row=\"114\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"52.382756650722115\">52,38275665</td><td data-value=\"52.382756650722115\">52,38275665</td><td>OK</td></tr><tr data-row=\"115\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"116\"><td>BASE · P/OCF · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"117\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"118\"><td>Múltiplo / Fundamental</td><td data-value=\"11018.39293789341\">11018,39294</td><td data-value=\"12395.692055130085\">12395,69206</td><td data-value=\"13772.991172366761\">13772,99117</td><td data-value=\"15150.290289603437\">15150,29029</td><td data-value=\"16527.589406840114\">16527,58941</td><td></td><td></td><td></td></tr><tr data-row=\"119\"><td data-value=\"18.400000000000002\">18,4</td><td data-value=\"36.21348486922568\">36,21348487</td><td data-value=\"40.84134638673965\">40,84134639</td><td data-value=\"45.46920790425362\">45,4692079</td><td data-value=\"50.09706942176759\">50,09706942</td><td data-value=\"54.72493093928157\">54,72493094</td><td></td><td></td><td></td></tr><tr data-row=\"120\"><td data-value=\"20.7\">20,7</td><td data-value=\"40.84134638673965\">40,84134639</td><td data-value=\"46.04769059394286\">46,04769059</td><td data-value=\"51.25403480114608\">51,2540348</td><td data-value=\"56.4603790083493\">56,46037901</td><td data-value=\"61.666723215552516\">61,66672322</td><td></td><td></td><td></td></tr><tr data-row=\"121\"><td data-value=\"23\">23</td><td data-value=\"45.46920790425362\">45,4692079</td><td data-value=\"51.25403480114608\">51,2540348</td><td data-value=\"57.038861698038545\">57,0388617</td><td data-value=\"62.82368859493101\">62,82368859</td><td data-value=\"68.60851549182348\">68,60851549</td><td></td><td></td><td></td></tr><tr data-row=\"122\"><td data-value=\"25.3\">25,3</td><td data-value=\"50.09706942176759\">50,09706942</td><td data-value=\"56.4603790083493\">56,46037901</td><td data-value=\"62.82368859493101\">62,82368859</td><td data-value=\"69.18699818151272\">69,18699818</td><td data-value=\"75.55030776809444\">75,55030777</td><td></td><td></td><td></td></tr><tr data-row=\"123\"><td data-value=\"27.599999999999998\">27,6</td><td data-value=\"54.724930939281556\">54,72493094</td><td data-value=\"61.66672321555251\">61,66672322</td><td data-value=\"68.60851549182347\">68,60851549</td><td data-value=\"75.55030776809443\">75,55030777</td><td data-value=\"82.49210004436539\">82,49210004</td><td></td><td></td><td></td></tr><tr data-row=\"124\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"57.038861698038545\">57,0388617</td><td data-value=\"57.038861698038545\">57,0388617</td><td>OK</td></tr><tr data-row=\"125\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"126\"><td>BASE · P/V · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"127\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"128\"><td>Múltiplo / Fundamental</td><td data-value=\"52953.06057069601\">52953,06057</td><td data-value=\"59572.19314203301\">59572,19314</td><td data-value=\"66191.32571337001\">66191,32571</td><td data-value=\"72810.45828470701\">72810,45828</td><td data-value=\"79429.59085604401\">79429,59086</td><td></td><td></td><td></td></tr><tr data-row=\"129\"><td data-value=\"4\">4</td><td data-value=\"37.87049075227975\">37,87049075</td><td data-value=\"42.70547800517548\">42,70547801</td><td data-value=\"47.54046525807121\">47,54046526</td><td data-value=\"52.37545251096694\">52,37545251</td><td data-value=\"57.210439763862674\">57,21043976</td><td></td><td></td><td></td></tr><tr data-row=\"130\"><td data-value=\"4.5\">4,5</td><td data-value=\"42.70547800517548\">42,70547801</td><td data-value=\"48.144838664683164\">48,14483866</td><td data-value=\"53.58419932419087\">53,58419932</td><td data-value=\"59.02355998369857\">59,02355998</td><td data-value=\"64.46292064320626\">64,46292064</td><td></td><td></td><td></td></tr><tr data-row=\"131\"><td data-value=\"5\">5</td><td data-value=\"47.54046525807121\">47,54046526</td><td data-value=\"53.58419932419087\">53,58419932</td><td data-value=\"59.62793339031053\">59,62793339</td><td data-value=\"65.6716674564302\">65,67166746</td><td data-value=\"71.71540152254987\">71,71540152</td><td></td><td></td><td></td></tr><tr data-row=\"132\"><td data-value=\"5.5\">5,5</td><td data-value=\"52.37545251096694\">52,37545251</td><td data-value=\"59.02355998369857\">59,02355998</td><td data-value=\"65.6716674564302\">65,67166746</td><td data-value=\"72.31977492916182\">72,31977493</td><td data-value=\"78.96788240189346\">78,9678824</td><td></td><td></td><td></td></tr><tr data-row=\"133\"><td data-value=\"6\">6</td><td data-value=\"57.210439763862674\">57,21043976</td><td data-value=\"64.46292064320626\">64,46292064</td><td data-value=\"71.71540152254987\">71,71540152</td><td data-value=\"78.96788240189346\">78,9678824</td><td data-value=\"86.22036328123706\">86,22036328</td><td></td><td></td><td></td></tr><tr data-row=\"134\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"59.62793339031053\">59,62793339</td><td data-value=\"59.62793339031053\">59,62793339</td><td>OK</td></tr><tr data-row=\"135\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"136\"><td>BASE · P/BV · ancla JMR (múltiplo elegido)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"137\"><td>Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"138\"><td>Múltiplo / Fundamental</td><td data-value=\"61400.4742343603\">61400,47423</td><td data-value=\"69075.53351365533\">69075,53351</td><td data-value=\"76750.59279295037\">76750,59279</td><td data-value=\"84425.65207224542\">84425,65207</td><td data-value=\"92100.71135154043\">92100,71135</td><td></td><td></td><td></td></tr><tr data-row=\"139\"><td data-value=\"6.4\">6,4</td><td data-value=\"70.95117635130772\">70,95117635</td><td data-value=\"79.92124930408195\">79,9212493</td><td data-value=\"88.89132225685618\">88,89132226</td><td data-value=\"97.86139520963042\">97,86139521</td><td data-value=\"106.83146816240462\">106,8314682</td><td></td><td></td><td></td></tr><tr data-row=\"140\"><td data-value=\"7.2\">7,2</td><td data-value=\"79.92124930408195\">79,9212493</td><td data-value=\"90.01258137595296\">90,01258138</td><td data-value=\"100.10391344782396\">100,1039134</td><td data-value=\"110.19524551969498\">110,1952455</td><td data-value=\"120.28657759156597\">120,2865776</td><td></td><td></td><td></td></tr><tr data-row=\"141\"><td data-value=\"8\">8</td><td data-value=\"88.89132225685618\">88,89132226</td><td data-value=\"100.10391344782396\">100,1039134</td><td data-value=\"111.31650463879174\">111,3165046</td><td data-value=\"122.52909582975954\">122,5290958</td><td data-value=\"133.7416870207273\">133,741687</td><td></td><td></td><td></td></tr><tr data-row=\"142\"><td data-value=\"8.8\">8,8</td><td data-value=\"97.86139520963042\">97,86139521</td><td data-value=\"110.19524551969498\">110,1952455</td><td data-value=\"122.52909582975954\">122,5290958</td><td data-value=\"134.86294613982412\">134,8629461</td><td data-value=\"147.19679644988867\">147,1967964</td><td></td><td></td><td></td></tr><tr data-row=\"143\"><td data-value=\"9.6\">9,6</td><td data-value=\"106.83146816240463\">106,8314682</td><td data-value=\"120.28657759156597\">120,2865776</td><td data-value=\"133.7416870207273\">133,741687</td><td data-value=\"147.19679644988867\">147,1967964</td><td data-value=\"160.65190587905\">160,6519059</td><td></td><td></td><td></td></tr><tr data-row=\"144\"><td>VP3 / centro / control</td><td></td><td></td><td></td><td></td><td></td><td data-value=\"111.31650463879174\">111,3165046</td><td data-value=\"111.31650463879174\">111,3165046</td><td>OK</td></tr></tbody></table>",
+      "Sensibilidad DCF": "<table data-source=\"verified-native-google-sheet\"><tbody><tr data-row=\"1\"><td>SENSIBILIDAD DCF · HISTORIA BASE · VALOR POR ACCIÓN</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"2\"><td>Cada celda recalcula el DCF completo. El centro concilia con Valuation output!B35; faltantes permanecen en blanco.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"3\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"4\"><td>WACC × crecimiento terminal</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"5\"><td></td><td data-value=\"0.03\">3,00%</td><td data-value=\"0.035\">3,50%</td><td data-value=\"0.04\">4,00%</td><td data-value=\"0.045\">4,50%</td><td data-value=\"0.05\">5,00%</td><td></td><td></td></tr><tr data-row=\"6\"><td data-value=\"0.08724352345088429\">8,72%</td><td data-value=\"65.15291939221835\">65,15</td><td data-value=\"67.66289601445389\">67,66</td><td data-value=\"70.71308817087721\">70,71</td><td data-value=\"74.53343453893537\">74,53</td><td data-value=\"79.50763883229743\">79,51</td><td></td><td></td></tr><tr data-row=\"7\"><td data-value=\"0.09224352345088428\">9,22%</td><td data-value=\"58.96516855508039\">58,97</td><td data-value=\"60.746432600845075\">60,75</td><td data-value=\"62.849015233394326\">62,85</td><td data-value=\"65.39183697568733\">65,39</td><td data-value=\"68.56193483694783\">68,56</td><td></td><td></td></tr><tr data-row=\"8\"><td data-value=\"0.09724352345088429\">9,72%</td><td data-value=\"53.80006431187967\">53,80</td><td data-value=\"55.07310853092315\">55,07</td><td data-value=\"56.53647108954618\">56,54</td><td data-value=\"58.252140295698275\">58,25</td><td data-value=\"60.313148875792194\">60,31</td><td></td><td></td></tr><tr data-row=\"9\"><td data-value=\"0.10224352345088429\">10,22%</td><td data-value=\"49.42192527639492\">49,42</td><td data-value=\"50.332593632376415\">50,33</td><td data-value=\"51.352871687239194\">51,35</td><td data-value=\"52.514339224211994\">52,51</td><td data-value=\"53.86261946792845\">53,86</td><td></td><td></td></tr><tr data-row=\"10\"><td data-value=\"0.10724352345088428\">10,72%</td><td data-value=\"45.66246309447132\">45,66</td><td data-value=\"46.31013508179522\">46,31</td><td data-value=\"47.0166554241331\">47,02</td><td data-value=\"47.79691376481336\">47,80</td><td data-value=\"48.671747523956995\">48,67</td><td></td><td></td></tr><tr data-row=\"11\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"12\"><td>Conciliación centro / DCF Base</td><td>OK</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"13\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"14\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"15\"><td>ROIC terminal × crecimiento terminal</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"16\"><td></td><td data-value=\"0.03\">3,00%</td><td data-value=\"0.035\">3,50%</td><td data-value=\"0.04\">4,00%</td><td data-value=\"0.045\">4,50%</td><td data-value=\"0.05\">5,00%</td><td></td><td></td></tr><tr data-row=\"17\"><td data-value=\"0.1004\">10,04%</td><td data-value=\"52.61789064707186\">52,62</td><td data-value=\"53.53915757904364\">53,54</td><td data-value=\"54.57052272791155\">54,57</td><td data-value=\"55.74693136329263\">55,75</td><td data-value=\"57.12081356333953\">57,12</td><td></td><td></td></tr><tr data-row=\"18\"><td data-value=\"0.1054\">10,54%</td><td data-value=\"53.23701765179094\">53,24</td><td data-value=\"54.34251709084392\">54,34</td><td data-value=\"55.60012756246783\">55,60</td><td data-value=\"57.058957293736576\">57,06</td><td data-value=\"58.79270074784984\">58,79</td><td></td><td></td></tr><tr data-row=\"19\"><td data-value=\"0.1104\">11,04%</td><td data-value=\"53.80006431187967\">53,80</td><td data-value=\"55.07310853092315\">55,07</td><td data-value=\"56.53647108954618\">56,54</td><td data-value=\"58.252140295698275\">58,25</td><td data-value=\"60.313148875792194\">60,31</td><td></td><td></td></tr><tr data-row=\"20\"><td data-value=\"0.1154\">11,54%</td><td data-value=\"54.314320100210274\">54,31</td><td data-value=\"55.74039048746\">55,74</td><td data-value=\"57.39167566280493\">57,39</td><td data-value=\"59.34192789021096\">59,34</td><td data-value=\"61.701842399926704\">61,70</td><td></td><td></td></tr><tr data-row=\"21\"><td data-value=\"0.1204\">12,04%</td><td data-value=\"54.7858636137626\">54,79</td><td data-value=\"56.352250354583475\">56,35</td><td data-value=\"58.17584995589269\">58,18</td><td data-value=\"60.341201564913604\">60,34</td><td data-value=\"62.97519593036233\">62,98</td><td></td><td></td></tr><tr data-row=\"22\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"23\"><td>Conciliación centro / DCF Base</td><td>OK</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"24\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"25\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"26\"><td>Crecimiento años 1–5 × margen EBIT objetivo</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"27\"><td></td><td data-value=\"0.31\">31,00%</td><td data-value=\"0.32999999999999996\">33,00%</td><td data-value=\"0.35\">35,00%</td><td data-value=\"0.37\">37,00%</td><td data-value=\"0.38999999999999996\">39,00%</td><td></td><td></td></tr><tr data-row=\"28\"><td data-value=\"0.05092495483619434\">5,09%</td><td data-value=\"41.97762463544136\">41,98</td><td data-value=\"44.26746617625767\">44,27</td><td data-value=\"46.55730771707398\">46,56</td><td data-value=\"48.847149257890294\">48,85</td><td data-value=\"51.136990798706606\">51,14</td><td></td><td></td></tr><tr data-row=\"29\"><td data-value=\"0.07092495483619433\">7,09%</td><td data-value=\"46.110202680709854\">46,11</td><td data-value=\"48.703927294194706\">48,70</td><td data-value=\"51.29765190767956\">51,30</td><td data-value=\"53.89137652116442\">53,89</td><td data-value=\"56.48510113464926\">56,49</td><td></td><td></td></tr><tr data-row=\"30\"><td data-value=\"0.09092495483619434\">9,09%</td><td data-value=\"50.67060215132538\">50,67</td><td data-value=\"53.60353662043578\">53,60</td><td data-value=\"56.53647108954618\">56,54</td><td data-value=\"59.46940555865662\">59,47</td><td data-value=\"62.40234002776702\">62,40</td><td></td><td></td></tr><tr data-row=\"31\"><td data-value=\"0.11092495483619434\">11,09%</td><td data-value=\"55.700045347290946\">55,70</td><td data-value=\"59.0110241245927\">59,01</td><td data-value=\"62.322002901894464\">62,32</td><td data-value=\"65.6329816791962\">65,63</td><td data-value=\"68.943960456498\">68,94</td><td></td><td></td></tr><tr data-row=\"32\"><td data-value=\"0.13092495483619435\">13,09%</td><td data-value=\"61.24309393488613\">61,24</td><td data-value=\"64.97474830967393\">64,97</td><td data-value=\"68.70640268446174\">68,71</td><td data-value=\"72.43805705924954\">72,44</td><td data-value=\"76.16971143403734\">76,17</td><td></td><td></td></tr><tr data-row=\"33\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"34\"><td>Conciliación centro / DCF Base</td><td>OK</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr data-row=\"35\"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
     },
     "analisis": {}
   },
@@ -254,45 +586,59 @@
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "pesoVigente": 0.1142857143,
+        "pesoVigente": 0.11428571428571431,
+        "pesoRelativo": 0.28571428571428575,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "EV/FCFF",
-        "pesoVigente": 0.1714285714,
+        "pesoVigente": 0.17142857142857143,
+        "pesoRelativo": 0.42857142857142855,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "P/E",
-        "pesoVigente": 0.0571428571,
+        "pesoVigente": 0.057142857142857155,
+        "pesoRelativo": 0.14285714285714288,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "P/FCFE",
-        "pesoVigente": 0.0571428571,
+        "pesoVigente": 0.057142857142857155,
+        "pesoRelativo": 0.14285714285714288,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "P/OCF",
         "pesoVigente": 0,
+        "pesoRelativo": 0,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "P/V",
         "pesoVigente": 0,
+        "pesoRelativo": 0,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       },
       {
         "nombre": "P/BV",
         "pesoVigente": 0,
+        "pesoRelativo": 0,
         "controlCalculo": "OK",
-        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+        "control": "CALCULADO",
+        "nota": "Motor JMR nueva revisión 2026-10-28, múltiplo salida definido por historia y valoración."
       }
     ]
   },
@@ -307,7 +653,7 @@
         "cons": 15,
         "base": 19,
         "opt": 23,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             63.34571224847286,
@@ -331,7 +677,7 @@
         "cons": 17,
         "base": 22.5,
         "opt": 27,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             42.51423241856158,
@@ -355,7 +701,7 @@
         "cons": 18,
         "base": 23,
         "opt": 28,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             59.66792974240747,
@@ -379,7 +725,7 @@
         "cons": 18,
         "base": 22,
         "opt": 28,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             44.23160385397753,
@@ -403,7 +749,7 @@
         "cons": 18,
         "base": 23,
         "opt": 28,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             46.07745511098782,
@@ -427,7 +773,7 @@
         "cons": 4,
         "base": 5,
         "opt": 6,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             51.243199360224885,
@@ -451,7 +797,7 @@
         "cons": 6,
         "base": 8,
         "opt": 10,
-        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "control": "CALCULADO",
         "precios": [
           [
             61.961622316513015,
@@ -472,7 +818,65 @@
       }
     ],
     "nota": "7 métodos calculados; P/V y P/BV sin ponderación",
-    "control": "63 precios FY+1/2/3 positivos"
+    "control": "7/7 métodos trazados al motor original; suma de pesos 100%; 21/21 supuestos originales preservados",
+    "preciosDescontados": [
+      {
+        "metodo": "EV/EBITDA",
+        "peso": 0.28571428571428575,
+        "cons": 55.38984580705255,
+        "base": 76.4430882953322,
+        "opt": 97.8521727091828
+      },
+      {
+        "metodo": "EV/FCFF",
+        "peso": 0.42857142857142855,
+        "cons": 38.08008221079708,
+        "base": 53.030929460866666,
+        "opt": 66.65444390318231
+      },
+      {
+        "metodo": "P/E",
+        "peso": 0.14285714285714288,
+        "cons": 52.13510287724105,
+        "base": 72.01136587157009,
+        "opt": 92.2776568260362
+      },
+      {
+        "metodo": "P/FCFE",
+        "peso": 0.14285714285714288,
+        "cons": 39.471988940347735,
+        "base": 50.02859485828176,
+        "opt": 66.30508846700782
+      },
+      {
+        "metodo": "P/OCF",
+        "peso": 0,
+        "cons": 41.16466253241759,
+        "base": 54.44821961285421,
+        "opt": 68.88355560940366
+      },
+      {
+        "metodo": "P/V",
+        "peso": 0,
+        "cons": 45.25822819238718,
+        "base": 59.95240888847356,
+        "opt": 74.79631409816288
+      },
+      {
+        "metodo": "P/BV",
+        "peso": 0,
+        "cons": 68.19081368237757,
+        "base": 93.99064090437399,
+        "opt": 120.11925539238182
+      }
+    ],
+    "ponderadoRelativo": {
+      "conservador": 45.23243286629788,
+      "base": 62.00270367187374,
+      "optimista": 79.17863177442236
+    },
+    "pesosRelativosSuman": 1,
+    "valorIntrinsecoDCFBase": 56.53647108773217
   },
   "sensibilidadMultiples": {
     "methods": 7,
@@ -482,9 +886,159 @@
       "optimista"
     ],
     "disrupcionFuera": true,
-    "controlesOK": true,
-    "base": "Solo Base visible en app",
-    "nota": "Múltiplos de salida fijados bajo criterio de ciclo y contrastados con historia y comparables"
+    "controles": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 53.31153604742094,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 76.69837362902604,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 100.89306819281525,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 37.58086581640438,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 55.768167939598094,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 71.81604637741748,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 50.115756798780595,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 72.15923658863984,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 95.04521721896913,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 38.80951649059896,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 52.382756650722115,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 71.14583053235727,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 40.51443181839055,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 57.038861698038545,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 73.91415655589398,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 43.90117363332324,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 59.62793339031053,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 75.74388548055056,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "conservador",
+        "estado": "OK",
+        "centro": 79.48012895388428,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 111.31650463879174,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "optimista",
+        "estado": "OK",
+        "centro": 143.83015639403615,
+        "detalle": "Centro VP FY+3 trazado a hoja nativa."
+      }
+    ],
+    "controlesOK": 21,
+    "noDisponibles": 0,
+    "errores": 0,
+    "nota": "Las matrices de múltiplos completas de 5×5 solo aparecen para Base; el ledger de 21 controla 7×3."
   },
   "auditoria": {
     "revisionId": "NFLX-2026-10-28",
@@ -493,7 +1047,11 @@
     "dictamen": "Pendiente de auditoría económica solicitada por usuario",
     "salvedades": [
       "Hipótesis de largo plazo, opciones, R&D y recompras requieren revisión visual."
-    ]
+    ],
+    "unificacionMultiples": {
+      "resultado": "OK",
+      "fuente": "Controles matemáticos de los 7 múltiplos; no representa auditoría económica independiente"
+    }
   },
   "cierreMultiplos": {
     "revisionId": "NFLX-2026-10-28",
@@ -503,7 +1061,8 @@
     "scenariosCalculated": 21,
     "horizonPricesChecked": 63,
     "dcfBase": 56.53647108773217,
-    "status": "CALCULO_COMPLETO_EN_REVISION",
-    "scope": "Cálculo de múltiplos con la plantilla IA JMR vigente; no significa auditoría final."
+    "status": "CALCULO_COMPLETO_PENDIENTE_AUDITORIA_ECONOMICA",
+    "scope": "Cálculo de múltiplos con la plantilla IA JMR vigente; no significa auditoría final.",
+    "presentValuesChecked": 63
   }
 }
