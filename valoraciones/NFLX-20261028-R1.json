@@ -1,0 +1,467 @@
+{
+  "ticker": "NFLX",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c/edit",
+  "nombreActivo": "Netflix, Inc.",
+  "fecha": "2026-10-27",
+  "precio": 62.52,
+  "precioAnalisis": 62.52,
+  "posicion": null,
+  "tipo": "Crecimiento",
+  "mos": 0.35,
+  "precioMOS": 44.804097905460054,
+  "precioMOSMax": 44.804097905460054,
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": 57.64576684626419,
+      "base": 91.92141553746603,
+      "optimista": 109.32903689601223
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.11428571428571431,
+      "conservador": 71.09409309818213,
+      "base": 102.28182715296332,
+      "optimista": 134.54688637523418
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.17142857142857143,
+      "conservador": 50.11631198705438,
+      "base": 74.37015733116667,
+      "optimista": 95.77095438702145
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.057142857142857155,
+      "conservador": 66.83233205603172,
+      "base": 96.22861887459739,
+      "optimista": 126.74843049902121
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.057142857142857155,
+      "conservador": 51.75479048331537,
+      "base": 69.85551072385603,
+      "optimista": 94.87718183388756
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 54.0283961233916,
+      "base": 76.06470277216643,
+      "optimista": 98.56890866517587
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "conservador": 58.54481706605923,
+      "base": 79.51738332829484,
+      "optimista": 101.00896063438331
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": 105.99146275351961,
+      "base": 148.4471566738453,
+      "optimista": 191.80603837617153
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 58.08027409043706,
+    "base": 89.0818925166442,
+    "optimista": 110.05640775157543
+  },
+  "valorPresentePonderado": {
+    "conservador": 44.02917327184768,
+    "base": 66.15871030455668,
+    "optimista": 80.86118398711896
+  },
+  "valorEsperado": {
+    "valor": 65.76716211429219,
+    "tipoPromedio": "ponderado",
+    "valorCentral": 68.92938139301546,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.09092495483619434,
+        "margen": 0.35,
+        "s2c": 1.2,
+        "s2c610": 1.2,
+        "roicTerminal": 0.20585,
+        "valor": 68.92938139301546,
+        "terminalGrowth": 0.04,
+        "titulo": "Precios, publicidad y escala sostienen márgenes",
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06596536304713352,
+        "margen": 0.31,
+        "s2c": 1,
+        "s2c610": 1.15,
+        "roicTerminal": 0.095,
+        "valor": 43.22700020888436,
+        "terminalGrowth": 0.04,
+        "titulo": "Presión competitiva limita precios y publicidad",
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.006319940019455794,
+        "margen": 0.23,
+        "s2c": 0.85,
+        "s2c610": 1,
+        "roicTerminal": 0.0869,
+        "valor": 23.715754958324144,
+        "terminalGrowth": 0.025,
+        "titulo": "Disrupción por sustitutos y pérdida de poder de precio",
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1099099011339515,
+        "margen": 0.375,
+        "s2c": 1.4,
+        "s2c610": 1.3,
+        "roicTerminal": 0.20585,
+        "valor": 81.98288546225349,
+        "terminalGrowth": 0.04,
+        "titulo": "Publicidad rentable y éxito internacional amplían margen",
+        "estado": "LISTO"
+      }
+    ],
+    "escenariosUnificados": true,
+    "historiaCentralId": "A",
+    "rango": {
+      "min": 43.22700020888436,
+      "max": 81.98288546225349
+    },
+    "fecha": "2026-10-27",
+    "dcfBase": 68.92938139301546,
+    "disrupcionEnPromedio": false,
+    "metodo": "A/B/D renormalizado, disrupción aparte"
+  },
+  "precioMOSHoy": {
+    "conservador": 28.097550135774835,
+    "base": 44.804097905460054,
+    "optimista": 53.28887555046477
+  },
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 68.92938139301546,
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-09-30",
+  "precioReferenciaFecha": "2026-10-27",
+  "precioReferenciaFuente": "StockAnalysis cierre 2026-10-27; US Treasury tasa 10Y 4,99%",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "NASDAQ",
+  "revisionId": "NFLX-20261028-R1",
+  "estado": "EN_REVISION_TECNICA",
+  "savedAt": "2026-10-28",
+  "reportSchema": "jmr-report-contract-v2-20261017",
+  "metodoPrincipal": "DCF",
+  "salvedades": [
+    "Controles técnicos automáticos aún no ejecutados: no mover al catálogo activo.",
+    "ROIC terminal 20,585% por midpoint del ROIC ajustado 30,13% y sector11,04% según decisión específica de usuario 21-oct.",
+    "I+D proxy: no capitalizar reduce Base de 68,93 a 68,11 (-1,18%); vida útil 5 años eleva a 69,11 (+0,27%).",
+    "Opción de 3 años eleva Base +0,15 USD; vencimiento 7 años y volatilidad60% reduce -0,23 USD.",
+    "P/BV calculado pero provisional por falta de puente de recompras futuras; peso cero.",
+    "Pendiente revisión visual, dictamen económico posterior."
+  ],
+  "escenariosDCF": {
+    "version": "2",
+    "principal": "DCF Base",
+    "central": "A",
+    "fecha": "2026-10-27",
+    "revisionId": "NFLX-20261028-R1",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.09092495483619434,
+        "margen": 0.35,
+        "s2c": 1.2,
+        "s2c610": 1.2,
+        "roicTerminal": 0.20585,
+        "valor": 68.92938139301546,
+        "terminalGrowth": 0.04,
+        "titulo": "Precios, publicidad y escala sostienen márgenes",
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06596536304713352,
+        "margen": 0.31,
+        "s2c": 1,
+        "s2c610": 1.15,
+        "roicTerminal": 0.095,
+        "valor": 43.22700020888436,
+        "terminalGrowth": 0.04,
+        "titulo": "Presión competitiva limita precios y publicidad",
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.006319940019455794,
+        "margen": 0.23,
+        "s2c": 0.85,
+        "s2c610": 1,
+        "roicTerminal": 0.0869,
+        "valor": 23.715754958324144,
+        "terminalGrowth": 0.025,
+        "titulo": "Disrupción por sustitutos y pérdida de poder de precio",
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1099099011339515,
+        "margen": 0.375,
+        "s2c": 1.4,
+        "s2c610": 1.3,
+        "roicTerminal": 0.20585,
+        "valor": 81.98288546225349,
+        "terminalGrowth": 0.04,
+        "titulo": "Publicidad rentable y éxito internacional amplían margen",
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": true
+  },
+  "seleccionMultiples": {
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "pesoVigente": 0.11428571428571431,
+        "pesoRelativo": 0.28571428571428575,
+        "controlCalculo": "CALCULADO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "EV/FCFF",
+        "pesoVigente": 0.17142857142857143,
+        "pesoRelativo": 0.42857142857142855,
+        "controlCalculo": "CALCULADO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "P/E",
+        "pesoVigente": 0.057142857142857155,
+        "pesoRelativo": 0.14285714285714288,
+        "controlCalculo": "CALCULADO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "P/FCFE",
+        "pesoVigente": 0.057142857142857155,
+        "pesoRelativo": 0.14285714285714288,
+        "controlCalculo": "CALCULADO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "P/OCF",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "controlCalculo": "CALCULADO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "P/V",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "controlCalculo": "CALCULADO · PESO CERO",
+        "nota": "Fórmulas de la copia IA vigente"
+      },
+      {
+        "nombre": "P/BV",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "controlCalculo": "PROVISIONAL · EQUITY FUTURO",
+        "nota": "No asumir movimientos patrimoniales cero como observación"
+      }
+    ]
+  },
+  "multiplesUnificados": {
+    "revisionId": "NFLX-20261028-R1",
+    "hojaId": "11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c",
+    "pestana": "Financials Multiples, Descuento de múltiplos, PV, PBV",
+    "metodos": [
+      {
+        "metodo": "EV/EBITDA",
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/E",
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/FCFE",
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/OCF",
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/V",
+        "control": "CALCULADO · PESO CERO"
+      },
+      {
+        "metodo": "P/BV",
+        "control": "PROVISIONAL · EQUITY FUTURO"
+      }
+    ],
+    "preciosDescontados": [
+      {
+        "metodo": "EV/EBITDA",
+        "conservador": 55.38984580704733,
+        "base": 76.44308829532697,
+        "optimista": 97.85217270917757,
+        "peso": 0.11428571428571431,
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "conservador": 38.080082210791836,
+        "base": 53.03092946086144,
+        "optimista": 66.6544439031771,
+        "peso": 0.17142857142857143,
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/E",
+        "conservador": 52.13510287723582,
+        "base": 72.01136587156486,
+        "optimista": 92.27765682603096,
+        "peso": 0.057142857142857155,
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/FCFE",
+        "conservador": 39.47198894034252,
+        "base": 50.02859485827653,
+        "optimista": 66.30508846700259,
+        "peso": 0.057142857142857155,
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/OCF",
+        "conservador": 41.16466253241236,
+        "base": 54.44821961284898,
+        "optimista": 68.88355560939841,
+        "peso": 0,
+        "control": "CALCULADO"
+      },
+      {
+        "metodo": "P/V",
+        "conservador": 45.25822819238195,
+        "base": 59.952408888468334,
+        "optimista": 74.79631409815765,
+        "peso": 0,
+        "control": "CALCULADO · PESO CERO"
+      },
+      {
+        "metodo": "P/BV",
+        "conservador": 68.19081368237234,
+        "base": 93.99064090436873,
+        "optimista": 120.11925539237659,
+        "peso": 0,
+        "control": "PROVISIONAL · EQUITY FUTURO"
+      }
+    ],
+    "ponderadoRelativo": {
+      "conservador": 45.23243286629265,
+      "base": 62.00270367186852,
+      "optimista": 79.17863177441714
+    },
+    "pesosRelativosSuman": 1,
+    "valorIntrinsecoDCFBase": 68.92938139301546,
+    "control": "EN_REVISION"
+  },
+  "descuentoMultiples": {
+    "version": 2,
+    "horizontes": [
+      1,
+      2,
+      3
+    ],
+    "horizonteAnios": 3,
+    "costoPatrimonio": 0.10070458167839776,
+    "criterio": "Promedio 1-3 años",
+    "dcfHoy": {
+      "conservador": 43.22700020888436,
+      "base": 68.92938139301546,
+      "optimista": 81.98288546225349
+    },
+    "multiplesHoy": {
+      "conservador": 45.23243286629265,
+      "base": 62.00270367186852,
+      "optimista": 79.17863177441714
+    },
+    "ponderadoHoy": {
+      "conservador": 44.02917327184768,
+      "base": 66.15871030455668,
+      "optimista": 80.86118398711896
+    },
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "chequeo": "Cinco originales calculados y PV/PBV; P/BV provisional sin peso"
+  },
+  "dcfInverso": {
+    "variable": "delta aditivo de crecimiento ingresos años 1-5",
+    "delta": -0.018932187045173528,
+    "cagrBase": 0.09092495483619434,
+    "cagrImplicito": 0.07199144449710038,
+    "precioObjetivo": 62.52,
+    "precioReproducido": 62.52,
+    "toleranciaUSD": 0.001,
+    "convergenciaAnios": 10,
+    "roicTerminal": 0.20585,
+    "waccInicial": 0.09724352345088429,
+    "waccTerminal": 0.0869,
+    "estado": "REPRODUCIDO_SIN_MODIFICAR_FORMULAS"
+  },
+  "auditoria": {
+    "revisionId": "NFLX-20261028-R1",
+    "fecha": "2026-10-28",
+    "estado": "PENDIENTE_AUDITORIA_ECONOMICA",
+    "dictamen": "Diferida para revisión visual conforme a reglas v13",
+    "salvedades": [
+      "ROIC terminal midpoint requiere evaluación económica de convergencia",
+      "P/BV provisional y no ponderado",
+      "Cierre controles técnicos pendiente"
+    ]
+  },
+  "cierreMultiplos": {
+    "revisionId": "NFLX-20261028-R1",
+    "date": "2026-10-28",
+    "sourceSheetId": "11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c",
+    "methodsCalculated": 7,
+    "scenariosCalculated": 21,
+    "dcfBase": 68.92938139301546,
+    "evidencePath": "evidencia/NFLX-20261028-R1/analisis-fundamental-borrador.md",
+    "status": "CALCULOS_LISTOS_CONTROL_TECNICO_PENDIENTE",
+    "scope": "Copias nuevas y datos SEC"
+  },
+  "revisionOrigen": "Nueva valoración y análisis desde cero, preservando solo SEC e historial financiero"
+}
