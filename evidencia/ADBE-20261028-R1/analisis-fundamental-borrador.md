@@ -444,7 +444,7 @@ Las historias de erosión no conservan retornos excedentes para siempre: la Cons
 
 - **DCF Base (valor intrínseco principal): US$374,92 por acción.**
 - **Promedio de Conservadora, Base y Optimista** ponderado con probabilidades renormalizadas (Base 50 %, Conservadora 25 %, Optimista 25 %): **US$371,34**. Rango de las tres historias: US$279,78 a US$455,72.
-- **Disrupción aparte** («¿qué pasaría si todo fallara?»): **US$128,85** por acción, con probabilidad de 10 %, fuera del promedio.
+- **Disrupción aparte** («¿Qué pasaría si todo fallara?»): **US$128,85** por acción, con probabilidad de 10 %, fuera del promedio.
 - **Precio con margen de seguridad (35 % sobre el DCF Base): US$243,70** = Base × (1 − 35 %). El margen se aplica solo al valor principal Base; las historias no se recortan «por prudencia» y no se detectó doble conteo del riesgo (Damodaran, *The Margin of Safety*, 2016).
 
 Sensibilidad del DCF Base (valor por acción), crecimiento de los años 1-5 frente al margen EBIT objetivo; el centro, en negrita, es el DCF Base:
