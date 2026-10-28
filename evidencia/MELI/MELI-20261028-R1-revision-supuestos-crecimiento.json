@@ -1,0 +1,91 @@
+{
+  "revision": "MELI-20261028-R1",
+  "change": "Análisis de conservadurismo tras petición de usuario 2026-10-28",
+  "financialCutoff": "2026-06-30",
+  "priceCutoff": "2026-10-27",
+  "old": {
+    "Base": [
+      0.21,
+      0.18,
+      0.15,
+      0.13,
+      0.11,
+      0.09,
+      0.08,
+      0.07,
+      0.06,
+      0.05
+    ],
+    "Optimista": [
+      0.26,
+      0.24,
+      0.21,
+      0.18,
+      0.16,
+      0.14,
+      0.12,
+      0.1,
+      0.08,
+      0.06
+    ],
+    "baseValue": 986.6489727259561,
+    "optimValue": 1821.5465354157266,
+    "baseRevenue5": 72458.13716572199,
+    "baseTerminalPVShare": 0.7029640955334485
+  },
+  "proposed": {
+    "Base": [
+      0.25,
+      0.23,
+      0.21,
+      0.18,
+      0.16,
+      0.14,
+      0.12,
+      0.1,
+      0.08,
+      0.06
+    ],
+    "Optimista": [
+      0.3,
+      0.27,
+      0.24,
+      0.22,
+      0.19,
+      0.17,
+      0.14,
+      0.12,
+      0.1,
+      0.07
+    ],
+    "baseReproduced": 1261.8004625787603,
+    "optimReproduced": 2195.642589848041,
+    "baseRevenue5": 89590.3050966,
+    "baseTerminalPVShare": 0.7993019606680125
+  },
+  "rationale": "Crecimiento H1 2026 = 19014/12725-1 = 49.42%, Q2 2026 10169/6790-1 = 49.76%, FY2025 +39.06%. Base 21-11% en años1-5 original parecía extrapolar erróneamente FY2025/LTM 21.77% como YoY. Proyección 25-16% primeros cinco años, descenso gradual a 6% año10 y g 4%; se conserva margen EBIT 13.5%, S/C 2.3/2.0, WACC 10.84% a 10.2%, ROIC 13.7%. Optimista 30/27/24/22/19 con descenso a 7% año10 y otros supuestos ya existentes. No ajustar crecimiento hasta el precio.",
+  "sourceURLs": [
+    "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000021/meli-20260805xex991.htm",
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202609&type=daily_treasury_yield_curve"
+  ],
+  "issues": [
+    {
+      "id": "FINTECH-DEUDA",
+      "impact": "POTENCIALMENTE MATERIAL",
+      "status": "PENDIENTE",
+      "description": "Deuda consolidada 13176 incluye fondeo financiero, en tanto EBIT ya incluye gastos financieros como costo de ventas. Requiere segmentación/FCFE Fintech antes de dictamen económico."
+    },
+    {
+      "id": "NOL",
+      "status": "INCERTIDUMBRE NO MATERIAL CUANTIFICADA",
+      "description": "DTA US$184M pérdida fiscal en 10-K no equivale a NOL bruto US$557.6M, conversión 33% es aproximación; efecto sobre precio por acción c. US$3."
+    },
+    {
+      "id": "R&D",
+      "status": "PENDIENTE",
+      "description": "50% Product & Technology capitalizable a 2 años sin separación SEC; sensibilidad a futuro."
+    }
+  ],
+  "verification": "Contrafactual calculado replicando exactamente Valuation output B3:M35 y B104:M137 con error cero antes de escritura. Resultado post-write a contrastar contra fórmula nativa."
+}
