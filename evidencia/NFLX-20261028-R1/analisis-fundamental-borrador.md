@@ -226,7 +226,27 @@ Se calcula el valor presente de cada múltiplo en horizontes FY+1, +2 y +3 usand
 | 10,22% | 56,20 | 58,80 | 61,88 | 65,60 | 70,18 |
 | 10,72% | 51,57 | 53,65 | 56,07 | 58,94 | 62,41 |
 
-**Matriz 2:** ROIC terminal × g terminal; **matriz 3:** crecimiento explícito años 1–5 × margen EBIT destino. Las dos se encuentran en la pestaña «Sensibilidad DCF», con cada centro conciliado al DCF Base 68,93. No hay matrices conservadoras u optimistas de múltiplos. Todas las celdas son salidas de la hoja, no precios de terceros.
+**Matriz 2: ROIC terminal × crecimiento a perpetuidad (USD/acción, centro DCF Base)**
+
+| ROIC terminal \ crecimiento terminal | 3,00% | 3,50% | 4,00% | 4,50% | 5,00% |
+|---|---:|---:|---:|---:|---:|
+| 19,59% | 61,30 | 64,49 | 68,35 | 73,10 | 79,10 |
+| 20,09% | 61,47 | 64,73 | 68,65 | 73,48 | 79,59 |
+| 20,59% | 61,64 | 64,94 | **68,93** | 73,84 | 80,06 |
+| 21,09% | 61,80 | 65,15 | 69,20 | 74,19 | 80,50 |
+| 21,59% | 61,96 | 65,35 | 69,46 | 74,52 | 80,92 |
+
+**Matriz 3: CAGR ingresos 1–5 × margen EBIT final (USD/acción, centro DCF Base)**
+
+| CAGR ingresos 1–5 \ margen EBIT destino | 31,00% | 33,00% | 35,00% | 37,00% | 39,00% |
+|---|---:|---:|---:|---:|---:|
+| 5,09% | 50,42 | 53,25 | 56,09 | 58,92 | 61,76 |
+| 7,09% | 55,75 | 58,96 | 62,18 | 65,39 | 68,61 |
+| 9,09% | 61,65 | 65,29 | **68,93** | 72,57 | 76,21 |
+| 11,09% | 68,18 | 72,29 | 76,41 | 80,53 | 84,64 |
+| 13,09% | 75,40 | 80,04 | 84,69 | 89,33 | 93,98 |
+
+Ambas matrices recalculan la historia Base y concilian exactamente sus celdas centrales con el valor intrínseco. No se presentan matrices de múltiplos para escenarios no Base.
 
 ## 2.8 DCF inverso y riesgos de modelo
 **DCF inverso actualizado y reproducido:** después de corregir ROIC terminal de Base a 20,585%, se reconstruyó el FCFF a 10 años con discrepancia inferior a US$0,000001 por acción respecto de la hoja (valor inicial US$68,929381). Se resolvió una raíz aplicando **delta = −1,89322 puntos porcentuales** a cada tasa anual de ingresos de años 1–5; la trayectoria Base original (11%, 10%, 9%, 8%, 7,5%) se convierte en (9,1068%, 8,1068%, 7,1068%, 6,1068%, 5,6068%). Años 6–10 mantienen convergencia al 4,0% terminal, disminuyendo gradualmente la perturbación de tasas de crecimiento. Las demás hipótesis Base, margen, reinversión prospectiva, impuestos, WACC, opciones y deuda se mantienen inalteradas. El **CAGR implícito a cinco años es 7,1991%**, frente al 9,0925% del Base. El motor reconstruye el precio de cierre del 27-oct de **US$62,5200** (tolerancia menor a 0,001 USD). La tasa implícita no es guía de Netflix ni pronóstico independiente; es la condición matemática del precio de mercado bajo los otros supuestos Base.
