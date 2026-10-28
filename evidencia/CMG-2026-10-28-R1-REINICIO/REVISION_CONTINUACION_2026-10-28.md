@@ -1,0 +1,26 @@
+# CMG · verificación y corrección de procedencia — 28-oct-2026
+
+**Rama:** `ccr-e19723cb-q1m72p`. **Estado:** PREPARACIÓN / PENDIENTE de auditoría económica y publicación. No es un dictamen, no cambia la ficha activa en la app ni supone despliegue a producción.
+
+## Verificaciones efectuadas desde esta conversación
+- Se localizó y releyó la hoja nativa de reinicio: https://docs.google.com/spreadsheets/d/1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc/edit. Metadatos: 61 pestañas; entre ellas Income Statement, Balance Sheet, Cash Flow Statement, los siete métodos de múltiplos, cuatro historias y matrices.
+- `Valuation output!B35` sigue mostrando **US$24,94**; escenario Base `C4:G4`: **11,0 %, 10,5 %, 10,0 %, 9,5 %, 9,0 %**. `Resumen de Valoración!C32:E32`: **11,06 / 24,94 / 32,23**.
+- La documentación de Work en `CONTINUAR.md` reporta controles de 21.265 fórmulas preservadas y 122 validaciones, 66 identidades y conciliaciones con el motor. **No se han repetido aquí todos esos ensayos**: el estado observado es el de esas evidencias guardadas.
+- Se identificó discrepancia documental en la pestaña `Origen de los Supuestos`: A5 llamaba valor principal al ponderado de DCF+cinco múltiplos; A7 describía tres escenarios en vez de cuatro; C11:C12 muestran 4,18 % vinculados a los *inputs históricos* B27/B29, pero no al crecimiento Base efectivo de 11,0 %/10,5 %...; E14 confundía g terminal con Rf; A15 repetía atajos antiguos de escenarios.
+- **Corrección aplicada y verificada** exclusivamente a texto estático de `Origen de los Supuestos!A5`, `A7`, `E14` y `A15`. No se reescribieron fórmulas, validaciones ni celdas de cálculo. Las fórmulas de C11:C12 permanecen *heredadas* y la discrepancia se advierte explícitamente en A7/A15; se deberá decidir después de auditoría si corresponde armonizarlas con la plantilla sin destruir la fórmula fuente.
+- Fórmulas `Valuation output!C4:G4` y `B35` releídas después de edición, permanecen activas con idénticos resultados. La verificación visual por navegador y validaciones integrales de las 61 pestañas no se ejecutaron en esta sesión.
+
+## Contraste económico fechado (no modifica el corte)
+- **DCF FCFF Base:** US$24,9369270995/acción; Conservadora US$11,0615407413; Optimista US$32,2273851892; Disrupción US$3,7174385572. Promedio ordinario de tres historias US$23,2906950324, MOS 35% exclusivamente Base US$16,2090026147. Base calculada con cifras hasta junio 2026 y precio de referencia **US$31,95 al 30-sep-2026**.
+- **Cotización separada:** cierre **US$27,98 al 27-oct-2026** (https://stockanalysis.com/stocks/cmg/history/). El DCF Base queda **10,88 % por debajo** de ese cierre; el precio con MOS queda **42,07 % por debajo**. No reemplazar en la hoja el precio congelado del corte sin crear una revisión fechada explícita.
+- El 3T-2026 está programado para divulgarse **hoy 28-oct-2026 ~16:10 ET**, conferencia **16:30 ET** (https://ir.chipotle.com/2026-09-01-CHIPOTLE-MEXICAN-GRILL-TO-ANNOUNCE-THIRD-QUARTER-2026-RESULTS-ON-OCTOBER-28%2C-2026). **No** insertar ni inferir resultados todavía no publicados.
+- ROIC marginal terminal Base **18,36 %**, WACC terminal **8,99 %**, g terminal **4,00 %**. Prueba diagnóstica **ya registrada** en `Auditoría DCF interna`: con ROIC terminal ~9,0% manteniendo otros supuestos, estimación **US$19,18/acción**, un desvío de aprox. **−23,1 %** frente al Base. **Material** por política §4B: requiere evidencia para afirmar ventaja durable y no es certificación económica. El VP terminal representa **68,84 %** del EV, que aumenta la importancia de ese juicio.
+- Fuente primaria 10-Q 30-jun-2026: https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm. Reporta **12,824 millones** de SOSARs pendientes a strike medio **US$39,28**, vida remanente **4,1 años**; RSU/PSU también existen y exigen puente de dilución sin doble cómputo. En junio los compromisos de arriendo ya reconocidos deben conciliarse sin duplicarlos. La valoración de inversiones privadas no debe confundirse con cotización de mercado.
+
+## Bloqueos restantes antes de cerrar como valoración JMR
+1. Completar auditoría económica y materialidad con escenarios alternativos para ROIC terminal, nuevas unidades/tráfico, WACC y costo de deuda, valoración de activos privados y dilución RSU/PSU, futuras obligaciones de arrendamiento. Fuentes primarias y pruebas cuantitativas; no imputar ceros sin evidencia.
+2. Resolver sensibilidad de WACC **exclusivamente terminal** si es obligatoria; la matriz actual mueve tasa inicial y terminal conjuntamente y está correctamente etiquetada así, pero no equivale al contrato solicitado.
+3. Ejecutar controles oficiales y verificación de profundidad editorial del artículo de 18 secciones y Nivel 2, completar inventario 8-K pertinente, sin mezclar información posterior al corte.
+4. Generar registro de valoración + análisis + auditoría bajo un **mismo revisionId** en rama. Cumplir publicación-gate, validar lector/visor/links con prueba local; sin certificar lo que no se comprobó. No fusionar a main ni afirmar publicación pública sin control y autorización.
+
+**Modificaciones de esta continuación:** exclusivamente cuatro descripciones en hoja específica CMG y este archivo de evidencia de rama. Se conservaron los tres repositorios y sus plantillas sin cambios.
