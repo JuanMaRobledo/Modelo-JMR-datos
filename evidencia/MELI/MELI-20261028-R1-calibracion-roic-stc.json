@@ -1,0 +1,156 @@
+{
+  "revisionId": "MELI-20261028-R1",
+  "date": "2026-10-28",
+  "stage": "CALIBRACION_SUPUESTOS_NO_DICTAMEN_ECONOMICO",
+  "cutoff": "2026-06-30",
+  "calcMethod": "ROIC GAAP proxy = EBIT*(1-tasa efectiva) / (patrimonio común + préstamos/financiación + pasivos arrendamientos - cash+short term investments). S/C incremental = cambio ingresos LTM (FY2025 vs LTM Jun2026) / cambio IC de FY2025 a Junio2026; no anualiza indebidamente ingresos y capital.",
+  "years": [
+    {
+      "year": "2021",
+      "sales": 7069,
+      "ebit": 441,
+      "ic": 2118,
+      "roicMarginalTax33pct": 0.1395
+    },
+    {
+      "year": "2022",
+      "sales": 10780,
+      "ebit": 1069,
+      "ic": 2992,
+      "roicMarginalTax33pct": 0.2394
+    },
+    {
+      "year": "2023",
+      "sales": 15107,
+      "ebit": 2207,
+      "ic": 2368,
+      "roicMarginalTax33pct": 0.6244,
+      "flag": "IC deprimido por capital circulante / financiación Fintech, no extrapolable"
+    },
+    {
+      "year": "2024",
+      "sales": 20777,
+      "ebit": 2631,
+      "ic": 4081,
+      "roicMarginalTax33pct": 0.4319,
+      "flag": "IC deprimido por cambios en cartera y fondeo, no extrapolable"
+    },
+    {
+      "year": "2025",
+      "sales": 28893,
+      "ebit": 3201,
+      "ic": 11841,
+      "roicEffective": 0.189955,
+      "roicMarginalTax33pct": 0.1811
+    },
+    {
+      "year": "2026JunLTM",
+      "sales": 35182,
+      "ebit": 2907,
+      "ic": 15280,
+      "roicEffective": 0.136059,
+      "roicMarginalTax33pct": 0.12747
+    }
+  ],
+  "stcObserved": {
+    "2024_2025": 1.0458763,
+    "2025_LTMJun2026": 1.8287293,
+    "2022_LTMJun2026": 1.9858398,
+    "2021_LTMJun2026": 2.1359216
+  },
+  "factsSEC2026H1": {
+    "totalRevenue": 19014,
+    "commerceRevenue": 10630,
+    "fintechRevenue": 8384,
+    "loansReceivableNet": 11996,
+    "creditImpairmentAllowance": 4379,
+    "customerFunds": 16035,
+    "restrictedCash": 13114,
+    "corporateAndFintechTotalDebtAndLeases": 13176,
+    "fintechSecuredDebtMinimum": 3587,
+    "cfo": 5737,
+    "loansChangeCash": -4069,
+    "fintechFundingNet": 1218,
+    "capexCash": -712,
+    "adjustedFcf": 158,
+    "adjustedFcfH12025": 512
+  },
+  "damodaranJan2026US": {
+    "retailGeneral": {
+      "ROIC": 0.206,
+      "salesInvestedCapital": 3.51
+    },
+    "softwareInternet": {
+      "ROIC": 0.062,
+      "salesInvestedCapital": 1.35
+    },
+    "financialServicesNonBank": {
+      "ROIC": 0.0117,
+      "salesInvestedCapital": 0.07,
+      "reason": "Fintech lending has debt as operating working capital; not direct analog or weighted hybrid ROC"
+    }
+  },
+  "recommendation": {
+    "roicTerminal": 0.155,
+    "rationale": "Balance-based GAAP proxy FY2025 ~19.0%, LTM-Jun2026 ~13.6%, central midpoint ~16.3%, faded ~80bps to 15.5 for durable but eroding network moat; must use SOTP/FCFE Fintech for full verification.",
+    "stcYears1To5": 2.1,
+    "rationaleYears1To5": "Weighted recent observed S/C around 1.99–2.14; down from ungroundedly optimistic 2.3, up modestly from recent 1.83 as logistics density and fintech funding mature.",
+    "stcYears6To10": 2.2,
+    "rationaleYears6To10": "Slight operating leverage in logistics and commerce, not the retail-industry 3.51 which excludes lending assets.",
+    "marginTarget": 0.135,
+    "terminalGrowth": 0.04,
+    "initialWacc": 0.10837569815596583,
+    "terminalWacc": 0.102,
+    "marginalTax": 0.33,
+    "keepOthersConstant": true,
+    "roicTerminalRange": [
+      0.135,
+      0.175
+    ],
+    "stcYears1To5Range": [
+      1.8,
+      2.3
+    ],
+    "stcYears6To10Range": [
+      2,
+      2.5
+    ]
+  },
+  "prewriteSensitivities": [
+    {
+      "case": "Prior Base",
+      "roic": 0.137,
+      "stcFirst": 2.3,
+      "stcLater": 2,
+      "dcf": 1261.8004625787607
+    },
+    {
+      "case": "Only ROIC 15.5",
+      "roic": 0.155,
+      "stcFirst": 2.3,
+      "stcLater": 2,
+      "dcf": 1314.949640676602
+    },
+    {
+      "case": "Only initial S/C 2.0",
+      "roic": 0.137,
+      "stcFirst": 2,
+      "stcLater": 2,
+      "dcf": 1206.856424607544
+    },
+    {
+      "case": "ROIC15.5, S/C 2.1/2.2",
+      "roic": 0.155,
+      "stcFirst": 2.1,
+      "stcLater": 2.2,
+      "dcf": 1299.804051355059
+    }
+  ],
+  "keyCaveat": "Fintech finance: GAAP capital employed is not pure Commerce operating IC; collateralized securitization debt $3.587bn is within $13.176bn debt pool and linked to loan book. Its funding costs are partly in cost of net revenues. Separating valuation by cash flows, FCFE for financial, is necessary before final economic validation. Prior DCF should not be treated as validated.",
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/mgnroc.html",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/termvalueexreturns.htm"
+  ],
+  "auditoriaEconomicaFinal": "PENDIENTE_HASTA_REVISION_VISUAL"
+}
