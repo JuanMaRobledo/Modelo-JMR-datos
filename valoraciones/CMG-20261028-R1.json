@@ -351,7 +351,12 @@
             22.93994256,
             22.20078389
           ],
-          "consolidado": 22.94808302
+          "consolidado": 22.94808302,
+          "fy": [
+            25.72142342,
+            27.01198749,
+            28.36707977
+          ]
         },
         "base": {
           "vp": [
@@ -359,7 +364,12 @@
             42.35021059,
             42.93755287
           ],
-          "consolidado": 42.28953344
+          "consolidado": 42.28953344,
+          "fy": [
+            45.12064846,
+            49.86775166,
+            54.86351263
+          ]
         },
         "optimista": {
           "vp": [
@@ -367,7 +377,12 @@
             53.87168072,
             55.61121072
           ],
-          "consolidado": 53.73531694
+          "consolidado": 53.73531694,
+          "fy": [
+            56.12628692,
+            63.43438576,
+            71.05729501
+          ]
         }
       },
       {
@@ -379,7 +394,12 @@
             18.38487325,
             22.20078389
           ],
-          "consolidado": 18.1950196
+          "consolidado": 18.1950196,
+          "fy": [
+            15.19118249,
+            21.64835265,
+            28.36707977
+          ]
         },
         "base": {
           "vp": [
@@ -387,7 +407,12 @@
             33.86095863,
             42.93755287
           ],
-          "consolidado": 33.78325168
+          "consolidado": 33.78325168,
+          "fy": [
+            26.64131155,
+            39.87158156,
+            54.86351263
+          ]
         },
         "optimista": {
           "vp": [
@@ -395,7 +420,12 @@
             42.66261225,
             55.61121072
           ],
-          "consolidado": 42.76649254
+          "consolidado": 42.76649254,
+          "fy": [
+            32.58176387,
+            50.23560741,
+            71.05729501
+          ]
         }
       }
     ],
@@ -815,7 +845,12 @@
     "controlesOK": 7,
     "noDisponibles": 14,
     "errores": 0,
-    "scope": "Sólo la historia Base tiene matrices; Conservador y Optimista se marcan N/D, no se publican matrices ficticias."
+    "scope": "Sólo la historia Base tiene matrices; Conservador y Optimista se marcan N/D, no se publican matrices ficticias.",
+    "economica": {
+      "controlesOK": 0,
+      "noDisponibles": 0,
+      "errores": 0
+    }
   },
   "revisionId": "CMG-2026-10-28-R1-REINICIO",
   "publicationRevisionId": "CMG-2026-10-28-R1-REINICIO",
@@ -845,5 +880,10 @@
   },
   "fechaTexto": "Análisis del 30 de sept de 2026",
   "publicationStage": "PREPARADO_SOLO_RAMA_NO_EN_PRODUCCION",
-  "auditPendingUserVisualReview": true
+  "auditPendingUserVisualReview": true,
+  "salvedades": [
+    "Revisión visual y auditoría económica independiente pendientes; el estado EN_REVISION no constituye un dictamen de valoración verificada.",
+    "Los métodos auxiliares P/V y P/BV tienen peso cero en esta revisión, aunque sus trayectorias y precios descontados están calculados.",
+    "Las cifras de esta revisión se mantienen sin cambios; esta corrección únicamente completa metadatos exigidos para integridad técnica del catálogo."
+  ]
 }
