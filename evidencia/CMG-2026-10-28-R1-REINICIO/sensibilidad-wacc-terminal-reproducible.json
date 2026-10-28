@@ -1,0 +1,120 @@
+{
+  "ticker": "CMG",
+  "revisionId": "CMG-2026-10-28-R1-REINICIO",
+  "state": "SOPORTE_TECNICO_NO_PUBLICADO",
+  "cutoff": "2026-09-30",
+  "sourceSheetId": "1SF3cYhIe01LazAiW4klGgYd6QrYG_uC-X-A8N5yYETc",
+  "sourceTab": "Valuation output",
+  "type": "Matriz independiente WACC TERMINAL × crecimiento TERMINAL; WACC inicial fijo",
+  "axes": {
+    "terminalWACC": [
+      0.07990000000000001,
+      0.0849,
+      0.08990000000000001,
+      0.09490000000000001,
+      0.0999
+    ],
+    "terminalGrowth": [
+      0.03,
+      0.035,
+      0.04,
+      0.045,
+      0.05
+    ]
+  },
+  "valuesPerShare": [
+    [
+      26.317080603843717,
+      28.253111062515504,
+      30.66656177024194,
+      33.762445146294134,
+      37.88290243384107
+    ],
+    [
+      24.109607912519674,
+      25.630642173029862,
+      27.483571675276504,
+      29.793011420201502,
+      32.75498628742011
+    ],
+    [
+      22.269429568583124,
+      23.484488189050857,
+      24.936927099500142,
+      26.70591095700867,
+      28.91028359569704
+    ],
+    [
+      20.711669010276246,
+      21.69538753858334,
+      22.852781100523664,
+      24.235933699191182,
+      25.920127273943773
+    ],
+    [
+      19.37573458621593,
+      20.180830801922568,
+      21.11533216677901,
+      22.214484940659993,
+      23.527660307418984
+    ]
+  ],
+  "centerCheck": {
+    "sheet": 24.93692709950013,
+    "model": 24.936927099500142,
+    "difference": 1.0658141036401503e-14,
+    "tolerance": 0.001,
+    "status": "PASS"
+  },
+  "modelParameters": {
+    "initialWACC": 0.07992657926629897,
+    "terminalWACC": 0.08990000000000001,
+    "terminalGrowth": 0.04,
+    "terminalROIC": 0.1836043629376828,
+    "shares": 1265.418,
+    "bridge": -4874.100251144899,
+    "baseRevenue": 12423.759,
+    "growthFY1to5": [
+      0.11,
+      0.105,
+      0.1,
+      0.095,
+      0.09
+    ],
+    "marginsFY1to5": [
+      0.14650549805417185,
+      0.15590329883250312,
+      0.16060219922166874,
+      0.1653010996108344,
+      0.17
+    ],
+    "taxesFY1to5": [
+      0.24082985279307004,
+      0.24082985279307004,
+      0.24082985279307004,
+      0.24082985279307004,
+      0.24082985279307004
+    ],
+    "marginalTax": 0.25,
+    "salesToCapitalFY1to10": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1.8,
+      1.8,
+      1.8,
+      1.8,
+      1.8
+    ]
+  },
+  "explanation": "Los años 1–5 conservan la senda Base observada. Años 6–10 convergen linealmente desde crecimiento FY5 a g terminal y WACC inicial a WACC terminal; NOPAT usa la trayectoria fiscal del DCF. La reinversión operativa es (ventas_{t+1}−ventas_t)/S2C_t, coherente con el lag de 1 año de la hoja. El año 11 reinvierte NOPAT11*g/ROIC_terminal. Descuento 1–10 por costo de capital anual; valor terminal en año 10 = FCFF11/(WACC_terminal−g). El puente a equity, opciones y número de acciones permanece igual. No toca fórmulas y no sustituye pruebas oficiales de publicación.",
+  "specialNotes": "La matriz preexistente de Sensibilidad DCF tiene otro eje: mueve WACC INICIAL y TERMINAL a la vez. NO la identificar como sensibilidad exclusivamente terminal.",
+  "sources": [
+    "Valuation output!B4:M16",
+    "Valuation output!B18:B35",
+    "Valuation output!G40:M42"
+  ],
+  "createdBy": "Relectura nativa por Google Sheets y cálculo en V8 con centro conciliado"
+}
