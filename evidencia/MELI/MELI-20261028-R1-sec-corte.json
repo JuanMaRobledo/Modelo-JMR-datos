@@ -1,0 +1,183 @@
+{
+  "schema_version": "jmr-evidencia-fiscal-v1",
+  "ticker": "MELI",
+  "company": "MercadoLibre, Inc.",
+  "revision": "MELI-20261028-R1",
+  "status": "EN_PREPARACION",
+  "listed_for_app": false,
+  "fiscal_cutoff": "2026-06-30",
+  "information_cutoff": "2026-10-28",
+  "currency": "USD",
+  "money_unit": "USD_million",
+  "share_unit": "million_shares",
+  "sheet": {
+    "id": "1Td7E4awGlz-glT-n6KEG9lwKRvA9g5RY_uKf7cEEN30",
+    "url": "https://docs.google.com/spreadsheets/d/1Td7E4awGlz-glT-n6KEG9lwKRvA9g5RY_uKf7cEEN30/edit",
+    "provenance_tab": "MELI · SEC 2026-06",
+    "official_inputs_active": false
+  },
+  "financials": [
+    {
+      "period": "FY2022",
+      "recast_income": true,
+      "revenue": 10780,
+      "cost_of_revenue": 5582,
+      "ebit": 1069,
+      "profit": 482,
+      "operating_cash_flow": 2940,
+      "capex": 455,
+      "assets": 13736,
+      "liabilities": 11909,
+      "equity": 1827,
+      "product_and_technology": 1099,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959025000007/meli-20241231.htm",
+      "notes": "Balance FY2022 from original 2023 10K, income recast 2024 10K"
+    },
+    {
+      "period": "FY2023",
+      "recast_income": true,
+      "revenue": 15107,
+      "cost_of_revenue": 7517,
+      "ebit": 2207,
+      "profit": 987,
+      "operating_cash_flow": 5140,
+      "capex": 509,
+      "assets": 17612,
+      "liabilities": 14541,
+      "equity": 3071,
+      "product_and_technology": 1831,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959025000007/meli-20241231.htm"
+    },
+    {
+      "period": "FY2024",
+      "revenue": 20777,
+      "cost_of_revenue": 11200,
+      "ebit": 2631,
+      "profit": 1911,
+      "operating_cash_flow": 7918,
+      "capex": 860,
+      "assets": 25196,
+      "liabilities": 20845,
+      "equity": 4351,
+      "product_and_technology": 1934,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm"
+    },
+    {
+      "period": "FY2025",
+      "revenue": 28893,
+      "cost_of_revenue": 16035,
+      "ebit": 3201,
+      "profit": 1997,
+      "operating_cash_flow": 12116,
+      "capex": 1343,
+      "assets": 42667,
+      "liabilities": 35919,
+      "equity": 6748,
+      "product_and_technology": 2269,
+      "adjusted_free_cash_flow_issuer": 1481,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm"
+    },
+    {
+      "period": "H1_2025",
+      "revenue": 12725,
+      "cost_of_revenue": 6860,
+      "ebit": 1588,
+      "profit": 1017,
+      "operating_cash_flow": 3948,
+      "capex": 559,
+      "product_and_technology": 1118,
+      "adjusted_free_cash_flow_issuer": 512,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm"
+    },
+    {
+      "period": "H1_2026",
+      "revenue": 19014,
+      "cost_of_revenue": 10993,
+      "ebit": 1294,
+      "profit": 883,
+      "operating_cash_flow": 5737,
+      "capex": 712,
+      "assets": 51356,
+      "liabilities": 43522,
+      "equity": 7834,
+      "product_and_technology": 1428,
+      "adjusted_free_cash_flow_issuer": 158,
+      "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm"
+    },
+    {
+      "period": "LTM_2026-06-30",
+      "derived": true,
+      "formula": "FY2025+H1_2026-H1_2025",
+      "revenue": 35182,
+      "cost_of_revenue": 20168,
+      "ebit": 2907,
+      "profit": 1863,
+      "operating_cash_flow": 13905,
+      "capex": 1496,
+      "product_and_technology": 2579,
+      "adjusted_free_cash_flow_issuer": 1127,
+      "notes": "LTM computation; no standalone SEC statement; do not treat CFO-capex as free corporate FCFF"
+    }
+  ],
+  "business_split": {
+    "h1_2025_commerce": 7142,
+    "h1_2025_fintech": 5583,
+    "h1_2026_commerce": 10630,
+    "h1_2026_fintech": 8384,
+    "categories_are_operational_not_SEC_reporting_segments": true,
+    "geographic_SEC_segments": [
+      "Brazil",
+      "Mexico",
+      "Argentina",
+      "Other Countries"
+    ]
+  },
+  "balance_jun2026": {
+    "customer_funds_payable": 16035,
+    "restricted_cash": 13114,
+    "short_loan_and_financial_liabilities": 6482,
+    "long_loan_and_financial_liabilities": 4144,
+    "operating_lease_short": 513,
+    "operating_lease_long": 2037,
+    "fintech_and_corporate_debt_mixed": true,
+    "corporate_cash_available_not_fully_reconciled": true,
+    "borrowings_not_all_equal_excess_corporate_debt": true
+  },
+  "issuer_cash_flow_h1_2026": {
+    "adjusted_free_cash_flow": 158,
+    "fintech_borrowings_net": 1218,
+    "commerce_and_corporate_borrowings_net": -199,
+    "loans_receivable_net_change": -4069,
+    "customer_funds_payable_cash_inflow": 2456,
+    "credit_card_settlement_payable_cash_inflow": 1209,
+    "source": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm"
+  },
+  "materiality_blockers": [
+    "FCFF: reconciling loan origination and collection, credit losses, fintech funding and customer restricted funds",
+    "EV-to-equity bridge: available nonrestricted corporate cash vs client funds and fintech debt",
+    "Discount-rate choice: detailed multibusiness bottom-up risk and geography; loan/finance business not ordinary unlevered enterprise without adjustment",
+    "R&D/technology investment capitalization based on separable product development vs recurring maintenance and wages",
+    "ROIC/Sales-to-Capital from operating and financing adjusted invested capital",
+    "WACC/ERP Damodaran same date and direct source; share price cutoff",
+    "Four full scenario DCF and proper 7 template-based multiple methods not yet completed",
+    "DCF Base 5x5 sens and inverse DCF not yet verified",
+    "All 18 calculation gates + bash scripts/controles_todas.sh not executed; app NOT approved"
+  ],
+  "audit_economic_independent": "DEFERIDA_POR_PEDIDO_USUARIO",
+  "sources": {
+    "sec_2025_10k": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm",
+    "sec_2026_10q": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm",
+    "sec_2024_10k": "https://www.sec.gov/Archives/edgar/data/1099590/000109959025000007/meli-20241231.htm",
+    "sec_2023_10k": "https://www.sec.gov/Archives/edgar/data/1099590/000109959024000008/meli-20231231.htm",
+    "sec_q2_2026_letter": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000021/meli-20260805xex991.htm",
+    "sec_proxy_2026": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000010/meli-20260423.htm"
+  },
+  "warnings": [
+    "No model valuation or scenario share prices have been calculated",
+    "Raw consolidated operating cash flow includes customer-float changes and is unsuitable for plain FCFF",
+    "Issuer adjusted FCF is not Damodaran FCFF",
+    "FY2022 balance predates reclassification of 2023; source and comparability documented",
+    "Historical FY2016-FY2021 not loaded and all essential forecasts not yet set",
+    "No Q3 2026 information included"
+  ]
+}

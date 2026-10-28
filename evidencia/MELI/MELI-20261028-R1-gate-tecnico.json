@@ -1,0 +1,116 @@
+{
+  "revision": "MELI-20261028-R1",
+  "ticker": "MELI",
+  "status": "EN_PREPARACION",
+  "auditEconomic": "NO_INICIADA",
+  "publishAuthorizedByUser": true,
+  "publishPermitted": false,
+  "rationale": "Los candados estructurales y financieros obligatorios aún están pendientes. No elevar falsamente a EN_REVISION.",
+  "sheet": "https://docs.google.com/spreadsheets/d/1Td7E4awGlz-glT-n6KEG9lwKRvA9g5RY_uKf7cEEN30/edit",
+  "achieved": [
+    {
+      "action": "fixed sheet layout",
+      "evidence": "61/61 pestañas del maestro; eliminada pestaña extra de evidencia. Soporte migrado a GitHub."
+    },
+    {
+      "action": "raw financials",
+      "evidence": "FY2021-25 consolidado, junio 2026, LTM; 2016-2020 no incorporados"
+    },
+    {
+      "action": "cutoff price",
+      "evidence": "2026-10-27 close $1,680.51; Input sheet D1"
+    },
+    {
+      "action": "DCF method",
+      "evidence": "Cost of capital worksheet B12 Detailed, B22 Multibusiness(Global)"
+    },
+    {
+      "action": "global beta proxy",
+      "evidence": "Ventas H1 2026 Commerce 10630 + Fintech 8384 = 19014 (USD M), coste capital Global G53:H54; beta 0.7293056419372386 SOLO PROVISIONAL"
+    }
+  ],
+  "raw_2021": {
+    "Revenue": 7069,
+    "EBIT": 441,
+    "NI": 83,
+    "CFO": 965,
+    "cash_capex": 609,
+    "assets": 10101,
+    "liabilities": 8570,
+    "equity": 1531,
+    "sources": [
+      "https://www.sec.gov/Archives/edgar/data/1099590/000109959024000008/meli-20231231.htm",
+      "https://www.globenewswire.com/fr/news-release/2023/02/23/2614782/9375/en/mercadolibre-inc-fourth-quarter-2022-letter-to-shareholders.html"
+    ]
+  },
+  "raw_2026": {
+    "fintech_revenues_H1": 8384,
+    "commerce_revenues_H1": 10630,
+    "total_H1": 19014,
+    "customer_funds_2026_06": 16035,
+    "restricted_cash_2026_06": 13114,
+    "fintech_funding_H1_2026": 1218,
+    "commerce_corporate_financing_H1_2026": -199,
+    "loans_receivable_net_H1_2026": -4069,
+    "adjusted_FCF_H1_2026": 158,
+    "report": "https://www.sec.gov/Archives/edgar/data/1099590/000109959026000023/meli-20260630.htm"
+  },
+  "wacc_proxy": {
+    "methodology": "Detailed / Multibusiness(Global)",
+    "businesses": [
+      {
+        "sector": "Software (Internet)",
+        "revenueH1": 10630,
+        "betaUnlevered": 1.337040006342187,
+        "evSales": 7.728498123638001
+      },
+      {
+        "sector": "Financial Svcs. (Non-bank & Insurance)",
+        "revenueH1": 8384,
+        "betaUnlevered": 0.2951148309916098,
+        "evSales": 13.71545649795927
+      }
+    ],
+    "weightedAssetBeta": 0.7293056419372386,
+    "caution": "Proxy provisional. EV/Sales sectorial pondera un negocio crediticio de modo cuestionable, por lo que NO sirve sin prueba de alternativas y conciliación de equity/debt y exposición por país."
+  },
+  "technicalControlsObserved": {
+    "masterTabCount": 61,
+    "companyTabCount": 61,
+    "orderMatches": true,
+    "oneTabRemoved": true,
+    "CostOfCapital_B84": "PENDIENTE",
+    "input_B81": "PENDIENTE",
+    "input_B85": "PENDIENTE",
+    "input_B92": "PENDIENTE",
+    "input_B108": "PENDIENTE",
+    "storyStates": [
+      "PENDIENTE",
+      "PENDIENTE",
+      "PENDIENTE",
+      "PENDIENTE"
+    ],
+    "valuationOutput_B35": null,
+    "sevenMultiplesOutputs": null,
+    "DCFInverse": null,
+    "CLI_unificacion_hojas": "NO EJECUTADO: repos no montados, solo acceso GitHub connector",
+    "CLI_controles_todas": "NO EJECUTADO: sin runtime de ejecución con acceso a fuente y cuentas"
+  },
+  "blockers": [
+    "No se ha especificado la partición comercial-corporativa versus Fintech para el puente EV/equity y la reinversión crediticia.",
+    "WACC sin ERP de geografías al corte ni libre de riesgo y deuda corporativa a mercado reconciliados.",
+    "Tasas marginales, I+D capitalizable y activos intangibles/plazos de amortización pendientes de documentar.",
+    "ROIC terminal, Sales-to-capital y reinversión acordes con la economía del crédito no establecidos.",
+    "Input sheet B17, B18, B25, B35, B38 y casos especiales y escenarios no aprobados.",
+    "Las cuatro historias carecen de parámetros y los precios de DCF y múltiplos están en blanco por las guardas de validación.",
+    "Sin sensibilidad 5x5, DCF inverso, ni siete salidas físicas de fórmulas del modelo, no se publicará.",
+    "No hay auditoría económica; se ejecutará solo tras revisión visual."
+  ],
+  "nextActions": [
+    "Resolver puentes Fintech con SEC 2026 notes 10-11 y adjusted FCF para fijar FCFF corporativo sin doble conteo.",
+    "Documentar primas de países y parámetros de coste de capital al corte",
+    "Completar I+D, arrendamientos, options/dilución e impuestos",
+    "Completar cuatro historias y siete salidas de fórmulas y ejecutar controles técnicos en runtime autorizado",
+    "Solo entonces publicar valoración y análisis en main con estado EN_REVISION y audEconomica PENDIENTE"
+  ]
+}
