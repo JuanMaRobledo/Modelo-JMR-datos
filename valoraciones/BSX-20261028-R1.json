@@ -96,7 +96,7 @@
       }
     },
     {
-      "nombre": "P/S",
+      "nombre": "P/V",
       "peso": 0.025,
       "conservador": 47.97464546742302,
       "base": 59.02808003205557,
@@ -127,9 +127,9 @@
     }
   ],
   "objetivoPonderado": {
-    "conservador": 40.09314727022364,
-    "base": 54.34114614685056,
-    "optimista": 68.82679731342182
+    "conservador": 40.093147270223646,
+    "base": 54.34114614685057,
+    "optimista": 68.8267973134218
   },
   "valorPresentePonderado": {
     "conservador": 31.49266484030259,
@@ -193,6 +193,7 @@
     "disrupcionSeparada": true
   },
   "descuentoMultiples": {
+    "version": 2,
     "horizontes": [
       1,
       2,
@@ -201,193 +202,356 @@
     "horizonteAnios": 3,
     "costoPatrimonio": 0.09485828074793906,
     "criterio": "Promedio 1-3 años",
-    "metodos": [
-      {
-        "name": "EV/EBITDA",
-        "sheet": "EVEBITDA",
-        "weight": 0.25,
-        "exits": [
-          12,
-          14,
-          16
-        ],
-        "fy3": [
-          51.30056792376339,
-          69.87758245158199,
-          88.50762954915182
-        ],
-        "fy1": [
-          47.22064783957082,
-          57.97131769534594,
-          68.15037729294076
-        ],
-        "fy2": [
-          49.121658184627734,
-          64.1081894812535,
-          78.64319168595864
-        ]
-      },
-      {
-        "name": "EV/FCFF",
-        "sheet": "EVFCFF",
-        "weight": 0.25,
-        "exits": [
-          22,
-          26,
-          30
-        ],
-        "fy3": [
-          40.722051079099046,
-          54.182160156265766,
-          67.89003352862389
-        ],
-        "fy1": [
-          38.0990748344463,
-          40.965302740367996,
-          46.62403970075029
-        ],
-        "fy2": [
-          39.69103948365978,
-          47.644017628166154,
-          56.51989431601461
-        ]
-      },
-      {
-        "name": "P/E",
-        "sheet": "PE",
-        "weight": 0.2,
-        "exits": [
-          19,
-          22,
-          25
-        ],
-        "fy3": [
-          47.308302392837035,
-          62.70039599574486,
-          78.34358421719115
-        ],
-        "fy1": [
-          43.30109842587251,
-          51.50646403098446,
-          59.24548950698316
-        ],
-        "fy2": [
-          45.35053807508211,
-          57.530875613911206,
-          69.46173292287502
-        ]
-      },
-      {
-        "name": "P/FCFE",
-        "sheet": "PFCFE",
-        "weight": 0.1,
-        "exits": [
-          17,
-          20,
-          23
-        ],
-        "fy3": [
-          33.17197778823886,
-          42.519359685357294,
-          52.027781208813074
-        ],
-        "fy1": [
-          31.275220430167185,
-          33.43789424203281,
-          37.39501314673702
-        ],
-        "fy2": [
-          32.40744259886437,
-          38.04546124293472,
-          44.271965453624105
-        ]
-      },
-      {
-        "name": "P/OCF",
-        "sheet": "POCF",
-        "weight": 0.15,
-        "exits": [
-          14,
-          16,
-          18
-        ],
-        "fy3": [
-          36.37025442516941,
-          44.8091692411831,
-          53.01283029613393
-        ],
-        "fy1": [
-          34.35791497002585,
-          36.16732782133836,
-          39.75342423303585
-        ],
-        "fy2": [
-          35.522088729076,
-          40.46753291340914,
-          45.802230106755985
-        ]
-      },
-      {
-        "name": "P/S",
-        "sheet": "PV",
-        "weight": 0.05,
-        "exits": [
-          3,
-          3.4,
-          3.8
-        ],
-        "fy3": [
-          47.97464546742302,
-          59.02808003205557,
-          68.9902606061071
-        ],
-        "fy1": [
-          44.6877249462816,
-          52.02403257680159,
-          58.85238616762188
-        ],
-        "fy2": [
-          46.25730292895367,
-          55.41582311203354,
-          63.57316588286529
-        ]
-      },
-      {
-        "name": "P/BV",
-        "sheet": "PBV",
-        "weight": 0,
-        "exits": [
-          1.7,
-          2,
-          2.3
-        ],
-        "fy3": [
-          41.344547056645325,
-          49.96258568302581,
-          58.56892968433488
-        ],
-        "fy1": [
-          33.02586001857201,
-          39.00385912343513,
-          44.94188621723139
-        ],
-        "fy2": [
-          37.097619344445945,
-          44.24824420405622,
-          51.3468427912446
-        ]
-      }
-    ],
-    "valorPresenteSoloMultiples": {
+    "formula": "VP_n = Precio FY+n / (1 + Ke)^n + suma(Dividendo FY+t / (1 + Ke)^t), t=1..n",
+    "pesoDcf": 0.5,
+    "pesoMultiplos": 0.5,
+    "dcfHoy": {
+      "conservador": 27.84736353352968,
+      "base": 39.01377460562861,
+      "optimista": 50.5029728802894
+    },
+    "multiplesHoy": {
       "conservador": 35.1379661470755,
       "base": 43.21208560194033,
       "optimista": 51.60558535105437
     },
-    "ponderadoSoloMultiplesFY3": {
-      "conservador": 43.638783445253466,
-      "base": 57.47973020742688,
-      "optimista": 71.37234830848891
-    }
+    "ponderadoHoy": {
+      "conservador": 31.49266484030259,
+      "base": 41.11293010378447,
+      "optimista": 51.05427911567189
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0.125,
+        "pesoMultiplos": 0.25,
+        "conservador": {
+          "fy": [
+            47.22064783957082,
+            49.121658184627734,
+            51.30056792376339
+          ],
+          "vp": [
+            43.12946129184191,
+            40.97860819747,
+            39.08845011986157
+          ],
+          "consolidado": 41.06550653639116,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            57.97131769534594,
+            64.1081894812535,
+            69.87758245158199
+          ],
+          "vp": [
+            52.948695474763674,
+            53.48077561077886,
+            53.24319996250836
+          ],
+          "consolidado": 53.22422368268363,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            68.15037729294076,
+            78.64319168595864,
+            88.50762954915182
+          ],
+          "vp": [
+            62.24584358660983,
+            65.60626531345284,
+            67.43835795347293
+          ],
+          "consolidado": 65.09682228451186,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0.125,
+        "pesoMultiplos": 0.25,
+        "conservador": {
+          "fy": [
+            38.0990748344463,
+            39.69103948365978,
+            40.722051079099046
+          ],
+          "vp": [
+            34.79817936657462,
+            33.11133247656127,
+            31.028152841296013
+          ],
+          "consolidado": 32.97922156147731,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            40.965302740367996,
+            47.644017628166154,
+            54.182160156265766
+          ],
+          "vp": [
+            37.41607791684514,
+            39.74592070975649,
+            41.28407833226922
+          ],
+          "consolidado": 39.48202565295695,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            46.62403970075029,
+            56.51989431601461,
+            67.89003352862389
+          ],
+          "vp": [
+            42.58454315100914,
+            47.15041572564794,
+            51.72878774291489
+          ],
+          "consolidado": 47.15458220652399,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.1,
+        "pesoMultiplos": 0.2,
+        "conservador": {
+          "fy": [
+            43.30109842587251,
+            45.35053807508211,
+            47.308302392837035
+          ],
+          "vp": [
+            39.54950077766402,
+            37.832638392178886,
+            36.04654476897419
+          ],
+          "consolidado": 37.80956131293903,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            51.50646403098446,
+            57.530875613911206,
+            62.70039599574486
+          ],
+          "vp": [
+            47.04395531063477,
+            47.99380351084366,
+            47.77454520615465
+          ],
+          "consolidado": 47.60410134254436,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            59.24548950698316,
+            69.46173292287502,
+            78.34358421719115
+          ],
+          "vp": [
+            54.112473320757395,
+            57.9468455129345,
+            59.69386710173869
+          ],
+          "consolidado": 57.251061978476855,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0.05,
+        "pesoMultiplos": 0.1,
+        "conservador": {
+          "fy": [
+            31.275220430167185,
+            32.40744259886437,
+            33.17197778823886
+          ],
+          "vp": [
+            28.56554220771103,
+            27.03516009067572,
+            25.275377088995192
+          ],
+          "consolidado": 26.95869312912731,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            33.43789424203281,
+            38.04546124293472,
+            42.519359685357294
+          ],
+          "vp": [
+            30.540842435963608,
+            31.738546856590958,
+            32.39761151688273
+          ],
+          "consolidado": 31.559000269812433,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            37.39501314673702,
+            44.271965453624105,
+            52.027781208813074
+          ],
+          "vp": [
+            34.155117428706,
+            36.932864107257096,
+            39.64255003277887
+          ],
+          "consolidado": 36.91017718958066,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0.075,
+        "pesoMultiplos": 0.15,
+        "conservador": {
+          "fy": [
+            34.35791497002585,
+            35.522088729076,
+            36.37025442516941
+          ],
+          "vp": [
+            31.38115277034272,
+            29.63348164903978,
+            27.712302874650458
+          ],
+          "consolidado": 29.575645764677656,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            36.16732782133836,
+            40.46753291340914,
+            44.8091692411831
+          ],
+          "vp": [
+            33.03379849000283,
+            33.7591041764907,
+            34.14233112193449
+          ],
+          "consolidado": 33.64507792947601,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            39.75342423303585,
+            45.802230106755985,
+            53.01283029613393
+          ],
+          "vp": [
+            36.309196296966206,
+            38.209452031537566,
+            40.39310784673088
+          ],
+          "consolidado": 38.30391872507821,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0.025,
+        "pesoMultiplos": 0.05,
+        "conservador": {
+          "fy": [
+            44.6877249462816,
+            46.25730292895367,
+            47.97464546742302
+          ],
+          "vp": [
+            40.81599028118391,
+            38.5890860172647,
+            36.55426464592323
+          ],
+          "consolidado": 38.65311364812394,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            52.02403257680159,
+            55.41582311203354,
+            59.02808003205557
+          ],
+          "vp": [
+            47.516681831425714,
+            46.22936983749819,
+            44.976425318196306
+          ],
+          "consolidado": 46.2408256623734,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            58.85238616762188,
+            63.57316588286529,
+            68.9902606061071
+          ],
+          "vp": [
+            53.75342836829767,
+            53.03444453758207,
+            52.56710538693463
+          ],
+          "consolidado": 53.118326097604786,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "pesoMultiplos": 0,
+        "conservador": {
+          "fy": [
+            33.02586001857201,
+            37.097619344445945,
+            41.344547056645325
+          ],
+          "vp": [
+            30.164506767040937,
+            30.94783165627484,
+            31.502463437706798
+          ],
+          "consolidado": 30.871600620340857,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            39.00385912343513,
+            44.24824420405622,
+            49.96258568302581
+          ],
+          "vp": [
+            35.62457334367524,
+            36.91307520297494,
+            38.06897501081301
+          ],
+          "consolidado": 36.868874519154396,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            44.94188621723139,
+            51.3468427912446,
+            58.56892968433488
+          ],
+          "vp": [
+            41.048131075493984,
+            42.83491703417229,
+            44.62657586836042
+          ],
+          "consolidado": 42.8365413260089,
+          "chequeo": "OK"
+        }
+      }
+    ],
+    "chequeo": "7 fórmulas nativas, cuatro DCF y puentes financieros conciliados; auditoría económica separada"
   },
   "crecimientoImplicito": {
     "precio": 45.06,
@@ -420,8 +584,270 @@
   "reportSchema": "jmr-report-contract-v2-20261017",
   "metodoPrincipal": "DCF",
   "auditoriaEconomica": "PENDIENTE",
-  "publicacionTecnica": "NO PUBLICAR HASTA CONTROLES DE PR",
+  "publicacionTecnica": "REQUIERE CONTROL DE INTEGRIDAD SOBRE CATALOGO ACTIVO",
   "limitaciones": [
+    "Registro del valor de las inversiones no operativas US$2.245 millones tomado de carrying value, exposición potencial 3.98% Base si no realizable.",
+    "Opciones valoradas a partir de conteo FY2025, pendiente confirmar si número vivo cambió en 1S2026.",
+    "Financiación de corto plazo de 2023-25 incompleta impide P/FCFE histórico íntegro; proyección FY+1–3 sí calculada.",
+    "Arrendamientos ASC842 sin conversión incremental; comprobar pasivos que estén fuera de deuda consolidada.",
+    "Controles integrales de repositorios y unificacion_hojas.py todavía no ejecutados; no existe dictamen independiente."
+  ],
+  "seleccionMultiples": {
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "pesoVigente": 0.125,
+        "pesoRelativo": 0.25,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "EV/FCFF",
+        "pesoVigente": 0.125,
+        "pesoRelativo": 0.25,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "P/E",
+        "pesoVigente": 0.1,
+        "pesoRelativo": 0.2,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "P/FCFE",
+        "pesoVigente": 0.05,
+        "pesoRelativo": 0.1,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "P/OCF",
+        "pesoVigente": 0.075,
+        "pesoRelativo": 0.15,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "P/V",
+        "pesoVigente": 0.025,
+        "pesoRelativo": 0.05,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      },
+      {
+        "nombre": "P/BV",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "controlCalculo": "OK",
+        "control": "CALCULADO CON FÓRMULA NATIVA",
+        "fuente": "Copia IA oficial BSX-20261028-R1; EVEBITDA/EVFCFF/PE/PFCFE/POCF/PV/PBV"
+      }
+    ],
+    "fuente": "Cost of Capital worksheet + múltiplos elegidos por industria MedTech"
+  },
+  "sensibilidadMultiples": {
+    "methods": 7,
+    "scenarios": [
+      "conservador",
+      "base",
+      "optimista"
+    ],
+    "disrupcionFuera": true,
+    "controles": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 53.24319996250836,
+        "fuente": "EV/EBITDA hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 41.28407833226922,
+        "fuente": "EV/FCFF hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 47.77454520615465,
+        "fuente": "P/E hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 32.39761151688273,
+        "fuente": "P/FCFE hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 34.14233112193449,
+        "fuente": "P/OCF hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 44.976425318196306,
+        "fuente": "P/V hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "conservador",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "estado": "OK",
+        "centro": 38.06897501081301,
+        "fuente": "P/BV hoja nativa FY+3, VP3",
+        "nota": "Valor central método relativo, VP del tercer año"
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "optimista",
+        "estado": "N/D",
+        "centro": null,
+        "fuente": "Sólo Base tiene sensibilidad por norma JMR; los valores FY+1..3 de todas las historias sí están calculados",
+        "nota": "Matriz de sensibilidad de múltiplos no aplicable fuera de Base"
+      }
+    ],
+    "controlesOK": 7,
+    "noDisponibles": 14,
+    "errores": 0,
+    "nota": "Siete matrices relativas de Base; conservadora y optimista N/D por regla v13, aunque sí tienen precios y VP completos",
+    "economica": {
+      "controles": [],
+      "controlesOK": 0,
+      "noDisponibles": 0,
+      "errores": 0,
+      "nota": "Auditoría económica de los múltiplos pendiente de revisión visual"
+    }
+  },
+  "publicationStatus": "EN_REVISION",
+  "validationStatus": "CONTROLES_PREPUBLICACION_PENDIENTES",
+  "publicationAuthorized": false,
+  "revisionOrigen": "Reinicio íntegro BSX 2026-10-28 desde estados históricos y 10-Q junio 2026, excluye tercer trimestre",
+  "salvedades": [
     "Registro del valor de las inversiones no operativas US$2.245 millones tomado de carrying value, exposición potencial 3.98% Base si no realizable.",
     "Opciones valoradas a partir de conteo FY2025, pendiente confirmar si número vivo cambió en 1S2026.",
     "Financiación de corto plazo de 2023-25 incompleta impide P/FCFE histórico íntegro; proyección FY+1–3 sí calculada.",
