@@ -14,10 +14,10 @@ spec.loader.exec_module(check)
 class ReviewedSnapshotRelease(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.record=json.loads((ROOT/'valoraciones/NFLX-1792548021734.json').read_text())
-        cls.analysis=json.loads((ROOT/'analisis/NFLX-research-1792549859632-adttn.json').read_text())
+        cls.record=json.loads((ROOT/'archivo/NFLX-antes-NFLX-20261028-R1/valoracion-20261025.json').read_text())
+        cls.analysis=json.loads((ROOT/'archivo/NFLX-antes-NFLX-20261028-R1/analisis-20261025.json').read_text())
         cls.evidence=json.loads((ROOT/cls.record['cierreMultiplos']['evidencePath']).read_text())
-        cls.audit=(ROOT/'auditorias/narrativas/NFLX.md').read_text()
+        cls.audit=(ROOT/'archivo/NFLX-antes-NFLX-20261028-R1/auditoria-20261025.md').read_text()
 
     def test_real_release_replays_63_prices_and_discounts(self):
         result=check.verify_snapshot_release(self.record,self.analysis,self.evidence,self.audit)

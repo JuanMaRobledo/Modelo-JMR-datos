@@ -1,0 +1,129 @@
+{
+  "schema": "jmr-reviewed-snapshot-release-v1",
+  "revisionId": "NFLX-20261028-R1",
+  "ticker": "NFLX",
+  "fecha": "2026-10-28",
+  "sourcePath": "evidencia/NFLX-20261028-R1/snapshot-native.json",
+  "sourceSha256": "7b7b81793724b8c261836fc774b002f398ade7f0bf855cebd48729b475a70623",
+  "sourceSheetId": "11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c",
+  "resultadosSha256": "9b1798dbcb10ee07dc4a6fabf25c9fcab6d26e5cc7c95f8d074d14bdbc84ad8d",
+  "criterion": "Promedio 1-3 años",
+  "ke": 0.10070458167839776,
+  "dcfBase": 68.92938139301546,
+  "methods": [
+    {
+      "method": "EV/EBITDA",
+      "weightRelative": 0.2857142857142857,
+      "inputs": [
+        15,
+        19,
+        23
+      ],
+      "sourceSheet": "mult_EVEBITDA",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "EV/FCFF",
+      "weightRelative": 0.4285714285714285,
+      "inputs": [
+        17,
+        22.5,
+        27
+      ],
+      "sourceSheet": "mult_EVFCFF",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "P/E",
+      "weightRelative": 0.14285714285714285,
+      "inputs": [
+        18,
+        23,
+        28
+      ],
+      "sourceSheet": "mult_PE",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "P/FCFE",
+      "weightRelative": 0.14285714285714285,
+      "inputs": [
+        18,
+        22,
+        28
+      ],
+      "sourceSheet": "mult_PFCFE",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "P/OCF",
+      "weightRelative": 0,
+      "inputs": [
+        18,
+        23,
+        28
+      ],
+      "sourceSheet": "mult_POCF",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "P/V",
+      "weightRelative": 0,
+      "inputs": [
+        4,
+        5,
+        6
+      ],
+      "sourceSheet": "multiples_ps",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    },
+    {
+      "method": "P/BV",
+      "weightRelative": 0,
+      "inputs": [
+        6,
+        8,
+        10
+      ],
+      "sourceSheet": "multiples_pbv",
+      "sourceRanges": [
+        "J8",
+        "J19",
+        "J30"
+      ],
+      "nota": "Valores y múltiplos de salida procedentes de fórmula nativa J8/J19/J30; no sobrescritos por IA."
+    }
+  ],
+  "estado": "EN_REVISION_TECNICA",
+  "nota": "Publicación preliminar solamente tras controles en verde; no constituye auditoría económica."
+}
