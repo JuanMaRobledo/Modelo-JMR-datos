@@ -1,0 +1,509 @@
+{
+  "ticker": "NFLX",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c/edit",
+  "nombreActivo": "Netflix, Inc.",
+  "fecha": "2026-10-27",
+  "precio": 62.52,
+  "precioAnalisis": 62.52,
+  "tipo": "Crecimiento",
+  "mos": 0.35,
+  "precioMOS": 36.748706,
+  "precioMOSMax": 36.748706,
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": 55.340085985524105,
+      "base": 75.39473511659804,
+      "optimista": 89.38394469200668
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1142857143,
+      "conservador": 71.0940930254593,
+      "base": 102.28182708024049,
+      "optimista": 134.54688630251135
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.1714285714,
+      "conservador": 50.116311985246675,
+      "base": 74.37015732935895,
+      "optimista": 95.77095438521374
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.0571428571,
+      "conservador": 66.83233205422403,
+      "base": 96.2286188727897,
+      "optimista": 126.7484304972135
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.0571428571,
+      "conservador": 51.75479048150767,
+      "base": 69.85551072204834,
+      "optimista": 94.87718183207987
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 54.028396121583896,
+      "base": 76.06470277035874,
+      "optimista": 98.56890866336816
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "conservador": 58.54481706425153,
+      "base": 79.51738332648715,
+      "optimista": null
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": 105.99146275171191,
+      "base": 148.44715667203764,
+      "optimista": null
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 56.696865565165346,
+    "base": 79.16588425529574,
+    "optimista": 98.08935242034443
+  },
+  "valorPresentePonderado": {
+    "conservador": 42.991792647228735,
+    "base": 58.722964097303134,
+    "optimista": 71.88741309967173
+  },
+  "descuentoMultiples": "Costo de patrimonio 10,07%; promedio FY+1/2/3 a valor presente",
+  "valorEsperado": {
+    "valor": 55.39939385169263,
+    "tipoPromedio": "ponderado condicional A/B/D; C excluida",
+    "valorCentral": 56.53647108773217,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.09092495483619434,
+        "margen": 0.35,
+        "s2c": 1.2,
+        "s2c610": 1.2,
+        "roicTerminal": 0.1104,
+        "valor": 56.53647108773217,
+        "terminalGrowth": 0.04
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06596536304713352,
+        "margen": 0.31,
+        "s2c": 1,
+        "s2c610": 1.15,
+        "roicTerminal": 0.095,
+        "valor": 41.498032541325415,
+        "terminalGrowth": 0.04
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.006319940019455794,
+        "margen": 0.23,
+        "s2c": 0.85,
+        "s2c610": 1,
+        "roicTerminal": 0.0899,
+        "valor": 23.23059487249615,
+        "terminalGrowth": 0.025
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1099099011339515,
+        "margen": 0.375,
+        "s2c": 1.4,
+        "s2c610": 1.3,
+        "roicTerminal": 0.1104,
+        "valor": 67.02660068998075,
+        "terminalGrowth": 0.04
+      }
+    ],
+    "historiaCentralId": "A",
+    "rango": [
+      41.498032541325415,
+      67.02660068998075
+    ],
+    "fecha": "2026-10-27",
+    "dcfBase": 56.53647108773217,
+    "disrupcionEnPromedio": false,
+    "metodo": "DCF Damodaran FCFF"
+  },
+  "multiplesHistoricos": null,
+  "precioMOSHoy": {
+    "conservador": 26.973721151861522,
+    "base": 36.74870620702591,
+    "optimista": 43.56729044848749
+  },
+  "cagr": {
+    "base": 0.08186490444704253
+  },
+  "zonas": {
+    "conMOS": {
+      "min": 26.973721151861522,
+      "max": 36.74870620702591
+    }
+  },
+  "baseMOS": "dcfBase",
+  "hojas": {
+    "financieros": {
+      "Income Statement": "<table><thead><tr><th>NFLX</th><th></th><th>Precio</th><th>62.52</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Income Statement</td><td>Dec-16</td><td>Dec-17</td><td>Dec-18</td><td>Dec-19</td><td>Dec-20</td><td>Dec-21</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>LTM Sep-26</td></tr><tr><td>Total Revenues</td><td>8,830.67</td><td>11,692.71</td><td>15,794.34</td><td>20,156.45</td><td>24,996.06</td><td>29,697.84</td><td>31,615.55</td><td>33,723.3</td><td>39,000.97</td><td>45,183.04</td><td>49,734.63</td></tr><tr><td>Total Revenues %Chg</td><td></td><td>0.32</td><td>0.35</td><td>0.28</td><td>0.24</td><td>0.19</td><td>0.06</td><td>0.07</td><td>0.16</td><td>0.16</td><td>0.1</td></tr><tr><td>Cost of Sales</td><td>6,257.46</td><td>8,033</td><td>9,967.54</td><td>12,440.21</td><td>15,276.32</td><td>17,332.68</td><td>19,168.29</td><td>19,715.37</td><td>21,038.46</td><td>23,275.33</td><td>24,526.84</td></tr><tr><td>Gross Profit</td><td>2,573.21</td><td>3,659.71</td><td>5,826.8</td><td>7,716.23</td><td>9,719.74</td><td>12,365.16</td><td>12,447.27</td><td>14,007.93</td><td>17,962.5</td><td>21,907.71</td><td>25,207.79</td></tr><tr><td>Gross Profit Margin</td><td>0.29</td><td>0.31</td><td>0.37</td><td>0.38</td><td>0.39</td><td>0.42</td><td>0.39</td><td>0.42</td><td>0.46</td><td>0.48</td><td>0.51</td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td>1,413.18</td><td>1,867.32</td><td>2,999.76</td><td>3,566.83</td><td>3,304.85</td><td>3,896.77</td><td>4,103.39</td><td>4,378.17</td><td>4,619.59</td><td>5,189.71</td><td>5,752.11</td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Research &amp; Development Expenses</td><td>780.23</td><td>953.71</td><td>1,221.81</td><td>1,545.15</td><td>1,829.6</td><td>2,273.89</td><td>2,711.04</td><td>2,675.76</td><td>2,925.3</td><td>3,391.39</td><td>3,890.81</td></tr><tr><td>Other Operating Expenses</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Operating Profit</td><td>379.79</td><td>838.68</td><td>1,605.23</td><td>2,604.25</td><td>4,585.29</td><td>6,194.51</td><td>5,632.83</td><td>6,954</td><td>10,417.61</td><td>13,326.6</td><td>15,564.87</td></tr><tr><td>Operating Margin</td><td>0.04</td><td>0.07</td><td>0.1</td><td>0.13</td><td>0.18</td><td>0.21</td><td>0.18</td><td>0.21</td><td>0.27</td><td>0.29</td><td>0.31</td></tr><tr><td>Interest and Investment Income</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Interest Expense</td><td>150.11</td><td>238.2</td><td>420.49</td><td>626.02</td><td>767.5</td><td>765.62</td><td>706.21</td><td>699.83</td><td>718.73</td><td>776.51</td><td>856.86</td></tr><tr><td>Interest Expense, Net</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Non-Operating Income</td><td>30.83</td><td>-115.15</td><td>41.73</td><td>84</td><td>-618.44</td><td>411.21</td><td>337.31</td><td>-48.77</td><td>266.78</td><td>172.46</td><td>2,992.31</td></tr><tr><td>Total Non-Operating Income</td><td>-119.29</td><td>-353.36</td><td>-378.77</td><td>-542.02</td><td>-1,385.94</td><td>-354.41</td><td>-368.9</td><td>-748.6</td><td>-451.96</td><td>-604.05</td><td>2,135.45</td></tr><tr><td>Income Before Provision for Income Taxes</td><td>260.51</td><td>485.32</td><td>1,226.46</td><td>2,062.23</td><td>3,199.35</td><td>5,840.1</td><td>5,263.93</td><td>6,205.41</td><td>9,965.66</td><td>12,722.55</td><td>17,700.32</td></tr><tr><td>Provision for Income Taxes</td><td>73.83</td><td>-73.61</td><td>15.22</td><td>195.32</td><td>437.95</td><td>723.88</td><td>772.01</td><td>797.42</td><td>1,254.03</td><td>1,741.35</td><td>2,933.67</td></tr><tr><td>Consolidated Net Income</td><td>186.68</td><td>558.93</td><td>1,211.24</td><td>1,866.92</td><td>2,761.4</td><td>5,116.23</td><td>4,491.92</td><td>5,407.99</td><td>8,711.63</td><td>10,981.2</td><td>14,766.65</td></tr><tr><td>Net Income Attributable to Common Shareholders</td><td>186.68</td><td>558.93</td><td>1,211.24</td><td>1,866.92</td><td>2,761.4</td><td>5,116.23</td><td>4,491.92</td><td>5,407.99</td><td>8,711.63</td><td>10,981.2</td><td>14,766.65</td></tr><tr><td>Basic EPS</td><td>0.04</td><td>0.13</td><td>0.28</td><td>0.43</td><td>0.63</td><td>1.15</td><td>1.01</td><td>1.22</td><td>2.03</td><td>2.58</td><td>3.52</td></tr><tr><td>Diluted EPS</td><td>0.04</td><td>0.13</td><td>0.27</td><td>0.41</td><td>0.61</td><td>1.12</td><td>1</td><td>1.2</td><td>1.98</td><td>2.53</td><td>3.46</td></tr><tr><td>Basic Weighted Average Shares Outstanding</td><td>4,288.22</td><td>4,318.85</td><td>4,353.74</td><td>4,377.99</td><td>4,409.22</td><td>4,431.55</td><td>4,446.98</td><td>4,415.71</td><td>4,295.19</td><td>4,249.51</td><td>4,193.8</td></tr><tr><td>Diluted Weighted Average Shares Outstanding</td><td>4,386.52</td><td>4,468.14</td><td>4,512.44</td><td>4,517.65</td><td>4,542.08</td><td>4,553.72</td><td>4,512.9</td><td>4,494.97</td><td>4,392.61</td><td>4,343.86</td><td>4,267.91</td></tr><tr><td>Shares Outstanding</td><td>4,300.54</td><td>4,333.93</td><td>4,365.99</td><td>4,388.07</td><td>4,428.95</td><td>4,439.63</td><td>4,453.47</td><td>4,327.6</td><td>4,277.57</td><td>4,222.16</td><td>4,106.33</td></tr><tr><td>EBITDA</td><td>437.32</td><td>910.59</td><td>1,688.38</td><td>2,707.83</td><td>4,701</td><td>6,402.92</td><td>5,969.51</td><td>7,310.95</td><td>10,746.53</td><td>13,659.99</td><td>15,957.06</td></tr><tr><td>Effective Tax Rate</td><td>0.28</td><td>0.15</td><td>0.01</td><td>0.09</td><td>0.14</td><td>0.12</td><td>0.15</td><td>0.13</td><td>0.13</td><td>0.14</td><td>0.17</td></tr><tr><td>EBITDA Margin</td><td>0.05</td><td>0.08</td><td>0.11</td><td>0.13</td><td>0.19</td><td>0.22</td><td>0.19</td><td>0.22</td><td>0.28</td><td>0.3</td><td>0.32</td></tr></tbody></table>",
+      "Balance Sheet": "<table><thead><tr><th>NFLX</th><th></th><th>Precio</th><th>62.52</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Assets</td><td>Dec-16</td><td>Dec-17</td><td>Dec-18</td><td>Dec-19</td><td>Dec-20</td><td>Dec-21</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>LTM Sep-26</td></tr><tr><td>Cash and Cash Equivalents</td><td>1,467.58</td><td>2,822.8</td><td>3,812.04</td><td>5,043.79</td><td>8,238.87</td><td>6,055.11</td><td>5,170.58</td><td>7,118.52</td><td>7,807.34</td><td>9,033.68</td><td>8,194.28</td></tr><tr><td>Short-Term Investments</td><td>266.21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>911.28</td><td>20.97</td><td>1,779.01</td><td>28.68</td><td>28.68</td></tr><tr><td>Total Cash and Cash Equivalents</td><td>1,733.78</td><td>2,822.8</td><td>3,812.04</td><td>5,043.79</td><td>8,238.87</td><td>6,055.11</td><td>6,081.86</td><td>7,139.49</td><td>9,586.34</td><td>9,062.36</td><td>8,222.95</td></tr><tr><td>Accounts Receivable</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Other Receivables</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Total Trade Receivables</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Other Current Assets</td><td>3,986.51</td><td>4,847.18</td><td>5,882.09</td><td>1,134.72</td><td>1,522.71</td><td>2,014.71</td><td>3,184.62</td><td>2,778.65</td><td>3,514.04</td><td>3,957.83</td><td>4,999.38</td></tr><tr><td>Total Current Assets</td><td>5,720.29</td><td>7,669.97</td><td>9,694.14</td><td>6,178.5</td><td>9,761.58</td><td>8,069.83</td><td>9,266.47</td><td>9,918.13</td><td>13,100.38</td><td>13,020.19</td><td>13,222.34</td></tr><tr><td>Net Property, Plant &amp; Equipment</td><td>250.4</td><td>319.4</td><td>418.28</td><td>565.22</td><td>960.18</td><td>1,323.45</td><td>1,398.26</td><td>1,491.44</td><td>1,593.76</td><td>2,004.35</td><td>2,560.62</td></tr><tr><td>Net Intangible Assets</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Goodwill</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Long-Term Investments</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Other Long-Term Assets</td><td>7,615.92</td><td>11,023.36</td><td>15,861.98</td><td>27,231.99</td><td>28,558.6</td><td>35,191.39</td><td>37,930.04</td><td>37,322.42</td><td>38,936.24</td><td>40,572.45</td><td>42,899</td></tr><tr><td>Total Assets</td><td>13,586.61</td><td>19,012.74</td><td>25,974.4</td><td>33,975.71</td><td>39,280.36</td><td>44,584.66</td><td>48,594.77</td><td>48,731.99</td><td>53,630.37</td><td>55,596.99</td><td>58,681.95</td></tr><tr><td>Liabilities</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Accounts Payable</td><td>312.84</td><td>359.56</td><td>562.99</td><td>674.35</td><td>656.18</td><td>837.48</td><td>671.51</td><td>747.41</td><td>899.91</td><td>900.61</td><td>860.1</td></tr><tr><td>Accrued Expenses</td><td>197.63</td><td>315.09</td><td>481.87</td><td>652.42</td><td>845.97</td><td>1,134.16</td><td>1,158.67</td><td>1,420.65</td><td>1,728.06</td><td>2,760.39</td><td>2,865.53</td></tr><tr><td>Short-Term Debt</td><td>0</td><td>0</td><td>0</td><td>0</td><td>499.88</td><td>699.82</td><td>0</td><td>399.84</td><td>1,784.45</td><td>998.87</td><td>2,474.8</td></tr><tr><td>Current Portion of Leases</td><td>0</td><td>0</td><td>0</td><td>190.62</td><td>256.22</td><td>315.19</td><td>355.99</td><td>383.31</td><td>428.48</td><td>460.48</td><td>435.73</td></tr><tr><td>Unearned Revenue</td><td>443.47</td><td>618.62</td><td>760.9</td><td>924.75</td><td>1,117.99</td><td>1,209.34</td><td>1,264.66</td><td>1,442.97</td><td>1,520.81</td><td>1,775.73</td><td>1,779.63</td></tr><tr><td>Other Current Liabilities</td><td>3,632.71</td><td>4,173.04</td><td>4,681.56</td><td>4,413.56</td><td>4,429.54</td><td>4,292.97</td><td>4,480.15</td><td>4,466.47</td><td>4,393.68</td><td>4,084.85</td><td>3,885.07</td></tr><tr><td>Total Current Liabilities</td><td>4,586.66</td><td>5,466.31</td><td>6,487.32</td><td>6,855.7</td><td>7,805.79</td><td>8,488.97</td><td>7,930.97</td><td>8,860.66</td><td>10,755.4</td><td>10,980.93</td><td>12,300.86</td></tr><tr><td>Long-Term Debt</td><td>3,364.31</td><td>6,499.43</td><td>10,360.06</td><td>14,759.26</td><td>15,809.1</td><td>14,693.07</td><td>14,353.08</td><td>14,143.42</td><td>13,798.35</td><td>13,463.97</td><td>12,657.6</td></tr><tr><td>Leases</td><td>0</td><td>0</td><td>0</td><td>1,422.61</td><td>1,945.63</td><td>2,408.49</td><td>2,222.5</td><td>2,046.8</td><td>1,983.69</td><td>2,052.53</td><td>1,816.51</td></tr><tr><td>Other Long-Term Liabilities</td><td>2,955.84</td><td>3,465.04</td><td>3,888.26</td><td>3,355.99</td><td>2,654.61</td><td>3,144.89</td><td>3,310.81</td><td>3,092.81</td><td>2,349.37</td><td>2,484.08</td><td>2,620.74</td></tr><tr><td>Total Long-Term Liabilities</td><td>6,320.15</td><td>9,964.47</td><td>14,248.32</td><td>19,537.86</td><td>20,409.33</td><td>20,246.45</td><td>19,886.39</td><td>19,283.02</td><td>18,131.41</td><td>18,000.58</td><td>17,094.84</td></tr><tr><td>Total Liabilities</td><td>10,906.81</td><td>15,430.79</td><td>20,735.64</td><td>26,393.56</td><td>28,215.12</td><td>28,735.42</td><td>27,817.37</td><td>28,143.68</td><td>28,886.81</td><td>28,981.51</td><td>29,395.7</td></tr><tr><td>Equity</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Additional Paid-in Capital</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Accumulated Other Comprehensive Income</td><td>-48.57</td><td>-20.56</td><td>-19.58</td><td>-23.52</td><td>44.4</td><td>-40.5</td><td>-217.31</td><td>-223.95</td><td>362.16</td><td>-580.38</td><td>-9.45</td></tr><tr><td>Retained Earnings</td><td>1,128.6</td><td>1,731.12</td><td>2,942.36</td><td>4,811.75</td><td>7,573.14</td><td>12,689.37</td><td>17,181.3</td><td>22,589.29</td><td>31,300.92</td><td>42,282.12</td><td>54,630.25</td></tr><tr><td>Total Common Shareholders' Equity</td><td>2,679.8</td><td>3,581.96</td><td>5,238.77</td><td>7,582.16</td><td>11,065.24</td><td>15,849.25</td><td>20,777.4</td><td>20,588.31</td><td>24,743.57</td><td>26,615.49</td><td>29,286.25</td></tr><tr><td>Total Shareholders' Equity</td><td>2,679.8</td><td>3,581.96</td><td>5,238.77</td><td>7,582.16</td><td>11,065.24</td><td>15,849.25</td><td>20,777.4</td><td>20,588.31</td><td>24,743.57</td><td>26,615.49</td><td>29,286.25</td></tr><tr><td>Total Liabilities and Shareholders' Equity</td><td>13,586.61</td><td>19,012.74</td><td>25,974.4</td><td>33,975.71</td><td>39,280.36</td><td>44,584.66</td><td>48,594.77</td><td>48,731.99</td><td>53,630.37</td><td>55,596.99</td><td>58,681.95</td></tr></tbody></table>",
+      "Cash Flow Statement": "<table><thead><tr><th>NFLX</th><th></th><th>Precio</th><th>62.52</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>Operating Activities</td><td>Dec-16</td><td>Dec-17</td><td>Dec-18</td><td>Dec-19</td><td>Dec-20</td><td>Dec-21</td><td>Dec-22</td><td>Dec-23</td><td>Dec-24</td><td>Dec-25</td><td>LTM Sep-26</td></tr><tr><td>Net Income</td><td>186.68</td><td>558.93</td><td>1,211.24</td><td>1,866.92</td><td>2,761.4</td><td>5,116.23</td><td>4,491.92</td><td>5,407.99</td><td>8,711.63</td><td>10,981.2</td><td>14,766.65</td></tr><tr><td>Depreciation &amp; Amortization</td><td>57.53</td><td>71.91</td><td>83.16</td><td>103.58</td><td>115.71</td><td>208.41</td><td>336.68</td><td>356.95</td><td>328.91</td><td>333.39</td><td>392.19</td></tr><tr><td>Share-Based Compensation Expense</td><td>173.68</td><td>182.21</td><td>320.66</td><td>405.38</td><td>415.18</td><td>403.22</td><td>575.45</td><td>339.37</td><td>272.59</td><td>368.45</td><td>540.06</td></tr><tr><td>Other Adjustments</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Trade Receivables</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Accounts Payable</td><td>32.25</td><td>74.56</td><td>199.2</td><td>96.06</td><td>-41.61</td><td>145.12</td><td>-158.54</td><td>93.5</td><td>121.35</td><td>-8.04</td><td>6.86</td></tr><tr><td>Changes in Accrued Expenses</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Income Taxes Payable</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Changes in Unearned Revenue</td><td>96.75</td><td>177.97</td><td>142.28</td><td>163.85</td><td>193.25</td><td>91.35</td><td>27.36</td><td>178.71</td><td>77.84</td><td>254.92</td><td>54.96</td></tr><tr><td>Changes in Other Operating Activities</td><td>-2,020.86</td><td>-2,851.53</td><td>-4,637.01</td><td>-5,523.1</td><td>-1,016.85</td><td>-5,571.72</td><td>-3,246.61</td><td>897.79</td><td>-2,150.97</td><td>-1,780.64</td><td>-3,452.78</td></tr><tr><td>Cash from Operating Activities</td><td>-1,473.98</td><td>-1,785.95</td><td>-2,680.48</td><td>-2,887.32</td><td>2,427.08</td><td>392.61</td><td>2,026.26</td><td>7,274.3</td><td>7,361.36</td><td>10,149.27</td><td>12,307.94</td></tr><tr><td>Investing Activities</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Capital Expenditure</td><td>-107.65</td><td>-173.3</td><td>-173.95</td><td>-253.04</td><td>-497.92</td><td>-524.59</td><td>-407.73</td><td>-348.55</td><td>-439.54</td><td>-688.22</td><td>-932.88</td></tr><tr><td>Proceeds from Sale of Property, Plant &amp; Equipment</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Purchases of Investments</td><td>-187.19</td><td>-74.82</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-911.28</td><td>-504.86</td><td>-1,742.25</td><td>-169.97</td><td>-61</td></tr><tr><td>Proceeds from Sale of Investments</td><td>422.73</td><td>342.86</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1,395.17</td><td>0</td><td>1,917.07</td><td>8.45</td></tr><tr><td>Payments for Business Acquisitions</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-788.35</td><td>-757.39</td><td>0</td><td>0</td><td>-17.19</td><td>-602.94</td></tr><tr><td>Proceeds from Business Divestments</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Other Investing Activities</td><td>-78.12</td><td>-60.41</td><td>-165.17</td><td>-134.03</td><td>-7.43</td><td>-26.92</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cash from Investing Activities</td><td>49.77</td><td>34.33</td><td>-339.12</td><td>-387.06</td><td>-505.35</td><td>-1,339.85</td><td>-2,076.39</td><td>541.75</td><td>-2,181.78</td><td>1,041.69</td><td>-1,588.36</td></tr><tr><td>Financing Activities</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Issuance of Short-Term Debt</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Net Issuance / (Repayments) of Short-Term Debt</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Issuance of Long-Term Debt</td><td>1,000</td><td>3,020.51</td><td>3,961.85</td><td>4,469.31</td><td>1,009.46</td><td>0</td><td>0</td><td>0</td><td>1,794.46</td><td>0</td><td>992.55</td></tr><tr><td>Repayments of Long-Term Debt</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-500</td><td>-700</td><td>0</td><td>-400</td><td>-1,833.45</td><td>0</td></tr><tr><td>Net Issuance / (Repayments) of Long-Term Debt</td><td>1,000</td><td>3,020.51</td><td>3,961.85</td><td>4,469.31</td><td>1,009.46</td><td>-500</td><td>-700</td><td>0</td><td>1,394.46</td><td>-1,833.45</td><td>992.55</td></tr><tr><td>Issuance of Common Shares</td><td>36.98</td><td>88.38</td><td>124.5</td><td>72.49</td><td>235.41</td><td>174.41</td><td>35.75</td><td>169.99</td><td>832.89</td><td>666.97</td><td>260.05</td></tr><tr><td>Repurchases of Common Shares</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-600.02</td><td>0</td><td>-6,045.35</td><td>-6,263.75</td><td>-9,127.17</td><td>-12,861.28</td></tr><tr><td>Net Issuance / (Repurchases) of Common Shares</td><td>36.98</td><td>88.38</td><td>124.5</td><td>72.49</td><td>235.41</td><td>-425.61</td><td>35.75</td><td>-5,875.36</td><td>-5,430.86</td><td>-8,460.2</td><td>-12,601.23</td></tr><tr><td>Common Share Dividends Paid</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Other Financing Activities</td><td>54.65</td><td>-31.9</td><td>-37.83</td><td>-36.13</td><td>-7.56</td><td>-224.17</td><td>0</td><td>-75.45</td><td>-38.03</td><td>-51.97</td><td>-124.14</td></tr><tr><td>Cash from Financing Activities</td><td>1,091.63</td><td>3,076.99</td><td>4,048.53</td><td>4,505.66</td><td>1,237.31</td><td>-1,149.78</td><td>-664.25</td><td>-5,950.8</td><td>-4,074.43</td><td>-10,345.62</td><td>-11,732.82</td></tr><tr><td>Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Free Cash Flow</td><td>-1,581.64</td><td>-1,959.25</td><td>-2,854.42</td><td>-3,140.36</td><td>1,929.15</td><td>-131.98</td><td>1,618.53</td><td>6,925.75</td><td>6,921.83</td><td>9,461.05</td><td>11,375.06</td></tr><tr><td>NOPAT</td><td>272.16</td><td>711.48</td><td>1,585.31</td><td>2,357.6</td><td>3,957.62</td><td>5,426.71</td><td>4,806.72</td><td>6,060.39</td><td>9,106.72</td><td>11,502.57</td><td>12,985.14</td></tr><tr><td>Levered Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Unlevered Free Cash Flow</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Net Change in Cash</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>"
+    },
+    "valoracion": {
+      "escenarios": "<table><tr><th>Escenario</th><th>DCF/acción</th></tr><tr><td>Base</td><td>US$56.54</td></tr><tr><td>Conservadora</td><td>US$41.50</td></tr><tr><td>Disrupción</td><td>US$23.23</td></tr><tr><td>Optimista</td><td>US$67.03</td></tr></table>"
+    },
+    "analisis": {}
+  },
+  "valorPrincipal": 56.53647108773217,
+  "precioMOSValorEsperado": 36.00960600360021,
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-09-30",
+  "precioReferenciaFecha": "2026-10-27",
+  "precioReferenciaFuente": "Cierre Nasdaq 27-oct-2026, StockAnalysis/ChartExchange",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "international",
+  "revisionId": "NFLX-2026-10-28",
+  "resultsSnapshotSha256": "9b3bd1ac62c76fcaf517c62378f59d04689fc05cfb7cf929101289f319024582",
+  "estado": "EN_REVISION",
+  "savedAt": "2026-10-28T13:30:00Z",
+  "reportSchema": "jmr-report-contract-v2-20261017",
+  "metodoPrincipal": "DCF",
+  "salvedades": [
+    "ROIC terminal y crecimiento previstos son hipótesis, no datos observados.",
+    "I+D capitalizada a partir de Technology & Development: posible porción de mantenimiento.",
+    "Múltiplo P/BV calculado, con peso 0 por depender de futuro volumen de recompras.",
+    "Opciones valoradas con plazo supuesto de 5 años y volatilidad sectorial 47,54%; sensibilidad económica a revisar.",
+    "Fuente SEC trimestral sin auditar; último 10-Q 3T26, datos a septiembre, precio 27-octubre.",
+    "Auditoría económica posterior a revisión visual; estado EN REVISIÓN."
+  ],
+  "escenariosDCF": {
+    "version": "2",
+    "principal": "DCF Base",
+    "central": "A",
+    "fecha": "2026-10-27",
+    "revisionId": "NFLX-2026-10-28",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.09092495483619434,
+        "margen": 0.35,
+        "s2c": 1.2,
+        "s2c610": 1.2,
+        "roicTerminal": 0.1104,
+        "valor": 56.53647108773217,
+        "terminalGrowth": 0.04
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06596536304713352,
+        "margen": 0.31,
+        "s2c": 1,
+        "s2c610": 1.15,
+        "roicTerminal": 0.095,
+        "valor": 41.498032541325415,
+        "terminalGrowth": 0.04
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.006319940019455794,
+        "margen": 0.23,
+        "s2c": 0.85,
+        "s2c610": 1,
+        "roicTerminal": 0.0899,
+        "valor": 23.23059487249615,
+        "terminalGrowth": 0.025
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1099099011339515,
+        "margen": 0.375,
+        "s2c": 1.4,
+        "s2c610": 1.3,
+        "roicTerminal": 0.1104,
+        "valor": 67.02660068998075,
+        "terminalGrowth": 0.04
+      }
+    ],
+    "disrupcionSeparada": true
+  },
+  "seleccionMultiples": {
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "pesoVigente": 0.1142857143,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "EV/FCFF",
+        "pesoVigente": 0.1714285714,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "P/E",
+        "pesoVigente": 0.0571428571,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "P/FCFE",
+        "pesoVigente": 0.0571428571,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "P/OCF",
+        "pesoVigente": 0,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "P/V",
+        "pesoVigente": 0,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      },
+      {
+        "nombre": "P/BV",
+        "pesoVigente": 0,
+        "controlCalculo": "OK",
+        "nota": "Múltiplo nuevo JMR — hipótesis de salida y ancla histórica; revisar criterio económico."
+      }
+    ]
+  },
+  "multiplesUnificados": {
+    "revisionId": "NFLX-2026-10-28",
+    "hojaId": "11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c",
+    "pestana": "Financials Multiples y pestañas originales",
+    "rangoSupuestos": "J8/J19/J30",
+    "metodos": [
+      {
+        "metodo": "EV/EBITDA",
+        "cons": 15,
+        "base": 19,
+        "opt": 23,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            63.34571224847286,
+            67.00826087959847,
+            71.09409309637442
+          ],
+          [
+            83.46601510060673,
+            93.04861899779796,
+            102.28182715115561
+          ],
+          [
+            103.62746376634406,
+            119.35828960806089,
+            134.54688637342645
+          ]
+        ]
+      },
+      {
+        "metodo": "EV/FCFF",
+        "cons": 17,
+        "base": 22.5,
+        "opt": 27,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            42.51423241856158,
+            46.08110657974883,
+            50.116311985246675
+          ],
+          [
+            54.9914162428482,
+            64.65369961060931,
+            74.37015732935895
+          ],
+          [
+            67.03255344841736,
+            81.47387866727138,
+            95.77095438521374
+          ]
+        ]
+      },
+      {
+        "metodo": "P/E",
+        "cons": 18,
+        "base": 23,
+        "opt": 28,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            59.66792974240747,
+            63.09840410902564,
+            66.83233205422403
+          ],
+          [
+            78.69834089928548,
+            87.68804636430254,
+            96.2286188727897
+          ],
+          [
+            97.791249301342,
+            112.60578103623956,
+            126.7484304972135
+          ]
+        ]
+      },
+      {
+        "metodo": "P/FCFE",
+        "cons": 18,
+        "base": 22,
+        "opt": 28,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            44.23160385397753,
+            47.761311744175565,
+            51.75479048327043
+          ],
+          [
+            52.145585073367954,
+            60.97527536623914,
+            69.8555107238111
+          ],
+          [
+            67.02749576533097,
+            81.02166073922123,
+            94.87718183384263
+          ]
+        ]
+      },
+      {
+        "metodo": "P/OCF",
+        "cons": 18,
+        "base": 23,
+        "opt": 28,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            46.07745511098782,
+            49.81626265415508,
+            54.028396121583896
+          ],
+          [
+            56.72753001139149,
+            66.35459757668062,
+            76.06470277035874
+          ],
+          [
+            69.64983034427266,
+            84.1531081167468,
+            98.56890866336816
+          ]
+        ]
+      },
+      {
+        "metodo": "P/V",
+        "cons": 4,
+        "base": 5,
+        "opt": 6,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            51.243199360224885,
+            54.90578079542278,
+            58.54481706425153
+          ],
+          [
+            66.14060400735914,
+            72.86260366521242,
+            79.51738332648715
+          ],
+          [
+            81.0380086544934,
+            90.89209680157346,
+            101.00896063257561
+          ]
+        ]
+      },
+      {
+        "metodo": "P/BV",
+        "cons": 6,
+        "base": 8,
+        "opt": 10,
+        "control": "CALCULADO · 3 HISTORIAS × 3 HORIZONTES",
+        "precios": [
+          [
+            61.961622316513015,
+            83.35422120991272,
+            105.99146275171191
+          ],
+          [
+            83.72526088788484,
+            114.60089182196346,
+            148.44715667203764
+          ],
+          [
+            105.55139670443522,
+            146.15324442136847,
+            191.80603837436385
+          ]
+        ]
+      }
+    ],
+    "nota": "7 métodos calculados; P/V y P/BV sin ponderación",
+    "control": "63 precios FY+1/2/3 positivos"
+  },
+  "sensibilidadMultiples": {
+    "methods": 7,
+    "scenarios": [
+      "conservador",
+      "base",
+      "optimista"
+    ],
+    "disrupcionFuera": true,
+    "controlesOK": true,
+    "base": "Solo Base visible en app",
+    "nota": "Múltiplos de salida fijados bajo criterio de ciclo y contrastados con historia y comparables"
+  },
+  "auditoria": {
+    "revisionId": "NFLX-2026-10-28",
+    "fecha": "2026-10-28",
+    "estado": "NO_INICIADA",
+    "dictamen": "Pendiente de auditoría económica solicitada por usuario",
+    "salvedades": [
+      "Hipótesis de largo plazo, opciones, R&D y recompras requieren revisión visual."
+    ]
+  },
+  "cierreMultiplos": {
+    "revisionId": "NFLX-2026-10-28",
+    "date": "2026-10-28",
+    "sourceSheetId": "11jF3DyHkVcgVt4weGSqtns4WNpa-qAg4gm22f-ugF1c",
+    "methodsCalculated": 7,
+    "scenariosCalculated": 21,
+    "horizonPricesChecked": 63,
+    "dcfBase": 56.53647108773217,
+    "status": "CALCULO_COMPLETO_EN_REVISION",
+    "scope": "Cálculo de múltiplos con la plantilla IA JMR vigente; no significa auditoría final."
+  }
+}
