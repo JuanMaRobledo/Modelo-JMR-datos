@@ -1,11 +1,9 @@
-# MercadoLibre (MELI) · revisión MELI-20261028-R1
+# MELI · método A-1.0 (MELI-20261028-A1) — EN_REVISION
 
-**Estado del expediente: EN_REVISION para auditoría visual del usuario.**
+**No se ha realizado auditoría económica independiente.** La revisión visual del usuario sigue primero.
 
-**Auditoría económica independiente: PENDIENTE. NO REALIZADA. NO EXISTE DICTAMEN.**
+Ficha A1 publicada para revisión visual. Reserva material: deuda y financiación Mercado Pago dentro del FCFF consolidado, sin conciliación económica individualizada. Método A-1.0 tiene respaldo de drivers por Commerce/Fintech, pero todavía no ha sido validado prospectivamente.
 
-Este documento es solo un marcador de flujo requerido por el catálogo para que se muestre la ficha completa. **No constituye auditoría**, no certifica los supuestos, el valor intrínseco ni la decisión.
+La valoración Método B `MELI-20261028-R1` y su hoja original siguen conservadas en GitHub/Drive, no activas en el visor.
 
-Al completar la revisión visual, consultar las observaciones del usuario registradas bajo `auditorias/solicitudes/MELI/MELI-20261028-R1.json` si existen. Solo entonces analizar económicamente crecimiento, margen EBIT, ROIC terminal y reinversión crediticia, sales-to-capital, WACC y ERP, capitalización I+D, pasivos y fondos de Mercado Pago, caja restringida y reclamos de equity, múltiplos, materialidad y posibles sesgos de la Base.
-
-No reutilizar conclusiones, dictámenes ni historias de revisiones anteriores. Si se acuerdan modificaciones en la auditoría económica, actualizarlas en la misma revisión o nueva revisión explícita según las reglas.
+Cuando el usuario solicite auditoría económica, utilizar **Google Sheets independiente**, no insertar pestañas ni cambiar la copia A. No hay dictamen económico final, precio definitivo ni recomendación de inversión certificada.
