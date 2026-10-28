@@ -92,10 +92,6 @@
   },
   "recommendation": {
     "roicTerminal": 0.155,
-    "range": [
-      2,
-      2.5
-    ],
     "rationale": "Balance-based GAAP proxy FY2025 ~19.0%, LTM-Jun2026 ~13.6%, central midpoint ~16.3%, faded ~80bps to 15.5 for durable but eroding network moat; must use SOTP/FCFE Fintech for full verification.",
     "stcYears1To5": 2.1,
     "rationaleYears1To5": "Weighted recent observed S/C around 1.99–2.14; down from ungroundedly optimistic 2.3, up modestly from recent 1.83 as logistics density and fintech funding mature.",
@@ -106,7 +102,19 @@
     "initialWacc": 0.10837569815596583,
     "terminalWacc": 0.102,
     "marginalTax": 0.33,
-    "keepOthersConstant": true
+    "keepOthersConstant": true,
+    "roicTerminalRange": [
+      0.135,
+      0.175
+    ],
+    "stcYears1To5Range": [
+      1.8,
+      2.3
+    ],
+    "stcYears6To10Range": [
+      2,
+      2.5
+    ]
   },
   "prewriteSensitivities": [
     {
