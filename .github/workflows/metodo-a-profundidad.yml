@@ -1,0 +1,29 @@
+name: Método A · profundidad editorial
+
+on:
+  pull_request:
+    paths:
+      - 'analisis/**'
+      - 'valoraciones/**'
+      - 'catalogo.json'
+      - 'scripts/validar_profundidad_metodo_a.cjs'
+      - '.github/workflows/metodo-a-profundidad.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'analisis/**'
+      - 'valoraciones/**'
+      - 'catalogo.json'
+      - 'scripts/validar_profundidad_metodo_a.cjs'
+      - '.github/workflows/metodo-a-profundidad.yml'
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar 16 análisis integrales y vínculo a revisión de valoración
+        run: node scripts/validar_profundidad_metodo_a.cjs
