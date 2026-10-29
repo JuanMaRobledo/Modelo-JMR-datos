@@ -16,9 +16,9 @@
   "market": "US",
   "tipo": "Financial services / Digital Banking / LATAM regulated subsidiaries",
   "mos": 0.35,
-  "precioMOS": 9.747033470043734,
+  "precioMOS": 11.912598886152015,
   "baseMOS": "dcfBase",
-  "valorPrincipal": 14.995436107759591,
+  "valorPrincipal": 18.32707520946464,
   "metodoPrincipal": "DCF FCFE bancario regulatorio — Método A-1.2 (costo patrimonio Ke)",
   "metodo_valoracion": "A",
   "version_metodo": "A-1.2",
@@ -27,7 +27,7 @@
   "estado": "EN_REVISION",
   "publicationStatus": "EN_REVISION",
   "publicationStage": "EN_REVISION",
-  "validationStatus": "JMR_FCFE_CALCULATED_SENSITIVITY_CENTER_OK_AZ_FCFE_CALCULATED_FCFE_BOOK_EQUITY_PROXY_MATERIAL_RESERVE_BANK_REG_COUNTRY_PENDING",
+  "validationStatus": "RECALIBRATED_FCFE_BANK_BOTH_MODELS_NATIVELY_RECONCILED_CAPITAL_RETENTION_MATERIAL_RESERVE_KE_NOT_REDUCED",
   "publicationAuthorized": true,
   "publicationAuthorization": "Requested NU fresh JMR A and AZ bank FCFE valuations from copies, no prior assumptions reused",
   "auditPendingUserVisualReview": true,
@@ -42,8 +42,8 @@
       "optimista": null,
       "valorHoy": {
         "conservador": 7.430896392235082,
-        "base": 14.995436107759591,
-        "optimista": 20.899677566572578
+        "base": 18.32707520946464,
+        "optimista": 28.747180470464553
       },
       "estado": "CALCULADO_NATIVO_FCFE",
       "rutaSheet": "FCFE bancario A!B12:B15"
@@ -100,20 +100,20 @@
     "estado": "PENDIENTE_MULTIPLOS_BANCARIOS"
   },
   "valorEsperado": {
-    "valor": 14.55594539274772,
+    "valor": 18.201055738697967,
     "tipoPromedio": "3_historias_renormalizado",
-    "valorCentral": 14.995436107759591,
+    "valorCentral": 18.32707520946464,
     "disrupcionSeparada": true,
     "historias": [
       {
         "id": "A",
-        "nombre": "Base: crecimiento del crédito rentable, México y Colombia, control de riesgo",
+        "nombre": "Base recalibrada: NU fintech rentable, crecimiento NI y ventaja de costos, sin liberar equity regulatorio",
         "probabilidad": 0.4,
-        "valor": 14.995436107759591,
-        "crecimientoNIprimeros5": 0.18172325684,
-        "ROE1": 0.305,
-        "ROE10": 0.22,
-        "ROEterminal": 0.2,
+        "valor": 18.32707520946464,
+        "crecimientoNIprimeros5": 0.22514982922877436,
+        "ROE1": 0.315,
+        "ROE10": 0.235,
+        "ROEterminal": 0.22,
         "Ke": 0.12,
         "KeTerminal": 0.11,
         "gTerminal": 0.04
@@ -146,13 +146,13 @@
       },
       {
         "id": "D",
-        "nombre": "Optimista: bancarización primaria y NuFormer elevan productividad y crédito sano",
+        "nombre": "Optimista recalibrada: éxito crédito sano y monetización internacional",
         "probabilidad": 0.225,
-        "valor": 20.899677566572578,
-        "crecimientoNIprimeros5": 0.2235658961,
-        "ROE1": 0.32,
-        "ROE10": 0.245,
-        "ROEterminal": 0.225,
+        "valor": 28.747180470464553,
+        "crecimientoNIprimeros5": 0.29220069960541384,
+        "ROE1": 0.335,
+        "ROE10": 0.265,
+        "ROEterminal": 0.25,
         "Ke": 0.115,
         "KeTerminal": 0.107,
         "gTerminal": 0.04
@@ -163,8 +163,8 @@
     "criterio": "Banca: P/E, P/BV, P/FCFE, ROTE, clase de referencia digital LATAM; no EV/EBITDA. Pendientes de anclas comparables, no proyectar objetivo ponderado.",
     "dcfHoy": {
       "conservador": 7.430896392235082,
-      "base": 14.995436107759591,
-      "optimista": 20.899677566572578
+      "base": 18.32707520946464,
+      "optimista": 28.747180470464553
     },
     "multiplesHoy": null,
     "ponderadoHoy": null,
@@ -200,25 +200,25 @@
     "keUSDInicial": 0.12,
     "keTerminal": 0.11,
     "gTerminal": 0.04,
-    "ROEInicialProyectado": 0.305,
-    "ROEYr10": 0.22,
-    "ROETerminal": 0.2,
+    "ROEInicialProyectado": 0.315,
+    "ROEYr10": 0.235,
+    "ROETerminal": 0.22,
     "niGrowthBase": [
+      0.3,
+      0.25,
       0.22,
-      0.2,
-      0.18,
-      0.16,
+      0.19,
+      0.17,
       0.15,
-      0.14,
-      0.12,
-      0.1,
+      0.13,
+      0.11,
       0.09,
-      0.08
+      0.075
     ],
-    "CAGRNIYrs1to5": 0.18172325684018742,
-    "reinvBaseFY1USDm": 1178.754,
-    "fcfeBaseFY1USDm": 3221.91532,
-    "retencionPrimerAnio": 0.26786,
+    "CAGRNIYrs1to5": 0.22514982922877436,
+    "reinvBaseFY1USDm": 1636.7992063492093,
+    "fcfeBaseFY1USDm": 3052.4385936507915,
+    "retencionPrimerAnio": 0.3490544255079598,
     "modeloReinversion": "EquityRequired_t=NI_t/ROE_t. Δequity_t=EquityRequired_t−EquityRequired_t−1, FCFE_t=NI_t−Δequity_t. No se suman como FCFE los depósitos/inversiones de clientes.",
     "supuestoRiesgoCapital": "Puente patrimonio contable consolidado aproxima necesidad capital, no modela RWA incremental por país ni CET1 separado; reserva MATERIAL.",
     "brasilRwaUSDm": 35710.139,
@@ -229,27 +229,104 @@
     "mexicoCapitalRegUSDm": 427.572,
     "mexicoCapitalRatio": 0.149,
     "mexicoMinRatio": 0.105,
-    "colombiaCapitalAdequacy": "PENDIENTE_MAPEO_RWA",
+    "colombiaCapitalAdequacy": "CONFIRMADO SEC 6K Q2 2026 cap regulatory US$179.741m and ratio15.3%, min10.5%. Future RWA/retention by entity STILL PENDING.",
     "AZStocks": {
       "hojaGoogle": "https://docs.google.com/spreadsheets/d/1nN5ufEnsKVOm-lzHw1WWAOcrdQw-VumiV4odz6uuQTU/edit",
       "fcfePerpetuidad": {
         "conservador": 6.2643404761524595,
-        "base": 11.903344574669038,
-        "optimista": 18.025101385502904
+        "base": 16.969355607234338,
+        "optimista": 24.97780390085099
       },
       "PBVExit": {
         "conservador": 6.474071468368569,
-        "base": 12.527625135911958,
-        "optimista": 18.778213607731132
+        "base": 16.506615369505717,
+        "optimista": 24.19859736333503
       },
-      "combinado6040": 12.153056799166206,
+      "combinado6040": 16.78425951214289,
       "ke10yBase": 0.126,
       "keTerminalBase": 0.117,
-      "roeTerminalBase": 0.195,
+      "roeTerminalBase": 0.22,
       "terminalGBase": 0.035,
       "pbExitBase": 2.4,
-      "bankValuationModel": "Standalone 5-tab copy adapted; ALL industrial AZ inputs/formulas cleared, FCFE bank & P/BV book value instead EV EBITDA."
-    }
+      "bankValuationModel": "Standalone 5-tab copy adapted; ALL industrial AZ inputs/formulas cleared, FCFE bank & P/BV book value instead EV EBITDA.",
+      "roeY10Base": 0.235,
+      "niGrowthBase": [
+        0.3,
+        0.27,
+        0.24,
+        0.21,
+        0.18,
+        0.16,
+        0.14,
+        0.12,
+        0.1,
+        0.08
+      ],
+      "NI_CAGR5": 0.23927368304935115,
+      "optimistaNiGrowth": [
+        0.36,
+        0.31,
+        0.27,
+        0.23,
+        0.2,
+        0.18,
+        0.16,
+        0.14,
+        0.12,
+        0.1
+      ],
+      "optimistaROETerminal": 0.245,
+      "explanation": "AZ independiente mantiene Ke 12.6%->11.7%, g3.5%, eleva crecimiento NI y ROE estable 22% de modo económicamente financiado por patrimonio retenido."
+    },
+    "niBaseY1USDm": 4689.2378,
+    "niBaseY2USDm": 5861.54725,
+    "niBaseY5USDm": 9956.4593281335,
+    "niBaseY10USDm": 16828.25750012359,
+    "optimistaNiGrowth": [
+      0.4,
+      0.34,
+      0.28,
+      0.24,
+      0.21,
+      0.18,
+      0.16,
+      0.14,
+      0.12,
+      0.1
+    ],
+    "optimistaRoeTrajectory": [
+      0.335,
+      0.335,
+      0.33,
+      0.325,
+      0.32,
+      0.315,
+      0.305,
+      0.295,
+      0.285,
+      0.265
+    ],
+    "roeBaseTrajectory": [
+      0.315,
+      0.31,
+      0.305,
+      0.3,
+      0.29,
+      0.28,
+      0.27,
+      0.26,
+      0.25,
+      0.235
+    ],
+    "consensoEPSFY2026": 0.89,
+    "consensoEPSFY2027": 1.13,
+    "consensoFuente": "S&P Global Market Intelligence vía stockanalysis.com/stocks/nu/forecast/, actualizado 27 Oct 2026. EPS ajustado, no igual a utilidad IFRS, y FY2026 FY2027 son fechas calendario distintas a FY+1 LTM Jun2026.",
+    "colombiaCapitalRegUSDm": 179.741,
+    "colombiaCapitalRatio": 0.153,
+    "colombiaMinRatio": 0.105,
+    "adjustmentVersion": "NU-20261029-R1-RECALIBRACION-FINTECH-2",
+    "adjustmentDate": "2026-10-29",
+    "analisisRetencion": "Proxy NI/ROE consolidado. Riesgo RWA y buffer local NO liberado por mejora del ROE. Año1 se retiene US$1.637m (34.9% NI), vs US$1.179m anterior y año10 US$8.993m. FCFE Y1 USD3052m."
   },
   "sensibilidadDCF": {
     "tipo": "FCFE BANCARIO Ke USD/g",
@@ -269,48 +346,48 @@
     ],
     "valorPorAccion": [
       [
-        16.82441073866272,
-        17.445025656821407,
-        18.16496785709483,
-        19.011326598241546,
-        20.022026842523548
+        20.516952118316294,
+        21.340448422379364,
+        22.296620806188965,
+        23.4216536551305,
+        24.766205108743552
       ],
       [
-        15.389069514420902,
-        15.88388175212213,
-        16.451193129209848,
-        17.109128430530657,
-        17.882403271784504
+        18.730051617004555,
+        19.391270214099478,
+        20.150178768294015,
+        21.031199768863054,
+        22.067636610272388
       ],
       [
-        14.146289843307668,
-        14.544060538940029,
-        14.995436107759595,
-        15.512786905117244,
-        16.112606738147523
+        17.182975767911266,
+        17.71856123867133,
+        18.327075209464642,
+        19.02534733414501,
+        19.835817151184205
       ],
       [
-        13.061468398092153,
-        13.38344254088757,
-        13.745472602145128,
-        14.156141992963846,
-        14.626675174011694
+        15.832657910197193,
+        16.269737638775496,
+        16.761895587843064,
+        17.32093423321902,
+        17.962287581743762
       ],
       [
-        12.107723984354529,
-        12.369851156202861,
-        12.662166752983858,
-        12.990708459684043,
-        13.363239014143252
+        14.645639387341813,
+        15.004625763763801,
+        15.40561639651599,
+        15.857012136864405,
+        16.369614079293967
       ]
     ],
-    "centro": 14.995436107759595,
+    "centro": 18.32707520946464,
     "centroConciliado": true,
     "Ke0": 0.12,
     "KeTerminal": 0.11,
     "g": 0.04,
     "fuente": "Google Sheets Sensibilidad FCFE A!A5:F10",
-    "nota": "Cada Ke sensibilidad mueve Ke terminal por igual cantidad. Descuento explícito FCFE años1–10 y TV con Ke terminal y ROE terminal20%."
+    "nota": "Matriz de la hoja Sensibilidad FCFE A, centro 12% Ke y 4% g coincide con JMR Base US$18.327075."
   },
   "fuentes_supuestos": [
     "https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm",
@@ -321,10 +398,11 @@
     "https://stockanalysis.com/stocks/nu/history/"
   ],
   "salvedades": [
+    "Recalibración Método A 29Oct: consenso S&P (FY2026 EPS0.89, FY2027 EPS1.13) y Q2 reporta NI+49% yoy, ROE33%, clientes139m y ARPAC17. Se aumenta Base NI CAGR5a de18,17 a22,51%, terminal ROE20 a22% SIN bajar Ke12%; el valor DCF Base sube US$15.00→18.327. No se calibra al precio mercado.",
     "Modelo FCFE bancario: NI menos nueva retención de equity según ROE objetivo; NO FCFF ni WACC, no sumar caja/banca disponible ni restar depósitos como deuda industrial.",
     "Reserva material: capital común consolidado NI/ROE es PROXY de requerimiento regulatorio país; Banco Brasil RWA US$35.71bn CAR15.7 CET11.9, México capital14.9 vs min10.5; la retención de equity real depende de RWA por cartera, riesgo, país y divisas. Sin auditoría regulatoria completa, estado EN_REVISION.",
     "Crédito bruto Q2 USD39.4bn creció37% interanual frente depósitos45.3bn +18%; la expansión más rápida que equity puede tensionar buffers y requerir más capital de lo modelado.",
-    "ROE 33% 2Q anualizado; modelo Base 30.5% y convalecencia22% año10,20% estable; variación de mix unsecured, costo funding y country risk pueden reducir ROE.",
+    "ROE 33% 2Q anualizado; modelo Base 31.5% y convalecencia22% año10,20% estable; variación de mix unsecured, costo funding y country risk pueden reducir ROE.",
     "Calidad cartera: NPL90+6.9% y NPL15–90 4.8% en Q2; ratio riesgo ajustado NIM12.4%; crecimiento de costo crédito1.7bn requiere stress, no duplicar provisiones si NI ya descontó pérdidas.",
     "FY2025 NI2.869bn vs LTM2026 3.607bn. Crecimiento FY1 22% y CAGR 18.17% primeros5; no extrapolar Q2 +49% net income y Q2+39% gross revenue sin base comparables.",
     "Ke USD 12% inicial y11% perpetuo JMR; Prima LATAM país incorporada por juicio, no beta bottomup estadísticamente validada. AZ usa Ke12.6% y11.7% terminal; no promediar dos modelos.",
@@ -332,13 +410,14 @@
     "NU comparte accionistas A/B y SBC; se usa 4.9088bn shares proxy diluido, outstanding4.8307bn; evitar doble descuento opciones y dilución.",
     "P/BV exit AZ 2.4x caso Base es ancla provisional, NO mediana verificada de comparables y NO reemplaza valor FCFE perpetuidad.",
     "El reporte Q2'26 se publicó13Ago2026; Q3 2026 aún no disponible al corte 29Oct2026. No usar cifras fiscales Q3 inexistentes.",
-    "No se realizó auditoría económica independiente, a la espera de revisión visual."
+    "No se realizó auditoría económica independiente, a la espera de revisión visual.",
+    "La convergencia JMR ROE Y10 23,5%→terminal22% deja gap1,5pp; AZ ROE Y10 23,5→terminal22% terminal. Sensibilidad Ke, NI, RWA y cartera aún material; análisis visual antes de auditoría independiente."
   ],
   "hojas": {
     "valoracion": {
-      "Resumen NU Método A FCFE": "<section><h2>Nu Holdings (NYSE NU) · JMR A-1.2 · EN_REVISION</h2><p><strong>Valor intrínseco Base FCFE bancario US$15,00</strong> (precio mercado US$11,98, MOS35% US$9,75); Conservador US$7,43, Optimista US$20,90, Disrupción US$3,97. <a href=\"https://docs.google.com/spreadsheets/d/1PMtFbAoT-rM5O3DnAlnd4JEGPAky15v24NNPjoQS9kI/edit\">Copia oficial plantilla JMR FCFE bancario A</a>.</p><p>Regulatorio: Brasil CAR15,7% y CET111,9%; México ratio14,9% vs min10,5%. Puente capital por equity NI/ROE es proxy y reserva MATERIAL; no se aplica EBIT, WACC, EV/EBITDA industrial.</p><p>AZ Stocks DCF bancario Base US$11,90 <a href=\"https://docs.google.com/spreadsheets/d/1nN5ufEnsKVOm-lzHw1WWAOcrdQw-VumiV4odz6uuQTU/edit\">ver hoja</a>. No auditoría económica independiente.</p></section>"
+      "Resumen NU Método A FCFE": "<section><h2>NU · Recalibración fintech Método JMR A-1.2</h2><p><strong>Valor intrínseco FCFE Base US$18,33</strong> frente precio USD11,98 (+53%). MOS35% US$11,91. Conservador US$7,43, Optimista US$28,75, Disrupción US$3,97; promedio normal US$18,20.</p><p>NI growth Base año1–5 30/25/22/19/17%, ROE31,5% año1→23,5% año10→22% terminal, Ke12/11%, g4%. Retención patrimonio Y1 US$1.637m, no es flujo libre. <a href=\"https://docs.google.com/spreadsheets/d/1PMtFbAoT-rM5O3DnAlnd4JEGPAky15v24NNPjoQS9kI/edit\">Hoja FCFE JMR</a>.</p><p>AZ Stocks independiente Base US$16,97. <a href=\"https://docs.google.com/spreadsheets/d/1nN5ufEnsKVOm-lzHw1WWAOcrdQw-VumiV4odz6uuQTU/edit\">Hoja AZ</a>. Colombia capital 179,741m ratio15,3% confirmado; proyección RWA pendiente.</p></section>"
     },
     "financieros": {}
   },
-  "revisionOrigen": "Nueva copia limpia de plantilla IA 46 tabs más 2 tabs dedicadas FCFE y sensibilidad bancarias, con histórico 2019–2025 + LTM Jun26 exclusivamente como hechos contables importados y contraste SEC/IFRS; valoraciones y supuestos anteriores desechados. AZ copia de 5 tabs eliminó todas las entradas y fórmulas industriales heredadas y recalculó FCFE y P/BV bancario."
+  "revisionOrigen": "Nueva copia limpia de plantilla IA 46 tabs más 2 tabs dedicadas FCFE y sensibilidad bancarias, con histórico 2019–2025 + LTM Jun26 exclusivamente como hechos contables importados y contraste SEC/IFRS; valoraciones y supuestos anteriores desechados. AZ copia de 5 tabs eliminó todas las entradas y fórmulas industriales heredadas y recalculó FCFE y P/BV bancario. Recalibración posterior en misma revisión publicada, con fuentes adicionales Q2 SEC y consenso Oct27, sin modificar datos contables históricos."
 }
