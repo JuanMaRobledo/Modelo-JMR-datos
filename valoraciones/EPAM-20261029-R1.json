@@ -1,0 +1,377 @@
+{
+  "ticker": "EPAM",
+  "nombreActivo": "EPAM Systems, Inc. (NYSE: EPAM)",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA/edit",
+  "sheet_id": "1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "precio": 136.23,
+  "precioAnalisis": 136.23,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "NYSE regular close US$136,23 Oct28 2026 via Investing.com/financecharts",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "IT Services / Digital Engineering / Consulting",
+  "mos": 0.35,
+  "precioMOS": 119.86554619,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 184.4085326,
+  "metodoPrincipal": "DCF FCFF 10Y/perpetuidad · JMR Método A-1.2",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "EPAM-20261029-R1",
+  "revision_id": "EPAM-20261029-R1",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "FOUR_STORIES_READY_WACC_VALIDATED_DCF_MATRIX_CENTER_OK_MULTIPLES_UNVALIDATED_ROIC_FADE_NOTICE",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "User requested new EPAM JMR A and AZ Stocks copy of templates remove old active",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "valorHoy": {
+        "conservador": 126.2443541,
+        "base": 184.4085326,
+        "optimista": 248.7059859
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "P/S",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VALIDACION_MULTIPLOS_NATIVOS"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "horizonteAnios": 3,
+    "estado": "PENDIENTE_MULTIPLOS_NO_PUBLICAR_OBJETIVO"
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorEsperado": {
+    "valor": 185.7714825,
+    "tipoPromedio": "3_historias_renormalizado",
+    "valorCentral": 184.4085326,
+    "historiaCentralId": "A",
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · AI engineering, recuperación orgánica y utilización",
+        "probabilidad": 0.5,
+        "crecimiento": 0.05993831734,
+        "margen": 0.135,
+        "s2c": 1.65,
+        "s2c610": 2.15,
+        "roicTerminal": 0.16,
+        "valor": 184.4085326,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "Crecimientos años1–5 4;5,5;6,5;7;7%; EBITGAAP13,5%; S/C1,65→2,15, ROIC terminal16%; incluye adquisiciones, capital humano y NWC."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · presión AI tarifas e integración de compras",
+        "probabilidad": 0.2,
+        "crecimiento": 0.03396413621,
+        "margen": 0.115,
+        "s2c": 1.15,
+        "s2c610": 1.65,
+        "roicTerminal": 0.12,
+        "valor": 126.2443541,
+        "terminalGrowth": 0.035,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · IA automatiza trabajo facturable, pérdida márgenes",
+        "probabilidad": 0.1,
+        "crecimiento": -0.002134330766,
+        "margen": 0.085,
+        "s2c": 0.9,
+        "s2c610": 1.3,
+        "roicTerminal": 0.09,
+        "valor": 87.55654697,
+        "terminalGrowth": 0.02,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · ingeniería AI-native con premium y productividad",
+        "probabilidad": 0.2,
+        "crecimiento": 0.08891947998,
+        "margen": 0.15,
+        "s2c": 2.15,
+        "s2c610": 2.75,
+        "roicTerminal": 0.19,
+        "valor": 248.7059859,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "criterio": "7 múltiplos JMR calculados en hojas nativas; anclas y precio fiscal por año no completados; no sustituir por AZ EBITDA externo, no inventar múltiplos",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 126.2443541,
+      "base": 184.4085326,
+      "optimista": 248.7059859
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": null,
+    "chequeo": "NO_CERTIFICADO"
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "crecimientoFY1": 0.04,
+    "crecimientoFY5": 0.07,
+    "crecimientoBase": 0.05993831734,
+    "crecimientoAnios": [
+      0.04,
+      0.055,
+      0.065,
+      0.07,
+      0.07,
+      0.065,
+      0.06,
+      0.055,
+      0.05,
+      0.045
+    ],
+    "margenEBITGAAPLtm": 0.10026921267088845,
+    "margenEBITObjetivo": 0.135,
+    "ingresosLtmMillones": 5616.749,
+    "ebitGAAPLtmMillones": 563.187,
+    "cfoLtmMillones": 538.79,
+    "capexLtmMillones": 56.111,
+    "fcfLtmMillones": 482.679,
+    "sbcFY2025Millones": 176.764,
+    "sbcAccountingRisk": "SBC incluido en EBIT GAAP y debe tratarse como costo/dilución; recompra409m 6M2026 no reemplaza dilución prospectiva",
+    "stcPromedio": 1.952058268,
+    "stcHistoricoMarginalNota": "NEORIS acquisitions 2024 y FX inflan FY25 crecimiento +15,4%; datos no permiten inferir productiv marginal homogénea",
+    "stcMarginal1a5": 1.65,
+    "stcMarginal6a10": 2.15,
+    "roicActualAjustado": 0.1433,
+    "roicAnio10": 0.1976,
+    "roicTerminal": 0.16,
+    "rf": 0.0505,
+    "erp": 0.042,
+    "beta": 1.2,
+    "waccInicial": 0.1002,
+    "waccTerminal": 0.09,
+    "gTerminal": 0.04,
+    "rdAmortizacionAnios": null,
+    "rdTratamiento": "N/D gasto investigación puro; no capitalizar salarios delivery y consulting sin evidencia separable",
+    "deudaFinancieraMillones": 25,
+    "deudaArrendamientoMillones": 127.243,
+    "deudaTotalMillones": 152.243,
+    "cajaMillones": 789.397,
+    "inversionesCortasMillones": 4.8,
+    "minorityInterestMillones": 0.582,
+    "nonOperatingAssetsMillones": 0,
+    "sharesMillones": 51.585,
+    "lagAnios": 1,
+    "reinvPrimerAnio": 194.7139653,
+    "nopatPrimerAnio": 483.2022019,
+    "terminalReinvNOPAT": 0.25,
+    "roicGapPercent": 3.76,
+    "pruebaLag0": {
+      "copiaGoogle": "https://docs.google.com/spreadsheets/d/1wOAdZlzLzOWFwv_00RXzHcwOr5Kh-9lltdQSbsfn99o/edit",
+      "lag0": {
+        "base": 186.5746447,
+        "conservador": 128.3671679,
+        "disrupcion": 89.35719681,
+        "optimista": 250.7896468
+      },
+      "lag1": {
+        "base": 184.4085326,
+        "conservador": 126.2443541,
+        "disrupcion": 87.55654697,
+        "optimista": 248.7059859
+      },
+      "deltaBasePorAccion": 2.1661120999999923,
+      "criterio": "Desfase un año conserva inversión en talento/contrato previo ingresos. No elegir por precio."
+    },
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1sqxRd0sun4d6qSdE5KUbLP5IPxlPaa0jMz0bfmPi8Og/edit",
+      "dcfPerpetuidad": {
+        "base": 163.41,
+        "optimista": 245.52,
+        "pesimista": 102.9
+      },
+      "exitEV_EBITDA": {
+        "base": 231.37,
+        "optimista": 373.61,
+        "pesimista": 128.65
+      },
+      "combinado6040": 190.59,
+      "wacc": 0.1,
+      "g": 0.035,
+      "capexNormalizadoAno1Millones": 200,
+      "capexNormalizadoAno10Millones": 380,
+      "capexPPEreportadoLtmMillones": 56.111,
+      "daAno10Millones": 170,
+      "nwcFinalAno10DeltaMillones": 42.3,
+      "normalizacion": "CapEx explícito AZ incluye adquisiciones/entrenamiento e inversión inorgánica normalizada; no son cifras reportadas de PPE. Terminal reinversion252.3m contra NOPAT994.3m implica RONIC≈13.8%."
+    }
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.1002,
+    "gCentro": 0.04,
+    "centro": 184.4085326,
+    "centroConciliado": true,
+    "matriz": {
+      "wacc": [
+        0.0902,
+        0.0952,
+        0.1002,
+        0.1052,
+        0.1102
+      ],
+      "g": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "valores": [
+        [
+          205.49,
+          217.02,
+          231.35,
+          249.7,
+          274.08
+        ],
+        [
+          186.05,
+          194.72,
+          205.25,
+          218.34,
+          235.1
+        ],
+        [
+          169.9,
+          176.52,
+          184.41,
+          193.99,
+          205.91
+        ],
+        [
+          156.29,
+          161.4,
+          167.4,
+          174.55,
+          183.23
+        ],
+        [
+          144.66,
+          148.64,
+          153.26,
+          158.67,
+          165.11
+        ]
+      ]
+    },
+    "nota": "Matriz extraída de la hoja nativa, centro conciliado US$184,41."
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1352010/000135201026000015/epam-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1352010/000135201026000046/epam-20260630.htm",
+    "https://investors.epam.com/news/news-details/2026/EPAM-Reports-Results-for-Second-Quarter-2026/default.aspx",
+    "https://www.investing.com/equities/epam-systems-inc-historical-data",
+    "https://people.stern.nyu.edu/adamodar/pdfiles/papers/growth.pdf"
+  ],
+  "salvedades": [
+    "Datos SEC FY2025 y H1'26 reconstruidos LTM Jun26, sin Q3 2026 aún publicado al corte29oct2026.",
+    "FY2026 +3.2–4.2% crecimiento publicado vs orgánico constante FX+2–3%; excluir extrapolación FY2025 +15,4% incluyendo adquisición NEORIS.",
+    "ROIC actual14,33%, año10 19,76%, terminal16%; gap 3,76pp, requiere futura normalización de ROIC, margen y reinversión.",
+    "CapEx físico LTM US$56,1m no representa toda reinversión económica: EPAM compra talento, adquiere firmas, financia cuentas por cobrar y SBC.",
+    "AZ Stocks capex explícito año10US$380m incluye adquisiciones/formación estimadas (no CapEx contable). Base AZ DCF US$163,41, terminal RONIC implícito≈13,8% vs JMR16%. Requiere conciliación antes de certificación económica.",
+    "Lease ASC842 corriente US$39,301m + largo US$87,942m tratado como deuda UNA vez; no activar conversor Damodaran adicional.",
+    "US$37,5m depósitos bancos Belarus bajo restricciones dividendos hasta fin2026; parte de los US$789,4m cash podría no ser plenamente distribuible; sensibilidad máximo0,73 dólares/acción.",
+    "FY2025 información histórica balance importado desde sheet anterior, cotejado FY2025 y Q2 2026 con fuente SEC; años anteriores de recepción reclasificación pueden requerir verificación SEC para todos los múltiplos.",
+    "SBC no excluido GAAP; recompra US$409m primer semestre 2026, no suponer retorno perpetuo ni compensar dilución gratuitamente.",
+    "7 múltiplos nativos (P/E,EV/EBITDA, EV/FCFF,P/FCFE,P/OCF,P/V,P/BV) pendientes de anclas/validación, sin promedio multiplicado publicado.",
+    "AZ exit EBITDA14× no verificado peers, se muestra sólo como secundaria.",
+    "No se ha realizado auditoría económica independiente; EN_REVISION para inspección visual del usuario."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen EPAM Método A-1.2": "<section><h2>EPAM Systems · Método JMR A-1.2 · 29 oct 2026</h2><p><strong>Valor intrínseco DCF Base US$184,41</strong>, frente a cierre US$136,23, MOS35% US$119,87. Conservador US$126,24, Optimista US$248,71, Disrupción US$87,56 separada, media3 historias US$185,77.</p><p>Crecimiento CAGR5a 5,99%, EBIT objetivo13,5%, sales/capital marginal1,65→2,15, ROIC terminal16%, WACC10,02%, g4%. CapEx LTM US$56,111m NO es toda inversión. <a href=\"https://docs.google.com/spreadsheets/d/1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA/edit\">Hoja JMR 46 pestañas</a>.</p><p>AZ Stocks independiente perpetuidad US$163,41, <a href=\"https://docs.google.com/spreadsheets/d/1sqxRd0sun4d6qSdE5KUbLP5IPxlPaa0jMz0bfmPi8Og/edit\">ver AZ Sheets</a>. Múltiplos y auditoría económica no realizados.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Nueva copia plantilla IA oficial JMR 46 tabs; históricos 2016–2025 como cifras exclusivamente, LTM Jun26 SEC FY2025+6M2026−6M2025 y balance 10Q, sin reutilizar valoraciones anteriores."
+}
