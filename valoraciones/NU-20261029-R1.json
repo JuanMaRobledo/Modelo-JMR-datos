@@ -253,11 +253,6 @@
   },
   "sensibilidadDCF": {
     "tipo": "FCFE BANCARIO Ke USD/g",
-    "centro": 14.995436107759591,
-    "centroConciliado": true,
-    "Ke0": 0.12,
-    "KeTerminal": 0.11,
-    "g": 0.04,
     "KeEscenarios": [
       0.11,
       0.115,
@@ -272,30 +267,50 @@
       0.045,
       0.05
     ],
-    "valores": [
+    "valorPorAccion": [
       [
-        13.98,
-        14.2,
-        14.5,
-        14.8,
-        15.1
+        16.82441073866272,
+        17.445025656821407,
+        18.16496785709483,
+        19.011326598241546,
+        20.022026842523548
       ],
       [
-        13.2,
-        13.5,
-        13.8,
-        14.2,
-        14.5
+        15.389069514420902,
+        15.88388175212213,
+        16.451193129209848,
+        17.109128430530657,
+        17.882403271784504
       ],
       [
-        14.1462898433,
-        14.544060539,
-        14.9954361078,
-        15.5127869051,
-        16.1126067381
+        14.146289843307668,
+        14.544060538940029,
+        14.995436107759595,
+        15.512786905117244,
+        16.112606738147523
+      ],
+      [
+        13.061468398092153,
+        13.38344254088757,
+        13.745472602145128,
+        14.156141992963846,
+        14.626675174011694
+      ],
+      [
+        12.107723984354529,
+        12.369851156202861,
+        12.662166752983858,
+        12.990708459684043,
+        13.363239014143252
       ]
     ],
-    "nota": "Central 0.12/g0.04 reconciliada. Valores exactos otras filas deben leerse de Sensibilidad FCFE A para publicación final."
+    "centro": 14.995436107759595,
+    "centroConciliado": true,
+    "Ke0": 0.12,
+    "KeTerminal": 0.11,
+    "g": 0.04,
+    "fuente": "Google Sheets Sensibilidad FCFE A!A5:F10",
+    "nota": "Cada Ke sensibilidad mueve Ke terminal por igual cantidad. Descuento explícito FCFE años1–10 y TV con Ke terminal y ROE terminal20%."
   },
   "fuentes_supuestos": [
     "https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm",
