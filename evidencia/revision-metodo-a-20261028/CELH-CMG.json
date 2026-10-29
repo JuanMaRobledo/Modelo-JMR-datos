@@ -1,0 +1,87 @@
+{
+  "fecha": "2026-10-28",
+  "metodo_revision": "A-1.2",
+  "tipo": "REVISION_FOCALIZADA_SUPUESTOS_REINVERSION_NO_AUDITORIA_INDEPENDIENTE",
+  "BSX": {
+    "seleccion": "BSX-20261028-A2",
+    "valor": 41.17242190620349,
+    "catalogo": "Una valoración y un análisis activos. Modelo-JMR docs/model-sync.js carga main con cache:no-store.",
+    "url": "https://modelo-jmr.vercel.app/visor.html?path=valoraciones%2FBSX-20261028-A2.json",
+    "verificacionProduccion": "NO_VERIFICADA_VISUALMENTE: web_fetch_vercel_url retorna401 aun con enlace autenticado regenerado; CLI Vercel no disponible. No se modificó protección.",
+    "reservas": "Corte junio2026, selección definitiva entre revisiones existentes; no certificación económica."
+  },
+  "CELH": {
+    "sheet_id": "10i-zC1I-LYl_gug9UZLaFrSdg36Za36dFskFpCFOy-I",
+    "valor_observado_no_publicado": 32.88142369742753,
+    "estado": "POR_REVISAR_REINVERSION_Y_PUENTE_ECONOMICO",
+    "supuestos": {
+      "crecimiento": [
+        0.1,
+        0.1,
+        0.09,
+        0.08,
+        0.07
+      ],
+      "margen": 0.195,
+      "sc": [
+        1.6,
+        1.4
+      ],
+      "roic_terminal": 0.1900781770674566,
+      "wacc": 0.0749965852642144
+    },
+    "decision": "Retener como hipótesis de trabajo; no promover resultado a valoración validada. No extrapolar crecimiento por adquisiciones.",
+    "hallazgos": {
+      "D5": "Revisión focalizada Método A-1.2 28-oct-2026: 19,5% es una hipótesis de margen normalizado. EBIT LTM GAAP 160,314 + terminaciones 412,748 = 573,062 US$M. Normalizar no significa ignorar caja: conciliar reembolsos Pepsi, ingreso diferido y pagos pendientes. Fuente SEC 10-Q 30-jun-2026 notas 4, 9, 11. Con impuesto25%, ROIC inicial homogéneo ≈14,31%, no17,39%.",
+      "E5": "Revisión A: S/C1,60 implica reinversión FY1 209,50 US$M (44,31% NOPAT). Capex LTM46M y D&A37M no cubren todo el puente: faltan WC normalizado, activos de distribución y adquisiciones comparables. No equiparar ratio promedio≈1,01 con marginal ni elevar S/C automáticamente.",
+      "F5": "Revisión A: S/C1,40 implica reinversión año10 170,95 US$M; terminal190,63 (+11,51%). Reconstruir inversión orgánica sin repetir Alani/Rockstar y sin extrapolar financiación excepcional de Pepsi.",
+      "G5": "Revisión A: ROIC terminal19,01% exige evidencia propia de persistencia. El punto medio WACC/sector no basta bajo A-1.2. ROIC año10≈18,37%; reinversión terminal21,04% NOPAT, sin discontinuidad extrema. WACC inicial7,50% requiere contrastar beta0,620 y preferentes híbridas.",
+      "M5": "REVISIÓN FOCALIZADA 28-oct-2026, no auditoría integral: hipótesis operativa 10/10/9/8/7%, margen19,5%, S/C1,60/1,40. DCF32,88 es resultado de copia, NO publicado ni validado. Resolver puente distribución/Pepsi y capital, coste/precio preferentes y desfase completo. Input sheet conserva21,15% y S/C1,68 que NO son las entradas activas. No cambiar fórmulas para conciliar rótulos."
+    },
+    "conciliacion_adicional": "SEC nota9: saldo terminaciones264,088+cargos85,287-pagos340,614=8,761M. No deducir otra vez todos los412,748M LTM del valor; separar pagos ya realizados del saldo futuro. Pepsi reembolsa275+81,1M, reconocidos como ingreso diferido; ingreso no equivale a nueva caja. Convergencia terminal leve (+11,51% reinversión), no razón para elevar ROIC. Fuente y copia protegidas conservadas.",
+    "fuentes": [
+      "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000050/celh-20260630.htm",
+      "https://ir.celsiusholdingsinc.com/news/news-details/2026/Celsius-Holdings-Reports-Second-Quarter-2026-Financial-Results/default.aspx"
+    ]
+  },
+  "CMG": {
+    "sheet_id": "1cBGkClyYdYWS8SIa8JQFHyllcnSEbTkOWDttIOiTDS0",
+    "revision_publicada": "CMG-2026-10-28-R1-REINICIO",
+    "valor_observado": 24.93692709950013,
+    "estado": "POR_REVISAR_ARRENDAMIENTOS_Y_REINVERSION",
+    "supuestos": {
+      "crecimiento": [
+        0.11,
+        0.105,
+        0.1,
+        0.095,
+        0.09
+      ],
+      "margen": 0.17,
+      "sc": [
+        2,
+        1.8
+      ],
+      "roic_terminal": 0.1836043629376828,
+      "wacc": 0.07992657926629897
+    },
+    "decision": "La copia A conserva las cifras R1; título Método A no acredita recalibración. Mantener supuestos como hipótesis condicionadas; no elevar S/C por comparación aislada con capex neto.",
+    "hallazgos": {
+      "D5": "Revisión focalizada A-1.2 28-oct-2026: margen17% es recuperación condicionada a productividad y costes, no resultado actual. Q3 reporta13,7% y ventas+9,6%; no sustituir EBIT corporativo por margen restaurante23,3%. Fuente https://ir.chipotle.com/2026-10-28-CHIPOTLE-ANNOUNCES-THIRD-QUARTER-2026-RESULTS .",
+      "E5": "Revisión A: S/C2,00 implica reinversión FY1 723,99 US$M,47,20% NOPAT. Capex neto LTM≈381M no es comparación suficiente: separar mantenimiento/aperturas, WC y altas de ROU. S/C promedio≈1,82 no reemplaza el marginal.",
+      "F5": "Revisión A: S/C1,80 etapa madura; reinversión año10 594,70 y terminal773,09 US$M (+30,00%); FCFF cae1,49%. Cuantificar fade de eficiencia antes de elevar terminal.",
+      "G5": "Revisión A: ROIC año10≈25,06% vs terminal18,36%; terminal reinv21,79% NOPAT. Sector solo referencia. Punto material: deuda5419,196M es arrendamientos; EBIT conserva renta y ajuste B80=0. Conciliar interés implícito, reinversión/ROU y EV-equity para evitar mezcla de tratamientos; no basta evitar duplicar el pasivo.",
+      "M5": "REVISIÓN FOCALIZADA 28-oct-2026, no auditoría integral: crecimiento11/10,5/10/9,5/9% es plausible condicionado a aperturas y comparables; Q3+9,6% y guía350–370 aperturas2026 lo apoyan. Mantener margen17% como recuperación, no garantizado. DCF24,94 sigue pendiente de puente integral de arrendamientos y S/C por nuevas unidades. Input4,18% y S/C2/2 no representan trayectoria activa11% y2/1,8. No modificar el valor publicado por una copia con nuevo título."
+    },
+    "conciliacion_adicional": "Deuda5419,196=317,002+5102,194M, toda correspondiente a arrendamientos. Ajuste EBIT por leases0; la coherencia entre tratamiento operativo y financiero permanece sin resolver. B21 144,656M no es minoritario real: nota identifica derechos RSU/PSU; no se concluye error de importe por el rótulo. Q3 ventas+9,6%, margen13,7%, comparables2,1% y guía350–370 aperturas sustentan crecimiento pero no garantizan margen17%.",
+    "fuentes": [
+      "https://www.sec.gov/Archives/edgar/data/1058090/000105809026000066/cmg-20260630.htm",
+      "https://ir.chipotle.com/2026-10-28-CHIPOTLE-ANNOUNCES-THIRD-QUARTER-2026-RESULTS"
+    ]
+  },
+  "controles": {
+    "notas": "Añadidas en D5:G5 y M5 de Escenarios e historias; verificación lectura posterior satisfactoria.",
+    "formulas": "No se modificaron fórmulas, cifras, selectores ni formato.",
+    "pendientes": "Pruebas completas lag0/1 en copias, puente de reinversión homogéneo, materialidad y controles integrales de publicación no ejecutados; esta revisión no certifica esos controles."
+  }
+}
