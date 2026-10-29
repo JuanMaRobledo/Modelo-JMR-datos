@@ -1,0 +1,253 @@
+{
+  "ticker": "ADBE",
+  "nombreActivo": "Adobe Inc.",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Di2o1dGk9HMH41oXiEgjvqUk1HI5_yRIogkrBrtjFqw/edit",
+  "sheet_id": "1Di2o1dGk9HMH41oXiEgjvqUk1HI5_yRIogkrBrtjFqw",
+  "fecha": "2026-10-28",
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-08-28",
+  "fecha_corte": "2026-08-28",
+  "precio": 249.76,
+  "precioAnalisis": 249.76,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "Cierre NASDAQ US$249,76, 28-oct-2026, financecharts/stockanalysis",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Crecimiento rentable · software",
+  "mos": 0.35,
+  "precioMOS": 280.99044181,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 432.2929874,
+  "metodoPrincipal": "DCF FCFF a perpetuidad · Método A-1.2",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "ADBE-20261028-A3",
+  "revision_id": "ADBE-20261028-A3",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "HISTORIAS_LISTO_WACC_VALIDADO_CENTRO_DCF_OK_AUDITORIA_VISUAL_PENDIENTE",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "2026-10-28: repetir ADBE con Método A actualizado y crear valoración AZ Stocks; publicar en revisión",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": 421.7,
+      "base": 587.3,
+      "optimista": 708.54,
+      "valorHoy": {
+        "conservador": 310.397448,
+        "base": 432.2929874,
+        "optimista": 521.5297543
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1142857143,
+      "conservador": 289.25,
+      "base": 344.72,
+      "optimista": 386,
+      "valorPresenteBase": 256.5
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.1714285714,
+      "conservador": 174.1,
+      "base": 208.8,
+      "optimista": 233.51,
+      "valorPresenteBase": 152.93
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.0571428571,
+      "conservador": 297.06,
+      "base": 355.58,
+      "optimista": 399.18,
+      "valorPresenteBase": 263.97
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.0571428571,
+      "conservador": 179.32,
+      "base": 214.33,
+      "optimista": 239.31,
+      "valorPresenteBase": 157.4
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 182.19,
+      "base": 217.32,
+      "optimista": 242.38,
+      "valorPresenteBase": 159.59
+    },
+    {
+      "nombre": "P/S (P/V)",
+      "peso": 0,
+      "conservador": null,
+      "base": 314.36,
+      "optimista": null,
+      "multiploBase": 3.6
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": null,
+      "base": 816.37,
+      "optimista": null,
+      "multiploBase": 7.94
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 343.14,
+    "base": 460.14,
+    "optimista": 545.75
+  },
+  "valorPresentePonderado": {
+    "conservador": 256.92,
+    "base": 338.98,
+    "optimista": 399.1
+  },
+  "valorEsperado": {
+    "valor": 424.1282943,
+    "tipoPromedio": "3_historias_sin_disrupcion",
+    "valorCentral": 432.2929874,
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · monetización creativa y documentos con IA",
+        "probabilidad": 0.45,
+        "crecimiento": 0.08673024008,
+        "margen": 0.39,
+        "s2c": 2.85,
+        "s2c610": 2.15,
+        "roicTerminal": 0.265,
+        "valor": 432.2929874,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "Crecimiento FY1 10,5%, años2-5 9,5→7,0%, EBIT objetivo 39% AJUSTADO por capitalización I+D, S/C marginal 2,85/2,15, ROIC terminal26,5%, WACC 10,35→8,75/8,99%, g4%. Sin compras Semrush nuevamente en capital."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador · menor ARPU y costos IA",
+        "probabilidad": 0.225,
+        "crecimiento": 0.05855658459,
+        "margen": 0.35,
+        "s2c": 2.05,
+        "s2c610": 1.5,
+        "roicTerminal": 0.16,
+        "valor": 310.397448,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "Menor crecimiento, margen y productividad, ROIC terminal16%, todavía mantiene algo de coste de cambio."
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · erosión creativa por IA",
+        "probabilidad": 0.1,
+        "crecimiento": -0.002797935895,
+        "margen": 0.24,
+        "s2c": 1.1,
+        "s2c610": 0.7,
+        "roicTerminal": 0.0899,
+        "valor": 131.8431677,
+        "terminalGrowth": 0,
+        "estado": "LISTO",
+        "descripcion": "Asientos a la baja, competencia de agentes multimodales; no promediar con escenarios ordinarios."
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · plataforma IA y documentos escala",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1055513627,
+        "margen": 0.415,
+        "s2c": 3.3,
+        "s2c610": 2.6,
+        "roicTerminal": 0.31,
+        "valor": 521.5297543,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "AI-first ARR +150% y monetización Firefly/Acrobat, margen41,5% ajustado, ROIC terminal31%, escenario condicional."
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "version": "A-1.2",
+    "horizonteAnios": 3,
+    "costoPatrimonio": 0.1076,
+    "criterio": "Promedio VP1-3 múltiplos, DCF perpetuidad principal",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 310.397448,
+      "base": 432.2929874,
+      "optimista": 521.5297543
+    },
+    "multiplesHoy": {
+      "conservador": 176.7,
+      "base": 199.02,
+      "optimista": 215.45
+    },
+    "ponderadoHoy": {
+      "conservador": 256.92,
+      "base": 338.98,
+      "optimista": 399.1
+    },
+    "chequeo": "Múltiplos FY+3 descontados a hoy, independientes de capitalizar DCF FY+3."
+  },
+  "revisionSupuestos": {
+    "metodo": "A-1.2",
+    "version": "A3",
+    "crecimientoBase": 0.08673024008,
+    "crecimientoFY1": 0.105,
+    "crecimientoFY5": 0.07,
+    "margenEBITAjusRND": 0.39,
+    "stcMarginal1a5": 2.85,
+    "stcMarginal6a10": 2.15,
+    "roicTerminal": 0.265,
+    "rf": 0.0505,
+    "waccInicial": 0.1035,
+    "gTerminal": 0.04,
+    "roicAnio10Advertencia": "ROIC año10 elevado en hoja; modelo converge a 26,5% terminal por maduración competitiva, requiere prueba económica posterior",
+    "fcfLtmMillones": 10592,
+    "cfoLtmMillones": 10806,
+    "capexLtmMillones": 214,
+    "ebitGaapLtmMillones": 9271,
+    "ebitAjustadoLtmMillones": 9458,
+    "resultadoPrevioA2": 385.87071419,
+    "resultadoA3": 432.2929874,
+    "semrushNoDobleConteo": true
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.1035,
+    "gCentro": 0.04,
+    "centro": 432.29,
+    "centroConciliado": true,
+    "matriz": "Google Sheets Sensibilidad DCF 9,35%-11,35% x 3%-5%"
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/796343/000079634326000156/adbe-20260828.htm",
+    "https://www.sec.gov/Archives/edgar/data/796343/000079634326000147/adbeex991q326.htm",
+    "https://stockanalysis.com/stocks/adbe/history/",
+    "https://docs.google.com/spreadsheets/d/1Di2o1dGk9HMH41oXiEgjvqUk1HI5_yRIogkrBrtjFqw/edit"
+  ],
+  "salvedades": [
+    "El margen EBIT 39% de JMR es ajustado por capitalización de I+D; no confundir con GAAP 35,7%.",
+    "CFO contiene SBC como adición no monetaria pero la remuneración en acciones es costo económico; valor común incorpora recompra pero no supone recompra futura extra sin financiar.",
+    "El ROIC terminal 26,5% se mantiene debajo del ROIC explícito alto; transitoriedad competitiva de IA debe revisarse en auditoría posterior.",
+    "AZ Stocks se publica como metodología separada y no se mezcla en la ponderación de JMR."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen A3": "<h2>ADBE · Método A-1.2 · EN_REVISION</h2><p><strong>Valor intrínseco DCF Base: US$432,29</strong> · precio US$249,76 (28 octubre 2026). Conservador US$310,40 · Optimista US$521,53 · disrupción separada US$131,84. Promedio ordinario US$424,13.</p><p>Base: crecimiento CAGR5 8,67%, margen EBIT objetivo 39% ajustado I+D, S/C marginal años1–5 2,85 y años6–10 2,15, ROIC terminal 26,5%, g4%, WACC inicial10,35%.</p><p>Contraste a valor presente: múltiplos US$199,02; ponderado DCF+ múltiplos US$338,98 (no valor principal). FY+3 ponderado US$460,14 (no valor hoy). Sensibilidad central OK.</p><a href=\"https://docs.google.com/spreadsheets/d/1Di2o1dGk9HMH41oXiEgjvqUk1HI5_yRIogkrBrtjFqw/edit\">Google Sheets 61 hojas, fórmulas y escenarios</a><p>Auditoría económica independiente pendiente de revisión visual.</p>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia específica del libro ADBE A2 con datos históricos SEC existentes, solo escenarios reparametrizados A3; no se recupera un valor histórico como nuevo precio sin recálculo."
+}
