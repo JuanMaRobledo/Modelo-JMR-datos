@@ -240,7 +240,30 @@
     "reinvPrimerAnio": 599.6424,
     "nopatPrimerAnio": 3032.488815,
     "roicAnio10Advertencia": "ROIC año10 21,83% cae a 16% estable; 5,83pp de convergencia terminal pendiente económica",
-    "fcffLtmObservadoMillones": 2105
+    "fcffLtmObservadoMillones": 2105,
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1VffA6YgOvkCJMZFz_GVYpMOkEZtNxLDpNai_6Vg8NCU/edit",
+      "valorPrincipalPerpetuidad": 41.85,
+      "valorSalidaEV_EBITDA": 51.19,
+      "valorCombinado": 45.58,
+      "escenariosDCF": {
+        "optimista": 67.37,
+        "base": 41.85,
+        "pesimista": 25.83
+      },
+      "pesos": {
+        "perpetuidad": 0.6,
+        "salida": 0.4
+      },
+      "wacc": 0.093,
+      "g": 0.035,
+      "terminalReinversionMillones": 1158,
+      "terminalNopatMillones": 6512.6,
+      "terminalCapexMillones": 1800,
+      "terminalDyaMillones": 1000,
+      "terminalCambioNwcMillones": 358,
+      "terminalRoicIncrementalImplicito": 0.197
+    }
   },
   "sensibilidadDCF": {
     "waccCentro": 0.0951,
@@ -314,15 +337,16 @@
     "La caída de ingresos en año1 tiene reinversión positiva por inventarios y ritmo de inversión. Sin liberación automática de capital en escenarios de contracción.",
     "ROIC año10 21,83% vs terminal16% tiene salto5,83pp; debe revisarse el mecanismo de fade/terminal en auditoría económica posterior.",
     "Posible doble conteo de arrendamientos ASC842 en deuda y capital si se convierte otra vez; motor no activa conversor adicional.",
-    "AZ Stocks Base US$46,24 es independiente, potencialmente optimista en reinversión terminal por perpetuar el CapEx neto del año10; no promediar sin conciliación.",
+    "AZ Stocks Base US$41,85 es independiente, potencialmente optimista en reinversión terminal por perpetuar el CapEx neto del año10; no promediar sin conciliación.",
     "Los múltiplos nativos 7 no están completamente validados: denominadores históricos, precios de cierres fiscales ajustados o brutos, y anclas de salida pendientes de certificación.",
     "ROIC FY26 emisor usa valores promedio; JMR usa capital invertido de cierre. Ausencia de gasto I+D separado impide capitalización reproducible.",
     "Prueba reinversión lag0 vs lag1 pendiente porque copia de control separada fue bloqueada; no declarar realizada.",
-    "La auditoría económica NO se efectúa antes de la revisión visual solicitada por usuario."
+    "La auditoría económica NO se efectúa antes de la revisión visual solicitada por usuario.",
+    "AZ Stocks primero calculó US$46,24 al mantener capex terminal US$1.070m e implicar ROIC sostenible ~53%; se corrigió con capex gradual a US$1.800m, reinversión terminal US$1.158m y RONIC implícito≈19,7%. AZ perpetuidad Base recalculada US$41,85 y salida EBITDA Base US$51,19. Esta revisión no es auditoría económica independiente."
   ],
   "hojas": {
     "valoracion": {
-      "Resumen NKE A-1.2": "<section><h2>NKE JMR Método A-1.2 · revisión visual</h2><p><strong>DCF Base US$37,73</strong> frente a cierre US$37,15; MOS35% US$24,52. Conservador US$23,48; Optimista US$53,04; Disrupción US$13,60 (fuera de media). Promedio normal US$37,97.</p><p>LTM EBIT margen8,19%, objetivo12,4%, S/C marginal1,5→2,3, ROIC terminal16%, WACC inicial9,51%, g4%. <strong>ROIC año10 21,83% vs terminal16%, múltiples pendientes.</strong></p><p>Ver <a href=\"https://docs.google.com/spreadsheets/d/1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0/edit\">plantilla Método A</a> y <a href=\"https://docs.google.com/spreadsheets/d/1VffA6YgOvkCJMZFz_GVYpMOkEZtNxLDpNai_6Vg8NCU/edit\">AZ Stocks</a> por DCF perpetuidad US$46,24, con tratamiento distinto de CapEx y NWC. La auditoría económica no se realizó.</p></section>"
+      "Resumen NKE A-1.2": "<section><h2>NKE JMR Método A-1.2 · revisión visual</h2><p><strong>DCF Base US$37,73</strong> frente a cierre US$37,15; MOS35% US$24,52. Conservador US$23,48; Optimista US$53,04; Disrupción US$13,60 (fuera de media). Promedio normal US$37,97.</p><p>LTM EBIT margen8,19%, objetivo12,4%, S/C marginal1,5→2,3, ROIC terminal16%, WACC inicial9,51%, g4%. <strong>ROIC año10 21,83% vs terminal16%, múltiples pendientes.</strong></p><p>Ver <a href=\"https://docs.google.com/spreadsheets/d/1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0/edit\">plantilla Método A</a> y <a href=\"https://docs.google.com/spreadsheets/d/1VffA6YgOvkCJMZFz_GVYpMOkEZtNxLDpNai_6Vg8NCU/edit\">AZ Stocks</a> por DCF perpetuidad US$41,85, con tratamiento distinto de CapEx y NWC. La auditoría económica no se realizó.</p></section>"
     },
     "financieros": {}
   },
