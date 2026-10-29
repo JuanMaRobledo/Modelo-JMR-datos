@@ -249,16 +249,18 @@
     "azStocks": {
       "hojaGoogle": "https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit",
       "metodo": "FCFF 10yr perpetuidad, modelado de CapEx y NWC, copia de reconstrucción independiente AZ Stocks",
-      "dcfPerpetuityBase": 542.84,
+      "dcfPerpetuityBase": 532.49,
       "dcfConservador": 369.92,
       "dcfOptimista": 732.69,
-      "exitEVEBITDABase": 698.15,
+      "exitEVEBITDABase": 696.37,
       "exitMultiploBase": 17,
       "wacc": 0.08926,
       "g": 0.03,
-      "capexSobreVentasInicial": 0.03,
-      "capexSobreVentasFinal": 0.042,
-      "nota": "DCF perpetuidad principal; EV EBITDA secundario no verificado; 0% peso blending."
+      "capexSobreVentasInicial": 0.031,
+      "capexSobreVentasFinal": 0.0482,
+      "nota": "DCF perpetuidad principal, CapEx económico 3,1→4,82% ventas; RONIC marginal terminal ~40% vs ROIC corporativo JMR 26%, sin confundir goodwill con capital incremental. EV EBITDA secundario, sin certificar. 0% blending.",
+      "reinversionNetaTerminalUSDm": 967.3000000000003,
+      "roicMarginalImplicitoTerminal": 0.4
     }
   },
   "sensibilidadDCF": {
@@ -278,7 +280,7 @@
     "SBC US$2.056m FY26 ya gastada en EBIT GAAP, no se vuelve a sumar como caja libre ni se proyectan recompras sin límite.",
     "I+D US$3.376m expensada; capitalización formal del activo de investigación del motor Damodaran no implantada en esta corrida independiente: ROIC ajustado contable y terminal son supuestos distintos.",
     "CapEx declarado en PPE y software US$221m no representa necesariamente compras, gastos de desarrollo, financiación de cuentas por cobrar y expansión; proyección JMR usa Δventas / sales-to-capital.",
-    "AZ proyecta CapEx económico 3%-4.2% ventas, por encima del CapEx contable, sin desglose explícito de M&A; puede solaparse con gastos de innovación ya incluidos en EBIT; requiere revisión económica.",
+    "AZ proyecta CapEx económico 3,1%-4,82% ventas, por encima del CapEx contable, sin desglose explícito de M&A; puede solaparse con gastos de innovación ya incluidos en EBIT; requiere revisión económica.",
     "Plataformas TurboTax, QuickBooks, Credit Karma y Mailchimp muestran crecimientos diferentes; Mailchimp puede estancarse y riesgo de IA sobre preparación fiscal y bookkeeping.",
     "Guía FY27 de ventas 9%-10%, el método Base usa 9.5% primer año; margen EBIT FY27 cercano 31.9% coincide con guía GAAP.",
     "ROIC actual calculado en base patrimonial con goodwill y caja corporativa; no equiparar al ROIC marginal/terminal.",
@@ -289,7 +291,7 @@
   ],
   "hojas": {
     "valoracion": {
-      "INTU JMR A-1.2": "<section><h2>INTU · Intuit · Método A-1.2</h2><p><strong>Valor intrínseco DCF Base US$506,85</strong> frente al cierre US$328,19 (28-oct-2026); precio con MOS35% US$329,45. Conservador US$330,97; optimista US$756,63; disrupción separada US$164,37.</p><p>FY2027 ventas +9,5%, margen EBIT 31,9%; año10 33,5%; reinversión por sales-to-capital 3,4→2,7; ROIC terminal 26%; WACC 8,87%; g3%. DCF independiente en copia limpia de plantilla IA. Estado EN_REVISION, múltiples y auditoría pendientes.</p><p>AZ Stocks reconstruido, FCFF perpetuidad Base US$542,84; EV/EBITDA 17x US$698,15 <em>no certificado</em>.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit\">Hoja JMR</a> · <a href=\"https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit\">AZ Stocks</a></p></section>"
+      "INTU JMR A-1.2": "<section><h2>INTU · Intuit · Método A-1.2</h2><p><strong>Valor intrínseco DCF Base US$506,85</strong> frente al cierre US$328,19 (28-oct-2026); precio con MOS35% US$329,45. Conservador US$330,97; optimista US$756,63; disrupción separada US$164,37.</p><p>FY2027 ventas +9,5%, margen EBIT 31,9%; año10 33,5%; reinversión por sales-to-capital 3,4→2,7; ROIC terminal 26%; WACC 8,87%; g3%. DCF independiente en copia limpia de plantilla IA. Estado EN_REVISION, múltiples y auditoría pendientes.</p><p>AZ Stocks reconstruido, FCFF perpetuidad Base US$532,49; EV/EBITDA 17x US$696,37 <em>no certificado</em>.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit\">Hoja JMR</a> · <a href=\"https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit\">AZ Stocks</a></p></section>"
     },
     "financieros": {}
   },
