@@ -238,7 +238,24 @@
     "nonOperatingAssetValueMillones": 28000,
     "lagAnios": 1,
     "roicAnio10Advertencia": "ROIC año10 33,50% vs terminal16,00%, salto17,50pp exige revisar normalización fade y terminal; no se disimula.",
-    "fcffLtmObservadoMillones": 59957
+    "fcffLtmObservadoMillones": 59957,
+    "pruebaLag0": {
+      "copiaCalculo": "https://docs.google.com/spreadsheets/d/1Qw3o4bBeG50Vc_dHyvUFwzRr0qFSIr_lUBTbRoNlNRQ/edit",
+      "lag0": {
+        "base": 481.2808855,
+        "conservador": 311.400069,
+        "disrupcion": 170.2899886,
+        "optimista": 716.9283148
+      },
+      "lag1": {
+        "base": 480.836687,
+        "conservador": 313.4372932,
+        "disrupcion": 174.1271974,
+        "optimista": 714.6815764
+      },
+      "deltaBasePorAccion": 0.4441985,
+      "comentario": "Prueba 10 años y perpetuidad idénticos demás parámetros en copia; impacto Base+0,44, sin selección por precio. Lag1 mantenido por inversión anticipada."
+    }
   },
   "sensibilidadDCF": {
     "waccCentro": 0.0954,
@@ -313,7 +330,8 @@
     "Activos no operativos monetizables en puente valorados provisionalmente en US$28.000m frente a libros US$37.808m, por restricciones contractual y OpenAI; sensibilidad pendiente.",
     "Las rentas arrendamientos y las compras de componentes prepagadas podrían ocasionar doble conteo de reinversión, requiere conciliación de capex total comprometido.",
     "Las fórmulas de siete múltiplos están presentes en la plantilla pero entradas sectoriales/anclas históricas requieren validación; no se publicó valor por esos múltiplos.",
-    "Las revisiones anteriores de MSFT se excluyen del catálogo principal; auditoría económica posterior a revisión visual."
+    "Las revisiones anteriores de MSFT se excluyen del catálogo principal; auditoría económica posterior a revisión visual.",
+    "Prueba completa lag0 vs lag1 ejecutada en copia independiente: Base+US$0,44/acción con lag0. Se conserva lag1 por supuestos de construcción de capacidad, no por el signo del efecto."
   ],
   "hojas": {
     "valoracion": {
