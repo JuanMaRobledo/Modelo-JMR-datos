@@ -27,7 +27,7 @@
   "estado": "EN_REVISION",
   "publicationStatus": "EN_REVISION",
   "publicationStage": "EN_REVISION",
-  "validationStatus": "4_4_ESCENARIOS_LISTO_WACC_VALIDADO_CENTRO_SENSIBILIDAD_OK_MULTIPLOS_PENDIENTES_AUDITORIA_VISUAL_PENDIENTE",
+  "validationStatus": "EN_REVISION_ANALISIS_AMPLIADO_29OCT_Q3_SEC_CAPEX_ROIC_TERMINAL_GAP_MATERIAL_PENDING_CAPITAL_BRIDGE",
   "publicationAuthorized": true,
   "publicationAuthorization": "2026-10-28: valoración y análisis desde cero GOOG Método A, copia limpia de plantilla; AZ Stocks separado; sustituir valoración activa",
   "auditPendingUserVisualReview": true,
@@ -228,7 +228,92 @@
     "nonOperatingAssetValueMillones": 135230,
     "lagAnios": 1,
     "roicAnio10Advertencia": "Verificar convergencia terminal; ROIC terminal no se impone a escenarios adversos",
-    "fcffLtmObservadoMillones": 19747
+    "fcffLtmObservadoMillones": 19747,
+    "revisionInformeAmpliado": {
+      "fecha": "2026-10-29",
+      "revision": "GOOG-20261029-ANALISIS-AMPLIADO-R2",
+      "estado": "ANALISIS_REVISADO_DCF_BASE_SIN_CAMBIO_AUDITORIA_ECONOMICA_PENDIENTE",
+      "ventasQ3_2026USDm": 127577,
+      "crecimientoQ3": 0.25,
+      "ventasSearchQ3USDm": 63350,
+      "crecimientoSearchQ3": 0.12,
+      "ventasCloudQ3USDm": 30709,
+      "crecimientoCloudQ3": 1.026,
+      "ebitCloudQ3USDm": 11121,
+      "ebitServicesQ3USDm": 39157,
+      "margenEBITQ3Consolidado": 0.3180510593602295,
+      "margenCloud": 0.36214139177439836,
+      "margenServices": 0.4066063010114016,
+      "capex9mUSDm": 131953,
+      "ocf9mUSDm": 127149,
+      "FCF9mUSDm": -4804,
+      "capexGuidanceFY2026USDm": [
+        195000,
+        205000
+      ],
+      "capexFY2027Guidance": "CRECIMIENTO_SIGNIFICATIVO_SIN_CIFRA_OFICIAL",
+      "PPEnotInServiceSept26USDm": 145270,
+      "PPEnotInServiceDec25USDm": 78592,
+      "capex2027AZ": 215000,
+      "capex2028AZ": 225000,
+      "roicAjustadoVivo": 0.2548900350856337,
+      "roicAno10Vivo": 0.28199612832923465,
+      "roicTerminalBaseVivo": 0.15,
+      "saltoTerminalROICpuntos": 13.199612832923467,
+      "sensibilidadROICterminalConstanteOtros": {
+        "roic": [
+          0.12,
+          0.15,
+          0.18,
+          0.2,
+          0.22,
+          0.25,
+          0.282
+        ],
+        "valorUSD": [
+          280.29,
+          297.39,
+          308.79,
+          314.49,
+          319.15,
+          324.75,
+          329.4
+        ],
+        "nota": "SENSIBILIDAD SOLO FCFF_TERMINAL; no recalibra años1–10 de capital ni CAPEX, NO precios oficiales"
+      },
+      "sensibilidadExcesoNetInvestmentAnios1a3": {
+        "USDmAnuales": [
+          25000,
+          35000,
+          50000
+        ],
+        "impactoUSDAccion": [
+          -5.03,
+          -7.05,
+          -10.07
+        ],
+        "nota": "EXCESO NETO ADICIONAL A LA REINVERSIÓN YA MODELADA, no CAPEX BRUTO; no doble conteo"
+      },
+      "backlogCloudUSDm": 560800,
+      "backlogRelatedPartyCruxUSDm": 16800,
+      "backlogAccountingDefinitionChange": "Q1 2026 incluye contratos de plazo <=1 año, anterior no comparable directamente",
+      "purchaseCommitmentsUSDm": 924400,
+      "uncommencedLeasesUSDm": 130500,
+      "privateAssetsUSDm": 135230,
+      "haircutValueSensitivity": {
+        "haircut": [
+          0.25,
+          0.5
+        ],
+        "impactoUSDAccion": [
+          -2.75,
+          -5.5
+        ]
+      },
+      "limites": "Antes de cambiar ROIC15→20 o S/C0.70→1.70 y extrapolar GAAP38%, reconciliar CAPEX~200bn+, mantenimiento vs crecimiento, I+D capitalizada, WACC g y portafolio financiero.",
+      "source10Q": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "sourceCall": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/"
+    }
   },
   "sensibilidadDCF": {
     "waccCentro": 0.1027,
@@ -301,13 +386,19 @@
     "Las inversiones estratégicas privadas no cotizadas se reconocen por 135.230 millones de valor contable, no fair value verificado; riesgo de descuento.",
     "Los siete múltiplos se conservan como fórmulas nativas pero sus precios futuros aún no están validados ni publicados.",
     "Fecha LTM septiembre 2026 actualizada; FY2025 de balances históricos migrado de registros anteriores y corregido con fuente emisor; reconciliación completa SEC pendiente.",
-    "No se realizó auditoría económica independiente. Se solicita revisión visual antes de la misma."
+    "No se realizó auditoría económica independiente. Se solicita revisión visual antes de la misma.",
+    "INFORME 29-OCT R2: ROIC JMR año10 28,20% frente a15% estable, salto13,20 puntos. Sensibilidad aislada 20% daría314,49 USD, NO actualizar Base sin conciliar.",
+    "CAPEX 2026 guía US$195–205bn y 2027 incremento significativamente sin cifra; AZ CapEx2027 US$215bn puede ser optimista. Reconciliar JMR S/C con inversión neta y activos en construcción.",
+    "Q3: backlog Cloud560.8bn incluye Crux AI parte relacionada16.8bn; monto 2026 no directamente comparable con FY25 tras cambio definición y no equivale cobros.",
+    "Compromisos futuros924.4bn y arrendamientos contratados no iniciados130.5bn no son deuda a sumar de inmediato; asignar a flujos futuros sin duplicar.",
+    "Nonmarketable securities135.23bn + marketable265.10bn (incluye 90.4bn equities) debe analizarse neto fiscal antes de reconocer 100% en equity bridge."
   ],
   "hojas": {
     "valoracion": {
-      "Resumen GOOG A-1.2": "<section><h2>GOOG · JMR A-1.2 · revisión visual</h2><p><strong>DCF Base US$297,39</strong> vs cierre regular US$321,89; precio MOS35% US$193,30. Conservador US$210,35; Optimista US$437,69; Disrupción US$123,04. Promedio tres US$310,70.</p><p>S/C marginal 0,70→1,70; ROIC terminal 15%; margen EBIT ajustado objetivo38%; WACC inicial10,27%, g4%; I+D amortización5 años.</p><p>Libro <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">JMR A-1.2</a>; contraste independiente <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ Stocks</a>. Los múltiplos siguen pendientes; auditoría económica NO realizada.</p></section>"
+      "Resumen GOOG A-1.2": "<section><h2>GOOG · JMR A-1.2 · revisión visual</h2><p><strong>DCF Base US$297,39</strong> vs cierre regular US$321,89; precio MOS35% US$193,30. Conservador US$210,35; Optimista US$437,69; Disrupción US$123,04. Promedio tres US$310,70.</p><p>S/C marginal 0,70→1,70; ROIC terminal 15%; margen EBIT ajustado objetivo38%; WACC inicial10,27%, g4%; I+D amortización5 años.</p><p>Libro <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">JMR A-1.2</a>; contraste independiente <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ Stocks</a>. Los múltiplos siguen pendientes; auditoría económica NO realizada.</p></section>",
+      "Resumen GOOG JMR A-1.2 — revisión económica": "<section><h2>GOOG · revisión detallada de supuestos · 29-oct-2026</h2><p><strong>DCF Base JMR US$297,39</strong>, conservador210,35, optimista437,69; AZ perpetuidad251,84. El valor no cambia tras la revisión analítica; no existe auditoría económica independiente. Q3 Cloud US$30.709m crece103%, Search US$63.350m crece12%; CapEx 9M US$131.953m, CFO US$127.149m, FCF −US$4.804m. Guía CapEx FY2026 195–205bn; 2027 subirá significativamente, cifra aún no fijada.</p><p>ROIC ajustado actual25,49%, año10 28,20%, terminal15%: salto13,20 puntos pendiente de resolver. ROIC terminal20% con otros parámetros fijos daría solo como sensibilidad US$314,49, no una valoración nueva. <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">Abrir tesis ampliada en Sheets (fila55+)</a>; ver artículo con apéndices en la ficha análisis.</p></section>"
     },
     "financieros": {}
   },
-  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero."
+  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero. Informe analítico ampliado 29-oct-2026 en análisis GOOG research mismo expediente; DCF JMR y AZ conservados sin modificar los supuestos financieros hasta conciliación."
 }
