@@ -1,0 +1,297 @@
+{
+  "ticker": "INTU",
+  "nombreActivo": "Intuit Inc. (NASDAQ: INTU)",
+  "revisionId": "INTU-20261029-R1",
+  "revision_id": "INTU-20261029-R1",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-07-31",
+  "fecha_corte": "2026-07-31",
+  "precio": 328.19,
+  "precioAnalisis": 328.19,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "https://stockanalysis.com/stocks/intu/history/",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Software financiero, impuestos y fintech SaaS",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit",
+  "sheet_id": "1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "metodoPrincipal": "DCF FCFF 10 años, Método JMR A (hoja INTU A - DCF independiente; reinversión incremental)",
+  "valorPrincipal": 506.8516262,
+  "precioMOS": 329.45355703,
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "publicationAuthorized": true,
+  "validationStatus": "FOUR_SCENARIOS_SHEETS_FORMULAS_RECALCULATED_AZ_SENS_CENTER_OK_OFFICIAL_DAMODARAN_CORE_NOT_INTEGRATED_MULTIPLES_PENDING",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 1,
+      "valorHoy": {
+        "conservador": 330.9716071,
+        "base": 506.8516262,
+        "optimista": 756.6277135
+      },
+      "nota": "FCFF A independiente en copia oficial; no se alimentó el motor original Damodaran de la plantilla"
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "EV/FCFF",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/E",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/FCFE",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/OCF",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/S",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/BV",
+      "estado": "PENDIENTE_MULTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    }
+  ],
+  "objetivoPonderado": {
+    "estado": "PENDIENTE_MULTIPLOS",
+    "base": null
+  },
+  "valorPresentePonderado": {
+    "estado": "PENDIENTE_MULTIPLOS",
+    "base": null
+  },
+  "valorEsperado": {
+    "valor": 523.2729746888889,
+    "valorCentral": 506.8516262,
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.5,
+        "valor": 506.8516262,
+        "growth": [
+          0.095,
+          0.105,
+          0.105,
+          0.1,
+          0.095,
+          0.09,
+          0.085,
+          0.08,
+          0.07,
+          0.06
+        ],
+        "margenFinal": 0.335,
+        "salesToCapitalPrimerAño": 3.4,
+        "salesToCapitalFinal": 2.7,
+        "roicTerminal": 0.26,
+        "wacc": 0.0887,
+        "gTerminal": 0.03
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.2,
+        "valor": 330.9716071,
+        "growth": [
+          0.075,
+          0.075,
+          0.075,
+          0.07,
+          0.07,
+          0.065,
+          0.06,
+          0.055,
+          0.05,
+          0.045
+        ],
+        "margenFinal": 0.31,
+        "salesToCapitalPrimerAño": 2.8,
+        "salesToCapitalFinal": 2.3,
+        "roicTerminal": 0.21,
+        "wacc": 0.095,
+        "gTerminal": 0.025
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "valor": 164.3728961,
+        "growth": [
+          0.04,
+          0.04,
+          0.035,
+          0.03,
+          0.03,
+          0.025,
+          0.025,
+          0.02,
+          0.02,
+          0.02
+        ],
+        "margenFinal": 0.27,
+        "salesToCapitalPrimerAño": 2.1,
+        "salesToCapitalFinal": 1.8,
+        "roicTerminal": 0.13,
+        "wacc": 0.115,
+        "gTerminal": 0.02
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.2,
+        "valor": 756.6277135,
+        "growth": [
+          0.11,
+          0.13,
+          0.13,
+          0.125,
+          0.12,
+          0.115,
+          0.11,
+          0.1,
+          0.09,
+          0.08
+        ],
+        "margenFinal": 0.36,
+        "salesToCapitalPrimerAño": 4,
+        "salesToCapitalFinal": 3.2,
+        "roicTerminal": 0.3,
+        "wacc": 0.083,
+        "gTerminal": 0.033
+      }
+    ],
+    "tipoPromedio": "3_historias_renormalizado"
+  },
+  "revisionSupuestos": {
+    "periodoFiscal": "FY2026 to 2026-07-31",
+    "ingresosFY26USDm": 21448,
+    "ingresosFY25USDm": 18831,
+    "ingresosFY24USDm": 16285,
+    "ebitGAAPFY26USDm": 5884,
+    "ebitNormalizadoFY26USDm": 6177,
+    "ebitMargenNormalizado": 0.288,
+    "ebitMargenGAAP": 0.2743379336,
+    "rdFY26USDm": 3376,
+    "sbcFY26USDm": 2056,
+    "cfoFY26USDm": 8838,
+    "capexPPEAndSoftwareUSDm": 221,
+    "depreciacionAmortizacionUSDm": 846,
+    "deudaFY26USDm": 7669,
+    "efectivoInversionesCorporativasUSDm": 7200,
+    "deudaNetaUSDm": 469,
+    "accionesMillones": 267.236,
+    "guiaFY27IngresosMedioUSDm": 23395.5,
+    "guiaFY27EBITGAAPMedioUSDm": 7449,
+    "crecimientoBase": [
+      0.095,
+      0.105,
+      0.105,
+      0.1,
+      0.095,
+      0.09,
+      0.085,
+      0.08,
+      0.07,
+      0.06
+    ],
+    "crecimientoBase5aCagr": 0.09999090903455987,
+    "margenEBITAno1": 0.319,
+    "margenEBITAno10": 0.335,
+    "salesToCapitalMarginalAno1": 3.4,
+    "salesToCapitalMarginalAno10": 2.7,
+    "reinversionAnio1USDm": 599.2823529411764,
+    "roicFY26NormalizadoIncluyeGoodwill": 0.2444011099,
+    "roicTerminal": 0.26,
+    "reinversionTerminalUSDm": 1533.990178,
+    "fcffTerminalUSDm": 11760.59136,
+    "wacc": 0.0887,
+    "gTerminal": 0.03,
+    "impuestoNormalizado": 0.23,
+    "pvFCFF10yrUSDm": 50271.65705,
+    "pvTerminalUSDm": 85646.34414,
+    "pesoValorTerminal": 0.6301324577,
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit",
+      "metodo": "FCFF 10yr perpetuidad, modelado de CapEx y NWC, copia de reconstrucción independiente AZ Stocks",
+      "dcfPerpetuityBase": 542.84,
+      "dcfConservador": 369.92,
+      "dcfOptimista": 732.69,
+      "exitEVEBITDABase": 698.15,
+      "exitMultiploBase": 17,
+      "wacc": 0.08926,
+      "g": 0.03,
+      "capexSobreVentasInicial": 0.03,
+      "capexSobreVentasFinal": 0.042,
+      "nota": "DCF perpetuidad principal; EV EBITDA secundario no verificado; 0% peso blending."
+    }
+  },
+  "sensibilidadDCF": {
+    "centro": 506.8516262,
+    "centroConciliado": true,
+    "centroOrigen": "'INTU A - DCF'!D31",
+    "metodo": "Recomendado reejecutar sensibilidad WACC g ROIC, aun sin grilla JMR completa",
+    "nota": "Sin matriz independiente nativa JMR; la tabla AZ sí concilia su centro US$542.84."
+  },
+  "fuentes_supuestos": [
+    "https://investors.intuit.com/sec-filings/all-sec-filings/content/0000896878-26-000037/intu-20260731.htm",
+    "https://investors.intuit.com/news-events/press-releases/detail/1323/intuit-hosts-investor-day-reaffirms-first-quarter-and-fiscal-2027-guidance",
+    "https://stockanalysis.com/stocks/intu/history/"
+  ],
+  "salvedades": [
+    "FCFF empresarial independiente calculado en pestaña INTU A - DCF; plantilla oficial IA copiada, otras pestañas heredadas no se han rellenado ni auditado; NO presentar como salida del motor original Valuation output.",
+    "SBC US$2.056m FY26 ya gastada en EBIT GAAP, no se vuelve a sumar como caja libre ni se proyectan recompras sin límite.",
+    "I+D US$3.376m expensada; capitalización formal del activo de investigación del motor Damodaran no implantada en esta corrida independiente: ROIC ajustado contable y terminal son supuestos distintos.",
+    "CapEx declarado en PPE y software US$221m no representa necesariamente compras, gastos de desarrollo, financiación de cuentas por cobrar y expansión; proyección JMR usa Δventas / sales-to-capital.",
+    "AZ proyecta CapEx económico 3%-4.2% ventas, por encima del CapEx contable, sin desglose explícito de M&A; puede solaparse con gastos de innovación ya incluidos en EBIT; requiere revisión económica.",
+    "Plataformas TurboTax, QuickBooks, Credit Karma y Mailchimp muestran crecimientos diferentes; Mailchimp puede estancarse y riesgo de IA sobre preparación fiscal y bookkeeping.",
+    "Guía FY27 de ventas 9%-10%, el método Base usa 9.5% primer año; margen EBIT FY27 cercano 31.9% coincide con guía GAAP.",
+    "ROIC actual calculado en base patrimonial con goodwill y caja corporativa; no equiparar al ROIC marginal/terminal.",
+    "Participación de valor terminal JMR Base ~63%; estimación muy sensible a WACC, ROIC terminal, márgenes y riesgo de disrupción.",
+    "Precio USD328.19 es cierre del 28-oct-2026, no cotización instantánea, acciones 267.236m son en circulación (no promedio diluido FY2026); dilución prospectiva requiere test.",
+    "Los múltiplos EV/EBITDA de salida AZ no son certificados; AZ Stocks es reconstrucción independiente del marco público, no un informe de AZ Stocks.",
+    "Sin auditoría económica independiente ni inspección visual completada; estado EN_REVISION."
+  ],
+  "hojas": {
+    "valoracion": {
+      "INTU JMR A-1.2": "<section><h2>INTU · Intuit · Método A-1.2</h2><p><strong>Valor intrínseco DCF Base US$506,85</strong> frente al cierre US$328,19 (28-oct-2026); precio con MOS35% US$329,45. Conservador US$330,97; optimista US$756,63; disrupción separada US$164,37.</p><p>FY2027 ventas +9,5%, margen EBIT 31,9%; año10 33,5%; reinversión por sales-to-capital 3,4→2,7; ROIC terminal 26%; WACC 8,87%; g3%. DCF independiente en copia limpia de plantilla IA. Estado EN_REVISION, múltiples y auditoría pendientes.</p><p>AZ Stocks reconstruido, FCFF perpetuidad Base US$542,84; EV/EBITDA 17x US$698,15 <em>no certificado</em>.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit\">Hoja JMR</a> · <a href=\"https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit\">AZ Stocks</a></p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Nueva copia IA oficial 46 pestañas; hojas independientes INTU A - DCF e INTU - Supuestos; base SEC FY2026. Motor original Valuation output aún sin carga y no validado."
+}
