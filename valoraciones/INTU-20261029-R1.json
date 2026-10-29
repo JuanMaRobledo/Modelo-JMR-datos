@@ -30,7 +30,7 @@
   "auditPendingUserVisualReview": true,
   "auditoriaEconomica": "NO_REALIZADA",
   "publicationAuthorized": true,
-  "validationStatus": "FOUR_SCENARIOS_SHEETS_FORMULAS_RECALCULATED_AZ_SENS_CENTER_OK_OFFICIAL_DAMODARAN_CORE_NOT_INTEGRATED_MULTIPLES_PENDING",
+  "validationStatus": "INTU_CUSTOM_DCF_FORMULAS_AND_AZ_PERPETUITY_VERIFIED_NATIVE_WITH_SUMMARY_LINKED_STANDARD_TABS_UNCALIBRATED_ROIC_AZ_TERMINAL_SENSITIVITY_PENDING",
   "reportSchema": "jmr-valuation-two-levels-v5",
   "metodos": [
     {
@@ -287,11 +287,15 @@
     "Participación de valor terminal JMR Base ~63%; estimación muy sensible a WACC, ROIC terminal, márgenes y riesgo de disrupción.",
     "Precio USD328.19 es cierre del 28-oct-2026, no cotización instantánea, acciones 267.236m son en circulación (no promedio diluido FY2026); dilución prospectiva requiere test.",
     "Los múltiplos EV/EBITDA de salida AZ no son certificados; AZ Stocks es reconstrucción independiente del marco público, no un informe de AZ Stocks.",
-    "Sin auditoría económica independiente ni inspección visual completada; estado EN_REVISION."
+    "Sin auditoría económica independiente ni inspección visual completada; estado EN_REVISION.",
+    "El Resumen de Valoración en la copia JMR ahora lee de forma VIVA los valores Conservador/Base/Optimista de 'INTU A - DCF' y los pondera al 100% en el DCF, manteniendo múltiplos de cero/pending. Confirmado 330,971607 /506,851626 /756,627713; las pestañas genéricas Valuation output y Escenarios e historias siguen PENDIENTE y no deben confundirse con este motor.",
+    "Método A aquí constituye motor FCFF independiente, no la implementación completa de Damodaran con capitalización formal de I+D: 2026 R&D3376m sigue gastada en EBIT; la capitalización R&D 6 años falta, por lo que se considera una versión provisional EN_REVISION y no un resultado normativo de la plantilla estándar.",
+    "AZ DCF tiene ROC marginal terminal implícito40% derivado g3%/(reinversión967,3/NOPAT12900≈7,5%) contra ROIC total JMR terminal26%. No son necesariamente incompatibles (capital incremental vs goodwill existente), pero la brecha exige sensibilidad por mayor reinversión terminal y no debe ocultarse.",
+    "Valores 267,236m son acciones EN CIRCULACIÓN reportadas 31Ago2026 (10-K cover), mientras promedio ponderado diluido FY26 277m, por lo que el riesgo SBC 2056m necesita sensibilidad de emisión neta de recompra; el modelo ya expensa SBC en EBIT, no debe descontarse dos veces."
   ],
   "hojas": {
     "valoracion": {
-      "INTU JMR A-1.2": "<section><h2>INTU · Intuit · Método A-1.2</h2><p><strong>Valor intrínseco DCF Base US$506,85</strong> frente al cierre US$328,19 (28-oct-2026); precio con MOS35% US$329,45. Conservador US$330,97; optimista US$756,63; disrupción separada US$164,37.</p><p>FY2027 ventas +9,5%, margen EBIT 31,9%; año10 33,5%; reinversión por sales-to-capital 3,4→2,7; ROIC terminal 26%; WACC 8,87%; g3%. DCF independiente en copia limpia de plantilla IA. Estado EN_REVISION, múltiples y auditoría pendientes.</p><p>AZ Stocks reconstruido, FCFF perpetuidad Base US$532,49; EV/EBITDA 17x US$696,37 <em>no certificado</em>.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit\">Hoja JMR</a> · <a href=\"https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit\">AZ Stocks</a></p></section>"
+      "INTU JMR A-1.2": "<section><h2>INTU · Intuit · Método A-1.2</h2><p><strong>Valor intrínseco DCF Base US$506,85</strong> frente al cierre US$328,19 (28-oct-2026); precio con MOS35% US$329,45. Conservador US$330,97; optimista US$756,63; disrupción separada US$164,37.</p><p>FY2027 ventas +9,5%, margen EBIT 31,9%; año10 33,5%; reinversión por sales-to-capital 3,4→2,7; ROIC terminal 26%; WACC 8,87%; g3%. DCF independiente con cálculos en INTU A - DCF y nuevo Resumen de Valoración ligado por fórmulas. Pestañas originales Damodaran y capitalización formal I+D aún pendientes. Estado EN_REVISION, múltiples y auditoría pendientes.</p><p>AZ Stocks reconstruido, FCFF perpetuidad Base US$532,49; EV/EBITDA 17x US$696,37 <em>no certificado</em>.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU/edit\">Hoja JMR</a> · <a href=\"https://docs.google.com/spreadsheets/d/1lxChcp8YIDedkXtPpQwmf7mPGF2zZBQrlcL8Z5Qrhfk/edit\">AZ Stocks</a></p></section>"
     },
     "financieros": {}
   },
