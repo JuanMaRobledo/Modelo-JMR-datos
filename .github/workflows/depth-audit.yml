@@ -1,0 +1,24 @@
+name: Validación de profundidad editorial
+on:
+  pull_request:
+    paths:
+      - "analisis/**"
+      - "catalogo.json"
+      - "scripts/auditar_profundidad.cjs"
+  push:
+    branches: [main]
+    paths:
+      - "analisis/**"
+      - "catalogo.json"
+      - "scripts/auditar_profundidad.cjs"
+permissions:
+  contents: read
+jobs:
+  profundidad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Comprobar 22 expedientes activos
+        run: node scripts/auditar_profundidad.cjs
