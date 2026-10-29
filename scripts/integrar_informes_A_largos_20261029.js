@@ -65,6 +65,7 @@ return (function expand(a,v,profile){
   const repl="<section"+x.attrs+">"+x.head+x.rest+"<div class=\"jmr-longform\" data-jmr-longform=\"METODO-A-20261029\">"+additional+(adds[x.no]||[]).join("")+"</div></section>";
   const pos=out.lastIndexOf(x.all);if(pos<0)throw Error("Lost section "+x.no);out=out.slice(0,pos)+repl+out.slice(pos+x.all.length);
  }
+ if(!/<article(?:\s|>)/i.test(out))out='<article data-jmr-revision="'+a.revisionId+'">'+out;
  if(article.trim().endsWith("</article>")&&!out.trim().endsWith("</article>"))out+="</article>";
  const words=x=>x.replace(/<table\b[\s\S]*?<\/table>/gi," ").replace(/<[^>]*>/g," ").replace(/\s+/g," ").trim().split(/\s+/).filter(Boolean).length;
  const chapters=[...out.matchAll(/<section(?:\s[^>]*)?>\s*<h2[^>]*>\s*(\d+)\.\s*([\s\S]*?)<\/h2>([\s\S]*?)<\/section>/g)].map(m=>({id:Number(m[1]),words:words(m[3])}));
