@@ -16,10 +16,10 @@
   "market": "US",
   "tipo": "Software · publicidad digital / Cloud",
   "mos": 0.35,
-  "precioMOS": 185.38106480994045,
+  "precioMOS": 180.78928217204,
   "baseMOS": "DCF_Base_HOY_MOS_35pct",
-  "valorPrincipal": 285.20163816913913,
-  "metodoPrincipal": "JMR Método A-1.2 FCFF CapEx net FLOOR vs sales-to-capital sin duplicar R&D; 10 años y terminal ROIC18%",
+  "valorPrincipal": 278.1373571877538,
+  "metodoPrincipal": "JMR A-1.2 FCFF físico neto CapEx−D&A+ΔNWC + net capitalized R&D investment and tax shield; S/C control only; terminal ROIC18%",
   "metodo_valoracion": "A",
   "version_metodo": "A-1.2",
   "revisionId": "GOOG-20261028-R1",
@@ -27,7 +27,7 @@
   "estado": "EN_REVISION",
   "publicationStatus": "EN_REVISION",
   "publicationStage": "EN_REVISION",
-  "validationStatus": "JMR_A_FCFF_CAPEX_BRIDGE_INTEGRATED_ROIC_Y10_18.99_TERMINAL18_WACC5x5_CENTER_OK_AZ_GAAP_FCFF_TERMINAL_ROIC16_VERIFIED_4_STORIES_LISTO_ECONOMIC_AUDIT_PENDING",
+  "validationStatus": "JMR_R4_RND_NET_ASSET_ADDED_ONCE_TO_PHYSICAL_NET_CAPEX_WITH_TAX_SHIELD_SALES_TO_CAPITAL_NOT_ADDITIONAL_WACC_G_CENTER_OK_AZ_GAAP_INDEPENDENT_ECONOMIC_AUDIT_PENDING",
   "publicationAuthorized": true,
   "publicationAuthorization": "2026-10-28: valoración y análisis desde cero GOOG Método A, copia limpia de plantilla; AZ Stocks separado; sustituir valoración activa",
   "auditPendingUserVisualReview": true,
@@ -35,14 +35,14 @@
   "reportSchema": "jmr-valuation-two-levels-v5",
   "metodos": [
     {
-      "nombre": "DCF FCFF JMR A con capital físico y ROIC normalizado",
+      "nombre": "DCF FCFF JMR A con CapEx neto e I+D capitalizada neta (sin doble S/C)",
       "peso": 0.6,
       "conservador": 292.4999554470333,
       "base": 380.9715931151335,
       "optimista": 635.8154184342477,
       "valorHoy": {
         "conservador": 218.97030635741731,
-        "base": 285.20163816913913,
+        "base": 278.1373571877538,
         "optimista": 475.9819424537584
       },
       "estado": "LISTO"
@@ -118,21 +118,21 @@
     "estado": "PENDIENTE_MULTIPLOS"
   },
   "valorEsperado": {
-    "valor": 316.33888128736345,
+    "valor": 312.8067407966708,
     "tipoPromedio": "3_historias_renormalizado",
-    "valorCentral": 285.20163816913913,
+    "valorCentral": 278.1373571877538,
     "disrupcionSeparada": true,
     "historias": [
       {
         "id": "A",
-        "nombre": "Base · Cloud y Search con IA capital intensiva, ROIC19% año10→18% estable y CapEx sostenido",
+        "nombre": "Base · CapEx económico e I+D neta reconciliadas, ROIC17,64% año10→18% estable",
         "probabilidad": 0.45,
         "crecimiento": 0.1497738715,
         "margen": 0.38,
         "s2c": 0.7,
         "s2c610": 0.56,
         "roicTerminal": 0.18,
-        "valor": 285.20163816913913,
+        "valor": 278.1373571877538,
         "terminalGrowth": 0.04,
         "estado": "LISTO"
       },
@@ -184,14 +184,14 @@
     "pesoMultiplos": 0.4,
     "dcfHoy": {
       "conservador": 218.97030635741731,
-      "base": 285.20163816913913,
+      "base": 278.1373571877538,
       "optimista": 475.9819424537584
     },
     "multiplesHoy": null,
     "ponderadoHoy": null,
     "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_CERTIFICADOS",
     "estado": "PENDIENTE_MULTIPLOS",
-    "precioDCFPrincipalHoy": 285.20163816913913
+    "precioDCFPrincipalHoy": 278.1373571877538
   },
   "revisionSupuestos": {
     "metodo": "A",
@@ -230,12 +230,12 @@
     "preferredValueMillones": 19000,
     "nonOperatingAssetValueMillones": 135230,
     "lagAnios": 1,
-    "roicAnio10Advertencia": "RESUELTO en Base: 25.49% ROIC current, 18.99% year10, 18% stable, gap0.99pp via capitalized CAPEX bridge + S/C6-10 0.56; ROIC other scenarios independent.",
+    "roicAnio10Advertencia": "R4 year10 17.64%, terminal18%, near convergence0.36pp. Capitalized R&D net applied in both NOPAT tax shield and reinvestment; sales-to-capital excluded from FCFF cashflow, used as a diagnostic.",
     "fcffLtmObservadoMillones": 19747,
     "revisionInformeAmpliado": {
       "fecha": "2026-10-29",
-      "revision": "GOOG-20261029-RECALIBRACION-R3",
-      "estado": "JMR_A_RECALIBRADA_BASE285.20_AZ218.82_MATRICES_CONCILIADAS_PENDIENTE_AUDITORIA_ECONOMICA",
+      "revision": "GOOG-20261029-R4",
+      "estado": "RECONCILIACION_RND_NET_INVESTMENT_CASH_TAX_COMPLETE, JMR_BASE278.137357 AZ218.815740",
       "ventasQ3_2026USDm": 127577,
       "crecimientoQ3": 0.25,
       "ventasSearchQ3USDm": 63350,
@@ -260,9 +260,9 @@
       "capex2027AZ": 240000,
       "capex2028AZ": 260000,
       "roicAjustadoVivo": 0.2548900350856337,
-      "roicAno10Vivo": 0.18991536174777676,
+      "roicAno10Vivo": 0.17641044533558284,
       "roicTerminalBaseVivo": 0.18,
-      "saltoTerminalROICpuntos": 0.9915361747776769,
+      "saltoTerminalROICpuntos": -0.3589554664417155,
       "sensibilidadROICterminalConstanteOtros": {
         "status": "HISTORICA_R2_SUPERADA_NO_USAR_PARA_PRECIO_R3",
         "comment": "La antigua sensibilidad 15–20% partía de FCFF con S/C6-10=1.70 y WACC obsoleto, NO comparable al nuevo DCF285.20."
@@ -296,26 +296,26 @@
           -5.5
         ]
       },
-      "limites": "ROIC gradual y piso CapEx reconciliados en hoja oficial JMR; persistir valoración económica de instrumentos, covenants, contrato preferentes y costos de reemplazo IA.",
+      "limites": "R&D intangible cap vs net physical cap aligned. Forecast for CAPEX 2027 onward remains analyst, not company guidance. Future economic audit still pending after visual.",
       "source10Q": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
       "sourceCall": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/"
     },
-    "roicAno10": 0.18991536174777676,
+    "roicAno10": 0.17641044533558284,
     "ke": 0.10132,
     "kd": 0.0596,
     "roicOptimistaTerminal": 0.22,
     "roicConservadorTerminal": 0.12,
     "roicDisrupcionTerminal": 0.095,
-    "reinvY1USDm": 201695.9528,
-    "nopatY1USDm": 179015.07080398168,
-    "fcffY1USDm": -22680.881996018317,
-    "retencionY1_NOPAT": 1.1266981706856039,
+    "reinvY1USDm": 235601.6928,
+    "nopatY1USDm": 185137.9473908603,
+    "fcffY1USDm": -50463.745409139694,
+    "retencionY1_NOPAT": 1.2725737544372868,
     "reinversionSTC_Y1USDm": 135003.22685714278,
     "extraReinvSCDeltaY1USDm": 66692.72594285721,
     "capexBridge": {
       "sheet": "Puente CAPEX ROIC",
       "sheetId": 2026102901,
-      "methode": "MAX(incremental sales to capital with lag1, gross capex−economic D&A+positive Δoperating NWC), never ADD twice",
+      "methode": "Net operating reinvestment = physical CapEx−D&A + operating ΔNWC + ΔcapitalizedResearchAsset (R&D spending−amortization). Tax deduction on current R&D retained in NOPAT. S/C ratio only diagnostic, NEVER add to same cash flow.",
       "capexFYplus1to10USDm": [
         240000,
         255000,
@@ -347,12 +347,23 @@
       ],
       "publishedFY2027CapexGuideUSDm": null,
       "FY2027ForecastAnalystNOTGUIDANCE": 240000,
-      "ROICYear10": 0.18991536174777676,
+      "ROICYear10": 0.17641044533558284,
       "ROICStable": 0.18,
-      "FCFFyear1": -22680.881996018317,
-      "FCFFyear10": 329949.1416061211,
-      "netReinvYear10": 103018.9651574004,
-      "rationale": "CapEx physical floor dominates years1-5, marginal Δsales/S/C dominates years6-10; both are alternative estimators of same investment and are never summed; R&D once within Damodaran capitalized intangible."
+      "FCFFyear1": -50463.745409139694,
+      "FCFFyear10": 313685.29415748554,
+      "netReinvYear10": 126632.82834168001,
+      "rationale": "Damodaran capitalized R&D must be accounted for as annual incremental intangible asset, otherwise EBIT addback produces cash flow overstatement. The capitalized R&D return includes tax shield on current expense. C39:L39 bridge vs Valuation output equal 0. S/C is only a cross check, not extra money.",
+      "revision": "R4",
+      "mode": "EXPLICIT_PHYSICAL_PLUS_NET_RD",
+      "netPhysicalReinvYear1USDm": 201695.9528,
+      "netIntangibleRDMYear1USDm": 33905.74,
+      "netReinvYear1USDm": 235601.6928,
+      "modelReinvestmentSTCYear1USDm": 135003.22685714278,
+      "rdCapitalizedCurrentUSDm": 178999,
+      "rdAmortizationCurrentUSDm": 45380.4,
+      "rdForecastY1USDm": 87866.34,
+      "rdForecastAmortY1USDm": 53960.6,
+      "roicY10": 0.17641044533558284
     },
     "AZStocks": {
       "sheet": "https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit",
@@ -433,12 +444,16 @@
       "terminalMethod": "FCFF Year11 = NOPAT Year10*(1+g)*(1-g/ROICterminal) not last year free cashflow perpetually; 5x5 WACC/g updated, centre verified",
       "noRDAdjustment": "R&D GAAP expense remains EBIT cost; no capitalized asset double count",
       "status": "LISTO_DCF_PENDIENTE_EXIT_MULTIPLES"
-    }
+    },
+    "revision": "GOOG-20261029-R4",
+    "investigacionNetY1USDm": 33905.74,
+    "investigacionTaxShieldY1USDm": 6122.8765868786,
+    "reinversionSTCY1USDm": 135003.22685714278
   },
   "sensibilidadDCF": {
     "waccCentro": 0.10025011549342412,
     "gCentro": 0.04,
-    "centro": 285.20163816913913,
+    "centro": 278.1373571877538,
     "centroConciliado": true,
     "matriz": {
       "wacc": [
@@ -457,43 +472,43 @@
       ],
       "valores": [
         [
-          326.0494618167014,
-          343.1760041906319,
-          364.33232124078114,
-          391.1303228376369,
-          426.1738633873715
+          319.2428762915726,
+          336.6177579023443,
+          358.0808469509445,
+          385.26742641250485,
+          420.81910724685315
         ],
         [
-          292.13545496146367,
-          304.9563519366363,
-          320.47638511710824,
-          339.64819081063257,
-          363.9324780224301
+          285.00651456508064,
+          298.013317819578,
+          313.7583954434431,
+          333.20819721410004,
+          357.84461279026556
         ],
         [
-          263.88202663750195,
-          273.6148927715102,
-          285.201638169139,
-          299.2276983873213,
-          316.5540080686053
+          256.5086058459949,
+          266.38260102375443,
+          278.1373571877537,
+          292.36679885996347,
+          309.9443444550461
         ],
         [
-          240.02192925508467,
-          247.49187630513416,
-          256.2609440302218,
-          266.70031157668996,
-          279.3374400448188
+          232.46367091902877,
+          240.04193410838712,
+          248.93815611328603,
+          259.52889659530854,
+          272.3492666524937
         ],
         [
-          219.63792980574354,
-          225.4197336235916,
-          232.1266260522954,
-          239.99993455555634,
-          249.37292086896224
+          211.94131420044135,
+          217.80695564974715,
+          224.61109973094185,
+          232.59857321756172,
+          242.1074702254426
         ]
       ]
     },
-    "descripcion": "5x5 WACC paralelamente desplazado años1–10 y perpetuidad, sobre FCFF CORREGIDOS Valuation output C11:L11 con piso de CapEx, factor de descuento compuesto y ROIC18%. Centro concilia exactamente con DCF Base hoja; anterior Motor sensibilidad DCF obsoleto no se usa."
+    "descripcion": "R4 sensitivity recalcula FCFF forecast que resta inversión neta física y R&D neta, reconoce tax shield, no reutiliza antiguo Motor sensibilidad DCF; centro OK con fuente Valuation output!B35."
   },
   "fuentes_supuestos": [
     "https://abc.xyz/investor/",
@@ -502,21 +517,21 @@
     "https://people.stern.nyu.edu/adamodar/pdfiles/papers/growth.pdf"
   ],
   "salvedades": [
-    "Revisión R3 integral 29Oct: JMR Base US$285.20, AZ perpetuity US$218.82. No usar valores R2 297.39/251.84 ni sensibilidad 314.49 basada en CAPEX anterior.",
-    "RF Treasury 10yr 28Oct26 5.05% (antes5.29%) y coste deuda5.96% (antes6.2%), conservando ERP4.2% beta1.21. WACC JMR 10.025% inicial/9.25% estable; AZ 9.942% propio.",
-    "ROIC Base actual ajustado25.49%, year10 18.99%, stable18%; gap0.99pp vs antiguo13.20pp. JMR S/C 0.70 first5, 0.56 second5, CAPEX floor realistic but uncertain.",
-    "JMR CapEx y D&A previstos FY+1 to10 son supuestos de analista NO cifras compañía; 2026 guidance CapEx195–205bn y FY2027 se elevaría de manera significativa sin guía numérica.",
-    "JMR usa MAX(reinvestment Δsales/S/C, capex−D&A+ΔNWC) y capitaliza I+D una vez. Inversión primer año201696m, 112.7% de NOPAT, FCFF Y1 −22681m; modela inversión material, NO sumar dos veces.",
-    "AZ Stocks GAAP aplica CapEx 240bn,260bn,270bn en primeros3 años y horizonte 10, I+D gastada, ROIC marginal terminal base16%, peor12%, mejor20%; DCF perpetuity main 100%, exit EVEBITDA16x secondary not certified.",
-    "Participaciones financieras no cotizadas135230m reconocidas a libro y cash/marketables265098m: puede requerir descuentos neto impuestos; preferentes convertibles19bn y 12294m acciones requieren reconciliación y potencial dilución.",
-    "Rentabilidad prolongada de Search, Cloud y contratos de IA no asegurada por backlog; CapEx físico, servidores, energía y cambio de plataforma Search son riesgos relevantes.",
-    "Alto peso del valor terminal en JMR, múltiplos JMR sin validar, no auditoría económica independiente. Estado EN_REVISION hasta revisión visual."
+    "R4 reemplaza R3: nuevo JMR Base US$278.14 (anterior 285.20), AZ Stocks Base US$218.82 SIN CAMBIO. Corrige la reinversión intangible y ventaja fiscal de I+D capitalizada.",
+    "El flujo físico de reinversión se mide CapEx−D&A+ΔNWC; la capitalización de I+D eleva EBIT y capital invertido, por tanto incluye net R&D spending−research amortization en inversión una sola vez. Contrastar con S/C sin sumarlo como gasto duplicado.",
+    "Primer año: reinversión física US$201,695.95m, investigación netaUS$33,905.74m, totalUS$235,601.69m, NOPAT neto de efecto fiscal185,137.95m, FCFF−50,463.75m. Bridge validador error=0 años1-10.",
+    "ROIC JMR actual25.489%, año10 17.641%, terminal18%; salto pequeño+0.359pp (frente a salto28.2→15 del modelo R2). No prometer 18% anual en cada cohorte sin auditar recuperación capital.",
+    "AZ Stocks sigue independiente con I+D como gasto GAAP, no necesita un activo I+D adicional. AZ Base218.82, Bear140.75, Bull391.26 y múltiplo salida secundario371.46.",
+    "CapEx FY2027=US$240bn y demás futuras cifras SON ESTIMACIONES ANALISTA. Dirección FY2026 guió US$195–205bn y FY2027 incremento significativo sin cifra oficial. Duración GPUs y contratos continúan riesgo.",
+    "El S/C 0.70/0.56 se conserva como diagnóstico de eficiencia incremental y contraste económico, pero en Base JMR FCFF se determina por inversión física y research asset, no por Δventas/S/C.",
+    "Valor terminal y activos no operativos hacen al DCF sensible a WACC/g, fair value y tributación de valores financieros. Los múltiplos no están certificados y no se realiza auditoría económica independiente hasta revisión visual."
   ],
   "hojas": {
     "valoracion": {
-      "GOOG R3 JMR A y AZ Stocks": "<section><h2>GOOG · Método JMR A-1.2 recalibrado · 29/oct/2026</h2><p><strong>Valor intrínseco FCFF Base US$285,20</strong> vs cierre US$321,89 (−11,40% respecto a precio), MOS35% US$185,38; conservador US$218,97, optimista US$475,98, disrupción US$125,93, promedio ordinario US$316,34. WACC10,025%→9,25%, g4%, ROIC19,0% año10→18% terminal; S/C0,70→0,56, piso de reinversión MAX(CapEx−D&amp;A+ΔNWC, Δventas/S-C). Año1 net investment US$201.696m.</p><p><strong>AZ Stocks DCF independiente Base US$218,82</strong>, WACC9,942%, g3,5%, ROIC marginal terminal16%, CapEx explícito10a, sin capitalizar I+D. <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">JMR oficial</a> · <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ independiente</a>. Matrices WACC/g conciliadas; análisis de múltiples y auditoría económica independientes pendientes. EN_REVISION.</p></section>"
+      "GOOG R4 JMR y AZ definitivo para revisión": "<section><h2>Alphabet GOOG · Modelo JMR A-1.2 R4 · 29/oct/2026</h2><p><strong>Valor intrínseco Base US$278,14</strong> por acción frente a precio de referencia US$321,89; MOS35% <strong>US$180,79</strong>. Conservador US$218,97; optimista US$475,98; disrupción US$125,93; promedio normal US$312,81.</p><p>El FCFF JMR usa reinversión neta <strong>CapEx−D&amp;A+ΔNWC+I+D neta capitalizada</strong>, con ajuste de deducción fiscal de I+D para mantener cash taxes. El método de sales-to-capital es un <em>contraste</em>, no una inversión adicional. Año1 físicaUS$201.696m + I+D netaUS$33.906m=total235.602m; FCFF−US$50.464m. ROIC17,64% Y10→18% terminal, WACC10,03% inicial/9,25% terminal.</p><p>AZ Stocks independiente usa I+D GAAP y DCF FCFF perpetuidad Base <strong>US$218,82</strong>; no se fuerza a igualar JMR. <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">Google Sheets JMR Puente CAPEX ROIC</a> y <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ Sheets</a>. EN_REVISION, auditoría económica posterior a revisión visual.</p></section>"
     },
     "financieros": {}
   },
-  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero. Informe analítico ampliado 29-oct-2026 en análisis GOOG research mismo expediente; DCF JMR y AZ conservados sin modificar los supuestos financieros hasta conciliación. 29Oct26 R3 reformulación CapEx, ROIC y Rf en hojas oficiales, matriz sensibilidad actualizada, AZ terminal ROC propio, sin auditoría económica independiente."
+  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero. Informe analítico ampliado 29-oct-2026 en análisis GOOG research mismo expediente; DCF JMR y AZ conservados sin modificar los supuestos financieros hasta conciliación. 29Oct26 R3 reformulación CapEx, ROIC y Rf en hojas oficiales, matriz sensibilidad actualizada, AZ terminal ROC propio, sin auditoría económica independiente. 29Oct2026 R4 correction accounting R&D capitalization: cash flow uses physical reinvestment + net capitalized R&D and tax deduction, no Δsales/S-C duplication; JMR Base278.137357, AZ remains218.815740.",
+  "version": "GOOG-20261029-R4"
 }
