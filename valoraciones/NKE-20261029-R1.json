@@ -263,6 +263,24 @@
       "terminalDyaMillones": 1000,
       "terminalCambioNwcMillones": 358,
       "terminalRoicIncrementalImplicito": 0.197
+    },
+    "pruebaLag0": {
+      "copiaGoogle": "https://docs.google.com/spreadsheets/d/1uFTGkiyf-oPOoGtqzsxHp9B1H6dz6zBqTfvLtORvieo/edit",
+      "lag0": {
+        "base": 38.75968129,
+        "conservador": 24.23681239,
+        "disrupcion": 13.88010164,
+        "optimista": 54.13726135
+      },
+      "lag1": {
+        "base": 37.72796351,
+        "conservador": 23.48326485,
+        "disrupcion": 13.60373295,
+        "optimista": 53.03947487
+      },
+      "deltaBasePorAccion": 1.03171778,
+      "deltaPctBase": 2.734623563041083,
+      "criterio": "Desfase 1 año es negocio Nike: inventarios, producción, venta posterior. No elegir por valoración. Contraste COPIA completa, mismos escenarios y WACC; PV 10 años más terminal."
     }
   },
   "sensibilidadDCF": {
@@ -340,7 +358,7 @@
     "AZ Stocks Base US$41,85 es independiente, potencialmente optimista en reinversión terminal por perpetuar el CapEx neto del año10; no promediar sin conciliación.",
     "Los múltiplos nativos 7 no están completamente validados: denominadores históricos, precios de cierres fiscales ajustados o brutos, y anclas de salida pendientes de certificación.",
     "ROIC FY26 emisor usa valores promedio; JMR usa capital invertido de cierre. Ausencia de gasto I+D separado impide capitalización reproducible.",
-    "Prueba reinversión lag0 vs lag1 pendiente porque copia de control separada fue bloqueada; no declarar realizada.",
+    "Prueba lag0 vs lag1 completa en copia nativa: JMR Base lag0 US$38,76 vs lag1 US$37,73, efecto US$1,03 (~2,73%). Se mantiene desfase1 por ciclo inventario/producción Nike; materialidad documentada, no selección por precio.",
     "La auditoría económica NO se efectúa antes de la revisión visual solicitada por usuario.",
     "AZ Stocks primero calculó US$46,24 al mantener capex terminal US$1.070m e implicar ROIC sostenible ~53%; se corrigió con capex gradual a US$1.800m, reinversión terminal US$1.158m y RONIC implícito≈19,7%. AZ perpetuidad Base recalculada US$41,85 y salida EBITDA Base US$51,19. Esta revisión no es auditoría económica independiente."
   ],
