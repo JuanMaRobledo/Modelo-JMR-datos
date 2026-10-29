@@ -1,0 +1,118 @@
+{
+  "ticker": "GOOGL.CODEX",
+  "tickerMercado": "GOOGL",
+  "nombreActivo": "Google (Codex)",
+  "revision_id": "GOOGL.CODEX-20261029-A1",
+  "revisionId": "GOOGL.CODEX-20261029-A1",
+  "fecha": "2026-10-29",
+  "fecha_corte": "2026-10-29",
+  "fechaCorteContable": "2026-09-30",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "sheet_id": "1ELHyYG-z2cAErHVeN1zoXhlEcxokc1nHliYMWchFpRc",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1ELHyYG-z2cAErHVeN1zoXhlEcxokc1nHliYMWchFpRc/edit",
+  "estado": "PENDIENTE",
+  "publicationStatus": "NO_PUBLICADO_CONTROLES_INCOMPLETOS",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "2026-10-29: usuario solicita valoración nueva con Método A y subir como Google (Codex). Controles previos siguen exigibles.",
+  "valorPrincipal": 266.58769142902406,
+  "precioMOS": 173.28199942886565,
+  "baseMOS": "dcfBase",
+  "mos": 0.35,
+  "moneda": "USD",
+  "precio": 283.82,
+  "precioReferenciaFecha": "2026-10-29",
+  "escenarios": [
+    {
+      "nombre": "Base",
+      "valor": 266.58769142902406,
+      "MOS35": 173.28199942886565,
+      "probabilidad": 0.45
+    },
+    {
+      "nombre": "Conservador",
+      "valor": 171.90724651749184,
+      "MOS35": 111.7397102363697,
+      "probabilidad": 0.225
+    },
+    {
+      "nombre": "Optimista",
+      "valor": 411.7827301709,
+      "MOS35": 267.658774611085,
+      "probabilidad": 0.225
+    },
+    {
+      "nombre": "Disrupción",
+      "valor": 104.54168602371116,
+      "MOS35": 67.95209591541226,
+      "probabilidad": 0.1
+    }
+  ],
+  "promedioOrdinario": 279.21633988661,
+  "revisionSupuestos": {
+    "ingresosLtmMillones": 471098,
+    "ebitGAAPLtmMillones": 156976,
+    "crecimientoAnios": [
+      0.2,
+      0.19,
+      0.17,
+      0.15,
+      0.13,
+      0.11,
+      0.09,
+      0.08,
+      0.06,
+      0.04
+    ],
+    "margenEBITObjetivoAjustadoRND": 0.36,
+    "stcMarginal1a5": 0.45,
+    "stcMarginal6a10": 0.65,
+    "roicTerminal": 0.18,
+    "gTerminal": 0.04,
+    "waccInicial": 0.10338712105723187,
+    "waccTerminal": 0.08990000000000001,
+    "roicActualAjustado": 0.2670430275205421,
+    "roicAnio10": 0.17926053447391138,
+    "researchLife": 3,
+    "accionesSpotMillones": 12294,
+    "rsuPsuMillones": 284,
+    "accionesValoracionMillones": 12578,
+    "preferredClaim": 19000,
+    "ERP": 0.0445,
+    "rf": 0.0529
+  },
+  "controles": {
+    "cuatroDCF": "LISTO_NATIVO",
+    "WACC_Detailed": "VALIDADO_NATIVO",
+    "casosEspeciales": "VALIDADO_NATIVO",
+    "centrosSensibilidadDCF": "APROBADOS_NATIVOS",
+    "formulasMotor": "NO_MODIFICADAS_POR_LAS_ENTRADAS",
+    "multiplesSiete": "INCOMPLETOS",
+    "historiaPrimariaCompleta": "NO_VERIFICADA_LINEA_A_LINEA",
+    "integridadGlobal": "NO_APROBADA",
+    "auditoriaEconomica": "NO_REALIZADA"
+  },
+  "salvedades": [
+    "Valor provisional, no aprobado para publicar como valoración completa.",
+    "Datos históricos reutilizados como datos, no supuestos R5. Anclas SEC/comunicado verificadas; historia completa no cotejada línea a línea.",
+    "ERP4,45% es proxy regional (3,70%madura+0,75%país), no desglose exhaustivo de ventas por país.",
+    "I+D100% según conversor oficial, vida3años; parte del gasto GAAP contiene depreciación. No se ha cuantificado integralmente solapamiento.",
+    "Cohortes anuales del conversor frente a LTM escalonado, limitación de comparabilidad temporal.",
+    "Primer margen y transición de la plantilla comunes a escenarios; no modela choque inmediato diferenciado de margen.",
+    "S/C histórico homogéneo N/D. S/C previsto se justifica por capacidad/CapEx y se sensibiliza, no estadísticamente certificado.",
+    "Valor no cotizadas135230m usa saldo como proxy de fair value; requiere impuestos, liquidez y participaciones.",
+    "Valor actual de preferentes19000m proxy de reclamación; retorno esperado8,5%es juicio.",
+    "Múltiplos no completos: celdas E143:H145, E155:H157, E167:H169 rotuladas entradas contienen fórmulas que devuelven blanco con preferentes>0. No sobrescritas."
+  ],
+  "metodos": [
+    {
+      "nombre": "DCF FCFF Método A-1.2",
+      "peso": 1,
+      "valorHoy": {
+        "base": 266.58769142902406,
+        "conservador": 171.90724651749184,
+        "optimista": 411.7827301709
+      }
+    }
+  ]
+}

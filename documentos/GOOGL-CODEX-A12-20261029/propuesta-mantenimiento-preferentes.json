@@ -1,0 +1,953 @@
+{
+  "status": "PROPUESTA_NO_APLICADA",
+  "scope": "Mantenimiento general de plantillas oficiales con respaldo previo, no parche individual de Google",
+  "objetivo": "Convertir36celdas rotuladas como entrada en entradas reales sin fórmula semilla; importador debe exigir0documentado si no hay preferentes y datos proyectados si existen. Todas las fórmulas de cálculo posteriores se conservan.",
+  "condiciones": [
+    "Respaldo nativo de las tres plantillas",
+    "Revisar regla§11yregistrar excepción de fórmula semilla como entrada",
+    "Actualizar importador para escribirsolo estas36celdas de entrada",
+    "Regresión nativa preferentes/no preferentes/datosfaltantes y conservación de fórmulas de cálculo",
+    "Nueva copia limpia tras mantenimiento y reconstrucción de múltiplos con fuentes",
+    "No alterar R5 ni valoraciones previas"
+  ],
+  "backup_cells": [
+    {
+      "row": 142,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 142,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 142,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 142,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 143,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 143,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 143,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 143,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 144,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 144,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 144,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 144,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 154,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 154,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 154,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 154,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 155,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 155,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 155,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 155,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 156,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 156,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 156,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 156,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 166,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 166,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 166,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 166,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 167,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 167,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 167,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 167,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 168,
+      "col": 4,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 168,
+      "col": 5,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 168,
+      "col": 6,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    },
+    {
+      "row": 168,
+      "col": 7,
+      "value": {
+        "formulaValue": "=IF(AND(ISNUMBER('Input sheet'!$B$76);'Input sheet'!$B$76=0);0;\"\")"
+      }
+    }
+  ],
+  "requests_propuestos_no_ejecutados": [
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 142,
+          "endRowIndex": 143,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 142,
+          "endRowIndex": 143,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 142,
+          "endRowIndex": 143,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 142,
+          "endRowIndex": 143,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 143,
+          "endRowIndex": 144,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 143,
+          "endRowIndex": 144,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 143,
+          "endRowIndex": 144,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 143,
+          "endRowIndex": 144,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 144,
+          "endRowIndex": 145,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 144,
+          "endRowIndex": 145,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 144,
+          "endRowIndex": 145,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 144,
+          "endRowIndex": 145,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 154,
+          "endRowIndex": 155,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 154,
+          "endRowIndex": 155,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 154,
+          "endRowIndex": 155,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 154,
+          "endRowIndex": 155,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 155,
+          "endRowIndex": 156,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 155,
+          "endRowIndex": 156,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 155,
+          "endRowIndex": 156,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 155,
+          "endRowIndex": 156,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 156,
+          "endRowIndex": 157,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 156,
+          "endRowIndex": 157,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 156,
+          "endRowIndex": 157,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 156,
+          "endRowIndex": 157,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 166,
+          "endRowIndex": 167,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 166,
+          "endRowIndex": 167,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 166,
+          "endRowIndex": 167,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 166,
+          "endRowIndex": 167,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 167,
+          "endRowIndex": 168,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 167,
+          "endRowIndex": 168,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 167,
+          "endRowIndex": 168,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 167,
+          "endRowIndex": 168,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 168,
+          "endRowIndex": 169,
+          "startColumnIndex": 4,
+          "endColumnIndex": 5
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 168,
+          "endRowIndex": 169,
+          "startColumnIndex": 5,
+          "endColumnIndex": 6
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 168,
+          "endRowIndex": 169,
+          "startColumnIndex": 6,
+          "endColumnIndex": 7
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    },
+    {
+      "updateCells": {
+        "range": {
+          "sheetId": 1307437786,
+          "startRowIndex": 168,
+          "endRowIndex": 169,
+          "startColumnIndex": 7,
+          "endColumnIndex": 8
+        },
+        "rows": [
+          {
+            "values": [
+              {}
+            ]
+          }
+        ],
+        "fields": "userEnteredValue"
+      }
+    }
+  ]
+}
