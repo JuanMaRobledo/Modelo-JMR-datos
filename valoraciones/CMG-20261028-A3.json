@@ -1,0 +1,241 @@
+{
+  "ticker": "CMG",
+  "nombreActivo": "Chipotle Mexican Grill Inc.",
+  "tipo": "Crecimiento rentable · restaurantes propios",
+  "fecha": "2026-10-28",
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "precio": 28.73,
+  "precioAnalisis": 28.73,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "NYSE cierre regular 28-oct-2026 stockanalysis.com/stocks/cmg/history; excluye after-hours",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "sheet_id": "1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c/edit",
+  "revisionId": "CMG-20261028-A3",
+  "revision_id": "CMG-20261028-A3",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "4_HISTORIAS_LISTO_MATRIZ_CENTRO_DCF_OK_AUDITORIA_VISUAL_PENDIENTE",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "Usuario solicitó rehacer CMG en nuevo flujo con revisión de reinversión, márgenes, crecimiento y ROIC, publicando ficha en revisión",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "valorPrincipal": 23.20885152,
+  "mos": 0.35,
+  "precioMOS": 15.08575349,
+  "baseMOS": "dcfBase",
+  "metodoPrincipal": "DCF FCFF a perpetuidad, Método A-1.2",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.4,
+      "conservador": 19,
+      "base": 29.49,
+      "optimista": 39.52,
+      "valorHoy": {
+        "conservador": 14.95287828,
+        "base": 23.20885152,
+        "optimista": 31.11071538
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.15,
+      "conservador": 17.84,
+      "base": 28.49,
+      "optimista": 40.16
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.18,
+      "conservador": 16.8,
+      "base": 33.68,
+      "optimista": 42.29
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.15,
+      "conservador": 28.22,
+      "base": 50.17,
+      "optimista": 64.03
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.06,
+      "conservador": 22.44,
+      "base": 40.36,
+      "optimista": 49.85
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0.06,
+      "conservador": 22.53,
+      "base": 39.35,
+      "optimista": 49.95
+    },
+    {
+      "nombre": "P/S (P/V)",
+      "peso": 0
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 20.23,
+    "base": 34.44,
+    "optimista": 45.04,
+    "horizonteAnios": 3
+  },
+  "valorPresentePonderado": {
+    "conservador": 16.14,
+    "base": 26.02,
+    "optimista": 33.06
+  },
+  "valorEsperado": {
+    "valor": 23.12032418,
+    "valorCentral": 23.20885152,
+    "tipoPromedio": "tres_historias_renormalizado",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.0789842238,
+        "margen": 0.165,
+        "s2c": 2.2,
+        "s2c610": 2.05,
+        "roicTerminal": 0.19,
+        "valor": 23.20885152,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador",
+        "probabilidad": 0.225,
+        "crecimiento": 0.04998566854,
+        "margen": 0.145,
+        "s2c": 1.7,
+        "s2c610": 1.6,
+        "roicTerminal": 0.135,
+        "valor": 14.95287828,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.01090361511,
+        "margen": 0.09,
+        "s2c": 1.2,
+        "s2c610": 1.2,
+        "roicTerminal": 0.0899,
+        "valor": 4.013561059,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1039845815,
+        "margen": 0.18,
+        "s2c": 2.55,
+        "s2c610": 2.35,
+        "roicTerminal": 0.225,
+        "valor": 31.11071538,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": true,
+    "historiaCentralId": "A",
+    "rango": {
+      "min": 14.95287828,
+      "max": 31.11071538
+    }
+  },
+  "descuentoMultiples": {
+    "criterio": "VP múltiplos FY1–FY3; DCF principal a hoy",
+    "pesoDcf": 0.4,
+    "pesoMultiplos": 0.6,
+    "horizonteAnios": 3,
+    "dcfHoy": {
+      "conservador": 14.95287828,
+      "base": 23.20885152,
+      "optimista": 31.11071538
+    },
+    "multiplesHoy": {
+      "conservador": 16.93,
+      "base": 27.89,
+      "optimista": 34.36
+    },
+    "ponderadoHoy": {
+      "conservador": 16.14,
+      "base": 26.02,
+      "optimista": 33.06
+    },
+    "advertencia": "Objetivo FY+3 US$34,44 no es valor de hoy."
+  },
+  "revisionSupuestos": {
+    "version": "A-1.2",
+    "revision": "A3",
+    "ingresosLtmJun2026": 12423.76,
+    "ingresosLtmSep2026Recalculado": 12713.478,
+    "ebitLtmJun2026": 1820.15,
+    "ebitLtmSep2026Recalculado": 1794.942,
+    "precio": 28.73,
+    "crecimientoFY1": 0.085,
+    "crecimientoFY5": 0.07,
+    "cagr5": 0.0789842238,
+    "margenEBITFY1": 0.142,
+    "margenObjetivoCorporativo": 0.165,
+    "salesToCapitalMarginal15": 2.2,
+    "salesToCapitalMarginal610": 2.05,
+    "roicTerminal": 0.19,
+    "waccInicial": 0.0776,
+    "rf": 0.0505,
+    "gTerminal": 0.04,
+    "esquemaLeases": "Arrendamientos capitalizados JMR; no volver a cargar rentas al FCFF sin ajustes",
+    "valorPrevioR1": 24.9369271,
+    "resultadoA3": 23.20885152,
+    "marginOfSafety35Entry": 15.08575349,
+    "controles": "Historias4/4 LISTO, sensibilidad WACC/g centro OK"
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.0776,
+    "gCentro": 0.04,
+    "centro": 23.21,
+    "centroConciliado": true
+  },
+  "fuentes_supuestos": [
+    "https://newsroom.chipotle.com/2026-10-28-CHIPOTLE-ANNOUNCES-THIRD-QUARTER-2026-RESULTS",
+    "https://stockanalysis.com/stocks/cmg/history/",
+    "https://docs.google.com/spreadsheets/d/1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c/edit"
+  ],
+  "salvedades": [
+    "Históricos completos hasta 30-jun-2026; comunicado resultados septiembre 2026 actualiza proyección, no integra totalmente el 10-Q de septiembre.",
+    "Margen de restaurante 23,3% Q3 no es margen operativo GAAP consolidado 13,7%; Base16,5% objetivo corporativo, no restaurante.",
+    "Inversiones en aperturas CAPEX 9M26 US$640,6m, incremento36,6% vs 9M25; S/C2,20/2,05 es marginal económico y no rotación promedio.",
+    "JMR capitaliza arrendamientos y modifica EBIT; AZ trata rentas como gasto operacional, sin restar doblemente pasivos por leases.",
+    "Auditoría económica pendiente de revisión visual del usuario."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Ficha CMG A3": "<section><h2>CMG · A3 EN_REVISION</h2><p><strong>Intrínseco principal DCF US$23,21</strong> al 28-oct-2026; cierre US$28,73. Conservador US$14,95; Optimista US$31,11; Disrupción US$4,01 separada. Media tres historias US$23,12.</p><p>CAGR5 7,90%, EBIT GAAP objetivo16,5%, S/C marginal 2,20/2,05, ROIC terminal19%, WACC7,76%, g4%.</p><p>VP múltiplos US$27,89 y ponderado secundario US$26,02; FY+3 ponderado US$34,44 no es valor actual.</p><a href=\"https://docs.google.com/spreadsheets/d/1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c/edit\">Google Sheet de cálculo A3</a></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia independiente de CMG Método A-1.2, conserva estados financieros importados hasta LTM junio 2026. Resultados Q3 2026 en calibración prospectiva, sin sustituir archivos históricos ni auditoría."
+}
