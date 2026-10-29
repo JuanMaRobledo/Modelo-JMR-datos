@@ -1,0 +1,483 @@
+{
+  "ticker": "GOOGL",
+  "nombreActivo": "Alphabet Inc. (NASDAQ: GOOGL, acción clase A, un voto)",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA/edit",
+  "sheet_id": "1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-09-30",
+  "fecha_corte": "2026-09-30",
+  "precio": 324.89,
+  "precioAnalisis": 324.89,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "Alphabet clase A GOOGL cierre regular 2026-10-28 US$324,89: https://stockanalysis.com/stocks/googl/history/ (confirmación Investing.com y TwelveData)",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Software · publicidad digital / Cloud",
+  "mos": 0.35,
+  "precioMOS": 186.68320696719854,
+  "baseMOS": "DCF_Base_HOY_MOS_35pct",
+  "valorPrincipal": 287.20493379569007,
+  "metodoPrincipal": "JMR A-1.2 FCFF Base R5 por cohortes IA: CapEx-D&A+ΔNWC + inversión I+D capitalizable neta 85% provisional; ROIC terminal21%; S/C solo contraste",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "GOOGL-20261029-R5",
+  "revision_id": "GOOGL-20261029-R5",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "R5_BASE_ARITHMETIC_AND_WACC_G_CENTER_OK_ALTERNATE_HISTORIES_MULTIPLES_AND_ECONOMIC_AUDIT_PENDING",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "2026-10-29: petición explícita 'Publícalo' tras revisar DCF R5 US$287,20; publicación EN_REVISION para revisión visual",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF FCFF JMR A con CapEx neto e I+D capitalizada neta (sin doble S/C)",
+      "peso": 0.6,
+      "conservador": null,
+      "base": 383.65,
+      "optimista": null,
+      "valorHoy": {
+        "conservador": null,
+        "base": 287.20493379569007,
+        "optimista": null
+      },
+      "estado": "BASE_R5_LISTO_OTROS_ESCENARIOS_NO_HOMOLOGADOS"
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/S",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "horizonteAnios": 3,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorEsperado": {
+    "valor": null,
+    "tipoPromedio": "NO_CALCULADO_HISTORIAS_R5_PENDIENTES",
+    "valorCentral": 287.20493379569007,
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base R5 · Cohortes IA y amortización física proyectada",
+        "probabilidad": 0.45,
+        "crecimiento": 0.1497738715,
+        "margen": 0.38,
+        "s2c": 0.7,
+        "s2c610": 0.56,
+        "roicTerminal": 0.21,
+        "valor": 287.20493379569007,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO_BASE_R5"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador · infraestructura menos productiva",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1157931455,
+        "margen": 0.355,
+        "s2c": 0.55,
+        "s2c610": 1.4,
+        "roicTerminal": 0.12,
+        "valor": null,
+        "terminalGrowth": 0.035,
+        "estado": "PENDIENTE_RECALIBRACION_COHORTES_R5",
+        "referenciaHistoricaR4": 218.95909260326206
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · desintermediación de búsqueda",
+        "probabilidad": 0.1,
+        "crecimiento": 0.02990290164,
+        "margen": 0.27,
+        "s2c": 0.45,
+        "s2c610": 1.1,
+        "roicTerminal": 0.095,
+        "valor": null,
+        "terminalGrowth": 0.02,
+        "estado": "PENDIENTE_RECALIBRACION_COHORTES_R5",
+        "referenciaHistoricaR4": 125.92905008869238
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · Cloud e IA con mayor productividad",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1996665555,
+        "margen": 0.42,
+        "s2c": 0.95,
+        "s2c610": 2,
+        "roicTerminal": 0.22,
+        "valor": null,
+        "terminalGrowth": 0.04,
+        "estado": "PENDIENTE_RECALIBRACION_COHORTES_R5",
+        "referenciaHistoricaR4": 475.95535696106674
+      }
+    ],
+    "estado": "PENDIENTE_RECALIBRACION_R5"
+  },
+  "descuentoMultiples": {
+    "version": "pendiente",
+    "criterio": "DCF Base R5 publicado independientemente; múltiplos e historias alternativas de R4 no comparables",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": null,
+      "base": 287.20493379569007,
+      "optimista": null
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": null,
+    "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_CERTIFICADOS",
+    "estado": "PENDIENTE_MULTIPLOS_R5",
+    "precioDCFPrincipalHoy": 287.20493379569007
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "crecimientoFY1": 0.18,
+    "crecimientoFY5": 0.12,
+    "crecimientoBase": 0.1497738714732435,
+    "crecimientoAnios": [
+      0.18,
+      0.17,
+      0.15,
+      0.13,
+      0.12,
+      0.11,
+      0.1,
+      0.09,
+      0.08,
+      0.06
+    ],
+    "margenEBITAjusRND": 0.38,
+    "ebitGAAPLtmMillones": 156976,
+    "ingresosLtmMillones": 471098,
+    "capexLtmMillones": 159804,
+    "cfoLtmMillones": 179551,
+    "fcfLtmMillones": 19747,
+    "stcMarginalHistoricoAproximado": 0.52,
+    "stcMarginal1a5": 0.7,
+    "stcMarginal6a10": 0.56,
+    "roicActualAjustado": 0.26061246819838946,
+    "roicTerminal": 0.21,
+    "rf": 0.0505,
+    "waccInicial": 0.10025011549342412,
+    "waccTerminal": 0.0925,
+    "gTerminal": 0.04,
+    "rdAmortizacionAnios": 5,
+    "preferredValueMillones": 19000,
+    "nonOperatingAssetValueMillones": 135230,
+    "lagAnios": 1,
+    "roicAnio10Advertencia": "R5 ROIC año10 23,10%→terminal 21%, salto2,10pp; requiere examen económico; terminal 79,08% del EV",
+    "fcffLtmObservadoMillones": 19747,
+    "revisionInformeAmpliado": {
+      "revision": "GOOGL-20261029-R5",
+      "dcfBase": 287.20493379569007,
+      "estado": "EN_REVISION",
+      "metodo": "CapEx cohorte y I+D 85% capitalizable",
+      "matrizWaccG": "CENTRO_OK",
+      "otrasMatrices": "REVISAR",
+      "otrasHistorias": "NO_HOMOLOGADAS",
+      "multiples": "PENDIENTE",
+      "audit": "NO_REALIZADA"
+    },
+    "roicAno10": 0.23099511170204498,
+    "ke": 0.10132,
+    "kd": 0.0596,
+    "roicOptimistaTerminal": 0.22,
+    "roicConservadorTerminal": 0.12,
+    "roicDisrupcionTerminal": 0.095,
+    "reinvY1USDm": 216822.49846666667,
+    "nopatY1USDm": 170721.4511839729,
+    "fcffY1USDm": -46101.04728269376,
+    "retencionY1_NOPAT": 1.2700366413416573,
+    "reinversionSTC_Y1USDm": 135003.22685714278,
+    "extraReinvSCDeltaY1USDm": 66692.72594285721,
+    "capexBridge": {
+      "modelo": "Cohortes IA R5",
+      "capex2026USDm": 200000,
+      "capex2027USDm": 240000,
+      "capex2028USDm": 255000,
+      "capex2029USDm": 260000,
+      "capex2027a2036USDm": 2490000,
+      "capexR4USDm": 2660000,
+      "dAndA2027USDm": 53693.33333,
+      "reinvFisica2027USDm": 188002.61946666669,
+      "investigacionNeta2027USDm": 28819.878999999986,
+      "reinversion2027USDm": 216822.49846666667,
+      "fcff2027USDm": -46101.04728269376,
+      "controlFil44": "C44:L44 sin diferencias",
+      "estatus": "R5_BASE_ARITMETICA_CONCILIADA"
+    },
+    "AZStocks": {
+      "sheet": "https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit",
+      "modelo": "Independiente GAAP DCF FCFF perpetuity + exit EV/EBITDA secondary",
+      "perpetuidadHoy": {
+        "conservador": 140.75059225637128,
+        "base": 218.81574042769319,
+        "optimista": 391.255609579132
+      },
+      "exitEVEBITDA": {
+        "base": 371.45938235706734,
+        "conservador": 221.47294704504023,
+        "optimista": 653.9115383917486
+      },
+      "pesoDCFPrincipal": 1,
+      "pesoExitSecundario": 0,
+      "rf": 0.0505,
+      "erp": 0.042,
+      "beta": 1.21,
+      "preTaxCostDebt": 0.0596,
+      "wacc": 0.09942174,
+      "gBase": 0.035,
+      "terminalROICMarginalBase": 0.16,
+      "terminalROICMarginalWorst": 0.12,
+      "terminalROICMarginalBest": 0.2,
+      "capexBaseYear1to10USDm": [
+        240000,
+        260000,
+        270000,
+        275000,
+        280000,
+        275000,
+        270000,
+        265000,
+        255000,
+        245000
+      ],
+      "terminalMethod": "FCFF Year11 = NOPAT Year10*(1+g)*(1-g/ROICterminal) not last year free cashflow perpetually; 5x5 WACC/g updated, centre verified",
+      "noRDAdjustment": "R&D GAAP expense remains EBIT cost; no capitalized asset double count",
+      "status": "LISTO_DCF_PENDIENTE_EXIT_MULTIPLES",
+      "ticker": "GOOGL",
+      "precioReferencia": 324.89
+    },
+    "azStocks": {
+      "sheet": "https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit",
+      "modelo": "Independiente GAAP DCF FCFF perpetuity + exit EV/EBITDA secondary",
+      "perpetuidadHoy": {
+        "conservador": 140.75059225637128,
+        "base": 218.81574042769319,
+        "optimista": 391.255609579132
+      },
+      "exitEVEBITDA": {
+        "base": 371.45938235706734,
+        "conservador": 221.47294704504023,
+        "optimista": 653.9115383917486
+      },
+      "pesoDCFPrincipal": 1,
+      "pesoExitSecundario": 0,
+      "rf": 0.0505,
+      "erp": 0.042,
+      "beta": 1.21,
+      "preTaxCostDebt": 0.0596,
+      "wacc": 0.09942174,
+      "gBase": 0.035,
+      "terminalROICMarginalBase": 0.16,
+      "terminalROICMarginalWorst": 0.12,
+      "terminalROICMarginalBest": 0.2,
+      "capexBaseYear1to10USDm": [
+        240000,
+        260000,
+        270000,
+        275000,
+        280000,
+        275000,
+        270000,
+        265000,
+        255000,
+        245000
+      ],
+      "terminalMethod": "FCFF Year11 = NOPAT Year10*(1+g)*(1-g/ROICterminal) not last year free cashflow perpetually; 5x5 WACC/g updated, centre verified",
+      "noRDAdjustment": "R&D GAAP expense remains EBIT cost; no capitalized asset double count",
+      "status": "LISTO_DCF_PENDIENTE_EXIT_MULTIPLES",
+      "ticker": "GOOGL",
+      "precioReferencia": 324.89
+    },
+    "revision": "GOOGL-20261029-R5",
+    "investigacionNetY1USDm": 28819.878999999986,
+    "investigacionTaxShieldY1USDm": 5204.445099,
+    "reinversionSTCY1USDm": 135003.22685714278,
+    "precioReferencia": 324.89,
+    "claseDeAccion": "Alphabet Class A GOOGL; 1 voto por acción vs GOOG Class C sin voto; mismo derecho económico; sin prima explícita de control",
+    "cambioTicker": {
+      "desde": "GOOG",
+      "hacia": "GOOGL",
+      "fecha": "2026-10-29",
+      "precioAnteriorGOOG": 321.89,
+      "precioGOOGL": 324.89,
+      "valoracionOrigen": "GOOG-20261029-R4",
+      "cambioFundamentales": false,
+      "variacionDCFPorMarketWACC": -0.01589499786973647,
+      "control": "Matriz sensibilidad centro OK 278.1214621898841. No tomar la cotización intradiaria Oct29 como cierre definitivo."
+    },
+    "rdCapitalizableFraccion": 0.85,
+    "rdCapitalizableFraccionEstado": "HIPOTESIS_ANALISTA"
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.10025011549342412,
+    "gCentro": 0.04,
+    "centro": 287.20493379569007,
+    "centroConciliado": true,
+    "matriz": {
+      "wacc": [
+        0.09025,
+        0.09525,
+        0.10025,
+        0.10525,
+        0.11025
+      ],
+      "g": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "valores": [
+        [
+          325.36,
+          343.68,
+          366.3,
+          394.96,
+          432.44
+        ],
+        [
+          291.79,
+          305.68,
+          322.49,
+          343.25,
+          369.55
+        ],
+        [
+          263.79,
+          274.48,
+          287.2,
+          302.61,
+          321.64
+        ],
+        [
+          240.11,
+          248.44,
+          258.22,
+          269.87,
+          283.96
+        ],
+        [
+          219.86,
+          226.42,
+          234.03,
+          242.96,
+          253.59
+        ]
+      ]
+    },
+    "descripcion": "R5 Sensibilidad DCF!A4:F12 WACC×g centro US$287,20 OK (salida redondeada); matrices ROIC×g y growth×margin muestran REVISAR.",
+    "otrasMatrices": "PENDIENTE_RECALIBRAR",
+    "capexImpacto10pct": {
+      "menor": 304.95275057554795,
+      "base": 287.20493379569007,
+      "mayor": 269.4571170158322
+    },
+    "fraccionRnDSens": {
+      "fraccion70": 292.32437964506926,
+      "fraccion85": 287.20493379569007,
+      "fraccion100": 282.08548794631093
+    }
+  },
+  "fuentes_supuestos": [
+    "https://abc.xyz/investor/",
+    "https://www.sec.gov/edgar/browse/?CIK=1652044",
+    "https://pages.stern.nyu.edu/~adamodar/",
+    "https://people.stern.nyu.edu/adamodar/pdfiles/papers/growth.pdf",
+    "https://stockanalysis.com/stocks/googl/history/",
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+  ],
+  "salvedades": [
+    "R5 Base DCF por cohortes US$287,20 (R4 original US$278,14). R4 inalterada y conservada en Git.",
+    "CapEx 2027–2036 US$2,49 billones es previsión del analista, no guía corporativa; CapEx 2026 US$195–205bn según compañía.",
+    "I+D capitalizada 85% GAAP es hipótesis provisional; escenarios 70% y 100% dan US$292,32 y US$282,09.",
+    "Reinversión 2027 US$216.822,50m = física US$188.002,62m + I+D neta US$28.819,88m; no se suma además Δventas/S-C.",
+    "ROIC actual26,06%, año10 23,10%, estable21%: duración ventaja y amortización por cohortes requieren auditoría económica.",
+    "Matriz WACC×g central concilia; matrices ROIC×g y crecimiento×margen etiquetadas REVISAR.",
+    "Conservador, Optimista y Disrupción aún expresan hipótesis R4, no homologadas en nueva R5; no publicar promedio 3 historias como R5.",
+    "Cinco múltiplos JMR y P/S/P/BV no certificados: mantener nulos, no valores inventados.",
+    "Valor económico de activos no cotizados US$135.230m y preferentes US$19.000m requiere revisión de realizabilidad/impuestos/dilución.",
+    "Precio de clase A GOOGL ref 28-oct US$324,89; el libro R5 heredó cabecera/precio de clase C GOOG US$321,89: no equivalen a prima intrínseca automática.",
+    "Matriz CapEx 2028–2036 ±10% cambia valor a US$304,95 / US$269,46. Acercarse a 300 es sensibilidad, no justificación de elevar Base.",
+    "EN_REVISION para revisión visual; auditoría económica independiente NO REALIZADA."
+  ],
+  "hojas": {
+    "valoracion": {
+      "GOOGL R5 · DCF Base cohortes IA para revisión": "<section><h2>Alphabet GOOGL · Revisión R5 · JMR Método A-1.2</h2><p><strong>Valor intrínseco DCF Base HOY US$287,20</strong>, precio referencia GOOGL US$324,89 (28-oct-2026); <strong>precio compra MOS35% US$186,68</strong>. Precio de mercado +13,12% sobre valor justo y +74,03% sobre entrada MOS. <strong>R5 solo Base recalibrada</strong>, escenarios y múltiples quedan pendientes.</p><p>CapEx por cohortes 2027–2036 US$2,49bn (billones españoles: US$2,49 billones); FCFF 2027 US$−46.101m; ROIC terminal21%, WACC terminal9,25%, g4%. Escenario CapEx 2028–36 -10% → US$304,95; +10% → US$269,46. AZ independiente perpetuidad US$218,82.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA/edit\">Abrir hoja R5</a> · <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ Stocks independiente</a>. EN_REVISION; sin auditoría económica independiente.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero. Informe analítico ampliado 29-oct-2026 en análisis GOOG research mismo expediente; DCF JMR y AZ conservados sin modificar los supuestos financieros hasta conciliación. 29Oct26 R3 reformulación CapEx, ROIC y Rf en hojas oficiales, matriz sensibilidad actualizada, AZ terminal ROC propio, sin auditoría económica independiente. 29Oct2026 R4 correction accounting R&D capitalization: cash flow uses physical reinvestment + net capitalized R&D and tax deduction, no Δsales/S-C duplication; JMR Base278.137357, AZ remains218.815740. GOOGL 29oct2026: sustitución ticker clase C→A sin cambio de proyecciones operativas, precio referencia $324.89, JMR recalculado 278.121462, AZ218.815740. 29Oct2026 R5 desde COPIA nueva de R4 con hoja Google independiente: CapEx por cohortes, depuración parcial I+D, DCF Base287.2049338 vs R4 278.137357; solo Base homologado; escenarios y múltiplos aún pendientes; auditoría económica no realizada.",
+  "version": "GOOGL-20261029-R5"
+}
