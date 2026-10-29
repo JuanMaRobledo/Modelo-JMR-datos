@@ -1,0 +1,559 @@
+{
+  "ticker": "GOOGL",
+  "nombreActivo": "Alphabet Inc. (NASDAQ: GOOGL, acción clase A, un voto)",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit",
+  "sheet_id": "1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-09-30",
+  "fecha_corte": "2026-09-30",
+  "precio": 324.89,
+  "precioAnalisis": 324.89,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "Alphabet clase A GOOGL cierre regular 2026-10-28 US$324,89: https://stockanalysis.com/stocks/googl/history/ (confirmación Investing.com y TwelveData)",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Software · publicidad digital / Cloud",
+  "mos": 0.35,
+  "precioMOS": 180.77895042342467,
+  "baseMOS": "DCF_Base_HOY_MOS_35pct",
+  "valorPrincipal": 278.1214621898841,
+  "metodoPrincipal": "JMR A-1.2 FCFF físico neto CapEx−D&A+ΔNWC + net capitalized R&D investment and tax shield; S/C control only; terminal ROIC18%",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "GOOGL-20261029-R4",
+  "revision_id": "GOOGL-20261029-R4",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "JMR_R4_RND_NET_ASSET_ADDED_ONCE_TO_PHYSICAL_NET_CAPEX_WITH_TAX_SHIELD_SALES_TO_CAPITAL_NOT_ADDITIONAL_WACC_G_CENTER_OK_AZ_GAAP_INDEPENDENT_ECONOMIC_AUDIT_PENDING",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "2026-10-28: valoración y análisis desde cero GOOG Método A, copia limpia de plantilla; AZ Stocks separado; sustituir valoración activa",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF FCFF JMR A con CapEx neto e I+D capitalizada neta (sin doble S/C)",
+      "peso": 0.6,
+      "conservador": 292.4849761439243,
+      "base": 371.51391278879316,
+      "optimista": 635.7799056035028,
+      "valorHoy": {
+        "conservador": 218.95909260326206,
+        "base": 278.1214621898841,
+        "optimista": 475.95535696106674
+      },
+      "estado": "LISTO"
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/S",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_CALCULO_Y_VERIFICACION_DE_FORMULAS_NATIVAS"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "horizonteAnios": 3,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorEsperado": {
+    "valor": 312.7893434860243,
+    "tipoPromedio": "3_historias_renormalizado",
+    "valorCentral": 278.1214621898841,
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · CapEx económico e I+D neta reconciliadas, ROIC17,64% año10→18% estable",
+        "probabilidad": 0.45,
+        "crecimiento": 0.1497738715,
+        "margen": 0.38,
+        "s2c": 0.7,
+        "s2c610": 0.56,
+        "roicTerminal": 0.18,
+        "valor": 278.1214621898841,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador · infraestructura menos productiva",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1157931455,
+        "margen": 0.355,
+        "s2c": 0.55,
+        "s2c610": 1.4,
+        "roicTerminal": 0.12,
+        "valor": 218.95909260326206,
+        "terminalGrowth": 0.035,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · desintermediación de búsqueda",
+        "probabilidad": 0.1,
+        "crecimiento": 0.02990290164,
+        "margen": 0.27,
+        "s2c": 0.45,
+        "s2c610": 1.1,
+        "roicTerminal": 0.095,
+        "valor": 125.92905008869238,
+        "terminalGrowth": 0.02,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · Cloud e IA con mayor productividad",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1996665555,
+        "margen": 0.42,
+        "s2c": 0.95,
+        "s2c610": 2,
+        "roicTerminal": 0.22,
+        "valor": 475.95535696106674,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "version": "pendiente",
+    "criterio": "Múltiplos 1-3 años pendiente de verificación; DCF no mezclado",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 218.95909260326206,
+      "base": 278.1214621898841,
+      "optimista": 475.95535696106674
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": null,
+    "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_CERTIFICADOS",
+    "estado": "PENDIENTE_MULTIPLOS",
+    "precioDCFPrincipalHoy": 278.1214621898841
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "crecimientoFY1": 0.18,
+    "crecimientoFY5": 0.12,
+    "crecimientoBase": 0.1497738714732435,
+    "crecimientoAnios": [
+      0.18,
+      0.17,
+      0.15,
+      0.13,
+      0.12,
+      0.11,
+      0.1,
+      0.09,
+      0.08,
+      0.06
+    ],
+    "margenEBITAjusRND": 0.38,
+    "ebitGAAPLtmMillones": 156976,
+    "ingresosLtmMillones": 471098,
+    "capexLtmMillones": 159804,
+    "cfoLtmMillones": 179551,
+    "fcfLtmMillones": 19747,
+    "stcMarginalHistoricoAproximado": 0.52,
+    "stcMarginal1a5": 0.7,
+    "stcMarginal6a10": 0.56,
+    "roicActualAjustado": 0.2548900350856337,
+    "roicTerminal": 0.18,
+    "rf": 0.0505,
+    "waccInicial": 0.10025975682200201,
+    "waccTerminal": 0.0925,
+    "gTerminal": 0.04,
+    "rdAmortizacionAnios": 5,
+    "preferredValueMillones": 19000,
+    "nonOperatingAssetValueMillones": 135230,
+    "lagAnios": 1,
+    "roicAnio10Advertencia": "R4 year10 17.64%, terminal18%, near convergence0.36pp. Capitalized R&D net applied in both NOPAT tax shield and reinvestment; sales-to-capital excluded from FCFF cashflow, used as a diagnostic.",
+    "fcffLtmObservadoMillones": 19747,
+    "revisionInformeAmpliado": {
+      "fecha": "2026-10-29",
+      "revision": "GOOG-20261029-R4",
+      "estado": "RECONCILIACION_RND_NET_INVESTMENT_CASH_TAX_COMPLETE, JMR_BASE278.137357 AZ218.815740",
+      "ventasQ3_2026USDm": 127577,
+      "crecimientoQ3": 0.25,
+      "ventasSearchQ3USDm": 63350,
+      "crecimientoSearchQ3": 0.12,
+      "ventasCloudQ3USDm": 30709,
+      "crecimientoCloudQ3": 1.026,
+      "ebitCloudQ3USDm": 11121,
+      "ebitServicesQ3USDm": 39157,
+      "margenEBITQ3Consolidado": 0.3180510593602295,
+      "margenCloud": 0.36214139177439836,
+      "margenServices": 0.4066063010114016,
+      "capex9mUSDm": 131953,
+      "ocf9mUSDm": 127149,
+      "FCF9mUSDm": -4804,
+      "capexGuidanceFY2026USDm": [
+        195000,
+        205000
+      ],
+      "capexFY2027Guidance": "CRECIMIENTO_SIGNIFICATIVO_SIN_CIFRA_OFICIAL",
+      "PPEnotInServiceSept26USDm": 145270,
+      "PPEnotInServiceDec25USDm": 78592,
+      "capex2027AZ": 240000,
+      "capex2028AZ": 260000,
+      "roicAjustadoVivo": 0.2548900350856337,
+      "roicAno10Vivo": 0.17641044533558284,
+      "roicTerminalBaseVivo": 0.18,
+      "saltoTerminalROICpuntos": -0.3589554664417155,
+      "sensibilidadROICterminalConstanteOtros": {
+        "status": "HISTORICA_R2_SUPERADA_NO_USAR_PARA_PRECIO_R3",
+        "comment": "La antigua sensibilidad 15–20% partía de FCFF con S/C6-10=1.70 y WACC obsoleto, NO comparable al nuevo DCF285.20."
+      },
+      "sensibilidadExcesoNetInvestmentAnios1a3": {
+        "USDmAnuales": [
+          25000,
+          35000,
+          50000
+        ],
+        "impactoUSDAccion": [
+          -5.03,
+          -7.05,
+          -10.07
+        ],
+        "nota": "EXCESO NETO ADICIONAL A LA REINVERSIÓN YA MODELADA, no CAPEX BRUTO; no doble conteo"
+      },
+      "backlogCloudUSDm": 560800,
+      "backlogRelatedPartyCruxUSDm": 16800,
+      "backlogAccountingDefinitionChange": "Q1 2026 incluye contratos de plazo <=1 año, anterior no comparable directamente",
+      "purchaseCommitmentsUSDm": 924400,
+      "uncommencedLeasesUSDm": 130500,
+      "privateAssetsUSDm": 135230,
+      "haircutValueSensitivity": {
+        "haircut": [
+          0.25,
+          0.5
+        ],
+        "impactoUSDAccion": [
+          -2.75,
+          -5.5
+        ]
+      },
+      "limites": "R&D intangible cap vs net physical cap aligned. Forecast for CAPEX 2027 onward remains analyst, not company guidance. Future economic audit still pending after visual.",
+      "source10Q": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+      "sourceCall": "https://stockanalysis.com/stocks/googl/transcripts/712854-q3-2026/"
+    },
+    "roicAno10": 0.17641044533558284,
+    "ke": 0.10132,
+    "kd": 0.0596,
+    "roicOptimistaTerminal": 0.22,
+    "roicConservadorTerminal": 0.12,
+    "roicDisrupcionTerminal": 0.095,
+    "reinvY1USDm": 235601.6928,
+    "nopatY1USDm": 185137.9473908603,
+    "fcffY1USDm": -50463.745409139694,
+    "retencionY1_NOPAT": 1.2725737544372868,
+    "reinversionSTC_Y1USDm": 135003.22685714278,
+    "extraReinvSCDeltaY1USDm": 66692.72594285721,
+    "capexBridge": {
+      "sheet": "Puente CAPEX ROIC",
+      "sheetId": 2026102901,
+      "methode": "Net operating reinvestment = physical CapEx−D&A + operating ΔNWC + ΔcapitalizedResearchAsset (R&D spending−amortization). Tax deduction on current R&D retained in NOPAT. S/C ratio only diagnostic, NEVER add to same cash flow.",
+      "capexFYplus1to10USDm": [
+        240000,
+        255000,
+        265000,
+        275000,
+        280000,
+        280000,
+        275000,
+        270000,
+        265000,
+        255000
+      ],
+      "forecastDandAUSDm": [
+        40000,
+        56000,
+        67000,
+        84000,
+        95000,
+        110000,
+        125000,
+        140000,
+        154000,
+        165000
+      ],
+      "nwcIncrementalSalesRatio": 0.02,
+      "publishedFY2026CapexGuideUSDm": [
+        195000,
+        205000
+      ],
+      "publishedFY2027CapexGuideUSDm": null,
+      "FY2027ForecastAnalystNOTGUIDANCE": 240000,
+      "ROICYear10": 0.17641044533558284,
+      "ROICStable": 0.18,
+      "FCFFyear1": -50463.745409139694,
+      "FCFFyear10": 313685.29415748554,
+      "netReinvYear10": 126632.82834168001,
+      "rationale": "Damodaran capitalized R&D must be accounted for as annual incremental intangible asset, otherwise EBIT addback produces cash flow overstatement. The capitalized R&D return includes tax shield on current expense. C39:L39 bridge vs Valuation output equal 0. S/C is only a cross check, not extra money.",
+      "revision": "R4",
+      "mode": "EXPLICIT_PHYSICAL_PLUS_NET_RD",
+      "netPhysicalReinvYear1USDm": 201695.9528,
+      "netIntangibleRDMYear1USDm": 33905.74,
+      "netReinvYear1USDm": 235601.6928,
+      "modelReinvestmentSTCYear1USDm": 135003.22685714278,
+      "rdCapitalizedCurrentUSDm": 178999,
+      "rdAmortizationCurrentUSDm": 45380.4,
+      "rdForecastY1USDm": 87866.34,
+      "rdForecastAmortY1USDm": 53960.6,
+      "roicY10": 0.17641044533558284
+    },
+    "AZStocks": {
+      "sheet": "https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit",
+      "modelo": "Independiente GAAP DCF FCFF perpetuity + exit EV/EBITDA secondary",
+      "perpetuidadHoy": {
+        "conservador": 140.75059225637128,
+        "base": 218.81574042769319,
+        "optimista": 391.255609579132
+      },
+      "exitEVEBITDA": {
+        "base": 371.45938235706734,
+        "conservador": 221.47294704504023,
+        "optimista": 653.9115383917486
+      },
+      "pesoDCFPrincipal": 1,
+      "pesoExitSecundario": 0,
+      "rf": 0.0505,
+      "erp": 0.042,
+      "beta": 1.21,
+      "preTaxCostDebt": 0.0596,
+      "wacc": 0.09942174,
+      "gBase": 0.035,
+      "terminalROICMarginalBase": 0.16,
+      "terminalROICMarginalWorst": 0.12,
+      "terminalROICMarginalBest": 0.2,
+      "capexBaseYear1to10USDm": [
+        240000,
+        260000,
+        270000,
+        275000,
+        280000,
+        275000,
+        270000,
+        265000,
+        255000,
+        245000
+      ],
+      "terminalMethod": "FCFF Year11 = NOPAT Year10*(1+g)*(1-g/ROICterminal) not last year free cashflow perpetually; 5x5 WACC/g updated, centre verified",
+      "noRDAdjustment": "R&D GAAP expense remains EBIT cost; no capitalized asset double count",
+      "status": "LISTO_DCF_PENDIENTE_EXIT_MULTIPLES",
+      "ticker": "GOOGL",
+      "precioReferencia": 324.89
+    },
+    "azStocks": {
+      "sheet": "https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit",
+      "modelo": "Independiente GAAP DCF FCFF perpetuity + exit EV/EBITDA secondary",
+      "perpetuidadHoy": {
+        "conservador": 140.75059225637128,
+        "base": 218.81574042769319,
+        "optimista": 391.255609579132
+      },
+      "exitEVEBITDA": {
+        "base": 371.45938235706734,
+        "conservador": 221.47294704504023,
+        "optimista": 653.9115383917486
+      },
+      "pesoDCFPrincipal": 1,
+      "pesoExitSecundario": 0,
+      "rf": 0.0505,
+      "erp": 0.042,
+      "beta": 1.21,
+      "preTaxCostDebt": 0.0596,
+      "wacc": 0.09942174,
+      "gBase": 0.035,
+      "terminalROICMarginalBase": 0.16,
+      "terminalROICMarginalWorst": 0.12,
+      "terminalROICMarginalBest": 0.2,
+      "capexBaseYear1to10USDm": [
+        240000,
+        260000,
+        270000,
+        275000,
+        280000,
+        275000,
+        270000,
+        265000,
+        255000,
+        245000
+      ],
+      "terminalMethod": "FCFF Year11 = NOPAT Year10*(1+g)*(1-g/ROICterminal) not last year free cashflow perpetually; 5x5 WACC/g updated, centre verified",
+      "noRDAdjustment": "R&D GAAP expense remains EBIT cost; no capitalized asset double count",
+      "status": "LISTO_DCF_PENDIENTE_EXIT_MULTIPLES",
+      "ticker": "GOOGL",
+      "precioReferencia": 324.89
+    },
+    "revision": "GOOG-20261029-R4",
+    "investigacionNetY1USDm": 33905.74,
+    "investigacionTaxShieldY1USDm": 6122.8765868786,
+    "reinversionSTCY1USDm": 135003.22685714278,
+    "precioReferencia": 324.89,
+    "claseDeAccion": "Alphabet Class A GOOGL; 1 voto por acción vs GOOG Class C sin voto; mismo derecho económico; sin prima explícita de control",
+    "cambioTicker": {
+      "desde": "GOOG",
+      "hacia": "GOOGL",
+      "fecha": "2026-10-29",
+      "precioAnteriorGOOG": 321.89,
+      "precioGOOGL": 324.89,
+      "valoracionOrigen": "GOOG-20261029-R4",
+      "cambioFundamentales": false,
+      "variacionDCFPorMarketWACC": -0.01589499786973647,
+      "control": "Matriz sensibilidad centro OK 278.1214621898841. No tomar la cotización intradiaria Oct29 como cierre definitivo."
+    }
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.10025975682200201,
+    "gCentro": 0.04,
+    "centro": 278.1214621898841,
+    "centroConciliado": true,
+    "matriz": {
+      "wacc": [
+        0.09025975682200202,
+        0.09525975682200201,
+        0.10025975682200201,
+        0.10525975682200202,
+        0.11025975682200201
+      ],
+      "g": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "valores": [
+        [
+          319.22429872094307,
+          336.5981039422907,
+          358.05986333336716,
+          385.24475856206396,
+          420.7942369380522
+        ],
+        [
+          284.99012815625116,
+          297.99612930907773,
+          313.7402359677624,
+          333.18883831084355,
+          357.82373461207965
+        ],
+        [
+          256.4940385808059,
+          266.36742761973295,
+          278.1214621898841,
+          292.3500303537514,
+          309.9264969091168
+        ],
+        [
+          232.4506343802873,
+          240.02843446598743,
+          248.9241128274614,
+          259.51420611493046,
+          272.3337927260773
+        ],
+        [
+          211.9295804638826,
+          217.79486508243903,
+          224.59859523996448,
+          232.58558281619,
+          242.09390135931565
+        ]
+      ]
+    },
+    "descripcion": "R4 sensitivity recalcula FCFF forecast que resta inversión neta física y R&D neta, reconoce tax shield, no reutiliza antiguo Motor sensibilidad DCF; centro OK con fuente Valuation output!B35."
+  },
+  "fuentes_supuestos": [
+    "https://abc.xyz/investor/",
+    "https://www.sec.gov/edgar/browse/?CIK=1652044",
+    "https://pages.stern.nyu.edu/~adamodar/",
+    "https://people.stern.nyu.edu/adamodar/pdfiles/papers/growth.pdf",
+    "https://stockanalysis.com/stocks/googl/history/",
+    "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm"
+  ],
+  "salvedades": [
+    "R4 reemplaza R3: nuevo JMR Base US$278.14 (anterior 285.20), AZ Stocks Base US$218.82 SIN CAMBIO. Corrige la reinversión intangible y ventaja fiscal de I+D capitalizada.",
+    "El flujo físico de reinversión se mide CapEx−D&A+ΔNWC; la capitalización de I+D eleva EBIT y capital invertido, por tanto incluye net R&D spending−research amortization en inversión una sola vez. Contrastar con S/C sin sumarlo como gasto duplicado.",
+    "Primer año: reinversión física US$201,695.95m, investigación netaUS$33,905.74m, totalUS$235,601.69m, NOPAT neto de efecto fiscal185,137.95m, FCFF−50,463.75m. Bridge validador error=0 años1-10.",
+    "ROIC JMR actual25.489%, año10 17.641%, terminal18%; salto pequeño+0.359pp (frente a salto28.2→15 del modelo R2). No prometer 18% anual en cada cohorte sin auditar recuperación capital.",
+    "AZ Stocks sigue independiente con I+D como gasto GAAP, no necesita un activo I+D adicional. AZ Base218.82, Bear140.75, Bull391.26 y múltiplo salida secundario371.46.",
+    "CapEx FY2027=US$240bn y demás futuras cifras SON ESTIMACIONES ANALISTA. Dirección FY2026 guió US$195–205bn y FY2027 incremento significativo sin cifra oficial. Duración GPUs y contratos continúan riesgo.",
+    "El S/C 0.70/0.56 se conserva como diagnóstico de eficiencia incremental y contraste económico, pero en Base JMR FCFF se determina por inversión física y research asset, no por Δventas/S/C.",
+    "Valor terminal y activos no operativos hacen al DCF sensible a WACC/g, fair value y tributación de valores financieros. Los múltiplos no están certificados y no se realiza auditoría económica independiente hasta revisión visual.",
+    "GOOGL (clase A) reemplaza GOOG (clase C) como único ticker activo; iguales derechos económicos, diferente voto (1 vs0). Precio de cierre referencia GOOGL 28-Oct-2026 US$324.89; sin prima independiente por voto.",
+    "Valor principal GOOGL US$278.12146 vs GOOG US$278.13736, delta mecánico por mayor precio que alimenta WACC de mercado. AZ independiente mantiene FCFF US$218.81574, cambia solo diferencia contra cotización.",
+    "Cambio de ticker no representa revisión ni auditoría económica nueva; conserva reserva de CapEx/I+D ya expuesta en R4; EN_REVISION hasta inspección visual."
+  ],
+  "hojas": {
+    "valoracion": {
+      "GOOGL R4 JMR y AZ definitivo para revisión": "<section><h2>Alphabet GOOGL · Modelo JMR A-1.2 R4 · 29/oct/2026</h2><p><strong>Valor intrínseco Base US$278,12</strong> por acción frente a precio de referencia US$324,89; MOS35% <strong>US$180,79</strong>. Conservador US$218,97; optimista US$475,98; disrupción US$125,93; promedio normal US$312,81.</p><p>El FCFF JMR usa reinversión neta <strong>CapEx−D&amp;A+ΔNWC+I+D neta capitalizada</strong>, con ajuste de deducción fiscal de I+D para mantener cash taxes. El método de sales-to-capital es un <em>contraste</em>, no una inversión adicional. Año1 físicaUS$201.696m + I+D netaUS$33.906m=total235.602m; FCFF−US$50.464m. ROIC17,64% Y10→18% terminal, WACC10,03% inicial/9,25% terminal.</p><p>AZ Stocks independiente usa I+D GAAP y DCF FCFF perpetuidad Base <strong>US$218,82</strong>; no se fuerza a igualar JMR. <a href=\"https://docs.google.com/spreadsheets/d/1ijC-R4HeGyQM1hy6ref04DsieCe63sIv0Pb-mV3_L_o/edit\">Google Sheets JMR Puente CAPEX ROIC</a> y <a href=\"https://docs.google.com/spreadsheets/d/1XF1Rszivh_ADnJnNIJTJ6yAkVz8sh6nagNCMUMyauMg/edit\">AZ Sheets</a>. EN_REVISION, auditoría económica posterior a revisión visual.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia NUEVA de plantilla IA oficial 46 pestañas; históricos 2016–2025 importados de libro previo con reconciliación 2025/sep26; supuestos, escenarios y valor recalculados desde cero. Informe analítico ampliado 29-oct-2026 en análisis GOOG research mismo expediente; DCF JMR y AZ conservados sin modificar los supuestos financieros hasta conciliación. 29Oct26 R3 reformulación CapEx, ROIC y Rf en hojas oficiales, matriz sensibilidad actualizada, AZ terminal ROC propio, sin auditoría económica independiente. 29Oct2026 R4 correction accounting R&D capitalization: cash flow uses physical reinvestment + net capitalized R&D and tax deduction, no Δsales/S-C duplication; JMR Base278.137357, AZ remains218.815740. GOOGL 29oct2026: sustitución ticker clase C→A sin cambio de proyecciones operativas, precio referencia $324.89, JMR recalculado 278.121462, AZ218.815740.",
+  "version": "GOOGL-20261029-R4"
+}
