@@ -37,12 +37,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
+        id: node
         with:
           node-version: '22'
-      - run: node scripts/validar_catalogo.cjs
-      - run: node scripts/auditar_integridad.cjs
-      - run: node --test scripts/tests/*.test.cjs
-      - run: python3 scripts/verificar_cierre_multiplos.py
+      - if: ${{ !cancelled() && steps.node.outcome == 'success' }}
+        run: node scripts/validar_catalogo.cjs
+      - if: ${{ !cancelled() && steps.node.outcome == 'success' }}
+        run: node scripts/auditar_integridad.cjs
+      - if: ${{ !cancelled() && steps.node.outcome == 'success' }}
+        run: node --test scripts/tests/*.test.cjs
+      - if: ${{ !cancelled() && steps.node.outcome == 'success' }}
+        run: python3 scripts/verificar_cierre_multiplos.py
 
-      - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
-
+      - if: ${{ !cancelled() && steps.node.outcome == 'success' }}
+        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
