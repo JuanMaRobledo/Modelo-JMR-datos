@@ -15,8 +15,8 @@ En cada uno de los 19 expedientes se comparó la versión original en `main` con
 - **13 capítulos principales** `h2` con títulos y orden vigentes.
 - **0 párrafos originales perdidos** por empresa (excluyendo únicamente antiguas notas de huecos generadas por una migración previa).
 - Sin modificaciones en campos ajenos a `articleHtml`, `html`, `calculationHtml` o la metainformación editorial `jmrNarrative`.
-- `calculationHtml` original **sin cambios en 18/19** expedientes. En AFYA, que carecía de anexo autónomo, se añadió aviso explícito de falta de soporte: **no** se crearon fórmulas ni cifras.
-- Los títulos anteriores y bloques narrativos quedan como subsecciones de sus capítulos económicos; se preservan datos, fuentes, tablas y referencias existentes.
+- El contenido original de `calculationHtml` se conserva íntegro. En **META y NVDA** se añadieron al final tablas numéricas extensas del Nivel 1; **AFYA** carecía de anexo autónomo y ahora incluye una advertencia explícita más su tabla numérica trasladada. **No** se crearon fórmulas ni cifras.
+- Los títulos anteriores y bloques narrativos quedan como subsecciones de sus capítulos económicos; se preservan datos, fuentes, tablas y referencias existentes. **Siete tablas técnicas extensas** (2 META, 4 NVDA, 1 AFYA) se trasladaron íntegramente al Nivel 2 con anclas verificadas, manteniendo en Nivel 1 su enlace y explicación.
 
 **Estos controles son documentales, no una auditoría de datos financieros, ni una validación de profundidad.**
 
