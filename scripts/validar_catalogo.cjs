@@ -115,10 +115,20 @@ function validate(root = path.join(__dirname, '..')) {
       assert.ok(a.calculationHtml?.length>1000,'META: falta nivel 2');
       assert.ok(a.editorialRevisionId,'META: falta revisión editorial');
     } else if (a.controlCobertura) {
-      assert.equal(a.controlCobertura.entradas.length, 25,
-        'Cobertura editorial v5 debe documentar 25 puntos');
-      assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
-      assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
+      // Las revisiones EN_REVISION pueden tener indicadores anteriores (13/18
+      // apartados) o una ficha de capítulos sin inventario de 25 entradas.
+      // Solo afirmar cobertura v5 cuando el inventario de 25 existe realmente.
+      const cov = a.controlCobertura;
+      if (Array.isArray(cov.entradas) && cov.entradas.length === 25) {
+        assert.equal(cov.resueltas + cov.limitadas, 25,
+          a.ticker + ': inventario de 25 puntos sin conciliación');
+        assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
+      } else {
+        assert.equal(a.status, 'EN_REVISION',
+          a.ticker + ': cobertura incompleta o legado no permite cierre editorial');
+        console.warn('PENDIENTE_COBERTURA: '+a.ticker+
+          ' no acredita las 25 entradas editoriales vigentes.');
+      }
     }
   }
   for (const {record: v} of vals) {
