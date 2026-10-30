@@ -47,3 +47,8 @@ Entorno local Node 24.22.1 y Python 3.12; CI configura Node 22. La réplica loca
 ## Condiciones para recuperar el gate verde
 Reconciliar el contrato editorial vigente y sus validadores; completar enlaces y snapshots de la misma revisión sin recalcular precios; resolver con evidencia el contrato de múltiplos de cada revisión nueva; separar formalmente estados EN_REVISION de certificación económica si la política actual permite publicación preliminar sin auditoría. No eliminar requisitos ni inventar evidencias.
 Después ejecutar todos los controles sobre el mismo SHA y verificar resultados CI. Hasta entonces, ni los correos ni este parche habilitan publicación por el gate. El cambio propuesto recupera diagnóstico y selección determinista, no certificación financiera.
+
+## Confirmación CI del parche
+Run https://github.com/JuanMaRobledo/Modelo-JMR-datos/actions/runs/41054518870 (commit 69cabf9d1c1334ee9a2c5a0c69f7a913fe7b2327): completado con failure, como corresponde a los bloqueos pendientes. Los cinco controles se ejecutaron; ninguno quedó omitido por el primer error. Python 9/9 PASS. Node 4/15 PASS, 11/15 FAIL. Catálogo, integridad y cierre activo siguen FAIL.
+
+CI completo confirma además hashes discordantes de los análisis META y NVDA frente a sus manifiestos de recaptura. Aunque ambos registros pasan validateRecord, sus paquetes de publicación NO pasan trazabilidad. No se regeneraron hashes para ocultar cambios editoriales. Este hallazgo no apareció en los logs históricos porque la suite estaba omitida; queda ahora expuesto por el parche.
