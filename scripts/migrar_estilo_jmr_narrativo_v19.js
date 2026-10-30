@@ -129,10 +129,16 @@ function migrate(input){
   if(!html)html='<p class="jmr-editorial-gap" data-editorial-gap="true"><strong>Pendiente de investigación:</strong> todavía falta evidencia específica del emisor para desarrollar este capítulo; no se utiliza texto genérico como sustituto.</p>';
   return sec+html+'</section>';
  }).join("\n");
- const next=parts.before+chapters+parts.exterior+parts.after;
- // Integrity: all original full paragraphs survive except placeholders introduced by the previous 18-title migration.
+ let next=parts.before+chapters+parts.exterior+parts.after;
+ // Integrity: preserve any source paragraph placed directly inside a legacy chapter wrapper,
+ // outside its nested subsections (e.g. an SEC source bibliography).
  const originalP=[...s.matchAll(/<p\b[^>]*>[\s\S]*?<\/p>/gi)].map(x=>x[0])
  .filter(x=>!x.includes("data-editorial-gap")&&!x.includes("Pendiente de ampliación editorial"));
+ const outsideP=originalP.filter(x=>!next.includes(x));
+ if(outsideP.length){
+   chapters=chapters.replace(/<\/section>\s*$/, '<div class="jmr-preserved-sources">'+outsideP.join("\\n")+'</div></section>');
+   next=parts.before+chapters+parts.exterior+parts.after;
+ }
  const lostP=originalP.filter(x=>!next.includes(x));
  if(lostP.length)throw Error("Lost "+lostP.length+" source paragraphs");
  if((next.match(/<h2\b/gi)||[]).length!==13)throw Error("Bad main chapter count");
