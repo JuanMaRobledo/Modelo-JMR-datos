@@ -1,0 +1,277 @@
+{
+  "ticker": "DUOL",
+  "nombreActivo": "Duolingo, Inc.",
+  "sheet_id": "14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts/edit",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-30",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-10-29",
+  "precio": 136.39,
+  "precioAnalisis": 136.39,
+  "precioReferenciaFecha": "2026-10-29",
+  "precioReferenciaFuente": "https://stockanalysis.com/stocks/duol/history/",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "NASDAQ",
+  "tipo": "Crecimiento",
+  "mos": 0.35,
+  "precioMOS": 88.83969406,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 136.6764524,
+  "metodoPrincipal": "DCF FCFF Base",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "DUOL-20261029-A1",
+  "revision_id": "DUOL-20261029-A1",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "REVISION_VISUAL_PENDIENTE",
+  "validationStatus": "LISTO_CONTROLES_HOJA_NO_AUDITADO_ECONOMICAMENTE",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "Usuario autorizó valoración nueva, eliminación de expedientes DUOL anteriores y publicación 30-oct-2026",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "reportSchema": "jmr-valuation-two-levels-v19",
+  "metodos": [
+    {
+      "nombre": "DCF FCFF",
+      "peso": 0.6,
+      "conservador": 92.51,
+      "base": 136.6764524,
+      "optimista": 196.95,
+      "nota": "Principal: 10 años + perpetuidad; MOS sobre Base.",
+      "valorPresente": true,
+      "estado": "EN_REVISION"
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1,
+      "conservador": 76.47,
+      "base": 97.08,
+      "optimista": 121.39,
+      "nota": "Múltiplo relativo secundario, año 1-3 traído a VP.",
+      "valorPresente": true,
+      "estado": "EN_REVISION"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.15,
+      "conservador": 63.01,
+      "base": 76.54,
+      "optimista": 81.39,
+      "nota": "Secundario; comparabilidad dependiente de SBC y capitalización I+D.",
+      "valorPresente": true,
+      "estado": "EN_REVISION"
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.05,
+      "conservador": 16.28,
+      "base": 23.14,
+      "optimista": 33.44,
+      "nota": "Provisional: fuerte anomalía en puente interés/otros en Financials Multiples.",
+      "valorPresente": true,
+      "estado": "PROVISIONAL_SIN_APROBACION_ECONOMICA"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.05,
+      "conservador": 15.45,
+      "base": 14.69,
+      "optimista": 12.22,
+      "nota": "Provisional: reconciliar estructura de FCFE y dilución.",
+      "valorPresente": true,
+      "estado": "PROVISIONAL_SIN_APROBACION_ECONOMICA"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0.05,
+      "conservador": 16.11,
+      "base": 16.31,
+      "optimista": 16.64,
+      "nota": "Provisional: OCF se beneficia del addback de SBC.",
+      "valorPresente": true,
+      "estado": "PROVISIONAL_SIN_APROBACION_ECONOMICA"
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "nota": "No ponderado: precio/ventas no representa márgenes; hoja PV auxiliar.",
+      "valorPresente": true,
+      "estado": "PROVISIONAL_SIN_APROBACION_ECONOMICA"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "nota": "No ponderado: base contable no refleja intangible propio.",
+      "valorPresente": true,
+      "estado": "PROVISIONAL_SIN_APROBACION_ECONOMICA"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 100.7,
+    "base": 145.58,
+    "optimista": 203.83,
+    "horizonte": "FY+3, no VP"
+  },
+  "valorPresentePonderado": {
+    "conservador": 75,
+    "base": 105.9,
+    "optimista": 145.63,
+    "clasificacion": "SECUNDARIO_NO_VALOR_INTRINSECO"
+  },
+  "valorEsperado": 141.15,
+  "valorIndependiente": 136.6764524,
+  "escenariosDCF": [
+    {
+      "nombre": "Base",
+      "probabilidad": 0.4,
+      "valor": 136.6764524,
+      "crecimientoCagr5": 0.142,
+      "margen": 0.285,
+      "salesToCapital1a5": 2,
+      "salesToCapital6a10": 2.4,
+      "roicTerminal": 0.15,
+      "gTerminal": 0.04
+    },
+    {
+      "nombre": "Conservadora",
+      "probabilidad": 0.25,
+      "valor": 92.51,
+      "crecimientoCagr5": 0.083,
+      "margen": 0.245,
+      "salesToCapital1a5": 1.6,
+      "salesToCapital6a10": 2,
+      "roicTerminal": 0.115,
+      "gTerminal": 0.04
+    },
+    {
+      "nombre": "Optimista",
+      "probabilidad": 0.25,
+      "valor": 196.95,
+      "crecimientoCagr5": 0.193,
+      "margen": 0.325,
+      "salesToCapital1a5": 2.3,
+      "salesToCapital6a10": 2.7,
+      "roicTerminal": 0.19,
+      "gTerminal": 0.04
+    },
+    {
+      "nombre": "Disrupción",
+      "probabilidad": 0.1,
+      "valor": 54.83,
+      "crecimientoCagr5": -0.005,
+      "margen": 0.16,
+      "salesToCapital1a5": 1.3,
+      "salesToCapital6a10": 1.7,
+      "roicTerminal": 0.12,
+      "gTerminal": 0,
+      "excluidoPromedioOrdinario": true
+    }
+  ],
+  "revisionSupuestos": {
+    "metodo": "A-1.2",
+    "revLtmMillones": 1145,
+    "ebitGaapLtmMillones": 157.1,
+    "ebitEconomicoAjustadoMillones": 249.59,
+    "rndLtmMillones": 337.4,
+    "activoRndMillones": 620.03,
+    "amortizacionRndMillones": 245.33,
+    "yr1IngresosMillones": 1314.3,
+    "yr5IngresosMillones": 2227.39,
+    "yr10IngresosMillones": 3145.16,
+    "margenEbitY1": 0.235,
+    "margenEbitTerminal": 0.285,
+    "impuestoY1": 0.24,
+    "impuestoTerminal": 0.25,
+    "salesCapital1a5": 2,
+    "salesCapital6a10": 2.4,
+    "roicTerminal": 0.15,
+    "rf10y": 0.0498,
+    "erpGlobalJuicio": 0.042,
+    "betaGlobalPrevia": 1.34,
+    "waccInicial": 0.1056,
+    "waccTerminal": 0.095,
+    "gTerminal": 0.04,
+    "accionesDiluidasMillones": 50.7,
+    "cashCortoPlazoMillones": 1313.87,
+    "activosNoOperativosMillones": 102.693,
+    "deudaLeaseReconocidaMillones": 105.06,
+    "sbcLtmMillonesAprox": 144.7,
+    "evMillones": 5618,
+    "pvFcffProyeccionMillones": 2102.64,
+    "pvTerminalMillones": 3515.35,
+    "valorEquityMillones": 6929.5,
+    "valorTerminalParticipacionEv": 0.6257,
+    "bases": [
+      "Ajuste I+D 3 años desde hoja original reconstruida con 10-K/10-Q",
+      "Normalización fiscal 2025",
+      "Capacidad futura y retención con presión de monetización en Q2",
+      "S/C marginal no equivalente a Sales/IC histórico",
+      "SBC por dilución presente y futura con reservas"
+    ]
+  },
+  "sensibilidadDCF": {
+    "metodo": "Base únicamente",
+    "wacc_g": {
+      "waccBase": 0.1056,
+      "gBase": 0.04,
+      "centro": 136.6764524,
+      "lowWacc9_56_g4": 162.5057,
+      "highWacc11_56_g4": 118.7754
+    },
+    "roic_g": {
+      "roicBase": 0.15,
+      "gBase": 0.04,
+      "centro": 136.6764524,
+      "roic14_g4": 134.8755,
+      "roic16_g4": 138.2523
+    },
+    "controles": [
+      "Escenarios e historias K5:K8 = LISTO",
+      "Sensibilidad DCF A12 = OK",
+      "Los múltiplos secundarios no cuentan con auditoría económica independiente"
+    ]
+  },
+  "fuentes_supuestos": {
+    "SEC_10Q_20260630": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053603/duol-20260630.htm",
+    "SEC_CARTA_Q2_2026": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026053299/q2fy26duolingo6-30x26share.htm",
+    "IR_10K_FY2025": "https://investors.duolingo.com/static-files/f19d76fb-dee4-4f13-96ae-138ebfd0f2d3",
+    "CALENDARIO_Q3": "https://duolingo.gcs-web.com/news-releases/news-release-details/duolingo-announce-third-quarter-2026-results-tuesday-november-3",
+    "PRECIO": "https://stockanalysis.com/stocks/duol/history/",
+    "MODELO": "https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/METODO_A_JMR.md"
+  },
+  "salvedades": [
+    "Las cifras Q3 2026 no estaban publicadas al corte; último 10-Q disponible 30-jun-2026.",
+    "Reinvertir económicamente I+D y SBC; no confundir FCF contable con efectivo para accionistas sin dilución.",
+    "La Base depende de EBIT normalizado, margen terminal 28,5%, S/C 2,0→2,4, ROIC terminal15%, g4% y WACC terminal9,5%.",
+    "Riesgo elevado por desempeño relativo de reservas (bookings) vs usuarios y pagos; guía FY2026 más lenta que 2025.",
+    "Valor terminal representa cerca del 63% del EV; sensibilidad económica relevante.",
+    "Los siete múltiplos se muestran como contraste; P/E, P/FCFE y P/OCF están condicionados por denominadores y puentes contables de la hoja heredada y no se certifican; P/V y P/BV peso cero.",
+    "No se ha realizado auditoría económica; el usuario revisará visualmente el expediente."
+  ],
+  "linkedAnalysis": "DUOL-20261029-A1",
+  "publicationRevisionId": "DUOL-20261029-A1",
+  "savedAt": "2026-10-30T12:20:00Z",
+  "hojas": {
+    "valoracion": {
+      "DUOL · DCF FCFF Base A-1.2": "<section><h2>DUOL · Valoración nueva A-1.2 al 29-oct-2026</h2><p><strong>Valor Base US$136,68 · precio US$136,39 · MOS35% US$88,84</strong>. Conservadora US$92,51 · Optimista US$196,95 · Disrupción US$54,83 (fuera del promedio). Fuente: <a href='https://docs.google.com/spreadsheets/d/14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts/edit'>hoja oficial nueva</a>.</p><p>PV FCFF explícito US$2.102,64M, PV terminal US$3.515,35M, EV US$5.618M, patrimonio US$6.929,50M, acciones diluidas 50,70M.</p><div class=\"table-scroll\"><table><tbody><tr><td>—</td><td>Base year</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>Terminal year</td></tr><tr><td>Revenue growth rate</td><td>15,00%</td><td>14,79%</td><td>16,16%</td><td>14,65%</td><td>13,70%</td><td>11,92%</td><td>10,34%</td><td>8,75%</td><td>7,17%</td><td>5,58%</td><td>4,00%</td><td>4,00%</td></tr><tr><td>Revenues</td><td> $ 1.145,00 </td><td> $ 1.314,30 </td><td> $ 1.526,74 </td><td> $ 1.750,41 </td><td> $ 1.990,18 </td><td> $ 2.227,39 </td><td> $ 2.457,61 </td><td> $ 2.672,68 </td><td> $ 2.864,26 </td><td> $ 3.024,19 </td><td> $ 3.145,16 </td><td> $ 3.270,97 </td></tr><tr><td>EBIT (Operating) margin</td><td>21,80%</td><td>23,50%</td><td>25,50%</td><td>26,50%</td><td>27,50%</td><td>28,50%</td><td>28,50%</td><td>28,50%</td><td>28,50%</td><td>28,50%</td><td>28,50%</td><td>28,50%</td></tr><tr><td>EBIT (Operating income)</td><td> $ 249,59 </td><td> $ 308,86 </td><td> $ 389,32 </td><td> $ 463,86 </td><td> $ 547,30 </td><td> $ 634,81 </td><td> $ 700,42 </td><td> $ 761,72 </td><td> $ 816,31 </td><td> $ 861,89 </td><td> $ 896,37 </td><td> $ 932,23 </td></tr><tr><td>Tax rate</td><td>103,47%</td><td>24,00%</td><td>24,00%</td><td>24,00%</td><td>24,00%</td><td>24,00%</td><td>24,20%</td><td>24,40%</td><td>24,60%</td><td>24,80%</td><td>25,00%</td><td>25,00%</td></tr><tr><td>EBIT(1-t)</td><td> $ (8,65)</td><td> $ 261,42 </td><td> $ 295,88 </td><td> $ 352,53 </td><td> $ 415,95 </td><td> $ 482,45 </td><td> $ 530,92 </td><td> $ 575,86 </td><td> $ 615,50 </td><td> $ 648,14 </td><td> $ 672,28 </td><td> $ 699,17 </td></tr><tr><td> - Reinvestment</td><td>—</td><td> $ 106,22 </td><td> $ 111,84 </td><td> $ 119,88 </td><td> $ 118,61 </td><td> $ 115,11 </td><td> $ 89,62 </td><td> $ 79,82 </td><td> $ 66,64 </td><td> $ 50,40 </td><td> $ 52,42 </td><td> $ 186,45 </td></tr><tr><td>FCFF</td><td>—</td><td> $ 155,21 </td><td> $ 184,04 </td><td> $ 232,65 </td><td> $ 297,34 </td><td> $ 367,35 </td><td> $ 441,30 </td><td> $ 496,04 </td><td> $ 548,86 </td><td> $ 597,74 </td><td> $ 619,86 </td><td> $ 512,72 </td></tr><tr><td>NOL</td><td> $ 111,20 </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td><td> $ -   </td></tr><tr></tr><tr><td>Cost of capital</td><td>—</td><td>10,56%</td><td>10,56%</td><td>10,56%</td><td>10,56%</td><td>10,56%</td><td>10,35%</td><td>10,14%</td><td>9,93%</td><td>9,71%</td><td>9,50%</td><td>9,50%</td></tr><tr><td>Cumulated discount factor</td><td>—</td><td>0,9045</td><td>0,8180</td><td>0,7399</td><td>0,6692</td><td>0,6052</td><td>0,5485</td><td>0,4980</td><td>0,4530</td><td>0,4129</td><td>0,3771</td></tr><tr><td>PV(FCFF)</td><td>—</td><td> $ 140,38 </td><td> $ 150,55 </td><td> $ 172,13 </td><td> $ 198,98 </td><td> $ 222,34 </td><td> $ 242,04 </td><td> $ 247,02 </td><td> $ 248,65 </td><td> $ 246,82 </td><td> $ 233,74 </td></tr></tbody></table></div></section>",
+      "DUOL · Historias y escenarios": "<section><h2>Cuatro historias y promedio ordinario</h2><div class=\"table-scroll\"><table><tbody><tr><td>Escenario / historia</td><td>Probabilidad</td><td>CAGR ingresos 1–5</td><td>Margen objetivo</td><td>Ventas/capital 1–5</td><td>Ventas/capital 6–10</td><td>ROIC terminal</td><td>DCF hoy por acción</td><td>Aporte al esperado</td><td>Crecimiento terminal</td></tr><tr><td>Base · Adopción y monetización recurrente mejoran, con I+D y SBC disciplinadas</td><td>40,0%</td><td>14,2%</td><td>28,5%</td><td>2,00</td><td>2,40</td><td>15,0%</td><td>136,68</td><td>60,75</td><td>4,0%</td></tr><tr><td>Conservadora · Usuarios aumentan pero conversión a pago y margen se normalizan</td><td>25,0%</td><td>8,3%</td><td>24,5%</td><td>1,60</td><td>2,00</td><td>11,5%</td><td>92,51</td><td>25,70</td><td>4,0%</td></tr><tr><td>Disrupción · Tutores de IA presionan retención, precio y hábitos</td><td>10,0%</td><td>-0,5%</td><td>16,0%</td><td>1,30</td><td>1,70</td><td>12,0%</td><td>54,83</td><td>0,00</td><td>0,0%</td></tr><tr><td>Optimista · Expansión internacional y mayor conversión elevan retorno</td><td>25,0%</td><td>19,3%</td><td>32,5%</td><td>2,30</td><td>2,70</td><td>19,0%</td><td>196,95</td><td>54,71</td><td>4,0%</td></tr><tr></tr><tr><td>Promedio condicionado · tres historias</td><td>90%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>141,15</td></tr><tr><td>DCF Base · valor intrínseco principal</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>136,68</td></tr><tr><td>Mínimo · tres historias, sin disrupción</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>92,51</td></tr><tr><td>Máximo · tres historias, sin disrupción</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>196,95</td></tr><tr><td>Margen de seguridad (precio con MOS sobre el DCF Base)</td><td>35%</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>88,84</td></tr></tbody></table></div></section>",
+      "DUOL · Sensibilidad DCF Base": "<section><h2>WACC × g, solo Base</h2><div class=\"table-scroll\"><table><tbody><tr><td>WACC × crecimiento terminal</td></tr><tr><td>—</td><td>3,00%</td><td>3,50%</td><td>4,00%</td><td>4,50%</td><td>5,00%</td></tr><tr><td>9,56%</td><td>149,5520875</td><td>155,4351069</td><td>162,5056643</td><td>171,2061249</td><td>182,231583</td></tr><tr><td>10,06%</td><td>138,4484593</td><td>142,9747535</td><td>148,3033075</td><td>154,6990264</td><td>162,559225</td></tr><tr><td>10,56%</td><td>129,0608047</td><td>132,5923156</td><td>136,6764524</td><td>141,4768402</td><td>147,2297899</td></tr><tr><td>11,06%</td><td>121,0216525</td><td>123,8088521</td><td>126,9822091</td><td>130,64516</td><td>134,9424845</td></tr><tr><td>11,56%</td><td>114,0614939</td><td>116,282214</td><td>118,7754297</td><td>121,6076183</td><td>124,8694035</td></tr></tbody></table></div></section>",
+      "DUOL · Múltiplos secundarios": "<section><h2>Métodos DCF y relativos · revisión pendiente de denominadores</h2><div class=\"table-scroll\"><table><tbody><tr><td>VALOR POR ACCIÓN HOY | DCF = VALOR INTRÍNSECO · MÚLTIPLOS Y PONDERADO = SECUNDARIOS</td></tr><tr><td>Método</td><td>Peso</td><td>Conservador</td><td>Base</td><td>Optimista</td></tr><tr><td>DCF hoy · valor intrínseco</td><td>60,0%</td><td>92,51</td><td>136,68</td><td>196,95</td></tr><tr><td>Múltiplos consolidados hoy (secundario)</td><td>40,0%</td><td>48,73</td><td>59,74</td><td>68,66</td></tr><tr><td>Ponderado hoy (secundario)</td><td>100,0%</td><td>75,00</td><td>105,90</td><td>145,63</td></tr><tr><td>Descuento del precio frente al ponderado</td><td>—</td><td>-81,9%</td><td>-28,8%</td><td>6,3%</td></tr><tr><td>Compra con MOS sobre el ponderado</td><td>—</td><td>48,75</td><td>68,84</td><td>94,66</td></tr><tr><td>Chequeo: múltiplos VP 3 años &lt; FY+3</td></tr><tr></tr><tr><td>CADA MÉTODO A VALOR HOY</td></tr><tr><td>Método</td><td>Peso</td><td>Conservador</td><td>Base</td><td>Optimista</td></tr><tr><td>DCF Damodaran</td><td>60,0%</td><td>92,51</td><td>136,68</td><td>196,95</td></tr><tr><td>EV/EBITDA</td><td>10,0%</td><td>76,47</td><td>97,08</td><td>121,39</td></tr><tr><td>EV/FCFF</td><td>15,0%</td><td>63,01</td><td>76,54</td><td>81,39</td></tr><tr><td>P/E</td><td>5,0%</td><td>16,28</td><td>23,14</td><td>33,44</td></tr><tr><td>P/FCFE</td><td>5,0%</td><td>15,45</td><td>14,69</td><td>12,22</td></tr><tr><td>P/OCF</td><td>5,0%</td><td>16,11</td><td>16,31</td><td>16,64</td></tr></tbody></table></div></section>"
+    },
+    "financieros": {
+      "Income Statement": "<div class=\"table-scroll\"><table><tbody><tr><td>Income Statement</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Dec '20</td><td>Dec '21</td><td>Dec '22</td><td>Dec '23</td><td>Dec '24</td><td>Dec '25</td><td>LTM</td></tr><tr><td>Total Revenues</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$162</td><td>$251</td><td>$370</td><td>$531</td><td>$748</td><td>$1.038</td><td>$1.145</td></tr><tr><td>Total Revenues %Chg</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>55,10%</td><td>47,33%</td><td>43,73%</td><td>40,84%</td><td>38,72%</td><td>10,35%</td></tr><tr><td>Cost of Sales</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$46</td><td>$69</td><td>$99</td><td>$142</td><td>$204</td><td>$288</td><td>$312</td></tr><tr><td>Gross Profit</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$116</td><td>$182</td><td>$270</td><td>$389</td><td>$544</td><td>$750</td><td>$833</td></tr><tr><td>Gross Profit Margin</td><td>—</td><td>—</td><td>—</td><td>—</td><td>71,55%</td><td>72,41%</td><td>73,10%</td><td>73,24%</td><td>72,78%</td><td>72,23%</td><td>72,72%</td></tr><tr><td>Selling, General &amp; Administrative Expenses</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$79</td><td>$138</td><td>$185</td><td>$208</td><td>$247</td><td>$308</td><td>$338</td></tr><tr><td>Depreciation &amp; Amortization Expenses</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$2</td><td>$3</td><td>$5</td><td>$7</td><td>$11</td><td>$14</td><td>$16</td></tr><tr><td>Research &amp; Development Expenses</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$53</td><td>$104</td><td>$150</td><td>$194</td><td>$235</td><td>$306</td><td>$337</td></tr><tr><td>Other Operating Expenses</td><td>—</td><td>—</td><td>—</td><td>—</td><td>-$2</td><td>-$3</td><td>-$5</td><td>-$7</td><td>-$11</td><td>-$14</td><td>-$16</td></tr><tr><td>Operating Profit</td><td>—</td><td>—</td><td>—</td><td>—</td><td>-$16</td><td>-$60</td><td>-$65</td><td>-$13</td><td>$63</td><td>$136</td><td>$157</td></tr><tr><td>Operating Margin</td><td>—</td><td>—</td><td>—</td><td>—</td><td>-9,89%</td><td>-23,92%</td><td>-17,65%</td><td>-2,50%</td><td>8,37%</td><td>13,07%</td><td>13,72%</td></tr></tbody></table></div>",
+      "Cash Flow Statement": "<div class=\"table-scroll\"><table><tbody><tr><td>Duolingo, Inc. (NASDAQ:DUOL)</td><td>—</td><td>Precio</td><td>$ 136,39</td></tr><tr><td>Operating Activities</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Dec '20</td><td>Dec '21</td><td>Dec '22</td><td>Dec '23</td><td>Dec '24</td><td>Dec '25</td><td>LTM</td></tr><tr><td>Net Income</td><td>—</td><td>—</td><td>—</td><td>—</td><td>($16)</td><td>($60)</td><td>($60)</td><td>$16</td><td>$89</td><td>$414</td><td>$411</td></tr><tr><td>Depreciation &amp; Amortization</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$2</td><td>$3</td><td>$5</td><td>$7</td><td>$11</td><td>$14</td><td>$16</td></tr><tr><td>Share-Based Compensation Expense</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$17</td><td>$41</td><td>$74</td><td>$95</td><td>$111</td><td>$137</td><td>$145</td></tr><tr><td>Other Adjustments</td><td>—</td><td>—</td><td>—</td><td>—</td><td>($2)</td><td>($11)</td><td>($5)</td><td>($15)</td><td>($12)</td><td>($269)</td><td>($204)</td></tr><tr><td>Changes in Trade Receivables</td><td>—</td><td>—</td><td>—</td><td>—</td><td>($10)</td><td>($13)</td><td>($14)</td><td>($42)</td><td>($40)</td><td>($34)</td><td>($18)</td></tr><tr><td>Changes in Accounts Payable</td><td>—</td><td>—</td><td>—</td><td>—</td><td>($2)</td><td>$6</td><td>($7)</td><td>$1</td><td>$4</td><td>$2</td><td>$7</td></tr><tr><td>Changes in Accrued Expenses</td></tr><tr><td>Changes in Income Taxes Payable</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><td>Changes in Unearned Revenue</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$29</td><td>$44</td><td>$59</td><td>$92</td><td>$124</td><td>$123</td><td>$74</td></tr><tr><td>Changes in Other Operating Activities</td></tr><tr><td>Cash from Operating Activities</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$18</td><td>$9</td><td>$54</td><td>$154</td><td>$286</td><td>$388</td><td>$431</td></tr><tr><td>Investing Activities</td></tr><tr><td>Capital Expenditure</td><td>—</td><td>—</td><td>—</td><td>—</td><td>($3)</td><td>($4)</td><td>($6)</td><td>($3)</td><td>($12)</td><td>($18)</td><td>($23)</td></tr><tr><td>Proceeds from Sale of Property, Plant &amp; Equipment</td></tr></tbody></table></div>"
+    }
+  },
+  "analysisSchema": "jmr-valuacion-v19",
+  "hojaFuente": "https://docs.google.com/spreadsheets/d/1Pbpv8PYFX6HIPJOQgtoLVDGgtPh08JMxbBkUQWyMVCc/edit"
+}
