@@ -50,10 +50,10 @@ function validate(root = path.join(__dirname, '..')) {
     // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
     // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
     // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
-    const h2 = [...a.articleHtml.matchAll(/<h2[^>]*>([\\s\\S]*?)<\\/h2>/gi)]
+    const h2 = [...a.articleHtml.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)]
       .map(m => m[1].replace(/<[^>]+>/g, '').trim());
     const numbers = h2
-      .map(h => /^(\\d+)\\.\\s+/.exec(h))
+      .map(h => /^(\d+)\.\s+/.exec(h))
       .filter(Boolean).map(m => Number(m[1]));
     const numberedSequence = n => JSON.stringify(numbers) ===
       JSON.stringify(Array.from({length:n}, (_,i) => i+1));
