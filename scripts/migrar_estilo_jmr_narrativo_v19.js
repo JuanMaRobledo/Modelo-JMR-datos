@@ -55,7 +55,7 @@ function unwrapV18(s){
  const units=[];let discarded=0;
  for(const p of wrappers){
   const oldN=Number((p.opener.match(/jmr-capitulo-(\d+)/)||[])[1]);
-  const nested=parts.filter(t=>t.parent===p);
+  const nested=parts.filter(t=>t.parent && t.parent.start===p.start);
   if(!nested.length){discarded++;continue;}
   for(const t of nested){const title=heading(t.raw,3)||heading(t.raw,2),cat=category(title,canonicalFallback(oldN));
    units.push({title,cat,html:t.raw,section:p.opener,oldChapter:oldN});
