@@ -34,13 +34,16 @@ function category(text,fallback){
  if(/catalizadores|vigilar|indicadores|seguimiento|eventos recientes|noticias|que invalidaria|vigilancia|hit[oó]s/.test(t))return 12;
  if(/problema|pendientes|limitaciones|salvedades|control de cobertura|fuente y limite|verificaciones realizadas/.test(t))return 13;
  if(/filosofias|warren buffett|charlie munger|peter lynch|howard marks|greenblatt/.test(t))return 1;
+ if(/calidad del negocio|calidad financiera|historia financiera/.test(t))return 5;
+ if(/rentabilidad del capital|retorno sobre capital|eficiencia de capital/.test(t))return 6;
  if(/gestion|management|gobierno|incentivo|asignacion de capital|recompras|dilucion|sbc|equipo directivo|administracion/.test(t))return 7;
  if(/(costo|coste) de capital|wacc|cost of capital|costo de equity|ke\b|beta|tasa de descuento|valor terminal|crecimiento terminal|tasas y riesgo de descuento/.test(t))return 9;
  if(/metodo a|metodo b|modelo jmr|normalizacion de estados|procedencia de datos|calibracion|metodologia|nuestro proceso|definicion contable|perimetro|corte contable|criterio de valoracion|aclaracion de metodo|fuente y corte/.test(t))return 8;
  if(/(reinv|sales.to.capital|ventas.capital|roic|retorno del capital|capital invertido|capital fisico|capital de trabajo|capex|capitalizacion de i.d|arrendamientos|leases|leasing|intangibles|costos de contenido|compromisos de contenido|manufactura|inventarios y capital|adquisiciones y capital)/.test(t))return 6;
- if(/supuesto|hipotesis|crecimiento base|crecimiento explicito|crecimiento proyectado|trayectoria base|margen objetivo|margen terminal|base y escenario|proyeccion de ingresos|convergencia|sostenibilidad del margen|drivers de valor/.test(t))return 9;
+ if(/supuesto|hipotesis|crecimiento proyectado|trayectoria base|margen objetivo|margen terminal|base y escenario|proyeccion de ingresos|convergencia|sostenibilidad del margen|drivers de valor/.test(t))return 9;
  if(/valoracion|valuacion|valor intrinseco|dcf|fcff|fcfe|sotp|mos|precio|escenarios|historias|perpetuidad|sensibilidad|multiplo|az stocks|descuento de flujos|market value|valor esperado|retorno potencial/.test(t))return 10;
  if(/historia|resultados|ultimo trimestre|ltm|historico|margenes|margenes|flujo|cash.flow|cash flow|margenes gaap|balance|liquidez|deuda|rentabilidad corporativa|calidad de resultados|gaap|guia fy|ingresos reportados|inventarios/.test(t))return 5;
+ if(/crecimiento: explicacion|motores de crecimiento|crecimiento base y verificacion/.test(t))return 4;
  if(/cliente|producto|segmento|geografia|mercado pago|business model|modelo de negocio|unidad economica|modelo comercial|modelo economico|monetizacion|cartera de clientes|modelo y propuesta|que hace/.test(t))return 2;
  if(/competencia|competidor|moat|ventaja|rival|industria|dinamica de mercado|cuota de mercado|pricing power|portafolio competitivo/.test(t))return 3;
  if(/crecimiento|expansion|penetracion|guia|demanda|drivers|motor|oportunidades|backlog|contratos|lanzamientos|nuevos productos|expansion regional|trafico|ticket/.test(t))return 4;
@@ -82,13 +85,28 @@ function unwrapLegacy(s){
  return {before:s.slice(0,first.start),after:s.slice(last.end),units,exterior};
 }
 function unwrapFlat(s){
- const heads=[...s.matchAll(/<h2\b[^>]*>[\s\S]*?<\/h2>/gi)];if(heads.length<4)throw Error("Not enough H2 blocks to migrate flat report");
+ const heads=[...s.matchAll(/<h2\b[^>]*>[\s\S]*?<\/h2>/gi)];
+ if(heads.length<4)throw Error("Not enough H2 blocks to migrate flat report");
+ const names18=["Resumen ejecutivo","Modelo de negocio","Segmentos y geografía","Industria y crecimiento","Calidad del negocio",
+ "Ventaja competitiva","Competencia","Gestión y asignación de capital","Catalizadores","Riesgos",
+ "Bulls say / Bears say","Valor con criterio Damodaran","Filosofías de inversión",
+ "Noticias y eventos recientes","Qué vigilar","Preguntas abiertas","Fuentes","Control de calidad final"];
  const units=[];
  for(let i=0;i<heads.length;i++){
-  let body=s.slice(heads[i].index,i+1<heads.length?heads[i+1].index:s.length);
-  const title=heading(body,2);
-  body=body.replace(/<h2(\b[^>]*)>/i,"<h3$1>").replace(/<\/h2>/i,"</h3>");
-  units.push({title,html:'<section class="jmr-preserved-flat">'+body+'</section>',cat:category(title)});
+  const chunk=s.slice(heads[i].index,i+1<heads.length?heads[i+1].index:s.length);
+  const title=heading(chunk,2),rawTitle=norm(title).replace(/^\d+\s+/,"");
+  const oldIndex=names18.findIndex(n=>norm(n)===rawTitle)+1;
+  const fallback=oldIndex?canonicalFallback(oldIndex):category(title);
+  const subt=[...chunk.matchAll(/<h3\b[^>]*>[\s\S]*?<\/h3>/gi)];
+  let leadEnd=subt.length?subt[0].index:chunk.length;
+  let lead=chunk.slice(0,leadEnd).replace(/<h2(\b[^>]*)>/i,"<h3$1>").replace(/<\/h2>/i,"</h3>");
+  if(lead.trim())units.push({title,html:'<section class="jmr-preserved-flat">'+lead+'</section>',cat:fallback});
+  for(let j=0;j<subt.length;j++){
+   const part=chunk.slice(subt[j].index,j+1<subt.length?subt[j+1].index:chunk.length);
+   const subTitle=heading(part,3);
+   units.push({title:subTitle,html:'<section class="jmr-preserved-flat">'+part+'</section>',
+     cat:category(subTitle,fallback)});
+  }
  }
  return {before:s.slice(0,heads[0].index),after:"",units,exterior:""};
 }
