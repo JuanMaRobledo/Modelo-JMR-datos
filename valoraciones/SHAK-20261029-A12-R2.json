@@ -1,0 +1,915 @@
+{
+  "ticker": "SHAK",
+  "nombreActivo": "Shake Shack Inc.",
+  "market": "NYSE",
+  "moneda": "USD",
+  "currency": "USD",
+  "tipo": "Restaurantes premium: expansión por locales y licencias",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-30",
+  "fechaCorteContable": "2026-07-01",
+  "fecha_corte": "2026-10-29",
+  "precio": 70.51,
+  "precioAnalisis": 70.51,
+  "precioReferenciaFecha": "2026-10-29",
+  "precioReferenciaFuente": "Hoja R2 Input sheet!B23, no cotización en vivo",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg/edit",
+  "sheet_id": "1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "SHAK-20261029-A12-R2",
+  "revision_id": "SHAK-20261029-A12-R2",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "REVISION_VISUAL",
+  "validationStatus": "CENTROS_DCF_BASE_Y_MULTIPLOS_VERIFICADOS; VALIDACION_ECONOMICA_PENDIENTE",
+  "publicationAuthorized": true,
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "valorPrincipal": 35.4898699647347,
+  "metodoPrincipal": "DCF FCFF Base 10 años",
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "precioMOS": 23.068415477077558,
+  "precioMOSMax": 23.068415477077558,
+  "precioMOSHoy": 23.068415477077558,
+  "valorEsperado": {
+    "valor": 41.105761233310965,
+    "tipoPromedio": "renormalizado_3_historias",
+    "valorCentral": 35.4898699647347,
+    "historiaCentralId": "A",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · desarrollo rentable con eficiencia gradual",
+        "historia": "Base",
+        "probabilidad": 0.4,
+        "crecimiento": 0.1381594015989629,
+        "margen": 0.105,
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.7,
+        "roicTerminal": 0.11,
+        "terminalGrowth": 0.04,
+        "valor": 35.4898699647347,
+        "pesoEnPromedio": 0.4705882352941177,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2, revisión SHAK-20261029-A12-R2] Base: ingresos año1 +17,3% y CAGR 5a +13,82% se apoyan en 33 Shacks propias abiertas en 1S26 y guía 60–65 FY26, 3,5% SSS 2T26, 406 Shacks propias al 1-jul-2026. Margen EBIT consolidado ajustado por arrendamientos 6,21% LTM→10,5% año5 requiere absorción SG&A y eficiencia, NO confundir con beneficio a nivel restaurante 23% en 2T26. S/C marginal 1,50× años1–5 y 1,70× años6–10 (vs 1,60/1,80 anterior): FY24–FY25 marginal ≈1,25–1,48× al normalizar semana53, nueva tienda ≈US$2,3m costo bruto y US$1,9m neto de tenant allowances; el crecimiento incluye nuevas obligaciones ASC842 y reinversión mantenimiento, no solo CapEx neto. ROIC perpetuo 11%, no 12%, refleja ventaja económica limitada por competencia y menor duración de retornos >WACC 8,99%; preferible 2 pp exceso permanente, sensibilidad de fade aparte. No cambiar costos de capital, terminal g4%, métricas históricas o motor. Fuentes 10-K FY25 https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm y 10-Q 2T26 https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm ."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · capacidad nueva con menor productividad",
+        "historia": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.0810719415995016,
+        "margen": 0.075,
+        "salesToCapital": 1.3,
+        "salesToCapital2": 1.45,
+        "roicTerminal": 0.095,
+        "terminalGrowth": 0.04,
+        "valor": 9.886641053384258,
+        "pesoEnPromedio": 0.2647058823529412,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Conservadora · capacidad nueva con menor productividad. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · pérdida de tráfico y capital comprometido",
+        "historia": "Disrupción",
+        "probabilidad": 0.15,
+        "crecimiento": -0.004533387102365172,
+        "margen": 0.035,
+        "salesToCapital": 0.9,
+        "salesToCapital2": 1,
+        "roicTerminal": 0.0899,
+        "terminalGrowth": 0,
+        "valor": 0,
+        "pesoEnPromedio": 0,
+        "incluidaEnPromedio": false,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Disrupción · pérdida de tráfico y capital comprometido. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · expansión y licencias de mayor productividad",
+        "historia": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1677991848975955,
+        "margen": 0.135,
+        "salesToCapital": 1.9,
+        "salesToCapital2": 2.2,
+        "roicTerminal": 0.16,
+        "terminalGrowth": 0.04,
+        "valor": 82.30868811292879,
+        "pesoEnPromedio": 0.2647058823529412,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Optimista · expansión y licencias de mayor productividad. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      }
+    ],
+    "escenariosUnificados": true,
+    "disrupcionSeparada": {
+      "titulo": "¿Qué pasaría si todo fallara?",
+      "valor": 0,
+      "historiaId": "C",
+      "incluidaEnPromedio": false
+    },
+    "dcfBase": 35.4898699647347,
+    "escenariosPromedio": [
+      "B",
+      "A",
+      "D"
+    ],
+    "rango": {
+      "min": 9.886641053384258,
+      "max": 82.30868811292879
+    }
+  },
+  "escenariosDCF": {
+    "revisionId": "SHAK-20261029-A12-R2",
+    "fecha": "2026-10-29",
+    "central": "A",
+    "principal": "DCF Base",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · desarrollo rentable con eficiencia gradual",
+        "historia": "Base",
+        "probabilidad": 0.4,
+        "crecimiento": 0.1381594015989629,
+        "margen": 0.105,
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.7,
+        "roicTerminal": 0.11,
+        "terminalGrowth": 0.04,
+        "valor": 35.4898699647347,
+        "pesoEnPromedio": 0.4705882352941177,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2, revisión SHAK-20261029-A12-R2] Base: ingresos año1 +17,3% y CAGR 5a +13,82% se apoyan en 33 Shacks propias abiertas en 1S26 y guía 60–65 FY26, 3,5% SSS 2T26, 406 Shacks propias al 1-jul-2026. Margen EBIT consolidado ajustado por arrendamientos 6,21% LTM→10,5% año5 requiere absorción SG&A y eficiencia, NO confundir con beneficio a nivel restaurante 23% en 2T26. S/C marginal 1,50× años1–5 y 1,70× años6–10 (vs 1,60/1,80 anterior): FY24–FY25 marginal ≈1,25–1,48× al normalizar semana53, nueva tienda ≈US$2,3m costo bruto y US$1,9m neto de tenant allowances; el crecimiento incluye nuevas obligaciones ASC842 y reinversión mantenimiento, no solo CapEx neto. ROIC perpetuo 11%, no 12%, refleja ventaja económica limitada por competencia y menor duración de retornos >WACC 8,99%; preferible 2 pp exceso permanente, sensibilidad de fade aparte. No cambiar costos de capital, terminal g4%, métricas históricas o motor. Fuentes 10-K FY25 https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm y 10-Q 2T26 https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm ."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · capacidad nueva con menor productividad",
+        "historia": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.0810719415995016,
+        "margen": 0.075,
+        "salesToCapital": 1.3,
+        "salesToCapital2": 1.45,
+        "roicTerminal": 0.095,
+        "terminalGrowth": 0.04,
+        "valor": 9.886641053384258,
+        "pesoEnPromedio": 0.2647058823529412,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Conservadora · capacidad nueva con menor productividad. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · pérdida de tráfico y capital comprometido",
+        "historia": "Disrupción",
+        "probabilidad": 0.15,
+        "crecimiento": -0.004533387102365172,
+        "margen": 0.035,
+        "salesToCapital": 0.9,
+        "salesToCapital2": 1,
+        "roicTerminal": 0.0899,
+        "terminalGrowth": 0,
+        "valor": 0,
+        "pesoEnPromedio": 0,
+        "incluidaEnPromedio": false,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Disrupción · pérdida de tráfico y capital comprometido. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · expansión y licencias de mayor productividad",
+        "historia": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1677991848975955,
+        "margen": 0.135,
+        "salesToCapital": 1.9,
+        "salesToCapital2": 2.2,
+        "roicTerminal": 0.16,
+        "terminalGrowth": 0.04,
+        "valor": 82.30868811292879,
+        "pesoEnPromedio": 0.2647058823529412,
+        "incluidaEnPromedio": true,
+        "estado": "LISTO",
+        "fundamento": "[Juicio A-1.2] Optimista · expansión y licencias de mayor productividad. Margen ajustado por leases, noGAAP. S/C incremental incluye capex/NWC/ROU y no promedio. Fuentes: https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm; https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm; Damodaran octubre2026 Rf5.29/ERP3.70. FichasA del expediente."
+      }
+    ],
+    "disrupcionSeparada": true
+  },
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.8,
+      "valorHoy": {
+        "conservador": 9.886641053384258,
+        "base": 35.4898699647347,
+        "optimista": 82.30868811292879
+      },
+      "conservador": 9.886641053384258,
+      "base": 35.4898699647347,
+      "optimista": 82.30868811292879
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0,
+      "conservador": -7.143121346830195,
+      "base": 135.17680978261802,
+      "optimista": 161.20688821278415,
+      "estado": "CONTRASTE"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0,
+      "conservador": -8.55615362840422,
+      "base": -34.35943454940775,
+      "optimista": -15.749625022066553,
+      "estado": "N/A: flujo negativo"
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.2,
+      "conservador": 14.79657209583692,
+      "base": 35.25975547637371,
+      "optimista": 69.65869356960208,
+      "estado": "SELECCIONADO"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0,
+      "conservador": -9.065811288567044,
+      "base": -45.441816468516365,
+      "optimista": -43.05990192746253,
+      "estado": "N/A: flujo negativo"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 63.64495375543171,
+      "base": 54.071191044466644,
+      "optimista": 64.44963207476388,
+      "estado": "CONTRASTE"
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "estado": "COMPLEMENTARIO_OPTATIVO"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "estado": "COMPLEMENTARIO_OPTATIVO"
+    }
+  ],
+  "descuentoMultiples": {
+    "version": 3,
+    "costoPatrimonio": 0.08957357112214778,
+    "criterio": "Promedio VP FY+1..3, flujos/dividendos originales; métodos secundarios",
+    "horizontes": [
+      1,
+      2,
+      3
+    ],
+    "pesoDcf": 0.8,
+    "pesoMultiplos": 0.2,
+    "dcfHoy": {
+      "conservador": 9.886641053384258,
+      "base": 35.4898699647347,
+      "optimista": 82.30868811292879
+    },
+    "multiplesHoy": {
+      "conservador": 10.90873874372636,
+      "base": 22.693654040270626,
+      "optimista": 41.33313913157029
+    },
+    "ponderadoHoy": {
+      "conservador": 10.09106059145268,
+      "base": 32.93062677984189,
+      "optimista": 74.1135783166571
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE",
+        "conservador": {
+          "fy": [
+            -8.275357126445977,
+            -7.642761561965611,
+            -7.143121346830195
+          ],
+          "vp": [
+            -7.5950420841460184,
+            -6.437795692661813,
+            -5.522279028819162
+          ],
+          "consolidado": -6.518372268542332,
+          "chequeo": "n/a (≤ 0)"
+        },
+        "base": {
+          "fy": [
+            85.9086280716654,
+            112.20613637526935,
+            135.17680978261802
+          ],
+          "vp": [
+            78.84610121663324,
+            94.51559826774867,
+            104.50390320983213
+          ],
+          "consolidado": 92.62186756473801,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            88.13233182476814,
+            126.6680840509348,
+            161.20688821278415
+          ],
+          "vp": [
+            80.88699483964263,
+            106.6974599808275,
+            124.62750873939693
+          ],
+          "consolidado": 104.07065451995568,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "N/A: flujo negativo",
+        "conservador": {
+          "fy": [
+            -37.30035367151382,
+            -23.5911046114207,
+            -8.55615362840422
+          ],
+          "vp": [
+            -34.23390091327043,
+            -19.871706113186445,
+            -6.614680817435483
+          ],
+          "consolidado": -20.24009594796412,
+          "chequeo": "n/a (≤ 0)"
+        },
+        "base": {
+          "fy": [
+            -75.46240910803243,
+            -54.94142600729894,
+            -34.35943454940775
+          ],
+          "vp": [
+            -69.25866330468531,
+            -46.27930268800898,
+            -26.562951354379326
+          ],
+          "consolidado": -47.36697244902454,
+          "chequeo": "n/a (≤ 0)"
+        },
+        "optimista": {
+          "fy": [
+            -81.77700405839786,
+            -47.306957537470055,
+            -15.749625022066553
+          ],
+          "vp": [
+            -75.05413698147619,
+            -39.848492589808515,
+            -12.175884987550834
+          ],
+          "consolidado": -42.35950485294518,
+          "chequeo": "n/a (≤ 0)"
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.2,
+        "pesoRelativo": 1,
+        "estado": "SELECCIONADO",
+        "conservador": {
+          "fy": [
+            11.082512104785744,
+            13.196238784439018,
+            14.79657209583692
+          ],
+          "vp": [
+            10.171421552903405,
+            11.115705824001804,
+            11.439088854273868
+          ],
+          "consolidado": 10.90873874372636,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            18.86103301405879,
+            27.912171513014354,
+            35.25975547637371
+          ],
+          "vp": [
+            17.31047220118774,
+            23.51150903798536,
+            27.258980881638784
+          ],
+          "consolidado": 22.693654040270626,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            29.336092442193273,
+            51.312557866249854,
+            69.65869356960208
+          ],
+          "vp": [
+            26.924379610254444,
+            43.222565735237275,
+            53.85247204921916
+          ],
+          "consolidado": 41.33313913157029,
+          "chequeo": "OK"
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "N/A: flujo negativo",
+        "conservador": {
+          "fy": [
+            -29.887294580927072,
+            -20.25962556463438,
+            -9.065811288567044
+          ],
+          "vp": [
+            -27.4302675588453,
+            -17.065471575617266,
+            -7.008692296722916
+          ],
+          "consolidado": -17.16814381039516,
+          "chequeo": "n/a (≤ 0)"
+        },
+        "base": {
+          "fy": [
+            -70.85124004648134,
+            -58.80800753742542,
+            -45.441816468516365
+          ],
+          "vp": [
+            -65.02657729988064,
+            -49.536274885578365,
+            -35.130635184700374
+          ],
+          "consolidado": -49.89782912338646,
+          "chequeo": "n/a (≤ 0)"
+        },
+        "optimista": {
+          "fy": [
+            -79.81217686668286,
+            -61.16860077532503,
+            -43.05990192746253
+          ],
+          "vp": [
+            -73.25083774240652,
+            -51.52469449750308,
+            -33.28919975614812
+          ],
+          "consolidado": -52.68824399868591,
+          "chequeo": "n/a (≤ 0)"
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE",
+        "conservador": {
+          "fy": [
+            35.86897515973005,
+            49.389924420154436,
+            63.64495375543171
+          ],
+          "vp": [
+            32.920195671402645,
+            41.60305671124291,
+            49.2033071186381
+          ],
+          "consolidado": 41.242186500427884,
+          "chequeo": "OK"
+        },
+        "base": {
+          "fy": [
+            20.70924072140445,
+            36.70728546228453,
+            54.071191044466644
+          ],
+          "vp": [
+            19.00673921456821,
+            30.919976022073662,
+            41.80192241878078
+          ],
+          "consolidado": 30.576212551807547,
+          "chequeo": "OK"
+        },
+        "optimista": {
+          "fy": [
+            24.742215584337096,
+            44.019365210556764,
+            64.44963207476388
+          ],
+          "vp": [
+            22.708164221398267,
+            37.079225545451436,
+            49.825396257550096
+          ],
+          "consolidado": 36.5375953414666,
+          "chequeo": "OK"
+        }
+      }
+    ],
+    "chequeo": "P/E ponderado; EV/EBITDA y P/OCF con peso cero, EV/FCFF P/FCFE N/A; P/V P/BV complementarios"
+  },
+  "valorPresentePonderado": {
+    "conservador": 10.09106059145268,
+    "base": 32.93062677984189,
+    "optimista": 74.1135783166571,
+    "estado": "SECUNDARIO"
+  },
+  "objetivoPonderado": {
+    "conservador": 13.190087096654196,
+    "base": 43.777143200684506,
+    "optimista": 99.10540618284159,
+    "horizonteAnios": 3,
+    "estado": "SECUNDARIO_FY3"
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "crecimientoFY1": 0.17299609902683333,
+    "cagrCincoAnios": 0.1381594015989629,
+    "margenLtm": 0.06205182470769096,
+    "margenEBITTerminalExplicit": 0.105,
+    "salesToCapital1a5": 1.5,
+    "salesToCapital6a10": 1.7,
+    "roicLtm": 0.05462202674916396,
+    "roicAnio10": 0.12081154190385134,
+    "roicTerminal": 0.11,
+    "waccInicial": 0.0793947702876499,
+    "waccTerminal": 0.0899,
+    "ke": 0.08957357112214778,
+    "gTerminal": 0.04,
+    "riskFree": 0.0529,
+    "erp": 0.0382,
+    "accionesMillones": 43.420552,
+    "deudaMillones": 935.5040153612013,
+    "cajaMillones": 307.962,
+    "nonOperativosMillones": 47.407879204231705,
+    "opcionesMillones": 0.11615322978365833,
+    "pesoTerminalSobreEV": 0.8666628312042355,
+    "fcffY1": -107.85476677335369,
+    "fcffY10": 212.9598008536595,
+    "fcffTerminal": 202.75844531203285,
+    "reinvY1": 189.346173688,
+    "delayAnio": 1
+  },
+  "sensibilidadDCF": {
+    "centro": 35.4898699647347,
+    "centroConciliado": true,
+    "matrices": [
+      {
+        "nombre": "WACC inicial × g",
+        "ejeFilas": [
+          0.0693947702876499,
+          0.07439477028764989,
+          0.0793947702876499,
+          0.0843947702876499,
+          0.08939477028764989
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            45.97123922272199,
+            48.66857288810358,
+            52.01494464204807,
+            56.28862585850501,
+            61.95401049153727
+          ],
+          [
+            38.78013681060787,
+            40.60243664582361,
+            42.80779115613589,
+            45.539634294717814,
+            49.0235872126977
+          ],
+          [
+            32.83360661894448,
+            34.049646683968895,
+            35.4898699647347,
+            37.22868588615985,
+            39.37779355491777
+          ],
+          [
+            27.842645259232402,
+            28.629928537861154,
+            29.54374764845439,
+            30.621723053319652,
+            31.918225636421734
+          ],
+          [
+            23.60098799269338,
+            24.08024015699521,
+            24.624796879371356,
+            25.252139611548444,
+            25.98675036375353
+          ]
+        ],
+        "control": "OK"
+      },
+      {
+        "nombre": "ROIC terminal × g",
+        "ejeFilas": [
+          0.1,
+          0.105,
+          0.11,
+          0.115,
+          0.12
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            31.37860442490913,
+            32.16178638727465,
+            33.07047597658853,
+            34.145819858279836,
+            35.44957620212875
+          ],
+          [
+            32.1407484313086,
+            33.15066559030497,
+            34.337777589427,
+            35.76065444431222,
+            37.50721386311348
+          ],
+          [
+            32.83360661894448,
+            34.049646683968895,
+            35.4898699647347,
+            37.22868588615985,
+            39.37779355491777
+          ],
+          [
+            33.46621626852506,
+            34.870455508618555,
+            36.541780394363485,
+            38.56906242002072,
+            41.08571414308693
+          ],
+          [
+            34.046108447307276,
+            35.62286359788075,
+            37.506031621523185,
+            39.797740909393205,
+            42.65130801557531
+          ]
+        ],
+        "control": "OK"
+      },
+      {
+        "nombre": "CAGR explícito × margen EBIT",
+        "ejeFilas": [
+          0.09815940159896289,
+          0.11815940159896289,
+          0.1381594015989629,
+          0.15815940159896288,
+          0.1781594015989629
+        ],
+        "ejeColumnas": [
+          0.065,
+          0.08499999999999999,
+          0.105,
+          0.125,
+          0.145
+        ],
+        "valores": [
+          [
+            9.059767559447547,
+            19.46516595377709,
+            29.87056434810663,
+            40.27596274243617,
+            50.6813611367657
+          ],
+          [
+            9.151046963347566,
+            20.851918973639698,
+            32.55279098393184,
+            44.25366299422397,
+            55.95453500451611
+          ],
+          [
+            9.211961765052514,
+            22.350915864893608,
+            35.4898699647347,
+            48.6288240645758,
+            61.76777816441691
+          ],
+          [
+            9.240580945266109,
+            23.973731799437843,
+            38.70688265360958,
+            53.440033507781294,
+            68.17318436195303
+          ],
+          [
+            9.23489027010724,
+            25.7329267343939,
+            42.2309631986806,
+            58.728999662967276,
+            75.22703612725397
+          ]
+        ],
+        "control": "OK"
+      }
+    ],
+    "nota": "3 matrices del motor oficial Base 5×5 con centros idénticos al DCF R2, sin auditoría externa"
+  },
+  "sensibilidadMultiples": {
+    "version": "A-1.2-R2-Base",
+    "sourceSheet": "1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg",
+    "controles": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "centro": 104.50390320983213,
+        "vp3Original": 104.50390320983213,
+        "estado": "OK"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": -26.562951354379326,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "centro": 27.258980881638784,
+        "vp3Original": 27.258980881638784,
+        "estado": "OK"
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": -35.130635184700374,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "centro": 41.80192241878078,
+        "vp3Original": 41.80192241878078,
+        "estado": "OK"
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "centro": 27.258980881638784,
+        "vp3Original": 27.258980881638784,
+        "estado": "OK"
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "centro": 33.94221170483824,
+        "vp3Original": 33.94221170483824,
+        "estado": "OK"
+      }
+    ],
+    "controlesOK": 5,
+    "noDisponibles": 2,
+    "errores": 0,
+    "nota": "Solo Base; tres prioritarios OK, EV/FCFF y P/FCFE N/A; P/V y P/BV opcionales"
+  },
+  "seleccionMultiples": {
+    "version": "A-1.2-R2",
+    "noReponderaDCF": true,
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "rol": "CONTRASTE",
+        "control": "OK",
+        "salida": {
+          "conservador": -7.143121346830195,
+          "base": 135.17680978261802,
+          "optimista": 161.20688821278415
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "rol": "N/A: flujo negativo",
+        "control": "n/a (≤ 0)",
+        "salida": {
+          "conservador": -8.55615362840422,
+          "base": -34.35943454940775,
+          "optimista": -15.749625022066553
+        }
+      },
+      {
+        "nombre": "P/E",
+        "pesoVigente": 0.2,
+        "pesoRelativo": 1,
+        "rol": "Seleccionado",
+        "control": "OK",
+        "salida": {
+          "conservador": 14.79657209583692,
+          "base": 35.25975547637371,
+          "optimista": 69.65869356960208
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "rol": "N/A: flujo negativo",
+        "control": "n/a (≤ 0)",
+        "salida": {
+          "conservador": -9.065811288567044,
+          "base": -45.441816468516365,
+          "optimista": -43.05990192746253
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "pesoVigente": 0,
+        "pesoRelativo": 0,
+        "rol": "CONTRASTE",
+        "control": "OK",
+        "salida": {
+          "conservador": 63.64495375543171,
+          "base": 54.071191044466644,
+          "optimista": 64.44963207476388
+        }
+      }
+    ]
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000018/shak-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1620533/000162053326000034/shak-20260701.htm",
+    "https://investor.shakeshack.com/press-releases/press-release-details/2026/Shake-Shack-Announces-Second-Quarter-2026-Financial-Results/default.aspx",
+    "https://investor.shakeshack.com/press-releases/2026/"
+  ],
+  "hojas": {
+    "valoracion": {
+      "SHAK A-1.2 R2": "<section><h2>SHAK · Método A · corte 29-oct-2026</h2><p>DCF Base US$35.49, MOS US$23.07 y cotización de referencia US$70.51; valor intrínseco independiente del ponderado relativo.</p></section>"
+    }
+  },
+  "salvedades": [
+    "Disrupción: motor EV-equity devuelve −US$2,27 por acción; el accionista común tiene responsabilidad limitada, por lo que se presenta USD0,00, sin alterar resultado crudo del motor.",
+    "Valor terminal representa 86,7% del enterprise value Base: examinar crecimiento4%, ROIC estable11% y duración de retornos extraordinarios al realizar la auditoría económica.",
+    "Rf5,29% y ERP3,82% son inputs heredados por la hoja R2; su cotejo con Treasury/sector de la fecha es pendiente. No certificar costo de capital por un chequeo aritmético.",
+    "CAGR cinco años13,82% y margen EBIT 10,5% requieren productividad de locales y apalancamiento SG&A; margen de restaurante23% no-GAAP no equivale al margen EBIT consolidado.",
+    "FCFF inicial negativo; EV/FCFF y P/FCFE no aplicables, no forzar salidas positivas. P/BV y P/S no son esenciales (reglas JMR v22).",
+    "Corte documental FY25 y Q2 2026; informe Q3 2026 anunciado para 5-nov-2026, fuera del corte.",
+    "Auditoría económica independiente posterior a la revisión visual; solo se comprobó conciliación mecánica de cifras del modelo activo."
+  ],
+  "revisionOrigen": {
+    "anterior": "SHAK-REC-20261027-R1",
+    "rutaAnterior": "valoraciones/SHAK-1790595627129.json",
+    "motivo": "Sustituir expediente activo anterior con nueva valoración económica Método A-1.2 R2; versión antigua permanece en Git sin uso activo."
+  },
+  "controlPublicacion": {
+    "dccfBaseConcilia": true,
+    "probabilidadesSuman1": true,
+    "promedioOrdinaryConciliado": true,
+    "sensibilidadesDCFCentros3OK": true,
+    "multiplesCentros5OK": true,
+    "auditoriaEconomicaRealizada": false,
+    "analisisPublicacion": "PENDIENTE_ENTREGA"
+  }
+}
