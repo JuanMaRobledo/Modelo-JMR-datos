@@ -32,7 +32,11 @@ function validate(root = path.join(__dirname, '..')) {
   }));
   for (const p of c.analisis) {
     const a = JSON.parse(fs.readFileSync(path.join(root, p)));
-    const v = vals.find(x => x.path === a.linkedValuation?.sourcePath);
+    // El vínculo de un artículo puede ser una ruta simple (CELH) o
+    // un objeto con metadatos; ambas formas resuelven la misma fuente oficial.
+    const refPath = typeof a.linkedValuation === 'string'
+      ? a.linkedValuation : a.linkedValuation?.sourcePath;
+    const v = vals.find(x => x.path === refPath);
     assert.ok(v, 'Análisis sin valoración');
     assert.equal(a.ticker, v.record.ticker);
     // El artículo puede publicarse después de su valoración sin cambiar el DCF.
@@ -51,7 +55,13 @@ function validate(root = path.join(__dirname, '..')) {
     // el expediente oficial sigue siendo la única fuente del cálculo.
     // Cuando hay copia embebida, sí debe coincidir íntegramente.
     const linked = a.linkedValuation;
-    if (Object.prototype.hasOwnProperty.call(linked, 'descuentoMultiples')) {
+    if (typeof linked === 'string') {
+      assert.equal(linked, v.path, a.ticker + ': ruta de valoración distinta');
+      assert.equal(a.status, 'EN_REVISION',
+        a.ticker + ': referencia simple no acredita conciliación financiera');
+      console.warn('VINCULO_RUTA: '+a.ticker+
+        ' usa la ruta del catálogo, sin duplicar múltiplos en el análisis.');
+    } else if (Object.prototype.hasOwnProperty.call(linked, 'descuentoMultiples')) {
       assert.deepEqual(linked.descuentoMultiples, v.record.descuentoMultiples,
         a.ticker + ': múltiplos embebidos distintos de la valoración oficial');
     } else {
