@@ -1,0 +1,764 @@
+{
+  "ticker": "UBER",
+  "nombreActivo": "Uber Technologies, Inc.",
+  "market": "NYSE",
+  "moneda": "USD",
+  "currency": "USD",
+  "tipo": "Plataforma de movilidad, delivery y logística",
+  "fecha": "2026-10-30",
+  "fechaRevision": "2026-10-30",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-10-30",
+  "precio": 65.74,
+  "precioAnalisis": 65.74,
+  "precioReferenciaFecha": "2026-10-29",
+  "precioReferenciaFuente": "Cierre 29-oct-2026, YCharts histórico; no cotización en vivo",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58/edit",
+  "sheet_id": "1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "UBER-20261030-A1",
+  "revision_id": "UBER-20261030-A1",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "REVISION_VISUAL",
+  "publicationAuthorized": true,
+  "validationStatus": "DCF_4_LISTO_SENSIBILIDADES_DCF_3_OK;_MULTIPLOS_5_PENDIENTES;_GATE_CI_BLOQUEADO",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "valorPrincipal": 91.13793738151752,
+  "metodoPrincipal": "DCF FCFF Base 10 años",
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "precioMOS": 59.239659297986385,
+  "precioMOSMax": 59.239659297986385,
+  "precioMOSHoy": 59.239659297986385,
+  "valorEsperado": {
+    "valor": 91.13793738151752,
+    "tipoPromedio": "renormalizado_3_historias",
+    "valorCentral": 91.13793738151752,
+    "historiaCentralId": "A",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · plataforma de escala y retorno durable",
+        "historia": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.11186742635429803,
+        "margen": 0.2,
+        "salesToCapital": 3,
+        "salesToCapital2": 2.6,
+        "roicTerminal": 0.14,
+        "terminalGrowth": 0.04,
+        "valor": 91.13793738151752,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · presión de tarifas, oferta y regulación",
+        "historia": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06294558260299565,
+        "margen": 0.155,
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.105,
+        "terminalGrowth": 0.03,
+        "valor": 48.42964391509511,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Disrupción · robotaxis sin plataforma Uber y margin squeeze",
+        "historia": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": 0.01289435572105524,
+        "margen": 0.09,
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.4,
+        "roicTerminal": 0.0919,
+        "terminalGrowth": 0.015,
+        "valor": 24.66341760748674,
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista · orquestador global de movilidad autónoma",
+        "historia": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.14174434388121715,
+        "margen": 0.23,
+        "salesToCapital": 3.6,
+        "salesToCapital2": 3,
+        "roicTerminal": 0.17,
+        "terminalGrowth": 0.04,
+        "valor": 127.19953770439781,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      }
+    ],
+    "escenariosUnificados": [
+      {
+        "id": "A",
+        "nombre": "Base · plataforma de escala y retorno durable",
+        "historia": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.11186742635429803,
+        "margen": 0.2,
+        "salesToCapital": 3,
+        "salesToCapital2": 2.6,
+        "roicTerminal": 0.14,
+        "terminalGrowth": 0.04,
+        "valor": 91.13793738151752,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · presión de tarifas, oferta y regulación",
+        "historia": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06294558260299565,
+        "margen": 0.155,
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.105,
+        "terminalGrowth": 0.03,
+        "valor": 48.42964391509511,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Disrupción · robotaxis sin plataforma Uber y margin squeeze",
+        "historia": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": 0.01289435572105524,
+        "margen": 0.09,
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.4,
+        "roicTerminal": 0.0919,
+        "terminalGrowth": 0.015,
+        "valor": 24.66341760748674,
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista · orquestador global de movilidad autónoma",
+        "historia": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.14174434388121715,
+        "margen": 0.23,
+        "salesToCapital": 3.6,
+        "salesToCapital2": 3,
+        "roicTerminal": 0.17,
+        "terminalGrowth": 0.04,
+        "valor": 127.19953770439781,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": {
+      "id": "D",
+      "nombre": "Disrupción · robotaxis sin plataforma Uber y margin squeeze",
+      "historia": "Disrupción",
+      "probabilidad": 0.1,
+      "crecimiento": 0.01289435572105524,
+      "margen": 0.09,
+      "salesToCapital": 1.5,
+      "salesToCapital2": 1.4,
+      "roicTerminal": 0.0919,
+      "terminalGrowth": 0.015,
+      "valor": 24.66341760748674,
+      "incluidaEnPromedio": false,
+      "pesoEnPromedio": 0,
+      "estado": "LISTO"
+    },
+    "dcfBase": 91.13793738151752,
+    "escenariosPromedio": [
+      "B",
+      "A",
+      "C"
+    ],
+    "rango": {
+      "min": 48.42964391509511,
+      "max": 127.19953770439781
+    }
+  },
+  "escenariosDCF": {
+    "version": "A-1.2",
+    "revisionId": "UBER-20261030-A1",
+    "fecha": "2026-10-30",
+    "central": "A",
+    "principal": "DCF Base",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · plataforma de escala y retorno durable",
+        "historia": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.11186742635429803,
+        "margen": 0.2,
+        "salesToCapital": 3,
+        "salesToCapital2": 2.6,
+        "roicTerminal": 0.14,
+        "terminalGrowth": 0.04,
+        "valor": 91.13793738151752,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · presión de tarifas, oferta y regulación",
+        "historia": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.06294558260299565,
+        "margen": 0.155,
+        "salesToCapital": 2.1,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.105,
+        "terminalGrowth": 0.03,
+        "valor": 48.42964391509511,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Disrupción · robotaxis sin plataforma Uber y margin squeeze",
+        "historia": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": 0.01289435572105524,
+        "margen": 0.09,
+        "salesToCapital": 1.5,
+        "salesToCapital2": 1.4,
+        "roicTerminal": 0.0919,
+        "terminalGrowth": 0.015,
+        "valor": 24.66341760748674,
+        "incluidaEnPromedio": false,
+        "pesoEnPromedio": 0,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista · orquestador global de movilidad autónoma",
+        "historia": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.14174434388121715,
+        "margen": 0.23,
+        "salesToCapital": 3.6,
+        "salesToCapital2": 3,
+        "roicTerminal": 0.17,
+        "terminalGrowth": 0.04,
+        "valor": 127.19953770439781,
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25,
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": {
+      "id": "D",
+      "nombre": "Disrupción · robotaxis sin plataforma Uber y margin squeeze",
+      "historia": "Disrupción",
+      "probabilidad": 0.1,
+      "crecimiento": 0.01289435572105524,
+      "margen": 0.09,
+      "salesToCapital": 1.5,
+      "salesToCapital2": 1.4,
+      "roicTerminal": 0.0919,
+      "terminalGrowth": 0.015,
+      "valor": 24.66341760748674,
+      "incluidaEnPromedio": false,
+      "pesoEnPromedio": 0,
+      "estado": "LISTO"
+    }
+  },
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 1,
+      "conservador": 48.42964391509511,
+      "base": 91.13793738151752,
+      "optimista": 127.19953770439781,
+      "estado": "DCF_VERIFICADO"
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "N/D_ANCLA_Y_DENOMINADOR_SIN_CONCILIAR"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "N/D_ANCLA_Y_DENOMINADOR_SIN_CONCILIAR"
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "N/D_ANCLA_Y_DENOMINADOR_SIN_CONCILIAR"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "N/D_ANCLA_Y_DENOMINADOR_SIN_CONCILIAR"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "N/D_ANCLA_Y_DENOMINADOR_SIN_CONCILIAR"
+    }
+  ],
+  "descuentoMultiples": {
+    "version": 3,
+    "costoPatrimonio": 0.10574629847329092,
+    "criterio": "Cinco múltiplos pendientes; ningún múltiplo computado se incorpora a objetivo",
+    "horizontes": [
+      1,
+      2,
+      3
+    ],
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "dcfHoy": {
+      "conservador": 48.42964391509511,
+      "base": 91.13793738151752,
+      "optimista": 127.19953770439781
+    },
+    "multiplesHoy": {
+      "conservador": null,
+      "base": null,
+      "optimista": null
+    },
+    "ponderadoHoy": {
+      "conservador": null,
+      "base": null,
+      "optimista": null
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "estado": "N/D",
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "estado": "N/D",
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "N/D",
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "N/D",
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "estado": "N/D",
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      }
+    ],
+    "chequeo": {
+      "centroDCF": "OK",
+      "multiples": "BLOQUEADO_NO_HAY_ANCLAS"
+    }
+  },
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null
+  },
+  "sensibilidadDCF": {
+    "centro": 91.13793738151752,
+    "centroConciliado": true,
+    "matrices": [
+      {
+        "nombre": "WACC inicial × crecimiento terminal",
+        "ejeFilas": [
+          0.09048685538926544,
+          0.09548685538926543,
+          0.10048685538926544,
+          0.10548685538926544,
+          0.11048685538926543
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            102.38303526833637,
+            108.31149693613553,
+            115.74152678851252,
+            125.37673269224759,
+            138.44399702713005
+          ],
+          [
+            92.25046467118591,
+            96.63614699350468,
+            101.98004735205117,
+            108.66957806001935,
+            117.33508022288845
+          ],
+          [
+            83.89787353201005,
+            87.20330360541907,
+            91.13793738151752,
+            95.92521898084678,
+            101.9097009830321
+          ],
+          [
+            76.8942764334048,
+            79.42242682854202,
+            82.37240388135002,
+            85.87755988378878,
+            90.13488779337511
+          ],
+          [
+            70.93751921757675,
+            72.89376296457753,
+            75.1368736275307,
+            77.74840438090544,
+            80.84467008705693
+          ]
+        ],
+        "centro": 91.13793738151752,
+        "centroConciliado": true
+      },
+      {
+        "nombre": "ROIC terminal × crecimiento terminal",
+        "ejeFilas": [
+          0.13,
+          0.135,
+          0.14,
+          0.14500000000000002,
+          0.15000000000000002
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            82.83268138373438,
+            85.81447602259743,
+            89.34760764369398,
+            93.62741498788135,
+            98.95510398288347
+          ],
+          [
+            83.38500323839584,
+            86.53460884331976,
+            90.27592676700989,
+            94.81886891015972,
+            100.4871172422198
+          ],
+          [
+            83.89787353201005,
+            87.20330360541907,
+            91.13793738151752,
+            95.92521898084678,
+            101.9097009830321
+          ],
+          [
+            84.37537346054744,
+            87.82588148737361,
+            91.94049898812808,
+            96.95526904665888,
+            103.2341755003401
+          ],
+          [
+            84.82104006051566,
+            88.40695417719782,
+            92.68955648763128,
+            97.91664910808349,
+            104.47035171649425
+          ]
+        ],
+        "centro": 91.13793738151752,
+        "centroConciliado": true
+      },
+      {
+        "nombre": "CAGR explícito × margen EBIT objetivo",
+        "ejeFilas": [
+          0.07186742635429802,
+          0.09186742635429802,
+          0.11186742635429803,
+          0.13186742635429802,
+          0.15186742635429804
+        ],
+        "ejeColumnas": [
+          0.16,
+          0.18000000000000002,
+          0.2,
+          0.22,
+          0.24000000000000002
+        ],
+        "valores": [
+          [
+            60.51386437672123,
+            67.60353501837577,
+            74.69320566003029,
+            81.78287630168481,
+            88.87254694333933
+          ],
+          [
+            66.5043257267318,
+            74.4983147906075,
+            82.4923038544832,
+            90.48629291835891,
+            98.48028198223463
+          ],
+          [
+            73.13757748930192,
+            82.13775743540971,
+            91.13793738151752,
+            100.13811732762534,
+            109.13829727373316
+          ],
+          [
+            80.47547437241221,
+            90.59357931257487,
+            100.71168425273751,
+            110.82978919290021,
+            120.94789413306289
+          ],
+          [
+            88.58484692661136,
+            99.94326869419386,
+            111.30169046177635,
+            122.6601122293588,
+            134.0185339969413
+          ]
+        ],
+        "centro": 91.13793738151752,
+        "centroConciliado": true
+      }
+    ],
+    "nota": "Tres matrices nativas 5x5 en Sensibilidad DCF; centros coinciden con el DCF FCFF Base"
+  },
+  "sensibilidadMultiples": {
+    "version": "A-1.2-UBER-PENDIENTE",
+    "sourceSheet": "1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58",
+    "controles": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": null,
+        "estado": "N/D",
+        "motivo": "Anclas FY historicas no conciliadas; ganancias no recurrentes en Interest/Other"
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": null,
+        "estado": "N/D",
+        "motivo": "Anclas FY historicas no conciliadas; ganancias no recurrentes en Interest/Other"
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": null,
+        "estado": "N/D",
+        "motivo": "Anclas FY historicas no conciliadas; ganancias no recurrentes en Interest/Other"
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": null,
+        "estado": "N/D",
+        "motivo": "Anclas FY historicas no conciliadas; ganancias no recurrentes en Interest/Other"
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "centro": null,
+        "vp3Original": null,
+        "estado": "N/D",
+        "motivo": "Anclas FY historicas no conciliadas; ganancias no recurrentes en Interest/Other"
+      }
+    ],
+    "controlesOK": 0,
+    "noDisponibles": 5,
+    "errores": 0,
+    "nota": "Matrices no se inventan. Pendiente FY+3 y anclas históricas."
+  },
+  "seleccionMultiples": {
+    "version": "A-1.2-UBER",
+    "noReponderaDCF": true,
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "rol": "CONTRASTE_PENDIENTE",
+        "control": "N/D",
+        "pesoVigente": 0,
+        "estado": "PENDIENTE"
+      },
+      {
+        "nombre": "EV/FCFF",
+        "rol": "CONTRASTE_PENDIENTE",
+        "control": "N/D",
+        "pesoVigente": 0,
+        "estado": "PENDIENTE"
+      },
+      {
+        "nombre": "P/E",
+        "rol": "CONTRASTE_PENDIENTE",
+        "control": "N/D",
+        "pesoVigente": 0,
+        "estado": "PENDIENTE"
+      },
+      {
+        "nombre": "P/FCFE",
+        "rol": "CONTRASTE_PENDIENTE",
+        "control": "N/D",
+        "pesoVigente": 0,
+        "estado": "PENDIENTE"
+      },
+      {
+        "nombre": "P/OCF",
+        "rol": "CONTRASTE_PENDIENTE",
+        "control": "N/D",
+        "pesoVigente": 0,
+        "estado": "PENDIENTE"
+      }
+    ]
+  },
+  "posicion": {
+    "acciones": 8,
+    "costoPromedio": 75.0799,
+    "primeraCompra": "2026-01-20",
+    "compras": "Compras: 2026-01-20, 2026-07-24, 2026-10-20",
+    "precioHoyHoja": 65.74,
+    "dcfBase": 91.13793738151752,
+    "dcfEsperado": 91.13793738151752,
+    "ponderadoBase": null,
+    "fuente": "app Cartera, posiciones al 2026-10-27"
+  },
+  "revisionSupuestos": {
+    "corte": "2026-10-30",
+    "metodo": "A-1.2",
+    "crecimientoBase": ".14,.12,.11,.10,.09,.08,.07,.06,.05,.04",
+    "cagr5": 0.11186742635429803,
+    "margenEBITObjetivo": 0.2,
+    "salesToCapital1_5": 3,
+    "salesToCapital6_10": 2.6,
+    "roicTerminal": 0.14,
+    "roicAnio10": 0.3464544273363343,
+    "rf": 0.04989,
+    "waccInicial": 0.10048685538926544,
+    "waccTerminal": 0.08689,
+    "ke": 0.10574629847329092,
+    "gTerminal": 0.04,
+    "rdCapitalizacionAnios": 3,
+    "leasingReconocido": 2008,
+    "nolBase": 14024,
+    "opcionesMillones": 6.099,
+    "volatilidadOpcionSupuesto": 0.4,
+    "sources": [
+      "Uber 10-Q 2026-06-30",
+      "Uber Q2 2026 investor relations",
+      "Damodaran METODO_A_JMR.md"
+    ]
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000032/uber-20260630.htm",
+    "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-Second-Quarter-2026/default.aspx"
+  ],
+  "hojas": {
+    "input": "Input sheet",
+    "motor": "Valuation output",
+    "historias": "Escenarios e historias",
+    "sensibilidad": "Sensibilidad DCF",
+    "multiples": "Sensibilidad por múltiplo",
+    "link": "https://docs.google.com/spreadsheets/d/1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58/edit"
+  },
+  "salvedades": [
+    "Importes financieros LTM a 30-jun-2026: Q3 aún no incluido; fuente histórica y ERP a recertificar.",
+    "Cinco múltiplos y matrices Base N/D: Financials Multiples extrapola ingresos no operativos no recurrentes. Bloqueo de contrato de publicación.",
+    "NOL 14.024 millones de USD requiere verificación fiscal independiente.",
+    "Inversiones no operativas 12.532 millones USD son proxy contable, no fair value acreditado.",
+    "RSUs 71,804 millones, SBC, dilución y recompras requieren conciliación.",
+    "ROIC año10 ~34,65% frente a 14% terminal, no fade anual suavizado; reserva material.",
+    "Gate de repositorio global en rojo; sin auditoría económica independiente."
+  ],
+  "controlPublicacion": {
+    "dcfBaseConcilia": true,
+    "probabilidadesSuman1": true,
+    "promedioOrdinaryConciliado": true,
+    "sensibilidadesDCFCentros3OK": true,
+    "multiplesCentros5OK": false,
+    "auditoriaEconomicaRealizada": false,
+    "analisisPublicacion": "N1_13_N2_12_EN_REVISION",
+    "gateCI": "BLOQUEADO"
+  },
+  "analisisFundamental": {
+    "ticker": "UBER",
+    "revisionId": "UBER-20261030-A1",
+    "sourcePath": "analisis/UBER-research-UBER-20261030-A1.json",
+    "nivel1": "documentos/UBER-20261030-A1-NIVEL1.md",
+    "nivel2": "documentos/UBER-20261030-A1-NIVEL2.md"
+  }
+}
