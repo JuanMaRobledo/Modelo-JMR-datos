@@ -47,23 +47,55 @@ function validate(root = path.join(__dirname, '..')) {
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
     assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    if(a.ticker==='META' && /^META-/.test(a.revisionId||'')){
-      const headings=a.articleHtml.split('<h2>').slice(1).map(h=>h.split('</h2>')[0].replace(/<[^>]+>/g,'').trim());
-      assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');
-      assert.ok(headings.filter(h=>!/^[0-9]+[.] /.test(h)).every(h=>/^Adenda /.test(h)),'META: h2 extra no identificado como adenda');
-      assert.equal(a.controlCobertura?.secciones,18);
+    // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
+    // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
+    // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
+    const h2 = [...a.articleHtml.matchAll(/<h2[^>]*>([\\s\\S]*?)<\\/h2>/gi)]
+      .map(m => m[1].replace(/<[^>]+>/g, '').trim());
+    const numbers = h2
+      .map(h => /^(\\d+)\\.\\s+/.exec(h))
+      .filter(Boolean).map(m => Number(m[1]));
+    const numberedSequence = n => JSON.stringify(numbers) ===
+      JSON.stringify(Array.from({length:n}, (_,i) => i+1));
+    const is14 = numberedSequence(14);
+    const legacy13 = numberedSequence(13);
+    const legacy18 = numberedSequence(18);
+    const historicalRevisions = {
+      META: 'META-20261025-R5',
+      NVDA: 'NVDA-20261025-R4',
+      XP: 'XP-JMR-20261026-R2'
+    };
+    const frozenHistorical = historicalRevisions[a.ticker] === a.revisionId;
+    if (is14) {
+      assert.ok(h2.some(h => /ciclos?/i.test(h) && /macro|mercado/i.test(h)),
+        a.ticker + ': falta capítulo propio de ciclos');
+      if (a.controlCobertura?.secciones != null)
+        assert.equal(a.controlCobertura.secciones, 14,
+          a.ticker + ': metadatos editoriales deben contar 14 capítulos');
+    } else if (legacy13) {
+      assert.ok(a.status === 'EN_REVISION' || frozenHistorical,
+        a.ticker + ': no publicar como nuevo un informe de 13 capítulos');
+      console.warn('PENDIENTE_EDITORIAL: ' + a.ticker +
+        ' conserva 13 capítulos; separar ciclos antes de certificar Nivel 1 (14).');
+    } else if (legacy18 && frozenHistorical && a.ticker === 'XP') {
+      console.warn('LEGADO_HISTORICO: XP conserva 18 capítulos por revisión archivada; ' +
+        'no corresponde al nuevo Nivel 1 de 14.');
+    } else {
+      assert.fail(a.ticker + ': índice inválido: estándar=14, ' +
+        'legado de 13 solo EN_REVISION o revisión histórica congelada');
+    }
+    if (a.ticker==='META' && /^META-/.test(a.revisionId||'')) {
+      assert.ok(h2.filter(h => !/^[0-9]+[.] /.test(h))
+        .every(h => /^Adenda /.test(h)), 'META: h2 extra no identificado como adenda');
       assert.equal(a.controlCobertura?.matricesDCF,8);
       assert.equal(a.controlCobertura?.centrosDCFValidados,8);
       assert.ok(a.calculationHtml?.length>1000,'META: falta nivel 2');
       assert.ok(a.editorialRevisionId,'META: falta revisión editorial');
-    } else {
-      assert.equal((a.articleHtml.match(/<h2>/g) || []).length, 18);
-      if (a.controlCobertura) {
-        assert.equal(a.controlCobertura.entradas.length, 25,
-          'Cobertura editorial v5 debe documentar 25 puntos');
-        assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
-        assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
-      }
+    } else if (a.controlCobertura) {
+      assert.equal(a.controlCobertura.entradas.length, 25,
+        'Cobertura editorial v5 debe documentar 25 puntos');
+      assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
+      assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
     }
   }
   for (const {record: v} of vals) {
