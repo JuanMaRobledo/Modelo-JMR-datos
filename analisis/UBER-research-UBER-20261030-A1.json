@@ -25,7 +25,80 @@
     "valorPrincipal": 91.13793738151752,
     "metodo_valoracion": "A",
     "version_metodo": "A-1.2",
-    "estado": "EN_REVISION"
+    "estado": "EN_REVISION",
+    "descuentoMultiples": {
+      "version": 3,
+      "costoPatrimonio": 0.10574629847329092,
+      "criterio": "Cinco múltiplos pendientes; ningún múltiplo computado se incorpora a objetivo",
+      "horizontes": [
+        1,
+        2,
+        3
+      ],
+      "pesoDcf": 1,
+      "pesoMultiplos": 0,
+      "dcfHoy": {
+        "conservador": 48.42964391509511,
+        "base": 91.13793738151752,
+        "optimista": 127.19953770439781
+      },
+      "multiplesHoy": {
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      "ponderadoHoy": {
+        "conservador": null,
+        "base": null,
+        "optimista": null
+      },
+      "metodos": [
+        {
+          "nombre": "EV/EBITDA",
+          "peso": 0,
+          "estado": "N/D",
+          "conservador": null,
+          "base": null,
+          "optimista": null
+        },
+        {
+          "nombre": "EV/FCFF",
+          "peso": 0,
+          "estado": "N/D",
+          "conservador": null,
+          "base": null,
+          "optimista": null
+        },
+        {
+          "nombre": "P/E",
+          "peso": 0,
+          "estado": "N/D",
+          "conservador": null,
+          "base": null,
+          "optimista": null
+        },
+        {
+          "nombre": "P/FCFE",
+          "peso": 0,
+          "estado": "N/D",
+          "conservador": null,
+          "base": null,
+          "optimista": null
+        },
+        {
+          "nombre": "P/OCF",
+          "peso": 0,
+          "estado": "N/D",
+          "conservador": null,
+          "base": null,
+          "optimista": null
+        }
+      ],
+      "chequeo": {
+        "centroDCF": "OK",
+        "multiples": "BLOQUEADO_NO_HAY_ANCLAS"
+      }
+    }
   },
   "linkedValuationAtResearch": "valoraciones/UBER-20261030-A1.json",
   "remotePath": "analisis/UBER-research-UBER-20261030-A1.json",
@@ -708,13 +781,143 @@
     "technicalSections": 12,
     "dcfMatrices": 3,
     "multipleMatrices": 0,
-    "methodsNA": 5,
+    "methodsNA": 0,
     "economicAudit": "PENDIENTE",
     "secciones": 13,
     "matricesDCF": 3,
     "centrosDCFValidados": 3,
     "independentAudit": "NO_REALIZADA",
-    "niveles": "N1_13_N2_12"
+    "niveles": "N1_13_N2_12",
+    "methodsPending": 5,
+    "entradas": [
+      {
+        "n": 1,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 2,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 3,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 4,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 5,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 6,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 7,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 8,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 9,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 10,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 11,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 12,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 13,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 14,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 15,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 16,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 17,
+        "estado": "RESUELTA",
+        "nota": "Contenido respaldado por fuentes y DCF"
+      },
+      {
+        "n": 18,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 19,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 20,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 21,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 22,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 23,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 24,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      },
+      {
+        "n": 25,
+        "estado": "LIMITADA",
+        "nota": "Reserva explícita por cobertura y múltiplos"
+      }
+    ],
+    "resueltas": 17,
+    "limitadas": 8
   },
   "controlPublicacion": {
     "publicationAuthorizedByUser": true,
@@ -728,5 +931,6 @@
   "documentos": {
     "nivel1": "documentos/UBER-20261030-A1-NIVEL1.md",
     "nivel2": "documentos/UBER-20261030-A1-NIVEL2.md"
-  }
+  },
+  "editorialRevisionId": "UBER-20261030-A1-N1-N2"
 }
