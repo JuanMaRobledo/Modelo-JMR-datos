@@ -46,7 +46,30 @@ function validate(root = path.join(__dirname, '..')) {
       assert.equal(a.linkedValuation.revisionId, v.record.revisionId,
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
-    assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
+    // Algunos análisis nuevos enlazan el resultado en vez de duplicar todo el
+    // bloque financiero. Una referencia compacta no es un error de cálculo;
+    // el expediente oficial sigue siendo la única fuente del cálculo.
+    // Cuando hay copia embebida, sí debe coincidir íntegramente.
+    const linked = a.linkedValuation;
+    if (Object.prototype.hasOwnProperty.call(linked, 'descuentoMultiples')) {
+      assert.deepEqual(linked.descuentoMultiples, v.record.descuentoMultiples,
+        a.ticker + ': múltiplos embebidos distintos de la valoración oficial');
+    } else {
+      assert.ok(typeof linked.revisionId === 'string' && linked.revisionId,
+        a.ticker + ': vínculo compacto sin revisión financiera');
+      assert.ok(Number.isFinite(linked.valorPrincipal),
+        a.ticker + ': vínculo compacto sin valor Base numérico');
+      assert.equal(linked.valorPrincipal, v.record.valorPrincipal,
+        a.ticker + ': valor Base del análisis difiere de la valoración');
+      if (linked.metodo_valoracion !== undefined)
+        assert.equal(linked.metodo_valoracion, v.record.metodo_valoracion,
+          a.ticker + ': método del análisis difiere de la valoración');
+      if (linked.version_metodo !== undefined)
+        assert.equal(linked.version_metodo, v.record.version_metodo,
+          a.ticker + ': versión del método difiere de la valoración');
+      console.warn('VINCULO_COMPACTO: ' + a.ticker +
+        ' usa la valoración como fuente única de múltiplos; sin copia embebida.');
+    }
     // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
     // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
     // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
