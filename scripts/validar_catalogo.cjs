@@ -33,7 +33,7 @@ function validate(root = path.join(__dirname, '..')) {
   for (const p of c.analisis) {
     const a = JSON.parse(fs.readFileSync(path.join(root, p)));
     const v = vals.find(x => x.path === a.linkedValuation?.sourcePath);
-    assert.ok(v, 'Análisis sin valoración');
+    assert.ok(v, 'Análisis sin valoración: '+p+' -> '+String(a.linkedValuation?.sourcePath));
     assert.equal(a.ticker, v.record.ticker);
     // El artículo puede publicarse después de su valoración sin cambiar el DCF.
     const isoDate = x => typeof x === 'string' &&
@@ -46,7 +46,8 @@ function validate(root = path.join(__dirname, '..')) {
       assert.equal(a.linkedValuation.revisionId, v.record.revisionId,
         'Enlace a revisión distinta');
     assert.equal(a.remotePath, p);
-    assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
+    assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples,
+      'descuentoMultiples discordante: '+p+' -> '+v.path);
     if(a.ticker==='META' && /^META-/.test(a.revisionId||'')){
       const headings=a.articleHtml.split('<h2>').slice(1).map(h=>h.split('</h2>')[0].replace(/<[^>]+>/g,'').trim());
       assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');

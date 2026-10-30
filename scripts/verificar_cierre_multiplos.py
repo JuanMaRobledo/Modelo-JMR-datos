@@ -101,12 +101,29 @@ def verify_recaptura(record,analysis):
             'scope':'Recaptura: evidencia propia, hashes y coherencia interna de descuentos y ponderados; no reproduce año a año el cierre de múltiplos','ok':True}
 
 
+def active_pair(ticker, root=None):
+    """Resolve only explicit catalog entries; never reuse a historical glob match."""
+    root = ROOT if root is None else Path(root)
+    catalog = json.loads((root/'catalogo.json').read_text())
+    def one(group):
+        matches = [(p, json.loads((root/p).read_text())) for p in catalog[group]]
+        matches = [(p, r) for p, r in matches if r.get('ticker') == ticker]
+        assert len(matches) == 1, f'{ticker}: catálogo requiere exactamente un {group}, encontrados {len(matches)}'
+        return matches[0]
+    vp, record = one('valoraciones')
+    ap, analysis = one('analisis')
+    link = analysis.get('linkedValuation') or {}
+    assert link.get('sourcePath') == vp, f'{ap}: enlace no corresponde a valoración activa {vp}'
+    assert record.get('revisionId') and record['revisionId'] == analysis.get('revisionId') == link.get('revisionId'), f'{ticker}: revisión activa discordante'
+    return record, analysis
+
 def verify(ticker):
-    record=json.loads(next((ROOT/'valoraciones').glob(ticker+'*.json')).read_text())
-    analysis=json.loads(next((ROOT/'analisis').glob(ticker+'*.json')).read_text())
+    record, analysis = active_pair(ticker)
     if record.get('evidenciaRecaptura'):
         return verify_recaptura(record,analysis)
-    evidence=json.loads((ROOT/record['cierreMultiplos']['evidencePath']).read_text())
+    evidence_path = (record.get('cierreMultiplos') or {}).get('evidencePath')
+    assert evidence_path, f'{ticker} {record.get("revisionId")}: falta evidencia de cierre de múltiplos de la revisión activa'
+    evidence=json.loads((ROOT/evidence_path).read_text())
     audit=(ROOT/'auditorias/narrativas'/f'{ticker}.md').read_text()
     if evidence.get('schema')=='jmr-reviewed-snapshot-release-v1':
         return verify_snapshot_release(record,analysis,evidence,audit)
