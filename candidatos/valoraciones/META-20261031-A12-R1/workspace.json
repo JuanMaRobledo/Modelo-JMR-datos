@@ -2,7 +2,7 @@
   "schema": "jmr-valuation-workspace-v1",
   "ticker": "META",
   "revisionCandidata": "META-20261031-A12-R1",
-  "estado": "PREPARACION_SIN_VALORACION",
+  "estado": "CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA",
   "versionMetodo": "A-1.2",
   "corteContable": "2026-09-30",
   "fechaAnalisis": "2026-10-31",
@@ -53,6 +53,32 @@
       ],
       "fuente": "R& D converter de la revisión 2026-10-23",
       "status": "CARGADO_EN_COPIA"
+    },
+    "calibracion": "candidatos/valoraciones/META-20261031-A12-R1/CALIBRACION_DCF_PROVISIONAL.json",
+    "analisisNivel1": "candidatos/valoraciones/META-20261031-A12-R1/NIVEL1_ANALISIS_PROVISIONAL.md",
+    "analisisNivel2": "candidatos/valoraciones/META-20261031-A12-R1/NIVEL2_CALIBRACION_PROVISIONAL.md",
+    "controles": {
+      "waccDetalles": "VALIDADO_TECNICAMENTE",
+      "fiscal": "VALIDADO_TECNICAMENTE",
+      "researchCapitalized": "VALIDADO_TECNICAMENTE",
+      "noPreferred": "NO_APLICA",
+      "noConvertible": "NO_APLICA",
+      "noNOL": "NO_APLICA",
+      "investments": "PENDIENTE_VALOR_ECONOMICO",
+      "stockOptions": "REVISAR",
+      "auditSpecial": "PENDIENTE",
+      "scenarios": "PENDIENTE_EN_HOJA",
+      "dcfIndependiente": "4_ESCENARIOS_MATRICES_5X5_CON_PRUEBAS_APROBADAS",
+      "multipleMatrices": "PENDIENTE"
+    },
+    "diferencias": {
+      "inputSheetB20": "VACIO_A_PROPOSITO: dato contable 32624 no es valor económico certificado",
+      "bookNonop": 32624,
+      "price30Oct": 614.99,
+      "rdAsset": 125558.66666666666,
+      "rdAdjEBIT": 32422.66666666667,
+      "waccInitial": 0.08979122059139251,
+      "waccTerminal": 0.088
     }
   },
   "fuentePrimaria": {
@@ -136,6 +162,11 @@
       "id": "HISTORICO_BORRADOR",
       "estado": "CARGADO",
       "detalle": "649 hardcodes históricos (187 IS, 253 BS, 209 CF) importados a tres hojas de la copia limpia, preservando fórmulas de destino; 12 entradas del conversor I+D. Validación contable y de celdas derivadas aún pendiente."
+    },
+    {
+      "id": "REVISION_PREVIA_PUBLICACION",
+      "estado": "PENDIENTE",
+      "detalle": "WACC fiscal y dos matrices DCF calculadas; cuatro pruebas propias nuevas aprobadas; el gate oficial K5:K8 continúa pendiente por valores económicos de participaciones y premios/opciones. El gate general PR211 falla por UBER y recapturas META/NVDA sin conciliación de hashes."
     }
   ],
   "supuestosDefinitivos": null,
@@ -266,5 +297,14 @@
     "fecha": "2026-10-30",
     "fuente": "https://stockanalysis.com/stocks/meta/history/",
     "nota": "Cierre anterior al corte de estudio; no implica valor intrínseco ni aprobación de MOS"
+  },
+  "supuestosProvisionales": {
+    "baseCandidato": 780.630296103935,
+    "mos35Candidato": 507.4096924675578,
+    "conservador": 482.7689088233554,
+    "optimista": 1152.3933120312597,
+    "disrupcion": 244.06042760290117,
+    "promedioTresSinDisrupcion": 799.1057032656214,
+    "estado": "NO_CERTIFICADO_NO_USAR_EN_APP"
   }
 }
