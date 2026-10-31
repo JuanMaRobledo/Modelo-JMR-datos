@@ -19,7 +19,13 @@ class NativeDiscountTests(unittest.TestCase):
         p=next(p for p in (ROOT/'evidencia/descuentos-20261031').glob(ticker+'*-UNFORMATTED_VALUE.json') if '-DCF-' not in p.name)
         c=json.loads(p.read_text())
         f=json.loads(p.with_name(p.name.replace('UNFORMATTED_VALUE','FORMULA')).read_text())
-        v=json.loads((ROOT/'valoraciones'/(c['revisionId']+'.json')).read_text())
+        # La captura anterior a los descuentos completos se prueba con su
+        # respaldo exacto. El test MSFT nuevo comprueba la extensión actual.
+        if ticker=='MSFT':
+            prev=ROOT/'evidencia/descuentos-nativos-20261031'/c['revisionId']/'registro_antes.json'
+            v=json.loads(prev.read_text())
+        else:
+            v=json.loads((ROOT/'valoraciones'/(c['revisionId']+'.json')).read_text())
         return v,c,f,hashlib.sha256(p.read_bytes()).hexdigest()
 
     def test_all_fourteen_reproduce_and_preserve_financial_fields(self):
