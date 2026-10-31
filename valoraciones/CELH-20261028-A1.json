@@ -193,26 +193,289 @@
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "valorPresenteBase": 29.97
+        "peso": 0.10000000000000003,
+        "pesoRelativo": 0.25,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            15.755692519686967,
+            8.821609983945793,
+            9.521722883923868
+          ],
+          "vp": [
+            14.671830059497301,
+            7.649647721108912,
+            7.688753038065403
+          ],
+          "consolidado": 10.00341027289054,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D11:K11"
+        },
+        "base": {
+          "fy": [
+            29.89105610819143,
+            35.18550226776773,
+            39.09035352435192
+          ],
+          "vp": [
+            27.834796532764315,
+            30.511062915786667,
+            31.565303683313388
+          ],
+          "consolidado": 29.970387710621456,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": {
+          "fy": [
+            47.67727519306458,
+            75.17552013224625,
+            86.04414794587746
+          ],
+          "vp": [
+            44.39746957859697,
+            65.18835533529163,
+            69.48030435159889
+          ],
+          "consolidado": 59.6887097551625,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D29:K29"
+        }
       },
       {
         "nombre": "EV/FCFF",
-        "valorPresenteBase": 21.35
+        "peso": 0.15,
+        "pesoRelativo": 0.3749999999999999,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            15.408824678187719,
+            5.646168146540655,
+            6.117992490743286
+          ],
+          "vp": [
+            14.348823881430382,
+            4.896067426896556,
+            4.9402543976031845
+          ],
+          "consolidado": 8.061715235310041,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D12:K12"
+        },
+        "base": {
+          "fy": [
+            18.79174750552319,
+            25.28785285917698,
+            30.496837710290677
+          ],
+          "vp": [
+            17.499029355740205,
+            21.928328995272132,
+            24.6260741312139
+          ],
+          "consolidado": 21.35114416074208,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": {
+          "fy": [
+            23.666448697737795,
+            53.939380515576886,
+            64.75204846655201
+          ],
+          "vp": [
+            22.03839107491791,
+            46.7734642531148,
+            52.28701942258087
+          ],
+          "consolidado": 40.366291583537866,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D30:K30"
+        }
       },
       {
         "nombre": "P/E",
-        "valorPresenteBase": 43.53
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            25.004587377039712,
+            15.39152585724954,
+            16.15014870678881
+          ],
+          "vp": [
+            23.284476784843147,
+            13.3467417979903,
+            13.041180304058441
+          ],
+          "consolidado": 16.55746629563063,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D13:K13"
+        },
+        "base": {
+          "fy": [
+            44.03448231893585,
+            51.034936984227244,
+            56.1457454383755
+          ],
+          "vp": [
+            41.005270985968785,
+            44.254879790515325,
+            45.33746424637157
+          ],
+          "consolidado": 43.532538340951895,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": {
+          "fy": [
+            66.22858951038697,
+            104.55888812292183,
+            119.20812919902566
+          ],
+          "vp": [
+            61.67260557810814,
+            90.66810499521009,
+            96.26008619601727
+          ],
+          "consolidado": 82.86693225644517,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D31:K31"
+        }
       },
       {
         "nombre": "P/FCFE",
-        "valorPresenteBase": 29.01
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            23.159993359434747,
+            11.369893975100897,
+            11.994309851092984
+          ],
+          "vp": [
+            21.566775711326443,
+            9.859388897736943,
+            9.685357096748955
+          ],
+          "consolidado": 13.703840568604113,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D14:K14"
+        },
+        "base": {
+          "fy": [
+            26.689317534027264,
+            34.240145912023635,
+            40.21301548643899
+          ],
+          "vp": [
+            24.853311320586087,
+            29.691298371047743,
+            32.47184871481091
+          ],
+          "consolidado": 29.00548613548158,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": {
+          "fy": [
+            42.57785876378363,
+            88.921063752668,
+            105.66277177631282
+          ],
+          "vp": [
+            39.648851188162354,
+            77.10778575929807,
+            85.32226440628602
+          ],
+          "consolidado": 67.35963378458216,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D32:K32"
+        }
       },
       {
         "nombre": "P/OCF",
-        "valorPresenteBase": 31.55
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            19.855640622187014,
+            12.06745561422657,
+            12.558489363080572
+          ],
+          "vp": [
+            18.489735349123645,
+            10.464278573519678,
+            10.140929789809858
+          ],
+          "consolidado": 13.03164790415106,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D15:K15"
+        },
+        "base": {
+          "fy": [
+            30.207811678668808,
+            37.048059388079004,
+            42.58246574412436
+          ],
+          "vp": [
+            28.12976191715705,
+            32.12617692068528,
+            34.385170294257634
+          ],
+          "consolidado": 31.547036377366656,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": {
+          "fy": [
+            38.512347780459955,
+            70.11627188299974,
+            82.07202882953622
+          ],
+          "vp": [
+            35.86301402627225,
+            60.80123474043371,
+            66.27283409693625
+          ],
+          "consolidado": 54.31236095454741,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D33:K33"
+        }
       }
     ],
-    "chequeo": "Todos VP3 < FY+3: OK. Combinado 32,32 es secundario; 41,33 está expresado al horizonte FY+3, no hoy."
+    "chequeo": "Todos VP3 < FY+3: OK. Combinado 32,32 es secundario; 41,33 está expresado al horizonte FY+3, no hoy.",
+    "integracionNativa": {
+      "revisionId": "CELH-20261028-A1",
+      "sourceSheetId": "1xqXfx9bD8XCGzgWtDnQP_9X0x_Cq94rID4w_w5mPyUo",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "capturaSha256": "64e1e5236f0ee80231d8d4c854697b51f5916c5e976d08f863a98e8559be4bfc",
+      "fechaCaptura": "2026-10-31",
+      "estado": "METODOS_Y_CONSOLIDACION_CONCILIADOS",
+      "certificadoEconomico": false,
+      "calculosExternosExportados": false,
+      "motivoPendiente": null
+    },
+    "resumenNativo": {
+      "dcfHoy": {
+        "conservador": 9.211163723789952,
+        "base": 34.85258306615184,
+        "optimista": 65.3585318673924
+      },
+      "multiplesHoy": {
+        "conservador": 10.935615127512124,
+        "base": 28.50990859465866,
+        "optimista": 55.626902657064164
+      },
+      "ponderadoHoy": {
+        "conservador": 9.900944285278822,
+        "base": 32.31551327755457,
+        "optimista": 61.46588018326111
+      }
+    }
   },
   "moneda": "USD",
   "currency": "USD",

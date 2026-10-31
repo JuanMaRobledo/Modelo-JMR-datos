@@ -185,7 +185,135 @@
     },
     "multiplesHoy": null,
     "ponderadoHoy": null,
-    "chequeo": "PENDIENTE"
+    "chequeo": "PENDIENTE",
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            41.32956099794294,
+            47.453037088653716,
+            53.04509156482449
+          ],
+          "vp": [
+            37.4701368975004,
+            39.15579220785602,
+            39.96815571826054
+          ],
+          "consolidado": 38.86469494120565,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            57.54671733952202,
+            52.8961713169409,
+            53.03990537040487
+          ],
+          "vp": [
+            52.17290783274888,
+            43.62981321895094,
+            39.964290960693255
+          ],
+          "consolidado": 45.25567067079769,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            31.520741758276323,
+            36.85442822020917,
+            41.76499298766118
+          ],
+          "vp": [
+            28.577281739144446,
+            30.44419393064079,
+            31.562214326832358
+          ],
+          "consolidado": 30.194563332205863,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            40.70055821874498,
+            39.971939884929284,
+            41.75933653399201
+          ],
+          "vp": [
+            36.89987145851766,
+            33.00665373877973,
+            31.55799913157488
+          ],
+          "consolidado": 33.82150810962409,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            42.019157750031525,
+            40.4277369249498,
+            41.770994725029624
+          ],
+          "vp": [
+            38.09533794200501,
+            33.38129920007462,
+            31.56668682786777
+          ],
+          "consolidado": 34.34777465664913,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": null
+      }
+    ],
+    "integracionNativa": {
+      "revisionId": "NKE-20261029-R1",
+      "sourceSheetId": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "capturaSha256": "45c863fdf4697260ef48c9cc53689dce7740a633d6d2e093fb5f2268837814b9",
+      "fechaCaptura": "2026-10-31",
+      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "certificadoEconomico": false,
+      "calculosExternosExportados": false,
+      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+    }
   },
   "revisionSupuestos": {
     "metodo": "A",

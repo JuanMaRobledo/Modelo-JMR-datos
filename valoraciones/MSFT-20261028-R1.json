@@ -190,7 +190,135 @@
     },
     "multiplesHoy": null,
     "ponderadoHoy": null,
-    "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_VERIFICADOS"
+    "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_VERIFICADOS",
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0.10000000000000003,
+        "pesoRelativo": 0.25,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            677.2120800544822,
+            796.1233778767485,
+            920.6806894677328
+          ],
+          "vp": [
+            617.4998450391922,
+            662.2410616942234,
+            698.9239154491015
+          ],
+          "consolidado": 659.5549407275057,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0.15,
+        "pesoRelativo": 0.3749999999999999,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            585.6039297515981,
+            720.1889415161936,
+            920.694662484904
+          ],
+          "vp": [
+            533.9691162137303,
+            599.1070935617576,
+            698.9345086366736
+          ],
+          "consolidado": 610.6702394707205,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            635.7275089811217,
+            739.7221277927325,
+            853.4196036873229
+          ],
+          "vp": [
+            579.673118429034,
+            615.3475191053536,
+            647.9321153787591
+          ],
+          "consolidado": 614.3175843043823,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            549.4930807174032,
+            672.5765784143424,
+            853.3917762337642
+          ],
+          "vp": [
+            501.04229116203453,
+            559.5208720941923,
+            647.9110189017714
+          ],
+          "consolidado": 569.4913940526661,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0.05000000000000002,
+        "pesoRelativo": 0.125,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            590.3056459624141,
+            704.7036014252149,
+            853.2674461888861
+          ],
+          "vp": [
+            538.2562651248419,
+            586.2321580952964,
+            647.8167621303024
+          ],
+          "consolidado": 590.7683951168136,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": null
+      }
+    ],
+    "integracionNativa": {
+      "revisionId": "MSFT-20261028-R1",
+      "sourceSheetId": "1WNgt14r3sRRGWOHgRyzy-ZAkpqTsioZv2jP8OdfrWi4",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "capturaSha256": "d3b1e4d07040fd0de0456c0d88d799a185960b209cbb85d1880a728ccbadcafd",
+      "fechaCaptura": "2026-10-31",
+      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "certificadoEconomico": false,
+      "calculosExternosExportados": false,
+      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+    }
   },
   "revisionSupuestos": {
     "metodo": "A",

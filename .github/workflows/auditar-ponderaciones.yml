@@ -8,6 +8,12 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/integrar_matrices_nativas.py'
+      - 'scripts/integrar_descuentos_nativos.py'
+      - 'scripts/estandarizar_nivel1.py'
+      - 'scripts/aplicar_ampliacion_editorial.py'
+      - 'scripts/ampliaciones_editoriales_20261031.json'
+      - 'scripts/restaurar_nivel2_desde_foto.py'
+      - 'evidencia/descuentos-20261031/**'
       - 'scripts/tests/validar_matrices_nativas.test.cjs'
       - 'scripts/tests/capturas_matrices_fuente.test.cjs'
       - 'candidatos/hoja-multiples/**'
@@ -27,6 +33,12 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/integrar_matrices_nativas.py'
+      - 'scripts/integrar_descuentos_nativos.py'
+      - 'scripts/estandarizar_nivel1.py'
+      - 'scripts/aplicar_ampliacion_editorial.py'
+      - 'scripts/ampliaciones_editoriales_20261031.json'
+      - 'scripts/restaurar_nivel2_desde_foto.py'
+      - 'evidencia/descuentos-20261031/**'
       - 'scripts/tests/validar_matrices_nativas.test.cjs'
       - 'scripts/tests/capturas_matrices_fuente.test.cjs'
       - 'candidatos/hoja-multiples/**'
@@ -55,11 +67,13 @@ jobs:
       - run: node --test scripts/tests/capturas_matrices_fuente.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
       - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
       - run: node scripts/validar_catalogo.cjs
       - run: node scripts/auditar_integridad.cjs
       - run: node --test scripts/tests/*.test.cjs
       - run: python3 scripts/verificar_cierre_multiplos.py
 
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
+
 
 

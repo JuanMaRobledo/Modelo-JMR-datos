@@ -1,0 +1,421 @@
+{
+  "ticker": "ADBE",
+  "revisionId": "ADBE-20261028-A3",
+  "sourceSheetId": "1Di2o1dGk9HMH41oXiEgjvqUk1HI5_yRIogkrBrtjFqw",
+  "capturedAt": "2026-10-31",
+  "range": "'Descuento de múltiplos'!A1:M80",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "ADOBE INC. (NASDAQ:ADBE) · Múltiplos a valor presente (1, 2 y 3 años)"
+    ],
+    [
+      "Cada múltiplo da un precio objetivo al cierre de FY+1, FY+2 y FY+3 (múltiplo × métrica proyectada ÷ acciones) más los dividendos por acción hasta ese año. Se trae a hoy con el costo del patrimonio descontando cada dividendo en su año de pago: VP_n = Precio FY+n ÷ (1 + Ke)^n + suma(Dividendo FY+t ÷ (1 + Ke)^t), t = 1..n."
+    ],
+    [],
+    [
+      "Parámetro",
+      "Valor usado",
+      "Entrada manual",
+      "Automático"
+    ],
+    [
+      "Tasa de descuento: Ke (costo del patrimonio del DCF)",
+      0.107544746196132,
+      null,
+      0.107544746196132
+    ],
+    [
+      "Criterio para consolidar cada método",
+      "Promedio 1-3 años",
+      null,
+      "Promedio 1-3 años"
+    ],
+    [
+      "Factor de descuento a 1, 2 y 3 años",
+      0.9028980575588526,
+      0.8152249023435489,
+      0.7360649807995957
+    ],
+    [],
+    [
+      "CONSERVADOR"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.11428571428571431,
+      0.2857142857142857,
+      269.86517244923857,
+      277.80840988460926,
+      289.25105068700645,
+      243.66074000720226,
+      226.4763338183972,
+      212.90756907019428,
+      227.68154763193127,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.17142857142857143,
+      0.4285714285714285,
+      159.822900436781,
+      165.8058573642929,
+      174.09971053699405,
+      144.30378635779144,
+      135.1690638777941,
+      128.1487000936277,
+      135.87385010973773,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.057142857142857155,
+      0.14285714285714285,
+      276.93839787522154,
+      285.394250290345,
+      297.05620007511,
+      250.0471415049982,
+      232.66049982235685,
+      218.65266620468668,
+      233.78676917734728,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.057142857142857155,
+      0.14285714285714285,
+      165.05724412035465,
+      171.03406535200332,
+      179.31620510151194,
+      149.02986510228556,
+      139.43122922400707,
+      131.98837906510073,
+      140.14982446379778,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0,
+      0,
+      167.31546754697328,
+      173.62227488652584,
+      182.18897870869188,
+      151.0688106477134,
+      141.54120208903285,
+      134.1029271151112,
+      142.23764661728583,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.4000000000000001,
+      0.9999999999999998,
+      208.74209831491373,
+      215.6375296434922,
+      225.31051973737385,
+      188.47283509929463,
+      175.79308404522004,
+      165.843183384437,
+      176.70303417631723,
+      "OK"
+    ],
+    [],
+    [
+      "BASE"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.11428571428571431,
+      0.2857142857142857,
+      286.065713382285,
+      315.83994624718247,
+      344.716810320757,
+      258.2881769470526,
+      257.4805893355511,
+      253.73397237004588,
+      256.5009128842165,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.17142857142857143,
+      0.4285714285714285,
+      167.54403523620272,
+      188.67911912957052,
+      208.7971890635575,
+      151.27518397033938,
+      153.81591646667096,
+      153.688298959077,
+      152.92646646536244,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.057142857142857155,
+      0.14285714285714285,
+      293.4258931905836,
+      325.38137022519624,
+      355.57961739412144,
+      264.9336689992493,
+      265.25899576624573,
+      261.72970424993156,
+      263.9741230051422,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.057142857142857155,
+      0.14285714285714285,
+      172.94555532830302,
+      194.15533328166632,
+      214.33275940979308,
+      156.15220596936186,
+      158.28026261402562,
+      157.7628384396937,
+      157.3984356743604,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0,
+      0,
+      175.36070691163164,
+      196.8445128908067,
+      217.3193978372342,
+      158.33284164265945,
+      160.47254879827136,
+      159.96119839644348,
+      159.58886294579142,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.4000000000000001,
+      0.9999999999999998,
+      220.1621401417235,
+      245.32199334141984,
+      269.3910806623001,
+      198.78396868196205,
+      199.99259806448373,
+      198.2893406152783,
+      199.02196912057468,
+      "OK"
+    ],
+    [],
+    [
+      "OPTIMISTA"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.11428571428571431,
+      0.2857142857142857,
+      298.69358533300965,
+      342.96162981291064,
+      385.9952266400931,
+      269.6898580024638,
+      279.5908611718145,
+      284.1175690855757,
+      277.7994294199513,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.17142857142857143,
+      0.4285714285714285,
+      174.6592728856049,
+      204.442489347959,
+      233.51168455494428,
+      157.69951822305424,
+      166.66660841356193,
+      171.8797736084163,
+      165.4153000816775,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.057142857142857155,
+      0.14285714285714285,
+      306.28693220461,
+      353.9263802926125,
+      399.1775979994034,
+      276.54587614320235,
+      288.5295988108508,
+      293.8206510070596,
+      286.29870865370424,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.057142857142857155,
+      0.14285714285714285,
+      180.07756462926275,
+      210.08535752462865,
+      239.30711225335668,
+      162.59168331369008,
+      171.26681507182496,
+      176.14558498597367,
+      170.00136112382958,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0,
+      0,
+      182.68840232199634,
+      212.86586983208403,
+      242.37954902973863,
+      164.94900359506065,
+      173.53355794613532,
+      178.4070981027892,
+      172.2965532146617,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.4000000000000001,
+      0.9999999999999998,
+      229.6756408795295,
+      266.1803522124199,
+      301.5728881711113,
+      207.3736900187118,
+      216.9968516381415,
+      221.97724214134763,
+      215.44926126606697,
+      "OK"
+    ],
+    [],
+    [
+      "VALOR HOY · DCF (VALOR INTRÍNSECO) + MÚLTIPLOS DESCONTADOS (SECUNDARIO)"
+    ],
+    [
+      "Concepto",
+      "Peso",
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "DCF · valor intrínseco (valor presente)",
+      0.6,
+      310.39744799568473,
+      432.2929873886732,
+      521.5297543210061
+    ],
+    [
+      "Múltiplos consolidados (valor presente)",
+      0.4000000000000001,
+      176.70303417631723,
+      199.02196912057468,
+      215.44926126606697
+    ],
+    [
+      "Ponderado DCF + múltiplos (secundario)",
+      1,
+      256.9196824679377,
+      338.9845800814338,
+      399.09755709903044
+    ],
+    [
+      "Precio de referencia de la hoja",
+      249.76
+    ],
+    [
+      "Descuento del precio frente al ponderado",
+      null,
+      0.027867395752488644,
+      0.26321132383071677,
+      0.37418810123654667
+    ],
+    [
+      "Compra con MOS sobre el ponderado (secundario)",
+      0.35,
+      166.9977936041595,
+      220.339977052932,
+      259.4134121143698
+    ],
+    [],
+    [
+      "CHEQUEO MATEMÁTICO · MÚLTIPLOS A 3 AÑOS"
+    ],
+    [
+      "Concepto",
+      null,
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "Múltiplos FY+3 sin descontar (ponderado)",
+      null,
+      225.31051973737385,
+      269.3910806623001,
+      301.5728881711113
+    ],
+    [
+      "Múltiplos a 3 años descontados (ponderado)",
+      null,
+      165.843183384437,
+      198.2893406152783,
+      221.97724214134763
+    ],
+    [
+      "VP a 3 años < FY+3 sin descontar",
+      null,
+      "OK",
+      "OK",
+      "OK"
+    ],
+    [
+      "Ponderado DCF capitalizado + múltiplos FY+3 (sin descontar)",
+      null,
+      343.143266884956,
+      460.1380822538125,
+      545.7517473698613
+    ],
+    [
+      "Fuentes: precio + dividendos de cada horizonte = filas 12, 23, 34 (columnas F:H) de EVEBITDA, EVFCFF, PE, PFCFE, POCF; dividendos acumulados = filas 11, 22, 33 (dividendos por acción de «Financials Multiples»). Ke = 'Cost of capital worksheet'!B63 (C5 lo reemplaza). C6 = «Solo 3 años» usa solo el VP a 3 años; vacío = promedio simple de 1, 2 y 3 años."
+    ],
+    [
+      "Los pesos salen de la categoría de empresa del Resumen (I5:U11): el DCF conserva su peso y el de los múltiplos se reparte entre los 5 métodos en la misma proporción (múltiplos solos = 100% entre los múltiplos). Fila 50: DCF capitalizado a FY+3 (DCF hoy × (1 + Ke)^3, antes de distribuciones; riqueza capitalizada, no un precio exdividendo) con su peso + múltiplos FY+3 sin descontar. Resumen C32:E47 muestra DCF, múltiplos consolidados, ponderado y cada método."
+    ]
+  ]
+}

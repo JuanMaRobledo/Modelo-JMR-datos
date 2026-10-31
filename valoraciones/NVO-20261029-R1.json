@@ -773,5 +773,135 @@
     "certificado": false,
     "nota": "Integración técnica: 25 celdas, ejes, fórmulas, origen y centro FY+3 contrastados con foto SHA256. Pendiente revisión visual y auditoría económica independiente.",
     "controlesTecnicosAprobados": true
+  },
+  "descuentoMultiples": {
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            77.05851420294854,
+            97.92825113274117,
+            120.78432102512836
+          ],
+          "vp": [
+            70.72183755777216,
+            83.51441499826903,
+            96.43173087699074
+          ],
+          "consolidado": 83.55599447767732,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            89.50884625680897,
+            104.20414362395086,
+            120.77325916752655
+          ],
+          "vp": [
+            82.14835375992013,
+            88.80058719554043,
+            96.42317968258716
+          ],
+          "consolidado": 89.12404021268257,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            81.53026582073164,
+            101.67011921242003,
+            124.61295710655716
+          ],
+          "vp": [
+            74.82586804399013,
+            86.66618329837308,
+            99.39139756330326
+          ],
+          "consolidado": 86.96114963522216,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            91.29676979273782,
+            106.94051873136218,
+            124.61778439727436
+          ],
+          "vp": [
+            83.78925274663898,
+            91.10543069538744,
+            99.39512922419162
+          ],
+          "consolidado": 91.42993755540601,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            88.02727627645113,
+            105.02930025103988,
+            124.61507662952623
+          ],
+          "vp": [
+            80.78861625959172,
+            89.4956150384523,
+            99.39303602707704
+          ],
+          "consolidado": 89.89242244170703,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": null
+      }
+    ],
+    "integracionNativa": {
+      "revisionId": "NVO-20261029-R1",
+      "sourceSheetId": "1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "capturaSha256": "a654ceea1d48da590ad805739a80cc4b16e1bd4c839d955b22acb43e81e197a4",
+      "fechaCaptura": "2026-10-31",
+      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "certificadoEconomico": false,
+      "calculosExternosExportados": false,
+      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+    }
   }
 }
