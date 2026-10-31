@@ -94,8 +94,12 @@ y valor Base, sin cambiar contenido financiero.
 
 ## 4. Trabajo pendiente y condición de cierre
 
-1. Crear el **mapeo de exportación** de las matrices nativas de Sheets al
-   JSON candidato de la misma revisión, con ID de hoja y hash de la foto.
+1. **Prototipo de extracción creado en PR #181:** `scripts/jmr_native_sens_candidate.py`
+   toma el bloque nativo Base de la foto `resultados_hoja.json`, conserva
+   los 25 valores, ejes, centro, control, revisión, hoja y hash, y emite un
+   **JSON candidato no publicado**. Sus pruebas unitarias pasan. Falta
+   ejecutarlo sobre una foto de producción de cada revisión y conectarlo,
+   tras conciliación, al JSON activo.
 2. Para cada método prioritario aplicable, verificar 25 celdas numéricas,
    ambos ejes, valor VP FY+3 del centro, tipo de múltiplo, moneda, acciones
    y condición `N/A` o `N/D` documentada; P/V y P/BV opcionales.
