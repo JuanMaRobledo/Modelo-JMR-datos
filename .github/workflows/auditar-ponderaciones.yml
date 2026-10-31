@@ -8,6 +8,8 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/tests/validar_matrices_nativas.test.cjs'
+      - 'scripts/tests/capturas_matrices_fuente.test.cjs'
+      - 'candidatos/hoja-multiples/**'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -24,6 +26,8 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/tests/validar_matrices_nativas.test.cjs'
+      - 'scripts/tests/capturas_matrices_fuente.test.cjs'
+      - 'candidatos/hoja-multiples/**'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -46,6 +50,7 @@ jobs:
       # Diagnóstico informativo y sus pruebas ANTES del gate; nunca publica.
       - run: node --test scripts/tests/inventariar_cobertura_a.test.cjs
       - run: node --test scripts/tests/validar_matrices_nativas.test.cjs
+      - run: node --test scripts/tests/capturas_matrices_fuente.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
       - run: node scripts/validar_catalogo.cjs
       - run: node scripts/auditar_integridad.cjs
