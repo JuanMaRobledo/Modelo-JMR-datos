@@ -89,10 +89,16 @@ jobs:
       # errores de una pasada. El gate financiero obligatorio sigue al final:
       # un catálogo incompleto mantiene el workflow en rojo, sin excepciones.
       - run: node scripts/auditar_integridad.cjs
+      # Tras un rechazo financiero los diagnósticos independientes continúan,
+      # pero GitHub conserva la conclusión failure; no hay continue-on-error.
       - run: node --test scripts/tests/*.test.cjs
+        if: ${{ !cancelled() }}
       - run: python3 scripts/verificar_cierre_multiplos.py
+        if: ${{ !cancelled() }}
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
+        if: ${{ !cancelled() }}
       - name: Gate financiero obligatorio del catálogo Método A
+        if: ${{ !cancelled() }}
         run: node scripts/validar_catalogo.cjs
 
 
