@@ -2,7 +2,7 @@
   "schema": "jmr-valuation-workspace-v1",
   "ticker": "NVDA",
   "revisionCandidata": "NVDA-20261031-A12-R1",
-  "estado": "PREPARACION_SIN_VALORACION",
+  "estado": "CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA",
   "versionMetodo": "A-1.2",
   "metodoPrincipal": "DCF FCFF",
   "corteContable": "2026-07-26",
@@ -46,6 +46,45 @@
         1463
       ],
       "estado": "CARGADO_SIN_AUDITORIA"
+    },
+    "calibracion": "candidatos/valoraciones/NVDA-20261031-A12-R1/CALIBRACION_DCF_PROVISIONAL.json",
+    "controles": {
+      "waccDetailed": "VALIDADO_TECNICAMENTE",
+      "leases": "SIN_DUPLICACION_CON_BALANCE",
+      "fiscal": "VALIDADO_TECNICAMENTE",
+      "rdConverter": "CARGADO",
+      "legal": "NO_APLICA",
+      "nonOperatingAssets": "PENDIENTE_VALOR_ECONOMICO",
+      "SBC_RSU": "PENDIENTE_DILUCION",
+      "officialDCF": "PENDIENTE_GATE",
+      "officialMultiples": "PENDIENTE",
+      "ciGlobal": "BLOQUEADO_PR211"
+    },
+    "wacc": {
+      "initial": 0.10275679876039412,
+      "terminal": 0.093,
+      "rf": 0.0494,
+      "erp": 0.037,
+      "betaPreliminar": 1.45,
+      "debtCostPreliminar": 0.06,
+      "source": "Treasury 10y 30-oct y Damodaran ERP octubre; beta, Kd de juicio analítico"
+    },
+    "conciliaDeuda": {
+      "deudaCorto": 1000,
+      "deudaLargo": 32366,
+      "leaseCorto": 509,
+      "leaseLargo": 4985,
+      "total": 38860,
+      "metodo": "B18=No para evitar doble capitalización de lease GAAP"
+    },
+    "alternativaSCTerminal": {
+      "valorActual": 0.7,
+      "ROICImplicito": 0.2865680055,
+      "sensibilidadSC084": {
+        "valor": 205.7154117278977,
+        "ROIC": 0.3438816066
+      },
+      "nota": "Aumentar eficiencia 0,70 a 0,84 sube el Base solo ~US$4,27; no inflar hipótesis para igualar precios pasados."
     }
   },
   "fuentePrimaria": {
@@ -102,6 +141,11 @@
       "id": "DEUDA_CAJA_OPCIONES",
       "estado": "PENDIENTE",
       "detalle": "Conciliar deuda y efectivo Q2 FY27, intereses, acciones diluidas y opciones antes de calcular equity."
+    },
+    {
+      "id": "SC_TERMINAL_SENSIBILIDAD",
+      "estado": "CALIBRACION",
+      "detalle": "SC0.70 y ROIC terminal28.66% justifican normalización fabless; 0.84 implica ROIC34.39% y variación DCF solo US$4.27; evitar optimizar parámetros para reproducir valor anterior."
     }
   ],
   "supuestosDefinitivos": null,
@@ -230,5 +274,15 @@
     "fecha": "2026-10-30",
     "fuente": "https://stockanalysis.com/stocks/nvda/history/",
     "nota": "Cierre anterior al corte de estudio; no implica valor intrínseco ni aprobación de MOS"
+  },
+  "supuestosProvisionales": {
+    "dcfBase": 201.44597794111647,
+    "MOS35": 130.9398856617257,
+    "conservador": 107.73568558932644,
+    "optimista": 344.60757009178525,
+    "disrupcion": 49.60250088026367,
+    "promedioTres": 213.80880289083618,
+    "moneda": "USD/accion",
+    "estado": "NO_CERTIFICADO"
   }
 }
