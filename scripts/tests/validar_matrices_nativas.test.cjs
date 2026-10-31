@@ -51,3 +51,20 @@ test('P/V o P/BV son complementarios sin exigir cálculo, salvo peso positivo',(
   a.descuentoMultiples.metodos[6].peso=.2;
   assert.throws(()=>validateNativeMatrices(a),/N\/D prioritario o con peso positivo/);
 });
+
+test('FCFE bancario exige P/E, P/FCFE y P/BV, sin imponer múltiplos industriales',()=>{
+  const v=fixture();
+  v.ticker='NU';v.revisionId='NU-R1';
+  v.metodoPrincipal='DCF FCFE bancario regulatorio — Método A-1.2';
+  v.sensibilidadMultiples.revisionId='NU-R1';
+  for(const m of v.sensibilidadMultiples.matrices){
+    if(['EV/EBITDA','EV/FCFF','P/OCF'].includes(m.metodo)){
+      m.estado='N/D';m.matriz=null;m.centro=null;
+      v.descuentoMultiples.metodos.find(x=>x.nombre===m.metodo).peso=0;
+    }
+  }
+  assert.equal(validateNativeMatrices(v),true);
+  const pbv=v.sensibilidadMultiples.matrices.find(x=>x.metodo==='P/BV');
+  pbv.estado='N/D';pbv.matriz=null;pbv.centro=null;
+  assert.throws(()=>validateNativeMatrices(v),/N\/D prioritario/);
+});
