@@ -42,7 +42,13 @@ test('UBER/GOOGL: no aprobar 5 matrices dependientes sin anclas relativas indepe
   // y reemplazar este test por la validación de esa fuente.
   assert.ok(!(v.sensibilidadMultiples?.matrices?.length>0),
     ticker+': matrices incorporadas sin revisar la evidencia de anclas');
-  assert.ok(v.descuentoMultiples?.ponderadoHoy==null,
-    ticker+': valoración relativa publicada sin fuentes independientes');
+  const secondary=v.descuentoMultiples?.ponderadoHoy;
+  // En revisiones existentes, UBER conserva un objeto con tres null;
+  // GOOGL conserva null. Ninguna salida numérica puede estar publicada.
+  assert.ok(secondary==null ||
+    (typeof secondary==='object' && !Array.isArray(secondary) &&
+      ['conservador','base','optimista'].every(s=>secondary[s]==null) &&
+      Object.values(secondary).every(n=>n==null)),
+    ticker+': valoración relativa numérica publicada sin fuentes independientes');
  }
 });
