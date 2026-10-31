@@ -247,7 +247,21 @@ function validate(root = path.join(__dirname, '..')) {
     // CI técnico no equivale a publicar resultados. Si una revisión carece de
     // sensibilidad por múltiplos, fallar EXPLÍCITAMENTE en vez de pasar el
     // registro como si estuviera auditado o dejar un TypeError opaco.
-    if (v.ticker !== 'META') {
+    const contratoA = c.controlModeloA?.empresas?.[v.ticker]?.metodo === 'A-1.2';
+    if (contratoA) {
+      const s = v.sensibilidadMultiples;
+      const grids = Array.isArray(s?.matrices) ? s.matrices : [];
+      // Método A vigente: sensibilidades de múltiplos SOLO Base, matrices 5x5
+      // por método prioritario aplicable. P/S y P/BV son opcionales.
+      // Los centros sueltos de SHAK o los N/D de UBER no sustituyen grillas.
+      assert.ok(grids.length > 0,
+        v.ticker + ': BLOQUEO_FINANCIERO: faltan matrices Base 5x5 ' +
+        'exportadas desde la hoja oficial al JSON (matrices: ' +
+        grids.length + ', controles de centro: ' + (s?.controles?.length ?? 0) +
+        '). Verificar anclas, centros FY+3 y origen; N/A con causa cuando ' +
+        'no aplique. No exponer 21/28 controles legados como requisito del Método A.');
+    } else if (v.ticker !== 'META') {
+      // Únicamente para revisiones históricas anteriores al Método A.
       const s = v.sensibilidadMultiples;
       const traditional = s?.methods === 7 &&
         s.scenarios?.length === 3 && s.disrupcionFuera &&
@@ -255,10 +269,7 @@ function validate(root = path.join(__dirname, '..')) {
       const twoAnchors = s?.contract === 'base-two-anchors-two-families-v1' &&
         s.matrices?.length === 28 && s.controles?.length === 28;
       assert.ok(traditional || twoAnchors,
-        v.ticker + ': BLOQUEO_FINANCIERO: sensibilidad por múltiplos parcial ' +
-        '(controles registrados: ' + (s?.controles?.length ?? 'N/D') +
-        '; se requieren 21 o 28 según contrato). Mantener EN_REVISION ' +
-        'hasta verificar cálculo y conciliación desde la hoja oficial.');
+        v.ticker + ': sensibilidad histórica no concilia con 21/28 controles.');
     }
     require('./auditar_integridad.cjs').validateRecord(v);
     assert.ok(c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md'));
