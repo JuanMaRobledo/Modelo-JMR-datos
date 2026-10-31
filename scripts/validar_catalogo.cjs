@@ -57,6 +57,17 @@ function validateNativeMatrices(v){
         m.metodo+': falta justificación económica N/A');
       assert.ok(!chosen||!finiteNative(chosen.peso)||chosen.peso===0,
         m.metodo+': un método no aplicable no puede tener peso positivo');
+      if(m.estadoFuente==='N/D'){
+        // Un N/D procedente de Sheets solo se clasifica N/A cuando la
+        // revisión YA registra flujo FY+3 negativo y peso cero.
+        assert.ok(['EV/FCFF','P/FCFE'].includes(m.metodo),
+          m.metodo+': N/A económico no habilitado para este método');
+        const fy3=chosen?.base?.fy?.[2],vp3=chosen?.base?.vp?.[2];
+        assert.ok(chosen?.estado?.startsWith('N/A: flujo negativo')&&
+          chosen.peso===0&&finiteNative(fy3)&&fy3<0&&
+          finiteNative(vp3)&&vp3<0&&nearNative(vp3,m.vp3Original),
+          m.metodo+': N/A no respaldado por flujo FY+3 negativo de la misma revisión');
+      }
     }else if(m.estado==='N/D' && !required.includes(m.metodo) &&
              (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
       // Métodos no prioritarios y con peso cero no validan una empresa;
