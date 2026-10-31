@@ -52,7 +52,7 @@ test('seis fotos relativas con 90 filas de método: guardadas y sin publicación
    }
   }
   // El objetivo relativo de estas seis revisiones NO está integrado.
-  assert.equal(d.multiplesHoy,null);
+  assert.ok(d.multiplesHoy==null,'No debe haber valor relativo agregado, ni siquiera cero');
   assert.ok(d.metodos.every(m=>m.conservador===null&&m.optimista===null));
  }
  assert.equal(count,90);assert.equal(formulas,630);
