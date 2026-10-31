@@ -66,6 +66,11 @@
       "id": "CORPORATE_ACTION_20261026",
       "estado": "BLOQUEO_MATERIAL_COMPARABILIDAD",
       "detalle": "Precio de XP disminuyó ~48% 26-oct-2026; no hay confirmación oficial de split, dividendo extraordinario o modificación del capital en las fuentes consultadas. Requiere aclaración corporativa antes de valorar delta precio/intrínseco."
+    },
+    {
+      "id": "CRP_FX_REVALORIZACION_POST_ELECTORAL",
+      "estado": "PENDIENTE_DATOS_COTIZADOS",
+      "detalle": "XP 2Q26 FCFE BRL debe descontarse a Ke nominal BRL compatible con CRP Brasil posterior a shock octubre; convertir equity a USD con FX de valoración 30-oct y comparar precio de igual fecha. No reutilizar FX 5,5007 BRL/USD de junio como actual sin verificar."
     }
   ],
   "supuestosDefinitivos": null,
@@ -81,6 +86,7 @@
     "archivarSoloCuandoVerificado": true
   },
   "siguientes": [
+    "Reestimar FX/CRP/Ke a corte 30-oct por repricing macro brasileño antes de actualizar FCFE.",
     "Reconciliar 2Q26 con cifras IFRS y capital regulatorio",
     "Calibrar Ke BRL, CRP Brasil, FX",
     "Revisar crecimiento RWA y retención regulatoria",
@@ -202,11 +208,18 @@
     "cierreAnterior": 30.41,
     "cierrePosterior": 15.71,
     "variacionPorcentualAproximada": -48.36,
-    "estado": "CAUSA_CORPORATIVA_NO_VERIFICADA",
+    "estado": "MOVIMIENTO_REVALORIZACION_MACRO_CON_RESPALDO_PUBLICO_CAUSA_TOTAL_NO_DEMOSTRADA",
     "mitigacion": "No atribuir a split ni alterar acciones; contrastar emisor y estados/post-trade antes de comparar con valor intrínseco R2 o A-1.2",
     "fuentes": [
       "https://stockanalysis.com/stocks/xp/history/",
       "https://septinvesting.com/stocks/XP/filings"
-    ]
+    ],
+    "contextoVerificado": "Oct26: tras resultado electoral Lula/Flávio Bolsonaro, activos brasileños registraron ventas intensas; WSJ y Reuters reportaron caída 48% XP, 14% Petrobras y circuit breaker Ibovespa. No hay anuncio verificado de desdoblamiento de acciones; posible contribución de preocupación por gobernanza/flujo institucional.",
+    "fuentesAdicionales": [
+      "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-26-2026/card/stocks-to-watch-petrobras-coreweave-moderna-AI2pYQgbWbw8nIbZ8hMo",
+      "https://br.investing.com/equities/xp-inc-news",
+      "https://www.investing.com/news/stock-market-news/why-is-xp-stock-plummeting-45-today-93CH-4971958"
+    ],
+    "noAsumir": "No inferir mecánicamente cambio en acciones ni duplicar denominador; no inferir que 48% representa destrucción intrínseca exacta."
   }
 }
