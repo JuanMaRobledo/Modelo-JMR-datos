@@ -46,8 +46,12 @@ class CandidateIntegrity(unittest.TestCase):
             else:
                 self.assertEqual(capture["estadoHoja"],"N/D")
                 self.assertIsNone(capture["matriz"])
-        self.assertFalse(v.get("sensibilidadMultiples",{}).get("matrices"),
-                         "No integrar foto sin procesar por el validador seguro")
+        official_matrices=v.get("sensibilidadMultiples",{}).get("matrices") or []
+        self.assertIn(len(official_matrices),(0,7))
+        if official_matrices:
+            self.assertEqual(v["sensibilidadMultiples"]["resultadosSha256"],s["data_sha256"])
+            self.assertEqual(v["sensibilidadMultiples"]["estadoPublicacion"],"INTEGRADO_EN_REVISION")
+            self.assertFalse(v["sensibilidadMultiples"]["certificado"])
         self.assertEqual(v["estado"],"EN_REVISION")
 
 if __name__=="__main__":
