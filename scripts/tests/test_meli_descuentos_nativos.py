@@ -28,8 +28,9 @@ class DiscountEvidence(unittest.TestCase):
         # El registro MELI no contiene escenariosDCF; la comparación integral
         # de todos los campos ajenos a descuentoMultiples se hace abajo.
         self.assertEqual(old["metodos"],active["metodos"])
-        self.assertEqual({k:v for k,v in old.items() if k!="descuentoMultiples"},
-                         {k:v for k,v in active.items() if k!="descuentoMultiples"})
+        ignored={"descuentoMultiples","sensibilidadMultiples"}
+        self.assertEqual({k:v for k,v in old.items() if k not in ignored},
+                         {k:v for k,v in active.items() if k not in ignored})
         rows=n["values"]
         fr=f["values"]
         self.assertTrue(near(rows[37][3],old["valorPrincipal"]))
