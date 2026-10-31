@@ -36,12 +36,8 @@ test('UBER/GOOGL: no aprobar 5 matrices dependientes sin anclas relativas indepe
   }
   assert.ok(derived>=3,'Deben explicarse las dependencias de anclas');
   assert.ok(priceAnchored>0||ticker==='GOOGL');
-  // Mientras las únicas anclas registradas sean las de esta fotografía,
-  // no se permite convertir estas matrices en una certificación económica.
-  // La corrección posterior exige nueva evidencia independiente por método
-  // y reemplazar este test por la validación de esa fuente.
-  assert.ok(!(v.sensibilidadMultiples?.matrices?.length>0),
-    ticker+': matrices incorporadas sin revisar la evidencia de anclas');
+  // Contraste provisional autorizado, sin certificación ni peso en DCF.
+  require('../validar_relativos_revision.cjs').validateReviewRelatives(v);
   const secondary=v.descuentoMultiples?.ponderadoHoy;
   // En revisiones existentes, UBER conserva un objeto con tres null;
   // GOOGL conserva null. Ninguna salida numérica puede estar publicada.

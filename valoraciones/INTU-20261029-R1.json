@@ -299,5 +299,535 @@
     },
     "financieros": {}
   },
-  "revisionOrigen": "Nueva copia IA oficial 46 pestañas; hojas independientes INTU A - DCF e INTU - Supuestos; base SEC FY2026. Motor original Valuation output aún sin carga y no validado."
+  "revisionOrigen": "Nueva copia IA oficial 46 pestañas; hojas independientes INTU A - DCF e INTU - Supuestos; base SEC FY2026. Motor original Valuation output aún sin carga y no validado.",
+  "sensibilidadMultiples": {
+    "contrato": "review-relative-v1",
+    "revisionId": "INTU-20261029-R1",
+    "sourceSheetId": "1SkW8M3meAfvGDgj9Evg7PqPAJZiLw44cWKPHL5yC7QU",
+    "sourcePath": "evidencia/relativos-revision-20261031/INTU-20261029-R1.json",
+    "resultadosSha256": "91272ac06b01ffcbc6c5b7a67652565d5d4f75b5825dd564cbef7760ba5167a6",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "pesoEnDCFPrincipal": 0,
+    "tipo": "MULTIPLOS_OPERATIVOS",
+    "advertencia": "Contrastes provisionales EN_REVISION, sin certificación económica; peso cero en el DCF principal. Anexo alternativo nativo de la misma hoja, no la plantilla industrial vacía. NI/OCF/FCFE son proxies y las anclas derivadas no son estimaciones independientes. P/BV no disponible por patrimonio FY+3 sin proyectar.",
+    "matrices": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A34:F40",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          8360.775277139997,
+          9405.872186782497,
+          10450.969096424997,
+          11496.066006067498,
+          12541.162915709996
+        ],
+        "multiploElegido": [
+          15.664,
+          17.622,
+          19.58,
+          21.538,
+          23.496
+        ],
+        "matriz": [
+          [
+            378.4177720611017,
+            425.8899991675873,
+            473.36222627407295,
+            520.8344533805587,
+            568.3066804870442
+          ],
+          [
+            425.8899991675873,
+            479.29625466238366,
+            532.70251015718,
+            586.1087656519765,
+            639.5150211467726
+          ],
+          [
+            473.36222627407295,
+            532.7025101571799,
+            592.042794040287,
+            651.3830779233941,
+            710.723361806501
+          ],
+          [
+            520.8344533805586,
+            586.1087656519763,
+            651.3830779233941,
+            716.6573901948119,
+            781.9317024662296
+          ],
+          [
+            568.3066804870441,
+            639.5150211467726,
+            710.7233618065011,
+            781.9317024662296,
+            853.140043125958
+          ]
+        ],
+        "centro": 592.042794040287,
+        "vp3Original": 592.042794040287,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0028998822831203253,
+          "constante": -1.3600447907831494,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A42:F48",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5059.7984462298,
+          5692.273252008525,
+          6324.748057787249,
+          6957.222863565975,
+          7589.697669344699
+        ],
+        "multiploElegido": [
+          25.880000000000003,
+          29.115000000000002,
+          32.35,
+          35.58500000000001,
+          38.82
+        ],
+        "matriz": [
+          [
+            378.3725334546913,
+            425.83910573537565,
+            473.30567801605986,
+            520.7722502967442,
+            568.2388225774284
+          ],
+          [
+            425.83910573537565,
+            479.2389995511454,
+            532.6388933669153,
+            586.0387871826853,
+            639.438680998455
+          ],
+          [
+            473.30567801605986,
+            532.6388933669153,
+            591.9721087177707,
+            651.3053240686262,
+            710.6385394194814
+          ],
+          [
+            520.7722502967443,
+            586.0387871826854,
+            651.3053240686262,
+            716.5718609545673,
+            781.8383978405083
+          ],
+          [
+            568.2388225774286,
+            639.438680998455,
+            710.6385394194815,
+            781.838397840508,
+            853.0382562615345
+          ]
+        ],
+        "centro": 591.9721087177707,
+        "vp3Original": 591.9721087177707,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.002899882283120331,
+          "constante": -1.3600447907839452,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A50:F56",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5726.581270979799,
+          6442.403929852274,
+          7158.226588724749,
+          7874.049247597224,
+          8589.871906469698
+        ],
+        "multiploElegido": [
+          21.840000000000003,
+          24.57,
+          27.3,
+          30.030000000000005,
+          32.76
+        ],
+        "matriz": [
+          [
+            351.6211941548712,
+            395.57384342423,
+            439.5264926935889,
+            483.4791419629479,
+            527.4317912323066
+          ],
+          [
+            395.57384342423,
+            445.02057385225874,
+            494.46730428028746,
+            543.9140347083162,
+            593.360765136345
+          ],
+          [
+            439.5264926935889,
+            494.46730428028746,
+            549.4081158669861,
+            604.3489274536847,
+            659.2897390403832
+          ],
+          [
+            483.4791419629479,
+            543.9140347083163,
+            604.3489274536847,
+            664.7838201990534,
+            725.2187129444217
+          ],
+          [
+            527.4317912323066,
+            593.360765136345,
+            659.2897390403832,
+            725.2187129444216,
+            791.1476868484599
+          ]
+        ],
+        "centro": 549.4081158669861,
+        "vp3Original": 549.4081158669861,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0028114281043780634,
+          "constante": 7.389644451905042e-13,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A58:F64",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5045.3532462298,
+          5676.022402008525,
+          6306.69155778725,
+          6937.360713565975,
+          7568.029869344699
+        ],
+        "multiploElegido": [
+          24.792,
+          27.891,
+          30.99,
+          34.089,
+          37.187999999999995
+        ],
+        "matriz": [
+          [
+            351.6657910582427,
+            395.62401494052307,
+            439.5822388228034,
+            483.54046270508377,
+            527.4986865873641
+          ],
+          [
+            395.62401494052295,
+            445.07701680808844,
+            494.5300186756537,
+            543.9830205432191,
+            593.4360224107845
+          ],
+          [
+            439.5822388228033,
+            494.5300186756538,
+            549.4777985285042,
+            604.4255783813545,
+            659.373358234205
+          ],
+          [
+            483.54046270508377,
+            543.9830205432191,
+            604.4255783813545,
+            664.8681362194901,
+            725.3106940576255
+          ],
+          [
+            527.498686587364,
+            593.4360224107845,
+            659.3733582342049,
+            725.3106940576255,
+            791.2480298810459
+          ]
+        ],
+        "centro": 549.4777985285042,
+        "vp3Original": 549.4777985285042,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0028114281043780695,
+          "constante": -1.1368683772161603e-13,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A66:F72",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5281.738802129799,
+          5941.956152396025,
+          6602.173502662249,
+          7262.3908529284745,
+          7922.608203194699
+        ],
+        "multiploElegido": [
+          23.680000000000003,
+          26.64,
+          29.6,
+          32.56,
+          35.52
+        ],
+        "matriz": [
+          [
+            351.62974054835155,
+            395.5834581168956,
+            439.5371756854395,
+            483.49089325398353,
+            527.4446108225274
+          ],
+          [
+            395.5834581168955,
+            445.0313903815075,
+            494.4793226461194,
+            543.9272549107313,
+            593.3751871753433
+          ],
+          [
+            439.5371756854395,
+            494.4793226461194,
+            549.4214696067993,
+            604.3636165674793,
+            659.3057635281592
+          ],
+          [
+            483.4908932539834,
+            543.9272549107313,
+            604.3636165674793,
+            664.7999782242273,
+            725.2363398809752
+          ],
+          [
+            527.4446108225274,
+            593.3751871753433,
+            659.3057635281592,
+            725.2363398809753,
+            791.1669162337912
+          ]
+        ],
+        "centro": 549.4214696067993,
+        "vp3Original": 549.4214696067993,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0028114281043780734,
+          "constante": -6.252776074688882e-13,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Fuentes: INTU A - DCF y INTU - Supuestos; Damodaran Software System/App EV/EBITDA 24,48x y forward PE 34,13x enero 2026. Supuestos: múltiplos EVEBITDA 19,58x y PE 27,30x (aprox -20% sector por madurez); derivados no son anclas independientes.",
+        "limitacion": "NI, FCFE y OCF: proxies operativos con net debt 469m, costo 5%, deuda neta constante; excluirlos de ponderación hasta auditoría.",
+        "origen": "'Múltiplos A - INTU'!A74:F80",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          22941.164719199995,
+          25808.810309099994,
+          28676.455898999993,
+          31544.101488899996,
+          34411.74707879999
+        ],
+        "multiploElegido": [
+          5.448,
+          6.129,
+          6.81,
+          7.4910000000000005,
+          8.171999999999999
+        ],
+        "matriz": [
+          [
+            351.3820271805764,
+            395.3047805781485,
+            439.2275339757205,
+            483.15028737329254,
+            527.0730407708646
+          ],
+          [
+            395.3047805781484,
+            444.7178781504169,
+            494.1309757226854,
+            543.544073294954,
+            592.9571708672225
+          ],
+          [
+            439.2275339757204,
+            494.1309757226854,
+            549.0344174696505,
+            603.9378592166156,
+            658.8413009635807
+          ],
+          [
+            483.15028737329254,
+            543.544073294954,
+            603.9378592166156,
+            664.3316451382773,
+            724.7254310599387
+          ],
+          [
+            527.0730407708645,
+            592.9571708672225,
+            658.8413009635806,
+            724.7254310599387,
+            790.6095611562968
+          ]
+        ],
+        "centro": 549.0344174696505,
+        "vp3Original": 549.0344174696505,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.002811428104378071,
+          "constante": -2.2737367544323206e-13,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "criterio": "Contraste provisional FY+3 a valor presente; peso cero en DCF",
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "ponderadoHoy": null,
+    "multiplesHoy": null,
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            592.042794040287
+          ],
+          "consolidado": 592.042794040287
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            591.9721087177707
+          ],
+          "consolidado": 591.9721087177707
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            549.4081158669861
+          ],
+          "consolidado": 549.4081158669861
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            549.4777985285042
+          ],
+          "consolidado": 549.4777985285042
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            549.4214696067993
+          ],
+          "consolidado": 549.4214696067993
+        }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            549.0344174696505
+          ],
+          "consolidado": 549.0344174696505
+        }
+      }
+    ]
+  }
 }

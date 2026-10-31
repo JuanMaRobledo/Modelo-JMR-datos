@@ -29,7 +29,7 @@
     "descuentoMultiples": {
       "version": 3,
       "costoPatrimonio": 0.10574629847329092,
-      "criterio": "Cinco múltiplos pendientes; ningún múltiplo computado se incorpora a objetivo",
+      "criterio": "Contraste provisional FY+3 a valor presente; peso cero en DCF",
       "horizontes": [
         1,
         2,
@@ -42,62 +42,80 @@
         "base": 91.13793738151752,
         "optimista": 127.19953770439781
       },
-      "multiplesHoy": {
-        "conservador": null,
-        "base": null,
-        "optimista": null
-      },
-      "ponderadoHoy": {
-        "conservador": null,
-        "base": null,
-        "optimista": null
-      },
+      "multiplesHoy": null,
+      "ponderadoHoy": null,
       "metodos": [
         {
           "nombre": "EV/EBITDA",
           "peso": 0,
-          "estado": "N/D",
-          "conservador": null,
-          "base": null,
-          "optimista": null
+          "estado": "PROVISIONAL_NO_CERTIFICADO",
+          "base": {
+            "vp": [
+              null,
+              null,
+              95.38907493750871
+            ],
+            "consolidado": 95.38907493750871
+          }
         },
         {
           "nombre": "EV/FCFF",
           "peso": 0,
-          "estado": "N/D",
-          "conservador": null,
-          "base": null,
-          "optimista": null
+          "estado": "PROVISIONAL_NO_CERTIFICADO",
+          "base": {
+            "vp": [
+              null,
+              null,
+              95.3890749375087
+            ],
+            "consolidado": 95.3890749375087
+          }
         },
         {
           "nombre": "P/E",
           "peso": 0,
-          "estado": "N/D",
-          "conservador": null,
-          "base": null,
-          "optimista": null
+          "estado": "PROVISIONAL_NO_CERTIFICADO",
+          "base": {
+            "vp": [
+              null,
+              null,
+              78.75824385882007
+            ],
+            "consolidado": 78.75824385882007
+          }
         },
         {
           "nombre": "P/FCFE",
           "peso": 0,
-          "estado": "N/D",
-          "conservador": null,
-          "base": null,
-          "optimista": null
+          "estado": "PROVISIONAL_NO_CERTIFICADO",
+          "base": {
+            "vp": [
+              null,
+              null,
+              78.75824385882007
+            ],
+            "consolidado": 78.75824385882007
+          }
         },
         {
           "nombre": "P/OCF",
           "peso": 0,
-          "estado": "N/D",
-          "conservador": null,
-          "base": null,
-          "optimista": null
+          "estado": "PROVISIONAL_NO_CERTIFICADO",
+          "base": {
+            "vp": [
+              null,
+              null,
+              78.75824385882007
+            ],
+            "consolidado": 78.75824385882007
+          }
         }
       ],
       "chequeo": {
         "centroDCF": "OK",
         "multiples": "BLOQUEADO_NO_HAY_ANCLAS"
-      }
+      },
+      "certificacionEconomica": "NO_CERTIFICADA"
     }
   },
   "linkedValuationAtResearch": "valoraciones/UBER-20261030-A1.json",

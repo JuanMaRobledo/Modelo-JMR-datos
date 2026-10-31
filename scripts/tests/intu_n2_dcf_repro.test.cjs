@@ -39,7 +39,7 @@ assert.equal(e.originalMos,v.precioMOS);
 assert.ok(near(bridge[10][3],bridge[5][3]/bridge[6][3]));
 // En la revisión INTU A-1.2 no hay bloque de descuento relativo
 // certificado. No crear ni simular un 0: mantener métodos pendientes.
-assert.equal(v.descuentoMultiples,undefined);
+require('../validar_relativos_revision.cjs').validateReviewRelatives(v);
 assert.equal(v.metodos.find(m=>m.nombre==='DCF Damodaran').peso,1);
 assert.ok(v.metodos.filter(m=>m.nombre!=='DCF Damodaran').length>=5);
 for(const m of v.metodos.filter(m=>m.nombre!=='DCF Damodaran')){
@@ -47,5 +47,5 @@ for(const m of v.metodos.filter(m=>m.nombre!=='DCF Damodaran')){
  assert.equal(m.peso,null);
  assert.equal(m.valorHoy,null);
 }
-assert.ok(!v.sensibilidadMultiples?.matrices?.length);
+assert.equal(v.sensibilidadMultiples.certificado,false);
 });

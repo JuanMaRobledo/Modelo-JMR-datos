@@ -58,6 +58,7 @@ function validateBankNativeMatrices(v){
  * explícito. La auditoría económica independiente se realiza después.
  */
 function validateNativeMatrices(v){
+  if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
   if(v.ticker==='NU'||/DCF FCFE bancario/i.test(v.metodoPrincipal||''))
     return validateBankNativeMatrices(v);
   const s=v.sensibilidadMultiples||{};
@@ -394,7 +395,11 @@ function validate(root = path.join(__dirname, '..')) {
         v.ticker + ': sensibilidad histórica no concilia con 21/28 controles.');
     }
     require('./auditar_integridad.cjs').validateRecord(v);
-    assert.ok(c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md'));
+    if(!c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md')) {
+      assert.equal(v.estado,'EN_REVISION');
+      assert.equal(v.auditPendingUserVisualReview,true);
+      assert.match(v.auditoriaEconomica||'',/^(NO_REALIZADA|PENDIENTE_REVISION_VISUAL)/);
+    }
     assert.ok(v.salvedades.length);
   }
   return {valoraciones: vals.length, analisis: c.analisis.length,
@@ -402,4 +407,3 @@ function validate(root = path.join(__dirname, '..')) {
 }
 module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));
-

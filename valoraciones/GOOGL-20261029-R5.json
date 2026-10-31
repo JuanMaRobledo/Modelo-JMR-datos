@@ -183,9 +183,9 @@
   },
   "descuentoMultiples": {
     "version": "pendiente",
-    "criterio": "DCF Base R5 publicado independientemente; múltiplos e historias alternativas de R4 no comparables",
-    "pesoDcf": 0.6,
-    "pesoMultiplos": 0.4,
+    "criterio": "Contraste provisional FY+3 a valor presente; peso cero en DCF",
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
     "dcfHoy": {
       "conservador": null,
       "base": 287.20493379569007,
@@ -195,7 +195,88 @@
     "ponderadoHoy": null,
     "chequeo": "NO_PUBLICAR_MULTIPLOS_NO_CERTIFICADOS",
     "estado": "PENDIENTE_MULTIPLOS_R5",
-    "precioDCFPrincipalHoy": 287.20493379569007
+    "precioDCFPrincipalHoy": 287.20493379569007,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            282.50381180673406
+          ],
+          "consolidado": 282.50381180673406
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            282.50576247289246
+          ],
+          "consolidado": 282.50576247289246
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            235.2626875073004
+          ],
+          "consolidado": 235.2626875073004
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            235.26268750730046
+          ],
+          "consolidado": 235.26268750730046
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            235.2626875073004
+          ],
+          "consolidado": 235.2626875073004
+        }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            237.95087722686233
+          ],
+          "consolidado": 237.95087722686233
+        }
+      }
+    ]
   },
   "revisionSupuestos": {
     "metodo": "A",
@@ -517,5 +598,447 @@
       }
     ],
     "promedio": null
+  },
+  "sensibilidadMultiples": {
+    "contrato": "review-relative-v1",
+    "revisionId": "GOOGL-20261029-R5",
+    "sourceSheetId": "1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA",
+    "sourcePath": "evidencia/relativos-revision-20261031/GOOGL-20261029-R5.json",
+    "resultadosSha256": "cba34f503ffef2589671d212160c1c1f4e675f10c0bedcb57224441555dad4e6",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "pesoEnDCFPrincipal": 0,
+    "tipo": "MULTIPLOS_OPERATIVOS",
+    "advertencia": "Contrastes provisionales EN_REVISION, sin certificación económica; peso cero en el DCF principal. Se preservan los supuestos de la hoja como contraste; la ponderación 60/40 de la fuente no se adopta en el objetivo principal. P/BV N/D se conserva sin generar ceros.",
+    "matrices": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A76:I84",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          223890.8090436026,
+          251877.16017405293,
+          279863.51130450325,
+          307849.8624349536,
+          335836.2135654039
+        ],
+        "multiploElegido": [
+          12.48,
+          14.04,
+          15.6,
+          17.16,
+          18.72
+        ],
+        "matriz": [
+          [
+            187.21979395421386,
+            208.39402014366277,
+            229.56824633311172,
+            250.74247252256072,
+            271.9166987120096
+          ],
+          [
+            208.39402014366277,
+            232.21502460679284,
+            256.03602906992285,
+            279.857033533053,
+            303.678037996183
+          ],
+          [
+            229.56824633311172,
+            256.0360290699229,
+            282.50381180673406,
+            308.9715945435453,
+            335.43937728035644
+          ],
+          [
+            250.7424725225607,
+            279.85703353305297,
+            308.9715945435453,
+            338.0861555540376,
+            367.2007165645299
+          ],
+          [
+            271.9166987120096,
+            303.678037996183,
+            335.43937728035644,
+            367.2007165645299,
+            398.96205584870324
+          ]
+        ],
+        "centro": 282.50381180673406,
+        "vp3Original": 282.50381180673406,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.062429259286849e-05,
+          "constante": 17.82598443862247,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A86:I94",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          15521.141012886586,
+          17461.28363949741,
+          19401.426266108232,
+          21341.568892719057,
+          23281.711519329878
+        ],
+        "multiploElegido": [
+          180.024,
+          202.52700000000002,
+          225.03,
+          247.53300000000002,
+          270.036
+        ],
+        "matriz": [
+          [
+            187.22104238055516,
+            208.3954246232968,
+            229.5698068660384,
+            250.74418910878003,
+            271.9185713515216
+          ],
+          [
+            208.3954246232968,
+            232.21660464638114,
+            256.03778466946545,
+            279.85896469254976,
+            303.68014471563407
+          ],
+          [
+            229.5698068660384,
+            256.03778466946545,
+            282.50576247289246,
+            308.97374027631946,
+            335.44171807974647
+          ],
+          [
+            250.74418910878003,
+            279.85896469254976,
+            308.97374027631946,
+            338.0885158600892,
+            367.2032914438589
+          ],
+          [
+            271.9185713515217,
+            303.6801447156341,
+            335.44171807974647,
+            367.203291443859,
+            398.9648648079713
+          ]
+        ],
+        "centro": 282.50576247289246,
+        "vp3Original": 282.50576247289246,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.0624292592868595e-05,
+          "constante": 17.82598443862213,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A96:I104",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          182397.50246249302,
+          205197.19027030465,
+          227996.87807811628,
+          250796.56588592794,
+          273596.25369373953
+        ],
+        "multiploElegido": [
+          13.491544888177044,
+          15.177987999199173,
+          16.864431110221304,
+          18.550874221243436,
+          20.237317332265565
+        ],
+        "matriz": [
+          [
+            151.34572013621857,
+            169.99393510757008,
+            188.6421500789216,
+            207.29036505027312,
+            225.93858002162466
+          ],
+          [
+            169.99393510757008,
+            190.97317695034053,
+            211.952418793111,
+            232.93166063588146,
+            253.9109024786519
+          ],
+          [
+            188.6421500789216,
+            211.952418793111,
+            235.2626875073004,
+            258.57295622148985,
+            281.88322493567915
+          ],
+          [
+            207.29036505027312,
+            232.93166063588146,
+            258.57295622148985,
+            284.2142518070982,
+            309.8555473927065
+          ],
+          [
+            225.93858002162463,
+            253.9109024786519,
+            281.88322493567915,
+            309.8555473927065,
+            337.82786984973376
+          ]
+        ],
+        "centro": 235.2626875073004,
+        "vp3Original": 235.2626875073004,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.062429259286853e-05,
+          "constante": 2.1600003654065176,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A106:I114",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          37972.38364702516,
+          42718.93160290331,
+          47465.47955878145,
+          52212.0275146596,
+          56958.57547053774
+        ],
+        "multiploElegido": [
+          64.8056259738357,
+          72.90632922056515,
+          81.00703246729462,
+          89.10773571402409,
+          97.20843896075354
+        ],
+        "matriz": [
+          [
+            151.34572013621863,
+            169.99393510757014,
+            188.64215007892165,
+            207.29036505027318,
+            225.93858002162472
+          ],
+          [
+            169.9939351075701,
+            190.9731769503406,
+            211.95241879311104,
+            232.9316606358815,
+            253.91090247865193
+          ],
+          [
+            188.64215007892165,
+            211.95241879311106,
+            235.26268750730046,
+            258.57295622148985,
+            281.88322493567927
+          ],
+          [
+            207.29036505027318,
+            232.9316606358815,
+            258.57295622148985,
+            284.2142518070982,
+            309.8555473927065
+          ],
+          [
+            225.9385800216247,
+            253.91090247865196,
+            281.88322493567927,
+            309.85554739270657,
+            337.82786984973376
+          ]
+        ],
+        "centro": 235.26268750730046,
+        "vp3Original": 235.26268750730046,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.062429259286853e-05,
+          "constante": 2.160000365406546,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A116:I124",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          128934.04338201496,
+          145050.79880476685,
+          161167.5542275187,
+          177284.3096502706,
+          193401.06507302244
+        ],
+        "multiploElegido": [
+          19.085914219513015,
+          21.471653496952143,
+          23.85739277439127,
+          26.243132051830397,
+          28.628871329269522
+        ],
+        "matriz": [
+          [
+            151.34572013621857,
+            169.9939351075701,
+            188.64215007892162,
+            207.29036505027312,
+            225.93858002162466
+          ],
+          [
+            169.9939351075701,
+            190.9731769503406,
+            211.95241879311104,
+            232.93166063588149,
+            253.91090247865193
+          ],
+          [
+            188.64215007892162,
+            211.95241879311104,
+            235.2626875073004,
+            258.57295622148985,
+            281.8832249356792
+          ],
+          [
+            207.29036505027312,
+            232.93166063588149,
+            258.5729562214898,
+            284.2142518070982,
+            309.8555473927065
+          ],
+          [
+            225.93858002162466,
+            253.91090247865193,
+            281.8832249356792,
+            309.8555473927065,
+            337.82786984973376
+          ]
+        ],
+        "centro": 235.2626875073004,
+        "vp3Original": 235.2626875073004,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.0624292592868575e-05,
+          "constante": 2.160000365406404,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Hoja oficial; ancla JMR seleccionada existente, provisional, no independiente",
+        "limitacion": "Ancla ligada a precio/derivada o constante; no constituye confirmación independiente del DCF.",
+        "origen": "'Sensibilidad por múltiplo'!A126:I134",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          598366.066896,
+          673161.8252579999,
+          747957.5836199999,
+          822753.341982,
+          897549.1003439999
+        ],
+        "multiploElegido": [
+          4.16,
+          4.680000000000001,
+          5.2,
+          5.720000000000001,
+          6.24
+        ],
+        "matriz": [
+          [
+            153.06616155673822,
+            171.92943170565468,
+            190.79270185457113,
+            209.65597200348768,
+            228.5192421524041
+          ],
+          [
+            171.92943170565468,
+            193.15061062318574,
+            214.37178954071678,
+            235.59296845824784,
+            256.8141473757788
+          ],
+          [
+            190.79270185457113,
+            214.37178954071675,
+            237.95087722686233,
+            261.529964913008,
+            285.10905259915353
+          ],
+          [
+            209.65597200348765,
+            235.5929684582478,
+            261.529964913008,
+            287.46696136776814,
+            313.40395782252824
+          ],
+          [
+            228.5192421524041,
+            256.81414737577876,
+            285.10905259915353,
+            313.4039578225283,
+            341.69886304590295
+          ]
+        ],
+        "centro": 237.95087722686233,
+        "vp3Original": 237.95087722686233,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 6.06242925928685e-05,
+          "constante": 2.160000365406603,
+          "descripcion": "Coeficientes de la fórmula nativa múltiplo × fundamental, puente equity/dividendos y descuento; ver captura de fórmulas."
+        }
+      }
+    ]
   }
 }

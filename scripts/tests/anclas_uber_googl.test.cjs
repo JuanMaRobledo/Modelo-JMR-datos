@@ -29,8 +29,8 @@ for(const [ticker,revision] of cases){
    else assert.equal(m.provenance,'FORMULA_REQUIERE_REVISION');
   }
   // Una matriz aritmética OK en Sheets no certifica el fundamento de J19.
-  assert.equal(v.sensibilidadMultiples?.matrices?.length||0,0,
-     ticker+': una nueva integración requiere justificar primero cada ancla');
+  require('../validar_relativos_revision.cjs').validateReviewRelatives(v);
+  assert.equal(v.sensibilidadMultiples.certificado,false);
   assert.equal(e.registered.matrices,0);
   assert.ok(e.methods.some(m=>m.provenance!=='CONSTANTE_SIN_SERIE_COTEJADA'));
   if(ticker==='UBER'){

@@ -54,7 +54,10 @@ for(const file of files){
     for(const m of candidate.metodos){
       const calc=valuation.descuentoMultiples?.metodos?.find(x=>x.nombre===m.metodo);
       const vp3=calc?.base?.vp?.[2];
-      if(typeof vp3==='number')assert.ok(near(m.vp3Original,vp3),
+      if(valuation.sensibilidadMultiples?.contrato==='review-relative-v1'){
+        // La captura antigua sigue intacta; la importación nueva se concilia con su fuente contemporánea.
+        require('../validar_relativos_revision.cjs').validateReviewRelatives(valuation);
+      }else if(typeof vp3==='number')assert.ok(near(m.vp3Original,vp3),
         ticker+'/'+m.metodo+': VP3 difiere de registro existente');
       assert.equal(m.origen.startsWith("'Sensibilidad por múltiplo'!A"),true);
       if(m.estadoHoja==='OK'){

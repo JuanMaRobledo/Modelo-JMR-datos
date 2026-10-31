@@ -54,7 +54,8 @@ function verify(e,v){
 test('NU: Ke×g FCFE bancario concilia 25 fórmulas y DCF sin crear múltiplos industriales',()=>{
  const e=read(src),v=read(val);
  verify(e,v);
- assert.equal(v.sensibilidadMultiples?.matrices?.length||0,0,'No publicar matrices relativas pendientes');
+ require('../validar_relativos_revision.cjs').validateReviewRelatives(v);
+ assert.equal(v.sensibilidadMultiples.tipo,'MULTIPLOS_BANCARIOS');
 });
 test('NU: centro o valor alterado NO supera control',()=>{
  const e=read(src),v=read(val);

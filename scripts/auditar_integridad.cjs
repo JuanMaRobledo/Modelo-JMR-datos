@@ -9,7 +9,10 @@ function validateLedger(s,{optional=false}={}){
  const ids=new Set();for(const x of ledger){assert.ok(METHODS.includes(x.metodo)&&SCENARIOS.includes(x.escenario));const key=x.metodo+'/'+x.escenario;assert.ok(!ids.has(key),'Control duplicado');ids.add(key);assert.ok(['OK','N/D'].includes(x.estado),'Error de matriz');if(x.estado==='OK')assert.ok(finite(x.centro));else assert.equal(x.centro,null);}
  assert.equal(s.controlesOK,ledger.filter(x=>x.estado==='OK').length,'Contador OK no deriva de bloques');assert.equal(s.noDisponibles,ledger.filter(x=>x.estado==='N/D').length,'Contador N/D no deriva de bloques');assert.equal(s.errores||0,0);
 }
+// Precio publicado puede estar redondeado a centavos; no se relajan matrices.
+const mosNear=(a,b)=>finite(a)&&finite(b)&&Math.abs(a-b)<=0.005000001;
 function validateRecord(j){
+ if(j.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(j);
  // Contrato formal del expediente META R4 (análisis privado): DCF oficial
  // ponderado 100%; los 7 métodos se calculan en la hoja y se publican como
  // referencia SIN mezclarlos con DCF. Rechazar si falta la trazabilidad real.
@@ -88,7 +91,7 @@ function validateRecord(j){
    }else assert.fail(name+': estado no reconocido');
   }
   assert.ok(finite(j.valorPrincipal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);
-  assert.ok(near(j.precioMOS,j.valorPrincipal*(1-j.mos)),
+  assert.ok(mosNear(j.precioMOS,j.valorPrincipal*(1-j.mos)),
     'MOS no corresponde a DCF Base');
   return;
  }
@@ -107,7 +110,7 @@ function validateRecord(j){
  }else{
   assert.ok(s&&s.methods===7&&s.scenarios?.length===3&&s.disrupcionFuera);validateLedger(s);validateLedger(s.economica||{},{optional:true});assert.equal(s.controlesOK+s.noDisponibles,21);
  }
- const principal=j.valorPrincipal;assert.ok(finite(principal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);assert.ok(near(j.precioMOS,principal*(1-j.mos)),'MOS diferente del Base principal');
+ const principal=j.valorPrincipal;assert.ok(finite(principal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);assert.ok(mosNear(j.precioMOS,principal*(1-j.mos)),'MOS diferente del Base principal');
  if(j.valoracionHolding){assert.equal(j.metodoPrincipal,'SOTP');assert.ok(near(principal,j.valoracionHolding.nav.base));assert.ok(near(j.precioMOS,j.valoracionHolding.umbralMOS));assert.ok(!(j.valoracionHolding.metodos||[]).some(m=>/DCF/i.test(m.nombre||'')&&(m.peso||0)>0));return;}
  const dm=j.descuentoMultiples;assert.equal(dm?.metodos?.length,7);assert.ok(near(j.metodos.reduce((a,m)=>a+(m.peso||0),0),1),'Pesos no suman 100%');const dcf=j.metodos.find(m=>/DCF/i.test(m.nombre));assert.ok(dcf&&near(dcf.peso,dm.pesoDcf));assert.ok(near(dm.pesoDcf+dm.pesoMultiplos,1));
  for(const m of dm.metodos){const saved=j.metodos.find(x=>x.nombre===m.nombre),sel=j.seleccionMultiples?.metodos?.find(x=>x.nombre===m.nombre);assert.ok(saved&&sel&&near(saved.peso,m.peso)&&near(saved.peso,sel.pesoVigente),'Pesos duplicados no concilian');if(m.peso>0){assert.equal(sel.controlCalculo,'OK');assert.ok(!/^N\/D/.test(sel.control));}
