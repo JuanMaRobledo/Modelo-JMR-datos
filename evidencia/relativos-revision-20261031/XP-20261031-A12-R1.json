@@ -1,0 +1,294 @@
+{
+  "revisionId": "XP-20261031-A12-R1",
+  "sheetId": "1C8TU1AJMxy0JmU4KsBNdp1dYzBSoli7CLtnjQI3SsnQ",
+  "sourceRevision": "XP-JMR-20261026-R2",
+  "sourceSheetTab": "XP Multiplos",
+  "baseCalibration": "candidatos/valoraciones/XP-20261031-A12-R1/CALIBRACION_FCFE_PROVISIONAL.json",
+  "economicCertification": "NO_CERTIFICADA",
+  "matrices": [
+    {
+      "metodo": "P/E",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "XP Multiplos segun hoja y revision historica R2; recalculo del candidato A-1.2, sin certificar ancla economica del corte.",
+      "limitacion": "Ancla derivada de revision R2 de precio relativo, no de serie independiente homologada a 2026-10-31; no suma peso en DCF.",
+      "origen": "'XP Múltiplos'!D4:I6",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        5449.783197370758,
+        6131.006097042102,
+        6812.228996713447,
+        7493.451896384792,
+        8174.674796056135
+      ],
+      "multiploElegido": [
+        6.039973034971896,
+        6.794969664343383,
+        7.54996629371487,
+        8.304962923086357,
+        9.059959552457844
+      ],
+      "matriz": [
+        [
+          10.35742887485871,
+          11.323301550550669,
+          12.289174226242631,
+          13.255046901934595,
+          14.220919577626551
+        ],
+        [
+          11.323301550550669,
+          12.409908310704127,
+          13.496515070857582,
+          14.58312183101104,
+          15.669728591164496
+        ],
+        [
+          12.289174226242631,
+          13.496515070857582,
+          14.703855915472536,
+          15.911196760087487,
+          17.118537604702436
+        ],
+        [
+          13.255046901934595,
+          14.58312183101104,
+          15.911196760087487,
+          17.239271689163935,
+          18.56734661824038
+        ],
+        [
+          14.220919577626555,
+          15.669728591164496,
+          17.118537604702436,
+          18.567346618240382,
+          20.016155631778318
+        ]
+      ],
+      "centro": 14.703855915472536,
+      "vp3Original": 14.703855915472536,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00023474461684558424,
+        "constante": 2.630447469323018,
+        "descripcion": "Producto del multiple por fundamental y VP de dividendos; ancla R2 provisional"
+      }
+    },
+    {
+      "metodo": "P/FCFE",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "XP Multiplos segun hoja y revision historica R2; recalculo del candidato A-1.2, sin certificar ancla economica del corte.",
+      "limitacion": "Ancla derivada de revision R2 de precio relativo, no de serie independiente homologada a 2026-10-31; no suma peso en DCF.",
+      "origen": "'XP Múltiplos'!D13:I15",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        3695.443112444558,
+        4157.373501500128,
+        4619.303890555698,
+        5081.234279611268,
+        5543.164668666837
+      ],
+      "multiploElegido": [
+        8.404880253050164,
+        9.455490284681433,
+        10.506100316312704,
+        11.556710347943975,
+        12.607320379575244
+      ],
+      "matriz": [
+        [
+          9.92155818852835,
+          10.832947028429018,
+          11.744335868329685,
+          12.65572470823035,
+          13.567113548131015
+        ],
+        [
+          10.832947028429016,
+          11.858259473317265,
+          12.883571918205515,
+          13.908884363093767,
+          14.934196807982016
+        ],
+        [
+          11.744335868329685,
+          12.883571918205517,
+          14.022807968081347,
+          15.162044017957184,
+          16.301280067833016
+        ],
+        [
+          12.65572470823035,
+          13.908884363093767,
+          15.162044017957184,
+          16.4152036728206,
+          17.668363327684016
+        ],
+        [
+          13.567113548131013,
+          14.934196807982016,
+          16.301280067833012,
+          17.668363327684016,
+          19.035446587535013
+        ]
+      ],
+      "centro": 14.022807968081347,
+      "vp3Original": 14.022807968081347,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00023474461684558422,
+        "constante": 2.630447469323018,
+        "descripcion": "Producto del multiple por fundamental y VP de dividendos; ancla R2 provisional"
+      }
+    },
+    {
+      "metodo": "P/BV",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "XP Multiplos segun hoja y revision historica R2; recalculo del candidato A-1.2, sin certificar ancla economica del corte.",
+      "limitacion": "Ancla derivada de revision R2 de precio relativo, no de serie independiente homologada a 2026-10-31; no suma peso en DCF.",
+      "origen": "'XP Múltiplos'!D10:I12",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        26793.825061317242,
+        30143.053193981897,
+        33492.28132664655,
+        36841.50945931121,
+        40190.73759197586
+      ],
+      "multiploElegido": [
+        1.0733032083145058,
+        1.2074661093538188,
+        1.341629010393132,
+        1.4757919114324454,
+        1.6099548124717584
+      ],
+      "matriz": [
+        [
+          9.38120931082733,
+          10.225054541015366,
+          11.068899771203407,
+          11.912745001391446,
+          12.756590231579485
+        ],
+        [
+          10.225054541015366,
+          11.17438042497691,
+          12.123706308938454,
+          13.073032192899998,
+          14.02235807686154
+        ],
+        [
+          11.068899771203407,
+          12.123706308938454,
+          13.178512846673504,
+          14.233319384408551,
+          15.288125922143598
+        ],
+        [
+          11.912745001391446,
+          13.073032192899998,
+          14.233319384408551,
+          15.393606575917108,
+          16.55389376742566
+        ],
+        [
+          12.756590231579482,
+          14.02235807686154,
+          15.288125922143598,
+          16.553893767425656,
+          17.819661612707716
+        ]
+      ],
+      "centro": 13.178512846673504,
+      "vp3Original": 13.178512846673504,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00023474461684558422,
+        "constante": 2.6304474693230198,
+        "descripcion": "Producto del multiple por fundamental y VP de dividendos; ancla R2 provisional"
+      }
+    },
+    {
+      "metodo": "P/S",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "XP Multiplos segun hoja y revision historica R2; recalculo del candidato A-1.2, sin certificar ancla economica del corte.",
+      "limitacion": "Ancla derivada de revision R2 de precio relativo, no de serie independiente homologada a 2026-10-31; no suma peso en DCF.",
+      "origen": "'XP Múltiplos'!D7:I9",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        19809.602249184012,
+        22285.80253033201,
+        24762.00281148001,
+        27238.203092628017,
+        29714.40337377601
+      ],
+      "multiploElegido": [
+        1.4262244328331903,
+        1.6045024869373392,
+        1.7827805410414879,
+        1.9610585951456367,
+        2.139336649249785
+      ],
+      "matriz": [
+        [
+          9.262672746843986,
+          10.091700906534104,
+          10.920729066224226,
+          11.749757225914347,
+          12.578785385604467
+        ],
+        [
+          10.091700906534108,
+          11.02435758618549,
+          11.957014265836877,
+          12.889670945488263,
+          13.822327625139648
+        ],
+        [
+          10.920729066224226,
+          11.957014265836877,
+          12.993299465449526,
+          14.02958466506218,
+          15.065869864674827
+        ],
+        [
+          11.749757225914347,
+          12.889670945488263,
+          14.029584665062178,
+          15.169498384636096,
+          16.309412104210008
+        ],
+        [
+          12.578785385604467,
+          13.822327625139648,
+          15.065869864674827,
+          16.30941210421001,
+          17.55295434374519
+        ]
+      ],
+      "centro": 12.993299465449526,
+      "vp3Original": 12.993299465449526,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00023474461684558422,
+        "constante": 2.6304474693230198,
+        "descripcion": "Producto del multiple por fundamental y VP de dividendos; ancla R2 provisional"
+      }
+    }
+  ]
+}
