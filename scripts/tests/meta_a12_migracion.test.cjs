@@ -1,0 +1,34 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.join(__dirname,'../..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const x=read('candidatos/valoraciones/META-20261031-A12-R1/workspace.json');
+const prior=read(x.trabajo.valoracionAnterior);
+const catalog=read('catalogo.json');
+test('META A-1.2 es un candidato separado; el anterior sigue vigente',()=>{
+ assert.equal(x.versionMetodo,'A-1.2');
+ assert.equal(x.publicationStatus,'NO_PUBLICAR');
+ assert.equal(x.estado,'PREPARACION_SIN_VALORACION');
+ assert.equal(x.valorPrincipal,null);assert.equal(x.precioMOS,null);
+ assert.ok(x.trabajo.hojaBorrador!==x.trabajo.hojaAnterior);
+ assert.equal(prior.revisionId,'META-20261025-R5');
+ assert.ok(Math.abs(prior.valorPrincipal-726.6456435543839)<1e-8);
+ assert.ok(catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
+ assert.ok(!catalog.valoraciones.some(p=>p.includes('META-20261031-A12-R1')));
+});
+test('puentes de ingresos y EBIT y guía CapEx tienen respaldo de fuentes',()=>{
+ const c=x.conciliaciones;
+ const a=c.find(t=>t.id==='REV_LTM'),b=c.find(t=>t.id==='EBIT_LTM_GAAP');
+ assert.equal(a.resultado,200966+181712-141073);
+ assert.equal(b.resultado,83276+54635-58531);
+ assert.equal(c.find(t=>t.id==='EBIT_LTM_NORMALIZADO').resultado,b.resultado+9890);
+ assert.equal(x.datosImportados['Input sheet!B12'],a.resultado);
+ assert.equal(x.datosImportados['Input sheet!B13'],b.resultado);
+ const cap=c.find(t=>t.id==='CAPEX_2026');
+ assert.equal(cap.valorMin,135000);assert.equal(cap.valorMax,145000);
+ assert.equal(x.supuestosDefinitivos,null);
+ assert.ok(x.fuentePrimaria.resultadosT3.startsWith('https://investor.atmeta.com/'));
+});
