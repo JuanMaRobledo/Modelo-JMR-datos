@@ -1,5 +1,8 @@
 # Modelo JMR — Inventario y plan de continuación
 
+> **Registro histórico (corte 30-oct-2026).** Este inventario conserva la evidencia de origen, pero ya no describe el estado vigente: el 31-oct se organizaron 20 análisis en 14 capítulos y se integraron matrices nativas Base de 14 revisiones en el PR #211. Para decisiones actuales y pendientes, consultar [AVANCE_ESTANDARIZACION_20261031.md](AVANCE_ESTANDARIZACION_20261031.md). No convertir los pendientes históricos de 13 capítulos o cero matrices en tareas nuevas sin reconciliar con el informe vigente.
+
+
 Corte: 30 de octubre de 2026, Colombia. Estado: trabajo en ramas de revisión, sin cierre ni despliegue de esta ejecución.
 
 ## Resultado comprobado
