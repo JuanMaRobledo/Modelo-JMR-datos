@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-31",
+  "kind": "ANCLAS_LEIDAS_NO_CERTIFICADAS",
+  "notes": "Este archivo es evidencia de fórmulas originales y no autoriza la importación de múltiplos; se requieren fuentes independientes y conciliación de ponderaciones. No cambia las hojas.",
+  "records": [
+    {
+      "ticker": "UBER",
+      "revisionId": "UBER-20261030-A1",
+      "sourceSheetId": "1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58",
+      "dcfUnchanged": 91.13793738151752,
+      "method": [
+        {
+          "method": "EV/EBITDA",
+          "sourceTab": "EVEBITDA",
+          "anchorRange": "EVEBITDA!J19",
+          "anchorValue": 17.77922149527431,
+          "anchorFormulaOrLiteral": "=('Input sheet'!$B$22*'Input sheet'!$B$23+'Valuation output'!$B$27-'Valuation output'!$B$29-'Valuation output'!$B$30+'Valuation output'!$B$28+'Valuation output'!$B$32+N('Input sheet'!$B$76))/('Income Statement'!$L$12+'Cash Flow Statement'!$L$4)",
+          "historicalRange": "EVEBITDA!D8:E8",
+          "historicalValues": [
+            0,
+            0
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": false,
+          "dependsOnCurrentSharePrice": true,
+          "reviewRequired": true
+        },
+        {
+          "method": "EV/FCFF",
+          "sourceTab": "EVFCFF",
+          "anchorRange": "EVFCFF!J19",
+          "anchorValue": 34.85137617846402,
+          "anchorFormulaOrLiteral": "=EVEBITDA!$J$19*'Financials Multiples'!$G$57/'Financials Multiples'!$G$63",
+          "historicalRange": "EVFCFF!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/E",
+          "sourceTab": "PE",
+          "anchorRange": "PE!J19",
+          "anchorValue": 14.017944921181751,
+          "anchorFormulaOrLiteral": "='Input sheet'!$B$22*'Input sheet'!$B$23/'Income Statement'!$L$22",
+          "historicalRange": "PE!D8:E8",
+          "historicalValues": [
+            0,
+            0
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": false,
+          "dependsOnCurrentSharePrice": true,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/FCFE",
+          "sourceTab": "PFCFE",
+          "anchorRange": "PFCFE!J19",
+          "anchorValue": 16.51887701975784,
+          "anchorFormulaOrLiteral": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$159",
+          "historicalRange": "PFCFE!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/OCF",
+          "sourceTab": "POCF",
+          "anchorRange": "POCF!J19",
+          "anchorValue": 16.259490082335745,
+          "anchorFormulaOrLiteral": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$65",
+          "historicalRange": "POCF!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        }
+      ],
+      "financialStatus": "EN_REVISION",
+      "relativeUncertified": true
+    },
+    {
+      "ticker": "GOOGL",
+      "revisionId": "GOOGL-20261029-R5",
+      "sourceSheetId": "1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA",
+      "dcfUnchanged": 287.20493379569007,
+      "method": [
+        {
+          "method": "EV/EBITDA",
+          "sourceTab": "EVEBITDA",
+          "anchorRange": "EVEBITDA!J19",
+          "anchorValue": 15.6,
+          "anchorFormulaOrLiteral": 15.6,
+          "historicalRange": "EVEBITDA!D8:E8",
+          "historicalValues": [
+            0,
+            0
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": false,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        },
+        {
+          "method": "EV/FCFF",
+          "sourceTab": "EVFCFF",
+          "anchorRange": "EVFCFF!J19",
+          "anchorValue": 225.03,
+          "anchorFormulaOrLiteral": "=IFERROR(IF('Financials Multiples'!$G$63>0;ROUND(EVEBITDA!$J$19*'Financials Multiples'!$G$57/'Financials Multiples'!$G$63;2);\"\");\"\")",
+          "historicalRange": "EVFCFF!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/E",
+          "sourceTab": "PE",
+          "anchorRange": "PE!J19",
+          "anchorValue": 16.864431110221304,
+          "anchorFormulaOrLiteral": "=('Input sheet'!$B$22+385/20/2*(2,816+2,842))*'Input sheet'!$B$23/('Income Statement'!$L$22+384)",
+          "historicalRange": "PE!D8:E8",
+          "historicalValues": [
+            0,
+            0
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": false,
+          "dependsOnCurrentSharePrice": true,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/FCFE",
+          "sourceTab": "PFCFE",
+          "anchorRange": "PFCFE!J19",
+          "anchorValue": 81.00703246729462,
+          "anchorFormulaOrLiteral": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$159",
+          "historicalRange": "PFCFE!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        },
+        {
+          "method": "P/OCF",
+          "sourceTab": "POCF",
+          "anchorRange": "POCF!J19",
+          "anchorValue": 23.85739277439127,
+          "anchorFormulaOrLiteral": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$65",
+          "historicalRange": "POCF!D8:E8",
+          "historicalValues": [
+            null,
+            null
+          ],
+          "positiveHistoricalPoints": 0,
+          "derivedFromAnotherMultiple": true,
+          "dependsOnCurrentSharePrice": false,
+          "reviewRequired": true
+        }
+      ],
+      "financialStatus": "EN_REVISION",
+      "relativeUncertified": true
+    }
+  ]
+}
