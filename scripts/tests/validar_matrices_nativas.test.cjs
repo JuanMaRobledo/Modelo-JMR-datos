@@ -4,7 +4,8 @@ const assert=require('node:assert/strict');
 const {validateNativeMatrices}=require('../validar_catalogo.cjs');
 const names=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF','P/V','P/BV'];
 function fixture(){
-  const m=names.map(name=>({metodo:name,escenario:'base',ancla:'JMR',estado:'OK',
+  const m=names.map((name,i)=>({metodo:name,escenario:'base',ancla:'JMR',estado:'OK',
+    origen:"'Sensibilidad por múltiplo'!A"+(76+10*i)+':I'+(84+10*i),
     fundamentalFY3:[1,2,3,4,5],multiploElegido:[1,2,3,4,5],
     matriz:Array.from({length:5},()=>[10,10,10,10,10]),
     centro:10,vp3Original:10}));
@@ -29,6 +30,7 @@ test('candidato, revisión falsa o centro diferente no pasan',()=>{
     x=>x.sensibilidadMultiples.revisionId='OLD',
     x=>x.sensibilidadMultiples.sourceSheetId='OTHER',
     x=>x.sensibilidadMultiples.controlesTecnicosAprobados=false,
+    x=>delete x.sensibilidadMultiples.matrices[0].origen,
     x=>x.sensibilidadMultiples.matrices[0].matriz[2][2]=99,
     x=>x.sensibilidadMultiples.matrices.shift()
   ]){
@@ -68,3 +70,4 @@ test('FCFE bancario exige P/E, P/FCFE y P/BV, sin imponer múltiplos industriale
   pbv.estado='N/D';pbv.matriz=null;pbv.centro=null;
   assert.throws(()=>validateNativeMatrices(v),/N\/D prioritario/);
 });
+

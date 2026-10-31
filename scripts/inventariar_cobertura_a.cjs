@@ -7,6 +7,7 @@
 const fs=require('node:fs');
 const path=require('node:path');
 const CORE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+const BANK=['P/E','P/FCFE','P/BV'];
 const isFiniteNumber=x=>typeof x==='number' && Number.isFinite(x);
 const near=(a,b)=>isFiniteNumber(a)&&isFiniteNumber(b)&&Math.abs(a-b)<=Math.max(1e-5,Math.abs(b)*1e-8);
 const read=(root,p)=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
@@ -59,9 +60,11 @@ function inspect(root=path.resolve(__dirname,'..')){
       if(!a.remotePath)issues.push('remotePath no declarado');
     }
     const legacy=declared.metodo!=='A-1.2';
+    const bank=ticker==='NU'||/bancari/i.test(v.metodoPrincipal||'');
+    const required=bank?BANK:CORE;
     const dm=v.descuentoMultiples?.metodos;
     const methods=Array.isArray(dm)?dm:[];
-    const evaluated=CORE.filter(m=>methods.some(x=>normalize(x.nombre)===m)).length;
+    const evaluated=required.filter(m=>methods.some(x=>normalize(x.nombre)===m)).length;
     const sens=v.sensibilidadMultiples;
     const controls=Array.isArray(sens?.controles)?sens.controles:[];
     const matrices=Array.isArray(sens?.matrices)?sens.matrices:[];
@@ -84,7 +87,7 @@ function inspect(root=path.resolve(__dirname,'..')){
       }catch(e){issues.push('Captura parcial ilegible: '+e.message)}
     }
     if(!legacy && !matricesEstructurales)issues.push('No se exportaron matrices 5x5 de múltiplos Base verificables');
-    if(!legacy && evaluated<CORE.length)issues.push('Faltan métodos prioritarios en descuentoMultiples (o sus exclusiones)');
+    if(!legacy && evaluated<required.length)issues.push('Faltan métodos prioritarios en descuentoMultiples (o sus exclusiones)');
     if(!legacy && chapterCount(a||{})!==14)issues.push('Nivel 1 no acredita 14 capítulos');
     const item={
       ticker,revisionId:v.revisionId,metodo:declared.metodo,estado:declared.estado,
@@ -92,6 +95,9 @@ function inspect(root=path.resolve(__dirname,'..')){
       enlace,nivel1Capitulos:chapterCount(a||{}),nivel2Presente:!!a?.calculationHtml,
       precioBase:v.valorPrincipal,
       metodosPrioritariosEnDescuento:evaluated,
+      metodosPrioritariosRequeridos:required,
+      excepcionSectorial:bank?'FCFE_BANCARIO':null,
+      estadoIntegracion:sens?.estadoPublicacion||'SIN_INTEGRACION',
       controlesBase:controls.filter(x=>x.escenario==='base').length,
       centrosBaseConciliados:checked,
       controlesND:noDisponible,
@@ -118,7 +124,7 @@ function inspect(root=path.resolve(__dirname,'..')){
     metodoAConCincoMatricesPrioritariasEnCaptura:current.filter(x=>x.capturaParcialPrioritarios5x5===5).length,
     metodoASinCapturaParcial:current.filter(x=>!x.capturaParcialEsSoloCandidata).map(x=>x.ticker),
     metodoAConControlesBase:current.filter(x=>x.controlesBase>0).length,
-    metodoAConCincoMetodosEnDescuento:current.filter(x=>x.metodosPrioritariosEnDescuento===5).length,
+    metodoAConCincoMetodosEnDescuento:current.filter(x=>x.metodosPrioritariosRequeridos.length===5&&x.metodosPrioritariosEnDescuento===5).length,
     metodoASinVinculo:current.filter(x=>x.enlace==='NO_EXPLICITO').map(x=>x.ticker),
     empresas:reported
   };
@@ -128,3 +134,4 @@ if(require.main===module){
   const result=inspect(process.argv[2]?path.resolve(process.argv[2]):undefined);
   console.log(JSON.stringify(result,null,2));
 }
+

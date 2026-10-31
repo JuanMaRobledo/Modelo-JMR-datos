@@ -1,0 +1,364 @@
+{
+  "ticker": "NVO",
+  "nombreActivo": "Novo Nordisk A/S (NYSE NVO)",
+  "revisionId": "NVO-20261029-R1",
+  "revision_id": "NVO-20261029-R1",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "precio": 38.29,
+  "precioAnalisis": 38.29,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "https://stockanalysis.com/stocks/nvo/history/",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Global Pharma / GLP-1 / diabetes and obesity",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA/edit",
+  "sheet_id": "1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "metodoPrincipal": "DCF FCFF JMR A con I+D capitalizada 6 años",
+  "valorPrincipal": 63.42808082810516,
+  "precioMOS": 41.22825253826836,
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "validationStatus": "FOUR_STORIES_LISTO_WACC_DETAILED_VALIDADO_RND_6Y_SENS_CENTER_OK_LAG_TESTED_MULTIPLES_PENDING",
+  "publicationAuthorized": true,
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 1,
+      "valorHoy": {
+        "conservador": 39.15387273476057,
+        "base": 63.42808082810516,
+        "optimista": 93.4743207682763
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "EV/FCFF",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/E",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/FCFE",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/OCF",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/S",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    },
+    {
+      "nombre": "P/BV",
+      "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
+      "peso": null,
+      "valorHoy": null
+    }
+  ],
+  "objetivoPonderado": {
+    "estado": "PENDIENTE_MULTIPLOS",
+    "base": null
+  },
+  "valorPresentePonderado": {
+    "estado": "PENDIENTE_MULTIPLOS",
+    "base": null
+  },
+  "valorEsperado": {
+    "valor": 64.71075457184439,
+    "valorCentral": 63.42808082810516,
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.5,
+        "valor": 63.42808082810516,
+        "growth": [
+          0.03,
+          0.05,
+          0.06,
+          0.07,
+          0.07,
+          0.06,
+          0.055,
+          0.05,
+          0.045,
+          0.04
+        ],
+        "margen": 0.435,
+        "salesToCapital1a5": 0.55,
+        "salesToCapital6a10": 1,
+        "roicTerminal": 0.23,
+        "gTerminal": 0.04
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.2,
+        "valor": 39.15387273476057,
+        "growth": [
+          -0.045,
+          -0.015,
+          0.015,
+          0.025,
+          0.03,
+          0.035,
+          0.035,
+          0.035,
+          0.03,
+          0.025
+        ],
+        "margen": 0.38,
+        "salesToCapital1a5": 0.4,
+        "salesToCapital6a10": 0.85,
+        "roicTerminal": 0.18,
+        "gTerminal": 0.035
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "valor": 18.98134543437466,
+        "growth": [
+          -0.12,
+          -0.1,
+          -0.08,
+          -0.05,
+          -0.03,
+          0,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ],
+        "margen": 0.295,
+        "salesToCapital1a5": 0.3,
+        "salesToCapital6a10": 0.7,
+        "roicTerminal": 0.12,
+        "gTerminal": 0.02
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.2,
+        "valor": 93.4743207682763,
+        "growth": [
+          0.075,
+          0.11,
+          0.12,
+          0.105,
+          0.095,
+          0.09,
+          0.075,
+          0.065,
+          0.055,
+          0.045
+        ],
+        "margen": 0.475,
+        "salesToCapital1a5": 0.75,
+        "salesToCapital6a10": 1.45,
+        "roicTerminal": 0.32,
+        "gTerminal": 0.04
+      }
+    ],
+    "tipoPromedio": "3_historias_renormalizado"
+  },
+  "revisionSupuestos": {
+    "monedaFuente": "DKK",
+    "monedaValoracion": "USD",
+    "fxDKKperUSD": 6.6996,
+    "fechaFX": "2026-10-28",
+    "conversion": "Financials DKK divided by spot USD/DKK; proforma, not originally reported historical USD",
+    "salesFY25DKKm": 309064,
+    "ebitFY25DKKm": 127658,
+    "rdFY25DKKm": 52039,
+    "salesH126ReportedDKKm": 175311,
+    "ebitH126ReportedDKKm": 86679,
+    "salesH125ReportedDKKm": 154944,
+    "ebitH125ReportedDKKm": 72240,
+    "oneoff340BreversalDKKm": 26760,
+    "oneoffImpairmentRD_DKKm": 6328,
+    "salesLtmNormalizedDKKm": 302671,
+    "ebitLtmNormalizedDKKm": 121665,
+    "ebitLtmNormalizedMargin": 0.40197111715360906,
+    "reportedLtmEBITDKKm": 142097,
+    "year2025RestructuringNote": "Approximately DKK8bn restructuring costs FY2025 retained in LTM normalization, not added back",
+    "fy26AdjustedGuidanceCER": "Sales and adjusted EBIT -6% to 0% constant currency",
+    "growthBase": [
+      0.03,
+      0.05,
+      0.06,
+      0.07,
+      0.07,
+      0.06,
+      0.055,
+      0.05,
+      0.045,
+      0.04
+    ],
+    "cagr5": 0.05589318995920545,
+    "ebitMarginTarget": 0.435,
+    "roicAdjustedToday": 0.2358757461039946,
+    "roicYear10": 0.2276836157765221,
+    "roicTerminal": 0.23,
+    "salesToCapitalYears1to5": 0.55,
+    "salesToCapitalYears6to10": 1,
+    "lagYears": 1,
+    "reinvestmentYear1USDm": 4230.254316404236,
+    "nopatYear1USDm": 14758.215676326872,
+    "terminalReinvestmentPercentNOPAT": 0.17391304347826086,
+    "researchAsset6yUSDm": 23044.70913686389,
+    "annualRDAmortizationUSDm": 4722.296853543496,
+    "rdLtmNormalizedUSDm": 7729.41668159293,
+    "rdTreatment": "JMR six-year R&D converter, AZ GAAP already expenses R&D; no double counting",
+    "rfUSD": 0.0505,
+    "beta": 0.85,
+    "ERP": 0.046,
+    "Ke": 0.0896,
+    "WACCinitial": 0.08541351278988082,
+    "WACCterminal": 0.088,
+    "gTerminal": 0.04,
+    "tax": 0.22,
+    "fy25CFO_DKKm": 119102,
+    "ltmCFO_DKKm": 131881,
+    "ltmCapexPPEDKKm": 56043,
+    "ltmCapexIntangibleDKKm": 28049,
+    "fy25CapexPPEDKKm": 60140,
+    "fy25CapexIntangibleDKKm": 29973,
+    "cashJuneDKKm": 44482,
+    "marketableJuneDKKm": 500,
+    "grossBorrowingsDKKm": 140127,
+    "leaseIncludedOnceDKKm": 8622,
+    "netDebtUSDm": 14201.59412502239,
+    "dilutedSharesMillions": 4442.2,
+    "ADRrights": "1 ADS NVO = 1 Class B share; A and B equal economic dividends, voting differs",
+    "lag0Sheet": "https://docs.google.com/spreadsheets/d/1bYJ1bV8VW3fsdWqD9z2fULJdaCczU0YBEhoUbrC7a7s/edit",
+    "lag0Value": 64.1486593493997,
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1t5aCFGHI6UOrQv88v2nBmkVKsY3gy5uX4QqjnKh2hhI/edit",
+      "dcfPerpetuityBase": 54.55491249237646,
+      "dcfConservador": 27.06678763387965,
+      "dcfOptimista": 85.34221578135319,
+      "exitEVEBITDABase": 58.58495641791275,
+      "exitEVEBITDAMultiple": 12,
+      "blended6040": 56.16693006259098,
+      "WACC": 0.0898856,
+      "g": 0.035,
+      "capexYr1USDm": 8400,
+      "capexYr10USDm": 8300,
+      "DAyr10USDm": 5200,
+      "deltaNWCyr10USDm": 238.240675169106,
+      "NOPATyr10USDm": 23904.08234938522,
+      "impliedTerminalRONIC": 0.2506238955302708,
+      "rdTreatment": "R&D remains in EBIT under GAAP. Not capitalized twice"
+    }
+  },
+  "sensibilidadDCF": {
+    "wacc": [
+      0.07541351278988082,
+      0.0804135127898808,
+      0.08541351278988081,
+      0.09041351278988081,
+      0.0954135127898808
+    ],
+    "g": [
+      0.03,
+      0.035,
+      0.04,
+      0.045,
+      0.05
+    ],
+    "matriz": [
+      [
+        69.80804376039528,
+        75.22119074572689,
+        82.03812662456103,
+        90.89638222482108,
+        102.88885753479607
+      ],
+      [
+        62.40370819155902,
+        66.55103707037053,
+        71.64542623320547,
+        78.06025514018556,
+        86.39518573091493
+      ],
+      [
+        56.28857197600607,
+        59.52829116092933,
+        63.42808082810516,
+        68.21780987337493,
+        74.24832410301777
+      ],
+      [
+        51.15534433332537,
+        53.72662134869219,
+        56.770219966720866,
+        60.433408528425254,
+        64.9319466065384
+      ],
+      [
+        46.7871235080956,
+        48.8550453150956,
+        51.26834417471454,
+        54.12448095920094,
+        57.56152038432202
+      ]
+    ],
+    "centro": 63.42808082810516,
+    "centroConciliado": true
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/353278/000035327826000012/nvo-20251231_d2.htm",
+    "https://www.sec.gov/Archives/edgar/data/353278/000035327826000023/caq22026.htm",
+    "https://www.sec.gov/Archives/edgar/data/353278/000162828023001868/nvo-20221231_d2.htm",
+    "https://stockanalysis.com/stocks/nvo/history/",
+    "https://www.exchangerates.org.uk/USD-DKK-exchange-rate-history.html"
+  ],
+  "salvedades": [
+    "LTM H1 2026 IFRS excluye 340B DKK26.76bn y impairment no recurrente DKK6.328bn; no capitalizar estos efectos como negocios ordinarios.",
+    "FY2025 DKK29.97bn intangible associated with Akero; cannot extrapolate annual M&A CapEx. FY2026 PP&E guidance ~DKK55bn, S/C marginal and AZ cash CapEx explicitly reconciled.",
+    "ROIC actual adjusted JMR23.59%, Yr10 22.77%, terminal23%; reported FY2025 ROIC39.3% uses separate average balance definition and is not the DCF return.",
+    "ADR dilution 4442.2m; capital structure includes IFRS16 leases in debt already, avoid double counting.",
+    "WACC 8.54% and USD g4%, USD/DKK FX6.6996 spot, small input changes materially impact DCF.",
+    "AZ exit EV/EBITDA12x unverified peers, strictly secondary. R&D capitalized only in JMR.",
+    "Históricos 2019–25 principal sales EBIT R&D converted uniformly spot, other old imported 2019–22 income/balance rows remain not independently audited; material audit after visual.",
+    "No separate independent economic audit. Seven mandatory JMR multiples pending."
+  ],
+  "hojas": {
+    "valoracion": {
+      "NVO JMR A-1.2": "<h2>NVO — Novo Nordisk</h2><p>JMR FCFF Base US$63,43 vs US$38,29; MOS 35% US$41,23. Conservadora39,15 Optimista93,47 Disrupción18,98.</p><p>R&D capitalizada6y, ventas2026 340B normalizado, margen EBIT43.5%, S/C0.55→1.0, ROIC terminal23%.</p><a href=\"https://docs.google.com/spreadsheets/d/1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA/edit\">Hoja JMR</a> <a href=\"https://docs.google.com/spreadsheets/d/1t5aCFGHI6UOrQv88v2nBmkVKsY3gy5uX4QqjnKh2hhI/edit\">AZ DCF Base US$54,55</a>"
+    }
+  }
+}
+

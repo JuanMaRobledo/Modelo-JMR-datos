@@ -37,6 +37,9 @@ function validateNativeMatrices(v){
       'Método no reconocido');
     assert.equal(m.escenario,'base','Solo sensibilidad de Base');
     assert.equal(m.ancla,'JMR','Ancla de la hoja oficial');
+    const sourceRow=76+10*[...CORE_NATIVE,...MAYBE_NATIVE].indexOf(m.metodo);
+    assert.equal(m.origen,"'Sensibilidad por múltiplo'!A"+sourceRow+':I'+(sourceRow+8),
+      m.metodo+': rango de origen nativo ausente o distinto');
     const chosen=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre===m.metodo);
     const vp3=chosen?.base?.vp?.[2];
     if(finiteNative(vp3))assert.ok(nearNative(vp3,m.vp3Original),
@@ -344,3 +347,4 @@ function validate(root = path.join(__dirname, '..')) {
 }
 module.exports = {validate,validateNativeMatrices};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));
+

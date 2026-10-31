@@ -6,6 +6,17 @@ const os=require('node:os');
 const path=require('node:path');
 const {inspect,matrix5x5,chapterCount}=require('../inventariar_cobertura_a.cjs');
 const CORE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+test('banca usa tres métodos propios sin exigir los cinco industriales',t=>{
+  const {root,put}=fixture();t.after(()=>fs.rmSync(root,{force:true,recursive:true}));
+  const v=JSON.parse(fs.readFileSync(path.join(root,'valoraciones/A.json'),'utf8'));
+  v.metodoPrincipal='DCF FCFE bancario regulatorio';
+  v.descuentoMultiples.metodos=['P/E','P/FCFE','P/BV'].map(nombre=>({nombre}));put('valoraciones/A.json',v);
+  const item=inspect(root).empresas.find(x=>x.ticker==='A');
+  assert.deepEqual(item.metodosPrioritariosRequeridos,['P/E','P/FCFE','P/BV']);
+  assert.equal(item.metodosPrioritariosEnDescuento,3);
+  assert.equal(item.excepcionSectorial,'FCFE_BANCARIO');
+  assert.ok(!item.issues.some(x=>x.startsWith('Faltan métodos prioritarios')));
+});
 function fixture(){
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'jmr-inventory-'));
   const put=(p,obj)=>{const dest=path.join(root,p);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,JSON.stringify(obj));};
@@ -84,3 +95,4 @@ test('captura de rango se cuenta como evidencia, nunca como matriz integrada',t=
   assert.equal(bad.metodoAConCapturaParcial,0);
   assert.ok(bad.empresas.find(x=>x.ticker==='A').issues.some(x=>x.includes('Captura parcial sin identidad')));
 });
+
