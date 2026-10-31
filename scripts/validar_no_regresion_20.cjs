@@ -53,7 +53,9 @@ function run(){
         assert.ok(Math.abs(linked.valorPrincipal-val.valorPrincipal)<1e-7,
           ticker+': DCF vinculado no concilia');
     }
-    const baseline='evidencia/integracion-nativa-20261030/'+val.revisionId+'/registro_antes.json';
+    const originalBaseline='evidencia/integracion-nativa-20261030/'+val.revisionId+'/registro_antes.json';
+    const shakBaseline='evidencia/captura-completa-candidata-20261031/'+val.revisionId+'/registro_antes.json';
+    const baseline=exists(originalBaseline)?originalBaseline:shakBaseline;
     if(exists(baseline)){
       const previous=read(baseline);
       assert.equal(previous.revisionId,val.revisionId,ticker+': foto de otra revisión');
@@ -63,7 +65,7 @@ function run(){
       snapshots++;
     }else withoutSnapshot.push(ticker);
   }
-  assert.ok(snapshots>=14,'Desaparecieron fotografías financieras de control');
+  assert.ok(snapshots>=15,'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/20 expedientes vinculados; '+snapshots+
     ' fotografías financieras sin cambios fuera de descuentos y matrices.');
   console.log('Sin fotografía antigua integral: '+withoutSnapshot.join(', ')+
