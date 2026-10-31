@@ -1,0 +1,389 @@
+{
+  "ticker": "ONON",
+  "nombreActivo": "On Holding AG (NYSE: ONON)",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1cyilxyBVYI8Q7ouK8Ybm4SW5WFXP9SaPA--S_m3Fb7U/edit",
+  "sheet_id": "1cyilxyBVYI8Q7ouK8Ybm4SW5WFXP9SaPA--S_m3Fb7U",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "precio": 31.94,
+  "precioAnalisis": 31.94,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "https://stockanalysis.com/stocks/onon/history/ Oct28 2026 USD31.94",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Premium Athletic Footwear / DTC Retail / Apparel",
+  "mos": 0.35,
+  "precioMOS": 26.52792883,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 40.8121982,
+  "metodoPrincipal": "DCF FCFF 10Y / perpetuidad JMR Método A-1.2 · USD proforma a CHF/USD0.8281",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "ONON-20261029-R1",
+  "revision_id": "ONON-20261029-R1",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "FOUR_SCENARIOS_LISTO_WACC_DETAILED_VALIDADO_SENS_DCF_OK_FX_SINGLE_SPOT_LEASE_ONCE_CLASSB_EQUIV_ROIC_FADE_MULTIPLOS_PENDIENTES",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "User requested ONON new DCF JMR A and AZ using copies; remove previous active",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "valorHoy": {
+        "conservador": 22.99117651,
+        "base": 40.8121982,
+        "optimista": 64.94020668
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "P/S",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_ANCLAS_MERCADO_Y_VALIDACION_7_MULTIPLOS"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "horizonteAnios": 3,
+    "estado": "PENDIENTE_MULTIPLOS_NO_PUBLICAR_OBJETIVO"
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorEsperado": {
+    "valor": 42.21375082,
+    "tipoPromedio": "3_historias_renormalizado",
+    "valorCentral": 40.8121982,
+    "historiaCentralId": "A",
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · Crecimiento DTC y Asia, premium footwear sostenible",
+        "probabilidad": 0.5,
+        "crecimiento": 0.1399122726,
+        "margen": 0.175,
+        "s2c": 1.65,
+        "s2c610": 2,
+        "roicTerminal": 0.22,
+        "valor": 40.8121982,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "Años1–5 +16/+15/+14/+13/+12%, objetivo EBIT17,5%, inversiones en canales DTC, inventarios y arrendamientos; ROIC terminal22%, USD."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador · Moda y promoción limitan pricing, desacelera wholesale",
+        "probabilidad": 0.2,
+        "crecimiento": 0.08199259083,
+        "margen": 0.14,
+        "s2c": 1.3,
+        "s2c610": 1.9,
+        "roicTerminal": 0.14,
+        "valor": 22.99117651,
+        "terminalGrowth": 0.035,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · Marca pierde relevancia y necesita liquidar inventario",
+        "probabilidad": 0.1,
+        "crecimiento": 0.004810617095,
+        "margen": 0.095,
+        "s2c": 0.95,
+        "s2c610": 1.45,
+        "roicTerminal": 0.1,
+        "valor": 13.28735568,
+        "terminalGrowth": 0.02,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · DTC y APAC sostienen premium global",
+        "probabilidad": 0.2,
+        "crecimiento": 0.1938047119,
+        "margen": 0.205,
+        "s2c": 2.3,
+        "s2c610": 3,
+        "roicTerminal": 0.25,
+        "valor": 64.94020668,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "criterio": "Siete múltiplos JMR oficiales requeridos; ONON IPO 2021 y acciones A+B/10 implican histórico limitado y diferentes IFRS/USGAAP; no usar exit AZ como múltiplo JMR validado.",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 22.99117651,
+      "base": 40.8121982,
+      "optimista": 64.94020668
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": null,
+    "chequeo": "NO_CERTIFICADO"
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "monedaFuente": "CHF",
+    "monedaValoracion": "USD",
+    "tipoDeCambioHistoricoParaValoracion": "CHF 0.8281 por USD al 28 oct 2026, spot usado de forma uniforme solo para valorar, no series USD contables originales",
+    "usdchfSpot": 0.8281,
+    "precioEquivalenteCHF": 26.449514,
+    "crecimientoFY1": 0.16,
+    "crecimientoBase": 0.1399122726,
+    "crecimientoAnios": [
+      0.16,
+      0.15,
+      0.14,
+      0.13,
+      0.12,
+      0.11,
+      0.1,
+      0.09,
+      0.08,
+      0.07
+    ],
+    "margenEBITGAAPLtm": 0.13790212395975657,
+    "margenEBITObjetivo": 0.175,
+    "ingresosLtmCHFMillones": 3220.4,
+    "ebitLtmCHFMillones": 444.1,
+    "cfoLtmCHFMillones": 525.4,
+    "capexLtmCHFMillones": 96.4,
+    "fcfLtmCHFMillones": 429,
+    "cfoLtmUSDMillones": 634.4644366622389,
+    "capexLtmUSDMillones": 116.41106146600653,
+    "fcfLtmUSDMillones": 518.0533751962324,
+    "shareBasedCompLtmCHFMillones": 72.3,
+    "rdFY2025CHFMillones": 10.6,
+    "rdTratamiento": "No capitalizar como I+D en JMR por baja materialidad y falta separación detallada; costos de marketing de marca se mantienen íntegros en SG&A",
+    "stcPromedio": 2.53914689,
+    "stcMarginalHistoricoAproximado": 2.18,
+    "stcHistoricoLimitacion": "Δventas FY24-25 CHF695.7m / Δcapital invertido IFRS16 y caja inflada; proxy 2.18 no evidencia homogénea por canal/tienda.",
+    "stcMarginal1a5": 1.65,
+    "stcMarginal6a10": 2,
+    "roicActualAjustado": 0.3223,
+    "roicAnio10": 0.2891,
+    "roicTerminal": 0.22,
+    "roicFadeGapPuntos": 6.91,
+    "rf": 0.0505,
+    "erp": 0.042,
+    "beta": 1.45,
+    "waccInicial": 0.1077,
+    "waccTerminal": 0.095,
+    "gTerminal": 0.04,
+    "tasaFiscalMarginal": 0.22,
+    "accionesAActualesMillones": 301.715535,
+    "accionesBActualesMillones": 324.99168,
+    "accionesEconomicasEquivMillones": 334.214703,
+    "conversionB_A": "10 Class B : 1 Class A por derechos económicos; 334.214703m acciones A equivalentes",
+    "leasesCorrienteCHFMillones": 87.9,
+    "leasesNoCorrienteCHFMillones": 474.6,
+    "deudaFinancieraExLeasesCHFMillones": 0,
+    "deudaTotalUSDMillones": 679.2657891558991,
+    "efectivoUSDMillones": 1455.8628185001812,
+    "netDebtUSDMillones": -776.5970293442821,
+    "sharesMillones": 334.214703,
+    "lagAnios": 1,
+    "reinvPrimerAnioUSDM": 410.102425,
+    "nopatPrimerAnioUSDM": 643.6635694,
+    "reinvNOPATPrimerAnio": 0.6371,
+    "terminalReinversionNOPAT": 0.18181818181818182,
+    "pruebaLag0": {
+      "copiaGoogle": "https://docs.google.com/spreadsheets/d/1gq9_RigfNjafVF8Kvp_6e9KRlF8valnJhN9hUUz4-ZU/edit",
+      "lag0": {
+        "base": 40.88775173,
+        "conservador": 23.04766722,
+        "disrupcion": 13.53916291,
+        "optimista": 65.21207412
+      },
+      "lag1": {
+        "base": 40.8121982,
+        "conservador": 22.99117651,
+        "disrupcion": 13.28735568,
+        "optimista": 64.94020668
+      },
+      "deltaBasePorAccion": 0.07555353,
+      "criterio": "Se mantiene lag1 porque inventario, equipamiento y apertura retail DTC se invierten antes de ventas; no seleccionado para elevar precio."
+    },
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Z-4aYZ0BZvH4HeAV7dX_-OjlUN1ClKAXZgKIKyGAZRI/edit",
+      "valorPerpetuidadBase": 33.72,
+      "valorPerpetuidadPesimista": 20.48,
+      "valorPerpetuidadOptimista": 55.7,
+      "valorSalidaEV_EBITDA": 56.52,
+      "valorCombinado6040": 42.84,
+      "wacc": 0.107,
+      "g": 0.035,
+      "exitMultBase": 17,
+      "capexLtmUSDM": 116.41106146600653,
+      "capexAno1USDM": 200,
+      "capexAno10USDM": 475,
+      "daAno10USDM": 290,
+      "deltaNwcAno10USDM": 128,
+      "nopatAno10USDM": 1571.3,
+      "reinvTerminalUSDM": 313,
+      "roicMarginalImplicitoTerminal": 0.1758,
+      "nota": "GAAP/IFRS EBITDA exit17× no validado comparables; principal perpetuidad. Lease assets replacement and future debt in DCF require sensitivity."
+    }
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.1077,
+    "gCentro": 0.04,
+    "centro": 40.8121982,
+    "centroConciliado": true,
+    "matriz": {
+      "wacc": [
+        0.0977,
+        0.1027,
+        0.1077,
+        0.1127,
+        0.1177
+      ],
+      "g": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "valores": [
+        [
+          44.74,
+          47.4,
+          50.64,
+          54.69,
+          59.88
+        ],
+        [
+          40.65,
+          42.73,
+          45.23,
+          48.27,
+          52.06
+        ],
+        [
+          37.2,
+          38.86,
+          40.81,
+          43.15,
+          45.99
+        ],
+        [
+          34.27,
+          35.6,
+          37.15,
+          38.97,
+          41.15
+        ],
+        [
+          31.73,
+          32.81,
+          34.06,
+          35.5,
+          37.21
+        ]
+      ]
+    },
+    "nota": "Extraída nativa de Google Sheets, centro WACC10.77/g4% US$40.81, OK."
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1858985/000185898526000008/onholdingag-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1858985/000185898526000018/onholdingag-20260630_d2.htm",
+    "https://press.on-running.com/on-reports-results-for-the-second-quarter-and-six-month-period-ended-june-30-2026",
+    "https://www.sec.gov/Archives/edgar/data/1858985/000185898523000021/a2022annualreport_pdx.htm",
+    "https://www.investing.com/currencies/usd-chf-historical-data",
+    "https://stockanalysis.com/stocks/onon/history/"
+  ],
+  "salvedades": [
+    "Currency critical: On IFRS reports in CHF; all historical CHF data 2020-2026 transformed using fixed Oct28 USDCHF 0.8281 to USD proforma for valuation. This is not reported historical USD revenue or original FY exchange series. Price ONON USD31.94. ±10% exchange sensitivity important.",
+    "Class B 324,991,680 shares have economic rights one-tenth Class A, outstanding Class A301,715,535. Equivalent shares = 334,214,703 A; counting B one-for-one would nearly halve per-share intrinsic.",
+    "IFRS16 operating lease asset CHF530.7m and liabilities CHF87.9m current+474.6m long are included once; no additional lease converter. Payment lease principal CHF35.8m H1 is financing, not full CapEx.",
+    "FY2025 cash flow operating CHF359.5m vs FY2024 CHF510.6m despite revenue+30% from inventory and AR working-capital absorption; Base US$410.1m reinvestment first year and 63.7% NOPAT.",
+    "ROIC current adjusted32.23%, year10 28.91%, terminal22.0%, gap 6.91pp at entry to perpetuity; fade likely should be smoothed; risk marked, no independent economic audit.",
+    "FY2025 IFRS income tax expense CHF1.5m only, FX losses CHF173.2m; LTM tax rate~7.95%; model uses marginal normalized22%, not artificial 0.7% tax perpetuity.",
+    "R&D FY2025 explicit CHF10.6m included SG&A, not capitalized due small amount; brand marketing and footwear product development non-separable. Do not add back marketing and also claim intangible advantage.",
+    "AZ GAAP DCF Perpetuity Base33.72 USD vs JMR40.81, AZ cost capital10.7%, terminal g3.5%, terminal RONIC implied~17.6%, JMR ROIC terminal22% and g4%; difference material; no arithmetic averaging.",
+    "AZ exit EV/EBITDA17x Base56.52 not a comparable-validated multiple, secondary only. Weighted DCF+exit42.84 also secondary, not principal intrinsic.",
+    "SBC recurring CHF72.3m LTM, Class A/B awards dilutive: economic share count334.215m at Jun26 is current not fully diluted forecast; detailed grant schedule to certify later.",
+    "IPO Sep2021 and 5–6 years audited history limit seven mandatory JMR multiples, old ONON sheet USD values from unspecified conversion not retained as accounting values.",
+    "No independent economic audit; publication is EN_REVISION for user's visual inspection."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen ONON JMR A-1.2": "<section><h2>ONON On Holding AG · Método A-1.2 · EN_REVISION</h2><p><strong>DCF FCFF Base US$40,81</strong> vs cierre US$31,94, MOS35% US$26,53. Conservador22,99, optimista64,94, disrupción13,29; media normal42,21.</p><p>Fuente CHF reportado y conversión proforma USD a FX0.8281 CHF/USD. LTM EBIT CHF444.1m, ingreso3220.4m; S/C1.65→2.0, EBIT17.5%, ROIC terminal22%, DCF USD WACC10.77%, g4%. ClaseB equivalente1/10; deuda leaseCHF562.5m. <a href=\"https://docs.google.com/spreadsheets/d/1cyilxyBVYI8Q7ouK8Ybm4SW5WFXP9SaPA--S_m3Fb7U/edit\">Hoja JMR A 46 tabs</a>; <a href=\"https://docs.google.com/spreadsheets/d/1Z-4aYZ0BZvH4HeAV7dX_-OjlUN1ClKAXZgKIKyGAZRI/edit\">AZ Stocks DCF US$33.72</a>.</p><p>Los siete múltiplos y auditoría económica independiente pendientes.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia nueva de IA oficial limpia 46 tabs. Histórico IFRS CHF 2020–2025 y junio2026 recuperado de SEC, convertido a USD proforma a cotización spot0.8281 para no mezclar USD cash flows/CHF cost of capital. No reuso de pronósticos, análisis ni comparables anteriores."
+}
+

@@ -1,0 +1,94 @@
+{
+  "type": "EVIDENCIA_ANCLAS_NO_CERTIFICADAS",
+  "ticker": "GOOGL",
+  "revisionId": "GOOGL-20261029-R5",
+  "sourceSheetId": "1we5M6ZMziOkTVHttcQWoerKhYqbQoWAbkoGeDZfb7bA",
+  "cutoff": "2026-10-31",
+  "recordedDCF": 287.20493379569007,
+  "registered": {
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "matrices": 0
+  },
+  "sheet": {
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.40000000000000013
+  },
+  "methods": [
+    {
+      "name": "EVEBITDA",
+      "sourceFormulaOrConstant": 15.6,
+      "provenance": "CONSTANTE_SIN_SERIE_COTEJADA",
+      "certificado": false
+    },
+    {
+      "name": "EVFCFF",
+      "sourceFormulaOrConstant": "=IFERROR(IF('Financials Multiples'!$G$63>0;ROUND(EVEBITDA!$J$19*'Financials Multiples'!$G$57/'Financials Multiples'!$G$63;2);\"\");\"\")",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    },
+    {
+      "name": "PE",
+      "sourceFormulaOrConstant": "=('Input sheet'!$B$22+385/20/2*(2,816+2,842))*'Input sheet'!$B$23/('Income Statement'!$L$22+384)",
+      "provenance": "LIGADA_A_PRECIO",
+      "certificado": false
+    },
+    {
+      "name": "PFCFE",
+      "sourceFormulaOrConstant": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$159",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    },
+    {
+      "name": "POCF",
+      "sourceFormulaOrConstant": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$65",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    }
+  ],
+  "supuestos": [
+    [
+      "Método",
+      "Conservador (x0,9)",
+      "Base (mín. positivo 4 cierres)",
+      "Optimista (x1,1)",
+      "Override manual activo (columna J)"
+    ],
+    [
+      "EV/FCFF",
+      225.03,
+      225.03,
+      225.03,
+      "Sí — revisar"
+    ],
+    [
+      "P/OCF",
+      23.85739277439127,
+      23.85739277439127,
+      23.85739277439127,
+      "Sí — revisar"
+    ],
+    [
+      "P/E",
+      16.864431110221304,
+      16.864431110221304,
+      16.864431110221304,
+      "Sí — revisar"
+    ],
+    [
+      "P/FCFE",
+      81.00703246729462,
+      81.00703246729462,
+      81.00703246729462,
+      "Sí — revisar"
+    ],
+    [
+      "EV/EBITDA",
+      15.6,
+      15.6,
+      15.6,
+      "Sí — revisar"
+    ]
+  ],
+  "policy": "No integrar ni certificar matrices por estado aritmético OK sin cotejo de anclas históricas independientes. No modificar DCF ni ponderaciones."
+}

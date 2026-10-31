@@ -6,6 +6,18 @@ on:
       - 'auditorias/ponderaciones-38-2026-10-18.json'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/inventariar_cobertura_a.cjs'
+      - 'scripts/validar_no_regresion_20.cjs'
+      - 'scripts/integrar_matrices_nativas.py'
+      - 'scripts/integrar_descuentos_nativos.py'
+      - 'scripts/estandarizar_nivel1.py'
+      - 'scripts/aplicar_ampliacion_editorial.py'
+      - 'scripts/ampliaciones_editoriales_20261031.json'
+      - 'scripts/restaurar_nivel2_desde_foto.py'
+      - 'evidencia/descuentos-20261031/**'
+      - 'scripts/tests/validar_matrices_nativas.test.cjs'
+      - 'scripts/tests/capturas_matrices_fuente.test.cjs'
+      - 'candidatos/hoja-multiples/**'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -20,6 +32,17 @@ on:
       - 'valoraciones/**'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/inventariar_cobertura_a.cjs'
+      - 'scripts/integrar_matrices_nativas.py'
+      - 'scripts/integrar_descuentos_nativos.py'
+      - 'scripts/estandarizar_nivel1.py'
+      - 'scripts/aplicar_ampliacion_editorial.py'
+      - 'scripts/ampliaciones_editoriales_20261031.json'
+      - 'scripts/restaurar_nivel2_desde_foto.py'
+      - 'evidencia/descuentos-20261031/**'
+      - 'scripts/tests/validar_matrices_nativas.test.cjs'
+      - 'scripts/tests/capturas_matrices_fuente.test.cjs'
+      - 'candidatos/hoja-multiples/**'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -39,10 +62,44 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node scripts/validar_catalogo.cjs
+      # Diagnóstico informativo y sus pruebas ANTES del gate; nunca publica.
+      - run: node --test scripts/tests/inventariar_cobertura_a.test.cjs
+      - run: node --test scripts/tests/validar_matrices_nativas.test.cjs
+      - run: node --test scripts/tests/contrato_nativo_a12.test.cjs
+      - run: node --test scripts/tests/msft_discount_native.test.cjs
+      - run: node --test scripts/tests/nu_fcfe_bancario.test.cjs
+      - run: node --test scripts/tests/anclas_uber_googl.test.cjs
+      - run: node --test scripts/tests/ponderaciones_no_sobrescribir.test.cjs
+      - run: node --test scripts/tests/capturas_descuentos_pendientes.test.cjs
+      - run: node --test scripts/tests/nu_fcfe_bank_25_formulas.test.cjs
+      - run: node --test scripts/tests/nu_n2_reconciliation.test.cjs
+      - run: node --test scripts/tests/anclas_uber_googl_fuente.test.cjs
+      - run: node --test scripts/tests/intu_n2_dcf_repro.test.cjs
+      - run: node --test scripts/tests/capturas_matrices_fuente.test.cjs
+      - run: node --test scripts/tests/shak_formulas_evidencia.test.cjs
+      - run: node scripts/inventariar_cobertura_a.cjs
+      - run: node scripts/validar_no_regresion_20.cjs
+      - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_shak_full_snapshot_candidate.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
+      # Ejecutar las pruebas independientes primero para exponer todos los
+      # errores de una pasada. El gate financiero obligatorio sigue al final:
+      # un catálogo incompleto mantiene el workflow en rojo, sin excepciones.
       - run: node scripts/auditar_integridad.cjs
+      # Tras un rechazo financiero los diagnósticos independientes continúan,
+      # pero GitHub conserva la conclusión failure; no hay continue-on-error.
       - run: node --test scripts/tests/*.test.cjs
+        if: ${{ !cancelled() }}
       - run: python3 scripts/verificar_cierre_multiplos.py
-
+        if: ${{ !cancelled() }}
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
+        if: ${{ !cancelled() }}
+      - name: Gate financiero obligatorio del catálogo Método A
+        if: ${{ !cancelled() }}
+        run: node scripts/validar_catalogo.cjs
+
+
 

@@ -69,6 +69,184 @@
     "auditorias/narrativas/CMG.md",
     "auditorias/narrativas/MELI.md"
   ],
+  "controlModeloA": {
+      "version": "2026-10-30-R1",
+      "alcance": "Clasificación editorial, no certificación económica ni modificación de cálculos. Cada entrada solo vale para rutaValoracion exacta; revisión nueva requiere reclasificación.",
+      "criterioCompleto": [
+        "Análisis fundamental Nivel 1 extenso",
+        "Análisis técnico Nivel 2 reproducible con fuentes, fórmulas y conciliaciones",
+        "Estados financieros y series históricas",
+        "DCF Base, conservador, optimista y disrupción por separado",
+        "Crecimiento, márgenes, ROIC, reinversión, Sales-to-Capital, WACC/Ke verificables",
+        "Múltiplos principales aplicables con precios por escenario, VP, ponderaciones y anclas; N/A justificado si no aplica",
+        "Sensibilidades DCF y por múltiplos",
+        "Auditoría visual y controles económicos independientes aprobados"
+      ],
+      "nota": "P/S y P/BV son complementarios y no bloqueantes, salvo métrica esencial en casos financieros como P/BV para bancos. Ninguna valoración A se marca COMPLETA hasta conciliar los criterios.",
+      "empresas": {
+        "META": {
+          "rutaValoracion": "valoraciones/META-20261025-R5.json",
+          "metodo": "ANTERIOR",
+          "estado": "EXCLUIDA_HASTA_REHACER_A",
+          "multiplos": "FUERA_DE_ALCANCE_MODELO_A",
+          "diagnostico": "Rehacer por Modelo A-1.2; conservar como histórico."
+        },
+        "NVDA": {
+          "rutaValoracion": "valoraciones/NVDA-20261025-R4.json",
+          "metodo": "ANTERIOR",
+          "estado": "EXCLUIDA_HASTA_REHACER_A",
+          "multiplos": "FUERA_DE_ALCANCE_MODELO_A",
+          "diagnostico": "Rehacer por Modelo A-1.2; conservar como histórico."
+        },
+        "XP": {
+          "rutaValoracion": "valoraciones/XP-20261026-R2.json",
+          "metodo": "ANTERIOR",
+          "estado": "EXCLUIDA_HASTA_REHACER_A",
+          "multiplos": "FUERA_DE_ALCANCE_MODELO_A",
+          "diagnostico": "Rehacer por Modelo A-1.2; conservar como histórico."
+        },
+        "SHAK": {
+          "rutaValoracion": "valoraciones/SHAK-20261029-A12-R2.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "UBER": {
+          "rutaValoracion": "valoraciones/UBER-20261030-A1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "MELI": {
+          "rutaValoracion": "valoraciones/MELI-20261028-A3.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "CELH": {
+          "rutaValoracion": "valoraciones/CELH-20261028-A1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "ADBE": {
+          "rutaValoracion": "valoraciones/ADBE-20261028-A3.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "BSX": {
+          "rutaValoracion": "valoraciones/BSX-20261028-A4.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "CMG": {
+          "rutaValoracion": "valoraciones/CMG-20261028-A3.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "NFLX": {
+          "rutaValoracion": "valoraciones/NFLX-20261028-A2.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "GOOGL": {
+          "rutaValoracion": "valoraciones/GOOGL-20261029-R5.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "MSFT": {
+          "rutaValoracion": "valoraciones/MSFT-20261028-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "NKE": {
+          "rutaValoracion": "valoraciones/NKE-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "PYPL": {
+          "rutaValoracion": "valoraciones/PYPL-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "EPAM": {
+          "rutaValoracion": "valoraciones/EPAM-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "ZTS": {
+          "rutaValoracion": "valoraciones/ZTS-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "ONON": {
+          "rutaValoracion": "valoraciones/ONON-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "NU": {
+          "rutaValoracion": "valoraciones/NU-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "NVO": {
+          "rutaValoracion": "valoraciones/NVO-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "INTU": {
+          "rutaValoracion": "valoraciones/INTU-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_PENDIENTES",
+          "diagnostico": "Sin cifras conciliadas para los múltiplos principales en el JSON activo; no certificar."
+        },
+        "AFYA": {
+          "rutaValoracion": "valoraciones/AFYA-20261029-R1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        },
+        "DUOL": {
+          "rutaValoracion": "valoraciones/DUOL-20261029-A1.json",
+          "metodo": "A-1.2",
+          "estado": "INCOMPLETA_EN_REVISION",
+          "multiplos": "PRINCIPALES_REGISTRADOS_PENDIENTE_AUDITORIA",
+          "diagnostico": "Existen datos de múltiplos principales, pero quedan por confirmar fuente, anclas, VP y sensibilidad individual."
+        }
+      }
+    },
   "seleccionesDefinitivas": {
     "BSX": {
       "fecha": "2026-10-28",

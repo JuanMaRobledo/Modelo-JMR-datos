@@ -1,0 +1,206 @@
+{
+  "ticker": "NFLX",
+  "nombreActivo": "Netflix Inc.",
+  "fecha": "2026-10-28",
+  "precio": 61.99,
+  "precioAnalisis": 61.99,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "NASDAQ cierre 28oct2026 split-adjusted",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "fechaCorteContable": "2026-09-30",
+  "fechaRevision": "2026-10-28",
+  "sheet_id": "1Pfjx3tqxCty8NwKZqUIx12Wl-lkrnT1ph3f7TqSu6U0",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1Pfjx3tqxCty8NwKZqUIx12Wl-lkrnT1ph3f7TqSu6U0/edit",
+  "revisionId": "NFLX-20261028-A2",
+  "revision_id": "NFLX-20261028-A2",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "publicationAuthorized": true,
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "PENDIENTE_REVISION_VISUAL",
+  "metodoPrincipal": "DCF FCFF perpetuidad",
+  "valorPrincipal": 74.0786659,
+  "mos": 0.35,
+  "precioMOS": 48.1511,
+  "baseMOS": "dcfBase",
+  "reportSchema": "jmr-two-levels-v5",
+  "valorEsperado": {
+    "valor": 72.57183842,
+    "valorCentral": 74.0786659,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.45,
+        "crecimiento": 0.09497716838,
+        "margen": 0.36,
+        "s2c": 1.65,
+        "s2c610": 1.5,
+        "roicTerminal": 0.225,
+        "valor": 74.0786659,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "crecimiento": 0.0699766349,
+        "margen": 0.325,
+        "s2c": 1.25,
+        "s2c610": 1.25,
+        "roicTerminal": 0.145,
+        "valor": 52.99139048,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.1,
+        "crecimiento": -0.00631994,
+        "margen": 0.23,
+        "s2c": 0.85,
+        "s2c610": 1,
+        "roicTerminal": 0.0869,
+        "valor": 23.77436786,
+        "terminalGrowth": 0.025,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1149775779,
+        "margen": 0.38,
+        "s2c": 1.9,
+        "s2c610": 1.7,
+        "roicTerminal": 0.265,
+        "valor": 89.13863139,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": true,
+    "tipoPromedio": "3_historias_sin_disrupcion"
+  },
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "base": 98.9,
+      "conservador": 70.74,
+      "optimista": 119
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1142857,
+      "base": 101
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.1714286,
+      "base": 77.5
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.0571429,
+      "base": 94.5
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.0571428,
+      "base": 72.09
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "base": 78.83
+    },
+    {
+      "nombre": "P/S",
+      "peso": 0
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0
+    }
+  ],
+  "valorPresentePonderado": {
+    "conservador": 49.94,
+    "base": 69.53,
+    "optimista": 85.43
+  },
+  "objetivoPonderado": {
+    "conservador": 66.4,
+    "base": 93.69,
+    "optimista": 116.27,
+    "horizonteAnios": 3
+  },
+  "descuentoMultiples": {
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "multiplesHoy": {
+      "conservador": 45.36,
+      "base": 62.71,
+      "optimista": 79.87
+    },
+    "ponderadoHoy": {
+      "conservador": 49.94,
+      "base": 69.53,
+      "optimista": 85.43
+    }
+  },
+  "revisionSupuestos": {
+    "crecimientoFY1": 0.105,
+    "cagr5": 0.09497717,
+    "margenEBITObjetivo": 0.36,
+    "s2c15": 1.65,
+    "s2c610": 1.5,
+    "roicTerminal": 0.225,
+    "waccInicial": 0.0979,
+    "rf": 0.0505,
+    "gTerminal": 0.04,
+    "valorPrevio": 68.92938,
+    "baseActual": 74.0786659,
+    "contentAdditions9M": 14934.23,
+    "contentAmort9M": 12764.663,
+    "cashContentRatioFY26": 1.1,
+    "contentObligationsSep": 25222.8,
+    "guiaFCFFY26": 12000,
+    "deudaAntes": 17384.63,
+    "deudaActual": 15132.394,
+    "leasesExcluidos": 2252.236,
+    "nAccionesPostSplitMillones": 4106.33
+  },
+  "sensibilidadDCF": {
+    "centro": 74.08,
+    "waccCentro": 0.0979,
+    "gCentro": 0.04,
+    "centroConciliado": true
+  },
+  "salvedades": [
+    "El gasto y pago de contenido no debe omitirse ni duplicarse contra el S/C marginal; SEC 9M26 content additions14.934bn y amort12.765bn.",
+    "La guía FY26 es ventas51.1bn, EBIT margin31.5%, FCF12bn; Q3 margen34.6% favorecido por timing.",
+    "Deuda financiera corregida con B16=deuda corriente + no corriente, excluyendo arrendamientos que ya afectan EBIT.",
+    "ROIC terminal22.5% sujeto a la ventaja competitiva; cash content ratio≈1.1× es guía.",
+    "Auditoría económica no realizada; estado EN_REVISION."
+  ],
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000291/nflx-20260930.htm",
+    "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000290/ex991_q326.htm",
+    "https://docs.google.com/spreadsheets/d/1Pfjx3tqxCty8NwKZqUIx12Wl-lkrnT1ph3f7TqSu6U0/edit"
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen": "<h2>Netflix JMR A2 · EN_REVISION</h2><p>DCF Base US$74,08; conservador US$52,99; optimista US$89,14; disrupción US$23,77. Precio US$61,99. Margen meta36%, CAGR5 9,50%, S/C1,65/1,50, ROIC terminal22,5%; WACC9,79%; g4%. Múltiplos VP US$62,71, ponderado secundario US$69,53.</p><p><a href=\"https://docs.google.com/spreadsheets/d/1Pfjx3tqxCty8NwKZqUIx12Wl-lkrnT1ph3f7TqSu6U0/edit\">Cálculos de 61 pestañas</a></p>"
+    },
+    "financieros": {}
+  }
+}
+

@@ -1,0 +1,346 @@
+{
+  "ticker": "DUOL",
+  "revisionId": "DUOL-20261029-A1",
+  "sourceSheetId": "14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts",
+  "capturedAt": "2026-10-31",
+  "range": "'Valuation output'!A3:M42",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      null,
+      "Base year",
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      "Terminal year"
+    ],
+    [
+      "Revenue growth rate",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Input sheet'!B27;\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!C29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!D29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!E29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!F29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!G29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!H29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!I29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!J29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!K29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!L29;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!B68=\"Yes\";'Input sheet'!B69;IF('Input sheet'!B65=\"Yes\";'Input sheet'!B66;'Input sheet'!B35));\"\"))"
+    ],
+    [
+      "Revenues",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Input sheet'!$B$12;\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B5*(1+C4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C5*(1+D4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D5*(1+E4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E5*(1+F4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F5*(1+G4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G5*(1+H4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H5*(1+I4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I5*(1+J4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J5*(1+K4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K5*(1+L4);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L5*(1+M4);\"\"))"
+    ],
+    [
+      "EBIT (Operating) margin",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B7/B5;\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!B28;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-D3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-E3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-F3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-G3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-H3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-I3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-J3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-K3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-L3));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L6;\"\"))"
+    ],
+    [
+      "EBIT (Operating income)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF('Input sheet'!$B$18=\"Yes\";IF('Input sheet'!$B$17=\"Yes\";'Input sheet'!$B$13+'Input sheet'!$B$80+'R& D converter'!$D$40;'Input sheet'!$B$13+'Input sheet'!$B$80);IF('Input sheet'!$B$17=\"Yes\";'Input sheet'!$B$13+'R& D converter'!$D$40;'Input sheet'!$B$13));\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C6*C5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D6*D5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E6*E5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F6*F5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G6*G5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H6*H5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I6*I5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J6*J5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K6*K5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L6*L5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M6*M5;\"\"))"
+    ],
+    [
+      "Tax rate",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Input sheet'!$B$24;\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$93;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C8;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D8;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E8;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F8;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G8+($M8-$G8)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H8+($M8-$G8)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I8+($M8-$G8)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J8+($M8-$G8)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K8+($M8-$G8)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$60=\"Yes\";'Input sheet'!$B$93;'Input sheet'!$B$25);\"\"))"
+    ],
+    [
+      "EBIT(1-t)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(B7>0;B7*(1-B8);B7);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(C7>0;IF(C7<B12;C7;C7-(C7-B12)*C8);C7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D7>0;IF(D7<C12;D7;D7-(D7-C12)*D8);D7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E7>0;IF(E7<D12;E7;E7-(E7-D12)*E8);E7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F7>0;IF(F7<E12;F7;F7-(F7-E12)*F8);F7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G7>0;IF(G7<F12;G7;G7-(G7-F12)*G8);G7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H7>0;IF(H7<G12;H7;H7-(H7-G12)*H8);H7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I7>0;IF(I7<H12;I7;I7-(I7-H12)*I8);I7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J7>0;IF(J7<I12;J7;J7-(J7-I12)*J8);J7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K7>0;IF(K7<J12;K7;K7-(K7-J12)*K8);K7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L7>0;IF(L7<K12;L7;L7-(L7-K12)*L8);L7);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M7*(1-M8);\"\"))"
+    ],
+    [
+      " - Reinvestment",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(D5-C5)/C40;IF('Input sheet'!$B$58=0;(C5-B5)/C40;IF('Input sheet'!$B$58=2;(E5-D5)/C40;IF('Input sheet'!$B$58=3;(F5-E5)/C40;(D5-C5)/C40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(E5-D5)/D40;IF('Input sheet'!$B$58=0;(D5-C5)/D40;IF('Input sheet'!$B$58=2;(F5-E5)/D40;IF('Input sheet'!$B$58=3;(G5-F5)/D40;(E5-D5)/D40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(F5-E5)/E40;IF('Input sheet'!$B$58=0;(E5-D5)/E40;IF('Input sheet'!$B$58=2;(G5-F5)/E40;IF('Input sheet'!$B$58=3;(H5-G5)/E40;(F5-E5)/E40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(G5-F5)/F40;IF('Input sheet'!$B$58=0;(F5-E5)/F40;IF('Input sheet'!$B$58=2;(H5-G5)/F40;IF('Input sheet'!$B$58=3;(I5-H5)/F40;(G5-F5)/F40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(H5-G5)/G40;IF('Input sheet'!$B$58=0;(G5-F5)/G40;IF('Input sheet'!$B$58=2;(I5-H5)/G40;IF('Input sheet'!$B$58=3;(J5-I5)/G40;(H5-G5)/G40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(I5-H5)/H40;IF('Input sheet'!$B$58=0;(H5-G5)/H40;IF('Input sheet'!$B$58=2;(J5-I5)/H40;IF('Input sheet'!$B$58=3;(K5-J5)/H40;(I5-H5)/H40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(J5-I5)/I40;IF('Input sheet'!$B$58=0;(I5-H5)/I40;IF('Input sheet'!$B$58=2;(K5-J5)/I40;IF('Input sheet'!$B$58=3;(L5-K5)/I40;(J5-I5)/I40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(K5-J5)/J40;IF('Input sheet'!$B$58=0;(J5-I5)/J40;IF('Input sheet'!$B$58=2;(L5-K5)/J40;IF('Input sheet'!$B$58=3;(M5-L5)/J40;(K5-J5)/J40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(L5-K5)/K40;IF('Input sheet'!$B$58=0;(K5-J5)/K40;IF('Input sheet'!$B$58=2;L5*L4/K40;IF('Input sheet'!$B$58=3;M5*M4/K40;(L5-K5)/K40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(M5-L5)/L40;IF('Input sheet'!$B$58=0;(L5-K5)/L40;IF('Input sheet'!$B$58=2;M5*M4/L40;IF('Input sheet'!$B$58=3;K10*(1+M4);(M5-L5)/L40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;M9*(M4/M42);IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    ],
+    [
+      "FCFF",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C9-C10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D9-D10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E9-E10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F9-F10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G9-G10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H9-H10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I9-I10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J9-J10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K9-K10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L9-L10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M9-M10;\"\"))"
+    ],
+    [
+      "NOL",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF('Input sheet'!$B$62=\"Yes\";'Input sheet'!$B$63;0);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(C7<0;B12-C7;IF(B12>C7;B12-C7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D7<0;C12-D7;IF(C12>D7;C12-D7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E7<0;D12-E7;IF(D12>E7;D12-E7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F7<0;E12-F7;IF(E12>F7;E12-F7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G7<0;F12-G7;IF(F12>G7;F12-G7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H7<0;G12-H7;IF(G12>H7;G12-H7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I7<0;H12-I7;IF(H12>I7;H12-I7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J7<0;I12-J7;IF(I12>J7;I12-J7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K7<0;J12-K7;IF(J12>K7;J12-K7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L7<0;K12-L7;IF(K12>L7;K12-L7;0));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(M7<0;L12-M7;IF(L12>M7;L12-M7;0));\"\"))"
+    ],
+    [],
+    [
+      "Cost of capital",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$36;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C14;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D14;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E14;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F14;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G14-($G14-$M14)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H14-($G14-$M14)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I14-($G14-$M14)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J14-($G14-$M14)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K14-($G14-$M14)/5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$46=\"Yes\";'Input sheet'!$B$47;IF('Input sheet'!$B$65=\"Yes\";'Input sheet'!$B$66+'Country equity risk premiums'!$B$2;'Input sheet'!$B$35+'Country equity risk premiums'!$B$2));\"\"))"
+    ],
+    [
+      "Cumulated discount factor",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";1/(1+C14);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C15*(1/(1+D14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D15*(1/(1+E14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E15*(1/(1+F14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F15*(1/(1+G14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G15*(1/(1+H14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H15*(1/(1+I14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I15*(1/(1+J14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J15*(1/(1+K14));\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K15*(1/(1+L14));\"\"))"
+    ],
+    [
+      "PV(FCFF)",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C11*C15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D11*D15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E11*E15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F11*F15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G11*G15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H11*H15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I11*I15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J11*J15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K11*K15;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L11*L15;\"\"))"
+    ],
+    [],
+    [
+      "Terminal cash flow",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M11;\"\"))"
+    ],
+    [
+      "Terminal cost of capital",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M14;\"\"))"
+    ],
+    [
+      "Terminal value",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B18/(B19-M4);\"\"))"
+    ],
+    [
+      "PV(Terminal value)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B20*L15;\"\"))"
+    ],
+    [
+      "PV (CF over next 10 years)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";SUM(C16:L16);\"\"))"
+    ],
+    [
+      "Sum of PV",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B21+B22;\"\"))"
+    ],
+    [
+      "Probability of failure =",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$52=\"Yes\";'Input sheet'!$B$53;0);\"\"))"
+    ],
+    [
+      "Proceeds if firm fails =",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$54=\"B\";('Input sheet'!$B$15+'Input sheet'!$B$16)*'Input sheet'!$B$55;'Valuation output'!B23*'Input sheet'!$B$55);\"\"))"
+    ],
+    [
+      "Value of operating assets =",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B23*(1-B24)+B25*B24;\"\"))"
+    ],
+    [
+      " - Debt",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";(IF('Input sheet'!$B$18=\"Yes\";'Input sheet'!$B$16+'Input sheet'!$B$79;'Input sheet'!$B$16))+IF(AND(ISNUMBER('Cost of capital worksheet'!$B$41);'Cost of capital worksheet'!$B$41>0);IF('Input sheet'!$B$116=\"Incluida en balance y gastos\";'Cost of capital worksheet'!$B$44-'Cost of capital worksheet'!$B$41;'Cost of capital worksheet'!$B$44);0);\"\"))"
+    ],
+    [
+      " - Minority interests",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$21;\"\"))"
+    ],
+    [
+      " +  Cash",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$71=\"YES\";'Input sheet'!$B$19-'Input sheet'!$B$72*('Input sheet'!$B$25-'Input sheet'!$B$73);'Input sheet'!$B$19);\"\"))",
+      null,
+      "If you get Value Errors all over, it is usually because your option worksheet has gone haywire. The fix is very low tech. Go into the option value worksheet, and in cell B17 of that worksheet (adjusted S), enter any number (say 5) and then undo what you did. Voila!"
+    ],
+    [
+      " + Non-operating assets",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$20;\"\"))"
+    ],
+    [
+      "Value of equity",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B26-B27-B28+B29+B30;\"\"))"
+    ],
+    [
+      " - Value of options",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF('Input sheet'!$B$38=\"No\";0;'Option value'!$B$30);\"\"))"
+    ],
+    [
+      "Value of equity in common stock",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B31-B32-N('Input sheet'!$B$76);\"\"))"
+    ],
+    [
+      "Number of shares",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$22;\"\"))"
+    ],
+    [
+      "Estimated value /share",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B33/B34;\"\"))"
+    ],
+    [
+      "Price",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!$B$23;\"\"))"
+    ],
+    [
+      "Price as % of value",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B36/B35;\"\"))"
+    ],
+    [],
+    [
+      "Implied variables",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      "After year 10"
+    ],
+    [
+      "Sales to capital ratio",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$E$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$E$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$E$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$E$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$E$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$F$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$F$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$F$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$F$5;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$F$5;\"\"))"
+    ],
+    [
+      "Invested capital",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF('Input sheet'!$B$18=\"Yes\";IF('Input sheet'!$B$17=\"Yes\";'Input sheet'!$B$15+'Input sheet'!$B$16-'Input sheet'!$B$19-'Input sheet'!$B$83+'Input sheet'!$B$79+'R& D converter'!$D$36;'Input sheet'!$B$15+'Input sheet'!$B$16-'Input sheet'!$B$19-'Input sheet'!$B$83+'Input sheet'!$B$79);IF('Input sheet'!$B$17=\"Yes\";'Input sheet'!$B$15+'Input sheet'!$B$16-'Input sheet'!$B$19-'Input sheet'!$B$83+'R& D converter'!$D$36;'Input sheet'!$B$15+'Input sheet'!$B$16-'Input sheet'!$B$19-'Input sheet'!$B$83));\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";B41+C10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C41+D10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D41+E10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E41+F10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F41+G10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G41+H10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H41+I10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I41+J10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J41+K10;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K41+L10;\"\"))"
+    ],
+    [
+      "ROIC",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B9/B41;\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";C9/B41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";D9/C41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";E9/D41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";F9/E41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";G9/F41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";H9/G41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";I9/H41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";J9/I41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";K9/J41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";L9/K41;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Escenarios e historias'!$G$5;\"\"))"
+    ]
+  ]
+}

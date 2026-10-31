@@ -1,0 +1,298 @@
+{
+  "ticker": "NVO",
+  "revisionId": "NVO-20261029-R1",
+  "sourceSheetId": "1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA",
+  "capturedAt": "2026-10-31",
+  "range": "'Descuento de múltiplos'!A1:M80",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "Novo Nordisk A/S · NVO NYSE · USD proforma IFRS adjusted · NVO-20261029-R1 · Múltiplos a valor presente (1, 2 y 3 años)"
+    ],
+    [
+      "Cada múltiplo da un precio objetivo al cierre de FY+1, FY+2 y FY+3 (múltiplo × métrica proyectada ÷ acciones) más los dividendos por acción hasta ese año. Se trae a hoy con el costo del patrimonio descontando cada dividendo en su año de pago: VP_n = Precio FY+n ÷ (1 + Ke)^n + suma(Dividendo FY+t ÷ (1 + Ke)^t), t = 1..n."
+    ],
+    [],
+    [
+      "Parámetro",
+      "Valor usado",
+      "Entrada manual",
+      "Automático"
+    ],
+    [
+      "Tasa de descuento: Ke (costo del patrimonio del DCF)",
+      0.0896,
+      null,
+      0.0896
+    ],
+    [
+      "Criterio para consolidar cada método",
+      "Promedio 1-3 años",
+      null,
+      "Promedio 1-3 años"
+    ],
+    [
+      "Factor de descuento a 1, 2 y 3 años",
+      0.9177679882525699,
+      0.8422980802611691,
+      0.7730342146302949
+    ],
+    [],
+    [
+      "CONSERVADOR"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0,
+      0
+    ],
+    [
+      "EV/FCFF",
+      0,
+      0
+    ],
+    [
+      "P/E",
+      0,
+      0
+    ],
+    [
+      "P/FCFE",
+      0,
+      0
+    ],
+    [
+      "P/OCF",
+      0,
+      0
+    ],
+    [
+      "Múltiplos consolidados",
+      0,
+      0
+    ],
+    [],
+    [
+      "BASE"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0,
+      0,
+      77.05851420294854,
+      97.92825113274117,
+      120.78432102512836,
+      70.72183755777216,
+      83.51441499826903,
+      96.43173087699074,
+      83.55599447767732,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0,
+      0,
+      89.50884625680897,
+      104.20414362395086,
+      120.77325916752655,
+      82.14835375992013,
+      88.80058719554043,
+      96.42317968258716,
+      89.12404021268257,
+      "OK"
+    ],
+    [
+      "P/E",
+      0,
+      0,
+      81.53026582073164,
+      101.67011921242003,
+      124.61295710655716,
+      74.82586804399013,
+      86.66618329837308,
+      99.39139756330326,
+      86.96114963522216,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0,
+      0,
+      91.29676979273782,
+      106.94051873136218,
+      124.61778439727436,
+      83.78925274663898,
+      91.10543069538744,
+      99.39512922419162,
+      91.42993755540601,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0,
+      0,
+      88.02727627645113,
+      105.02930025103988,
+      124.61507662952623,
+      80.78861625959172,
+      89.4956150384523,
+      99.39303602707704,
+      89.89242244170703,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0,
+      0
+    ],
+    [],
+    [
+      "OPTIMISTA"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0,
+      0
+    ],
+    [
+      "EV/FCFF",
+      0,
+      0
+    ],
+    [
+      "P/E",
+      0,
+      0
+    ],
+    [
+      "P/FCFE",
+      0,
+      0
+    ],
+    [
+      "P/OCF",
+      0,
+      0
+    ],
+    [
+      "Múltiplos consolidados",
+      0,
+      0
+    ],
+    [],
+    [
+      "VALOR HOY · DCF (VALOR INTRÍNSECO) + MÚLTIPLOS DESCONTADOS (SECUNDARIO)"
+    ],
+    [
+      "Concepto",
+      "Peso",
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "DCF · valor intrínseco (valor presente)",
+      null,
+      39.15387273476057,
+      63.42808082810516,
+      93.4743207682763
+    ],
+    [
+      "Múltiplos consolidados (valor presente)",
+      0
+    ],
+    [
+      "Ponderado DCF + múltiplos (secundario)",
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      "Precio de referencia de la hoja",
+      38.29
+    ],
+    [
+      "Descuento del precio frente al ponderado"
+    ],
+    [
+      "Compra con MOS sobre el ponderado (secundario)",
+      0.35,
+      0,
+      0,
+      0
+    ],
+    [],
+    [
+      "CHEQUEO MATEMÁTICO · MÚLTIPLOS A 3 AÑOS"
+    ],
+    [
+      "Concepto",
+      null,
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "Múltiplos FY+3 sin descontar (ponderado)"
+    ],
+    [
+      "Múltiplos a 3 años descontados (ponderado)"
+    ],
+    [
+      "VP a 3 años < FY+3 sin descontar"
+    ],
+    [
+      "Ponderado DCF capitalizado + múltiplos FY+3 (sin descontar)",
+      null,
+      0,
+      0,
+      0
+    ],
+    [
+      "Fuentes: precio + dividendos de cada horizonte = filas 12, 23, 34 (columnas F:H) de EVEBITDA, EVFCFF, PE, PFCFE, POCF; dividendos acumulados = filas 11, 22, 33 (dividendos por acción de «Financials Multiples»). Ke = 'Cost of capital worksheet'!B63 (C5 lo reemplaza). C6 = «Solo 3 años» usa solo el VP a 3 años; vacío = promedio simple de 1, 2 y 3 años."
+    ],
+    [
+      "Los pesos salen de la categoría de empresa del Resumen (I5:U11): el DCF conserva su peso y el de los múltiplos se reparte entre los 5 métodos en la misma proporción (múltiplos solos = 100% entre los múltiplos). Fila 50: DCF capitalizado a FY+3 (DCF hoy × (1 + Ke)^3, antes de distribuciones; riqueza capitalizada, no un precio exdividendo) con su peso + múltiplos FY+3 sin descontar. Resumen C32:E47 muestra DCF, múltiplos consolidados, ponderado y cada método."
+    ]
+  ]
+}
