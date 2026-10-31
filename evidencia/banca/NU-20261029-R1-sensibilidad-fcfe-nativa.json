@@ -1,0 +1,135 @@
+{
+  "ticker": "NU",
+  "revisionId": "NU-20261029-R1",
+  "sourceSheetId": "1PMtFbAoT-rM5O3DnAlnd4JEGPAky15v24NNPjoQS9kI",
+  "sourceRanges": [
+    "'Sensibilidad FCFE A'!A3:F12",
+    "'Sensibilidad FCFE A'!A6:F10",
+    "'FCFE bancario A'!A12:I12",
+    "'FCFE bancario A'!B5",
+    "'FCFE bancario A'!C26:H26",
+    "'FCFE bancario A'!G17:G26"
+  ],
+  "dataCutoff": "2026-10-31",
+  "kind": "EVIDENCIA_SENSIBILIDAD_FCFE_BANCARIA_NO_PUBLICADA",
+  "method": "FCFE bancario, descontado a Ke; NO FCFF industrial, NO matrices de múltiplos",
+  "keInicial": [
+    0.11,
+    0.115,
+    0.12,
+    0.125,
+    0.13
+  ],
+  "crecimientoTerminal": [
+    0.03,
+    0.035,
+    0.04,
+    0.045,
+    0.05
+  ],
+  "matrix": [
+    [
+      20.516952118316294,
+      21.340448422379364,
+      22.296620806188965,
+      23.4216536551305,
+      24.766205108743552
+    ],
+    [
+      18.730051617004555,
+      19.391270214099478,
+      20.150178768294015,
+      21.031199768863054,
+      22.067636610272388
+    ],
+    [
+      17.182975767911266,
+      17.71856123867133,
+      18.327075209464642,
+      19.02534733414501,
+      19.835817151184205
+    ],
+    [
+      15.832657910197193,
+      16.269737638775496,
+      16.761895587843064,
+      17.32093423321902,
+      17.962287581743762
+    ],
+    [
+      14.645639387341813,
+      15.004625763763801,
+      15.40561639651599,
+      15.857012136864405,
+      16.369614079293967
+    ]
+  ],
+  "formulas": [
+    [
+      "=(('FCFE bancario A'!G17/(1+$A6)^1)+('FCFE bancario A'!G18/(1+$A6)^2)+('FCFE bancario A'!G19/(1+$A6)^3)+('FCFE bancario A'!G20/(1+$A6)^4)+('FCFE bancario A'!G21/(1+$A6)^5)+('FCFE bancario A'!G22/(1+$A6)^6)+('FCFE bancario A'!G23/(1+$A6)^7)+('FCFE bancario A'!G24/(1+$A6)^8)+('FCFE bancario A'!G25/(1+$A6)^9)+('FCFE bancario A'!G26/(1+$A6)^10)+('FCFE bancario A'!C26*(1+B$5)*(1-B$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A6-'FCFE bancario A'!D12)-B$5)/(1+$A6)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A6)^1)+('FCFE bancario A'!G18/(1+$A6)^2)+('FCFE bancario A'!G19/(1+$A6)^3)+('FCFE bancario A'!G20/(1+$A6)^4)+('FCFE bancario A'!G21/(1+$A6)^5)+('FCFE bancario A'!G22/(1+$A6)^6)+('FCFE bancario A'!G23/(1+$A6)^7)+('FCFE bancario A'!G24/(1+$A6)^8)+('FCFE bancario A'!G25/(1+$A6)^9)+('FCFE bancario A'!G26/(1+$A6)^10)+('FCFE bancario A'!C26*(1+C$5)*(1-C$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A6-'FCFE bancario A'!D12)-C$5)/(1+$A6)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A6)^1)+('FCFE bancario A'!G18/(1+$A6)^2)+('FCFE bancario A'!G19/(1+$A6)^3)+('FCFE bancario A'!G20/(1+$A6)^4)+('FCFE bancario A'!G21/(1+$A6)^5)+('FCFE bancario A'!G22/(1+$A6)^6)+('FCFE bancario A'!G23/(1+$A6)^7)+('FCFE bancario A'!G24/(1+$A6)^8)+('FCFE bancario A'!G25/(1+$A6)^9)+('FCFE bancario A'!G26/(1+$A6)^10)+('FCFE bancario A'!C26*(1+D$5)*(1-D$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A6-'FCFE bancario A'!D12)-D$5)/(1+$A6)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A6)^1)+('FCFE bancario A'!G18/(1+$A6)^2)+('FCFE bancario A'!G19/(1+$A6)^3)+('FCFE bancario A'!G20/(1+$A6)^4)+('FCFE bancario A'!G21/(1+$A6)^5)+('FCFE bancario A'!G22/(1+$A6)^6)+('FCFE bancario A'!G23/(1+$A6)^7)+('FCFE bancario A'!G24/(1+$A6)^8)+('FCFE bancario A'!G25/(1+$A6)^9)+('FCFE bancario A'!G26/(1+$A6)^10)+('FCFE bancario A'!C26*(1+E$5)*(1-E$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A6-'FCFE bancario A'!D12)-E$5)/(1+$A6)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A6)^1)+('FCFE bancario A'!G18/(1+$A6)^2)+('FCFE bancario A'!G19/(1+$A6)^3)+('FCFE bancario A'!G20/(1+$A6)^4)+('FCFE bancario A'!G21/(1+$A6)^5)+('FCFE bancario A'!G22/(1+$A6)^6)+('FCFE bancario A'!G23/(1+$A6)^7)+('FCFE bancario A'!G24/(1+$A6)^8)+('FCFE bancario A'!G25/(1+$A6)^9)+('FCFE bancario A'!G26/(1+$A6)^10)+('FCFE bancario A'!C26*(1+F$5)*(1-F$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A6-'FCFE bancario A'!D12)-F$5)/(1+$A6)^10))/'FCFE bancario A'!B5"
+    ],
+    [
+      "=(('FCFE bancario A'!G17/(1+$A7)^1)+('FCFE bancario A'!G18/(1+$A7)^2)+('FCFE bancario A'!G19/(1+$A7)^3)+('FCFE bancario A'!G20/(1+$A7)^4)+('FCFE bancario A'!G21/(1+$A7)^5)+('FCFE bancario A'!G22/(1+$A7)^6)+('FCFE bancario A'!G23/(1+$A7)^7)+('FCFE bancario A'!G24/(1+$A7)^8)+('FCFE bancario A'!G25/(1+$A7)^9)+('FCFE bancario A'!G26/(1+$A7)^10)+('FCFE bancario A'!C26*(1+B$5)*(1-B$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A7-'FCFE bancario A'!D12)-B$5)/(1+$A7)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A7)^1)+('FCFE bancario A'!G18/(1+$A7)^2)+('FCFE bancario A'!G19/(1+$A7)^3)+('FCFE bancario A'!G20/(1+$A7)^4)+('FCFE bancario A'!G21/(1+$A7)^5)+('FCFE bancario A'!G22/(1+$A7)^6)+('FCFE bancario A'!G23/(1+$A7)^7)+('FCFE bancario A'!G24/(1+$A7)^8)+('FCFE bancario A'!G25/(1+$A7)^9)+('FCFE bancario A'!G26/(1+$A7)^10)+('FCFE bancario A'!C26*(1+C$5)*(1-C$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A7-'FCFE bancario A'!D12)-C$5)/(1+$A7)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A7)^1)+('FCFE bancario A'!G18/(1+$A7)^2)+('FCFE bancario A'!G19/(1+$A7)^3)+('FCFE bancario A'!G20/(1+$A7)^4)+('FCFE bancario A'!G21/(1+$A7)^5)+('FCFE bancario A'!G22/(1+$A7)^6)+('FCFE bancario A'!G23/(1+$A7)^7)+('FCFE bancario A'!G24/(1+$A7)^8)+('FCFE bancario A'!G25/(1+$A7)^9)+('FCFE bancario A'!G26/(1+$A7)^10)+('FCFE bancario A'!C26*(1+D$5)*(1-D$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A7-'FCFE bancario A'!D12)-D$5)/(1+$A7)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A7)^1)+('FCFE bancario A'!G18/(1+$A7)^2)+('FCFE bancario A'!G19/(1+$A7)^3)+('FCFE bancario A'!G20/(1+$A7)^4)+('FCFE bancario A'!G21/(1+$A7)^5)+('FCFE bancario A'!G22/(1+$A7)^6)+('FCFE bancario A'!G23/(1+$A7)^7)+('FCFE bancario A'!G24/(1+$A7)^8)+('FCFE bancario A'!G25/(1+$A7)^9)+('FCFE bancario A'!G26/(1+$A7)^10)+('FCFE bancario A'!C26*(1+E$5)*(1-E$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A7-'FCFE bancario A'!D12)-E$5)/(1+$A7)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A7)^1)+('FCFE bancario A'!G18/(1+$A7)^2)+('FCFE bancario A'!G19/(1+$A7)^3)+('FCFE bancario A'!G20/(1+$A7)^4)+('FCFE bancario A'!G21/(1+$A7)^5)+('FCFE bancario A'!G22/(1+$A7)^6)+('FCFE bancario A'!G23/(1+$A7)^7)+('FCFE bancario A'!G24/(1+$A7)^8)+('FCFE bancario A'!G25/(1+$A7)^9)+('FCFE bancario A'!G26/(1+$A7)^10)+('FCFE bancario A'!C26*(1+F$5)*(1-F$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A7-'FCFE bancario A'!D12)-F$5)/(1+$A7)^10))/'FCFE bancario A'!B5"
+    ],
+    [
+      "=(('FCFE bancario A'!G17/(1+$A8)^1)+('FCFE bancario A'!G18/(1+$A8)^2)+('FCFE bancario A'!G19/(1+$A8)^3)+('FCFE bancario A'!G20/(1+$A8)^4)+('FCFE bancario A'!G21/(1+$A8)^5)+('FCFE bancario A'!G22/(1+$A8)^6)+('FCFE bancario A'!G23/(1+$A8)^7)+('FCFE bancario A'!G24/(1+$A8)^8)+('FCFE bancario A'!G25/(1+$A8)^9)+('FCFE bancario A'!G26/(1+$A8)^10)+('FCFE bancario A'!C26*(1+B$5)*(1-B$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A8-'FCFE bancario A'!D12)-B$5)/(1+$A8)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A8)^1)+('FCFE bancario A'!G18/(1+$A8)^2)+('FCFE bancario A'!G19/(1+$A8)^3)+('FCFE bancario A'!G20/(1+$A8)^4)+('FCFE bancario A'!G21/(1+$A8)^5)+('FCFE bancario A'!G22/(1+$A8)^6)+('FCFE bancario A'!G23/(1+$A8)^7)+('FCFE bancario A'!G24/(1+$A8)^8)+('FCFE bancario A'!G25/(1+$A8)^9)+('FCFE bancario A'!G26/(1+$A8)^10)+('FCFE bancario A'!C26*(1+C$5)*(1-C$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A8-'FCFE bancario A'!D12)-C$5)/(1+$A8)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A8)^1)+('FCFE bancario A'!G18/(1+$A8)^2)+('FCFE bancario A'!G19/(1+$A8)^3)+('FCFE bancario A'!G20/(1+$A8)^4)+('FCFE bancario A'!G21/(1+$A8)^5)+('FCFE bancario A'!G22/(1+$A8)^6)+('FCFE bancario A'!G23/(1+$A8)^7)+('FCFE bancario A'!G24/(1+$A8)^8)+('FCFE bancario A'!G25/(1+$A8)^9)+('FCFE bancario A'!G26/(1+$A8)^10)+('FCFE bancario A'!C26*(1+D$5)*(1-D$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A8-'FCFE bancario A'!D12)-D$5)/(1+$A8)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A8)^1)+('FCFE bancario A'!G18/(1+$A8)^2)+('FCFE bancario A'!G19/(1+$A8)^3)+('FCFE bancario A'!G20/(1+$A8)^4)+('FCFE bancario A'!G21/(1+$A8)^5)+('FCFE bancario A'!G22/(1+$A8)^6)+('FCFE bancario A'!G23/(1+$A8)^7)+('FCFE bancario A'!G24/(1+$A8)^8)+('FCFE bancario A'!G25/(1+$A8)^9)+('FCFE bancario A'!G26/(1+$A8)^10)+('FCFE bancario A'!C26*(1+E$5)*(1-E$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A8-'FCFE bancario A'!D12)-E$5)/(1+$A8)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A8)^1)+('FCFE bancario A'!G18/(1+$A8)^2)+('FCFE bancario A'!G19/(1+$A8)^3)+('FCFE bancario A'!G20/(1+$A8)^4)+('FCFE bancario A'!G21/(1+$A8)^5)+('FCFE bancario A'!G22/(1+$A8)^6)+('FCFE bancario A'!G23/(1+$A8)^7)+('FCFE bancario A'!G24/(1+$A8)^8)+('FCFE bancario A'!G25/(1+$A8)^9)+('FCFE bancario A'!G26/(1+$A8)^10)+('FCFE bancario A'!C26*(1+F$5)*(1-F$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A8-'FCFE bancario A'!D12)-F$5)/(1+$A8)^10))/'FCFE bancario A'!B5"
+    ],
+    [
+      "=(('FCFE bancario A'!G17/(1+$A9)^1)+('FCFE bancario A'!G18/(1+$A9)^2)+('FCFE bancario A'!G19/(1+$A9)^3)+('FCFE bancario A'!G20/(1+$A9)^4)+('FCFE bancario A'!G21/(1+$A9)^5)+('FCFE bancario A'!G22/(1+$A9)^6)+('FCFE bancario A'!G23/(1+$A9)^7)+('FCFE bancario A'!G24/(1+$A9)^8)+('FCFE bancario A'!G25/(1+$A9)^9)+('FCFE bancario A'!G26/(1+$A9)^10)+('FCFE bancario A'!C26*(1+B$5)*(1-B$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A9-'FCFE bancario A'!D12)-B$5)/(1+$A9)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A9)^1)+('FCFE bancario A'!G18/(1+$A9)^2)+('FCFE bancario A'!G19/(1+$A9)^3)+('FCFE bancario A'!G20/(1+$A9)^4)+('FCFE bancario A'!G21/(1+$A9)^5)+('FCFE bancario A'!G22/(1+$A9)^6)+('FCFE bancario A'!G23/(1+$A9)^7)+('FCFE bancario A'!G24/(1+$A9)^8)+('FCFE bancario A'!G25/(1+$A9)^9)+('FCFE bancario A'!G26/(1+$A9)^10)+('FCFE bancario A'!C26*(1+C$5)*(1-C$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A9-'FCFE bancario A'!D12)-C$5)/(1+$A9)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A9)^1)+('FCFE bancario A'!G18/(1+$A9)^2)+('FCFE bancario A'!G19/(1+$A9)^3)+('FCFE bancario A'!G20/(1+$A9)^4)+('FCFE bancario A'!G21/(1+$A9)^5)+('FCFE bancario A'!G22/(1+$A9)^6)+('FCFE bancario A'!G23/(1+$A9)^7)+('FCFE bancario A'!G24/(1+$A9)^8)+('FCFE bancario A'!G25/(1+$A9)^9)+('FCFE bancario A'!G26/(1+$A9)^10)+('FCFE bancario A'!C26*(1+D$5)*(1-D$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A9-'FCFE bancario A'!D12)-D$5)/(1+$A9)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A9)^1)+('FCFE bancario A'!G18/(1+$A9)^2)+('FCFE bancario A'!G19/(1+$A9)^3)+('FCFE bancario A'!G20/(1+$A9)^4)+('FCFE bancario A'!G21/(1+$A9)^5)+('FCFE bancario A'!G22/(1+$A9)^6)+('FCFE bancario A'!G23/(1+$A9)^7)+('FCFE bancario A'!G24/(1+$A9)^8)+('FCFE bancario A'!G25/(1+$A9)^9)+('FCFE bancario A'!G26/(1+$A9)^10)+('FCFE bancario A'!C26*(1+E$5)*(1-E$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A9-'FCFE bancario A'!D12)-E$5)/(1+$A9)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A9)^1)+('FCFE bancario A'!G18/(1+$A9)^2)+('FCFE bancario A'!G19/(1+$A9)^3)+('FCFE bancario A'!G20/(1+$A9)^4)+('FCFE bancario A'!G21/(1+$A9)^5)+('FCFE bancario A'!G22/(1+$A9)^6)+('FCFE bancario A'!G23/(1+$A9)^7)+('FCFE bancario A'!G24/(1+$A9)^8)+('FCFE bancario A'!G25/(1+$A9)^9)+('FCFE bancario A'!G26/(1+$A9)^10)+('FCFE bancario A'!C26*(1+F$5)*(1-F$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A9-'FCFE bancario A'!D12)-F$5)/(1+$A9)^10))/'FCFE bancario A'!B5"
+    ],
+    [
+      "=(('FCFE bancario A'!G17/(1+$A10)^1)+('FCFE bancario A'!G18/(1+$A10)^2)+('FCFE bancario A'!G19/(1+$A10)^3)+('FCFE bancario A'!G20/(1+$A10)^4)+('FCFE bancario A'!G21/(1+$A10)^5)+('FCFE bancario A'!G22/(1+$A10)^6)+('FCFE bancario A'!G23/(1+$A10)^7)+('FCFE bancario A'!G24/(1+$A10)^8)+('FCFE bancario A'!G25/(1+$A10)^9)+('FCFE bancario A'!G26/(1+$A10)^10)+('FCFE bancario A'!C26*(1+B$5)*(1-B$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A10-'FCFE bancario A'!D12)-B$5)/(1+$A10)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A10)^1)+('FCFE bancario A'!G18/(1+$A10)^2)+('FCFE bancario A'!G19/(1+$A10)^3)+('FCFE bancario A'!G20/(1+$A10)^4)+('FCFE bancario A'!G21/(1+$A10)^5)+('FCFE bancario A'!G22/(1+$A10)^6)+('FCFE bancario A'!G23/(1+$A10)^7)+('FCFE bancario A'!G24/(1+$A10)^8)+('FCFE bancario A'!G25/(1+$A10)^9)+('FCFE bancario A'!G26/(1+$A10)^10)+('FCFE bancario A'!C26*(1+C$5)*(1-C$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A10-'FCFE bancario A'!D12)-C$5)/(1+$A10)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A10)^1)+('FCFE bancario A'!G18/(1+$A10)^2)+('FCFE bancario A'!G19/(1+$A10)^3)+('FCFE bancario A'!G20/(1+$A10)^4)+('FCFE bancario A'!G21/(1+$A10)^5)+('FCFE bancario A'!G22/(1+$A10)^6)+('FCFE bancario A'!G23/(1+$A10)^7)+('FCFE bancario A'!G24/(1+$A10)^8)+('FCFE bancario A'!G25/(1+$A10)^9)+('FCFE bancario A'!G26/(1+$A10)^10)+('FCFE bancario A'!C26*(1+D$5)*(1-D$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A10-'FCFE bancario A'!D12)-D$5)/(1+$A10)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A10)^1)+('FCFE bancario A'!G18/(1+$A10)^2)+('FCFE bancario A'!G19/(1+$A10)^3)+('FCFE bancario A'!G20/(1+$A10)^4)+('FCFE bancario A'!G21/(1+$A10)^5)+('FCFE bancario A'!G22/(1+$A10)^6)+('FCFE bancario A'!G23/(1+$A10)^7)+('FCFE bancario A'!G24/(1+$A10)^8)+('FCFE bancario A'!G25/(1+$A10)^9)+('FCFE bancario A'!G26/(1+$A10)^10)+('FCFE bancario A'!C26*(1+E$5)*(1-E$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A10-'FCFE bancario A'!D12)-E$5)/(1+$A10)^10))/'FCFE bancario A'!B5",
+      "=(('FCFE bancario A'!G17/(1+$A10)^1)+('FCFE bancario A'!G18/(1+$A10)^2)+('FCFE bancario A'!G19/(1+$A10)^3)+('FCFE bancario A'!G20/(1+$A10)^4)+('FCFE bancario A'!G21/(1+$A10)^5)+('FCFE bancario A'!G22/(1+$A10)^6)+('FCFE bancario A'!G23/(1+$A10)^7)+('FCFE bancario A'!G24/(1+$A10)^8)+('FCFE bancario A'!G25/(1+$A10)^9)+('FCFE bancario A'!G26/(1+$A10)^10)+('FCFE bancario A'!C26*(1+F$5)*(1-F$5/'FCFE bancario A'!F12)/(('FCFE bancario A'!H12+$A10-'FCFE bancario A'!D12)-F$5)/(1+$A10)^10))/'FCFE bancario A'!B5"
+    ]
+  ],
+  "base": {
+    "valorPorAccion": 18.32707520946464,
+    "keCentral": 0.12,
+    "gTerminal": 0.04,
+    "roeTerminal": 0.22,
+    "keTerminal": 0.11,
+    "sharesMillions": 4908.8,
+    "niTerminalMillions": 16828.25750012359,
+    "fcfeTenYearMillions": [
+      3052.4385936507915,
+      1839.7995208653338,
+      2613.1155804838727,
+      3590.002305716669,
+      3989.8219470926997,
+      4889.945788250796,
+      5910.949720332717,
+      7044.618904240368,
+      8274.51698977044,
+      7835.4232101020825
+    ]
+  },
+  "checks": {
+    "formulas": 25,
+    "independentCellsReconciled": 25,
+    "maxAbsoluteDifference": 0,
+    "centerDelta": 3.552713678800501e-15,
+    "sourceCenterCheck": 3.552713678800501e-15,
+    "originalValuationModified": false,
+    "bankMultiplesCertified": false,
+    "economicAuditPerformed": false
+  }
+}
