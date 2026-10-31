@@ -1319,5 +1319,69 @@
     "https://fincast.info/pairs/usd-brl/archive",
     "https://aswathdamodaran.substack.com/p/country-risk-determinants-measures",
     "https://stockanalysis.com/stocks/xp/history/"
-  ]
+  ],
+  "riskSensitivity": {
+    "type": "ceteris_paribus_ke_shock_br_fx_5x5",
+    "rows": {
+      "type": "prima adicional de riesgo sobre CRP, USD p.p.",
+      "values": [
+        0,
+        0.01,
+        0.02,
+        0.03,
+        0.04
+      ]
+    },
+    "columns": {
+      "type": "FX BRL por USD",
+      "values": [
+        5.05,
+        5.25,
+        5.4209,
+        5.6,
+        5.85
+      ]
+    },
+    "matrixUSDperShare": [
+      [
+        19.944897434741534,
+        19.18509181817995,
+        18.580260112793955,
+        17.986023579543705,
+        17.217390093238418
+      ],
+      [
+        17.479688935813577,
+        16.81379602397306,
+        16.283722098887374,
+        15.762933772474744,
+        15.089304124078389
+      ],
+      [
+        15.538757691991952,
+        14.946805018011306,
+        14.475590094736917,
+        14.0126297043856,
+        13.413799375138352
+      ],
+      [
+        13.971457165243764,
+        13.439211177996382,
+        13.015524854633181,
+        12.59926047937161,
+        12.06083054435573
+      ],
+      [
+        12.679770837580145,
+        12.196731948529472,
+        11.812216187308332,
+        11.434436201746381,
+        10.94578508201363
+      ]
+    ],
+    "center": 14.475590094736917,
+    "method": "Descuento anual reestimado conservando FCFE y ROE proyectados fijos, KeBRL shock = KeBRLbase + (shock - 2pp)*(1+infBRL)/(1+infUSD); FX conversión final; no es reestimación de demanda, capital ni ROE por shock",
+    "disclaimer": "Sensibilidad condicional, no probable ni aprobada. El riesgo país se mantiene separado de la beta; evitar doble descuento en escenarios.",
+    "source": "Cálculo independiente trazable a las series de FCFE y tasas del libro XP copia 31-oct-2026"
+  }
 }
