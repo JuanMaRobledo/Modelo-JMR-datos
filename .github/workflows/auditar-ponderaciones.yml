@@ -85,12 +85,15 @@ jobs:
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
-      - run: node scripts/validar_catalogo.cjs
+      # Ejecutar las pruebas independientes primero para exponer todos los
+      # errores de una pasada. El gate financiero obligatorio sigue al final:
+      # un catálogo incompleto mantiene el workflow en rojo, sin excepciones.
       - run: node scripts/auditar_integridad.cjs
       - run: node --test scripts/tests/*.test.cjs
       - run: python3 scripts/verificar_cierre_multiplos.py
-
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
+      - name: Gate financiero obligatorio del catálogo Método A
+        run: node scripts/validar_catalogo.cjs
 
 
 
