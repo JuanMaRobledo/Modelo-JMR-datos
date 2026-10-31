@@ -28,11 +28,11 @@ Se contrastó `proxy.js`: devuelve ese resultado cuando falta `APP_PASSWORD`. La
 
 ## Pruebas de esta continuación
 
-- 10 pruebas Python de índices, identidad, reproducción, estados pendientes y rechazo de cambios indebidos: aprobadas localmente.
+- 12 pruebas Python de índices, identidad, reproducción, estados pendientes y rechazo de cambios indebidos: aprobadas localmente.
 - 5 pruebas Node del contrato de matrices: aprobadas localmente.
 - Protección de datos: 20/20 valoraciones idénticas fuera de descuentos; 20/20 nuevos destinos N1/N2 sin duplicados.
 - Control editorial: ejecutado sobre las 20 empresas. Falla en las cuatro extensiones insuficientes señaladas arriba; los otros 16 conservan avisos por capítulos que aún requieren investigación.
-- Se incorpora la nueva suite Python al workflow antes del gate de catálogo.
+- Se incorpora la nueva suite Python al workflow antes del gate de catálogo. El primer CI detectó selección accidental de un histórico de AFYA en las pruebas y en el punto de entrada de restauración; se corrigió usando exclusivamente las rutas activas del catálogo y se añadieron dos regresiones de identidad.
 - El gate financiero global no se da por recuperado. SHAK, MELI, GOOGL, UBER, INTU y NU conservan sus dependencias previamente identificadas.
 
 ## Pendientes concretos

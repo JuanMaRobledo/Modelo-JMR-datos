@@ -5,12 +5,14 @@ import json
 import re
 import sys
 import unittest
+import tempfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'scripts'))
 from integrar_descuentos_nativos import integrate
 from estandarizar_nivel1 import standardize, Document
+from restaurar_nivel2_desde_foto import active_analysis_path
 
 class NativeDiscountTests(unittest.TestCase):
     def fixture(self,ticker='ADBE'):
@@ -59,6 +61,20 @@ class NativeDiscountTests(unittest.TestCase):
                 self.assertEqual(len(method['base']['vp']),3)
 
 class EditorialTests(unittest.TestCase):
+    def test_historical_filename_never_selects_active_report(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'analisis').mkdir()
+            (root/'analisis/AFYA-000-historico.json').write_text('{}')
+            active=root/'analisis/AFYA-activo.json';active.write_text('{}')
+            (root/'catalogo.json').write_text(json.dumps({'analisis':['analisis/AFYA-activo.json']}))
+            self.assertEqual(active_analysis_path(root,'AFYA'),active)
+
+    def test_ambiguous_active_catalog_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/'catalogo.json').write_text(json.dumps({'analisis':['analisis/AFYA-one.json','analisis/AFYA-two.json']}))
+            with self.assertRaises(ValueError): active_analysis_path(root,'AFYA')
+
     def test_twenty_linked_indices_and_cycle_chapters(self):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
@@ -78,7 +94,7 @@ class EditorialTests(unittest.TestCase):
 
     def test_two_n2_reports_have_twelve_sourced_sections(self):
         for ticker in ['AFYA','DUOL']:
-            a=json.loads(next((ROOT/'analisis').glob(ticker+'-*')).read_text())
+            a=json.loads(active_analysis_path(ROOT,ticker).read_text())
             h=a['calculationHtml']
             for i in range(1,13):
                 self.assertIn('id="jmr-'+ticker.lower()+'-n2-repro-'+str(i)+'"',h)
@@ -88,7 +104,7 @@ class EditorialTests(unittest.TestCase):
 
     def test_four_expansions_are_specific_and_do_not_certify(self):
         for ticker in ['SHAK','UBER','AFYA','DUOL']:
-            a=json.loads(next((ROOT/'analisis').glob(ticker+'-*')).read_text())
+            a=json.loads(active_analysis_path(ROOT,ticker).read_text())
             self.assertEqual(a['ampliacionEditorial20261031']['capitulosAmpliados'],list(range(1,15)))
             self.assertFalse(a['ampliacionEditorial20261031']['supuestosModificados'])
             self.assertFalse(a['ampliacionEditorial20261031']['auditoriaEconomicaEjecutada'])

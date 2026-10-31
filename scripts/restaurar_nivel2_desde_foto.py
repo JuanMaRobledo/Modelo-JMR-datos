@@ -72,9 +72,16 @@ def build(a,v,snapshot,formula,current):
     a['nivel2Reproduccion20261031']={'apartados':12,'fuenteSha256':digest,'revisionId':a['revisionId'],'baseActualContrastada':True,'historicosReauditados':False,'auditoriaEconomicaEjecutada':False}
     return a
 
+def active_analysis_path(root,ticker):
+    catalog=json.loads((root/'catalogo.json').read_text())
+    paths=[root/path for path in catalog['analisis'] if Path(path).name.startswith(ticker+'-')]
+    if len(paths)!=1:
+        raise ValueError('Expected one active analysis for '+ticker)
+    return paths[0]
+
 if __name__=='__main__':
     for ticker in ['AFYA','DUOL']:
-        p=next((ROOT/'analisis').glob(ticker+'-*'));a=json.loads(p.read_text())
+        p=active_analysis_path(ROOT,ticker);a=json.loads(p.read_text())
         v=json.loads((ROOT/'valoraciones'/(a['revisionId']+'.json')).read_text())
         snapshot=json.loads((ROOT/'evidencia/integracion-nativa-20261030'/a['revisionId']/'resultados_hoja.json').read_text())
         directory=ROOT/'evidencia/descuentos-20261031'
