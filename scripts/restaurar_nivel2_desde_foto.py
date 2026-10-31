@@ -62,14 +62,10 @@ def build(a,v,snapshot,formula,current):
     assert len(blocks)==12
     html='<div data-jmr-n2-reproducible="20261031"><h2>Nivel 2 · datos, fórmulas y conciliaciones</h2><nav aria-label="Índice del Nivel 2"><ol>'+''.join('<li><a href="#'+prefix+str(i)+'">'+str(i)+'. '+h+'</a></li>' for i,h in enumerate(headings,1))+'</ol></nav>'
     html+=''.join('<section id="'+prefix+str(i)+'"><h3>'+str(i)+'. '+title+'</h3>'+body+'</section>' for i,(title,body) in enumerate(zip(headings,blocks),1))+'</div>'
-    old=a.get('calculationHtml','')
-    if 'data-jmr-n2-reproducible=' in old:
-        marker=old.find('<details data-soporte-complementario=')
-        old=old[marker:] if marker>=0 else ''
-    else:
-        old=re.sub(r'^<section><h2>Soporte cuantitativo pendiente de importación</h2>[\s\S]*?</section>', '', old)
-        old=re.sub(r'<section data-descuentos-nativos="20261031">[\s\S]*?</section>', '', old)
-        old='<details data-soporte-complementario="20261031"><summary>Notas y tablas complementarias conservadas</summary>'+old.replace('<h2','<h4').replace('</h2>','</h4>')+'</details>'
+    source_notes=ROOT/'evidencia/nivel2-20261031'/(a['revisionId']+'-soporte-previo.html')
+    old=source_notes.read_text()
+    old=re.sub(r'^<section><h2>Soporte cuantitativo pendiente de importación</h2>[\s\S]*?</section>', '', old)
+    old='<details data-soporte-complementario="20261031"><summary>Notas y tablas complementarias conservadas</summary>'+old.replace('<h2','<h4').replace('</h2>','</h4>')+'</details>'
     html+=old
     a['calculationHtml']=html
     a['html']=a['articleHtml']+html
