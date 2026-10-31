@@ -1,5 +1,14 @@
 # Depuración y estandarización — 31 de octubre de 2026
 
+## INTU Nivel 2 — DCF reproducible, múltiplos aún no validados
+
+- Se hizo una lectura **solo lectura** de `INTU A - DCF!A10:G21`, de sus fórmulas y del puente `A23:G33`. Se guardó la fotografía de datos/fórmulas y el análisis previo en `evidencia/intu-dcf-20261031/`.
+- En el análisis vigente `INTU-20261029-R1` se añadió el cuadro de crecimiento, margen, NOPAT, Sales-to-Capital, reinversión incremental, FCFF y VP de los **cinco primeros años**; también el puente 10 años/valor terminal/EV/deuda neta/equity/valor por acción. **Únicamente cambió `calculationHtml` y el `html` integrado**, sin tocar Nivel 1, la valoración, WACC, ROIC, S/C, MOS, ni escenarios.
+- Control de NI/FCFF: se verificó en cinco años `FCFF=NOPAT−reinversión`, `reinversión=Δventas/Sales-to-Capital`, `VP=FCFF×factor`, y la igualdad `EV=VP10+VP terminal`; el DCF Base permanece **US$506,8516262/acción**, MOS **US$329,45355703**.
+- La prueba `scripts/tests/intu_n2_dcf_repro.test.cjs` pasó en GitHub Actions junto con `nu_n2_reconciliation.test.cjs` y el control de no regresión. El expediente **NO** dispone de bloque `descuentoMultiples` nativo aprobado: los siete múltiples relativos siguen pendientes, con `peso=null`; las seis cuadrículas del Nivel 2 son exploratorias, no oficiales.
+- **Estado financiero general sin cambios:** 16/20 matrices Base integradas, primer gate rojo en UBER; PR abierto en borrador y sin QA visual autenticado. No fusionar hasta resolver fuentes de anclas.
+
+
 ## Seguimiento posterior — NI/FCFE NU y anclas UBER/GOOGL
 
 **Cambios efectivos de esta pasada, sin publicación:**
