@@ -151,8 +151,275 @@
       "base": 2373.806185107163,
       "optimista": 3417.7771203096413
     },
-    "metodos": [],
-    "chequeo": "Valor presente ponderado secundario; DCF principal. Múltiplos calculados en Google Sheet fuente."
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0.26666666666666666,
+        "pesoRelativo": 0.6666666666666666,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            1790.7808837697494,
+            2213.330041193478,
+            2657.475448805895
+          ],
+          "vp": [
+            1605.3626544238148,
+            1778.7200098965045,
+            1914.5264868921074
+          ],
+          "consolidado": 1766.2030504041422,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D11:K11"
+        },
+        "base": {
+          "fy": [
+            2515.809988075985,
+            3716.605066484829,
+            5013.899116722083
+          ],
+          "vp": [
+            2255.3219308336656,
+            2986.8115814641906,
+            3612.166075093064
+          ],
+          "consolidado": 2951.4331957969735,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": {
+          "fy": [
+            3013.1232558698302,
+            4753.958549923195,
+            6695.199797526996
+          ],
+          "vp": [
+            2701.143167201274,
+            3820.4700797389037,
+            4823.426441497243
+          ],
+          "consolidado": 3781.6798961458067,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D29:K29"
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "N/A: flujo negativo",
+        "conservador": {
+          "fy": [
+            -751.3120845933054,
+            -659.5336916232658,
+            -454.46074473490296
+          ],
+          "vp": [
+            -673.5209055193807,
+            -530.0274937119804,
+            -327.4074021788775
+          ],
+          "consolidado": -510.3186004700795,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D12:K12"
+        },
+        "base": {
+          "fy": [
+            -1517.3321990690272,
+            -1223.4490841725801,
+            -683.795070492422
+          ],
+          "vp": [
+            -1360.2269651284544,
+            -983.2123210752061,
+            -492.62685555655685
+          ],
+          "consolidado": -945.355380586739,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": {
+          "fy": [
+            -2173.8356999057946,
+            -1689.1618409563391,
+            -969.9630326015782
+          ],
+          "vp": [
+            -1948.7558087708064,
+            -1357.4776063865006,
+            -698.7909965664383
+          ],
+          "consolidado": -1335.0081372412485,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D30:K30"
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0.13333333333333333,
+        "pesoRelativo": 0.3333333333333333,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            1809.2195581562812,
+            2133.3882209785593,
+            2552.9124937844476
+          ],
+          "vp": [
+            1621.892180467731,
+            1714.4755851621117,
+            1839.1961401804485
+          ],
+          "consolidado": 1725.1879686034301,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D13:K13"
+        },
+        "base": {
+          "fy": [
+            2378.415609978211,
+            3457.856828130751,
+            4702.34710952753
+          ],
+          "vp": [
+            2132.153426230446,
+            2778.8712108370896,
+            3387.7144926385995
+          ],
+          "consolidado": 2766.2463765687116,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": {
+          "fy": [
+            2890.030499645721,
+            4524.412468060649,
+            6440.337098775316
+          ],
+          "vp": [
+            2590.795488340477,
+            3635.9977229718634,
+            4639.815568440958
+          ],
+          "consolidado": 3622.2029265844326,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D31:K31"
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "N/A: flujo negativo",
+        "conservador": {
+          "fy": [
+            -514.864139301421,
+            -448.3501254620794,
+            -295.0057537166335
+          ],
+          "vp": [
+            -461.5548830276855,
+            -360.3119845465905,
+            -212.53115603752767
+          ],
+          "consolidado": -344.79934120393455,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D14:K14"
+        },
+        "base": {
+          "fy": [
+            -1045.9021128666898,
+            -852.9922781465274,
+            -485.63974504369855
+          ],
+          "vp": [
+            -937.60895450514,
+            -685.4985046009251,
+            -349.8697063754519
+          ],
+          "consolidado": -657.6590551605057,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": {
+          "fy": [
+            -1580.9473558107875,
+            -1250.1823567697952,
+            -749.8018588760791
+          ],
+          "vp": [
+            -1417.2553809520343,
+            -1004.6962416897042,
+            -540.180162109954
+          ],
+          "consolidado": -987.3772615838975,
+          "chequeo": "n/a (≤ 0)",
+          "origen": "'Descuento de múltiplos'!D32:K32"
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "fy": [
+            -28.794935322961887,
+            13.353068775143823,
+            80.6520904017036
+          ],
+          "vp": [
+            -25.813495231600726,
+            10.731056906029815,
+            58.10422947337511
+          ],
+          "consolidado": 14.340597049268068,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D15:K15"
+        },
+        "base": {
+          "fy": [
+            -105.69697421043085,
+            -18.881095270016022,
+            118.92273847384601
+          ],
+          "vp": [
+            -94.75306366115963,
+            -15.173598758651641,
+            85.67557333567348
+          ],
+          "consolidado": -8.083696361379262,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": {
+          "fy": [
+            -186.5915718896635,
+            -51.11256407341139,
+            136.28171999974913
+          ],
+          "vp": [
+            -167.27179961365763,
+            -41.07608841990444,
+            98.18151386345735
+          ],
+          "consolidado": -36.72212472336824,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D33:K33"
+        }
+      }
+    ],
+    "chequeo": "Valor presente ponderado secundario; DCF principal. Múltiplos calculados en Google Sheet fuente.",
+    "integracionNativa": {
+      "revisionId": "MELI-20261028-A3",
+      "sourceSheetId": "15n1KYTSW2H3tVz1erPDpvZpOKmFS39KU9SyGQRFy7yg",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "fechaCaptura": "2026-10-31",
+      "estado": "DESCUENTOS_CONCILIADOS_PENDIENTE_MATRICES",
+      "certificadoEconomico": false,
+      "publicado": false,
+      "origen": "Filas nativas y fórmulas verificadas de Google Sheets",
+      "nota": "Se añadieron solo cinco métodos faltantes. N/A por VP3 y flujos FY+3 negativos con peso 0. No modifica DCF, pesos ni valores esperados. La integración de matrices 5x5 y auditoría económica sigue pendiente."
+    }
   },
   "precioMOSHoy": {
     "conservador": 1319.4181895759314,
