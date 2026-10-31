@@ -69,6 +69,7 @@ jobs:
       - run: node --test scripts/tests/msft_discount_native.test.cjs
       - run: node --test scripts/tests/nu_fcfe_bancario.test.cjs
       - run: node --test scripts/tests/anclas_uber_googl.test.cjs
+      - run: node --test scripts/tests/ponderaciones_no_sobrescribir.test.cjs
       - run: node --test scripts/tests/nu_fcfe_bank_25_formulas.test.cjs
       - run: node --test scripts/tests/nu_n2_reconciliation.test.cjs
       - run: node --test scripts/tests/anclas_uber_googl_fuente.test.cjs
