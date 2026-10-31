@@ -62,3 +62,25 @@ test('detecta discrepancia numérica de vínculo sin convertirla en cierre',t=>{
   assert.ok(a.issues.includes('Valor principal divergente en vínculo'));
   assert.equal(a.estadoInventario,'PENDIENTE_EXPORTACION_Y_CONCILIACION');
 });
+
+test('captura de rango se cuenta como evidencia, nunca como matriz integrada',t=>{
+  const {root,put}=fixture();t.after(()=>fs.rmSync(root,{force:true,recursive:true}));
+  const vp='valoraciones/A.json',v=JSON.parse(fs.readFileSync(path.join(root,vp),'utf8'));
+  v.sheet_id='SHEET-A';put(vp,v);
+  const file='candidatos/hoja-multiples/A-R1-captura-rango.json';
+  const candidate={tipo:'CAPTURA_ACOTADA_NO_PUBLICADA',ticker:'A',revisionId:'A-R1',
+    sourceSheetId:'SHEET-A',hashFotografiaCompleta:null,
+    metodos:CORE.map(metodo=>({metodo,prioritario:true,estadoHoja:'OK',
+      matriz:Array.from({length:5},()=>[1,2,3,4,5])}))};
+  put(file,candidate);
+  const result=inspect(root);
+  assert.equal(result.metodoAConCapturaParcial,1);
+  assert.equal(result.metodoAConCincoMatricesPrioritariasEnCaptura,1);
+  assert.equal(result.metodoAConMatrices5x5,0,
+    'no declarar matriz oficial solo porque hay captura de rango');
+  assert.equal(result.empresas.find(x=>x.ticker==='A').capturaParcialEsSoloCandidata,true);
+  candidate.sourceSheetId='OTHER';put(file,candidate);
+  const bad=inspect(root);
+  assert.equal(bad.metodoAConCapturaParcial,0);
+  assert.ok(bad.empresas.find(x=>x.ticker==='A').issues.some(x=>x.includes('Captura parcial sin identidad')));
+});
