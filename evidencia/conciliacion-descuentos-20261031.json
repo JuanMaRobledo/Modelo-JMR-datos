@@ -1,0 +1,505 @@
+{
+  "cutoff": "2026-10-31",
+  "name": "Conciliacion de descuentos relativos 7 Metodo A-1.2",
+  "kind": "READ_ONLY_SNAPSHOT_NOT_PUBLICATION",
+  "policy": "Las ponderaciones de la hoja no sobrescriben el JSON oficial; MSFT integrada solo si todas las ponderaciones y formulas concilian; los otros seis quedan retenidos.",
+  "entries": [
+    {
+      "ticker": "EPAM",
+      "revisionId": "EPAM-20261029-R1",
+      "sourceSheetId": "1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 184.4085326
+      },
+      "source": {
+        "pesoDcf": 0.5,
+        "pesoMultiplos": 0.5,
+        "dcfBase": 184.40853259047017,
+        "relative": {
+          "conservador": 213.21628677028139,
+          "base": 210.9996826784673,
+          "optimista": 215.28073932139867
+        },
+        "weighted": {
+          "conservador": 169.730320425643,
+          "base": 197.70410763446876,
+          "optimista": 231.99336260955204
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.1,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.1,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.1,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.1,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.1,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": false,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    },
+    {
+      "ticker": "MSFT",
+      "revisionId": "MSFT-20261028-R1",
+      "sourceSheetId": "1WNgt14r3sRRGWOHgRyzy-ZAkpqTsioZv2jP8OdfrWi4",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 480.836687
+      },
+      "source": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.40000000000000013,
+        "dcfBase": 480.83668700585315,
+        "relative": {
+          "conservador": 579.4899838140268,
+          "base": 615.7122466676293,
+          "optimista": 694.1303537066592
+        },
+        "weighted": {
+          "conservador": 419.85836943494417,
+          "base": 534.7869108705637,
+          "optimista": 706.4610873013141
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0.10000000000000003,
+          "sheetWeight": 0.10000000000000003,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0.15,
+          "sheetWeight": 0.15,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0.05000000000000002,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0.05000000000000002,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0.05000000000000002,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": true,
+      "methodsMatch": true,
+      "status": "INTEGRADO_TEST_APROBADO"
+    },
+    {
+      "ticker": "NKE",
+      "revisionId": "NKE-20261029-R1",
+      "sourceSheetId": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 37.72796351
+      },
+      "source": {
+        "pesoDcf": 0.4,
+        "pesoMultiplos": 0.5999999999999999,
+        "dcfBase": 37.72796351487522,
+        "relative": {
+          "conservador": 36.44410849205137,
+          "base": 36.24313810012622,
+          "optimista": 37.167841611562494
+        },
+        "weighted": {
+          "conservador": 31.259771033261096,
+          "base": 36.83706826602581,
+          "optimista": 43.51649491493309
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.09999999999999998,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.04999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.04999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": false,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    },
+    {
+      "ticker": "NVO",
+      "revisionId": "NVO-20261029-R1",
+      "sourceSheetId": "1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA",
+      "json": {
+        "pesoDcf": null,
+        "pesoMultiplos": null,
+        "dcfBase": 63.42808082810516
+      },
+      "source": {
+        "pesoDcf": 0.55,
+        "pesoMultiplos": 0.44999999999999996,
+        "dcfBase": 63.42808082810516,
+        "relative": {
+          "conservador": 93.76876113426408,
+          "base": 88.86284472401655,
+          "optimista": 87.6607460877045
+        },
+        "weighted": {
+          "conservador": 63.730572514537144,
+          "base": 74.8737245812653,
+          "optimista": 90.85821216201899
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.049999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999998,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.049999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.09999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.049999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": false,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    },
+    {
+      "ticker": "ONON",
+      "revisionId": "ONON-20261029-R1",
+      "sourceSheetId": "1cyilxyBVYI8Q7ouK8Ybm4SW5WFXP9SaPA--S_m3Fb7U",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 40.8121982
+      },
+      "source": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.40000000000000013,
+        "dcfBase": 40.8121981979253,
+        "relative": {
+          "conservador": 39.13100070558798,
+          "base": 38.07447159287053,
+          "optimista": 43.732380335129264
+        },
+        "weighted": {
+          "conservador": 29.447106186438145,
+          "base": 39.7171075559034,
+          "optimista": 56.457076139273326
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.10000000000000003,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.15,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.05000000000000002,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": true,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    },
+    {
+      "ticker": "PYPL",
+      "revisionId": "PYPL-20261029-R1",
+      "sourceSheetId": "17RZXWm5RmfQpMPKqsN1EDynzFxhLBrQdv0vjeSosTEM",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 137.807737
+      },
+      "source": {
+        "pesoDcf": 0.4,
+        "pesoMultiplos": 0.5999999999999999,
+        "dcfBase": 137.8077369908573,
+        "relative": {
+          "conservador": 86.51423840356838,
+          "base": 91.4758919588998,
+          "optimista": 97.93959157516917
+        },
+        "weighted": {
+          "conservador": 90.05183923243794,
+          "base": 110.00862997168278,
+          "optimista": 136.44394803374064
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.09999999999999998,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.04999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.04999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": false,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    },
+    {
+      "ticker": "ZTS",
+      "revisionId": "ZTS-20261029-R1",
+      "sourceSheetId": "1d6iyGLcFVq6q5JB2RrQRRqucXxiOk_2TtAnVjIX4vA0",
+      "json": {
+        "pesoDcf": 0.6,
+        "pesoMultiplos": 0.4,
+        "dcfBase": 98.31591793
+      },
+      "source": {
+        "pesoDcf": 0.3,
+        "pesoMultiplos": 0.7,
+        "dcfBase": 98.31591792860398,
+        "relative": {
+          "conservador": 134.04761157328062,
+          "base": 141.38640834808106,
+          "optimista": 148.75948451145962
+        },
+        "weighted": {
+          "conservador": 113.1183839885166,
+          "base": 128.46526122223793,
+          "optimista": 142.8320299192634
+        }
+      },
+      "methods": [
+        {
+          "name": "EV/EBITDA",
+          "jsonWeight": 0,
+          "sheetWeight": 0.19999999999999996,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "EV/FCFF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.09999999999999998,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/E",
+          "jsonWeight": 0,
+          "sheetWeight": 0.24999999999999997,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/FCFE",
+          "jsonWeight": 0,
+          "sheetWeight": 0.09999999999999998,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        },
+        {
+          "name": "P/OCF",
+          "jsonWeight": 0,
+          "sheetWeight": 0.04999999999999999,
+          "sourceBaseStatus": "OK",
+          "sourceConservativeStatus": "OK",
+          "sourceOptimisticStatus": "OK"
+        }
+      ],
+      "DCFpreserved": true,
+      "jsonVsSheetWeights": false,
+      "methodsMatch": false,
+      "status": "RETENER_SIN_IMPORTAR_HASTA_CONCILIAR_PESOS"
+    }
+  ]
+}
