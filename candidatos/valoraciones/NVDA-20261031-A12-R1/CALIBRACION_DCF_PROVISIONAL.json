@@ -1,0 +1,843 @@
+{
+  "schema": "jmr-a12-nvda-independent-dcf-candidate-v1",
+  "ticker": "NVDA",
+  "revision": "NVDA-20261031-A12-R1",
+  "status": "CALIBRACION_INDEPENDIENTE_NO_PUBLICAR",
+  "asOf": "2026-10-31",
+  "accountingCut": "2026-07-26",
+  "units": "USD millones excepto precio por acción",
+  "sourceSheet": "https://docs.google.com/spreadsheets/d/1gN_WFYyGzdLjgYr_0AEHGDdBIeCiNVnDFy0wkH0vB0Y/edit",
+  "inputs": {
+    "revenueLTM": 302970,
+    "ebitGAAPLTM": 197579,
+    "rdAdjustment": 12337,
+    "operatingMarginBase": 0.6928606792751758,
+    "sharesMillions": 24268,
+    "debtBook": 38860,
+    "cashAndMarketableSecurities": 99369,
+    "nonOperatingBookProxy": 39257,
+    "optionsProxy": 0,
+    "initialTax": 0.17,
+    "terminalTax": 0.2537,
+    "initialWacc": 0.10275679876039412,
+    "terminalWacc": 0.093,
+    "referencePrice": 204.64,
+    "priceDate": "2026-10-30"
+  },
+  "scenarios": [
+    {
+      "name": "Base",
+      "probability": 0.45,
+      "marginTarget": 0.53,
+      "salesToCapitalFirst5": 2.2,
+      "salesToCapitalYears6to10": 0.7,
+      "roicTerminal": 0.28656800549999994,
+      "gTerminal": 0.035,
+      "growth": [
+        0.4,
+        0.28,
+        0.22,
+        0.17,
+        0.13,
+        0.105,
+        0.085,
+        0.065,
+        0.055,
+        0.045,
+        0.035
+      ],
+      "result": {
+        "projection": [
+          {
+            "year": 1,
+            "revenues": 424158,
+            "growth": 0.4,
+            "margin": 0.6928606792751758,
+            "tax": 0.17,
+            "nopat": 243922.39200000002,
+            "reinvestment": 53983.745454545446,
+            "fcff": 189938.64654545457,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 172239.83271648298,
+            "discountFactor": 0.9068182586805152
+          },
+          {
+            "year": 2,
+            "revenues": 542922.24,
+            "growth": 0.28,
+            "margin": 0.6277164075651055,
+            "tax": 0.17,
+            "nopat": 282864.9944064,
+            "reinvestment": 54292.22400000001,
+            "fcff": 228572.7704064,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 187959.81296574997,
+            "discountFactor": 0.8223193542763619
+          },
+          {
+            "year": 3,
+            "revenues": 662365.1328,
+            "growth": 0.22,
+            "margin": 0.5951442717100703,
+            "tax": 0.17,
+            "nopat": 327188.336090112,
+            "reinvestment": 51182.76026181818,
+            "fcff": 276005.5758282938,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 205815.758421919,
+            "discountFactor": 0.7456942049241763
+          },
+          {
+            "year": 4,
+            "revenues": 774967.205376,
+            "growth": 0.17,
+            "margin": 0.5625721358550352,
+            "tax": 0.17,
+            "nopat": 361859.21343516675,
+            "reinvestment": 45793.51668130908,
+            "fcff": 316065.69675385766,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 213726.5067960681,
+            "discountFactor": 0.6762091204174928
+          },
+          {
+            "year": 5,
+            "revenues": 875712.94207488,
+            "growth": 0.13,
+            "margin": 0.53,
+            "tax": 0.17,
+            "nopat": 385226.12321873975,
+            "reinvestment": 41795.39041721018,
+            "fcff": 343430.7328015296,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 210591.30536588622,
+            "discountFactor": 0.6131987770808737
+          },
+          {
+            "year": 6,
+            "revenues": 967662.8009927424,
+            "growth": 0.105,
+            "margin": 0.53,
+            "tax": 0.18674000000000002,
+            "nopat": 417089.5682537396,
+            "reinvestment": 117501.91154911883,
+            "fcff": 299587.6567046208,
+            "discountRate": 0.10080543900831529,
+            "presentValue": 166883.97259854962,
+            "discountFactor": 0.5570455553283669
+          },
+          {
+            "year": 7,
+            "revenues": 1049914.1390771256,
+            "growth": 0.085,
+            "margin": 0.53,
+            "tax": 0.20348,
+            "nopat": 443227.1333305874,
+            "reinvestment": 97492.02720001873,
+            "fcff": 345735.10613056866,
+            "discountRate": 0.09885407925623647,
+            "presentValue": 175264.58501329846,
+            "discountFactor": 0.5069331459418208
+          },
+          {
+            "year": 8,
+            "revenues": 1118158.5581171387,
+            "growth": 0.065,
+            "margin": 0.53,
+            "tax": 0.22021999999999997,
+            "nopat": 462116.37063774874,
+            "reinvestment": 87855.31528063219,
+            "fcff": 374261.05535711657,
+            "discountRate": 0.09690271950415764,
+            "presentValue": 172964.59460092525,
+            "discountFactor": 0.46214959351269924
+          },
+          {
+            "year": 9,
+            "revenues": 1179657.2788135812,
+            "growth": 0.055,
+            "margin": 0.53,
+            "tax": 0.23696,
+            "nopat": 477066.61571373494,
+            "reinvestment": 75835.11078087281,
+            "fcff": 401231.5049328621,
+            "discountRate": 0.09495135975207883,
+            "presentValue": 169349.05396272216,
+            "discountFactor": 0.4220731719236735
+          },
+          {
+            "year": 10,
+            "revenues": 1232741.8563601922,
+            "growth": 0.045,
+            "margin": 0.53,
+            "tax": 0.2537,
+            "nopat": 487597.4811228541,
+            "reinvestment": 61637.09281800947,
+            "fcff": 425960.3883048446,
+            "discountRate": 0.093,
+            "presentValue": 164488.97731533888,
+            "discountFactor": 0.3861602670847882
+          }
+        ],
+        "pvExplicit": 1839284.3997569405,
+        "terminal": {
+          "roic": 0.28656800549999994,
+          "growth": 0.035,
+          "discountRate": 0.093,
+          "nopat": 504663.3929621539,
+          "fcff": 443026.3001441443,
+          "value": 7638384.485243867,
+          "pv": 2949640.592918074,
+          "portionOfEV": 0.6159295870012058
+        },
+        "enterpriseValue": 4788924.992675015,
+        "equityValue": 4888690.992675015,
+        "perShare": 201.44597794111647,
+        "mos35": 130.9398856617257
+      }
+    },
+    {
+      "name": "Conservadora",
+      "probability": 0.225,
+      "marginTarget": 0.43,
+      "salesToCapitalFirst5": 1.4,
+      "salesToCapitalYears6to10": 0.62,
+      "roicTerminal": 0.2049324874,
+      "gTerminal": 0.03,
+      "growth": [
+        0.28,
+        0.18,
+        0.13,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.05,
+        0.045,
+        0.04,
+        0.03
+      ],
+      "result": {
+        "projection": [
+          {
+            "year": 1,
+            "revenues": 387801.60000000003,
+            "growth": 0.28,
+            "margin": 0.6928606792751758,
+            "tax": 0.17,
+            "nopat": 223014.75840000002,
+            "reinvestment": 49860.205714285716,
+            "fcff": 173154.5526857143,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 157019.70994906296,
+            "discountFactor": 0.9068182586805152
+          },
+          {
+            "year": 2,
+            "revenues": 457605.88800000004,
+            "growth": 0.18,
+            "margin": 0.5877164075651055,
+            "tax": 0.17,
+            "nopat": 223222.26551808,
+            "reinvestment": 42491.975314285664,
+            "fcff": 180730.29020379434,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 148618.01553856366,
+            "discountFactor": 0.8223193542763619
+          },
+          {
+            "year": 3,
+            "revenues": 517094.65343999997,
+            "growth": 0.13,
+            "margin": 0.5351442717100703,
+            "tax": 0.17,
+            "nopat": 229677.80062786557,
+            "reinvestment": 36935.33238857149,
+            "fcff": 192742.46823929407,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 143726.9416088237,
+            "discountFactor": 0.7456942049241763
+          },
+          {
+            "year": 4,
+            "revenues": 568804.118784,
+            "growth": 0.1,
+            "margin": 0.4825721358550351,
+            "tax": 0.17,
+            "nopat": 227825.88534233085,
+            "reinvestment": 32503.092501942887,
+            "fcff": 195322.79284038796,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 132079.05394408692,
+            "discountFactor": 0.6762091204174928
+          },
+          {
+            "year": 5,
+            "revenues": 614308.4482867201,
+            "growth": 0.08,
+            "margin": 0.43,
+            "tax": 0.17,
+            "nopat": 219246.68519353037,
+            "reinvestment": 30715.422414336022,
+            "fcff": 188531.26277919434,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 115607.13977771481,
+            "discountFactor": 0.6131987770808737
+          },
+          {
+            "year": 6,
+            "revenues": 657310.0396667905,
+            "growth": 0.07,
+            "margin": 0.43,
+            "tax": 0.18674000000000002,
+            "nopat": 229862.50402954803,
+            "reinvestment": 63610.649000012105,
+            "fcff": 166251.85502953592,
+            "discountRate": 0.10080543900831529,
+            "presentValue": 92609.85690929898,
+            "discountFactor": 0.5570455553283669
+          },
+          {
+            "year": 7,
+            "revenues": 696748.642046798,
+            "growth": 0.06,
+            "margin": 0.43,
+            "tax": 0.20348,
+            "nopat": 238638.9181961397,
+            "reinvestment": 56189.4066166773,
+            "fcff": 182449.5115794624,
+            "discountRate": 0.09885407925623647,
+            "presentValue": 92489.70488052555,
+            "discountFactor": 0.5069331459418208
+          },
+          {
+            "year": 8,
+            "revenues": 731586.074149138,
+            "growth": 0.05,
+            "margin": 0.43,
+            "tax": 0.22021999999999997,
+            "nopat": 245304.76122700635,
+            "reinvestment": 53098.98925276,
+            "fcff": 192205.77197424637,
+            "discountRate": 0.09690271950415764,
+            "presentValue": 88827.81938869251,
+            "discountFactor": 0.46214959351269924
+          },
+          {
+            "year": 9,
+            "revenues": 764507.4474858491,
+            "growth": 0.045,
+            "margin": 0.43,
+            "tax": 0.23696,
+            "nopat": 250840.39797372898,
+            "reinvestment": 49323.06112811935,
+            "fcff": 201517.33684560962,
+            "discountRate": 0.09495135975207883,
+            "presentValue": 85055.06156003781,
+            "discountFactor": 0.4220731719236735
+          },
+          {
+            "year": 10,
+            "revenues": 795087.7453852831,
+            "growth": 0.04,
+            "margin": 0.43,
+            "tax": 0.2537,
+            "nopat": 255150.81328384578,
+            "reinvestment": 38471.98767993306,
+            "fcff": 216678.82560391273,
+            "discountRate": 0.093,
+            "presentValue": 83672.75316682518,
+            "discountFactor": 0.3861602670847882
+          }
+        ],
+        "pvExplicit": 1139706.0567236322,
+        "terminal": {
+          "roic": 0.2049324874,
+          "growth": 0.03,
+          "discountRate": 0.093,
+          "nopat": 262805.3376823612,
+          "fcff": 224333.35000242814,
+          "value": 3560846.8254353674,
+          "pv": 1375057.5611581416,
+          "portionOfEV": 0.546793961619492
+        },
+        "enterpriseValue": 2514763.617881774,
+        "equityValue": 2614529.617881774,
+        "perShare": 107.73568558932644,
+        "mos35": 70.02819563306218
+      }
+    },
+    {
+      "name": "Disrupción",
+      "probability": 0.1,
+      "marginTarget": 0.3,
+      "salesToCapitalFirst5": 0.85,
+      "salesToCapitalYears6to10": 0.65,
+      "roicTerminal": 0.1477114275,
+      "gTerminal": 0.015,
+      "growth": [
+        0.18,
+        0.1,
+        0.03,
+        -0.03,
+        -0.04,
+        -0.03,
+        -0.015,
+        0,
+        0.02,
+        0.03,
+        0.015
+      ],
+      "result": {
+        "projection": [
+          {
+            "year": 1,
+            "revenues": 357504.6,
+            "growth": 0.18,
+            "margin": 0.6928606792751758,
+            "tax": 0.17,
+            "nopat": 205591.7304,
+            "reinvestment": 42059.36470588238,
+            "fcff": 163532.36569411762,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 148294.13509664495,
+            "discountFactor": 0.9068182586805152
+          },
+          {
+            "year": 2,
+            "revenues": 393255.06,
+            "growth": 0.1,
+            "margin": 0.5357164075651055,
+            "tax": 0.17,
+            "nopat": 174858.74604,
+            "reinvestment": 13879.590352941168,
+            "fcff": 160979.15568705884,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 132376.27535653615,
+            "discountFactor": 0.8223193542763619
+          },
+          {
+            "year": 3,
+            "revenues": 405052.7118,
+            "growth": 0.03,
+            "margin": 0.4571442717100703,
+            "tax": 0.17,
+            "nopat": 153689.0473602,
+            "reinvestment": 0,
+            "fcff": 153689.0473602,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 114605.03197681841,
+            "discountFactor": 0.7456942049241763
+          },
+          {
+            "year": 4,
+            "revenues": 392901.13044599997,
+            "growth": -0.03,
+            "margin": 0.37857213585503513,
+            "tax": 0.17,
+            "nopat": 123455.37871022397,
+            "reinvestment": 0,
+            "fcff": 123455.37871022397,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 83481.65304844902,
+            "discountFactor": 0.6762091204174928
+          },
+          {
+            "year": 5,
+            "revenues": 377185.08522815997,
+            "growth": -0.04,
+            "margin": 0.3,
+            "tax": 0.17,
+            "nopat": 93919.08622181183,
+            "reinvestment": 0,
+            "fcff": 93919.08622181183,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 57591.06881576814,
+            "discountFactor": 0.6131987770808737
+          },
+          {
+            "year": 6,
+            "revenues": 365869.53267131513,
+            "growth": -0.03,
+            "margin": 0.3,
+            "tax": 0.18674000000000002,
+            "nopat": 89264.11684208212,
+            "reinvestment": 0,
+            "fcff": 89264.11684208212,
+            "discountRate": 0.10080543900831529,
+            "presentValue": 49724.17953719386,
+            "discountFactor": 0.5570455553283669
+          },
+          {
+            "year": 7,
+            "revenues": 360381.4896812454,
+            "growth": -0.015,
+            "margin": 0.3,
+            "tax": 0.20348,
+            "nopat": 86115.31924827167,
+            "reinvestment": 0,
+            "fcff": 86115.31924827167,
+            "discountRate": 0.09885407925623647,
+            "presentValue": 43654.709700310596,
+            "discountFactor": 0.5069331459418208
+          },
+          {
+            "year": 8,
+            "revenues": 360381.4896812454,
+            "growth": 0,
+            "margin": 0.3,
+            "tax": 0.22021999999999997,
+            "nopat": 84305.48340709246,
+            "reinvestment": 11088.66122096141,
+            "fcff": 73216.82218613104,
+            "discountRate": 0.09690271950415764,
+            "presentValue": 33837.12461161204,
+            "discountFactor": 0.46214959351269924
+          },
+          {
+            "year": 9,
+            "revenues": 367589.1194748703,
+            "growth": 0.02,
+            "margin": 0.3,
+            "tax": 0.23696,
+            "nopat": 84145.56051723151,
+            "reinvestment": 16965.651668070976,
+            "fcff": 67179.90884916054,
+            "discountRate": 0.09495135975207883,
+            "presentValue": 28354.837217508448,
+            "discountFactor": 0.4220731719236735
+          },
+          {
+            "year": 10,
+            "revenues": 378616.79305911646,
+            "growth": 0.03,
+            "margin": 0.3,
+            "tax": 0.2537,
+            "nopat": 84768.51379800557,
+            "reinvestment": 8737.310609056507,
+            "fcff": 76031.20318894906,
+            "discountRate": 0.093,
+            "presentValue": 29360.229730222367,
+            "discountFactor": 0.3861602670847882
+          }
+        ],
+        "pvExplicit": 721279.245091064,
+        "terminal": {
+          "roic": 0.1477114275,
+          "growth": 0.015,
+          "discountRate": 0.093,
+          "nopat": 86040.04150497566,
+          "fcff": 77302.73089591911,
+          "value": 991060.6525117835,
+          "pv": 382708.24627117475,
+          "portionOfEV": 0.34665994793015376
+        },
+        "enterpriseValue": 1103987.4913622388,
+        "equityValue": 1203753.4913622388,
+        "perShare": 49.60250088026367,
+        "mos35": 32.24162557217139
+      }
+    },
+    {
+      "name": "Optimista",
+      "probability": 0.225,
+      "marginTarget": 0.57,
+      "salesToCapitalFirst5": 2.8,
+      "salesToCapitalYears6to10": 0.78,
+      "roicTerminal": 0.3450771792,
+      "gTerminal": 0.04,
+      "growth": [
+        0.5,
+        0.38,
+        0.31,
+        0.25,
+        0.19,
+        0.15,
+        0.12,
+        0.1,
+        0.08,
+        0.06,
+        0.04
+      ],
+      "result": {
+        "projection": [
+          {
+            "year": 1,
+            "revenues": 454455,
+            "growth": 0.5,
+            "margin": 0.6928606792751758,
+            "tax": 0.17,
+            "nopat": 261345.41999999998,
+            "reinvestment": 61676.03571428569,
+            "fcff": 199669.3842857143,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 181063.8433697821,
+            "discountFactor": 0.9068182586805152
+          },
+          {
+            "year": 2,
+            "revenues": 627147.8999999999,
+            "growth": 0.38,
+            "margin": 0.6437164075651055,
+            "tax": 0.17,
+            "nopat": 335075.476356,
+            "reinvestment": 69434.2317857143,
+            "fcff": 265641.24457028566,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 218441.93670420646,
+            "discountFactor": 0.8223193542763619
+          },
+          {
+            "year": 3,
+            "revenues": 821563.749,
+            "growth": 0.31,
+            "margin": 0.6191442717100702,
+            "tax": 0.17,
+            "nopat": 422193.1859015399,
+            "reinvestment": 73353.90616071428,
+            "fcff": 348839.27974082564,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 260127.4293526573,
+            "discountFactor": 0.7456942049241763
+          },
+          {
+            "year": 4,
+            "revenues": 1026954.6862499999,
+            "growth": 0.25,
+            "margin": 0.5945721358550351,
+            "tax": 0.17,
+            "nopat": 506796.8722208999,
+            "reinvestment": 69686.21085267852,
+            "fcff": 437110.6613682214,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 295578.21584891353,
+            "discountFactor": 0.6762091204174928
+          },
+          {
+            "year": 5,
+            "revenues": 1222076.0766374997,
+            "growth": 0.19,
+            "margin": 0.57,
+            "tax": 0.17,
+            "nopat": 578164.191857201,
+            "reinvestment": 65468.36124843744,
+            "fcff": 512695.8306087636,
+            "discountRate": 0.10275679876039412,
+            "presentValue": 314384.4563437566,
+            "discountFactor": 0.6131987770808737
+          },
+          {
+            "year": 6,
+            "revenues": 1405387.4881331245,
+            "growth": 0.15,
+            "margin": 0.57,
+            "tax": 0.18674000000000002,
+            "nopat": 651478.8943015125,
+            "reinvestment": 216213.4597127887,
+            "fcff": 435265.4345887238,
+            "discountRate": 0.10080543900831529,
+            "presentValue": 242462.6757257186,
+            "discountFactor": 0.5570455553283669
+          },
+          {
+            "year": 7,
+            "revenues": 1574033.9867090997,
+            "growth": 0.12,
+            "margin": 0.57,
+            "tax": 0.20348,
+            "nopat": 714637.2441233132,
+            "reinvestment": 201799.22906526944,
+            "fcff": 512838.01505804376,
+            "discountRate": 0.09885407925623647,
+            "presentValue": 259974.588331933,
+            "discountFactor": 0.5069331459418208
+          },
+          {
+            "year": 8,
+            "revenues": 1731437.38538001,
+            "growth": 0.1,
+            "margin": 0.57,
+            "tax": 0.22021999999999997,
+            "nopat": 769579.9392918258,
+            "reinvestment": 177583.32157743713,
+            "fcff": 591996.6177143886,
+            "discountRate": 0.09690271950415764,
+            "presentValue": 273590.99623759754,
+            "discountFactor": 0.46214959351269924
+          },
+          {
+            "year": 9,
+            "revenues": 1869952.3762104108,
+            "growth": 0.08,
+            "margin": 0.57,
+            "tax": 0.23696,
+            "nopat": 813303.6228518472,
+            "reinvestment": 143842.49047772415,
+            "fcff": 669461.1323741231,
+            "discountRate": 0.09495135975207883,
+            "presentValue": 282561.5836207604,
+            "discountFactor": 0.4220731719236735
+          },
+          {
+            "year": 10,
+            "revenues": 1982149.5187830357,
+            "growth": 0.06,
+            "margin": 0.57,
+            "tax": 0.2537,
+            "nopat": 843188.5659446343,
+            "reinvestment": 101648.6932709249,
+            "fcff": 741539.8726737094,
+            "discountRate": 0.093,
+            "presentValue": 286353.2352856994,
+            "discountFactor": 0.3861602670847882
+          }
+        ],
+        "pvExplicit": 2614538.960821025,
+        "terminal": {
+          "roic": 0.3450771792,
+          "growth": 0.04,
+          "discountRate": 0.093,
+          "nopat": 876916.1085824196,
+          "fcff": 775267.4153114946,
+          "value": 14627687.081348956,
+          "pv": 5648631.550166419,
+          "portionOfEV": 0.683591309492585
+        },
+        "enterpriseValue": 8263170.510987444,
+        "equityValue": 8362936.510987444,
+        "perShare": 344.60757009178525,
+        "mos35": 223.99492055966041
+      }
+    }
+  ],
+  "expectedValueThree": 213.80880289083618,
+  "sensitivity": {
+    "waccVsTerminalGrowth": {
+      "rows": [
+        0.09275679876039412,
+        0.09775679876039411,
+        0.10275679876039412,
+        0.10775679876039412,
+        0.11275679876039411
+      ],
+      "columns": [
+        0.025,
+        0.03,
+        0.035,
+        0.04,
+        0.045
+      ],
+      "values": [
+        [
+          221.15460792276792,
+          231.7869251902623,
+          244.63539007031684,
+          260.47307731149914,
+          280.47994310899105
+        ],
+        [
+          202.66475171486397,
+          211.03693545870317,
+          220.9897121735649,
+          233.0170171628938,
+          247.8425230805737
+        ],
+        [
+          186.93152296086004,
+          193.61240397456083,
+          201.44597794111647,
+          210.7584787151086,
+          222.012070923861
+        ],
+        [
+          173.38701954877334,
+          178.77855142495508,
+          185.02660074148824,
+          192.3526806294982,
+          201.0618940809124
+        ],
+        [
+          161.6090224517602,
+          166.00196305498633,
+          171.04156081857934,
+          176.88178173310274,
+          183.72968351000412
+        ]
+      ],
+      "center": 201.44597794111647
+    },
+    "waccVsTerminalROIC": {
+      "rows": [
+        0.09275679876039412,
+        0.09775679876039411,
+        0.10275679876039412,
+        0.10775679876039412,
+        0.11275679876039411
+      ],
+      "columns": [
+        0.22656800549999995,
+        0.2565680054999999,
+        0.28656800549999994,
+        0.31656800549999997,
+        0.34656800549999994
+      ],
+      "values": [
+        [
+          238.7067425870431,
+          242.01767896292404,
+          244.63539007031684,
+          246.7569592312249,
+          248.5112291964936
+        ],
+        [
+          215.8606084819745,
+          218.72502840845232,
+          220.9897121735649,
+          222.8251642300209,
+          224.34285145637241
+        ],
+        [
+          196.9678095339161,
+          199.46870551711484,
+          201.44597794111647,
+          203.04849251410684,
+          204.37356983711015
+        ],
+        [
+          181.0866690319287,
+          183.28697917896818,
+          185.02660074148824,
+          186.43650707082688,
+          187.60232168247137
+        ],
+        [
+          167.55248738032947,
+          169.50100939945995,
+          171.04156081857934,
+          172.29012731331832,
+          173.32253424198237
+        ]
+      ],
+      "center": 201.44597794111647
+    }
+  },
+  "controls": {
+    "probabilities": 1,
+    "waccDetailedSheet": "VALIDADO",
+    "leaseDebtReconciled": "1000+32366+509+4985=38860",
+    "researchConverterAdjustment": 12337,
+    "officialScenarioGates": "PENDIENTE",
+    "economicAudit": false,
+    "officialMultiplesSensitivities": false
+  },
+  "caveats": [
+    "Este cálculo independiente no se promociona como valor intrínseco en la app; la revisión oficial del Método A conserva los controles.",
+    "Valor de participaciones no operativas US$39257m tomado del registro anterior como proxy contable, no certificado económicamente; B20 de Input sheet permanece vacío.",
+    "Opciones no asumidas por la hoja anterior como instrumentos de ejercicio; SBC/RSU de la compañía no están certificados como dilución terminal, deben tratarse separadamente.",
+    "La beta 1,45 y Kd 6,0% son supuestos analíticos; el WACC está calculado técnicamente pero pendiente de revisión económica.",
+    "La cifra LTM ingresos del libro 302970 difiere en 1 millón de la suma de estados trimestrales redondeados 302969.",
+    "Resultados Q3 FY2027 terminaron 25-oct pero se anuncian 17-nov: no están incluidos ni anticipados como publicados.",
+    "El alto ROIC terminal optimista está expresamente sujeto a riesgo de obsolescencia, ASIC y normalización de márgenes.",
+    "La lectura de múltiplos y sus siete matrices nativas aún no ha sido validada."
+  ]
+}
