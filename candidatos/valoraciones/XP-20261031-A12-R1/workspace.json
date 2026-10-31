@@ -2,7 +2,7 @@
   "schema": "jmr-valuation-workspace-v1",
   "ticker": "XP",
   "revisionCandidata": "XP-20261031-A12-R1",
-  "estado": "PREPARACION_SIN_VALORACION",
+  "estado": "FCFE_RECALCULADO_CON_SENSIBILIDADES_NATIVAS_SIN_CERTIFICACION_ECONOMICA",
   "versionMetodo": "A-1.2",
   "metodoPrincipal": "FCFE_FINANCIERO",
   "corteContable": "2026-06-30",
@@ -16,7 +16,21 @@
     "analisisAnterior": "analisis/XP-research-20261026-r2.json",
     "estructuraFuente": "69 pestañas; 5 módulos XP nativos y soporte, copiados sin borrar dependencias",
     "etiquetasBorradorModificadas": 8,
-    "formulasFuenteIntactas": true
+    "formulasFuenteIntactas": true,
+    "calibracion": "candidatos/valoraciones/XP-20261031-A12-R1/CALIBRACION_FCFE_PROVISIONAL.json",
+    "analisisNivel1": "candidatos/valoraciones/XP-20261031-A12-R1/NIVEL1_ANALISIS_PROVISIONAL.md",
+    "analisisNivel2": "candidatos/valoraciones/XP-20261031-A12-R1/NIVEL2_CALIBRACION_PROVISIONAL.md",
+    "matrices": "XP A12 Matrices; 4 bancos/fintech nativas con centros FY+3 concilian, Ke×g, ROE×g y EBT×crecimiento conciliados",
+    "versionCopia": "XP Control A27:B39: resumen candidato separado de XP R2",
+    "tasasActualizadas": {
+      "rfUSD": 0.0494,
+      "erpUSD": 0.037,
+      "crpBrasilDamodaranJulio": 0.031,
+      "repricingShockJuicio": 0.02,
+      "fxPTAX20261030": 5.4209,
+      "KeBRL": 0.14443773216031297,
+      "KeTerminalBRL": 0.14518279569892467
+    }
   },
   "fuentePrimaria": {
     "inversores": "https://investors.xpinc.com/en/",
@@ -71,6 +85,21 @@
       "id": "CRP_FX_REVALORIZACION_POST_ELECTORAL",
       "estado": "PENDIENTE_DATOS_COTIZADOS",
       "detalle": "XP 2Q26 FCFE BRL debe descontarse a Ke nominal BRL compatible con CRP Brasil posterior a shock octubre; convertir equity a USD con FX de valoración 30-oct y comparar precio de igual fecha. No reutilizar FX 5,5007 BRL/USD de junio como actual sin verificar."
+    },
+    {
+      "id": "CAPITAL_CET1_PERIMETRO",
+      "estado": "BLOQUEO_MATERIAL",
+      "detalle": "Pillar3 RWA 99904 CET1 7675 7.68% vs grupo gerencial RWA 126600 y CET1 17.1%. El capital de grupo consolidado y el ratio de filial se mezclan en motor; 7.68% es observado, NO mínimo prudencial verificado. FCFE y repartos candidatos sin certificación hasta puente y buffers."
+    },
+    {
+      "id": "MULTIPLOS_NATIVOS_FY3",
+      "estado": "RECONCILIADOS_MATEMATICAMENTE",
+      "detalle": "Cuatro matrices 5×5 en XP A12 Matrices con centro de P/E, P/FCFE, P/BV, P/S igual exactamente al VP FY+3 del motor. Ke×g, ROE×g y EBT×crecimiento 5×5 en XP Sensibilidad actualizadas con ejes dinámicos. P/FCFE sin ancla económica independiente peso 0."
+    },
+    {
+      "id": "KE_FX_DATED",
+      "estado": "CALCULADO_SUJETO_JUICIO",
+      "detalle": "ERP 3.70, Rf USD 4.94, CRP julio 3.10, shock adicional juicio 2pp, Ke nominal BRL 14.4438%, FX PTAX BCB 5.4209. Riesgo macro octubre no permite asumir CRP invariable sin sensibilizar."
     }
   ],
   "supuestosDefinitivos": null,
@@ -221,5 +250,16 @@
       "https://www.investing.com/news/stock-market-news/why-is-xp-stock-plummeting-45-today-93CH-4971958"
     ],
     "noAsumir": "No inferir mecánicamente cambio en acciones ni duplicar denominador; no inferir que 48% representa destrucción intrínseca exacta."
+  },
+  "supuestosProvisionales": {
+    "baseUSD": 14.475590094736917,
+    "MOS35USD": 9.409133561578997,
+    "conservadorUSD": 10.820295471137689,
+    "optimistaUSD": 16.607456593973765,
+    "disrupcionUSD": 7.306173112951838,
+    "promedioTresSinDisrupcionUSD": 14.094733063646322,
+    "accionReferenciaUSD": 14.29,
+    "fecha": "2026-10-30",
+    "estado": "CANDIDATO_NO_PUBLICAR"
   }
 }
