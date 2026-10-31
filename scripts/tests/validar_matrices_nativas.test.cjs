@@ -45,6 +45,28 @@ test('un N/D prioritario bloquea, N/A justificado con peso cero es válido',()=>
   a.descuentoMultiples.metodos[1].peso=0;
   assert.equal(validateNativeMatrices(a),true);
 });
+test('N/A derivado de N/D de la hoja exige flujo FY+3 negativo real y peso cero',()=>{
+  const make=()=>{
+    const v=fixture(),m=v.sensibilidadMultiples.matrices[1];
+    m.estado='N/A';m.estadoFuente='N/D';m.matriz=null;m.centro=null;m.vp3Original=-3;
+    m.motivo='Flujo FY+3 negativo y descuento negativo: método no aplicable con peso cero';
+    const d=v.descuentoMultiples.metodos[1];
+    d.peso=0;d.estado='N/A: flujo negativo';d.base={fy:[-2,-3,-4],vp:[-1,-2,-3]};
+    return v;
+  };
+  assert.equal(validateNativeMatrices(make()),true);
+  for(const change of [
+    v=>v.descuentoMultiples.metodos[1].base.fy[2]=4,
+    v=>v.descuentoMultiples.metodos[1].base.vp[2]=3,
+    v=>v.descuentoMultiples.metodos[1].peso=.1,
+    v=>v.descuentoMultiples.metodos[1].estado='PENDIENTE',
+    v=>v.sensibilidadMultiples.matrices[1].vp3Original=100
+  ]){
+    const v=make();change(v);
+    assert.throws(()=>validateNativeMatrices(v));
+  }
+});
+
 test('P/V o P/BV son complementarios sin exigir cálculo, salvo peso positivo',()=>{
   const a=fixture(),m=a.sensibilidadMultiples.matrices[6];
   m.estado='N/D';m.matriz=null;m.centro=null;
