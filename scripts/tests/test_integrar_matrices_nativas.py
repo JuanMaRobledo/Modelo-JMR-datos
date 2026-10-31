@@ -98,8 +98,10 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(candidate['sensibilidadMultiples']['matrices'][1]['estado'],'N/D')
         invalid=copy.deepcopy(official)
         invalid['descuentoMultiples']['metodos'][0]['base']['fy'][2]=2
+        invalid_candidate=copy.deepcopy(candidate)
+        invalid_candidate['descuentoMultiples']=copy.deepcopy(invalid['descuentoMultiples'])
         with self.assertRaisesRegex(ValueError,'justificación'):
-            mod.integrate(invalid,candidate,photo,cells)
+            mod.integrate(invalid,invalid_candidate,photo,cells)
 
     def test_missing_method_rejected(self):
         a=list(fixture());a[1]['sensibilidadMultiples']['matrices'].pop()
