@@ -1,0 +1,87 @@
+{
+  "schema": "jmr-valuation-workspace-v1",
+  "ticker": "XP",
+  "revisionCandidata": "XP-20261031-A12-R1",
+  "estado": "PREPARACION_SIN_VALORACION",
+  "versionMetodo": "A-1.2",
+  "metodoPrincipal": "FCFE_FINANCIERO",
+  "corteContable": "2026-06-30",
+  "fechaAnalisis": "2026-10-31",
+  "moneda": "BRL",
+  "unidades": "BRL millones para estados, FCFE y patrimonio; FX BRL/USD explícito; resultados finales USD por acción",
+  "trabajo": {
+    "hojaBorrador": "https://docs.google.com/spreadsheets/d/1C8TU1AJMxy0JmU4KsBNdp1dYzBSoli7CLtnjQI3SsnQ/edit",
+    "hojaAnterior": "https://docs.google.com/spreadsheets/d/18DYy3HRcy8SCBue16aBoba3ELBZ0pyjoFO472dic0-I/edit",
+    "valoracionAnterior": "valoraciones/XP-20261026-R2.json",
+    "analisisAnterior": "analisis/XP-research-20261026-r2.json",
+    "estructuraFuente": "69 pestañas; 5 módulos XP nativos y soporte, copiados sin borrar dependencias",
+    "etiquetasBorradorModificadas": 8,
+    "formulasFuenteIntactas": true
+  },
+  "fuentePrimaria": {
+    "inversores": "https://investors.xpinc.com/en/",
+    "resultados2Q26": "https://markets.ft.markitdigital.com/data/announce/full?dockey=600-202608171605BIZWIRE_USPRX____20260817_BW593369-1"
+  },
+  "datosHistoricosR2": {
+    "ingresosLTM_BRLm": 19122.419,
+    "beneficioAtribuibleLTM_BRLm": 5316.803,
+    "patrimonioAtribuible_BRLm": 24831.073,
+    "accionesBase_m": 507.483079,
+    "rsuPsu_m": 17.672287,
+    "fxAnterior_BRLporUSD": 5.5007,
+    "valorAnterior_USDaccion": 13.530630645337256
+  },
+  "conciliaciones": [
+    {
+      "id": "FCFE",
+      "estado": "PENDIENTE",
+      "detalle": "Usar beneficio atribuible, retención para CET1/RWA y coste patrimonio Ke. No usar FCFF industrial ni EV/EBITDA como método primario."
+    },
+    {
+      "id": "CAPITAL_REG",
+      "estado": "PENDIENTE",
+      "detalle": "Diferenciar CET1 Pilar3 perímetro regulado 7,68% de CET1 gerencial 17,1% y BIS gerencial 20,3%; no compararlos sin perímetro reconciliado."
+    },
+    {
+      "id": "DILUCION",
+      "estado": "PENDIENTE",
+      "detalle": "Comprobar acciones A/B, tesorería, RSU y PSU, escenarios de vesting y valor razonable de incentivos; no doble dilución."
+    },
+    {
+      "id": "FX",
+      "estado": "PENDIENTE",
+      "detalle": "Ke nominal BRL para flujos BRL, convertir equity final por FX correspondiente a corte; no usar Ke USD con FCFE BRL."
+    },
+    {
+      "id": "SENSIBILIDADES",
+      "estado": "PENDIENTE",
+      "detalle": "Matrices Ke/g, P/E, P/FCFE, P/BV con anclas bancarias; históricos no suficientes para certificar nueva revisión."
+    },
+    {
+      "id": "COPIA_FUENTE",
+      "estado": "PRESERVADA",
+      "detalle": "Retenidas 69 pestañas porque borrar fuentes antes de mapa de dependencias rompería el contrato FCFE. Se revisará limpiar/ocultar solo tras cotejar fórmulas."
+    }
+  ],
+  "supuestosDefinitivos": null,
+  "valorPrincipal": null,
+  "precioMOS": null,
+  "escenarios": null,
+  "azStocks": null,
+  "auditoriaEconomica": "NO_INICIADA",
+  "publicationStatus": "NO_PUBLICAR",
+  "controlNoRegresion": {
+    "alterarOriginal": false,
+    "alterarCatalogo": false,
+    "archivarSoloCuandoVerificado": true
+  },
+  "siguientes": [
+    "Reconciliar 2Q26 con cifras IFRS y capital regulatorio",
+    "Calibrar Ke BRL, CRP Brasil, FX",
+    "Revisar crecimiento RWA y retención regulatoria",
+    "Reproyectar FCFE cuatro escenarios",
+    "Analizar sensibilidad Ke/g, P/E, P/FCFE y P/BV",
+    "Completar análisis 18 capítulos y Nivel2 con fuente",
+    "Separar auditoría económica de plantilla"
+  ]
+}
