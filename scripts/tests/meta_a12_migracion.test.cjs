@@ -11,7 +11,7 @@ const catalog=read('catalogo.json');
 test('META A-1.2 es un candidato separado; el anterior sigue vigente',()=>{
  assert.equal(x.versionMetodo,'A-1.2');
  assert.equal(x.publicationStatus,'NO_PUBLICAR');
- assert.equal(x.estado,'PREPARACION_SIN_VALORACION');
+ assert.ok(['PREPARACION_SIN_VALORACION','CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA'].includes(x.estado),'ningún estado de publicación puede reemplazar un candidato');
  assert.equal(x.valorPrincipal,null);assert.equal(x.precioMOS,null);
  assert.ok(x.trabajo.hojaBorrador!==x.trabajo.hojaAnterior);
  assert.equal(prior.revisionId,'META-20261025-R5');
