@@ -32,3 +32,9 @@
 6. No cerrar PR #211 mientras el gate financiero falle ni fusionar #151 sin QA visual y autenticación real.
 
 **Norma de seguridad:** conservar PRs en borrador y todas las revisiones `EN_REVISION`; sin cambios a Google Sheets, DCF, MOS, estimaciones de crecimiento, capital invertido, ROIC, reglas de descuentos o ponderaciones por defecto. La validación editorial y las pruebas de no regresión no sustituyen la auditoría económica independiente.
+
+## Contrato bancario estricto añadido
+
+- El validador `scripts/validar_catalogo.cjs` separa ahora los métodos de empresas industriales de NU: el contrato `bank-relative-ke-v1` exige exactamente **P/E, P/FCFE y P/BV** provenientes de las hojas `PE`, `PFCFE` y `PBV`, con anclas históricas verificadas, 5×5 conciliadas, fuente y descuento a Ke. **No hay datos reales falsamente declarados completos para ese contrato.**
+- `scripts/tests/validar_matrices_nativas.test.cjs` prueba que una matriz industrial, aunque tenga nombres P/E/P/FCFE/P/BV y centros aritméticos válidos, no puede aprobar NU. Prueba también un esquema sintético positivo del nuevo contrato y seis formas de invalidarlo.
+- **Evidencia CI:** los tests de matrices, FCFE NU, conservación de pesos, anclas UBER/GOOGL y no regresión del expediente aprobaron en el commit `412447099e7a88ee0cffd4935d758ddae7fdecc4`. El único fallo del gate financiero global continúa en UBER por no disponer de matrices Base oficialmente justificadas. Ambos workflows editoriales están en verde.
