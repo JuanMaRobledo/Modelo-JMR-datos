@@ -14,7 +14,7 @@
 El descuento se hace al **Ke nominal BRL sobre FCFE BRL**, convierte el equity final a USD y divide por acciones **ajustadas una sola vez** para autocartera, clase A/B, RSU y PSU. Sensibilidades: Ke×g, anclas **P/E, P/FCFE y P/BV**. P/BV debe contrastarse con ROE sostenible y capital regulatorio; no ponderar EV/EBITDA como método bancario principal.
 
 ## Alerta material de mercado (NO interpretar sin evidencia)
-La serie de precios muestra **US$30,41 al 23-oct-2026, US$15,71 el 26-oct y US$14,29 al 30-oct**. La variación aproximada en la sesión del 26-oct es **−48,36%**. **No se ha certificado una acción corporativa o hecho económico** que explique el salto; no duplicar número de acciones ni asumir split, dividendo o caída económica irreversible. Requiere revisión de comunicaciones oficiales y reconciliación de capitalización antes de comparar precio y valor intrínseco.
+La serie de precios muestra **US$30,41 al 23-oct-2026, US$15,71 el 26-oct y US$14,29 al 30-oct**. La variación aproximada en la sesión del 26-oct es **−48,36%**. **Se verificó un contexto de repricing macro brasileño tras la segunda vuelta electoral del 25-oct-2026**, con caída de XP ~48% y de otras acciones vinculadas a Brasil (WSJ; Reuters); no se certificó un split ni un dividendo extraordinario. Esto contextualiza la caída, pero **no prueba que toda su magnitud derive exclusivamente de elecciones**; la atribución total de factores de mercado y gobernanza sigue pendiente. No duplicar número de acciones ni asumir destrucción definitiva del patrimonio intrínseco. Requiere revisión de comunicaciones oficiales y reconciliación de capitalización antes de comparar precio y valor intrínseco.
 
 ## Flujo de cierre
 1. Cotejar los estados 2Q26 IFRS vs presentación gerencial y regulatoria, especialmente CET1/RWA por perímetro.
@@ -28,3 +28,7 @@ La serie de precios muestra **US$30,41 al 23-oct-2026, US$15,71 el 26-oct y US$1
 **Fuentes:** [XP inversores](https://investors.xpinc.com/en/), [reporte 2Q26](https://markets.ft.markitdigital.com/data/announce/full?dockey=600-202608171605BIZWIRE_USPRX____20260817_BW593369-1), [estados IFRS de XP 2Q26 (SEC)](https://www.sec.gov/Archives/edgar/data/1787425/000095010326012482/dp251887_ex9901.htm), [precios](https://stockanalysis.com/stocks/xp/history/).
 
 *No se ha validado la causa del descenso bursátil ni calculado valor intrínseco A-1.2 en esta nota.*
+
+## Actualización de riesgo macro y convertibilidad (31-oct-2026)
+
+La caída de mercado del 26-oct es compatible con un shock de percepción fiscal, monetaria y crediticia tras el resultado electoral, pero no es demostración contable de reducción del patrimonio de XP. Para FCFE regulatorio expresado en BRL, actualizar la prima país (CRP) y la tasa Ke BRL de acuerdo con el mismo corte de precio; obtener el tipo de cambio BRL/USD del mismo día de valoración; sólo entonces recalcular precio en USD por acción. El antiguo valor US$13,53 no debe compararse con US$14,29 sin verificar ambas fechas, FX, dilución y capital. Fuentes: [WSJ cobertura electoral y XP](https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-26-2026/card/stocks-to-watch-petrobras-coreweave-moderna-AI2pYQgbWbw8nIbZ8hMo), [Reuters/Investing Brasil](https://br.investing.com/equities/xp-inc-news), [Histórico del precio](https://stockanalysis.com/stocks/xp/history/).
