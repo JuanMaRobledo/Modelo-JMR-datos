@@ -1,0 +1,855 @@
+{
+  "ticker": "ONON",
+  "revisionId": "ONON-20261029-R1",
+  "sourceSheetId": "1cyilxyBVYI8Q7ouK8Ybm4SW5WFXP9SaPA--S_m3Fb7U",
+  "kind": "CAPTURA_DESCUENTOS_NO_PUBLICADA_PESOS_DIVERGENTES",
+  "sourceRange": "'Descuento de múltiplos'!A1:K42",
+  "sourceValues": [
+    [
+      "On Holding AG (NYSE:ONON) — USD proforma at 0.8281 CHF/USD · Múltiplos a valor presente (1, 2 y 3 años)"
+    ],
+    [
+      "Cada múltiplo da un precio objetivo al cierre de FY+1, FY+2 y FY+3 (múltiplo × métrica proyectada ÷ acciones) más los dividendos por acción hasta ese año. Se trae a hoy con el costo del patrimonio descontando cada dividendo en su año de pago: VP_n = Precio FY+n ÷ (1 + Ke)^n + suma(Dividendo FY+t ÷ (1 + Ke)^t), t = 1..n."
+    ],
+    [],
+    [
+      "Parámetro",
+      "Valor usado",
+      "Entrada manual",
+      "Automático"
+    ],
+    [
+      "Tasa de descuento: Ke (costo del patrimonio del DCF)",
+      0.1114,
+      null,
+      0.1114
+    ],
+    [
+      "Criterio para consolidar cada método",
+      "Promedio 1-3 años",
+      null,
+      "Promedio 1-3 años"
+    ],
+    [
+      "Factor de descuento a 1, 2 y 3 años",
+      0.8997660608241858,
+      0.8095789642110723,
+      0.728431675554321
+    ],
+    [],
+    [
+      "CONSERVADOR"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.10000000000000003,
+      0.25,
+      47.43049831099523,
+      50.93087292132354,
+      54.452991605795575,
+      42.67635262821238,
+      41.23256334601086,
+      39.665283914355044,
+      41.19139996285943,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.15,
+      0.3749999999999999,
+      54.31952859715697,
+      56.72365144437298,
+      63.299889387414915,
+      48.87486827169063,
+      45.92227498260537,
+      46.10964448887783,
+      46.96892924772461,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.05000000000000002,
+      0.125,
+      29.70655154640707,
+      31.607770845377136,
+      33.95599947874174,
+      26.728946865581314,
+      25.58898638202135,
+      24.734625595421495,
+      25.684186281008053,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.05000000000000002,
+      0.125,
+      37.90883434508294,
+      39.25900539191645,
+      45.128561637472984,
+      34.109082549111875,
+      31.783264921144625,
+      32.8730737689409,
+      32.92180707973247,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0.05000000000000002,
+      0.125,
+      35.69275792863541,
+      37.55382769751733,
+      42.473925493082376,
+      32.115132201399504,
+      30.402788929517158,
+      30.939352714295385,
+      31.152424615070682,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.40000000000000013,
+      0.9999999999999999,
+      45.14096577919834,
+      47.55666301382211,
+      52.54551724789162,
+      40.61630896094866,
+      38.500873984065116,
+      38.275819171750165,
+      39.13100070558798,
+      "OK"
+    ],
+    [],
+    [
+      "BASE"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.10000000000000003,
+      0.25,
+      50.54848341693095,
+      59.38269336523613,
+      67.77310608700674,
+      45.48180980468864,
+      48.07497938669158,
+      49.368077224479066,
+      47.641622138619766,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.15,
+      0.3749999999999999,
+      39.55760976960373,
+      53.200265678692624,
+      67.7728168011203,
+      35.59259471801668,
+      43.069815983909834,
+      49.367866499476094,
+      42.676759067134206,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.05000000000000002,
+      0.125,
+      31.759999809983594,
+      37.46655461455162,
+      43.24912851543902,
+      28.576569920805827,
+      30.33213447740627,
+      31.504035150765407,
+      30.137579849659165,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.05000000000000002,
+      0.125,
+      19.144706470232517,
+      30.68418651066486,
+      43.24897788251364,
+      17.225757126356413,
+      24.841271932963412,
+      31.503925424971182,
+      24.52365149476367,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0.05000000000000002,
+      0.125,
+      23.910591057457925,
+      33.16011709685393,
+      43.24824034538147,
+      21.51393832774692,
+      26.845733252388875,
+      31.503388179562208,
+      26.621019919899336,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.40000000000000013,
+      0.9999999999999999,
+      36.82313668504338,
+      47.45963024857756,
+      58.576376165088554,
+      33.132208642292056,
+      38.422318298483894,
+      42.66888783783564,
+      38.07447159287053,
+      "OK"
+    ],
+    [],
+    [
+      "OPTIMISTA"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "EV/EBITDA",
+      0.10000000000000003,
+      0.25,
+      52.627140154221436,
+      67.34175577927573,
+      81.93986676719663,
+      47.352114589006156,
+      54.51846889194103,
+      59.68759444392686,
+      53.85272597495802,
+      "OK"
+    ],
+    [
+      "EV/FCFF",
+      0.15,
+      0.3749999999999999,
+      37.60447403286527,
+      61.74909719148032,
+      88.23879225800079,
+      33.83522946991656,
+      49.99077014524747,
+      64.27593129338516,
+      49.367310302849724,
+      "OK"
+    ],
+    [
+      "P/E",
+      0.05000000000000002,
+      0.125,
+      33.12896531903461,
+      43.024907862720426,
+      53.194431539363435,
+      29.808318624288837,
+      34.83206034277802,
+      38.74850889637813,
+      34.46296262114833,
+      "OK"
+    ],
+    [
+      "P/FCFE",
+      0.05000000000000002,
+      0.125,
+      15.824843046825753,
+      36.40252115457988,
+      59.503431927138415,
+      14.238656691403413,
+      29.470715370996427,
+      43.34418461991791,
+      29.01785222743925,
+      "OK"
+    ],
+    [
+      "P/OCF",
+      0.05000000000000002,
+      0.125,
+      22.179191791992626,
+      38.1385822981699,
+      56.12092157642464,
+      19.95608403094532,
+      30.876193953431127,
+      40.880256937567644,
+      30.570844973981366,
+      "OK"
+    ],
+    [
+      "Múltiplos consolidados",
+      0.40000000000000013,
+      0.9999999999999999,
+      36.15008782061146,
+      54.687101806057825,
+      74.67686191891525,
+      32.52662211679994,
+      44.27352723585375,
+      54.3969916527341,
+      43.732380335129264,
+      "OK"
+    ],
+    [],
+    [
+      "VALOR HOY · DCF (VALOR INTRÍNSECO) + MÚLTIPLOS DESCONTADOS (SECUNDARIO)"
+    ],
+    [
+      "Concepto",
+      "Peso",
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "DCF · valor intrínseco (valor presente)",
+      0.6,
+      22.991176507004912,
+      40.8121981979253,
+      64.94020667536935
+    ],
+    [
+      "Múltiplos consolidados (valor presente)",
+      0.40000000000000013,
+      39.13100070558798,
+      38.07447159287053,
+      43.732380335129264
+    ],
+    [
+      "Ponderado DCF + múltiplos (secundario)",
+      1,
+      29.447106186438145,
+      39.7171075559034,
+      56.457076139273326
+    ],
+    [
+      "Precio de referencia de la hoja"
+    ],
+    [
+      "Descuento del precio frente al ponderado",
+      null,
+      1
+    ]
+  ],
+  "sourceFormulas": [
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Input sheet'!A1&\" · Múltiplos a valor presente (1, 2 y 3 años)\")"
+    ],
+    [
+      "Cada múltiplo da un precio objetivo al cierre de FY+1, FY+2 y FY+3 (múltiplo × métrica proyectada ÷ acciones) más los dividendos por acción hasta ese año. Se trae a hoy con el costo del patrimonio descontando cada dividendo en su año de pago: VP_n = Precio FY+n ÷ (1 + Ke)^n + suma(Dividendo FY+t ÷ (1 + Ke)^t), t = 1..n."
+    ],
+    [],
+    [
+      "Parámetro",
+      "Valor usado",
+      "Entrada manual",
+      "Automático"
+    ],
+    [
+      "Tasa de descuento: Ke (costo del patrimonio del DCF)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER(C5);C5;D5))",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Cost of capital worksheet'!B63;'Input sheet'!B36))"
+    ],
+    [
+      "Criterio para consolidar cada método",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(C6=\"Solo 3 años\";\"Solo 3 años\";\"Promedio 1-3 años\"))",
+      null,
+      "Promedio 1-3 años"
+    ],
+    [
+      "Factor de descuento a 1, 2 y 3 años",
+      "=IF('Input sheet'!$A$1=\"\";\"\";1/(1+B5))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";1/(1+B5)^2)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";1/(1+B5)^3)"
+    ],
+    [],
+    [
+      "CONSERVADOR"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B11/SUM($B$11:$B$15);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!F12));IFERROR(EVEBITDA!F12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!G12));IFERROR(EVEBITDA!G12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!H12));IFERROR(EVEBITDA!H12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D11);ISNUMBER($B$5));IFERROR(IFERROR(D11/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E11);ISNUMBER(EVEBITDA!F11);ISNUMBER($B$5));IFERROR(IFERROR((E11-N(EVEBITDA!F11))/(1+$B$5)^2+N(EVEBITDA!F11)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F11);ISNUMBER(EVEBITDA!G11);ISNUMBER($B$5);ISNUMBER(EVEBITDA!F11));IFERROR(IFERROR((F11-N(EVEBITDA!G11))/(1+$B$5)^3+N(EVEBITDA!F11)/(1+$B$5)+(N(EVEBITDA!G11)-N(EVEBITDA!F11))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I11);I11;\"\");IF(COUNT(G11:I11)=3;AVERAGE(G11:I11);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I11);ISNUMBER(F11));IFERROR(IF(NOT(ISNUMBER(I11));\"\";IF(F11<=0;\"n/a (≤ 0)\";IF(I11<F11;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B12/SUM($B$11:$B$15);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!F12));IFERROR(EVFCFF!F12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!G12));IFERROR(EVFCFF!G12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!H12));IFERROR(EVFCFF!H12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D12);ISNUMBER($B$5));IFERROR(IFERROR(D12/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E12);ISNUMBER(EVFCFF!F11);ISNUMBER($B$5));IFERROR(IFERROR((E12-N(EVFCFF!F11))/(1+$B$5)^2+N(EVFCFF!F11)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F12);ISNUMBER(EVFCFF!G11);ISNUMBER($B$5);ISNUMBER(EVFCFF!F11));IFERROR(IFERROR((F12-N(EVFCFF!G11))/(1+$B$5)^3+N(EVFCFF!F11)/(1+$B$5)+(N(EVFCFF!G11)-N(EVFCFF!F11))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I12);I12;\"\");IF(COUNT(G12:I12)=3;AVERAGE(G12:I12);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I12);ISNUMBER(F12));IFERROR(IF(NOT(ISNUMBER(I12));\"\";IF(F12<=0;\"n/a (≤ 0)\";IF(I12<F12;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B13/SUM($B$11:$B$15);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!F12));IFERROR(PE!F12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!G12));IFERROR(PE!G12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!H12));IFERROR(PE!H12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D13);ISNUMBER($B$5));IFERROR(IFERROR(D13/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E13);ISNUMBER(PE!F11);ISNUMBER($B$5));IFERROR(IFERROR((E13-N(PE!F11))/(1+$B$5)^2+N(PE!F11)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F13);ISNUMBER(PE!G11);ISNUMBER($B$5);ISNUMBER(PE!F11));IFERROR(IFERROR((F13-N(PE!G11))/(1+$B$5)^3+N(PE!F11)/(1+$B$5)+(N(PE!G11)-N(PE!F11))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I13);I13;\"\");IF(COUNT(G13:I13)=3;AVERAGE(G13:I13);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I13);ISNUMBER(F13));IFERROR(IF(NOT(ISNUMBER(I13));\"\";IF(F13<=0;\"n/a (≤ 0)\";IF(I13<F13;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B14/SUM($B$11:$B$15);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!F12));IFERROR(PFCFE!F12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!G12));IFERROR(PFCFE!G12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!H12));IFERROR(PFCFE!H12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D14);ISNUMBER($B$5));IFERROR(IFERROR(D14/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E14);ISNUMBER(PFCFE!F11);ISNUMBER($B$5));IFERROR(IFERROR((E14-N(PFCFE!F11))/(1+$B$5)^2+N(PFCFE!F11)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F14);ISNUMBER(PFCFE!G11);ISNUMBER($B$5);ISNUMBER(PFCFE!F11));IFERROR(IFERROR((F14-N(PFCFE!G11))/(1+$B$5)^3+N(PFCFE!F11)/(1+$B$5)+(N(PFCFE!G11)-N(PFCFE!F11))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I14);I14;\"\");IF(COUNT(G14:I14)=3;AVERAGE(G14:I14);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I14);ISNUMBER(F14));IFERROR(IF(NOT(ISNUMBER(I14));\"\";IF(F14<=0;\"n/a (≤ 0)\";IF(I14<F14;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B15/SUM($B$11:$B$15);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!F12));IFERROR(POCF!F12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!G12));IFERROR(POCF!G12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!H12));IFERROR(POCF!H12;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D15);ISNUMBER($B$5));IFERROR(IFERROR(D15/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E15);ISNUMBER(POCF!F11);ISNUMBER($B$5));IFERROR(IFERROR((E15-N(POCF!F11))/(1+$B$5)^2+N(POCF!F11)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F15);ISNUMBER(POCF!G11);ISNUMBER($B$5);ISNUMBER(POCF!F11));IFERROR(IFERROR((F15-N(POCF!G11))/(1+$B$5)^3+N(POCF!F11)/(1+$B$5)+(N(POCF!G11)-N(POCF!F11))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I15);I15;\"\");IF(COUNT(G15:I15)=3;AVERAGE(G15:I15);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I15);ISNUMBER(F15));IFERROR(IF(NOT(ISNUMBER(I15));\"\";IF(F15<=0;\"n/a (≤ 0)\";IF(I15<F15;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "Múltiplos consolidados",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(B11:B15))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(C11:C15))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(D11));OR($B$12=0;ISNUMBER(D12));OR($B$13=0;ISNUMBER(D13));OR($B$14=0;ISNUMBER(D14));OR($B$15=0;ISNUMBER(D15)));SUMPRODUCT($C$11:$C$15;D11:D15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(E11));OR($B$12=0;ISNUMBER(E12));OR($B$13=0;ISNUMBER(E13));OR($B$14=0;ISNUMBER(E14));OR($B$15=0;ISNUMBER(E15)));SUMPRODUCT($C$11:$C$15;E11:E15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(F11));OR($B$12=0;ISNUMBER(F12));OR($B$13=0;ISNUMBER(F13));OR($B$14=0;ISNUMBER(F14));OR($B$15=0;ISNUMBER(F15)));SUMPRODUCT($C$11:$C$15;F11:F15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(G11));OR($B$12=0;ISNUMBER(G12));OR($B$13=0;ISNUMBER(G13));OR($B$14=0;ISNUMBER(G14));OR($B$15=0;ISNUMBER(G15)));SUMPRODUCT($C$11:$C$15;G11:G15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(H11));OR($B$12=0;ISNUMBER(H12));OR($B$13=0;ISNUMBER(H13));OR($B$14=0;ISNUMBER(H14));OR($B$15=0;ISNUMBER(H15)));SUMPRODUCT($C$11:$C$15;H11:H15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(I11));OR($B$12=0;ISNUMBER(I12));OR($B$13=0;ISNUMBER(I13));OR($B$14=0;ISNUMBER(I14));OR($B$15=0;ISNUMBER(I15)));SUMPRODUCT($C$11:$C$15;I11:I15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$11:$B$15)>0;OR($B$11=0;ISNUMBER(J11));OR($B$12=0;ISNUMBER(J12));OR($B$13=0;ISNUMBER(J13));OR($B$14=0;ISNUMBER(J14));OR($B$15=0;ISNUMBER(J15)));SUMPRODUCT($C$11:$C$15;J11:J15);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I16);ISNUMBER(F16));IFERROR(IF(NOT(ISNUMBER(I16));\"\";IF(F16<=0;\"n/a (≤ 0)\";IF(I16<F16;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [],
+    [
+      "BASE"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B20/SUM($B$20:$B$24);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!F23));IFERROR(EVEBITDA!F23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!G23));IFERROR(EVEBITDA!G23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!H23));IFERROR(EVEBITDA!H23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D20);ISNUMBER($B$5));IFERROR(IFERROR(D20/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E20);ISNUMBER(EVEBITDA!F22);ISNUMBER($B$5));IFERROR(IFERROR((E20-N(EVEBITDA!F22))/(1+$B$5)^2+N(EVEBITDA!F22)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F20);ISNUMBER(EVEBITDA!G22);ISNUMBER($B$5);ISNUMBER(EVEBITDA!F22));IFERROR(IFERROR((F20-N(EVEBITDA!G22))/(1+$B$5)^3+N(EVEBITDA!F22)/(1+$B$5)+(N(EVEBITDA!G22)-N(EVEBITDA!F22))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I20);I20;\"\");IF(COUNT(G20:I20)=3;AVERAGE(G20:I20);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I20);ISNUMBER(F20));IFERROR(IF(NOT(ISNUMBER(I20));\"\";IF(F20<=0;\"n/a (≤ 0)\";IF(I20<F20;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B21/SUM($B$20:$B$24);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!F23));IFERROR(EVFCFF!F23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!G23));IFERROR(EVFCFF!G23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!H23));IFERROR(EVFCFF!H23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D21);ISNUMBER($B$5));IFERROR(IFERROR(D21/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E21);ISNUMBER(EVFCFF!F22);ISNUMBER($B$5));IFERROR(IFERROR((E21-N(EVFCFF!F22))/(1+$B$5)^2+N(EVFCFF!F22)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F21);ISNUMBER(EVFCFF!G22);ISNUMBER($B$5);ISNUMBER(EVFCFF!F22));IFERROR(IFERROR((F21-N(EVFCFF!G22))/(1+$B$5)^3+N(EVFCFF!F22)/(1+$B$5)+(N(EVFCFF!G22)-N(EVFCFF!F22))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I21);I21;\"\");IF(COUNT(G21:I21)=3;AVERAGE(G21:I21);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I21);ISNUMBER(F21));IFERROR(IF(NOT(ISNUMBER(I21));\"\";IF(F21<=0;\"n/a (≤ 0)\";IF(I21<F21;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B22/SUM($B$20:$B$24);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!F23));IFERROR(PE!F23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!G23));IFERROR(PE!G23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!H23));IFERROR(PE!H23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D22);ISNUMBER($B$5));IFERROR(IFERROR(D22/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E22);ISNUMBER(PE!F22);ISNUMBER($B$5));IFERROR(IFERROR((E22-N(PE!F22))/(1+$B$5)^2+N(PE!F22)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F22);ISNUMBER(PE!G22);ISNUMBER($B$5);ISNUMBER(PE!F22));IFERROR(IFERROR((F22-N(PE!G22))/(1+$B$5)^3+N(PE!F22)/(1+$B$5)+(N(PE!G22)-N(PE!F22))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I22);I22;\"\");IF(COUNT(G22:I22)=3;AVERAGE(G22:I22);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I22);ISNUMBER(F22));IFERROR(IF(NOT(ISNUMBER(I22));\"\";IF(F22<=0;\"n/a (≤ 0)\";IF(I22<F22;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B23/SUM($B$20:$B$24);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!F23));IFERROR(PFCFE!F23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!G23));IFERROR(PFCFE!G23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!H23));IFERROR(PFCFE!H23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D23);ISNUMBER($B$5));IFERROR(IFERROR(D23/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E23);ISNUMBER(PFCFE!F22);ISNUMBER($B$5));IFERROR(IFERROR((E23-N(PFCFE!F22))/(1+$B$5)^2+N(PFCFE!F22)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F23);ISNUMBER(PFCFE!G22);ISNUMBER($B$5);ISNUMBER(PFCFE!F22));IFERROR(IFERROR((F23-N(PFCFE!G22))/(1+$B$5)^3+N(PFCFE!F22)/(1+$B$5)+(N(PFCFE!G22)-N(PFCFE!F22))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I23);I23;\"\");IF(COUNT(G23:I23)=3;AVERAGE(G23:I23);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I23);ISNUMBER(F23));IFERROR(IF(NOT(ISNUMBER(I23));\"\";IF(F23<=0;\"n/a (≤ 0)\";IF(I23<F23;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B24/SUM($B$20:$B$24);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!F23));IFERROR(POCF!F23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!G23));IFERROR(POCF!G23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!H23));IFERROR(POCF!H23;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D24);ISNUMBER($B$5));IFERROR(IFERROR(D24/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E24);ISNUMBER(POCF!F22);ISNUMBER($B$5));IFERROR(IFERROR((E24-N(POCF!F22))/(1+$B$5)^2+N(POCF!F22)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F24);ISNUMBER(POCF!G22);ISNUMBER($B$5);ISNUMBER(POCF!F22));IFERROR(IFERROR((F24-N(POCF!G22))/(1+$B$5)^3+N(POCF!F22)/(1+$B$5)+(N(POCF!G22)-N(POCF!F22))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I24);I24;\"\");IF(COUNT(G24:I24)=3;AVERAGE(G24:I24);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I24);ISNUMBER(F24));IFERROR(IF(NOT(ISNUMBER(I24));\"\";IF(F24<=0;\"n/a (≤ 0)\";IF(I24<F24;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "Múltiplos consolidados",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(B20:B24))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(C20:C24))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(D20));OR($B$21=0;ISNUMBER(D21));OR($B$22=0;ISNUMBER(D22));OR($B$23=0;ISNUMBER(D23));OR($B$24=0;ISNUMBER(D24)));SUMPRODUCT($C$20:$C$24;D20:D24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(E20));OR($B$21=0;ISNUMBER(E21));OR($B$22=0;ISNUMBER(E22));OR($B$23=0;ISNUMBER(E23));OR($B$24=0;ISNUMBER(E24)));SUMPRODUCT($C$20:$C$24;E20:E24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(F20));OR($B$21=0;ISNUMBER(F21));OR($B$22=0;ISNUMBER(F22));OR($B$23=0;ISNUMBER(F23));OR($B$24=0;ISNUMBER(F24)));SUMPRODUCT($C$20:$C$24;F20:F24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(G20));OR($B$21=0;ISNUMBER(G21));OR($B$22=0;ISNUMBER(G22));OR($B$23=0;ISNUMBER(G23));OR($B$24=0;ISNUMBER(G24)));SUMPRODUCT($C$20:$C$24;G20:G24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(H20));OR($B$21=0;ISNUMBER(H21));OR($B$22=0;ISNUMBER(H22));OR($B$23=0;ISNUMBER(H23));OR($B$24=0;ISNUMBER(H24)));SUMPRODUCT($C$20:$C$24;H20:H24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(I20));OR($B$21=0;ISNUMBER(I21));OR($B$22=0;ISNUMBER(I22));OR($B$23=0;ISNUMBER(I23));OR($B$24=0;ISNUMBER(I24)));SUMPRODUCT($C$20:$C$24;I20:I24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$20:$B$24)>0;OR($B$20=0;ISNUMBER(J20));OR($B$21=0;ISNUMBER(J21));OR($B$22=0;ISNUMBER(J22));OR($B$23=0;ISNUMBER(J23));OR($B$24=0;ISNUMBER(J24)));SUMPRODUCT($C$20:$C$24;J20:J24);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I25);ISNUMBER(F25));IFERROR(IF(NOT(ISNUMBER(I25));\"\";IF(F25<=0;\"n/a (≤ 0)\";IF(I25<F25;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [],
+    [
+      "OPTIMISTA"
+    ],
+    [
+      "Método",
+      "Peso total",
+      "Peso en múltiplos",
+      "Precio + div. FY+1",
+      "Precio + div. FY+2",
+      "Precio + div. FY+3",
+      "VP 1 año",
+      "VP 2 años",
+      "VP 3 años",
+      "Consolidado hoy",
+      "Chequeo VP3 < FY+3"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B7)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B29/SUM($B$29:$B$33);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!F34));IFERROR(EVEBITDA!F34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!G34));IFERROR(EVEBITDA!G34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVEBITDA!H34));IFERROR(EVEBITDA!H34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D29);ISNUMBER($B$5));IFERROR(IFERROR(D29/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E29);ISNUMBER(EVEBITDA!F33);ISNUMBER($B$5));IFERROR(IFERROR((E29-N(EVEBITDA!F33))/(1+$B$5)^2+N(EVEBITDA!F33)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F29);ISNUMBER(EVEBITDA!G33);ISNUMBER($B$5);ISNUMBER(EVEBITDA!F33));IFERROR(IFERROR((F29-N(EVEBITDA!G33))/(1+$B$5)^3+N(EVEBITDA!F33)/(1+$B$5)+(N(EVEBITDA!G33)-N(EVEBITDA!F33))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I29);I29;\"\");IF(COUNT(G29:I29)=3;AVERAGE(G29:I29);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I29);ISNUMBER(F29));IFERROR(IF(NOT(ISNUMBER(I29));\"\";IF(F29<=0;\"n/a (≤ 0)\";IF(I29<F29;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B8)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B30/SUM($B$29:$B$33);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!F34));IFERROR(EVFCFF!F34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!G34));IFERROR(EVFCFF!G34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(EVFCFF!H34));IFERROR(EVFCFF!H34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D30);ISNUMBER($B$5));IFERROR(IFERROR(D30/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E30);ISNUMBER(EVFCFF!F33);ISNUMBER($B$5));IFERROR(IFERROR((E30-N(EVFCFF!F33))/(1+$B$5)^2+N(EVFCFF!F33)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F30);ISNUMBER(EVFCFF!G33);ISNUMBER($B$5);ISNUMBER(EVFCFF!F33));IFERROR(IFERROR((F30-N(EVFCFF!G33))/(1+$B$5)^3+N(EVFCFF!F33)/(1+$B$5)+(N(EVFCFF!G33)-N(EVFCFF!F33))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I30);I30;\"\");IF(COUNT(G30:I30)=3;AVERAGE(G30:I30);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I30);ISNUMBER(F30));IFERROR(IF(NOT(ISNUMBER(I30));\"\";IF(F30<=0;\"n/a (≤ 0)\";IF(I30<F30;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B9)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B31/SUM($B$29:$B$33);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!F34));IFERROR(PE!F34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!G34));IFERROR(PE!G34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PE!H34));IFERROR(PE!H34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D31);ISNUMBER($B$5));IFERROR(IFERROR(D31/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E31);ISNUMBER(PE!F33);ISNUMBER($B$5));IFERROR(IFERROR((E31-N(PE!F33))/(1+$B$5)^2+N(PE!F33)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F31);ISNUMBER(PE!G33);ISNUMBER($B$5);ISNUMBER(PE!F33));IFERROR(IFERROR((F31-N(PE!G33))/(1+$B$5)^3+N(PE!F33)/(1+$B$5)+(N(PE!G33)-N(PE!F33))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I31);I31;\"\");IF(COUNT(G31:I31)=3;AVERAGE(G31:I31);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I31);ISNUMBER(F31));IFERROR(IF(NOT(ISNUMBER(I31));\"\";IF(F31<=0;\"n/a (≤ 0)\";IF(I31<F31;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B10)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B32/SUM($B$29:$B$33);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!F34));IFERROR(PFCFE!F34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!G34));IFERROR(PFCFE!G34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(PFCFE!H34));IFERROR(PFCFE!H34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D32);ISNUMBER($B$5));IFERROR(IFERROR(D32/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E32);ISNUMBER(PFCFE!F33);ISNUMBER($B$5));IFERROR(IFERROR((E32-N(PFCFE!F33))/(1+$B$5)^2+N(PFCFE!F33)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F32);ISNUMBER(PFCFE!G33);ISNUMBER($B$5);ISNUMBER(PFCFE!F33));IFERROR(IFERROR((F32-N(PFCFE!G33))/(1+$B$5)^3+N(PFCFE!F33)/(1+$B$5)+(N(PFCFE!G33)-N(PFCFE!F33))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I32);I32;\"\");IF(COUNT(G32:I32)=3;AVERAGE(G32:I32);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I32);ISNUMBER(F32));IFERROR(IF(NOT(ISNUMBER(I32));\"\";IF(F32<=0;\"n/a (≤ 0)\";IF(I32<F32;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!A11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Resumen de Valoración'!B11)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B33/SUM($B$29:$B$33);0))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!F34));IFERROR(POCF!F34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!G34));IFERROR(POCF!G34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(POCF!H34));IFERROR(POCF!H34;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(D33);ISNUMBER($B$5));IFERROR(IFERROR(D33/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(E33);ISNUMBER(POCF!F33);ISNUMBER($B$5));IFERROR(IFERROR((E33-N(POCF!F33))/(1+$B$5)^2+N(POCF!F33)/(1+$B$5);\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(F33);ISNUMBER(POCF!G33);ISNUMBER($B$5);ISNUMBER(POCF!F33));IFERROR(IFERROR((F33-N(POCF!G33))/(1+$B$5)^3+N(POCF!F33)/(1+$B$5)+(N(POCF!G33)-N(POCF!F33))/(1+$B$5)^2;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF($B$6=\"Solo 3 años\";IF(ISNUMBER(I33);I33;\"\");IF(COUNT(G33:I33)=3;AVERAGE(G33:I33);\"\")))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I33);ISNUMBER(F33));IFERROR(IF(NOT(ISNUMBER(I33));\"\";IF(F33<=0;\"n/a (≤ 0)\";IF(I33<F33;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [
+      "Múltiplos consolidados",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(B29:B33))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM(C29:C33))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(D29));OR($B$30=0;ISNUMBER(D30));OR($B$31=0;ISNUMBER(D31));OR($B$32=0;ISNUMBER(D32));OR($B$33=0;ISNUMBER(D33)));SUMPRODUCT($C$29:$C$33;D29:D33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(E29));OR($B$30=0;ISNUMBER(E30));OR($B$31=0;ISNUMBER(E31));OR($B$32=0;ISNUMBER(E32));OR($B$33=0;ISNUMBER(E33)));SUMPRODUCT($C$29:$C$33;E29:E33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(F29));OR($B$30=0;ISNUMBER(F30));OR($B$31=0;ISNUMBER(F31));OR($B$32=0;ISNUMBER(F32));OR($B$33=0;ISNUMBER(F33)));SUMPRODUCT($C$29:$C$33;F29:F33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(G29));OR($B$30=0;ISNUMBER(G30));OR($B$31=0;ISNUMBER(G31));OR($B$32=0;ISNUMBER(G32));OR($B$33=0;ISNUMBER(G33)));SUMPRODUCT($C$29:$C$33;G29:G33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(H29));OR($B$30=0;ISNUMBER(H30));OR($B$31=0;ISNUMBER(H31));OR($B$32=0;ISNUMBER(H32));OR($B$33=0;ISNUMBER(H33)));SUMPRODUCT($C$29:$C$33;H29:H33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(I29));OR($B$30=0;ISNUMBER(I30));OR($B$31=0;ISNUMBER(I31));OR($B$32=0;ISNUMBER(I32));OR($B$33=0;ISNUMBER(I33)));SUMPRODUCT($C$29:$C$33;I29:I33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(SUM($B$29:$B$33)>0;OR($B$29=0;ISNUMBER(J29));OR($B$30=0;ISNUMBER(J30));OR($B$31=0;ISNUMBER(J31));OR($B$32=0;ISNUMBER(J32));OR($B$33=0;ISNUMBER(J33)));SUMPRODUCT($C$29:$C$33;J29:J33);\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(I34);ISNUMBER(F34));IFERROR(IF(NOT(ISNUMBER(I34));\"\";IF(F34<=0;\"n/a (≤ 0)\";IF(I34<F34;\"OK\";\"REVISAR\")));\"\");\"\"))"
+    ],
+    [],
+    [
+      "VALOR HOY · DCF (VALOR INTRÍNSECO) + MÚLTIPLOS DESCONTADOS (SECUNDARIO)"
+    ],
+    [
+      "Concepto",
+      "Peso",
+      "Conservador",
+      "Base",
+      "Optimista"
+    ],
+    [
+      "DCF · valor intrínseco (valor presente)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Resumen de Valoración'!B6;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Valuation output'!B86)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER('Valuation output'!B35));IFERROR('Valuation output'!B35;\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER('Valuation output'!B137));IFERROR('Valuation output'!B137;\"\");\"\"))"
+    ],
+    [
+      "Múltiplos consolidados (valor presente)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";SUM('Resumen de Valoración'!B7:B11))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER(J16);J16;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER(J25);J25;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER(J34);J34;\"\"))"
+    ],
+    [
+      "Ponderado DCF + múltiplos (secundario)",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B38+B39;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(OR($B$38=0;ISNUMBER(C38));OR($B$39=0;ISNUMBER(C39)));SUMPRODUCT($B$38:$B$39;C38:C39);\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(OR($B$38=0;ISNUMBER(D38));OR($B$39=0;ISNUMBER(D39)));SUMPRODUCT($B$38:$B$39;D38:D39);\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(OR($B$38=0;ISNUMBER(E38));OR($B$39=0;ISNUMBER(E39)));SUMPRODUCT($B$38:$B$39;E38:E39);\"\");\"\"))"
+    ],
+    [
+      "Precio de referencia de la hoja",
+      "=IF('Input sheet'!$A$1=\"\";\"\";'Input sheet'!D1)"
+    ],
+    [
+      "Descuento del precio frente al ponderado",
+      null,
+      "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(1-$B$41/C40;\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER($B$41);ISNUMBER(D40));IFERROR(IFERROR(1-$B$41/D40;\"\");\"\");\"\"))",
+      "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER($B$41);ISNUMBER(E40));IFERROR(IFERROR(1-$B$41/E40;\"\");\"\");\"\"))"
+    ]
+  ],
+  "oldWeightDcf": 0.6,
+  "oldWeightMultiples": 0.4,
+  "newWeightDcf": 0.6,
+  "newWeightMultiples": 0.40000000000000013,
+  "methodChecks": [
+    {
+      "method": "EV/EBITDA",
+      "scenario": "conservador",
+      "sourceRow": 11,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.10000000000000003
+    },
+    {
+      "method": "EV/FCFF",
+      "scenario": "conservador",
+      "sourceRow": 12,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.15
+    },
+    {
+      "method": "P/E",
+      "scenario": "conservador",
+      "sourceRow": 13,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/FCFE",
+      "scenario": "conservador",
+      "sourceRow": 14,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/OCF",
+      "scenario": "conservador",
+      "sourceRow": 15,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "EV/EBITDA",
+      "scenario": "base",
+      "sourceRow": 20,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.10000000000000003
+    },
+    {
+      "method": "EV/FCFF",
+      "scenario": "base",
+      "sourceRow": 21,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.15
+    },
+    {
+      "method": "P/E",
+      "scenario": "base",
+      "sourceRow": 22,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/FCFE",
+      "scenario": "base",
+      "sourceRow": 23,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/OCF",
+      "scenario": "base",
+      "sourceRow": 24,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "EV/EBITDA",
+      "scenario": "optimista",
+      "sourceRow": 29,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.10000000000000003
+    },
+    {
+      "method": "EV/FCFF",
+      "scenario": "optimista",
+      "sourceRow": 30,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.15
+    },
+    {
+      "method": "P/E",
+      "scenario": "optimista",
+      "sourceRow": 31,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/FCFE",
+      "scenario": "optimista",
+      "sourceRow": 32,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    },
+    {
+      "method": "P/OCF",
+      "scenario": "optimista",
+      "sourceRow": 33,
+      "status": "OK",
+      "jsonWeight": 0,
+      "sourceWeight": 0.05000000000000002
+    }
+  ],
+  "dcfPreserved": true,
+  "integrated": false,
+  "economicAudit": false
+}

@@ -24,27 +24,33 @@ test('acepta cálculo con advertencias económicas', () => {
 
 test('rechaza contar celdas N/D como matrices', () => {
   const r = record();
-  r.sensibilidadMultiples.noDisponibles = 255;
+  // Método A no usa el contador histórico de 21 celdas: rechazar que
+  // un múltiplo prioritario OK se convierta en N/D sin matriz.
+  r.sensibilidadMultiples.matrices[0].estado = 'N/D';
+  r.sensibilidadMultiples.matrices[0].matriz = null;
   assert.throws(() => validateRecord(r), assert.AssertionError);
 });
 
 test('rechaza MOS sobre el ponderado', () => {
   const r = record();
-  r.precioMOS = r.valorPresentePonderado.base * (1 - r.mos);
-  assert.throws(() => validateRecord(r), /MOS diferente/);
+  r.precioMOS = r.valorPrincipal * (1 - r.mos) + 1;
+  assert.throws(() => validateRecord(r), /MOS no corresponde a DCF Base/);
 });
 
 test('rechaza cifras ausentes aunque el texto diga OK', () => {
   const r = record();
-  const active = r.descuentoMultiples.metodos.find(m => m.peso > 0);
-  assert.ok(active);
-  active.base.vp[2] = null;
-  assert.throws(() => validateRecord(r), /sin cifras/);
+  // Faltante en una cuadrícula 5x5 Base declarada OK.
+  r.sensibilidadMultiples.matrices[0].matriz[2][2] = null;
+  assert.throws(() => validateRecord(r), /matriz numérica 5x5/);
 });
 
 // Caso sintético del contrato SOTP: no restaurar empresas archivadas a producción.
 function holding() {
-  const r = record();
+  // Usar el expediente histórico FCFE (contrato anterior), no etiquetar
+  // un registro A-1.2 industrial como SOTP sintético.
+  const vp = catalog.valoraciones.find(p => /^valoraciones\/XP-/.test(p));
+  assert.ok(vp, 'XP histórico necesario para el caso SOTP');
+  const r = read(vp);
   r.ticker = 'TEST-HOLDING';
   r.metodoPrincipal = 'SOTP';
   r.valorPrincipal = 100;

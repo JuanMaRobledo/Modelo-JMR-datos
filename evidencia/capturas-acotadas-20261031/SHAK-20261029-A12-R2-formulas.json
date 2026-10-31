@@ -1,0 +1,445 @@
+{
+  "tipo": "EVIDENCIA_ACOTADA_FORMULAS_NO_PUBLICADA",
+  "ticker": "SHAK",
+  "revisionId": "SHAK-20261029-A12-R2",
+  "sourceSheetId": "1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg",
+  "rango": "'Sensibilidad por múltiplo'!A76:I144",
+  "control": "FORMULAS_Y_25_VALORES_DE_CADA_METODO_OK_VERIFICADOS",
+  "fechaCaptura": "2026-10-31",
+  "metodos": [
+    {
+      "method": "EV/EBITDA",
+      "sourceStatus": "OK",
+      "formulaCount": 25,
+      "grid": [
+        [
+          63.16326969183127,
+          72.35007714027593,
+          81.53688458872054,
+          90.72369203716518,
+          99.91049948560982
+        ],
+        [
+          72.35007714027591,
+          82.68523551977611,
+          93.02039389927633,
+          103.35555227877656,
+          113.69071065827677
+        ],
+        [
+          81.53688458872054,
+          93.02039389927634,
+          104.50390320983213,
+          115.98741252038793,
+          127.47092183094372
+        ],
+        [
+          90.72369203716518,
+          103.35555227877656,
+          115.98741252038793,
+          128.6192727619993,
+          141.25113300361068
+        ],
+        [
+          99.9104994856098,
+          113.69071065827677,
+          127.47092183094372,
+          141.25113300361068,
+          155.03134417627763
+        ]
+      ],
+      "gridFormulas": [
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(B$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(C$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(D$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(E$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(F$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(B$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(C$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(D$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(E$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(F$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(B$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(C$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(D$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(E$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(F$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(B$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(C$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(D$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(E$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(F$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(B$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(C$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(D$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(E$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(F$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ]
+      ],
+      "origin": "'Sensibilidad por múltiplo'!A76:I84",
+      "sourceVP3": 104.50390320983213
+    },
+    {
+      "method": "EV/FCFF",
+      "sourceStatus": "N/D",
+      "formulaCount": 0,
+      "grid": null,
+      "gridFormulas": null,
+      "origin": "'Sensibilidad por múltiplo'!A86:I94",
+      "sourceVP3": "N/D"
+    },
+    {
+      "method": "P/E",
+      "sourceStatus": "OK",
+      "formulaCount": 25,
+      "grid": [
+        [
+          17.445003257275708,
+          19.625887173800834,
+          21.80677109032596,
+          23.987655006851096,
+          26.16853892337622
+        ],
+        [
+          19.625887173800834,
+          22.079381579891603,
+          24.532875985982372,
+          26.986370392073145,
+          29.439864798163914
+        ],
+        [
+          21.80677109032596,
+          24.532875985982372,
+          27.258980881638784,
+          29.985085777295197,
+          32.71119067295161
+        ],
+        [
+          23.987655006851096,
+          26.986370392073148,
+          29.9850857772952,
+          32.98380116251725,
+          35.98251654773931
+        ],
+        [
+          26.168538923376218,
+          29.439864798163914,
+          32.7111906729516,
+          35.9825165477393,
+          39.253842422526986
+        ]
+      ],
+      "gridFormulas": [
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(B$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(C$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(D$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(E$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(F$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(B$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(C$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(D$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(E$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(F$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(B$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(C$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(D$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(E$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(F$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(B$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(C$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(D$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(E$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(F$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(B$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(C$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(D$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(E$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(F$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ]
+      ],
+      "origin": "'Sensibilidad por múltiplo'!A96:I104",
+      "sourceVP3": 27.258980881638784
+    },
+    {
+      "method": "P/FCFE",
+      "sourceStatus": "N/D",
+      "formulaCount": 0,
+      "grid": null,
+      "gridFormulas": null,
+      "origin": "'Sensibilidad por múltiplo'!A106:I114",
+      "sourceVP3": "N/D"
+    },
+    {
+      "method": "P/OCF",
+      "sourceStatus": "OK",
+      "formulaCount": 25,
+      "grid": [
+        [
+          26.752485841046585,
+          30.09680508054307,
+          33.441124320039556,
+          36.78544355953605,
+          40.129762799032534
+        ],
+        [
+          30.096805080543074,
+          33.85916422497662,
+          37.62152336941017,
+          41.38388251384372,
+          45.14624165827727
+        ],
+        [
+          33.44112432003956,
+          37.62152336941017,
+          41.80192241878078,
+          45.9823214681514,
+          50.162720517522
+        ],
+        [
+          36.785443559536056,
+          41.38388251384373,
+          45.9823214681514,
+          50.58076042245908,
+          55.17919937676673
+        ],
+        [
+          40.129762799032534,
+          45.14624165827727,
+          50.162720517522,
+          55.17919937676673,
+          60.19567823601146
+        ]
+      ],
+      "gridFormulas": [
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(B$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(C$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(D$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(E$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(F$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(B$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(C$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(D$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(E$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(F$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(B$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(C$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(D$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(E$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(F$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(B$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(C$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(D$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(E$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(F$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(B$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(C$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(D$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(E$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(F$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ]
+      ],
+      "origin": "'Sensibilidad por múltiplo'!A116:I124",
+      "sourceVP3": 41.80192241878078
+    },
+    {
+      "method": "P/V",
+      "sourceStatus": "OK",
+      "formulaCount": 25,
+      "grid": [
+        [
+          17.4450032572757,
+          19.625887173800834,
+          21.80677109032596,
+          23.987655006851092,
+          26.168538923376218
+        ],
+        [
+          19.62588717380083,
+          22.079381579891603,
+          24.532875985982372,
+          26.986370392073145,
+          29.43986479816391
+        ],
+        [
+          21.80677109032596,
+          24.532875985982372,
+          27.258980881638784,
+          29.985085777295197,
+          32.7111906729516
+        ],
+        [
+          23.987655006851096,
+          26.986370392073148,
+          29.9850857772952,
+          32.98380116251725,
+          35.98251654773931
+        ],
+        [
+          26.168538923376218,
+          29.439864798163914,
+          32.7111906729516,
+          35.9825165477393,
+          39.253842422526986
+        ]
+      ],
+      "gridFormulas": [
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A129));PV!$D$42+(B$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A129));PV!$D$42+(C$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A129));PV!$D$42+(D$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A129));PV!$D$42+(E$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A129));PV!$D$42+(F$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A130));PV!$D$42+(B$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A130));PV!$D$42+(C$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A130));PV!$D$42+(D$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A130));PV!$D$42+(E$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A130));PV!$D$42+(F$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A131));PV!$D$42+(B$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A131));PV!$D$42+(C$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A131));PV!$D$42+(D$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A131));PV!$D$42+(E$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A131));PV!$D$42+(F$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A132));PV!$D$42+(B$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A132));PV!$D$42+(C$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A132));PV!$D$42+(D$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A132));PV!$D$42+(E$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A132));PV!$D$42+(F$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A133));PV!$D$42+(B$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A133));PV!$D$42+(C$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A133));PV!$D$42+(D$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A133));PV!$D$42+(E$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A133));PV!$D$42+(F$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ]
+      ],
+      "origin": "'Sensibilidad por múltiplo'!A126:I134",
+      "sourceVP3": 27.258980881638784
+    },
+    {
+      "method": "P/BV",
+      "sourceStatus": "OK",
+      "formulaCount": 25,
+      "grid": [
+        [
+          21.722270984123355,
+          24.437813366504443,
+          27.15335574888553,
+          29.86889813126662,
+          32.5844405136477
+        ],
+        [
+          24.437813366504443,
+          27.49279854668317,
+          30.547783726861887,
+          33.60276890704061,
+          36.65775408721933
+        ],
+        [
+          27.153355748885534,
+          30.54778372686189,
+          33.94221170483824,
+          37.33663968281461,
+          40.73106766079096
+        ],
+        [
+          29.86889813126662,
+          33.602768907040605,
+          37.3366396828146,
+          41.0705104585886,
+          44.804381234362594
+        ],
+        [
+          32.584440513647706,
+          36.65775408721933,
+          40.73106766079096,
+          44.804381234362594,
+          48.87769480793421
+        ]
+      ],
+      "gridFormulas": [
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A139));PBV!$D$42+(B$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A139));PBV!$D$42+(C$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A139));PBV!$D$42+(D$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A139));PBV!$D$42+(E$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A139));PBV!$D$42+(F$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A140));PBV!$D$42+(B$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A140));PBV!$D$42+(C$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A140));PBV!$D$42+(D$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A140));PBV!$D$42+(E$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A140));PBV!$D$42+(F$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A141));PBV!$D$42+(B$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A141));PBV!$D$42+(C$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A141));PBV!$D$42+(D$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A141));PBV!$D$42+(E$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A141));PBV!$D$42+(F$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A142));PBV!$D$42+(B$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A142));PBV!$D$42+(C$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A142));PBV!$D$42+(D$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A142));PBV!$D$42+(E$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A142));PBV!$D$42+(F$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ],
+        [
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A143));PBV!$D$42+(B$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A143));PBV!$D$42+(C$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A143));PBV!$D$42+(D$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A143));PBV!$D$42+(E$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))",
+          "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A143));PBV!$D$42+(F$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+        ]
+      ],
+      "origin": "'Sensibilidad por múltiplo'!A136:I144",
+      "sourceVP3": 33.94221170483824
+    }
+  ],
+  "controles": {
+    "matricesOK": 5,
+    "noDisponibles": 2,
+    "formulasNumericas": 125,
+    "hojaOriginalModificada": false,
+    "valoracionModificada": false
+  },
+  "fotoCompleta46Hojas": false,
+  "shaFotografiaCompleta": null,
+  "estado": "SOLO_EVIDENCIA_NO_INTEGRAR",
+  "nota": "Prueba de fórmulas y 25 celdas por bloque OK; no sustituye fotografía financiera integral firmada ni valida auditabilidad económica. No alimentar JSON oficial con esta prueba parcial."
+}

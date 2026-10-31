@@ -160,7 +160,7 @@
     ]
   },
   "descuentoMultiples": {
-    "criterio": "Banca: P/E, P/BV, P/FCFE, ROTE, clase de referencia digital LATAM; no EV/EBITDA. Pendientes de anclas comparables, no proyectar objetivo ponderado.",
+    "criterio": "Contraste provisional FY+3 a valor presente; peso cero en DCF",
     "dcfHoy": {
       "conservador": 7.430896392235082,
       "base": 18.32707520946464,
@@ -168,7 +168,51 @@
     },
     "multiplesHoy": null,
     "ponderadoHoy": null,
-    "chequeo": "NO_CERTIFICADO"
+    "chequeo": "NO_CERTIFICADO",
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "metodos": [
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            16.90503000865525
+          ],
+          "consolidado": 16.90503000865525
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            16.905030008655245
+          ],
+          "consolidado": 16.905030008655245
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "estado": "PROVISIONAL_NO_CERTIFICADO",
+        "base": {
+          "vp": [
+            null,
+            null,
+            15.08932976565204
+          ],
+          "consolidado": 15.08932976565204
+        }
+      }
+    ]
   },
   "revisionSupuestos": {
     "metodo": "A",
@@ -419,5 +463,234 @@
     },
     "financieros": {}
   },
-  "revisionOrigen": "Nueva copia limpia de plantilla IA 46 tabs más 2 tabs dedicadas FCFE y sensibilidad bancarias, con histórico 2019–2025 + LTM Jun26 exclusivamente como hechos contables importados y contraste SEC/IFRS; valoraciones y supuestos anteriores desechados. AZ copia de 5 tabs eliminó todas las entradas y fórmulas industriales heredadas y recalculó FCFE y P/BV bancario. Recalibración posterior en misma revisión publicada, con fuentes adicionales Q2 SEC y consenso Oct27, sin modificar datos contables históricos."
+  "revisionOrigen": "Nueva copia limpia de plantilla IA 46 tabs más 2 tabs dedicadas FCFE y sensibilidad bancarias, con histórico 2019–2025 + LTM Jun26 exclusivamente como hechos contables importados y contraste SEC/IFRS; valoraciones y supuestos anteriores desechados. AZ copia de 5 tabs eliminó todas las entradas y fórmulas industriales heredadas y recalculó FCFE y P/BV bancario. Recalibración posterior en misma revisión publicada, con fuentes adicionales Q2 SEC y consenso Oct27, sin modificar datos contables históricos.",
+  "sensibilidadMultiples": {
+    "contrato": "review-relative-v1",
+    "revisionId": "NU-20261029-R1",
+    "sourceSheetId": "1PMtFbAoT-rM5O3DnAlnd4JEGPAky15v24NNPjoQS9kI",
+    "sourcePath": "evidencia/relativos-revision-20261031/NU-20261029-R1.json",
+    "resultadosSha256": "1d0e4fd69eff2ef5dd4c1262d51e8f8083cd0cc0cf66a7149537a462ec79244a",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "pesoEnDCFPrincipal": 0,
+    "tipo": "MULTIPLOS_BANCARIOS",
+    "advertencia": "Contrastes provisionales EN_REVISION, sin certificación económica; peso cero en el DCF principal. Banca: Ke USD 0.12, acciones 4908.8 millones. P/E=precio×acciones/NI LTM; P/BV=precio×acciones/patrimonio. P/FCFE=P/E×NI FY3/FCFE FY3; sin añadir caja ni restar depósitos. No incluye dividendos en el contraste de precios.",
+    "matrices": [
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "FCFE bancario A: NI y patrimonio LTM, precio observado; P/FCFE equivalente al P/E proyectado",
+        "limitacion": "Ancla observada/derivada provisional; no comparable independiente. Precio FY+3 descontado a Ke, excluye dividendos, no es retorno total.",
+        "origen": "'FCFE bancario A'!A3:J19",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5720.870116000002,
+          6435.978880500002,
+          7151.087645000001,
+          7866.196409500002,
+          8581.305174000001
+        ],
+        "multiploElegido": [
+          13.042571856773826,
+          14.672893338870553,
+          16.30321482096728,
+          17.93353630306401,
+          19.563857785160735
+        ],
+        "matriz": [
+          [
+            10.81921920553936,
+            12.171621606231781,
+            13.5240240069242,
+            14.876426407616622,
+            16.22882880830904
+          ],
+          [
+            12.17162160623178,
+            13.693074307010752,
+            15.214527007789725,
+            16.7359797085687,
+            18.25743240934767
+          ],
+          [
+            13.524024006924199,
+            15.214527007789725,
+            16.90503000865525,
+            18.595533009520775,
+            20.286036010386297
+          ],
+          [
+            14.87642640761662,
+            16.735979708568696,
+            18.595533009520775,
+            20.455086310472854,
+            22.31463961142493
+          ],
+          [
+            16.22882880830904,
+            18.25743240934767,
+            20.286036010386297,
+            22.314639611424926,
+            24.343243212463555
+          ]
+        ],
+        "centro": 16.90503000865525,
+        "vp3Original": 16.90503000865525,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00014500086534660424,
+          "constante": 0,
+          "descripcion": "VP USD/acción = factor × múltiplo × fundamental + constante. Parámetros y supuestos explícitos en evidencia."
+        }
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "FCFE bancario A: NI y patrimonio LTM, precio observado; P/FCFE equivalente al P/E proyectado",
+        "limitacion": "Ancla observada/derivada provisional; no comparable independiente. Precio FY+3 descontado a Ke, excluye dividendos, no es retorno total.",
+        "origen": "'FCFE bancario A'!A3:J19",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          2090.492464387098,
+          2351.8040224354854,
+          2613.1155804838727,
+          2874.4271385322604,
+          3135.7386965806472
+        ],
+        "multiploElegido": [
+          35.6924795675243,
+          40.15403951346484,
+          44.615599459405374,
+          49.07715940534592,
+          53.538719351286446
+        ],
+        "matriz": [
+          [
+            10.81921920553936,
+            12.17162160623178,
+            13.524024006924199,
+            14.876426407616622,
+            16.22882880830904
+          ],
+          [
+            12.17162160623178,
+            13.69307430701075,
+            15.214527007789723,
+            16.7359797085687,
+            18.25743240934767
+          ],
+          [
+            13.524024006924199,
+            15.214527007789723,
+            16.905030008655245,
+            18.595533009520775,
+            20.286036010386297
+          ],
+          [
+            14.87642640761662,
+            16.735979708568696,
+            18.595533009520775,
+            20.455086310472858,
+            22.31463961142493
+          ],
+          [
+            16.228828808309036,
+            18.257432409347665,
+            20.286036010386294,
+            22.31463961142493,
+            24.343243212463555
+          ]
+        ],
+        "centro": 16.905030008655245,
+        "vp3Original": 16.905030008655245,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00014500086534660424,
+          "constante": 0,
+          "descripcion": "VP USD/acción = factor × múltiplo × fundamental + constante. Parámetros y supuestos explícitos en evidencia."
+        }
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "FCFE bancario A: NI y patrimonio LTM, precio observado; P/FCFE equivalente al P/E proyectado",
+        "limitacion": "Ancla observada/derivada provisional; no comparable independiente. Precio FY+3 descontado a Ke, excluye dividendos, no es retorno total.",
+        "origen": "'FCFE bancario A'!A3:J19",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          18756.951200000007,
+          21101.570100000004,
+          23446.189000000006,
+          25790.807900000007,
+          28135.426800000005
+        ],
+        "multiploElegido": [
+          3.550725353914475,
+          3.9945660231537845,
+          4.438406692393094,
+          4.882247361632404,
+          5.326088030871712
+        ],
+        "matriz": [
+          [
+            9.657171050017308,
+            10.86431743126947,
+            12.071463812521632,
+            13.278610193773797,
+            14.485756575025958
+          ],
+          [
+            10.864317431269471,
+            12.222357110178153,
+            13.580396789086837,
+            14.938436467995523,
+            16.296476146904205
+          ],
+          [
+            12.071463812521635,
+            13.580396789086837,
+            15.08932976565204,
+            16.598262742217244,
+            18.107195718782446
+          ],
+          [
+            13.2786101937738,
+            14.938436467995523,
+            16.598262742217248,
+            18.258089016438973,
+            19.917915290660694
+          ],
+          [
+            14.48575657502596,
+            16.2964761469042,
+            18.107195718782446,
+            19.91791529066069,
+            21.728634862538936
+          ]
+        ],
+        "centro": 15.08932976565204,
+        "vp3Original": 15.08932976565204,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00014500086534660424,
+          "constante": 0,
+          "descripcion": "VP USD/acción = factor × múltiplo × fundamental + constante. Parámetros y supuestos explícitos en evidencia."
+        }
+      }
+    ]
+  }
 }

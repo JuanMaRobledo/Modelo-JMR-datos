@@ -1,0 +1,285 @@
+{
+  "ticker": "CELH",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1xqXfx9bD8XCGzgWtDnQP_9X0x_Cq94rID4w_w5mPyUo/edit",
+  "nombreActivo": "Celsius Holdings, Inc.",
+  "fecha": "2026-10-28",
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "precio": 27.98,
+  "precioAnalisis": 27.98,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "Cierre 28 octubre 2026, US$27,98; precio histórico de referencia, no cotización intradía",
+  "tipo": "Crecimiento",
+  "mos": 0.35,
+  "precioMOS": 22.65,
+  "precioMOSMax": 22.65,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 34.85258305,
+  "metodoPrincipal": "DCF FCFF a perpetuidad (Método A-1.2)",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran (FY+3 capitalizado)",
+      "peso": 0.6,
+      "conservador": 11.41,
+      "base": 43.16,
+      "optimista": 80.94,
+      "valorHoy": {
+        "conservador": 9.21116371,
+        "base": 34.85258305,
+        "optimista": 65.35853185
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1,
+      "conservador": 9.52,
+      "base": 39.09,
+      "optimista": 86.04,
+      "valorPresenteBase": 29.97,
+      "multiploBase": 14
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.15,
+      "conservador": 6.12,
+      "base": 30.5,
+      "optimista": 64.75,
+      "valorPresenteBase": 21.35,
+      "multiploBase": 24
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.05,
+      "conservador": 16.15,
+      "base": 56.15,
+      "optimista": 119.21,
+      "valorPresenteBase": 43.53,
+      "multiploBase": 28
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.05,
+      "conservador": 11.99,
+      "base": 40.21,
+      "optimista": 105.66,
+      "valorPresenteBase": 29.01,
+      "multiploBase": 26
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0.05,
+      "conservador": 12.56,
+      "base": 42.58,
+      "optimista": 82.07,
+      "valorPresenteBase": 31.55,
+      "multiploBase": 22
+    },
+    {
+      "nombre": "P/S (P/V)",
+      "peso": 0,
+      "conservador": 20.09,
+      "base": 47.38,
+      "optimista": 74.63,
+      "multiploBase": 3,
+      "nota": "Valor FY+3, histórico/referencia, no ponderado"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "conservador": 25.41,
+      "base": 54.15,
+      "optimista": 90.48,
+      "multiploBase": 5,
+      "nota": "Valor FY+3, patrimonio común; no ponderado"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 10.75,
+    "base": 41.33,
+    "optimista": 82.23
+  },
+  "valorPresentePonderado": {
+    "conservador": 9.9,
+    "base": 32.32,
+    "optimista": 61.47
+  },
+  "valorEsperado": {
+    "valor": 36.06871542,
+    "tipoPromedio": "ponderado_renormalizado_3_historias",
+    "valorCentral": 34.85258305,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · marcas Celsius, Alani y Rockstar con integración disciplinada",
+        "probabilidad": 0.45,
+        "crecimiento": 0.08793733372,
+        "margen": 0.195,
+        "salesToCapital": 1.6,
+        "s2c610": 1.4,
+        "roicTerminal": 0.1900781771,
+        "gTerminal": 0.04,
+        "valor": 34.85258305,
+        "estadoCalculo": "LISTO",
+        "descripcion": "EBIT recurrente normalizado; FY+1 ventas +10%, años1-5 CAGR 8,79%, sin repetir adquisiciones; EBIT 19,5%, S/C marginal 1,60→1,40, ROIC terminal 19%; WACC 7,3%→8,75%. Riesgos: margen bruto reciente, derechos preferentes, integración y uso de capital."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora · presión de integración y menor productividad",
+        "probabilidad": 0.225,
+        "crecimiento": 0.04,
+        "margen": 0.12,
+        "salesToCapital": 1.2,
+        "s2c610": 1.1,
+        "roicTerminal": 0.0899,
+        "gTerminal": 0.04,
+        "valor": 9.21116371,
+        "estadoCalculo": "LISTO",
+        "descripcion": "FY1-5 crecimiento 4%, EBIT 12%, productividad 1,2/1,1, sin prima terminal de ROIC sobre WACC; no sumar adquisiciones futuras no financiadas."
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · pérdida de relevancia comercial",
+        "probabilidad": 0.1,
+        "crecimiento": -0.04234377318,
+        "margen": 0.06,
+        "salesToCapital": 0.8,
+        "s2c610": 0.8,
+        "roicTerminal": 0.0899,
+        "gTerminal": 0,
+        "valor": 0.2245295141,
+        "estadoCalculo": "LISTO",
+        "descripcion": "Contracción de ventas y presión de márgenes, ROIC converge hacia coste de capital; escenario de ruptura fuera del promedio ordinario."
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · escalamiento de marcas y recuperación de productividad",
+        "probabilidad": 0.225,
+        "crecimiento": 0.1299114961,
+        "margen": 0.25,
+        "salesToCapital": 1.9,
+        "s2c610": 1.6,
+        "roicTerminal": 0.2902563541,
+        "gTerminal": 0.04,
+        "valor": 65.35853185,
+        "estadoCalculo": "LISTO",
+        "descripcion": "CAGR 13%, EBIT 25%, S/C 1,90/1,60 y ventaja de marca terminal larga (ROIC 29%), condicionado a ejecución superior con marcas adquiridas."
+      }
+    ],
+    "disrupcionSeparada": true
+  },
+  "descuentoMultiples": {
+    "version": "A-1.2",
+    "horizonteAnios": 3,
+    "costoPatrimonio": 0.0739,
+    "criterio": "Promedio 1-3 años",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 9.21116371,
+      "base": 34.85258305,
+      "optimista": 65.35853185
+    },
+    "multiplesHoy": {
+      "conservador": 10.94,
+      "base": 28.51,
+      "optimista": 55.63
+    },
+    "ponderadoHoy": {
+      "conservador": 9.9,
+      "base": 32.32,
+      "optimista": 61.47
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "valorPresenteBase": 29.97
+      },
+      {
+        "nombre": "EV/FCFF",
+        "valorPresenteBase": 21.35
+      },
+      {
+        "nombre": "P/E",
+        "valorPresenteBase": 43.53
+      },
+      {
+        "nombre": "P/FCFE",
+        "valorPresenteBase": 29.01
+      },
+      {
+        "nombre": "P/OCF",
+        "valorPresenteBase": 31.55
+      }
+    ],
+    "chequeo": "Todos VP3 < FY+3: OK. Combinado 32,32 es secundario; 41,33 está expresado al horizonte FY+3, no hoy."
+  },
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "revisionId": "CELH-20261028-A1",
+  "revision_id": "CELH-20261028-A1",
+  "sheet_id": "1xqXfx9bD8XCGzgWtDnQP_9X0x_Cq94rID4w_w5mPyUo",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "WACC_HISTORIAS_Y_CENTRO_DCF_OK_CONTROLES_REMOTOS_COMPLETOS_NO_EJECUTADOS",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "Usuario 2026-10-28: usar criterio financiero y cerrar/publicar para revisión visual",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "revisionOrigen": "Nueva hoja oficial 46 pestañas, datos de fuente SEC independiente; revisión independiente y cálculo bajo A-1.2, no se usaron precios DCF de la valoración antigua",
+  "limitaciones": [
+    "No existe selector gráfico A/B en app de creación; metadatos persistidos en expediente.",
+    "El LTM se normaliza por cargos de terminación no recurrentes y se registra un puente explícito; no se liberan obligaciones en caja.",
+    "Coste y dilución de preferentes híbridas dependen de condiciones 2031; puente separado y estimado.",
+    "No se efectuó auditoría económica independiente, pendiente de observaciones del usuario."
+  ],
+  "salvedades": [
+    "Estimación de reparto de arrendamientos junio: 4,456m corriente +13,760m no corriente; efecto no material al valor objetivo.",
+    "No extrapolar LTM adquirido y no confundir crecimiento de portafolio con crecimiento orgánico.",
+    "Tasa libre de riesgo actualizada al cierre de la revisión y escenario recalculado."
+  ],
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000050/celh-20260630.htm",
+    "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm",
+    "https://data.sec.gov/api/xbrl/companyfacts/CIK0001341766.json",
+    "https://docs.google.com/spreadsheets/d/1O0tCafCwsCvt8bYnFtKR0SNtjkahEeqm5j192XzkrXs/edit"
+  ],
+  "revisionSupuestos": {
+    "metodo": "A-1.2",
+    "escenarioBase": "Más probable, no calibrado para aproximar cotización",
+    "ebitLtmGaapMillones": 160.314,
+    "ajusteExtraordinarioMillones": 412.748,
+    "ebitRecurrenteMillones": 573.062,
+    "revenuesLtmMillones": 3047.274,
+    "crecimientoCincoAnios": 0.08793733372,
+    "margenObjetivo": 0.195,
+    "stcMarginal1a5": 1.6,
+    "stcMarginal6a10": 1.4,
+    "roicTerminal": 0.1900781771,
+    "waccInicial": 0.073,
+    "waccTerminal": 0.0875,
+    "gTerminal": 0.04,
+    "tasaLibreRiesgo": 0.0505,
+    "impuestosNormalizados": 0.25,
+    "accionComunesMillones": 253.34,
+    "accionesPreferentesMezzanineMillonesUSD": 1759.975
+  },
+  "sensibilidadDCF": {
+    "centroBase": 34.85258305,
+    "centroConciliado": true,
+    "fuente": "Sensibilidad DCF del libro oficial",
+    "estado": "OK"
+  },
+  "hojas": {
+    "valoracion": {
+      "Resumen CELH A1": "<section data-jmr-revision=\"CELH-20261028-A1\" data-method=\"A-1.2\"><h2>CELH · Método A-1.2 · EN_REVISION</h2><p><strong>Valor intrínseco principal DCF Base: US$34,85/acción</strong> · precio de referencia US$27,98 (28-oct-2026) · potencial teórico +24,6 % · precio con MOS 35 %: US$22,65. Auditoría económica pendiente de revisión visual.</p><table><thead><tr><th>Historia / medida</th><th>Conservadora</th><th>Base</th><th>Optimista</th></tr></thead><tbody><tr><th>DCF valor presente (USD)</th><td>9,21</td><td>34,85</td><td>65,36</td></tr><tr><th>FY+3 ponderado (USD; NO valor hoy)</th><td>10,75</td><td>41,33</td><td>82,23</td></tr><tr><th>DCF + múltiplos VP (secundario)</th><td>9,90</td><td>32,32</td><td>61,47</td></tr></tbody></table><p>Disrupción separada: US$0,22. Base: ventas CAGR 8,79 %, margen EBIT 19,5 %, S/C marginal 1,60 (años 1-5) y 1,40 (años 6-10), ROIC terminal 19,0 %, g terminal 4,0 %, WACC 7,30 %→8,75 %. Se normalizó EBIT LTM: GAAP 160,314m + cargos no recurrentes de terminación 412,748m = 573,062m; caja y pasivos siguen contabilizados. Reclamaciones por preferentes híbridas separadas, sin doble conteo.</p><p>DCF Base principal: no utilizar US$41,33 (combinado al cierre FY+3) como valor presente. Los siete múltiplos están calculados; P/S y P/BV no ponderan. <a href=\"https://docs.google.com/spreadsheets/d/1xqXfx9bD8XCGzgWtDnQP_9X0x_Cq94rID4w_w5mPyUo/edit\">Abrir 46 pestañas y fórmulas fuente</a>.</p><p><strong>Estado:</strong> EN_REVISION, controles de historias/WACC y centro DCF aprobados en hoja; falta auditoría visual y dictamen económico independiente.</p></section>"
+    },
+    "financieros": {}
+  }
+}
+

@@ -9,7 +9,10 @@ function validateLedger(s,{optional=false}={}){
  const ids=new Set();for(const x of ledger){assert.ok(METHODS.includes(x.metodo)&&SCENARIOS.includes(x.escenario));const key=x.metodo+'/'+x.escenario;assert.ok(!ids.has(key),'Control duplicado');ids.add(key);assert.ok(['OK','N/D'].includes(x.estado),'Error de matriz');if(x.estado==='OK')assert.ok(finite(x.centro));else assert.equal(x.centro,null);}
  assert.equal(s.controlesOK,ledger.filter(x=>x.estado==='OK').length,'Contador OK no deriva de bloques');assert.equal(s.noDisponibles,ledger.filter(x=>x.estado==='N/D').length,'Contador N/D no deriva de bloques');assert.equal(s.errores||0,0);
 }
+// Precio publicado puede estar redondeado a centavos; no se relajan matrices.
+const mosNear=(a,b)=>finite(a)&&finite(b)&&Math.abs(a-b)<=0.005000001;
 function validateRecord(j){
+ if(j.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(j);
  // Contrato formal del expediente META R4 (análisis privado): DCF oficial
  // ponderado 100%; los 7 métodos se calculan en la hoja y se publican como
  // referencia SIN mezclarlos con DCF. Rechazar si falta la trazabilidad real.
@@ -46,6 +49,52 @@ function validateRecord(j){
   return;
  }
  const s=j.sensibilidadMultiples;
+ // El Método A-1.2 no conserva el contrato histórico de 21 matrices
+ // (7 métodos x 3 historias). Solo matrices 5x5 Base verificadas, con N/A
+ // económico justificado y sin reescribir DCF, supuestos ni estados.
+ if(j.version_metodo==='A-1.2'){
+  assert.ok(s?.contrato==='base-native-five-priority-v1'&&
+    s.estadoPublicacion==='INTEGRADO_EN_REVISION',
+    j.ticker+': BLOQUEO_FINANCIERO: integración nativa Base aún pendiente');
+  assert.equal(s.revisionId,j.revisionId,'Revisión de sensibilidad incorrecta');
+  assert.equal(s.sourceSheetId,j.sheet_id,'Libro de sensibilidad incorrecto');
+  assert.equal(s.controlesTecnicosAprobados,true,'Sin validación de fuente');
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/);
+  assert.equal(s.certificado,false,'Integración no certifica auditoría económica');
+  const a=s.matrices||[],seen=new Set(),bank=j.ticker==='NU'||/bancari/i.test(j.metodoPrincipal||'');
+  const required=bank?['P/E','P/FCFE','P/BV']:METHODS.slice(0,5);
+  assert.equal(a.length,7,'El contrato nativo exige siete posiciones');
+  for(let i=0;i<a.length;i++){
+   const m=a[i],name=METHODS[i],origin=76+10*i;
+   assert.equal(m.metodo,name,'Métodos en orden original');
+   assert.ok(!seen.has(name),'Método duplicado');seen.add(name);
+   assert.equal(m.escenario,'base');assert.equal(m.ancla,'JMR');
+   assert.equal(m.origen,"'Sensibilidad por múltiplo'!A"+origin+":I"+(origin+8));
+   const chosen=j.descuentoMultiples?.metodos?.find(x=>x.nombre===name);
+   if(m.estado==='OK'){
+    assert.ok(Array.isArray(m.matriz)&&m.matriz.length===5&&m.matriz.every(r=>
+      Array.isArray(r)&&r.length===5&&r.every(finite)),name+': matriz numérica 5x5');
+    assert.ok(near(m.matriz[2][2],m.centro)&&near(m.centro,m.vp3Original),name+': centro VP3');
+    if(finite(chosen?.base?.vp?.[2]))assert.ok(near(chosen.base.vp[2],m.vp3Original),name+': VP3 descontado');
+   }else if(m.estado==='N/A'){
+    assert.equal(m.matriz,null);assert.ok(m.motivo?.length>=20,'Falta motivo de no aplicabilidad');
+    assert.ok(chosen?.peso===0,name+': N/A con ponderación positiva');
+    if(m.estadoFuente==='N/D'){
+     assert.ok(['EV/FCFF','P/FCFE'].includes(name),'N/A por flujo solo FCFF/FCFE');
+     assert.ok(chosen.estado?.startsWith('N/A: flujo negativo')&&chosen.base?.fy?.[2]<0&&
+       chosen.base?.vp?.[2]<0&&near(chosen.base.vp[2],m.vp3Original),
+       name+': N/A sin respaldo de flujo negativo');
+    }
+   }else if(m.estado==='N/D'){
+    assert.ok(!required.includes(name),'N/D prioritario no pasa');
+    assert.equal(m.matriz,null);assert.ok(!chosen||!finite(chosen.peso)||chosen.peso===0);
+   }else assert.fail(name+': estado no reconocido');
+  }
+  assert.ok(finite(j.valorPrincipal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);
+  assert.ok(mosNear(j.precioMOS,j.valorPrincipal*(1-j.mos)),
+    'MOS no corresponde a DCF Base');
+  return;
+ }
  if(s?.contract==='base-two-anchors-two-families-v1'){
   assert.equal(s.methods,7);assert.deepEqual(s.scenarios,['base']);assert.ok(s.disrupcionFuera);assert.equal(s.matrices.length,28);assert.equal(s.controles.length,28);
   const ids=new Set();let ok=0,nd=0;const aliases={EVEBITDA:'EV/EBITDA',EVFCFF:'EV/FCFF',PE:'P/E',PFCFE:'P/FCFE',POCF:'P/OCF',PV:'P/V',PBV:'P/BV'};
@@ -61,7 +110,7 @@ function validateRecord(j){
  }else{
   assert.ok(s&&s.methods===7&&s.scenarios?.length===3&&s.disrupcionFuera);validateLedger(s);validateLedger(s.economica||{},{optional:true});assert.equal(s.controlesOK+s.noDisponibles,21);
  }
- const principal=j.valorPrincipal;assert.ok(finite(principal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);assert.ok(near(j.precioMOS,principal*(1-j.mos)),'MOS diferente del Base principal');
+ const principal=j.valorPrincipal;assert.ok(finite(principal)&&finite(j.mos)&&j.mos>=0&&j.mos<1);assert.ok(mosNear(j.precioMOS,principal*(1-j.mos)),'MOS diferente del Base principal');
  if(j.valoracionHolding){assert.equal(j.metodoPrincipal,'SOTP');assert.ok(near(principal,j.valoracionHolding.nav.base));assert.ok(near(j.precioMOS,j.valoracionHolding.umbralMOS));assert.ok(!(j.valoracionHolding.metodos||[]).some(m=>/DCF/i.test(m.nombre||'')&&(m.peso||0)>0));return;}
  const dm=j.descuentoMultiples;assert.equal(dm?.metodos?.length,7);assert.ok(near(j.metodos.reduce((a,m)=>a+(m.peso||0),0),1),'Pesos no suman 100%');const dcf=j.metodos.find(m=>/DCF/i.test(m.nombre));assert.ok(dcf&&near(dcf.peso,dm.pesoDcf));assert.ok(near(dm.pesoDcf+dm.pesoMultiplos,1));
  for(const m of dm.metodos){const saved=j.metodos.find(x=>x.nombre===m.nombre),sel=j.seleccionMultiples?.metodos?.find(x=>x.nombre===m.nombre);assert.ok(saved&&sel&&near(saved.peso,m.peso)&&near(saved.peso,sel.pesoVigente),'Pesos duplicados no concilian');if(m.peso>0){assert.equal(sel.controlCalculo,'OK');assert.ok(!/^N\/D/.test(sel.control));}
@@ -69,5 +118,5 @@ function validateRecord(j){
  }
  for(const sc of SCENARIOS){const rel=dm.metodos.filter(m=>m.peso>0).reduce((a,m)=>a+m.peso*m[sc].consolidado,0)/dm.pesoMultiplos;assert.ok(near(rel,dm.multiplesHoy[sc]),'Múltiplos no concilian');assert.ok(near(dm.dcfHoy[sc]*dm.pesoDcf+rel*dm.pesoMultiplos,dm.ponderadoHoy[sc]),'Combinación no concilia');}assert.ok(near(principal,dm.dcfHoy.base));
 }
-function main(){const root=path.join(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8')),files=catalog.valoraciones.map(p=>path.basename(p));let ok=0,nd=0,total=0;for(const file of files){const j=JSON.parse(fs.readFileSync(path.join(root,'valoraciones',file),'utf8'));try{validateRecord(j);}catch(e){e.message=j.ticker+': '+e.message;throw e;}if(j.ticker==='META'&&/^META-/.test(j.revisionId||'')){ok+=j.auditoria.sensibilidadMultiplosBase20261023.centersVerified;nd+=j.auditoria.sensibilidadMultiplosBase20261023.notDeterminable;total+=28;}else{ok+=j.sensibilidadMultiples.controlesOK;nd+=j.sensibilidadMultiples.noDisponibles;total+=j.sensibilidadMultiples.contract==='base-two-anchors-two-families-v1'?28:21;}}assert.equal(ok+nd,total);console.log(JSON.stringify({estado:'OK',empresas:files.length,matricesOK:ok,matricesND:nd,mosSobrePrincipal:true},null,2));}
+function main(){const root=path.join(__dirname,'..'),catalog=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8')),files=catalog.valoraciones.map(p=>path.basename(p));let ok=0,nd=0,total=0;for(const file of files){const j=JSON.parse(fs.readFileSync(path.join(root,'valoraciones',file),'utf8'));try{validateRecord(j);}catch(e){e.message=j.ticker+': '+e.message;throw e;}if(j.ticker==='META'&&/^META-/.test(j.revisionId||'')){ok+=j.auditoria.sensibilidadMultiplosBase20261023.centersVerified;nd+=j.auditoria.sensibilidadMultiplosBase20261023.notDeterminable;total+=28;}else if(j.version_metodo==='A-1.2'){const m=j.sensibilidadMultiples.matrices;ok+=m.filter(x=>x.estado==='OK').length;nd+=m.filter(x=>x.estado==='N/D'||x.estado==='N/A').length;total+=m.length;}else{ok+=j.sensibilidadMultiples.controlesOK;nd+=j.sensibilidadMultiples.noDisponibles;total+=j.sensibilidadMultiples.contract==='base-two-anchors-two-families-v1'?28:21;}}assert.equal(ok+nd,total);console.log(JSON.stringify({estado:'OK',empresas:files.length,matricesOK:ok,matricesND:nd,mosSobrePrincipal:true},null,2));}
 module.exports={validateRecord,validateLedger};if(require.main===module)main();

@@ -1,0 +1,94 @@
+{
+  "type": "EVIDENCIA_ANCLAS_NO_CERTIFICADAS",
+  "ticker": "UBER",
+  "revisionId": "UBER-20261030-A1",
+  "sourceSheetId": "1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58",
+  "cutoff": "2026-10-31",
+  "recordedDCF": 91.13793738151752,
+  "registered": {
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "matrices": 0
+  },
+  "sheet": {
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.40000000000000013
+  },
+  "methods": [
+    {
+      "name": "EVEBITDA",
+      "sourceFormulaOrConstant": "=('Input sheet'!$B$22*'Input sheet'!$B$23+'Valuation output'!$B$27-'Valuation output'!$B$29-'Valuation output'!$B$30+'Valuation output'!$B$28+'Valuation output'!$B$32+N('Input sheet'!$B$76))/('Income Statement'!$L$12+'Cash Flow Statement'!$L$4)",
+      "provenance": "LIGADA_A_PRECIO",
+      "certificado": false
+    },
+    {
+      "name": "EVFCFF",
+      "sourceFormulaOrConstant": "=EVEBITDA!$J$19*'Financials Multiples'!$G$57/'Financials Multiples'!$G$63",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    },
+    {
+      "name": "PE",
+      "sourceFormulaOrConstant": "='Input sheet'!$B$22*'Input sheet'!$B$23/'Income Statement'!$L$22",
+      "provenance": "LIGADA_A_PRECIO",
+      "certificado": false
+    },
+    {
+      "name": "PFCFE",
+      "sourceFormulaOrConstant": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$159",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    },
+    {
+      "name": "POCF",
+      "sourceFormulaOrConstant": "=PE!$J$19*'Financials Multiples'!$G$158/'Financials Multiples'!$G$65",
+      "provenance": "DERIVADA_DE_OTRO_MULTIPLO",
+      "certificado": false
+    }
+  ],
+  "supuestos": [
+    [
+      "Método",
+      "Conservador (x0,9)",
+      "Base (mín. positivo 4 cierres)",
+      "Optimista (x1,1)",
+      "Override manual activo (columna J)"
+    ],
+    [
+      "EV/FCFF",
+      34.85137617846402,
+      34.85137617846402,
+      34.85137617846402,
+      "Sí — revisar"
+    ],
+    [
+      "P/OCF",
+      16.259490082335745,
+      16.259490082335745,
+      16.259490082335745,
+      "Sí — revisar"
+    ],
+    [
+      "P/E",
+      14.017944921181751,
+      14.017944921181751,
+      14.017944921181751,
+      "Sí — revisar"
+    ],
+    [
+      "P/FCFE",
+      16.51887701975784,
+      16.51887701975784,
+      16.51887701975784,
+      "Sí — revisar"
+    ],
+    [
+      "EV/EBITDA",
+      17.77922149527431,
+      17.77922149527431,
+      17.77922149527431,
+      "Sí — revisar"
+    ]
+  ],
+  "policy": "No integrar ni certificar matrices por estado aritmético OK sin cotejo de anclas históricas independientes. No modificar DCF ni ponderaciones."
+}

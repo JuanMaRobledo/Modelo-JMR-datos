@@ -1,0 +1,2962 @@
+{
+  "spreadsheetId": "1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1Okf7uchAUwWVMo7YPKcXVoT2UOWeGpEqzk0VrkbV8Fg/edit",
+  "properties": {
+    "title": "SHAK — Método A-1.2 — 2026-10-29 — revisión económica R2"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "title": "Sensibilidad por múltiplo",
+        "sheetId": 26101704
+      },
+      "data": [
+        {
+          "startRow": 75,
+          "startColumn": 0,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · EV/EBITDA · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · EV/EBITDA · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · EV/EBITDA · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "375,6346178",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 375.63461775993187
+                  }
+                },
+                {
+                  "formattedValue": "422,588945",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 422.5889449799234
+                  }
+                },
+                {
+                  "formattedValue": "469,5432722",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 469.54327219991484
+                  }
+                },
+                {
+                  "formattedValue": "516,4975994",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 516.4975994199064
+                  }
+                },
+                {
+                  "formattedValue": "563,4519266",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 563.4519266398978
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "10,98889473",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 10.988894731731516
+                  }
+                },
+                {
+                  "formattedValue": "63,16326969",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(B$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 63.16326969183127
+                  }
+                },
+                {
+                  "formattedValue": "72,35007714",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(C$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 72.35007714027593
+                  }
+                },
+                {
+                  "formattedValue": "81,53688459",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(D$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 81.53688458872054
+                  }
+                },
+                {
+                  "formattedValue": "90,72369204",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(E$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 90.72369203716518
+                  }
+                },
+                {
+                  "formattedValue": "99,91049949",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A79));'Descuento de múltiplos'!$I$20+(F$78*$A79-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 99.91049948560982
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "12,36250657",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 12.362506573197955
+                  }
+                },
+                {
+                  "formattedValue": "72,35007714",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(B$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 72.35007714027591
+                  }
+                },
+                {
+                  "formattedValue": "82,68523552",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(C$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 82.68523551977611
+                  }
+                },
+                {
+                  "formattedValue": "93,0203939",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(D$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 93.02039389927633
+                  }
+                },
+                {
+                  "formattedValue": "103,3555523",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(E$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 103.35555227877656
+                  }
+                },
+                {
+                  "formattedValue": "113,6907107",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A80));'Descuento de múltiplos'!$I$20+(F$78*$A80-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 113.69071065827677
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "13,73611841",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 13.736118414664395
+                  }
+                },
+                {
+                  "formattedValue": "81,53688459",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(B$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 81.53688458872054
+                  }
+                },
+                {
+                  "formattedValue": "93,0203939",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(C$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 93.02039389927634
+                  }
+                },
+                {
+                  "formattedValue": "104,5039032",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(D$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 104.50390320983213
+                  }
+                },
+                {
+                  "formattedValue": "115,9874125",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(E$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 115.98741252038793
+                  }
+                },
+                {
+                  "formattedValue": "127,4709218",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A81));'Descuento de múltiplos'!$I$20+(F$78*$A81-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 127.47092183094372
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "15,10973026",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 15.109730256130835
+                  }
+                },
+                {
+                  "formattedValue": "90,72369204",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(B$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 90.72369203716518
+                  }
+                },
+                {
+                  "formattedValue": "103,3555523",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(C$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 103.35555227877656
+                  }
+                },
+                {
+                  "formattedValue": "115,9874125",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(D$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 115.98741252038793
+                  }
+                },
+                {
+                  "formattedValue": "128,6192728",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(E$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 128.6192727619993
+                  }
+                },
+                {
+                  "formattedValue": "141,251133",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A82));'Descuento de múltiplos'!$I$20+(F$78*$A82-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 141.25113300361068
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "16,4833421",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVEBITDA!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 16.483342097597273
+                  }
+                },
+                {
+                  "formattedValue": "99,91049949",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(B$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 99.9104994856098
+                  }
+                },
+                {
+                  "formattedValue": "113,6907107",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(C$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 113.69071065827677
+                  }
+                },
+                {
+                  "formattedValue": "127,4709218",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(D$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 127.47092183094372
+                  }
+                },
+                {
+                  "formattedValue": "141,251133",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(E$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 141.25113300361068
+                  }
+                },
+                {
+                  "formattedValue": "155,0313442",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVEBITDA!$H$19);EVEBITDA!$H$19>0;ISNUMBER(EVEBITDA!$H$20);EVEBITDA!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$20);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$78);ISNUMBER($A83));'Descuento de múltiplos'!$I$20+(F$78*$A83-EVEBITDA!$H$19*EVEBITDA!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 155.03134417627763
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "104,5039032",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Descuento de múltiplos'!$I$20;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 104.50390320983213
+                  }
+                },
+                {
+                  "formattedValue": "104,5039032",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D81)"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 104.50390320983213
+                  }
+                },
+                {
+                  "formattedValue": "OK",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G84);ISNUMBER(H84));IF(ABS(G84-H84)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "OK"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · EV/FCFF · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · EV/FCFF · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · EV/FCFF · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "-29,17297041",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -29.172970405004868
+                  }
+                },
+                {
+                  "formattedValue": "-32,81959171",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -32.81959170563048
+                  }
+                },
+                {
+                  "formattedValue": "-36,46621301",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -36.46621300625608
+                  }
+                },
+                {
+                  "formattedValue": "-40,11283431",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -40.112834306881695
+                  }
+                },
+                {
+                  "formattedValue": "-43,75945561",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -43.7594556075073
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "20",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 20
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$88);ISNUMBER($A89));'Descuento de múltiplos'!$I$21+(B$88*$A89-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$88);ISNUMBER($A89));'Descuento de múltiplos'!$I$21+(C$88*$A89-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$88);ISNUMBER($A89));'Descuento de múltiplos'!$I$21+(D$88*$A89-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$88);ISNUMBER($A89));'Descuento de múltiplos'!$I$21+(E$88*$A89-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$88);ISNUMBER($A89));'Descuento de múltiplos'!$I$21+(F$88*$A89-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "22,5",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 22.5
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$88);ISNUMBER($A90));'Descuento de múltiplos'!$I$21+(B$88*$A90-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$88);ISNUMBER($A90));'Descuento de múltiplos'!$I$21+(C$88*$A90-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$88);ISNUMBER($A90));'Descuento de múltiplos'!$I$21+(D$88*$A90-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$88);ISNUMBER($A90));'Descuento de múltiplos'!$I$21+(E$88*$A90-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$88);ISNUMBER($A90));'Descuento de múltiplos'!$I$21+(F$88*$A90-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "25",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 25
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$88);ISNUMBER($A91));'Descuento de múltiplos'!$I$21+(B$88*$A91-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$88);ISNUMBER($A91));'Descuento de múltiplos'!$I$21+(C$88*$A91-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$88);ISNUMBER($A91));'Descuento de múltiplos'!$I$21+(D$88*$A91-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$88);ISNUMBER($A91));'Descuento de múltiplos'!$I$21+(E$88*$A91-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$88);ISNUMBER($A91));'Descuento de múltiplos'!$I$21+(F$88*$A91-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "27,5",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.500000000000004
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$88);ISNUMBER($A92));'Descuento de múltiplos'!$I$21+(B$88*$A92-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$88);ISNUMBER($A92));'Descuento de múltiplos'!$I$21+(C$88*$A92-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$88);ISNUMBER($A92));'Descuento de múltiplos'!$I$21+(D$88*$A92-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$88);ISNUMBER($A92));'Descuento de múltiplos'!$I$21+(E$88*$A92-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$88);ISNUMBER($A92));'Descuento de múltiplos'!$I$21+(F$88*$A92-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "30",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(EVFCFF!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$88);ISNUMBER($A93));'Descuento de múltiplos'!$I$21+(B$88*$A93-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$88);ISNUMBER($A93));'Descuento de múltiplos'!$I$21+(C$88*$A93-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$88);ISNUMBER($A93));'Descuento de múltiplos'!$I$21+(D$88*$A93-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$88);ISNUMBER($A93));'Descuento de múltiplos'!$I$21+(E$88*$A93-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(EVFCFF!$H$19);EVFCFF!$H$19>0;ISNUMBER(EVFCFF!$H$20);EVFCFF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$21);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$88);ISNUMBER($A93));'Descuento de múltiplos'!$I$21+(F$88*$A93-EVFCFF!$H$19*EVFCFF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "-26,56295135",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Descuento de múltiplos'!$I$21;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -26.562951354379326
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D91)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G94);ISNUMBER(H94));IF(ABS(G94-H94)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · P/E · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · P/E · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · P/E · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "62,54862515",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 62.54862515291534
+                  }
+                },
+                {
+                  "formattedValue": "70,3672033",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 70.36720329702976
+                  }
+                },
+                {
+                  "formattedValue": "78,18578144",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 78.18578144114417
+                  }
+                },
+                {
+                  "formattedValue": "86,00435959",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 86.0043595852586
+                  }
+                },
+                {
+                  "formattedValue": "93,82293773",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 93.82293772937301
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "15,66642089",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 15.666420888064188
+                  }
+                },
+                {
+                  "formattedValue": "17,44500326",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(B$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 17.445003257275708
+                  }
+                },
+                {
+                  "formattedValue": "19,62588717",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(C$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 19.625887173800834
+                  }
+                },
+                {
+                  "formattedValue": "21,80677109",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(D$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.80677109032596
+                  }
+                },
+                {
+                  "formattedValue": "23,98765501",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(E$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 23.987655006851096
+                  }
+                },
+                {
+                  "formattedValue": "26,16853892",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A99));'Descuento de múltiplos'!$I$22+(F$98*$A99-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.16853892337622
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "17,6247235",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 17.62472349907221
+                  }
+                },
+                {
+                  "formattedValue": "19,62588717",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(B$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 19.625887173800834
+                  }
+                },
+                {
+                  "formattedValue": "22,07938158",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(C$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 22.079381579891603
+                  }
+                },
+                {
+                  "formattedValue": "24,53287599",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(D$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.532875985982372
+                  }
+                },
+                {
+                  "formattedValue": "26,98637039",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(E$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.986370392073145
+                  }
+                },
+                {
+                  "formattedValue": "29,4398648",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A100));'Descuento de múltiplos'!$I$22+(F$98*$A100-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.439864798163914
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "19,58302611",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 19.583026110080233
+                  }
+                },
+                {
+                  "formattedValue": "21,80677109",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(B$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.80677109032596
+                  }
+                },
+                {
+                  "formattedValue": "24,53287599",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(C$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.532875985982372
+                  }
+                },
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(D$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "29,98508578",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(E$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.985085777295197
+                  }
+                },
+                {
+                  "formattedValue": "32,71119067",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A101));'Descuento de múltiplos'!$I$22+(F$98*$A101-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.71119067295161
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "21,54132872",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.54132872108826
+                  }
+                },
+                {
+                  "formattedValue": "23,98765501",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(B$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 23.987655006851096
+                  }
+                },
+                {
+                  "formattedValue": "26,98637039",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(C$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.986370392073148
+                  }
+                },
+                {
+                  "formattedValue": "29,98508578",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(D$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.9850857772952
+                  }
+                },
+                {
+                  "formattedValue": "32,98380116",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(E$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.98380116251725
+                  }
+                },
+                {
+                  "formattedValue": "35,98251655",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A102));'Descuento de múltiplos'!$I$22+(F$98*$A102-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 35.98251654773931
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "23,49963133",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PE!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 23.49963133209628
+                  }
+                },
+                {
+                  "formattedValue": "26,16853892",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(B$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.168538923376218
+                  }
+                },
+                {
+                  "formattedValue": "29,4398648",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(C$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.439864798163914
+                  }
+                },
+                {
+                  "formattedValue": "32,71119067",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(D$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.7111906729516
+                  }
+                },
+                {
+                  "formattedValue": "35,98251655",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(E$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 35.9825165477393
+                  }
+                },
+                {
+                  "formattedValue": "39,25384242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PE!$H$19);PE!$H$19>0;ISNUMBER(PE!$H$20);PE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$22);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$98);ISNUMBER($A103));'Descuento de múltiplos'!$I$22+(F$98*$A103-PE!$H$19*PE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 39.253842422526986
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Descuento de múltiplos'!$I$22;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D101)"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "OK",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G104);ISNUMBER(H104));IF(ABS(G104-H104)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "OK"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · P/FCFE · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · P/FCFE · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · P/FCFE · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "-52,61313605",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -52.613136045756995
+                  }
+                },
+                {
+                  "formattedValue": "-59,18977805",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -59.18977805147662
+                  }
+                },
+                {
+                  "formattedValue": "-65,76642006",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -65.76642005719624
+                  }
+                },
+                {
+                  "formattedValue": "-72,34306206",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -72.34306206291588
+                  }
+                },
+                {
+                  "formattedValue": "-78,91970407",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -78.91970406863548
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "24",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$108);ISNUMBER($A109));'Descuento de múltiplos'!$I$23+(B$108*$A109-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$108);ISNUMBER($A109));'Descuento de múltiplos'!$I$23+(C$108*$A109-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$108);ISNUMBER($A109));'Descuento de múltiplos'!$I$23+(D$108*$A109-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$108);ISNUMBER($A109));'Descuento de múltiplos'!$I$23+(E$108*$A109-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$108);ISNUMBER($A109));'Descuento de múltiplos'!$I$23+(F$108*$A109-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "27",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$108);ISNUMBER($A110));'Descuento de múltiplos'!$I$23+(B$108*$A110-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$108);ISNUMBER($A110));'Descuento de múltiplos'!$I$23+(C$108*$A110-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$108);ISNUMBER($A110));'Descuento de múltiplos'!$I$23+(D$108*$A110-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$108);ISNUMBER($A110));'Descuento de múltiplos'!$I$23+(E$108*$A110-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$108);ISNUMBER($A110));'Descuento de múltiplos'!$I$23+(F$108*$A110-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "30",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$108);ISNUMBER($A111));'Descuento de múltiplos'!$I$23+(B$108*$A111-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$108);ISNUMBER($A111));'Descuento de múltiplos'!$I$23+(C$108*$A111-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$108);ISNUMBER($A111));'Descuento de múltiplos'!$I$23+(D$108*$A111-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$108);ISNUMBER($A111));'Descuento de múltiplos'!$I$23+(E$108*$A111-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$108);ISNUMBER($A111));'Descuento de múltiplos'!$I$23+(F$108*$A111-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "33",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$108);ISNUMBER($A112));'Descuento de múltiplos'!$I$23+(B$108*$A112-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$108);ISNUMBER($A112));'Descuento de múltiplos'!$I$23+(C$108*$A112-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$108);ISNUMBER($A112));'Descuento de múltiplos'!$I$23+(D$108*$A112-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$108);ISNUMBER($A112));'Descuento de múltiplos'!$I$23+(E$108*$A112-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$108);ISNUMBER($A112));'Descuento de múltiplos'!$I$23+(F$108*$A112-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "36",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PFCFE!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 36
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$108);ISNUMBER($A113));'Descuento de múltiplos'!$I$23+(B$108*$A113-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$108);ISNUMBER($A113));'Descuento de múltiplos'!$I$23+(C$108*$A113-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$108);ISNUMBER($A113));'Descuento de múltiplos'!$I$23+(D$108*$A113-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$108);ISNUMBER($A113));'Descuento de múltiplos'!$I$23+(E$108*$A113-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PFCFE!$H$19);PFCFE!$H$19>0;ISNUMBER(PFCFE!$H$20);PFCFE!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$23);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$108);ISNUMBER($A113));'Descuento de múltiplos'!$I$23+(F$108*$A113-PFCFE!$H$19*PFCFE!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "-35,13063518",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Descuento de múltiplos'!$I$23;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": -35.130635184700374
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D111)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                },
+                {
+                  "formattedValue": "N/D",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G114);ISNUMBER(H114));IF(ABS(G114-H114)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "N/D"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · P/OCF · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · P/OCF · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · P/OCF · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "136,3858658",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 136.38586578706358
+                  }
+                },
+                {
+                  "formattedValue": "153,434099",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 153.43409901044652
+                  }
+                },
+                {
+                  "formattedValue": "170,4823322",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 170.48233223382945
+                  }
+                },
+                {
+                  "formattedValue": "187,5305655",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 187.53056545721242
+                  }
+                },
+                {
+                  "formattedValue": "204,5787987",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 204.57879868059533
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "11,01776159",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 11.017761594005579
+                  }
+                },
+                {
+                  "formattedValue": "26,75248584",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(B$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.752485841046585
+                  }
+                },
+                {
+                  "formattedValue": "30,09680508",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(C$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30.09680508054307
+                  }
+                },
+                {
+                  "formattedValue": "33,44112432",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(D$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.441124320039556
+                  }
+                },
+                {
+                  "formattedValue": "36,78544356",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(E$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 36.78544355953605
+                  }
+                },
+                {
+                  "formattedValue": "40,1297628",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A119));'Descuento de múltiplos'!$I$24+(F$118*$A119-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 40.129762799032534
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "12,39498179",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 12.394981793256276
+                  }
+                },
+                {
+                  "formattedValue": "30,09680508",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(B$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30.096805080543074
+                  }
+                },
+                {
+                  "formattedValue": "33,85916422",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(C$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.85916422497662
+                  }
+                },
+                {
+                  "formattedValue": "37,62152337",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(D$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 37.62152336941017
+                  }
+                },
+                {
+                  "formattedValue": "41,38388251",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(E$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.38388251384372
+                  }
+                },
+                {
+                  "formattedValue": "45,14624166",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A120));'Descuento de múltiplos'!$I$24+(F$118*$A120-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 45.14624165827727
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "13,77220199",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 13.772201992506973
+                  }
+                },
+                {
+                  "formattedValue": "33,44112432",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(B$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.44112432003956
+                  }
+                },
+                {
+                  "formattedValue": "37,62152337",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(C$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 37.62152336941017
+                  }
+                },
+                {
+                  "formattedValue": "41,80192242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(D$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.80192241878078
+                  }
+                },
+                {
+                  "formattedValue": "45,98232147",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(E$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 45.9823214681514
+                  }
+                },
+                {
+                  "formattedValue": "50,16272052",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A121));'Descuento de múltiplos'!$I$24+(F$118*$A121-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 50.162720517522
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "15,14942219",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 15.149422191757672
+                  }
+                },
+                {
+                  "formattedValue": "36,78544356",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(B$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 36.785443559536056
+                  }
+                },
+                {
+                  "formattedValue": "41,38388251",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(C$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.38388251384373
+                  }
+                },
+                {
+                  "formattedValue": "45,98232147",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(D$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 45.9823214681514
+                  }
+                },
+                {
+                  "formattedValue": "50,58076042",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(E$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 50.58076042245908
+                  }
+                },
+                {
+                  "formattedValue": "55,17919938",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A122));'Descuento de múltiplos'!$I$24+(F$118*$A122-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 55.17919937676673
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "16,52664239",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(POCF!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 16.526642391008366
+                  }
+                },
+                {
+                  "formattedValue": "40,1297628",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(B$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 40.129762799032534
+                  }
+                },
+                {
+                  "formattedValue": "45,14624166",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(C$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 45.14624165827727
+                  }
+                },
+                {
+                  "formattedValue": "50,16272052",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(D$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 50.162720517522
+                  }
+                },
+                {
+                  "formattedValue": "55,17919938",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(E$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 55.17919937676673
+                  }
+                },
+                {
+                  "formattedValue": "60,19567824",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(POCF!$H$19);POCF!$H$19>0;ISNUMBER(POCF!$H$20);POCF!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER('Descuento de múltiplos'!$I$24);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$118);ISNUMBER($A123));'Descuento de múltiplos'!$I$24+(F$118*$A123-POCF!$H$19*POCF!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 60.19567823601146
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "41,80192242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR('Descuento de múltiplos'!$I$24;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.80192241878078
+                  }
+                },
+                {
+                  "formattedValue": "41,80192242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D121)"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.80192241878078
+                  }
+                },
+                {
+                  "formattedValue": "OK",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G124);ISNUMBER(H124));IF(ABS(G124-H124)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "OK"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · P/V · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · P/V · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · P/V · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "1888,002644",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 1888.002643656304
+                  }
+                },
+                {
+                  "formattedValue": "2124,002974",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2124.002974113342
+                  }
+                },
+                {
+                  "formattedValue": "2360,003305",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2360.00330457038
+                  }
+                },
+                {
+                  "formattedValue": "2596,003635",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2596.003635027418
+                  }
+                },
+                {
+                  "formattedValue": "2832,003965",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2832.003965484456
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "0,5190210358",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.5190210357532292
+                  }
+                },
+                {
+                  "formattedValue": "17,44500326",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A129));PV!$D$42+(B$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 17.4450032572757
+                  }
+                },
+                {
+                  "formattedValue": "19,62588717",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A129));PV!$D$42+(C$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 19.625887173800834
+                  }
+                },
+                {
+                  "formattedValue": "21,80677109",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A129));PV!$D$42+(D$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.80677109032596
+                  }
+                },
+                {
+                  "formattedValue": "23,98765501",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A129));PV!$D$42+(E$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 23.987655006851092
+                  }
+                },
+                {
+                  "formattedValue": "26,16853892",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A129));PV!$D$42+(F$128*$A129-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.168538923376218
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "0,5838986652",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.5838986652223829
+                  }
+                },
+                {
+                  "formattedValue": "19,62588717",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A130));PV!$D$42+(B$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 19.62588717380083
+                  }
+                },
+                {
+                  "formattedValue": "22,07938158",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A130));PV!$D$42+(C$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 22.079381579891603
+                  }
+                },
+                {
+                  "formattedValue": "24,53287599",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A130));PV!$D$42+(D$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.532875985982372
+                  }
+                },
+                {
+                  "formattedValue": "26,98637039",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A130));PV!$D$42+(E$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.986370392073145
+                  }
+                },
+                {
+                  "formattedValue": "29,4398648",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A130));PV!$D$42+(F$128*$A130-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.43986479816391
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "0,6487762947",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.6487762946915365
+                  }
+                },
+                {
+                  "formattedValue": "21,80677109",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A131));PV!$D$42+(B$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.80677109032596
+                  }
+                },
+                {
+                  "formattedValue": "24,53287599",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A131));PV!$D$42+(C$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.532875985982372
+                  }
+                },
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A131));PV!$D$42+(D$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "29,98508578",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A131));PV!$D$42+(E$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.985085777295197
+                  }
+                },
+                {
+                  "formattedValue": "32,71119067",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A131));PV!$D$42+(F$128*$A131-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.7111906729516
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "0,7136539242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.7136539241606903
+                  }
+                },
+                {
+                  "formattedValue": "23,98765501",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A132));PV!$D$42+(B$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 23.987655006851096
+                  }
+                },
+                {
+                  "formattedValue": "26,98637039",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A132));PV!$D$42+(C$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.986370392073148
+                  }
+                },
+                {
+                  "formattedValue": "29,98508578",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A132));PV!$D$42+(D$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.9850857772952
+                  }
+                },
+                {
+                  "formattedValue": "32,98380116",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A132));PV!$D$42+(E$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.98380116251725
+                  }
+                },
+                {
+                  "formattedValue": "35,98251655",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A132));PV!$D$42+(F$128*$A132-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 35.98251654773931
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "0,7785315536",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.7785315536298438
+                  }
+                },
+                {
+                  "formattedValue": "26,16853892",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$128);ISNUMBER($A133));PV!$D$42+(B$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 26.168538923376218
+                  }
+                },
+                {
+                  "formattedValue": "29,4398648",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$128);ISNUMBER($A133));PV!$D$42+(C$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.439864798163914
+                  }
+                },
+                {
+                  "formattedValue": "32,71119067",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$128);ISNUMBER($A133));PV!$D$42+(D$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.7111906729516
+                  }
+                },
+                {
+                  "formattedValue": "35,98251655",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$128);ISNUMBER($A133));PV!$D$42+(E$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 35.9825165477393
+                  }
+                },
+                {
+                  "formattedValue": "39,25384242",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PV!$H$19);PV!$H$19>0;ISNUMBER(PV!$H$20);PV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$128);ISNUMBER($A133));PV!$D$42+(F$128*$A133-PV!$H$19*PV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 39.253842422526986
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PV!$D$42;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "27,25898088",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D131)"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.258980881638784
+                  }
+                },
+                {
+                  "formattedValue": "OK",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G134);ISNUMBER(H134));IF(ABS(G134-H134)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "OK"
+                  }
+                }
+              ]
+            },
+            {},
+            {
+              "values": [
+                {
+                  "formattedValue": "BASE · P/BV · ancla JMR (múltiplo elegido)",
+                  "userEnteredValue": {
+                    "stringValue": "BASE · P/BV · ancla JMR (múltiplo elegido)"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "BASE · P/BV · ancla JMR (múltiplo elegido)"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy",
+                  "userEnteredValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Vertical: múltiplo en veces · Horizontal: fundamental FY+3 en unidades de la hoja · VP por acción a hoy"
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "Múltiplo / Fundamental",
+                  "userEnteredValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "Múltiplo / Fundamental"
+                  }
+                },
+                {
+                  "formattedValue": "602,7653924",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$20*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 602.765392377448
+                  }
+                },
+                {
+                  "formattedValue": "678,1110664",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$20*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 678.111066424629
+                  }
+                },
+                {
+                  "formattedValue": "753,4567405",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$20*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 753.45674047181
+                  }
+                },
+                {
+                  "formattedValue": "828,8024145",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$20*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 828.8024145189911
+                  }
+                },
+                {
+                  "formattedValue": "904,1480886",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$20*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 904.148088566172
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "2,024245975",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$19*(8/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2.0242459746206403
+                  }
+                },
+                {
+                  "formattedValue": "21,72227098",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A139));PBV!$D$42+(B$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 21.722270984123355
+                  }
+                },
+                {
+                  "formattedValue": "24,43781337",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A139));PBV!$D$42+(C$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.437813366504443
+                  }
+                },
+                {
+                  "formattedValue": "27,15335575",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A139));PBV!$D$42+(D$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.15335574888553
+                  }
+                },
+                {
+                  "formattedValue": "29,86889813",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A139));PBV!$D$42+(E$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.86889813126662
+                  }
+                },
+                {
+                  "formattedValue": "32,58444051",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A139));PBV!$D$42+(F$138*$A139-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.5844405136477
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "2,277276721",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$19*(9/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2.2772767214482204
+                  }
+                },
+                {
+                  "formattedValue": "24,43781337",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A140));PBV!$D$42+(B$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 24.437813366504443
+                  }
+                },
+                {
+                  "formattedValue": "27,49279855",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A140));PBV!$D$42+(C$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.49279854668317
+                  }
+                },
+                {
+                  "formattedValue": "30,54778373",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A140));PBV!$D$42+(D$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30.547783726861887
+                  }
+                },
+                {
+                  "formattedValue": "33,60276891",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A140));PBV!$D$42+(E$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.60276890704061
+                  }
+                },
+                {
+                  "formattedValue": "36,65775409",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A140));PBV!$D$42+(F$138*$A140-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 36.65775408721933
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "2,530307468",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$19*1;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2.5303074682758004
+                  }
+                },
+                {
+                  "formattedValue": "27,15335575",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A141));PBV!$D$42+(B$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 27.153355748885534
+                  }
+                },
+                {
+                  "formattedValue": "30,54778373",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A141));PBV!$D$42+(C$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 30.54778372686189
+                  }
+                },
+                {
+                  "formattedValue": "33,9422117",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A141));PBV!$D$42+(D$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.94221170483824
+                  }
+                },
+                {
+                  "formattedValue": "37,33663968",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A141));PBV!$D$42+(E$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 37.33663968281461
+                  }
+                },
+                {
+                  "formattedValue": "40,73106766",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A141));PBV!$D$42+(F$138*$A141-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 40.73106766079096
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "2,783338215",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$19*(11/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 2.7833382151033805
+                  }
+                },
+                {
+                  "formattedValue": "29,86889813",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A142));PBV!$D$42+(B$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 29.86889813126662
+                  }
+                },
+                {
+                  "formattedValue": "33,60276891",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A142));PBV!$D$42+(C$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.602768907040605
+                  }
+                },
+                {
+                  "formattedValue": "37,33663968",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A142));PBV!$D$42+(D$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 37.3366396828146
+                  }
+                },
+                {
+                  "formattedValue": "41,07051046",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A142));PBV!$D$42+(E$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 41.0705104585886
+                  }
+                },
+                {
+                  "formattedValue": "44,80438123",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A142));PBV!$D$42+(F$138*$A142-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 44.804381234362594
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "3,036368962",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$H$19*(12/10);\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 3.0363689619309606
+                  }
+                },
+                {
+                  "formattedValue": "32,58444051",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(B$138);ISNUMBER($A143));PBV!$D$42+(B$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 32.584440513647706
+                  }
+                },
+                {
+                  "formattedValue": "36,65775409",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(C$138);ISNUMBER($A143));PBV!$D$42+(C$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 36.65775408721933
+                  }
+                },
+                {
+                  "formattedValue": "40,73106766",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(D$138);ISNUMBER($A143));PBV!$D$42+(D$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 40.73106766079096
+                  }
+                },
+                {
+                  "formattedValue": "44,80438123",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(E$138);ISNUMBER($A143));PBV!$D$42+(E$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 44.804381234362594
+                  }
+                },
+                {
+                  "formattedValue": "48,87769481",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(IF(AND(ISNUMBER(PBV!$H$19);PBV!$H$19>0;ISNUMBER(PBV!$H$20);PBV!$H$20>0;ISNUMBER('Financials Multiples'!$G$70);'Financials Multiples'!$G$70>0;ISNUMBER(PBV!$D$42);ISNUMBER('Descuento de múltiplos'!$B$5);'Descuento de múltiplos'!$B$5>-1;ISNUMBER(F$138);ISNUMBER($A143));PBV!$D$42+(F$138*$A143-PBV!$H$19*PBV!$H$20)/'Financials Multiples'!$G$70/(1+'Descuento de múltiplos'!$B$5)^3;\"N/D\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 48.87769480793421
+                  }
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "formattedValue": "VP3 / centro / control",
+                  "userEnteredValue": {
+                    "stringValue": "VP3 / centro / control"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "VP3 / centro / control"
+                  }
+                },
+                {},
+                {},
+                {},
+                {},
+                {},
+                {
+                  "formattedValue": "33,9422117",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IFERROR(PBV!$D$42;\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.94221170483824
+                  }
+                },
+                {
+                  "formattedValue": "33,9422117",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";D141)"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 33.94221170483824
+                  }
+                },
+                {
+                  "formattedValue": "OK",
+                  "userEnteredValue": {
+                    "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(AND(ISNUMBER(G144);ISNUMBER(H144));IF(ABS(G144-H144)<0,01;\"OK\";\"REVISAR\");\"N/D\"))"
+                  },
+                  "effectiveValue": {
+                    "stringValue": "OK"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

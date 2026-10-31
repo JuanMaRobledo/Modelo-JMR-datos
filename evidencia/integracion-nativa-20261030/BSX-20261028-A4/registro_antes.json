@@ -1,0 +1,237 @@
+{
+  "ticker": "BSX",
+  "nombreActivo": "Boston Scientific Corporation",
+  "tipo": "Crecimiento",
+  "fecha": "2026-10-28",
+  "fechaRevision": "2026-10-28",
+  "fechaCorteContable": "2026-06-30",
+  "precio": 42.43,
+  "precioAnalisis": 42.43,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "Cierre NYSE 28-oct-2026 stockanalysis.com/stocks/bsx/history",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/15JGT_k9IVcdZBOtS7ij4BEpR-bUBVl1vwP-tt-EilY0/edit",
+  "sheet_id": "15JGT_k9IVcdZBOtS7ij4BEpR-bUBVl1vwP-tt-EilY0",
+  "revisionId": "BSX-20261028-A4",
+  "revision_id": "BSX-20261028-A4",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "Petición explícita del usuario: repetir BSX con nuevo flujo y publicar para revisión visual",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "PENDIENTE_REVISION_VISUAL",
+  "validationStatus": "ESCENARIOS_4_4_LISTO_SENSIBILIDAD_DCF_OK_AUDITORIA_PENDIENTE",
+  "metodoPrincipal": "DCF FCFF por perpetuidad — Método A-1.2",
+  "valorPrincipal": 41.75970476,
+  "mos": 0.35,
+  "precioMOS": 27.14380809,
+  "baseMOS": "dcfBase",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "valorEsperado": {
+    "valor": 40.95866796,
+    "valorCentral": 41.75970476,
+    "tipoPromedio": "3_historias_renormalizado",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base · recuperación gradual sin Penumbra",
+        "probabilidad": 0.45,
+        "crecimiento": 0.04932097804,
+        "margen": 0.255,
+        "s2c": 1.5,
+        "s2c610": 1.7,
+        "roicTerminal": 0.15,
+        "valor": 41.75970476,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "FY1 +3%, FY2-5 +4, +5,2, +6, +6,5; margen EBIT objetivo25,5% (ajustado R&D), S/C marginal1,5/1,7, ROIC terminal15%; sin consolidar Penumbra."
+      },
+      {
+        "id": "B",
+        "nombre": "Conservador · estancamiento y China",
+        "probabilidad": 0.225,
+        "crecimiento": 0.02289891829,
+        "margen": 0.23,
+        "s2c": 1.15,
+        "s2c610": 1.35,
+        "roicTerminal": 0.112,
+        "valor": 28.08733132,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción · persistencia de presión",
+        "probabilidad": 0.1,
+        "crecimiento": -0.02501025649,
+        "margen": 0.17,
+        "s2c": 0.75,
+        "s2c610": 0.85,
+        "roicTerminal": 0.0899,
+        "valor": 13.39813707,
+        "terminalGrowth": 0.01,
+        "estado": "LISTO"
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista · FARAPULSE y WATCHMAN recuperan",
+        "probabilidad": 0.225,
+        "crecimiento": 0.07089469649,
+        "margen": 0.275,
+        "s2c": 1.75,
+        "s2c610": 1.9,
+        "roicTerminal": 0.175,
+        "valor": 52.22793101,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ],
+    "disrupcionSeparada": true,
+    "historiaCentralId": "A"
+  },
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.5,
+      "conservador": 36.65,
+      "base": 54.49,
+      "optimista": 68.15,
+      "valorHoy": {
+        "conservador": 28.0873,
+        "base": 41.7597,
+        "optimista": 52.2279
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0.1,
+      "conservador": 46.15,
+      "base": 62.64,
+      "optimista": 79.9
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0.1,
+      "conservador": 40.16,
+      "base": 52.88,
+      "optimista": 65.4
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0.1,
+      "conservador": 43.81,
+      "base": 57.65,
+      "optimista": 72.15
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0.1,
+      "conservador": 32.71,
+      "base": 41.55,
+      "optimista": 50.28
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0.1,
+      "conservador": 35.73,
+      "base": 43.7,
+      "optimista": 51.39
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": 38.18,
+    "base": 53.09,
+    "optimista": 65.99,
+    "horizonteAnios": 3
+  },
+  "valorPresentePonderado": {
+    "conservador": 30.67,
+    "base": 41.24,
+    "optimista": 50.19
+  },
+  "descuentoMultiples": {
+    "criterio": "Valor presente de EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF FY1–FY3, DCF principal separado",
+    "valorHoyDCF": {
+      "conservador": 28.09,
+      "base": 41.76,
+      "optimista": 52.23
+    },
+    "multiplesHoy": {
+      "conservador": 33.25,
+      "base": 40.72,
+      "optimista": 48.15
+    },
+    "ponderadoHoy": {
+      "conservador": 30.67,
+      "base": 41.24,
+      "optimista": 50.19
+    },
+    "pesoDcf": 0.5,
+    "pesoMultiplos": 0.5,
+    "horizonteAnios": 3
+  },
+  "revisionSupuestos": {
+    "metodo": "A-1.2",
+    "version": "A4",
+    "crecimientoFY1": 0.03,
+    "crecimientoFY5": 0.065,
+    "cagr5": 0.04932097804,
+    "margenEBITObjetivoAjustadoRND": 0.255,
+    "stcMarginal1a5": 1.5,
+    "stcMarginal6a10": 1.7,
+    "roicTerminal": 0.15,
+    "rf": 0.0505,
+    "waccInicial": 0.0858,
+    "gTerminal": 0.04,
+    "anteriorA3": 32.22510011,
+    "resultadoA4": 41.75970476,
+    "motivo": "Separar shock Q3 de evolución a largo plazo, reducir doble financiación de adquisiciones ya reflejadas en invested capital",
+    "penumbraEnDCF": false
+  },
+  "eventoPosteriorAlCorte": {
+    "fecha": "2026-10-28",
+    "descripcion": "Comunicado Q3 2026: ventas5.138m +1,5% orgánico; EBIT GAAP828m margen16,1%; EBIT ajustado26,5%, guía FY26 +3,75% orgánico y Q4 -1 a -3%; incorporado en supuestos forward, no en estados históricos de junio.",
+    "src": "https://news.bostonscientific.com/2026-10-28-Boston-Scientific-announces-results-for-third-quarter-2026"
+  },
+  "penumbra": {
+    "tratamiento": "NO_CONSOLIDADA_DCF_STANDALONE",
+    "valorTransaccionAproxUSDmm": 15000,
+    "consideracionEfectivoUSDmm": 11000,
+    "contraprestacionAccionesUSDmm": 4000,
+    "cierreEsperado": "2027-Q1",
+    "warning": "No sumar sinergias y ventas sin restar financiación y dilución; hoja pro forma aparte en workbook."
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.0858,
+    "gCentro": 0.04,
+    "centro": 41.76,
+    "estado": "OK",
+    "matriz": "Sensibilidad DCF pestaña del libro JMR"
+  },
+  "fuentes_supuestos": [
+    "https://news.bostonscientific.com/2026-10-28-Boston-Scientific-announces-results-for-third-quarter-2026",
+    "https://stockanalysis.com/stocks/bsx/history/",
+    "https://investors.bostonscientific.com/~/media/Files/B/Boston-Scientific-IR-V3/investor-presentation.pdf",
+    "https://docs.google.com/spreadsheets/d/15JGT_k9IVcdZBOtS7ij4BEpR-bUBVl1vwP-tt-EilY0/edit"
+  ],
+  "salvedades": [
+    "Corte contable completo en libro de 30-jun-2026; Q3 2026 comunicado preliminar impacta proyección, no estados GAAP insertados.",
+    "Margen EBIT objetivo JMR ajustado por capitalización de I+D; no compararlo con margen GAAP AZ.",
+    "US$2.245m activos no operativos e inversiones estratégicas en puente valor BSX: valoración proxy, verificar MiRus y restricciones, no duplicar.",
+    "Penumbra anunciado pero no consolidado; riesgo material de financiamiento y dilución; estimaciones son standalone.",
+    "ROIC 15% terminal requiere recuperación de retornos sobre capital tras adquisiciones; estudio aún EN_REVISION y sin auditoría económica."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen BSX A4": "<section><h2>BSX A4 · revisión para inspección</h2><p><strong>Valor intrínseco DCF Base US$41,76</strong> frente a precio US$42,43. Conservador US$28,09; Optimista US$52,23; Disrupción US$13,40 separada; promedio ordinario US$40,96.</p><p>Base: año+1 crecimiento3%, CAGR5 4,93%, margen EBIT ajustado25,5%, S/C1,50→1,70, ROIC terminal15%, WACC inicial8,58%, g4%.</p><p>Multiplos VP Base US$40,72, combinado VP secundario US$41,24; FY+3 ponderado US$53,09 (NO intrínseco hoy). <a href=\"https://docs.google.com/spreadsheets/d/15JGT_k9IVcdZBOtS7ij4BEpR-bUBVl1vwP-tt-EilY0/edit\">Libro completo de BSX A4</a>. Auditoría económica pendiente.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Copia de BSX A3 (Q3 evaluado), históricos de junio conservados, proyección A4 recalibrada; A3 y A2 históricas sin sobrescribir."
+}
+

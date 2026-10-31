@@ -101,11 +101,44 @@ def verify_recaptura(record,analysis):
             'scope':'Recaptura: evidencia propia, hashes y coherencia interna de descuentos y ponderados; no reproduce año a año el cierre de múltiplos','ok':True}
 
 
+def verify_a_native(record):
+    """Método A: verificar cuadrículas nativas Base y descuentos del mismo registro.
+
+    Esta comprobación complementa (no reemplaza) el gate obligatorio
+    validateNativeMatrices del catálogo y no depende del esquema legacy
+    'cierreMultiplos'. Solo lee y coteja revisiones publicadas.
+    """
+    rev=record['revisionId']
+    sens=record.get('sensibilidadMultiples') or {}
+    assert sens.get('contrato')=='base-native-five-priority-v1',rev
+    assert sens.get('revisionId')==rev
+    assert sens.get('estadoPublicacion')=='INTEGRADO_EN_REVISION'
+    assert sens.get('controlesTecnicosAprobados') is True
+    methods=('EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF')
+    matrices={v['metodo']:v for v in sens.get('matrices') or []}
+    for name in methods:
+        m=matrices[name]
+        assert m['estado'] in ('OK','N/A'),(rev,name,m['estado'])
+        if m['estado']=='OK':
+            grid=m['matriz']
+            assert len(grid)==5 and all(len(row)==5 and all(isinstance(x,(int,float)) and math.isfinite(x) for x in row) for row in grid)
+            assert equal(grid[2][2],m['centro'])
+            assert equal(m['centro'],m['vp3Original'])
+            disc=next(x for x in record['descuentoMultiples']['metodos'] if x['nombre']==name)
+            assert equal(disc['base']['vp'][2],m['vp3Original'])
+        else:
+            assert m['matriz'] is None and len(m.get('motivo',''))>=20
+    return {'ticker':record['ticker'],'revisionId':rev,'contract':'A-1.2-BASE-NATIVE',
+            'matrices':len(matrices),'verifiedRequired':len(methods),'ok':True,
+            'scope':'Base 5x5 y VP3; NO auditoría económica'}
+
 def verify(ticker):
     record=json.loads(next((ROOT/'valoraciones').glob(ticker+'*.json')).read_text())
     analysis=json.loads(next((ROOT/'analisis').glob(ticker+'*.json')).read_text())
     if record.get('evidenciaRecaptura'):
         return verify_recaptura(record,analysis)
+    if record.get('version_metodo')=='A-1.2' and not record.get('cierreMultiplos'):
+        return verify_a_native(record)
     evidence=json.loads((ROOT/record['cierreMultiplos']['evidencePath']).read_text())
     audit=(ROOT/'auditorias/narrativas'/f'{ticker}.md').read_text()
     if evidence.get('schema')=='jmr-reviewed-snapshot-release-v1':

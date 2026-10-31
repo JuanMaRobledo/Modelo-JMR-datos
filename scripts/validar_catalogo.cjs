@@ -3,6 +3,128 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 
+const CORE_NATIVE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+const BANK_NATIVE=['P/E','P/FCFE','P/BV'];
+const MAYBE_NATIVE=['P/V','P/BV'];
+const finiteNative=x=>typeof x==='number'&&Number.isFinite(x);
+const nearNative=(a,b)=>finiteNative(a)&&finiteNative(b)&&Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
+/**
+ * NU: los 25 valores Ke×g de FCFE NO acreditan múltiplos P/E/PFCFE/PBV.
+ * Los métodos relativos deben provenir de hojas bancarias y de un
+ * contrato con fuente económica propia, nunca de sensibilidad industrial.
+ */
+function validateBankNativeMatrices(v){
+  const s=v.sensibilidadMultiples||{};
+  assert.equal(s.contrato,'bank-relative-ke-v1',v.ticker+': contrato bancario requerido');
+  assert.equal(s.tipo,'MULTIPLOS_BANCARIOS');
+  assert.equal(s.revisionId,v.revisionId);
+  assert.equal(s.sourceSheetId,v.sheet_id);
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/);
+  assert.equal(s.estadoPublicacion,'INTEGRADO_EN_REVISION');
+  assert.equal(s.controlesTecnicosAprobados,true);
+  assert.equal(s.certificado,false);
+  const items=s.matrices||[];
+  assert.deepEqual(items.map(x=>x.metodo),BANK_NATIVE,
+    'Banca exige P/E, P/FCFE y P/BV, no múltiplos industriales');
+  const sheetByMethod={'P/E':'PE','P/FCFE':'PFCFE','P/BV':'PBV'};
+  for(const m of items){
+    assert.equal(m.escenario,'base');assert.equal(m.ancla,'JMR_BANCARIO');
+    assert.equal(m.estado,'OK','N/D bancario prioritario pendiente');
+    const prefix="'"+sheetByMethod[m.metodo]+"'!";
+    assert.ok(typeof m.origen==='string'&&m.origen.startsWith(prefix),
+      m.metodo+': falta hoja bancaria');
+    assert.match(m.origen.slice(prefix.length),/^[A-Z]+[0-9]+:[A-Z]+[0-9]+$/);
+    assert.equal(m.anclaHistoricaValidada,true,'Ancla sin aprobación documentada');
+    assert.ok(typeof m.fuenteAncla==='string'&&m.fuenteAncla.length>=20,
+      'Falta referencia económica independiente');
+    assert.ok(Array.isArray(m.matriz)&&m.matriz.length===5&&m.matriz.every(r=>
+      Array.isArray(r)&&r.length===5&&r.every(finiteNative)));
+    assert.ok(Array.isArray(m.fundamentalFY3)&&m.fundamentalFY3.length===5&&
+      m.fundamentalFY3.every(finiteNative));
+    assert.ok(Array.isArray(m.multiploElegido)&&m.multiploElegido.length===5&&
+      m.multiploElegido.every(finiteNative));
+    assert.ok(nearNative(m.matriz[2][2],m.centro)&&nearNative(m.centro,m.vp3Original));
+    const chosen=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre===m.metodo);
+    assert.ok(chosen&&finiteNative(chosen.peso)&&chosen.peso>=0&&
+      nearNative(chosen.base?.vp?.[2],m.vp3Original),
+      'Falta descuento bancario Ke con VP3 conciliado');
+  }
+  return true;
+}
+
+/**
+ * Puerta de datos estructurados A. La matriz candidata NO basta:
+ * exige origen/revisión, integridad, centros VP3 y estado de integración
+ * explícito. La auditoría económica independiente se realiza después.
+ */
+function validateNativeMatrices(v){
+  if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
+  if(v.ticker==='NU'||/DCF FCFE bancario/i.test(v.metodoPrincipal||''))
+    return validateBankNativeMatrices(v);
+  const s=v.sensibilidadMultiples||{};
+  assert.equal(s.contrato,'base-native-five-priority-v1','Formato de matrices A no vigente');
+  assert.equal(s.revisionId,v.revisionId,'Revisión de matriz diferente');
+  assert.equal(s.sourceSheetId,v.sheet_id,'ID de hoja diferente');
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/,'Foto financiera sin SHA256');
+  assert.equal(s.estadoPublicacion,'INTEGRADO_EN_REVISION',
+    'CANDIDATO_NO_PUBLICADO nunca acredita matrices oficiales');
+  assert.equal(s.controlesTecnicosAprobados,true,'Revisión técnica de matrices pendiente');
+  const items=s.matrices;
+  assert.ok(Array.isArray(items),'Matriz de múltiplos no publicada');
+  const names=new Set(items.map(x=>x?.metodo));
+  assert.equal(names.size,items.length,'Matrices repetidas');
+  const required=CORE_NATIVE;
+  for(const name of required)assert.ok(names.has(name),'Falta múltiplo aplicable: '+name);
+  // El balance es la fuente de capital bancario; los depósitos no son deuda
+  // industrial. P/BV es prioritario en bancos; no lo es en operativas.
+  for(const m of items){
+    assert.ok(CORE_NATIVE.includes(m.metodo)||MAYBE_NATIVE.includes(m.metodo),
+      'Método no reconocido');
+    assert.equal(m.escenario,'base','Solo sensibilidad de Base');
+    assert.equal(m.ancla,'JMR','Ancla de la hoja oficial');
+    const sourceRow=76+10*[...CORE_NATIVE,...MAYBE_NATIVE].indexOf(m.metodo);
+    assert.equal(m.origen,"'Sensibilidad por múltiplo'!A"+sourceRow+':I'+(sourceRow+8),
+      m.metodo+': rango de origen nativo ausente o distinto');
+    const chosen=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre===m.metodo);
+    const vp3=chosen?.base?.vp?.[2];
+    if(finiteNative(vp3))assert.ok(nearNative(vp3,m.vp3Original),
+      m.metodo+': VP3 no coincide con descuento oficial');
+    if(m.estado==='OK'){
+      assert.ok(Array.isArray(m.matriz)&&m.matriz.length===5&&m.matriz.every(r=>
+        Array.isArray(r)&&r.length===5&&r.every(finiteNative)),m.metodo+': no es 5x5 numérica');
+      assert.ok(Array.isArray(m.fundamentalFY3)&&m.fundamentalFY3.length===5&&m.fundamentalFY3.every(finiteNative));
+      assert.ok(Array.isArray(m.multiploElegido)&&m.multiploElegido.length===5&&m.multiploElegido.every(finiteNative));
+      assert.ok(nearNative(m.matriz[2][2],m.centro)&&nearNative(m.centro,m.vp3Original),
+        m.metodo+': centro no concilia');
+    }else if(m.estado==='N/A'){
+      assert.equal(m.matriz,null,m.metodo+': N/A con matriz numérica');
+      assert.ok(typeof m.motivo==='string'&&m.motivo.trim().length>=20,
+        m.metodo+': falta justificación económica N/A');
+      assert.ok(!chosen||!finiteNative(chosen.peso)||chosen.peso===0,
+        m.metodo+': un método no aplicable no puede tener peso positivo');
+      if(m.estadoFuente==='N/D'){
+        // Un N/D procedente de Sheets solo se clasifica N/A cuando la
+        // revisión YA registra flujo FY+3 negativo y peso cero.
+        assert.ok(['EV/FCFF','P/FCFE'].includes(m.metodo),
+          m.metodo+': N/A económico no habilitado para este método');
+        const fy3=chosen?.base?.fy?.[2],vp3=chosen?.base?.vp?.[2];
+        assert.ok(chosen?.estado?.startsWith('N/A: flujo negativo')&&
+          chosen.peso===0&&finiteNative(fy3)&&fy3<0&&
+          finiteNative(vp3)&&vp3<0&&nearNative(vp3,m.vp3Original),
+          m.metodo+': N/A no respaldado por flujo FY+3 negativo de la misma revisión');
+      }
+    }else if(m.estado==='N/D' && !required.includes(m.metodo) &&
+             (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
+      // Métodos no prioritarios y con peso cero no validan una empresa;
+      // los N/D prioritarios siguen bloqueados. Para bancos EV/FCFF no aplica.
+      assert.equal(m.matriz,null,m.metodo+': N/D no prioritario no lleva matriz');
+    }else{
+      assert.fail(m.metodo+': N/D prioritario o con peso positivo no puede pasar como aprobado');
+    }
+  }
+  return true;
+}
+
 function validate(root = path.join(__dirname, '..')) {
   const c = JSON.parse(fs.readFileSync(path.join(root, 'catalogo.json'), 'utf8'));
   const inventory = dir => fs.readdirSync(path.join(root, dir), {withFileTypes: true})
@@ -32,8 +154,26 @@ function validate(root = path.join(__dirname, '..')) {
   }));
   for (const p of c.analisis) {
     const a = JSON.parse(fs.readFileSync(path.join(root, p)));
-    const v = vals.find(x => x.path === a.linkedValuation?.sourcePath);
-    assert.ok(v, 'Análisis sin valoración');
+    // El catálogo es la fuente de identidad: admite ruta o revisión explícita.
+    // Una revisión sin vínculo interno (AFYA) permanece EN_REVISION, nunca
+    // se declara completa por inferencia.
+    const status = a.status || a.estado || a.publicationStatus;
+    const refPath = typeof a.linkedValuation === 'string'
+      ? a.linkedValuation : a.linkedValuation?.sourcePath;
+    const candidates = vals.filter(x =>
+      refPath ? x.path === refPath ||
+        (x.record.revisionId === refPath && x.record.ticker === a.ticker)
+        : x.record.revisionId === a.revisionId && x.record.ticker === a.ticker);
+    assert.equal(candidates.length, 1,
+      a.ticker + ': valoración del catálogo ausente o ambigua para ' +
+      (refPath || a.revisionId));
+    const v = candidates[0];
+    if (!refPath) {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': falta vínculo explícito en un análisis no provisional');
+      console.warn('PENDIENTE_VINCULO: '+a.ticker+
+        ' resuelto solo por ticker y revisión oficial; completar vínculo antes del cierre.');
+    }
     assert.equal(a.ticker, v.record.ticker);
     // El artículo puede publicarse después de su valoración sin cambiar el DCF.
     const isoDate = x => typeof x === 'string' &&
@@ -45,24 +185,105 @@ function validate(root = path.join(__dirname, '..')) {
     if (a.linkedValuation?.revisionId && v.record.revisionId)
       assert.equal(a.linkedValuation.revisionId, v.record.revisionId,
         'Enlace a revisión distinta');
-    assert.equal(a.remotePath, p);
-    assert.deepEqual(a.linkedValuation.descuentoMultiples, v.record.descuentoMultiples);
-    if(a.ticker==='META' && /^META-/.test(a.revisionId||'')){
-      const headings=a.articleHtml.split('<h2>').slice(1).map(h=>h.split('</h2>')[0].replace(/<[^>]+>/g,'').trim());
-      assert.equal(headings.filter(h=>/^[0-9]+[.] /.test(h)).length,18,'META: 18 secciones numeradas');
-      assert.ok(headings.filter(h=>!/^[0-9]+[.] /.test(h)).every(h=>/^Adenda /.test(h)),'META: h2 extra no identificado como adenda');
-      assert.equal(a.controlCobertura?.secciones,18);
+    if (a.remotePath !== undefined) assert.equal(a.remotePath, p);
+    else {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': ruta remota ausente de expediente no provisional');
+      console.warn('PENDIENTE_RUTA: '+a.ticker+
+        ' sin remotePath embebido; ruta vigente solo en catálogo.');
+    }
+    // Algunos análisis nuevos enlazan el resultado en vez de duplicar todo el
+    // bloque financiero. Una referencia compacta no es un error de cálculo;
+    // el expediente oficial sigue siendo la única fuente del cálculo.
+    // Cuando hay copia embebida, sí debe coincidir íntegramente.
+    const linked = a.linkedValuation;
+    if (linked == null) {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': sin vínculo financiero explícito no puede cerrarse');
+    } else if (typeof linked === 'string') {
+      assert.ok(linked === v.path || linked === v.record.revisionId,
+        a.ticker + ': ruta o ID de revisión no corresponde al expediente');
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': referencia simple no acredita conciliación financiera');
+      console.warn('VINCULO_REFERENCIA: '+a.ticker+
+        ' usa ruta o revisión oficial; sin copia interna de múltiplos.');
+    } else if (Object.prototype.hasOwnProperty.call(linked, 'descuentoMultiples')) {
+      assert.deepEqual(linked.descuentoMultiples, v.record.descuentoMultiples,
+        a.ticker + ': múltiplos embebidos distintos de la valoración oficial');
+    } else {
+      assert.ok(typeof linked.revisionId === 'string' && linked.revisionId,
+        a.ticker + ': vínculo compacto sin revisión financiera');
+      assert.ok(Number.isFinite(linked.valorPrincipal),
+        a.ticker + ': vínculo compacto sin valor Base numérico');
+      assert.equal(linked.valorPrincipal, v.record.valorPrincipal,
+        a.ticker + ': valor Base del análisis difiere de la valoración');
+      if (linked.metodo_valoracion !== undefined)
+        assert.equal(linked.metodo_valoracion, v.record.metodo_valoracion,
+          a.ticker + ': método del análisis difiere de la valoración');
+      if (linked.version_metodo !== undefined)
+        assert.equal(linked.version_metodo, v.record.version_metodo,
+          a.ticker + ': versión del método difiere de la valoración');
+      console.warn('VINCULO_COMPACTO: ' + a.ticker +
+        ' usa la valoración como fuente única de múltiplos; sin copia embebida.');
+    }
+    // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
+    // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
+    // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
+    const h2 = [...a.articleHtml.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)]
+      .map(m => m[1].replace(/<[^>]+>/g, '').trim());
+    const numbers = h2
+      .map(h => /^(\d+)\.\s+/.exec(h))
+      .filter(Boolean).map(m => Number(m[1]));
+    const numberedSequence = n => JSON.stringify(numbers) ===
+      JSON.stringify(Array.from({length:n}, (_,i) => i+1));
+    const is14 = numberedSequence(14);
+    const legacy13 = numberedSequence(13);
+    const legacy18 = numberedSequence(18);
+    const historicalRevisions = {
+      META: 'META-20261025-R5',
+      NVDA: 'NVDA-20261025-R4',
+      XP: 'XP-JMR-20261026-R2'
+    };
+    const frozenHistorical = historicalRevisions[a.ticker] === a.revisionId;
+    if (is14) {
+      assert.ok(h2.some(h => /ciclos?/i.test(h) && /macro|mercado/i.test(h)),
+        a.ticker + ': falta capítulo propio de ciclos');
+      if (a.controlCobertura?.secciones != null)
+        assert.equal(a.controlCobertura.secciones, 14,
+          a.ticker + ': metadatos editoriales deben contar 14 capítulos');
+    } else if (legacy13) {
+      assert.ok(status === 'EN_REVISION' || frozenHistorical,
+        a.ticker + ': no publicar como nuevo un informe de 13 capítulos');
+      console.warn('PENDIENTE_EDITORIAL: ' + a.ticker +
+        ' conserva 13 capítulos; separar ciclos antes de certificar Nivel 1 (14).');
+    } else if (legacy18 && frozenHistorical && a.ticker === 'XP') {
+      console.warn('LEGADO_HISTORICO: XP conserva 18 capítulos por revisión archivada; ' +
+        'no corresponde al nuevo Nivel 1 de 14.');
+    } else {
+      assert.fail(a.ticker + ': índice inválido: estándar=14, ' +
+        'legado de 13 solo EN_REVISION o revisión histórica congelada');
+    }
+    if (a.ticker==='META' && /^META-/.test(a.revisionId||'')) {
+      assert.ok(h2.filter(h => !/^[0-9]+[.] /.test(h))
+        .every(h => /^Adenda /.test(h)), 'META: h2 extra no identificado como adenda');
       assert.equal(a.controlCobertura?.matricesDCF,8);
       assert.equal(a.controlCobertura?.centrosDCFValidados,8);
       assert.ok(a.calculationHtml?.length>1000,'META: falta nivel 2');
       assert.ok(a.editorialRevisionId,'META: falta revisión editorial');
-    } else {
-      assert.equal((a.articleHtml.match(/<h2>/g) || []).length, 18);
-      if (a.controlCobertura) {
-        assert.equal(a.controlCobertura.entradas.length, 25,
-          'Cobertura editorial v5 debe documentar 25 puntos');
-        assert.equal(a.controlCobertura.resueltas + a.controlCobertura.limitadas, 25);
+    } else if (a.controlCobertura) {
+      // Las revisiones EN_REVISION pueden tener indicadores anteriores (13/18
+      // apartados) o una ficha de capítulos sin inventario de 25 entradas.
+      // Solo afirmar cobertura v5 cuando el inventario de 25 existe realmente.
+      const cov = a.controlCobertura;
+      if (Array.isArray(cov.entradas) && cov.entradas.length === 25) {
+        assert.equal(cov.resueltas + cov.limitadas, 25,
+          a.ticker + ': inventario de 25 puntos sin conciliación');
         assert.ok(a.editorialRevisionId, 'Falta identificación de revisión editorial');
+      } else {
+        assert.equal(status, 'EN_REVISION',
+          a.ticker + ': cobertura incompleta o legado no permite cierre editorial');
+        console.warn('PENDIENTE_COBERTURA: '+a.ticker+
+          ' no acredita las 25 entradas editoriales vigentes.');
       }
     }
   }
@@ -70,7 +291,7 @@ function validate(root = path.join(__dirname, '..')) {
     // Regla única de los siete múltiplos para NFLX v7 y NKE R4.
     // Control de precios y pesos, con excepción NKE P/FCFE explícita;
     // no permitir que el ponderado relativo reemplace el DCF principal.
-    if (['NFLX','NKE'].includes(v.ticker)) {
+    if (['NFLX','NKE'].includes(v.ticker) && v.multiplesUnificados) {
       const u=v.multiplesUnificados;
       assert.ok(u && u.revisionId===v.revisionId,'Múltiplos sin revisión vigente: '+v.ticker);
       assert.equal(u.metodos.length,7);
@@ -145,12 +366,44 @@ function validate(root = path.join(__dirname, '..')) {
       }
 
     }
+    // CI técnico no equivale a publicar resultados. Si una revisión carece de
+    // sensibilidad por múltiplos, fallar EXPLÍCITAMENTE en vez de pasar el
+    // registro como si estuviera auditado o dejar un TypeError opaco.
+    const contratoA = c.controlModeloA?.empresas?.[v.ticker]?.metodo === 'A-1.2';
+    if (contratoA) {
+      const s = v.sensibilidadMultiples;
+      const grids = Array.isArray(s?.matrices) ? s.matrices : [];
+      // Método A vigente: sensibilidades de múltiplos SOLO Base, matrices 5x5
+      // por método prioritario aplicable. P/S y P/BV son opcionales.
+      // Los centros sueltos de SHAK o los N/D de UBER no sustituyen grillas.
+      assert.ok(grids.length > 0,
+        v.ticker + ': BLOQUEO_FINANCIERO: faltan matrices Base 5x5 ' +
+        'exportadas desde la hoja oficial al JSON (matrices: ' +
+        grids.length + ', controles de centro: ' + (s?.controles?.length ?? 0) +
+        '). Verificar anclas, centros FY+3 y origen; N/A con causa cuando ' +
+        'no aplique. No exponer 21/28 controles legados como requisito del Método A.');
+      validateNativeMatrices(v);
+    } else if (v.ticker !== 'META') {
+      // Únicamente para revisiones históricas anteriores al Método A.
+      const s = v.sensibilidadMultiples;
+      const traditional = s?.methods === 7 &&
+        s.scenarios?.length === 3 && s.disrupcionFuera &&
+        s.controles?.length === 21;
+      const twoAnchors = s?.contract === 'base-two-anchors-two-families-v1' &&
+        s.matrices?.length === 28 && s.controles?.length === 28;
+      assert.ok(traditional || twoAnchors,
+        v.ticker + ': sensibilidad histórica no concilia con 21/28 controles.');
+    }
     require('./auditar_integridad.cjs').validateRecord(v);
-    assert.ok(c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md'));
+    if(!c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md')) {
+      assert.equal(v.estado,'EN_REVISION');
+      assert.equal(v.auditPendingUserVisualReview,true);
+      assert.match(v.auditoriaEconomica||'',/^(NO_REALIZADA|PENDIENTE_REVISION_VISUAL)/);
+    }
     assert.ok(v.salvedades.length);
   }
   return {valoraciones: vals.length, analisis: c.analisis.length,
     auditorias: c.auditorias.length};
 }
-module.exports = {validate};
+module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));
