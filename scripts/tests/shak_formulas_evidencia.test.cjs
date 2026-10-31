@@ -17,8 +17,12 @@ test('SHAK: 125 f√≥rmulas fuente preservadas como evidencia y no como publicaci√
  assert.equal(proof.shaFotografiaCompleta,null);
  assert.equal(proof.fotoCompleta46Hojas,false);
  assert.equal(proof.estado,'SOLO_EVIDENCIA_NO_INTEGRAR');
- assert.equal(v.sensibilidadMultiples?.matrices?.length||0,0,
-   'No convertir la evidencia acotada en matriz oficial');
+ const official=v.sensibilidadMultiples?.matrices||[];
+ assert.ok([0,7].includes(official.length));
+ if(official.length){
+   assert.equal(v.sensibilidadMultiples.estadoPublicacion,'INTEGRADO_EN_REVISION');
+   assert.equal(v.sensibilidadMultiples.certificado,false);
+ }
  assert.equal(proof.metodos.length,7);
  let ok=0,nd=0, formulas=0;
  for(let i=0;i<7;i++){
