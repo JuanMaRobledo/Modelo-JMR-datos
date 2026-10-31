@@ -76,20 +76,47 @@ test('P/V o P/BV son complementarios sin exigir cálculo, salvo peso positivo',(
   assert.throws(()=>validateNativeMatrices(a),/N\/D prioritario o con peso positivo/);
 });
 
-test('FCFE bancario exige P/E, P/FCFE y P/BV, sin imponer múltiplos industriales',()=>{
+test('NU rechaza expresamente una matriz industrial aunque contenga P/E, P/FCFE y P/BV',()=>{
   const v=fixture();
   v.ticker='NU';v.revisionId='NU-R1';
   v.metodoPrincipal='DCF FCFE bancario regulatorio — Método A-1.2';
   v.sensibilidadMultiples.revisionId='NU-R1';
-  for(const m of v.sensibilidadMultiples.matrices){
-    if(['EV/EBITDA','EV/FCFF','P/OCF'].includes(m.metodo)){
-      m.estado='N/D';m.matriz=null;m.centro=null;
-      v.descuentoMultiples.metodos.find(x=>x.nombre===m.metodo).peso=0;
-    }
-  }
-  assert.equal(validateNativeMatrices(v),true);
-  const pbv=v.sensibilidadMultiples.matrices.find(x=>x.metodo==='P/BV');
-  pbv.estado='N/D';pbv.matriz=null;pbv.centro=null;
-  assert.throws(()=>validateNativeMatrices(v),/N\/D prioritario/);
+  assert.throws(()=>validateNativeMatrices(v),/contrato bancario requerido/);
 });
 
+test('contrato bancario sintético exige tres fuentes y VP3 descontado con Ke',()=>{
+  const v=fixture();
+  v.ticker='NU';v.revisionId='NU-R1';
+  v.metodoPrincipal='DCF FCFE bancario regulatorio — Método A-1.2';
+  const sources=[['P/E','PE'],['P/FCFE','PFCFE'],['P/BV','PBV']];
+  v.descuentoMultiples.metodos=sources.map(([nombre])=>({
+    nombre,peso:1/3,base:{vp:[8,9,10]}
+  }));
+  v.sensibilidadMultiples={
+    contrato:'bank-relative-ke-v1',tipo:'MULTIPLOS_BANCARIOS',
+    revisionId:'NU-R1',sourceSheetId:'SHEET',
+    resultadosSha256:'b'.repeat(64),estadoPublicacion:'INTEGRADO_EN_REVISION',
+    controlesTecnicosAprobados:true,certificado:false,
+    matrices:sources.map(([metodo,tab])=>({
+      metodo,escenario:'base',ancla:'JMR_BANCARIO',estado:'OK',
+      origen:"'"+tab+"'!A1:F6",
+      anclaHistoricaValidada:true,
+      fuenteAncla:'Fuente independiente por cierre fiscal: prueba sintética sin publicación',
+      fundamentalFY3:[1,2,3,4,5],multiploElegido:[1,2,3,4,5],
+      matriz:Array.from({length:5},()=>[10,10,10,10,10]),
+      centro:10,vp3Original:10
+    }))
+  };
+  assert.equal(validateNativeMatrices(v),true);
+  for(const change of [
+    x=>x.sensibilidadMultiples.matrices[2].origen="'Sensibilidad por múltiplo'!A136:I144",
+    x=>x.sensibilidadMultiples.matrices[2].anclaHistoricaValidada=false,
+    x=>x.sensibilidadMultiples.matrices[2].estado='N/D',
+    x=>x.sensibilidadMultiples.matrices[0].matriz[2][2]=9,
+    x=>x.sensibilidadMultiples.matrices.pop(),
+    x=>x.descuentoMultiples.metodos[1].base.vp[2]=9
+  ]){
+    const invalid=clone(v);change(invalid);
+    assert.throws(()=>validateNativeMatrices(invalid));
+  }
+});
