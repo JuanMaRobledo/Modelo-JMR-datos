@@ -1,5 +1,17 @@
 # Depuración y estandarización — 31 de octubre de 2026
 
+## Actualización de ejecución — integridad N/D y acceso de Preview
+
+- En Vercel se registró `APP_PASSWORD` **solo para Preview y para la rama de #151**, como secreto nuevo distinto de producción. Se redesplegó el SHA `a8705030` a `dpl_7PRMENiSueeUXp5QQZEGHWAReGqj`; el estado de build es `READY`. Las peticiones automatizadas a la página protegida terminan en autenticación 401 tras redirección; **no hay todavía QA visual autenticado ni prueba funcional 200**. El problema de acceso no puede considerarse cerrado.
+- La app #151 sigue obteniendo `Modelo-JMR-datos/main` para vistas de expediente y lectores heredados, mientras las matrices están en la rama del PR #211. No tratar un Preview que solo carga `main` como prueba de la integración nueva.
+- Se contrastó `Sensibilidad por múltiplo!A76:I144` directamente en las hojas originales de SHAK y AFYA: SHAK conserva `N/D` en EV/FCFF y P/FCFE; AFYA mantiene siete bloques `OK`. En SHAK los flujos FY+3 y VP3 correspondientes son negativos y los pesos relativos de ambos métodos son cero en la revisión activa.
+- Se fortalecieron `scripts/integrar_matrices_nativas.py` y `scripts/validar_catalogo.cjs`: el valor literal de origen permanece `N/D`; una clasificación económica `N/A` solo puede surgir con evidencia de la misma revisión sobre flujos FY+3 negativos, VP3 negativos, declaración previa y peso cero. No se fabrican grillas, ni se modifica Sheets, DCF, supuestos o precios.
+- En CI, las suites Node de matrices y Python del integrador pasaron; el gate global sigue fallando **correctamente** en SHAK (cero matrices importadas en JSON). El control de profundidad sigue fallando en SHAK, UBER, AFYA y DUOL.
+- Los cuatro inventarios técnicos con fecha 30-oct se marcaron como fotografías históricas con referencia al informe vigente, para evitar reabrir tareas ya cubiertas. Se preservan fuentes y evidencias originales.
+
+**Sin autorización de cierre:** #151 y #211 continúan en borrador. Siguientes dependencias: foto completa y conciliación hoja→JSON de SHAK/MELI/GOOGL/UBER/INTU/NU, descuentos relativos incompletos de siete empresas, acceso SSO y QA visual real, y profundización editorial. No fusionar ni publicar por esta actualización.
+
+
 Estado: **avance de revisión, sin cierre ni publicación en producción**.
 
 ## Cambios comprobados
