@@ -51,7 +51,8 @@ class ShakDryRun(unittest.TestCase):
     def test_integrator_does_not_modify_original_record(self):
         snap=load(DIR/"resultados_hoja.json")
         formulas=load(DIR/"formulas.json")
-        original=load(ROOT/"valoraciones"/(REV+".json"))
+        original=load(DIR/"registro_antes.json")
+        active=load(ROOT/"valoraciones"/(REV+".json"))
         before=copy.deepcopy(original)
         body=json.dumps(snap["data"],ensure_ascii=False,sort_keys=True,default=str)
         self.assertEqual(hashlib.sha256(body.encode()).hexdigest(),snap["data_sha256"])
@@ -78,6 +79,10 @@ class ShakDryRun(unittest.TestCase):
                 self.assertTrue(all(len(r)==5 for r in m["matriz"]))
         self.assertFalse(out["sensibilidadMultiples"]["certificado"])
         self.assertEqual(out["auditoriaEconomica"],before["auditoriaEconomica"])
+        if active.get("sensibilidadMultiples",{}).get("matrices"):
+            self.assertEqual(active,out,"El registro integrado difiere de la ejecución Python verificada")
+        else:
+            self.assertEqual(active,original,"No se debe alterar el expediente antes de integrar")
 
 if __name__=="__main__":
     unittest.main()
