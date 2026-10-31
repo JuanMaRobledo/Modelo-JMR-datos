@@ -12,7 +12,7 @@ const near=(a,b)=>isFiniteNumber(a)&&isFiniteNumber(b)&&Math.abs(a-b)<=Math.max(
 const read=(root,p)=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const normalize=x=>x==='P/S'?'P/V':x;
 function matrix5x5(m){
-  const g=m?.values||m?.valores;
+  const g=Array.isArray(m)?m:m?.values||m?.valores||m?.matriz;
   return Array.isArray(g)&&g.length===5&&g.every(r=>Array.isArray(r)&&r.length===5&&r.every(isFiniteNumber));
 }
 function chapterCount(a){
@@ -68,6 +68,21 @@ function inspect(root=path.resolve(__dirname,'..')){
     const matricesEstructurales=matrices.filter(matrix5x5).length;
     const checked=controls.filter(x=>x.escenario==='base'&&x.estado==='OK'&&near(x.centro,x.vp3Original)).length;
     const noDisponible=controls.filter(x=>x.escenario==='base'&&x.estado==='N/D').length;
+    const partialPath='candidatos/hoja-multiples/'+v.revisionId+'-captura-rango.json';
+    let partial=null, partialCore=0, partialTotal=0;
+    if(!legacy && fs.existsSync(path.join(root,partialPath))){
+      try{
+        const c=read(root,partialPath);
+        if(c.ticker!==ticker||c.revisionId!==v.revisionId||c.sourceSheetId!==v.sheet_id||
+           c.tipo!=='CAPTURA_ACOTADA_NO_PUBLICADA'||c.hashFotografiaCompleta!==null)
+          issues.push('Captura parcial sin identidad de revisión/hoja o sin marca de no publicación');
+        else{
+          partial=c;
+          partialCore=c.metodos.filter(m=>m.prioritario&&m.estadoHoja==='OK'&&matrix5x5(m.matriz)).length;
+          partialTotal=c.metodos.filter(m=>m.estadoHoja==='OK'&&matrix5x5(m.matriz)).length;
+        }
+      }catch(e){issues.push('Captura parcial ilegible: '+e.message)}
+    }
     if(!legacy && !matricesEstructurales)issues.push('No se exportaron matrices 5x5 de múltiplos Base verificables');
     if(!legacy && evaluated<CORE.length)issues.push('Faltan métodos prioritarios en descuentoMultiples (o sus exclusiones)');
     if(!legacy && chapterCount(a||{})!==14)issues.push('Nivel 1 no acredita 14 capítulos');
@@ -82,6 +97,10 @@ function inspect(root=path.resolve(__dirname,'..')){
       controlesND:noDisponible,
       matricesExportadas:matrices.length,
       matrices5x5Estructurales:matricesEstructurales,
+      capturaParcialFuente:partial?partialPath:null,
+      capturaParcialPrioritarios5x5:partialCore,
+      capturaParcialMetodos5x5:partialTotal,
+      capturaParcialEsSoloCandidata:!!partial,
       hojasOriginales:!!(v.hojaGoogle||v.sheet_id),
       estadoInventario:legacy?'LEGADO_FUERA_MODELO_A':matricesEstructurales?'PENDIENTE_COTEJO_HOJA':'PENDIENTE_EXPORTACION_Y_CONCILIACION',
       issues
@@ -95,6 +114,9 @@ function inspect(root=path.resolve(__dirname,'..')){
     metodoA:current.length,
     legados:reported.length-current.length,
     metodoAConMatrices5x5:current.filter(x=>x.matrices5x5Estructurales>0).length,
+    metodoAConCapturaParcial:current.filter(x=>x.capturaParcialEsSoloCandidata).length,
+    metodoAConCincoMatricesPrioritariasEnCaptura:current.filter(x=>x.capturaParcialPrioritarios5x5===5).length,
+    metodoASinCapturaParcial:current.filter(x=>!x.capturaParcialEsSoloCandidata).map(x=>x.ticker),
     metodoAConControlesBase:current.filter(x=>x.controlesBase>0).length,
     metodoAConCincoMetodosEnDescuento:current.filter(x=>x.metodosPrioritariosEnDescuento===5).length,
     metodoASinVinculo:current.filter(x=>x.enlace==='NO_EXPLICITO').map(x=>x.ticker),
