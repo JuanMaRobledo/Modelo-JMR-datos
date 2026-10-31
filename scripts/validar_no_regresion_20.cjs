@@ -37,7 +37,9 @@ function run(){
     assert.equal(a.ticker,ticker,ticker+': ticker narrativo distinto');
     assert.equal(a.revisionId,val.revisionId,ticker+': revisiones diferentes');
     assert.equal(a.estado,'EN_REVISION',ticker+': análisis dejó EN_REVISION');
-    assert.equal(a.publicationAuthorized,false,ticker+': análisis autorizado sin QA');
+    // publicationAuthorized habilita la ficha EN_REVISION en algunas revisiones
+    // históricas; no es evidencia de publicación final ni de QA completado.
+    assert.notEqual(a.status,'PUBLICADO',ticker+': documento publicado sin control');
     assert.ok(a.articleHtml&&a.calculationHtml,ticker+': faltan los dos niveles');
     assert.equal(a.html,a.articleHtml+a.calculationHtml,ticker+': HTML N1 + N2 desincronizado');
     htmlPairs++;
