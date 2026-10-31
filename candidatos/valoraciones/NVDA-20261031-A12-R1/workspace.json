@@ -1,0 +1,288 @@
+{
+  "schema": "jmr-valuation-workspace-v1",
+  "ticker": "NVDA",
+  "revisionCandidata": "NVDA-20261031-A12-R1",
+  "estado": "CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA",
+  "versionMetodo": "A-1.2",
+  "metodoPrincipal": "DCF FCFF",
+  "corteContable": "2026-07-26",
+  "fechaAnalisis": "2026-10-31",
+  "moneda": "USD",
+  "unidades": "USD millones salvo precio por acción",
+  "trabajo": {
+    "hojaBorrador": "https://docs.google.com/spreadsheets/d/1gN_WFYyGzdLjgYr_0AEHGDdBIeCiNVnDFy0wkH0vB0Y/edit",
+    "plantillaFuente": "https://docs.google.com/spreadsheets/d/1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ/edit",
+    "hojaAnterior": "https://docs.google.com/spreadsheets/d/1gbtwORZsvjhZNCV8xlNDloHYEeE09cEbXmPZOoLJ8gY/edit",
+    "valoracionAnterior": "valoraciones/NVDA-20261025-R4.json",
+    "analisisAnterior": "analisis/NVDA-research-20261025-r4.json",
+    "hojasHistoricas": [
+      {
+        "nombre": "Income Statement",
+        "hardcodes": 199
+      },
+      {
+        "nombre": "Balance Sheet",
+        "hardcodes": 275
+      },
+      {
+        "nombre": "Cash Flow Statement",
+        "hardcodes": 165
+      }
+    ],
+    "formulasPlantillaPreservadas": true,
+    "rdConverter": {
+      "amortizacionAnios": 3,
+      "rdLtm": 23592,
+      "rdHistorico": [
+        15384,
+        10569,
+        7812,
+        7339,
+        5268,
+        3924,
+        2829,
+        2376,
+        1797,
+        1463
+      ],
+      "estado": "CARGADO_SIN_AUDITORIA"
+    },
+    "calibracion": "candidatos/valoraciones/NVDA-20261031-A12-R1/CALIBRACION_DCF_PROVISIONAL.json",
+    "controles": {
+      "waccDetailed": "VALIDADO_TECNICAMENTE",
+      "leases": "SIN_DUPLICACION_CON_BALANCE",
+      "fiscal": "VALIDADO_TECNICAMENTE",
+      "rdConverter": "CARGADO",
+      "legal": "NO_APLICA",
+      "nonOperatingAssets": "PENDIENTE_VALOR_ECONOMICO",
+      "SBC_RSU": "PENDIENTE_DILUCION",
+      "officialDCF": "PENDIENTE_GATE",
+      "officialMultiples": "PENDIENTE",
+      "ciGlobal": "BLOQUEADO_PR211"
+    },
+    "wacc": {
+      "initial": 0.10275679876039412,
+      "terminal": 0.093,
+      "rf": 0.0494,
+      "erp": 0.037,
+      "betaPreliminar": 1.45,
+      "debtCostPreliminar": 0.06,
+      "source": "Treasury 10y 30-oct y Damodaran ERP octubre; beta, Kd de juicio analítico"
+    },
+    "conciliaDeuda": {
+      "deudaCorto": 1000,
+      "deudaLargo": 32366,
+      "leaseCorto": 509,
+      "leaseLargo": 4985,
+      "total": 38860,
+      "metodo": "B18=No para evitar doble capitalización de lease GAAP"
+    },
+    "alternativaSCTerminal": {
+      "valorActual": 0.7,
+      "ROICImplicito": 0.2865680055,
+      "sensibilidadSC084": {
+        "valor": 205.7154117278977,
+        "ROIC": 0.3438816066
+      },
+      "nota": "Aumentar eficiencia 0,70 a 0,84 sube el Base solo ~US$4,27; no inflar hipótesis para igualar precios pasados."
+    }
+  },
+  "fuentePrimaria": {
+    "resultados2Q27": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx",
+    "informe10Q": "https://investor.nvidia.com/files/doc_financials/2027/NVDA-2027-Q2-10Q-Final-including-exhibits.pdf",
+    "resultadosFY26": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2026/"
+  },
+  "datosImportados": {
+    "Input sheet!B12": 302970,
+    "Input sheet!C12": 215938,
+    "Input sheet!D12": 0.5,
+    "Input sheet!B13": 197579,
+    "Input sheet!C13": 130387,
+    "Input sheet!B14": 464,
+    "Input sheet!C14": 259,
+    "Input sheet!B15": 228984,
+    "Input sheet!C15": 157293,
+    "Input sheet!B16": 38860,
+    "Input sheet!C16": 11412,
+    "Input sheet!B19": 99369,
+    "Input sheet!C19": 62556
+  },
+  "conciliaciones": [
+    {
+      "id": "REV_LTM",
+      "formula": "215938 + 81615 + 96221 − 44062 − 46743",
+      "resultadoCalculado": 302969,
+      "resultadoFuenteHoja": 302970,
+      "estado": "DIFERENCIA_REDONDEO_1_USDM",
+      "detalle": "Revisar importes sin redondear, no forzar ajuste de 1 USDm al DCF."
+    },
+    {
+      "id": "EBIT_LTM",
+      "formula": "130387 + 53536 + 63734 − 21638 − 28440",
+      "resultado": 197579,
+      "estado": "CONCILIADO"
+    },
+    {
+      "id": "CICLO_IA",
+      "estado": "PENDIENTE",
+      "detalle": "Crecimiento 106% YoY 2QFY27 no es crecimiento perpetuo; diferenciar compras adelantadas de hyperscalers, ciclo de hardware, oferta HBM e intensidad de competencia."
+    },
+    {
+      "id": "CAPEX_CLIENTES",
+      "estado": "PENDIENTE",
+      "detalle": "La inversión de Meta/Microsoft/Alphabet es CapEx del cliente, NO reinversión directa de NVIDIA. Para NVIDIA son ventas sujetas a márgenes, capital de trabajo, inventarios y capacidad de suministro."
+    },
+    {
+      "id": "SBC_ROIC",
+      "estado": "PENDIENTE",
+      "detalle": "Capitalizar I+D consistentemente, evitar reinversión duplicada y ajustar SBC/dilución."
+    },
+    {
+      "id": "DEUDA_CAJA_OPCIONES",
+      "estado": "PENDIENTE",
+      "detalle": "Conciliar deuda y efectivo Q2 FY27, intereses, acciones diluidas y opciones antes de calcular equity."
+    },
+    {
+      "id": "SC_TERMINAL_SENSIBILIDAD",
+      "estado": "CALIBRACION",
+      "detalle": "SC0.70 y ROIC terminal28.66% justifican normalización fabless; 0.84 implica ROIC34.39% y variación DCF solo US$4.27; evitar optimizar parámetros para reproducir valor anterior."
+    }
+  ],
+  "supuestosDefinitivos": null,
+  "valorPrincipal": null,
+  "precioMOS": null,
+  "escenarios": null,
+  "azStocks": null,
+  "auditoriaEconomica": "NO_INICIADA",
+  "publicationStatus": "NO_PUBLICAR",
+  "controlNoRegresion": {
+    "alterarOriginal": false,
+    "alterarCatalogo": false,
+    "archivarSoloCuandoVerificado": true
+  },
+  "siguientes": [
+    "Cotejar Q2 FY27 contra 10-Q",
+    "Calibrar ciclo IA y demanda por GPU con crecimiento 1–10 años",
+    "Revisar margen EBIT, S/C, reinversión y ROIC terminal",
+    "Completar escenarios DCF, sensibilidades y múltiplos",
+    "Análisis 18 capítulos y Nivel 2 reproducible",
+    "Valorar AZ Stocks sin mezclar supuestos"
+  ],
+  "estandarPresentacion": {
+    "version": "jmr-a12-ficha-unica-v1",
+    "presentacion": "misma ficha y sección por empresa, sin ventanas duplicadas",
+    "cabecera": [
+      "ticker",
+      "fecha de corte",
+      "precio de referencia con fecha",
+      "DCF Base principal",
+      "MOS35%",
+      "escenarios comparables"
+    ],
+    "pestanas": [
+      "Análisis fundamental",
+      "Valoración",
+      "Estados financieros",
+      "Indicadores",
+      "Modelo y supuestos",
+      "Sensibilidades",
+      "Revisión"
+    ],
+    "escenarios": [
+      "Base",
+      "Conservador",
+      "Optimista",
+      "Disrupción"
+    ],
+    "disrupcionFueraDelPromedio": true,
+    "mos": 0.35,
+    "nivel1": {
+      "capitulos": 18,
+      "tono": "análisis económico narrativo extenso",
+      "contenidos": [
+        "negocio y ventajas",
+        "competidores y unidad económica",
+        "ciclo de empresa",
+        "ciclo macro, monetario y crediticio",
+        "industria",
+        "crecimiento",
+        "márgenes",
+        "inversión y reinversión",
+        "ROIC",
+        "S/C",
+        "costo capital",
+        "valor terminal",
+        "cuatro historias",
+        "sensibilidades",
+        "múltiplos",
+        "AZ Stocks y conciliación",
+        "riesgos",
+        "conclusión"
+      ]
+    },
+    "nivel2": {
+      "apartados": 12,
+      "exigir": [
+        "datos históricos y fuentes",
+        "cifras originales y ajustes",
+        "fórmulas realmente aplicadas",
+        "proyecciones 10 años",
+        "puente enterprise-equity o FCFE",
+        "escenarios",
+        "sensibilidades DCF",
+        "sensibilidades múltiplos",
+        "pesos y anclas",
+        "centros reproducibles",
+        "conciliaciones",
+        "registro de reservas"
+      ]
+    },
+    "multiplos": {
+      "industriales": [
+        "EV/EBITDA",
+        "EV/FCFF",
+        "P/E",
+        "P/FCFE",
+        "P/OCF",
+        "P/S",
+        "P/BV"
+      ],
+      "financieras": [
+        "P/E",
+        "P/FCFE",
+        "P/BV"
+      ],
+      "regla": "N/D o N/A justificado cuando corresponda; no inventar 0 ni anclas"
+    },
+    "metodoPrincipal": {
+      "industrial": "FCFF DCF",
+      "financiero": "FCFE DCF regulatorio"
+    },
+    "azStocks": "ficha complementaria separada; DCF perpetuidad es referencia principal",
+    "release": {
+      "fichaActivaSoloTras": "validaciones contables, fórmulas, pesos, sensibilidad y QA",
+      "estadoBorrador": "NO_PUBLICAR",
+      "estadoRevision": "EN_REVISION",
+      "archivarOriginal": "solo después de validación y publicación de reemplazo",
+      "auditoriaEconomica": "después de revisión visual del usuario"
+    }
+  },
+  "precioReferencia": {
+    "valor": 204.64,
+    "moneda": "USD",
+    "unidad": "USD por acción",
+    "fecha": "2026-10-30",
+    "fuente": "https://stockanalysis.com/stocks/nvda/history/",
+    "nota": "Cierre anterior al corte de estudio; no implica valor intrínseco ni aprobación de MOS"
+  },
+  "supuestosProvisionales": {
+    "dcfBase": 201.44597794111647,
+    "MOS35": 130.9398856617257,
+    "conservador": 107.73568558932644,
+    "optimista": 344.60757009178525,
+    "disrupcion": 49.60250088026367,
+    "promedioTres": 213.80880289083618,
+    "moneda": "USD/accion",
+    "estado": "NO_CERTIFICADO"
+  }
+}

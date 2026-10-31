@@ -1,0 +1,265 @@
+{
+  "schema": "jmr-valuation-workspace-v1",
+  "ticker": "XP",
+  "revisionCandidata": "XP-20261031-A12-R1",
+  "estado": "FCFE_RECALCULADO_CON_SENSIBILIDADES_NATIVAS_SIN_CERTIFICACION_ECONOMICA",
+  "versionMetodo": "A-1.2",
+  "metodoPrincipal": "FCFE_FINANCIERO",
+  "corteContable": "2026-06-30",
+  "fechaAnalisis": "2026-10-31",
+  "moneda": "BRL",
+  "unidades": "BRL millones para estados, FCFE y patrimonio; FX BRL/USD explícito; resultados finales USD por acción",
+  "trabajo": {
+    "hojaBorrador": "https://docs.google.com/spreadsheets/d/1C8TU1AJMxy0JmU4KsBNdp1dYzBSoli7CLtnjQI3SsnQ/edit",
+    "hojaAnterior": "https://docs.google.com/spreadsheets/d/18DYy3HRcy8SCBue16aBoba3ELBZ0pyjoFO472dic0-I/edit",
+    "valoracionAnterior": "valoraciones/XP-20261026-R2.json",
+    "analisisAnterior": "analisis/XP-research-20261026-r2.json",
+    "estructuraFuente": "69 pestañas; 5 módulos XP nativos y soporte, copiados sin borrar dependencias",
+    "etiquetasBorradorModificadas": 8,
+    "formulasFuenteIntactas": true,
+    "calibracion": "candidatos/valoraciones/XP-20261031-A12-R1/CALIBRACION_FCFE_PROVISIONAL.json",
+    "analisisNivel1": "candidatos/valoraciones/XP-20261031-A12-R1/NIVEL1_ANALISIS_PROVISIONAL.md",
+    "analisisNivel2": "candidatos/valoraciones/XP-20261031-A12-R1/NIVEL2_CALIBRACION_PROVISIONAL.md",
+    "matrices": "XP A12 Matrices; 4 bancos/fintech nativas con centros FY+3 concilian, Ke×g, ROE×g y EBT×crecimiento conciliados",
+    "versionCopia": "XP Control A27:B39: resumen candidato separado de XP R2",
+    "tasasActualizadas": {
+      "rfUSD": 0.0494,
+      "erpUSD": 0.037,
+      "crpBrasilDamodaranJulio": 0.031,
+      "repricingShockJuicio": 0.02,
+      "fxPTAX20261030": 5.4209,
+      "KeBRL": 0.14443773216031297,
+      "KeTerminalBRL": 0.14518279569892467
+    }
+  },
+  "fuentePrimaria": {
+    "inversores": "https://investors.xpinc.com/en/",
+    "resultados2Q26": "https://markets.ft.markitdigital.com/data/announce/full?dockey=600-202608171605BIZWIRE_USPRX____20260817_BW593369-1"
+  },
+  "datosHistoricosR2": {
+    "ingresosLTM_BRLm": 19122.419,
+    "beneficioAtribuibleLTM_BRLm": 5316.803,
+    "patrimonioAtribuible_BRLm": 24831.073,
+    "accionesBase_m": 507.483079,
+    "rsuPsu_m": 17.672287,
+    "fxAnterior_BRLporUSD": 5.5007,
+    "valorAnterior_USDaccion": 13.530630645337256
+  },
+  "conciliaciones": [
+    {
+      "id": "FCFE",
+      "estado": "PENDIENTE",
+      "detalle": "Usar beneficio atribuible, retención para CET1/RWA y coste patrimonio Ke. No usar FCFF industrial ni EV/EBITDA como método primario."
+    },
+    {
+      "id": "CAPITAL_REG",
+      "estado": "PENDIENTE",
+      "detalle": "Diferenciar CET1 Pilar3 perímetro regulado 7,68% de CET1 gerencial 17,1% y BIS gerencial 20,3%; no compararlos sin perímetro reconciliado."
+    },
+    {
+      "id": "DILUCION",
+      "estado": "PENDIENTE",
+      "detalle": "Comprobar acciones A/B, tesorería, RSU y PSU, escenarios de vesting y valor razonable de incentivos; no doble dilución."
+    },
+    {
+      "id": "FX",
+      "estado": "PENDIENTE",
+      "detalle": "Ke nominal BRL para flujos BRL, convertir equity final por FX correspondiente a corte; no usar Ke USD con FCFE BRL."
+    },
+    {
+      "id": "SENSIBILIDADES",
+      "estado": "PENDIENTE",
+      "detalle": "Matrices Ke/g, P/E, P/FCFE, P/BV con anclas bancarias; históricos no suficientes para certificar nueva revisión."
+    },
+    {
+      "id": "COPIA_FUENTE",
+      "estado": "PRESERVADA",
+      "detalle": "Retenidas 69 pestañas porque borrar fuentes antes de mapa de dependencias rompería el contrato FCFE. Se revisará limpiar/ocultar solo tras cotejar fórmulas."
+    },
+    {
+      "id": "CORPORATE_ACTION_20261026",
+      "estado": "BLOQUEO_MATERIAL_COMPARABILIDAD",
+      "detalle": "Precio de XP disminuyó ~48% 26-oct-2026; no hay confirmación oficial de split, dividendo extraordinario o modificación del capital en las fuentes consultadas. Requiere aclaración corporativa antes de valorar delta precio/intrínseco."
+    },
+    {
+      "id": "CRP_FX_REVALORIZACION_POST_ELECTORAL",
+      "estado": "PENDIENTE_DATOS_COTIZADOS",
+      "detalle": "XP 2Q26 FCFE BRL debe descontarse a Ke nominal BRL compatible con CRP Brasil posterior a shock octubre; convertir equity a USD con FX de valoración 30-oct y comparar precio de igual fecha. No reutilizar FX 5,5007 BRL/USD de junio como actual sin verificar."
+    },
+    {
+      "id": "CAPITAL_CET1_PERIMETRO",
+      "estado": "BLOQUEO_MATERIAL",
+      "detalle": "Pillar3 RWA 99904 CET1 7675 7.68% vs grupo gerencial RWA 126600 y CET1 17.1%. El capital de grupo consolidado y el ratio de filial se mezclan en motor; 7.68% es observado, NO mínimo prudencial verificado. FCFE y repartos candidatos sin certificación hasta puente y buffers."
+    },
+    {
+      "id": "MULTIPLOS_NATIVOS_FY3",
+      "estado": "RECONCILIADOS_MATEMATICAMENTE",
+      "detalle": "Cuatro matrices 5×5 en XP A12 Matrices con centro de P/E, P/FCFE, P/BV, P/S igual exactamente al VP FY+3 del motor. Ke×g, ROE×g y EBT×crecimiento 5×5 en XP Sensibilidad actualizadas con ejes dinámicos. P/FCFE sin ancla económica independiente peso 0."
+    },
+    {
+      "id": "KE_FX_DATED",
+      "estado": "CALCULADO_SUJETO_JUICIO",
+      "detalle": "ERP 3.70, Rf USD 4.94, CRP julio 3.10, shock adicional juicio 2pp, Ke nominal BRL 14.4438%, FX PTAX BCB 5.4209. Riesgo macro octubre no permite asumir CRP invariable sin sensibilizar."
+    }
+  ],
+  "supuestosDefinitivos": null,
+  "valorPrincipal": null,
+  "precioMOS": null,
+  "escenarios": null,
+  "azStocks": null,
+  "auditoriaEconomica": "NO_INICIADA",
+  "publicationStatus": "NO_PUBLICAR",
+  "controlNoRegresion": {
+    "alterarOriginal": false,
+    "alterarCatalogo": false,
+    "archivarSoloCuandoVerificado": true
+  },
+  "siguientes": [
+    "Reestimar FX/CRP/Ke a corte 30-oct por repricing macro brasileño antes de actualizar FCFE.",
+    "Reconciliar 2Q26 con cifras IFRS y capital regulatorio",
+    "Calibrar Ke BRL, CRP Brasil, FX",
+    "Revisar crecimiento RWA y retención regulatoria",
+    "Reproyectar FCFE cuatro escenarios",
+    "Analizar sensibilidad Ke/g, P/E, P/FCFE y P/BV",
+    "Completar análisis 18 capítulos y Nivel2 con fuente",
+    "Separar auditoría económica de plantilla"
+  ],
+  "estandarPresentacion": {
+    "version": "jmr-a12-ficha-unica-v1",
+    "presentacion": "misma ficha y sección por empresa, sin ventanas duplicadas",
+    "cabecera": [
+      "ticker",
+      "fecha de corte",
+      "precio de referencia con fecha",
+      "DCF Base principal",
+      "MOS35%",
+      "escenarios comparables"
+    ],
+    "pestanas": [
+      "Análisis fundamental",
+      "Valoración",
+      "Estados financieros",
+      "Indicadores",
+      "Modelo y supuestos",
+      "Sensibilidades",
+      "Revisión"
+    ],
+    "escenarios": [
+      "Base",
+      "Conservador",
+      "Optimista",
+      "Disrupción"
+    ],
+    "disrupcionFueraDelPromedio": true,
+    "mos": 0.35,
+    "nivel1": {
+      "capitulos": 18,
+      "tono": "análisis económico narrativo extenso",
+      "contenidos": [
+        "negocio y ventajas",
+        "competidores y unidad económica",
+        "ciclo de empresa",
+        "ciclo macro, monetario y crediticio",
+        "industria",
+        "crecimiento",
+        "márgenes",
+        "inversión y reinversión",
+        "ROIC",
+        "S/C",
+        "costo capital",
+        "valor terminal",
+        "cuatro historias",
+        "sensibilidades",
+        "múltiplos",
+        "AZ Stocks y conciliación",
+        "riesgos",
+        "conclusión"
+      ]
+    },
+    "nivel2": {
+      "apartados": 12,
+      "exigir": [
+        "datos históricos y fuentes",
+        "cifras originales y ajustes",
+        "fórmulas realmente aplicadas",
+        "proyecciones 10 años",
+        "puente enterprise-equity o FCFE",
+        "escenarios",
+        "sensibilidades DCF",
+        "sensibilidades múltiplos",
+        "pesos y anclas",
+        "centros reproducibles",
+        "conciliaciones",
+        "registro de reservas"
+      ]
+    },
+    "multiplos": {
+      "industriales": [
+        "EV/EBITDA",
+        "EV/FCFF",
+        "P/E",
+        "P/FCFE",
+        "P/OCF",
+        "P/S",
+        "P/BV"
+      ],
+      "financieras": [
+        "P/E",
+        "P/FCFE",
+        "P/BV"
+      ],
+      "regla": "N/D o N/A justificado cuando corresponda; no inventar 0 ni anclas"
+    },
+    "metodoPrincipal": {
+      "industrial": "FCFF DCF",
+      "financiero": "FCFE DCF regulatorio"
+    },
+    "azStocks": "ficha complementaria separada; DCF perpetuidad es referencia principal",
+    "release": {
+      "fichaActivaSoloTras": "validaciones contables, fórmulas, pesos, sensibilidad y QA",
+      "estadoBorrador": "NO_PUBLICAR",
+      "estadoRevision": "EN_REVISION",
+      "archivarOriginal": "solo después de validación y publicación de reemplazo",
+      "auditoriaEconomica": "después de revisión visual del usuario"
+    }
+  },
+  "precioReferencia": {
+    "valor": 14.29,
+    "moneda": "USD",
+    "unidad": "USD por acción",
+    "fecha": "2026-10-30",
+    "fuente": "https://stockanalysis.com/stocks/xp/history/",
+    "nota": "Observado tras movimiento anómalo 26-oct; no usar como prueba de split o actualización automática de acciones"
+  },
+  "alertaMaterial": {
+    "codigo": "XP_MOVIMIENTO_PRECIO_20261026",
+    "fecha": "2026-10-26",
+    "cierreAnterior": 30.41,
+    "cierrePosterior": 15.71,
+    "variacionPorcentualAproximada": -48.36,
+    "estado": "MOVIMIENTO_REVALORIZACION_MACRO_CON_RESPALDO_PUBLICO_CAUSA_TOTAL_NO_DEMOSTRADA",
+    "mitigacion": "No atribuir a split ni alterar acciones; contrastar emisor y estados/post-trade antes de comparar con valor intrínseco R2 o A-1.2",
+    "fuentes": [
+      "https://stockanalysis.com/stocks/xp/history/",
+      "https://septinvesting.com/stocks/XP/filings"
+    ],
+    "contextoVerificado": "Oct26: tras resultado electoral Lula/Flávio Bolsonaro, activos brasileños registraron ventas intensas; WSJ y Reuters reportaron caída 48% XP, 14% Petrobras y circuit breaker Ibovespa. No hay anuncio verificado de desdoblamiento de acciones; posible contribución de preocupación por gobernanza/flujo institucional.",
+    "fuentesAdicionales": [
+      "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-10-26-2026/card/stocks-to-watch-petrobras-coreweave-moderna-AI2pYQgbWbw8nIbZ8hMo",
+      "https://br.investing.com/equities/xp-inc-news",
+      "https://www.investing.com/news/stock-market-news/why-is-xp-stock-plummeting-45-today-93CH-4971958"
+    ],
+    "noAsumir": "No inferir mecánicamente cambio en acciones ni duplicar denominador; no inferir que 48% representa destrucción intrínseca exacta."
+  },
+  "supuestosProvisionales": {
+    "baseUSD": 14.475590094736917,
+    "MOS35USD": 9.409133561578997,
+    "conservadorUSD": 10.820295471137689,
+    "optimistaUSD": 16.607456593973765,
+    "disrupcionUSD": 7.306173112951838,
+    "promedioTresSinDisrupcionUSD": 14.094733063646322,
+    "accionReferenciaUSD": 14.29,
+    "fecha": "2026-10-30",
+    "estado": "CANDIDATO_NO_PUBLICAR"
+  }
+}
