@@ -13,7 +13,47 @@
     "plantillaFuente": "https://docs.google.com/spreadsheets/d/1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ/edit",
     "hojaAnterior": "https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit",
     "valoracionAnterior": "valoraciones/META-20261025-R5.json",
-    "analisisAnterior": "analisis/META-research-20261025-r5.json"
+    "analisisAnterior": "analisis/META-research-20261025-r5.json",
+    "estadoDatos": "DATOS_HISTORICOS_CARGADOS_PENDIENTES_DE_CONCILIACION_FORMULARIOS_Y_DCF",
+    "hojasHistoricas": [
+      {
+        "nombre": "Income Statement",
+        "hardcodes": 187,
+        "filas": "2:70",
+        "columnas": "B:L"
+      },
+      {
+        "nombre": "Balance Sheet",
+        "hardcodes": 253,
+        "filas": "2:70",
+        "columnas": "B:L"
+      },
+      {
+        "nombre": "Cash Flow Statement",
+        "hardcodes": 209,
+        "filas": "2:70",
+        "columnas": "B:L"
+      }
+    ],
+    "formulasDePlantillaPreservadas": true,
+    "rdConverter": {
+      "amortizacionAnos": 3,
+      "rdLtm": 76544,
+      "rdHistoricoLtm": [
+        52417,
+        42210,
+        37737,
+        35338,
+        24655,
+        18447,
+        13600,
+        10273,
+        7754,
+        5919
+      ],
+      "fuente": "R& D converter de la revisión 2026-10-23",
+      "status": "CARGADO_EN_COPIA"
+    }
   },
   "fuentePrimaria": {
     "resultadosT3": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/",
@@ -33,7 +73,10 @@
     "Input sheet!B16": 116026,
     "Input sheet!C16": 83897,
     "Input sheet!B19": 82449,
-    "Input sheet!C19": 81592
+    "Input sheet!C19": 81592,
+    "Input sheet!B17": "Yes",
+    "Input sheet!B18": "No",
+    "Input sheet!B20": 32624
   },
   "conciliaciones": [
     {
@@ -71,8 +114,8 @@
     },
     {
       "id": "NO_OPERATIVOS",
-      "estado": "NO_VERIFICADO",
-      "detalle": "B20 antiguo 32624 USDm: falta conciliación con balance para evitar doble cuenta"
+      "estado": "LIBRO_VALOR_CONTABLE_VERIFICADO_TRATAMIENTO_ECONOMICO_PENDIENTE",
+      "detalle": "US$32624m en inversiones en participaciones no cotizadas del balance de septiembre 2026, ingresados como referencia contable en B20. Verificar valor económico y evitar doble conteo de cash/ventures."
     },
     {
       "id": "ACCIONES_OPCIONES",
@@ -88,6 +131,11 @@
       "id": "SUPUESTOS",
       "estado": "PENDIENTE",
       "detalle": "Definir cinco años de crecimiento, márgenes, S/C, convergencia ROIC, WACC inicial y terminal a partir de Q3 2026"
+    },
+    {
+      "id": "HISTORICO_BORRADOR",
+      "estado": "CARGADO",
+      "detalle": "649 hardcodes históricos (187 IS, 253 BS, 209 CF) importados a tres hojas de la copia limpia, preservando fórmulas de destino; 12 entradas del conversor I+D. Validación contable y de celdas derivadas aún pendiente."
     }
   ],
   "supuestosDefinitivos": null,
