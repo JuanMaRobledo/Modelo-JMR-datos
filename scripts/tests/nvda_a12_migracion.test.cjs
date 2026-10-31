@@ -1,0 +1,41 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const root=path.join(__dirname,'../..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const x=read('candidatos/valoraciones/NVDA-20261031-A12-R1/workspace.json');
+const original=read(x.trabajo.valoracionAnterior),catalog=read('catalogo.json');
+test('NVDA usa estructura A-1.2 sin cambiar valoración vigente',()=>{
+assert.equal(x.schema,'jmr-valuation-workspace-v1');
+assert.equal(x.versionMetodo,'A-1.2');
+assert.equal(x.metodoPrincipal,'DCF FCFF');
+assert.equal(x.estado,'PREPARACION_SIN_VALORACION');
+assert.equal(x.publicationStatus,'NO_PUBLICAR');
+assert.equal(x.valorPrincipal,null);
+assert.equal(x.precioMOS,null);
+assert.equal(original.revisionId,'NVDA-20261025-R4');
+assert.ok(catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
+assert.ok(!catalog.valoraciones.some(p=>p.includes(x.revisionCandidata)));
+assert.notEqual(x.trabajo.hojaBorrador,x.trabajo.hojaAnterior);
+});
+test('NVDA comparte contrato único, escenarios y magnitudes coherentes',()=>{
+const e=x.estandarPresentacion;
+assert.equal(e.version,'jmr-a12-ficha-unica-v1');
+assert.equal(e.mos,.35);assert.equal(e.nivel1.capitulos,18);assert.equal(e.nivel2.apartados,12);
+assert.deepEqual(e.escenarios,['Base','Conservador','Optimista','Disrupción']);
+assert.equal(e.disrupcionFueraDelPromedio,true);
+assert.equal(e.release.estadoBorrador,'NO_PUBLICAR');
+assert.equal(e.release.auditoriaEconomica,'después de revisión visual del usuario');
+assert.equal(e.metodoPrincipal.industrial,'FCFF DCF');
+});
+test('NVDA concilia LTM y no usa datos futuros no publicados',()=>{
+const r=x.conciliaciones.find(v=>v.id==='REV_LTM');
+assert.equal(215938+81615+96221-44062-46743,302969);
+assert.equal(r.resultadoFuenteHoja-r.resultadoCalculado,1);
+assert.equal(x.datosImportados['Input sheet!B13'],197579);
+assert.equal(130387+53536+63734-21638-28440,197579);
+assert.equal(x.trabajo.rdConverter.rdLtm,23592);
+assert.equal(x.corteContable,'2026-07-26');
+});
