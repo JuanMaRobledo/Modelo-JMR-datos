@@ -37,7 +37,15 @@ assert.ok(near(bridge[8][3],v.valorPrincipal));
 assert.ok(near(e.originalDcf,v.valorPrincipal));
 assert.equal(e.originalMos,v.precioMOS);
 assert.ok(near(bridge[10][3],bridge[5][3]/bridge[6][3]));
-assert.equal(v.descuentoMultiples.pesoDcf,1);
-assert.equal(v.descuentoMultiples.pesoMultiplos,0);
-assert.equal(v.descuentoMultiples.multiplesHoy,null);
+// En la revisión INTU A-1.2 no hay bloque de descuento relativo
+// certificado. No crear ni simular un 0: mantener métodos pendientes.
+assert.equal(v.descuentoMultiples,undefined);
+assert.equal(v.metodos.find(m=>m.nombre==='DCF Damodaran').peso,1);
+assert.ok(v.metodos.filter(m=>m.nombre!=='DCF Damodaran').length>=5);
+for(const m of v.metodos.filter(m=>m.nombre!=='DCF Damodaran')){
+ assert.equal(m.estado,'PENDIENTE_MULTIPLOS_NATIVOS');
+ assert.equal(m.peso,null);
+ assert.equal(m.valorHoy,null);
+}
+assert.ok(!v.sensibilidadMultiples?.matrices?.length);
 });
