@@ -48,8 +48,12 @@ function validateNativeMatrices(v){
         m.metodo+': falta justificación económica N/A');
       assert.ok(!chosen||!finiteNative(chosen.peso)||chosen.peso===0,
         m.metodo+': un método no aplicable no puede tener peso positivo');
+    }else if(m.estado==='N/D' && MAYBE_NATIVE.includes(m.metodo) &&
+             (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
+      // P/V y P/BV son opcionales y no bloquean si no se utilizan.
+      assert.equal(m.matriz,null,m.metodo+': N/D opcional no lleva matriz');
     }else{
-      assert.fail(m.metodo+': N/D no puede pasar como matriz aprobada; investigar la fuente o justificar N/A');
+      assert.fail(m.metodo+': N/D prioritario o con peso positivo no puede pasar como aprobado');
     }
   }
   return true;
