@@ -1,5 +1,8 @@
 # Diagnóstico de limpieza — sensibilidades de múltiplos Modelo A
 
+> **Registro histórico (corte 30-oct-2026).** Este inventario conserva la evidencia de origen, pero ya no describe el estado vigente: el 31-oct se organizaron 20 análisis en 14 capítulos y se integraron matrices nativas Base de 14 revisiones en el PR #211. Para decisiones actuales y pendientes, consultar [AVANCE_ESTANDARIZACION_20261031.md](AVANCE_ESTANDARIZACION_20261031.md). No convertir los pendientes históricos de 13 capítulos o cero matrices en tareas nuevas sin reconciliar con el informe vigente.
+
+
 **Corte técnico: 30-oct-2026; inspección de solo lectura, sin cambios de valores ni hojas.**
 Este documento **no es auditoría económica** ni certificado de fórmulas. Los datos de GitHub
 corresponden a la rama de revisión del PR #211; las celdas fueron consultadas directamente
