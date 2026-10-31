@@ -63,3 +63,15 @@ test('XP seis sensibilidades 5x5 con centros exactos: DCF y cuatro múltiplos',(
  assert.equal(x.multipleSensitivities.find(m=>m.method==='P/FCFE').weight,0);
  assert.equal(x.checks.hasIndependentPFCFEAnchor,false);
 });
+
+test('XP matriz riesgo país adicional × FX 5x5 es condicional y centro Base',()=>{
+ const a=x.inputs,base=x.scenarios.find(s=>s.name==='Base');
+ const m=x.riskSensitivity;
+ assert.equal(m.matrixUSDperShare.length,5);
+ assert.equal(m.rows.values.length,5);assert.equal(m.columns.values.length,5);
+ near(m.matrixUSDperShare[2][2],base.perShareUSD);
+ for(let i=0;i<5;i++){assert.equal(m.matrixUSDperShare[i].length,5);}
+ assert.equal(m.rows.values[2],.02);near(m.columns.values[2],5.4209);
+ assert.ok(m.matrixUSDperShare[0][2]>m.matrixUSDperShare[4][2]);
+ assert.ok(m.matrixUSDperShare[2][0]>m.matrixUSDperShare[2][4]);
+});
