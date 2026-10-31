@@ -73,6 +73,21 @@ Pendiente cálculo separado de DCF perpetuidad/ROE y salida por múltiplos con s
 - Anclas P/E y P/BV independientes, fuente actualizada de P/FCFE si va a ponderar, y verificar matriz Base contra hoja de cada método.
 - Cierre de control financiero PR #211 y auditoría visual de la ficha antes de auditoría económica. **El catálogo y la valoración anterior siguen intactos.**
 
+
+## 13. Sensibilidad condicional del shock país y tipo de cambio
+
+Se añadió al JSON una matriz independiente **5×5 de prima país adicional (0, 1, 2, 3, 4 puntos porcentuales) × FX (5,05; 5,25; 5,4209; 5,60; 5,85 BRL/USD)**. Se recalculan los factores anuales Ke BRL y la perpetuidad *manteniendo fijos* los FCFE anuales y la política de ROE del motor; por tanto no debe interpretarse como proyección completa de crisis de capital.
+
+| Prima país adicional | FX 5,05 | FX 5,25 | FX 5,4209 | FX 5,60 | FX 5,85 |
+|---|---:|---:|---:|---:|---:|
+| 0 p.p. | 19,94 | 19,19 | 18,58 | 17,99 | 17,22 |
+| 1 p.p. | 17,48 | 16,81 | 16,28 | 15,76 | 15,09 |
+| **2 p.p. (Base)** | 15,54 | 14,95 | **14,48** | 14,01 | 13,41 |
+| 3 p.p. | 13,97 | 13,44 | 13,02 | 12,60 | 12,06 |
+| 4 p.p. | 12,68 | 12,20 | 11,81 | 11,43 | 10,95 |
+
+Esta cuadrícula deja visible la fragilidad de un valor aparentemente cercano al precio de mercado cuando cambian las tasas y la moneda. El centro se verifica automáticamente con XP FCFE!B64. **No reemplaza** las tres matrices DCF 5×5 de la hoja ni cierra la conciliación de capital regulatorio.
+
 ### Referencias
 [XP 2T26 SEC](https://www.sec.gov/Archives/edgar/data/1787425/000095010326012481/dp251884_6k-ex9901.htm), [BCB PTAX 30-oct](https://fincast.info/pairs/usd-brl/archive), [Damodaran 2026](https://aswathdamodaran.substack.com/p/country-risk-determinants-measures), [US Treasury](https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data), [hoja XP](https://docs.google.com/spreadsheets/d/1C8TU1AJMxy0JmU4KsBNdp1dYzBSoli7CLtnjQI3SsnQ/edit), [snapshot FCFE JSON](./CALIBRACION_FCFE_PROVISIONAL.json).
 
