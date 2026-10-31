@@ -73,6 +73,7 @@ jobs:
       - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_full_snapshot_candidate.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
+      - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
       - run: node scripts/validar_catalogo.cjs
       - run: node scripts/auditar_integridad.cjs
