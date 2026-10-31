@@ -21,6 +21,26 @@ def require(ok, message):
     if not ok:
         raise ValueError(message)
 
+def negative_flow_na(official, method):
+    """N/A económico únicamente para FCFF/FCFE FY+3 negativos, sin peso.
+
+    La fuente puede conservar N/D; NO se convierten celdas vacías a ceros
+    ni se infieren resultados de múltiplos sin ancla.
+    """
+    if method not in ('EV/FCFF', 'P/FCFE'):
+        return False
+    selected = next((x for x in official.get('descuentoMultiples',{}).get('metodos',[])
+                     if x.get('nombre') == method), None)
+    if not selected or selected.get('peso') != 0:
+        return False
+    if not str(selected.get('estado','')).startswith('N/A: flujo negativo'):
+        return False
+    base = selected.get('base',{})
+    fy, vp = base.get('fy'), base.get('vp')
+    return (isinstance(fy,list) and len(fy)>=3 and isinstance(vp,list) and len(vp)>=3
+            and type(fy[2]) in (int,float) and fy[2]<0
+            and type(vp[2]) in (int,float) and vp[2]<0)
+
 def integrate(official, candidate, snapshot, cells):
     require(official.get('estado') == 'EN_REVISION', 'Solo EN_REVISION')
     require(official.get('version_metodo') == 'A-1.2' and official.get('metodo_valoracion') == 'A', 'Solo Método A-1.2')
@@ -72,12 +92,21 @@ def integrate(official, candidate, snapshot, cells):
             require(m.get('centro')==m.get('vp3Original')==grid[2][2]==snap(start+8,7)==snap(start+8,8), 'Centro FY+3 divergente')
             require(all(cell(r,c).get('userEnteredValue',{}).get('formulaValue') for r in range(start+3,start+8) for c in range(2,7)), 'Matriz sin fórmulas nativas')
         else:
-            require(name not in CORE and m['estado']=='N/D' and m.get('matriz') is None, 'N/D prioritario: no integrar')
+            require(m['estado']=='N/D' and m.get('matriz') is None, 'Solo N/D sin matriz puede ser excepción')
             chosen=next((x for x in official.get('descuentoMultiples',{}).get('metodos',[]) if x.get('nombre')==name),{})
-            require(chosen.get('peso',0)==0, 'N/D opcional con peso positivo')
+            require(chosen.get('peso',0)==0, 'N/D con peso positivo')
+            if name in CORE:
+                require(negative_flow_na(official,name), 'N/D prioritario: no existe justificación financiera verificable de N/A')
     result=copy.deepcopy(candidate)
+    # La hoja conserva el estado literal N/D. Únicamente el expediente
+    # expresa N/A económico, con causa comprobada en la misma revisión.
+    for m in result['sensibilidadMultiples']['matrices']:
+        if m['estado']=='N/D' and negative_flow_na(official,m['metodo']):
+            m['estado']='N/A'
+            m['estadoFuente']='N/D'
+            m['motivo']='Flujo proyectado FY+3 y VP3 negativos en esta revisión; el múltiplo no representa un precio económico interpretable. Método sin ponderación (peso cero). La hoja original permanece N/D.'
     result['sensibilidadMultiples'].update(estadoPublicacion='INTEGRADO_EN_REVISION',controlesTecnicosAprobados=True,
-        certificado=False,nota='Integración técnica: 25 celdas, ejes, fórmulas, origen y centro FY+3 contrastados con foto SHA256. Pendiente revisión visual y auditoría económica independiente.')
+        certificado=False,nota='Integración técnica de matrices OK: celdas, ejes, fórmulas, origen y centro FY+3 contrastados con foto SHA256. N/D solo puede convertirse a N/A por flujos negativos acreditados, sin alterar la hoja. Pendiente revisión visual y auditoría económica independiente.')
     return result
 
 if __name__=='__main__':
