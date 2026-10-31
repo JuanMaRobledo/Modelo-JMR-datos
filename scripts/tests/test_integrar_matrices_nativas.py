@@ -54,6 +54,53 @@ class IntegrationTests(unittest.TestCase):
         for change in [lambda v:v.update(ticker='NU'),lambda v:v.update(sensibilidadMultiples={'matrices':[{}]}),lambda v:v.update(estado='APROBADA')]:
             a=list(fixture());change(a[0])
             with self.assertRaises(ValueError):mod.integrate(*a)
+    def test_negative_flow_na_requires_evidence(self):
+        val={'descuentoMultiples':{'metodos':[{'nombre':'EV/FCFF','peso':0,
+            'estado':'N/A: flujo negativo','base':{'fy':[-1,-2,-3],'vp':[-1,-2,-2.5]}}]}}
+        self.assertTrue(mod.negative_flow_na(val,'EV/FCFF'))
+        self.assertFalse(mod.negative_flow_na(val,'P/E'))
+        for change in [lambda x:x.update(peso=.1),lambda x:x.update(estado='PENDIENTE'),
+                       lambda x:x['base']['fy'].__setitem__(2,3),
+                       lambda x:x['base']['vp'].__setitem__(2,3),
+                       lambda x:x['base'].pop('fy')]:
+            a=copy.deepcopy(val)
+            change(a['descuentoMultiples']['metodos'][0])
+            self.assertFalse(mod.negative_flow_na(a,'EV/FCFF'))
+
+    def test_integrate_documented_na_keeps_sheet_nd(self):
+        official,candidate,photo,cells=fixture()
+        choice={'nombre':'EV/FCFF','peso':0,'estado':'N/A: flujo negativo',
+                'base':{'fy':[-2,-3,-4],'vp':[-1.5,-2.3,-3]}}
+        official['descuentoMultiples']={'metodos':[choice]}
+        candidate['descuentoMultiples']=copy.deepcopy(official['descuentoMultiples'])
+        m=candidate['sensibilidadMultiples']['matrices'][1]
+        m.update(estado='N/D',matriz=None,centro=None,vp3Original=-3)
+        start=86
+        rows=cells['sheets'][0]['data'][0]['rowData']
+        def set_cell(row,col,val):
+            photo['data']['sens_mult'][row-1][col-1]=val
+            cell=rows[row-76]['values'][col-1]
+            cell['effectiveValue']={('stringValue' if isinstance(val,str) else 'numberValue'):val}
+        for row in range(start+3,start+8):
+            for col in range(2,7):set_cell(row,col,'N/D')
+        set_cell(start+8,7,-3)
+        set_cell(start+8,8,-3)
+        set_cell(start+8,9,'N/D')
+        digest=hashlib.sha256(json.dumps(photo['data'],ensure_ascii=False,sort_keys=True,default=str).encode()).hexdigest()
+        photo['data_sha256']=digest
+        candidate['sensibilidadMultiples']['resultadosSha256']=digest
+        out=mod.integrate(official,candidate,photo,cells)
+        rel=out['sensibilidadMultiples']['matrices'][1]
+        self.assertEqual(rel['estado'],'N/A')
+        self.assertEqual(rel['estadoFuente'],'N/D')
+        self.assertIsNone(rel['matriz'])
+        self.assertEqual(out['valorPrincipal'],official['valorPrincipal'])
+        self.assertEqual(candidate['sensibilidadMultiples']['matrices'][1]['estado'],'N/D')
+        invalid=copy.deepcopy(official)
+        invalid['descuentoMultiples']['metodos'][0]['base']['fy'][2]=2
+        with self.assertRaisesRegex(ValueError,'justificación'):
+            mod.integrate(invalid,candidate,photo,cells)
+
     def test_missing_method_rejected(self):
         a=list(fixture());a[1]['sensibilidadMultiples']['matrices'].pop()
         with self.assertRaises(ValueError):mod.integrate(*a)
