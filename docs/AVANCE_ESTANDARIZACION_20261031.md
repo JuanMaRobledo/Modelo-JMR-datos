@@ -1,5 +1,18 @@
 # Depuración y estandarización — 31 de octubre de 2026
 
+## Seguimiento posterior — NI/FCFE NU y anclas UBER/GOOGL
+
+**Cambios efectivos de esta pasada, sin publicación:**
+- **NU `NU-20261029-R1`:** se comprobó por conector la matriz nativa FCFE bancario Ke/g (25 valores y 25 fórmulas), ya existente en `sensibilidadDCF`; las 25 coincidencias con JSON y el centro US$18,32707520946464/acción aprobaron en GitHub Actions. Evidencia: `evidencia/nu-fcfe-bancario-20261031/NU-20261029-R1-sensibilidad-25-formulas.json`. NO cuenta como matriz relativa industrial ni completa P/E, P/FCFE y P/BV.
+- **Corrección de Nivel 2 NU:** la narración antigua tenía capital retenido Y1 US$1178,754m y FCFE Y1 US$3221,915m, distintos a las fórmulas de `FCFE bancario A`. Se sustituyeron únicamente por **US$1636,799m** y **US$3052,439m**; se añadió la tabla de capital requerido/FCFE y matriz Ke/g con 25 celdas fuente y leyenda metodológica. Respaldos en `evidencia/nu-fcfe-bancario-20261031/NU-20261029-R1-analisis_antes.json`. Solo cambió `html` y `calculationHtml`, no `articleHtml`, el DCF ni los supuestos.
+- **Pruebas de NU:** `nu_fcfe_bank_25_formulas.test.cjs` y `nu_n2_reconciliation.test.cjs` pasaron; controles editoriales y no regresión también pasaron en el SHA `01a80bde1efc650aa4f293edba7cf17bf326d848`. El gate general **sigue rojo por UBER**, no por estas correcciones.
+- **UBER/GOOGL:** guardada lectura acotada de las celdas de ancla `J19` y dos celdas históricas `D8:E8` por método, sin modificar hojas. En las cinco hojas principales consultadas, las 10 parejas de datos históricos no incluyen valores positivos utilizables. **UBER:** EV/EBITDA y P/E dependen del precio observado; EV/FCFF, P/FCFE y P/OCF dependen de otra ancla. **GOOGL:** EV/EBITDA tiene ancla fija 15,6x; P/E deriva de una fórmula que incorpora precio observado y ajustes; EV/FCFF, P/FCFE y P/OCF dependen de otra ancla. Esto **no demuestra** ausencia de toda la historia contable; sí demuestra que esas celdas y fórmulas no constituyen cinco validaciones independientes. Evidencia `evidencia/diagnostico-anclas-uber-googl-20261031.json`.
+- **Matriz financiera global:** continúa **16/20**, pendientes UBER, GOOGL, INTU y NU. Las siete integraciones de descuentos anteriores se mantienen en **1 completa (MSFT)** y seis con divergencias o pesos faltantes (EPAM, NKE, NVO, ONON, PYPL, ZTS). No se alteraron ponderaciones para forzar la conciliación.
+- **Sin publicación:** app #151 y datos #211 siguen draft; QA autenticado y visual sin cierre. Se mantiene el paso de revisión visual previo a auditoría económica independiente.
+
+**Próxima acción protegida:** validar anclas independientes y reglas de ponderaciones en UBER/GOOGL; resolver contrato de P/E, P/FCFE y P/BV bancario de NU y el flujo nativo de INTU. Solo importar a la ficha cuando la revisión, fuente y semántica sean idénticas. No rebajar gates.
+
+
 ## Estado vigente — integración protegida SHAK/MELI
 
 - **Matrices Base oficiales en rama de revisión:** **16/20** expedientes Método A-1.2 (14 previos + **SHAK y MELI**). No confundir `INTEGRADO_EN_REVISION` con auditoría económica, aprobación o publicación en producción.
