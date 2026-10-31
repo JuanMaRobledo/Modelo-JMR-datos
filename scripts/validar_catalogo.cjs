@@ -32,12 +32,26 @@ function validate(root = path.join(__dirname, '..')) {
   }));
   for (const p of c.analisis) {
     const a = JSON.parse(fs.readFileSync(path.join(root, p)));
-    // El vínculo de un artículo puede ser una ruta simple (CELH) o
-    // un objeto con metadatos; ambas formas resuelven la misma fuente oficial.
+    // El catálogo es la fuente de identidad: admite ruta o revisión explícita.
+    // Una revisión sin vínculo interno (AFYA) permanece EN_REVISION, nunca
+    // se declara completa por inferencia.
+    const status = a.status || a.estado || a.publicationStatus;
     const refPath = typeof a.linkedValuation === 'string'
       ? a.linkedValuation : a.linkedValuation?.sourcePath;
-    const v = vals.find(x => x.path === refPath);
-    assert.ok(v, 'Análisis sin valoración');
+    const candidates = vals.filter(x =>
+      refPath ? x.path === refPath ||
+        (x.record.revisionId === refPath && x.record.ticker === a.ticker)
+        : x.record.revisionId === a.revisionId && x.record.ticker === a.ticker);
+    assert.equal(candidates.length, 1,
+      a.ticker + ': valoración del catálogo ausente o ambigua para ' +
+      (refPath || a.revisionId));
+    const v = candidates[0];
+    if (!refPath) {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': falta vínculo explícito en un análisis no provisional');
+      console.warn('PENDIENTE_VINCULO: '+a.ticker+
+        ' resuelto solo por ticker y revisión oficial; completar vínculo antes del cierre.');
+    }
     assert.equal(a.ticker, v.record.ticker);
     // El artículo puede publicarse después de su valoración sin cambiar el DCF.
     const isoDate = x => typeof x === 'string' &&
@@ -49,18 +63,28 @@ function validate(root = path.join(__dirname, '..')) {
     if (a.linkedValuation?.revisionId && v.record.revisionId)
       assert.equal(a.linkedValuation.revisionId, v.record.revisionId,
         'Enlace a revisión distinta');
-    assert.equal(a.remotePath, p);
+    if (a.remotePath !== undefined) assert.equal(a.remotePath, p);
+    else {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': ruta remota ausente de expediente no provisional');
+      console.warn('PENDIENTE_RUTA: '+a.ticker+
+        ' sin remotePath embebido; ruta vigente solo en catálogo.');
+    }
     // Algunos análisis nuevos enlazan el resultado en vez de duplicar todo el
     // bloque financiero. Una referencia compacta no es un error de cálculo;
     // el expediente oficial sigue siendo la única fuente del cálculo.
     // Cuando hay copia embebida, sí debe coincidir íntegramente.
     const linked = a.linkedValuation;
-    if (typeof linked === 'string') {
-      assert.equal(linked, v.path, a.ticker + ': ruta de valoración distinta');
-      assert.equal(a.status, 'EN_REVISION',
+    if (linked == null) {
+      assert.equal(status, 'EN_REVISION',
+        a.ticker + ': sin vínculo financiero explícito no puede cerrarse');
+    } else if (typeof linked === 'string') {
+      assert.ok(linked === v.path || linked === v.record.revisionId,
+        a.ticker + ': ruta o ID de revisión no corresponde al expediente');
+      assert.equal(status, 'EN_REVISION',
         a.ticker + ': referencia simple no acredita conciliación financiera');
-      console.warn('VINCULO_RUTA: '+a.ticker+
-        ' usa la ruta del catálogo, sin duplicar múltiplos en el análisis.');
+      console.warn('VINCULO_REFERENCIA: '+a.ticker+
+        ' usa ruta o revisión oficial; sin copia interna de múltiplos.');
     } else if (Object.prototype.hasOwnProperty.call(linked, 'descuentoMultiples')) {
       assert.deepEqual(linked.descuentoMultiples, v.record.descuentoMultiples,
         a.ticker + ': múltiplos embebidos distintos de la valoración oficial');
