@@ -9,11 +9,57 @@ const MAYBE_NATIVE=['P/V','P/BV'];
 const finiteNative=x=>typeof x==='number'&&Number.isFinite(x);
 const nearNative=(a,b)=>finiteNative(a)&&finiteNative(b)&&Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
 /**
+ * NU: los 25 valores Ke×g de FCFE NO acreditan múltiplos P/E/PFCFE/PBV.
+ * Los métodos relativos deben provenir de hojas bancarias y de un
+ * contrato con fuente económica propia, nunca de sensibilidad industrial.
+ */
+function validateBankNativeMatrices(v){
+  const s=v.sensibilidadMultiples||{};
+  assert.equal(s.contrato,'bank-relative-ke-v1',v.ticker+': contrato bancario requerido');
+  assert.equal(s.tipo,'MULTIPLOS_BANCARIOS');
+  assert.equal(s.revisionId,v.revisionId);
+  assert.equal(s.sourceSheetId,v.sheet_id);
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/);
+  assert.equal(s.estadoPublicacion,'INTEGRADO_EN_REVISION');
+  assert.equal(s.controlesTecnicosAprobados,true);
+  assert.equal(s.certificado,false);
+  const items=s.matrices||[];
+  assert.deepEqual(items.map(x=>x.metodo),BANK_NATIVE,
+    'Banca exige P/E, P/FCFE y P/BV, no múltiplos industriales');
+  const sheetByMethod={'P/E':'PE','P/FCFE':'PFCFE','P/BV':'PBV'};
+  for(const m of items){
+    assert.equal(m.escenario,'base');assert.equal(m.ancla,'JMR_BANCARIO');
+    assert.equal(m.estado,'OK','N/D bancario prioritario pendiente');
+    const prefix="'"+sheetByMethod[m.metodo]+"'!";
+    assert.ok(typeof m.origen==='string'&&m.origen.startsWith(prefix),
+      m.metodo+': falta hoja bancaria');
+    assert.match(m.origen.slice(prefix.length),/^[A-Z]+[0-9]+:[A-Z]+[0-9]+$/);
+    assert.equal(m.anclaHistoricaValidada,true,'Ancla sin aprobación documentada');
+    assert.ok(typeof m.fuenteAncla==='string'&&m.fuenteAncla.length>=20,
+      'Falta referencia económica independiente');
+    assert.ok(Array.isArray(m.matriz)&&m.matriz.length===5&&m.matriz.every(r=>
+      Array.isArray(r)&&r.length===5&&r.every(finiteNative)));
+    assert.ok(Array.isArray(m.fundamentalFY3)&&m.fundamentalFY3.length===5&&
+      m.fundamentalFY3.every(finiteNative));
+    assert.ok(Array.isArray(m.multiploElegido)&&m.multiploElegido.length===5&&
+      m.multiploElegido.every(finiteNative));
+    assert.ok(nearNative(m.matriz[2][2],m.centro)&&nearNative(m.centro,m.vp3Original));
+    const chosen=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre===m.metodo);
+    assert.ok(chosen&&finiteNative(chosen.peso)&&chosen.peso>=0&&
+      nearNative(chosen.base?.vp?.[2],m.vp3Original),
+      'Falta descuento bancario Ke con VP3 conciliado');
+  }
+  return true;
+}
+
+/**
  * Puerta de datos estructurados A. La matriz candidata NO basta:
  * exige origen/revisión, integridad, centros VP3 y estado de integración
  * explícito. La auditoría económica independiente se realiza después.
  */
 function validateNativeMatrices(v){
+  if(v.ticker==='NU'||/DCF FCFE bancario/i.test(v.metodoPrincipal||''))
+    return validateBankNativeMatrices(v);
   const s=v.sensibilidadMultiples||{};
   assert.equal(s.contrato,'base-native-five-priority-v1','Formato de matrices A no vigente');
   assert.equal(s.revisionId,v.revisionId,'Revisión de matriz diferente');
@@ -26,9 +72,7 @@ function validateNativeMatrices(v){
   assert.ok(Array.isArray(items),'Matriz de múltiplos no publicada');
   const names=new Set(items.map(x=>x?.metodo));
   assert.equal(names.size,items.length,'Matrices repetidas');
-  const bank=/bancari|\bfcfe\b/i.test(v.metodoPrincipal||'') &&
-    (v.ticker==='NU'||/bancari/i.test(v.metodoPrincipal||''));
-  const required=bank?BANK_NATIVE:CORE_NATIVE;
+  const required=CORE_NATIVE;
   for(const name of required)assert.ok(names.has(name),'Falta múltiplo aplicable: '+name);
   // El balance es la fuente de capital bancario; los depósitos no son deuda
   // industrial. P/BV es prioritario en bancos; no lo es en operativas.
@@ -356,6 +400,6 @@ function validate(root = path.join(__dirname, '..')) {
   return {valoraciones: vals.length, analisis: c.analisis.length,
     auditorias: c.auditorias.length};
 }
-module.exports = {validate,validateNativeMatrices};
+module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));
 
