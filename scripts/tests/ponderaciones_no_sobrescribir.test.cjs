@@ -23,7 +23,7 @@ test('6 divergencias de ponderación: prohibido sobreescribir la revisión aprob
    assert.equal(current.conservador,null);
    assert.equal(current.optimista,null);
   }
-  assert.equal(d.multiplesHoy,null,'No publicar valor secundario sin conciliar '+e.ticker);
+  assert.ok(d.multiplesHoy == null,'No publicar valor secundario sin conciliar '+e.ticker);
   assert.ok(!e.jsonVsSheetWeights||!e.methodsMatch,'No pertenece al grupo de seis excepciones');
  }
 });
