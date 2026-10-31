@@ -4,6 +4,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 
 const CORE_NATIVE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+const BANK_NATIVE=['P/E','P/FCFE','P/BV'];
 const MAYBE_NATIVE=['P/V','P/BV'];
 const finiteNative=x=>typeof x==='number'&&Number.isFinite(x);
 const nearNative=(a,b)=>finiteNative(a)&&finiteNative(b)&&Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
@@ -25,7 +26,12 @@ function validateNativeMatrices(v){
   assert.ok(Array.isArray(items),'Matriz de múltiplos no publicada');
   const names=new Set(items.map(x=>x?.metodo));
   assert.equal(names.size,items.length,'Matrices repetidas');
-  for(const name of CORE_NATIVE)assert.ok(names.has(name),'Falta prioritario: '+name);
+  const bank=/bancari|\bfcfe\b/i.test(v.metodoPrincipal||'') &&
+    (v.ticker==='NU'||/bancari/i.test(v.metodoPrincipal||''));
+  const required=bank?BANK_NATIVE:CORE_NATIVE;
+  for(const name of required)assert.ok(names.has(name),'Falta múltiplo aplicable: '+name);
+  // El balance es la fuente de capital bancario; los depósitos no son deuda
+  // industrial. P/BV es prioritario en bancos; no lo es en operativas.
   for(const m of items){
     assert.ok(CORE_NATIVE.includes(m.metodo)||MAYBE_NATIVE.includes(m.metodo),
       'Método no reconocido');
@@ -48,10 +54,11 @@ function validateNativeMatrices(v){
         m.metodo+': falta justificación económica N/A');
       assert.ok(!chosen||!finiteNative(chosen.peso)||chosen.peso===0,
         m.metodo+': un método no aplicable no puede tener peso positivo');
-    }else if(m.estado==='N/D' && MAYBE_NATIVE.includes(m.metodo) &&
+    }else if(m.estado==='N/D' && !required.includes(m.metodo) &&
              (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
-      // P/V y P/BV son opcionales y no bloquean si no se utilizan.
-      assert.equal(m.matriz,null,m.metodo+': N/D opcional no lleva matriz');
+      // Métodos no prioritarios y con peso cero no validan una empresa;
+      // los N/D prioritarios siguen bloqueados. Para bancos EV/FCFF no aplica.
+      assert.equal(m.matriz,null,m.metodo+': N/D no prioritario no lleva matriz');
     }else{
       assert.fail(m.metodo+': N/D prioritario o con peso positivo no puede pasar como aprobado');
     }
