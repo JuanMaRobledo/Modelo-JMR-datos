@@ -1,0 +1,37 @@
+'use strict';
+const assert=require('node:assert/strict'),test=require('node:test'),fs=require('node:fs'),path=require('node:path');
+const root=path.resolve(__dirname,'../..');
+const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+const prefix='candidatos/valoraciones/NVDA-20261031-A12-R1/';
+const v=read(prefix+'VALORACION_A12_EN_REVISION.json');
+const a=read(prefix+'ANALISIS_A12_EN_REVISION.json');
+const w=read(prefix+'workspace.json');
+const cat=read('catalogo.json');
+test('NVDA Método A 1.2 candidato enlazado con 18 capítulos y 12 apartados',()=>{
+assert.equal(v.version_metodo,'A-1.2');assert.equal(v.metodo_valoracion,'A');
+assert.equal(v.estado,'EN_REVISION');assert.equal(v.publicationStage,'PREPUBLICACION_CONTROLADA');
+assert.equal(v.valorVigenteEnCatalogo,false);assert.equal(v.publicadaEnApp,false);
+assert.equal(a.linkedValuation.sourcePath,prefix+'VALORACION_A12_EN_REVISION.json');
+assert.equal(a.linkedValuation.revisionId,v.revisionId);
+assert.equal(a.jmrNarrative.nivel1Capitulos,18);
+assert.equal(a.jmrNarrative.nivel2Apartados,12);
+assert.equal((a.articleHtml.match(/<h2 id="jmr-n1-/g)||[]).length,18);
+assert.equal((a.calculationHtml.match(/<h2 id="jmr-n2-/g)||[]).length,12);
+assert.ok(cat.valoraciones.includes(w.trabajo.valoracionAnterior));
+assert.equal(w.valorPrincipal,null);
+});
+test('NVDA DCF Base/MOS/escenarios A 1.2 coherentes',()=>{
+const vals=v.valorEsperado.historias;
+assert.equal(vals.length,4);assert.equal(new Set(vals.map(x=>x.id)).size,4);
+assert.ok(Math.abs(vals.reduce((sum,x)=>sum+x.probabilidad,0)-1)<1e-10);
+const base=vals.find(x=>x.id==='A'),dis=vals.find(x=>x.id==='C');
+assert.equal(dis.nombre,'Disrupción');
+assert.ok(Math.abs(v.valorPrincipal-base.valor)<1e-8);
+assert.ok(Math.abs(v.precioMOS-v.valorPrincipal*.65)<1e-8);
+const three=vals.filter(x=>x.id!=='C');
+assert.ok(Math.abs(v.valorEsperado.valor-three.reduce((t,x)=>t+x.probabilidad*x.valor,0)/.9)<1e-8);
+assert.equal(v.descuentoMultiples.pesoDcf,1);
+assert.equal(v.descuentoMultiples.pesoMultiplos,0);
+assert.ok(v.sensibilidadMultiples.controlesTecnicosAprobados===false);
+assert.equal(v.certificacionEconomica,'NO_CERTIFICADA');
+});

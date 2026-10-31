@@ -1,0 +1,310 @@
+{
+  "schema": "jmr-valuation-workspace-v1",
+  "ticker": "META",
+  "revisionCandidata": "META-20261031-A12-R1",
+  "estado": "CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA",
+  "versionMetodo": "A-1.2",
+  "corteContable": "2026-09-30",
+  "fechaAnalisis": "2026-10-31",
+  "moneda": "USD",
+  "unidades": "USD millones, salvo precio por acción",
+  "trabajo": {
+    "hojaBorrador": "https://docs.google.com/spreadsheets/d/1lpE-L0Ai2NrWDhzBhtdeOMASwo7XRleUEMEMl3K34ss/edit",
+    "plantillaFuente": "https://docs.google.com/spreadsheets/d/1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ/edit",
+    "hojaAnterior": "https://docs.google.com/spreadsheets/d/1Ap5ylZGNdW_qyEIH5dVy22jTfHSy1TNB5bFsiW1IXsg/edit",
+    "valoracionAnterior": "valoraciones/META-20261025-R5.json",
+    "analisisAnterior": "analisis/META-research-20261025-r5.json",
+    "estadoDatos": "DATOS_HISTORICOS_CARGADOS_PENDIENTES_DE_CONCILIACION_FORMULARIOS_Y_DCF",
+    "hojasHistoricas": [
+      {
+        "nombre": "Income Statement",
+        "hardcodes": 187,
+        "filas": "2:70",
+        "columnas": "B:L"
+      },
+      {
+        "nombre": "Balance Sheet",
+        "hardcodes": 253,
+        "filas": "2:70",
+        "columnas": "B:L"
+      },
+      {
+        "nombre": "Cash Flow Statement",
+        "hardcodes": 209,
+        "filas": "2:70",
+        "columnas": "B:L"
+      }
+    ],
+    "formulasDePlantillaPreservadas": true,
+    "rdConverter": {
+      "amortizacionAnos": 3,
+      "rdLtm": 76544,
+      "rdHistoricoLtm": [
+        52417,
+        42210,
+        37737,
+        35338,
+        24655,
+        18447,
+        13600,
+        10273,
+        7754,
+        5919
+      ],
+      "fuente": "R& D converter de la revisión 2026-10-23",
+      "status": "CARGADO_EN_COPIA"
+    },
+    "calibracion": "candidatos/valoraciones/META-20261031-A12-R1/CALIBRACION_DCF_PROVISIONAL.json",
+    "analisisNivel1": "candidatos/valoraciones/META-20261031-A12-R1/NIVEL1_ANALISIS_PROVISIONAL.md",
+    "analisisNivel2": "candidatos/valoraciones/META-20261031-A12-R1/NIVEL2_CALIBRACION_PROVISIONAL.md",
+    "controles": {
+      "waccDetalles": "VALIDADO_TECNICAMENTE",
+      "fiscal": "VALIDADO_TECNICAMENTE",
+      "researchCapitalized": "VALIDADO_TECNICAMENTE",
+      "noPreferred": "NO_APLICA",
+      "noConvertible": "NO_APLICA",
+      "noNOL": "NO_APLICA",
+      "investments": "PENDIENTE_VALOR_ECONOMICO",
+      "stockOptions": "REVISAR",
+      "auditSpecial": "PENDIENTE",
+      "scenarios": "PENDIENTE_EN_HOJA",
+      "dcfIndependiente": "4_ESCENARIOS_MATRICES_5X5_CON_PRUEBAS_APROBADAS",
+      "multipleMatrices": "PENDIENTE"
+    },
+    "diferencias": {
+      "inputSheetB20": "VACIO_A_PROPOSITO: dato contable 32624 no es valor económico certificado",
+      "bookNonop": 32624,
+      "price30Oct": 614.99,
+      "rdAsset": 125558.66666666666,
+      "rdAdjEBIT": 32422.66666666667,
+      "waccInitial": 0.08979122059139251,
+      "waccTerminal": 0.088
+    }
+  },
+  "fuentePrimaria": {
+    "resultadosT3": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/",
+    "respaldoSEC": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+    "riesgoMercado": "https://aswathdamodaran.blogspot.com/2026/10"
+  },
+  "datosImportados": {
+    "Input sheet!B12": 241605,
+    "Input sheet!C12": 200966,
+    "Input sheet!D12": 0.75,
+    "Input sheet!B13": 79380,
+    "Input sheet!C13": 83276,
+    "Input sheet!B14": 2778,
+    "Input sheet!C14": 1165,
+    "Input sheet!B15": 272386,
+    "Input sheet!C15": 217243,
+    "Input sheet!B16": 116026,
+    "Input sheet!C16": 83897,
+    "Input sheet!B19": 82449,
+    "Input sheet!C19": 81592,
+    "Input sheet!B17": "Yes",
+    "Input sheet!B18": "No",
+    "Input sheet!B20": 32624
+  },
+  "conciliaciones": [
+    {
+      "id": "REV_LTM",
+      "formula": "200966 + 181712 - 141073",
+      "resultado": 241605,
+      "estado": "VERIFICADO",
+      "detalle": "FY2025 + nueve meses 2026 − nueve meses 2025"
+    },
+    {
+      "id": "EBIT_LTM_GAAP",
+      "formula": "83276 + 54635 - 58531",
+      "resultado": 79380,
+      "estado": "VERIFICADO",
+      "detalle": "EBIT contable incluye cargo legal extraordinario de US$9890m en 3T2026"
+    },
+    {
+      "id": "EBIT_LTM_NORMALIZADO",
+      "formula": "79380 + 9890",
+      "resultado": 89270,
+      "estado": "PENDIENTE_DE_AJUSTE",
+      "detalle": "No trasladar automáticamente a EBIT del DCF sin conciliación de otros ajustes, impuestos, flujos y pasivo judicial"
+    },
+    {
+      "id": "CAPEX_2026",
+      "valorMin": 135000,
+      "valorMax": 145000,
+      "estado": "GUIA_OFICIAL",
+      "detalle": "CapEx 2026 incluyendo pagos principales de arrendamiento financiero"
+    },
+    {
+      "id": "CAPITAL_RECLAMOS",
+      "estado": "NO_VERIFICADO",
+      "detalle": "No copiar B21=18590 desde hoja antigua: en plantilla nueva B21 significa intereses minoritarios; clasificar provisión legal y evitar doble contabilización"
+    },
+    {
+      "id": "NO_OPERATIVOS",
+      "estado": "LIBRO_VALOR_CONTABLE_VERIFICADO_TRATAMIENTO_ECONOMICO_PENDIENTE",
+      "detalle": "US$32624m en inversiones en participaciones no cotizadas del balance de septiembre 2026, ingresados como referencia contable en B20. Verificar valor económico y evitar doble conteo de cash/ventures."
+    },
+    {
+      "id": "ACCIONES_OPCIONES",
+      "estado": "NO_VERIFICADO",
+      "detalle": "No importar acciones, opciones ni precio del estudio anterior sin comprobar dilución y cotización de referencia"
+    },
+    {
+      "id": "CONVERSION_ID",
+      "estado": "PENDIENTE",
+      "detalle": "Completar R& D converter y evitar doble contabilizar I+D entre EBIT, reinversión y CapEx"
+    },
+    {
+      "id": "SUPUESTOS",
+      "estado": "PENDIENTE",
+      "detalle": "Definir cinco años de crecimiento, márgenes, S/C, convergencia ROIC, WACC inicial y terminal a partir de Q3 2026"
+    },
+    {
+      "id": "HISTORICO_BORRADOR",
+      "estado": "CARGADO",
+      "detalle": "649 hardcodes históricos (187 IS, 253 BS, 209 CF) importados a tres hojas de la copia limpia, preservando fórmulas de destino; 12 entradas del conversor I+D. Validación contable y de celdas derivadas aún pendiente."
+    },
+    {
+      "id": "REVISION_PREVIA_PUBLICACION",
+      "estado": "PENDIENTE",
+      "detalle": "WACC fiscal y dos matrices DCF calculadas; cuatro pruebas propias nuevas aprobadas; el gate oficial K5:K8 continúa pendiente por valores económicos de participaciones y premios/opciones. El gate general PR211 falla por UBER y recapturas META/NVDA sin conciliación de hashes."
+    }
+  ],
+  "supuestosDefinitivos": null,
+  "valorPrincipal": null,
+  "precioMOS": null,
+  "escenarios": null,
+  "azStocks": null,
+  "auditoriaEconomica": "NO_INICIADA",
+  "publicationStatus": "NO_PUBLICAR",
+  "controlNoRegresion": {
+    "alterarOriginal": false,
+    "alterarCatalogo": false,
+    "sobrescribirRevisiones": false,
+    "archivosFuenteInmutables": true,
+    "pasarAEN_REVISION": "Solo cuando estén completas las proyecciones reproducibles y los controles"
+  },
+  "siguientes": [
+    "Normalizar T3 2026, costos de litigio e inversión AI",
+    "Actualizar histórico de R&D, CFO, CapEx, D&A, SBC y balance",
+    "Definir escenarios A-1.2 con reconciliación de FCFF y ROIC",
+    "Integrar sensibilidades DCF/múltiplos y AZ Stocks",
+    "Redactar Nivel 1 profundo y Nivel 2 reproducible",
+    "Verificar controles; archivar solo después de confirmar nueva ficha"
+  ],
+  "estandarPresentacion": {
+    "version": "jmr-a12-ficha-unica-v1",
+    "presentacion": "misma ficha y sección por empresa, sin ventanas duplicadas",
+    "cabecera": [
+      "ticker",
+      "fecha de corte",
+      "precio de referencia con fecha",
+      "DCF Base principal",
+      "MOS35%",
+      "escenarios comparables"
+    ],
+    "pestanas": [
+      "Análisis fundamental",
+      "Valoración",
+      "Estados financieros",
+      "Indicadores",
+      "Modelo y supuestos",
+      "Sensibilidades",
+      "Revisión"
+    ],
+    "escenarios": [
+      "Base",
+      "Conservador",
+      "Optimista",
+      "Disrupción"
+    ],
+    "disrupcionFueraDelPromedio": true,
+    "mos": 0.35,
+    "nivel1": {
+      "capitulos": 18,
+      "tono": "análisis económico narrativo extenso",
+      "contenidos": [
+        "negocio y ventajas",
+        "competidores y unidad económica",
+        "ciclo de empresa",
+        "ciclo macro, monetario y crediticio",
+        "industria",
+        "crecimiento",
+        "márgenes",
+        "inversión y reinversión",
+        "ROIC",
+        "S/C",
+        "costo capital",
+        "valor terminal",
+        "cuatro historias",
+        "sensibilidades",
+        "múltiplos",
+        "AZ Stocks y conciliación",
+        "riesgos",
+        "conclusión"
+      ]
+    },
+    "nivel2": {
+      "apartados": 12,
+      "exigir": [
+        "datos históricos y fuentes",
+        "cifras originales y ajustes",
+        "fórmulas realmente aplicadas",
+        "proyecciones 10 años",
+        "puente enterprise-equity o FCFE",
+        "escenarios",
+        "sensibilidades DCF",
+        "sensibilidades múltiplos",
+        "pesos y anclas",
+        "centros reproducibles",
+        "conciliaciones",
+        "registro de reservas"
+      ]
+    },
+    "multiplos": {
+      "industriales": [
+        "EV/EBITDA",
+        "EV/FCFF",
+        "P/E",
+        "P/FCFE",
+        "P/OCF",
+        "P/S",
+        "P/BV"
+      ],
+      "financieras": [
+        "P/E",
+        "P/FCFE",
+        "P/BV"
+      ],
+      "regla": "N/D o N/A justificado cuando corresponda; no inventar 0 ni anclas"
+    },
+    "metodoPrincipal": {
+      "industrial": "FCFF DCF",
+      "financiero": "FCFE DCF regulatorio"
+    },
+    "azStocks": "ficha complementaria separada; DCF perpetuidad es referencia principal",
+    "release": {
+      "fichaActivaSoloTras": "validaciones contables, fórmulas, pesos, sensibilidad y QA",
+      "estadoBorrador": "NO_PUBLICAR",
+      "estadoRevision": "EN_REVISION",
+      "archivarOriginal": "solo después de validación y publicación de reemplazo",
+      "auditoriaEconomica": "después de revisión visual del usuario"
+    }
+  },
+  "precioReferencia": {
+    "valor": 614.99,
+    "moneda": "USD",
+    "unidad": "USD por acción",
+    "fecha": "2026-10-30",
+    "fuente": "https://stockanalysis.com/stocks/meta/history/",
+    "nota": "Cierre anterior al corte de estudio; no implica valor intrínseco ni aprobación de MOS"
+  },
+  "supuestosProvisionales": {
+    "baseCandidato": 780.630296103935,
+    "mos35Candidato": 507.4096924675578,
+    "conservador": 482.7689088233554,
+    "optimista": 1152.3933120312597,
+    "disrupcion": 244.06042760290117,
+    "promedioTresSinDisrupcion": 799.1057032656214,
+    "estado": "NO_CERTIFICADO_NO_USAR_EN_APP"
+  }
+}
