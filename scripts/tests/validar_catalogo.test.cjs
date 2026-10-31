@@ -2,14 +2,26 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
 const {validate}=require('../validar_catalogo.cjs');const root=path.join(__dirname,'../..');
 function fixture(t,mutate){const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'jmr-catalog-'));t.after(()=>fs.rmSync(tmp,{recursive:true,force:true}));for(const p of ['catalogo.json','valoraciones','analisis','auditorias','scripts'])fs.cpSync(path.join(root,p),path.join(tmp,p),{recursive:true});mutate(tmp);return tmp;}
-test('catálogo vigente conserva vínculos, 18 secciones y auditoría narrativa por empresa',()=>{
+test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin certificar pendientes',()=>{
  const c=require(path.join(root,'catalogo.json'));
  // Prueba estructural independiente: el gate financiero exhaustivo se ejecuta al final del CI.
  assert.ok(c.valoraciones.every(p=>fs.existsSync(path.join(root,p))),'Valoración inexistente');
  assert.ok(c.analisis.every(p=>fs.existsSync(path.join(root,p))),'Análisis inexistente');
  assert.ok(c.auditorias.every(p=>fs.existsSync(path.join(root,p))),'Auditoría inexistente');
  assert.equal(c.valoraciones.length,c.analisis.length);
- assert.equal(c.valoraciones.length,c.auditorias.length);
+ // La auditoría económica es posterior a EN_REVISION. No fabricar ocho
+ // informes para igualar contadores; exigir estado pendiente explícito.
+ const audited=new Set(c.auditorias.map(p=>path.basename(p,'.md')));
+ assert.equal(audited.size,c.auditorias.length,'Auditoría duplicada');
+ for(const p of c.valoraciones){
+  const v=JSON.parse(fs.readFileSync(path.join(root,p)));
+  if(!audited.has(v.ticker)){
+   assert.equal(v.estado,'EN_REVISION',v.ticker+': sin auditoría no puede cerrarse');
+   assert.equal(v.auditPendingUserVisualReview,true,v.ticker+': falta revisión visual pendiente');
+   assert.match(v.auditoriaEconomica||'',/^(NO_REALIZADA|PENDIENTE_REVISION_VISUAL)/,
+    v.ticker+': auditoría ausente no puede declararse realizada');
+  }
+ }
  const tickers=c.valoraciones.map(p=>JSON.parse(fs.readFileSync(path.join(root,p))).ticker);
  assert.equal(new Set(tickers).size,tickers.length,'Una revisión activa por ticker');
  for(const t of ['META','NFLX','NKE','NVDA'])assert.ok(tickers.includes(t),'Se perdió un estudio existente: '+t);
