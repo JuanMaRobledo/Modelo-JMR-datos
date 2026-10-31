@@ -3,6 +3,58 @@ const fs = require('node:fs');
 const path = require('node:path');
 const assert = require('node:assert/strict');
 
+const CORE_NATIVE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+const MAYBE_NATIVE=['P/V','P/BV'];
+const finiteNative=x=>typeof x==='number'&&Number.isFinite(x);
+const nearNative=(a,b)=>finiteNative(a)&&finiteNative(b)&&Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
+/**
+ * Puerta de datos estructurados A. La matriz candidata NO basta:
+ * exige origen/revisión, integridad, centros VP3 y estado de integración
+ * explícito. La auditoría económica independiente se realiza después.
+ */
+function validateNativeMatrices(v){
+  const s=v.sensibilidadMultiples||{};
+  assert.equal(s.contrato,'base-native-five-priority-v1','Formato de matrices A no vigente');
+  assert.equal(s.revisionId,v.revisionId,'Revisión de matriz diferente');
+  assert.equal(s.sourceSheetId,v.sheet_id,'ID de hoja diferente');
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/,'Foto financiera sin SHA256');
+  assert.equal(s.estadoPublicacion,'INTEGRADO_EN_REVISION',
+    'CANDIDATO_NO_PUBLICADO nunca acredita matrices oficiales');
+  assert.equal(s.controlesTecnicosAprobados,true,'Revisión técnica de matrices pendiente');
+  const items=s.matrices;
+  assert.ok(Array.isArray(items),'Matriz de múltiplos no publicada');
+  const names=new Set(items.map(x=>x?.metodo));
+  assert.equal(names.size,items.length,'Matrices repetidas');
+  for(const name of CORE_NATIVE)assert.ok(names.has(name),'Falta prioritario: '+name);
+  for(const m of items){
+    assert.ok(CORE_NATIVE.includes(m.metodo)||MAYBE_NATIVE.includes(m.metodo),
+      'Método no reconocido');
+    assert.equal(m.escenario,'base','Solo sensibilidad de Base');
+    assert.equal(m.ancla,'JMR','Ancla de la hoja oficial');
+    const chosen=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre===m.metodo);
+    const vp3=chosen?.base?.vp?.[2];
+    if(finiteNative(vp3))assert.ok(nearNative(vp3,m.vp3Original),
+      m.metodo+': VP3 no coincide con descuento oficial');
+    if(m.estado==='OK'){
+      assert.ok(Array.isArray(m.matriz)&&m.matriz.length===5&&m.matriz.every(r=>
+        Array.isArray(r)&&r.length===5&&r.every(finiteNative)),m.metodo+': no es 5x5 numérica');
+      assert.ok(Array.isArray(m.fundamentalFY3)&&m.fundamentalFY3.length===5&&m.fundamentalFY3.every(finiteNative));
+      assert.ok(Array.isArray(m.multiploElegido)&&m.multiploElegido.length===5&&m.multiploElegido.every(finiteNative));
+      assert.ok(nearNative(m.matriz[2][2],m.centro)&&nearNative(m.centro,m.vp3Original),
+        m.metodo+': centro no concilia');
+    }else if(m.estado==='N/A'){
+      assert.equal(m.matriz,null,m.metodo+': N/A con matriz numérica');
+      assert.ok(typeof m.motivo==='string'&&m.motivo.trim().length>=20,
+        m.metodo+': falta justificación económica N/A');
+      assert.ok(!chosen||!finiteNative(chosen.peso)||chosen.peso===0,
+        m.metodo+': un método no aplicable no puede tener peso positivo');
+    }else{
+      assert.fail(m.metodo+': N/D no puede pasar como matriz aprobada; investigar la fuente o justificar N/A');
+    }
+  }
+  return true;
+}
+
 function validate(root = path.join(__dirname, '..')) {
   const c = JSON.parse(fs.readFileSync(path.join(root, 'catalogo.json'), 'utf8'));
   const inventory = dir => fs.readdirSync(path.join(root, dir), {withFileTypes: true})
@@ -260,6 +312,7 @@ function validate(root = path.join(__dirname, '..')) {
         grids.length + ', controles de centro: ' + (s?.controles?.length ?? 0) +
         '). Verificar anclas, centros FY+3 y origen; N/A con causa cuando ' +
         'no aplique. No exponer 21/28 controles legados como requisito del Método A.');
+      validateNativeMatrices(v);
     } else if (v.ticker !== 'META') {
       // Únicamente para revisiones históricas anteriores al Método A.
       const s = v.sensibilidadMultiples;
@@ -278,5 +331,5 @@ function validate(root = path.join(__dirname, '..')) {
   return {valoraciones: vals.length, analisis: c.analisis.length,
     auditorias: c.auditorias.length};
 }
-module.exports = {validate};
+module.exports = {validate,validateNativeMatrices};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));
