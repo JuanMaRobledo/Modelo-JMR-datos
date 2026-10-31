@@ -123,5 +123,104 @@
     "Completar escenarios DCF, sensibilidades y múltiplos",
     "Análisis 18 capítulos y Nivel 2 reproducible",
     "Valorar AZ Stocks sin mezclar supuestos"
-  ]
+  ],
+  "estandarPresentacion": {
+    "version": "jmr-a12-ficha-unica-v1",
+    "presentacion": "misma ficha y sección por empresa, sin ventanas duplicadas",
+    "cabecera": [
+      "ticker",
+      "fecha de corte",
+      "precio de referencia con fecha",
+      "DCF Base principal",
+      "MOS35%",
+      "escenarios comparables"
+    ],
+    "pestanas": [
+      "Análisis fundamental",
+      "Valoración",
+      "Estados financieros",
+      "Indicadores",
+      "Modelo y supuestos",
+      "Sensibilidades",
+      "Revisión"
+    ],
+    "escenarios": [
+      "Base",
+      "Conservador",
+      "Optimista",
+      "Disrupción"
+    ],
+    "disrupcionFueraDelPromedio": true,
+    "mos": 0.35,
+    "nivel1": {
+      "capitulos": 18,
+      "tono": "análisis económico narrativo extenso",
+      "contenidos": [
+        "negocio y ventajas",
+        "competidores y unidad económica",
+        "ciclo de empresa",
+        "ciclo macro, monetario y crediticio",
+        "industria",
+        "crecimiento",
+        "márgenes",
+        "inversión y reinversión",
+        "ROIC",
+        "S/C",
+        "costo capital",
+        "valor terminal",
+        "cuatro historias",
+        "sensibilidades",
+        "múltiplos",
+        "AZ Stocks y conciliación",
+        "riesgos",
+        "conclusión"
+      ]
+    },
+    "nivel2": {
+      "apartados": 12,
+      "exigir": [
+        "datos históricos y fuentes",
+        "cifras originales y ajustes",
+        "fórmulas realmente aplicadas",
+        "proyecciones 10 años",
+        "puente enterprise-equity o FCFE",
+        "escenarios",
+        "sensibilidades DCF",
+        "sensibilidades múltiplos",
+        "pesos y anclas",
+        "centros reproducibles",
+        "conciliaciones",
+        "registro de reservas"
+      ]
+    },
+    "multiplos": {
+      "industriales": [
+        "EV/EBITDA",
+        "EV/FCFF",
+        "P/E",
+        "P/FCFE",
+        "P/OCF",
+        "P/S",
+        "P/BV"
+      ],
+      "financieras": [
+        "P/E",
+        "P/FCFE",
+        "P/BV"
+      ],
+      "regla": "N/D o N/A justificado cuando corresponda; no inventar 0 ni anclas"
+    },
+    "metodoPrincipal": {
+      "industrial": "FCFF DCF",
+      "financiero": "FCFE DCF regulatorio"
+    },
+    "azStocks": "ficha complementaria separada; DCF perpetuidad es referencia principal",
+    "release": {
+      "fichaActivaSoloTras": "validaciones contables, fórmulas, pesos, sensibilidad y QA",
+      "estadoBorrador": "NO_PUBLICAR",
+      "estadoRevision": "EN_REVISION",
+      "archivarOriginal": "solo después de validación y publicación de reemplazo",
+      "auditoriaEconomica": "después de revisión visual del usuario"
+    }
+  }
 }
