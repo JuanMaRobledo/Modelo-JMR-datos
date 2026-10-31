@@ -6,6 +6,7 @@ on:
       - 'auditorias/ponderaciones-38-2026-10-18.json'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/inventariar_cobertura_a.cjs'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -20,6 +21,7 @@ on:
       - 'valoraciones/**'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/inventariar_cobertura_a.cjs'
       - 'catalogo.json'
       - 'analisis/**'
       - 'auditorias/**'
@@ -39,6 +41,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      # Diagnóstico informativo y sus pruebas ANTES del gate; nunca publica.
+      - run: node --test scripts/tests/inventariar_cobertura_a.test.cjs
+      - run: node scripts/inventariar_cobertura_a.cjs
       - run: node scripts/validar_catalogo.cjs
       - run: node scripts/auditar_integridad.cjs
       - run: node --test scripts/tests/*.test.cjs
