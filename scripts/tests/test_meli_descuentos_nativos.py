@@ -25,7 +25,8 @@ class DiscountEvidence(unittest.TestCase):
         self.assertEqual(f["revisionId"],old["revisionId"])
         self.assertEqual(old["valorPrincipal"],active["valorPrincipal"])
         self.assertEqual(old["precioMOS"],active["precioMOS"])
-        self.assertEqual(old["escenariosDCF"],active["escenariosDCF"])
+        # El registro MELI no contiene escenariosDCF; la comparación integral
+        # de todos los campos ajenos a descuentoMultiples se hace abajo.
         self.assertEqual(old["metodos"],active["metodos"])
         self.assertEqual({k:v for k,v in old.items() if k!="descuentoMultiples"},
                          {k:v for k,v in active.items() if k!="descuentoMultiples"})
