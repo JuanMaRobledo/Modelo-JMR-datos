@@ -1,5 +1,15 @@
 # Depuración y estandarización — 31 de octubre de 2026
 
+## Cierre editorial de profundidad y prioridad N2
+
+- Se profundizaron sin alterar valoraciones, supuestos ni `calculationHtml` los catorce capítulos del Nivel 1 de SHAK, UBER, AFYA y DUOL. El workflow `Método A · profundidad editorial` del SHA `c3072fc94708a415ad8fa5826677b034d1668b12` terminó **success**: SHAK **8.034**, UBER **8.218**, AFYA **8.146**, DUOL **8.502** palabras. El workflow paralelo de validación editorial también terminó **success**. Los 20 expedientes cumplen así el umbral de longitud, pero aún hay salvedades por investigación y fuentes; no confundir extensión con dictamen de calidad.
+- Los 20 expedientes mantienen `calculationHtml` y enlace a su N1 en el HTML integrado. La cobertura es heterogénea: ver [PRIORIZACION_NIVEL2_20261031.md](PRIORIZACION_NIVEL2_20261031.md) con tamaños, tablas y prioridades para conciliación. **No se han certificado todos los N2** solo por la presencia de sus apartados.
+- En el Nivel 2 de INTU se corrigió el rótulo engañoso «seis matrices Base validadas» por un aviso de **contrastes exploratorios sin integración en el JSON oficial**. No se modificaron precios, cifras, fórmulas ni escenarios.
+- El control financiero `Control JMR de ponderaciones` sigue fallando en SHAK por ausencia de matrices Base 5×5 oficiales; el resultado editorial verde no lo desactiva. La autenticación Preview y su QA visual real siguen pendientes pese a disponer de despliegue READY.
+
+**Próxima secuencia obligatoria:** completar fuentes y métodos faltantes de SHAK, MELI, GOOGL, UBER, INTU y NU; después descuentos/ponderaciones incompletos de siete revisiones; verificar de manera reproducible todos los N2; cerrar acceso y QA de #151. Mantener PR #151 y #211 en borrador hasta superar sus gates; no fusionar ni publicar producción.
+
+
 ## Actualización de ejecución — integridad N/D y acceso de Preview
 
 - En Vercel se registró `APP_PASSWORD` **solo para Preview y para la rama de #151**, como secreto nuevo distinto de producción. Se redesplegó el SHA `a8705030` a `dpl_7PRMENiSueeUXp5QQZEGHWAReGqj`; el estado de build es `READY`. Las peticiones automatizadas a la página protegida terminan en autenticación 401 tras redirección; **no hay todavía QA visual autenticado ni prueba funcional 200**. El problema de acceso no puede considerarse cerrado.
