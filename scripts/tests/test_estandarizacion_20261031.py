@@ -90,6 +90,8 @@ class EditorialTests(unittest.TestCase):
                 self.assertEqual(ids.count('jmr-n1-chapter-'+str(i)),1)
                 self.assertIn('href="#jmr-n1-chapter-'+str(i)+'"',h)
             self.assertEqual(a['html'],h+a.get('calculationHtml',''))
+            if a.get('controlCobertura',{}).get('secciones') is not None:
+                self.assertEqual(a['controlCobertura']['secciones'],14)
             self.assertEqual(standardize(copy.deepcopy(a)),a)
 
     def test_two_n2_reports_have_twelve_sourced_sections(self):

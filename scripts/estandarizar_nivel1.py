@@ -72,6 +72,10 @@ def standardize(a):
     before = copy.deepcopy(a)
     h = a['articleHtml']
     if 'data-jmr-n1-standard="14-20261031"' in h:
+        c=a.get('controlCobertura',{})
+        if c.get('secciones') is not None:
+            c.setdefault('seccionesAntesEstandarizacion',c['secciones']);c['secciones']=14
+            c['notaConteos']='secciones cuenta capítulos N1; entradas y resoluciones anteriores se conservan como inventario de evidencia, no como certificación.'
         return a
     h = re.sub(r'<h3>Índice</h3>\s*<p>1\. Tesis de inversión y conclusión;[\s\S]*?</p>', '', h)
     doc = Document(h)
@@ -131,6 +135,9 @@ def standardize(a):
     if 'editorialN21' in a:
         a['editorialN21']['chapters'] = 14
     c = a.get('controlCobertura', {})
+    if c.get('secciones') is not None:
+        c.setdefault('seccionesAntesEstandarizacion',c['secciones']);c['secciones']=14
+        c['notaConteos']='secciones cuenta capítulos N1; entradas y resoluciones anteriores se conservan como inventario de evidencia, no como certificación.'
     if 'articleChapters' in c:
         c['articleChapters'] = 14
     if c.get('niveles') == 'N1_13_N2_12':
