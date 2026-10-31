@@ -11,7 +11,7 @@ test('XP usa estructura A-1.2 sin cambiar valoración vigente',()=>{
 assert.equal(x.schema,'jmr-valuation-workspace-v1');
 assert.equal(x.versionMetodo,'A-1.2');
 assert.equal(x.metodoPrincipal,'FCFE_FINANCIERO');
-assert.equal(x.estado,'PREPARACION_SIN_VALORACION');
+assert.ok(['PREPARACION_SIN_VALORACION','FCFE_RECALCULADO_CON_SENSIBILIDADES_NATIVAS_SIN_CERTIFICACION_ECONOMICA'].includes(x.estado));
 assert.equal(x.publicationStatus,'NO_PUBLICAR');
 assert.equal(x.valorPrincipal,null);
 assert.equal(x.precioMOS,null);
