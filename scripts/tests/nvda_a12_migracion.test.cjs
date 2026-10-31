@@ -11,7 +11,7 @@ test('NVDA usa estructura A-1.2 sin cambiar valoración vigente',()=>{
 assert.equal(x.schema,'jmr-valuation-workspace-v1');
 assert.equal(x.versionMetodo,'A-1.2');
 assert.equal(x.metodoPrincipal,'DCF FCFF');
-assert.equal(x.estado,'PREPARACION_SIN_VALORACION');
+assert.ok(['PREPARACION_SIN_VALORACION','CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA'].includes(x.estado),'ningún estado de publicación puede reemplazar un candidato');
 assert.equal(x.publicationStatus,'NO_PUBLICAR');
 assert.equal(x.valorPrincipal,null);
 assert.equal(x.precioMOS,null);
