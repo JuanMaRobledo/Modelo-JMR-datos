@@ -61,6 +61,11 @@
       "id": "COPIA_FUENTE",
       "estado": "PRESERVADA",
       "detalle": "Retenidas 69 pestañas porque borrar fuentes antes de mapa de dependencias rompería el contrato FCFE. Se revisará limpiar/ocultar solo tras cotejar fórmulas."
+    },
+    {
+      "id": "CORPORATE_ACTION_20261026",
+      "estado": "BLOQUEO_MATERIAL_COMPARABILIDAD",
+      "detalle": "Precio de XP disminuyó ~48% 26-oct-2026; no hay confirmación oficial de split, dividendo extraordinario o modificación del capital en las fuentes consultadas. Requiere aclaración corporativa antes de valorar delta precio/intrínseco."
     }
   ],
   "supuestosDefinitivos": null,
@@ -182,5 +187,26 @@
       "archivarOriginal": "solo después de validación y publicación de reemplazo",
       "auditoriaEconomica": "después de revisión visual del usuario"
     }
+  },
+  "precioReferencia": {
+    "valor": 14.29,
+    "moneda": "USD",
+    "unidad": "USD por acción",
+    "fecha": "2026-10-30",
+    "fuente": "https://stockanalysis.com/stocks/xp/history/",
+    "nota": "Observado tras movimiento anómalo 26-oct; no usar como prueba de split o actualización automática de acciones"
+  },
+  "alertaMaterial": {
+    "codigo": "XP_MOVIMIENTO_PRECIO_20261026",
+    "fecha": "2026-10-26",
+    "cierreAnterior": 30.41,
+    "cierrePosterior": 15.71,
+    "variacionPorcentualAproximada": -48.36,
+    "estado": "CAUSA_CORPORATIVA_NO_VERIFICADA",
+    "mitigacion": "No atribuir a split ni alterar acciones; contrastar emisor y estados/post-trade antes de comparar con valor intrínseco R2 o A-1.2",
+    "fuentes": [
+      "https://stockanalysis.com/stocks/xp/history/",
+      "https://septinvesting.com/stocks/XP/filings"
+    ]
   }
 }
