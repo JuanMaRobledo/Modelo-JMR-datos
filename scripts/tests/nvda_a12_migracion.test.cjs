@@ -7,7 +7,7 @@ const root=path.join(__dirname,'../..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const x=read('candidatos/valoraciones/NVDA-20261031-A12-R1/workspace.json');
 const original=read(x.trabajo.valoracionAnterior),catalog=read('catalogo.json');
-test('NVDA usa estructura A-1.2 sin cambiar valoración vigente',()=>{
+test('NVDA conserva fotografías de preparación y el original R4',()=>{
 assert.equal(x.schema,'jmr-valuation-workspace-v1');
 assert.equal(x.versionMetodo,'A-1.2');
 assert.equal(x.metodoPrincipal,'DCF FCFF');
@@ -16,8 +16,10 @@ assert.equal(x.publicationStatus,'NO_PUBLICAR');
 assert.equal(x.valorPrincipal,null);
 assert.equal(x.precioMOS,null);
 assert.equal(original.revisionId,'NVDA-20261025-R4');
-assert.ok(catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
-assert.ok(!catalog.valoraciones.some(p=>p.includes(x.revisionCandidata)));
+assert.ok(!catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
+assert.ok(catalog.valoraciones.includes('valoraciones/NVDA-20261101-A12-R1.json'));
+assert.ok(fs.existsSync(path.join(root,x.trabajo.valoracionAnterior)),'R4 debe conservarse en disco');
+assert.ok(!catalog.valoraciones.some(p=>p.includes(x.revisionCandidata)),'el candidato 20261031 no es la revisión activa');
 assert.notEqual(x.trabajo.hojaBorrador,x.trabajo.hojaAnterior);
 });
 test('NVDA comparte contrato único, escenarios y magnitudes coherentes',()=>{
