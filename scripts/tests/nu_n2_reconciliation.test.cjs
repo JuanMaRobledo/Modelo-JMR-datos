@@ -7,8 +7,8 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const fmt=n=>n.toFixed(3).replace('.',',');
 const near=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=Math.max(1e-8,Math.abs(b)*1e-9);
 test('NU Nivel 2: reconciliar capital requerido/FCFE y 25 celdas sin tocar Nivel 1 ni valoración',()=>{
- const v=read('valoraciones/NU-20261029-R1.json');
- const a=read('analisis/NU-research-NU-20261029-R1.json');
+ const v=read('candidatos/valoraciones/NU-20261029-R1/VALORACION_A12_EN_REVISION.json');
+ const a=read('candidatos/valoraciones/NU-20261029-R1/ANALISIS_A12_EN_REVISION.json');
  const original=read('evidencia/nu-fcfe-bancario-20261031/NU-20261029-R1-analisis_antes.json');
  const src=read('evidencia/nu-fcfe-bancario-20261031/NU-20261029-R1-sensibilidad-25-formulas.json');
  assert.equal(v.revisionId,a.revisionId);

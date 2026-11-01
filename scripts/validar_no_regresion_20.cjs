@@ -22,7 +22,20 @@ function safeCore(v) {
 function run(){
   const cat=read('catalogo.json');
   const aEntries=Object.entries(cat.controlModeloA?.empresas||{}).filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(aEntries.length,20+['META','NVDA','XP'].filter(t=>aEntries.some(([name])=>name===t)).length,'Se perdieron revisiones A-1.2 originales');
+  // 1-nov-2026 (autorizado por el usuario): INTU y NU pasan a CANDIDATO por no tener DCF nativo (A-1.2 punto 9).
+  // No se pierden: deben estar fuera del catálogo y sus archivos conservados con la marca de degradación.
+  const DEGRADADAS=['INTU','NU'];
+  for(const t of DEGRADADAS){
+    const rev=t+'-20261029-R1',d='candidatos/valoraciones/'+rev+'/';
+    assert.ok(!aEntries.some(([name])=>name===t),t+': sigue en el catálogo activo');
+    assert.ok(!cat.valoraciones.some(p=>path.basename(p).startsWith(t+'-')),t+': valoración candidata en catálogo');
+    assert.ok(!cat.analisis.some(p=>path.basename(p).startsWith(t+'-')),t+': análisis candidato en catálogo');
+    const cand=read(d+'VALORACION_A12_EN_REVISION.json');
+    assert.ok(cand.degradadoACandidato&&cand.degradadoACandidato.fecha,t+': falta la marca de degradación');
+    assert.ok(Number.isFinite(cand.valorPrincipal)&&cand.valorPrincipal>0,t+': candidato perdió el DCF Base');
+    read(d+'ANALISIS_A12_EN_REVISION.json');
+  }
+  assert.equal(aEntries.length,20-DEGRADADAS.length+['META','NVDA','XP'].filter(t=>aEntries.some(([name])=>name===t)).length,'Se perdieron revisiones A-1.2 originales');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){

@@ -6,7 +6,7 @@ const root=path.resolve(__dirname,'../..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const near=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=Math.max(1e-8,Math.abs(b)*1e-9);
 test('NU: 25 fórmulas DCF FCFE bancario y centro Ke/g reproducibles, sin múltiplos industriales',()=>{
-  const v=read('valoraciones/NU-20261029-R1.json');
+  const v=read('candidatos/valoraciones/NU-20261029-R1/VALORACION_A12_EN_REVISION.json');
   const e=read('evidencia/nu-fcfe-bancario-20261031/NU-20261029-R1-sensibilidad-25-formulas.json');
   assert.equal(v.ticker,'NU');assert.equal(v.version_metodo,'A-1.2');
   assert.equal(v.revisionId,e.revisionId);assert.equal(v.sheet_id,e.sourceSheetId);

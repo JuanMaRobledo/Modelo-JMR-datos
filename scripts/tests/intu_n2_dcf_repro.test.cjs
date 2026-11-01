@@ -6,8 +6,8 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const near=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=Math.max(1e-5,Math.abs(b)*1e-8);
 test('INTU Nivel 2: cinco años DCF reproducibles sin tocar el cálculo ni las matrices exploratorias',()=>{
 const rev='INTU-20261029-R1';
-const v=read('valoraciones/'+rev+'.json');
-const a=read('analisis/INTU-research-'+rev+'.json');
+const v=read('candidatos/valoraciones/'+rev+'/VALORACION_A12_EN_REVISION.json');
+const a=read('candidatos/valoraciones/INTU-20261029-R1/ANALISIS_A12_EN_REVISION.json');
 const before=read('evidencia/intu-dcf-20261031/'+rev+'-analisis_antes.json');
 const e=read('evidencia/intu-dcf-20261031/'+rev+'-cinco-anios-formulas.json');
 assert.equal(e.kind,'EVIDENCIA_DCF_INTU_SOLO_LECTURA_NO_PUBLICADA');
