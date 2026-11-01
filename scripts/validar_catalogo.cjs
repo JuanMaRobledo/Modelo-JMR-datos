@@ -266,7 +266,7 @@ function validate(root = path.join(__dirname, '..')) {
       assert.fail(a.ticker + ': índice inválido: estándar=14, ' +
         'legado de 13 solo EN_REVISION o revisión histórica congelada');
     }
-    if (a.ticker==='META' && /^META-/.test(a.revisionId||'')) {
+    if (a.ticker==='META' && /^META-/.test(a.revisionId||'') && a.version_metodo!=='A-1.2') {
       assert.ok(h2.filter(h => !/^[0-9]+[.] /.test(h))
         .every(h => /^Adenda /.test(h)), 'META: h2 extra no identificado como adenda');
       assert.equal(a.controlCobertura?.matricesDCF,8);

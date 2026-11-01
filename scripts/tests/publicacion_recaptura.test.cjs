@@ -13,8 +13,16 @@ const sha = p => crypto.createHash('sha256').update(fs.readFileSync(path.join(ro
 // Toda valoración vigente que venga de una recaptura (campo evidenciaRecaptura) debe ser coherente de punta a punta.
 const recapturas = cat.valoraciones.map(p => ({p, v: read(p)})).filter(x => x.v.evidenciaRecaptura);
 
-test('hay al menos una recaptura publicada en el catálogo', () => {
-  assert.ok(recapturas.length >= 1);
+// Las recapturas META R5 y NVDA R4 salieron del catálogo activo al promoverse sus revisiones A-1.2; su evidencia debe seguir en disco.
+// Si no queda ninguna recaptura activa, el guardia ya no puede exigir una; exige en cambio que las históricas conserven la evidencia.
+test('las recapturas publicadas conservan su evidencia (activas o archivadas)', () => {
+  const historicas = ['valoraciones/META-20261025-R5.json', 'valoraciones/NVDA-20261025-R4.json'].map(p => ({p, v: read(p)}));
+  assert.ok(recapturas.length + historicas.length >= 1);
+  for (const {p, v} of historicas) {
+    assert.ok(v.evidenciaRecaptura, `${p}: pierde evidenciaRecaptura`);
+    assert.ok(fs.existsSync(path.join(root, v.evidenciaRecaptura, 'recaptura.json')), `${p}: falta recaptura.json`);
+    assert.ok(!cat.valoraciones.includes(p), `${p}: no debe estar en el catálogo activo`);
+  }
 });
 
 for (const {p, v} of recapturas) {

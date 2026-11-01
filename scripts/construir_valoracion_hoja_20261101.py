@@ -16,6 +16,9 @@ CAND_OLD = ROOT / f'candidatos/valoraciones/{TICKER}-20261031-A12-R1/VALORACION_
 OUT = ROOT / f'candidatos/valoraciones/{REV}/VALORACION_A12_EN_REVISION.json'
 METHODS = ['EV/EBITDA', 'EV/FCFF', 'P/E', 'P/FCFE', 'P/OCF']
 
+def fmt(x, d=0):
+    return f'{x:,.{d}f}'.replace(',', 'X').replace('.', ',').replace('X', '.')
+usd = lambda x, d=2: 'US$' + fmt(x, d)
 num = lambda x: isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x)
 def close(a, b, tol=1e-6): return num(a) and num(b) and abs(a - b) <= max(tol, abs(b) * 1e-8)
 def need(c, m): 
@@ -104,7 +107,7 @@ v['descuentoMultiples'] = {'version': 2, 'estado': 'CALCULADO_NATIVO_EN_REVISION
     'integracionNativa': {'revisionId': REV, 'sourceSheetId': v['sheet_id'], 'rango': "'Descuento de múltiplos'!A4:K50",
         'capturaSha256': sha, 'fechaCaptura': '2026-11-01', 'estado': 'METODOS_Y_CONSOLIDACION_CONCILIADOS',
         'certificadoEconomico': False, 'calculosExternosExportados': False},
-    'nota': 'Múltiplos de salida por regla de ciclo (historia propia con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares y justificado solo comprueban. Ver reference/multiplos_v3/NVDA_decision.json en JMR-valuation. Auditoría económica pendiente.'}
+    'nota': 'Múltiplos de salida por regla de ciclo (historia propia con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares y justificado solo comprueban. Ver reference/multiplos_v3/'+TICKER+'_decision.json en JMR-valuation. Auditoría económica pendiente.'}
 v['sensibilidadMultiples'] = {'contrato': 'base-native-five-priority-v1', 'revisionId': REV, 'sourceSheetId': v['sheet_id'],
     'resultadosSha256': sha, 'estadoPublicacion': 'INTEGRADO_EN_REVISION', 'matrices': matrices, 'metodosPendientes': ['P/V', 'P/BV'],
     'sinRecalculoExterno': True, 'certificado': False, 'controlesTecnicosAprobados': True,
@@ -143,7 +146,9 @@ v['puenteEquity'] = {'valorOperativo': vb[23][1], 'deuda': vb[24][1], 'minoritar
 v['tasas'] = {'rf': 0.0529, 'rfFecha': '2026-09-30', 'erp': 0.037, 'erpFuente': 'Damodaran oct-2026', 'wacc': ke if False else rate[0],
               'waccTerminal': vb[16][1]}
 
-v['salvedades'] = [
+CFG = {}
+CFG['NVDA'] = {}
+CFG['NVDA']['salvedades'] = [
  'EN_REVISION: valoración calculada por la hoja de trabajo A-1.2, sin auditoría económica independiente ni certificación; no equivale a valor auditado.',
  'Activos no operativos US$47.898 M = valor contable de valores de capital no cotizados (10-Q 26-jul-2026, Nota 6: costo menos deterioro más cambios de precio observables); el valor económico se iguala al contable por falta de valoración independiente. Se excluyen ~US$3.300 M de método de participación en financiadores de infraestructura y US$4.957 M de capital cotizado bloqueado a largo plazo.',
  'Opciones: NVIDIA no informa opciones pendientes; RSU/PSU 168 M (0,7 % de las acciones) con ~4 % devengado, inmaterial; el resto ya está en la compensación en acciones del EBIT. No se resta aparte para evitar doble conteo.',
@@ -156,8 +161,21 @@ v['salvedades'] = [
  'Diferencia con la revisión anterior R4 (381,79): ~85 % proviene de la senda de ventas (R4 suponía +70 % en el año 1); puente en docs/MULTIPLOS_Y_PUENTE_NVDA_META_20261101.md.',
  'Para obtener P/E y P/B se completaron en la hoja la utilidad atribuible y el patrimonio total igualándolos a los consolidados (sin participaciones minoritarias).',
  'Sensibilidades DCF y de múltiplos copiadas de la hoja nativa con centro conciliado; no certificadas económicamente. QA visual con acceso autenticado pendiente.']
-v['fuentes_supuestos'] = [v['hojaGoogle'] if 'hojaGoogle' in v else '', 'https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm',
+CFG['NVDA']['fuentes'] = [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm',
  'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']
+CFG['META'] = {'salvedades': [
+ 'EN_REVISION: valoración calculada por la hoja de trabajo A-1.2, sin auditoría económica independiente ni certificación; no equivale a valor auditado.',
+ 'Activos no operativos US$21.077 M = valor contable de inversiones no cotizadas bajo alternativa de medición (10-Q 30-sep-2026, Nota 5); su valor económico se iguala al contable por falta de valoración independiente. Se excluyen US$11.547 M de método de participación: son el 20 % de los Ventures de centros de datos de Louisiana y Texas, contraparte de los arrendamientos de Meta.',
+ 'Opciones: 20 M emitidas en 2026 con ejercicio medio US$2.788 y ~4 años (volatilidad 42,71 %, dividendo 0,34 %): valor total US$' + fmt(v['puenteEquity']['opciones'], 1) + ' M. RSU no adquiridas 134,5 M (5,3 % de las acciones): ~4,7 % devengado (inmaterial); el resto ya está en la compensación en acciones del EBIT y no se resta aparte.',
+ 'Pasivo legal: provisiones legales por US$19.881 M (Nota 8: 11.577 corrientes + 8.304 no corrientes; acuerdo multiestatal de fiscales generales de ago-2026 y otras) deducidas una sola vez, en valor bruto y sin efecto fiscal (cota superior), en el campo de reclamaciones de la hoja (Input sheet!B21, que no se usa para minoritarios); el puente EV→patrimonio de los múltiplos no las incluye. Efecto: −US$7,78 por acción.',
+ 'RIESGO MATERIAL NO CUANTIFICADO EN LA HOJA: al 30-sep-2026 META tiene arrendamientos aún no iniciados por US$355.730 M y compromisos no cancelables por US$454.520 M (10-Q, Nota 10), frente a ingresos LTM de US$241.605 M. Solo los pasivos de arrendamiento ya reconocidos (US$31.173 M) están en la deuda (B18 = No). La Base absorbe estos compromisos por márgenes y Sales-to-Capital 0,52: la reinversión del año 1 es US$' + fmt(rein[0]) + ' M, a contrastar con el capex 2026 guiado de US$135.000–145.000 M (incluye principal de arrendamientos financieros) menos la depreciación del LTM (US$24.920 M), es decir, un capex neto de unos US$110.000–120.000 M: la reinversión del año 1 queda entre US$15.000 M y US$25.000 M por debajo. Si la reinversión necesaria fuese mayor, el valor bajaría de forma material.',
+ 'Tasas: Rf 5,29 % y ERP 3,70 % del corte 30-sep-2026 (misma fecha, Damodaran oct-2026); WACC terminal 8,99 % sustituye al 8,80 % escrito a mano. Beta 1,15 y Kd 6 % son supuestos analíticos sin auditoría económica. El precio de mercado (US$614,99) es del 30-oct-2026.',
+ 'El EBIT GAAP LTM (79.380 M) incluye el cargo legal de 9.890 M del T3 2026; las historias parten de márgenes ajustados (I+D capitalizada a 3 años) con objetivos de 38,5 %–47 % que no incluyen cargos legales. Las pérdidas de Reality Labs no se eliminan del EBIT.',
+ 'Múltiplos: regla de ciclo propia (cierres con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares GOOGL, PINS, AMZN, MSFT, NFLX, APP y RDDT solo comprueban (SNAP excluido). El EV/EBITDA Base de salida (7,8x) queda por debajo de la historia (15–16x) y de los pares por el tope del múltiplo justificado, que incorpora el capex de IA; el valor por múltiplos Base es ' + usd(v['descuentoMultiples']['multiplesHoy']['base']) + ' frente al DCF ' + usd(b35) + '. Categoría Crecimiento (DCF 60 %) y MOS 35 % son juicio del analista.',
+ 'Para P/E y P/B no se tocaron estados: META ya tenía utilidad atribuible y patrimonio. Sensibilidades DCF y de múltiplos copiadas de la hoja nativa con centro conciliado; no certificadas. QA visual autenticado pendiente. AZ Stocks no incorporado.'],
+ 'fuentes': [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm', 'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']}
+v['salvedades'] = CFG[TICKER]['salvedades']
+v['fuentes_supuestos'] = CFG[TICKER]['fuentes']
 v['estado'] = v['publicationStatus'] = 'EN_REVISION'
 v['publicationStage'] = 'PUBLICACION_EN_REVISION'
 v['validationStatus'] = 'PENDIENTE_CI_PROMOCION_Y_QA'

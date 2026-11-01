@@ -17,7 +17,9 @@ assert.equal(a.jmrNarrative.nivel1Capitulos,18);
 assert.equal(a.jmrNarrative.nivel2Apartados,12);
 assert.equal((a.articleHtml.match(/<h2 id="jmr-n1-/g)||[]).length,18);
 assert.equal((a.calculationHtml.match(/<h2 id="jmr-n2-/g)||[]).length,12);
-assert.ok(cat.valoraciones.includes(w.trabajo.valoracionAnterior));
+assert.ok(!cat.valoraciones.includes(w.trabajo.valoracionAnterior));
+assert.ok(cat.valoraciones.includes('valoraciones/META-20261101-A12-R1.json'));
+assert.ok(fs.existsSync(path.join(root,w.trabajo.valoracionAnterior)),'R5 debe conservarse en disco');
 assert.equal(w.valorPrincipal,null);
 });
 test('META DCF Base/MOS/escenarios A 1.2 coherentes',()=>{

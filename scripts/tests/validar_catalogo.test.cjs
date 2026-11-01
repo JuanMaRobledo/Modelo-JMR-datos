@@ -27,7 +27,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
  for(const t of ['META','NFLX','NKE','NVDA'])assert.ok(tickers.includes(t),'Se perdió un estudio existente: '+t);
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
-test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS/);});
+test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a DCF Base/);});
 
 test('archivo histórico preservado y excluido del catálogo público', () => {
   assert.ok(fs.existsSync(path.join(root,'auditorias/archivo/NFLX-auditoria-2026-10-22.md')));

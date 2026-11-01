@@ -8,7 +8,7 @@ const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const x=read('candidatos/valoraciones/META-20261031-A12-R1/workspace.json');
 const prior=read(x.trabajo.valoracionAnterior);
 const catalog=read('catalogo.json');
-test('META A-1.2 es un candidato separado; el anterior sigue vigente',()=>{
+test('META conserva fotografías del candidato 20261031 y el original R5 fuera del catálogo activo',()=>{
  assert.equal(x.versionMetodo,'A-1.2');
  assert.equal(x.publicationStatus,'NO_PUBLICAR');
  assert.ok(['PREPARACION_SIN_VALORACION','CALIBRACION_INDEPENDIENTE_COMPLETA_SIN_VALIDACION_FINANCIERA'].includes(x.estado),'ningún estado de publicación puede reemplazar un candidato');
@@ -16,8 +16,10 @@ test('META A-1.2 es un candidato separado; el anterior sigue vigente',()=>{
  assert.ok(x.trabajo.hojaBorrador!==x.trabajo.hojaAnterior);
  assert.equal(prior.revisionId,'META-20261025-R5');
  assert.ok(Math.abs(prior.valorPrincipal-726.6456435543839)<1e-8);
- assert.ok(catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
- assert.ok(!catalog.valoraciones.some(p=>p.includes('META-20261031-A12-R1')));
+ assert.ok(!catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
+ assert.ok(catalog.valoraciones.includes('valoraciones/META-20261101-A12-R1.json'));
+ assert.ok(fs.existsSync(path.join(root,x.trabajo.valoracionAnterior)),'R5 debe conservarse en disco');
+ assert.ok(!catalog.valoraciones.some(p=>p.includes('META-20261031-A12-R1')),'el candidato 20261031 no es la revisión activa');
 });
 test('puentes de ingresos y EBIT y guía CapEx tienen respaldo de fuentes',()=>{
  const c=x.conciliaciones;
