@@ -1,0 +1,63 @@
+== probabilidades (previa + ajustes)
+Traceback (most recent call last):
+  File "/home/user/JMR-valuation/scripts/probabilidades.py", line 116, in <module>
+    raise SystemExit(main(sys.argv[1:]))
+                     ~~~~^^^^^^^^^^^^^^
+  File "/home/user/JMR-valuation/scripts/probabilidades.py", line 85, in main
+    d = json.loads(f.read_text())
+                   ~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/JMR-valuation/reference/damodaran/META.json'
+== supuestos (razonabilidad)
+Traceback (most recent call last):
+  File "/home/user/JMR-valuation/scripts/controles_supuestos.py", line 120, in <module>
+    raise SystemExit(main(sys.argv[1:]))
+                     ~~~~^^^^^^^^^^^^^^
+  File "/home/user/JMR-valuation/scripts/controles_supuestos.py", line 112, in main
+    h = revisar(tk)
+  File "/home/user/JMR-valuation/scripts/controles_supuestos.py", line 59, in revisar
+    d = json.loads((REF / "damodaran" / f"{tk}.json").read_text())
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/JMR-valuation/reference/damodaran/META.json'
+== consistencia (hoja = app = motor)
+Traceback (most recent call last):
+  File "/home/user/JMR-valuation/scripts/consistencia_migracion.py", line 180, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/user/JMR-valuation/scripts/consistencia_migracion.py", line 160, in main
+    inf = informe(tk, v)
+  File "/home/user/JMR-valuation/scripts/consistencia_migracion.py", line 76, in informe
+    return (bool(m and m.group(1) == es(ve["dcfBase"])), bool(e and e.group(1) == es(ve["valor"])), Path(fs[-1]).name)
+                                        ~~^^^^^^^^^^^
+KeyError: 'dcfBase'
+META        M1=NO M2=OK M3=NO H1=-- H2=-- H3=-- I1=-- ['M1', 'M3']
+META        M1=NO M2=NO M3=NO H1=-- H2=-- H3=-- I1=-- ['M1', 'M2', 'M3']
+NVDA        M1=OK M2=OK M3=OK H1=-- H2=-- H3=-- I1=OK 
+== META: integridad y estados
+      · error Cost of capital worksheet!B73 = #N/A (Did not find value '' in VLOOKUP evaluation.)
+hallazgos: 12
+META: 1 entradas esenciales vacías; 0 salvedades documentales no bloqueantes (sin expediente de excepciones)\n   PENDIENTE: Cost of capital worksheet!B49 «Number of Preferred Shares =»
+META: 15/15 candados listos
+== NVDA: integridad y estados
+      · error Cost of capital worksheet!B73 = #N/A (Did not find value '' in VLOOKUP evaluation.)
+hallazgos: 16
+NVDA: 5 entradas esenciales vacías; 0 salvedades documentales no bloqueantes (sin expediente de excepciones)\n   PENDIENTE: Input sheet!B39 «Number of options outstanding =»\n   PENDIENTE: Input sheet!B40 «Average strike price =»\n   PENDIENTE: Input sheet!B41 «Average maturity =»\n   PENDIENTE: Input sheet!B42 «Standard deviation on stock price =»\n   PENDIENTE: Cost of capital worksheet!B49 «Number of Preferred Shares =»
+NVDA: 15/15 candados listos
+CONTROLES con fallas: probabilidades supuestos consistencia integridad META estados META entradas META integridad NVDA estados NVDA entradas NVDA
