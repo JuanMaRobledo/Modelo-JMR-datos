@@ -27,15 +27,18 @@ function run(){
   const DEGRADADAS=['INTU','NU'];
   for(const t of DEGRADADAS){
     const rev=t+'-20261029-R1',d='candidatos/valoraciones/'+rev+'/';
-    assert.ok(!aEntries.some(([name])=>name===t),t+': sigue en el catálogo activo');
-    assert.ok(!cat.valoraciones.some(p=>path.basename(p).startsWith(t+'-')),t+': valoración candidata en catálogo');
-    assert.ok(!cat.analisis.some(p=>path.basename(p).startsWith(t+'-')),t+': análisis candidato en catálogo');
+    // La revisión degradada no vuelve al catálogo; una revisión nueva del mismo ticker sí puede entrar (INTU-20261101-A12-R1).
+    assert.ok(!aEntries.some(([,v])=>v.rutaValoracion==='valoraciones/'+rev+'.json'),t+': la revisión degradada sigue en el catálogo activo');
+    assert.ok(!cat.valoraciones.includes('valoraciones/'+rev+'.json'),t+': valoración degradada en catálogo');
+    assert.ok(!cat.analisis.some(p=>path.basename(p).includes(rev)),t+': análisis degradado en catálogo');
     const cand=read(d+'VALORACION_A12_EN_REVISION.json');
     assert.ok(cand.degradadoACandidato&&cand.degradadoACandidato.fecha,t+': falta la marca de degradación');
     assert.ok(Number.isFinite(cand.valorPrincipal)&&cand.valorPrincipal>0,t+': candidato perdió el DCF Base');
     read(d+'ANALISIS_A12_EN_REVISION.json');
   }
-  assert.equal(aEntries.length,20-DEGRADADAS.length+['META','NVDA','XP'].filter(t=>aEntries.some(([name])=>name===t)).length,'Se perdieron revisiones A-1.2 originales');
+  const NUEVAS={META:'META-20261101-A12-R1',NVDA:'NVDA-20261101-A12-R1',XP:'XP-20261031-A12-R1',INTU:'INTU-20261101-A12-R1'};
+  const nuevas=Object.entries(NUEVAS).filter(([t,r])=>aEntries.some(([name,v])=>name===t&&path.basename(v.rutaValoracion).startsWith(r))).length;
+  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas,'Se perdieron revisiones A-1.2 originales');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){

@@ -5,7 +5,9 @@ const root=path.resolve(__dirname,'../..');
 const cat=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json')));
 for(const ticker of ['UBER','GOOGL','INTU','NU']){
  // INTU y NU son CANDIDATO (fuera del catálogo) desde el 1-nov-2026; se siguen validando desde candidatos/.
- const rel=cat.valoraciones.find(p=>p.startsWith('valoraciones/'+ticker+'-'))||'candidatos/valoraciones/'+ticker+'-20261029-R1/VALORACION_A12_EN_REVISION.json';
+ // INTU y NU: los contrastes provisionales pertenecen a sus revisiones 20261029-R1, conservadas en candidatos/
+ // (INTU tiene desde el 1-nov-2026 una revisión activa nueva con múltiplos nativos, que no usa este contrato).
+ const rel=(ticker==='INTU'||ticker==='NU')?'candidatos/valoraciones/'+ticker+'-20261029-R1/VALORACION_A12_EN_REVISION.json':cat.valoraciones.find(p=>p.startsWith('valoraciones/'+ticker+'-'));
  const v=JSON.parse(fs.readFileSync(path.join(root,rel)));
  test(ticker+': contrastes provisionales trazables, sin certificación ni peso DCF',()=>assert.equal(validateReviewRelatives(v),true));
  test(ticker+': rechaza corrupción, pesos, certificación, moneda y MOS',()=>{

@@ -5,6 +5,10 @@ const fs=require('node:fs'), path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const cat=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
 const historicalDepth='MELI CELH ADBE BSX CMG NFLX GOOGL MSFT NKE PYPL EPAM ZTS ONON NU NVO INTU'.split(' ');
+// Reescrituras completas con el índice vigente de 14 capítulos (1-nov-2026). El análisis anterior se conserva íntegro y
+// sus 18 bloques históricos se siguen exigiendo en el archivo conservado; la revisión nueva debe cumplir el mínimo por
+// capítulo medido sobre su propio HTML.
+const REESCRITAS={INTU:{revision:'INTU-20261101-A12-R1',anterior:'candidatos/valoraciones/INTU-20261029-R1/ANALISIS_A12_EN_REVISION.json'}};
 const selected=Object.entries(cat.controlModeloA?.empresas||{})
  .filter(([,entry])=>entry.metodo==='A-1.2').map(([ticker])=>ticker);
 if(!selected.length)throw new Error('No A-1.2 entries in active catalog');
@@ -43,7 +47,14 @@ for(const t of selected){
  if(/data-editorial-gap=["']true["']/i.test(h))warnings.push(t+': contiene apartados pendientes de investigación; no acredita completitud');
  if(a.html!==h+(a.calculationHtml||''))errors.push(t+': level 1/level 2 HTML no longer reconcile');
  if(a.ampliacionEconomica?.auditoriaEconomicaEjecutada===true)errors.push(t+': editorial expansion must not certify financial audit');
- if(historicalDepth.includes(t)&&t!=='GOOGL'){
+ const reescrita=REESCRITAS[t]&&REESCRITAS[t].revision===a.revisionId;
+ if(reescrita){
+   const old=JSON.parse(fs.readFileSync(path.join(root,REESCRITAS[t].anterior),'utf8')).articleHtml||'';
+   if((old.match(/data-jmr-longform=/g)||[]).length!==18||(old.match(/data-jmr-deep-20261029=/g)||[]).length!==18)
+     errors.push(t+': bloques históricos de profundidad económica (18) perdidos en el análisis conservado');
+   const per=[...h.matchAll(/<section id="jmr-n1-chapter-\d+">([\s\S]*?)<\/section>/g)].map(m=>words(m[1]));
+   if(per.length!==14||Math.min(...per)<330)errors.push(t+': some chapter is too thin');
+ }else if(historicalDepth.includes(t)&&t!=='GOOGL'){
    if((h.match(/data-jmr-longform=/g)||[]).length!==18||(h.match(/data-jmr-deep-20261029=/g)||[]).length!==18)
      errors.push(t+': bloques históricos de profundidad económica (18) perdidos');
    if((a.controlProfundidadModeloA?.minimumPerChapter||0)<330)
