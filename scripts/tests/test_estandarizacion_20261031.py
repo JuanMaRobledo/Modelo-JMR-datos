@@ -85,8 +85,17 @@ class EditorialTests(unittest.TestCase):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        self.assertEqual(len(selected),20)
-        for a in selected:
+        provisional=[a for a in selected if a.get('ticker')=='XP' and a.get('revisionId')=='XP-20261031-A12-R1']
+        canonical=[a for a in selected if a not in provisional]
+        self.assertEqual(len(canonical),20)
+        self.assertEqual(len(provisional),1)
+        xp=provisional[0]
+        xp_headings=re.findall(r'<h2[^>]*>\\s*(\\d+)\\.',xp['articleHtml'])
+        self.assertEqual(xp_headings,list(map(str,range(1,19))))
+        self.assertEqual(xp['html'],xp['articleHtml']+xp.get('calculationHtml',''))
+        self.assertIn('ciclo empresarial',xp['articleHtml'].lower())
+        self.assertIn('ciclo macro',xp['articleHtml'].lower())
+        for a in canonical:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]
             headings=re.findall(r'<h2[^>]*>\s*(\d+)\.',h)
