@@ -51,10 +51,10 @@ test('PAGS: MOS, promedio y centros matrices',()=>{
 });
 test('PAGS: nivel editorial en rama, no certificacion economica',()=>{
  const h=a.articleHtml;
- const n=h.replace(/<[^>]+>/g,' ').replace(/\\s+/g,' ').trim().split(/\\s+/).length;
+ const n=h.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().split(/\s+/).length;
  assert.ok(n>=7500,'N1 por debajo de 7500 palabras: '+n);
- assert.deepEqual([...h.matchAll(/<h2>\\s*(\\d+)\\./g)].map(x=>Number(x[1])),Array.from({length:14},(_,i)=>i+1));
- assert.match(h,/<h2>5\\. Ciclos de la empresa, del mercado y de la macroeconomía<\\/h2>/);
+ assert.deepEqual([...h.matchAll(/<h2>\s*(\d+)\./g)].map(x=>Number(x[1])),Array.from({length:14},(_,i)=>i+1));
+ assert.match(h,/<h2>5\. Ciclos de la empresa, del mercado y de la macroeconomía<\/h2>/);
  assert.ok(a.controlProfundidadModeloA.minimoPorCapitulo>=330);
  assert.equal(a.status,'CANDIDATO_NO_PUBLICADO');
  assert.ok(a.calculationHtml.includes('12. SALVEDADES'));
