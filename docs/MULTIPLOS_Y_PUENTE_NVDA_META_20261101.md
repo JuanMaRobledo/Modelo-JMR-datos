@@ -17,7 +17,7 @@
 | META Cons/Base/Opt | 7,4 / 8,5 / 13,6 | 20,4 / 21,1 / 21,7 | 17,7 / 21,4 / 22,0 | 17,9 / 18,5 / 19,0 | 8,7 / 9,6 / 11,4 |
 | META LTM | 15,4 | 56,0 | 21,0 | 54,9 | 11,8 |
 
-Valor por múltiplos consolidado a hoy (VP, `Descuento de múltiplos`, chequeo VP3 < FY+3 = OK en los 3 escenarios): NVDA 129,0 / 233,5 / (Opt ver hoja) frente a DCF Base 201,8; META 388,6 / 412,6 / (Opt ver hoja) frente a DCF Base 783,4.
+Valor por múltiplos consolidado a hoy (VP, `Descuento de múltiplos`, chequeo VP3 < FY+3 = OK en los 3 escenarios): NVDA 129,0 / 233,5 / 362,8 frente a DCF Base 201,8; META 388,6 / 412,6 / 574,4 frente a DCF Base 783,4.
 Las diez matrices 5×5 Base (cinco métodos × dos empresas) calculan en la hoja y su centro coincide con el VP3 de cada método (control `OK`).
 
 ## 3. Puente NVDA R4 (381,79) → A-1.2 (201,80), sustituyendo supuestos de R4 sobre la hoja A-1.2, de uno en uno
