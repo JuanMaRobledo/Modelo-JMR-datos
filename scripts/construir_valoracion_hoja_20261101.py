@@ -73,6 +73,14 @@ for n, name in enumerate(METHODS):
     matrices.append({'metodo': name, 'escenario': 'base', 'prioritario': True, 'ancla': 'JMR', 'estado': 'OK',
         'fundamentalFY3': fund, 'multiploElegido': [row[0] for row in mats], 'matriz': grid, 'centro': center, 'vp3Original': vp3,
         'origen': f"'Sensibilidad por múltiplo'!A{76+10*n}:I{84+10*n}", 'motivo': None})
+for k, name in ((5, 'P/V'), (6, 'P/BV')):
+    r0 = 75 + 10 * k
+    need(sm[r0][0].startswith('BASE · ' + name), f'bloque {name}')
+    need(sm[r0 + 8][7] == 'N/D', f'{name} esperado N/D en la hoja (si calcula, integrarlo como OK)')
+    matrices.append({'metodo': name, 'escenario': 'base', 'prioritario': False, 'ancla': 'JMR', 'estado': 'N/D',
+        'fundamentalFY3': sm[r0 + 2][1:6], 'multiploElegido': [0, 0, 0, 0, 0], 'matriz': None, 'centro': None, 'vp3Original': None,
+        'origen': f"'Sensibilidad por múltiplo'!A{76+10*k}:I{84+10*k}",
+        'motivo': f'{name} es un método complementario opcional: la hoja no tiene múltiplo de salida elegido (celdas del bloque en N/D). No se calcula, no tiene peso y su ausencia no bloquea la publicación.'})
 methods = []
 for n, name in enumerate(METHODS):
     m = {'nombre': name, 'peso': md[16 + n][1], 'pesoRelativo': md[16 + n][2], 'estado': 'CALCULADO_NATIVO_EN_REVISION'}
@@ -98,9 +106,9 @@ v['descuentoMultiples'] = {'version': 2, 'estado': 'CALCULADO_NATIVO_EN_REVISION
         'certificadoEconomico': False, 'calculosExternosExportados': False},
     'nota': 'Múltiplos de salida por regla de ciclo (historia propia con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares y justificado solo comprueban. Ver reference/multiplos_v3/NVDA_decision.json en JMR-valuation. Auditoría económica pendiente.'}
 v['sensibilidadMultiples'] = {'contrato': 'base-native-five-priority-v1', 'revisionId': REV, 'sourceSheetId': v['sheet_id'],
-    'resultadosSha256': sha, 'estadoPublicacion': 'INTEGRADO_EN_REVISION', 'matrices': matrices, 'metodosPendientes': [],
+    'resultadosSha256': sha, 'estadoPublicacion': 'INTEGRADO_EN_REVISION', 'matrices': matrices, 'metodosPendientes': ['P/V', 'P/BV'],
     'sinRecalculoExterno': True, 'certificado': False, 'controlesTecnicosAprobados': True,
-    'nota': 'Cinco matrices 5×5 Base copiadas de la hoja nativa; centro = VP3 de cada método. Pendiente revisión visual y auditoría económica.'}
+    'nota': 'Siete posiciones del contrato: cinco matrices 5×5 Base copiadas de la hoja nativa; centro = VP3 de cada método. Pendiente revisión visual y auditoría económica.'}
 
 # metodos principales
 v['metodos'] = [{'nombre': 'DCF FCFF', 'peso': md[34][1], 'horizonte': 'Valor presente', 'conservador': cons[7], 'base': base[7],

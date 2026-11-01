@@ -123,12 +123,12 @@ def n2_9():
 
 def n2_10():
     parts = ''
-    for m in V['sensibilidadMultiples']['matrices']:
+    for m in [x for x in V['sensibilidadMultiples']['matrices'] if x['estado'] == 'OK']:
         parts += table(['Múltiplo \\ Fundamental FY+3'] + [n(f, 0) for f in m['fundamentalFY3']],
                        [[n(mu, 2) + 'x'] + [n(v, 2) for v in row] for mu, row in zip(m['multiploElegido'], m['matriz'])],
                        f'{m["metodo"]}: VP a 3 años por acción; centro = {usd(m["centro"])} (= VP3 del método, control OK).')
     return (h2(10, 'Sensibilidades de cada múltiplo (matrices 5×5 Base)') +
-      P('Eje vertical: múltiplo de salida en veces; eje horizontal: fundamental FY+3 en las unidades de la hoja; cada celda es el valor presente por acción a hoy. Solo se publican matrices de la historia Base y de los cinco métodos prioritarios aplicables.') + parts)
+      P('Eje vertical: múltiplo de salida en veces; eje horizontal: fundamental FY+3 en las unidades de la hoja; cada celda es el valor presente por acción a hoy. Solo se publican matrices de la historia Base y de los cinco métodos prioritarios aplicables. Las posiciones sexta y séptima del contrato (P/V y P/BV, métodos complementarios opcionales) están en N/D porque la hoja no tiene múltiplo de salida elegido para ellos; no tienen peso y no bloquean la publicación.') + parts)
 
 def n2_11():
     rows = [['Valor Base', 'Valuation output!B35', 'valorPrincipal', usd(b35), 'OK'], ['MOS 35 %', 'B35 × 0,65', 'precioMOS', usd(mos), 'OK'],
@@ -180,7 +180,7 @@ if __name__ == '__main__':
       'jmrNarrative': {'version': 'A-1.2-20261101', 'nivel1Capitulos': 14, 'nivel2Apartados': 12},
       'documentoNivel1': 'scripts/analisis_nvda_20261101_parte1.py', 'documentoNivel2': 'scripts/analisis_nvda_20261101_parte3.py',
       'salvedades': 'EN_REVISION: sin auditoría económica ni QA visual autenticado. Ver capítulo 14 y apartado 12 del Nivel 2.',
-      'controlCobertura': {'secciones': 14, 'niveles': 'N1_14_N2_12', 'revisionFinanciera': REV, 'auditoriaEconomicaEjecutada': False},
+      'controlCobertura': {'secciones': 14, 'niveles': 'N1_14_N2_12', 'revisionFinanciera': REV, 'auditoriaEconomicaEjecutada': False, 'seccionesAntesEstandarizacion': 14, 'notaConteos': 'secciones cuenta capítulos N1; entradas y resoluciones anteriores se conservan como inventario de evidencia, no como certificación.'},
       'estandarizacionEditorial20261031': {'nivel1Capitulos': 14, 'indiceInteractivo': True, 'ciclosSeparados': True, 'calculosModificados': False,
                                            'auditoriaEconomicaEjecutada': False, 'completitudInvestigacion': 'EN_REVISION_SALVEDADES'}}
     dest = ROOT / f'candidatos/valoraciones/{REV}/ANALISIS_A12_EN_REVISION.json'

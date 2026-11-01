@@ -959,13 +959,68 @@
         "vp3Original": 222.6359313559744,
         "origen": "'Sensibilidad por múltiplo'!A116:I124",
         "motivo": null
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "prioritario": false,
+        "ancla": "JMR",
+        "estado": "N/D",
+        "fundamentalFY3": [
+          529892.10624,
+          596128.6195200001,
+          662365.1328,
+          728601.6460800001,
+          794838.15936
+        ],
+        "multiploElegido": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "matriz": null,
+        "centro": null,
+        "vp3Original": null,
+        "origen": "'Sensibilidad por múltiplo'!A126:I134",
+        "motivo": "P/V es un método complementario opcional: la hoja no tiene múltiplo de salida elegido (celdas del bloque en N/D). No se calcula, no tiene peso y su ausencia no bloquea la publicación."
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "prioritario": false,
+        "ancla": "JMR",
+        "estado": "N/D",
+        "fundamentalFY3": [
+          920373.7581756073,
+          1035420.4779475582,
+          1150467.197719509,
+          1265513.91749146,
+          1380560.6372634107
+        ],
+        "multiploElegido": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "matriz": null,
+        "centro": null,
+        "vp3Original": null,
+        "origen": "'Sensibilidad por múltiplo'!A136:I144",
+        "motivo": "P/BV es un método complementario opcional: la hoja no tiene múltiplo de salida elegido (celdas del bloque en N/D). No se calcula, no tiene peso y su ausencia no bloquea la publicación."
       }
     ],
-    "metodosPendientes": [],
+    "metodosPendientes": [
+      "P/V",
+      "P/BV"
+    ],
     "sinRecalculoExterno": true,
     "certificado": false,
     "controlesTecnicosAprobados": true,
-    "nota": "Cinco matrices 5×5 Base copiadas de la hoja nativa; centro = VP3 de cada método. Pendiente revisión visual y auditoría económica."
+    "nota": "Siete posiciones del contrato: cinco matrices 5×5 Base copiadas de la hoja nativa; centro = VP3 de cada método. Pendiente revisión visual y auditoría económica."
   },
   "reporteFuentes": {
     "captura": "evidencia/captura-hoja-20261101/NVDA-20261101-A12-R1_resultados_hoja.json",
