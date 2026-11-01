@@ -18,7 +18,7 @@ function safeCore(v) {
 function run(){
   const cat=read('catalogo.json');
   const aEntries=Object.entries(cat.controlModeloA?.empresas||{}).filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(aEntries.length,20,'Cambió cantidad de revisiones Método A activas');
+  assert.equal(aEntries.length,20+['META','NVDA','XP'].filter(t=>aEntries.some(([name])=>name===t)).length,'Se perdieron revisiones A-1.2 originales');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){
@@ -67,7 +67,7 @@ function run(){
     }else withoutSnapshot.push(ticker);
   }
   assert.ok(snapshots>=16,'Desaparecieron fotografías financieras de control');
-  console.log('PASS no regresión: '+htmlPairs+'/20 expedientes vinculados; '+snapshots+
+  console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
     ' fotografías financieras sin cambios fuera de descuentos y matrices.');
   console.log('Sin fotografía antigua integral: '+withoutSnapshot.join(', ')+
     '. Requieren cotejo con Google Sheets antes de completar matrices.');

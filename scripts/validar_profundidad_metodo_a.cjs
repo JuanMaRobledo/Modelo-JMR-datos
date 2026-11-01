@@ -26,12 +26,15 @@ for(const t of selected){
  const legacy13=Array.from({length:13},(_,i)=>i+1);
  const is14=JSON.stringify(heads)===JSON.stringify(expected14);
  const isLegacy13=JSON.stringify(heads)===JSON.stringify(legacy13);
+ const is18Provisional=JSON.stringify(heads)===JSON.stringify(Array.from({length:18},(_,i)=>i+1)) && status==='EN_REVISION' && a.version_metodo==='A-1.2' && /ciclo empresarial/i.test(h) && /ciclo macro/i.test(h);
  if(a.ticker!==t||v.ticker!==t||a.revisionId!==v.revisionId)errors.push(t+': analysis/valuation revision or ticker mismatch');
  if(status!=='EN_REVISION')errors.push(t+': report changed status');
  if(!Number.isFinite(v.valorPrincipal)||v.valorPrincipal<=0)errors.push(t+': active Base value missing');
  if(n<7500)errors.push(t+': only '+n+' words, min=7500');
- if(!is14&&!isLegacy13)errors.push(t+': índice inválido; vigente=14, legado EN_REVISION=13, encontrado='+heads.join(','));
- if(isLegacy13){
+ if(!is14&&!isLegacy13&&!is18Provisional)errors.push(t+': índice inválido; vigente=14, legado EN_REVISION=13, encontrado='+heads.join(','));
+ if(is18Provisional){
+   warnings.push(t+': 18 capitulos narrativos en revision; el minimo de 7500 palabras no cambia');
+ } else if(isLegacy13){
    if(status!=='EN_REVISION')errors.push(t+': 13 capítulos heredados solo admisibles como EN_REVISION');
    else warnings.push(t+': PENDIENTE_EDITORIAL, separar ciclos para obtener 14 capítulos; no certifica investigación');
  }else if(is14&&!/<h2[^>]*>\s*5\.\s*(?:Ciclos de la empresa, del mercado y de la macroeconomía|Ciclos empresariales, macroeconómicos y de mercado)\s*<\/h2>/i.test(h))

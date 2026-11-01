@@ -47,28 +47,24 @@ test('rechaza revisión financiera editorial discordante', t => {
   assert.throws(()=>validate(tmp),/Revisión financiera distinta/);
 });
 
-test('XP mantiene FCFE principal, MOS, revisión y reservas sin certificar supuestos',()=>{
+test('XP FCFE A-1.2 activo usa contraste historico R2 no certificado',()=>{
  const c=require(path.join(root,'catalogo.json'));
- const vp=c.valoraciones.find(p=>p.startsWith('valoraciones/XP-'));
- assert.ok(vp,'XP debe estar en el catálogo');
- const v=JSON.parse(fs.readFileSync(path.join(root,vp)));
+ const p=c.valoraciones.find(p=>p.startsWith('valoraciones/XP-'));
+ const v=JSON.parse(fs.readFileSync(path.join(root,p)));
  const ap=c.analisis.find(p=>p.startsWith('analisis/XP-'));
  const a=JSON.parse(fs.readFileSync(path.join(root,ap)));
- assert.equal(v.revisionId,'XP-JMR-20261026-R2');
- assert.equal(a.revisionId,v.revisionId);
- assert.equal(v.metodoPrincipal,'FCFE');
- assert.equal(v.primaryWeight,1);
- assert.ok(Math.abs(v.valorPrincipal-13.530630645337256)<1e-9);
- assert.ok(Math.abs(v.precioMOS-v.valorPrincipal*.65)<1e-9);
- assert.equal(v.validationStatus,'PENDIENTE_VALIDACION_INTEGRAL');
- assert.equal(v.auditoria.fullJmrCertified,false);
- assert.match(v.estado,/CONDICIONADA/);
- assert.equal(v.sensibilidadMultiples.noDisponibles,9);
- assert.equal(v.sensibilidadMultiples.controlesOK,12);
- assert.deepEqual(v.sensibilidadMultiples.displayScenarios,['base']);
- assert.equal(v.auditoria.numericChecks.comparisons,716);
- assert.ok(v.salvedades.some(s=>s.includes('50%')));
- assert.ok(v.salvedades.some(s=>s.includes('2pp')));
- assert.ok(a.articleHtml.includes('auditoría condicionada'));
+ assert.equal(v.revisionId,'XP-20261031-A12-R1');
+ assert.equal(v.version_metodo,'A-1.2');
+ assert.match(v.metodoPrincipal,/FCFE/);
+ assert.equal(v.estado,'EN_REVISION');
+ assert.equal(v.certificacionEconomica,'NO_CERTIFICADA');
+ assert.equal(v.auditPendingUserVisualReview,true);
+ assert.equal(v.sensibilidadMultiples.contrato,'review-relative-v1');
+ assert.deepEqual(v.sensibilidadMultiples.matrices.map(m=>m.metodo),['P/E','P/FCFE','P/BV','P/S']);
+ assert.ok(v.sensibilidadMultiples.matrices.every(m=>m.peso===0&&m.anclaCertificada===false));
+ assert.ok(Math.abs(v.valorPrincipal-14.475590094736917)<1e-8);
+ assert.ok(Math.abs(v.precioMOS-v.valorPrincipal*.65)<1e-8);
+ assert.equal(a.linkedValuation.sourcePath,p);
+ assert.ok(!c.auditorias.includes('auditorias/narrativas/XP.md'));
+ assert.ok(fs.existsSync(path.join(root,'valoraciones/XP-20261026-R2.json')));
 });
-

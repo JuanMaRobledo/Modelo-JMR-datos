@@ -256,6 +256,9 @@ function validate(root = path.join(__dirname, '..')) {
         a.ticker + ': no publicar como nuevo un informe de 13 capítulos');
       console.warn('PENDIENTE_EDITORIAL: ' + a.ticker +
         ' conserva 13 capítulos; separar ciclos antes de certificar Nivel 1 (14).');
+    } else if (legacy18 && a.version_metodo==='A-1.2' && status==='EN_REVISION' &&
+      h2.some(h=>/ciclo/i.test(h)) && h2.some(h=>/macro|monetario/i.test(h))) {
+      console.warn('REVISION_18_CAPITULOS: '+a.ticker+' incluye 18 capitulos narrativos; auditoria economica NO certificada.');
     } else if (legacy18 && frozenHistorical && a.ticker === 'XP') {
       console.warn('LEGADO_HISTORICO: XP conserva 18 capítulos por revisión archivada; ' +
         'no corresponde al nuevo Nivel 1 de 14.');

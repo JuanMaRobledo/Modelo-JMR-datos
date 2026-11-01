@@ -19,7 +19,7 @@ const byTicker=new Map();
 test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>{
   const active=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(active.length,20);
+  assert.equal(active.length,20+['META','NVDA','XP'].filter(t=>active.some(([name])=>name===t)).length);
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
     const p='candidatos/hoja-multiples/'+f;

@@ -81,11 +81,11 @@ class EditorialTests(unittest.TestCase):
             (root/'catalogo.json').write_text(json.dumps({'analisis':['analisis/AFYA-one.json','analisis/AFYA-two.json']}))
             with self.assertRaises(ValueError): active_analysis_path(root,'AFYA')
 
-    def test_twenty_linked_indices_and_cycle_chapters(self):
+    def test_all_active_a12_linked_indices_and_cycle_chapters(self):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        self.assertEqual(len(selected),20)
+        self.assertEqual(len(selected),21)
         for a in selected:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]

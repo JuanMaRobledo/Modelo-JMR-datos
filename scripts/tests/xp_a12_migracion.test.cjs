@@ -7,7 +7,7 @@ const root=path.join(__dirname,'../..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const x=read('candidatos/valoraciones/XP-20261031-A12-R1/workspace.json');
 const original=read(x.trabajo.valoracionAnterior),catalog=read('catalogo.json');
-test('XP usa estructura A-1.2 sin cambiar valoración vigente',()=>{
+test('XP conserva fotografias de preparacion y el original R2',()=>{
 assert.equal(x.schema,'jmr-valuation-workspace-v1');
 assert.equal(x.versionMetodo,'A-1.2');
 assert.equal(x.metodoPrincipal,'FCFE_FINANCIERO');
@@ -16,8 +16,10 @@ assert.equal(x.publicationStatus,'NO_PUBLICAR');
 assert.equal(x.valorPrincipal,null);
 assert.equal(x.precioMOS,null);
 assert.equal(original.revisionId,'XP-JMR-20261026-R2');
-assert.ok(catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
-assert.ok(!catalog.valoraciones.some(p=>p.includes(x.revisionCandidata)));
+assert.ok(!catalog.valoraciones.includes(x.trabajo.valoracionAnterior));
+assert.ok(catalog.valoraciones.includes('valoraciones/XP-20261031-A12-R1.json'));
+assert.ok(fs.existsSync(path.join(root,x.trabajo.valoracionAnterior)));
+assert.ok(catalog.valoraciones.some(p=>p.includes(x.revisionCandidata)));
 assert.notEqual(x.trabajo.hojaBorrador,x.trabajo.hojaAnterior);
 });
 test('XP comparte contrato único, escenarios y magnitudes coherentes',()=>{

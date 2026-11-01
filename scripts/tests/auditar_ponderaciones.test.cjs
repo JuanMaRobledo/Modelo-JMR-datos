@@ -48,8 +48,7 @@ test('rechaza cifras ausentes aunque el texto diga OK', () => {
 function holding() {
   // Usar el expediente histórico FCFE (contrato anterior), no etiquetar
   // un registro A-1.2 industrial como SOTP sintético.
-  const vp = catalog.valoraciones.find(p => /^valoraciones\/XP-/.test(p));
-  assert.ok(vp, 'XP histórico necesario para el caso SOTP');
+  const vp = 'valoraciones/XP-20261026-R2.json';
   const r = read(vp);
   r.ticker = 'TEST-HOLDING';
   r.metodoPrincipal = 'SOTP';

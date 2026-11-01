@@ -6,13 +6,15 @@ const read=p=>JSON.parse(fs.readFileSync(path.resolve(__dirname,'../..',p),'utf8
 const x=read('candidatos/valoraciones/XP-20261031-A12-R1/CALIBRACION_FCFE_PROVISIONAL.json');
 const ws=read('candidatos/valoraciones/XP-20261031-A12-R1/workspace.json'),catalog=read('catalogo.json');
 const near=(a,b,tolerance=1e-6)=>assert.ok(Math.abs(a-b)<tolerance,String(a)+' != '+String(b));
-test('XP A-1.2 no publica nuevo FCFE ni toca la revisión anterior',()=>{
+test('XP conserva fuente congelada y revision original como evidencia',()=>{
  assert.equal(x.publicationStatus,'NO_PUBLICAR');
  assert.equal(ws.publicationStatus,'NO_PUBLICAR');
  assert.equal(ws.valorPrincipal,null);
  assert.equal(x.originalRevision,'XP-20261026-R2');
- assert.ok(catalog.valoraciones.includes(ws.trabajo.valoracionAnterior));
- assert.ok(!catalog.valoraciones.some(p=>p.includes(x.revision)));
+ assert.ok(!catalog.valoraciones.includes(ws.trabajo.valoracionAnterior));
+ assert.ok(catalog.valoraciones.includes('valoraciones/XP-20261031-A12-R1.json'));
+ assert.ok(catalog.valoraciones.some(p=>p.includes(x.revision)));
+ assert.ok(fs.existsSync(path.resolve(__dirname,'../..',ws.trabajo.valoracionAnterior)));
  assert.equal(x.accountingCut,'2026-06-30');
  assert.equal(x.priceDate,'2026-10-30');
 });
