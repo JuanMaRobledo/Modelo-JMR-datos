@@ -90,7 +90,7 @@ class EditorialTests(unittest.TestCase):
         self.assertEqual(len(canonical),20)
         self.assertEqual(len(provisional),1)
         xp=provisional[0]
-        xp_headings=re.findall(r'<h2[^>]*>\\s*(\\d+)\\.',xp['articleHtml'])
+        xp_headings=re.findall(r'<h2[^>]*>\s*(\d+)\.',xp['articleHtml'])
         self.assertEqual(xp_headings,list(map(str,range(1,19))))
         self.assertEqual(xp['html'],xp['articleHtml']+xp.get('calculationHtml',''))
         self.assertIn('ciclo empresarial',xp['articleHtml'].lower())
