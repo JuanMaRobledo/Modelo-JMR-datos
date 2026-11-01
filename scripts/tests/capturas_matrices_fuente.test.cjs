@@ -19,7 +19,7 @@ const byTicker=new Map();
 test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>{
   const active=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(active.length,18+['META','NVDA','XP'].filter(t=>active.some(([name])=>name===t)).length,'INTU y NU son CANDIDATO desde el 1-nov-2026');
+  assert.equal(active.length,18+['META','NVDA','XP','INTU'].filter(t=>active.some(([name])=>name===t)).length,'NU es CANDIDATO; INTU volvió con INTU-20261101-A12-R1');
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
     const p='candidatos/hoja-multiples/'+f;
@@ -36,7 +36,8 @@ for(const file of files){
     assert.notEqual(ticker,'NU','NU requiere contrato de múltiplos bancarios');
     assert.equal(byTicker.has(ticker),false,'Captura duplicada');
     byTicker.set(ticker,true);
-    const declared=catalog.controlModeloA.empresas[ticker]||(ticker==='INTU'?{rutaValoracion:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json'}:undefined);
+    // La captura parcial de INTU pertenece a INTU-20261029-R1 (candidato conservado), no a la revisión activa nueva.
+    const declared=ticker==='INTU'?{rutaValoracion:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json'}:catalog.controlModeloA.empresas[ticker];
     const valuation=JSON.parse(fs.readFileSync(path.join(root,declared.rutaValoracion),'utf8'));
     assert.equal(candidate.tipo,'CAPTURA_ACOTADA_NO_PUBLICADA');
     assert.equal(candidate.contrato,'sensibilidad-nativa-base-parcial-v1');
