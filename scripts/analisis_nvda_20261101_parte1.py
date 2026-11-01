@@ -1,0 +1,123 @@
+# -*- coding: utf-8 -*-
+"""Utilidades y capítulos 1-7 del Nivel 1 de NVDA (revisión NVDA-20261101-A12-R1). Las cifras salen de la captura de la hoja."""
+import json, math
+from pathlib import Path
+ROOT = Path(__file__).resolve().parent.parent
+REV = 'NVDA-20261101-A12-R1'
+CAP = json.loads((ROOT / f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json').read_text())
+D = CAP['data']
+V = json.loads((ROOT / f'candidatos/valoraciones/{REV}/VALORACION_A12_EN_REVISION.json').read_text())
+
+def n(x, d=0):
+    s = f'{x:,.{d}f}'
+    return s.replace(',', 'X').replace('.', ',').replace('X', '.')
+def pc(x, d=1): return n(x * 100, d) + ' %'
+def usd(x, d=2): return 'US$' + n(x, d)
+def table(head, rows, cap=None):
+    h = ''.join(f'<th>{c}</th>' for c in head)
+    b = ''.join('<tr>' + ''.join(f'<td>{c}</td>' for c in r) + '</tr>' for r in rows)
+    c = f'<caption>{cap}</caption>' if cap else ''
+    return f'<table>{c}<thead><tr>{h}</tr></thead><tbody>{b}</tbody></table>'
+def P(*a): return '<p>' + ' '.join(a) + '</p>'
+
+IS = D['is']; CF = D['cf']; BS = D['bs']
+yrs = [str(x) for x in IS[1][1:12]]
+def ser(tab, i): return tab[i][1:12]
+rev = ser(IS, 2); cogs = ser(IS, 4); gp = ser(IS, 5); rd = ser(IS, 9); ebit = ser(IS, 11); ni = ser(IS, 20)
+ocf = ser(CF, 12); capex = ser(CF, 14); sbc = ser(CF, 4); fcf = ser(CF, 35); buy = ser(CF, 29); div = ser(CF, 31)
+VB = D['valuation_base']; ST = D['stories']
+base, cons, disr, opt = ST[1], ST[2], ST[3], ST[4]
+b35 = V['valorPrincipal']; mos = V['precioMOS']; price = V['precio']
+sc = V['escenarios']; ve = V['valorEsperado']['valor']
+proy = V['nivel2ProyeccionBase']
+dm = V['descuentoMultiples']
+pb = V['puenteEquity']
+tv_share = pb['valorTerminalPV'] / pb['sumaPV']
+
+def chapter(i, title, body):
+    return f'<section id="jmr-n1-chapter-{i}"><h2>{i}. {title}</h2>{body}</section>'
+
+# ---------------- capítulos ----------------
+def cap1():
+    return chapter(1, 'Tesis y resumen ejecutivo',
+    P(f'NVIDIA se valora aquí como lo que es hoy: el proveedor dominante de la infraestructura de cómputo acelerado con la que clientes de gran escala entrenan y ejecutan modelos de inteligencia artificial. El Método JMR A-1.2 arroja un valor Base de {usd(b35)} por acción, calculado por la hoja oficial de trabajo (<code>Valuation output!B35</code>), un precio con margen de seguridad del 35 % de {usd(mos)} y una cotización de referencia de {usd(price)} al cierre del 30 de octubre de 2026. El mercado, por tanto, cotiza prácticamente en el valor Base: la acción no ofrece descuento alguno frente al caso central y exige que el futuro supere ligeramente a la historia Base para dejar un retorno atractivo.',
+      f'Los cuatro escenarios de la hoja valen {usd(sc["conservador"])} (Conservadora), {usd(sc["base"])} (Base), {usd(sc["optimista"])} (Optimista) y {usd(sc["disrupcion"])} (Disrupción). El promedio ordinario ponderado de las tres primeras historias, con la Disrupción informada aparte, es {usd(ve)}. La dispersión es la verdadera noticia: de lo que la empresa conserve en márgenes y de cuántos años sostenga el crecimiento dependen los dos tercios del valor, y ninguna de las dos variables se observa hoy; se estiman.'),
+    '<h3>Qué tiene que ser cierto</h3>' + P(
+      f'La historia Base exige que los ingresos pasen de {n(proy[0]["revenues"]/(1+proy[0]["growth"]))} millones LTM a {n(proy[0]["revenues"])} millones en el primer año proyectado ({pc(proy[0]["growth"],0)}), que luego crezcan {pc(proy[1]["growth"],0)}, {pc(proy[2]["growth"],0)}, {pc(proy[3]["growth"],0)} y {pc(proy[4]["growth"],0)} hasta el año 5 y se desaceleren hasta {pc(proy[9]["growth"],1)} en el año 10, y que el margen operativo ajustado baje desde {pc(proy[0]["margin"],1)} hasta {pc(base[3],0)}. Con una inversión incremental de capital que rinde {n(base[4],1)} dólares de ventas por dólar invertido en los años 1 a 5 y {n(base[5],1)} en los años 6 a 10, el retorno sobre el capital invertido converge a {pc(base[6],1)} en el terminal, con un crecimiento perpetuo de {pc(base[9],1)}.'),
+    '<h3>Lo que el análisis no afirma</h3>' + P(
+      'Esta revisión se publica como EN_REVISION: las cifras son el resultado de una hoja de cálculo con controles técnicos aprobados, no una opinión auditada. No se ha realizado auditoría económica independiente; beta (1,45) y costo de la deuda (6 %) son supuestos analíticos; el valor de las inversiones no operativas se iguala a su valor contable; los resultados del tercer trimestre fiscal de 2027 se anuncian el 17 de noviembre de 2026 y no se anticipan. Las salvedades completas están en el capítulo 14 y en el apartado 12 del Nivel 2.',
+      'La conclusión operativa es simple: a US$204,64 NVIDIA es una empresa extraordinaria cotizada a un precio que ya recoge el caso Base. El precio de compra con 35 % de margen de seguridad es US$' + n(mos) + '; la distancia entre ambos cifras la brecha de disciplina, no un juicio sobre la calidad del negocio.'))
+
+def cap2():
+    return chapter(2, 'Modelo de negocio, segmentos y monetización',
+    P('NVIDIA diseña procesadores gráficos y aceleradores de cómputo, equipos de interconexión (redes), sistemas completos y la capa de software que los hace programables. No fabrica obleas: contrata fundición, empaquetado avanzado, memoria de alto ancho de banda y ensamblaje a terceros. Esa estructura “fabless” es la razón por la que sus márgenes brutos son excepcionales y su capital fijo es pequeño frente a sus ingresos, y también la razón por la que su cadena de suministro es un riesgo de primer orden. En el segundo trimestre fiscal de 2027 (cerrado el 26 de julio de 2026) el margen bruto fue de 75,0 % (72.142 millones sobre 96.221 millones de ingresos), el margen operativo de 66,2 % (63.734 millones) y el gasto operativo total de 8.408 millones, un 55 % más que un año antes.'),
+    P('La compañía informa dos segmentos contables, Compute &amp; Networking y Graphics. La lectura económica que importa es otra: los ingresos de Data Center fueron 89.023 millones en el trimestre (92,5 % del total), de los cuales los grandes proveedores de nube aportaron 48.710 millones y los demás clientes (nubes de IA, industria y empresa) 40.313 millones; Edge Computing sumó 7.198 millones. Se trata de un negocio que, a efectos de valoración, se comporta como un solo mercado de infraestructura de IA con un segundo negocio —gráficos, consolas y estaciones de trabajo— que dejó de determinar el valor.'),
+    '<h3>De dónde viene el dinero</h3>' + P(
+      'NVIDIA vende plataformas, no componentes: la unidad económica es el sistema de entrenamiento o inferencia (GPU, redes, memoria, software), lo que explica el aumento del valor medio por pedido y la capacidad de capturar parte del presupuesto de infraestructura de sus clientes. El ingreso depende del precio de plataforma, de la mezcla de generaciones —Blackwell sigue siendo la gran mayoría de los envíos y la arquitectura Vera Rubin empezó envíos de producción en el tercer trimestre fiscal de 2027— y, sobre todo, de la capacidad de suministro. La empresa reconoce en su 10-Q “restricciones de suministro” actuales, de modo que parte del ritmo de ingresos lo fija la oferta y no la demanda.'),
+    '<h3>Monetización del software y de los acuerdos</h3>' + P(
+      'Los acuerdos de licencia y desarrollo, los servicios de soporte y los anticipos de clientes ya aparecen en el balance (4.616 millones de ingresos diferidos, de los cuales 2.800 millones son anticipos de clientes frente a 160 millones al inicio del año). Es un indicio de que algunos clientes pagan por asegurar capacidad futura, un hecho relevante para el capital de trabajo (capítulo 8) y para la calidad de los ingresos. La licencia no exclusiva con Groq, Inc. (consideración devengada de 986 millones y pagos de 2.944 millones en el semestre) muestra además que NVIDIA compra tecnología para cubrir segmentos de inferencia sin construir toda la pila internamente.'),
+    P('Para la valoración se trata el negocio como una sola unidad con un margen operativo que parte de niveles excepcionales y converge a un margen sostenible. No se proyectan segmentos por separado porque la hoja del Método A-1.2 modela ingresos totales, y porque el 92,5 % del ingreso trimestral y la práctica totalidad del beneficio incremental provienen de Data Center.'))
+
+def cap3():
+    g = {'US': 60074, 'TW': 26985, 'CN': 7880, 'OT': 1282}; tot = sum(g.values())
+    return chapter(3, 'Industria, mercado direccionable y crecimiento orgánico',
+    P('El mercado de NVIDIA no es “los semiconductores”; es el gasto de capital en centros de datos de IA de un grupo pequeño de compradores. Esa diferencia lo cambia todo: un sector de chips crece con el PIB mundial y con ciclos de inventario de dos o tres años, mientras que el cómputo acelerado crece con la monetización de modelos, con la disponibilidad de energía y suelo y con el acceso a financiamiento de proyectos que cuestan decenas de miles de millones de dólares.'),
+    table(['Región (sede del cliente directo)', 'Ingresos T2 FY27 (M US$)', 'Peso'], [
+        ['Estados Unidos', n(g['US']), pc(g['US']/tot)], ['Taiwán', n(g['TW']), pc(g['TW']/tot)],
+        ['China (incluye Hong Kong)', n(g['CN']), pc(g['CN']/tot)], ['Otros', n(g['OT']), pc(g['OT']/tot)], ['Total', n(tot), '100,0 %']],
+        'Ingresos por ubicación de la sede del cliente directo (10-Q, 26-jul-2026).'),
+    P('La geografía de los ingresos se lee con cautela: se asigna según la sede del cliente directo, no del usuario final ni del lugar de envío. Taiwán pesa 28,0 % porque allí tienen sede fabricantes de sistemas y equipos que ensamblan para terceros, no porque Taiwán sea un mercado final. Los ingresos de clientes con sede fuera de Estados Unidos fueron 38 % del total en el trimestre.'),
+    '<h3>Qué crece y por qué no puede crecer así para siempre</h3>' + P(
+      f'Los ingresos de NVIDIA pasaron de {n(rev[5])} millones en el año fiscal {yrs[5]} a {n(rev[9])} millones en {yrs[9]} y a {n(rev[10])} millones en los doce meses a julio de 2026. Es una expansión de 11 veces en cuatro años. Ningún mercado de infraestructura ha sostenido tasas así durante una década; la hoja Base asume un crecimiento de {pc(base[2],1)} anual compuesto en los años 1 a 5 y la desaceleración hasta {pc(proy[9]["growth"],1)} en el año 10. La historia Optimista llega a {pc(opt[2],1)} anual en los primeros cinco años y la Conservadora a {pc(cons[2],1)}.'),
+    '<h3>Las restricciones que fijan el techo</h3>' + P(
+      'El 10-Q describe tres cuellos de botella explícitos: la disponibilidad de “terreno, energía, envolvente y capital” de los clientes para construir centros de datos completos; las restricciones de suministro de memoria y empaquetado, y las licencias de exportación. Respecto de China, el Gobierno de Estados Unidos concedió licencias para enviar pequeñas cantidades de H200 a clientes específicos, pero el Gobierno chino restringió esas ventas; los envíos fueron inferiores al 1 % de los ingresos de Data Center del último trimestre y, además, están sujetos a un arancel de importación del 25 % que la compañía no pudo trasladar a sus clientes. El crecimiento Base no incluye ingresos adicionales por una reapertura de China no anunciada.'),
+    P('Una advertencia de método: crecer 40 % en el año 1 significa alcanzar 424.158 millones de ingresos proyectados. Con 177.837 millones ya reportados en el primer semestre, esa cifra exige unos 246.000 millones en el segundo (cerca de 123.000 millones por trimestre, frente a 96.221 millones del último trimestre reportado y una guía del emisor de 108.000 millones ±2 % para el trimestre siguiente). Es exigente pero coherente con la trayectoria secuencial reciente; una proyección de +70 %, como la que usaba la revisión R4, requeriría unos 169.000 millones por trimestre y no está respaldada por la evidencia disponible.'))
+
+def cap4():
+    return chapter(4, 'Ventajas competitivas y competencia',
+    P('La ventaja de NVIDIA no es un único activo sino la superposición de cuatro: arquitectura de procesadores a la vanguardia, redes y sistemas diseñados para escalar a miles de aceleradores, una pila de software (CUDA y bibliotecas) en la que se han formado los desarrolladores y que condiciona los costes de cambio, y escala de compras que le da acceso preferente a capacidad de fundición, empaquetado y memoria. Cada una por separado es replicable; juntas explican por qué su margen bruto ronda 75 % y por qué los clientes aceptan precios de plataforma que ningún competidor con productos comparables ha podido imponer.'),
+    '<h3>Quién compite y con qué</h3>' + P(
+      'La competencia llega por tres vías. Primero, los aceleradores propios de los grandes compradores (circuitos integrados de aplicación específica), que reducen la dependencia de NVIDIA en cargas de inferencia muy estandarizadas. Segundo, otros fabricantes de GPU y aceleradores, que compiten en precio y disponibilidad. Tercero, las soluciones de red de código abierto y de otros proveedores que erosionan la ventaja de interconexión. En este contexto, el 10-Q reconoce que los clientes pueden “adoptar nuevas tecnologías más gradualmente de lo previsto” y postergar compras de nuevas arquitecturas.'),
+    '<h3>La parte de la renta que es escasez, no foso</h3>' + P(
+      f'Es útil separar dos componentes del margen operativo actual de {pc(ebit[10]/rev[10],1)} (EBIT GAAP LTM sobre ingresos): la parte que es ventaja estructural (diseño, software, ecosistema) y la parte que es renta de escasez, es decir, el exceso de precio que los clientes pagan mientras la capacidad total es inferior a la demanda. La primera se mantiene mientras las barreras técnicas se mantengan; la segunda se disipa cuando la oferta alcanza a la demanda. La hoja Base converge a un margen objetivo de {pc(base[3],0)} (frente a {pc(proy[0]["margin"],1)} del año 1) precisamente porque trata una parte del margen actual como renta transitoria. La historia Optimista mantiene {pc(opt[3],0)} y la Conservadora {pc(cons[3],0)}; la Disrupción cae a {pc(disr[3],0)}.'),
+    '<h3>La señal más fiable de que el foso se estrecha</h3>' + P(
+      'No será una cifra de ingresos sino una combinación: caída del margen bruto no explicada por mezcla, aumento de los descuentos y programas de clientes (7.391 millones acumulados al cierre del trimestre), y compromisos de suministro crecientes sin ingresos que los respalden. Los dos últimos ya son visibles en los estados: la compañía incrementó sus compromisos de suministro y capacidad de 119.000 millones el trimestre anterior a 279.000 millones al 26 de julio de 2026, un movimiento que solo se justifica si la dirección espera que la demanda se mantenga muy por encima de la actual; si esa expectativa fallara, el costo sería un exceso de inventario y de obligaciones de compra, como los 4.500 millones que se registraron en el primer trimestre del año fiscal 2026 por los productos H20.'),
+    P('La conclusión competitiva para el modelo es que la ventaja es real y duradera pero que su retorno económico (ROIC) debe converger hacia el costo de capital más un diferencial sostenible, no mantenerse para siempre en niveles de 100 % o más. El ROIC terminal Base de la hoja es ' + pc(base[6], 1) + ' y el de la historia Optimista ' + pc(opt[6], 1) + '; ambos son muy superiores al costo de capital terminal de 8,99 % y requieren que el foso de software y plataforma sobreviva más de una década.'))
+
+def cap5():
+    return chapter(5, 'Ciclos empresariales, macroeconómicos y de mercado',
+    '<h3>Ciclo de la empresa</h3>' + P(
+      f'Con el esquema del ciclo de vida de Damodaran, NVIDIA está en la fase de expansión de escala más extrema de su historia: ingresos que se multiplicaron por {n(rev[9]/rev[7],1)} entre los años fiscales {yrs[7]} y {yrs[9]}. En la historia reciente conviven ciclos distintos: la caída de 2023 (el EBIT cayó de {n(ebit[4])} a {n(ebit[5])} millones por el ajuste de inventarios y las restricciones de exportación) y la expansión de 2024-2026. Eso es lo que hace peligrosa la extrapolación lineal: el negocio ya demostró que pasa de crecer 61 % a no crecer en doce meses (el crecimiento de ingresos fue {pc(rev[5]/rev[4]-1,1)} en {yrs[5]}, cuando el año anterior fue {pc(rev[4]/rev[3]-1,1)}).'),
+    '<h3>Ciclo económico, monetario y de crédito</h3>' + P(
+      'La demanda de NVIDIA se financia con flujo de caja de las mayores empresas del mundo, pero también con deuda, financiamiento de proyectos y capital privado. El 10-Q señala los vehículos de financiación a infraestructuras en que NVIDIA invierte (3.300 millones en método de participación en “financiadores de infraestructura”, con una exposición máxima a pérdida de 4.700 millones incluidos compromisos). El tipo del Tesoro a 10 años fue 5,29 % el 30 de septiembre y 4,94 % el 30 de octubre de 2026. Un costo de financiamiento alto reduce la rentabilidad de proyectos de centros de datos y modera los pedidos; uno bajo puede coincidir con debilidad económica y recortes de inversión publicitaria o empresarial, que es lo que monetiza la IA. La relación no es mecánica y por eso el modelo no la usa para fijar el crecimiento: solo ajusta el descuento.'),
+    '<h3>Ciclo de mercado y ánimo inversor</h3>' + P(
+      f'En el marco de ciclos de Howard Marks, la pregunta pertinente no es si NVIDIA es un gran negocio sino cuánto de él descuenta la cotización. El múltiplo precio/utilidad histórico al cierre fiscal fue {n(D["trailing"][12][7],1)}x en {yrs[7]}, {n(D["trailing"][12][8],1)}x en {yrs[8]}, {n(D["trailing"][12][9],1)}x en {yrs[9]} y {n(D["trailing"][12][11],1)}x sobre la utilidad LTM; esta última cifra está inflada por 30.399 millones de ingresos no operativos en los doce meses (ganancias por inversiones), lo que hace que el P/E LTM sea una señal más optimista de lo que sugiere el negocio operativo. Una acción puede caer aunque la empresa siga creciendo a dos dígitos si ese crecimiento ya estaba descontado; el valor Base de ' + usd(b35) + ' frente al precio de ' + usd(price) + ' indica que el mercado ya descuenta el caso central.'),
+    '<h3>Cómo se trata cada ciclo en la valoración</h3>' + P(
+      'El ciclo empresarial entra por la forma de la senda de crecimiento (desaceleración de 40 % a 4,5 % en diez años) y por el margen que converge; el ciclo macroeconómico entra por el costo de capital (Rf 5,29 % y prima de riesgo de 3,70 % del mismo corte, WACC inicial 10,6 % y terminal 8,99 %); el ciclo de mercado entra por los múltiplos de salida, que se fijan por la regla de ciclo de la casa (el múltiplo que NVIDIA tuvo cuando su crecimiento se parecía al que cada escenario espera en el año FY+3) y no por el múltiplo actual. Ninguno de los tres cambia los ingresos proyectados por sí solo: lo hacen las hipótesis explícitas de cada historia.'))
+
+def cap6():
+    rows = [[yrs[i], n(rev[i]), pc(gp[i]/rev[i],1) if i in range(11) else '', n(rd[i]), n(ebit[i]), pc(ebit[i]/rev[i],1), n(ni[i]), n(ocf[i]), n(-capex[i]), n(fcf[i])] for i in range(11)]
+    return chapter(6, 'Estados financieros, rentabilidad y calidad de resultados',
+    table(['Año fiscal', 'Ingresos', 'Margen bruto', 'I+D', 'EBIT', 'Margen EBIT', 'Utilidad neta', 'Flujo operativo', 'Capex', 'FCF'], rows,
+          'Serie histórica de la hoja (millones de US$; LTM = doce meses a 26-jul-2026).'),
+    P(f'La serie muestra una empresa cuya rentabilidad cambió de categoría: el margen operativo pasó de {pc(ebit[5]/rev[5],1)} en {yrs[5]} a {pc(ebit[10]/rev[10],1)} en los doce meses a julio de 2026, y el flujo de caja libre pasó de {n(fcf[5])} a {n(fcf[10])} millones. Entre {yrs[7]} y LTM la empresa generó una caja acumulada equivalente a varias veces el valor total de su negocio de hace cinco años.'),
+    '<h3>Calidad de los resultados</h3>' + P(
+      f'Cuatro advertencias separan la utilidad contable del flujo del negocio. Primera, la utilidad neta LTM de {n(ni[10])} millones incluye {n(IS[17][11])} millones de resultado no operativo (principalmente ganancias no realizadas en inversiones de capital: 24.140 millones en el semestre, de ellos 7.504 millones en valores no cotizados), que no forman parte del EBIT ni del flujo del DCF y que la hoja trata como activo no operativo, no como beneficio recurrente. Segunda, la compensación en acciones fue de {n(sbc[10])} millones LTM ({pc(sbc[10]/ocf[10],1)} del flujo operativo); el EBIT GAAP ya la descuenta, pero el flujo operativo y el FCF no. Tercera, las cuentas por cobrar subieron de 38.466 a 63.059 millones en seis meses y los inventarios de 21.403 a 31.575 millones: parte del crecimiento se financia con capital de trabajo. Cuarta, el flujo de caja del semestre (74.421 millones operativos y solo 4.434 de inversión en inmovilizado e intangibles) no incluye las compras de valores de capital (42.404 millones en el semestre).'),
+    '<h3>El tratamiento de I+D</h3>' + P(
+      f'La compañía gastó {n(rd[10])} millones en I+D en los doce meses. La hoja la capitaliza con una vida útil de tres años, lo que añade 12.337 millones al EBIT analítico (de 197.579 a 209.916 millones) y 37.371 millones al capital invertido. El resultado es un margen ajustado de {pc(proy[0]["margin"],2)} en el primer año proyectado, no comparable con el margen GAAP de {pc(ebit[10]/rev[10],1)}. La hoja no mezcla ambas bases: los márgenes objetivo de las historias (53 %, 43 %, 57 % y 30 %) son márgenes ajustados.'),
+    P('El estado financiero muestra también una compañía con balance muy líquido: 99.369 millones de caja y valores negociables (incluyen 42.783 millones de capital cotizado), 38.860 millones de deuda total con arrendamientos (33.500 millones de bonos sénior y un programa de papel comercial de 25.000 millones sin utilizar) y 228.984 millones de patrimonio.'))
+
+def cap7():
+    cap_pairs = [('Conservadora', cons), ('Base', base), ('Optimista', opt), ('Disrupción', disr)]
+    rows = [[k, pc(r[1],1), pc(r[2],1), pc(r[3],0), n(r[4],2), n(r[5],2), pc(r[6],1), pc(r[9],1)] for k, r in cap_pairs]
+    return chapter(7, 'Drivers de crecimiento, márgenes e hipótesis A-1.2',
+    P('El Método A-1.2 estima los supuestos con clases de referencia y con la evidencia del negocio, y los introduce en la hoja; la hoja calcula el valor. Cada historia tiene su propio crecimiento anual, su margen objetivo, su eficiencia de capital, su retorno terminal y su crecimiento perpetuo. Ninguna cifra de valor se escribe a mano.'),
+    table(['Historia', 'Probabilidad', 'CAGR años 1–5', 'Margen EBIT objetivo', 'Ventas/capital 1–5', 'Ventas/capital 6–10', 'ROIC terminal', 'g terminal'], rows,
+          'Supuestos de las cuatro historias (hoja Escenarios e historias).'),
+    '<h3>Crecimiento</h3>' + P(
+      f'La senda Base de crecimiento anual de ingresos por año es {", ".join(pc(p["growth"],1) for p in proy)}. Está anclada en tres evidencias: el primer semestre fiscal (177.837 millones), la guía del emisor para el tercer trimestre (108.000 millones ±2 %) y el tamaño de los compromisos de suministro (279.000 millones, que tienen sentido si el ritmo se sostiene durante varios trimestres). De ahí en adelante la senda baja a la mitad cada dos años aproximadamente, porque ningún mercado crece indefinidamente a tasas superiores a las de los clientes que lo financian.'),
+    '<h3>Márgenes</h3>' + P(
+      'El margen operativo ajustado parte de 69,3 % y converge a 53 % en el año 5 y se mantiene. La razón de no bajarlo más es que el gasto operativo crece menos que los ingresos (el gasto operativo del último trimestre fue solo 8,7 % de los ingresos). La razón de no mantenerlo es la competencia de aceleradores propios de los clientes, la presión de precios cuando el suministro se normaliza y el crecimiento del costo de memoria y fundición, que la propia compañía menciona como riesgo para el margen bruto.'),
+    '<h3>Impuestos</h3>' + P(
+      'La tasa efectiva del trimestre fue 16,5 % (11.819 millones sobre 71.507 millones de utilidad antes de impuestos) y la tasa efectiva de la hoja es 16,0 %. El modelo usa una tasa normalizada de 17 % durante la proyección y la marginal de 25,37 % en la convergencia terminal; es la parte más sencilla de justificar y la que menos mueve el valor.'),
+    P('El control de la hoja para las cuatro historias exige que el crecimiento terminal no supere la tasa libre de riesgo (5,29 %), que el ROIC terminal sea coherente con g y la reinversión, que la historia de Disrupción no libere capital automáticamente cuando caen las ventas (se mantiene “Sin liberación”) y que ningún escenario tenga flujos negativos sin justificación. Los cuatro estados de cálculo (K5 a K8) están en LISTO.'))
