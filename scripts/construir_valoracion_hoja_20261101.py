@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 TICKER = sys.argv[1]
-REV = f'{TICKER}-20261101-A12-R1'
+REV = sys.argv[2] if len(sys.argv) > 2 else f'{TICKER}-20261101-A12-R1'
 CAP = ROOT / f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json'
 # Molde de estructura: candidato previo DE LA MISMA EMPRESA (nunca de otra, por aislamiento); sus valores se sobrescriben.
 CAND_OLD = ROOT / {'INTU': 'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json'}.get(
@@ -28,7 +28,13 @@ def need(c, m):
 
 cap = json.loads(CAP.read_text()); D = cap['data']; sha = hashlib.sha256(CAP.read_bytes()).hexdigest()
 need(cap['revision_id'] == REV, 'revisión de la captura')
-v = copy.deepcopy(json.loads(CAND_OLD.read_text()))
+# DPZ no tiene candidato previo A: esqueleto propio solo con identidad (aislamiento: ningún molde de otra empresa).
+SKELETON = {'DPZ': {'ticker': 'DPZ', 'nombreActivo': "Domino's Pizza, Inc.", 'market': 'NASDAQ', 'moneda': 'USD', 'currency': 'USD',
+    'mos': 0.35, 'baseMOS': 'dcfBase', 'tipo': 'Madura', 'metodo_valoracion': 'A', 'version_metodo': 'A-1.2',
+    'fecha_corte': '2026-09-06', 'fechaCorteContable': '2026-09-06', 'reportSchema': 'jmr-valuation-two-levels-v5',
+    'auditoriaEconomica': 'NO_REALIZADA_PENDIENTE_REVISION_VISUAL', 'auditPendingUserVisualReview': True,
+    'valorEsperado': {'metodo': 'promedio ponderado de Conservadora, Base y Optimista (Disrupción aparte)'}}}
+v = copy.deepcopy(SKELETON[TICKER]) if TICKER in SKELETON else copy.deepcopy(json.loads(CAND_OLD.read_text()))
 for k in ('degradadoACandidato', 'hojas', 'revisionSupuestos', 'objetivoPonderado', 'valorPresentePonderado'):
     v.pop(k, None)   # campos del molde que no salen de esta captura
 v['sheet_id'] = cap['sheet_id']
@@ -206,6 +212,20 @@ CFG['INTU'] = {'salvedades': [
  'fuentes': [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/896878/000089687826000037/intu-20260731.htm',
              'https://www.sec.gov/Archives/edgar/data/896878/000089687826000029/fy26q4earningspressrelease.htm',
              'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']}
+CFG['DPZ'] = {'salvedades': [
+ 'EN_REVISION: valoración desde cero calculada por la copia limpia A-1.2 (AAA Finanzas/Análisis/DPZ), sin auditoría económica independiente ni certificación; no equivale a valor auditado. La hoja histórica B de DPZ no se heredó ni se modificó.',
+ 'Corte de la cartera: precio US$299,61 del 30-sep-2026 con Rf 5,29 % y ERP 3,70 % (Damodaran oct-2026). Corte contable LTM al 6-sep-2026 = 10-K FY25 + 10-Q 3T26 (presentado el 13-oct-2026, hecho posterior al corte de mercado usado como corte contable). Cambio de CEO el 1-oct-2026.',
+ 'Estados importados corregidos con nota y respaldo: LTM completo, deuda FY24/FY25 reclasificada desde otros pasivos, financiación FY24/FY25 mal etiquetada en XBRL, FCF/NOPAT LTM y rótulo LTM de Trailing Valuation.',
+ 'Patrimonio contable negativo (−3.955) por recapitalizaciones con deuda securitizada: P/BV es N/A (complementario sin valor) y el P/E no tiene ancla C (ROE no definido).',
+ 'Disrupción formulada como estancamiento (ventas planas años 1-3, margen 16 %, ROIC = costo de capital): con caída de ventas la hoja libera capital y el motor no (política «Sin liberación»); con la caída la Disrupción valía ~88-89, fuera del promedio.',
+ 'Arrendamientos: la ficha usa VP 262,4 para el ajuste de ventas/capital y la hoja calcula 222,2 a su Kd sintético de 6,30 %; efecto en la Base < 1,5 % (salvedad no bloqueante §4B). Lag de reinversión 0 no probado en copia separada.',
+ 'Múltiplos por regla de ciclo con tope LTM del Conservador y ancla C; el Optimista supera +25 % el múltiplo actual en cuatro métodos (justificacion_salto: caída de 31 % del precio con EBIT +4,8 %). Pesos del perfil Madura de la plantilla, revisados. Pares PZZA, YUM, MCD, QSR, WING solo comprueban.',
+ 'Probabilidades 45/25/20/10: previa madura estable con −5 pp Base / +5 pp Conservadora por ventas mismas tiendas internacionales de 9M26 (−0,1 %) bajo el umbral 0 %.',
+ 'Controles: 15/15 candados, integridad y estados completos 0 hallazgos, entradas esenciales 0 vacías, contrato A OK, probabilidades 0 fallos, controles de supuestos 0, verificador de múltiplos APTO (P/BV complementario no utilizado), motor = hoja. apply_canonical_formulas.py no ejecutable por un error de importación previo. QA visual autenticado pendiente.'],
+ 'fuentes': [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/1286681/000119312526062321/dpz-20251228.htm',
+             'https://www.sec.gov/Archives/edgar/data/1286681/000128668126000040/dpz-20260906.htm',
+             'https://www.sec.gov/Archives/edgar/data/1286681/000128668126000039/dpz-ex99_1.htm',
+             'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']}
 v['salvedades'] = CFG[TICKER]['salvedades']
 v['fuentes_supuestos'] = CFG[TICKER]['fuentes']
 v['estado'] = v['publicationStatus'] = 'EN_REVISION'
@@ -215,6 +235,15 @@ v['controlEditorial'] = {'nivel1Capitulos': 14, 'nivel2Apartados': 12, 'estado':
 v['reporteFuentes'] = {'captura': f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json', 'capturaSha256': sha,
     'gates': 'docs/CIERRE_GATES_META_NVDA_20261101.md', 'multiplos': 'docs/MULTIPLOS_Y_PUENTE_NVDA_META_20261101.md',
     'fechas': 'docs/FECHAS_TASAS_META_NVDA_20261101.md'}
+if TICKER == 'DPZ':
+    v['reporteFuentes'] = {'captura': f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json', 'capturaSha256': sha,
+        'research': 'JMR-valuation: data/DPZ_Research_JMR_A1_2026-11-01.md',
+        'scripts': 'JMR-valuation: scripts/run_dpz_cero.py, scripts/dpz_cero_spec.py, reference/multiplos_v3/DPZ_decision.json'}
+    v['metodoPrincipal'] = 'DCF FCFF 10 años, Método JMR A-1.2, calculado por la hoja (Valuation output!B35)'
+    v['revisionOrigen'] = 'Copia limpia de la plantilla IA vigente (46 pestañas) en AAA Finanzas/Análisis/DPZ; desde cero con 10-K FY2025 y 10-Q 3T26.'
+    v['objetivoPonderado'] = v['valorPresentePonderado'] = {'estado': 'CALCULADO_NATIVO_EN_REVISION', **v['descuentoMultiples']['ponderadoHoy']}
+    v['precioReferenciaFecha'] = '2026-09-30'
+    v['precioReferenciaFuente'] = 'Cierre del 30-sep-2026 (corte vigente de la cartera, JMR-valuation reference/corte_vigente.json; yfinance auto_adjust=False)'
 if TICKER == 'INTU':
     v['reporteFuentes'] = {'captura': f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json', 'capturaSha256': sha,
         'valoracion': 'docs/VALORACION_INTU_A12_20261101.md',
