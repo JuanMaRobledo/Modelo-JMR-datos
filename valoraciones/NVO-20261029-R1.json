@@ -35,7 +35,7 @@
   "metodos": [
     {
       "nombre": "DCF Damodaran",
-      "peso": 1,
+      "peso": 0.55,
       "valorHoy": {
         "conservador": 39.15387273476057,
         "base": 63.42808082810516,
@@ -45,31 +45,31 @@
     {
       "nombre": "EV/EBITDA",
       "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
-      "peso": null,
+      "peso": 0.049999999999999996,
       "valorHoy": null
     },
     {
       "nombre": "EV/FCFF",
       "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
-      "peso": null,
+      "peso": 0.19999999999999998,
       "valorHoy": null
     },
     {
       "nombre": "P/E",
       "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
-      "peso": null,
+      "peso": 0.049999999999999996,
       "valorHoy": null
     },
     {
       "nombre": "P/FCFE",
       "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
-      "peso": null,
+      "peso": 0.09999999999999999,
       "valorHoy": null
     },
     {
       "nombre": "P/OCF",
       "estado": "PENDIENTE_MÚLTIPLOS_NATIVOS",
-      "peso": null,
+      "peso": 0.049999999999999996,
       "valorHoy": null
     },
     {
@@ -778,10 +778,24 @@
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.049999999999999996,
+        "pesoRelativo": 0.11111111111111112,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            72.20809143862202,
+            87.1350636525037,
+            105.78078652718048
+          ],
+          "vp": [
+            66.27027481518174,
+            74.42333390376612,
+            84.83348536969106
+          ],
+          "consolidado": 75.17569802954631,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D11:K11"
+        },
         "base": {
           "fy": [
             77.05851420294854,
@@ -797,14 +811,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D20:K20"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            79.96876786154445,
+            106.6794585738066,
+            135.7235153071544
+          ],
+          "vp": [
+            73.39277520332641,
+            90.8855402258457,
+            107.98023919600612
+          ],
+          "consolidado": 90.75285154172609,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D29:K29"
+        }
       },
       {
         "nombre": "EV/FCFF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.19999999999999998,
+        "pesoRelativo": 0.4444444444444445,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            113.20694977084071,
+            114.13740280373275,
+            124.76780329272243
+          ],
+          "vp": [
+            103.8977145473942,
+            97.16735233340736,
+            99.51109896321402
+          ],
+          "consolidado": 100.19205528133853,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D12:K12"
+        },
         "base": {
           "fy": [
             89.50884625680897,
@@ -820,14 +862,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D21:K21"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            72.62720163583492,
+            94.19718197409382,
+            131.96136064227267
+          ],
+          "vp": [
+            66.65492073773396,
+            80.37174260861872,
+            105.07196491932157
+          ],
+          "consolidado": 84.03287608855808,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D30:K30"
+        }
       },
       {
         "nombre": "P/E",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.049999999999999996,
+        "pesoRelativo": 0.11111111111111112,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            76.58701938153527,
+            90.56689606233505,
+            109.1398434324839
+          ],
+          "vp": [
+            70.2891147040522,
+            77.31395975434513,
+            87.43015128638076
+          ],
+          "consolidado": 78.34440858159269,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D13:K13"
+        },
         "base": {
           "fy": [
             81.53026582073164,
@@ -843,14 +913,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D22:K22"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            84.49621368424945,
+            110.69819598693951,
+            140.0274202296147
+          ],
+          "vp": [
+            77.54792004795289,
+            94.27051503400129,
+            111.3073049575837
+          ],
+          "consolidado": 94.37524667984597,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D31:K31"
+        }
       },
       {
         "nombre": "P/FCFE",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.09999999999999999,
+        "pesoRelativo": 0.22222222222222224,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            110.13443918754203,
+            113.25171757965667,
+            125.22409748980924
+          ],
+          "vp": [
+            101.07786269047544,
+            96.42134136945239,
+            99.8638299894994
+          ],
+          "consolidado": 99.12101134980907,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D14:K14"
+        },
         "base": {
           "fy": [
             91.29676979273782,
@@ -866,14 +964,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D23:K23"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            77.78005092015397,
+            100.20389609385423,
+            136.62562672726537
+          ],
+          "vp": [
+            71.38404085917215,
+            85.43118638037056,
+            108.67760218916064
+          ],
+          "consolidado": 88.49760980956778,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D32:K32"
+        }
       },
       {
         "nombre": "P/OCF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.049999999999999996,
+        "pesoRelativo": 0.11111111111111112,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            96.96766084072851,
+            104.96145078584729,
+            119.88072306464836
+          ],
+          "vp": [
+            88.99381501535291,
+            89.43846556417384,
+            95.73321873726955
+          ],
+          "consolidado": 91.38849977226543,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D15:K15"
+        },
         "base": {
           "fy": [
             88.02727627645113,
@@ -889,19 +1015,73 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D24:K24"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            81.36517852187316,
+            104.0485875784324,
+            136.69568410656075
+          ],
+          "vp": [
+            74.67435620583073,
+            88.66956263702723,
+            108.7317589403433
+          ],
+          "consolidado": 90.69189259440043,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D33:K33"
+        }
       }
     ],
     "integracionNativa": {
       "revisionId": "NVO-20261029-R1",
       "sourceSheetId": "1gyqxSLGIVhddAa7k7MtaCaHi1PFNVIprg14fRuLdeGA",
       "rango": "'Descuento de múltiplos'!A1:M80",
-      "capturaSha256": "a654ceea1d48da590ad805739a80cc4b16e1bd4c839d955b22acb43e81e197a4",
-      "fechaCaptura": "2026-10-31",
-      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "capturaSha256": "4cf22d29a3c4bfe9e2ca92551e7cf26c822e6a3ceddfe522f2bf1c1d39d30f82",
+      "fechaCaptura": "2026-11-01",
+      "estado": "METODOS_Y_CONSOLIDACION_CONCILIADOS",
       "certificadoEconomico": false,
       "calculosExternosExportados": false,
-      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
-    }
+      "motivoPendiente": null,
+      "categoriaEmpresa": "Biotech/Farma",
+      "justificacionPesos": "Biotech/Farma: valor concentrado en flujos de cartera de productos; 55 % DCF y relativos con más peso en EV/FCFF (20 %) por la caja operativa.",
+      "respaldoAnterior": "evidencia/descuentos-20261101/respaldo/NVO/"
+    },
+    "dcfHoy": {
+      "conservador": 39.15387273476057,
+      "base": 63.42808082810516,
+      "optimista": 93.4743207682763
+    },
+    "multiplesHoy": {
+      "conservador": 93.76876113426408,
+      "base": 88.86284472401655,
+      "optimista": 87.6607460877045
+    },
+    "ponderadoHoy": {
+      "conservador": 63.730572514537144,
+      "base": 74.8737245812653,
+      "optimista": 90.85821216201899
+    },
+    "costoPatrimonio": 0.0896,
+    "criterio": "Promedio 1-3 años",
+    "pesoDcf": 0.55,
+    "pesoMultiplos": 0.44999999999999996,
+    "resumenNativo": {
+      "dcfHoy": {
+        "conservador": 39.15387273476057,
+        "base": 63.42808082810516,
+        "optimista": 93.4743207682763
+      },
+      "multiplesHoy": {
+        "conservador": 93.76876113426408,
+        "base": 88.86284472401655,
+        "optimista": 87.6607460877045
+      },
+      "ponderadoHoy": {
+        "conservador": 63.730572514537144,
+        "base": 74.8737245812653,
+        "optimista": 90.85821216201899
+      }
+    },
+    "chequeo": "CONCILIADO_NATIVO_EN_REVISION"
   }
 }

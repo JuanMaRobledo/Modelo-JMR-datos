@@ -17,13 +17,15 @@ test('seis fotos relativas con 90 filas de método: guardadas y sin publicación
  for(const [ticker,revision] of cases){
   const e=read('evidencia/capturas-descuentos-pendientes-20261031/'+revision+'.json');
   const v=read('valoraciones/'+revision+'.json');
-  const d=v.descuentoMultiples||{},record=manifest.entries.find(x=>x.ticker===ticker);
+  const prev=read('evidencia/descuentos-20261101/respaldo/'+ticker+'/'+revision+'.json');
+  const d=prev.descuentoMultiples||{},record=manifest.entries.find(x=>x.ticker===ticker);
+  const now=v.descuentoMultiples||{};
   assert.ok(record,'falta registro de divergencia '+ticker);
   assert.equal(e.kind,'CAPTURA_DESCUENTOS_NO_PUBLICADA_PESOS_DIVERGENTES');
   assert.equal(e.ticker,ticker);assert.equal(e.revisionId,v.revisionId);
   assert.equal(e.sourceSheetId,v.sheet_id);
   assert.equal(e.dcfPreserved,true);
-  assert.equal(e.integrated,false);assert.equal(e.economicAudit,false);
+  assert.equal(e.integrated,false);assert.equal(e.economicAudit,false); // la captura pendiente describe el estado previo a la resolución
   assert.equal(v.estado,'EN_REVISION');
   assert.ok(near(e.sourceValues[37][3],v.valorPrincipal));
   assert.ok(near(record.json.dcfBase,v.valorPrincipal));
@@ -54,6 +56,11 @@ test('seis fotos relativas con 90 filas de método: guardadas y sin publicación
   // El objetivo relativo de estas seis revisiones NO está integrado.
   assert.ok(d.multiplesHoy==null,'No debe haber valor relativo agregado, ni siquiera cero');
   assert.ok(d.metodos.every(m=>m.conservador===null&&m.optimista===null));
+  // Estado actual: resuelto con fotografía nueva (pesos de la hoja y 15 descuentos), sin cambiar el DCF.
+  assert.ok(near(e.newWeightDcf,now.pesoDcf)&&near(e.newWeightMultiples,now.pesoMultiplos),'Pesos actuales distintos de la hoja '+ticker);
+  assert.ok(now.metodos.every(m=>m.conservador&&m.optimista&&near(m.peso,checks.find(x=>x.method===m.nombre&&x.scenario==='base').sourceWeight)));
+  assert.ok(Number.isFinite(now.multiplesHoy?.base));
+  assert.ok(near(v.valorPrincipal,prev.valorPrincipal));
  }
  assert.equal(count,90);assert.equal(formulas,630);
 });

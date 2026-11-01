@@ -36,7 +36,7 @@
   "metodos": [
     {
       "nombre": "DCF Damodaran",
-      "peso": 0.6,
+      "peso": 0.5,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -48,7 +48,7 @@
     },
     {
       "nombre": "EV/EBITDA",
-      "peso": null,
+      "peso": 0.1,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -56,7 +56,7 @@
     },
     {
       "nombre": "EV/FCFF",
-      "peso": null,
+      "peso": 0.1,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -64,7 +64,7 @@
     },
     {
       "nombre": "P/E",
-      "peso": null,
+      "peso": 0.1,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -72,7 +72,7 @@
     },
     {
       "nombre": "P/FCFE",
-      "peso": null,
+      "peso": 0.1,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -80,7 +80,7 @@
     },
     {
       "nombre": "P/OCF",
-      "peso": null,
+      "peso": 0.1,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -179,24 +179,46 @@
     ]
   },
   "descuentoMultiples": {
-    "criterio": "7 múltiplos JMR calculados en hojas nativas; anclas y precio fiscal por año no completados; no sustituir por AZ EBITDA externo, no inventar múltiplos",
-    "pesoDcf": 0.6,
-    "pesoMultiplos": 0.4,
+    "criterio": "Promedio 1-3 años",
+    "pesoDcf": 0.5,
+    "pesoMultiplos": 0.5,
     "dcfHoy": {
       "conservador": 126.2443541,
       "base": 184.4085326,
       "optimista": 248.7059859
     },
-    "multiplesHoy": null,
-    "ponderadoHoy": null,
-    "chequeo": "NO_CERTIFICADO",
+    "multiplesHoy": {
+      "conservador": 213.21628677028139,
+      "base": 210.9996826784673,
+      "optimista": 215.28073932139867
+    },
+    "ponderadoHoy": {
+      "conservador": 169.730320425643,
+      "base": 197.70410763446876,
+      "optimista": 231.99336260955204
+    },
+    "chequeo": "CONCILIADO_NATIVO_EN_REVISION",
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.1,
+        "pesoRelativo": 0.2,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            211.05687815260754,
+            218.0847877623719,
+            226.5572059638981
+          ],
+          "vp": [
+            191.71303311164277,
+            179.94079276087868,
+            169.798662462828
+          ],
+          "consolidado": 180.48416277844981,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D11:K11"
+        },
         "base": {
           "fy": [
             214.95145803295057,
@@ -212,14 +234,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D20:K20"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            219.81968288337933,
+            250.42518844589108,
+            280.9790207290491
+          ],
+          "vp": [
+            199.67270677026008,
+            206.6247141700957,
+            210.58638014590596
+          ],
+          "consolidado": 205.62793369542058,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D29:K29"
+        }
       },
       {
         "nombre": "EV/FCFF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.1,
+        "pesoRelativo": 0.2,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            275.72121147529975,
+            264.20248180456787,
+            252.19182264508322
+          ],
+          "vp": [
+            250.45073255999614,
+            217.99229791812286,
+            189.0111329145784
+          ],
+          "consolidado": 219.1513877975658,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D12:K12"
+        },
         "base": {
           "fy": [
             246.5346434779734,
@@ -235,14 +285,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D21:K21"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            222.0590163262876,
+            243.91097903712355,
+            268.1098511500849
+          ],
+          "vp": [
+            201.70680018738088,
+            201.2498688301208,
+            200.94127628695546
+          ],
+          "consolidado": 201.29931510148572,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D30:K30"
+        }
       },
       {
         "nombre": "P/E",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.1,
+        "pesoRelativo": 0.2,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            228.9995477273118,
+            236.7044705632343,
+            245.42120662207088
+          ],
+          "vp": [
+            208.01121602989537,
+            195.3038105968314,
+            183.93673442053944
+          ],
+          "consolidado": 195.7505870157554,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D13:K13"
+        },
         "base": {
           "fy": [
             233.4897349376513,
@@ -258,14 +336,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D22:K22"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            239.10246895057557,
+            276.4151498131813,
+            311.97605066892277
+          ],
+          "vp": [
+            217.188181442979,
+            228.06891621756066,
+            233.81783818635105
+          ],
+          "consolidado": 226.35831194896357,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D31:K31"
+        }
       },
       {
         "nombre": "P/FCFE",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.1,
+        "pesoRelativo": 0.2,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            296.1968869415416,
+            285.1168530442426,
+            273.6359880004022
+          ],
+          "vp": [
+            269.04976559318885,
+            235.24865302466512,
+            205.08297039806638
+          ],
+          "consolidado": 236.4604630053068,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D14:K14"
+        },
         "base": {
           "fy": [
             266.52863275054546,
@@ -281,14 +387,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D23:K23"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            241.84485515689337,
+            268.3683831783686,
+            297.13015622520754
+          ],
+          "vp": [
+            219.67922168852155,
+            221.4295646961346,
+            222.69123107234532
+          ],
+          "consolidado": 221.26667248566716,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D32:K32"
+        }
       },
       {
         "nombre": "P/OCF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.1,
+        "pesoRelativo": 0.2,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            291.9517238427837,
+            282.4757144061693,
+            272.77990289303534
+          ],
+          "vp": [
+            265.19368139048385,
+            233.06946122865534,
+            204.44135714384748
+          ],
+          "consolidado": 234.2348332543289,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D15:K15"
+        },
         "base": {
           "fy": [
             265.3293831854357,
@@ -304,19 +438,54 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D24:K24"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            243.3591237695989,
+            268.8805484077889,
+            297.07185527351027
+          ],
+          "vp": [
+            221.0547041235343,
+            221.85214995919688,
+            222.6475360436377
+          ],
+          "consolidado": 221.8514633754563,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D33:K33"
+        }
       }
     ],
     "integracionNativa": {
       "revisionId": "EPAM-20261029-R1",
       "sourceSheetId": "1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA",
       "rango": "'Descuento de múltiplos'!A1:M80",
-      "capturaSha256": "f5638d41b7d7a46b7e542a55f93c5ca9629c376c54e3d5909c82bf8fadb3f3db",
-      "fechaCaptura": "2026-10-31",
-      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "capturaSha256": "b386e70e904b51613c503d28257c1657ecad7169e3c9e6909568b65b4332b8c1",
+      "fechaCaptura": "2026-11-01",
+      "estado": "METODOS_Y_CONSOLIDACION_CONCILIADOS",
       "certificadoEconomico": false,
       "calculosExternosExportados": false,
-      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+      "motivoPendiente": null,
+      "categoriaEmpresa": "Genérico",
+      "justificacionPesos": "Genérico: servicios de TI sin rasgo dominante de crecimiento ni defensivo; reparto equilibrado 50 % DCF y 10 % por cada uno de los cinco relativos.",
+      "respaldoAnterior": "evidencia/descuentos-20261101/respaldo/EPAM/"
+    },
+    "costoPatrimonio": 0.1009,
+    "resumenNativo": {
+      "dcfHoy": {
+        "conservador": 126.24435408100459,
+        "base": 184.40853259047017,
+        "optimista": 248.70598589770538
+      },
+      "multiplesHoy": {
+        "conservador": 213.21628677028139,
+        "base": 210.9996826784673,
+        "optimista": 215.28073932139867
+      },
+      "ponderadoHoy": {
+        "conservador": 169.730320425643,
+        "base": 197.70410763446876,
+        "optimista": 231.99336260955204
+      }
     }
   },
   "revisionSupuestos": {

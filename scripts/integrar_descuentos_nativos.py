@@ -54,7 +54,7 @@ def integrate(v, capture, formulas, raw_hash):
     d['metodos']=methods
     d['integracionNativa']={'revisionId':v['revisionId'],'sourceSheetId':v['sheet_id'],
        'rango':"'Descuento de múltiplos'!A1:M80",'capturaSha256':raw_hash,
-       'fechaCaptura':'2026-10-31','estado':'METODOS_Y_CONSOLIDACION_CONCILIADOS' if complete_weights else 'METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE',
+       'fechaCaptura':capture.get('fechaCaptura','2026-10-31'),'estado':'METODOS_Y_CONSOLIDACION_CONCILIADOS' if complete_weights else 'METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE',
        'certificadoEconomico':False,'calculosExternosExportados':False,
        'motivoPendiente':None if complete_weights else 'Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente.'}
     if complete_weights:
@@ -71,6 +71,7 @@ def integrate(v, capture, formulas, raw_hash):
         d.setdefault('criterio',rows[5][1])
         d.setdefault('pesoDcf',rows[37][1]);d.setdefault('pesoMultiplos',rows[38][1])
         d['resumenNativo']=summary
+    d['integracionNativa']={**(before.get('descuentoMultiples') or {}).get('integracionNativa',{}),**d['integracionNativa']}
     v['descuentoMultiples']=d
     assert all(v[k]==before[k] for k in before.keys()-{'descuentoMultiples'})
     return v

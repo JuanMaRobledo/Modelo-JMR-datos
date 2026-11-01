@@ -1,0 +1,948 @@
+{
+  "ticker": "NKE",
+  "nombreActivo": "NIKE, Inc. (NYSE: NKE)",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0/edit",
+  "sheet_id": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
+  "fecha": "2026-10-29",
+  "fechaRevision": "2026-10-29",
+  "fechaCorteContable": "2026-08-31",
+  "fecha_corte": "2026-08-31",
+  "precio": 37.15,
+  "precioAnalisis": 37.15,
+  "precioReferenciaFecha": "2026-10-28",
+  "precioReferenciaFuente": "NASDAQ cierre regular 28 oct 2026; https://stockanalysis.com/stocks/nke/history/",
+  "moneda": "USD",
+  "currency": "USD",
+  "market": "US",
+  "tipo": "Footwear / Athletic Apparel / Brands",
+  "mos": 0.35,
+  "precioMOS": 24.523176281500003,
+  "baseMOS": "dcfBase",
+  "valorPrincipal": 37.72796351,
+  "metodoPrincipal": "DCF FCFF perpetuidad · JMR Método A-1.2",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "revisionId": "NKE-20261029-R1",
+  "revision_id": "NKE-20261029-R1",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "EN_REVISION",
+  "validationStatus": "CUATRO_ESCENARIOS_LISTOS_WACC_DETAILED_VALIDADO_DCF_SENSIBILIDAD_OK_MULTIPLOS_INCOMPLETOS_REVISION_VISUAL_PENDIENTE",
+  "publicationAuthorized": true,
+  "publicationAuthorization": "User requested NKE new JMR A + independent AZ, old active to delete",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 0.6,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "valorHoy": {
+        "conservador": 23.48326485,
+        "base": 37.72796351,
+        "optimista": 53.03947487
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "P/S",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": null,
+      "conservador": null,
+      "base": null,
+      "optimista": null,
+      "estado": "PENDIENTE_RECONCILIACION_Y_VALIDACION_ANCLAS_NATIVAS"
+    }
+  ],
+  "objetivoPonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "horizonteAnios": 3,
+    "estado": "NO_PUBLICAR_HASTA_MULTIPLOS"
+  },
+  "valorPresentePonderado": {
+    "conservador": null,
+    "base": null,
+    "optimista": null,
+    "estado": "PENDIENTE_MULTIPLOS"
+  },
+  "valorEsperado": {
+    "valor": 37.965033,
+    "tipoPromedio": "3_historias_renormalizado",
+    "valorCentral": 37.72796351,
+    "historiaCentralId": "Base",
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "nombre": "Base — recuperación Nike performance, menos descuentos",
+        "probabilidad": 0.5,
+        "crecimiento": 0.02960572849,
+        "margen": 0.124,
+        "s2c": 1.5,
+        "s2c610": 2.3,
+        "roicTerminal": 0.16,
+        "valor": 37.72796351,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "descripcion": "Crecimiento FY+1 −2%, +2%,+4%,+5%,+6% años 2-5, recuperación a EBIT 12,4% año10; capacidad tercerizada, invierte en inventarios y marca."
+      },
+      {
+        "nombre": "Conservadora — recuperación lenta China y NIKE Direct",
+        "probabilidad": 0.2,
+        "crecimiento": -0.004417130091,
+        "margen": 0.1,
+        "s2c": 1,
+        "s2c610": 1.65,
+        "roicTerminal": 0.12,
+        "valor": 23.48326485,
+        "terminalGrowth": 0.035,
+        "estado": "LISTO"
+      },
+      {
+        "nombre": "Disrupción — pérdida estructural cuota ante HOKA, On, Adidas",
+        "probabilidad": 0.1,
+        "crecimiento": -0.0404168839,
+        "margen": 0.067,
+        "s2c": 0.75,
+        "s2c610": 1.2,
+        "roicTerminal": 0.09,
+        "valor": 13.60373295,
+        "terminalGrowth": 0.02,
+        "estado": "LISTO"
+      },
+      {
+        "nombre": "Optimista — innovación running y margen se recuperan",
+        "probabilidad": 0.2,
+        "crecimiento": 0.05556289983,
+        "margen": 0.145,
+        "s2c": 2,
+        "s2c610": 2.8,
+        "roicTerminal": 0.19,
+        "valor": 53.03947487,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO"
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "criterio": "Siete múltiplos históricos nativos: requiere completar entradas verificadas, distinguir precios brutos de históricos ajustados y validar FCFF/FCFE de Nike; no se asigna peso a outputs no verificados",
+    "pesoDcf": 0.6,
+    "pesoMultiplos": 0.4,
+    "dcfHoy": {
+      "conservador": 23.48326485,
+      "base": 37.72796351,
+      "optimista": 53.03947487
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": null,
+    "chequeo": "PENDIENTE",
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            41.32956099794294,
+            47.453037088653716,
+            53.04509156482449
+          ],
+          "vp": [
+            37.4701368975004,
+            39.15579220785602,
+            39.96815571826054
+          ],
+          "consolidado": 38.86469494120565,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D20:K20"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            57.54671733952202,
+            52.8961713169409,
+            53.03990537040487
+          ],
+          "vp": [
+            52.17290783274888,
+            43.62981321895094,
+            39.964290960693255
+          ],
+          "consolidado": 45.25567067079769,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D21:K21"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            31.520741758276323,
+            36.85442822020917,
+            41.76499298766118
+          ],
+          "vp": [
+            28.577281739144446,
+            30.44419393064079,
+            31.562214326832358
+          ],
+          "consolidado": 30.194563332205863,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D22:K22"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            40.70055821874498,
+            39.971939884929284,
+            41.75933653399201
+          ],
+          "vp": [
+            36.89987145851766,
+            33.00665373877973,
+            31.55799913157488
+          ],
+          "consolidado": 33.82150810962409,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D23:K23"
+        },
+        "optimista": null
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "pesoRelativo": 0,
+        "estado": "CONTRASTE_SIN_CONSOLIDACION",
+        "conservador": null,
+        "base": {
+          "fy": [
+            42.019157750031525,
+            40.4277369249498,
+            41.770994725029624
+          ],
+          "vp": [
+            38.09533794200501,
+            33.38129920007462,
+            31.56668682786777
+          ],
+          "consolidado": 34.34777465664913,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D24:K24"
+        },
+        "optimista": null
+      }
+    ],
+    "integracionNativa": {
+      "revisionId": "NKE-20261029-R1",
+      "sourceSheetId": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
+      "rango": "'Descuento de múltiplos'!A1:M80",
+      "capturaSha256": "45c863fdf4697260ef48c9cc53689dce7740a633d6d2e093fb5f2268837814b9",
+      "fechaCaptura": "2026-10-31",
+      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "certificadoEconomico": false,
+      "calculosExternosExportados": false,
+      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+    }
+  },
+  "revisionSupuestos": {
+    "metodo": "A",
+    "version": "A-1.2",
+    "crecimientoFY1": -0.02,
+    "crecimientoFY5": 0.06,
+    "crecimientoBase": 0.02960572849,
+    "crecimientoAnios": [
+      -0.02,
+      0.02,
+      0.04,
+      0.05,
+      0.06,
+      0.055,
+      0.05,
+      0.045,
+      0.04,
+      0.04
+    ],
+    "margenEBITGAAPLtm": 0.08188969514719661,
+    "margenEBITObjetivo": 0.124,
+    "ebitGAAPLtmMillones": 3758,
+    "ingresosLtmMillones": 45891,
+    "capexLtmMillones": 676,
+    "cfoLtmMillones": 2781,
+    "fcfLtmMillones": 2105,
+    "stcMarginalHistoricoAproximado": null,
+    "stcMarginalHistoricoLimitacion": "Ventas FY25 46309 a FY26 46398 suben 89m en plena fase turnaround; Δventas/Δreinversión no representativo y no se reemplaza por promedio S/C.",
+    "stcPromedio": 2.560310199,
+    "stcMarginal1a5": 1.5,
+    "stcMarginal6a10": 2.3,
+    "roicActualModeloAjustado": 0.1663,
+    "roicFY26ReportadoEmisor": 0.187,
+    "roicAnio10": 0.2183,
+    "roicTerminal": 0.16,
+    "rf": 0.0505,
+    "erp": 0.042,
+    "beta": 1.25,
+    "waccInicial": 0.0951,
+    "waccTerminal": 0.0925,
+    "gTerminal": 0.04,
+    "rdAmortizacionAnios": null,
+    "rdNoCapitalizada": "I+D no revelada de manera separable (N/D); actividad Nike innovación incorporada en SG&A, no se inventa activo I+D",
+    "deudaInclLeasesMillones": 11072,
+    "cajaYValoresMillones": 8368,
+    "nonOperatingAssetValueMillones": 0,
+    "lagAnios": 1,
+    "netDebtMillones": 2704,
+    "inventarioAgosto2026Millones": 7846,
+    "inventarioMayo2026Millones": 7501,
+    "contractionNoLiberation": "Input sheet B98:B101 Sin liberación, se impide beneficio automático de desinversión al caer ventas",
+    "reinvPrimerAnio": 599.6424,
+    "nopatPrimerAnio": 3032.488815,
+    "roicAnio10Advertencia": "ROIC año10 21,83% cae a 16% estable; 5,83pp de convergencia terminal pendiente económica",
+    "fcffLtmObservadoMillones": 2105,
+    "azStocks": {
+      "hojaGoogle": "https://docs.google.com/spreadsheets/d/1VffA6YgOvkCJMZFz_GVYpMOkEZtNxLDpNai_6Vg8NCU/edit",
+      "valorPrincipalPerpetuidad": 41.85,
+      "valorSalidaEV_EBITDA": 51.19,
+      "valorCombinado": 45.58,
+      "escenariosDCF": {
+        "optimista": 67.37,
+        "base": 41.85,
+        "pesimista": 25.83
+      },
+      "pesos": {
+        "perpetuidad": 0.6,
+        "salida": 0.4
+      },
+      "wacc": 0.093,
+      "g": 0.035,
+      "terminalReinversionMillones": 1158,
+      "terminalNopatMillones": 6512.6,
+      "terminalCapexMillones": 1800,
+      "terminalDyaMillones": 1000,
+      "terminalCambioNwcMillones": 358,
+      "terminalRoicIncrementalImplicito": 0.197
+    },
+    "pruebaLag0": {
+      "copiaGoogle": "https://docs.google.com/spreadsheets/d/1uFTGkiyf-oPOoGtqzsxHp9B1H6dz6zBqTfvLtORvieo/edit",
+      "lag0": {
+        "base": 38.75968129,
+        "conservador": 24.23681239,
+        "disrupcion": 13.88010164,
+        "optimista": 54.13726135
+      },
+      "lag1": {
+        "base": 37.72796351,
+        "conservador": 23.48326485,
+        "disrupcion": 13.60373295,
+        "optimista": 53.03947487
+      },
+      "deltaBasePorAccion": 1.03171778,
+      "deltaPctBase": 2.734623563041083,
+      "criterio": "Desfase 1 año es negocio Nike: inventarios, producción, venta posterior. No elegir por valoración. Contraste COPIA completa, mismos escenarios y WACC; PV 10 años más terminal."
+    }
+  },
+  "sensibilidadDCF": {
+    "waccCentro": 0.0951,
+    "gCentro": 0.04,
+    "centro": 37.72796351,
+    "centroConciliado": true,
+    "matriz": {
+      "wacc": [
+        0.0851,
+        0.0901,
+        0.0951,
+        0.1001,
+        0.1051
+      ],
+      "g": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "valores": [
+        [
+          42.48,
+          44.88,
+          47.81,
+          51.52,
+          56.33
+        ],
+        [
+          38.24,
+          40.05,
+          42.24,
+          44.91,
+          48.29
+        ],
+        [
+          34.69,
+          36.08,
+          37.73,
+          39.71,
+          42.14
+        ],
+        [
+          31.67,
+          32.75,
+          34.01,
+          35.5,
+          37.29
+        ],
+        [
+          29.07,
+          29.92,
+          30.9,
+          32.03,
+          33.37
+        ]
+      ]
+    }
+  },
+  "fuentes_supuestos": [
+    "https://investors.nike.com/sec-filings/all-sec-filings/content/0000320187-26-000088/nke-20260531.htm",
+    "https://investors.nike.com/sec-filings/all-sec-filings/content/0000320187-26-000193/nke-20260831.htm",
+    "https://stockanalysis.com/stocks/nke/history/",
+    "https://people.stern.nyu.edu/adamodar/pdfiles/papers/growth.pdf"
+  ],
+  "salvedades": [
+    "El histórico 2017–2026 fue importado exclusivamente como datos contables, no reutiliza ninguna valoración anterior. Anuales anteriores a FY2026 requieren comprobación del pack SEC por años.",
+    "FY2026 NIKE ROIC 18,7% según emisor usa definición distinta del ROIC JMR 16,63% basado en EBIT LTM y capital de cierre ajustado; no equiparar.",
+    "El histórico marginal S/C no se infiere de ventas/capital promedio (2,56): FY25→FY26 Δventas=89m no representativo durante reestructuración.",
+    "La caída de ingresos en año1 tiene reinversión positiva por inventarios y ritmo de inversión. Sin liberación automática de capital en escenarios de contracción.",
+    "ROIC año10 21,83% vs terminal16% tiene salto5,83pp; debe revisarse el mecanismo de fade/terminal en auditoría económica posterior.",
+    "Posible doble conteo de arrendamientos ASC842 en deuda y capital si se convierte otra vez; motor no activa conversor adicional.",
+    "AZ Stocks Base US$41,85 es independiente, potencialmente optimista en reinversión terminal por perpetuar el CapEx neto del año10; no promediar sin conciliación.",
+    "Los múltiplos nativos 7 no están completamente validados: denominadores históricos, precios de cierres fiscales ajustados o brutos, y anclas de salida pendientes de certificación.",
+    "ROIC FY26 emisor usa valores promedio; JMR usa capital invertido de cierre. Ausencia de gasto I+D separado impide capitalización reproducible.",
+    "Prueba lag0 vs lag1 completa en copia nativa: JMR Base lag0 US$38,76 vs lag1 US$37,73, efecto US$1,03 (~2,73%). Se mantiene desfase1 por ciclo inventario/producción Nike; materialidad documentada, no selección por precio.",
+    "La auditoría económica NO se efectúa antes de la revisión visual solicitada por usuario.",
+    "AZ Stocks primero calculó US$46,24 al mantener capex terminal US$1.070m e implicar ROIC sostenible ~53%; se corrigió con capex gradual a US$1.800m, reinversión terminal US$1.158m y RONIC implícito≈19,7%. AZ perpetuidad Base recalculada US$41,85 y salida EBITDA Base US$51,19. Esta revisión no es auditoría económica independiente."
+  ],
+  "hojas": {
+    "valoracion": {
+      "Resumen NKE A-1.2": "<section><h2>NKE JMR Método A-1.2 · revisión visual</h2><p><strong>DCF Base US$37,73</strong> frente a cierre US$37,15; MOS35% US$24,52. Conservador US$23,48; Optimista US$53,04; Disrupción US$13,60 (fuera de media). Promedio normal US$37,97.</p><p>LTM EBIT margen8,19%, objetivo12,4%, S/C marginal1,5→2,3, ROIC terminal16%, WACC inicial9,51%, g4%. <strong>ROIC año10 21,83% vs terminal16%, múltiples pendientes.</strong></p><p>Ver <a href=\"https://docs.google.com/spreadsheets/d/1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0/edit\">plantilla Método A</a> y <a href=\"https://docs.google.com/spreadsheets/d/1VffA6YgOvkCJMZFz_GVYpMOkEZtNxLDpNai_6Vg8NCU/edit\">AZ Stocks</a> por DCF perpetuidad US$41,85, con tratamiento distinto de CapEx y NWC. La auditoría económica no se realizó.</p></section>"
+    },
+    "financieros": {}
+  },
+  "revisionOrigen": "Nueva copia nativa de plantilla IA oficial 46 tabs (ID 1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ), históricos de NIKE revisados desde SEC solamente, sin valoraciones previas. Último 10K FY26, LTM ago2026=FY26+Q1FY27−Q1FY26.",
+  "sensibilidadMultiples": {
+    "contrato": "base-native-five-priority-v1",
+    "revisionId": "NKE-20261029-R1",
+    "sourceSheetId": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
+    "resultadosSha256": "aa82d78823cd259e6a6c7a9c089e92fc0e2184506e82b422d0dec17d8e9e7665",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "matrices": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "prioritario": true,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          4308.007990412724,
+          4846.508989214315,
+          5385.009988015905,
+          5923.510986817496,
+          6462.011985619086
+        ],
+        "multiploElegido": [
+          10.792000000000002,
+          12.141,
+          13.49,
+          14.839000000000002,
+          16.188
+        ],
+        "matriz": [
+          [
+            26.827008663764808,
+            29.747263564763863,
+            32.66751846576291,
+            35.587773366761965,
+            38.50802826776101
+          ],
+          [
+            29.747263564763855,
+            33.03255032838779,
+            36.31783709201172,
+            39.60312385563566,
+            42.88841061925959
+          ],
+          [
+            32.66751846576291,
+            36.31783709201173,
+            39.96815571826054,
+            43.61847434450935,
+            47.26879297075816
+          ],
+          [
+            35.587773366761965,
+            39.603123855635666,
+            43.61847434450936,
+            47.63382483338306,
+            51.64917532225675
+          ],
+          [
+            38.508028267761006,
+            42.888410619259595,
+            47.26879297075816,
+            51.649175322256745,
+            56.02955767375531
+          ]
+        ],
+        "centro": 39.96815571826054,
+        "vp3Original": 39.96815571826054,
+        "origen": "'Sensibilidad por múltiplo'!A76:I84",
+        "motivo": null
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "prioritario": true,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          1655.5235011284394,
+          1862.4639387694942,
+          2069.404376410549,
+          2276.3448140516043,
+          2483.2852516926587
+        ],
+        "multiploElegido": [
+          28.080000000000002,
+          31.590000000000003,
+          35.1,
+          38.61000000000001,
+          42.12
+        ],
+        "matriz": [
+          [
+            26.824535218921746,
+            29.744480939315416,
+            32.66442665970908,
+            35.58437238010276,
+            38.50431810049642
+          ],
+          [
+            29.74448093931542,
+            33.0294198747583,
+            36.31435881020117,
+            39.59929774564406,
+            42.884236681086925
+          ],
+          [
+            32.664426659709086,
+            36.31435881020117,
+            39.964290960693255,
+            43.614223111185346,
+            47.26415526167742
+          ],
+          [
+            35.584372380102764,
+            39.59929774564406,
+            43.614223111185346,
+            47.62914847672665,
+            51.644073842267936
+          ],
+          [
+            38.50431810049642,
+            42.884236681086925,
+            47.26415526167742,
+            51.644073842267936,
+            56.02399242285843
+          ]
+        ],
+        "centro": 39.964290960693255,
+        "vp3Original": 39.964290960693255,
+        "origen": "'Sensibilidad por múltiplo'!A86:I94",
+        "motivo": null
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "prioritario": true,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          2927.724816968439,
+          3293.690419089494,
+          3659.6560212105487,
+          4025.621623331604,
+          4391.5872254526585
+        ],
+        "multiploElegido": [
+          11.632,
+          13.086,
+          14.54,
+          15.994,
+          17.447999999999997
+        ],
+        "matriz": [
+          [
+            21.93635554457483,
+            24.07543527396539,
+            26.214515003355952,
+            28.35359473274652,
+            30.492674462137078
+          ],
+          [
+            24.075435273965393,
+            26.481899969529774,
+            28.88836466509416,
+            31.294829360658543,
+            33.70129405622292
+          ],
+          [
+            26.214515003355952,
+            28.88836466509415,
+            31.562214326832358,
+            34.236063988570564,
+            36.909913650308766
+          ],
+          [
+            28.353594732746515,
+            31.294829360658536,
+            34.236063988570564,
+            37.17729861648259,
+            40.118533244394605
+          ],
+          [
+            30.492674462137074,
+            33.70129405622292,
+            36.90991365030876,
+            40.118533244394605,
+            43.32715283848045
+          ]
+        ],
+        "centro": 31.562214326832358,
+        "vp3Original": 31.562214326832358,
+        "origen": "'Sensibilidad por múltiplo'!A96:I104",
+        "motivo": null
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "prioritario": true,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          1868.4112388976298,
+          2101.9626437598336,
+          2335.514048622037,
+          2569.065453484241,
+          2802.6168583464446
+        ],
+        "multiploElegido": [
+          18.224,
+          20.502000000000002,
+          22.78,
+          25.058000000000003,
+          27.336000000000002
+        ],
+        "matriz": [
+          [
+            21.933657819610044,
+            24.07240033338001,
+            26.211142847149972,
+            28.349885360919938,
+            30.4886278746899
+          ],
+          [
+            24.07240033338001,
+            26.47848566137122,
+            28.88457098936243,
+            31.29065631735364,
+            33.69674164534485
+          ],
+          [
+            26.211142847149972,
+            28.88457098936243,
+            31.55799913157488,
+            34.23142727378734,
+            36.9048554159998
+          ],
+          [
+            28.349885360919938,
+            31.29065631735364,
+            34.23142727378734,
+            37.17219823022104,
+            40.112969186654745
+          ],
+          [
+            30.4886278746899,
+            33.69674164534485,
+            36.9048554159998,
+            40.112969186654745,
+            43.321082957309685
+          ]
+        ],
+        "centro": 31.55799913157488,
+        "vp3Original": 31.55799913157488,
+        "origen": "'Sensibilidad por múltiplo'!A106:I114",
+        "motivo": null
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "prioritario": true,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          2162.3280497681576,
+          2432.6190559891775,
+          2702.910062210197,
+          2973.2010684312168,
+          3243.492074652236
+        ],
+        "multiploElegido": [
+          15.752000000000002,
+          17.721,
+          19.69,
+          21.659000000000002,
+          23.628
+        ],
+        "matriz": [
+          [
+            21.939217945237495,
+            24.07865547471089,
+            26.218093004184283,
+            28.357530533657677,
+            30.496968063131074
+          ],
+          [
+            24.078655474710885,
+            26.485522695368452,
+            28.892389916026023,
+            31.299257136683593,
+            33.70612435734116
+          ],
+          [
+            26.218093004184283,
+            28.892389916026026,
+            31.56668682786777,
+            34.24098373970951,
+            36.91528065155126
+          ],
+          [
+            28.357530533657677,
+            31.299257136683597,
+            34.24098373970951,
+            37.18271034273543,
+            40.12443694576135
+          ],
+          [
+            30.49696806313107,
+            33.70612435734117,
+            36.91528065155126,
+            40.12443694576135,
+            43.333593239971435
+          ]
+        ],
+        "centro": 31.56668682786777,
+        "vp3Original": 31.56668682786777,
+        "origen": "'Sensibilidad por múltiplo'!A116:I124",
+        "motivo": null
+      },
+      {
+        "metodo": "P/V",
+        "escenario": "base",
+        "prioritario": false,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          38166.03947520001,
+          42936.79440960001,
+          47707.54934400001,
+          52478.30427840001,
+          57249.059212800006
+        ],
+        "multiploElegido": [
+          0.8960000000000001,
+          1.0080000000000002,
+          1.12,
+          1.2320000000000002,
+          1.344
+        ],
+        "matriz": [
+          [
+            22.00744677014231,
+            24.155412902728806,
+            26.303379035315302,
+            28.451345167901803,
+            30.599311300488303
+          ],
+          [
+            24.155412902728806,
+            26.57187480188862,
+            28.98833670104843,
+            31.40479860020824,
+            33.82126049936805
+          ],
+          [
+            26.303379035315302,
+            28.988336701048425,
+            31.673294366781548,
+            34.35825203251467,
+            37.04320969824779
+          ],
+          [
+            28.451345167901803,
+            31.404798600208238,
+            34.35825203251467,
+            37.31170546482111,
+            40.265158897127534
+          ],
+          [
+            30.599311300488296,
+            33.821260499368044,
+            37.04320969824779,
+            40.26515889712755,
+            43.48710809600728
+          ]
+        ],
+        "centro": 31.673294366781548,
+        "vp3Original": 31.673294366781548,
+        "origen": "'Sensibilidad por múltiplo'!A126:I134",
+        "motivo": null
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "prioritario": false,
+        "ancla": "JMR",
+        "estado": "OK",
+        "fundamentalFY3": [
+          13250.430661861416,
+          14906.734494594093,
+          16563.03832732677,
+          18219.34216005945,
+          19875.64599279212
+        ],
+        "multiploElegido": [
+          2.568,
+          2.8890000000000002,
+          3.21,
+          3.531,
+          3.852
+        ],
+        "matriz": [
+          [
+            21.922190628543255,
+            24.059499743429875,
+            26.196808858316494,
+            28.33411797320311,
+            30.47142708808972
+          ],
+          [
+            24.059499743429875,
+            26.463972497677318,
+            28.868445251924765,
+            31.272918006172212,
+            33.67739076041965
+          ],
+          [
+            26.196808858316494,
+            28.868445251924765,
+            31.540081645533032,
+            34.21171803914131,
+            36.88335443274957
+          ],
+          [
+            28.334117973203107,
+            31.27291800617221,
+            34.2117180391413,
+            37.15051807211041,
+            40.08931810507949
+          ],
+          [
+            30.471427088089726,
+            33.67739076041965,
+            36.88335443274957,
+            40.0893181050795,
+            43.29528177740942
+          ]
+        ],
+        "centro": 31.540081645533032,
+        "vp3Original": 31.540081645533032,
+        "origen": "'Sensibilidad por múltiplo'!A136:I144",
+        "motivo": null
+      }
+    ],
+    "metodosPendientes": [],
+    "sinRecalculoExterno": true,
+    "certificado": false,
+    "nota": "Integración técnica: 25 celdas, ejes, fórmulas, origen y centro FY+3 contrastados con foto SHA256. Pendiente revisión visual y auditoría económica independiente.",
+    "controlesTecnicosAprobados": true
+  }
+}
