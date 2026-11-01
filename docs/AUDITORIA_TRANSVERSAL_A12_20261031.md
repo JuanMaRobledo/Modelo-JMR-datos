@@ -68,3 +68,23 @@
 - Orden: **(P0)** concluir XP, META, NVDA mediante evidencia nativa, reporte y CI; **(P1)** UBER, GOOGL, INTU, NU por anclas bancarias/relativas; **(P2)** seis descuentos y pesos EPAM/NKE/NVO/ONON/PYPL/ZTS; **(P3)** revisar en hojas el resto de 20 y QA visual autenticado. No recalcular DCF ya válidos solo por depuración.
 
 **No se cambian** catálogo activo, valoraciones, hojas, fórmulas, análisis o pesos con este inventario.
+
+## Actualización efectiva posterior a XP — 31-oct-2026 (hora Colombia)
+
+**Esta actualización prevalece sobre las cifras de inventario del corte SHA 144285bb anterior.** Con el merge de PR #216, SHA `96fcf2fbb3c6409c65621fc6ce01ec8aee279311`, el catálogo tiene **23 valoraciones activas: 21 A-1.2 EN_REVISION y 2 legadas, META y NVDA**. La única XP activa es `valoraciones/XP-20261031-A12-R1.json`, con análisis enlazado `analisis/XP-research-20261031-A12-R1.json`. XP conserva FCFE Base USD 14,475590094736917 y MOS35 USD 9,409133561578997, cuatro relativas de carácter exploratorio con peso cero, 14 capítulos N1 (8.407 palabras) y N2 existente. R2 antigua preservada fuera del catálogo activo y auditoría narrativa archivada. **Los 3 CI de main** postmerge aprobaron: control ponderaciones [41257231415](https://github.com/JuanMaRobledo/Modelo-JMR-datos/actions/runs/41257231415), profundidad Método A [41257231371](https://github.com/JuanMaRobledo/Modelo-JMR-datos/actions/runs/41257231371) y profundidad editorial [41257231368](https://github.com/JuanMaRobledo/Modelo-JMR-datos/actions/runs/41257231368). No equivale a auditoría económica ni a QA autenticado.
+
+### Diagnóstico exacto y reproducible de los candidatos META/NVDA desde Google Sheets
+
+**META hoja candidata:** `1lpE-L0Ai2NrWDhzBhtdeOMASwo7XRleUEMEMl3K34ss` (47 pestañas). **NVDA hoja candidata:** `1gN_WFYyGzdLjgYr_0AEHGDdBIeCiNVnDFy0wkH0vB0Y` (47 pestañas). Ambos libros siguen rotulados `NO PUBLICAR` y tienen `Escenarios e historias!K5:K8=PENDIENTE`; `Valuation output!B35` contiene la fórmula original, pero su **resultado es vacío**: la fórmula exige historia Base `LISTO`. Los DCF candidatos USD 780,6302961 y 201,4459779, respectivamente, **no son una salida nativa aprobada**.
+
+Dos bloqueos claros en **ambas** hojas:
+1. `Input sheet!B85=PENDIENTE` (conciliación de participaciones y doble conteo). `B82` reporta valor contable de inversiones a largo plazo, META **USD 32.624 millones** y NVDA **USD 51.157 millones**; `B83` valor contable de inversiones excluidas del capital operativo y `B84` valor económico atribuible **están vacíos**, igual `B86` certificación de no-solapamiento. META `B87` contiene advertencia histórica; NVDA `B87` está vacío. La fórmula requiere B83 y B84 económicos trazables, B86 `Sin solapamiento` y fuentes. **No rellenar con cero por conveniencia**: comprobar naturaleza de cada inversión, incluido si la renta ya se contabiliza en EBIT/FCFF y valor económico de activos no operativos.
+2. `Input sheet!B108=PENDIENTE` porque `B112=REVISAR`: opciones y remuneración en acciones. La fórmula revisa `Input sheet!B38:B42` y `Option value!B9/B30`; documentar acciones, RSU, opciones, precio de ejercicio, plazo, volatilidad, dividendos y evitar doble contabilizar SBC/dilución. No declarar `No aplica` por comodidad.
+
+**Otros elementos:** `Cost of capital worksheet!B84=VALIDADO` en ambas (costo capital fuente META 8,9791%, NVDA 10,2757%), `Input sheet!B92=VALIDADO` fiscal y `B111=VALIDADO` I+D, por lo que no rehacerlos sin hallazgo material. `Input sheet!B98:B101` dice `Sin liberación`; META `C101` y NVDA `C98:C101` no tienen justificaciones suficientemente documentadas. Revisar si las exige el gate para escenarios negativos; no forzar el valor `LISTO`.
+
+`Múltiplos históricos!A1:F6` en ambos libros solo tiene encabezados: no hay serie normalizada verificable en esas celdas. El reporte futuro debe demostrar ancla independiente, denominador y descuento VP para cada múltiplo aplicable, sensibilidad 5×5 nativa en la misma hoja, y peso cero en todo contraste con `PENDIENTE_ANCLA`.
+
+**Orden de cierre de META y NVDA:** documentar activos no operativos y opciones con fuentes primarias → corregir `Input sheet` sin tocar fórmulas de salida → lograr `K5:K8=LISTO` con fórmulas → capturar `Valuation output!B35` y conciliar versus candidatos → explicar diferencia sustantiva NVDA R4→A-1.2 (-47,2%) → históricos/pares y matrices de múltiplos nativos → adaptar artículos N1 14/N2 12 → gate CI en PR → sustitución del catálogo con historial → QA real de visor/editor. **No promover candidatos provisionales antes de eso**.
+
+Este diagnóstico proviene de lectura de rangos limitada de los libros originales; no constituye comprobación contable integral ni modificación de Google Sheets.
