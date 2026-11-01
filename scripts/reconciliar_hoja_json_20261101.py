@@ -21,9 +21,10 @@ def get(sh, rng):
     except Exception as e:
         return {'error': str(e)[:90]}
 def first(x): return x[0][0] if isinstance(x, list) and x and x[0] else None
-res = {}
+res = json.loads((OUT / 'resumen.json').read_text()) if (OUT / 'resumen.json').exists() and sys.argv[1:] else {}
 for p in cat['valoraciones']:
     v = json.loads((ROOT / p).read_text()); t = v['ticker']
+    if sys.argv[1:] and t not in sys.argv[1:]: continue
     sid = v.get('sheet_id') or re.search(r'/d/([\w-]+)', v.get('hojaGoogle', '')).group(1)
     r = {'ticker': t, 'revision': v['revisionId'], 'sheet_id': sid}
     try:

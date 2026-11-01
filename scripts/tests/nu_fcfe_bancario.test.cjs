@@ -5,7 +5,7 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'../..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const src='evidencia/banca/NU-20261029-R1-sensibilidad-fcfe-nativa.json';
-const val='valoraciones/NU-20261029-R1.json';
+const val='candidatos/valoraciones/NU-20261029-R1/VALORACION_A12_EN_REVISION.json';
 const near=(a,b)=>typeof a==='number'&&typeof b==='number'&&Math.abs(a-b)<=1e-7;
 
 function valueAt(e,k,g){
