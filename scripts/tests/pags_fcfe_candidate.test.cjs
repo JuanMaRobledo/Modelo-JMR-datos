@@ -42,7 +42,8 @@ test('PAGS: MOS, promedio y centros matrices',()=>{
  close(c.valorEsperadoOrdinario,average,'promedio tres');
  close(c.sensibilidadDCF.keVsRoeTerminal.centro,c.valorPrincipal,'centro Ke ROE');
  close(c.sensibilidadDCF.fxVsKe.centro,c.valorPrincipal,'centro FX Ke');
- for(const v of [c.sensibilidadDCF.keVsRoeTerminal,c.sensibilidadDCF.fxVsKe]){
+ close(c.sensibilidadDCF.roeVsRetencion.centro,c.valorPrincipal,'centro ROE retencion');
+ for(const v of [c.sensibilidadDCF.keVsRoeTerminal,c.sensibilidadDCF.fxVsKe,c.sensibilidadDCF.roeVsRetencion]){
    assert.equal(v.matriz.length,6);
    assert.ok(v.matriz.slice(1).every(x=>x.length===6&&x.every(Number.isFinite)));
  }
