@@ -66,3 +66,8 @@
 
 ## Aplicación
 `modelo-jmr.vercel.app` responde 401 sin sesión (SSO) y lee el catálogo de `main` del repositorio de datos. Con las herramientas disponibles **no se puede comprobar** visor, editor, pestañas, estados financieros completos ni móvil: esa prueba sigue sin ejecutarse y no debe darse por aprobada.
+
+## Adenda — XP y CELH (tras mover las hojas a Análisis)
+
+- **CELH:** DCF hoja 34,8526 = JSON; K5:K8 LISTO; B85/B108/B84 VALIDADO; pesos y 5 consolidados coinciden; 7 controles de sensibilidad OK.
+- **XP:** la hoja abre (71 pestañas). Valor FCFE en `XP FCFE!B65` = 14,4756 USD/acción = JSON. Las compuertas de la plantilla estándar (Escenarios K5:K8, Input B85/B108) están en PENDIENTE porque XP usa el motor FCFE propio; no se forzaron. Los consolidados de múltiplos y las matrices estándar no son comparables con el JSON. Queda pendiente decidir si se completa la plantilla estándar para XP.
