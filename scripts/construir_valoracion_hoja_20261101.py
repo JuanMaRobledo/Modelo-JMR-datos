@@ -12,7 +12,9 @@ ROOT = Path(__file__).resolve().parent.parent
 TICKER = sys.argv[1]
 REV = f'{TICKER}-20261101-A12-R1'
 CAP = ROOT / f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json'
-CAND_OLD = ROOT / f'candidatos/valoraciones/{TICKER}-20261031-A12-R1/VALORACION_A12_EN_REVISION.json'
+# Molde de estructura: candidato previo DE LA MISMA EMPRESA (nunca de otra, por aislamiento); sus valores se sobrescriben.
+CAND_OLD = ROOT / {'INTU': 'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json'}.get(
+    TICKER, f'candidatos/valoraciones/{TICKER}-20261031-A12-R1/VALORACION_A12_EN_REVISION.json')
 OUT = ROOT / f'candidatos/valoraciones/{REV}/VALORACION_A12_EN_REVISION.json'
 METHODS = ['EV/EBITDA', 'EV/FCFF', 'P/E', 'P/FCFE', 'P/OCF']
 
@@ -27,9 +29,14 @@ def need(c, m):
 cap = json.loads(CAP.read_text()); D = cap['data']; sha = hashlib.sha256(CAP.read_bytes()).hexdigest()
 need(cap['revision_id'] == REV, 'revisión de la captura')
 v = copy.deepcopy(json.loads(CAND_OLD.read_text()))
+for k in ('degradadoACandidato', 'hojas', 'revisionSupuestos', 'objetivoPonderado', 'valorPresentePonderado'):
+    v.pop(k, None)   # campos del molde que no salen de esta captura
+v['sheet_id'] = cap['sheet_id']
+v['hojaGoogle'] = f"https://docs.google.com/spreadsheets/d/{cap['sheet_id']}/edit"
+need(v['ticker'] == TICKER, 'ticker del molde')
 
 # --- escenarios (hoja: Escenarios e historias A4:N13) ---
-st = {r[0]: r for r in D['stories'][1:5]}
+st = {str(r[0]).split(' · ')[0].strip(): r for r in D['stories'][1:5]}
 base = st['Base']; cons = st['Conservadora']; opt = st['Optimista']
 disr = next(r for k, r in st.items() if k.startswith('Disrup'))
 for r in (base, cons, disr, opt): need(r[10] == 'LISTO', f'estado de cálculo {r[0]}')
@@ -79,7 +86,18 @@ for n, name in enumerate(METHODS):
 for k, name in ((5, 'P/V'), (6, 'P/BV')):
     r0 = 75 + 10 * k
     need(sm[r0][0].startswith('BASE · ' + name), f'bloque {name}')
-    need(sm[r0 + 8][7] == 'N/D', f'{name} esperado N/D en la hoja (si calcula, integrarlo como OK)')
+    ctrl = sm[r0 + 8]
+    if ctrl[8] == 'OK':   # complementario calculado por la hoja: se integra con su control, sin prioridad ni peso
+        fund = sm[r0 + 2][1:6]; mats = [[sm[r0 + 3 + i][0]] + sm[r0 + 3 + i][1:6] for i in range(5)]
+        grid = [row[1:] for row in mats]
+        need(close(ctrl[6], ctrl[7]) and close(grid[2][2], ctrl[6]), f'control de centro {name}')
+        need(all(num(x) for x in fund) and all(num(x) for row in grid for x in row), f'matriz completa {name}')
+        matrices.append({'metodo': name, 'escenario': 'base', 'prioritario': False, 'ancla': 'JMR', 'estado': 'OK',
+            'fundamentalFY3': fund, 'multiploElegido': [row[0] for row in mats], 'matriz': grid, 'centro': ctrl[6],
+            'vp3Original': ctrl[7], 'origen': f"'Sensibilidad por múltiplo'!A{76+10*k}:I{84+10*k}",
+            'motivo': 'Complementario opcional calculado por la hoja; sin peso en la consolidación.'})
+        continue
+    need(ctrl[7] == 'N/D', f'{name} esperado N/D en la hoja (si calcula, integrarlo como OK)')
     matrices.append({'metodo': name, 'escenario': 'base', 'prioritario': False, 'ancla': 'JMR', 'estado': 'N/D',
         'fundamentalFY3': sm[r0 + 2][1:6], 'multiploElegido': [0, 0, 0, 0, 0], 'matriz': None, 'centro': None, 'vp3Original': None,
         'origen': f"'Sensibilidad por múltiplo'!A{76+10*k}:I{84+10*k}",
@@ -109,7 +127,7 @@ v['descuentoMultiples'] = {'version': 2, 'estado': 'CALCULADO_NATIVO_EN_REVISION
         'certificadoEconomico': False, 'calculosExternosExportados': False},
     'nota': 'Múltiplos de salida por regla de ciclo (historia propia con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares y justificado solo comprueban. Ver reference/multiplos_v3/'+TICKER+'_decision.json en JMR-valuation. Auditoría económica pendiente.'}
 v['sensibilidadMultiples'] = {'contrato': 'base-native-five-priority-v1', 'revisionId': REV, 'sourceSheetId': v['sheet_id'],
-    'resultadosSha256': sha, 'estadoPublicacion': 'INTEGRADO_EN_REVISION', 'matrices': matrices, 'metodosPendientes': ['P/V', 'P/BV'],
+    'resultadosSha256': sha, 'estadoPublicacion': 'INTEGRADO_EN_REVISION', 'matrices': matrices, 'metodosPendientes': [m['metodo'] for m in matrices if m['estado'] != 'OK'],
     'sinRecalculoExterno': True, 'certificado': False, 'controlesTecnicosAprobados': True,
     'nota': 'Siete posiciones del contrato: cinco matrices 5×5 Base copiadas de la hoja nativa; centro = VP3 de cada método. Pendiente revisión visual y auditoría económica.'}
 
@@ -174,6 +192,20 @@ CFG['META'] = {'salvedades': [
  'Múltiplos: regla de ciclo propia (cierres con crecimiento FY+3 de cada escenario, tope por múltiplo justificado); pares GOOGL, PINS, AMZN, MSFT, NFLX, APP y RDDT solo comprueban (SNAP excluido). El EV/EBITDA Base de salida (7,8x) queda por debajo de la historia (15–16x) y de los pares por el tope del múltiplo justificado, que incorpora el capex de IA; el valor por múltiplos Base es ' + usd(v['descuentoMultiples']['multiplesHoy']['base']) + ' frente al DCF ' + usd(b35) + '. Categoría Crecimiento (DCF 60 %) y MOS 35 % son juicio del analista.',
  'Para P/E y P/B no se tocaron estados: META ya tenía utilidad atribuible y patrimonio. Sensibilidades DCF y de múltiplos copiadas de la hoja nativa con centro conciliado; no certificadas. QA visual autenticado pendiente. AZ Stocks no incorporado.'],
  'fuentes': [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930.htm', 'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']}
+CFG['INTU'] = {'salvedades': [
+ 'EN_REVISION propuesta: valoración desde cero calculada por la copia limpia A-1.2 (Análisis/INTU), sin auditoría económica independiente ni certificación; no equivale a valor auditado. Sustituye al candidato INTU-20261029-R1, cuyo DCF no salía de la hoja.',
+ 'Corte vigente de la cartera: precio US$275,71 del 30-sep-2026 con Rf 5,29 % y ERP 3,70 % de la misma fecha (Damodaran oct-2026). Hecho posterior: cierre del 30-oct-2026 US$341,09 (+24 %); no se incorporó para mantener el corte común.',
+ 'Activos no operativos US$248 M = participaciones no cotizadas en empresas privadas (10-K FY26), al valor contable por falta de valoración independiente; sus ganancias van fuera del EBIT. Los préstamos a clientes (US$1.468 M) generan ingresos en el EBIT y quedan en el capital operativo.',
+ 'Opciones: 1,24 M con ejercicio medio US$549,37 y 3,86 años (volatilidad 50,65 %, dividendo 2,0 %), valor US$' + fmt(v['puenteEquity']['opciones'], 1) + ' M. RSU sin consolidar (13,46 M) ya incluidas en la compensación en acciones del EBIT.',
+ 'I+D capitalizada a 3 años (3.376 en FY26) y arrendamientos operativos convertidos a deuda (VP US$710,8 M); impuesto marginal 24,4 % (21 % federal + 3,4 % estatal) con convergencia desde la efectiva de 24,1 %.',
+ 'Costo de capital: beta bottom-up de software de EE.UU. reapalancada 1,25 (≈92 % de ventas en EE.UU.), prima por regiones 3,84 %, Kd por calificación sintética 5,92 %, WACC inicial ' + f"{rate[0]*100:.2f}".replace('.', ',') + ' %, terminal 8,99 % y g perpetuo 4 %. Son supuestos analíticos sin auditoría económica.',
+ 'Segmentos: TurboTax y ProTax se agrupan en «Impuestos» porque la plantilla admite cuatro segmentos; el detalle se conserva en la ficha de historias. Ventas/capital nuevo 0,8-1,1 elegidas para que el capital nuevo rinda ≈1,5 veces el ROIC terminal de cada historia (ROIC actual ajustado ~17-18 %).',
+ 'Múltiplos: regla de ciclo propia; Intuit nunca creció menos de 12,9 % al año en FY2018-FY2026, mientras las historias esperan 5-10 % a FY+3, por lo que los múltiplos de salida parten del mínimo observado ajustado por tasas y quedan topados por el múltiplo justificado. El valor por múltiplos Base (' + usd(v['descuentoMultiples']['multiplesHoy']['base']) + ') queda un 26 % bajo el DCF (' + usd(b35) + '): brecha fuera de ±25 % explicada por ese tope, no por un error. Pares (ADBE, MSFT, ORCL, ADSK, CRM, NOW) solo comprueban. P/V y P/BV calculados como complementarios sin peso.',
+ 'Controles de la hoja: 15/15 candados, integridad 0 hallazgos, estados completos 0 hallazgos, entradas esenciales 0 vacías, motor = hoja. El control de fórmula única (apply_canonical_formulas.py) no pudo ejecutarse por un error de importación previo de la herramienta.',
+ 'Los resultados del 1T FY27 (noviembre de 2026) no están incluidos. QA visual autenticado pendiente. El contraste AZ Stocks del candidato anterior no se mezcla con esta valoración.'],
+ 'fuentes': [v['hojaGoogle'], 'https://www.sec.gov/Archives/edgar/data/896878/000089687826000037/intu-20260731.htm',
+             'https://www.sec.gov/Archives/edgar/data/896878/000089687826000029/fy26q4earningspressrelease.htm',
+             'https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPOct26.xlsx', 'https://fred.stlouisfed.org/series/DGS10']}
 v['salvedades'] = CFG[TICKER]['salvedades']
 v['fuentes_supuestos'] = CFG[TICKER]['fuentes']
 v['estado'] = v['publicationStatus'] = 'EN_REVISION'
@@ -183,6 +215,16 @@ v['controlEditorial'] = {'nivel1Capitulos': 14, 'nivel2Apartados': 12, 'estado':
 v['reporteFuentes'] = {'captura': f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json', 'capturaSha256': sha,
     'gates': 'docs/CIERRE_GATES_META_NVDA_20261101.md', 'multiplos': 'docs/MULTIPLOS_Y_PUENTE_NVDA_META_20261101.md',
     'fechas': 'docs/FECHAS_TASAS_META_NVDA_20261101.md'}
+if TICKER == 'INTU':
+    v['reporteFuentes'] = {'captura': f'evidencia/captura-hoja-20261101/{REV}_resultados_hoja.json', 'capturaSha256': sha,
+        'valoracion': 'docs/VALORACION_INTU_A12_20261101.md',
+        'scripts': 'JMR-valuation: scripts/run_intu_cero.py, scripts/intu_cero_spec.py, reference/multiplos_v3/INTU_decision.json'}
+    v['metodoPrincipal'] = 'DCF FCFF 10 años, Método JMR A-1.2, calculado por la hoja (Valuation output!B35)'
+    v['revisionOrigen'] = 'Copia limpia de la plantilla IA vigente (46 pestañas) en AAA Finanzas/Análisis/INTU; desde cero con 10-K FY2026 y guía FY27.'
+    v['objetivoPonderado'] = v['valorPresentePonderado'] = {'estado': 'CALCULADO_NATIVO_EN_REVISION', **v['descuentoMultiples']['ponderadoHoy']}
+    v['precioReferenciaFecha'] = '2026-09-30'
+    v['precioReferenciaFuente'] = 'Cierre del 30-sep-2026 (corte vigente de la cartera, JMR-valuation reference/corte_vigente.json; yfinance auto_adjust=False)'
+    v['publicationAuthorized'] = False   # candidato: la promoción a EN_REVISION requiere autorización explícita del usuario
 OUT.parent.mkdir(parents=True, exist_ok=True)
 OUT.write_text(json.dumps(v, ensure_ascii=False, indent=2) + '\n')
 print('OK', OUT.relative_to(ROOT), 'base', b35, 'MOS', v['precioMOS'], 'esperado', ve['valor'])
