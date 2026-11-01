@@ -81,21 +81,12 @@ class EditorialTests(unittest.TestCase):
             (root/'catalogo.json').write_text(json.dumps({'analisis':['analisis/AFYA-one.json','analisis/AFYA-two.json']}))
             with self.assertRaises(ValueError): active_analysis_path(root,'AFYA')
 
-    def test_twenty_linked_indices_and_cycle_chapters(self):
+    def test_all_active_a12_linked_indices_and_cycle_chapters(self):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        provisional=[a for a in selected if a.get('ticker')=='XP' and a.get('revisionId')=='XP-20261031-A12-R1']
-        canonical=[a for a in selected if a not in provisional]
-        self.assertEqual(len(canonical),20)
-        self.assertEqual(len(provisional),1)
-        xp=provisional[0]
-        xp_headings=re.findall(r'<h2[^>]*>\s*(\d+)\.',xp['articleHtml'])
-        self.assertEqual(xp_headings,list(map(str,range(1,19))))
-        self.assertEqual(xp['html'],xp['articleHtml']+xp.get('calculationHtml',''))
-        self.assertIn('ciclo empresarial',xp['articleHtml'].lower())
-        self.assertIn('ciclo macro',xp['articleHtml'].lower())
-        for a in canonical:
+        self.assertEqual(len(selected),21)
+        for a in selected:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]
             headings=re.findall(r'<h2[^>]*>\s*(\d+)\.',h)
