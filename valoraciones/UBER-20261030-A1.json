@@ -23,7 +23,7 @@
   "publicationStatus": "EN_REVISION",
   "publicationStage": "REVISION_VISUAL",
   "publicationAuthorized": true,
-  "validationStatus": "DCF_4_LISTO_SENSIBILIDADES_DCF_3_OK;_MULTIPLOS_5_PENDIENTES;_GATE_CI_BLOQUEADO",
+  "validationStatus": "DCF_4_LISTO_DCF_3_CENTROS_OK;_MULTIPLOS_5_PROVISIONALES_PESO_0;_RESERVAS_MATERIALES",
   "auditPendingUserVisualReview": true,
   "auditoriaEconomica": "NO_REALIZADA",
   "reportSchema": "jmr-valuation-two-levels-v5",
@@ -340,7 +340,7 @@
   "descuentoMultiples": {
     "version": 3,
     "costoPatrimonio": 0.10574629847329092,
-    "criterio": "Contraste provisional FY+3 a valor presente; peso cero en DCF",
+    "criterio": "Solo 3 años; contraste provisional a VP3, peso cero en DCF",
     "horizontes": [
       1,
       2,
@@ -424,7 +424,7 @@
     ],
     "chequeo": {
       "centroDCF": "OK",
-      "multiples": "BLOQUEADO_NO_HAY_ANCLAS"
+      "multiples": "CENTROS_5_OK;_ANCLAS_NO_CERTIFICADAS"
     },
     "certificacionEconomica": "NO_CERTIFICADA"
   },
@@ -625,7 +625,7 @@
     "certificacionEconomica": "NO_CERTIFICADA",
     "pesoEnDCFPrincipal": 0,
     "tipo": "MULTIPLOS_OPERATIVOS",
-    "advertencia": "Contrastes provisionales EN_REVISION, sin certificación económica; peso cero en el DCF principal. Se preservan los supuestos de la hoja como contraste; la ponderación 60/40 de la fuente no se adopta en el objetivo principal. P/BV N/D se conserva sin generar ceros.",
+    "advertencia": "Cinco contrastes provisionales EN_REVISION, sin certificación económica. Hoja y JSON: DCF 100%, múltiplos 0%; criterio Solo 3 años. Anclas e ingresos no recurrentes pendientes de normalización.",
     "matrices": [
       {
         "metodo": "EV/EBITDA",
@@ -1076,22 +1076,23 @@
   },
   "salvedades": [
     "Importes financieros LTM a 30-jun-2026: Q3 aún no incluido; fuente histórica y ERP a recertificar.",
-    "Cinco múltiplos y matrices Base N/D: Financials Multiples extrapola ingresos no operativos no recurrentes. Bloqueo de contrato de publicación.",
+    "Cinco matrices Base calculadas como contrastes provisionales, peso cero; anclas sin certificar y normalización de ingresos no operativos pendiente.",
     "NOL 14.024 millones de USD requiere verificación fiscal independiente.",
     "Inversiones no operativas 12.532 millones USD son proxy contable, no fair value acreditado.",
     "RSUs 71,804 millones, SBC, dilución y recompras requieren conciliación.",
     "ROIC año10 ~34,65% frente a 14% terminal, no fade anual suavizado; reserva material.",
-    "Gate de repositorio global en rojo; sin auditoría económica independiente."
+    "Gate global: último control confirmado aprobado en run 41354221137; comprobar el SHA de cada nueva integración. Auditoría económica pendiente."
   ],
   "controlPublicacion": {
     "dcfBaseConcilia": true,
     "probabilidadesSuman1": true,
     "promedioOrdinaryConciliado": true,
     "sensibilidadesDCFCentros3OK": true,
-    "multiplesCentros5OK": false,
+    "multiplesCentros5OK": true,
     "auditoriaEconomicaRealizada": false,
-    "analisisPublicacion": "N1_13_N2_12_EN_REVISION",
-    "gateCI": "BLOQUEADO"
+    "analisisPublicacion": "N1_14_N2_EN_REVISION",
+    "gateCI": "CONSULTAR_SHA_ACTUAL;_ULTIMO_CONFIRMADO_41354221137_SUCCESS",
+    "multiplesAnclasCertificadas": false
   },
   "analisisFundamental": {
     "ticker": "UBER",
@@ -1099,5 +1100,25 @@
     "sourcePath": "analisis/UBER-research-UBER-20261030-A1.json",
     "nivel1": "documentos/UBER-20261030-A1-NIVEL1.md",
     "nivel2": "documentos/UBER-20261030-A1-NIVEL2.md"
+  },
+  "conciliacionHoja": {
+    "revisionId": "UBER-20261030-A1",
+    "sourceSheetId": "1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58",
+    "sourcePath": "evidencia/uber-conciliacion-20261101/lectura-final.json",
+    "sha256": "cd2db7b6344c95813990f535462d240900dcc469cdb2e6a2204d1a1bd9221ea9",
+    "fecha": "2026-11-01",
+    "estado": "CONCILIADO_CON_RESERVAS_MATERIALES",
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "dcfBase": 91.13793738151752,
+    "mos35": 59.239659297986385,
+    "gateGlobalReferencia": {
+      "run": 41354221137,
+      "commit": "35c005df6987926e9f5f70d96c357f44202a80d4",
+      "conclusion": "success"
+    },
+    "auditoriaEconomica": "PENDIENTE",
+    "verificacionVisualNativa": "PENDIENTE",
+    "verificacionDespliegueApp": "PENDIENTE"
   }
 }
