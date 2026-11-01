@@ -36,7 +36,7 @@
   "metodos": [
     {
       "nombre": "DCF Damodaran",
-      "peso": 0.6,
+      "peso": 0.4,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -48,7 +48,7 @@
     },
     {
       "nombre": "EV/EBITDA",
-      "peso": null,
+      "peso": 0.19999999999999996,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -56,7 +56,7 @@
     },
     {
       "nombre": "EV/FCFF",
-      "peso": null,
+      "peso": 0.09999999999999998,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -64,7 +64,7 @@
     },
     {
       "nombre": "P/E",
-      "peso": null,
+      "peso": 0.19999999999999996,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -72,7 +72,7 @@
     },
     {
       "nombre": "P/FCFE",
-      "peso": null,
+      "peso": 0.04999999999999999,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -80,7 +80,7 @@
     },
     {
       "nombre": "P/OCF",
-      "peso": null,
+      "peso": 0.04999999999999999,
       "conservador": null,
       "base": null,
       "optimista": null,
@@ -175,24 +175,46 @@
     ]
   },
   "descuentoMultiples": {
-    "criterio": "Siete múltiplos históricos nativos: requiere completar entradas verificadas, distinguir precios brutos de históricos ajustados y validar FCFF/FCFE de Nike; no se asigna peso a outputs no verificados",
-    "pesoDcf": 0.6,
-    "pesoMultiplos": 0.4,
+    "criterio": "Promedio 1-3 años",
+    "pesoDcf": 0.4,
+    "pesoMultiplos": 0.5999999999999999,
     "dcfHoy": {
       "conservador": 23.48326485,
       "base": 37.72796351,
       "optimista": 53.03947487
     },
-    "multiplesHoy": null,
-    "ponderadoHoy": null,
-    "chequeo": "PENDIENTE",
+    "multiplesHoy": {
+      "conservador": 36.44410849205137,
+      "base": 36.24313810012622,
+      "optimista": 37.167841611562494
+    },
+    "ponderadoHoy": {
+      "conservador": 31.259771033261096,
+      "base": 36.83706826602581,
+      "optimista": 43.51649491493309
+    },
+    "chequeo": "CONCILIADO_NATIVO_EN_REVISION",
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.19999999999999996,
+        "pesoRelativo": 0.3333333333333333,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            40.06331497920261,
+            42.46286116421846,
+            45.13049126630723
+          ],
+          "vp": [
+            36.32213506727344,
+            35.05408333965329,
+            34.07018720399542
+          ],
+          "consolidado": 35.14880187030739,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D11:K11"
+        },
         "base": {
           "fy": [
             41.32956099794294,
@@ -208,14 +230,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D20:K20"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            42.1737250104365,
+            51.58966479229273,
+            59.95383484646776
+          ],
+          "vp": [
+            38.23547145098504,
+            42.55592134025518,
+            45.11655851958792
+          ],
+          "consolidado": 41.96931710360938,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D29:K29"
+        }
       },
       {
         "nombre": "EV/FCFF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.09999999999999998,
+        "pesoRelativo": 0.16666666666666666,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            69.54204434730212,
+            72.51318717119024,
+            55.63124456385619
+          ],
+          "vp": [
+            63.048090976701836,
+            59.754152143165165,
+            41.89535966868858
+          ],
+          "consolidado": 54.89920092951852,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D12:K12"
+        },
         "base": {
           "fy": [
             57.54671733952202,
@@ -231,14 +281,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D21:K21"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            46.049986342651806,
+            49.762203975117366,
+            54.956858648984294
+          ],
+          "vp": [
+            41.74976096341959,
+            41.05382755566591,
+            41.39280657158227
+          ],
+          "consolidado": 41.398798363555926,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D30:K30"
+        }
       },
       {
         "nombre": "P/E",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.19999999999999996,
+        "pesoRelativo": 0.3333333333333333,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            30.61058197398407,
+            32.98718428152977,
+            35.62470786579106
+          ],
+          "vp": [
+            27.752114210321004,
+            27.265486606694147,
+            26.986467359018295
+          ],
+          "consolidado": 27.334689392011146,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D13:K13"
+        },
         "base": {
           "fy": [
             31.520741758276323,
@@ -254,14 +332,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D22:K22"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            32.127514947804485,
+            40.0978522119887,
+            47.18766330576434
+          ],
+          "vp": [
+            29.12739342502673,
+            33.11014822801943,
+            35.60319398380938
+          ],
+          "consolidado": 32.613578545618516,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D31:K31"
+        }
       },
       {
         "nombre": "P/FCFE",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.04999999999999999,
+        "pesoRelativo": 0.08333333333333333,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            46.94421515014124,
+            49.559096341668536,
+            41.54989338689898
+          ],
+          "vp": [
+            42.560485176918625,
+            40.88688186198057,
+            31.401921876818914
+          ],
+          "consolidado": 38.28309630523937,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D14:K14"
+        },
         "base": {
           "fy": [
             40.70055821874498,
@@ -277,14 +383,42 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D23:K23"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            34.64680347804621,
+            39.128674755540224,
+            44.2169231563013
+          ],
+          "vp": [
+            31.411426544012883,
+            32.31352625954108,
+            33.38939528207598
+          ],
+          "consolidado": 32.37144936187665,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D32:K32"
+        }
       },
       {
         "nombre": "P/OCF",
-        "peso": 0,
-        "pesoRelativo": 0,
-        "estado": "CONTRASTE_SIN_CONSOLIDACION",
-        "conservador": null,
+        "peso": 0.04999999999999999,
+        "pesoRelativo": 0.08333333333333333,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
+        "conservador": {
+          "fy": [
+            48.50543402731251,
+            50.8772340109821,
+            42.346115223696984
+          ],
+          "vp": [
+            43.97591480264054,
+            41.97033403873873,
+            31.995267231818683
+          ],
+          "consolidado": 39.31383869106598,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D15:K15"
+        },
         "base": {
           "fy": [
             42.019157750031525,
@@ -300,19 +434,54 @@
           "chequeo": "OK",
           "origen": "'Descuento de múltiplos'!D24:K24"
         },
-        "optimista": null
+        "optimista": {
+          "fy": [
+            35.731669458636766,
+            39.07745956530733,
+            43.52529931138076
+          ],
+          "vp": [
+            32.394985909915476,
+            32.271429587370406,
+            32.8739964612637
+          ],
+          "consolidado": 32.51347065284986,
+          "chequeo": "OK",
+          "origen": "'Descuento de múltiplos'!D33:K33"
+        }
       }
     ],
     "integracionNativa": {
       "revisionId": "NKE-20261029-R1",
       "sourceSheetId": "1-nmaTwO34GwoqqAE7ROZaO-2icKJKU70oXQAJ5QqFx0",
       "rango": "'Descuento de múltiplos'!A1:M80",
-      "capturaSha256": "45c863fdf4697260ef48c9cc53689dce7740a633d6d2e093fb5f2268837814b9",
-      "fechaCaptura": "2026-10-31",
-      "estado": "METODOS_BASE_CONCILIADOS_ESCENARIOS_Y_PONDERACION_PENDIENTE",
+      "capturaSha256": "91a292059cd7ddec3db3d7a9ad61b53f95e736fb50b8a1525d15e4df3a22c3df",
+      "fechaCaptura": "2026-11-01",
+      "estado": "METODOS_Y_CONSOLIDACION_CONCILIADOS",
       "certificadoEconomico": false,
       "calculosExternosExportados": false,
-      "motivoPendiente": "Faltan resultados conservador/optimista y/o ponderaciones nativas. No se interpreta el ponderado cero como valor ni se inventan datos. Consultar la fotografía fuente."
+      "motivoPendiente": null,
+      "categoriaEmpresa": "Madura",
+      "justificacionPesos": "Madura: marca global consolidada con crecimiento moderado y márgenes cíclicos; el DCF pesa 40 % y los relativos 60 %, con más peso en EV/EBITDA y P/E, los múltiplos que más usa el mercado para consumo maduro.",
+      "respaldoAnterior": "evidencia/descuentos-20261101/respaldo/NKE/"
+    },
+    "costoPatrimonio": 0.10300000000000001,
+    "resumenNativo": {
+      "dcfHoy": {
+        "conservador": 23.483264845075688,
+        "base": 37.72796351487522,
+        "optimista": 53.039474869989
+      },
+      "multiplesHoy": {
+        "conservador": 36.44410849205137,
+        "base": 36.24313810012622,
+        "optimista": 37.167841611562494
+      },
+      "ponderadoHoy": {
+        "conservador": 31.259771033261096,
+        "base": 36.83706826602581,
+        "optimista": 43.51649491493309
+      }
     }
   },
   "revisionSupuestos": {

@@ -15,8 +15,10 @@ from estandarizar_nivel1 import standardize, Document
 from restaurar_nivel2_desde_foto import active_analysis_path
 
 class NativeDiscountTests(unittest.TestCase):
+    SEIS=('NKE','PYPL','EPAM','ZTS','NVO','ONON')
     def fixture(self,ticker='ADBE'):
-        p=next(p for p in (ROOT/'evidencia/descuentos-20261031').glob(ticker+'*-UNFORMATTED_VALUE.json') if '-DCF-' not in p.name)
+        carpeta='evidencia/descuentos-20261101' if ticker in self.SEIS else 'evidencia/descuentos-20261031'
+        p=next(p for p in (ROOT/carpeta).glob('*-UNFORMATTED_VALUE.json') if '-DCF-' not in p.name and json.loads(p.read_text())['ticker']==ticker)
         c=json.loads(p.read_text())
         f=json.loads(p.with_name(p.name.replace('UNFORMATTED_VALUE','FORMULA')).read_text())
         # La captura anterior a los descuentos completos se prueba con su
@@ -58,13 +60,21 @@ class NativeDiscountTests(unittest.TestCase):
         with self.assertRaises(AssertionError): integrate(v,c,f,h)
 
     def test_missing_scenarios_stay_null(self):
-        for ticker in ['EPAM','MSFT','NKE','NVO','ONON','PYPL','ZTS']:
+        for ticker in ['MSFT']:
             v,c,f,h=self.fixture(ticker);d=integrate(v,c,f,h)['descuentoMultiples']
             self.assertIn('PENDIENTE',d['integracionNativa']['estado'])
             for method in d['metodos']:
                 self.assertIsNone(method['conservador'])
                 self.assertIsNone(method['optimista'])
                 self.assertEqual(len(method['base']['vp']),3)
+
+    def test_six_resolved_have_all_scenarios_and_sheet_weights(self):
+        for ticker in self.SEIS:
+            v,c,f,h=self.fixture(ticker);d=integrate(v,c,f,h)['descuentoMultiples']
+            self.assertEqual(d['integracionNativa']['estado'],'METODOS_Y_CONSOLIDACION_CONCILIADOS',ticker)
+            self.assertAlmostEqual(d['pesoDcf'],c['values'][37][1],msg=ticker)
+            for method in d['metodos']:
+                self.assertIsNotNone(method['conservador'],ticker);self.assertIsNotNone(method['optimista'],ticker)
 
 class EditorialTests(unittest.TestCase):
     def test_historical_filename_never_selects_active_report(self):
