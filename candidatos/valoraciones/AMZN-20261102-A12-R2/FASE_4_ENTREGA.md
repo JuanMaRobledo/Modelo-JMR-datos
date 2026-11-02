@@ -6,6 +6,18 @@
 
 **Dictamen: PENDIENTE** · Tesis: **Plausible con reservas** · Estado del expediente: **CANDIDATO** (sin cambios; no se marca AUDITADO) · Informe: [`AUDITORIA_ECONOMICA_AMZN_R2.md`](AUDITORIA_ECONOMICA_AMZN_R2.md) · Evidencia: [`auditoria_fase4/`](auditoria_fase4/)
 
+## Actualización v2 (misma sesión, a pedido del usuario: «capitalizar I+D y resolver los otros problemas»)
+
+- **B-04 (I+D) resuelto → C-10.** Serie de T&I de los 10-K FY2015–FY2025 y D&A de PP&E por segmento. I+D estimada de 73 a 96 mM; activo de 106 a 179 mM; ROIC ajustado 13,7 %–14,6 % (GAAP 15,9 %). Con capitalización consistente el FCFF es idéntico (verificado): 0 % de efecto en el valor.
+- **B-01 resuelto.** Base de las preferentes 2,1 mM (= 8,0 − 5,9); impuesto diferido total 56.907 → −3,5 %.
+- **B-03 confirmado y agravado.** Beta de regresión de 60 meses: 1,49 (EE 0,21). Bottom-up con AWS = Software: βu 1,05 → −6,3 % sobre el R3.
+- **B-06 nuevo.** El impuesto en caja (≈ 6,5 % del EBIT; 10-K: la ley de 2025 lo reduce) frente al 22,5 % del modelo → +4,2 %. **C-09 nuevo:** margen de partida 14,1 % → +2,0 %.
+- **A-02 recalculado** con vida de 9,9 años y tasa de 4,0 % del 10-Q: +6,6 %.
+- **C-02: causa raíz encontrada.** `Trailing Valuation!B3:K3` (precios de cierre) está vacía. Calculé las anclas A y C y las matrices del auditor; con el tope C, los múltiplos no contradicen el DCF.
+- **D-01 corregido** en JMR-valuation (`controles_supuestos.py`, función `foso()`, 3 pruebas nuevas, commit `667de1c`). `controles_supuestos.py AMZN` oficial: **0 hallazgos**. Los 28 fallos previos de la suite de pruebas de JMR-valuation siguen igual (no los causa este cambio). La ejecución global de `controles_supuestos.py` ya fallaba antes con `AttributeError` (`crec` en forma de lista en otra ficha); no se tocó.
+- **R3 central propuesto: 185,10 USD** (MOS 120,30; rango 168,8–197,6), con la tabla celda por celda en el informe §15. Dictamen de R2: **sigue PENDIENTE** (A-01 y A-02 son errores de R2).
+- Evidencia: `auditoria_fase4/resolucion_R3.json`, `scripts/resolver.py`, `anclaC.py`, `alt3.py`.
+
 ## Hecho y verificado (con evidencia)
 
 - **Revisión.** AMZN no figura en `catalogo.json` y no existe `auditorias/solicitudes/AMZN/`. Audité la última revisión identificable, R2 (CANDIDATO), como permite el prompt 3/3 («valoración más reciente identificable»).
@@ -28,10 +40,10 @@
 | 5b. `inputs_completos.py` (ídem) | **0** vacías esenciales |
 | 5b. `estados_completos.py` (ídem) | **2 hallazgos** (`CFS!38–39`) → C-06 |
 | 5b. `integridad_hojas.py` (ídem) | **19 hallazgos**: 15 `#NUM!` en múltiplos (C-02) + 4 contra el motor legado (falsos positivos, D-01) |
-| 5b. `controles_supuestos.py` | Oficial (ficha legada): 2 S1. **PRUEBA EQUIVALENTE** con datos de R2 (`supuestos_r2.py`): 1 S1, falso positivo por el bug `rstrip("N")` (D-01) |
+| 5b. `controles_supuestos.py` | v1: oficial (ficha legada) 2 S1; prueba equivalente con R2: 1 S1, falso positivo del bug `rstrip("N")`. **v2: bug corregido, oficial AMZN = 0 hallazgos** |
 | `probabilidades.py` (oficial) | **0 fallos** |
 | Formato unificado: selectores y validaciones | **NO EJECUTADO**: `unificacion_hojas.py` no existe en el repositorio; las fórmulas y el orden de pestañas sí se verificaron |
-| 6. Clasificación y dictamen | A: 2 · B: 5 · C: 8 · D: 2 → **PENDIENTE** |
+| 6. Clasificación y dictamen | v2: A: 2 · B: 5 (B-01, B-02, B-03, B-05, B-06) · C: 10 · D: 2 → **PENDIENTE** |
 | 18 títulos H2 exactos y en orden | **APROBADO** (comparación automática con el prompt) |
 | Resumen oral de 90 a 150 palabras | **126 palabras** ✓ |
 | Hallazgos con evidencia, celda, efecto y propuesta | ✓ (§15) |
@@ -50,17 +62,17 @@
 
 ## Pendiente o bloqueado
 
-1. **Fase 2 nueva (`AMZN-<fecha>-A12-R3`)** con estos cambios propuestos (requieren aprobación del usuario):
+1. **Fase 2 nueva (`AMZN-<fecha>-A12-R3`)** aplicando la tabla celda por celda del informe §15 (v2; R3 central 185,10). Cambios, que requieren aprobación del usuario:
    - A-01: prima madura y Rf de la misma fecha y columna (Damodaran 1-nov-26 T12m 3,79 % con Rf 4,94 %, o el corte oficial 30-sep 3,70 % / 5,29 %).
    - A-02: `B18 = Yes` con el convertidor de arrendamientos, o excluir los 100.288 de arrendamientos operativos de la deuda (y de la deuda de mercado del WACC).
    - B-01: restar el impuesto diferido AFS de 34.608 y estimar el de las preferentes de Anthropic (≤ 22,8 mM).
    - B-02: justificar el ROIC terminal de 12,5 % frente a la ventaja durable (referencia 16,5 %, piso Retail 13,6 %) o ajustarlo.
    - B-03: revisar el mapeo de AWS en la beta (Computer Services frente a Software) y añadir beta de regresión.
-   - B-04: acotar la capitalización de I+D.
+   - B-06: `Input!B90` = 15 %. C-09: `Input!B28` = 14,1 %. C-10 (I+D): mantener `B17 = No` o capitalizar de forma consistente.
    - C-02: anclas y matrices 5×5 de EV/EBITDA, P/E normalizado y P/OCF.
    - C-08: incorporar Anthropic y OpenAI (participadas y clientes) al Nivel 1.
 2. **C-04**: mover la hoja R2 (conservando su ID) desde `Revisiones sustituidas…/AMZN` a `Análisis/AMZN` antes de cualquier promoción.
-3. **C-01 y D-01** (mantenimiento de herramientas, con respaldo y regresión): rama K = 0 en `Option value` de la plantilla; `controles_supuestos.py` (`rstrip("N")`); `integridad_hojas.py` para candidatos.
+3. **C-01** (mantenimiento de la maestra, con respaldo y regresión): rama K = 0 en `Option value`. `integridad_hojas.py` para candidatos. (D-01 ya está corregido.)
 4. Crear la hoja de auditoría independiente en Drive (REGLAS §11) importando `inventario_entradas_R2.csv` y la tabla §15. Necesita permiso para escribir en Drive.
 5. Publicar el informe en `auditorias/narrativas/AMZN.md` **solo** con autorización expresa.
 

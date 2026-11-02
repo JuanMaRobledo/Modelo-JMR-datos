@@ -1,0 +1,688 @@
+{
+ "beta_regresion": {
+  "meses": 60,
+  "desde": "2021-10",
+  "hasta": "2026-10",
+  "beta": 1.4914423086982045,
+  "error_estandar": 0.21221516363044898,
+  "r2": 0.4599245171981322,
+  "ic95": [
+   1.0755005879825246,
+   1.9073840294138844
+  ],
+  "beta_blume": 1.329266346827797,
+  "beta_desapalancada_equivalente": 1.4042860920663298,
+  "beta_desapalancada_R2": 0.8082016226002329
+ },
+ "beta_bottom_up_alternativas": {
+  "R2_EV_ventas": 0.8082,
+  "EBIT_x_EV_EBIT_ComputerServices": 0.8633363525914386,
+  "EBIT_x_EV_EBIT_Software": 1.0543494641094868
+ },
+ "ID": {
+  "serie_TI": {
+   "2018": 28837,
+   "2019": 35931,
+   "2020": 42740,
+   "2021": 56052,
+   "2022": 73213,
+   "2023": 85622,
+   "2024": 88544,
+   "2025": 108521,
+   "LTM": 126938
+  },
+  "serie_DA_PPE": {
+   "2018": 12138,
+   "2019": 15150,
+   "2020": 16239,
+   "2021": 22909,
+   "2022": 24924,
+   "2023": 30225,
+   "2024": 32067,
+   "2025": 41860,
+   "LTM": 53958
+  },
+  "ID_prudente": {
+   "2018": 16699,
+   "2019": 20781,
+   "2020": 26501,
+   "2021": 33143,
+   "2022": 48289,
+   "2023": 55397,
+   "2024": 56477,
+   "2025": 66661,
+   "LTM": 72980
+  },
+  "ID_alta": {
+   "2023": 73091,
+   "2024": 75224,
+   "2025": 87071,
+   "LTM": 95787
+  },
+  "resultados": {
+   "prudente_vida2": {
+    "ID_LTM": 72980,
+    "activo": 106310.5,
+    "amortizacion": 61569.0,
+    "EBIT_ajustado": 115777.0,
+    "margen_ajustado": 0.1451831137807149,
+    "ROIC_GAAP": 0.1591872891224391,
+    "ROIC_ajustado": 0.14576712915166318
+   },
+   "prudente_vida3": {
+    "ID_LTM": 72980,
+    "activo": 136246.33333333334,
+    "amortizacion": 59511.666666666664,
+    "EBIT_ajustado": 117834.33333333334,
+    "margen_ajustado": 0.14776298767119567,
+    "ROIC_GAAP": 0.1591872891224391,
+    "ROIC_ajustado": 0.14147699515921303
+   },
+   "alta_vida2": {
+    "ID_LTM": 95787,
+    "activo": 139322.5,
+    "amortizacion": 81147.5,
+    "EBIT_ajustado": 119005.5,
+    "margen_ajustado": 0.14923161808503302,
+    "ROIC_GAAP": 0.1591872891224391,
+    "ROIC_ajustado": 0.14220544711504732
+   },
+   "alta_vida3": {
+    "ID_LTM": 95787,
+    "activo": 178909.0,
+    "amortizacion": 78462.0,
+    "EBIT_ajustado": 121691.0,
+    "margen_ajustado": 0.15259920622480266,
+    "ROIC_GAAP": 0.1591872891224391,
+    "ROIC_ajustado": 0.13704937150330598
+   }
+  },
+  "neutralidad": {
+   "FCFF_terminal_GAAP": 168899.20855488532,
+   "FCFF_terminal_capitalizado_consistente": 168899.20855488535,
+   "ROIC_terminal_ajustado_equivalente_a_12_5_GAAP": 0.11276399703023211,
+   "efecto_si_se_aplica_12_5_a_base_ajustada": 4.581607096705979
+  }
+ },
+ "arrendamientos": {
+  "costo_operativo_LTM": 16070,
+  "pasivo": 100288,
+  "vida_remanente": 9.9,
+  "tasa_descuento": 0.04,
+  "depreciacion_ROU": 10130.10101010101,
+  "ajuste_EBIT": 5939.898989898989,
+  "ajuste_margen_pp": 0.7448569499092725,
+  "valor": 158.56271164797133,
+  "pct": 6.649696363605668,
+  "alternativa_excluir_de_deuda": 157.95267370759706
+ },
+ "impuesto_diferido": {
+  "costo_total_notas": 8000,
+  "base_notas_restantes": 5900,
+  "base_preferentes": 2100,
+  "tasa_implicita": 0.24667141838916606,
+  "DTL_notas_observado": 34608,
+  "DTL_preferentes_estimado": 22299.096222380613,
+  "DTL_total": 56907.09622238061,
+  "valor": 143.4123817621359
+ },
+ "multiplos": {
+  "tasas_R2": {
+   "historicos": {
+    "2022": {
+     "EV_EBITDA": 17.176,
+     "P_OCF": 18.402,
+     "PE_operativo": 100.186,
+     "factor_tasas": 1.06
+    },
+    "2023": {
+     "EV_EBITDA": 19.019,
+     "P_OCF": 18.572,
+     "PE_operativo": 54.533,
+     "factor_tasas": 0.816
+    },
+    "2024": {
+     "EV_EBITDA": 19.39,
+     "P_OCF": 20.056,
+     "PE_operativo": 41.513,
+     "factor_tasas": 0.894
+    },
+    "2025": {
+     "EV_EBITDA": 16.926,
+     "P_OCF": 17.754,
+     "PE_operativo": 38.198,
+     "factor_tasas": 0.803
+    }
+   },
+   "metodos": {
+    "EV_EBITDA": {
+     "ancla_A_mediana": 16.430790172830488,
+     "ancla_A_minimo": 13.596242794522265,
+     "serie": {
+      "sin_ajuste": [
+       17.18,
+       19.02,
+       19.39,
+       16.93
+      ],
+      "ajustado": [
+       18.21,
+       15.52,
+       17.34,
+       13.6
+      ],
+      "minimo": 13.596242794522265,
+      "mediana": 16.430790172830488
+     },
+     "observado_hoy": 13.575426874738051,
+     "VP_por_accion_mediana": 315.4520790272275,
+     "VP_por_accion_minimo": 261.9867307811427,
+     "VP_por_accion_observado": 261.5941000532733,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       13.14,
+       14.79,
+       16.43,
+       18.07,
+       19.72
+      ],
+      "columnas_FY3": [
+       238660,
+       251919,
+       265178,
+       278437,
+       291695
+      ],
+      "valores": [
+       [
+        228.67,
+        241.07,
+        253.47,
+        265.87,
+        278.26
+       ],
+       [
+        256.57,
+        270.51,
+        284.46,
+        298.41,
+        312.35
+       ],
+       [
+        284.46,
+        299.96,
+        315.45,
+        330.95,
+        346.44
+       ],
+       [
+        312.35,
+        329.4,
+        346.44,
+        363.49,
+        380.53
+       ],
+       [
+        340.25,
+        358.84,
+        377.44,
+        396.03,
+        414.63
+       ]
+      ]
+     }
+    },
+    "P_OCF": {
+     "ancla_A_mediana": 16.545987481744135,
+     "ancla_A_minimo": 14.261397537634743,
+     "serie": {
+      "sin_ajuste": [
+       18.4,
+       18.57,
+       20.06,
+       17.75
+      ],
+      "ajustado": [
+       19.51,
+       15.16,
+       17.94,
+       14.26
+      ],
+      "minimo": 14.261397537634743,
+      "mediana": 16.545987481744135
+     },
+     "observado_hoy": 15.439238562091504,
+     "VP_por_accion_mediana": 152.5042148525696,
+     "VP_por_accion_minimo": 131.18631004634602,
+     "VP_por_accion_observado": 142.17694882639302,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       13.24,
+       14.89,
+       16.55,
+       18.2,
+       19.86
+      ],
+      "columnas_FY3": [
+       118067,
+       124626,
+       131185,
+       137744,
+       144304
+      ],
+      "valores": [
+       [
+        109.27,
+        115.45,
+        121.63,
+        127.8,
+        133.98
+       ],
+       [
+        123.17,
+        130.12,
+        137.06,
+        144.01,
+        150.96
+       ],
+       [
+        137.06,
+        144.78,
+        152.5,
+        160.22,
+        167.94
+       ],
+       [
+        150.96,
+        159.45,
+        167.94,
+        176.44,
+        184.93
+       ],
+       [
+        164.86,
+        174.12,
+        183.38,
+        192.65,
+        201.91
+       ]
+      ]
+     }
+    },
+    "PE_operativo": {
+     "ancla_A_mediana": 40.813961703866454,
+     "ancla_A_minimo": 30.683497053511065,
+     "serie": {
+      "sin_ajuste": [
+       100.19,
+       54.53,
+       41.51,
+       38.2
+      ],
+      "ajustado": [
+       106.21,
+       44.5,
+       37.13,
+       30.68
+      ],
+      "minimo": 30.683497053511065,
+      "mediana": 40.813961703866454
+     },
+     "observado_hoy": 31.436256811438994,
+     "VP_por_accion_mediana": 395.5112430247634,
+     "VP_por_accion_minimo": 296.872159574901,
+     "VP_por_accion_observado": 304.2016883914639,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       32.65,
+       36.73,
+       40.81,
+       44.9,
+       48.98
+      ],
+      "columnas_FY3": [
+       123200,
+       130044,
+       136889,
+       143733,
+       150578
+      ],
+      "valores": [
+       [
+        284.24,
+        300.14,
+        316.03,
+        331.93,
+        347.82
+       ],
+       [
+        320.01,
+        337.89,
+        355.77,
+        373.65,
+        391.54
+       ],
+       [
+        355.77,
+        375.64,
+        395.51,
+        415.38,
+        435.25
+       ],
+       [
+        391.54,
+        413.39,
+        435.25,
+        457.11,
+        478.97
+       ],
+       [
+        427.3,
+        451.15,
+        474.99,
+        498.84,
+        522.68
+       ]
+      ]
+     }
+    }
+   }
+  },
+  "tasas_corte_nov26": {
+   "historicos": {
+    "2022": {
+     "EV_EBITDA": 17.176,
+     "P_OCF": 18.402,
+     "PE_operativo": 100.186,
+     "factor_tasas": 1.23
+    },
+    "2023": {
+     "EV_EBITDA": 19.019,
+     "P_OCF": 18.572,
+     "PE_operativo": 54.533,
+     "factor_tasas": 0.947
+    },
+    "2024": {
+     "EV_EBITDA": 19.39,
+     "P_OCF": 20.056,
+     "PE_operativo": 41.513,
+     "factor_tasas": 1.038
+    },
+    "2025": {
+     "EV_EBITDA": 16.926,
+     "P_OCF": 17.754,
+     "PE_operativo": 38.198,
+     "factor_tasas": 0.932
+    }
+   },
+   "metodos": {
+    "EV_EBITDA": {
+     "ancla_A_mediana": 19.070832568464986,
+     "ancla_A_minimo": 15.78083994543916,
+     "serie": {
+      "sin_ajuste": [
+       17.18,
+       19.02,
+       19.39,
+       16.93
+      ],
+      "ajustado": [
+       21.13,
+       18.01,
+       20.13,
+       15.78
+      ],
+      "minimo": 15.78083994543916,
+      "mediana": 19.070832568464986
+     },
+     "observado_hoy": 13.575426874738051,
+     "VP_por_accion_mediana": 371.8745152989311,
+     "VP_por_accion_minimo": 308.6928044273997,
+     "VP_por_accion_observado": 266.33958758122327,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       15.26,
+       17.16,
+       19.07,
+       20.98,
+       22.88
+      ],
+      "columnas_FY3": [
+       238660,
+       251919,
+       265178,
+       278437,
+       291695
+      ],
+      "valores": [
+       [
+        269.33,
+        283.98,
+        298.63,
+        313.28,
+        327.93
+       ],
+       [
+        302.29,
+        318.77,
+        335.25,
+        351.73,
+        368.21
+       ],
+       [
+        335.25,
+        353.56,
+        371.87,
+        390.19,
+        408.5
+       ],
+       [
+        368.21,
+        388.36,
+        408.5,
+        428.64,
+        448.78
+       ],
+       [
+        401.17,
+        423.15,
+        445.12,
+        467.1,
+        489.07
+       ]
+      ]
+     }
+    },
+    "P_OCF": {
+     "ancla_A_mediana": 19.20453938155926,
+     "ancla_A_minimo": 16.552869446430176,
+     "serie": {
+      "sin_ajuste": [
+       18.4,
+       18.57,
+       20.06,
+       17.75
+      ],
+      "ajustado": [
+       22.64,
+       17.59,
+       20.82,
+       16.55
+      ],
+      "minimo": 16.552869446430176,
+      "mediana": 19.20453938155926
+     },
+     "observado_hoy": 15.439238562091504,
+     "VP_por_accion_mediana": 180.5281719475054,
+     "VP_por_accion_minimo": 155.3361224792355,
+     "VP_por_accion_observado": 144.7561313740125,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       15.36,
+       17.28,
+       19.2,
+       21.12,
+       23.05
+      ],
+      "columnas_FY3": [
+       118067,
+       124626,
+       131185,
+       137744,
+       144304
+      ],
+      "valores": [
+       [
+        129.44,
+        136.74,
+        144.04,
+        151.34,
+        158.63
+       ],
+       [
+        145.86,
+        154.07,
+        162.28,
+        170.49,
+        178.7
+       ],
+       [
+        162.28,
+        171.41,
+        180.53,
+        189.65,
+        198.77
+       ],
+       [
+        178.7,
+        188.74,
+        198.77,
+        208.81,
+        218.84
+       ],
+       [
+        195.12,
+        206.07,
+        217.02,
+        227.97,
+        238.91
+       ]
+      ]
+     }
+    },
+    "PE_operativo": {
+     "ancla_A_mediana": 47.37180755903316,
+     "ancla_A_minimo": 35.61361497331411,
+     "serie": {
+      "sin_ajuste": [
+       100.19,
+       54.53,
+       41.51,
+       38.2
+      ],
+      "ajustado": [
+       123.27,
+       51.65,
+       43.09,
+       35.61
+      ],
+      "minimo": 35.61361497331411,
+      "mediana": 47.37180755903316
+     },
+     "observado_hoy": 31.436256811438994,
+     "VP_por_accion_mediana": 467.6973440822805,
+     "VP_por_accion_minimo": 351.13238648624656,
+     "VP_por_accion_observado": 309.7201053509788,
+     "matriz_5x5": {
+      "filas_multiplo": [
+       37.9,
+       42.63,
+       47.37,
+       52.11,
+       56.85
+      ],
+      "columnas_FY3": [
+       123200,
+       130044,
+       136889,
+       143733,
+       150578
+      ],
+      "valores": [
+       [
+        336.2,
+        354.99,
+        373.77,
+        392.56,
+        411.34
+       ],
+       [
+        378.47,
+        399.6,
+        420.74,
+        441.87,
+        463.0
+       ],
+       [
+        420.74,
+        444.22,
+        467.7,
+        491.18,
+        514.66
+       ],
+       [
+        463.0,
+        488.83,
+        514.66,
+        540.49,
+        566.32
+       ],
+       [
+        505.27,
+        533.44,
+        561.62,
+        589.8,
+        617.98
+       ]
+      ]
+     }
+    }
+   }
+  }
+ },
+ "multiplos_nota": "Auditor: precios de cierre de diciembre (Alpha Vantage, ajustados por split 20:1), acciones de Income Statement!27, deuda y caja de Balance Sheet; EV excluye inversiones no operativas. P/E con utilidad operativa normalizada (sin ganancias de Anthropic/Rivian). Ke de descuento = Ke del caso. No oficial: la hoja debe calcularlos tras diligenciar Trailing Valuation!B3:K3 y Entradas hist\u00f3ricas auxiliares!4:5.",
+ "beta_usada_en_R3": "bottom-up R2 0,808; ver beta_regresion",
+ "paquetes_R3": {
+  "1_errores: ERP nov T12m + arrendamientos Damodaran + DTL total + RSU a mercado": {
+   "valor": 181.63548726926527,
+   "pct": 22.168505853567396,
+   "mos35": 118.06306672502242
+  },
+  "2_+ impuesto de caja 15%\u219225% + margen a\u00f1o 1 14,1% (+ajuste arriendo)": {
+   "valor": 191.66938785587257,
+   "pct": 28.917333744957485,
+   "mos35": 124.58510210631718
+  },
+  "3_+ ROIC terminal 13,6% (piso Retail) = R3 central propuesto": {
+   "valor": 197.56644764076543,
+   "pct": 32.88371164654845,
+   "mos35": 128.41819096649755
+  },
+  "4_R3 central con beta bottom-up EBIT\u00d7EV/EBIT ComputerServices": {
+   "valor": 194.6904718339438,
+   "pct": 30.949322764327746,
+   "mos35": 126.54880669206348
+  },
+  "5_R3 central con ERP pago sostenible nov 4,41%": {
+   "valor": 170.61622185367932,
+   "pct": 14.756918989870753,
+   "mos35": 110.90054420489156
+  },
+  "6_R3 central con beta de regresi\u00f3n desapalancada": {
+   "valor": 168.80142022862395,
+   "pct": 13.536278649775957,
+   "mos35": 109.72092314860558
+  }
+ },
+ "margen_terminal_implicito_R3_central": 0.2112006889532576
+}
