@@ -1,0 +1,840 @@
+{
+  "ticker": "AMZN",
+  "revision_id": "AMZN-20261102-A12-R2",
+  "sheet_id": "1h6Xv5cNqwtKPpqI81KiZ_FNpTl4k_uQQS2QJEHphaBI",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1h6Xv5cNqwtKPpqI81KiZ_FNpTl4k_uQQS2QJEHphaBI/edit",
+  "fecha_corte": "2026-11-02",
+  "fecha_mercado": "2026-10-30",
+  "periodo_base": "LTM terminado2026-09-30",
+  "moneda": "USD",
+  "unidad_financiera": "millones",
+  "unidad_acciones": "millones",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "CANDIDATO",
+  "fase": 2,
+  "estado_fase": "CERRADA CON CONTROLES PENDIENTES",
+  "publicable": false,
+  "valor_oficial_certificado": false,
+  "industria_damodaran": "Retail (General); beta multibusiness Retail+Computer Services",
+  "snapshot": {
+    "file": "CAPTURA_SHEET.json",
+    "sha256": "ad3c2174044e688e584f0b639e8777a8bf4c8e1229ae3a98e121640a1fd3b4cd",
+    "native_export_sha256": "0365c794f4854e42f62012d2899c4e8c9c42c157c7f4e3b8ffeab2ce45cbc72a"
+  },
+  "segmentos": {
+    "North America": 460255,
+    "International": 175818,
+    "AWS": 161382
+  },
+  "margen_ltm": 0.13087384241117053,
+  "iyd": {
+    "estado": "POR_REVISAR_MATERIAL",
+    "capitalizada": false,
+    "margen_pp": null,
+    "capital_ventas": null,
+    "razon": "Separación pura no verificable; no equivale a ausencia deI+D. Valores provisionales GAAP."
+  },
+  "arrendamientos": {
+    "estado": "reconocidos_en_balance_sin_conversion_incremental",
+    "margen_pp": 0,
+    "capital_ventas": 0,
+    "pasivo_reconocido": 114783
+  },
+  "historias": [
+    {
+      "id": "A",
+      "nombre": "Base",
+      "titulo": "AWS escala; retail madura y monetiza publicidad",
+      "prob": 0.45,
+      "margen": 0.17,
+      "s2c": 0.75,
+      "s2c_6_10": 1.4,
+      "crec": {
+        "consolidado": [
+          0.1390497269438402,
+          0.12942384296468434,
+          0.11915604474919217,
+          0.10515212080739755,
+          0.0944636628034683
+        ]
+      },
+      "crecimiento_anual": [
+        0.1390497269438402,
+        0.12942384296468434,
+        0.11915604474919217,
+        0.10515212080739755,
+        0.0944636628034683,
+        0.08357093024277464,
+        0.07267819768208097,
+        0.061785465121387315,
+        0.05089273256069366,
+        0.04
+      ],
+      "roic_terminal": 0.125,
+      "g_terminal": 0.04,
+      "valor_por_accion": 148.67619604595617,
+      "estado": "CANDIDATO_CON_RESERVAS",
+      "fuente": "Escenarios e historias!fila5; C29:M29; Valuation output!B35",
+      "narrativa": "Capacidad IA y AWS amplía mezcla; margen17% con retail8%/AWS30% aproximados al final. SC0.75/1.4 financia capex alto. Competencia y depreciación pueden impedir mejora."
+    },
+    {
+      "id": "B",
+      "nombre": "Conservadora",
+      "titulo": "Adopción más lenta y capacidad cara",
+      "prob": 0.225,
+      "margen": 0.14,
+      "s2c": 0.6,
+      "s2c_6_10": 1,
+      "crec": {
+        "consolidado": [
+          0.0847027104977709,
+          0.07944789119465212,
+          0.0710374652587571,
+          0.0631689480881763,
+          0.05733090643185923
+        ]
+      },
+      "crecimiento_anual": [
+        0.0847027104977709,
+        0.07944789119465212,
+        0.0710374652587571,
+        0.0631689480881763,
+        0.05733090643185923,
+        0.05386472514548738,
+        0.05039854385911554,
+        0.04693236257274369,
+        0.04346618128637185,
+        0.04
+      ],
+      "roic_terminal": 0.105,
+      "g_terminal": 0.04,
+      "valor_por_accion": 91.92733065741396,
+      "estado": "CANDIDATO_CON_RESERVAS",
+      "fuente": "Escenarios e historias!fila6; C53:M53; Valuation output!B86",
+      "narrativa": "Nube crece pero productividad de capex menor; retail modesto. Margen14% y ROIC10.5% reflejan erosión parcial, sin recorte adicional de WACC ni probabilidades."
+    },
+    {
+      "id": "C",
+      "nombre": "Disrupción",
+      "titulo": "Capacidad ociosa y compresión de rentabilidad",
+      "prob": 0.1,
+      "margen": 0.1,
+      "s2c": 0.45,
+      "s2c_6_10": 0.65,
+      "crec": {
+        "consolidado": [
+          0.05,
+          0.05,
+          0.04,
+          0.03,
+          0.02
+        ]
+      },
+      "crecimiento_anual": [
+        0.05,
+        0.05,
+        0.04,
+        0.03,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02,
+        0.02
+      ],
+      "roic_terminal": 0.0949,
+      "g_terminal": 0.02,
+      "valor_por_accion": 59.98155580102019,
+      "estado": "CANDIDATO_CON_RESERVAS",
+      "fuente": "Escenarios e historias!fila7; C77:M77; Valuation output!B190",
+      "narrativa": "Monetización IA insuficiente y competencia reducen rentabilidad. g2% estabiliza año5; ROIC=WACC9.49%. Motor ventas/capital no impone gasto contractual fijo: stress separado requerido."
+    },
+    {
+      "id": "D",
+      "nombre": "Optimista",
+      "titulo": "Infraestructura monetizada y ventaja persistente",
+      "prob": 0.225,
+      "margen": 0.2,
+      "s2c": 0.95,
+      "s2c_6_10": 1.7,
+      "crec": {
+        "consolidado": [
+          0.1651208657541805,
+          0.15746232788199865,
+          0.14646073149548866,
+          0.13178830510315986,
+          0.1134828966326713
+        ]
+      },
+      "crecimiento_anual": [
+        0.1651208657541805,
+        0.15746232788199865,
+        0.14646073149548866,
+        0.13178830510315986,
+        0.1134828966326713,
+        0.09878631730613704,
+        0.08408973797960279,
+        0.06939315865306853,
+        0.05469657932653427,
+        0.04000000000000001
+      ],
+      "roic_terminal": 0.15,
+      "g_terminal": 0.04,
+      "valor_por_accion": 225.32782080977046,
+      "estado": "CANDIDATO_CON_RESERVAS",
+      "fuente": "Escenarios e historias!fila8; C101:M101; Valuation output!B137",
+      "narrativa": "Capacidad instalada captura demanda; mixAWS y publicidad mejora margen20%, SC0.95/1.7, ROIC15%. Contra: energía, chips y competencia; no se extrapola39% nube perpetuo."
+    }
+  ],
+  "valor_principal_nativo": 148.67619604595617,
+  "mos35": 96.63952742987152,
+  "promedio_ordinario_sin_disrupcion": 153.6518858897742,
+  "precio": 240.35,
+  "wacc": {
+    "initial": 0.08757648008000218,
+    "terminal": 0.0949,
+    "ke": 0.0915094186435848,
+    "rf": 0.0494,
+    "erp": 0.049057867221630184,
+    "beta_unlevered": 0.8082016226002329,
+    "beta_levered": 0.8583621960845919,
+    "beta_regresion": null,
+    "error_estandar_beta_regresion": null,
+    "ERP_corte_exacto_observado": false
+  },
+  "indicadores": [
+    [
+      "Crecimiento AWS",
+      "39.3% Q3, S3",
+      "Base:25–35% próximo año; Optimista≥35% durante4trimestres",
+      "Conservadora<25%; Disrupción<15% durante4trimestres"
+    ],
+    [
+      "Margen AWS",
+      "38.7% Q3, S3",
+      "Base≥30%; Optimista≥35% sostenible sin excluirSBC",
+      "Conservadora<28%; Disrupción<20% durante4trimestres"
+    ],
+    [
+      "Margen EBIT consolidado",
+      "13.09% LTM; ISL12/L3",
+      "Base avanza hacia17% a10años; Optimista20%",
+      "Conservadora estanca14%; Disrupción cae≤10%"
+    ],
+    [
+      "Reinversión económica cash-proxy",
+      "144,345 USDm LTM; CFS L4,L7:L16",
+      "Base productividad mejora con capacidad y ventas, sin reducircapex artificialmente",
+      "Dos años inversión>150000m sin crecimiento comparable favorecenConservadora"
+    ],
+    [
+      "FCF reportado",
+      "−42357 USDm LTM; S1 p34, CFO−capexneto",
+      "Base recupera flujo con maduración de capacidad; Optimista antes",
+      "Negativo persistente con AWS<15% favoreceDisrupción"
+    ],
+    [
+      "Acciones reales/RSU",
+      "10811m /223.3m; ISL27 yS1Nota6",
+      "Dilución neta≤2% anual; SBC sigue enEBIT",
+      ">3% anual durante2años obliga revisarclaims/denominador"
+    ],
+    [
+      "Inversiones no operativas",
+      "294595 USDm proxy bruto; B84 yS1Nota2",
+      "Realización neta y contratos respaldanvalor; no ingresos operativos duplicados",
+      "Deterioro/netotax−20% o más exige recálculo del puente, no castigoWACC adicional"
+    ],
+    [
+      "Capex y capacidad",
+      "Guía2026~220000m,2027mayor; S1/S3",
+      "Ventas/capital0.75 primeros5años,1.4 después si utilización mejora",
+      "Capexcrece sin utilización: reducirproductividad y margen, no sumarprimaespecífica"
+    ]
+  ],
+  "ajustes_prob": [],
+  "premortem": [
+    "La capacidad IA entra antes que la demanda monetizable y obliga a reinvertir sin generar ingresos suficientes.",
+    "La competencia convierte la nube en un servicio con menor poder de precio y erosiona margen y retorno del capital nuevo.",
+    "La publicidad y los servicios no compensan costos logísticos, depreciación, salarios y energía.",
+    "El valor realizable neto de impuestos de inversiones privadas resulta inferior al proxy contable.",
+    "SBC/RSU diluyen más de lo modelado y la plantilla sigue valorando incorrectamente ejercicio cero.",
+    "La capitalización de I+D y la clasificación de leases no son homogéneas con el sector y distorsionan ROIC/reinversión."
+  ],
+  "metodos_relativos": [
+    {
+      "metodo": "EV/EBITDA",
+      "status": "PENDIENTE_ANCLA",
+      "peso": 0,
+      "motivo": "Métrica positiva; faltan serie histórica de cierres, ajuste por tasas y pares homogéneos. Sector no sustituye ancla por ciclo."
+    },
+    {
+      "metodo": "EV/FCFF",
+      "status": "NO_APLICA_FY3_NEGATIVO",
+      "peso": 0,
+      "motivo": "FCFF FY+3 negativo en las tres historias ordinarias; no fabricar múltiplos."
+    },
+    {
+      "metodo": "P/E",
+      "status": "PENDIENTE_ANCLA_Y_NORMALIZACION",
+      "peso": 0,
+      "motivo": "Interest/Other proyecta media histórica positiva, incluye partidas no operativas; normalizar y obtener ancla independiente."
+    },
+    {
+      "metodo": "P/FCFE",
+      "status": "NO_APLICA_BASE_FY3_NEGATIVO",
+      "peso": 0,
+      "motivo": "BaseFY+3 negativo; Cons/Opt positivos con dependencia deOtros ynetborrowing. Sin ancla, peso0."
+    },
+    {
+      "metodo": "P/OCF",
+      "status": "PENDIENTE_ANCLA_Y_NWC",
+      "peso": 0,
+      "motivo": "Positivo, pero NWC es residuo de conciliación delDCF yOtros requiere normalización. Sin ancla independiente."
+    }
+  ],
+  "sensibilidad_dcf_nativa": [
+    {
+      "kind": "parallel_wacc_g",
+      "x": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "y": [
+        0.07757648008000219,
+        0.08257648008000218,
+        0.08757648008000218,
+        0.09257648008000219,
+        0.09757648008000218
+      ],
+      "values": [
+        [
+          174.7166304600301,
+          182.60185453095178,
+          192.14006891712282,
+          203.94984611434364,
+          219.00419166906178
+        ],
+        [
+          155.67152034348695,
+          161.38792676816718,
+          168.1616275121888,
+          176.34341902655754,
+          186.4598940279671
+        ],
+        [
+          139.68643245236845,
+          143.8410803632163,
+          148.67619604595617,
+          154.3942497427637,
+          161.2878636195437
+        ],
+        [
+          126.10100723710843,
+          129.11021983472895,
+          132.55530252888659,
+          136.55354058287858,
+          141.26919706920143
+        ],
+        [
+          114.4313389748979,
+          116.58787783540411,
+          119.01832699674863,
+          121.78969808323457,
+          124.9933886446034
+        ]
+      ]
+    },
+    {
+      "kind": "terminal_roic_g",
+      "x": [
+        0.03,
+        0.035,
+        0.04,
+        0.045,
+        0.05
+      ],
+      "y": [
+        0.115,
+        0.12,
+        0.125,
+        0.13,
+        0.135
+      ],
+      "values": [
+        [
+          136.676375026888,
+          139.9626687739092,
+          143.746923999147,
+          148.17614747978394,
+          153.46278235570867
+        ],
+        [
+          138.24411326932574,
+          141.98267481000664,
+          146.31425319019343,
+          151.41474240841924,
+          157.53834551395607
+        ],
+        [
+          139.68643245236845,
+          143.8410803632163,
+          148.67619604595617,
+          154.3942497427637,
+          161.2878636195437
+        ],
+        [
+          141.01780400594635,
+          145.55653164310212,
+          150.85645098973717,
+          157.1445642052355,
+          164.74895725547074
+        ],
+        [
+          142.25055544444444,
+          147.14491245781127,
+          152.87520556731218,
+          159.6911516704872,
+          167.95367358503287
+        ]
+      ]
+    },
+    {
+      "kind": "growth_delta_margin",
+      "x": [
+        0.13,
+        0.15000000000000002,
+        0.17,
+        0.19,
+        0.21000000000000002
+      ],
+      "y": [
+        0.0773332886787044,
+        0.0973332886787044,
+        0.1173332886787044,
+        0.1373332886787044,
+        0.1573332886787044
+      ],
+      "values": [
+        [
+          103.3130609221412,
+          119.58534046690974,
+          135.85762001167828,
+          152.1298995564468,
+          168.40217910121532
+        ],
+        [
+          105.16135285903324,
+          123.55909285904221,
+          141.9568328590512,
+          160.35457285906014,
+          178.75231285906906
+        ],
+        [
+          107.14394075039844,
+          127.91006839817734,
+          148.67619604595617,
+          169.44232369373503,
+          190.20845134151392
+        ],
+        [
+          109.28744004416293,
+          132.68859017881474,
+          156.08974031346648,
+          179.49089044811828,
+          202.8920405827701
+        ],
+        [
+          111.62163162689127,
+          137.950068373662,
+          164.2785051204327,
+          190.60694186720346,
+          216.9353786139742
+        ]
+      ]
+    }
+  ],
+  "sensibilidad_dcf_diagnostica": [
+    {
+      "kind": "terminal_wacc_g",
+      "x": [
+        0.035,
+        0.0375,
+        0.04,
+        0.0425,
+        0.045
+      ],
+      "y": [
+        0.0849,
+        0.0899,
+        0.0949,
+        0.0999,
+        0.1049
+      ],
+      "values": [
+        [
+          171.14484649947212,
+          175.3889343177842,
+          180.08141166133203,
+          185.30127753859156,
+          191.14732765964743
+        ],
+        [
+          156.2547929838541,
+          159.38689715086284,
+          162.81132039134195,
+          166.57403746840987,
+          170.73126027913952
+        ],
+        [
+          143.84108036321626,
+          146.16257814785027,
+          148.67619604595617,
+          151.4091837293803,
+          154.39424974276366
+        ],
+        [
+          133.33149248444056,
+          135.04839364070608,
+          136.8911357766364,
+          138.87593766622913,
+          141.02197054435123
+        ],
+        [
+          124.31753509867782,
+          125.57485350224522,
+          126.91311472226302,
+          128.34184418954194,
+          129.87215594883617
+        ]
+      ],
+      "source": "cálculo independiente, no salida nativa; reproduce Base previamente",
+      "center_error": 0.0
+    },
+    {
+      "kind": "terminal_roic_g",
+      "x": [
+        0.035,
+        0.0375,
+        0.04,
+        0.0425,
+        0.045
+      ],
+      "y": [
+        0.115,
+        0.12,
+        0.125,
+        0.13,
+        0.135
+      ],
+      "values": [
+        [
+          139.96266877390917,
+          141.78456296090482,
+          143.74692399914693,
+          145.86953652658065,
+          148.1761474797839
+        ],
+        [
+          141.98267481000659,
+          144.06477920410558,
+          146.3142531901934,
+          148.75476944470546,
+          151.4147424084192
+        ],
+        [
+          143.84108036321626,
+          146.16257814785027,
+          148.67619604595617,
+          151.4091837293803,
+          154.39424974276366
+        ],
+        [
+          145.5565316431021,
+          148.09900794207616,
+          150.85645098973714,
+          153.85941229984937,
+          157.14456420523547
+        ],
+        [
+          147.14491245781124,
+          149.89199849228527,
+          152.87520556731215,
+          156.1281424576911,
+          159.69115167048716
+        ]
+      ],
+      "source": "cálculo independiente, no salida nativa; reproduce Base previamente",
+      "center_error": 0.0
+    },
+    {
+      "kind": "growth_delta_margin",
+      "x": [
+        0.14,
+        0.155,
+        0.17,
+        0.185,
+        0.2
+      ],
+      "y": [
+        -0.02,
+        -0.01,
+        0,
+        0.01,
+        0.02
+      ],
+      "values": [
+        [
+          114.3602228590377,
+          128.1585278590444,
+          141.95683285905116,
+          155.75513785905784,
+          169.55344285906455
+        ],
+        [
+          115.90933246899498,
+          130.57192982777335,
+          145.23452718655176,
+          159.89712454533014,
+          174.5597219041085
+        ],
+        [
+          117.52700457428786,
+          133.10160031012197,
+          148.67619604595617,
+          164.25079178179024,
+          179.82538751762442
+        ],
+        [
+          119.2181694466278,
+          135.75473508144952,
+          152.29130071627122,
+          168.82786635109298,
+          185.3644319859147
+        ],
+        [
+          120.98801511148882,
+          138.53887771247764,
+          156.08974031346648,
+          173.64060291445531,
+          191.19146551544418
+        ]
+      ],
+      "source": "cálculo independiente, no salida nativa; reproduce Base previamente",
+      "center_error": 0.0
+    }
+  ],
+  "dcf_inverso_diagnostico": {
+    "delta": 0.1663688357110909,
+    "base_cagr5": 0.1173332886787044,
+    "implied_cagr5": 0.28371714573754936,
+    "reconstructed_price": 240.3499999999999,
+    "error": -8.526512829121202e-14,
+    "interval": [
+      -0.09,
+      0.35
+    ],
+    "roots": [
+      0.1663688357110909
+    ],
+    "selection": "única raíz localizada en intervalo; precio fijo sin modificar Base",
+    "root_count_scope": "barrido 441 puntos en intervalo",
+    "sign_changes_scan": 1
+  },
+  "ajustes_diagnosticos": {
+    "RSU_strike_cero": {
+      "valor_base_con_limite_economico": 146.168622056612,
+      "sobrestimacion_nativa_por_accion": 2.507573989344162,
+      "NO_es_output_nativo": true
+    },
+    "no_operativos_20pc_menos": 143.22628391941836,
+    "no_operativos_50pc_menos": 135.0514157296117,
+    "lag0": 147.96934575423913
+  },
+  "controles": {
+    "independent_recalc_errors": {
+      "Base": 0.0,
+      "Conservadora": -2.842170943040401e-14,
+      "Optimista": -8.526512829121202e-14,
+      "Disrupción": -1.4210854715202004e-14
+    },
+    "native_matrix_max_abs_error": 8.526512829121202e-14,
+    "native_locks": [
+      {
+        "hoja": "Input sheet",
+        "celda": "B81",
+        "value": "NO APLICA",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B85",
+        "value": "VALIDADO",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B92",
+        "value": "VALIDADO",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B108",
+        "value": "VALIDADO",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B109",
+        "value": "NO APLICA",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B110",
+        "value": "NO APLICA",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B112",
+        "value": "VALIDADO",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B113",
+        "value": "NO APLICA",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B114",
+        "value": "NO APLICA",
+        "pass": true
+      },
+      {
+        "hoja": "Cost of capital worksheet",
+        "celda": "B84",
+        "value": "VALIDADO",
+        "pass": true
+      },
+      {
+        "hoja": "Escenarios e historias",
+        "celda": "K5",
+        "value": "LISTO",
+        "pass": true
+      },
+      {
+        "hoja": "Escenarios e historias",
+        "celda": "K6",
+        "value": "LISTO",
+        "pass": true
+      },
+      {
+        "hoja": "Escenarios e historias",
+        "celda": "K7",
+        "value": "LISTO",
+        "pass": true
+      },
+      {
+        "hoja": "Escenarios e historias",
+        "celda": "K8",
+        "value": "LISTO",
+        "pass": true
+      },
+      {
+        "hoja": "Input sheet",
+        "celda": "B111",
+        "value": "NO APLICA",
+        "pass": true
+      }
+    ],
+    "essential_blanks_equivalent": [],
+    "formula_comparison": {
+      "sheet_count": 46,
+      "same_order": true,
+      "candidate_formula_count": 20741,
+      "template_formula_count": 20741,
+      "identical": 20740,
+      "differences": [
+        {
+          "tab": "Input sheet",
+          "cell": "D12",
+          "kind": "changed"
+        }
+      ],
+      "extra": [],
+      "candidate_export_sha256": "0365c794f4854e42f62012d2899c4e8c9c42c157c7f4e3b8ffeab2ce45cbc72a",
+      "template_export_sha256": "d8882980ac0d978effff9c518806b01c84b819a7e9e4eab5fe6cc15c2f9525ad",
+      "native_D12_equal": true,
+      "undeclared_formula_changes": 0,
+      "verified_formula_count_including_native_D12": 20741
+    },
+    "independently_audited": false
+  },
+  "reservas_materiales": [
+    "Error de fórmula RSU strikecero: +2.507574USD/acción en resultado nativo. No se alteró fórmula.",
+    "I+D no homologada con sector, no se acreditó inmaterialidad.",
+    "Valor realizable neto de impuestos de inversiones privadas no validado.",
+    "ERP del30-oct no observado; rebaseesjuicio.",
+    "PVterminal/EV Base>85%; condición dealerta no suprimida.",
+    "Anclas relativas, cohorte homogénea y beta regresiónN/D."
+  ],
+  "fuentes": [
+    {
+      "id": "S1",
+      "document": "Amazon10-Q, Sep2026, presentado30-oct2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+      "locators": "Balance pp5–6; notas2 pp10–12,3 pp13–14,4 pp15–16,5 pp17–18,6 pp19–20,7 p22; MD&A pp28–36. Notas puntuales de celdas."
+    },
+    {
+      "id": "S2",
+      "document": "Amazon10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "locators": "Estados y segmentos/geografía; notas de celdas históricas B:K."
+    },
+    {
+      "id": "S3",
+      "document": "AmazonQ3IR,29-oct2026",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+      "locators": "Resultados por segmento, guía capex2026/2027, cambio calendarioPrimeDay."
+    },
+    {
+      "id": "S4",
+      "document": "USTTreasury10Y30-oct2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+      "locators": "Fila10/30/2026, columna10-year4.94%; InputB35."
+    },
+    {
+      "id": "S5",
+      "document": "Damodaran, ERP publicado1-oct2026, corte30-sep",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "locators": "4.20% adjusted payout;3.70% cashyield; Rf5.29%. Rebase a4.55% esJUICIO, no cotizaciónOct30."
+    },
+    {
+      "id": "S6",
+      "document": "Damodaran, BetasUS enero2026",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "locators": "RetailGeneral n23 yComputerServices n64; caché de IndustryAveragesUS filas75/22. Precisión de caché, tabla pública redondeada."
+    },
+    {
+      "id": "S7",
+      "document": "PrecioAMZN30-oct2026",
+      "url": "https://stockanalysis.com/stocks/amzn/history/?period=daily",
+      "locators": "Cierre sin ajuste240.35, proveedorS&PGlobal; contrasteYahooHistory. No cierreNov2."
+    },
+    {
+      "id": "S8",
+      "document": "Entrega fase1 R2",
+      "url": "https://drive.google.com/file/d/1fE-5Vkw2ciMUGU_RqilijMUgAqwe1QlX/view",
+      "locators": "CERRADA CON CONTROLES PENDIENTES, actualización2-nov. Continuidad autorizada por README vigente y nueva invocación."
+    }
+  ],
+  "procedencia_numerica": "Resultados principales y entradas extraídos de CAPTURA_SHEET.json; diagnósticos calculados desde esa captura y series históricas/caché anexas, no calibrados por output/precio."
+}
