@@ -19,7 +19,7 @@ const byTicker=new Map();
 test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>{
   const active=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(active.length,18+['META','NVDA','XP','INTU','DPZ'].filter(t=>active.some(([name])=>name===t)).length,'NU es CANDIDATO; INTU volvió con INTU-20261101-A12-R1');
+  assert.equal(active.length,18+['META','NVDA','XP','INTU','DPZ','NU'].filter(t=>active.some(([name])=>name===t)).length,'NU-20261029-R1 sigue como CANDIDATO; NU volvió con la revisión nueva NU-20261102-A12-R1 (INTU con INTU-20261101-A12-R1)');
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
     const p='candidatos/hoja-multiples/'+f;

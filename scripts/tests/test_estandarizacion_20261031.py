@@ -95,7 +95,7 @@ class EditorialTests(unittest.TestCase):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        self.assertEqual(len(selected),23)  # 22 + DPZ-20261101-A1 (1-nov-2026)
+        self.assertEqual(len(selected),24)  # 22 + DPZ-20261101-A1 (1-nov-2026) + NU-20261102-A12-R1 (2-nov-2026)
         for a in selected:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]

@@ -1,0 +1,938 @@
+{
+  "ticker": "NU",
+  "nombreActivo": "Nu Holdings Ltd. (NYSE: NU)",
+  "revisionId": "NU-20261102-A12-R1",
+  "revision_id": "NU-20261102-A12-R1",
+  "fecha": "2026-11-02",
+  "fechaRevision": "2026-11-02",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "moneda": "USD",
+  "currency": "USD",
+  "monedaEstados": "USD",
+  "unidadesEstados": "US$ millones",
+  "market": "US",
+  "precio": 11.61,
+  "precioAnalisis": 11.61,
+  "precioReferenciaFecha": "2026-10-30",
+  "precioReferenciaFuente": "Cierre NYSE 30-oct-2026 (Yahoo Finance, auto_adjust=False)",
+  "tipo": "Financiera · banco digital (Brasil, México, Colombia)",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "metodoPrincipal": "DCF FCFE financiero",
+  "metodoCalculoPrimario": "FCFE en US$ descontado a Ke en US$; patrimonio requerido = utilidad / ROE",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1zKbHKOIei5vaWY0HYL5Gd1p7eeKDgQhlNhXJM1Pm9NI/edit",
+  "sheet_id": "1zKbHKOIei5vaWY0HYL5Gd1p7eeKDgQhlNhXJM1Pm9NI",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "PREPUBLICACION_CONTROLADA",
+  "publicationAuthorized": true,
+  "publicadaEnApp": true,
+  "valorVigenteEnCatalogo": true,
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "certificacionEconomica": "NO_CERTIFICADA",
+  "validationStatus": "CONTROLES_TECNICOS_APROBADOS_EN_REVISION",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "valorPrincipal": 15.139922964354914,
+  "valorIndependiente": 15.139922964354914,
+  "mos": 0.35,
+  "precioMOS": 9.840949926830694,
+  "precioMOSMax": 9.840949926830694,
+  "precioMOSHoy": 9.840949926830694,
+  "baseMOS": "dcfBase",
+  "escenarios": {
+    "conservador": 5.978024215781942,
+    "base": 15.139922964354914,
+    "optimista": 23.77646522019754,
+    "disrupcion": 2.548567597259867
+  },
+  "valorEsperado": {
+    "valor": 15.000858010396882,
+    "valorCentral": 15.139922964354914,
+    "tipoPromedio": "3_historias_renormalizado",
+    "disrupcionSeparada": true,
+    "escenariosUnificados": true,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "probabilidad": 0.4,
+        "valor": 15.139922964354914,
+        "precioMOS": 9.840949926830694,
+        "Ke": 0.10928349473303745,
+        "ROEterminal": 0.16,
+        "gTerminal": 0.04,
+        "crecimientoNIprimeros5": 0.22166277561897507,
+        "ROE1": 0.28,
+        "ROE10": 0.17
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "probabilidad": 0.225,
+        "valor": 5.978024215781942,
+        "precioMOS": 3.8857157402582625,
+        "Ke": 0.11816349473303744,
+        "ROEterminal": 0.125,
+        "gTerminal": 0.04,
+        "crecimientoNIprimeros5": 0.09020462392731754,
+        "ROE1": 0.24,
+        "ROE10": 0.13
+      },
+      {
+        "id": "D",
+        "nombre": "Optimista",
+        "probabilidad": 0.225,
+        "valor": 23.77646522019754,
+        "precioMOS": 15.454702393128402,
+        "Ke": 0.10928349473303745,
+        "ROEterminal": 0.2,
+        "gTerminal": 0.04,
+        "crecimientoNIprimeros5": 0.294666897241078,
+        "ROE1": 0.31,
+        "ROE10": 0.2
+      },
+      {
+        "id": "C",
+        "nombre": "Disrupción",
+        "probabilidad": 0.15,
+        "valor": 2.548567597259867,
+        "precioMOS": 1.6565689382189137,
+        "Ke": 0.14144524209955617,
+        "ROEterminal": 0.14144524209955617,
+        "gTerminal": 0.04,
+        "crecimientoNIprimeros5": -0.09297508936199705,
+        "ROE1": 0.19,
+        "ROE10": 0.11
+      }
+    ]
+  },
+  "metodos": [
+    {
+      "nombre": "DCF FCFE financiero",
+      "peso": 1,
+      "horizonte": "Valor presente",
+      "conservador": 5.978024215781942,
+      "base": 15.139922964354914,
+      "optimista": 23.77646522019754,
+      "disrupcion": 2.548567597259867,
+      "estado": "CALCULADO_NATIVO_FCFE",
+      "rutaSheet": "NU FCFE!B50,B70,B90,B110"
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0,
+      "estado": "CALCULADO_CONTRASTE",
+      "valorHoy": {
+        "conservador": 6.307251800258966,
+        "base": 13.901481212715906,
+        "optimista": 23.014140971077104,
+        "disrupcion": 1.9299538938329401
+      },
+      "multiploSalida": {
+        "conservador": 9,
+        "base": 13,
+        "optimista": 17,
+        "disrupcion": 6
+      }
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0,
+      "estado": "PENDIENTE_ANCLA",
+      "valorHoy": {
+        "conservador": 0.4095618052116197,
+        "base": 2.683613054977095,
+        "optimista": 3.2876837042343365,
+        "disrupcion": 1.7045413651715262
+      },
+      "multiploSalida": {
+        "conservador": 10,
+        "base": 16,
+        "optimista": 20,
+        "disrupcion": 6
+      }
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "estado": "CALCULADO_CONTRASTE",
+      "valorHoy": {
+        "conservador": 8.760071944804118,
+        "base": 15.6288842036451,
+        "optimista": 21.660367972778452,
+        "disrupcion": 2.2975641593249287
+      },
+      "multiploSalida": {
+        "conservador": 2.5,
+        "base": 3.8,
+        "optimista": 4.8,
+        "disrupcion": 1
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0,
+      "estado": "N/A",
+      "valorHoy": null,
+      "motivo": "No interpretable en un banco: depósitos y fondeo son operativos; no hay EBITDA industrial."
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0,
+      "estado": "N/A",
+      "valorHoy": null,
+      "motivo": "FCFF industrial no aplica a un banco; el motor principal es FCFE a Ke."
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "estado": "N/A",
+      "valorHoy": null,
+      "motivo": "El flujo operativo de un banco incluye variación de cartera y depósitos: no es flujo al accionista."
+    }
+  ],
+  "descuentoMultiples": {
+    "version": 2,
+    "estado": "COMPARACION_SECUNDARIA_EN_REVISION",
+    "horizonteAnios": 3,
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "metodos": [
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "CALCULADO_CONTRASTE",
+        "base": {
+          "vp": [
+            null,
+            null,
+            13.901481212715906
+          ],
+          "consolidado": 13.901481212715906
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "PENDIENTE_ANCLA",
+        "base": {
+          "vp": [
+            null,
+            null,
+            2.683613054977095
+          ],
+          "consolidado": 2.683613054977095
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "estado": "CALCULADO_CONTRASTE",
+        "base": {
+          "vp": [
+            null,
+            null,
+            15.6288842036451
+          ],
+          "consolidado": 15.6288842036451
+        }
+      }
+    ],
+    "nota": "Contraste FY+3 → valor presente a Ke de cada historia. Peso 0: anclas parciales (serie propia y pares), sin certificación."
+  },
+  "sensibilidadDCF": {
+    "tipo": "FCFE",
+    "estado": "CALCULADA_NATIVA_EN_HOJA",
+    "centro": 15.139922964354914,
+    "centroConciliado": true,
+    "fuente": "NU Sensibilidad!A4:F29",
+    "matrices": [
+      {
+        "title": "Ke × g terminal",
+        "rows": [
+          0.08928349473303744,
+          0.09928349473303745,
+          0.10928349473303745,
+          0.11928349473303744,
+          0.12928349473303744
+        ],
+        "columns": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.049
+        ],
+        "values": [
+          [
+            21.512097051869382,
+            22.519738482619733,
+            23.72363894374639,
+            25.19027659993332,
+            26.61850132779646
+          ],
+          [
+            17.386598553231508,
+            17.97795717892542,
+            18.662826901437967,
+            19.467047369803858,
+            20.22028173706234
+          ],
+          [
+            14.377906363768371,
+            14.73555036170639,
+            15.139922964354913,
+            15.601927889278887,
+            16.022663798848487
+          ],
+          [
+            12.10436926492855,
+            12.323645275697306,
+            12.566658907464172,
+            12.838203476917473,
+            13.080073290822096
+          ],
+          [
+            10.338695278919287,
+            10.472880046909944,
+            10.618900034396455,
+            10.778861564722428,
+            10.91861913124929
+          ]
+        ],
+        "rowsLabel": "Ke",
+        "columnsLabel": "g"
+      },
+      {
+        "title": "ROE terminal × g",
+        "rows": [
+          0.115,
+          0.14,
+          0.16,
+          0.18,
+          0.2
+        ],
+        "columns": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.049
+        ],
+        "values": [
+          [
+            13.344154741407642,
+            13.442079717525932,
+            13.547332706858807,
+            13.661623638193968,
+            13.761074935313037
+          ],
+          [
+            14.00050497782715,
+            14.263330920180188,
+            14.558501124316649,
+            14.893562845232013,
+            15.197004372478403
+          ],
+          [
+            14.377906363768371,
+            14.73555036170639,
+            15.139922964354913,
+            15.601927889278887,
+            16.022663798848487
+          ],
+          [
+            14.671440775055983,
+            15.102832149560099,
+            15.592139951051335,
+            16.152878479093125,
+            16.664843352691886
+          ],
+          [
+            14.90626830408607,
+            15.396657579843065,
+            15.953913540408477,
+            16.593638950944513,
+            17.178586995766608
+          ]
+        ],
+        "rowsLabel": "ROE terminal",
+        "columnsLabel": "g"
+      },
+      {
+        "title": "Utilidad relativa (margen/escala) × Ke",
+        "rows": [
+          0.7,
+          0.85,
+          1,
+          1.15,
+          1.3
+        ],
+        "columns": [
+          0.08928349473303744,
+          0.09928349473303745,
+          0.10928349473303745,
+          0.11928349473303744,
+          0.12928349473303744
+        ],
+        "values": [
+          [
+            17.371475429679062,
+            13.824267333278309,
+            11.353664687552374,
+            9.547878070627537,
+            8.180011584801637
+          ],
+          [
+            20.547557186712723,
+            16.24354711735814,
+            13.246793825953645,
+            11.057268489045851,
+            9.399455809599047
+          ],
+          [
+            23.72363894374639,
+            18.662826901437967,
+            15.139922964354913,
+            12.566658907464172,
+            10.618900034396455
+          ],
+          [
+            26.899720700780055,
+            21.08210668551779,
+            17.033052102756173,
+            14.076049325882481,
+            11.838344259193864
+          ],
+          [
+            30.075802457813715,
+            23.501386469597623,
+            18.92618124115745,
+            15.5854397443008,
+            13.057788483991272
+          ]
+        ],
+        "rowsLabel": "Utilidad relativa a la Base",
+        "columnsLabel": "Ke"
+      }
+    ],
+    "dcfInverso": {
+      "precio": 11.61,
+      "utilidadRelativaImplicita": 0.7203104458577055,
+      "keImplicito": 0.1241808650145765
+    },
+    "alternativaCapital": {
+      "tau": [
+        0.25,
+        0.3,
+        0.35,
+        0.4
+      ],
+      "valor": [
+        22.490234703375265,
+        20.99643115202268,
+        19.5026276006701,
+        18.00882404931751
+      ]
+    }
+  },
+  "sensibilidadMultiples": {
+    "contrato": "review-relative-v1",
+    "revisionId": "NU-20261102-A12-R1",
+    "sourceSheetId": "1zKbHKOIei5vaWY0HYL5Gd1p7eeKDgQhlNhXJM1Pm9NI",
+    "sourcePath": "evidencia/relativos-revision-20261031/NU-20261102-A12-R1.json",
+    "resultadosSha256": "e95f896d8991754d803e37c47316b5e2bb7fed5bc74e414ee1b4dd6465c6f882",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "pesoEnDCFPrincipal": 0,
+    "tipo": "MULTIPLOS_BANCARIOS",
+    "advertencia": "Matrices aritméticamente conciliadas con la hoja; anclas parciales (serie propia y pares) sin certificar económicamente. Peso cero y no auditadas.",
+    "matrices": [
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Serie propia de NU (cierre de diciembre / BPA diluido NIIF del 20-F) y P/E trailing de ITUB, BBD, PAGS, INTR y STNE (Yahoo Finance, 2-nov-2026).",
+        "limitacion": "Múltiplos de salida elegidos entre la serie propia de NU (26–39× en 2023–2025) y los pares brasileños (mediana 5,7×); son juicios, no confirmación independiente del DCF. Peso 0 y sin certificación económica.",
+        "origen": "'NU Múltiplos'!A46:F52",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          5536.802239238399,
+          6228.902519143198,
+          6921.002799047998,
+          7613.103078952799,
+          8305.203358857598
+        ],
+        "multiploElegido": [
+          9,
+          11,
+          13,
+          15,
+          17
+        ],
+        "matriz": [
+          [
+            7.699281902427272,
+            8.661692140230679,
+            9.624102378034088,
+            10.586512615837497,
+            11.548922853640907
+          ],
+          [
+            9.410233436299999,
+            10.586512615837497,
+            11.762791795374998,
+            12.939070974912497,
+            14.115350154449995
+          ],
+          [
+            11.121184970172724,
+            12.511333091444316,
+            13.901481212715906,
+            15.291629333987498,
+            16.681777455259084
+          ],
+          [
+            12.832136504045451,
+            14.436153567051132,
+            16.040170630056814,
+            17.644187693062495,
+            19.248204756068173
+          ],
+          [
+            14.543088037918178,
+            16.36097404265795,
+            18.178860047397723,
+            19.996746052137496,
+            21.814632056877265
+          ]
+        ],
+        "centro": 13.901481212715906,
+        "vp3Original": 13.901481212715906,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00015450719205279694,
+          "constante": 0.0,
+          "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+        }
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "Sin ancla independiente: se usa el mismo orden de magnitud del P/E como referencia provisional; no hay serie histórica de FCFE comparable.",
+        "limitacion": "Ancla no comparable: el FCFE de un banco en crecimiento acelerado es residual tras la retención de capital y no existen pares con la misma definición. Peso 0; el resultado no es una estimación de valor.",
+        "origen": "'NU Múltiplos'!A55:F61",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          868.4427628650687,
+          976.9981082232023,
+          1085.5534535813358,
+          1194.1087989394696,
+          1302.664144297603
+        ],
+        "multiploElegido": [
+          12,
+          14,
+          16,
+          18,
+          20
+        ],
+        "matriz": [
+          [
+            1.6101678329862574,
+            1.811438812109539,
+            2.012709791232821,
+            2.213980770356104,
+            2.4152517494793857
+          ],
+          [
+            1.8785291384839669,
+            2.1133452807944626,
+            2.3481614231049583,
+            2.5829775654154545,
+            2.8177937077259494
+          ],
+          [
+            2.1468904439816763,
+            2.4152517494793857,
+            2.683613054977095,
+            2.951974360474805,
+            3.220335665972514
+          ],
+          [
+            2.4152517494793857,
+            2.717158218164309,
+            3.019064686849232,
+            3.320971155534155,
+            3.622877624219078
+          ],
+          [
+            2.683613054977095,
+            3.019064686849232,
+            3.3545163187213687,
+            3.6899679505935064,
+            4.025419582465642
+          ]
+        ],
+        "centro": 2.683613054977095,
+        "vp3Original": 2.683613054977095,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00015450719205279697,
+          "constante": 0.0,
+          "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+        }
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "P/BV propio de NU (patrimonio atribuible del 20-F) y P/BV trailing de ITUB, BBD, PAGS, INTR y STNE (Yahoo Finance, 2-nov-2026).",
+        "limitacion": "Múltiplos de salida elegidos entre el P/BV propio (6,3–7,3×) y los pares brasileños (mediana 0,85×), sin ajuste por ROE sostenible auditado. Peso 0 y sin certificación económica.",
+        "origen": "'NU Múltiplos'!A64:F70",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          21295.393227839995,
+          23957.317381319994,
+          26619.241534799992,
+          29281.165688279994,
+          31943.08984175999
+        ],
+        "multiploElegido": [
+          2.8,
+          3.3,
+          3.8,
+          4.3,
+          4.8
+        ],
+        "matriz": [
+          [
+            9.212815951622375,
+            10.36441794557517,
+            11.516019939527968,
+            12.667621933480765,
+            13.81922392743356
+          ],
+          [
+            10.857961657269227,
+            12.215206864427879,
+            13.572452071586534,
+            14.92969727874519,
+            16.28694248590384
+          ],
+          [
+            12.50310736291608,
+            14.06599578328059,
+            15.6288842036451,
+            17.19177262400961,
+            18.754661044374117
+          ],
+          [
+            14.148253068562932,
+            15.916784702133299,
+            17.685316335703668,
+            19.453847969274033,
+            21.222379602844395
+          ],
+          [
+            15.793398774209786,
+            17.767573620986006,
+            19.741748467762232,
+            21.715923314538454,
+            23.690098161314673
+          ]
+        ],
+        "centro": 15.6288842036451,
+        "vp3Original": 15.6288842036451,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.00015450719205279694,
+          "constante": 0.0,
+          "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+        }
+      }
+    ]
+  },
+  "supuestosModeloA": {
+    "horizonteAnios": 10,
+    "unidades": "US$ millones",
+    "rf": 0.0494,
+    "erpMadura": 0.037,
+    "crpPonderada": 0.03176349473303744,
+    "ingresosUDM": 19339.756999999998,
+    "utilidadAtribuibleUDM": 3607.1059999999998,
+    "patrimonioAtribuible": 13249.67,
+    "accionesDiluidasM": 4908.841,
+    "gTerminal": 0.04,
+    "ke": {
+      "Base": 0.10928349473303745,
+      "Conservador": 0.11816349473303744,
+      "Optimista": 0.10928349473303745,
+      "Disrupcion": 0.14144524209955617
+    },
+    "roeTerminal": {
+      "Base": 0.16,
+      "Conservador": 0.125,
+      "Optimista": 0.2,
+      "Disrupcion": 0.14144524209955617
+    },
+    "metodoReinversion": "patrimonio requerido = utilidad / ROE; FCFE = utilidad − variación del patrimonio requerido",
+    "controlCapitalRegulatorio": [
+      {
+        "anio": 1,
+        "APR": 51680.885770842666,
+        "capitalObjetivo": 7752.1328656263995,
+        "patrimonioROE": 15713.552562499995,
+        "exceso": 7961.419696873596,
+        "patrimonioSobreAPR": 0.30404959837908335
+      },
+      {
+        "anio": 2,
+        "APR": 64084.298355844905,
+        "capitalObjetivo": 9612.644753376735,
+        "patrimonioROE": 20783.79218933333,
+        "exceso": 11171.147435956595,
+        "patrimonioSobreAPR": 0.3243195716043556
+      },
+      {
+        "anio": 3,
+        "APR": 76901.15802701388,
+        "capitalObjetivo": 11535.173704052082,
+        "patrimonioROE": 26619.241534799992,
+        "exceso": 15084.06783074791,
+        "patrimonioSobreAPR": 0.34614877353926415
+      },
+      {
+        "anio": 4,
+        "APR": 89974.35489160623,
+        "capitalObjetivo": 13496.153233740934,
+        "patrimonioROE": 33265.70642655935,
+        "exceso": 19769.553192818417,
+        "patrimonioSobreAPR": 0.3697243116289654
+      },
+      {
+        "anio": 5,
+        "APR": 103470.50812534716,
+        "capitalObjetivo": 15520.576218802073,
+        "patrimonioROE": 40898.216371468945,
+        "exceso": 25377.64015266687,
+        "patrimonioSobreAPR": 0.3952644778928085
+      },
+      {
+        "anio": 6,
+        "APR": 116921.67418164227,
+        "capitalObjetivo": 17538.25112724634,
+        "patrimonioROE": 48224.33165192337,
+        "exceso": 30686.08052467703,
+        "patrimonioSobreAPR": 0.4124498899751045
+      },
+      {
+        "anio": 7,
+        "APR": 129783.05834162293,
+        "capitalObjetivo": 19467.45875124344,
+        "patrimonioROE": 57123.75226959334,
+        "exceso": 37656.29351834989,
+        "patrimonioSobreAPR": 0.4401479900344827
+      },
+      {
+        "anio": 8,
+        "APR": 141463.53359236903,
+        "capitalObjetivo": 21219.530038855355,
+        "patrimonioROE": 68819.08891847324,
+        "exceso": 47599.55887961788,
+        "patrimonioSobreAPR": 0.4864793574065334
+      },
+      {
+        "anio": 9,
+        "APR": 152073.29861179666,
+        "capitalObjetivo": 22810.9947917695,
+        "patrimonioROE": 76035.53504811869,
+        "exceso": 53224.540256349195,
+        "patrimonioSobreAPR": 0.49999267289004834
+      },
+      {
+        "anio": 10,
+        "APR": 161197.69652850446,
+        "capitalObjetivo": 24179.65447927567,
+        "patrimonioROE": 85338.70639518261,
+        "exceso": 61159.051915906944,
+        "patrimonioSobreAPR": 0.5294040065894628
+      }
+    ],
+    "capitalRegulatorio2T26": {
+      "brasil": {
+        "APR": 35710.139,
+        "CET1": 4262.877,
+        "CET1ratio": 0.119,
+        "CAR": 0.157
+      },
+      "mexico": {
+        "capital": 427.572,
+        "indice": 0.149
+      },
+      "colombia": {
+        "capital": 179.741,
+        "indice": 0.153
+      }
+    }
+  },
+  "nivel2ProyeccionBase": [
+    {
+      "anio": 1,
+      "ingresos": 25141.6841,
+      "margenNeto": 0.175,
+      "utilidad": 4399.794717499999,
+      "ROE": 0.28,
+      "patrimonioRequerido": 15713.552562499995,
+      "deltaPatrimonio": 2463.8825624999954,
+      "FCFE": 1935.9121550000036,
+      "VP": 1745.1915260543062
+    },
+    {
+      "anio": 2,
+      "ingresos": 31175.688283999996,
+      "margenNeto": 0.18,
+      "utilidad": 5611.623891119999,
+      "ROE": 0.27,
+      "patrimonioRequerido": 20783.79218933333,
+      "deltaPatrimonio": 5070.239626833334,
+      "FCFE": 541.3842642866648,
+      "VP": 439.9674287410452
+    },
+    {
+      "anio": 3,
+      "ingresos": 37410.825940799994,
+      "margenNeto": 0.185,
+      "utilidad": 6921.002799047998,
+      "ROE": 0.26,
+      "patrimonioRequerido": 26619.241534799992,
+      "deltaPatrimonio": 5835.449345466663,
+      "FCFE": 1085.5534535813358,
+      "VP": 795.2864079996616
+    },
+    {
+      "anio": 4,
+      "ingresos": 43770.66635073599,
+      "margenNeto": 0.19,
+      "utilidad": 8316.426606639838,
+      "ROE": 0.25,
+      "patrimonioRequerido": 33265.70642655935,
+      "deltaPatrimonio": 6646.464891759359,
+      "FCFE": 1669.9617148804791,
+      "VP": 1102.900441137598
+    },
+    {
+      "anio": 5,
+      "ingresos": 50336.26630334638,
+      "margenNeto": 0.195,
+      "utilidad": 9815.571929152546,
+      "ROE": 0.24,
+      "patrimonioRequerido": 40898.216371468945,
+      "deltaPatrimonio": 7632.509944909594,
+      "FCFE": 2183.0619842429514,
+      "VP": 1299.7305034462406
+    },
+    {
+      "anio": 6,
+      "ingresos": 56879.98092278141,
+      "margenNeto": 0.195,
+      "utilidad": 11091.596279942376,
+      "ROE": 0.23,
+      "patrimonioRequerido": 48224.33165192337,
+      "deltaPatrimonio": 7326.115280454425,
+      "FCFE": 3765.4809994879506,
+      "VP": 2020.9946043936839
+    },
+    {
+      "anio": 7,
+      "ingresos": 63136.77882428737,
+      "margenNeto": 0.19,
+      "utilidad": 11995.9879766146,
+      "ROE": 0.21,
+      "patrimonioRequerido": 57123.75226959334,
+      "deltaPatrimonio": 8899.420617669966,
+      "FCFE": 3096.567358944634,
+      "VP": 1498.2444376730773
+    },
+    {
+      "anio": 8,
+      "ingresos": 68819.08891847324,
+      "margenNeto": 0.19,
+      "utilidad": 13075.626894509915,
+      "ROE": 0.19,
+      "patrimonioRequerido": 68819.08891847324,
+      "deltaPatrimonio": 11695.3366488799,
+      "FCFE": 1380.2902456300144,
+      "VP": 602.0464643805395
+    },
+    {
+      "anio": 9,
+      "ingresos": 73980.52058735873,
+      "margenNeto": 0.185,
+      "utilidad": 13686.396308661364,
+      "ROE": 0.18,
+      "patrimonioRequerido": 76035.53504811869,
+      "deltaPatrimonio": 7216.446129645454,
+      "FCFE": 6469.95017901591,
+      "VP": 2544.0050950514687
+    },
+    {
+      "anio": 10,
+      "ingresos": 78419.35182260025,
+      "margenNeto": 0.185,
+      "utilidad": 14507.580087181046,
+      "ROE": 0.17,
+      "patrimonioRequerido": 85338.70639518261,
+      "deltaPatrimonio": 9303.171347063922,
+      "FCFE": 5204.408740117124,
+      "VP": 1844.7855440124938
+    }
+  ],
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1691493/000129281426002166/nuform20f_2025.htm",
+    "https://www.sec.gov/Archives/edgar/data/1691493/000129281426004225/nufs2q26_6k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1691493/000129281426004222/nupr2q26_6k.htm",
+    "https://www.sec.gov/Archives/edgar/data/1691493/000129281426005000/nu20261023_6k.htm",
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/xml?data=daily_treasury_yield_curve&field_tdr_date_value_month=202610",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html"
+  ],
+  "salvedades": [
+    "Auditoría económica NO realizada (pendiente de la revisión visual del usuario). Estado EN_REVISION no equivale a valor certificado.",
+    "El costo del patrimonio es el juicio más sensible: Base Ke 10,93 % (Rf 4,94 %, beta 0,76, prima madura 3,70 %, prima país ponderada 3,18 %). El DCF inverso indica que el precio de US$11,61 equivale a Ke 12,4 % con los flujos Base, o a 72 % de la utilidad Base con el Ke Base.",
+    "Reserva material de capital: el modelo mide el capital con utilidad/ROE; el control regulatorio (APR aproximado por ingresos) muestra patrimonio/APR subiendo de 30 % a 53 %. Si el patrimonio se mantuviera en 40 % del APR el valor subiría a US$18,01 (35 %: US$19,50; 30 %: US$21,00). El APR por país (Brasil prudencial, México, Colombia) no se proyecta entidad por entidad.",
+    "El CET1 de Brasil (11,9 %, conglomerado prudencial) no cubre el perímetro completo; México y Colombia solo informan índices de capital total. No se compara con el patrimonio contable consolidado, que incluye impuestos diferidos activos (US$3.649 M), plusvalía e intangibles.",
+    "ROE terminal Base 16 % (ventaja durable según la regla de moat, entre el costo del patrimonio y el ROE actual de 29–33 %): juicio del analista, con matriz ROE terminal × g en la hoja.",
+    "Múltiplos: P/E y P/BV son contrastes con peso 0; sus múltiplos de salida son juicios entre la serie propia de NU (26–39× P/E 2023–2025) y los pares brasileños (3–9×); no son una confirmación independiente del DCF. P/FCFE queda PENDIENTE_ANCLA (peso 0): el FCFE de un banco en crecimiento acelerado es residual y no comparable.",
+    "Calidad de utilidades: de la utilidad del 1S26 (US$1.932 M), US$991 M son beneficio de impuesto diferido (impuesto corriente US$1.249 M frente a utilidad antes de impuestos de US$2.191 M; tasa efectiva contable 11,8 % frente a 28,7 % en el 1S25). Los márgenes netos de las historias se normalizan a una tasa efectiva cercana al 26 % (la de 2025); el UDM de 18,65 % de margen neto está inflado por ese efecto y el impuesto diferido crece con la cartera (activo por impuesto diferido US$3.649 M).",
+    "Contexto de mercado posterior a las elecciones de Brasil del 25-oct-2026 (prensa: caída de acciones brasileñas, Selic 13,75 % con riesgo de alza en el Copom del 4-nov). La prima país de Damodaran de la hoja es la de enero y no incorpora ese movimiento.",
+    "Dilución: se usan 4.908,8 M de acciones diluidas (promedio 1S26) con el gasto en acciones dentro de la utilidad; sin recompras proyectadas. El programa de US$1.000 M (US$500,4 M ejecutados al 30-jun-2026) no se suma al FCFE.",
+    "Capital de la matriz Nu Holdings (Caimán) vs. subsidiarias: no se modela la repatriación de dividendos ni el impuesto de retención.",
+    "Control de integridad de hoja abierto (igual que XP): scripts/integridad_hojas.py NU devuelve 4 hallazgos («sin valor comparable de historia A-D en Escenarios e historias!H5:H8») porque esas celdas son fórmulas del motor FCFF industrial de la plantilla, que no se alimenta en un banco y no se sobrescriben con cifras. El valor oficial de esta revisión está en NU FCFE; estados completos = 0 hallazgos; las matrices industriales vaciadas se respaldaron.",
+    "Hechos posteriores al corte contable relevantes: lanzamiento del banco en México (ago-2026), licencia bancaria completa en Brasil en trámite, renuncia del CTO (6-K del 23-oct-2026); ninguno cambia las cifras del modelo."
+  ],
+  "reporteFuentes": {
+    "captura": "evidencia/captura-hoja-20261102/NU-20261102-A12-R1_resultados_hoja.json",
+    "sha256": "566080dce8ba8069f0b640417cce2516dae04134b204bb1ecc91b00b13a516d0"
+  },
+  "revisionOrigen": "NU-20261029-R1 (candidato, conservada sin cambios); esta revisión es una copia limpia de la plantilla IA vigente sin supuestos heredados.",
+  "controlEditorial": {
+    "nivel1Capitulos": 14,
+    "nivel2Apartados": 12,
+    "estado": "DOCUMENTOS_COMPLETADOS"
+  },
+  "publicationAuthorization": "Usuario 2-nov-2026: publicar valoración y análisis en EN_REVISION si los controles obligatorios se aprueban; sin auditoría económica."
+}
