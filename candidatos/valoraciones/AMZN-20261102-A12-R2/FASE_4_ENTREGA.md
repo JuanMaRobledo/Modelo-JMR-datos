@@ -47,7 +47,7 @@
 | 18 títulos H2 exactos y en orden | **APROBADO** (comparación automática con el prompt) |
 | Resumen oral de 90 a 150 palabras | **126 palabras** ✓ |
 | Hallazgos con evidencia, celda, efecto y propuesta | ✓ (§15) |
-| Hoja de auditoría independiente en Google Sheets (REGLAS §11) | **NO EJECUTADO**: el clasificador de permisos de la sesión denegó crear archivos en Drive |
+| Hoja de auditoría independiente en Google Sheets (REGLAS §11) | **CREADA** el 2-nov-2026: [hoja de auditoría](https://docs.google.com/spreadsheets/d/1YEUFaivTD62CGJq5nvOfZtLI_TZAp-BBQwRS_t4A2OY/edit) en `Análisis/AMZN` (`1q-BigOgle9iQgVeHsWwX3EDlDcgdnk3J`); 7 pestañas, contenido leído y verificado |
 | Publicación en `auditorias/narrativas/AMZN.md` | **No publicada**: requiere autorización expresa del usuario |
 
 **PASOS: 7/7 ejecutados** (1, 2, 3, 4, 5, 5b, 6). En el 5b, `controles_supuestos` va con prueba equivalente; la comparación de selectores queda NO EJECUTADA, con su motivo.
@@ -71,9 +71,9 @@
    - B-06: `Input!B90` = 15 %. C-09: `Input!B28` = 14,1 %. C-10 (I+D): mantener `B17 = No` o capitalizar de forma consistente.
    - C-02: anclas y matrices 5×5 de EV/EBITDA, P/E normalizado y P/OCF.
    - C-08: **atendido** en la fase 3 de R2 el 2-nov-2026 (misma sesión que esta auditoría: requiere revisión independiente). En R3, conservar ese contenido y actualizarlo.
-2. **C-04**: mover la hoja R2 (conservando su ID) desde `Revisiones sustituidas…/AMZN` a `Análisis/AMZN` antes de cualquier promoción.
+2. ~~C-04~~ **Resuelto el 2-nov-2026:** hoja R2 movida a `Análisis/AMZN` (`1q-BigOgle9iQgVeHsWwX3EDlDcgdnk3J`) con el mismo ID (lectura por la cuenta de servicio verificada).
 3. **C-01** (mantenimiento de la maestra, con respaldo y regresión): rama K = 0 en `Option value`. `integridad_hojas.py` para candidatos. (D-01 ya está corregido.)
-4. Crear la hoja de auditoría independiente en Drive (REGLAS §11) importando `inventario_entradas_R2.csv` y la tabla §15. Necesita permiso para escribir en Drive.
+4. ~~Hoja de auditoría en Drive~~ **Creada el 2-nov-2026:** [hoja de auditoría](https://docs.google.com/spreadsheets/d/1YEUFaivTD62CGJq5nvOfZtLI_TZAp-BBQwRS_t4A2OY/edit).
 5. Publicar el informe en `auditorias/narrativas/AMZN.md` **solo** con autorización expresa.
 
 ## Para la fase siguiente
