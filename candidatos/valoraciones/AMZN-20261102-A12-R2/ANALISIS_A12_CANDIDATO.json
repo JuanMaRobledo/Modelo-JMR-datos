@@ -1,0 +1,82 @@
+{
+  "ticker": "AMZN",
+  "revision_id": "AMZN-20261102-A12-R2",
+  "sheet_id": "1h6Xv5cNqwtKPpqI81KiZ_FNpTl4k_uQQS2QJEHphaBI",
+  "fecha_corte": "2026-11-02",
+  "fecha_mercado": "2026-10-30",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "CANDIDATO",
+  "fase": 3,
+  "estado_editorial": "REDACTADO_CON_RESERVAS_DE_EVIDENCIA",
+  "publicado": false,
+  "auditado": false,
+  "nivel1": {
+    "capitulos": 14,
+    "palabras": [
+      628,
+      679,
+      658,
+      816,
+      662,
+      573,
+      679,
+      564,
+      565,
+      698,
+      584,
+      562,
+      577,
+      566
+    ],
+    "total_palabras": 8811,
+    "minimo_capitulo": 562
+  },
+  "nivel2": {
+    "apartados": 12,
+    "titulos": [
+      "Identificación, fuentes y unidades",
+      "Estados históricos y LTM",
+      "Ratios y economía del negocio",
+      "Puente contable a económico",
+      "Supuestos efectivos por historia",
+      "Costo de capital descompuesto",
+      "Proyección explícita anual completa",
+      "Valor terminal y puente hasta la acción",
+      "Escenarios y ciclos",
+      "Cinco múltiplos prioritarios y complementarios opcionales",
+      "Sensibilidades DCF y de múltiplos más inverso",
+      "Trazabilidad, reconciliaciones y límites"
+    ]
+  },
+  "valuation_reference": {
+    "file": "VALORACION_A12_EN_REVISION.json",
+    "sha256_read": "204b7013e947a36f4120f02eb661f731802e14f16f5f103e12f7018deed7512e",
+    "snapshot_sha256": "ad3c2174044e688e584f0b639e8777a8bf4c8e1229ae3a98e121640a1fd3b4cd",
+    "base": 148.67619604595617,
+    "mos35": 96.63952742987152,
+    "cambios_hipotesis": false,
+    "cambios_sheet": false
+  },
+  "reservas_heredadas": [
+    "Error de fórmula RSU strikecero: +2.507574USD/acción en resultado nativo. No se alteró fórmula.",
+    "I+D no homologada con sector, no se acreditó inmaterialidad.",
+    "Valor realizable neto de impuestos de inversiones privadas no validado.",
+    "ERP del30-oct no observado; rebaseesjuicio.",
+    "PVterminal/EV Base>85%; condición dealerta no suprimida.",
+    "Anclas relativas, cohorte homogénea y beta regresiónN/D."
+  ],
+  "reservas_investigacion": [
+    "BaseAWS35/30% inicial es inferior; horizontesLTM/fiscales no idénticos; necesita conciliación específica en valoración, no se cambia fase2.",
+    "Globalstar pendiente de cierre; no incorporación comooperacióncompletada ni precio nuevodeSOTP.",
+    "Cohorte, cuotasTAMyconsenso homogéneos pendientes; psicologíaMarks sinindicadorvalidado."
+  ],
+  "fuentes_nuevas": [
+    "M1",
+    "M2",
+    "M3",
+    "M4",
+    "G1"
+  ],
+  "aislamiento": "OK"
+}
