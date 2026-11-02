@@ -30,7 +30,7 @@ inv=list(csv.reader(open(D+'auditoria_fase4/inventario_entradas_R2.csv')))
 resumen=[['Campo','Valor'],
  ['Empresa / ticker','Amazon.com, Inc. · AMZN'],['Revisión auditada','AMZN-20261102-A12-R2 (CANDIDATO; no en catálogo)'],
  ['Hoja de valoración',f'https://docs.google.com/spreadsheets/d/{VAL}/edit'],['Prompt','auditoria-economica-jmr-v1.3'],
- ['Versión de la auditoría','v2.1 · 2-nov-2026'],['Auditor','Claude Code · claude-opus-5-5 · esfuerzo high · sesión distinta de las fases 2 y 3 (ChatGPT/Codex)'],
+ ['Versión de la auditoría','v2.1 · 2-nov-2026'],['Auditor','Claude Code (modelo y esfuerzo según los metadatos de la sesión) · sesión distinta de las fases 2 y 3 (ChatGPT/Codex)'],
  ['Dictamen','PENDIENTE'],['Tesis económica','Plausible con reservas'],
  ['Bloqueantes','A-01 prima de riesgo no es la del corte (+12 % a +20 %); A-02 arrendamientos contados dos veces (+6,2 % a +6,6 %)'],
  ['Valor Base R2 (oficial, sin cambios)','148,68 USD · MOS 96,64'],['R3 central propuesto (auditor, no oficial)','185,32 USD · MOS 120,46 · rango 169,0–197,8'],

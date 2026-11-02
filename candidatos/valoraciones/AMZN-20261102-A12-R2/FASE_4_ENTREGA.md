@@ -1,6 +1,6 @@
 # AMZN · AMZN-20261102-A12-R2 · Fase 4 · CERRADA CON CONTROLES PENDIENTES
 
-2026-11-02 · Claude Code (sesión remota nueva), modelo `claude-opus-5-5`, esfuerzo `high` (metadatos de la sesión) · hoja `1h6Xv5cNqwtKPpqI81KiZ_FNpTl4k_uQQS2QJEHphaBI` · base auditada Modelo-JMR-datos `b1fb039` · prompt `auditoria-economica-jmr-v1.3`
+2026-11-02 · Claude Code (sesión remota nueva), modelo y esfuerzo según los metadatos de la sesión · hoja `1h6Xv5cNqwtKPpqI81KiZ_FNpTl4k_uQQS2QJEHphaBI` · base auditada Modelo-JMR-datos `b1fb039` · prompt `auditoria-economica-jmr-v1.3`
 
 **Independencia: SÍ.** Las fases 2 y 3 se hicieron con ChatGPT Work/Codex (GPT-6), según sus entregas. Esta auditoría la hizo otro LLM en otra sesión. Las entregas de las fases 2 y 3 se leyeron **después** de formar el juicio, solo para contrastar. **AISLAMIENTO=OK**: todos los datos provienen de documentos de Amazon (SEC CIK 0001018724), del Treasury, de Damodaran y de la hoja R2. Las hojas de otros tickers solo las leyeron `estados_completos.py` e `integridad_hojas.py` como patrón de filas, sin aportar cifras.
 
