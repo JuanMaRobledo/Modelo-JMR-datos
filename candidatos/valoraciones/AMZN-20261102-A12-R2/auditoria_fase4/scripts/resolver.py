@@ -60,7 +60,7 @@ OUT['arrendamientos']=dict(costo_operativo_LTM=cost,pasivo=pv,vida_remanente=vid
   ajuste_EBIT=adj,ajuste_margen_pp=100*dm,valor=v_lease,pct=pct(v_lease),
   alternativa_excluir_de_deuda=run(A(debt=B['debt']-pv))['ps'])
 # ---------------- 4. Impuesto diferido de Anthropic ----------------
-basis_notas=146200-140300; basis_pref=8000-basis_notas; tasa=34608/140300
+basis_notas=146200-140300; basis_pref=(8000-basis_notas)+5000+5000; tasa=34608/140300  # base preferentes = notas convertidas + Serie G + Serie H (T2-26, 10-Q nota 2)
 dtl=34608+(92500-basis_pref)*tasa
 OUT['impuesto_diferido']=dict(costo_total_notas=8000,base_notas_restantes=basis_notas,base_preferentes=basis_pref,tasa_implicita=tasa,
   DTL_notas_observado=34608,DTL_preferentes_estimado=(92500-basis_pref)*tasa,DTL_total=dtl,valor=run(A(nonop=B['nonop']-dtl))['ps'])

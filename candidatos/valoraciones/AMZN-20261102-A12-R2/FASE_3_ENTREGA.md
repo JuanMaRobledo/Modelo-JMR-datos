@@ -84,3 +84,18 @@ Para completar la publicación con ClaudeCode, leer esta entrega, normas central
 Secuencia concreta: (1) recuperar el expediente y verificar SHA256SUMS; (2) revisar la calibración y reservas con el usuario donde corresponda; (3) resolver la valoración en su fase sin modificarla desde research; (4) integrar análisis y valoración de la misma revisión únicamente con autorización de publicación; (5) ejecutar todos los pasos reales de los workflows de datos y app, y `bash scripts/controles_todas.sh AMZN` en su checkout autenticado; (6) preparar PR, revisar CI y fusionar solo según las reglas aplicables; (7) comprobar la ficha/índice/matrices visibles y que el anterior quede archivado sin pérdida. No usar pasosFCFFlegados declarados noaplicables para A-1.2.
 
 La fase4, si se invoca posteriormente, corresponde a otro LLM recomendadoClaudeOpus, esfuerzoalto y sesiónnueva. **Esta entrega no inicia auditoría** ni afirma que ya exista revisión publicada. Su lista de insumos debe prepararse al invocarla con el estado real del expediente.
+
+## Adenda 2-nov-2026 · Anthropic y OpenAI (Claude Code)
+
+2026-11-02 · Claude Code, modelo `claude-opus-5-5`, esfuerzo `high` (metadatos de la sesión) · misma hoja y revisión · estado **CANDIDATO** (sin cambio) · fase **CERRADA CON CONTROLES PENDIENTES** (sin cambio).
+
+**Hecho y verificado.** A pedido del usuario, y atendiendo el hallazgo C-08 de la auditoría fase 4, se incorporaron Anthropic y OpenAI: N1 subcapítulo **2B** (relación doble cliente-participada; contratos; inversiones; línea de 20.000 millones; backlog; efecto en resultados) y párrafos en los capítulos **8** (asignación de capital), **11** (peso en el valor: 27,25 USD por acción, 18,3 % de la Base; diagnósticos −20 % / −50 %), **12** (riesgo correlacionado; ilustración aritmética de la Disrupción), **13** (señales de seguimiento) y **14** (estado y limitaciones). En N2.4 se añadió la tabla de desglose de los 294.595 millones no operativos. Fuente: 10-Q T3-26 (`0001018724-26-000040`), notas 2, 4 y 7, y el JSON de la revisión. Las cifras derivadas se generan por código (`fase3_adicion/adiciones.py`, `cifras.json`). N1: 14 capítulos, **10.008 palabras**, mínimo de 549 por capítulo. HTML: 0 errores de anidado, 29 identificadores únicos, 43 tablas, 60 enlaces internos, 0 rotos (`CONTROLES_FASE3.json`).
+
+**Controles de cierre.** Valoración, hoja, supuestos y probabilidades **sin cambios** (0 escrituras). Los controles de publicación siguen como estaban (NO EJECUTADOS; ver arriba). El `archive_sha256` del expediente ZIP de ChatGPT ya no corresponde a los textos actuales: los blobs nuevos se registran en `FASE_3_MANIFIESTO.json`.
+
+**Decisiones.** La valoración de los no operativos se describe tal como está en R2 (bruta, sin impuesto diferido) y se marca como reserva. No se usan cifras del R3 propuesto por la auditoría.
+
+**Pendiente.** **Independencia:** esta adenda la redactó la misma sesión que auditó R2. Debe revisarla otra sesión u otro LLM antes de considerarla auditada. La concentración del backlog por cliente y la base fiscal de las preferentes no son públicas (N/D).
+
+**Para la fase siguiente.** Leer los textos actualizados `AMZN_NIVEL_1.md`, `AMZN_NIVEL_2.md` y `AMZN_ANALISIS_A12_R2.html`, junto con esta adenda.
+

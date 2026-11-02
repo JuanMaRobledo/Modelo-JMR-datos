@@ -216,6 +216,31 @@ Reclamación RSU nativa: 26.560,77 millones. Límite económico de ejercicio cer
 
 La falta de conciliación fiscal de los activos privados puede afectar tanto el patrimonio como el denominador del ROIC. No se presume que esta reserva sea independiente o inmaterial respecto de las demás. Tampoco se declara cumplido el límite conjunto de materialidad.
 
+### Participaciones en Anthropic y OpenAI (desglose de los no operativos)
+
+| Componente | Valor contable 30-sep-26 | Costo / aporte | Contabilización | Efecto en resultados 9M26 | Fuente |
+|---|---|---|---|---|---|
+| Anthropic: notas convertibles | 146.200 | 8.000 (T3-23 a T4-25, parte ya convertida) | AFS, valor razonable, nivel 3; ganancia no realizada 140.300 en otro resultado integral | Reclasificación de 4.500 a otros ingresos | 10-Q nota 2 |
+| Anthropic: preferentes sin voto (164 M acciones) | 92.500 | Notas convertidas + Serie G 5.000 + Serie H 5.000 (T2-26) | Participación privada; ajustes por precios observables, nivel 3 | Ajustes al alza por 62.800 | 10-Q nota 2 |
+| OpenAI: preferentes Serie C | 50.000 | 15.000 (T1) + 13.700 (T2) + 21.300 (T3) | Participación privada; ajustes por precios observables, nivel 3 | — | 10-Q nota 2 |
+| Otras participaciones privadas | 1.200 | N/D | Ídem | — | 10-Q nota 2 (143.700 − 92.500 − 50.000) |
+| Warrants de capital | 4.300 | N/D | Valor razonable, niveles 2 y 3 | En otros ingresos | 10-Q nota 2 |
+| Método de participación | 395 | N/D | Método de participación / opción de valor razonable | — | 10-Q nota 2 |
+| **Total no operativos (`Input sheet!B83:B84`)** | **294.595** | | Excluido del capital operativo; sumado una vez al patrimonio | | Captura R2 |
+
+| Medida | Valor | Cálculo |
+|---|---|---|
+| No operativos por acción | 27,25 USD | 294.595 / 10.811 |
+| Peso en el valor Base | 18,3 % | 27,25 / 148,68 |
+| Anthropic / OpenAI por acción | 22,08 / 4,62 USD | 238.700 y 50.000 / 10.811 |
+| Impuesto diferido de las notas de Anthropic (no restado) | 34.608 M · 3,20 USD por acción | AOCI, 10-Q |
+| Otros ingresos 9M26 / utilidad antes de impuestos 9M26 | 46,3 % | 68.359 / 147.560 |
+| Desembolso 2026 en Anthropic y OpenAI | 60.000 M | 5.000 + 5.000 + 15.000 + 13.700 + 21.300 |
+| Línea de financiación a Anthropic | 20.000 M; 15.000 disponibles | 10-Q nota 2 |
+| Backlog de AWS / ingresos de AWS LTM | 3,58× | 578.000 / 161.382; desglose por cliente N/D |
+| Base con no operativos −20 % / −50 % (diagnóstico R2) | 143,23 / 135,05 USD | JSON `ajustes_diagnosticos` |
+| Disrupción con participadas −50 % (ilustración aritmética) | 46,36 USD | 59,98 − 0,5 × 27,25; no es valor oficial |
+
 ## 5. Supuestos efectivos por historia
 
 | Historia | Prob | Margen | S/C1–5 | S/C6–10 | ROIC terminal | gterminal | DCF hoy |

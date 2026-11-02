@@ -9,20 +9,20 @@
 ## Actualización v2 (misma sesión, a pedido del usuario: «capitalizar I+D y resolver los otros problemas»)
 
 - **B-04 (I+D) resuelto → C-10.** Serie de T&I de los 10-K FY2015–FY2025 y D&A de PP&E por segmento. I+D estimada de 73 a 96 mM; activo de 106 a 179 mM; ROIC ajustado 13,7 %–14,6 % (GAAP 15,9 %). Con capitalización consistente el FCFF es idéntico (verificado): 0 % de efecto en el valor.
-- **B-01 resuelto.** Base de las preferentes 2,1 mM (= 8,0 − 5,9); impuesto diferido total 56.907 → −3,5 %.
+- **B-01 resuelto.** Base de las preferentes 12,1 mM (= 8,0 − 5,9 + 5,0 Serie G + 5,0 Serie H); impuesto diferido total 54.440 → −3,4 %.
 - **B-03 confirmado y agravado.** Beta de regresión de 60 meses: 1,49 (EE 0,21). Bottom-up con AWS = Software: βu 1,05 → −6,3 % sobre el R3.
 - **B-06 nuevo.** El impuesto en caja (≈ 6,5 % del EBIT; 10-K: la ley de 2025 lo reduce) frente al 22,5 % del modelo → +4,2 %. **C-09 nuevo:** margen de partida 14,1 % → +2,0 %.
 - **A-02 recalculado** con vida de 9,9 años y tasa de 4,0 % del 10-Q: +6,6 %.
 - **C-02: causa raíz encontrada.** `Trailing Valuation!B3:K3` (precios de cierre) está vacía. Calculé las anclas A y C y las matrices del auditor; con el tope C, los múltiplos no contradicen el DCF.
 - **D-01 corregido** en JMR-valuation (`controles_supuestos.py`, función `foso()`, 3 pruebas nuevas, commit `667de1c`). `controles_supuestos.py AMZN` oficial: **0 hallazgos**. Los 28 fallos previos de la suite de pruebas de JMR-valuation siguen igual (no los causa este cambio). La ejecución global de `controles_supuestos.py` ya fallaba antes con `AttributeError` (`crec` en forma de lista en otra ficha); no se tocó.
-- **R3 central propuesto: 185,10 USD** (MOS 120,30; rango 168,8–197,6), con la tabla celda por celda en el informe §15. Dictamen de R2: **sigue PENDIENTE** (A-01 y A-02 son errores de R2).
+- **R3 central propuesto: 185,32 USD** (MOS 120,46; rango 169,0–197,8), con la tabla celda por celda en el informe §15. Dictamen de R2: **sigue PENDIENTE** (A-01 y A-02 son errores de R2).
 - Evidencia: `auditoria_fase4/resolucion_R3.json`, `scripts/resolver.py`, `anclaC.py`, `alt3.py`.
 
 ## Hecho y verificado (con evidencia)
 
 - **Revisión.** AMZN no figura en `catalogo.json` y no existe `auditorias/solicitudes/AMZN/`. Audité la última revisión identificable, R2 (CANDIDATO), como permite el prompt 3/3 («valoración más reciente identificable»).
 - **Réplica independiente** (`scripts/dcf.py`, `blocks.py`, desde las entradas de una captura propia de la hoja con SHA-256 `c3fcffec…8c98`). Base 148,6762, Conservadora 91,9273, Optimista 225,3278, Disrupción 59,9816: error ≤ 1e-13 USD por acción. MOS 96,64 y promedio de 3 de 153,65 ✓. Las 75 celdas de las matrices DCF nativas, reproducidas con error máximo de 8,5e-14.
-- **Fuentes primarias.** Ingresos, EBIT e intereses LTM, patrimonio, caja, deuda (179.952 + 114.783 + 9.726 = 304.461), no operativos (Anthropic 146,2 + 92,5, OpenAI 50,0, warrants 4,3) y acciones verificados contra el 10-Q del T3-26 y XBRL. Ingresos y EBIT de FY2016–FY2025: los 20 valores exactos. Rf 4,94 % (Treasury, 30-oct). Precio 240,35 (cierre del 30-oct).
+- **Fuentes primarias.** Ingresos, EBIT e intereses LTM, patrimonio, caja, deuda (179.952 + 114.783 + 9.726 = 304.461), no operativos (Anthropic 146,2 + 92,5, OpenAI 50,0, warrants 4,3, otras 1,6) y acciones verificados contra el 10-Q del T3-26 y XBRL. Ingresos y EBIT de FY2016–FY2025: los 20 valores exactos. Rf 4,94 % (Treasury, 30-oct). Precio 240,35 (cierre del 30-oct).
 - **ERP.** Se descargaron `ERPNov26.xlsx` y `ERPOct26.xlsx` de Damodaran: noviembre T12m 3,79 %, pago sostenible 4,41 % (T.Bond 4,94 %); octubre T12m 3,70 % (= `corte_vigente.json`). La hoja usa 4,55 %, un «rebase» (nota de `Country equity risk premiums!B2`).
 - **Pruebas de alternativas** (diez años más terminal, mismo corte): `alternativas.json` y `alternativas2.json`. Resumen en §13 del informe.
 - **Inventario de entradas.** 4 pestañas exigidas, 207 celdas sin fórmula; 71 diligenciadas, las 71 con nota de fuente (`inventario_entradas_R2.csv`, tabla de 71 filas en §3).
@@ -62,7 +62,7 @@
 
 ## Pendiente o bloqueado
 
-1. **Fase 2 nueva (`AMZN-<fecha>-A12-R3`)** aplicando la tabla celda por celda del informe §15 (v2; R3 central 185,10). Cambios, que requieren aprobación del usuario:
+1. **Fase 2 nueva (`AMZN-<fecha>-A12-R3`)** aplicando la tabla celda por celda del informe §15 (v2; R3 central 185,32). Cambios, que requieren aprobación del usuario:
    - A-01: prima madura y Rf de la misma fecha y columna (Damodaran 1-nov-26 T12m 3,79 % con Rf 4,94 %, o el corte oficial 30-sep 3,70 % / 5,29 %).
    - A-02: `B18 = Yes` con el convertidor de arrendamientos, o excluir los 100.288 de arrendamientos operativos de la deuda (y de la deuda de mercado del WACC).
    - B-01: restar el impuesto diferido AFS de 34.608 y estimar el de las preferentes de Anthropic (≤ 22,8 mM).
@@ -70,7 +70,7 @@
    - B-03: revisar el mapeo de AWS en la beta (Computer Services frente a Software) y añadir beta de regresión.
    - B-06: `Input!B90` = 15 %. C-09: `Input!B28` = 14,1 %. C-10 (I+D): mantener `B17 = No` o capitalizar de forma consistente.
    - C-02: anclas y matrices 5×5 de EV/EBITDA, P/E normalizado y P/OCF.
-   - C-08: incorporar Anthropic y OpenAI (participadas y clientes) al Nivel 1.
+   - C-08: **atendido** en la fase 3 de R2 el 2-nov-2026 (misma sesión que esta auditoría: requiere revisión independiente). En R3, conservar ese contenido y actualizarlo.
 2. **C-04**: mover la hoja R2 (conservando su ID) desde `Revisiones sustituidas…/AMZN` a `Análisis/AMZN` antes de cualquier promoción.
 3. **C-01** (mantenimiento de la maestra, con respaldo y regresión): rama K = 0 en `Option value`. `integridad_hojas.py` para candidatos. (D-01 ya está corregido.)
 4. Crear la hoja de auditoría independiente en Drive (REGLAS §11) importando `inventario_entradas_R2.csv` y la tabla §15. Necesita permiso para escribir en Drive.

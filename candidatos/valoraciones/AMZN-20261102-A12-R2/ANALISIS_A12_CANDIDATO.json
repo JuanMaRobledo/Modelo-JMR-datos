@@ -14,23 +14,23 @@
   "nivel1": {
     "capitulos": 14,
     "palabras": [
-      628,
-      679,
+      606,
+      1208,
       658,
-      816,
-      662,
-      573,
+      810,
+      678,
+      551,
+      660,
       679,
-      564,
-      565,
-      698,
-      584,
-      562,
-      577,
-      566
+      549,
+      680,
+      708,
+      704,
+      688,
+      672
     ],
-    "total_palabras": 8811,
-    "minimo_capitulo": 562
+    "total_palabras": 10008,
+    "minimo_capitulo": 549
   },
   "nivel2": {
     "apartados": 12,
@@ -78,5 +78,24 @@
     "M4",
     "G1"
   ],
-  "aislamiento": "OK"
+  "aislamiento": "OK",
+  "adicion_20261102_anthropic_openai": {
+    "fecha": "2026-11-02",
+    "motivo": "Pedido del usuario tras la auditoría fase 4 (hallazgo C-08): incorporar Anthropic y OpenAI",
+    "secciones": [
+      "N1 2B",
+      "N1 8",
+      "N1 11",
+      "N1 12",
+      "N1 13",
+      "N1 14",
+      "N2.4 tabla de participaciones"
+    ],
+    "fuente": "10-Q T3-26 (0001018724-26-000040), notas 2, 4 y 7; JSON R2 ajustes_diagnosticos",
+    "cifras_generadas_por_codigo": "fase3_adicion/adiciones.py + cifras.json",
+    "valuation_changes": false,
+    "sheet_writes": 0,
+    "herramienta": "Claude Code, claude-opus-5-5, esfuerzo high",
+    "independencia": "Redactado en la misma sesión que hizo la auditoría fase 4: requiere revisión independiente (otra sesión u otro LLM)"
+  }
 }
