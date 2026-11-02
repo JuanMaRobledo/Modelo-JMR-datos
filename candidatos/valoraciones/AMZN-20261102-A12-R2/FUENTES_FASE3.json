@@ -1,0 +1,107 @@
+{
+  "fecha_corte": "2026-11-02",
+  "macro": {
+    "fed_rango": [
+      0.0375,
+      0.04
+    ],
+    "fecha_fed": "2026-10-28",
+    "pib_q3_saar": 0.034,
+    "pib_q2_saar": 0.022,
+    "fecha_pib": "2026-10-29",
+    "ipc_sept_yoy": 0.037,
+    "ipc_core_sept_yoy": 0.026,
+    "fecha_ipc": "2026-10-14",
+    "credito": "SLOOSjulio2026 publicado3-ago; estándaresC&I generalmenteestables, tarjetasendurecen; dato rezagado"
+  },
+  "guia_aws": {
+    "umbral_crecimiento": 0.4,
+    "anos": [
+      2027,
+      2028
+    ],
+    "naturaleza": "expectativa de dirección, no ingreso realizado ni compromiso contractual certificado",
+    "fuente": "S3,29-oct2026, declaraciónCEO",
+    "reserva": "BaseAWS35/30% inicial es inferior; horizontesLTM/fiscales no idénticos; necesita conciliación específica en valoración, no se cambia fase2."
+  },
+  "sources": {
+    "S1": {
+      "id": "S1",
+      "document": "Amazon10-Q, Sep2026, presentado30-oct2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+      "locators": "Balance pp5–6; notas2 pp10–12,3 pp13–14,4 pp15–16,5 pp17–18,6 pp19–20,7 p22; MD&A pp28–36. Notas puntuales de celdas."
+    },
+    "S2": {
+      "id": "S2",
+      "document": "Amazon10-K FY2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm",
+      "locators": "Estados y segmentos/geografía; notas de celdas históricas B:K."
+    },
+    "S3": {
+      "id": "S3",
+      "document": "AmazonQ3IR,29-oct2026",
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+      "locators": "Resultados por segmento, guía capex2026/2027, cambio calendarioPrimeDay."
+    },
+    "S4": {
+      "id": "S4",
+      "document": "USTTreasury10Y30-oct2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+      "locators": "Fila10/30/2026, columna10-year4.94%; InputB35."
+    },
+    "S5": {
+      "id": "S5",
+      "document": "Damodaran, ERP publicado1-oct2026, corte30-sep",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm",
+      "locators": "4.20% adjusted payout;3.70% cashyield; Rf5.29%. Rebase a4.55% esJUICIO, no cotizaciónOct30."
+    },
+    "S6": {
+      "id": "S6",
+      "document": "Damodaran, BetasUS enero2026",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html",
+      "locators": "RetailGeneral n23 yComputerServices n64; caché de IndustryAveragesUS filas75/22. Precisión de caché, tabla pública redondeada."
+    },
+    "S7": {
+      "id": "S7",
+      "document": "PrecioAMZN30-oct2026",
+      "url": "https://stockanalysis.com/stocks/amzn/history/?period=daily",
+      "locators": "Cierre sin ajuste240.35, proveedorS&PGlobal; contrasteYahooHistory. No cierreNov2."
+    },
+    "S8": {
+      "id": "S8",
+      "document": "Entrega fase1 R2",
+      "url": "https://drive.google.com/file/d/1fE-5Vkw2ciMUGU_RqilijMUgAqwe1QlX/view",
+      "locators": "CERRADA CON CONTROLES PENDIENTES, actualización2-nov. Continuidad autorizada por README vigente y nueva invocación."
+    },
+    "F2": {
+      "document": "Entrega y JSON AMZN R2, fase 2",
+      "url": "https://chatgpt.com/library?file_id=libfile_52c828369dac819198bffd18acf78c38&account_id=personal",
+      "locators": "FASE_2_ENTREGA.md, versión2; JSON y captura SHA256ad3c2174044e688e584f0b639e8777a8bf4c8e1229ae3a98e121640a1fd3b4cd"
+    },
+    "M1": {
+      "document": "FOMC, decisión28-oct2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+      "locators": "Mantiene3.75–4.00%; comunicado publicado28-oct2026. Nivel y decisión, no trayectoria completa de tipos."
+    },
+    "M2": {
+      "document": "BEA, PIBQ3 avance,29-oct2026",
+      "url": "https://www.bea.gov/index.php/news/2026/gdp-advance-estimate-3rd-quarter-2026",
+      "locators": "PIBreal3.4%SAAR Q3;2.2%Q2. Datos de primera estimación conocidos al corte."
+    },
+    "M3": {
+      "document": "BLS, IPCseptiembre publicado14-oct2026",
+      "url": "https://www.bls.gov/cpi/news.htm",
+      "locators": "Titular3.7%interanual; subyacente2.6%. Archivo mensual vigente al corte; no sustituir por octubre publicado posteriormente."
+    },
+    "M4": {
+      "document": "FederalReserve SLOOSjulio2026, publicado3-ago2026",
+      "url": "https://www.federalreserve.gov/data/sloos/sloos-202607.htm",
+      "locators": "CréditoC&I y hogares, cambios enQ2 y nivel de estándares. Rezago explícito; no encuesta noviembre."
+    },
+    "G1": {
+      "document": "AmazonProxy2026",
+      "url": "https://s2.q4cdn.com/299287126/files/doc_financials/2026/ar/Amazon-2026-Proxy-Statement.pdf",
+      "locators": "Remuneración e incentivos, pp56–61. Sin inferir porcentajes de control no comprobados."
+    }
+  }
+}
