@@ -36,7 +36,7 @@ function run(){
     assert.ok(Number.isFinite(cand.valorPrincipal)&&cand.valorPrincipal>0,t+': candidato perdió el DCF Base');
     read(d+'ANALISIS_A12_EN_REVISION.json');
   }
-  const NUEVAS={META:'META-20261101-A12-R1',NVDA:'NVDA-20261101-A12-R1',XP:'XP-20261031-A12-R1',INTU:'INTU-20261101-A12-R1',DPZ:'DPZ-20261101-A1'};
+  const NUEVAS={META:'META-20261101-A12-R1',NVDA:'NVDA-20261101-A12-R1',XP:'XP-20261031-A12-R1',INTU:'INTU-20261101-A12-R1',DPZ:'DPZ-20261101-A1',NU:'NU-20261102-A12-R1'};
   const nuevas=Object.entries(NUEVAS).filter(([t,r])=>aEntries.some(([name,v])=>name===t&&path.basename(v.rutaValoracion).startsWith(r))).length;
   assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas,'Se perdieron revisiones A-1.2 originales');
   let snapshots=0,htmlPairs=0;

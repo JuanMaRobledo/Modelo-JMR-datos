@@ -8,7 +8,8 @@ const historicalDepth='MELI CELH ADBE BSX CMG NFLX GOOGL MSFT NKE PYPL EPAM ZTS 
 // Reescrituras completas con el índice vigente de 14 capítulos (1-nov-2026). El análisis anterior se conserva íntegro y
 // sus 18 bloques históricos se siguen exigiendo en el archivo conservado; la revisión nueva debe cumplir el mínimo por
 // capítulo medido sobre su propio HTML.
-const REESCRITAS={INTU:{revision:'INTU-20261101-A12-R1',anterior:'candidatos/valoraciones/INTU-20261029-R1/ANALISIS_A12_EN_REVISION.json'}};
+const REESCRITAS={INTU:{revision:'INTU-20261101-A12-R1',anterior:'candidatos/valoraciones/INTU-20261029-R1/ANALISIS_A12_EN_REVISION.json'},
+ NU:{revision:'NU-20261102-A12-R1',anterior:'candidatos/valoraciones/NU-20261029-R1/ANALISIS_A12_EN_REVISION.json'}};
 const selected=Object.entries(cat.controlModeloA?.empresas||{})
  .filter(([,entry])=>entry.metodo==='A-1.2').map(([ticker])=>ticker);
 if(!selected.length)throw new Error('No A-1.2 entries in active catalog');

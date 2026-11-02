@@ -1,0 +1,225 @@
+{
+  "revisionId": "NU-20261102-A12-R1",
+  "sheetId": "1zKbHKOIei5vaWY0HYL5Gd1p7eeKDgQhlNhXJM1Pm9NI",
+  "certificacionEconomica": "NO_CERTIFICADA",
+  "sources": {
+    "captura": "evidencia/captura-hoja-20261102/NU-20261102-A12-R1_resultados_hoja.json",
+    "capturaSha256": "566080dce8ba8069f0b640417cce2516dae04134b204bb1ecc91b00b13a516d0"
+  },
+  "supuestos": "Multiplos de salida por historia en NU Múltiplos!C22:C33; Ke por historia en NU FCFE!D23:D26.",
+  "matrices": [
+    {
+      "metodo": "P/E",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "Serie propia de NU (cierre de diciembre / BPA diluido NIIF del 20-F) y P/E trailing de ITUB, BBD, PAGS, INTR y STNE (Yahoo Finance, 2-nov-2026).",
+      "limitacion": "Múltiplos de salida elegidos entre la serie propia de NU (26–39× en 2023–2025) y los pares brasileños (mediana 5,7×); son juicios, no confirmación independiente del DCF. Peso 0 y sin certificación económica.",
+      "origen": "'NU Múltiplos'!A46:F52",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        5536.802239238399,
+        6228.902519143198,
+        6921.002799047998,
+        7613.103078952799,
+        8305.203358857598
+      ],
+      "multiploElegido": [
+        9,
+        11,
+        13,
+        15,
+        17
+      ],
+      "matriz": [
+        [
+          7.699281902427272,
+          8.661692140230679,
+          9.624102378034088,
+          10.586512615837497,
+          11.548922853640907
+        ],
+        [
+          9.410233436299999,
+          10.586512615837497,
+          11.762791795374998,
+          12.939070974912497,
+          14.115350154449995
+        ],
+        [
+          11.121184970172724,
+          12.511333091444316,
+          13.901481212715906,
+          15.291629333987498,
+          16.681777455259084
+        ],
+        [
+          12.832136504045451,
+          14.436153567051132,
+          16.040170630056814,
+          17.644187693062495,
+          19.248204756068173
+        ],
+        [
+          14.543088037918178,
+          16.36097404265795,
+          18.178860047397723,
+          19.996746052137496,
+          21.814632056877265
+        ]
+      ],
+      "centro": 13.901481212715906,
+      "vp3Original": 13.901481212715906,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00015450719205279694,
+        "constante": 0.0,
+        "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+      }
+    },
+    {
+      "metodo": "P/FCFE",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "Sin ancla independiente: se usa el mismo orden de magnitud del P/E como referencia provisional; no hay serie histórica de FCFE comparable.",
+      "limitacion": "Ancla no comparable: el FCFE de un banco en crecimiento acelerado es residual tras la retención de capital y no existen pares con la misma definición. Peso 0; el resultado no es una estimación de valor.",
+      "origen": "'NU Múltiplos'!A55:F61",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        868.4427628650687,
+        976.9981082232023,
+        1085.5534535813358,
+        1194.1087989394696,
+        1302.664144297603
+      ],
+      "multiploElegido": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "matriz": [
+        [
+          1.6101678329862574,
+          1.811438812109539,
+          2.012709791232821,
+          2.213980770356104,
+          2.4152517494793857
+        ],
+        [
+          1.8785291384839669,
+          2.1133452807944626,
+          2.3481614231049583,
+          2.5829775654154545,
+          2.8177937077259494
+        ],
+        [
+          2.1468904439816763,
+          2.4152517494793857,
+          2.683613054977095,
+          2.951974360474805,
+          3.220335665972514
+        ],
+        [
+          2.4152517494793857,
+          2.717158218164309,
+          3.019064686849232,
+          3.320971155534155,
+          3.622877624219078
+        ],
+        [
+          2.683613054977095,
+          3.019064686849232,
+          3.3545163187213687,
+          3.6899679505935064,
+          4.025419582465642
+        ]
+      ],
+      "centro": 2.683613054977095,
+      "vp3Original": 2.683613054977095,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00015450719205279697,
+        "constante": 0.0,
+        "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+      }
+    },
+    {
+      "metodo": "P/BV",
+      "escenario": "base",
+      "estado": "OK",
+      "peso": 0,
+      "ancla": "PROVISIONAL",
+      "anclaCertificada": false,
+      "fuenteAncla": "P/BV propio de NU (patrimonio atribuible del 20-F) y P/BV trailing de ITUB, BBD, PAGS, INTR y STNE (Yahoo Finance, 2-nov-2026).",
+      "limitacion": "Múltiplos de salida elegidos entre el P/BV propio (6,3–7,3×) y los pares brasileños (mediana 0,85×), sin ajuste por ROE sostenible auditado. Peso 0 y sin certificación económica.",
+      "origen": "'NU Múltiplos'!A64:F70",
+      "unidadResultado": "USD/accion",
+      "fundamentalFY3": [
+        21295.393227839995,
+        23957.317381319994,
+        26619.241534799992,
+        29281.165688279994,
+        31943.08984175999
+      ],
+      "multiploElegido": [
+        2.8,
+        3.3,
+        3.8,
+        4.3,
+        4.8
+      ],
+      "matriz": [
+        [
+          9.212815951622375,
+          10.36441794557517,
+          11.516019939527968,
+          12.667621933480765,
+          13.81922392743356
+        ],
+        [
+          10.857961657269227,
+          12.215206864427879,
+          13.572452071586534,
+          14.92969727874519,
+          16.28694248590384
+        ],
+        [
+          12.50310736291608,
+          14.06599578328059,
+          15.6288842036451,
+          17.19177262400961,
+          18.754661044374117
+        ],
+        [
+          14.148253068562932,
+          15.916784702133299,
+          17.685316335703668,
+          19.453847969274033,
+          21.222379602844395
+        ],
+        [
+          15.793398774209786,
+          17.767573620986006,
+          19.741748467762232,
+          21.715923314538454,
+          23.690098161314673
+        ]
+      ],
+      "centro": 15.6288842036451,
+      "vp3Original": 15.6288842036451,
+      "formula": {
+        "tipo": "affine-product",
+        "factor": 0.00015450719205279694,
+        "constante": 0.0,
+        "descripcion": "VP US$/acción = múltiplo × métrica FY+3 ÷ acciones diluidas ÷ (1+Ke)^(3 − días/365); constante 0 (sin dividendos)."
+      }
+    }
+  ]
+}
