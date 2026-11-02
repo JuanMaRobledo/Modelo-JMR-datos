@@ -11,8 +11,8 @@ cand = ROOT / f'candidatos/valoraciones/{REV}'
 v = json.loads((cand / 'VALORACION_A12_EN_REVISION.json').read_text())
 a = json.loads((cand / 'ANALISIS_A12_EN_REVISION.json').read_text())
 v.update({'valorVigenteEnCatalogo': True, 'publicadaEnApp': True, 'publicationAuthorized': True, 'auditPendingUserVisualReview': True,
-          'validationStatus': 'CONTROLES_TECNICOS_APROBADOS_EN_REVISION',
-          'publicationAuthorization': 'Usuario 2-nov-2026: publicar valoración y análisis en EN_REVISION si los controles obligatorios se aprueban; sin auditoría económica.'})
+          'validationStatus': 'CONTROLES_DEL_CATALOGO_APROBADOS_INTEGRIDAD_DE_HOJA_CON_4_HALLAZGOS_FCFE_PENDIENTE_QA_VISUAL',
+          'publicationAuthorization': 'Instrucción del usuario del 2-nov-2026: publicar valoración y análisis en EN_REVISION si los controles obligatorios se aprueban. Aprobados los controles del catálogo, de profundidad y las pruebas; queda abierto integridad_hojas (4 hallazgos del motor FCFF de la plantilla, igual que XP). Sin auditoría económica ni QA visual autenticado.'})
 a['linkedValuation']['sourcePath'] = VP; a['remotePath'] = AP; a['publicationStage'] = 'PUBLICACION_EN_REVISION'
 (ROOT / VP).write_text(json.dumps(v, ensure_ascii=False, indent=2) + '\n')
 (ROOT / AP).write_text(json.dumps(a, ensure_ascii=False, indent=2) + '\n')
@@ -25,6 +25,6 @@ cat['controlModeloA']['empresas']['NU'] = {'rutaValoracion': VP, 'metodo': 'A-1.
     'diagnostico': 'DCF FCFE nativo en las pestañas añadidas de la hoja, cuatro historias, sensibilidades 5x5 y DCF inverso conciliados con la hoja (SHA-256). P/E y P/BV contraste con peso 0; P/FCFE pendiente de ancla; reserva material de capital regulatorio (APR por entidad) y de Ke; sin auditoría económica.'}
 if '+NU-A12-20261102' not in cat['version']: cat['version'] += '+NU-A12-20261102'
 cat['actualizadoEl'] = '2026-11-02'
-cat['nota'] += '\nNU nueva selección A-1.2 EN_REVISION (2-nov-2026): DCF FCFE Base y MOS35 calculados por la copia limpia de la plantilla IA (Análisis/NU); NU-20261029-R1 queda en candidatos sin cambios.'
+if 'NU nueva selección A-1.2 EN_REVISION (2-nov-2026)' not in cat['nota']: cat['nota'] += '\nNU nueva selección A-1.2 EN_REVISION (2-nov-2026): DCF FCFE Base y MOS35 calculados por la copia limpia de la plantilla IA (Análisis/NU); NU-20261029-R1 queda en candidatos sin cambios.'
 (ROOT / 'catalogo.json').write_text(json.dumps(cat, ensure_ascii=False, indent=2) + '\n')
 print('promovido', REV, len(cat['valoraciones']), len(cat['analisis']))
