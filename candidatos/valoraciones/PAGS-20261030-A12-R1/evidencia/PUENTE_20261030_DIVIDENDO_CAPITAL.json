@@ -1,0 +1,53 @@
+{
+  "ticker": "PAGS",
+  "revisionId": "PAGS-20261030-A12-R1",
+  "marketCutoff": "2026-10-30",
+  "assessment": "EVIDENCIA_CONCILIACION_PARCIAL_NO_PUBLICABLE",
+  "capital": {
+    "period": "2026-06",
+    "perimeter": "Conglomerado prudencial PAGSEGURO - C0084813",
+    "rwaBRLm": 32846.2419551,
+    "regulatoryCapitalBRLm": 4940.57756456,
+    "additionalCoreCapitalBRLm": 1642.31209775,
+    "irrbbBRLm": 761.57362304,
+    "capitalRatio": 0.15041530691132482,
+    "additionalCoreCapitalToRwa": 0.04999999999984778,
+    "min10_5IllustrativeExcessBRLm": 1491.7221592745,
+    "eightPlusReportedAcpIllustrativeExcessBRLm": 670.5661104019991,
+    "managerRatioReported": 0.149,
+    "managerRatioGapPointsPct": 0.14153069113248262,
+    "availableForEquityDistributionBRLm": null,
+    "classification": "Las holguras algebraicas NO son capital liberable ni patrimonio de PagSeguro Digital Ltd. consolidado. Requiere régimen, perímetro, IRRBB, filiales y saldo posterior a junio."
+  },
+  "dividend": {
+    "usdPerShare": 0.28,
+    "recordDate": "2026-09-16",
+    "paymentDate": "2026-09-30",
+    "source": "https://investors.pagbank.com/investor-services/dividends/",
+    "status": "FECHA_DE_PAGO_EN_CALENDARIO_OFICIAL",
+    "valuationTreatment": "Hecho previo al corte; conciliar con patrimonio/caja y fecha base de DCF sin restarlo dos veces"
+  },
+  "repurchase": {
+    "authorizationDate": "2026-09-01",
+    "maximumUSDm": 150,
+    "sharesRepurchasedSinceAuthorization": null,
+    "asOfCutoffShares": null,
+    "source": "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001939/MainDocument.htm",
+    "status": "AUTORIZADO_NO_EJECUCION_DEMOSTRADA",
+    "valuationTreatment": "No inferir nueva dilución ni reducción de acciones al 30-octubre sin evidencia de ejecución"
+  },
+  "forwardDividendTarget": {
+    "year2027BRLm": 1000,
+    "year2028BRLm": 1000,
+    "source": "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001939/MainDocument.htm",
+    "conditional": true,
+    "valuationTreatment": "Objetivo condicionado de dirección: no es FCFE regulatorio disponible ni pasivo exigible"
+  },
+  "sourceCapital": "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202606&@TipoInstituicao=1&@Relatorio='5'&$filter=CodInst%20eq%20'C0084813'&$format=json",
+  "controls": {
+    "doesNotCertifyFCFE": true,
+    "doesNotUpdateBaseValuation": true,
+    "hasEquityCapitalReleaseProof": false,
+    "publicationReady": false
+  }
+}
