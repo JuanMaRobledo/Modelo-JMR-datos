@@ -92,3 +92,15 @@ En motor PR203 ya se propuso leer fórmulas por **lotes** para reducir las llama
 **Panel principal de resumen, verificación posterior adicional:** en `Resumen de Valoración!F1:H2` se añadieron los rótulos **DCF BASE HOY · VALOR PRINCIPAL**, fórmula `G1='Valuation output'!B35` que muestra **US$149,19**, y **Precio con MOS35%** con fórmula `G2=G1*(1-G4)` que muestra **US$96,97**. Estado visible **CON RESERVAS / NO PUBLICADO**. La lectura de `Valuation output!B35` tras el cambio permaneció **149,19148575564947**. Este panel es de presentación, no introduce supuesto ni copia un número como constante.
 
 **DICTAMEN actualizado:** pasa cobertura de materialidad histórica y conciliación SEC; la puerta de comparación exhaustiva de fórmulas está pendiente de versión optimizada/repetición; la puerta de promoción integrada y auditoría económica de materialidad siguen pendientes. Disponible **para revisión visual del usuario** exclusivamente como candidata.
+
+## Adenda final de control técnico de candidata — corrida optimizada verificada
+[GitHub Actions run 41640312601](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41640312601) **SUCCESS**, con job `regression` SUCCESS (**52 passed**) y `live-readonly` SUCCESS. Efectivamente ejecutados con las credenciales oficiales sobre **AMZN R5 sheet-id**: `inputs_completos` exit0 (0 faltantes), `auditar_ceros_materiales` exit0 (0 alertas), `diff_formulas_plantilla` exit0 (**0 sustituciones fórmula→número/vacío**), `candados` exit0 (**15/15**), `estados_completos` exit0 (`PASS_CON_SALVEDADES`, 0 material, 3 secundarias), `auditar_estados_sec` exit0 (**0 discrepancias tras 20/20 normalizaciones**). El comparador de fórmulas pasó en ~7,6 segundos de ejecución según logs en vez de agotar 600 s. Artefactos del run preservan código de salida y detalle. **La observación histórica del timeout del run 41638493874 queda superada, no borrada de la cronología.**
+
+Se congeló un testigo numérico verificable adicional en `SNAPSHOT_NUMERICO_PROVISIONAL_20261103.json`: vectores completos de NOPAT, reinversión, FCFF, factores de descuento, VP por año y bridge, más identidad/ticker/revisión/corte y errores máximos de reproducción. Es una **captura provisional**, NO sustituto de un snapshot automático con hashes de todas las fuentes, fórmulas y repos. Debe formar parte del gate por cada ejecución cuando se implemente el contrato PR172.
+
+**Dictamen actualizado y delimitado:**
+- **Controles técnicos F1/F2 de candidata: superados**, con tres salvedades secundarias y la evidencia oficial anterior.
+- **Auditoría aritmética interna: superada** para DCF Base y puente, sin recalibración de supuestos.
+- **Análisis F3 y F4 Nivel 1/2: redactados como candidatos**, con reservas económicas materiales explícitas.
+- **Presentación: preparada para revisión visual directa en la hoja** (no se ha validado renderizado navegador ni desplegado en app).
+- **No autoriza merge ni publicación** mientras falten gate integrado de R5 (hoja ↔ motor ↔ JSON ↔ aplicación) y cierre de reservas económicas materialmente relevantes por CAPEX/ROIC/WACC/Level3/RSU/múltiplos.
