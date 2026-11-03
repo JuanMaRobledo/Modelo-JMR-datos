@@ -1,3 +1,5 @@
+> **SUSTITUIDO POR EL DCF NATIVO, 03-nov-2026.** Esta es una exploración EXTERNA anterior con WACC no homologado 9,45% y Base US$174,52 que **NO ES** valoración oficial ni precio con MOS del expediente. La hoja JMR 46 pestañas ahora calcula DCF Base **US$150,042339** y MOS35% **US$97,527521** con WACC Detailed inicial12,483033%; Conservador108,788831, Optimista184,757116, Disrupción73,755343. La diferencia entre modelos externos/nativos no se asigna solo a WACC; cifras actuales y limitaciones en `FASE_3_ENTREGA.md`. No publicar el contraste externo.
+
 # AAPL FY2026 — CONTRASTE DCF INDEPENDIENTE — PROVISIONAL, NO PUBLICABLE
 
 **Advertencia:** cálculo externo y NO el DCF nativo de la hoja JMR. Es un instrumento de prueba de coherencia, no una valoración EN_REVISION ni dato apto para catalogo.json. Debe cotejarse con el resultado de 46 pestañas, el WACC Detailed y el puente de la hoja, y modificar juicios si la evidencia lo requiere. Método de juicio A-1.2, fuente de datos SEC; corte mercado 2-nov y 10-K 3-nov no son sincrónicos.
