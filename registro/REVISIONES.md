@@ -9,7 +9,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 |---|---|---|
 | ADBE | ADBE-20261028-A3 | ADBE-20261028-A2, ADBE-20261028-R1 |
 | AFYA | AFYA-20261029-R1 | — |
-| AMZN | — (fuera del catálogo) | AMZN-20261102-A12-R2, AMZN-20261102-A12-R5 |
+| AMZN | AMZN-20261102-A12-R5 | AMZN-20261102-A12-R2 |
 | BSX | BSX-20261028-A4 | BSX-20261028-R1, BSX-20261028-A2 |
 | CELH | CELH-20261028-A1 | — |
 | CMG | CMG-20261028-A3 | CMG-2026-10-28-R1-REINICIO |
