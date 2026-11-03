@@ -75,3 +75,20 @@ La inspección de fórmulas **no certifica** comportamiento para todas las firma
 - Abrir históricos, CAPEX bridge y `Duración ventaja · FCFF` para revisar la mayor reserva económica; sin perder años ni fórmulas.
 
 **Cierre:** candidata suficientemente preparada para **inspección visual y comentarios del usuario**, no lista para integrar al catálogo. El registro completo de sensibilidad, fuentes y fórmulas se encuentra en `FASE_3_ENTREGA.md`, `FASE_4_BORRADOR_NIVEL_1.md` y `FASE_4_BORRADOR_NIVEL_2.md`.
+
+
+## Adenda de resultados oficiales posteriores (mismo 3-nov-2026)
+**Motor run [41638493874](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41638493874) ya terminó.** En lectura autenticada y ejecutada sobre el **mismo sheet_id R5**:
+- `inputs_completos`: **exit0**, cero datos materiales esenciales faltantes.
+- `auditar_ceros_materiales`: **exit0**, cero alertas.
+- `candados`: **exit0**, **15/15**.
+- `estados_completos` con perfil explícito de cobertura: **exit0**, `PASS_CON_SALVEDADES`; **0** entradas requeridas vacías, **0** etiquetas erradas, **0** blancos sin explicación, **8** categorías documentadas y **3** pendientes secundarios, **0** pendientes materiales.
+- `auditar_estados_sec` con perfil de impuestos, split y corte PPE: **exit0**, **20 normalizaciones, 20 conciliadas, 0 diferencias y 0 cambios propuestos**.
+- `diff_formulas_plantilla`: **exit124 TIMEOUT 600s**, por ejecución de lectura secuencial con muchos rangos. El job final **FAILED** por este timeout, no por un error contable acreditado.
+- `controles_todas.sh` permaneció **NO EJECUTADO contra candidata** por identidad y contratos JSON integrados no resueltos. El 0 de los controles parciales no autoriza publicación.
+
+En motor PR203 ya se propuso leer fórmulas por **lotes** para reducir las llamadas a Google Sheets sin omitir pestañas ni fallar abierto (nuevo HEAD posterior al timeout). La prueba del nuevo workflow se encuentra pendiente del resultado del [run 41640312601](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41640312601), no marcado como aprobado anticipadamente.
+
+**Panel principal de resumen, verificación posterior adicional:** en `Resumen de Valoración!F1:H2` se añadieron los rótulos **DCF BASE HOY · VALOR PRINCIPAL**, fórmula `G1='Valuation output'!B35` que muestra **US$149,19**, y **Precio con MOS35%** con fórmula `G2=G1*(1-G4)` que muestra **US$96,97**. Estado visible **CON RESERVAS / NO PUBLICADO**. La lectura de `Valuation output!B35` tras el cambio permaneció **149,19148575564947**. Este panel es de presentación, no introduce supuesto ni copia un número como constante.
+
+**DICTAMEN actualizado:** pasa cobertura de materialidad histórica y conciliación SEC; la puerta de comparación exhaustiva de fórmulas está pendiente de versión optimizada/repetición; la puerta de promoción integrada y auditoría económica de materialidad siguen pendientes. Disponible **para revisión visual del usuario** exclusivamente como candidata.
