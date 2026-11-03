@@ -92,3 +92,21 @@ El acceso Google autenticado está disponible en Actions; los bloqueos restantes
 - Activos no operativos/Anthropic/OpenAI, RSU, arrendamientos y riesgo de doble conteo económico.
 - Comparables y aplicabilidad de EV/EBITDA, EV/FCFF, P/E, P/FCFE, P/OCF; pérdidas y flujo negativo no se convierten artificialmente en múltiplos válidos.
 - Probabilidades, escenarios y sensibilidad económica. No se avanzó a esa fase.
+
+## Adenda final: repetición terminada y verificada
+
+Run41609454032, commit75116d213712828fd9a2addc5bcf3490d993a345: regresión **40/40 aprobada**. Job autenticado125827493733 terminó con fallo real por estados incompletos, no por credenciales ni importaciones.
+
+| Control repetido | Código | Resultado |
+|---|---:|---|
+| inputs_completos | 0 | 0 faltantes, 0 excepciones |
+| auditar_ceros_materiales | 0 | 0 alertas |
+| diff_formulas_plantilla | 0 | 7 diferencias fórmula→fórmula: las 5 anteriores + I26 y L4 corregidas; ningún reemplazo por constantes/vacíos |
+| candados | 0 | **15/15 listos**, fallo de importación resuelto y comprobado en vivo |
+| estados_completos | 1 | Persisten 11 filas con vacíos |
+| auditar_estados_sec | 0 | Persisten 20 diferencias informativas, 0 cambios propuestos |
+| controles_todas.sh | No ejecutado | Identidad/artefactos candidatos pendientes en consumidores integrados |
+
+Salidas definitivas en `evidencia_tecnica_20261103/official-final/` y artefacto13218756096 del run. El acceso autenticado queda demostrado. PR203 permanece en borrador sin integración: la puerta total sigue roja y no se elude la regla de no fusionar con fallos. Issue200 permanece abierta con alcance pendiente; issue204 separa crecimiento corregido de defectos fiscales aún abiertos. PR234 sigue borrador, sin merge ni publicación.
+
+La relectura posterior a los cambios confirma los cuatro DCF originales, crecimiento15,350845 % y ausencia de cambios en previsiones. Reconsulta final de las tres ramas main: mismos commits que al inicio. Se verificó que los scripts de reproducción funcionan con las capturas reducidas versionadas; son evidencia aritmética, no una nueva lectura ni sustitución de controles oficiales. Las capturas de reproducción preceden a las dos correcciones de crecimiento; `growth_before.json` y `final_cells.json` preservan la transición.
