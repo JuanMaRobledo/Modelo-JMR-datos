@@ -42,7 +42,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | CMG-2026-10-28-R1-REINICIO | SUSTITUIDA | 24.94 | 10.0 % | 17.0 % | N/D | N/D | N/D | 4.0 % | 18.4 % |
-| CMG-20261028-A3 | VIGENTE | 23.21 | 7.9 % (-2.1 pp) | 16.5 % (-0.5 pp) | 2.20 | 2.05 | N/D | 4.0 % (+0.0 pp) | 19.0 % (+0.6 pp) |
+| CMG-20261028-A3 | VIGENTE | 25.25 | 8.4 % (-1.6 pp) | 17.0 % (+0.0 pp) | 2.20 | 2.05 | N/D | 4.0 % (+0.0 pp) | 19.0 % (+0.6 pp) |
 
 ## DPZ
 
