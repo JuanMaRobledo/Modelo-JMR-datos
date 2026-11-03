@@ -6,7 +6,7 @@
   "fechaContable": "2026-06-30",
   "metodo_valoracion": "A",
   "version_metodo": "A-1.2",
-  "estado": "CANDIDATO_NO_PUBLICADO",
+  "estado": "EN_REVISION",
   "publicationAuthorized": false,
   "auditoriaEconomica": "NO_REALIZADA",
   "valorPrincipal": 12.880006211613892,
@@ -564,50 +564,52 @@
       "rango": "'FCFE financiero PAGS'!M33:R38",
       "matriz": [
         [
-          null,
-          null,
-          null,
-          0.139
+          "Ke / ROE_T",
+          0.119,
+          0.129,
+          0.139,
+          0.149,
+          0.159
         ],
         [
           0.1046923949169112,
-          -2.4843501940996253,
-          -2.4843501940996253,
+          15.496302713541855,
+          17.007281949478113,
           18.518261185414374,
-          -2.4843501940996253,
-          -2.4843501940996253
+          20.029240421350632,
+          21.540219657286894
         ],
         [
           0.1146923949169112,
-          -0.6065957369111993,
-          -0.6065957369111993,
+          12.926279081996688,
+          14.063495453333486,
           15.200711824670286,
-          -0.6065957369111993,
-          -0.6065957369111993
+          16.337928196007084,
+          17.47514456734388
         ],
         [
           0.1246923949169112,
-          0.5909313338655334,
-          0.5909313338655334,
+          11.111793998988226,
+          11.995900105301057,
           12.880006211613892,
-          0.5909313338655334,
-          0.5909313338655334
+          13.76411231792672,
+          14.648218424239552
         ],
         [
           0.1346923949169112,
-          1.3847596897378744,
-          1.3847596897378744,
+          9.758731773381273,
+          10.46242690646055,
           11.166122039539829,
-          1.3847596897378744,
-          1.3847596897378744
+          11.869817172619102,
+          12.573512305698381
         ],
         [
           0.1446923949169112,
-          1.9228140780423826,
-          1.9228140780423826,
+          8.708539371828474,
+          9.278768388113019,
           9.848997404397565,
-          1.9228140780423826,
-          1.9228140780423826
+          10.41922642068211,
+          10.989455436966654
         ]
       ],
       "centro": 12.880006211613892,
@@ -738,7 +740,8 @@
     "Acciones diluidas medias Q2, no cierre exacto 30oct",
     "Beta sectorial e inflación de conversión sin sensibilidad económica integral",
     "NPL 90+ 3,4% y cartera sin garantía 24,3%, cohorts por revisar",
-    "SOTP y matrices bancarias relativas P/E P/FCFE P/BV sin ancla independiente"
+    "SOTP y matrices bancarias relativas P/E P/FCFE P/BV sin ancla independiente",
+    "Puente temporal junio–octubre 2026 pendiente; origen de proyección no coincide con corte de mercado"
   ],
   "fuentes": [
     "https://www.sec.gov/Archives/edgar/data/1712807/000155485526000826/pags-20251231.htm",
@@ -749,5 +752,11 @@
     "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html"
   ],
   "contratoCatalogoActivo": "NO_INTEGRAR_HASTA_VALIDAR",
-  "gatesEspecificosPAGS": "PENDIENTES"
+  "gatesEspecificosPAGS": "PENDIENTES",
+  "estadoPublicacion": "CANDIDATO_NO_PUBLICADO",
+  "revisionInterna": {
+    "fecha": "2026-11-03",
+    "dictamen": "EN_REVISION_CANDIDATO_NO_PUBLICADO",
+    "nota": "REVISIÓN INTERNA — 3 NOVIEMBRE 2026\nEstado: EN_REVISION, candidato no publicado. Auditoría económica pendiente; publicación no autorizada. La revisión interna no acredita los controles económicos pendientes ni habilita el catálogo activo.\nCapital: el 20-F identifica conglomerado prudencial Tipo 3/S3 (PagSeguro Brazil, BancoSeguro y PagInvest). El Pilar III oficial de junio de 2025 informa RWA R$26.826,577284m, capital principal/Nivel I/PR R$7.876,265870m y buffer de conservación 2,5%. Son referencias históricas, NO inputs sustitutivos de junio de 2026. La presentación 2T26 declara objetivo gerencial 18–22%, ratio gerencial 22,5% y prudencial 14,9%; explica la reducción prudencial por dividendos intercompañía declarados. Falta cuantificar y conciliar capital elegible, RWA, deducciones, buffers vigentes y restricciones de transferencias de 2026 con el patrimonio consolidado. No inferir capital liberable de la diferencia de ratios.\nFuentes: https://www.sec.gov/Archives/edgar/data/1712807/000155485526000826/pags-20251231.htm ; https://www.sec.gov/Archives/edgar/data/1712807/000155485526001793/MainDocument.htm ; https://acq-static-pages.pagseguro.com.br/website-cms-pages/PILAR_3_Relatorio_2t_2025_4e207c30fc.pdf\nSupuestos: FCFE nominal BRL y ausencia de liberación inicial de capital se conservan como hipótesis; no prueban suficiencia de retención futura. ROE inicial 14,5% se contrasta con ROAE GAAP LTM 14,5%, distinguiendo patrimonio inicial y promedio. Acciones 279,5m son promedio ponderado diluido 2T26, NO recuento al corte. Beta 0,82 e inflaciones 4% BRL/2,3% USD continúan pendientes de contraste. Múltiplos independientes permanecen N/D y peso cero.\nUnidades: crecimiento de patrimonio = capital retenido/patrimonio de apertura; no es la tasa de retención de utilidades. En Base año 1, 6,5%/14,5%=44,83% de las utilidades se retiene. Las tablas que decían «retención %» deben leerse como crecimiento patrimonial.\nFecha económica: la proyección empieza desde el balance de junio de 2026, mientras precio y FX usan 30-oct-2026. Los US$12,88 son el cálculo candidato con esa convención; falta puente junio–octubre, movimientos patrimoniales/dividendos y descuento con fracción de periodo para acreditar un valor económico al 30 de octubre. No se inventan movimientos ni se desplaza el calendario sin evidencia.\nControl técnico: se restauraron los cinco encabezados ROE terminal de M33:R38; antes cuatro vacíos se evaluaban como cero, afectando 20 celdas. Se recalcula la grilla completa; la Base y MOS no cambian. La hoja tiene 47 pestañas (46 de plantilla + FCFE). Continúan pendientes capital regulatorio 2026, acciones al corte, beta/inflación, múltiplos independientes e integración; sin promoción."
+  }
 }
