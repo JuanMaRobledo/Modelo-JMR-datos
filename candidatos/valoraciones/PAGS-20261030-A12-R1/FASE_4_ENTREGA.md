@@ -50,3 +50,26 @@ Integración: las 46 hojas de plantilla no equivalen a estados históricos compl
 5. Completar historia/indicadores de plantilla y contrato hoja→JSON→app, pruebas y preview. Promover solo después de controles aprobados.
 
 No merge, no despliegue, ninguna ficha activada. Estado correcto: CANDIDATO_REVISADO; publicationReady=false.
+
+
+## Addendum — resolución parcial de bloqueos (3-nov-2026)
+
+**Alcance:** rama candidata de PR #226. Sin cambios en catálogo activo, sin fusión ni despliegue.
+
+### Cambios de evidencia y calidad ya aplicados
+
+- Contrato: el validador `scripts/validar_catalogo.cjs` enruta FCFE financiero de PAGS al contrato bancario; P/E y P/FCFE siguen siendo obligatorios. P/BV se considera complementario opcional, ausente o N/D con justificación y peso cero. Se actualizaron las pruebas de regresión bancarias. Esta adecuación normativa NO genera una matriz, una fuente histórica ni un estado de publicación.
+- Puente regulatorio: `evidencia/PUENTE_20261030_DIVIDENDO_CAPITAL.json` y la hoja `FCFE financiero PAGS!M132:P140` registran RWA R$32.846,242m, PR R$4.940,578m, ACP R$1.642,312m e IRRBB R$761,574m. Holguras aritméticas bajo los supuestos ilustrativos 10,5% y 8%+ACP reportado: R$1.491,722m y R$670,566m respectivamente. **Ninguna se clasifica como capital distribuible**; PR/RWA, ACP e IRRBB requieren conciliación con perímetro, régimen y capital de filiales.
+- Dividendo: calendario IR del emisor da registro 16-sep y pago 30-sep-2026, US$0,28/acción. Se conserva fecha anterior al corte 30-oct sin sumarlo ni restarlo de nuevo hasta cuadrar patrimonio/caja y la fecha base del DCF.
+- Recompra: SEC 6-K del 1-sep-2026 autoriza programa IV de hasta US$150m. No hay comprobación independiente aquí de acciones realmente adquiridas entre junio y 30-oct; denominador económico sigue pendiente.
+- Hoja: nueva evidencia en la pestaña financiera excepcional sin intervenir fórmulas DCF de la plantilla de 46 pestañas. Corregido separador decimal local en N139.
+
+### Validación pendiente para promoción
+
+1. Determinar capital regulatorio realmente liberable por filiales, con suficiencia proyectada, buffers específicos e IRRBB; comparar ratio 15,0415% BCB vs 14,9% reportado y la presentación gerencial.
+2. Conciliar pago y movimientos patrimoniales junio–octubre y dilución económica (recompras, LTIP, acciones emitidas/tesorería).
+3. Alinear Rf/ERP a una misma fecha, calibrar beta bottom-up y transición terminal beta=1, inflación y CRP; recalcular de forma integrada cuatro historias y sensibilidades. US$12,88 queda **provisional sin revisión económica**.
+4. Construir anclas históricas independientes P/E y P/FCFE, proyecciones FY+3, descuento por Ke y matrices 5×5 nativas conciliadas; P/BV no condiciona la publicación con peso cero.
+5. Cerrar estados/históricos y el contrato hoja→JSON→app, ejecutar gates de extremo a extremo y revisión visual.
+
+**Dictamen:** sigue `CANDIDATO_REVISADO`, `publicationReady=false`, sin publicación. Los cambios corrigen reglas/evidencia y no hacen pasar por aprobadas incertidumbres financieras.
