@@ -10,7 +10,7 @@ const cat=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
 const close=(x,y,label)=>assert.ok(Number.isFinite(x)&&Number.isFinite(y)&&Math.abs(x-y)<Math.max(1e-6,1e-9*Math.abs(y)),label+': '+x+' vs '+y);
 test('PAGS: revision no publicada ni activada en catalogo',()=>{
  assert.equal(c.ticker,'PAGS');assert.equal(c.metodo_valoracion,'A');assert.equal(c.version_metodo,'A-1.2');
- assert.equal(c.estado,'EN_REVISION');assert.equal(c.estadoPublicacion,'CANDIDATO_NO_PUBLICADO');assert.equal(c.publicationAuthorized,false);
+ assert.equal(c.estado,'CANDIDATO_REVISADO');assert.equal(c.estadoPublicacion,'CANDIDATO_NO_PUBLICADO');assert.equal(c.publicationAuthorized,false);
  assert.equal(c.auditoriaEconomica,'NO_REALIZADA');
  for(const v of cat.valoraciones||[]) assert.ok(!v.includes('PAGS-'));
  for(const v of cat.analisis||[]) assert.ok(!v.includes('PAGS-'));
@@ -57,7 +57,7 @@ test('PAGS: nivel editorial en rama, no certificacion economica',()=>{
  assert.deepEqual([...h.matchAll(/<h2>\s*(\d+)\./g)].map(x=>Number(x[1])),Array.from({length:14},(_,i)=>i+1));
  assert.match(h,/<h2>5\. Ciclos de la empresa, del mercado y de la macroeconomía<\/h2>/);
  assert.ok(a.controlProfundidadModeloA.minimoPorCapitulo>=330);
- assert.equal(a.status,'EN_REVISION');assert.equal(a.estadoPublicacion,'CANDIDATO_NO_PUBLICADO');
+ assert.equal(a.status,'CANDIDATO_REVISADO');assert.equal(a.estadoPublicacion,'CANDIDATO_NO_PUBLICADO');
  assert.ok(a.calculationHtml.includes('12. SALVEDADES'));
 });
 
@@ -89,4 +89,15 @@ test('PAGS: 75 sensibilidad celdas recalculadas y ejes completos',()=>{
    }
    close(m[3][3],c.valorPrincipal,name+' centro real');
  }
+});
+
+test('PAGS: no promover con dependencias materiales sin cerrar',()=>{
+ assert.equal(c.publicationReady,false);assert.equal(a.publicationReady,false);
+ assert.equal(c.cierrePromocion.estado,'BLOQUEADA');
+ assert.equal(c.cierrePromocion.capital.recursosLiberables,null);
+ assert.equal(c.cierrePromocion.acciones.accionesEconomicasOctubre,null);
+ const x=c.cierrePromocion;close(x.capital.capitalElegibleBRLm/x.capital.rwaBRLm,x.capital.ratio,'PR/RWA');
+ assert.equal(x.acciones.emitidas-x.acciones.autocartera,x.acciones.circulacionJunio);
+ assert.ok(Math.abs(x.diagnosticoTasas.impactoPct)>2);
+ assert.ok(x.diagnosticoTasas.mosSoloCambioRf<c.precioMercadoUSD);
 });
