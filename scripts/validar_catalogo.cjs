@@ -4,7 +4,8 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 
 const CORE_NATIVE=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
-const BANK_NATIVE=['P/E','P/FCFE','P/BV'];
+const BANK_REQUIRED=['P/E','P/FCFE'];
+const BANK_OPTIONAL=['P/BV'];
 const MAYBE_NATIVE=['P/V','P/BV'];
 const finiteNative=x=>typeof x==='number'&&Number.isFinite(x);
 const nearNative=(a,b)=>finiteNative(a)&&finiteNative(b)&&Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
@@ -24,11 +25,24 @@ function validateBankNativeMatrices(v){
   assert.equal(s.controlesTecnicosAprobados,true);
   assert.equal(s.certificado,false);
   const items=s.matrices||[];
-  assert.deepEqual(items.map(x=>x.metodo),BANK_NATIVE,
-    'Banca exige P/E, P/FCFE y P/BV, no múltiplos industriales');
+  assert.ok(Array.isArray(items),'Múltiplos bancarios sin matrices');
+  const names=items.map(x=>x.metodo);
+  assert.deepEqual(names.slice(0,2),BANK_REQUIRED,
+    'Banca exige P/E y P/FCFE, no múltiplos industriales');
+  assert.ok(items.length===2||items.length===3&&names[2]==='P/BV',
+    'Solo P/BV puede acompañar a P/E y P/FCFE como método bancario opcional');
   const sheetByMethod={'P/E':'PE','P/FCFE':'PFCFE','P/BV':'PBV'};
   for(const m of items){
     assert.equal(m.escenario,'base');assert.equal(m.ancla,'JMR_BANCARIO');
+    if(m.metodo==='P/BV'&&m.estado==='N/D'){
+      const optional=(v.descuentoMultiples?.metodos||[]).find(x=>x.nombre==='P/BV');
+      assert.ok(!optional||optional.peso===0,
+        'P/BV opcional N/D debe tener peso cero');
+      assert.ok(typeof m.motivo==='string'&&m.motivo.trim().length>=20,
+        'P/BV opcional N/D requiere justificación');
+      assert.equal(m.matriz,null,'P/BV no verificado no debe publicar matriz');
+      continue;
+    }
     assert.equal(m.estado,'OK','N/D bancario prioritario pendiente');
     const prefix="'"+sheetByMethod[m.metodo]+"'!";
     assert.ok(typeof m.origen==='string'&&m.origen.startsWith(prefix),
@@ -59,7 +73,8 @@ function validateBankNativeMatrices(v){
  */
 function validateNativeMatrices(v){
   if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
-  if(v.ticker==='NU'||/DCF FCFE bancario/i.test(v.metodoPrincipal||''))
+  if(v.sensibilidadMultiples?.contrato==='bank-relative-ke-v1'||
+     v.ticker==='NU'||/DCF FCFE (bancario|financiero)/i.test(v.metodoPrincipal||''))
     return validateBankNativeMatrices(v);
   const s=v.sensibilidadMultiples||{};
   assert.equal(s.contrato,'base-native-five-priority-v1','Formato de matrices A no vigente');
