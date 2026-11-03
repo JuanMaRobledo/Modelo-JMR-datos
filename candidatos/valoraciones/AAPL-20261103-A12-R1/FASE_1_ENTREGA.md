@@ -1,3 +1,5 @@
+> **ACTUALIZACIÓN 03-nov-2026 — DCF y WACC resueltos aritméticamente después de F1.** Este archivo preserva la foto original de Fase 1, cuando los nativos aún eran PENDIENTE y el escenario externo ilustrativo daba US$174,52. La revisión actual calculada en la hoja 46 pestañas es **DCF Base US$150,042339, MOS35% US$97,527521, WACC Detailed inicial12,483033% y cinco múltiplos nativos calculados**. Referencia oficial al estado ACTUAL: `FASE_3_ENTREGA.md`; controles integrales aún NO EJECUTADOS. No publicar ni usar contraste externo como valoración oficial.
+
 # AAPL · AAPL-20261103-A12-R1 · FASE_1 · CERRADA CON CONTROLES PENDIENTES
 
 - Fecha de ejecución: 3-nov-2026 · Método **A / A-1.2** · Emisor Apple Inc. (NASDAQ: AAPL), USD millones y millones de acciones.
