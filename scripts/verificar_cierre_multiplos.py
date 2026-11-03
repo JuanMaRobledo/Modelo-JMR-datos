@@ -133,8 +133,14 @@ def verify_a_native(record):
             'scope':'Base 5x5 y VP3; NO auditoría económica'}
 
 def verify(ticker):
-    record=json.loads(next((ROOT/'valoraciones').glob(ticker+'*.json')).read_text())
-    analysis=json.loads(next((ROOT/'analisis').glob(ticker+'*.json')).read_text())
+    # No tomar el primer archivo glob: los análisis históricos se preservan.
+    # El catálogo vigente identifica UNA pareja de revisión por ticker.
+    catalog=json.loads((ROOT/'catalogo.json').read_text())
+    valuations=[p for p in catalog['valoraciones'] if Path(p).name.startswith(ticker+'-')]
+    analyses=[p for p in catalog['analisis'] if Path(p).name.startswith(ticker+'-')]
+    assert len(valuations)==len(analyses)==1, (ticker,valuations,analyses)
+    record=json.loads((ROOT/valuations[0]).read_text())
+    analysis=json.loads((ROOT/analyses[0]).read_text())
     if record.get('evidenciaRecaptura'):
         return verify_recaptura(record,analysis)
     if record.get('version_metodo')=='A-1.2' and not record.get('cierreMultiplos'):
