@@ -137,10 +137,48 @@ test('contrato bancario sintético exige tres fuentes y VP3 descontado con Ke',(
     x=>x.sensibilidadMultiples.matrices[2].anclaHistoricaValidada=false,
     x=>x.sensibilidadMultiples.matrices[2].estado='N/D',
     x=>x.sensibilidadMultiples.matrices[0].matriz[2][2]=9,
-    x=>x.sensibilidadMultiples.matrices.pop(),
+    x=>x.sensibilidadMultiples.matrices.shift(),
     x=>x.descuentoMultiples.metodos[1].base.vp[2]=9
   ]){
     const invalid=clone(v);change(invalid);
     assert.throws(()=>validateNativeMatrices(invalid));
   }
+});
+
+test('PAGS: FCFE financiero exige contrato bancario; P/BV es opcional con peso cero',()=>{
+  const v=fixture();
+  v.ticker='PAGS';v.revisionId='PAGS-R1';
+  v.metodoPrincipal='DCF FCFE financiero 10 años en BRL';
+  v.descuentoMultiples.metodos=['P/E','P/FCFE'].map(nombre=>({
+    nombre,peso:0,base:{vp:[8,9,10]}
+  }));
+  const make=(metodo,tab)=>({
+    metodo,escenario:'base',ancla:'JMR_BANCARIO',estado:'OK',
+    origen:"'"+tab+"'!A1:F6",anclaHistoricaValidada:true,
+    fuenteAncla:'Ancla independiente por cierres anuales documentados',
+    fundamentalFY3:[1,2,3,4,5],multiploElegido:[1,2,3,4,5],
+    matriz:Array.from({length:5},()=>[10,10,10,10,10]),
+    centro:10,vp3Original:10
+  });
+  v.sensibilidadMultiples={
+    contrato:'bank-relative-ke-v1',tipo:'MULTIPLOS_BANCARIOS',
+    revisionId:v.revisionId,sourceSheetId:v.sheet_id,
+    resultadosSha256:'c'.repeat(64),estadoPublicacion:'INTEGRADO_EN_REVISION',
+    controlesTecnicosAprobados:true,certificado:false,
+    matrices:[make('P/E','PE'),make('P/FCFE','PFCFE')]
+  };
+  assert.equal(validateNativeMatrices(v),true,'P/BV ausente no bloquea');
+  const pbv=make('P/BV','PBV');
+  pbv.estado='N/D';pbv.motivo='No existe ancla histórica confiable por ciclo';
+  pbv.matriz=null;
+  v.sensibilidadMultiples.matrices.push(pbv);
+  assert.equal(validateNativeMatrices(v),true,'P/BV pendiente y peso cero no bloquea');
+  v.descuentoMultiples.metodos.push({nombre:'P/BV',peso:.1,base:{vp:[8,9,10]}});
+  assert.throws(()=>validateNativeMatrices(v),/peso cero/);
+  v.descuentoMultiples.metodos.pop();
+  pbv.motivo='';
+  assert.throws(()=>validateNativeMatrices(v),/justificación/);
+  v.sensibilidadMultiples.matrices.pop();
+  v.sensibilidadMultiples.contrato='base-native-five-priority-v1';
+  assert.throws(()=>validateNativeMatrices(v),/contrato bancario requerido/);
 });
