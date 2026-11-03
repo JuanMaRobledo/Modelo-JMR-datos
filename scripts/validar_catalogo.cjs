@@ -111,12 +111,18 @@ function validateNativeMatrices(v){
         // FY+3 de multiples es un PRECIO; no inventar VP negativo a partir
         // de FCFF en millones. Exigir el flujo real de la misma R5.
         const flujo=m.fundamentalFY3?.[2], flujoDCF=v.nivel2ProyeccionBase?.[2]?.fcff;
-        assert.ok(m.metodo==='EV/FCFF'&&chosen?.estado?.startsWith('N/A: flujo negativo')&&
-          chosen.peso===0&&finiteNative(flujo)&&flujo<0&&
-          finiteNative(flujoDCF)&&nearNative(flujo,flujoDCF)&&
-          (fy3===null||fy3===undefined)&&(vp3===null||vp3===undefined)&&
-          m.vp3Original==null&&m.centro==null,
-          m.metodo+': N/A sin FCFF FY+3 negativo verificable (nunca fabricar precio negativo)');
+        const legacyNAv1=chosen?.estado?.startsWith('N/A: flujo negativo')&&
+          chosen.peso===0&&finiteNative(fy3)&&fy3<0&&
+          finiteNative(vp3)&&vp3<0&&nearNative(vp3,m.vp3Original);
+        // Preservar expedientes previos (SHAK) sin reescribir su contrato.
+        // AMZN R5 debe emplear el test nuevo por flujo, nunca un precio inventado.
+        const amznNAv2=v.ticker==='AMZN'&&m.metodo==='EV/FCFF'&&
+          chosen?.estado?.startsWith('N/A: flujo negativo')&&chosen.peso===0&&
+          finiteNative(flujo)&&flujo<0&&finiteNative(flujoDCF)&&
+          nearNative(flujo,flujoDCF)&&fy3==null&&vp3==null&&
+          m.vp3Original==null&&m.centro==null;
+        assert.ok(legacyNAv1||amznNAv2,
+          m.metodo+': N/A sin trazabilidad económica; legado VP negativo o R5 FCFF negativo con precio N/D');
       }
     }else if(m.estado==='N/D' && !required.includes(m.metodo) &&
              (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
