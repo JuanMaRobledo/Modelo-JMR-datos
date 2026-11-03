@@ -1,3 +1,5 @@
+> **RESOLUCIÓN PARCIAL 03-nov-2026:** El bloqueo específico de deuda=0 y `Cost of capital worksheet!B84=PENDIENTE` documentado más abajo **ya se corrigió en la hoja AAPL**: WACC Detailed12,483033%, deuda mercado78658M, Ke12,615632%, Kd5,31%, control B84=VALIDADO. Se usó PROXY de intereses brutos2937M porque Apple no informa bruto separado. Esto no equivale a validación económica ni ejecución de 18 candados. DCF nativo Base150,042339, MOS97,527521, cuatro historias LISTO. Consultar `FASE_3_ENTREGA.md` y `FASE_4_ENTREGA.md` actuales. El texto inferior se conserva como evidencia histórica de la incidencia, no como estado actual.
+
 # AAPL R1 — control de continuación · 3-nov-2026
 
 ## Hallazgo crítico: WACC y comparabilidad
