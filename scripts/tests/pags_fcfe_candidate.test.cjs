@@ -101,3 +101,26 @@ test('PAGS: no promover con dependencias materiales sin cerrar',()=>{
  assert.ok(Math.abs(x.diagnosticoTasas.impactoPct)>2);
  assert.ok(x.diagnosticoTasas.mosSoloCambioRf<c.precioMercadoUSD);
 });
+
+test('PAGS: evidencia calendario de pago, recompra autorizada y holgura NO distribuible',()=>{
+ const e=JSON.parse(fs.readFileSync(path.join(root,'candidatos/valoraciones/PAGS-20261030-A12-R1/evidencia/PUENTE_20261030_DIVIDENDO_CAPITAL.json'),'utf8'));
+ const b=JSON.parse(fs.readFileSync(path.join(root,'candidatos/valoraciones/PAGS-20261030-A12-R1/evidencia/BCB_CAPITAL_202606.json'),'utf8'));
+ const get=(code)=>b.data.value.find(x=>x.Conta===code).Saldo/1e6;
+ assert.equal(e.marketCutoff,'2026-10-30');assert.equal(e.ticker,c.ticker);
+ close(e.capital.rwaBRLm,get('79665'),'RWA BCB');
+ close(e.capital.regulatoryCapitalBRLm,get('79649'),'PR BCB');
+ close(e.capital.additionalCoreCapitalBRLm,get('92999'),'ACP BCB');
+ close(e.capital.irrbbBRLm,get('98576'),'IRRBB BCB');
+ close(e.capital.capitalRatio,e.capital.regulatoryCapitalBRLm/e.capital.rwaBRLm,'ratio capital');
+ close(e.capital.additionalCoreCapitalToRwa,e.capital.additionalCoreCapitalBRLm/e.capital.rwaBRLm,'buffer BCB');
+ close(e.capital.min10_5IllustrativeExcessBRLm,e.capital.regulatoryCapitalBRLm-.105*e.capital.rwaBRLm,'simulación 10.5');
+ close(e.capital.eightPlusReportedAcpIllustrativeExcessBRLm,e.capital.regulatoryCapitalBRLm-(.08+e.capital.additionalCoreCapitalToRwa)*e.capital.rwaBRLm,'simulación 8+ACP');
+ assert.equal(e.capital.availableForEquityDistributionBRLm,null);
+ assert.equal(e.dividend.paymentDate,'2026-09-30');
+ assert.equal(e.dividend.usdPerShare,.28);
+ assert.equal(e.repurchase.authorizationDate,'2026-09-01');
+ assert.equal(e.repurchase.sharesRepurchasedSinceAuthorization,null);
+ assert.equal(e.repurchase.asOfCutoffShares,null);
+ assert.equal(e.controls.doesNotCertifyFCFE,true);
+ assert.equal(e.controls.publicationReady,false);
+});
