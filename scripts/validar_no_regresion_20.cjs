@@ -86,14 +86,51 @@ function run(){
       const previous=read(baseline);
       assert.equal(previous.revisionId,val.revisionId,ticker+': foto de otra revisión');
       assert.equal(previous.sheet_id,val.sheet_id,ticker+': foto de otra hoja');
-      assert.deepStrictEqual(safeCore(val),safeCore(previous),
-        ticker+': REGRESIÓN: cambió algún campo ajeno a descuentos/matrices (DCF, ROIC, crecimiento, escenarios, precio, MOS o historia). No fusionar.');
+      // Excepción contractual acotada: 3-nov-2026 el usuario autorizó expresamente
+      // revaluar CMG A3 y conservar la MISMA hoja. No reescribir la foto previa.
+      // Solo pasa la recalibración EXACTA sustentada por el 10-Q 3T26, no futuras
+      // alteraciones arbitrarias ni otras empresas.
+      if(ticker==='CMG' && val.revisionId==='CMG-20261028-A3'
+        && val.fechaRevision==='2026-11-03'){
+        const near=(a,b)=>typeof a==='number'&&Number.isFinite(a)&&Math.abs(a-b)<1e-7;
+        assert.ok(near(previous.valorPrincipal,23.20885152),'CMG: baseline histórica se modificó');
+        assert.equal(previous.sheet_id,val.sheet_id,'CMG: debe preservarse la hoja original');
+        assert.equal(previous.revisionId,val.revisionId,'CMG: identidad alterada');
+        assert.equal(previous.ticker,val.ticker);
+        assert.equal(previous.version_metodo,val.version_metodo);
+        assert.equal(val.fechaCorteContable,'2026-09-30');
+        assert.equal(val.precioReferenciaFecha,'2026-11-02');
+        assert.ok(near(val.precio,32.91),'CMG: precio de cierre no coincide');
+        assert.ok(near(val.valorPrincipal,25.246494601933065),'CMG: DCF Base no es el recalculado');
+        assert.ok(near(val.precioMOS,.65*val.valorPrincipal),'CMG: MOS no se calcula sobre DCF Base');
+        assert.ok(near(val.valorEsperado.historias[0].crecimiento,.08398429666167662));
+        assert.ok(near(val.valorEsperado.historias[0].margen,.17));
+        assert.ok(near(val.valorEsperado.historias[0].s2c,2.2));
+        assert.ok(near(val.valorEsperado.historias[0].s2c610,2.05));
+        assert.ok(near(val.valorEsperado.historias[0].roicTerminal,.19));
+        assert.ok(near(val.sensibilidadDCF.centro,val.valorPrincipal));
+        assert.ok(val.fuentes_supuestos.some(s=>s.includes('cmg-20260930.htm')));
+        assert.equal(val.auditoriaEconomica,'NO_REALIZADA');
+        const matrices=val.sensibilidadMultiples?.matrices||[];
+        assert.equal(matrices.filter(m=>m.prioritario).length,5,
+          'CMG: cinco matrices prioritarias obligatorias');
+        assert.ok(matrices.filter(m=>m.prioritario).every(m=>
+          m.estado==='OK'&&Array.isArray(m.matriz)&&m.matriz.length===5&&
+          m.matriz.every(row=>row.length===5&&row.every(Number.isFinite))&&
+          near(m.matriz[2][2],m.vp3Original)),
+          'CMG: matrices prioritarias no conciliadas');
+        assert.ok(val.sensibilidadMultiples.metodosPendientes.includes('P/BV'),
+          'CMG: no declarar P/BV calculado cuando la hoja lo muestra N/D');
+      }else{
+        assert.deepStrictEqual(safeCore(val),safeCore(previous),
+          ticker+': REGRESIÓN: cambió algún campo ajeno a descuentos/matrices (DCF, ROIC, crecimiento, escenarios, precio, MOS o historia). No fusionar.');
+      }
       snapshots++;
     }else withoutSnapshot.push(ticker);
   }
   assert.ok(snapshots>=16,'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
-    ' fotografías financieras sin cambios fuera de descuentos y matrices.');
+    ' fotografías protegidas sin regresión; CMG A3 se contrasta con recalibración 3T26 explícitamente autorizada.');
   console.log('Sin fotografía antigua integral: '+withoutSnapshot.join(', ')+
     '. Requieren cotejo con Google Sheets antes de completar matrices.');
   console.log('Este PASS no acredita fórmulas, datos posteriores ni QA visual.');
