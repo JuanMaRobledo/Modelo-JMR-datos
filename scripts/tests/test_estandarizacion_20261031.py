@@ -95,7 +95,8 @@ class EditorialTests(unittest.TestCase):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        self.assertEqual(len(selected),24)  # 22 + DPZ-20261101-A1 (1-nov-2026) + NU (R2 desde el 2-nov-2026)
+        self.assertEqual(len(selected),25)  # 24 expedientes previos + nueva AMZN R5, sin perder ninguno
+        self.assertEqual(len([x for x in selected if x.get('ticker')=='AMZN' and x.get('revisionId')=='AMZN-20261102-A12-R5']),1)
         for a in selected:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]
