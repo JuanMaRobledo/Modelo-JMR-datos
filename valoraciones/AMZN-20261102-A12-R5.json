@@ -21,17 +21,15 @@
   "metodoCalculoPrimario": "FCFF nominal USD, proyección 10 años, reinversión por Sales-to-Capital marginal",
   "hojaGoogle": "https://docs.google.com/spreadsheets/d/199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I/edit",
   "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
-  "estado": "CANDIDATO",
-  "publicationStatus": "CANDIDATO_NO_PUBLICADO",
-  "publicationStage": "PREPARACION_PARA_EN_REVISION",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "PUBLICACION_EN_REVISION",
   "publicationAuthorized": true,
   "publicationAuthorization": "Usuario 2026-11-03: «Publicala». La autorización operativa no exime controles de publicación.",
-  "publicadaEnApp": false,
-  "valorVigenteEnCatalogo": false,
   "auditPendingUserVisualReview": true,
   "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
   "certificacionEconomica": "NO_CERTIFICADA",
-  "validationStatus": "CONTROLES_HOJA_R5_APROBADOS_CON_TRES_SALVEDADES_HISTORICAS;GATE_PUBLICACION_PENDIENTE_POR_3_MULTIPLOS",
+  "validationStatus": "CONTRATO_NATIVO_4_OK_1_NA_2_OPCIONALES_PENDIENTE_GATE",
   "reportSchema": "jmr-valuation-two-levels-v5",
   "valorPrincipal": 149.19148575564947,
   "valorIndependiente": 149.19148575564947,
@@ -116,58 +114,83 @@
       "base": 149.19148575564947,
       "conservador": 81.00951720766344,
       "optimista": 241.84351613972044,
-      "horizonte": "Valor hoy",
-      "estado": "CALCULADO_REPRODUCIDO"
+      "estado": "CALCULADO_REPRODUCIDO",
+      "horizonte": "Hoy"
     },
     {
       "nombre": "EV/EBITDA",
-      "peso": 0.10000000000000003,
-      "pesoOriginalCategoria": 0.10000000000000003,
+      "peso": 0.16000000000000003,
       "base": 341.1022567433121,
+      "conservador": 276.93766783537546,
+      "optimista": 410.01858816222165,
       "estado": "CALCULADO_NATIVO_EN_REVISION",
       "salvedad": null,
-      "horizonte": "VP consolidado 1-3 años"
+      "horizonte": "VP 1–3 años"
     },
     {
       "nombre": "EV/FCFF",
       "peso": 0,
-      "pesoOriginalCategoria": 0.15,
       "base": null,
-      "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
-      "salvedad": "FCFF proyectado FY+3 negativo (−US$6.371,92 millones) por inversiones de capacidad; usar un múltiplo positivo produciría un precio carente de interpretación económica.",
-      "horizonte": "VP consolidado 1-3 años"
+      "conservador": null,
+      "optimista": null,
+      "estado": "N/A: flujo negativo FY+3",
+      "salvedad": "El FCFF del año FY+3 es −US$6.371,915 millones. No puede calcularse un precio EV/FCFF con un múltiplo de salida positivo.",
+      "horizonte": "VP 1–3 años"
     },
     {
       "nombre": "P/E",
-      "peso": 0,
-      "pesoOriginalCategoria": 0.05000000000000002,
-      "base": null,
-      "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
-      "salvedad": "El beneficio por acción incorpora revalorizaciones extraordinarias de participaciones privadas; no hay un denominador recurrente normalizado auditado al mismo corte.",
-      "horizonte": "VP consolidado 1-3 años"
+      "peso": 0.08000000000000002,
+      "base": 361.6629201053635,
+      "conservador": 282.4538267615011,
+      "optimista": 446.0183143998515,
+      "estado": "CALCULADO_NATIVO_EN_REVISION",
+      "salvedad": null,
+      "horizonte": "VP 1–3 años"
     },
     {
       "nombre": "P/FCFE",
-      "peso": 0,
-      "pesoOriginalCategoria": 0.05000000000000002,
-      "base": null,
-      "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
-      "salvedad": "El flujo patrimonial FY+3 depende materialmente de financiación, leases, dilución y calendario de inversión; el ancla histórica no es homogénea y no puede usarse como precio contrastable.",
-      "horizonte": "VP consolidado 1-3 años"
+      "peso": 0.08000000000000002,
+      "base": 28.16428438297554,
+      "conservador": 1.9214375214380723,
+      "optimista": 186.60886254253987,
+      "estado": "CALCULADO_NATIVO_EN_REVISION",
+      "salvedad": null,
+      "horizonte": "VP 1–3 años"
     },
     {
       "nombre": "P/OCF",
-      "peso": 0.05000000000000002,
-      "pesoOriginalCategoria": 0.05000000000000002,
+      "peso": 0.08000000000000002,
       "base": 190.4043412690061,
+      "conservador": 156.83712765354525,
+      "optimista": 269.17164413145315,
       "estado": "CALCULADO_NATIVO_EN_REVISION",
       "salvedad": null,
-      "horizonte": "VP consolidado 1-3 años"
+      "horizonte": "VP 1–3 años"
+    },
+    {
+      "nombre": "P/V",
+      "peso": 0,
+      "base": null,
+      "conservador": null,
+      "optimista": null,
+      "estado": "N/D: opcional sin ancla",
+      "salvedad": "P/V es opcional en un modelo industrial FCFF; la hoja no fija ancla de salida validada.",
+      "horizonte": "VP 1–3 años"
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "base": null,
+      "conservador": null,
+      "optimista": null,
+      "estado": "N/D: opcional sin ancla",
+      "salvedad": "P/BV es opcional en empresa operativa; valor contable y valor económico AWS/publicidad no equivalen.",
+      "horizonte": "VP 1–3 años"
     }
   ],
   "descuentoMultiples": {
     "version": 2,
-    "estado": "PARCIAL_DOS_APLICABLES_TRES_EN_ND",
+    "estado": "CALCULADO_CON_UN_NA_ECONOMICO_EN_REVISION",
     "horizonteAnios": 3,
     "pesoDcf": 0.6,
     "pesoMultiplosOriginal": 0.4,
@@ -181,8 +204,8 @@
     "metodos": [
       {
         "nombre": "EV/EBITDA",
-        "peso": 0.10000000000000003,
-        "pesoCategoriaOriginal": 0.10000000000000003,
+        "peso": 0.16000000000000003,
+        "pesoCategoriaOriginal": 0.1,
         "estado": "CALCULADO_NATIVO_EN_REVISION",
         "base": {
           "fy": [
@@ -195,16 +218,45 @@
             342.89533216374923,
             349.74355751694196
           ],
+          "consolidado": 341.1022567433121,
           "consolidadoHoy": 341.1022567433121
         },
         "fuente": "Descuento de múltiplos!A20:K24 · Sensibilidad por múltiplo R5",
-        "causa": null
+        "causa": null,
+        "conservador": {
+          "fy": [
+            315.134126522243,
+            323.2964018091008,
+            338.33694677433846
+          ],
+          "vp": [
+            290.59795530889267,
+            274.91289217219486,
+            265.3021560250389
+          ],
+          "consolidado": 276.93766783537546,
+          "consolidadoHoy": 276.93766783537546
+        },
+        "optimista": {
+          "fy": [
+            403.92972449350367,
+            487.3648549318175,
+            565.1423286292382
+          ],
+          "vp": [
+            372.47997645222165,
+            414.42738323917996,
+            443.14840479526333
+          ],
+          "consolidado": 410.01858816222165,
+          "consolidadoHoy": 410.01858816222165
+        }
       },
       {
         "nombre": "EV/FCFF",
         "peso": 0,
         "pesoCategoriaOriginal": 0.15,
-        "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
+        "estado": "N/A: flujo negativo FY+3",
         "base": {
           "fy": [
             null,
@@ -216,57 +268,144 @@
             null,
             null
           ],
+          "consolidado": null,
           "consolidadoHoy": null
         },
         "fuente": "Descuento de múltiplos!A20:K24 · Sensibilidad por múltiplo R5",
-        "causa": "FCFF proyectado FY+3 negativo (−US$6.371,92 millones) por inversiones de capacidad; usar un múltiplo positivo produciría un precio carente de interpretación económica."
+        "causa": "El FCFF del año FY+3 es −US$6.371,915 millones. No puede calcularse un precio EV/FCFF con un múltiplo de salida positivo.",
+        "conservador": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null,
+          "consolidadoHoy": null
+        },
+        "optimista": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null,
+          "consolidadoHoy": null
+        }
       },
       {
         "nombre": "P/E",
-        "peso": 0,
-        "pesoCategoriaOriginal": 0.05000000000000002,
-        "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
+        "peso": 0.08000000000000002,
+        "pesoCategoriaOriginal": 0.05,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
         "base": {
           "fy": [
-            null,
-            null,
-            null
+            376.346661376755,
+            429.0276333386157,
+            475.8403570132719
           ],
           "vp": [
-            null,
-            null,
-            null
+            347.0445155856324,
+            364.8207243969105,
+            373.1235203335476
           ],
-          "consolidadoHoy": null
+          "consolidado": 361.6629201053635,
+          "consolidadoHoy": 361.6629201053635
         },
         "fuente": "Descuento de múltiplos!A20:K24 · Sensibilidad por múltiplo R5",
-        "causa": "El beneficio por acción incorpora revalorizaciones extraordinarias de participaciones privadas; no hay un denominador recurrente normalizado auditado al mismo corte."
+        "causa": null,
+        "conservador": {
+          "fy": [
+            329.55761698937465,
+            328.43700827445923,
+            336.90442949832766
+          ],
+          "vp": [
+            303.89844067498626,
+            279.2841718493044,
+            264.1788677602126
+          ],
+          "consolidado": 282.4538267615011,
+          "consolidadoHoy": 282.4538267615011
+        },
+        "optimista": {
+          "fy": [
+            425.1700120418475,
+            533.7282951731817,
+            627.6159522708641
+          ],
+          "vp": [
+            392.06650679674146,
+            453.8522187043526,
+            492.13621769846026
+          ],
+          "consolidado": 446.0183143998515,
+          "consolidadoHoy": 446.0183143998515
+        }
       },
       {
         "nombre": "P/FCFE",
-        "peso": 0,
-        "pesoCategoriaOriginal": 0.05000000000000002,
-        "estado": "PENDIENTE_NO_COMPARABLE_NO_PONDERAR",
+        "peso": 0.08000000000000002,
+        "pesoCategoriaOriginal": 0.05,
+        "estado": "CALCULADO_NATIVO_EN_REVISION",
         "base": {
           "fy": [
-            null,
-            null,
-            null
+            -32.7272759509448,
+            38.40134797611917,
+            104.59624876351582
           ],
           "vp": [
-            null,
-            null,
-            null
+            -30.17914809522599,
+            32.654324565169354,
+            82.01767667898326
           ],
-          "consolidadoHoy": null
+          "consolidado": 28.16428438297554,
+          "consolidadoHoy": 28.16428438297554
         },
         "fuente": "Descuento de múltiplos!A20:K24 · Sensibilidad por múltiplo R5",
-        "causa": "El flujo patrimonial FY+3 depende materialmente de financiación, leases, dilución y calendario de inversión; el ancla histórica no es homogénea y no puede usarse como precio contrastable."
+        "causa": null,
+        "conservador": {
+          "fy": [
+            -12.300780101802172,
+            -4.36945706561123,
+            26.55521563308994
+          ],
+          "vp": [
+            -11.343048072058679,
+            -3.7155380400388998,
+            20.822898676411796
+          ],
+          "consolidado": 1.9214375214380723,
+          "consolidadoHoy": 1.9214375214380723
+        },
+        "optimista": {
+          "fy": [
+            73.25432746338761,
+            212.7244894514619,
+            397.1084230372366
+          ],
+          "vp": [
+            67.55078548081644,
+            180.888819992146,
+            311.3869821546571
+          ],
+          "consolidado": 186.60886254253987,
+          "consolidadoHoy": 186.60886254253987
+        }
       },
       {
         "nombre": "P/OCF",
-        "peso": 0.05000000000000002,
-        "pesoCategoriaOriginal": 0.05000000000000002,
+        "peso": 0.08000000000000002,
+        "pesoCategoriaOriginal": 0.05,
         "estado": "CALCULADO_NATIVO_EN_REVISION",
         "base": {
           "fy": [
@@ -279,14 +418,143 @@
             192.27737579995082,
             208.74792687341065
           ],
+          "consolidado": 190.4043412690061,
           "consolidadoHoy": 190.4043412690061
         },
         "fuente": "Descuento de múltiplos!A20:K24 · Sensibilidad por múltiplo R5",
-        "causa": null
+        "causa": null,
+        "conservador": {
+          "fy": [
+            166.88603994340244,
+            182.82183605867417,
+            205.5226532591722
+          ],
+          "vp": [
+            153.89238389491882,
+            155.46130245148356,
+            161.15769661423343
+          ],
+          "consolidado": 156.83712765354525,
+          "consolidadoHoy": 156.83712765354525
+        },
+        "optimista": {
+          "fy": [
+            244.03726100722642,
+            314.5311882087991,
+            401.7400750536781
+          ],
+          "vp": [
+            225.03665296585095,
+            267.45945251780347,
+            315.01882691070506
+          ],
+          "consolidado": 269.17164413145315,
+          "consolidadoHoy": 269.17164413145315
+        }
+      },
+      {
+        "nombre": "P/V",
+        "peso": 0,
+        "estado": "N/D: opcional sin ancla",
+        "causa": "P/V es opcional en un modelo industrial FCFF; la hoja no fija ancla de salida validada.",
+        "base": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        },
+        "conservador": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        },
+        "optimista": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "estado": "N/D: opcional sin ancla",
+        "causa": "P/BV es opcional en empresa operativa; valor contable y valor económico AWS/publicidad no equivalen.",
+        "base": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        },
+        "conservador": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        },
+        "optimista": {
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null
+        }
       }
     ],
-    "ponderadoHoy": null,
-    "nota": "No hay ponderado completo: EV/FCFF, P/E, P/FCFE sin ancla válida. Sus pesos categoría originales están preservados sin crear valores."
+    "ponderadoHoy": {
+      "conservador": 128.2127285331769,
+      "base": 190.50977619290722,
+      "optimista": 282.85298947569527
+    },
+    "nota": "Ponderado secundario. DCF Base US$149,19 es valor intrínseco principal; relativo EV/FCFF N/A por flujo negativo, peso0 y demás cuatro pesos calculados en Resumen de Valoración; anclas P/E y P/FCFE provisionales en revisión.",
+    "pesoMultiplos": 0.4,
+    "multiplesHoy": {
+      "conservador": 199.0175455214471,
+      "base": 252.48721184879386,
+      "optimista": 344.3671994796576
+    }
   },
   "sensibilidadDCF": {
     "tipo": "FCFF",
@@ -456,15 +724,15 @@
       }
     },
     "origen": "Sensibilidad DCF!A4:G12,A15:G23,A26:G34",
-    "capturaSha256": "b5aa19b60e51ea905482ca3ba01cffaeba8a0a7dac8cfcdc8612e5383aad0d60"
+    "capturaSha256": "b784caa4ba823fa8d549228701dc44a6ca5043ab212cf37a4fd4befd19a419ae"
   },
   "sensibilidadMultiples": {
     "contrato": "base-native-five-priority-v1",
     "revisionId": "AMZN-20261102-A12-R5",
     "sourceSheetId": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
-    "resultadosSha256": "b5aa19b60e51ea905482ca3ba01cffaeba8a0a7dac8cfcdc8612e5383aad0d60",
-    "estadoPublicacion": "CANDIDATO_NO_PUBLICADO",
-    "controlesTecnicosAprobados": false,
+    "resultadosSha256": "b784caa4ba823fa8d549228701dc44a6ca5043ab212cf37a4fd4befd19a419ae",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
     "matrices": [
       {
         "metodo": "EV/EBITDA",
@@ -538,7 +806,7 @@
         "origen": "'Sensibilidad por múltiplo'!A86:I94",
         "estado": "N/A",
         "estadoFuente": "N/D",
-        "motivo": "FCFF proyectado FY+3 negativo (−US$6.371,92 millones) por inversiones de capacidad; usar un múltiplo positivo produciría un precio carente de interpretación económica.",
+        "motivo": "FCFF FY+3 del escenario Base es negativo (-US$6371,915 M), por lo que el múltiplo EV/FCFF no genera un precio económico positivo. Se excluye por selector nativo F8=No y peso 0; no se inventa un VP negativo.",
         "matriz": null,
         "fundamentalFY3": [
           -5097.532348670822,
@@ -557,10 +825,46 @@
         "prioritario": true,
         "ancla": "JMR",
         "origen": "'Sensibilidad por múltiplo'!A96:I104",
-        "estado": "N/A",
-        "estadoFuente": "N/D",
-        "motivo": "El beneficio por acción incorpora revalorizaciones extraordinarias de participaciones privadas; no hay un denominador recurrente normalizado auditado al mismo corte.",
-        "matriz": null,
+        "estado": "OK",
+        "estadoFuente": "CALCULADO",
+        "motivo": null,
+        "matriz": [
+          [
+            238.7990530134705,
+            268.6489346401543,
+            298.49881626683816,
+            328.34869789352194,
+            358.1985795202057
+          ],
+          [
+            268.6489346401543,
+            302.23005147017363,
+            335.8111683001929,
+            369.3922851302122,
+            402.97340196023146
+          ],
+          [
+            298.49881626683816,
+            335.8111683001929,
+            373.1235203335476,
+            410.4358723669024,
+            447.74822440025713
+          ],
+          [
+            328.34869789352194,
+            369.3922851302122,
+            410.43587236690246,
+            451.4794596035928,
+            492.5230468402829
+          ],
+          [
+            358.1985795202057,
+            402.97340196023146,
+            447.74822440025713,
+            492.52304684028286,
+            537.2978692803085
+          ]
+        ],
         "fundamentalFY3": [
           104919.21227988755,
           118034.11381487349,
@@ -568,9 +872,16 @@
           144263.91688484538,
           157378.8184198313
         ],
-        "multiploElegido": null,
-        "centro": null,
-        "vp3Original": null
+        "multiploElegido": [
+          31.379938833378347,
+          35.30243118755064,
+          39.22492354172293,
+          43.14741589589523,
+          47.06990825006751
+        ],
+        "centro": 373.1235203335476,
+        "vp3Original": 373.1235203335476,
+        "control": "OK"
       },
       {
         "metodo": "P/FCFE",
@@ -578,10 +889,46 @@
         "prioritario": true,
         "ancla": "JMR",
         "origen": "'Sensibilidad por múltiplo'!A106:I114",
-        "estado": "N/A",
-        "estadoFuente": "N/D",
-        "motivo": "El flujo patrimonial FY+3 depende materialmente de financiación, leases, dilución y calendario de inversión; el ancla histórica no es homogénea y no puede usarse como precio contrastable.",
-        "matriz": null,
+        "estado": "OK",
+        "estadoFuente": "CALCULADO",
+        "motivo": null,
+        "matriz": [
+          [
+            52.491313074549296,
+            59.05272720886795,
+            65.61414134318662,
+            72.17555547750527,
+            78.73696961182394
+          ],
+          [
+            59.05272720886795,
+            66.43431810997645,
+            73.81590901108493,
+            81.19749991219344,
+            88.57909081330193
+          ],
+          [
+            65.61414134318662,
+            73.81590901108493,
+            82.01767667898326,
+            90.21944434688159,
+            98.42121201477993
+          ],
+          [
+            72.17555547750528,
+            81.19749991219344,
+            90.21944434688159,
+            99.24138878156975,
+            108.26333321625792
+          ],
+          [
+            78.73696961182394,
+            88.57909081330192,
+            98.42121201477991,
+            108.2633332162579,
+            118.1054544177359
+          ]
+        ],
         "fundamentalFY3": [
           13307.94292296763,
           14971.435788338582,
@@ -589,9 +936,16 @@
           18298.42151908049,
           19961.914384451444
         ],
-        "multiploElegido": null,
-        "centro": null,
-        "vp3Original": null
+        "multiploElegido": [
+          54.38147978495631,
+          61.17916475807585,
+          67.97684973119539,
+          74.77453470431493,
+          81.57221967743446
+        ],
+        "centro": 82.01767667898326,
+        "vp3Original": 82.01767667898326,
+        "control": "OK"
       },
       {
         "metodo": "P/OCF",
@@ -700,7 +1054,10 @@
         "vp3Original": null
       }
     ],
-    "nota": "Dos matrices Base OK; tres prioritarios conservan N/D original. No declarar integrados ni publicar."
+    "nota": "Dos matrices Base OK; tres prioritarios conservan N/D original. No declarar integrados ni publicar.",
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "advertencia": "Dos anclas (P/E, P/FCFE) provisionales con riesgos de extraordinarios y financiación. EV/FCFF N/A por FCFF FY+3 negativo. El ponderado de múltiplos no reemplaza el DCF principal."
   },
   "nivel2ProyeccionBase": [
     {
@@ -879,11 +1236,11 @@
   ],
   "reporteFuentes": {
     "captura": "evidencia/captura-hoja-20261103/AMZN-20261102-A12-R5_captura_numerica.json",
-    "capturaSha256": "b5aa19b60e51ea905482ca3ba01cffaeba8a0a7dac8cfcdc8612e5383aad0d60",
+    "capturaSha256": "b784caa4ba823fa8d549228701dc44a6ca5043ab212cf37a4fd4befd19a419ae",
     "expediente": "https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/234",
     "gate": "NO_APROBADO; falta homologación de tres múltiplos y JSON/app",
     "capturaHashScope": "SHA-256 de bytes UTF-8 del archivo JSON de captura declarado, no de una cadena parcial",
-    "sha256ValoresCanonicos": "d98aa3440645f4cd62660047d04073d7ee2747ec627ec57f5e43f3c84b1926d3"
+    "sha256ValoresCanonicos": "d846bb84beec51483e1e0ed593b0d2545919a1e2c89e3a1678b62ee267d5dedd"
   },
   "salvedades": [
     "Valoración candidata de Amazon R5, sin auditoría económica final ni publicación en la app.",
@@ -891,7 +1248,9 @@
     "78,8 % del valor operativo proviene del terminal; WACC, ROIC terminal y margen requieren auditoría económica.",
     "Participaciones Anthropic/OpenAI por 288.700 millones Level3 sujetas a iliquidez, restricciones, impuestos y doble contabilización.",
     "RSU/SBC y deuda valor de mercado no conciliados completamente.",
-    "EV/FCFF, P/E y P/FCFE son N/D en las matrices nativas de esta revisión; no inventar anclas, precios ni reponderado."
+    "EV/FCFF Base FY+3 se clasifica N/A por FCFF negativo, con peso cero; no inventar precio ni exposición en matriz.",
+    "Anclas P/E (cierre FY2024) y P/FCFE (mediana FY2024–25) son provisionales, con materialidad de inversiones Level3, deuda, dilución y CAPEX; ponderado secundario sin certificación.",
+    "P/FCFE Base FY+1 negativo (−32,73/acción) debido a expansión; promedio VP 1–3 años ≈28,16 y centro FY+3 ≈82,02; NO usar sin evaluar la trayectoria ni confundir ambos horizontes."
   ],
   "controlEditorial": {
     "nivel1Capitulos": 14,
