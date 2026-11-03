@@ -145,6 +145,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | ONON-20261029-R1 | VIGENTE | 40.81 | 14.0 % | 17.5 % | 1.65 | 2.00 | N/D | 4.0 % | 22.0 % |
 
+## PAGS
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| PAGS-20261030-A12-R1 | VIGENTE | 12.88 | 8.8 % | N/D | N/D | N/D | 12.5 % | 5.8 % | 13.9 % |
+
 ## PYPL
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
