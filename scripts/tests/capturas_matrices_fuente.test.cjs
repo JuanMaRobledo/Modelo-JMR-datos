@@ -19,7 +19,10 @@ const byTicker=new Map();
 test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>{
   const active=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='A-1.2');
-  assert.equal(active.length,18+['META','NVDA','XP','INTU','DPZ','NU'].filter(t=>active.some(([name])=>name===t)).length,'NU-20261029-R1 sigue como CANDIDATO; NU volvió con la revisión nueva NU-20261102-A12-R1 (INTU con INTU-20261101-A12-R1)');
+  const previous=18+['META','NVDA','XP','INTU','DPZ','NU'].filter(t=>active.some(([name])=>name===t)).length;
+  const amzn=active.find(([ticker])=>ticker==='AMZN');
+  assert.equal(active.length,previous+(amzn?1:0),'No permitir altas desconocidas sin catálogo reconciliado');
+  if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
     const p='candidatos/hoja-multiples/'+f;

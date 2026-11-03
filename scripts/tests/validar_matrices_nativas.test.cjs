@@ -67,6 +67,30 @@ test('N/A derivado de N/D de la hoja exige flujo FY+3 negativo real y peso cero'
   }
 });
 
+test('AMZN R5 exige FCFF negativo FY+3 en unidad de flujo, N/A sin inventar precio',()=>{
+  const make=()=>{
+    const v=fixture(),m=v.sensibilidadMultiples.matrices[1];
+    v.ticker='AMZN';v.revisionId='AMZN-20261102-A12-R5';
+    v.sensibilidadMultiples.revisionId=v.revisionId;
+    v.nivel2ProyeccionBase=[{fcff:-100},{fcff:-300},{fcff:-6371.915435838528}];
+    m.estado='N/A';m.estadoFuente='N/D';m.matriz=null;m.centro=null;m.vp3Original=null;
+    m.fundamentalFY3=[-5000,-5700,-6371.915435838528,-7000,-7500];
+    m.motivo='FCFF FY+3 negativo, no interpretar EV/FCFF como precio; sin matriz';
+    const d=v.descuentoMultiples.metodos[1];
+    d.peso=0;d.estado='N/A: flujo negativo';d.base={fy:[null,null,null],vp:[null,null,null]};
+    return v;
+  };
+  assert.equal(validateNativeMatrices(make()),true);
+  for(const change of [
+    v=>v.nivel2ProyeccionBase[2].fcff=100,
+    v=>v.sensibilidadMultiples.matrices[1].fundamentalFY3[2]=100,
+    v=>v.descuentoMultiples.metodos[1].peso=.1,
+    v=>v.descuentoMultiples.metodos[1].base.vp[2]=17,
+    v=>v.sensibilidadMultiples.matrices[1].vp3Original=-3,
+    v=>v.descuentoMultiples.metodos[1].estado='PENDIENTE'
+  ]){const v=make();change(v);assert.throws(()=>validateNativeMatrices(v));}
+});
+
 test('P/V o P/BV son complementarios sin exigir cálculo, salvo peso positivo',()=>{
   const a=fixture(),m=a.sensibilidadMultiples.matrices[6];
   m.estado='N/D';m.matriz=null;m.centro=null;

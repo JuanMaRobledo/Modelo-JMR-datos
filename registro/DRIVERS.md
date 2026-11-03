@@ -21,6 +21,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | AMZN-20261102-A12-R2 | SUSTITUIDA | N/D | N/D | 17.0 % | 0.75 | N/D | N/D | N/D | N/D |
+| AMZN-20261102-A12-R5 | VIGENTE | 149.19 | 9.3 % | 15.8 % (-1.2 pp) | 0.72 (-0.03) | 1.65 | 8.2 % | 4.0 % | 11.5 % |
 
 ## BSX
 

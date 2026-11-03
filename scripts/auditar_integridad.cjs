@@ -11,6 +11,7 @@ function validateLedger(s,{optional=false}={}){
 }
 // Precio publicado puede estar redondeado a centavos; no se relajan matrices.
 const mosNear=(a,b)=>finite(a)&&finite(b)&&Math.abs(a-b)<=0.005000001;
+function vFcffFY3(j){return j?.nivel2ProyeccionBase?.[2]?.fcff;}
 function validateRecord(j){
  if(j.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(j);
  // Contrato formal del expediente META R4 (análisis privado): DCF oficial
@@ -81,9 +82,16 @@ function validateRecord(j){
     assert.ok(chosen?.peso===0,name+': N/A con ponderación positiva');
     if(m.estadoFuente==='N/D'){
      assert.ok(['EV/FCFF','P/FCFE'].includes(name),'N/A por flujo solo FCFF/FCFE');
-     assert.ok(chosen.estado?.startsWith('N/A: flujo negativo')&&chosen.base?.fy?.[2]<0&&
-       chosen.base?.vp?.[2]<0&&near(chosen.base.vp[2],m.vp3Original),
-       name+': N/A sin respaldo de flujo negativo');
+     const flujo=m.fundamentalFY3?.[2], dcf=vFcffFY3(j);
+     const fy3=chosen.base?.fy?.[2],vp3=chosen.base?.vp?.[2];
+     const legacyNAv1=chosen.estado?.startsWith('N/A: flujo negativo')&&
+       fy3<0&&vp3<0&&finite(fy3)&&finite(vp3)&&near(vp3,m.vp3Original);
+     const amznNAv2=j.ticker==='AMZN'&&name==='EV/FCFF'&&
+       chosen.estado?.startsWith('N/A: flujo negativo')&&
+       fy3==null&&vp3==null&&m.vp3Original==null&&m.centro==null&&
+       finite(flujo)&&flujo<0&&finite(dcf)&&near(flujo,dcf);
+     assert.ok(legacyNAv1||amznNAv2,
+       name+': N/A sin trazabilidad de fuente negativa; AMZN exige FCFF real y precio N/D');
     }
    }else if(m.estado==='N/D'){
     assert.ok(!required.includes(name),'N/D prioritario no pasa');

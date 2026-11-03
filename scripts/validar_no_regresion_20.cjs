@@ -38,7 +38,12 @@ function run(){
   }
   const NUEVAS={META:'META-20261101-A12-R1',NVDA:'NVDA-20261101-A12-R1',XP:'XP-20261031-A12-R1',INTU:'INTU-20261101-A12-R1',DPZ:'DPZ-20261101-A1',NU:'NU-20261102-A12-R3'};
   const nuevas=Object.entries(NUEVAS).filter(([t,r])=>aEntries.some(([name,v])=>name===t&&path.basename(v.rutaValoracion).startsWith(r))).length;
-  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas,'Se perdieron revisiones A-1.2 originales');
+  // Alta explícita de AMZN R5. Se exige preservar íntegramente las 24 previas.
+  const ADICIONALES={AMZN:'AMZN-20261102-A12-R5'};
+  const extra=Object.entries(ADICIONALES).filter(([ticker,revision])=>
+    aEntries.some(([name,item])=>name===ticker&&item.rutaValoracion==='valoraciones/'+revision+'.json')).length;
+  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra,
+    'Se perdieron revisiones A-1.2 anteriores o apareció un alta sin contrato');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){
