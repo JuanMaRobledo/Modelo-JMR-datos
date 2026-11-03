@@ -59,3 +59,27 @@ Las tres matrices DCF `Sensibilidad DCF!B12/B23/B34` retornaron **OK** tras cada
 
 ## 6. Estado
 **Completado:** captura SEC, puente histórico y segmentado, identificación mantenimiento/crecimiento como proxies, reconciliación, escenarios de stress y restitución 0,72. **PENDIENTE ECONÓMICO MATERIAL de F3:** previsión CAPEX FY2027 por inversión comprometida, conciliación cash capex y reinversión DCF, separación de leases, productividad de activos y ROIC incremental. **F1/F2 no se certifican por este puente**; consulte [CIERRE_OPERATIVO_F1_F2.md](CIERRE_OPERATIVO_F1_F2.md). No se fusiona ni publica PR #234.
+
+## 7. Validación adicional del CAPEX de 2026 y conciliación ilustrativa con 2027 (3-nov-2026)
+
+La fuente primaria SEC confirma **cash CAPEX FY2026 nueve meses 175.670 M** (estado cash flows), frente a **guía FY2026 de ~220.000 M** de efectivo. La parte implícita de cuarto trimestre para llegar a ese importe sería **44.330 M**; **cálculo**, no previsión comunicada para Q4. Fuente: [10-Q Q3 2026](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm), [resultado 29-oct-2026](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm).
+
+La guía cualitativa indica que el CAPEX cash FY2027 será mayor que FY2026, pero **NO aporta cuantía FY2027**. Para hacer explícita la condición económica y evitar extrapolar ganancias sin inversión, se añadió `Input sheet!A210:B226`:
+
+| Concepto ilustrativo, US$ M | Importe |
+|---|---:|
+| Guía cash CAPEX FY2026, referencia (NO guía FY2027) | 220.000 |
+| Menos incentivos y ventas PPE observados LTM (NO proyección) | 4.535 |
+| Cash CAPEX neto ilustrativo | **215.465** |
+| Reinversión FY+1 ya contenida en DCF Base | **121.711,57** |
+| **D&A menos ΔNWC requerido para conciliar ambas series (bajo supuestos simplificadores)** | **93.753,43** |
+| D&A cash flow reportada LTM (incluye contenido y lease) | 79.353 |
+| Brecha sin justificar si D&A igual LTM y ΔNWC=0 | **14.400,43** |
+| Aumento de D&A para conciliar con ΔNWC=0 | **18,15%** |
+
+**No hay equivalencia contable automática**: CAPEX FY2026 vs reinversión FY2027, provisiones e incentivos, timing, importes no pagados, compras vía arrendamientos, depreciación de contenido/ROU y capital de trabajo difieren. Los resultados son un **test condicional**, no CAPEX sostenible calculado ni instrucción para subir o bajar DCF. Con inversión efectiva FY2027 mayor, el test exigiría más D&A y/o ΔNWC negativo, mayor reinversión o eficiencia demostrable.
+
+SEC divulga además aumentos netos LTM de PPE adquirido y no pagado por **26.779 M** y PPE financiado con leases por **4.543 M**: `Input B223:B224`. Son componentes de actividad no cash, **no sumarlos encima del CAPEX cash reportado** ni tratar todo como flujo incremental para el DCF. Esto explica por qué la comparación de adiciones a activos (196.910M en 9M) no debe reemplazar los desembolsos de efectivo (175.670M en 9M).
+
+**F1/F2:** datos históricos, clasificación, puente y test condicional documentados; **F3 deberá decidir si el S/C 0,72 y el desfase 2 años subestiman la reinversión 2027**, con productividad AWS, ROIC marginal y renovación de activos. Hasta entonces DCF Base US$149,19 **candidato**, no normalizado al alza para eliminar FCFF negativos. Los cuatro escenarios originales y tres sensibilidades centrales continúan LISTO/OK tras escritura y lectura.
+
