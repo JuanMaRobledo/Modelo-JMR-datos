@@ -8,12 +8,16 @@ const c=JSON.parse(fs.readFileSync(path.join(root,'candidatos/valoraciones/PAGS-
 const a=JSON.parse(fs.readFileSync(path.join(root,'analisis/PAGS-20261030-A12-R1-CANDIDATO.json'),'utf8'));
 const cat=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
 const close=(x,y,label)=>assert.ok(Number.isFinite(x)&&Number.isFinite(y)&&Math.abs(x-y)<Math.max(1e-6,1e-9*Math.abs(y)),label+': '+x+' vs '+y);
-test('PAGS: revision no publicada ni activada en catalogo',()=>{
+test('PAGS: candidato historico no sustituye la revision publicada EN_REVISION',()=>{
  assert.equal(c.ticker,'PAGS');assert.equal(c.metodo_valoracion,'A');assert.equal(c.version_metodo,'A-1.2');
  assert.equal(c.estado,'CANDIDATO_REVISADO');assert.equal(c.estadoPublicacion,'CANDIDATO_NO_PUBLICADO');assert.equal(c.publicationAuthorized,false);
  assert.equal(c.auditoriaEconomica,'NO_REALIZADA');
- for(const v of cat.valoraciones||[]) assert.ok(!v.includes('PAGS-'));
- for(const v of cat.analisis||[]) assert.ok(!v.includes('PAGS-'));
+ const active=(cat.valoraciones||[]).filter(v=>v.startsWith('valoraciones/PAGS-'));
+ assert.deepEqual(active,['valoraciones/PAGS-20261030-A12-R1.json']);
+ const analyses=(cat.analisis||[]).filter(v=>v.startsWith('analisis/PAGS-'));
+ assert.deepEqual(analyses,['analisis/PAGS-research-PAGS-20261030-A12-R1.json']);
+ assert.ok(!(cat.valoraciones||[]).some(v=>v.startsWith('candidatos/valoraciones/PAGS-')));
+ assert.ok(!(cat.analisis||[]).some(v=>v.endsWith('PAGS-20261030-A12-R1-CANDIDATO.json')));
 });
 test('PAGS: cuatro FCFE 10 años conciliados en BRL',()=>{
  for(const [name,s] of Object.entries(c.escenarios)){

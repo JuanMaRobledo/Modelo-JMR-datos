@@ -21,7 +21,9 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
     .filter(([,v])=>v.metodo==='A-1.2');
   const previous=18+['META','NVDA','XP','INTU','DPZ','NU'].filter(t=>active.some(([name])=>name===t)).length;
   const amzn=active.find(([ticker])=>ticker==='AMZN');
-  assert.equal(active.length,previous+(amzn?1:0),'No permitir altas desconocidas sin catálogo reconciliado');
+  const pags=active.find(([ticker])=>ticker==='PAGS');
+  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0),'No permitir altas desconocidas sin catálogo reconciliado');
+  if(pags)assert.equal(pags[1].rutaValoracion,'valoraciones/PAGS-20261030-A12-R1.json','PAGS exige revision A-1.2 vigente unica');
   if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
