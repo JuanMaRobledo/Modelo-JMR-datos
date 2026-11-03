@@ -429,7 +429,7 @@
       "origen": "'Sensibilidad por múltiplo'!A86:I94",
       "estado": "N/A",
       "estadoFuente": "N/D",
-      "motivo": "FCFF proyectado FY+3 negativo (−US$6.371,92 millones) por inversiones de capacidad; usar un múltiplo positivo produciría un precio carente de interpretación económica.",
+      "motivo": "FCFF FY+3 del escenario Base es negativo (-US$6371,915 M), por lo que el múltiplo EV/FCFF no genera un precio económico positivo. Se excluye por selector nativo F8=No y peso 0; no se inventa un VP negativo.",
       "matriz": null,
       "fundamentalFY3": [
         -5097.532348670822,
@@ -448,10 +448,46 @@
       "prioritario": true,
       "ancla": "JMR",
       "origen": "'Sensibilidad por múltiplo'!A96:I104",
-      "estado": "N/A",
-      "estadoFuente": "N/D",
-      "motivo": "El beneficio por acción incorpora revalorizaciones extraordinarias de participaciones privadas; no hay un denominador recurrente normalizado auditado al mismo corte.",
-      "matriz": null,
+      "estado": "OK",
+      "estadoFuente": "CALCULADO",
+      "motivo": null,
+      "matriz": [
+        [
+          238.7990530134705,
+          268.6489346401543,
+          298.49881626683816,
+          328.34869789352194,
+          358.1985795202057
+        ],
+        [
+          268.6489346401543,
+          302.23005147017363,
+          335.8111683001929,
+          369.3922851302122,
+          402.97340196023146
+        ],
+        [
+          298.49881626683816,
+          335.8111683001929,
+          373.1235203335476,
+          410.4358723669024,
+          447.74822440025713
+        ],
+        [
+          328.34869789352194,
+          369.3922851302122,
+          410.43587236690246,
+          451.4794596035928,
+          492.5230468402829
+        ],
+        [
+          358.1985795202057,
+          402.97340196023146,
+          447.74822440025713,
+          492.52304684028286,
+          537.2978692803085
+        ]
+      ],
       "fundamentalFY3": [
         104919.21227988755,
         118034.11381487349,
@@ -459,9 +495,16 @@
         144263.91688484538,
         157378.8184198313
       ],
-      "multiploElegido": null,
-      "centro": null,
-      "vp3Original": null
+      "multiploElegido": [
+        31.379938833378347,
+        35.30243118755064,
+        39.22492354172293,
+        43.14741589589523,
+        47.06990825006751
+      ],
+      "centro": 373.1235203335476,
+      "vp3Original": 373.1235203335476,
+      "control": "OK"
     },
     {
       "metodo": "P/FCFE",
@@ -469,10 +512,46 @@
       "prioritario": true,
       "ancla": "JMR",
       "origen": "'Sensibilidad por múltiplo'!A106:I114",
-      "estado": "N/A",
-      "estadoFuente": "N/D",
-      "motivo": "El flujo patrimonial FY+3 depende materialmente de financiación, leases, dilución y calendario de inversión; el ancla histórica no es homogénea y no puede usarse como precio contrastable.",
-      "matriz": null,
+      "estado": "OK",
+      "estadoFuente": "CALCULADO",
+      "motivo": null,
+      "matriz": [
+        [
+          52.491313074549296,
+          59.05272720886795,
+          65.61414134318662,
+          72.17555547750527,
+          78.73696961182394
+        ],
+        [
+          59.05272720886795,
+          66.43431810997645,
+          73.81590901108493,
+          81.19749991219344,
+          88.57909081330193
+        ],
+        [
+          65.61414134318662,
+          73.81590901108493,
+          82.01767667898326,
+          90.21944434688159,
+          98.42121201477993
+        ],
+        [
+          72.17555547750528,
+          81.19749991219344,
+          90.21944434688159,
+          99.24138878156975,
+          108.26333321625792
+        ],
+        [
+          78.73696961182394,
+          88.57909081330192,
+          98.42121201477991,
+          108.2633332162579,
+          118.1054544177359
+        ]
+      ],
       "fundamentalFY3": [
         13307.94292296763,
         14971.435788338582,
@@ -480,9 +559,16 @@
         18298.42151908049,
         19961.914384451444
       ],
-      "multiploElegido": null,
-      "centro": null,
-      "vp3Original": null
+      "multiploElegido": [
+        54.38147978495631,
+        61.17916475807585,
+        67.97684973119539,
+        74.77453470431493,
+        81.57221967743446
+      ],
+      "centro": 82.01767667898326,
+      "vp3Original": 82.01767667898326,
+      "control": "OK"
     },
     {
       "metodo": "P/OCF",
@@ -594,7 +680,7 @@
   "discountedMultiples": [
     {
       "name": "EV/EBITDA",
-      "weight": 0.10000000000000003,
+      "weight": 0.16000000000000003,
       "fy": [
         358.5872914869025,
         403.24346453799666,
@@ -609,7 +695,7 @@
     },
     {
       "name": "EV/FCFF",
-      "weight": 0.15,
+      "weight": 0,
       "fy": [
         null,
         null,
@@ -624,37 +710,37 @@
     },
     {
       "name": "P/E",
-      "weight": 0.05000000000000002,
+      "weight": 0.08000000000000002,
       "fy": [
-        null,
-        null,
-        null
+        376.346661376755,
+        429.0276333386157,
+        475.8403570132719
       ],
       "vp": [
-        null,
-        null,
-        null
+        347.0445155856324,
+        364.8207243969105,
+        373.1235203335476
       ],
-      "consolidated": null
+      "consolidated": 361.6629201053635
     },
     {
       "name": "P/FCFE",
-      "weight": 0.05000000000000002,
+      "weight": 0.08000000000000002,
       "fy": [
-        null,
-        null,
-        null
+        -32.7272759509448,
+        38.40134797611917,
+        104.59624876351582
       ],
       "vp": [
-        null,
-        null,
-        null
+        -30.17914809522599,
+        32.654324565169354,
+        82.01767667898326
       ],
-      "consolidated": null
+      "consolidated": 28.16428438297554
     },
     {
       "name": "P/OCF",
-      "weight": 0.05000000000000002,
+      "weight": 0.08000000000000002,
       "fy": [
         184.55724778674943,
         226.11738305268028,
@@ -668,8 +754,8 @@
       "consolidated": 190.4043412690061
     }
   ],
-  "methodNote": "Two verified native matrices; three principal methods unpriced (N/D). Do NOT mark all priority matrices approved. Original category weights are not certified as reweighted.",
-  "sha256NumericSource": "d98aa3440645f4cd62660047d04073d7ee2747ec627ec57f5e43f3c84b1926d3",
+  "methodNote": "AMZN R5: 4 centros 5×5 OK en hoja (EV/EBITDA, P/E, P/FCFE, P/OCF), EV/FCFF N/A por FCFF FY+3 negativo y peso cero, P/V y P/BV N/D opcionales. P/E 2023-24 mínimo positivo sin FY2025 Level3; P/FCFE mediana 2024-25 con reserva financiera. Ponderaciones provienen de Resumen B6:B11; DCF 60% conservado y 40% repartido nativamente entre 4 relativos habilitados. Ningún valor DCF cambia.",
+  "sha256NumericSource": "3296d7d47118651492d00d53ef83936f9db3f00e1dcd1b826516fd045b87384a",
   "hashScope": "ASCII JSON canonical numbers, projections, DCF matrices, native multiple matrices and discounted methods",
-  "publicationGate": "NO_APROBADO_MATRICES_3_PRIORITARIAS_ND"
+  "publicationGate": "DATOS_ECONOMICOS_CANDIDATOS_4_OK_1_NA_2_ND;VALIDACION_CI_Y_PUBLICACION_PENDIENTES"
 }
