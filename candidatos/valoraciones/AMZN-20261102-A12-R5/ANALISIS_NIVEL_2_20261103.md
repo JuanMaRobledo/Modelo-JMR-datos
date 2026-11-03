@@ -190,35 +190,33 @@ La hoja `Sensibilidad DCF` reproduce cada escenario Base **con otros dos paráme
 
 **WACC inicial × g estable; 5×5, USD/acción**
 
-| Eje vertical / horizontal | 17.593,55% | 18.343,29% | 19.276,73% | 20.472,86% | 22.063,46% |
+| Eje vertical / horizontal | 3,00% | 3,50% | 4,00% | 4,50% | 5,00% |
 |---|---:|---:|---:|---:|---:|
+| 7,18% | 175,94 | 183,43 | 192,77 | 204,73 | 220,63 |
 | 7,68% | 157,10 | 162,25 | 168,51 | 176,31 | 186,30 |
 | 8,18% | 141,48 | 145,00 | 149,19 | 154,29 | 160,63 |
 | 8,68% | 128,34 | 130,70 | 133,45 | 136,74 | 140,72 |
 | 9,18% | 117,15 | 118,66 | 120,40 | 122,44 | 124,86 |
-| N/D% |  |
 
 **ROIC terminal × g estable; 5×5, USD/acción**
 
-| Eje vertical / horizontal | 13.810,74% | 14.062,12% | 14.358,26% | 14.714,05% | 15.151,85% |
+| Eje vertical / horizontal | 3,00% | 3,50% | 4,00% | 4,50% | 5,00% |
 |---|---:|---:|---:|---:|---:|
+| 10,50% | 138,11 | 140,62 | 143,58 | 147,14 | 151,52 |
 | 11,00% | 139,87 | 142,91 | 146,51 | 150,88 | 156,28 |
 | 11,50% | 141,48 | 145,00 | 149,19 | 154,29 | 160,63 |
 | 12,00% | 142,96 | 146,91 | 151,65 | 157,41 | 164,61 |
 | 12,50% | 144,31 | 148,67 | 153,90 | 160,29 | 168,28 |
-| N/D% |  |
 
 **Crecimiento explícito años 1–5 × margen EBIT objetivo; 5×5, USD/acción**
 
-| Eje vertical / horizontal | 10.124,73% | 11.913,13% | 13.701,53% | 15.489,94% | 17.278,34% |
+| Eje vertical / horizontal | 11,80% | 13,80% | 15,80% | 17,80% | 19,80% |
 |---|---:|---:|---:|---:|---:|
+| 5,29% | 101,25 | 119,13 | 137,02 | 154,90 | 172,78 |
 | 7,29% | 102,56 | 122,75 | 142,93 | 163,11 | 183,30 |
 | 9,29% | 103,71 | 126,45 | 149,19 | 171,93 | 194,68 |
 | 11,29% | 104,66 | 130,25 | 155,84 | 181,43 | 207,02 |
 | 13,29% | 105,40 | 134,15 | 162,90 | 191,66 | 220,41 |
-| N/D% |  |
-
-
 
 En la hoja `Sensibilidad por múltiplo` hay matrices 5×5 para métodos aplicables en **historia Base solamente**, con ejes de múltiplo real y fundamental proyectado FY+3. El centro de EV/EBITDA corresponde VP3 **349,7436**, no promedio de VP3 años **341,1023**; P/OCF VP3 **208,7479** vs promedio **190,4043**. En ambos casos la igualdad del centro con `Descuento de múltiplos!I20/I24` es verificable y se preserva.
 
