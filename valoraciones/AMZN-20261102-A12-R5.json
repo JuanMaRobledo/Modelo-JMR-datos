@@ -558,24 +558,25 @@
   },
   "sensibilidadDCF": {
     "tipo": "FCFF",
-    "estado": "CALCULADA_NATIVA_CANDIDATA",
-    "matrices": {
-      "waccVsTerminalGrowth": {
-        "rows": [
+    "estado": "INTEGRADO_EN_REVISION",
+    "matrices": [
+      {
+        "nombre": "WACC × crecimiento terminal",
+        "ejeFilas": [
           0.07179602956197793,
           0.07679602956197792,
           0.08179602956197793,
           0.08679602956197793,
           0.09179602956197792
         ],
-        "columns": [
+        "ejeColumnas": [
           0.03,
           0.035,
           0.04,
           0.045,
           0.05
         ],
-        "values": [
+        "valores": [
           [
             175.93551833269788,
             183.43290622955573,
@@ -612,24 +613,26 @@
             124.85962490154819
           ]
         ],
-        "center": 149.19148575564947
+        "centroConciliado": true,
+        "origen": "Sensibilidad DCF · matriz waccVsTerminalGrowth"
       },
-      "waccVsTerminalROIC": {
-        "rows": [
+      {
+        "nombre": "WACC × ROIC terminal",
+        "ejeFilas": [
           0.10500000000000001,
           0.11,
           0.115,
           0.12000000000000001,
           0.125
         ],
-        "columns": [
+        "ejeColumnas": [
           0.03,
           0.035,
           0.04,
           0.045,
           0.05
         ],
-        "values": [
+        "valores": [
           [
             138.10742516150302,
             140.62124199766407,
@@ -666,24 +669,26 @@
             168.2755723007689
           ]
         ],
-        "center": 149.19148575564947
+        "centroConciliado": true,
+        "origen": "Sensibilidad DCF · matriz waccVsTerminalROIC"
       },
-      "growthVsMargin": {
-        "rows": [
+      {
+        "nombre": "Crecimiento × margen EBIT",
+        "ejeFilas": [
           0.05294707243434619,
           0.07294707243434619,
           0.09294707243434619,
           0.1129470724343462,
           0.1329470724343462
         ],
-        "columns": [
+        "ejeColumnas": [
           0.118,
           0.138,
           0.158,
           0.178,
           0.198
         ],
-        "values": [
+        "valores": [
           [
             101.24729641103431,
             119.13132260097156,
@@ -720,9 +725,10 @@
             220.40606443962434
           ]
         ],
-        "center": 149.19148575564947
+        "centroConciliado": true,
+        "origen": "Sensibilidad DCF · matriz growthVsMargin"
       }
-    },
+    ],
     "origen": "Sensibilidad DCF!A4:G12,A15:G23,A26:G34",
     "capturaSha256": "b784caa4ba823fa8d549228701dc44a6ca5043ab212cf37a4fd4befd19a419ae"
   },
