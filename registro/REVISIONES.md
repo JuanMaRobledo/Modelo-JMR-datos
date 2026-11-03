@@ -28,6 +28,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 | NVDA | NVDA-20261101-A12-R1 | NVDA-20261025-R4, NVDA-20261031-A12-R1 |
 | NVO | NVO-20261029-R1 | — |
 | ONON | ONON-20261029-R1 | — |
+| PAGS | PAGS-20261030-A12-R1 | — |
 | PYPL | PYPL-20261029-R1 | — |
 | SHAK | SHAK-20261029-A12-R2 | SHAK-REC-20261027-R1 |
 | UBER | UBER-20261030-A1 | — |
