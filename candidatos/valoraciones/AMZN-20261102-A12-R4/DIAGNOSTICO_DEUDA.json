@@ -1,0 +1,32 @@
+{
+  "scope": "Diagnostic only. No WACC or DCF approved. Maturity 13.9 is the disclosed notes maturity, not a certified all-debt duration. Discount-rate grid is an analyst stress, not sourced Kd.",
+  "native_formula": "interest*(1-(1+Kd)^(-maturity))/Kd + book_debt/(1+Kd)^maturity",
+  "book_debt": 304841,
+  "ltm_interest": 4484,
+  "interest_div_book": 0.014709307475044368,
+  "disclosed_notes_fair_value": 145400,
+  "disclosed_term_loan_fair_value": 17500,
+  "known_bonds_and_term_loan_fair_value": 162900,
+  "other_recognized_financing_approx": 125753,
+  "comparison_total_approx": 288653,
+  "stress": [
+    {
+      "Kd_assumed": 0.0529,
+      "maturity_assumed": 13.9,
+      "native_estimator": 192260.1724298863,
+      "difference_vs_reference_approx": -96392.8275701137
+    },
+    {
+      "Kd_assumed": 0.06,
+      "maturity_assumed": 13.9,
+      "native_estimator": 177104.9499197202,
+      "difference_vs_reference_approx": -111548.05008027979
+    },
+    {
+      "Kd_assumed": 0.07,
+      "maturity_assumed": 13.9,
+      "native_estimator": 158071.21351883,
+      "difference_vs_reference_approx": -130581.78648117001
+    }
+  ]
+}
