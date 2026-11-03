@@ -1,3 +1,58 @@
+# AMZN · AMZN-20261102-A12-R4 · FASE 1 — CERRADA CON CONTROLES PENDIENTES
+**Actualización final de esta fase: 2026-11-02. Estado: APTO PARA EMPEZAR FASE 2 EN CANDIDATO, no certificada ni publicable.**
+**Herramienta:** ChatGPT GPT-6 (esfuerzo alto), Google Sheets / GitHub, SEC web; identificador de hoja: `10qfoGrEP1PgdlLWrHvfoHqExKDZbPK75yb_oINlO4a8`.
+**Aislamiento:** R4 exclusiva. R2/R3 archivadas y no utilizadas como fuentes.
+**Corte:** 30-oct-2026 precio US$240,35, Treasury 10Y 4,94%; últimos estados al 30-sep-2026. Datos en USD millones, acciones millones post-split 20:1.
+
+## Dictamen operativo y puerta exacta
+**HABILITADA a Fase 2 (valoración como CANDIDATO), con obligaciones de corregir/corroborar antes de usar cada salida y antes de Fase 3.** Las cifras materiales de ventas, resultados, EBITDA, CFO, capex, deuda reconocida y balance son reproducibles con fuentes primarias y fórmulas. No se generó ni publicó DCF, MOS, múltiples EV ni JSON certificado. Las tareas de modelización (I+D, inversiones Anthropic/OpenAI, WACC, reinversión, NCI y SBC) son propias de Fase 2, NO se han declarado resueltas.
+
+## Matriz de controles efectivamente realizados
+| Requisito | Resultado comprobado | Estado |
+|---|---|---|
+| Emisor/CIK/fiscal/moneda | Amazon.com Inc, Nasdaq AMZN, CIK 0001018724, FY 31 diciembre, USD | OK |
+| Aislamiento y plantilla | R4 copia de plantilla IA, **46 pestañas**; sin fuentes de R2/R3 | OK |
+| Estados históricos | 2016–2025, diez ejercicios de P&L, balance y CF, con notas en celdas; apertura 2015 | OK CON RESERVAS DE CLASIFICACIÓN |
+| LTM 30-sep-2026 | P&L LTM con **15 fórmulas añadidas** (FY2025 + 9M2026 - 9M2025; acciones ponderadas pro rata 9/12), flujos LTM publicados directamente, balance spot sep2026, apertura sep2025 | OK |
+| Verificación contable directa | 10/10 EBIT FY2016–25 conciliados; 11/11 CFO y CFI (incl. LTM) conciliados; 11/11 balances 2016–25+sep2026: activos corrientes, activos totales, pasivos corrientes y pasivo+patrimonio = 0 de diferencia en USD M | APROBADO EQUIVALENTE PARCIAL |
+| Conservación de fórmulas | Comparación programática **5.357 fórmulas coincidentes**, 0 desaparecidas, 0 modificadas, en 46 pestañas: 14 pestañas A1:L80 y las otras 32 A1:L120. Excepciones: exactamente 15 fórmulas NUEVAS (Income Statement columna L). No es `diff_formulas_plantilla.py` de todo el libro | APROBADO EQUIVALENTE ACOTADO |
+| Precios de cierre por año | Trailing Valuation!B3:K3, cierre FY2016–25, USD split-adjusted; 2026 L3 cierre 30-oct-2026 | OK FUENTE EXTERNA FECHADA |
+| ROIC/ROE/ROA/trading | Fórmulas originales preservadas. Tras desagregar obligaciones 2023/24, ROIC FY2024 19,70%, FY2025 16,26%, LTM 13,26% observados en la hoja; ROA LTM 13,67%, ROE LTM 27,42% **GAAP** afectados por ingresos no operativos | OK TÉCNICO; INTERPRETACIÓN F2 |
+| Ceros/reclasificación | I+D no separada (dentro de tecnología/infrastructure); D&A CF no expensa separada en EBIT; deuda/leases 2023–26 desagregados desde notas 10-K/10-Q, con recorte equivalente de accrued. Preferentes **0** por balance que dice no emitidas. En otros años, sin soporte de desglose no se inventaron ceros | PARCIAL EVIDENCIADO |
+| Corte de tasas | Treasury 30-oct-2026 4,94% en Input B35. Damodaran ERP 1-oct-2026 4,20% (Rf original al 30-sep 5,29%): no trasladar 4,20 y 4,94 a un WACC como si fueran medidas simultáneas sin tratamiento temporal y sensibilidad | F2 PENDIENTE DE CIERRE |
+| 8-K / actualizaciones | Inventario de 15 formularios 8-K en 2026 hasta 30-oct, entre ellos 29-oct resultados, emisiones de deuda y contratos; varios materiales contrastados con 10-Q y SEC 8-K, no se afirma auditoría completa de los 15 cuerpos | INVENTARIO OK; LECTURA EXHAUSTIVA PENDIENTE |
+| Controles oficiales del motor | `estados_completos.py`, `auditar_estados_sec.py`, `auditar_ceros_materiales.py`, `diff_formulas_plantilla.py`, `inputs_completos.py`, `candados.py` | **NO EJECUTADO**: no hay sesión con credenciales/runtime del motor para correrlos contra la hoja; la revisión directa no reemplaza gates |
+| Entrega a siguiente agente | Hoja R4 y esta documentación con datos originales, advertencias de normalización y fuentes fechadas | OK |
+
+## Datos verificables clave y excepciones económicas
+- **FY2025:** ventas 716.924, EBIT 79.975, CFO 139.514, capex en caja 131.819 (USD M).
+- **LTM sep2026:** ingresos **797.455**, EBIT **104.366**, CFO **168.300**, capex de caja **215.192**, FCF fórmula CFO − capex **−46.892**, ajuste por incentivos de propiedad y equipo **4.535**, FCF neto incentivos **−42.357** (USD M). LTM net income contable **134.779** incluye beneficios financieros extraordinarios y NO debe usarse como utilidad recurrente.
+- **Deuda y arrendamientos a sep2026:** LT debt 173.125, corriente debt 6.827, leases largo 98.824 y corriente 15.959 (USD M), total reconocido de 294.735. Finanzas de infraestructura de corto/largo plazo y otros pasivos de financiamiento deben evaluarse en Fase 2 sin doble conteo.
+- **Mercado:** precio 240,35 USD; acciones 10.811 M (balance sep2026); market cap fórmula **2.598.423,85 USD M**. No se calculó EV oficial porque NCI e inversiones no operativas requieren comprobación.
+- **P/E LTM visible de 19,43x es DISTORSIONADO** por Anthropic y otras partidas a valor razonable; EV/FCFF LTM puede no ser económico por FCFF negativo. Es obligación de Fase 2 normalizar y decidir N/A o escenarios, no calcular mecánicamente.
+- **Capital I+D:** Technology and Infrastructure mezcla investigación, gastos operativos y otros; no se usaron ceros como sustituto de I+D. Separar o justificar proxy con sensibilidad en fase 2.
+- **Inversiones Anthropic/OpenAI:** activos financieros valorados a valor razonable y aportes 2026 son potencialmente materiales; estimar no-operativo con derechos/restricciones/posible no liquidez, no sumar toda cifra de Other assets ni duplicar ganancias no realizadas en DCF.
+
+## Documentos nuevos contrastados
+- SEC 2026 10-Q (estados, notas de leases, deuda, inversiones y guía): https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm
+- SEC 2025 Q3 10-Q (saldos de apertura LTM): https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm
+- SEC 2016 10-K (saldos de apertura 2015, recalculados desde último comparativo 2016): https://www.sec.gov/Archives/edgar/data/1018724/000101872417000011/amzn-20161231x10k.htm
+- 2024 10-K (obligaciones current FY2023/2024): https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/amzn-20241231.htm
+- 2025 10-K: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm
+- Cierre anual ajustado por split: https://www.macrotrends.net/stocks/charts/AMZN/amazon/stock-price-history
+- 8-K resultados 29-oct-2026: https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20261029.htm
+- Catálogo de 8-K: https://biz.datenus.com/companies/amazon-com-inc/filings (fechas: 02/05, 02/27, 03/13, 03/16, 04/09, 04/14, 04/29, 05/22, 06/10, 06/12, 07/09, 07/30, 09/09, 09/14, 10/29 de 2026; fuentes subyacentes SEC).
+- Rf 30-oct: https://treasuryratewatch.com/daily/treasury-yield-curve (replica U.S. Treasury). ERP 1-oct: https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm ; blog 08-oct: https://aswathdamodaran.substack.com/p/earnings-cashflows-and-stock-prices
+
+## Fase 2 habilitada con dependencias materiales explícitas
+**Orden de continuación:** (1) ejecutar scripts reales desde entorno de JMR con credenciales Google Sheets antes de certificar; (2) verificar todo cero/rubro agrupado y 8-K faltantes; (3) Fase 2 calcula tasas/fuentes homogéneas, beta y WACC, ajuste I+D/leases, RSU, no operativos y capital de reinversión; (4) cuatro historias, controles DCF y múltiplos + sensibilidades 5×5, recálculo independiente, captura+SHA y JSON candidato; (5) no promover a EN_REVISION hasta gates y autorización. Esta autorización de avance es **metodológica y de trabajo CANDIDATO**, NO certificado de auditoría.
+
+**Pasos de Fase 1 (0/1/2/3/4/5/5b/6/7/8):** 10/10 abordados, algunos con resultados PARCIALES y control oficial NO EJECUTADO justificado por acceso a scripts y entorno. No se oculta la pendiente ni se desbloquea la publicación. **La fase se declara CERRADA CON CONTROLES PENDIENTES porque hay insumos materiales suficientemente reconciliados para iniciar la investigación y construcción de Fase 2, no para entregar una valoración final.**
+
+---
+
+## Registro anterior de trabajo (historial; el dictamen anterior de PENDIENTE quedó reemplazado por el cierre CON CONTROLES PENDIENTES de arriba)
+
 # AMZN · AMZN-20261102-A12-R4 · Fase 1 · ENTREGA PARCIAL, cierre NO acreditado
 
 **Fecha:** 2026-11-02. **Herramienta:** ChatGPT GPT-6 / conectores Google Drive, GitHub y SEC (web), esfuerzo de razonamiento alto. **Método:** JMR A-1.2. **Estado:** CANDIDATO — fase 1 en curso, NO promover a EN_REVISION. **Hoja única de trabajo:** https://docs.google.com/spreadsheets/d/10qfoGrEP1PgdlLWrHvfoHqExKDZbPK75yb_oINlO4a8/edit. **PR:** https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/233 (borrador).
