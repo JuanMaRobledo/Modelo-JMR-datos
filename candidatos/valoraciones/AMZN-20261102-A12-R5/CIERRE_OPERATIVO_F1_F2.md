@@ -35,3 +35,12 @@
 - La fase 4 incorpora pruebas de publicación y análisis Nivel1/2; fase5 auditoría guiada. No se hizo F3/F4/F5 ni se reemplazó el catálogo de producción.
 
 **Resumen:** No se han perdido los avances de los prompts viejos. La valoración Base sigue **149,1915 US$/acción, provisoria**. Los datos financieros históricos 10FY + LTM y el puente CAPEX quedan documentados y comprobados. El cierre de controles **formales** es bloqueado y debe decirse así hasta ejecución real.
+
+## Actualización de cierre técnico 3-nov-2026 — pruebas y correcciones confirmadas
+
+1. `Resumen de Valoración!G4` estaba vacío (MOS). **Se cargó 0,35 y se leyó de vuelta**, completando la entrada de seguridad estándar sin alterar ninguna proyección ni ratio.
+2. `Input sheet!A210:B226` contiene prueba de conciliación 2027: cash CAPEX FY2026 guidance 220000, 9M2026 175670, cash neto ilustrativo 215465 y D&A menos ΔNWC requerido 93753 vs LTM D&A79353. Discrepancia hipotética 14400 USD M; **no** ajuste a DCF. Fuente SEC e informe de ganancias referenciados en [NORMALIZACION_CAPEX_Y_JUSTIFICACION_DCF.md](NORMALIZACION_CAPEX_Y_JUSTIFICACION_DCF.md).
+3. Se hizo **réplica literal de selección de campos** de `inputs_completos.py` mediante lectura actual de `Input A1:C120`, COC y Resumen: con MOS corregido, quedan **4 alertas, todas `Input sheet!B39:B42`**. Son campos de opciones propias desactivadas porque `Input B38=No`; no sería correcto completarlas con ceros arbitrarios. Se mantiene evidencia separada de RSU/SBC. Esta prueba replica condiciones del script, **NO es ejecución del script oficial con credenciales**.
+4. En [PR del motor #202](https://github.com/JuanMaRobledo/JMR-valuation/pull/202) se propuso corrección mínima de las cuatro condiciones, flag `--sheet-id` para que el control use el candidato correcto, y pruebas de regresión de Yes/No. **Solo rama de revisión, sin merge**. El [issue #200](https://github.com/JuanMaRobledo/JMR-valuation/issues/200) sigue abierto hasta que pase la CI relevante y se ejecute el control contra R5.
+5. El PR R5 datos #234 sigue en borrador. Datos 10FY+LTM, puentes y controles nativos satisfactorios; los scripts SEC/no-regresión y normalización económica WACC/múltiplos **siguen pendientes**. **El gate formal de F1/F2 todavía no es PASS**. No publicar ni promover la valoración por un cálculo ilustrativo.
+
