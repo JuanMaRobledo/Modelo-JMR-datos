@@ -26,6 +26,12 @@ class NativeDiscountTests(unittest.TestCase):
         if ticker=='MSFT':
             prev=ROOT/'evidencia/descuentos-nativos-20261031'/c['revisionId']/'registro_antes.json'
             v=json.loads(prev.read_text())
+        elif ticker=='CMG':
+            # La captura de 31-oct se reproduce contra la valoración INTEGRADA
+            # contemporánea archivada; la revaluación 3T26 autorizada el 3-nov
+            # utiliza la misma hoja, pero NO debe falsear esta prueba histórica.
+            prev=ROOT/'evidencia/descuentos-20261031'/'CMG-20261028-A3-registro-integrado-archivado.json'
+            v=json.loads(prev.read_text())
         else:
             v=json.loads((ROOT/'valoraciones'/(c['revisionId']+'.json')).read_text())
         return v,c,f,hashlib.sha256(p.read_bytes()).hexdigest()
