@@ -1,0 +1,31 @@
+name: Registro de revisiones y drivers
+
+on:
+  pull_request:
+    paths:
+      - 'catalogo.json'
+      - 'valoraciones/**'
+      - 'candidatos/valoraciones/**'
+      - 'registro/**'
+      - 'scripts/registro_revisiones.py'
+      - '.github/workflows/registro-revisiones.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'catalogo.json'
+      - 'valoraciones/**'
+      - 'candidatos/valoraciones/**'
+      - 'registro/**'
+      - 'scripts/registro_revisiones.py'
+      - '.github/workflows/registro-revisiones.yml'
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Registro al día y una sola revisión vigente por emisor
+        run: python3 scripts/registro_revisiones.py --check
