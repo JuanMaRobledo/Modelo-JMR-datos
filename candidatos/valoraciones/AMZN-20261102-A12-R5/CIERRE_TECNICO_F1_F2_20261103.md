@@ -110,3 +110,23 @@ Run41609454032, commit75116d213712828fd9a2addc5bcf3490d993a345: regresión **40/
 Salidas definitivas en `evidencia_tecnica_20261103/official-final/` y artefacto13218756096 del run. El acceso autenticado queda demostrado. PR203 permanece en borrador sin integración: la puerta total sigue roja y no se elude la regla de no fusionar con fallos. Issue200 permanece abierta con alcance pendiente; issue204 separa crecimiento corregido de defectos fiscales aún abiertos. PR234 sigue borrador, sin merge ni publicación.
 
 La relectura posterior a los cambios confirma los cuatro DCF originales, crecimiento15,350845 % y ausencia de cambios en previsiones. Reconsulta final de las tres ramas main: mismos commits que al inicio. Se verificó que los scripts de reproducción funcionan con las capturas reducidas versionadas; son evidencia aritmética, no una nueva lectura ni sustitución de controles oficiales. Las capturas de reproducción preceden a las dos correcciones de crecimiento; `growth_before.json` y `final_cells.json` preservan la transición.
+
+
+## Reevaluación autenticada de R5 posterior a correcciones (3-nov-2026; intento 2)
+
+**Evidencia de ejecución:** [Actions #41609454032](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41609454032), intento reejecutado bajo motor PR #203, código del runner en commit `75116d213712828fd9a2addc5bcf3490d993a345`. [Artefacto de esta repetición](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41609454032/artifacts/13230356575); SHA256 ZIP registrado por Actions: `c10d5929c8fe2ada1ff8514c7fa1891dbb86fae3a66fa7d89060c3c2e5ddde28`.
+
+| Comprobación | Resultado real |
+|---|---|
+| Regresión de software | **ÉXITO** en el job de regresión |
+| `inputs_completos` | **0 faltantes, código 0** |
+| `auditar_ceros_materiales` | **0 alertas, código 0** |
+| `diff_formulas_plantilla` | **código 0**; ninguna fórmula reemplazada por número ni vacío. Se observaron **14 diferencias fórmula→fórmula** (EVFCFF 1, POCF 1, PFCFE 1, Input 5, Valuation output 1, Income Statement 2, Synthetic rating 3); el control no homologa semánticamente todas las fórmulas diferentes. |
+| `candados` | **15/15, código 0** |
+| `estados_completos` | **11 filas señaladas, código 1**, incluidas partidas sin desglose y CF38; deben clasificarse, no llenarse con ceros ficticios. |
+| `auditar_estados_sec` | **20 diferencias informativas, código 0**, cero cambios propuestos: impuesto (11 períodos), EPS básica y diluida (8 casos 2016–2019), PPE LTM (1 período). Un exit code 0 no concilia esas diferencias. |
+| `controles_todas.sh` | **NO ejecutado** contra candidata R5: sigue usando otros registros/hojas. |
+
+**Lectura directa posterior sobre la hoja R5:** fórmulas actuales de `POCF!B8`, `PFCFE!B8`, `EVFCFF!B8`, `Income Statement!H29` y `Synthetic rating!D14,D15,D17` observadas. Las tres celdas de rating sintético inactivo se evalúan en blanco sin `#N/A`. DCF por acción, sin cambios respecto a evidencia previa: Base **149.19148575564947**, Conservador **81.00951720766344**, Optimista **241.84351613972044**, Disrupción **62.43573154339526** USD. Costo capital activo **0.08179602956197793**.
+
+**Decisión verificada:** el reintento autenticado **FALLÓ** por `estados_completos` y no equivale a certificación. Las correcciones fiscales y las protecciones de rating ya son visibles en R5, pero no se debe afirmar cierre F1/F2 ni puerta integral. Mantener PR #234 y PR motor #203 en borrador, sin merge/publicación. Próxima intervención: clasificar los once renglones por fuente y dependencia, resolver convenciones SEC, construir ruta candidata de validación integral; preservar las salidas no afectadas.
