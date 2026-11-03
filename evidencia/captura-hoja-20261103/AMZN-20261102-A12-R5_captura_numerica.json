@@ -754,8 +754,268 @@
       "consolidated": 190.4043412690061
     }
   ],
-  "methodNote": "AMZN R5: 4 centros 5×5 OK en hoja (EV/EBITDA, P/E, P/FCFE, P/OCF), EV/FCFF N/A por FCFF FY+3 negativo y peso cero, P/V y P/BV N/D opcionales. P/E 2023-24 mínimo positivo sin FY2025 Level3; P/FCFE mediana 2024-25 con reserva financiera. Ponderaciones provienen de Resumen B6:B11; DCF 60% conservado y 40% repartido nativamente entre 4 relativos habilitados. Ningún valor DCF cambia.",
-  "sha256NumericSource": "3296d7d47118651492d00d53ef83936f9db3f00e1dcd1b826516fd045b87384a",
-  "hashScope": "ASCII JSON canonical numbers, projections, DCF matrices, native multiple matrices and discounted methods",
-  "publicationGate": "DATOS_ECONOMICOS_CANDIDATOS_4_OK_1_NA_2_ND;VALIDACION_CI_Y_PUBLICACION_PENDIENTES"
+  "methodNote": "Controles y pesos desde Sheets en revisión R5: cuatro matrices Base 5×5 OK, EV/FCFF FY+3 con FCFF negativo y no aplicable, P/V y P/BV opcionales N/D. DCF Base permanece 149,1915 y peso DCF 60%. Contraste 40% dividido entre EV/EBITDA16%, P/E8%, P/FCFE8%, P/OCF8%. P/E ancla provisional cierre 2024 (MIN P/E2023–24); P/FCFE ancla mediana cierres 2024–25, con cautela sobre financiación. La componente relativa es secundaria y no modifica el DCF.",
+  "sha256NumericSource": "d846bb84beec51483e1e0ed593b0d2545919a1e2c89e3a1678b62ee267d5dedd",
+  "hashScope": "ASCII JSON canonical numbers, projections, DCF matrices, native multiples, relative discounts and weights",
+  "publicationGate": "FOUR_OK_ONE_NA_TWO_ND · contrato candidato; gate CI publicación requerido",
+  "relativeDiscountsByScenario": {
+    "conservador": {
+      "rel": 199.0175455214471,
+      "methods": [
+        {
+          "nombre": "EV/EBITDA",
+          "peso": 0.16000000000000003,
+          "fy": [
+            315.134126522243,
+            323.2964018091008,
+            338.33694677433846
+          ],
+          "vp": [
+            290.59795530889267,
+            274.91289217219486,
+            265.3021560250389
+          ],
+          "consolidado": 276.93766783537546,
+          "control": "OK"
+        },
+        {
+          "nombre": "EV/FCFF",
+          "peso": 0,
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null,
+          "control": null
+        },
+        {
+          "nombre": "P/E",
+          "peso": 0.08000000000000002,
+          "fy": [
+            329.55761698937465,
+            328.43700827445923,
+            336.90442949832766
+          ],
+          "vp": [
+            303.89844067498626,
+            279.2841718493044,
+            264.1788677602126
+          ],
+          "consolidado": 282.4538267615011,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/FCFE",
+          "peso": 0.08000000000000002,
+          "fy": [
+            -12.300780101802172,
+            -4.36945706561123,
+            26.55521563308994
+          ],
+          "vp": [
+            -11.343048072058679,
+            -3.7155380400388998,
+            20.822898676411796
+          ],
+          "consolidado": 1.9214375214380723,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/OCF",
+          "peso": 0.08000000000000002,
+          "fy": [
+            166.88603994340244,
+            182.82183605867417,
+            205.5226532591722
+          ],
+          "vp": [
+            153.89238389491882,
+            155.46130245148356,
+            161.15769661423343
+          ],
+          "consolidado": 156.83712765354525,
+          "control": "OK"
+        }
+      ],
+      "ponderado": 128.2127285331769
+    },
+    "base": {
+      "rel": 252.48721184879386,
+      "methods": [
+        {
+          "nombre": "EV/EBITDA",
+          "peso": 0.16000000000000003,
+          "fy": [
+            358.5872914869025,
+            403.24346453799666,
+            446.02414536393513
+          ],
+          "vp": [
+            330.6678805492452,
+            342.89533216374923,
+            349.74355751694196
+          ],
+          "consolidado": 341.1022567433121,
+          "control": "OK"
+        },
+        {
+          "nombre": "EV/FCFF",
+          "peso": 0,
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null,
+          "control": null
+        },
+        {
+          "nombre": "P/E",
+          "peso": 0.08000000000000002,
+          "fy": [
+            376.346661376755,
+            429.0276333386157,
+            475.8403570132719
+          ],
+          "vp": [
+            347.0445155856324,
+            364.8207243969105,
+            373.1235203335476
+          ],
+          "consolidado": 361.6629201053635,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/FCFE",
+          "peso": 0.08000000000000002,
+          "fy": [
+            -32.7272759509448,
+            38.40134797611917,
+            104.59624876351582
+          ],
+          "vp": [
+            -30.17914809522599,
+            32.654324565169354,
+            82.01767667898326
+          ],
+          "consolidado": 28.16428438297554,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/OCF",
+          "peso": 0.08000000000000002,
+          "fy": [
+            184.55724778674943,
+            226.11738305268028,
+            266.21395499385585
+          ],
+          "vp": [
+            170.1877211336569,
+            192.27737579995082,
+            208.74792687341065
+          ],
+          "consolidado": 190.4043412690061,
+          "control": "OK"
+        }
+      ],
+      "ponderado": 190.50977619290722
+    },
+    "optimista": {
+      "rel": 344.3671994796576,
+      "methods": [
+        {
+          "nombre": "EV/EBITDA",
+          "peso": 0.16000000000000003,
+          "fy": [
+            403.92972449350367,
+            487.3648549318175,
+            565.1423286292382
+          ],
+          "vp": [
+            372.47997645222165,
+            414.42738323917996,
+            443.14840479526333
+          ],
+          "consolidado": 410.01858816222165,
+          "control": "OK"
+        },
+        {
+          "nombre": "EV/FCFF",
+          "peso": 0,
+          "fy": [
+            null,
+            null,
+            null
+          ],
+          "vp": [
+            null,
+            null,
+            null
+          ],
+          "consolidado": null,
+          "control": null
+        },
+        {
+          "nombre": "P/E",
+          "peso": 0.08000000000000002,
+          "fy": [
+            425.1700120418475,
+            533.7282951731817,
+            627.6159522708641
+          ],
+          "vp": [
+            392.06650679674146,
+            453.8522187043526,
+            492.13621769846026
+          ],
+          "consolidado": 446.0183143998515,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/FCFE",
+          "peso": 0.08000000000000002,
+          "fy": [
+            73.25432746338761,
+            212.7244894514619,
+            397.1084230372366
+          ],
+          "vp": [
+            67.55078548081644,
+            180.888819992146,
+            311.3869821546571
+          ],
+          "consolidado": 186.60886254253987,
+          "control": "OK"
+        },
+        {
+          "nombre": "P/OCF",
+          "peso": 0.08000000000000002,
+          "fy": [
+            244.03726100722642,
+            314.5311882087991,
+            401.7400750536781
+          ],
+          "vp": [
+            225.03665296585095,
+            267.45945251780347,
+            315.01882691070506
+          ],
+          "consolidado": 269.17164413145315,
+          "control": "OK"
+        }
+      ],
+      "ponderado": 282.85298947569527
+    }
+  }
 }
