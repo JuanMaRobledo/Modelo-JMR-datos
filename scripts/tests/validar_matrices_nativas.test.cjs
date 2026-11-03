@@ -113,7 +113,7 @@ test('contrato bancario sintético exige tres fuentes y VP3 descontado con Ke',(
     x=>x.sensibilidadMultiples.matrices[2].anclaHistoricaValidada=false,
     x=>x.sensibilidadMultiples.matrices[2].estado='N/D',
     x=>x.sensibilidadMultiples.matrices[0].matriz[2][2]=9,
-    x=>x.sensibilidadMultiples.matrices.pop(),
+    x=>x.sensibilidadMultiples.matrices.shift(),
     x=>x.descuentoMultiples.metodos[1].base.vp[2]=9
   ]){
     const invalid=clone(v);change(invalid);
