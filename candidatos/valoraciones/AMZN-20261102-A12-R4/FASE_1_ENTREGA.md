@@ -1,3 +1,5 @@
+> **REVISIÓN DE CALIDAD POSTERIOR — 2 NOV 2026.** La etiqueta anterior «CERRADA CON CONTROLES PENDIENTES / apta para fase 2» se limitaba a la posibilidad de continuar la investigación como CANDIDATO, **no acreditó datos completos**. Ante la revisión directa de los 46 módulos y estados, se identificaron vacíos de desagregación, un puente EV–equity no resuelto y un **bug material de signo en impuestos de Financials Multiples**. Ver [AUDITORIA_COBERTURA_DATOS.md](AUDITORIA_COBERTURA_DATOS.md) e [issue JMR-valuation #194](https://github.com/JuanMaRobledo/JMR-valuation/issues/194). **Fase 1 NO RECERTIFICADA; los múltiplos P/E, P/FCFE y EV no deben marcarse verificados; PR sigue en borrador.**
+
 # AMZN · AMZN-20261102-A12-R4 · FASE 1 — CERRADA CON CONTROLES PENDIENTES
 **Actualización final de esta fase: 2026-11-02. Estado: APTO PARA EMPEZAR FASE 2 EN CANDIDATO, no certificada ni publicable.**
 **Herramienta:** ChatGPT GPT-6 (esfuerzo alto), Google Sheets / GitHub, SEC web; identificador de hoja: `10qfoGrEP1PgdlLWrHvfoHqExKDZbPK75yb_oINlO4a8`.
