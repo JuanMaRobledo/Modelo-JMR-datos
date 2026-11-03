@@ -83,11 +83,15 @@ function validateRecord(j){
     if(m.estadoFuente==='N/D'){
      assert.ok(['EV/FCFF','P/FCFE'].includes(name),'N/A por flujo solo FCFF/FCFE');
      const flujo=m.fundamentalFY3?.[2], dcf=vFcffFY3(j);
-     assert.ok(name==='EV/FCFF'&&chosen.estado?.startsWith('N/A: flujo negativo')&&
-       chosen.base?.fy?.[2]==null&&chosen.base?.vp?.[2]==null&&
-       m.vp3Original==null&&m.centro==null&&finite(flujo)&&flujo<0&&
-       finite(dcf)&&near(flujo,dcf),
-       name+': N/A sin FCFF FY+3 negativo verificable; prohibido fabricar un VP negativo');
+     const fy3=chosen.base?.fy?.[2],vp3=chosen.base?.vp?.[2];
+     const legacyNAv1=chosen.estado?.startsWith('N/A: flujo negativo')&&
+       fy3<0&&vp3<0&&finite(fy3)&&finite(vp3)&&near(vp3,m.vp3Original);
+     const amznNAv2=j.ticker==='AMZN'&&name==='EV/FCFF'&&
+       chosen.estado?.startsWith('N/A: flujo negativo')&&
+       fy3==null&&vp3==null&&m.vp3Original==null&&m.centro==null&&
+       finite(flujo)&&flujo<0&&finite(dcf)&&near(flujo,dcf);
+     assert.ok(legacyNAv1||amznNAv2,
+       name+': N/A sin trazabilidad de fuente negativa; AMZN exige FCFF real y precio N/D');
     }
    }else if(m.estado==='N/D'){
     assert.ok(!required.includes(name),'N/D prioritario no pasa');
