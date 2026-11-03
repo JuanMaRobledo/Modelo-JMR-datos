@@ -40,7 +40,7 @@ Clasificación y riesgo residual:
 - CF38 `Levered Free Cash Flow`: métrica derivada no GAAP, no debe contaminar FCFF.
 Quedan subpartidas **secundarias pendientes** de completar fuente histórica; la puerta de integridad económica nunca se convierte en verde si una discrepancia resulta material y no está acotada.
 
-El auditor SEC en PR motor #203 ahora documenta firmado fiscal, split20:1 FY2016–19 y PPE LTM con fecha2026-09-30. **La contabilización del 2022 beneficio fiscal** en Excel positivo requiere comparar invertido a la etiqueta SEC, no tratar el beneficio como gasto. El cotejo está instrumentado y testado, pero es importante no llamar «cero diferencias SEC auténticas» a un informe que utiliza un override secundario documentado del 10-Q: es **conciliación reproducible con fuente primaria y fecha**, no una validación ciega de un único XBRL tag.
+El auditor SEC en PR motor #203 ahora documenta firmado fiscal, split20:1 FY2016–19 y PPE LTM con fecha2026-09-30. **La contabilización del 2022 beneficio fiscal** en Excel positivo requiere comparar invertido a la etiqueta SEC, no tratar el beneficio como gasto. El cotejo está **instrumentado, probado y ejecutado en vivo**: la [corrida #41638493874](https://github.com/JuanMaRobledo/JMR-valuation/actions/runs/41638493874) (borrador motor PR #203) produjo **0 diferencias SEC restantes** tras **20 normalizaciones con fuente y fecha, las 20 conciliadas**, código 0, y **0 cambios propuestos**. El validador de historial produjo **PASS_CON_SALVEDADES**, 0 cifras esenciales faltantes, 0 vacíos sin explicar, 8 partidas justificadas y 3 salvedades secundarias; `inputs_completos` 0 y candados 15/15. La **prueba exhaustiva de fórmulas agotó 600 segundos** (`exit=124`), por lo que la corrida global terminó **FAIL**; se implementó batching de fórmulas en la rama para reejecución, pendiente de resultado. No se debe llamar «cero diferencias SEC auténticas» a un informe que usa un override explícito y documentado del 10-Q: es conciliación reproducible con fuente primaria y fecha, no una validación ciega de un único XBRL tag.
 
 ## 3. Supuestos que pueden cambiar materialmente el valor
 
@@ -80,8 +80,8 @@ Nivel 1 redactado con índice normativo **14 capítulos** y Nivel 2 con **12 apa
 |---|---|---|
 | Historia 10Y+LTM y DCF cuatro historias | REPRODUCIBLE COMO CANDIDATO | Verificar runtime de cada nueva revisión |
 | Fórmulas tax2022, rating inactivo | CORREGIDO EN HOJA R5 | Regresión de fórmulas/prueba crítica con último snapshot |
-| Control histórico 11 filas | PERFIL CANDIDATO IMPLEMENTADO | Fuente y saldo de excepciones secundarias mantenidos |
-| Cotejo SEC 20 diferencias | PERFIL DE CONVENCIÓN IMPLEMENTADO | Corrida real y resultado final por guardar |
+| Control histórico 11 filas | **PASS_CON_SALVEDADES en vivo** | 0 faltantes numéricos esenciales, 8 justificadas y 3 secundarias |
+| Cotejo SEC 20 diferencias | **20/20 conciliadas en vivo, 0 restantes** | Preservar cambios de definición y fuente SEC por año |
 | CAPEX FY2027 y reinversión | **SALVEDAD ECONÓMICA MATERIAL** | Validar guía, D&A 2027, ΔNWC y S/C marginal |
 | Deuda a mercado, RSUs, Level3 | **SALVEDAD ECONÓMICA MATERIAL** | Análisis de impacto y tratamiento sin doble conteo |
 | Cinco múltiplos | DOS CALCULADOS + TRES N/D | Concluir normalizaciones o dejar N/D aplicabilidad documentada |
