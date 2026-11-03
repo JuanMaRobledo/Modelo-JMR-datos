@@ -108,10 +108,15 @@ function validateNativeMatrices(v){
         assert.ok(['EV/FCFF','P/FCFE'].includes(m.metodo),
           m.metodo+': N/A económico no habilitado para este método');
         const fy3=chosen?.base?.fy?.[2],vp3=chosen?.base?.vp?.[2];
-        assert.ok(chosen?.estado?.startsWith('N/A: flujo negativo')&&
-          chosen.peso===0&&finiteNative(fy3)&&fy3<0&&
-          finiteNative(vp3)&&vp3<0&&nearNative(vp3,m.vp3Original),
-          m.metodo+': N/A no respaldado por flujo FY+3 negativo de la misma revisión');
+        // FY+3 de multiples es un PRECIO; no inventar VP negativo a partir
+        // de FCFF en millones. Exigir el flujo real de la misma R5.
+        const flujo=m.fundamentalFY3?.[2], flujoDCF=v.nivel2ProyeccionBase?.[2]?.fcff;
+        assert.ok(m.metodo==='EV/FCFF'&&chosen?.estado?.startsWith('N/A: flujo negativo')&&
+          chosen.peso===0&&finiteNative(flujo)&&flujo<0&&
+          finiteNative(flujoDCF)&&nearNative(flujo,flujoDCF)&&
+          (fy3===null||fy3===undefined)&&(vp3===null||vp3===undefined)&&
+          m.vp3Original==null&&m.centro==null,
+          m.metodo+': N/A sin FCFF FY+3 negativo verificable (nunca fabricar precio negativo)');
       }
     }else if(m.estado==='N/D' && !required.includes(m.metodo) &&
              (!chosen || !finiteNative(chosen.peso) || chosen.peso===0)){
