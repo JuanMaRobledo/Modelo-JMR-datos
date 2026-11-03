@@ -44,3 +44,12 @@
 4. En [PR del motor #202](https://github.com/JuanMaRobledo/JMR-valuation/pull/202) se propuso corrección mínima de las cuatro condiciones, flag `--sheet-id` para que el control use el candidato correcto, y pruebas de regresión de Yes/No. **Solo rama de revisión, sin merge**. El [issue #200](https://github.com/JuanMaRobledo/JMR-valuation/issues/200) sigue abierto hasta que pase la CI relevante y se ejecute el control contra R5.
 5. El PR R5 datos #234 sigue en borrador. Datos 10FY+LTM, puentes y controles nativos satisfactorios; los scripts SEC/no-regresión y normalización económica WACC/múltiplos **siguen pendientes**. **El gate formal de F1/F2 todavía no es PASS**. No publicar ni promover la valoración por un cálculo ilustrativo.
 
+
+### CI real del motor · nueva evidencia 2026-11-03
+
+- [PR #202 JMR-valuation](https://github.com/JuanMaRobledo/JMR-valuation/pull/202) **DRAFT**, sin merge. En el commit `8788398007fea0f1bd0df98e2c94d9093067da32`, workflows de GitHub Actions:
+  - **JMR F1 Input candidate regression** run **41591400571**, `SUCCESS`, test explícito `tests/test_inputs_completos_amzn_condicionales.py`: **2 passed**; sintaxis `inputs_completos.py` compilada correctamente.
+  - **JMR materialidad y salvedades** run **41591400515**, `SUCCESS`: **28 passed**, sintaxis del script probada.
+- Este resultado valida la **propuesta de reparación del gate para opciones B39:B42**, no su integración a `main`. En lectura literal anterior, los únicos cuatro avisos del script de cobertura eran B39:B42 condicionalmente no aplicables si B38=No. **Aún no se ha ejecutado el nuevo script contra la hoja real con `--sheet-id`**.
+- **No asumir éxito del resto**: `estados_completos.py`, `auditar_estados_sec.py`, `auditar_ceros_materiales.py`, `diff_formulas_plantilla.py`, `candados.py` con lectura real y CI de datos R5 **pendientes**. Los estados K5:K8 y matrices 5×5 acreditan cálculo, no auditoría de las hipótesis económicas.
+- Datos F1 y F2 **cerrados operativamente como candidatos con salvedades**, no valoración publicada. No fusionar PR #202 ni #234 por ahora.
