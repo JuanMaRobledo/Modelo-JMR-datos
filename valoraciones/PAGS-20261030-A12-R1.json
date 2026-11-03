@@ -1,0 +1,927 @@
+{
+  "ticker": "PAGS",
+  "nombreActivo": "PagSeguro Digital Ltd. (PagBank)",
+  "revisionId": "PAGS-20261030-A12-R1",
+  "fechaCorte": "2026-10-30",
+  "fechaContable": "2026-06-30",
+  "metodo_valoracion": "A",
+  "version_metodo": "A-1.2",
+  "estado": "EN_REVISION",
+  "publicationAuthorized": true,
+  "auditoriaEconomica": "NO_REALIZADA_PENDIENTE_REVISION_VISUAL",
+  "valorPrincipal": 12.880006211613892,
+  "precioMercadoUSD": 7.94,
+  "precioMOS": 8.372004037549031,
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "valorEsperadoOrdinario": 12.938959847810086,
+  "metodoPrincipal": "DCF FCFE financiero",
+  "sheet_id": "17J1q1niSBxe5vwoCOaaRJvKZiZYi8feYLdMODnYXVTI",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/17J1q1niSBxe5vwoCOaaRJvKZiZYi8feYLdMODnYXVTI/edit",
+  "documentos": {
+    "nivel1": "https://docs.google.com/document/d/1FMpMqUPAI8LOzDnAQeuXIrFkGo1uFbsj1CZeh8T6_1c/edit",
+    "nivel2": "https://docs.google.com/document/d/1QmAZ-kG6gG5eiIQMKRHOz0uBWojUbjB5HdT6BPWVO4Q/edit"
+  },
+  "supuestos": {
+    "patrimonioInicialBRLm": 15016,
+    "accionesDiluidasMillones": 279.5,
+    "fxBRLUSD": 5.4212,
+    "NI_LTM_BRLM": 2151.112,
+    "rfUSD": 0.0494,
+    "erpMaduro": 0.037,
+    "crpBrasil": 0.0324,
+    "betaEquity": 0.82,
+    "keUSD": 0.10630799999999999,
+    "keBRL": 0.1246923949169112,
+    "gTerminalBRL": 0.058,
+    "inflacionBRL": 0.04,
+    "inflacionUSD": 0.023
+  },
+  "escenarios": {
+    "conservador": 9.125797966913115,
+    "base": 12.880006211613892,
+    "optimista": 16.87002900109944,
+    "disrupcion": 7.939647028477495
+  },
+  "sensibilidadDCF": {
+    "tipo": "FCFE",
+    "estado": "CALCULADA_EN_HOJA_CANDIDATA",
+    "centro": 12.880006211613892,
+    "centroConciliado": true,
+    "fuente": "FCFE financiero PAGS · tres 5x5",
+    "matrices": [
+      {
+        "title": "Ke BRL × ROE terminal",
+        "rows": [
+          0.1046923949169112,
+          0.1146923949169112,
+          0.1246923949169112,
+          0.1346923949169112,
+          0.1446923949169112
+        ],
+        "columns": [
+          0.119,
+          0.129,
+          0.139,
+          0.149,
+          0.159
+        ],
+        "values": [
+          [
+            15.496302713541855,
+            17.007281949478113,
+            18.518261185414374,
+            20.029240421350632,
+            21.540219657286894
+          ],
+          [
+            12.926279081996688,
+            14.063495453333486,
+            15.200711824670286,
+            16.337928196007084,
+            17.47514456734388
+          ],
+          [
+            11.111793998988226,
+            11.995900105301057,
+            12.880006211613892,
+            13.76411231792672,
+            14.648218424239552
+          ],
+          [
+            9.758731773381273,
+            10.46242690646055,
+            11.166122039539829,
+            11.869817172619102,
+            12.573512305698381
+          ],
+          [
+            8.708539371828474,
+            9.278768388113019,
+            9.848997404397565,
+            10.41922642068211,
+            10.989455436966654
+          ]
+        ],
+        "rowsLabel": "Ke BRL",
+        "columnsLabel": "ROE terminal",
+        "origen": "'FCFE financiero PAGS'!'FCFE financiero PAGS'!M33:R38"
+      },
+      {
+        "title": "FX BRL/USD × Ke BRL",
+        "rows": [
+          4.33696,
+          4.87908,
+          5.4212,
+          5.96332,
+          6.505440000000001
+        ],
+        "columns": [
+          0.1046923949169112,
+          0.1146923949169112,
+          0.1246923949169112,
+          0.1346923949169112,
+          0.1446923949169112
+        ],
+        "values": [
+          [
+            23.147826481767964,
+            19.000889780837856,
+            16.10000776451736,
+            13.957652549424784,
+            12.311246755496954
+          ],
+          [
+            20.575845761571525,
+            16.889679805189207,
+            14.311118012904323,
+            12.406802266155365,
+            10.943330449330627
+          ],
+          [
+            18.518261185414374,
+            15.200711824670286,
+            12.880006211613892,
+            11.166122039539829,
+            9.848997404397565
+          ],
+          [
+            16.834782895831246,
+            13.81882893151844,
+            11.709096556012627,
+            10.151020035945297,
+            8.953634003997786
+          ],
+          [
+            15.431884321178643,
+            12.667259853891903,
+            10.73333850967824,
+            9.305101699616522,
+            8.20749783699797
+          ]
+        ],
+        "rowsLabel": "FX BRL/USD",
+        "columnsLabel": "Ke BRL",
+        "origen": "'FCFE financiero PAGS'!'FCFE financiero PAGS'!M42:R47"
+      },
+      {
+        "title": "ROE y capital retenido",
+        "rows": [
+          -0.02,
+          -0.01,
+          0,
+          0.01,
+          0.02
+        ],
+        "columns": [
+          -0.02,
+          -0.01,
+          0,
+          0.01,
+          0.02
+        ],
+        "values": [
+          [
+            9.76072313430941,
+            9.726939917064016,
+            9.68959067149321,
+            9.64838214295772,
+            9.603000945947967
+          ],
+          [
+            11.151713456420762,
+            11.216185639893947,
+            11.284798441553546,
+            11.35782497402073,
+            11.435555216662276
+          ],
+          [
+            12.542703778532116,
+            12.705431362723882,
+            12.880006211613892,
+            13.06726780508374,
+            13.268109487376588
+          ],
+          [
+            13.933694100643468,
+            14.194677085553817,
+            14.475213981674234,
+            14.776710636146749,
+            15.100663758090898
+          ],
+          [
+            15.32468442275482,
+            15.683922808383745,
+            16.070421751734564,
+            16.486153467209757,
+            16.9332180288052
+          ]
+        ],
+        "rowsLabel": "Δ ROE",
+        "columnsLabel": "Δ crecimiento de capital",
+        "origen": "'FCFE financiero PAGS'!'FCFE financiero PAGS'!M64:R69"
+      }
+    ],
+    "nota": "Cálculo DCF original sin recalibración final de Ke, capital ni puente temporal. Sensibilidad expresa rango de supuestos."
+  },
+  "multiplos": {
+    "PE_observado": 5.592869955632249,
+    "PBV_observado": 0.8012046933937133,
+    "PFCFE_FY1_implied": 10.015058667421417,
+    "valorJustoIndependiente": "N/D",
+    "peso": 0,
+    "anclasIndependientesCertificadas": false
+  },
+  "salvedadesMateriales": [
+    "Capital 2026 y RWA recuperados; pendiente conciliación y presupuesto de capital distribuible",
+    "Acciones diluidas medias Q2, no cierre exacto 30oct",
+    "Beta sectorial e inflación de conversión sin sensibilidad económica integral",
+    "NPL 90+ 3,4% y cartera sin garantía 24,3%, cohorts por revisar",
+    "SOTP y matrices bancarias relativas P/E P/FCFE P/BV sin ancla independiente",
+    "Puente temporal junio–octubre 2026 pendiente; origen de proyección no coincide con corte de mercado"
+  ],
+  "fuentes": [
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526000826/pags-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001793/MainDocument.htm",
+    "https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do",
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+    "https://aswathdamodaran.blogspot.com/2026/10",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001791/MainDocument.htm",
+    "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202606&@TipoInstituicao=1&@Relatorio='5'&$filter=CodInst%20eq%20'C0084813'&$format=json"
+  ],
+  "contratoCatalogoActivo": "INTEGRADO_EN_REVISION",
+  "gatesEspecificosPAGS": "CONTROLES_ARITMETICOS_OK_RESERVAS_ECONOMICAS",
+  "estadoPublicacion": "PUBLICACION_EN_REVISION",
+  "revisionInterna": {
+    "fecha": "2026-11-03",
+    "dictamen": "EN_REVISION_CANDIDATO_NO_PUBLICADO",
+    "nota": "REVISIÓN INTERNA — 3 NOVIEMBRE 2026\nEstado: EN_REVISION, candidato no publicado. Auditoría económica pendiente; publicación no autorizada. La revisión interna no acredita los controles económicos pendientes ni habilita el catálogo activo.\nCapital: el 20-F identifica conglomerado prudencial Tipo 3/S3 (PagSeguro Brazil, BancoSeguro y PagInvest). El Pilar III oficial de junio de 2025 informa RWA R$26.826,577284m, capital principal/Nivel I/PR R$7.876,265870m y buffer de conservación 2,5%. Son referencias históricas, NO inputs sustitutivos de junio de 2026. La presentación 2T26 declara objetivo gerencial 18–22%, ratio gerencial 22,5% y prudencial 14,9%; explica la reducción prudencial por dividendos intercompañía declarados. Falta cuantificar y conciliar capital elegible, RWA, deducciones, buffers vigentes y restricciones de transferencias de 2026 con el patrimonio consolidado. No inferir capital liberable de la diferencia de ratios.\nFuentes: https://www.sec.gov/Archives/edgar/data/1712807/000155485526000826/pags-20251231.htm ; https://www.sec.gov/Archives/edgar/data/1712807/000155485526001793/MainDocument.htm ; https://acq-static-pages.pagseguro.com.br/website-cms-pages/PILAR_3_Relatorio_2t_2025_4e207c30fc.pdf\nSupuestos: FCFE nominal BRL y ausencia de liberación inicial de capital se conservan como hipótesis; no prueban suficiencia de retención futura. ROE inicial 14,5% se contrasta con ROAE GAAP LTM 14,5%, distinguiendo patrimonio inicial y promedio. Acciones 279,5m son promedio ponderado diluido 2T26, NO recuento al corte. Beta 0,82 e inflaciones 4% BRL/2,3% USD continúan pendientes de contraste. Múltiplos independientes permanecen N/D y peso cero.\nUnidades: crecimiento de patrimonio = capital retenido/patrimonio de apertura; no es la tasa de retención de utilidades. En Base año 1, 6,5%/14,5%=44,83% de las utilidades se retiene. Las tablas que decían «retención %» deben leerse como crecimiento patrimonial.\nFecha económica: la proyección empieza desde el balance de junio de 2026, mientras precio y FX usan 30-oct-2026. Los US$12,88 son el cálculo candidato con esa convención; falta puente junio–octubre, movimientos patrimoniales/dividendos y descuento con fracción de periodo para acreditar un valor económico al 30 de octubre. No se inventan movimientos ni se desplaza el calendario sin evidencia.\nControl técnico: se restauraron los cinco encabezados ROE terminal de M33:R38; antes cuatro vacíos se evaluaban como cero, afectando 20 celdas. Se recalcula la grilla completa; la Base y MOS no cambian. La hoja tiene 47 pestañas (46 de plantilla + FCFE). Continúan pendientes capital regulatorio 2026, acciones al corte, beta/inflación, múltiplos independientes e integración; sin promoción."
+  },
+  "publicationReady": true,
+  "revision_id": "PAGS-20261030-A12-R1",
+  "fecha": "2026-11-03",
+  "fechaRevision": "2026-11-03",
+  "fechaCorteContable": "2026-06-30",
+  "fecha_corte": "2026-06-30",
+  "moneda": "USD",
+  "currency": "USD",
+  "monedaEstados": "BRL",
+  "unidadesEstados": "R$ millones",
+  "market": "NYSE",
+  "tipo": "Financiera fintech · adquirencia y PagBank",
+  "precio": 7.94,
+  "precioAnalisis": 7.94,
+  "precioReferenciaFecha": "2026-10-30",
+  "precioReferenciaFuente": "Precio del expediente PAGS al corte 30-oct-2026, no cotización en vivo",
+  "metodoCalculoPrimario": "FCFE BRL nominal descontado a Ke BRL por 10 años; crecimiento de patrimonio como proxy no auditada del capital necesario",
+  "publicationStatus": "EN_REVISION",
+  "publicationStage": "PUBLICACION_EN_REVISION",
+  "publicadaEnApp": true,
+  "valorVigenteEnCatalogo": true,
+  "publicationAuthorization": "3-nov-2026: el usuario solicita fusionar y publicar PAGS; acepta expresamente valoraciones basadas en supuestos. En revisión no significa verificada.",
+  "auditPendingUserVisualReview": true,
+  "certificacionEconomica": "NO_CERTIFICADA",
+  "validationStatus": "EN_REVISION_CON_RESERVAS_ECONOMICAS_Y_ANCLAS_PROVISIONALES",
+  "reportSchema": "jmr-valuation-two-levels-v5",
+  "valorIndependiente": 12.880006211613892,
+  "precioMOSMax": 8.372004037549031,
+  "precioMOSHoy": 8.372004037549031,
+  "valorEsperado": {
+    "valor": 12.938959847810086,
+    "valorCentral": 12.880006211613892,
+    "tipoPromedio": "50% Base + 25% Conservador + 25% Optimista",
+    "disrupcionSeparada": true,
+    "historias": [
+      {
+        "nombre": "Base",
+        "peso": 0.5,
+        "valor": 12.880006211613892
+      },
+      {
+        "nombre": "Conservador",
+        "peso": 0.25,
+        "valor": 9.125797966913115
+      },
+      {
+        "nombre": "Optimista",
+        "peso": 0.25,
+        "valor": 16.87002900109944
+      },
+      {
+        "nombre": "Disrupcion",
+        "peso": 0,
+        "valor": 7.939647028477495
+      }
+    ]
+  },
+  "sensibilidadMultiples": {
+    "contrato": "review-relative-v1",
+    "revisionId": "PAGS-20261030-A12-R1",
+    "sourceSheetId": "17J1q1niSBxe5vwoCOaaRJvKZiZYi8feYLdMODnYXVTI",
+    "sourcePath": "evidencia/relativos-revision-20261031/PAGS-20261030-A12-R1.json",
+    "resultadosSha256": "2b90f05f38e387549cd92e1fa7e3374cc1c48866062abeb754009c7e2c3fce60",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "certificacionEconomica": "NO_CERTIFICADA",
+    "pesoEnDCFPrincipal": 0,
+    "tipo": "MULTIPLOS_BANCARIOS",
+    "advertencia": "Tres matrices P/E, P/FCFE y P/BV computadas con supuestos explícitos sobre FY+3 y Ke. Sus anclas no son independientes ni certificadas económicamente; peso cero, solo contraste.",
+    "matrices": [
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "P/E observado de PAGS 5,59287x con NI LTM SEC; multiple FY+3 de 6x es un supuesto, no una ancla certificada.",
+        "limitacion": "P/E normalizado no calibrado con ciclo historico ni pares de riesgo equivalente; contraste ilustrativo con peso cero.",
+        "origen": "'FCFE financiero PAGS'!N144:S149",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          2067.06712224,
+          2325.4505125200003,
+          2583.8339028,
+          2842.21729308,
+          3100.60068336
+        ],
+        "multiploElegido": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "matriz": [
+          [
+            3.8356242291930838,
+            4.315077257842219,
+            4.794530286491354,
+            5.27398331514049,
+            5.753436343789625
+          ],
+          [
+            4.794530286491354,
+            5.393846572302775,
+            5.993162858114194,
+            6.592479143925613,
+            7.191795429737032
+          ],
+          [
+            5.753436343789626,
+            6.472615886763329,
+            7.191795429737032,
+            7.910974972710735,
+            8.630154515684437
+          ],
+          [
+            6.712342401087897,
+            7.551385201223884,
+            8.39042800135987,
+            9.229470801495857,
+            10.068513601631844
+          ],
+          [
+            7.6712484583861675,
+            8.630154515684438,
+            9.589060572982708,
+            10.54796663028098,
+            11.50687268757925
+          ]
+        ],
+        "centro": 7.191795429737032,
+        "vp3Original": 7.191795429737032,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0004638969131583602,
+          "constante": 0,
+          "descripcion": "VP3 USD/accion = multiplo por fundamental FY+3 BRLm descontado tres anos a Ke BRL, dividido por FX y acciones diluidas en millones. No incorpora dividendos."
+        }
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "FCFE del DCF Base FY+3 y multiples de salida 8x a 16x elegidos como escenarios; sin serie comparable independiente.",
+        "limitacion": "FCFE es residual despues de capital retenido; ancla de salida hipotetica, no una valoracion de mercado certificada.",
+        "origen": "'FCFE financiero PAGS'!N153:S158",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          1081.44571296,
+          1216.62642708,
+          1351.8071412,
+          1486.98785532,
+          1622.1685694399998
+        ],
+        "multiploElegido": [
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "matriz": [
+          [
+            4.013434623923889,
+            4.515113951914374,
+            5.016793279904861,
+            5.518472607895347,
+            6.020151935885832
+          ],
+          [
+            5.016793279904861,
+            5.643892439892968,
+            6.270991599881076,
+            6.898090759869183,
+            7.525189919857291
+          ],
+          [
+            6.020151935885833,
+            6.7726709278715616,
+            7.525189919857291,
+            8.277708911843021,
+            9.030227903828747
+          ],
+          [
+            7.023510591866806,
+            7.901449415850156,
+            8.779388239833507,
+            9.657327063816858,
+            10.535265887800206
+          ],
+          [
+            8.026869247847777,
+            9.030227903828749,
+            10.033586559809722,
+            11.036945215790695,
+            12.040303871771664
+          ]
+        ],
+        "centro": 7.525189919857291,
+        "vp3Original": 7.525189919857291,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0004638969131583602,
+          "constante": 0,
+          "descripcion": "VP3 USD/accion = multiplo por fundamental FY+3 BRLm descontado tres anos a Ke BRL, dividido por FX y acciones diluidas en millones. No incorpora dividendos."
+        }
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "ancla": "PROVISIONAL",
+        "anclaCertificada": false,
+        "fuenteAncla": "P/BV observado PAGS 0,8012x en el expediente con patrimonio contable junio 2026; salida 0,8x es juicio provisional.",
+        "limitacion": "Patrimonio del motor FCFE NO equivale al capital regulatorio liberable; multiple opcional con peso cero.",
+        "origen": "'FCFE financiero PAGS'!N162:S167",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          14674.807649280003,
+          16509.158605440003,
+          18343.509561600004,
+          20177.860517760004,
+          22012.211473920004
+        ],
+        "multiploElegido": [
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          1
+        ],
+        "matriz": [
+          [
+            4.084558781816211,
+            4.595128629543238,
+            5.1056984772702645,
+            5.61626832499729,
+            6.126838172724317
+          ],
+          [
+            4.76531857878558,
+            5.360983401133777,
+            5.9566482234819755,
+            6.552313045830172,
+            7.147977868178369
+          ],
+          [
+            5.446078375754949,
+            6.126838172724318,
+            6.807597969693686,
+            7.4883577666630545,
+            8.169117563632424
+          ],
+          [
+            6.126838172724318,
+            6.892692944314857,
+            7.658547715905397,
+            8.424402487495938,
+            9.190257259086476
+          ],
+          [
+            6.807597969693686,
+            7.658547715905397,
+            8.509497462117107,
+            9.360447208328818,
+            10.211396954540529
+          ]
+        ],
+        "centro": 6.807597969693686,
+        "vp3Original": 6.807597969693686,
+        "formula": {
+          "tipo": "affine-product",
+          "factor": 0.0004638969131583602,
+          "constante": 0,
+          "descripcion": "VP3 USD/accion = multiplo por fundamental FY+3 BRLm descontado tres anos a Ke BRL, dividido por FX y acciones diluidas en millones. No incorpora dividendos."
+        }
+      }
+    ]
+  },
+  "descuentoMultiples": {
+    "version": 2,
+    "estado": "COMPARACION_SECUNDARIA_EN_REVISION",
+    "horizonteAnios": 3,
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "metodos": [
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "CALCULADO_CONTRASTE",
+        "base": {
+          "vp": [
+            null,
+            null,
+            7.191795429737032
+          ],
+          "consolidado": 7.191795429737032
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "PENDIENTE_ANCLA",
+        "base": {
+          "vp": [
+            null,
+            null,
+            7.525189919857291
+          ],
+          "consolidado": 7.525189919857291
+        }
+      },
+      {
+        "nombre": "P/BV",
+        "peso": 0,
+        "estado": "CALCULADO_CONTRASTE",
+        "base": {
+          "vp": [
+            null,
+            null,
+            6.807597969693686
+          ],
+          "consolidado": 6.807597969693686
+        }
+      }
+    ],
+    "nota": "VP FY+3 descontado 3 años a Ke BRL, convertido a USD/acción. Contraste secundario de anclas provisionales, sin peso en el DCF."
+  },
+  "metodos": [
+    {
+      "nombre": "DCF FCFE financiero",
+      "peso": 1,
+      "horizonte": "10 años",
+      "conservador": 9.125797966913115,
+      "base": 12.880006211613892,
+      "optimista": 16.87002900109944,
+      "disrupcion": 7.939647028477495,
+      "estado": "CALCULADO_BAJO_SUPUESTOS"
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0,
+      "estado": "CALCULADO_CONTRASTE",
+      "valorHoy": {
+        "base": 7.191795429737032
+      },
+      "multiploSalida": {
+        "base": 6
+      }
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0,
+      "estado": "PENDIENTE_ANCLA",
+      "valorHoy": {
+        "base": 7.525189919857291
+      },
+      "multiploSalida": {
+        "base": 12
+      }
+    },
+    {
+      "nombre": "P/BV",
+      "peso": 0,
+      "estado": "CALCULADO_CONTRASTE",
+      "valorHoy": {
+        "base": 6.807597969693686
+      },
+      "multiploSalida": {
+        "base": 0.8
+      }
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0,
+      "estado": "N/A",
+      "motivo": "No aplica en consolidado bancario con depósitos, fondeo y liquidación de pagos."
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0,
+      "estado": "N/A",
+      "motivo": "No aplica en consolidado bancario con depósitos, fondeo y liquidación de pagos."
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "estado": "N/A",
+      "motivo": "No aplica en consolidado bancario con depósitos, fondeo y liquidación de pagos."
+    }
+  ],
+  "nivel2ProyeccionBase": [
+    {
+      "t": 1,
+      "capitalInicialBRLm": 15016,
+      "roe": 0.145,
+      "crecimientoCapital": 0.065,
+      "utilidadBRLm": 2177.3199999999997,
+      "capitalRetenidoBRLm": 976.0400000000001,
+      "fcfeBRLm": 1201.2799999999997,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 1068.0964905864298,
+      "capitalFinalBRLm": 15992.04
+    },
+    {
+      "t": 2,
+      "capitalInicialBRLm": 15992.04,
+      "roe": 0.148,
+      "crecimientoCapital": 0.07,
+      "utilidadBRLm": 2366.82192,
+      "capitalRetenidoBRLm": 1119.4428000000003,
+      "fcfeBRLm": 1247.3791199999996,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 986.1226931250119,
+      "capitalFinalBRLm": 17111.4828
+    },
+    {
+      "t": 3,
+      "capitalInicialBRLm": 17111.4828,
+      "roe": 0.151,
+      "crecimientoCapital": 0.072,
+      "utilidadBRLm": 2583.8339028,
+      "capitalRetenidoBRLm": 1232.0267616,
+      "fcfeBRLm": 1351.8071412,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 950.1965755326443,
+      "capitalFinalBRLm": 18343.509561600004
+    },
+    {
+      "t": 4,
+      "capitalInicialBRLm": 18343.509561600004,
+      "roe": 0.153,
+      "crecimientoCapital": 0.075,
+      "utilidadBRLm": 2806.5569629248007,
+      "capitalRetenidoBRLm": 1375.7632171200003,
+      "fcfeBRLm": 1430.7937458048004,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 894.2150998980115,
+      "capitalFinalBRLm": 19719.272778720006
+    },
+    {
+      "t": 5,
+      "capitalInicialBRLm": 19719.272778720006,
+      "roe": 0.155,
+      "crecimientoCapital": 0.075,
+      "utilidadBRLm": 3056.487280701601,
+      "capitalRetenidoBRLm": 1478.9454584040004,
+      "fcfeBRLm": 1577.5418222976004,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 876.6214420709744,
+      "capitalFinalBRLm": 21198.218237124005
+    },
+    {
+      "t": 6,
+      "capitalInicialBRLm": 21198.218237124005,
+      "roe": 0.153,
+      "crecimientoCapital": 0.07,
+      "utilidadBRLm": 3243.327390279973,
+      "capitalRetenidoBRLm": 1483.8752765986806,
+      "fcfeBRLm": 1759.4521136812923,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 869.310450153807,
+      "capitalFinalBRLm": 22682.093513722684
+    },
+    {
+      "t": 7,
+      "capitalInicialBRLm": 22682.093513722684,
+      "roe": 0.15,
+      "crecimientoCapital": 0.068,
+      "utilidadBRLm": 3402.3140270584026,
+      "capitalRetenidoBRLm": 1542.3823589331425,
+      "fcfeBRLm": 1859.93166812526,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 817.0726614181436,
+      "capitalFinalBRLm": 24224.47587265583
+    },
+    {
+      "t": 8,
+      "capitalInicialBRLm": 24224.47587265583,
+      "roe": 0.147,
+      "crecimientoCapital": 0.065,
+      "utilidadBRLm": 3560.9979532804064,
+      "capitalRetenidoBRLm": 1574.590931722629,
+      "fcfeBRLm": 1986.4070215577774,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 775.8864613457661,
+      "capitalFinalBRLm": 25799.066804378457
+    },
+    {
+      "t": 9,
+      "capitalInicialBRLm": 25799.066804378457,
+      "roe": 0.143,
+      "crecimientoCapital": 0.06,
+      "utilidadBRLm": 3689.2665530261193,
+      "capitalRetenidoBRLm": 1547.9440082627075,
+      "fcfeBRLm": 2141.3225447634118,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 743.666576817664,
+      "capitalFinalBRLm": 27347.010812641165
+    },
+    {
+      "t": 10,
+      "capitalInicialBRLm": 27347.010812641165,
+      "roe": 0.139,
+      "crecimientoCapital": 0.058,
+      "utilidadBRLm": 3801.2345029571225,
+      "capitalRetenidoBRLm": 1586.1266271331876,
+      "fcfeBRLm": 2215.1078758239346,
+      "keBRL": 0.1246923949169112,
+      "vpFCFEBRLm": 684.0018815462375,
+      "capitalFinalBRLm": 28933.137439774353
+    }
+  ],
+  "supuestosModeloA": {
+    "horizonteAnios": 10,
+    "monedaFlujo": "BRL",
+    "rfUSD": 0.0494,
+    "erpMaduro": 0.037,
+    "crpBrasil": 0.0324,
+    "betaEquity": 0.82,
+    "keBRL": 0.1246923949169112,
+    "gTerminalBRL": 0.058,
+    "inflacionBRL": 0.04,
+    "inflacionUSD": 0.023,
+    "accionesDiluidasMillones": 279.5,
+    "capitalInicialBRLm": 15016,
+    "controlRegulatorio": {
+      "fuente": "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202606&@TipoInstituicao=1&@Relatorio='5'&$filter=CodInst%20eq%20'C0084813'&$format=json",
+      "fechaContable": "2026-06-30",
+      "consulta": "2026-11-03",
+      "codInst": "C0084813",
+      "rwaBRLm": 32846.2419551,
+      "capitalElegibleBRLm": 4940.57756456,
+      "ratio": 0.150415306911325,
+      "acpBRLm": 1642.31209775,
+      "irrbbBRLm": 761.57362304,
+      "recursosLiberables": null,
+      "conciliacionEmisor": "PENDIENTE",
+      "holgurasIlustrativasNOdistribuiblesBRLm": {
+        "sobreUmbral10_5Pct": 1491.7221592745,
+        "sobreOchoPctMasAcpReportado": 670.5661104019991,
+        "capitalLibreCertificado": null
+      }
+    },
+    "nota": "Ke y reinversión provisional. La holgura prudencial NO se agrega al DCF como dividendo."
+  },
+  "fuentes_supuestos": [
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526000826/pags-20251231.htm",
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001793/MainDocument.htm",
+    "https://ptax.bcb.gov.br/ptax_internet/consultarUltimaCotacaoDolar.do",
+    "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202610&type=daily_treasury_yield_curve",
+    "https://aswathdamodaran.blogspot.com/2026/10",
+    "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html",
+    "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001791/MainDocument.htm",
+    "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202606&@TipoInstituicao=1&@Relatorio='5'&$filter=CodInst%20eq%20'C0084813'&$format=json"
+  ],
+  "reporteFuentes": {
+    "expediente": "candidatos/valoraciones/PAGS-20261030-A12-R1/FASE_4_ENTREGA.md",
+    "matrices": "evidencia/relativos-revision-20261031/PAGS-20261030-A12-R1.json",
+    "sha256Matrices": "2b90f05f38e387549cd92e1fa7e3374cc1c48866062abeb754009c7e2c3fce60",
+    "hoja": "https://docs.google.com/spreadsheets/d/17J1q1niSBxe5vwoCOaaRJvKZiZYi8feYLdMODnYXVTI/edit",
+    "nota": "Validación aritmética del contraste, no validación económica de anclas."
+  },
+  "salvedades": [
+    "Capital 2026 y RWA recuperados; pendiente conciliación y presupuesto de capital distribuible",
+    "Acciones diluidas medias Q2, no cierre exacto 30oct",
+    "Beta sectorial e inflación de conversión sin sensibilidad económica integral",
+    "NPL 90+ 3,4% y cartera sin garantía 24,3%, cohorts por revisar",
+    "SOTP y matrices bancarias relativas P/E P/FCFE P/BV sin ancla independiente",
+    "Puente temporal junio–octubre 2026 pendiente; origen de proyección no coincide con corte de mercado",
+    "P/E, P/FCFE y P/BV de contraste no son anclas independientes certificadas; matrices con peso cero.",
+    "La tasa Rf 4,94% y ERP 3,70% no corresponden a la misma fecha mensual; diagnóstico homogéneo Base 12,2141 sin aplicar.",
+    "El capital regulatorio liberable, movimiento de acciones, dividendos y flujo temporal junio–octubre no están cerrados."
+  ],
+  "controlEditorial": {
+    "nivel1Capitulos": 14,
+    "nivel2Apartados": 12,
+    "estado": "EN_REVISION_NIVEL_1_Y_2",
+    "auditoriaEconomica": false
+  },
+  "historialCierreCandidato": {
+    "fecha": "2026-11-03",
+    "estado": "BLOQUEADA",
+    "reglasVersion": 27,
+    "nota": "CIERRE DE PROMOCIÓN A-1.2 — 3 NOVIEMBRE 2026\nEstado normativo: CANDIDATO_REVISADO; publicación BLOQUEADA. Esta conclusión sustituye la etiqueta interna EN_REVISION de la revisión previa: según reglas v27 §0A/§8A, EN_REVISION es una salida de publicación tras superar controles, no una forma de omitir incertidumbres materiales.\nDatos recuperados y aplicados: el 6-K detallado 000155485526001791 permite sustituir el redondeo 6M por cifras exactas y completar ingresos transaccionales/financieros. LTM: ingresos R$20.588,036m y NI R$2.151,112m; P/E observado 5,59286996x. El cálculo candidato DCF permanece US$12,88000621/MOS US$8,37200404: no se presenta como precio publicable.\nCapital BCB IF.data, conglomerado C0084813, junio 2026: RWA R$32.846,2419551m; PR/CET1 R$4.940,57756456m; ratio calculado 15,04153069%. RWA crédito 7.334,55491588m, mercado 270,1239225m, operacional 13.293,45319147m y pagos 11.948,10992525m; suma conciliada. ACP reportado R$1.642,31209775m equivale a 5% del RWA; IRRBB R$761,57362304m. No sustituir ese ACP por el 2,5% histórico ni declarar incumplimiento o exceso distribuible sin verificar régimen, deducciones y tratamiento del IRRBB. Existe diferencia frente al 14,9% prudencial de la presentación: falta conciliación de versión/perímetro. Consulta realizada 3-nov-2026; verificar versión disponible al corte, no asumir ausencia de revisiones posteriores.\nAcciones SEC notas 23–24: emitidas 290.677.709 menos autocartera 15.031.687 = 275.646.022 en circulación al 30-jun. Promedio básico trimestral 276.672.131 + dilución media 2.788.611 = 279.460.742. El input 279,5m es redondeado y sigue siendo proxy; ninguno de esos dos denominadores acredita dilución económica al 30-oct. LTIP/LTIP Goals son los únicos instrumentos potencialmente dilutivos identificados en la nota EPS; no añadir doble deducción de opciones.\nCorte temporal: SEC acredita aprobación de dividendo US$0,28 el 11-ago; calendario oficial IR indica registro 16-sep y pago 30-sep-2026. Equivale al 2,1739% del DCF candidato; pago anunciado anterior al corte, sin puente de patrimonio/caja ni doble contabilización. Recompra autorizada por hasta US$150m el 1-sep; ejecución y acciones finales no demostradas. Conciliar patrimonio, pagos reales, acciones y tiempo transcurrido antes de trasladar el valor junio a octubre.\nCosto de patrimonio: se confirmó que ERP 3,70% del corte mensual 30-sep corresponde a Treasury 5,29% (alternativa libre de default 5,07% con ERP 3,92%), no al 4,94% de otro día. Con los demás supuestos provisionales intactos, la pareja Treasury/ERP compatible produce Ke USD 10,9808% y BRL 12,82505572%. El motor candidato usa todavía 10,6308%/12,46923949% y beta 0,82 constante; requiere recalibración conjunta y transición terminal a beta 1, con CRP terminal justificada. Los diagnósticos no se confunden con entradas definitivas.\nMúltiplos: P/E y P/FCFE siguen PENDIENTE_ANCLA, sin valores justos ni matrices independientes. EV/EBITDA, EV/FCFF y P/OCF consolidados no se usan por fondeo bancario/settlement no separable. P/BV es complementario opcional según §5A; el validador bancario de esta rama admite P/BV ausente o N/D justificado con peso cero, y mantiene P/E y P/FCFE obligatorios. Contrato nativo y matrices independientes siguen sin integrarse, nunca eludir el control.\nIntegración: las 46 hojas de plantilla no equivalen a estados históricos completos; Financials Multiples conserva fórmulas sin salidas empresariales. Faltan cobertura F2, contrato bancario, controles oficiales y conciliación app. La fuente de datos mejoró, pero promoción F4 sigue bloqueada; no hay auditoría independiente ni publicación.",
+    "capital": {
+      "fuente": "https://olinda.bcb.gov.br/olinda/servico/IFDATA/versao/v1/odata/IfDataValores(AnoMes=@AnoMes,TipoInstituicao=@TipoInstituicao,Relatorio=@Relatorio)?@AnoMes=202606&@TipoInstituicao=1&@Relatorio='5'&$filter=CodInst%20eq%20'C0084813'&$format=json",
+      "fechaContable": "2026-06-30",
+      "consulta": "2026-11-03",
+      "codInst": "C0084813",
+      "rwaBRLm": 32846.2419551,
+      "capitalElegibleBRLm": 4940.57756456,
+      "ratio": 0.150415306911325,
+      "acpBRLm": 1642.31209775,
+      "irrbbBRLm": 761.57362304,
+      "recursosLiberables": null,
+      "conciliacionEmisor": "PENDIENTE",
+      "holgurasIlustrativasNOdistribuiblesBRLm": {
+        "sobreUmbral10_5Pct": 1491.7221592745,
+        "sobreOchoPctMasAcpReportado": 670.5661104019991,
+        "capitalLibreCertificado": null
+      }
+    },
+    "acciones": {
+      "fuente": "https://www.sec.gov/Archives/edgar/data/1712807/000155485526001791/MainDocument.htm",
+      "emitidas": 290677709,
+      "autocartera": 15031687,
+      "circulacionJunio": 275646022,
+      "diluidasMediasQ2": 279460742,
+      "accionesEconomicasOctubre": null,
+      "recomprasPostJunioVerificadas": null
+    },
+    "diagnosticoTasas": {
+      "rf": 0.0529,
+      "erp": 0.037,
+      "fecha": "2026-09-30",
+      "keBRL": 0.12825055718475076,
+      "valorSoloCambioRf": 12.214059942428673,
+      "impactoPct": -5.170387795191722,
+      "mosSoloCambioRf": 7.939138962578638,
+      "aplicadoAlDCF": false
+    },
+    "bloqueos": [
+      "Capital distribuible y crecimiento RWA no conciliados",
+      "Desfase Rf/ERP y beta terminal constante",
+      "Conciliación de dividendo pagadero septiembre con patrimonio y caja del puente junio-octubre",
+      "Acciones económicas al corte",
+      "Anclas/múltiplos prioritarios sin cálculo",
+      "Cobertura histórica y contrato integrado pendientes"
+    ],
+    "dividendosYRecompras": {
+      "fuenteCalendarioIR": "https://investors.pagbank.com/investor-services/dividends/",
+      "dividendoUSDporAccion": 0.28,
+      "registro": "2026-09-16",
+      "fechaPagoSegunIR": "2026-09-30",
+      "autorizacionRecompra": "2026-09-01",
+      "maximoRecompraUSDm": 150,
+      "accionesRecompradasEfectivasHastaCorte": null,
+      "interpretacion": "Fecha de pago indicada por emisor antes del corte. Conciliación patrimonial/caja aún no demostrada; la recompra es autorización, no ejecución."
+    },
+    "evidenciaPuente": "candidatos/valoraciones/PAGS-20261030-A12-R1/evidencia/PUENTE_20261030_DIVIDENDO_CAPITAL.json",
+    "controlesBancarios": {
+      "motorFCFERuteado": true,
+      "PBVOpcional": true,
+      "PE_y_PFCFE_SiguenObligatorios": true,
+      "matricesBancariasIntegradas": false,
+      "publicationReady": false
+    }
+  },
+  "publicacionEnRevision": {
+    "estado": "PUBLICADA_EN_REVISION",
+    "autorizadaPorUsuario": true,
+    "corteMercado": "2026-10-30",
+    "fechaPublicacion": "2026-11-03",
+    "requisitoAuditoriaEconomicaPosterior": true,
+    "valorBaseProvisional": 12.880006211613892,
+    "margen35": 8.372004037549031,
+    "riesgoPrincipal": "Capital distribuible y RWA no conciliados; descuento y dividendos por recalibrar"
+  }
+}
