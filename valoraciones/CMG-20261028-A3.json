@@ -537,7 +537,7 @@
     "contrato": "base-native-five-priority-v1",
     "revisionId": "CMG-20261028-A3",
     "sourceSheetId": "1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c",
-    "resultadosSha256": "9c519a4ae74c5c0647cb78f4c3fb296fcda232ed9f6c912159a7549a06ec46dd",
+    "resultadosSha256": "416e7f1d4885f227b25b70da262e0ccc2226e86cd928efd162693e172011c711",
     "estadoPublicacion": "INTEGRADO_EN_REVISION",
     "matrices": [
       {
@@ -911,6 +911,33 @@
         "vp3Original": 42.23105592177721,
         "origen": "'Sensibilidad por múltiplo'!A126:I134",
         "motivo": null
+      },
+      {
+        "metodo": "P/BV",
+        "escenario": "base",
+        "prioritario": false,
+        "ancla": "JMR",
+        "estado": "N/D",
+        "fundamentalFY3": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "multiploElegido": [
+          7.123741767178811,
+          8.014209488076162,
+          8.904677208973514,
+          9.795144929870865,
+          10.685612650768215
+        ],
+        "matriz": null,
+        "centro": null,
+        "vp3Original": null,
+        "origen": "'Sensibilidad por múltiplo'!A136:I144",
+        "motivo": "P/BV no disponible en fuente nativa por denominador patrimonial FY+3 cero, 25 celdas N/D, sin peso en valoración; no se imputa cero numérico.",
+        "estadoFuente": "N/D"
       }
     ],
     "metodosPendientes": [
@@ -918,7 +945,7 @@
     ],
     "sinRecalculoExterno": true,
     "certificado": false,
-    "nota": "SHA256 calculado sobre JSON.stringify(matrices) 3-nov-2026. Se exportan 5 prioritarias y P/V; P/BV N/D; sin auditoría económica.",
+    "nota": "Cinco métodos prioritarios y P/V con matrices Base nativas 5x5; P/BV ocupa séptima posición contractual como N/D, matriz null, sin ponderación. Integración EN_REVISION sin auditoría económica.",
     "controlesTecnicosAprobados": true
   }
 }
