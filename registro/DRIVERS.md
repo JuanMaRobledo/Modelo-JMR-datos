@@ -93,7 +93,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| KO-20261103-A12-R1 | VIGENTE | 64.03 | 3.3 % | 33.5 % | 1.70 | 1.60 | 7.4 % | 4.0 % | 18.0 % |
+| KO-20261103-A12-R1 | VIGENTE | 59.49 | 3.3 % | 33.5 % | 1.70 | 1.60 | 7.7 % | 4.0 % | 18.0 % |
 
 ## LULU
 
