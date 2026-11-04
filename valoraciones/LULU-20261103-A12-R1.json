@@ -1383,7 +1383,12 @@
     "ingresosForward12m": 10473.87234,
     "interesLeaseProxy": "4.4% sobre pasivo lease reconocido; reañadido EBIT GAAP y restado una vez del equity",
     "nol35": true,
-    "opcionesRSU_PSU": "Opciones1.525m, RSU0.759m, PSU0.288m factor0.5; dividendos0"
+    "opcionesRSU_PSU": "Opciones1.525m, RSU0.759m, PSU0.288m factor0.5; dividendos0",
+    "roicCapitalExistenteAno10": 0.23091341180354327,
+    "roicReinversionNuevaTerminal": 0.14,
+    "diferenciaRoicExistenteMenosMarginalPP": 9.091341180354325,
+    "sensibilidadRoicMarginalTerminal23_09": 152.06504114707337,
+    "sensibilidadKdMercado6_29": 141.04939746962603
   },
   "fuentes_supuestos": [
     {
@@ -1419,7 +1424,9 @@
     "El Sales-to-Capital marginal aproximado FY2023–25 ~0,95x vs FY2021–25 ~1,87x muestra deterioro; 1,8→1,77 son juicios, no promedio mecánico.",
     "Acciones económicas y caja al 02-ago-2026 pueden variar por recompras/RSU/PSU posteriores al balance; divisor modelado112,585m.",
     "P/FCFE usa caja contable CFO−CapEx FY2025 como proxy de flujo disponible por ausencia de deuda bancaria; no es un FCFE plenamente reconciliado con pasivos de arriendos. P/V y P/BV opcionales sin peso.",
-    "Los controles de hoja son LISTO/VALIDADO y matrices reproducibles; auditoría independiente F5, CI, QA visual en app y coste incremental leases aún pendientes; EN_REVISION no equivale a certificado."
+    "Los controles de hoja son LISTO/VALIDADO y matrices reproducibles; auditoría independiente F5, CI, QA visual en app y coste incremental leases aún pendientes; EN_REVISION no equivale a certificado.",
+    "El ROIC sobre capital total en año10 (23,0913%) NO es la misma magnitud económica que el RONIC marginal terminal14% aplicado a reinversión nueva. Diferencia9,09pp, no una caída instantánea del EBIT de activos antiguos; con RONIC terminal23,0913% el DCF sube a152,0650 (+9,1495; +6,40%). Hipótesis crítica para auditoría independiente.",
+    "Si el costo antes de impuestos de nuevas obligaciones lease fuese6,29% (Rf5,29%+100pb como JUICIO, no spread corporativo comprobado) frente al costo histórico4,4%, DCF baja a141,0494 (−1,8662; −1,31%). Prueba aislada: hoja sensibilidad Kd."
   ],
   "controlEditorial": {
     "seccionesNivel1": 14,
