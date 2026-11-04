@@ -15,7 +15,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 | CELH | CELH-20261028-A1 | — |
 | CMG | CMG-20261028-A3 | CMG-2026-10-28-R1-REINICIO |
 | DPZ | DPZ-20261101-A1 | — |
-| DUOL | DUOL-20261029-A1 | — |
+| DUOL | DUOL-20261103-A12-R2 | DUOL-20261029-A1 |
 | EPAM | EPAM-20261029-R1 | — |
 | GOOG | — (fuera del catálogo) | GOOG-20261028-R1 |
 | GOOGL | GOOGL-20261029-R5 | GOOGL-20261029-R4 |
