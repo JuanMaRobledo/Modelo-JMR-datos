@@ -74,8 +74,15 @@ for(const file of files){
     assert.notEqual(ticker,'NU','NU requiere contrato de múltiplos bancarios');
     assert.equal(byTicker.has(ticker),false,'Captura duplicada');
     byTicker.set(ticker,true);
-    // La captura parcial de INTU pertenece a INTU-20261029-R1 (candidato conservado), no a la revisión activa nueva.
-    const declared=ticker==='INTU'?{rutaValoracion:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json'}:catalog.controlModeloA.empresas[ticker];
+    // Las capturas parciales históricas siguen ligadas a su revisión de origen,
+    // nunca a la revisión activa posterior ni se reescriben para forzar conciliación.
+    const historicalSources={
+      INTU:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json',
+      DUOL:'valoraciones/DUOL-20261029-A1.json',
+    };
+    const declared=historicalSources[ticker]
+      ?{rutaValoracion:historicalSources[ticker]}
+      :catalog.controlModeloA.empresas[ticker];
     const valuation=JSON.parse(fs.readFileSync(path.join(root,declared.rutaValoracion),'utf8'));
     assert.equal(candidate.tipo,'CAPTURA_ACOTADA_NO_PUBLICADA');
     assert.equal(candidate.contrato,'sensibilidad-nativa-base-parcial-v1');
