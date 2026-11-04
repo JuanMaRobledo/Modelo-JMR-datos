@@ -20,6 +20,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 | GOOG | — (fuera del catálogo) | GOOG-20261028-R1 |
 | GOOGL | GOOGL-20261029-R5 | GOOGL-20261029-R4 |
 | INTU | INTU-20261101-A12-R1 | INTU-20261029-R1 |
+| LULU | LULU-20261103-A12-R1 | — |
 | MELI | MELI-20261028-A3 | MELI-20261028-A1, MELI-20261028-R1 |
 | META | META-20261101-A12-R1 | META-20261025-R5, META-20261031-A12-R1 |
 | MSFT | MSFT-20261028-R1 | — |
