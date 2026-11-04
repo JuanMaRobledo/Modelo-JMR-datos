@@ -22,9 +22,25 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   const previous=18+['META','NVDA','XP','INTU','DPZ','NU'].filter(t=>active.some(([name])=>name===t)).length;
   const amzn=active.find(([ticker])=>ticker==='AMZN');
   const pags=active.find(([ticker])=>ticker==='PAGS');
-  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0),'No permitir altas desconocidas sin catálogo reconciliado');
+  // AAPL R1 se admite únicamente si el alta es la revisión oficial A-1.2,
+  // no una captura de rango ni un registro alternativo sin contrato.
+  const aapl=active.find(([ticker])=>ticker==='AAPL');
+  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0),
+    'No permitir altas desconocidas sin catálogo reconciliado');
   if(pags)assert.equal(pags[1].rutaValoracion,'valoraciones/PAGS-20261030-A12-R1.json','PAGS exige revision A-1.2 vigente unica');
   if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
+  if(aapl){
+    const rel='valoraciones/AAPL-20261103-A12-R1.json';
+    assert.equal(aapl[1].rutaValoracion,rel,'AAPL exige revisión A-1.2 R1 única');
+    assert.ok(catalog.valoraciones.includes(rel),'AAPL sin valoración oficial en catálogo');
+    assert.ok(catalog.analisis.includes('analisis/AAPL-research-AAPL-20261103-A12-R1.json'),
+      'AAPL sin análisis oficial vinculado');
+    const ficha=JSON.parse(fs.readFileSync(path.join(root,rel),'utf8'));
+    assert.equal(ficha.revisionId,'AAPL-20261103-A12-R1');
+    assert.equal(ficha.sensibilidadMultiples?.sourceSheetId,ficha.sheet_id);
+    assert.equal(ficha.sensibilidadMultiples?.matrices?.filter(m=>m.prioritario&&m.estado==='OK').length,5,
+      'AAPL debe tener cinco matrices Base completas, no capturas parciales');
+  }
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
     const p='candidatos/hoja-multiples/'+f;
