@@ -2,6 +2,44 @@
   "descripcion": "Drivers de la historia Base por revisión, leídos solo de campos estructurados (null = N/D, sin rellenar). 'origen' indica el campo de cada valor; 'variacion' es la diferencia frente a la revisión anterior del mismo emisor. Generado por scripts/registro_revisiones.py; no editar a mano.",
   "revisiones": [
     {
+      "ticker": "AAPL",
+      "revisionId": "AAPL-20261103-A12-R1",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-03",
+      "anterior": null,
+      "ordenAmbiguo": false,
+      "metodo": "A-1.2",
+      "metodoPrincipal": "DCF FCFF",
+      "valorPrincipal": 141.00851646862773,
+      "drivers": {
+        "crecimiento_1_5": 0.07000000000000006,
+        "margen_terminal": 0.36,
+        "sales_to_capital_1_5": 1.8,
+        "sales_to_capital_6_10": 2,
+        "costo_capital": 0.1286221065876554,
+        "g_terminal": 0.04,
+        "rentabilidad_terminal": 0.15
+      },
+      "variacion": {
+        "crecimiento_1_5": null,
+        "margen_terminal": null,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": null,
+        "rentabilidad_terminal": null
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimientoCAGR1a5 (CAGR ventas 1-5)",
+        "margen_terminal": "base.margenTerminal (margen EBIT terminal)",
+        "sales_to_capital_1_5": "base.ventasACapital1a5 (S/C 1-5)",
+        "sales_to_capital_6_10": "base.ventasACapital6a10 (S/C 6-10)",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
+        "g_terminal": "base.gTerminal (g terminal)",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
       "ticker": "ADBE",
       "revisionId": "ADBE-20261028-A2",
       "estado": "SUSTITUIDA",

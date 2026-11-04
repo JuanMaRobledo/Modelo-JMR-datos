@@ -101,9 +101,12 @@ class EditorialTests(unittest.TestCase):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        self.assertEqual(len(selected),26)  # 24 previos + AMZN R5 + PAGS A-1.2, sin perder ninguno
+        # 24 previos + AMZN R5 + PAGS A-1.2 + AAPL R1; una ficha por emisor.
+        # No aceptar un alto adicional desconocido ni duplicaciones de AAPL.
+        self.assertEqual(len(selected),27)
         self.assertEqual(len([x for x in selected if x.get('ticker')=='PAGS' and x.get('revisionId')=='PAGS-20261030-A12-R1']),1)
         self.assertEqual(len([x for x in selected if x.get('ticker')=='AMZN' and x.get('revisionId')=='AMZN-20261102-A12-R5']),1)
+        self.assertEqual(len([x for x in selected if x.get('ticker')=='AAPL' and x.get('revisionId')=='AAPL-20261103-A12-R1']),1)
         for a in selected:
             h=a['articleHtml'];doc=Document(h)
             ids=[n.attrs.get('id') for n in doc.nodes]
