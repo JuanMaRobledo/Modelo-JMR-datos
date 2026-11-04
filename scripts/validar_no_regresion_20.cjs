@@ -39,7 +39,7 @@ function run(){
   const NUEVAS={META:'META-20261101-A12-R1',NVDA:'NVDA-20261101-A12-R1',XP:'XP-20261031-A12-R1',INTU:'INTU-20261101-A12-R1',DPZ:'DPZ-20261101-A1',NU:'NU-20261102-A12-R3'};
   const nuevas=Object.entries(NUEVAS).filter(([t,r])=>aEntries.some(([name,v])=>name===t&&path.basename(v.rutaValoracion).startsWith(r))).length;
   // Altas explícitas y acotadas AMZN R5, PAGS R1 y AAPL R1. Se preservan las revisiones anteriores y solo se admiten rutas canónicas.
-  const ADICIONALES={AMZN:'AMZN-20261102-A12-R5',PAGS:'PAGS-20261030-A12-R1',AAPL:'AAPL-20261103-A12-R1',LULU:'LULU-20261103-A12-R1'};
+  const ADICIONALES={AMZN:'AMZN-20261102-A12-R5',PAGS:'PAGS-20261030-A12-R1',AAPL:'AAPL-20261103-A12-R1',LULU:'LULU-20261103-A12-R1',KO:'KO-20261103-A12-R1'};
   const extra=Object.entries(ADICIONALES).filter(([ticker,revision])=>
     aEntries.some(([name,item])=>name===ticker&&item.rutaValoracion==='valoraciones/'+revision+'.json')).length;
   const lulu=aEntries.find(([ticker])=>ticker==='LULU');
@@ -53,6 +53,21 @@ function run(){
       'LULU: se exigen las cinco grillas Base nativas completas');
     assert.equal(f.sensibilidadDCF?.matrices?.filter(m=>m.centroConciliado).length,3,
       'LULU: se exigen las tres sensibilidades DCF 5x5 conciliadas');
+  }
+  const ko=aEntries.find(([ticker])=>ticker==='KO');
+  if(ko){
+    // Alta por solicitud expresa: exactamente KO R1, con fuente nativa y artículos vinculados.
+    const rel='valoraciones/KO-20261103-A12-R1.json';
+    assert.equal(ko[1].rutaValoracion,rel,'KO: alta R1 no corresponde con contrato oficial');
+    const v=read(rel);
+    const a=read('analisis/KO-research-KO-20261103-A12-R1.json');
+    assert.equal(v.revisionId,'KO-20261103-A12-R1');
+    assert.equal(a.revisionId,v.revisionId);
+    assert.equal(v.sensibilidadMultiples?.sourceSheetId,v.sheet_id);
+    assert.equal(v.sensibilidadMultiples?.matrices?.filter(m=>m.prioritario&&m.estado==='OK').length,5);
+    assert.equal(v.sensibilidadDCF?.matrices?.filter(m=>m.centroConciliado).length,3);
+    assert.ok((a.controlCobertura?.palabrasNivel1||0)>=7500,'KO: artículo no pasa profundidad');
+    assert.equal(a.controlCobertura?.nivel2Apartados,12);
   }
   assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra,
     'Se perdieron revisiones A-1.2 anteriores o apareció un alta sin contrato');
