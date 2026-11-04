@@ -1,0 +1,179 @@
+{
+  "revision_id": "KO-20261103-A12-R1",
+  "sheet_id": "17bX2bK0z1LSxO02GGv7HDFpAU6f8hkxIH4rUMdfnyEE",
+  "template_id": "1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ",
+  "method": "Comparación equivalente a diff_formulas_plantilla.py mediante connector FORMULA; 46 pestañas, A1 hasta min(400 filas,80 columnas) según límites del script oficial.",
+  "scope": "No cubre filas >400 del motor de sensibilidad; no prueba ausencia de errores de cálculo.",
+  "formulaCount": 7882,
+  "counts": {
+    "formula": 16,
+    "text": 11
+  },
+  "formulaOverwrites": 0,
+  "formulaDeletions": 0,
+  "status": "SIN_FORMULAS_REEMPLAZADAS_POR_NUMEROS_NI_BORRADAS;16_REESCRITURAS_HISTORICAS_A_REVISAR",
+  "differences": [
+    {
+      "cell": "POCF!B8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B7/(('Income Statement'!$H$12+'Income Statement'!$H$18-'Income Statement'!$H$20)+'Cash Flow Statement'!$H$4-((('Balance Sheet'!$H$10-'Balance Sheet'!$H$5)-('Balance Sheet'!$H$24-'Balance Sheet'!$H$20-'Balance Sheet'!$H$21))-(('Balance Sheet'!$G$10-'Balance Sheet'!$G$5)-('Balance Sheet'!$G$24-'Balance Sheet'!$G$20-'Balance Sheet'!$G$21))));\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!H5);ISNUMBER('Cash Flow Statement'!H13);'Cash Flow Statement'!H13>0);'Trailing Valuation'!H5/'Cash Flow Statement'!H13;\"\")"
+    },
+    {
+      "cell": "POCF!C8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(C7/C9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!I5);ISNUMBER('Cash Flow Statement'!I13);'Cash Flow Statement'!I13>0);'Trailing Valuation'!I5/'Cash Flow Statement'!I13;\"\")"
+    },
+    {
+      "cell": "POCF!D8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(D7/D9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!J5);ISNUMBER('Cash Flow Statement'!J13);'Cash Flow Statement'!J13>0);'Trailing Valuation'!J5/'Cash Flow Statement'!J13;\"\")"
+    },
+    {
+      "cell": "POCF!E8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(E7/E9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!K5);ISNUMBER('Cash Flow Statement'!K13);'Cash Flow Statement'!K13>0);'Trailing Valuation'!K5/'Cash Flow Statement'!K13;\"\")"
+    },
+    {
+      "cell": "POCF!B20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B18/B19;\"\")))",
+      "value": "=IF(ISNUMBER('Cash Flow Statement'!H13);'Cash Flow Statement'!H13;\"\")"
+    },
+    {
+      "cell": "POCF!C20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!B65))",
+      "value": "=IF(ISNUMBER('Cash Flow Statement'!I13);'Cash Flow Statement'!I13;\"\")"
+    },
+    {
+      "cell": "POCF!D20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!C65))",
+      "value": "=IF(ISNUMBER('Cash Flow Statement'!J13);'Cash Flow Statement'!J13;\"\")"
+    },
+    {
+      "cell": "POCF!E20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!D65))",
+      "value": "=IF(ISNUMBER('Cash Flow Statement'!K13);'Cash Flow Statement'!K13;\"\")"
+    },
+    {
+      "cell": "PFCFE!B8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B7/(('Income Statement'!$H$12+'Income Statement'!$H$18-'Income Statement'!$H$20)+'Cash Flow Statement'!$H$4+'Cash Flow Statement'!$H$15-((('Balance Sheet'!$H$10-'Balance Sheet'!$H$5)-('Balance Sheet'!$H$24-'Balance Sheet'!$H$20-'Balance Sheet'!$H$21))-(('Balance Sheet'!$G$10-'Balance Sheet'!$G$5)-('Balance Sheet'!$G$24-'Balance Sheet'!$G$20-'Balance Sheet'!$G$21)))+'Cash Flow Statement'!$H$25+'Cash Flow Statement'!$H$28);\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!H5);ISNUMBER(B20);B20>0);'Trailing Valuation'!H5/B20;\"\")"
+    },
+    {
+      "cell": "PFCFE!C8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(C7/C9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!I5);ISNUMBER(C20);C20>0);'Trailing Valuation'!I5/C20;\"\")"
+    },
+    {
+      "cell": "PFCFE!D8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(D7/D9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!J5);ISNUMBER(D20);D20>0);'Trailing Valuation'!J5/D20;\"\")"
+    },
+    {
+      "cell": "PFCFE!E8",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(E7/E9;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Trailing Valuation'!K5);ISNUMBER(E20);E20>0);'Trailing Valuation'!K5/E20;\"\")"
+    },
+    {
+      "cell": "PFCFE!B20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";IFERROR(B18/B19;\"\")))",
+      "value": "=IF(AND(ISNUMBER('Cash Flow Statement'!H13);ISNUMBER('Cash Flow Statement'!H15);ISNUMBER('Cash Flow Statement'!H25);ISNUMBER('Cash Flow Statement'!H28));'Cash Flow Statement'!H13+'Cash Flow Statement'!H15+'Cash Flow Statement'!H25+'Cash Flow Statement'!H28;\"\")"
+    },
+    {
+      "cell": "PFCFE!C20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!B68))",
+      "value": "=IF(AND(ISNUMBER('Cash Flow Statement'!I13);ISNUMBER('Cash Flow Statement'!I15);ISNUMBER('Cash Flow Statement'!I25);ISNUMBER('Cash Flow Statement'!I28));'Cash Flow Statement'!I13+'Cash Flow Statement'!I15+'Cash Flow Statement'!I25+'Cash Flow Statement'!I28;\"\")"
+    },
+    {
+      "cell": "PFCFE!D20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!C68))",
+      "value": "=IF(AND(ISNUMBER('Cash Flow Statement'!J13);ISNUMBER('Cash Flow Statement'!J15);ISNUMBER('Cash Flow Statement'!J25);ISNUMBER('Cash Flow Statement'!J28));'Cash Flow Statement'!J13+'Cash Flow Statement'!J15+'Cash Flow Statement'!J25+'Cash Flow Statement'!J28;\"\")"
+    },
+    {
+      "cell": "PFCFE!E20",
+      "type": "formula",
+      "template": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!$A$1=\"\";\"\";'Financials Multiples'!D68))",
+      "value": "=IF(AND(ISNUMBER('Cash Flow Statement'!K13);ISNUMBER('Cash Flow Statement'!K15);ISNUMBER('Cash Flow Statement'!K25);ISNUMBER('Cash Flow Statement'!K28));'Cash Flow Statement'!K13+'Cash Flow Statement'!K15+'Cash Flow Statement'!K25+'Cash Flow Statement'!K28;\"\")"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!B2",
+      "type": "text",
+      "template": "='Income Statement'!B2",
+      "value": "2016"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!C2",
+      "type": "text",
+      "template": "='Income Statement'!C2",
+      "value": "2017"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!D2",
+      "type": "text",
+      "template": "='Income Statement'!D2",
+      "value": "2018"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!E2",
+      "type": "text",
+      "template": "='Income Statement'!E2",
+      "value": "2019"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!F2",
+      "type": "text",
+      "template": "='Income Statement'!F2",
+      "value": "2020"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!G2",
+      "type": "text",
+      "template": "='Income Statement'!G2",
+      "value": "2021"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!H2",
+      "type": "text",
+      "template": "='Income Statement'!H2",
+      "value": "2022"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!I2",
+      "type": "text",
+      "template": "='Income Statement'!I2",
+      "value": "2023"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!J2",
+      "type": "text",
+      "template": "='Income Statement'!J2",
+      "value": "2024"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!K2",
+      "type": "text",
+      "template": "='Income Statement'!K2",
+      "value": "2025"
+    },
+    {
+      "cell": "Entradas históricas auxiliares!L2",
+      "type": "text",
+      "template": "='Income Statement'!L2",
+      "value": "LTM Oct-26"
+    }
+  ]
+}

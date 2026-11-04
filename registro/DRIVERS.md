@@ -89,6 +89,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | INTU-20261029-R1 | SUSTITUIDA | 506.85 | N/D | N/D | N/D | N/D | 8.9 % | 3.0 % | 26.0 % |
 | INTU-20261101-A12-R1 | VIGENTE | 402.00 | 8.1 % | 35.2 % | 0.97 | 0.97 | 9.9 % (+1.0 pp) | 4.0 % (+1.0 pp) | 18.0 % (-8.0 pp) |
 
+## KO
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| KO-20261103-A12-R1 | VIGENTE | 59.49 | 3.3 % | 33.5 % | 1.70 | 1.60 | 7.7 % | 4.0 % | 18.0 % |
+
 ## LULU
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
