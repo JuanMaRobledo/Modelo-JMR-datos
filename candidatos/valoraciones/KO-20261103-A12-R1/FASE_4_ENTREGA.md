@@ -1,21 +1,27 @@
-# KO F4 · estado de promoción (04-nov-2026)
-CANDIDATO_REVISADO · NO PUBLICADO. Hoja: https://docs.google.com/spreadsheets/d/17bX2bK0z1LSxO02GGv7HDFpAU6f8hkxIH4rUMdfnyEE/edit. Valor DCF Base US$64,026942 y MOS35% US$41,617513; referencia US$94,80 (03-nov). Se revisaron crecimiento, márgenes, ROIC incremental, reinversión y ventas/capital. Cuatro DCF reactivados y tres matrices DCF OK; múltiplos FY+3 activos. Persisten bloqueos: auditoría contable SEC por rúbrica, diff de fórmulas vs plantilla, validar primas de cuatro participaciones y valor residual/cobros CCBA, cuantificar litigio IRS sin doble conteo, confirmar ERP/costo capital y documentación Nivel1 de 14 capítulos >=7500 palabras y Nivel2 de 12 secciones. No crear enlace en catálogo, no fusionar este PR hasta que los gates de datos/editorial y app hayan pasado. Revisión no equivale a auditoría independiente ni certificación.
+# KO · KO-20261103-A12-R1 · F4 · VALIDACIÓN PARCIAL
+Fecha: 04-nov-2026. Método A-1.2. AISLAMIENTO=OK.
+Hoja: https://docs.google.com/spreadsheets/d/17bX2bK0z1LSxO02GGv7HDFpAU6f8hkxIH4rUMdfnyEE/edit
+PR #244. Constructor ChatGPT Work; esfuerzo interno no expuesto.
 
-## Actualización 04-nov-2026 · auditoría de ROIC histórico
-Se etiquetaron FY2016–FY2025 y LTM2026 en tres estados y entradas históricas auxiliares. Se completaron leases ASC842 FY2019 US$281m corriente + US$1.111m no corriente, FY2020 US$322m+US$1.300m, FY2021 US$310m+US$1.161m; saldos FY2022–25 ya capturados, LTM usa proxy2025. Fuente: 10-K2019 y 10-K2021 Notas de arriendos; FY2016–18 reconocido0 antes de ASC842 (no cero económico). Se añadió panel de ROIC consistente `Tesis de Inversión y Supuestos!A40:L56`: FY2024 20,01%, FY2025 23,92%, LTM 26,59% con NOPAT margen impositivo 21% y capital operativo al cierre (otra definición que el ROIC histórico bruto 14,01/18,34%). Serie completa 2016-2026; evidencia S/C marginal sin normalizar presenta extremos que prohíben anclar 1.7x mecánicamente. El cambio no afecta DCF Base64.026942 y evidencia N1/N2 aún incompleta.
+## Resultado vigente
+DCF Base US$59,49298288; MOS35% US$38,67043887.
+Conservador40,20535617; optimista71,71935197; disrupción30,86592400.
+Rf5,29% y ERP4,41%, par mensual Damodaran 01-nov. WACC inicial7,740507351%, terminal8,99%. Crecimiento -3% año1 y5% años2–5; margen terminal33,5%; S/C1,7/1,6; ROIC marginal18%; g4%.
+Los valores anteriores64,026942/41,617513 son históricos sustituidos.
 
-**No fusionar/publicar:** faltan publicación estructurada JSON, 14 capítulos >=7500 palabras; reconstituir cuentas SEC secuenciales y contrastar fórmula maestra, ajustar valor de holdings con precio 03-nov; completar puente CCBA y exposición IRS, confirmar ERP; auditoría CI y preview de app. Tres centros DCF y cinco múltiplos en hoja siguen OK; eso no acredita CI.
+## Comprobaciones ejecutadas
+- Hoja/JSON: PV explícito91669,354811 + PV terminal146783,514899 = EV238452,869710 millones. Puente patrimonial y acciones concilian dentro de1e-8 USD/acción.
+- Tres centros DCF y cinco centros relativos conciliados. Matrices recapturadas tras corregir tasas.
+- Comparación 7882 fórmulas,46 pestañas, primeras400 filas según alcance del script oficial: cero fórmulas reemplazadas por números/borradas;16 reescrituras de históricos y11 encabezados documentados.
+- Nivel1:14 capítulos; Nivel2 ampliado con cuatro DCF completos, tres estados históricos y matrices.
+- Cotejo SEC nuevo:297 comprobaciones de27 métricas principales FY2016–2025 yLTM.290 coinciden con último dato seleccionado;7 coinciden con informes originales y difieren de presentaciones posteriores. Se conserva la base originalmente publicada. Evidencia COTEJO_SEC_297_20261104.json incluye etiquetas, celdas y accession. Este alcance no es un cotejo de cada nota/subpartida.
+- Integridad catálogo y no-regresión aprobadas; registro regenerado con script oficial.
+- Fuentes Damodaran aplicadas en APLICACION_DAMODARAN_20261104.md. Las aproximaciones y el estrés fiscal condicional no son probabilidades externas ni nuevas cifras certificadas.
 
-## Continuación 04-nov-2026 · soporte cuantitativo
-Nivel 2 ampliado en analisis/KO-research-KO-20261103-A12-R1.json: cuatro DCF anuales completos (incluido terminal y puente), tres estados FY2016–2025+LTM y matrices numéricas DCF/múltiplos. Captura nativa en evidencia/KO-20261103-A12-R1/CAPTURA_N2_CUATRO_HISTORIAS_20261104.json. CI commit 6bcbf3d6c6d6775de4abf9f2df54d7b2fdcdfa3e: cuatro workflows SUCCESS.
+## Verificación app: BLOQUEADA POR AUTENTICACIÓN
+Producción Vercel observada READY, dpl_2pyi9qL6ksjnY2kfxygNfPFFrpry, commit app588ee9bd2a460eb20007fcf543d46513ffbed594.
+Se intentó acceso mediante conector Vercel, que creó enlace temporal; falló tras redirección con401 deployment_authentication_required. Fallback CLI instalado y ejecutado: vercel whoami informa Logged out. No se desactivó protección ni se declaró QA aprobada.
+KO sigue en rama candidata: no hay publicación efectiva ni evidencia visual de la ficha KO en producción.
 
-### Hallazgo material de costo de capital
-Fuente primaria consultada: https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm, ERP 01-nov-2026 4,41%, Treasury usado en su estimación 5,29%. Hoja KO utiliza Treasury 02-nov-2026 4,91% con ERP 4,41%. Son cortes diferentes; la mezcla no cumple la conciliación temporal exigida. NO se cambió la hoja sin decidir y documentar un par consistente (reestimar ERP a 02-nov o usar íntegramente el par mensual). Base US$64,026942 continúa como candidato, no se reconfirmó como resultado publicable. Corregir tasas exige recapturar cuatro DCF, múltiplos, matrices, JSON y artículo; no basta cambiar el texto.
-
-Pendientes conservados: cotejo SEC por rúbrica y conciliación de perímetro CCBA/Asia/holdings. No se promovió ni fusionó. PASOS F4: 1–3 parciales/completados en soporte numérico; 4 PARCIAL, 5 NO EJECUTADO por datos materiales pendientes, 6 entrega de estado actualizada. AISLAMIENTO=OK.
-
-
-## Corrección ejecutada de tasas · 04-nov-2026
-Hallazgo Rf/ERP anterior RESUELTO: Input sheet!B35=5,29% con ERP=4,41%, ambos par mensual Damodaran 01-nov-2026. Selector Detailed y fórmulas preservados. WACC inicial 7,740507351% y terminal 8,99%; Ke 8,002232354%. DCF Base ahora US$59,49298288, MOS35 US$38,67043887; conservador US$40,20535617; optimista US$71,71935197; disrupción US$30,86592400. La corrección reduce Base ~7,08%.
-Recapturados cuatro DCF, descuento de cinco múltiplos y matrices. Tres centros DCF coinciden con Base y cinco centros relativos con VP3. Puente EV 238452,869710 millones → patrimonio común255933,001969 /4301,902335m acciones concilia con hoja dentro de 1e-8 USD/acción. Captura nueva RECALCULO_TASAS_MENSUALES_20261104.json; las capturas anteriores son evidencia histórica, no fuente vigente del precio.
-JSON, artículo y registro de drivers actualizados. No se ha aprobado todavía la promoción: continúan cotejo SEC por rúbrica, conciliación económica CCBA/Asia y participaciones, anclas relativas y QA app. No confundir el recálculo resuelto con cierre completo F4.
+## Límites de la entrega
+No equivale a cierre integral de publicación: el cotejo SEC cubre métricas principales, y el tratamiento de perímetro CCBA/Asia, participaciones y contingencia fiscal conserva aproximaciones explícitas de valoración. No se emite dictamen independienteF5. Los controles no ejecutados no quedan aprobados por CI.
