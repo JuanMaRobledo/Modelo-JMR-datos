@@ -800,6 +800,44 @@
       }
     },
     {
+      "ticker": "LULU",
+      "revisionId": "LULU-20261103-A12-R1",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-03",
+      "anterior": null,
+      "ordenAmbiguo": false,
+      "metodo": "A-1.2",
+      "metodoPrincipal": "DCF FCFF",
+      "valorPrincipal": 142.91558508336917,
+      "drivers": {
+        "crecimiento_1_5": 0.020015090896683407,
+        "margen_terminal": 0.175,
+        "sales_to_capital_1_5": 1.8,
+        "sales_to_capital_6_10": 1.77,
+        "costo_capital": 0.08313600570356186,
+        "g_terminal": 0.03,
+        "rentabilidad_terminal": 0.14
+      },
+      "variacion": {
+        "crecimiento_1_5": null,
+        "margen_terminal": null,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": null,
+        "rentabilidad_terminal": null
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimientoCAGR1a5 (CAGR ventas 1-5)",
+        "margen_terminal": "base.margenTerminal (margen EBIT terminal)",
+        "sales_to_capital_1_5": "base.ventasACapital1a5 (S/C 1-5)",
+        "sales_to_capital_6_10": "base.ventasACapital6a10 (S/C 6-10)",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
+        "g_terminal": "base.gTerminal (g terminal)",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
       "ticker": "MELI",
       "revisionId": "MELI-20261028-A1",
       "estado": "SUSTITUIDA",
