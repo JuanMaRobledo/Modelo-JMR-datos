@@ -2,6 +2,12 @@
 
 Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de la historia Base leídos solo de campos estructurados de cada JSON; **N/D** = el campo no existe en ese esquema (no se rellena ni se extrae de texto). Entre paréntesis, la variación frente a la revisión anterior del mismo emisor (orden por fecha de revisión; la vigente es la última). **⚠ orden ambiguo**: varias revisiones sustituidas comparten fecha y no se puede saber cuál fue antes, así que no se calcula variación. En financieras (FCFE) el costo de capital es Ke y la rentabilidad terminal es ROE. El campo exacto de cada cifra está en `drivers.json` → `origen`.
 
+## AAPL
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| AAPL-20261103-A12-R1 | VIGENTE | 141.01 | 7.0 % | 36.0 % | 1.80 | 2.00 | 12.9 % | 4.0 % | 15.0 % |
+
 ## ADBE
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
