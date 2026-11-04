@@ -26,7 +26,8 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   // no una captura de rango ni un registro alternativo sin contrato.
   const aapl=active.find(([ticker])=>ticker==='AAPL');
   const lulu=active.find(([ticker])=>ticker==='LULU');
-  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0),
+  const ko=active.find(([ticker])=>ticker==='KO');
+  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0),
     'No permitir altas desconocidas sin catálogo reconciliado');
   if(pags)assert.equal(pags[1].rutaValoracion,'valoraciones/PAGS-20261030-A12-R1.json','PAGS exige revision A-1.2 vigente unica');
   if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
@@ -57,6 +58,28 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
     assert.equal(ficha.sensibilidadMultiples?.matrices?.filter(m=>m.prioritario&&m.estado==='OK').length,5,
       'LULU debe tener cinco matrices Base5x5, no capturas de rango');
     assert.equal(nivel1.revisionId,ficha.revisionId,'LULU vinculó análisis de revisión distinta');
+  }
+  if(ko){
+    // KO es alta oficial R1 con N1+N2 y captura numérica integral,
+    // no una de las 19 capturas parciales históricas.
+    const rel='valoraciones/KO-20261103-A12-R1.json',ana='analisis/KO-research-KO-20261103-A12-R1.json';
+    assert.equal(ko[1].rutaValoracion,rel,'KO exige revision A-1.2 R1 unica');
+    assert.ok(catalog.valoraciones.includes(rel)&&catalog.analisis.includes(ana),
+      'KO requiere valoración y análisis oficiales enlazados');
+    const ficha=JSON.parse(fs.readFileSync(path.join(root,rel),'utf8'));
+    const nivel1=JSON.parse(fs.readFileSync(path.join(root,ana),'utf8'));
+    assert.equal(ficha.revisionId,'KO-20261103-A12-R1');
+    assert.equal(nivel1.revisionId,ficha.revisionId,'KO análisis/valoración mezclados');
+    assert.equal(ficha.sensibilidadMultiples.sourceSheetId,ficha.sheet_id);
+    assert.equal(ficha.sensibilidadMultiples.contrato,'base-native-five-priority-v1');
+    assert.equal(ficha.sensibilidadMultiples.matrices.filter(m=>m.prioritario&&m.estado==='OK').length,5);
+    assert.equal(nivel1.controlCobertura.secciones,14);
+    assert.equal(nivel1.controlCobertura.nivel2Apartados,12);
+    const capture=JSON.parse(fs.readFileSync(path.join(root,
+      'candidatos/valoraciones/KO-20261103-A12-R1/CAPTURA_NATIVA_KO.json'),'utf8'));
+    const digest=require('node:crypto').createHash('sha256').update(capture.canonicalPayload,'utf8').digest('hex');
+    assert.equal(capture.sha256,digest,'KO captura fuente no coincide con SHA256 real');
+    assert.equal(ficha.sensibilidadMultiples.resultadosSha256,digest);
   }
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
