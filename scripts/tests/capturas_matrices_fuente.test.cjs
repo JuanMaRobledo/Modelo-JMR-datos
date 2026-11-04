@@ -25,7 +25,8 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   // AAPL R1 se admite únicamente si el alta es la revisión oficial A-1.2,
   // no una captura de rango ni un registro alternativo sin contrato.
   const aapl=active.find(([ticker])=>ticker==='AAPL');
-  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0),
+  const lulu=active.find(([ticker])=>ticker==='LULU');
+  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0),
     'No permitir altas desconocidas sin catálogo reconciliado');
   if(pags)assert.equal(pags[1].rutaValoracion,'valoraciones/PAGS-20261030-A12-R1.json','PAGS exige revision A-1.2 vigente unica');
   if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
@@ -40,6 +41,22 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
     assert.equal(ficha.sensibilidadMultiples?.sourceSheetId,ficha.sheet_id);
     assert.equal(ficha.sensibilidadMultiples?.matrices?.filter(m=>m.prioritario&&m.estado==='OK').length,5,
       'AAPL debe tener cinco matrices Base completas, no capturas parciales');
+  }
+  if(lulu){
+    // Alta expresamente autorizada por el usuario; no habilita capturas parciales.
+    const rel='valoraciones/LULU-20261103-A12-R1.json',ana='analisis/LULU-research-LULU-20261103-A12-R1.json';
+    assert.equal(lulu[1].rutaValoracion,rel,'LULU solo admite la revisión A-1.2 R1 publicada');
+    assert.ok(catalog.valoraciones.includes(rel)&&catalog.analisis.includes(ana),
+      'LULU necesita valoración y análisis oficiales enlazados');
+    const ficha=JSON.parse(fs.readFileSync(path.join(root,rel),'utf8'));
+    const nivel1=JSON.parse(fs.readFileSync(path.join(root,ana),'utf8'));
+    assert.equal(ficha.revisionId,'LULU-20261103-A12-R1');
+    assert.equal(ficha.sheet_id,'1XY_iXmarfM0ESnzu3RMV5E4TkgrJAy9-XzJ2PxndHz4');
+    assert.equal(ficha.sensibilidadMultiples?.sourceSheetId,ficha.sheet_id);
+    assert.equal(ficha.sensibilidadMultiples?.contrato,'base-native-five-priority-v1');
+    assert.equal(ficha.sensibilidadMultiples?.matrices?.filter(m=>m.prioritario&&m.estado==='OK').length,5,
+      'LULU debe tener cinco matrices Base5x5, no capturas de rango');
+    assert.equal(nivel1.revisionId,ficha.revisionId,'LULU vinculó análisis de revisión distinta');
   }
   assert.equal(files.length,19,'NU se rige por contrato FCFE bancario separado');
   for(const f of files){
