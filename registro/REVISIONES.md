@@ -7,6 +7,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 
 | Emisor | Vigente | Sustituidas |
 |---|---|---|
+| AAPL | AAPL-20261103-A12-R1 | — |
 | ADBE | ADBE-20261028-A3 | ADBE-20261028-A2, ADBE-20261028-R1 |
 | AFYA | AFYA-20261029-R1 | — |
 | AMZN | AMZN-20261102-A12-R5 | AMZN-20261102-A12-R2 |
