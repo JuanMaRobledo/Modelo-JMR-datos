@@ -1,4 +1,6 @@
 # LULU — Análisis fundamental JMR A-1.2 | Nivel 1 | CANDIDATO
+**Actualización prioritaria**: Esta revisión ya tiene DCF/múltiplos nativos calculados; el estado inicial PENDIENTE descrito en secciones históricas queda sustituido por el anexo técnico al final.
+
 
 **Activo:** lululemon athletica inc. (NASDAQ:LULU) · **Revisión:** LULU-A12-20261103-R1 · **Corte de mercado:** 3 de noviembre de 2026 · **Moneda:** USD, millones salvo cifras por acción · **Último informe primario:** 10-Q correspondiente al trimestre terminado el 2 de agosto de 2026. **Estado:** CANDIDATO NO PUBLICADO; DCF oficial y múltiplos pendientes de controles. La fase 5 de auditoría económica todavía no ha comenzado.
 
@@ -61,3 +63,31 @@ Riesgos principales: pérdida de afinidad de marca, markdowns, presión por nuev
 - Damodaran US sector (enero2026): https://pages.stern.nyu.edu/~adamodar/pc/archives/indname.xls
 - Damodaran prima implícita: https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html
 - US Treasury (03/11/2026): https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview?type=daily_treasury_yield_curve
+
+
+---
+
+## Actualización técnica realizada el 03-nov-2026 (R1, revisión reproducible)
+
+**La documentación precedente refleja el estado inicial del candidato, no su estado final actual. Esta sección prevalece sobre todas las referencias anteriores a WACC, DCF y múltiplos pendientes.** Los controles económicos indicados abajo son controles **de hoja**, no equivalen a los gates CI o a una certificación de publicación.
+
+### Cuadro de valoración nativa
+- Hoja oficial 46 pestañas: https://docs.google.com/spreadsheets/d/1XY_iXmarfM0ESnzu3RMV5E4TkgrJAy9-XzJ2PxndHz4/edit
+- FCFF DCF Base presente: **142,9155850834 USD/acción**; MOS35%: **92,8951303042 USD/acción**.
+- DCF Conservador: **105,6981070993**; Optimista: **184,5616118779**; Disrupción: **73,9986974158**, separada del promedio. Valor esperado 50/30/20: **140,07954575**.
+- Valor operativo de diez años y perpetuidad: **US$16.875,73 millones**; PV del flujo explícito **US$7.282,42 millones**; PV terminal **US$9.593,31 millones** (~56,85% del valor operativo). Puente a equity: deuda leasing **US$2.141,127m**, caja **US$1.389,737m**, opciones **US$34,19m**, divisor económico estimado **112,585m acciones**; patrimonio ajustado **US$16.090,15m**.
+- Cost of capital worksheet B84 **VALIDADO**; Rf **5,29%** del corte mensual Damodaran, ERP implícita mature **4,41%** del mismo corte; beta levered bottom-up **~0,8949**; Ke **~9,24%**, Kd histórico/contratos de leasing **4,40%** (proxy, no cotización de nueva deuda), peso equity **84,90%**, lease-debt **15,10%**, WACC inicial **~8,31%** y terminal **9,70%**. Kd contractual por debajo de la tasa Treasury contemporánea implica un riesgo de costo de deuda de mercado: sensibilidad necesaria en F5; no proclamar coste de financiación de nuevo contrato verificado.
+- 4 historias hoja Escenarios e historias!K5:K8 = **LISTO**; nivel DCF Sensibilidad DCF tres matrices 5×5 con centros conciliados **OK**: WACC×g, ROIC×g y crecimiento×margen.
+- Cinco múltiplos nativos prioritarios EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/OCF, con 5 sensibilidades Base5×5 JMR de centro **OK**, precios de cierre fiscales FY2022–FY2025 fechados y descuento de FY+1/2/3 a Ke. Anclas Base 7,5068x, 21,6300x, 12,8728x, 22,0561x y 12,387x respectivamente. El P/FCFE último FY usa proxy CFO−CapEx porque no hay deuda bancaria, no es caja ajustada regulatoria ni dato de consenso. P/V y P/BV opcionales sin ponderar.
+- Precio objetivo ponderado **a cierre FY+3**: Base **164,31 USD**, Conservador **129,73**, Optimista **203,23**, con pesos DCF40%, EV/EBITDA20%, EV/FCFF10%, P/E20%, P/FCFE5%, P/OCF5%. No es valor presente intrínseco. El precio observado 03-nov-2026 **106,95 USD**.
+
+### Calibración ROIC, reinversión, crecimiento y margen
+- Eficiencia de capital histórico ROIC FY2025 **35,16%**, ROIC LTM ago-2026 **26,52%**, calculados con capital invertido medio y periodos consistentes; el cambio −8,64 puntos obliga a no extrapolar la mejor fase de la empresa. ROIC perpetuo Base **14%**, Conservador **11,5%**, Optimista **16%**, Disrupción **9,5%**. La reinversión terminal Base g/ROIC = 3%/14% = **21,43% del NOPAT** bajo definiciones armonizadas.
+- Sales-to-Capital marginal de la Base **1,80x** (años1–5), **1,77x** (años6–10), frente a Damodaran Apparel USA aprox1,77x; historia propia de eficiencia incremental aproximada FY2021–2025 ~1,87x pero FY2023–2025 ~0,95x muestra caída; no confundir con ventas/capital contable. La caída inicial de ventas no genera liberación automática: Input B98:B101 = 'Sin liberación' por falta de evidencia de cierres de activos.
+- Prueba reproducible de lag inversión/ingresos en copia separada: lag1 (oficial) DCF Base **142,915585**; lag0 **144,987046**, diferencia **2,071461 USD/acción (+1,45%)**, con **todo el flujo** descontado, terminal constante. Copia aislada: https://docs.google.com/spreadsheets/d/1OjGuh2aG3CRnwWj05FpO8YdB16aPxwS75jGa_pAi_U0/edit.
+- DCF empieza sobre LTM ago2026 ingresos **11.093,955m**; año siguiente modelado por guía FY2026 de 10.350–10.500m para segundo semestre y juicio +1% para H1FY2027 da estimación forward **~10.473,87m** y crecimiento **−5,59%**. Años siguientes Base **2%, 4%, 5%, 5%**, desacelerando hasta 3% año10 y perpetuidad3%. El +1% semestral futuro es JUICIO explícito, no guía publicada.
+- EBIT GAAP LTM **1.978,775m**, ajuste extraordinario reembolso arancelario IEEPA **−134,500m** e interés imputado del leasing a 4,4% sobre pasivo **+94,2096m** da EBIT DCF **1.938,4846m**. Esta suma es **proxy** para reconciliar el leasing bajo ASC842, no ingreso reportado. Margen año1 **14,2%** y objetivo año10 **17,5%**, por debajo de picos GAAP FY2024 **23,67%**; las trayectorias Conservadora15%, Optimista20%, Disrupción12,5% requieren readaptación de promociones/inventario. No duplicar amortización de ROU ni añadir deuda leasing dos veces.
+- FY2025 10-K: pérdidas fiscales NOL **US$35m** (Input B62=Yes, B63=35), impuesto efectivo LTM ~29,40%, marginal normalizado como JUICIO **29%** a largo plazo. Input B92 impuesto, B85 inversiones no operativas y B108 casos especiales = **VALIDADO** dentro de la hoja. Modela 1,525m opciones, strike258,81USD, 5,3 años de madurez residual proxy, vol43,69% proxy, RSU0,759m y PSU0,288m a factor de entrega50%, con costo potencial de dilución; requiere stress 0–100% PSU y variaciones de volatilidad.
+
+### Estado real de publicación
+**NO PUBLICADO** en app todavía. El libro tiene controles internos habilitados, pero la rama sigue PR #243 en draft con documentos fuera del catálogo. Para publicar se debe elaborar JSON nativo con snapshot/hash reproducible de cinco matrices y tres DCF 5×5, integrar **Nivel1 narrativo >=7.500 palabras en 14 capítulos**, Nivel2 HTML, comprobar contrato de catalogo scripts/validar_catalogo.cjs, integridad scripts/auditar_integridad.cjs, profundidad editorial y regresión CI; luego fusionar y verificar URL efectiva. La auditoría económica F5 no es requisito para EN_REVISION, sí permanece abierta; no inventar aprobación de CI ni afirmar publicación antes de constatarla.
