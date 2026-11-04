@@ -140,9 +140,38 @@ function run(){
       snapshots++;
     }else withoutSnapshot.push(ticker);
   }
-  assert.ok(snapshots>=16,'Desaparecieron fotografías financieras de control');
+  // DUOL R2 reemplaza la revisión A1 tras el 8-K 3T26, con libro oficial distinto.
+  // La foto de A1 permanece como archivo histórico real: no se compara R2 contra
+  // supuestos A1 (impediría toda actualización legítima), ni se rebaja el umbral.
+  const duolQ3=aEntries.find(([ticker])=>ticker==='DUOL');
+  let duolHistoricalProtected=0;
+  if(duolQ3 && duolQ3[1].rutaValoracion==='valoraciones/DUOL-20261103-A12-R2.json'){
+    const historical=read('valoraciones/DUOL-20261029-A1.json');
+    const current=read(duolQ3[1].rutaValoracion);
+    assert.equal(historical.revisionId,'DUOL-20261029-A1','La A1 historica no se conserva');
+    assert.equal(historical.sheet_id,'14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts',
+      'Se alteró la hoja de origen de A1');
+    assert.ok(Math.abs(historical.valorPrincipal-136.6764524)<1e-7,
+      'El DCF de la fotografía A1 fue reescrito');
+    assert.equal(current.revisionId,'DUOL-20261103-A12-R2');
+    assert.equal(current.sheet_id,'1_-Rxwq04iuXvS1FNpYuwlaAkGEeBxUsuyblIZAx_Oqc');
+    assert.ok(Math.abs(current.valorPrincipal-139.10868578744447)<1e-7,
+      'No coincide DCF Q3 registrado');
+    assert.ok(Math.abs(current.precioMOS-current.valorPrincipal*.65)<1e-7,
+      'DUOL: MOS35% no concilia');
+    assert.ok(current.sensibilidadMultiples?.matrices?.filter(m=>
+      m.prioritario&&m.estado==='OK'&&Array.isArray(m.matriz)&&
+      m.matriz.length===5&&m.matriz.every(row=>
+        row.length===5&&row.every(Number.isFinite))&&
+      Math.abs(m.matriz[2][2]-m.vp3Original)<1e-7).length===5,
+      'DUOL R2: cinco matrices Base prioritarias no conciliadas');
+    duolHistoricalProtected=1;
+  }
+  assert.ok(snapshots+duolHistoricalProtected>=16,
+    'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
-    ' fotografías protegidas sin regresión; CMG A3 se contrasta con recalibración 3T26 explícitamente autorizada.');
+    ' fotografías de baseline y '+duolHistoricalProtected+
+    ' fotografía DUOL A1 conservada con R2 verificada; sin relajar mínimos.');
   console.log('Sin fotografía antigua integral: '+withoutSnapshot.join(', ')+
     '. Requieren cotejo con Google Sheets antes de completar matrices.');
   console.log('Este PASS no acredita fórmulas, datos posteriores ni QA visual.');
