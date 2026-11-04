@@ -151,6 +151,27 @@ function validateNativeMatrices(v){
   return true;
 }
 
+// DCF por FCFE informativo (REGLAS_VIGENTES §1, v28): copia de la pestaña `DCF FCFE`; nunca valor principal ni MOS.
+function validateDcfFcfe(v){
+  const b=v.dcfFCFE;if(b===undefined)return;
+  const fin=x=>typeof x==='number'&&Number.isFinite(x);
+  assert.equal(b.estado,'INFORMATIVO',v.ticker+': dcfFCFE debe ser informativo');
+  assert.equal(b.alimentaValorPrincipal,false,v.ticker+': dcfFCFE no alimenta el valor principal');
+  assert.equal(b.sinMOS,true,v.ticker+': dcfFCFE no lleva MOS');
+  assert.equal(b.ponderadoNoEntraEnValorPrincipal,true,v.ticker+': el ponderado FCFF/FCFE no entra en el valor principal');
+  assert.equal(b.revisionId,v.revisionId,v.ticker+': dcfFCFE de otra revisión');
+  let suma=0,pesos=0;
+  for(const k of ['conservador','base','optimista']){
+    const h=b.historias?.[k];
+    assert.ok(h&&['probabilidad','dcfFCFF','dcfFCFE','diferencia','ponderadoFcffFcfe'].every(x=>fin(h[x])),v.ticker+': historia '+k+' incompleta en dcfFCFE');
+    suma+=h.probabilidad*h.dcfFCFE;pesos+=h.probabilidad;
+  }
+  assert.ok(Math.abs(suma/pesos-b.promedio.dcfFCFE)<0.02,v.ticker+': el promedio FCFE no concilia con las tres historias');
+  assert.ok(b.controles?.concilia===true,v.ticker+': el promedio FCFF de la hoja no concilia');
+  assert.ok(fin(v.valorPrincipal)&&Math.abs(b.controles.dcfFcffBaseHoja-v.valorPrincipal)<0.01&&Math.abs(b.historias.base.dcfFCFF-v.valorPrincipal)<0.01,
+    v.ticker+': dcfFCFE no corresponde al DCF Base del registro');
+  assert.ok(Math.abs(b.historias.base.dcfFCFE-b.baseDetalle?.puente?.valorPorAccionFcfe)<1e-6,v.ticker+': puente Base no coincide con el resumen');
+}
 function validate(root = path.join(__dirname, '..')) {
   const c = JSON.parse(fs.readFileSync(path.join(root, 'catalogo.json'), 'utf8'));
   const inventory = dir => fs.readdirSync(path.join(root, dir), {withFileTypes: true})
@@ -217,6 +238,11 @@ function validate(root = path.join(__dirname, '..')) {
         a.ticker + ': ruta remota ausente de expediente no provisional');
       console.warn('PENDIENTE_RUTA: '+a.ticker+
         ' sin remotePath embebido; ruta vigente solo en catálogo.');
+    }
+    if (v.record.dcfFCFE) {
+      assert.deepEqual(a.dcfFCFE, v.record.dcfFCFE, a.ticker + ': análisis sin el mismo dcfFCFE del registro');
+      assert.ok(String(a.calculationHtml || '').includes('id="jmr-nivel2-dcf-fcfe"'), a.ticker + ': falta la sección DCF por FCFE en el Nivel 2');
+      assert.equal(a.html, String(a.articleHtml || '') + String(a.calculationHtml || ''), a.ticker + ': html no reconcilia con Nivel 1 + Nivel 2');
     }
     // Algunos análisis nuevos enlazan el resultado en vez de duplicar todo el
     // bloque financiero. Una referencia compacta no es un error de cálculo;
@@ -424,6 +450,7 @@ function validate(root = path.join(__dirname, '..')) {
         v.ticker + ': sensibilidad histórica no concilia con 21/28 controles.');
     }
     require('./auditar_integridad.cjs').validateRecord(v);
+    validateDcfFcfe(v);
     if(!c.auditorias.includes('auditorias/narrativas/' + v.ticker + '.md')) {
       assert.equal(v.estado,'EN_REVISION');
       assert.equal(v.auditPendingUserVisualReview,true);
@@ -434,5 +461,5 @@ function validate(root = path.join(__dirname, '..')) {
   return {valoraciones: vals.length, analisis: c.analisis.length,
     auditorias: c.auditorias.length};
 }
-module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices};
+module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices,validateDcfFcfe};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));

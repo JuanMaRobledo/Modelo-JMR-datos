@@ -45,7 +45,7 @@ class DryRun(unittest.TestCase):
   self.assertEqual([m['estado'] for m in result['sensibilidadMultiples']['matrices']],
                    ['OK','N/A','OK','N/A','OK','OK','OK'])
   self.assertFalse(result['sensibilidadMultiples']['certificado'])
-  active=read(ROOT/'valoraciones'/(REV+'.json'))
+  active={k:v for k,v in read(ROOT/'valoraciones'/(REV+'.json')).items() if k!='dcfFCFE'}  # dcfFCFE: informativo (REGLAS v28)
   if active.get('sensibilidadMultiples',{}).get('matrices'):
    self.assertEqual(active,result)
   else:
