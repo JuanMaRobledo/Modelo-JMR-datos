@@ -101,9 +101,12 @@ class EditorialTests(unittest.TestCase):
         catalog=json.loads((ROOT/'catalogo.json').read_text())
         files=[ROOT/p for p in catalog['analisis'] if (ROOT/p).exists()]
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
-        # Altas canónicas verificadas: AMZN R5, PAGS A-1.2, AAPL R1 y LULU R1; una ficha por emisor.
+        # Altas canónicas verificadas: AMZN R5, PAGS A-1.2, AAPL R1, LULU R1 y KO R1; una ficha por emisor.
         # No aceptar altas desconocidas ni duplicaciones de empresas y revisiones oficiales.
-        self.assertEqual(len(selected),28)
+        self.assertEqual(len(selected),29)
+        self.assertEqual(len([x for x in selected if x.get('ticker')=='KO' and x.get('revisionId')=='KO-20261103-A12-R1']),1)
+        self.assertEqual(catalog['valoraciones'].count('valoraciones/KO-20261103-A12-R1.json'),1)
+        self.assertEqual(catalog['analisis'].count('analisis/KO-research-KO-20261103-A12-R1.json'),1)
         self.assertEqual(len([x for x in selected if x.get('ticker')=='PAGS' and x.get('revisionId')=='PAGS-20261030-A12-R1']),1)
         self.assertEqual(len([x for x in selected if x.get('ticker')=='AMZN' and x.get('revisionId')=='AMZN-20261102-A12-R5']),1)
         self.assertEqual(len([x for x in selected if x.get('ticker')=='AAPL' and x.get('revisionId')=='AAPL-20261103-A12-R1']),1)
