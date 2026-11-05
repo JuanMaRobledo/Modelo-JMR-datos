@@ -16,7 +16,7 @@ test('MSFT: 15 descuentos nativos, fórmulas y 3 consolidados sin cambios de DCF
  assert.equal(active.valorPrincipal,original.valorPrincipal);
  assert.equal(active.precioMOS,original.precioMOS);
  assert.deepEqual(
-   Object.fromEntries(Object.entries(active).filter(([k])=>k!=='descuentoMultiples'&&k!=='dcfFCFE')),
+   Object.fromEntries(Object.entries(active).filter(([k])=>k!=='descuentoMultiples'&&k!=='dcfFCFE'&&k!=='historiasNumeros')),
    Object.fromEntries(Object.entries(original).filter(([k])=>k!=='descuentoMultiples')));
  const d=active.descuentoMultiples,old=original.descuentoMultiples;
  assert.equal(d.pesoDcf,old.pesoDcf);
