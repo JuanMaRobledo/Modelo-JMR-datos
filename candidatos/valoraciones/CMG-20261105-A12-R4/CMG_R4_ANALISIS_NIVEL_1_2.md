@@ -86,7 +86,7 @@ El costo de una apertura no termina en el CAPEX. El proxy de1,55M de inversión 
 
 El Sales-to-Capital Base se revisó desde una propuesta inicial1,4×/1,3× a1,5×/1,4× después de contrastarlo con CAPEX, ROU y capital de trabajo. El puente normalizado reciente indica cerca de964M de reinversión y el primer año proyectado requiere993M. Se asume menor eficiencia después del quinto año porque los emplazamientos adicionales necesitan más capital por unidad de ingreso y la productividad inicial deja de mejorar al mismo ritmo. El rango se prueba en matriz, no se oculta dentro de un precio único.
 
-La reinversión pasa de791,4M en año10 a1.142,0M en estabilidad. El FCFF disminuye de3.051,8M a2.854,9M aunque el NOPAT crece4%. La causa es el cambio del rendimiento de nuevas inversiones a14%, no una caída de ventas ni un error de resta. El retorno de la cohorte financiada en año10 y el retorno de las inversiones nuevas desde año11 son magnitudes distintas. El salto44,3% en reinversión requiere una transición económica mejor probada y se conserva como reserva material, con sensibilidad de erosión adicional.
+La reinversión pasa de791,4M en año10 a1.142,0M en estabilidad. El FCFF disminuye de3.051,8M a2.854,9M aunque el NOPAT crece4%. La causa es el cambio del rendimiento de nuevas inversiones a14%, no una caída de ventas ni un error de resta. El retorno de la cohorte financiada en año10 y el retorno de las inversiones nuevas desde año11 son magnitudes distintas. El salto44,3% se contrasta al cierre con transiciones graduales de cinco y diez años, que elevan el valor a24,57–24,80. Su impacto es menor que el de extinguir por completo la ventaja competitiva.
 
 ## 8. Dirección, gobierno y asignación de capital
 
@@ -344,9 +344,9 @@ Se calcularon cinco comparaciones secundarias con anclasFY+1/+2/+3 y matrices pr
 | EV/FCFF | 22.0 | 783.22 | 987.45 | 1,218.20 | 13.72 |
 | P/E | 23.0 | 1,597.46 | 1,823.70 | 2,065.97 | 29.10 |
 | P/FCFE | 24.0 | 841.57 | 1,031.76 | 1,245.39 | 18.27 |
-| P/OCF | 18.0 | 2,370.49 | 2,678.49 | 3,005.21 | 33.14 |
+| P/OCF | 18.0 | 2,431.92 | 2,745.49 | 3,074.42 | 33.91 |
 
-Los denominadores de EBITDA y OCF son económicos estimados. El OCF futuro aún necesita conciliar capital de trabajo y SBC con CFO contable. El P/FCFE depende de la política de financiación auxiliar y no se presenta como dinero distribuible publicado. EV/FCFF es muy sensible a la fase de reinversión. Esa dispersión explica por qué no es legítimo promediar automáticamente los cinco precios. P/S y P/BV no se usan ni se ponderan.
+Los denominadores de EBITDA y OCF son económicos estimados. El OCF económico normalizado incorpora ahora ΔNWC, con NWC/ventas de−4,5%, y conserva SBC como costo sin añadirla otra vez. No equivale a CFO GAAP: usa amortización ROU estimada y excluye movimientos fiscales transitorios; su múltiplo necesita anclas homogéneas. El P/FCFE depende de la política de financiación auxiliar y no se presenta como dinero distribuible publicado. EV/FCFF es muy sensible a la fase de reinversión. Esa dispersión explica por qué no es legítimo promediar automáticamente los cinco precios. P/S y P/BV no se usan ni se ponderan.
 
 ## 11. Sensibilidades, DCF inverso y pruebas dinámicas
 
@@ -413,10 +413,51 @@ El inverso exige comparables constantes≈7.47% al variar solo ese motor. No inf
 
 1. Resolver la integración del núcleo original y las referencias rotas mediante mantenimiento separado o un adaptador JMR que permita conciliar la copia oficial, sin modificar fórmulas/comentarios originales. La hoja oficial y el auxiliar todavía no producen una misma salida certificada.
 2. Completar el roll-forward de ROU: altas nuevas, renovaciones, bajas, pagos, interés y amortización al mismo corte. El recast actual es económico y trazable, pero utiliza proxies. Acotar inversión de mantenimiento y de expansión durante los diez años.
-3. Cerrar la duración del exceso de ROIC y el cambio de reinversión10→11. El Base14% perpetuo es una hipótesis condicionada; el valor20,69–21,14 con ventaja finita es material.
+3. La duración del exceso de ROIC es un riesgo económico explícito: Base14% perpetuo frente a20,69–21,14 por acción con ventaja finita. La transición10→11 ya se probó en cinco y diez años; no se confunde la incertidumbre de la tesis con un error aritmético.
 4. Cerrar anclas de múltiplos, normalización de denominadores, ajustes de tasas y límites fundamentales. Las matrices existentes prueban matemáticas, no selección económica final.
 5. Completar la historia financiera y los controles de publicación: precios históricos fechados/splits, indicadores de dos períodos, suite técnica y conciliación hoja–JSON–análisis. No hay QA de producción porque no se desplegó.
 
 ### Estado de entrega
 
 AISLAMIENTO=OK. Se preservó la publicación anterior y su fotografía en Archivo/CMG. La nueva copia y el auxiliar están en Análisis/CMG. Se entregan investigación, cuatro historias, proyecciones, sensibilidades, comparación y pruebas como candidato. **No se afirma que el proceso integral haya quedado aprobado.** La orden de preparar PR de publicación estaba condicionada a superar todos los controles y esa condición aún no se cumple. No se solicitó autorización para fusionar porque no hay un resultado publicable que aprobar.
+
+
+## 13. Cierre adicional reproducible — 5 de noviembre de 2026
+
+El cierre no cambia el Base ni lo promueve a resultado aprobado. Añade la pestaña independiente **Cierre JMR** al auxiliar; la copia IA conserva sus51 pestañas. El auxiliar tiene11, porque no es la plantilla oficial.
+
+### Arrendamientos: residuos visibles
+
+Pasivo final = pasivo inicial + altas estimadas + interés estimado − pagos + residual. Las altas ROU se usan como proxy de altas de obligaciones; pueden diferir por incentivos, anticipos y modificaciones. El residual no se atribuye a una causa no verificada.
+
+| Puente LTM, USD M | Pasivo lease | Activo ROU |
+|---|---|---|
+| Saldo inicial Sep25 | 4.980,117 | 4.385,099 |
+| Altas ROU; proxy de altas de pasivo | 865.631 | 865.631 |
+| Interés estimado / bajas | 289.869 | −9,194 |
+| Pagos / amortización estimada | −567.538 | −307.715 |
+| Residual sin clasificación probada | 30.952 | -5.672 |
+| Saldo observado Sep26 | 5,599.031 | 4,928.149 |
+
+Los residuos equivalen al0,55% del pasivo final y−0,12% del ROU. La proximidad del puente no valida por sí sola el interés ni la amortización estimados: errores en componentes pueden compensarse. El límite material permanece en la identificación de altas por aperturas/renovaciones y la senda futura de contratos; no en ocultar estos residuos mediante una partida inventada.
+
+### Transición terminal sin salto inmediato
+
+La rentabilidad marginal implícita en financiar el crecimiento estable con la inversión del año10 es NOPAT10×g/reinversión10 =19,425%. En dos extensiones JMR se conserva el pronóstico de los diez años y se hace converger ese retorno hacia14% durante cinco o diez años adicionales. La primera reinversión crece4%, acompasada con el NOPAT; después aumenta a medida que cae el rendimiento marginal. Al terminar cada transición se aplica la identidad estable con14%.
+
+| Transición después año10 | Valor / acción | Incremento frente Base |
+|---|---|---|
+| 5 años | 24.572300 | 1.08% |
+| 10 años | 24.800383 | 2.02% |
+
+Ambas conservan14% después de la transición. Son diferentes de extinguir el exceso de retorno hasta WACC. La selección Base exige que marca, productividad y ejecución permitan sostener retornos marginales superiores al costo de capital; si no ocurre, la alternativa de ventaja finita resulta más pertinente. No se atribuye esta selección a Damodaran.
+
+### OCF y cinco múltiplos
+
+Se corrigieron los tres denominadoresFY+1/+2/+3 de P/OCF para restar ΔNWC. Fórmula normalizada: NOPAT−interés financiero×(1−tasa)+D&A física+amortización ROU−ΔNWC. NWC=−4,5% de ventas; el crecimiento libera ese capital de trabajo en esta hipótesis. SBC sigue en gastos y no se suma al flujo normalizado. Las cinco matrices permanecen calculadas y sus centros concilian con cada salida propia. La corrección no aporta por sí sola anclas históricas comparables ni aprueba los cinco múltiplos.
+
+### Evidencia de este cierre
+
+`close_review.py` genera el puente y las dos transiciones, `closure_results.json` conserva el cálculo independiente y `closure_native.json` la lectura de fórmulas y valores de Google Sheets. `verify_close.py` contrasta los resultados y el libro auxiliar exportado. Los nuevos diagnósticos se agregan a las29 comprobaciones anteriores; no se presentan como suite oficial de publicación.
+
+El expediente queda **entregado para revisión, con promoción bloqueada**. No se abrió un PR de publicación ni se fusionó o desplegó. Para aprobar la integración se necesitan una solución autorizada y comprobada al defecto de la plantilla, conciliación completa del recast, cierre económico de anclas de múltiplos y los controles oficiales con la historia financiera exigida. La publicación anterior permanece vigente.
