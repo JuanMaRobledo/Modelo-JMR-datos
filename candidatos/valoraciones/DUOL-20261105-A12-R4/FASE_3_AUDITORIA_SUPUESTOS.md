@@ -55,3 +55,43 @@
 - [JMR Stories-to-Numbers](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/docs/HISTORIAS_A_NUMEROS.md).
 
 **Separación epistemológica:** SEC es evidencia de resultados pasados; costos de capital, márgenes futuros, monetización, probabilidades, primas por ROW y ROIC terminal son hipótesis económicas JMR a contrastar, no hechos del emisor.
+
+## Anexo F3 (05-nov-2026): ROIC marginal, reinversión terminal y duración de ventaja
+
+**Copia aislada reproducible:** [DUOL F3 ROIC marginal y fade](https://docs.google.com/spreadsheets/d/1Ld_lp3uWLVuPpaKGyvUOYXFDfF1ZL2Grmx2-GV-xjqo/edit#gid=2064908873). 64 pestañas; la hoja nueva `F3 ROIC marginal y fade` añade fórmulas dependientes de `Valuation output` y diagnóstico de divergencia contra Stories, sin alterar los 10 años, el escenario Base, los cuatro escenarios alternos, las notas Damodaran ni las matrices. No se fusionó ni publicó.
+
+### Prueba algebraica Damodaran
+
+En el primer año estable:
+
+- `NOPAT_terminal = 711,276299` millones; `g = 4%`, `ROIC_terminal = WACC_terminal = 9,70%`.
+- `Reinversión_terminal = NOPAT × g/ROIC = 293,309814` millones, frente a `93,007557` millones en año 10. Diferencia explicada por pasar a reinversión marginal para sostener g y el ROIC estable supuesto.
+- `FCFF_año10 = 590,911961`, `FCFF_terminal = 417,966485` millones. El descenso no es un castigo arbitrario a EBIT: NOPAT del año 10 es 683,919519 y terminal crece 4% a 711,276299.
+- `TV = FCFF_terminal/(WACC-g) = 7332,745354 = NOPAT_terminal/WACC` millones, identidad exacta si ROIC = WACC. `VP_TV = 2407,161276` / `VP_EV = 4177,266527` (57,63%).
+- `ROIC PROMEDIO_año10 = 38,550848%` (`L9/K41`), **distinto** del ROIC **MARGINAL INDICATIVO** `(L9-K9)/K10 = 26,849259%` (aumento NOPAT de año9 a año10 / reinversión año9). Este último es inferencia de nuestras proyecciones, no una tasa observada ni prueba de que se prolongará en el tiempo.
+
+**Implicación:** No hay un error aritmético en la reinversión terminal ni en el DCF cuando el capital nuevo deja de ganar por encima del WACC. Sí hay un **juicio económico fuerte**, la extinción del exceso marginal inmediatamente después de t10; el 38,55% sobre capital preexistente no implica 38,55% de retorno marginal sostenible. Damodaran permite retornos extraordinarios modestos en estabilidad si existe ventaja competitiva sustentada y también propone estudiar la duración del período de ventaja competitiva (CAP). Fuente [Damodaran, Little Book — Terminal Value](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/terminalvalue.htm), [Damodaran CAP](https://pages.stern.nyu.edu/adamodar/New_Home_Page/valquestions/highgrowthperiod.htm).
+
+### Sensibilidad independiente reproducida en Sheets — USD/acción
+
+El motor original se perturbó **de forma secuencial** elevando exclusivamente `Escenarios e historias!N5` (ROIC marginal Base que alimenta `Input sheet!B50` y `Valuation output!M42`); cada perturbación fue seguida por lectura del DCF y reversión a 9,7%. El propio panel existente `Duración ventaja · FCFF` permitió medir apagado de exceso sobre WACC al cabo de 5 o 10 años extra. El nuevo panel F3 genera las mismas cifras con **116 fórmulas de diagnóstico y cálculo**, usando `SUM` de los ahorros anuales de reinversión, sin modificar `N5`. Ambos métodos dieron los mismos resultados a precisión de máquina.
+
+| ROIC marginal después de t10 (inicial) | Extinción en 5 años extra | Extinción en 10 años extra | Si permanece indefinidamente |
+|---|---:|---:|---:|
+| 9,70%, sin exceso | 111,442668 | 111,442668 | 111,442668 |
+| 12,0% | 112,419151 | 113,096634 | 117,816098 |
+| 15,0% | 113,336342 | 114,660232 | 123,191947 |
+| 20,0% | 114,372584 | 116,437398 | 128,567796 |
+| 27,0% (aproximación marginal año10) | 115,295499 | 118,029781 | 132,749013 |
+
+**Limitaciones de la extensión:** Se mantiene el NOPAT terminal del motor original creciendo nominalmente 4%, el WACC terminal 9,7% y se reduce SOLO la reinversión requerida según ROIC marginal que desciende de forma lineal al WACC en 5/10 años; los flujos marginales adicionales se descuentan primero a t10 y luego a hoy. Esto es sensibilidad de duración de ventaja (JMR), **no una segunda serie completa de FCFF 20 años**, ni una tesis demostrada por los reportes financieros. Retorno 27% es aproximación de supuestos anteriores, no expectativa defendida para años11–20.
+
+### Dictamen económico
+
+1. **No bajar el ROIC terminal por debajo del WACC** sin documentar destrucción estructural de valor: el actual 9,7%=9,7% significa nuevos proyectos con VAN cero, no fracaso de la empresa. El modelo ya conserva flujos futuros, rentabilidad del capital existente y caja.
+2. **No subir por reflejo a 15–27% perpetuo**: suponer 15% terminal perpetuo agrega US$11,75 por acción respecto al Base, y el reporte no demuestra una barrera de entrada con permanencia infinita. Calidad de producto, marca, datos y compromiso favorecen ciertos retornos; IA generalista, costos de cambio bajos y margen IA/SBC dificultan certificar un foso amplio. La guía Q3 reportó DAU+29%, pagadores+14%, bookings+12%, margen EBITDA ajustado25,5%, con presión de costes IA. Fuente [SEC Q3 carta](https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm).
+3. **La trayectoria finita es la sensibilidad económicamente más útil** para evitar castigar abruptamente retornos nuevos: una ancla del 20% que converja en diez años extra aporta US$4,99 (valor 116,44); 15% a cinco/diez años añade US$1,89/US$3,22. Estos NO reemplazan el Base hasta cuantificar el CAP desde retención de usuarios, ingresos por pagador, competencia y ventajas de producto. No sumar riesgos de IA otra vez en WACC si ya están en curvas de margen/monetización.
+4. **Falla editorial y metodológica independiente:** `Valuation output!B35 = 111,442668` vs `Escenarios e historias!B44 = 109,359925`; año 10 ventas `Valuation output!L5 = 3256,759612` vs `Escenarios e historias!L28 = 3090,566922`. Diferencia por crecer 2–5 años a CAGR constante en FCFF original, mientras el bloque de historias permite trayectorias anuales variables; `K5=LISTO` y sensibilidad 3/3 OK NO comprueban esa equivalencia. El nuevo panel reporta **REVISAR**. Debe unificarse el método antes de presentación de Base y ponderados.
+5. Tres centros de matrices DCF Base continúan OK al terminar, sin errores de fórmulas en el panel F3 inspeccionado. La perturbación del ROIC fue revertida a 9,7%. No se actualizaron catálogos ni expediente publicado, no se corrió CI integral ni se certificó F5.
+
+**Decisión:** mantener R4 como candidato F3 y **no publicar** todavía. Conservar el resultado FCFF base 111,44 como caso de ROIC nuevo = WACC mientras se evalúan los CAP finitos y se reconcilia Stories. Si se acepta económicamente una ventaja persistente después de t10, debe cambiarse explícitamente `Escenarios e historias!N5` con evidencia empresarial, no para acercarse a la cotización.
