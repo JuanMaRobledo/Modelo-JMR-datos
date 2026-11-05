@@ -1,0 +1,162 @@
+{
+  "checks": [
+    {
+      "name": "native_vs_python_Base",
+      "ok": true,
+      "delta": -2.648786079362253e-09
+    },
+    {
+      "name": "native_vs_python_Conservadora",
+      "ok": true,
+      "delta": 4.564629563219569e-09
+    },
+    {
+      "name": "native_vs_python_Optimista",
+      "ok": true,
+      "delta": 3.629466505117307e-09
+    },
+    {
+      "name": "native_vs_python_Disrupcion",
+      "ok": true,
+      "delta": -9.468692496739095e-11
+    },
+    {
+      "name": "dcf_center_D13",
+      "ok": true
+    },
+    {
+      "name": "dcf_center_D23",
+      "ok": true
+    },
+    {
+      "name": "dcf_center_D33",
+      "ok": true
+    },
+    {
+      "name": "dcf_center_D43",
+      "ok": true
+    },
+    {
+      "name": "multiple_center_D23",
+      "ok": true
+    },
+    {
+      "name": "multiple_center_D33",
+      "ok": true
+    },
+    {
+      "name": "multiple_center_D43",
+      "ok": true
+    },
+    {
+      "name": "multiple_center_D53",
+      "ok": true
+    },
+    {
+      "name": "multiple_center_D63",
+      "ok": true
+    },
+    {
+      "name": "fcfe_equivalence_Base",
+      "ok": true
+    },
+    {
+      "name": "fcfe_equivalence_Conservadora",
+      "ok": true
+    },
+    {
+      "name": "fcfe_equivalence_Optimista",
+      "ok": true
+    },
+    {
+      "name": "fcfe_equivalence_Disrupcion",
+      "ok": true
+    },
+    {
+      "name": "native_error_scan",
+      "ok": true
+    },
+    {
+      "name": "preserve_existing_formulas_notes_validations",
+      "ok": true,
+      "changes": [],
+      "counts": {
+        "formulas": 21856,
+        "notes": 464,
+        "validations": 33
+      },
+      "tabs": 51,
+      "native_D12_verification": "identical native formula; Excel export fallback cache differs"
+    },
+    {
+      "name": "CFO_reconciliation_I",
+      "ok": true,
+      "delta": 0.0
+    },
+    {
+      "name": "CFO_reconciliation_J",
+      "ok": true,
+      "delta": 0.0
+    },
+    {
+      "name": "CFO_reconciliation_K",
+      "ok": true,
+      "delta": 0.0
+    },
+    {
+      "name": "CFO_reconciliation_L",
+      "ok": true,
+      "delta": 0.0
+    },
+    {
+      "name": "44_FCFF_identities",
+      "ok": true
+    },
+    {
+      "name": "terminal_identity_Base",
+      "ok": true
+    },
+    {
+      "name": "terminal_identity_Conservadora",
+      "ok": true
+    },
+    {
+      "name": "terminal_identity_Optimista",
+      "ok": true
+    },
+    {
+      "name": "terminal_identity_Disrupcion",
+      "ok": true
+    },
+    {
+      "name": "all_stable_growth_below_rf",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "independent_review": "separate agent in same session; not F5",
+  "official_scripts": "diff_formulas launch blocked by missing jmr_valuation package; equivalent full exports comparison executed; CI not run",
+  "scope_note": "29 comprobaciones equivalentes del auxiliar/preservación/CFO; NO son suite oficial ni todos los controles del proyecto",
+  "official_attempts": {
+    "diff_formulas_plantilla.py": {
+      "exit": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/9514d8f35352/cmg_work/project/scripts/diff_formulas_plantilla.py\", line 30, in <module>\n    from jmr_valuation.io.sheets_auth import get_gspread_client  # noqa: E402\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'jmr_valuation'\n",
+      "stdout": ""
+    },
+    "estados_completos.py": {
+      "exit": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/9514d8f35352/cmg_work/project/scripts/estados_completos.py\", line 26, in <module>\n    from jmr_valuation.io.sheets_auth import get_gspread_client  # noqa: E402\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'jmr_valuation'\n",
+      "stdout": ""
+    },
+    "candados.py": {
+      "exit": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/9514d8f35352/cmg_work/project/scripts/candados.py\", line 18, in <module>\n    import model_steps as ms\nModuleNotFoundError: No module named 'model_steps'\n",
+      "stdout": ""
+    },
+    "auditar_ceros_materiales.py": {
+      "exit": 2,
+      "stderr": "NO EJECUTADO — lectura de fuentes/hoja: No module named 'jmr_valuation'\n",
+      "stdout": ""
+    }
+  }
+}
