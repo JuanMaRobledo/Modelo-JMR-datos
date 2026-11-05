@@ -667,16 +667,37 @@
     "q3_10q": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069692/duol-20260930.htm",
     "rf_available_at_cutoff": "https://fred.stlouisfed.org/series/DGS10/query/tables",
     "nyu_monthly": "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
-    "method": "https://github.com/JuanMaRobledo/Modelo-JMR/blob/65f28001d3d94d2322b0742385b99f3e8ab846f3/docs/HISTORIAS_A_NUMEROS.md"
+    "method": "https://github.com/JuanMaRobledo/Modelo-JMR/blob/65f28001d3d94d2322b0742385b99f3e8ab846f3/docs/HISTORIAS_A_NUMEROS.md",
+    "fy2025_10k": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+    "fy2025_leases": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/R16.htm"
   },
   "unresolved": [
     "WACC: reconcile dated primary Rf/ERP pair and terminal rate; monthly NYU pairs differ from daily FRED anchor.",
     "S/C marginal and target margin require homogeneous normalized reference/cohort support; sensitivities material.",
     "ROIC existing vs marginal and terminal fade must be justified; legacy support and production model disagree in Disruption.",
-    "NOL roll-forward unverified; zero NOL sensitivity only lower alternative, not an upper bound.",
+    "Federal NOL111.199m origin verified in FY2025 10-K; September2026 tax roll-forward remains unverified. State losses and tax credits require separate treatment.",
     "Leases: current portion/recognized debt vs old converter schedule reconciliation.",
     "Five multiple matrices centers match; economic denominators and historical FY+3 anchors not re-certified.",
     "First native DCF matrix shifts entire WACC curve; not terminal-only; g=5% column unmarked above Rf=4.91%.",
     "Official controls_todas.sh, full template diff and independent audit not executed; copied PASS labels are not source validation."
-  ]
+  ],
+  "source_reconciliations": {
+    "NOL": {
+      "federal_fy2025_usdm": 111.199,
+      "state_fy2025_usdm": 72.425,
+      "tax_credit_fy2025_usdm": 76.419,
+      "origin_verified": true,
+      "september2026_rollforward_verified": false,
+      "decision": "Preserve inherited federal NOL provisionally; do not add state losses or tax credits mechanically and do not add deferred tax assets to equity."
+    },
+    "leases": {
+      "fy2025_current_usdm": 7.204,
+      "fy2025_noncurrent_usdm": 93.779,
+      "fy2025_total_usdm": 100.983,
+      "fy2025_undiscounted_commitments_usdm": 137.818,
+      "converter_uses_fy2025_schedule": true,
+      "september2026_full_reconciliation_verified": false,
+      "decision": "Do not replace full lease debt with Q3 noncurrent component alone; reconcile periods, current portion and discount rates first."
+    }
+  }
 }
