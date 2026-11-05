@@ -168,7 +168,7 @@ for i,(name,m,typ) in enumerate(methods,6):
   elif name=='EV/FCFF':f=f'=Base!{L}31'
   elif name=='P/E':f=f'=Base!{L}28-Base!{L}62*(1-{R["tax"]})'
   elif name=='P/FCFE':f=f'=Base!{L}64'
-  else:f=f'=Base!{L}28-Base!{L}62*(1-{R["tax"]})+Base!{L}23*({R["da"]}+{R["rou_da_proxy"]})/{R["revenue"]}'
+  else:f=f'=Base!{L}28-Base!{L}62*(1-{R["tax"]})+Base!{L}23*({R["da"]}+{R["rou_da_proxy"]})/{R["revenue"]}+.045*(Base!{L}23-'+(R["revenue"] if y==1 else f'Base!{c(y+3)}23')+')'
   put(sn,f'{c(j)}{i}',f)
   bridge=f'+Base!D46+Base!D47-Base!D48-Base!D49' if typ=='enterprise' else '-Base!D49'
   discount=f'Base!{L}33' if typ=='enterprise' else f'Base!{L}66'
