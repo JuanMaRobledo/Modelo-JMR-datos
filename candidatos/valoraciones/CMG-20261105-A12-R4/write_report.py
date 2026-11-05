@@ -249,5 +249,47 @@ El inverso exige comparables constantes≈{pct(data['inverse']['constant_comps_n
 
 AISLAMIENTO=OK. Se preservó la publicación anterior y su fotografía en Archivo/CMG. La nueva copia y el auxiliar están en Análisis/CMG. Se entregan investigación, cuatro historias, proyecciones, sensibilidades, comparación y pruebas como candidato. **No se afirma que el proceso integral haya quedado aprobado.** La orden de preparar PR de publicación estaba condicionada a superar todos los controles y esa condición aún no se cumple. No se solicitó autorización para fusionar porque no hay un resultado publicable que aprobar.
 '''
+close=json.loads((P/'closure_results.json').read_text())
+text=text.replace('El OCF futuro aún necesita conciliar capital de trabajo y SBC con CFO contable.','El OCF económico normalizado incorpora ahora ΔNWC, con NWC/ventas de−4,5%, y conserva SBC como costo sin añadirla otra vez. No equivale a CFO GAAP: usa amortización ROU estimada y excluye movimientos fiscales transitorios; su múltiplo necesita anclas homogéneas.')
+text=text.replace('El salto44,3% en reinversión requiere una transición económica mejor probada y se conserva como reserva material, con sensibilidad de erosión adicional.','El salto44,3% se contrasta al cierre con transiciones graduales de cinco y diez años, que elevan el valor a24,57–24,80. Su impacto es menor que el de extinguir por completo la ventaja competitiva.')
+text=text.replace('3. Cerrar la duración del exceso de ROIC y el cambio de reinversión10→11. El Base14% perpetuo es una hipótesis condicionada; el valor20,69–21,14 con ventaja finita es material.','3. La duración del exceso de ROIC es un riesgo económico explícito: Base14% perpetuo frente a20,69–21,14 por acción con ventaja finita. La transición10→11 ya se probó en cinco y diez años; no se confunde la incertidumbre de la tesis con un error aritmético.')
+text+='''
+
+## 13. Cierre adicional reproducible — 5 de noviembre de 2026
+
+El cierre no cambia el Base ni lo promueve a resultado aprobado. Añade la pestaña independiente **Cierre JMR** al auxiliar; la copia IA conserva sus51 pestañas. El auxiliar tiene11, porque no es la plantilla oficial.
+
+### Arrendamientos: residuos visibles
+
+Pasivo final = pasivo inicial + altas estimadas + interés estimado − pagos + residual. Las altas ROU se usan como proxy de altas de obligaciones; pueden diferir por incentivos, anticipos y modificaciones. El residual no se atribuye a una causa no verificada.
+
+'''+table(['Puente LTM, USD M','Pasivo lease','Activo ROU'],[
+['Saldo inicial Sep25','4.980,117','4.385,099'],
+['Altas ROU; proxy de altas de pasivo',f(d['lease_add'],3),f(d['lease_add'],3)],
+['Interés estimado / bajas',f(d['lease_interest_proxy'],3),'−9,194'],
+['Pagos / amortización estimada','−'+f(d['lease_cash'],3),'−'+f(d['rou_da_proxy'],3)],
+['Residual sin clasificación probada',f(close['lease_liability_residual'],3),f(close['rou_residual'],3)],
+['Saldo observado Sep26',f(d['lease'],3),f(RAW['rou'],3)]])+'''
+
+Los residuos equivalen al0,55% del pasivo final y−0,12% del ROU. La proximidad del puente no valida por sí sola el interés ni la amortización estimados: errores en componentes pueden compensarse. El límite material permanece en la identificación de altas por aperturas/renovaciones y la senda futura de contratos; no en ocultar estos residuos mediante una partida inventada.
+
+### Transición terminal sin salto inmediato
+
+La rentabilidad marginal implícita en financiar el crecimiento estable con la inversión del año10 es NOPAT10×g/reinversión10 =19,425%. En dos extensiones JMR se conserva el pronóstico de los diez años y se hace converger ese retorno hacia14% durante cinco o diez años adicionales. La primera reinversión crece4%, acompasada con el NOPAT; después aumenta a medida que cae el rendimiento marginal. Al terminar cada transición se aplica la identidad estable con14%.
+
+'''+table(['Transición después año10','Valor / acción','Incremento frente Base'],[[str(x['years'])+' años',f(x['value'],6),pct(x['value']/b['value']-1)] for x in close['transition']])+'''
+
+Ambas conservan14% después de la transición. Son diferentes de extinguir el exceso de retorno hasta WACC. La selección Base exige que marca, productividad y ejecución permitan sostener retornos marginales superiores al costo de capital; si no ocurre, la alternativa de ventaja finita resulta más pertinente. No se atribuye esta selección a Damodaran.
+
+### OCF y cinco múltiplos
+
+Se corrigieron los tres denominadoresFY+1/+2/+3 de P/OCF para restar ΔNWC. Fórmula normalizada: NOPAT−interés financiero×(1−tasa)+D&A física+amortización ROU−ΔNWC. NWC=−4,5% de ventas; el crecimiento libera ese capital de trabajo en esta hipótesis. SBC sigue en gastos y no se suma al flujo normalizado. Las cinco matrices permanecen calculadas y sus centros concilian con cada salida propia. La corrección no aporta por sí sola anclas históricas comparables ni aprueba los cinco múltiplos.
+
+### Evidencia de este cierre
+
+`close_review.py` genera el puente y las dos transiciones, `closure_results.json` conserva el cálculo independiente y `closure_native.json` la lectura de fórmulas y valores de Google Sheets. `verify_close.py` contrasta los resultados y el libro auxiliar exportado. Los nuevos diagnósticos se agregan a las29 comprobaciones anteriores; no se presentan como suite oficial de publicación.
+
+El expediente queda **entregado para revisión, con promoción bloqueada**. No se abrió un PR de publicación ni se fusionó o desplegó. Para aprobar la integración se necesitan una solución autorizada y comprobada al defecto de la plantilla, conciliación completa del recast, cierre económico de anclas de múltiplos y los controles oficiales con la historia financiera exigida. La publicación anterior permanece vigente.
+'''
 (P/'CMG_R4_ANALISIS_NIVEL_1_2.md').write_text(text,encoding='utf8')
 print(len(text),'chars',len(text.split()),'words')
