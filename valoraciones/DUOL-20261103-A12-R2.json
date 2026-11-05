@@ -1274,5 +1274,714 @@
     "nota": "Informativo: mismo motor y supuestos que el DCF FCFF; solo añade la deuda (endeudamiento neto con razón deuda/valor constante, intereses y ahorro fiscal) y descuenta al costo del patrimonio. No sustituye el valor principal, no lleva MOS y el ponderado FCFF/FCFE no entra en el valor principal. Con supuestos coherentes FCFE ≈ FCFF; una diferencia grande señala incoherencia entre deuda, Kd, pesos y WACC, no un valor alternativo.",
     "revisionId": "DUOL-20261103-A12-R2",
     "hojaId": "1_-Rxwq04iuXvS1FNpYuwlaAkGEeBxUsuyblIZAx_Oqc"
+  },
+  "historiasNumeros": {
+    "estado": "INFORMATIVO",
+    "fuente": "'Escenarios e historias'!A104:N238",
+    "tam": {
+      "valor": "N/D",
+      "fecha": "2024-2026 (solo estimaciones secundarias)",
+      "fuente": "N/D: no hay un TAM en dólares de fuente primaria. Duolingo solo publica personas (más de 2.000 M aprendiendo un idioma, investors.duolingo.com). Estimaciones secundarias no conciliadas: US$220.000 M (Morgan Stanley, juegos + educación), US$115.000 M (aprendizaje de idiomas directo al consumidor) y US$64.000-98.000 M (mercado global de idiomas 2024). Con esas cifras, los ingresos del año 10 serían ~1-7 % del mercado según historia; no se elige una para no forzar la prueba «posible».",
+      "crecimiento": null,
+      "fuenteCrecimiento": "N/D: sin fuente primaria del crecimiento del mercado."
+    },
+    "industria": "Software (Internet) (EE. UU.) · Software (Internet) (global)",
+    "historias": {
+      "base": {
+        "nombre": "Base",
+        "titulo": null,
+        "probabilidad": 0.4,
+        "dcf": 139.10868578744447,
+        "tipo": "Alto crecimiento",
+        "historia": "Duolingo es la aplicación de idiomas más usada del mundo y ya es rentable: su motor es un hábito diario gratuito (64,9 M de usuarios diarios, +29 %) que se monetiza por suscripción (Super y Max), publicidad, Duolingo English Test y compras en la app. En la Base, la monetización sigue a los usuarios con rezago (ingresos +14 % frente a DAU +29 %): los ingresos crecen ~14 % anual en los años 1-5 y se desaceleran a 4 %, el margen operativo sube de 23 % a 28 % por apalancamiento operativo con I+D y SBC disciplinadas, y la reinversión es baja (ventas/capital 1,9 → 2,3) porque el producto es digital. El riesgo es que la IA abarate a los competidores y suba el costo de servir; se refleja en flujos, no en la tasa.",
+        "estado": "COMPLETA",
+        "senalesRevisar": 3,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.14858425230949313,
+            "anios2a5": 0.14124050664270293,
+            "anios6a10": 0.07148129752990684,
+            "terminal": 0.04,
+            "vinculo": "14,3 % anual en 1-5: suscripciones y publicidad siguen a los DAU con rezago (ingresos +14 % vs DAU +29 % en 3T26); desaceleración a 4 % cuando la base de pago madura."
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.23,
+            "anios2a5": 0.28,
+            "anios6a10": 0.28,
+            "terminal": 0.28,
+            "vinculo": "23 % → 28 %: apalancamiento operativo de una plataforma digital; el margen EBITDA ajustado ya fue 25-29 % antes del mayor gasto en IA de 2026."
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.24,
+            "anios2a5": 0.24,
+            "anios6a10": 0.25,
+            "terminal": 0.25,
+            "vinculo": "24 % → 25 %: tasa efectiva actual converge a la marginal; sin beneficios fiscales extraordinarios."
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 1.9,
+            "anios2a5": 1.9,
+            "anios6a10": 2.3,
+            "terminal": 0.6868131868131876,
+            "vinculo": "1,9 → 2,3: negocio digital con poco capital por dólar de ingreso; el capital extra va a contenido e IA."
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.3078225464214209,
+            "anios2a5": 0.3616321359126518,
+            "anios6a10": 0.38161768253515743,
+            "terminal": 0.15,
+            "vinculo": "15 % terminal sobre un costo de capital de 9,5 %: ventaja moderada y duradera (marca, hábito, datos de aprendizaje y distribución gratuita), no la rentabilidad actual de 30-38 %."
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10493029571598081,
+            "anios2a5": 0.10493029571598081,
+            "anios6a10": 0.095,
+            "terminal": 0.095,
+            "vinculo": "10,5 % → 9,5 %: riesgo sistemático de tecnología de consumo; común a las cuatro historias (§2)."
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": "No aplica en la Base: empresa rentable con caja neta; el riesgo de IA va en las historias, no en fracaso."
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.28,
+            "referencia": 0.03686141997593261,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.15,
+            "referencia": 0.03434780196741558,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 1.9,
+            "referencia": 1.350096770203276,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.14270548981708586,
+            "referencia": 0.291795,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.6276155349051248,
+            "referencia": null,
+            "senal": "ALTO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": "Con reserva",
+            "porque": "TAM N/D. Con las estimaciones secundarias, US$3.253 M de ingresos en el año 10 serían ~3-5 % del mercado de idiomas: posible, pero sin una cifra primaria que lo confirme."
+          },
+          "plausible": {
+            "juicio": "Con reserva",
+            "porque": "Margen 28 % y ROIC 15 % superan con holgura a Software (Internet) (3,7 % y 3,4 %), un promedio deprimido por empresas sin utilidades. Lo sostienen la marca, el hábito y la distribución gratuita; la propia historia de Duolingo (EBITDA ajustado 25-29 %) es la evidencia."
+          },
+          "probable": {
+            "juicio": "Sí",
+            "porque": "Es la continuidad de lo observado en 3T26: usuarios crecen y la monetización los sigue más despacio. No exige un cambio de modelo ni una mejora que aún no se vea."
+          }
+        },
+        "disparadores": [
+          {
+            "tipo": "Ruptura",
+            "senal": "Suscriptores de pago +5 % o menos interanual durante dos trimestres seguidos",
+            "umbral": "Crecimiento ≤ 5 %",
+            "efecto": "La conversión deja de seguir a los usuarios: la Base pasa a parecerse a la Conservadora (ingresos ~8 %, margen 23,5 %)."
+          },
+          {
+            "tipo": "Cambio",
+            "senal": "Margen EBITDA ajustado por costo de IA (cómputo por sesión) por debajo de 22 % dos trimestres",
+            "umbral": "< 22 %",
+            "efecto": "El apalancamiento operativo no llega: el margen objetivo baja de 28 % y la Base pierde valor."
+          },
+          {
+            "tipo": "Desplazamiento",
+            "senal": "Bookings creciendo al menos 20 % interanual con DAU estables o al alza",
+            "umbral": "Bookings ≥ 20 %",
+            "efecto": "La monetización alcanza a los usuarios: la historia se desplaza hacia la Optimista."
+          }
+        ],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 3253.269408664558,
+          "crecimiento10Modelo": 0.10652047469703829,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "conservador": {
+        "nombre": "Conservadora",
+        "titulo": null,
+        "probabilidad": 0.25,
+        "dcf": 92.89034985158617,
+        "tipo": "Crecimiento maduro",
+        "historia": "Los usuarios siguen creciendo, pero la conversión a pago y el precio se normalizan: Max y las funciones de IA no elevan el ingreso por usuario lo suficiente y la publicidad depende de regiones con menor precio. Los ingresos crecen ~8 % anual en los años 1-5, el margen se queda en 23,5 % (cerca del actual) porque el costo de IA absorbe la escala, y la reinversión es menos eficiente (ventas/capital 1,5 → 2,0). La empresa sigue siendo rentable y con ventaja, pero de una empresa madura.",
+        "estado": "COMPLETA",
+        "senalesRevisar": 3,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.08823979483952393,
+            "anios2a5": 0.0818850385245713,
+            "anios6a10": 0.054267964897969145,
+            "terminal": 0.04,
+            "vinculo": "8,3 % anual en 1-5: DAU crecen, pero conversión y ARPU se estancan; la brecha DAU-ingresos de 3T26 se vuelve permanente."
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.23,
+            "anios2a5": 0.235,
+            "anios6a10": 0.235,
+            "terminal": 0.235,
+            "vinculo": "23,5 %: el costo de cómputo de IA y la competencia absorben el apalancamiento operativo; margen cerca del LTM (~23 %)."
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.24,
+            "anios2a5": 0.24,
+            "anios6a10": 0.25,
+            "terminal": 0.25,
+            "vinculo": "24 % → 25 %: igual que la Base; la tasa no depende de la historia."
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 1.5,
+            "anios2a5": 1.5,
+            "anios6a10": 2,
+            "terminal": 0.627386797599563,
+            "vinculo": "1,5 → 2,0: más gasto en contenido e IA por dólar de ingreso nuevo."
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.2932846272693208,
+            "anios2a5": 0.2678805393110856,
+            "anios6a10": 0.27678075151055115,
+            "terminal": 0.115,
+            "vinculo": "11,5 % terminal, apenas sobre el 9,5 % de costo de capital: la ventaja se erosiona parcialmente."
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10493029571598081,
+            "anios2a5": 0.10493029571598081,
+            "anios6a10": 0.095,
+            "terminal": 0.095,
+            "vinculo": "10,5 % → 9,5 %: común a las cuatro historias (§2)."
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": "No aplica: la historia es de menor crecimiento, no de fracaso."
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.235,
+            "referencia": 0.03686141997593261,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.115,
+            "referencia": 0.03434780196741558,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 1.5,
+            "referencia": 1.350096770203276,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.08315301415235754,
+            "referencia": 0.291795,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.3658334022472691,
+            "referencia": null,
+            "senal": "MODERADO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": "Sí",
+            "porque": "Con ingresos de US$2.296 M en el año 10, la participación sería ~2-4 % con cualquiera de las estimaciones secundarias."
+          },
+          "plausible": {
+            "juicio": "Sí",
+            "porque": "Margen y ROIC sobre la industria por la misma ventaja de marca y hábito, pero ya cerca de lo observado hoy; ventas/capital 1,5 apenas por encima de la industria (1,35)."
+          },
+          "probable": {
+            "juicio": "Con reserva",
+            "porque": "Requiere que la brecha entre usuarios e ingresos no se cierre; 3T26 la muestra, pero un trimestre no prueba que sea permanente."
+          }
+        },
+        "disparadores": [
+          {
+            "tipo": "Desplazamiento",
+            "senal": "Ingresos creciendo menos de 10 % interanual dos trimestres",
+            "umbral": "< 10 %",
+            "efecto": "Se confirma la Conservadora como historia central: sube su probabilidad frente a la Base."
+          },
+          {
+            "tipo": "Cambio",
+            "senal": "Ingreso por usuario diario (ingresos / DAU) cayendo más de 10 % interanual",
+            "umbral": "< −10 %",
+            "efecto": "La monetización empeora: la Conservadora se acerca a la Disrupción."
+          },
+          {
+            "tipo": "Ruptura",
+            "senal": "Suscriptores de pago creciendo al menos 18 % interanual dos trimestres",
+            "umbral": "≥ 18 %",
+            "efecto": "La conversión no se normaliza: la Conservadora pierde sustento."
+          }
+        ],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 2295.7764655483993,
+          "crecimiento10Modelo": 0.06861289712575869,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "optimista": {
+        "nombre": "Optimista",
+        "titulo": null,
+        "probabilidad": 0.25,
+        "dcf": 195.81887986376282,
+        "tipo": "Alto crecimiento",
+        "historia": "La IA juega a favor de Duolingo: Max y la práctica conversacional elevan la conversión y el precio, la expansión internacional y los nuevos cursos (matemáticas, música, ajedrez) amplían el uso, y el DET crece con el reconocimiento institucional. Los ingresos por segmento (filas 96-101) crecen ~19 % anual en los años 1-5, el margen sube a 31 % con escala y el capital se usa con más eficiencia (2,3 → 2,7). La ventaja se fortalece: ROIC terminal 19 %.",
+        "estado": "COMPLETA",
+        "senalesRevisar": 3,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.1906462352003815,
+            "anios2a5": 0.19397620079625355,
+            "anios6a10": 0.08695008549016325,
+            "terminal": 0.04,
+            "vinculo": "19,3 % anual en 1-5, armado por segmentos: suscripciones +20-23 %, publicidad +18-25 %, DET +8-12 %, compras +8-12 % (filas 96-101)."
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.23,
+            "anios2a5": 0.31,
+            "anios6a10": 0.31,
+            "terminal": 0.31,
+            "vinculo": "23 % → 31 %: la escala diluye el costo de IA y de contenido; exige que la inferencia se abarate más rápido que el uso."
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.24,
+            "anios2a5": 0.24,
+            "anios6a10": 0.25,
+            "terminal": 0.25,
+            "vinculo": "24 % → 25 %: igual que la Base."
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 2.3,
+            "anios2a5": 2.3,
+            "anios6a10": 2.7,
+            "terminal": 0.7857733664185298,
+            "vinculo": "2,3 → 2,7: el producto crece con poco capital adicional."
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.3179559328546168,
+            "anios2a5": 0.45246892769233443,
+            "anios6a10": 0.4892876695547447,
+            "terminal": 0.19,
+            "vinculo": "19 % terminal: ventaja que se refuerza con datos de aprendizaje y efectos de red del hábito."
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10493029571598081,
+            "anios2a5": 0.10493029571598081,
+            "anios6a10": 0.095,
+            "terminal": 0.095,
+            "vinculo": "10,5 % → 9,5 %: común a las cuatro historias (§2)."
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": "No aplica."
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.31,
+            "referencia": 0.03686141997593261,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.19,
+            "referencia": 0.03434780196741558,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 2.3,
+            "referencia": 1.350096770203276,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.1933094634570347,
+            "referencia": 0.291795,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.7528155943562749,
+            "referencia": null,
+            "senal": "ALTO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": "Con reserva",
+            "porque": "US$4.340 M en el año 10 serían ~4-7 % del mercado de idiomas secundario; posible, sin TAM primario."
+          },
+          "plausible": {
+            "juicio": "Con reserva",
+            "porque": "Margen 31 % y ROIC 19 % muy por encima de la industria: exige que la IA sea ventaja propia y no un costo; aún sin evidencia en 3T26."
+          },
+          "probable": {
+            "juicio": "Con reserva",
+            "porque": "Hoy los ingresos crecen la mitad que los usuarios; la historia necesita que esa brecha se cierre, algo que todavía no se observa."
+          }
+        },
+        "disparadores": [
+          {
+            "tipo": "Desplazamiento",
+            "senal": "Bookings de suscripción creciendo al menos 25 % interanual dos trimestres",
+            "umbral": "≥ 25 %",
+            "efecto": "La monetización acelera: sube la probabilidad de la Optimista."
+          },
+          {
+            "tipo": "Cambio",
+            "senal": "Margen EBITDA ajustado de vuelta sobre 29 % con Max en expansión",
+            "umbral": "> 29 %",
+            "efecto": "La IA resulta palanca de margen y no costo: el 31 % deja de ser una apuesta."
+          },
+          {
+            "tipo": "Ruptura",
+            "senal": "Crecimiento de DAU por debajo de 15 % interanual",
+            "umbral": "< 15 %",
+            "efecto": "Sin usuarios nuevos la Optimista pierde su motor: vuelve hacia la Base."
+          }
+        ],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 4340.4915460450975,
+          "crecimiento10Modelo": 0.1388888546828635,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "disrupcion": {
+        "nombre": "Disrupción",
+        "titulo": null,
+        "probabilidad": 0.1,
+        "dcf": 56.93693710135458,
+        "tipo": "Declive",
+        "historia": "Los tutores de IA generalistas, gratuitos o incluidos en asistentes, se vuelven suficientes para aprender idiomas: el hábito diario de Duolingo pierde fuerza, la retención y la disposición a pagar caen y Max no compensa. Los ingresos se estancan (CAGR −0,5 % en 1-5, crecimiento terminal 0 %), el margen cae a 16 % porque hay que gastar más para retener y el capital rinde menos (1,3 → 1,7). La empresa sobrevive con caja, pero vale menos que hoy sin crecer.",
+        "estado": "COMPLETA",
+        "senalesRevisar": 2,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.06718515868303498,
+            "anios2a5": -0.021820005373709872,
+            "anios6a10": -0.012952615023695713,
+            "terminal": 0,
+            "vinculo": "−0,5 % anual en 1-5 y 0 % terminal: retención y conversión caen frente a tutores de IA más baratos."
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.23,
+            "anios2a5": 0.16,
+            "anios6a10": 0.16,
+            "terminal": 0.16,
+            "vinculo": "16 %: más gasto en producto y marketing para defender el hábito; precios bajo presión."
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.24,
+            "anios2a5": 0.24,
+            "anios6a10": 0.25,
+            "terminal": 0.25,
+            "vinculo": "24 % → 25 %: igual que las demás."
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 1.3,
+            "anios2a5": 1.3,
+            "anios6a10": 1.7,
+            "terminal": null,
+            "vinculo": "1,3 → 1,7: reinvertir rinde menos ingreso nuevo en un mercado que se comoditiza."
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.28821223767376847,
+            "anios2a5": 0.16001712487330194,
+            "anios6a10": 0.14794631258982838,
+            "terminal": 0.12,
+            "vinculo": "12 % terminal: ventaja residual de marca y comunidad, apenas sobre el costo de capital."
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10493029571598081,
+            "anios2a5": 0.10493029571598081,
+            "anios6a10": 0.095,
+            "terminal": 0.095,
+            "vinculo": "10,5 % → 9,5 %: común a las cuatro historias (§2); el riesgo de la disrupción está en los flujos."
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": "0 %: no se usa. Duolingo tiene caja neta y genera flujo; la disrupción ya está en crecimiento y margen, y sumarle fracaso castigaría dos veces el mismo riesgo (§2)."
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.16,
+            "referencia": 0.03686141997593261,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.12,
+            "referencia": 0.03434780196741558,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 1.3,
+            "referencia": 1.350096770203276,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": -0.004633599576930103,
+            "referencia": 0.291795,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": -0.3994863759679479,
+            "referencia": null,
+            "senal": "NEGATIVO: crecer destruye valor"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": "Sí",
+            "porque": "Ingresos del año 10 (US$1.082 M) menores que los actuales en términos reales; nada que pruebe contra el mercado."
+          },
+          "plausible": {
+            "juicio": "Sí",
+            "porque": "Margen 16 % y ROIC 12 % todavía sobre la industria, coherentes con una marca que conserva clientes fieles."
+          },
+          "probable": {
+            "juicio": "No",
+            "porque": "Probabilidad 10 %: requiere que la IA externa reemplace el hábito, algo que en 3T26 no se ve (DAU +29 %). Es la cola de riesgo, no la historia probable."
+          }
+        },
+        "disparadores": [
+          {
+            "tipo": "Desplazamiento",
+            "senal": "Crecimiento de DAU negativo interanual",
+            "umbral": "< 0 %",
+            "efecto": "La pérdida de hábito empieza: la Disrupción gana probabilidad a costa de la Conservadora."
+          },
+          {
+            "tipo": "Cambio",
+            "senal": "Retención o tasa de abandono de suscriptores empeorando dos trimestres (publicada en carta a accionistas)",
+            "umbral": "Deterioro 2 trimestres",
+            "efecto": "Confirma el mecanismo de la historia antes de que se vea en ingresos."
+          },
+          {
+            "tipo": "Ruptura",
+            "senal": "Lanzamiento de un tutor de idiomas gratuito de un gran asistente de IA con adopción masiva",
+            "umbral": "Anuncio + adopción medible",
+            "efecto": "Pone a prueba el foso de marca y hábito; revisar todas las historias."
+          }
+        ],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 1082.2569413186254,
+          "crecimiento10Modelo": -0.008801834832777633,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      }
+    },
+    "completas": 4,
+    "revisionId": "DUOL-20261103-A12-R2",
+    "hojaId": "1_-Rxwq04iuXvS1FNpYuwlaAkGEeBxUsuyblIZAx_Oqc"
   }
 }

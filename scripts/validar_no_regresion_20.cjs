@@ -11,7 +11,8 @@ const assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const exists=p=>fs.existsSync(path.join(root,p));
-const ALLOWED_NEW_FIELDS=new Set(['descuentoMultiples','sensibilidadMultiples','dcfFCFE']);
+// historiasNumeros (REGLAS v31-v32): copia informativa de la sección historias → números; no cambia DCF, MOS ni probabilidades.
+const ALLOWED_NEW_FIELDS=new Set(['descuentoMultiples','sensibilidadMultiples','dcfFCFE','historiasNumeros']);
 function safeCore(v) {
   // El peso de cada método en `metodos` se deriva de descuentoMultiples (categoría de la hoja): puede cambiar al integrar pesos.
   // Cualquier otro campo de `metodos` sigue protegido.

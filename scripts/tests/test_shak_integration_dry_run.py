@@ -52,7 +52,7 @@ class ShakDryRun(unittest.TestCase):
         snap=load(DIR/"resultados_hoja.json")
         formulas=load(DIR/"formulas.json")
         original=load(DIR/"registro_antes.json")
-        active={k:v for k,v in load(ROOT/"valoraciones"/(REV+".json")).items() if k!="dcfFCFE"}  # dcfFCFE: informativo (REGLAS v28)
+        active={k:v for k,v in load(ROOT/"valoraciones"/(REV+".json")).items() if k not in ("dcfFCFE","historiasNumeros")}  # dcfFCFE e historiasNumeros: informativos (REGLAS v28, v31-v32)
         before=copy.deepcopy(original)
         body=json.dumps(snap["data"],ensure_ascii=False,sort_keys=True,default=str)
         self.assertEqual(hashlib.sha256(body.encode()).hexdigest(),snap["data_sha256"])
