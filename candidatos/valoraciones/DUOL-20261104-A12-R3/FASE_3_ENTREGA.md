@@ -1,114 +1,70 @@
-# DUOL · DUOL-20261104-A12-R3 · FASE_3 · CERRADA CON CONTROLES PENDIENTES
+# DUOL · DUOL-20261104-A12-R3 · FASE_3 · BLOQUEADA PARA PROMOCIÓN
 
-Fecha: 4-nov-2026 (Colombia). Método A-1.2; REGLAS v33; corte contable 30-sep-2026 y fuentes publicadas hasta 3-nov-2026. Estado: **CANDIDATO**, sin promoción. Ejecución: ChatGPT Work / Codex; identificador exacto de modelo y esfuerzo no expuestos por el entorno. No se declara auditoría independiente.
+Actualización: 5-nov-2026 UTC / 4-nov Colombia. Método A-1.2, reglas v33. Información hasta 4-nov-2026; contabilidad 30-sep-2026. Ejecutor Codex / ChatGPT Work; esfuerzo exacto no expuesto. AISLAMIENTO=OK. No es auditoría independiente.
 
-**AISLAMIENTO=OK.** La única valoración publicada sigue siendo DUOL-20261103-A12-R2, Base139,1086857874 y MOS90,4206457618. Se confirmó que su B35 no cambió.
+**Estado actual: CANDIDATO, publication_ready=false.** La revisión económica y las reparaciones descritas están aplicadas en la copia R3. La publicación solicitada no se ejecutó porque el puente de arrendamientos no está conciliado. Se retiró el cero no soportado de Input sheet!B78; la fórmula canónica B81 devuelve REVISAR y el DCF queda en blanco automáticamente. No se modificó esa fórmula para obtener el bloqueo.
 
-[Copia R3 de trabajo](https://docs.google.com/spreadsheets/d/1TdXRa1f1HL5JusQV3LDgEnb4GWKYXEbVd6lhQjGSqQA/edit?usp=drivesdk), en la misma carpeta DUOL que R2. Conserva las 62 pestañas heredadas, sin intentar compactarlas ni tocar plantillas. Es copia del modelo vigente para revisión de supuestos, no reconstrucción de F1.
+[Copia R3](https://docs.google.com/spreadsheets/d/1TdXRa1f1HL5JusQV3LDgEnb4GWKYXEbVd6lhQjGSqQA/edit) · [Respaldo anterior a reparaciones](https://docs.google.com/spreadsheets/d/1FGr0uQFMTBzfS_QJF3mDAqx7FDOiX0RkBtaZ1k245Rw/edit?usp=drivesdk) · [PR250](https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/250).
 
-**PASOS: 8/10 ejecutados completamente; 2/10 parciales (múltiplos y gate integral).** Los pasos 0–5, 7 y 8 de F3 tienen revisión/evidencia; 6 y 9 mantienen pendientes indicados abajo. Los juicios con reserva no se presentan como datos verificados.
+R2 continúa como única versión publicada. Se confirmó que Valuation output!B35 de R2 sigue en139,1086857874. No se cambió catálogo, análisis publicado, registro de vigencia, plantillas oficiales ni el motor global.
 
-## Resultado de la revisión
+**PASOS F3: 8/10 completos, 2/10 parciales (múltiplos y cadena integral). F4: publicación intentada por preparación y controles; no promovida.** No se presenta esta entrega como cierre completo de valoración ni como análisis Nivel1/2 actualizado publicado.
 
-| Resultado | R2 publicada | R3 candidata | Cambio |
+## Cálculo condicional preservado, no salida aprobada actual
+
+| Medida USD/acción | R2 publicada | R3 provisional anterior | Diagnóstico corregido antes del bloqueo |
 |---|---:|---:|---:|
-| DCF FCFF Base USD/acción | 139,1087 | 134,8958 | −3,0285 % |
-| Precio con MOS35% USD/acción | 90,4206 | 87,6823 | −3,0285 % |
-| CAGR de ingresos años 1–5 | 14,2705 % | 13,6378 % | −0,6328 pp |
-| Ingresos año 5, USD millones | 2.303,55 | 2.240,47 | −63,08 |
-| Ingresos año 10, USD millones | 3.253,27 | 3.090,56 | −162,71 |
+| DCF Base FCFF |139,1087|134,8958|106,9762|
+| Precio Base×0,65 |90,4206|87,6823|69,5345|
 
-Estas cifras mantienen las tasas y el puente financiero heredados mientras se cierran las reservas. **No son el resultado de una valoración completamente aprobada.** El precio128 del3-nov se conserva únicamente como referencia histórica del análisis y DCF inverso; no es cotización actual ni señal de inversión.
+El diagnóstico es una fotografía anterior a retirar B78=0. La salida vigente de la hoja R3 está bloqueada/en blanco. **106,9762 no es valor final aprobado ni una nueva cotización.** El precio128 usado por el expediente es histórico del3-nov, no precio actual.
 
-## De la historia a los supuestos
+## Cambios aplicados y su causa
 
-La carta Q3 anuncia el retiro de Max y Video Call en Super. La copia corrige las cuatro historias y elimina la dependencia de crecimiento por un nivel Max premium. También distingue margen EBIT económico de EBITDA ajustado y evita tratar crecimiento de DAU como crecimiento de ingresos. Fuentes primarias al final.
+| Palanca | Antes de este cierre | Después | Causa / soporte nativo |
+|---|---|---|---|
+| Crecimiento1–5 |13,6378%CAGR|Mismos motores explícitos; pequeño cambio de redondeo|Audiencia, conversión y ARPU permanecen como hipótesis; ingresos LTM exactos1182,296m. No extrapola DAU ni Max premium.|
+| Margen EBIT año1 |23% fijado|22,3024% por fórmula|Se restaura InputB28 enlazada al EBIT económico LTM. Objetivo28% se mantiene con reserva de cohortes I+D y escala.|
+| S/C marginal1–5 |1,9|1,9|Juicio conservado, no cociente promedio: TesisC66→InputB32. No se declara calibración histórica terminada.|
+| S/C6–10 |2,3|1,400643|Convergencia a SoftwareInternetGlobal, InputK28→TesisC73→InputB33; no sostener mejora de eficiencia sin barrera demostrada.|
+| Rf/ERP madura |4,91%/4,20% mezclados|5,29%/4,41%|Pareja mensualNYU1-nov, conforme§4. CountryequityB2 actualizado; fórmulas de ponderación conservadas.|
+| ERP inicial |4,20% directa|5,5295907%|K33 por geografíaFY2025: EEUU37,8005%, ROW62,1995%; ROW añade proxy1,80pp. Es estimación, no distribución observada por país.|
+| WACC inicial/terminal |10,4930%/9,50%|12,6376368%/9,70%|Detailed, beta global1,3370 reapalancada, pesos de mercado; terminal beta1=Rf+ERP madura. Igual para cuatro historias.|
+| ROIC nuevo terminal Base/C/D |15%/11,5%/12%|9,70% en las tres|Registro moatDUOL previo: sin ventaja defendible. Marca/hábito con bajos costes de cambio no acreditan exceso perpetuo. Override nativoN5:N7, fórmulaG preservada. Optimista19% sigue condicionada a ventaja futura, no es Base.|
+| Capital operativo |Incluía inversionesLP no operativas|InputB83=B82=110,120m|Excluir valor en libros del capital; sumar su valor económico una sola vez al patrimonio. No altera por sí solo los flujos proyectados.|
 
-La nueva Base usa crecimiento de suscripciones = (1 + crecimiento de audiencia) × (1 + mejora relativa de penetración) × (1 + monetización por pagador) − 1. Todos los motores futuros son juicios explícitos, no guía empresarial ni datos de cohortes. La penetración no se calcula dividiendo pagadores al cierre por MAU promedio; ambos períodos y conceptos son diferentes.
+No se ha probado una descomposición aditiva del cambio de precio: los supuestos interactúan. Se conserva respaldo nativo para repetir comparaciones aisladas. La clasificación competitiva es un juicio del analista, no una conclusión atribuida a Damodaran sobre DUOL.
 
-| Motor anual | Año1 | Año2 | Año3 | Año4 | Año5 | Juicio y contraevidencia |
-|---|---:|---:|---:|---:|---:|---|
-| Audiencia MAU | 13 % | 14 % | 12 % | 10 % | 8 % | Ancla Q3 +13%; mejora año2 por mayor uso, seguida de desaceleración. Más actividad diaria puede no atraer más pagadores. |
-| Penetración de pago, mejora relativa | 1 % | 1 % | 1 % | 1 % | 1 % | Hipótesis modesta, no +1pp. No hay serie de cohortes que la certifique. |
-| Monetización por pagador | 2 % | 2 % | 2 % | 2 % | 2 % | Hipótesis nominal de precio/mezcla; retiro de Max limita la evidencia de premiumización. |
-| Publicidad | 0 % | 8 % | 10 % | 8 % | 6 % | Año1 plano ante caída trimestral ligera; recuperación posterior es juicio. |
-| DET | 0 % | 2 % | 3 % | 3 % | 3 % | No supone una expansión fuerte del negocio de pruebas. |
-| IAP y otros | 0 % | 10 % | 10 % | 8 % | 5 % | Nuevas colecciones pueden ayudar; caída reciente impide dar el éxito por realizado. |
+## Reparación de fuentes y fórmulas
 
-En la copia, entradas y fórmulas del soporte están en `Tesis de Inversión y Supuestos!A49:H80`. `Escenarios e historias!C24:G27` conserva la estructura ingreso previo × (1+crecimiento), sustituyendo las tasas embebidas por referencias al soporte. No se escribieron resultados calculados sobre fórmulas DCF.
+1. Comparación contra plantillaIA vigente:8687 fórmulas inspeccionadas,98 ausentes/reemplazadas y37 distintas inicialmente. Se restauraron134 expresiones canónicas; B47 se mantiene como fórmula explícita de tasa madura. El panel de reinversión se recuperó, ampliando únicamente Supuestos Recomendados a60filas. No se eliminaron las62pestañas heredadas.
+2. Se restauraron fórmulas tributarias y puentes de preferentes de múltiplos. Los valores relativos no se certifican por coincidir sus centros.
+3. Sensibilidad v2 en copiaR3: en la primera matriz años1–10 mantienen curva original y solo cambia WACC terminal. Se agregan restricciones g≤Rf y WACC>g en los75bloques; no se cambió el motor DCF principal.
+4. Se reconstruyeron FY2025 y LTM de resultados/flujo de caja en Entradas históricas auxiliares!A32:H76, con tres entradas primarias y LTM=FY+9Mactual−9Mprevio. Las salidas en Income Statement y Cash Flow Statement son referencias/fórmulas nativas.
+5. CFO LTM435,753m; PPE28,728m más software11,537m; FCF395,488m. El anterior406,994m omitía software y mezclaba redondeos. Los componentes de CFO, CFI y CFF ahora concilian con sus totales y el movimiento de caja para FY2025,9M2025 y9M2026. FCF menosSBC238,892m es diagnóstico, no FCFE económico certificado.
+6. Intereses y otros no operativos se separaron; utilidad LTM145,737m, EBIT146,122m e I+D362,473m. El10-Q fue publicado4-nov: no se atribuye disponibilidad al3-nov.
 
-La proyección es una aproximación por motores con base LTM; los MAU trimestrales son ancla de juicio, no un modelo validado de ingresos reconocidos por cohorte. El rezago de bookings a ingresos debe comprobarse con próximas observaciones.
+## Controles y evidencia
 
-## Drivers Base anterior → nuevo
+| Control | Resultado y alcance |
+|---|---|
+| node verificar_cierre.mjs |APROBADO: DCF condicional reproduce106,9761673399;75celdas de las tres matrices reproducidas, incluidaterminal-only; identidades primarias CFO/CFI/CFF/caja y resultados pasan.|
+| diff_formulas_plantilla.py |APROBADO en captura previa a últimos ajustes de fuentes, por adaptador explícito de SOLOLECTURA:0 fórmulas→número/vacío sin declarar. Código original sin modificación. Alcance oficial primeras400filas por pestaña; no equivale a revisar las3600del motor de sensibilidad.|
+| R2 y catálogo |R2 B35 intacto139,1086857874; no promoción ni cambio de referencia.|
+| Control nativo de promoción |REVISAR enB81; cuatro historias PENDIENTE;B35 vacío tras retirar B78no soportado. Ver CONTROL_FINAL_NATIVO.json.|
+| Gates CLI completos |NOEJECUTADOS: no hay autenticación CLI/serviceaccount disponible; no se simula una consulta viva. El adaptador de captura solo se usó para el diff indicado.|
+| Render nativo / auditoría independiente |NOEJECUTADOS. No se emite dictamen VERIFICADO ni se afirma calidad visual completa.|
 
-| Driver | Anterior | Nuevo | Decisión / evidencia / celda |
-|---|---:|---:|---|
-| Crecimiento años1–5 | 14,2705% CAGR | 13,6378% CAGR | CAMBIAR; motores anteriores sustituidos por soporte explícito. EscenariosC29:G29. |
-| Margen año1 / objetivo | 23% /28% | 23% /28% | MANTENER CON RESERVA; LTM ajustado22,3% exige mejora de5,7pp, sin usar EBITDA ajustado como EBIT. InputB28, EscenariosD5. |
-| Convergencia del margen | 5 años | 5 años | MANTENER CON RESERVA; no se modifica fórmula; escala debe superar costesIA y remuneración. |
-| S/C1–5 /6–10 | 1,9 /2,3 | 1,9 /2,3 | RESERVA; falta ancla marginal plurianual contablemente homogénea. EscenariosE5:F5. |
-| WACC inicial /terminal | 10,4930% /9,5% | Sin cambio | RESERVA; revisar fecha/composición ERP y par mensual frente al dato diario. CostofcapitalB14, InputB47. |
-| g terminal | 4% | 4% | MANTENER; menor que Rf4,91% y WACC. |
-| ROIC terminal | 15% | 15% | RESERVA; inversión nueva distinta del promedio año10. No se aumenta para sostener precio. EscenariosG5. |
-| Probabilidades B/C/O/D | 40/25/25/10 | 40/22,5/22,5/15 | CAMBIAR a previa JMR de alto crecimiento: no hay ajuste válido de5pp que justifique el reparto anterior. EscenariosB5:B8; efecto Base/MOS=0. |
+## Bloqueos precisos que quedan
 
-Con las probabilidades corregidas, promedio condicionado C/B/O=139,9034. No es el valor principal ni la esperanza de todos los desenlaces. Conservadora92,8903; Optimista195,8189; Disrupción56,9369, todas conservadas numéricamente y sujetas a sus reservas. No se inventaron nuevos disparadores para justificar pesos.
+- **Leases, puente estructural:** InputB78 decía0 ya reconocido, pero10-Qp6 tiene84,216mLP y corriente agrupada en70,536m de accruedliabilities; el conversor descuenta el cronogramaFY2025. Hace falta conciliar mismo corte/perímetro, porción corriente y deuda reconocida contra balance, sin sumar otra vez pasivosASC842. No reemplazar el total por84,216LP. B78 queda pendiente yB81 bloquea.
+- **NOL:** origen111,199mFY2025 verificado; no hay saldo fiscalQ3 conciliado. No sumar72,425mestatales,76,419mcréditos ni todoDTA203,605m al mismo NOL; tienen otra naturaleza/límites. No afirmar que un estrésNOL0 acota todo el riesgo fiscal.
+- **CohortesI+D y reinversión:** el conversor usa gastoLTM y cohortesFY, con solapamiento de ventanas; reconstruir cohortesLTM homogéneas y reconciliar inversión marginal/prepagos. S/C1,9 y margen28% siguen siendo hipótesis, no datos auditados.
+- **Múltiplos:** FCFF histórico312,8m permanece como entrada heredada sin fórmula reproducible; las anclas por ciclo, P/E fiscalmente normalizado, tratamientoSBC y denominadores deben reconstruirse antes de certificar. Restaurar una fórmula canónica no convierte una utilidad reportada con beneficio fiscal en utilidad normalizada.
+- Ejecutar controles integrales sobreIDR3, con registro candidato explícito, y verificar app/preview solo después de resolverlos. No modificar el mapeo oficialR2 para hacer pasar una prueba de candidato.
 
-## Objeción fuerte y sensibilidad material
+## Archivos y fuentes
 
-La principal objeción es que más audiencia no produzca mejor penetración o monetización. En Google Sheets se pusieron temporalmente en cero ambos motores, se leyó el DCF y se restauraron los diez inputs a sus valores previos. Resultado nativo y cálculo independiente:120,2472, MOS78,1607, −10,8592% respecto a la candidata.
+CIERRE_REVISION.json y LECTURA_CONDICIONAL_NATIVA.json preservan el cálculo condicionado; CONTROL_FINAL_NATIVO.json demuestra el bloqueo vigente. verificar_cierre.mjs reproduce el alcance declarado. REVISION_SUPUESTOS.json, verificar_revision.mjs y FASE_3_ENTREGA_ANTES_CIERRE.md son fotografías históricas anteriores a este cierre: **no representan la salida actual**.
 
-| Prueba completa de diez años + terminal | DCF USD/acción | Impacto vs candidata |
-|---|---:|---:|
-| Margen objetivo26% | 127,0896 | −5,7869% |
-| Margen objetivo30% | 142,7020 | +5,7869% |
-| S/C1,5→2,0 | 132,1526 | −2,0336% |
-| ROIC terminal=WACC9,5% | 120,7681 | −10,4730% |
-| ROIC terminal11,5% | 127,4690 | −5,5056% |
-| WACC+0,5pp en toda la curva | 125,5015 | −6,9641% |
-| NOL0, solo alternativa inferior | 134,4203 | −0,3525% |
-
-Lag0 frente a lag1:134,9830 frente a134,8958 (+0,0647%), recalculando diez años y perpetuidad. Se mantiene lag1: no hay prueba causal que justifique cambiarlo por valor. No se modifica el selector nativo.
-
-DCF inverso al precio histórico128: delta aditivo común a las cinco tasas iniciales = −1,353320853pp; CAGR geométrico implícito12,2843%. Reconstruye128 con error<1e−10, manteniendo forma de trayectoria, transición6–10, reinversión y terminal. No usa crecimiento constante ni un factor sobre el valor.
-
-## Controles ejecutados y límites
-
-| Control | Resultado | Alcance |
-|---|---|---|
-| Reproducción independiente R2 | APROBADO |139,1086857874 exacto; no usa factor de calibración. |
-| Hoja R3 = cálculo independiente | APROBADO |134,8958020588; MOS87,6822713382. |
-| Motor Base preservado | APROBADO PARCIAL |194 fórmulas A1:M45 idénticas. No equivale a diff completo de62 pestañas contra maestra. |
-| Prueba nativa de motores y restauración | APROBADO |120,2472232149 con motores de monetización0; luego vuelve a134,8958020588. |
-| Tres matrices DCF5×5 | APROBADO ARITMÉTICO, RESERVA DE CONTRATO |75/75 celdas replicadas, error máximo1,42e−13; centros coinciden. Primera matriz desplaza WACC completo, no solo terminal. Columna g5% excede Rf4,91% sin marcar inválida. |
-| Cinco centros de múltiplos | APROBADO ARITMÉTICO |EV/EBITDA103,4877; EV/FCFF82,4804; P/E24,6528; P/FCFE18,9225; P/OCF20,0214. Centros=VP3. No certifica anclas ni denominadores. |
-| Candados nativos |15/15 muestran estado admitido |El archivo vigente de candados enumera15, aunque textos antiguos dicen18. Leer una etiqueta heredada no verifica sus fuentes ni sus premisas. |
-| Historias |4 COMPLETA; Base probableSí |Completitud estructural; reservas económicas quedan escritas. |
-| Tasas y puente financiero |PARCIAL |Fuentes recuperadas y alternativas cuantificadas; conciliaciones pendientes. |
-| `controles_todas.sh`, `diff_formulas_plantilla.py`, integridad y estados completos |NO EJECUTADOS como comandos oficiales |Se usaron lecturas nativas y verificaciones equivalentes acotadas. No se dispone en esta ejecución del repositorio/mapeo y autenticación CLI de Sheets del motor para ejecutar su cadena oficial sobre la copia. No se presume aprobado. |
-| Formato |VERIFICADO POR API |Área nueva con fórmulas, porcentajes, ajuste de texto, encabezados y altura de filas. No render Google ni inspección visual completa. |
-| Publicación / auditoría |NO EJECUTADAS |F3 no publica ni emite auditoría independiente. |
-
-El script `node verificar_revision.mjs` comprueba los resultados contra los valores nativos archivados en `REVISION_SUPUESTOS.json`. Es una comprobación aritmética reproducible, no una implementación de los gates oficiales de promoción.
-
-## Reservas que deben resolverse antes de F4
-
-1. **Tasas.** R2 usa Rf4,91% disponible al corte y ERP4,2%. NYU publica para1-nov ERP4,41% y Rf de su modelo5,29%, mientras FRED da4,91% para2-nov. Distinguir tasa usada por el modelo mensual de cotización diaria; elegir y documentar un corte coherente conforme §4, sin mezclar primas o escogerlo por precio. La pareja mensual aplicada como diagnóstico produce128,3038; cambiar solo terminal aRf+ERP heredados9,11% produce140,9072. Son alternativas materiales, no correcciones aplicadas. También falta conciliar la composición geográfica de la prima directa.
-2. **Margen, reinversión y persistencia.** Identificar referencias maduras equivalentes y el puente contable de margen28%; reconstruir inversión económica marginal con períodos homogéneos y justificarROIC15% frente aWACC9,5% y año10. Las sensibilidades muestran que estas hipótesis importan.
-3. **NOL.** Origen confirmado: el 10-K2025, nota9, reporta111,199m de pérdidas federales,72,425m estatales y76,419m de créditos fiscales. El saldo federal del modelo tiene fuente, pero aún falta el movimiento fiscal hasta30-sep-2026. No sumar las pérdidas estatales ni los créditos al mismo saldo: tienen jurisdicciones, tasas y límites diferentes. Tampoco añadir todo el activo fiscal diferido al patrimonio si sus beneficios ya están en los flujos. El casoNOL0 no prueba el límite superior. Se conserva111,199m provisionalmente.
-4. **Arriendos y opciones.** El cronograma del conversor coincide con compromisosFY2025, no con una actualización íntegraQ3. El 10-K reporta137,818m sin descontar y100,983m reconocidos:7,204m corrientes y93,779m no corrientes. Los105,061m del conversor descuentan aquel cronograma con otra tasa; la diferencia no demuestra por sí sola un error. Falta conciliar deuda corriente/largo plazo y cronograma al30-sep;84,216m de deuda no corrienteQ3 no es deuda total. La carta confirma50,8m diluidas con opciones/RSU/founder: no restar opciones además bajo esa representación. La nota de Input se corrigió para no afirmar que no existen opciones. Revisar representación económica y remuneración futura sin doble conteo.
-5. **Múltiplos.** Verificar anclas históricas/ciclo y normalizaciónEBIT/GAAP, impuestos ySBC. El cuadre de centros no acredita su pertinencia económica. Las mediasVP1–3 son distintas deVP3; no mezclarlas.
-6. **Mantenimiento técnico.** Corregir matrizWACCterminal/g y estados inválidos como mantenimiento separado con regresión; conciliar el control DisrupciónB92=58,9660 con motorH7=56,9369, asociado a tratamiento de liberación de capital. No se arreglaron fórmulas estructurales por iniciativa de esta revisión.
-
-**Siguiente ejecución:** resolver estas reservas sobre R3 con la misma información/corte; ejecutar cadena oficial contra el ID candidato sin apuntar por error aR2; actualizar registros y análisis únicamente con salidas nativas de esa revisión. R2 continúa como única referencia del catálogo hasta pasar promoción. La existencia de R3 no prueba publicación.
-
-## Fuentes primarias
-
-- [Carta Q3, publicada3-nov-2026](https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm): estrategia de suscripción, métricas y guía.
-- [10-Q30-sep-2026, notas3/5/8/9 y estados](https://www.sec.gov/Archives/edgar/data/1562088/000162828026069692/duol-20260930.htm): ingresos por línea, impuestos, SBC/derechos e inversiones.
-- [10-K2025, nota9 y arrendamientos](https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm): origen del NOL y fecha del cronograma de arrendamientos.
-- [FRED DGS10](https://fred.stlouisfed.org/series/DGS10/query/tables): dato2-nov4,91%, publicado3-nov; dato3-nov se publicó4-nov y no se introduce retroactivamente.
-- [Damodaran, tabla ERP mensual visible1-nov](https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm): par de inputs del modelo mensual; no se identifica con el rendimiento diario observado.
-- [Reglas y guía v33 del JMR](https://github.com/JuanMaRobledo/Modelo-JMR/blob/65f28001d3d94d2322b0742385b99f3e8ab846f3/docs/HISTORIAS_A_NUMEROS.md).
-
-Las cifras prospectivas, rangos y decisiones de este expediente son juicios del analista apoyados en esas fuentes, no previsiones publicadas por el emisor ni por Damodaran.
+Fuentes: [10-K2025](https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm), [10-Q4-nov2026 originaldel emisor](https://duolingo.gcs-web.com/static-files/f27581cd-cf47-4058-a316-2dcca04cfb00), [NYU ERP mensual](https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm), registro moat y plantilla del repositorio JMR-valuation consultados enmain. Datos monetarios enUSDmillones salvo precios poracción. Juicios de crecimiento, margen y riesgo diferenciados de hechos reportados.
