@@ -1397,5 +1397,638 @@
     "nota": "Informativo: mismo motor y supuestos que el DCF FCFF; solo añade la deuda (endeudamiento neto con razón deuda/valor constante, intereses y ahorro fiscal) y descuenta al costo del patrimonio. No sustituye el valor principal, no lleva MOS y el ponderado FCFF/FCFE no entra en el valor principal. Con supuestos coherentes FCFE ≈ FCFF; una diferencia grande señala incoherencia entre deuda, Kd, pesos y WACC, no un valor alternativo.",
     "revisionId": "EPAM-20261029-R1",
     "hojaId": "1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA"
+  },
+  "historiasNumeros": {
+    "estado": "INFORMATIVO",
+    "fuente": "'Escenarios e historias'!A104:N238",
+    "tam": {
+      "valor": null,
+      "fecha": null,
+      "fuente": null,
+      "crecimiento": null,
+      "fuenteCrecimiento": null
+    },
+    "industria": "Computer Services (EE. UU.) · Computer Services (global)",
+    "historias": {
+      "base": {
+        "nombre": "Base",
+        "titulo": "EPAM AI-native modernización y vuelta a crecimiento orgánico medio; mejora utilización talento sin márgenes de software",
+        "probabilidad": 0.5,
+        "dcf": 184.40853259047017,
+        "tipo": null,
+        "historia": null,
+        "estado": "PENDIENTE: 13 faltantes",
+        "senalesRevisar": 1,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.04,
+            "anios2a5": 0.06498233882317694,
+            "anios6a10": 0.054976302678791944,
+            "terminal": 0.04,
+            "vinculo": null
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.113,
+            "anios2a5": 0.124,
+            "anios6a10": 0.135,
+            "terminal": 0.135,
+            "vinculo": null
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.26796456305370225,
+            "anios2a5": 0.26796456305370225,
+            "anios6a10": 0.24999999999999994,
+            "terminal": 0.25,
+            "vinculo": null
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 1.65,
+            "anios2a5": 1.65,
+            "anios6a10": 2.15,
+            "terminal": 1.5194681861348525,
+            "vinculo": null
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.16793323917032207,
+            "anios2a5": 0.17529005009334792,
+            "anios6a10": 0.1975714364093782,
+            "terminal": 0.16,
+            "vinculo": null
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10015037733704044,
+            "anios2a5": 0.10015037733704044,
+            "anios6a10": 0.08999999999999998,
+            "terminal": 0.09,
+            "vinculo": null
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": null
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.135,
+            "referencia": 0.07409334745931717,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.16,
+            "referencia": 0.2634856323685177,
+            "senal": "OK"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 1.65,
+            "referencia": 5.189890691696159,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.0599383173356991,
+            "referencia": 0.2709984210526316,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.4836396486504033,
+            "referencia": null,
+            "senal": "MODERADO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": null,
+            "porque": null
+          },
+          "plausible": {
+            "juicio": null,
+            "porque": null
+          },
+          "probable": {
+            "juicio": null,
+            "porque": null
+          }
+        },
+        "disparadores": [],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 9819.774185805229,
+          "crecimiento10Modelo": 0.057454399532384404,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "conservador": {
+        "nombre": "Conservadora",
+        "titulo": "La automatización IA presiona tarifas y la compra de consultoría reduce retornos",
+        "probabilidad": 0.2,
+        "dcf": 126.24435408100459,
+        "tipo": null,
+        "historia": null,
+        "estado": "PENDIENTE: 13 faltantes",
+        "senalesRevisar": 1,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.02,
+            "anios2a5": 0.0374849395098098,
+            "anios6a10": 0.03399323572644608,
+            "terminal": 0.035,
+            "vinculo": null
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.113,
+            "anios2a5": 0.114,
+            "anios6a10": 0.115,
+            "terminal": 0.115,
+            "vinculo": null
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.26796456305370225,
+            "anios2a5": 0.26796456305370225,
+            "anios6a10": 0.24999999999999994,
+            "terminal": 0.25,
+            "vinculo": null
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 1.15,
+            "anios2a5": 1.15,
+            "anios6a10": 1.65,
+            "terminal": 1.3442554085276164,
+            "vinculo": null
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.16470375380166202,
+            "anios2a5": 0.15104057306953567,
+            "anios6a10": 0.1514024410080755,
+            "terminal": 0.12,
+            "vinculo": null
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10015037733704044,
+            "anios2a5": 0.10015037733704044,
+            "anios6a10": 0.08999999999999998,
+            "terminal": 0.09,
+            "vinculo": null
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": null
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.115,
+            "referencia": 0.07409334745931717,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.12,
+            "referencia": 0.2634856323685177,
+            "senal": "OK"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 1.15,
+            "referencia": 5.189890691696159,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.03396413620663741,
+            "referencia": 0.2709984210526316,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.2197489658295887,
+            "referencia": null,
+            "senal": "MODERADO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": null,
+            "porque": null
+          },
+          "plausible": {
+            "juicio": null,
+            "porque": null
+          },
+          "probable": {
+            "juicio": null,
+            "porque": null
+          }
+        },
+        "disparadores": [],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 7845.143301904679,
+          "crecimiento10Modelo": 0.03397868586417241,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "optimista": {
+        "nombre": "Optimista",
+        "titulo": "AI-native engineering premium eleva entregas, ingresos y rentabilidad de EPAM",
+        "probabilidad": 0.2,
+        "dcf": 248.70598589770538,
+        "tipo": null,
+        "historia": null,
+        "estado": "PENDIENTE: 13 faltantes",
+        "senalesRevisar": 1,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": 0.065,
+            "anios2a5": 0.09498282418252613,
+            "anios6a10": 0.06990653225850352,
+            "terminal": 0.04,
+            "vinculo": null
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.113,
+            "anios2a5": 0.1315,
+            "anios6a10": 0.15,
+            "terminal": 0.15,
+            "vinculo": null
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.26796456305370225,
+            "anios2a5": 0.26796456305370225,
+            "anios6a10": 0.24999999999999994,
+            "terminal": 0.25,
+            "vinculo": null
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 2.15,
+            "anios2a5": 2.15,
+            "anios6a10": 2.75,
+            "terminal": 1.6239316239316277,
+            "vinculo": null
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.1719700958811471,
+            "anios2a5": 0.2021581812103938,
+            "anios6a10": 0.24976435945200828,
+            "terminal": 0.19,
+            "vinculo": null
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10015037733704044,
+            "anios2a5": 0.10015037733704044,
+            "anios6a10": 0.08999999999999998,
+            "terminal": 0.09,
+            "vinculo": null
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": null
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.15,
+            "referencia": 0.07409334745931717,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.19,
+            "referencia": 0.2634856323685177,
+            "senal": "OK"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 2.15,
+            "referencia": 5.189890691696159,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": 0.08891947998143701,
+            "referencia": 0.2709984210526316,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": 0.6241580333819509,
+            "referencia": null,
+            "senal": "ALTO"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": null,
+            "porque": null
+          },
+          "plausible": {
+            "juicio": null,
+            "porque": null
+          },
+          "probable": {
+            "juicio": null,
+            "porque": null
+          }
+        },
+        "disparadores": [],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 12055.717080678844,
+          "crecimiento10Modelo": 0.07937114318276639,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      },
+      "disrupcion": {
+        "nombre": "Disrupción",
+        "titulo": "IA sustituye esfuerzo facturable, presión geográfica y rotación laboral",
+        "probabilidad": 0.1,
+        "dcf": 87.55654697282291,
+        "tipo": null,
+        "historia": null,
+        "estado": "PENDIENTE: 13 faltantes",
+        "senalesRevisar": 1,
+        "alerta": null,
+        "palancas": [
+          {
+            "palanca": "crecimiento",
+            "etiqueta": "Crecimiento de ingresos",
+            "anio1": -0.03,
+            "anios2a5": 0.004956279169803457,
+            "anios6a10": 0.020000000000000018,
+            "terminal": 0.02,
+            "vinculo": null
+          },
+          {
+            "palanca": "margen",
+            "etiqueta": "Margen operativo",
+            "anio1": 0.113,
+            "anios2a5": 0.099,
+            "anios6a10": 0.085,
+            "terminal": 0.085,
+            "vinculo": null
+          },
+          {
+            "palanca": "impuestos",
+            "etiqueta": "Tasa de impuestos",
+            "anio1": 0.26796456305370225,
+            "anios2a5": 0.26796456305370225,
+            "anios6a10": 0.24999999999999994,
+            "terminal": 0.25,
+            "vinculo": null
+          },
+          {
+            "palanca": "ventasCapital",
+            "etiqueta": "Ventas / capital (eficiencia de la reinversión)",
+            "anio1": 0.9,
+            "anios2a5": 0.9,
+            "anios6a10": 1.3,
+            "terminal": 1.3840830449827,
+            "vinculo": null
+          },
+          {
+            "palanca": "roic",
+            "etiqueta": "ROIC (terminal = el de la historia)",
+            "anio1": 0.15663004038001194,
+            "anios2a5": 0.13166271808230443,
+            "anios6a10": 0.11043704711193926,
+            "terminal": 0.09,
+            "vinculo": null
+          },
+          {
+            "palanca": "costoCapital",
+            "etiqueta": "Costo de capital (común a todas las historias, §2)",
+            "anio1": 0.10015037733704044,
+            "anios2a5": 0.10015037733704044,
+            "anios6a10": 0.08999999999999998,
+            "terminal": 0.09,
+            "vinculo": null
+          }
+        ],
+        "fracaso": {
+          "entrada": null,
+          "valor": 0,
+          "vinculo": null
+        },
+        "pruebas": [
+          {
+            "prueba": "posible",
+            "tipo": "Posible",
+            "indicador": "Participación del mercado en el año 10",
+            "historia": null,
+            "referencia": null,
+            "senal": "N/D: falta TAM"
+          },
+          {
+            "prueba": "plausibleMargen",
+            "tipo": "Plausible",
+            "indicador": "Margen operativo del año 10",
+            "historia": 0.085,
+            "referencia": 0.07409334745931717,
+            "senal": "REVISAR"
+          },
+          {
+            "prueba": "plausibleRoic",
+            "tipo": "Plausible",
+            "indicador": "ROIC terminal",
+            "historia": 0.09,
+            "referencia": 0.2634856323685177,
+            "senal": "OK"
+          },
+          {
+            "prueba": "plausibleVentasCapital",
+            "tipo": "Plausible",
+            "indicador": "Ventas / capital años 1-5",
+            "historia": 0.9,
+            "referencia": 5.189890691696159,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Crecimiento anual compuesto años 1-5",
+            "historia": -0.0021343307660570687,
+            "referencia": 0.2709984210526316,
+            "senal": "OK"
+          },
+          {
+            "prueba": "probableParticipacion",
+            "tipo": "Probable",
+            "indicador": "Participación año 10 / participación actual",
+            "historia": null,
+            "referencia": 1,
+            "senal": "N/D"
+          },
+          {
+            "prueba": "probableValorCrecimiento",
+            "tipo": "Probable",
+            "indicador": "Valor del crecimiento (% del valor operativo)",
+            "historia": -0.18207343179207158,
+            "referencia": null,
+            "senal": "NEGATIVO: crecer destruye valor"
+          }
+        ],
+        "juicios": {
+          "posible": {
+            "juicio": null,
+            "porque": null
+          },
+          "plausible": {
+            "juicio": null,
+            "porque": null
+          },
+          "probable": {
+            "juicio": null,
+            "porque": null
+          }
+        },
+        "disparadores": [],
+        "participacion": {
+          "objetivo": null,
+          "ingresos10Historia": null,
+          "crecimiento10Historia": null,
+          "ingresos10Modelo": 6135.448034637778,
+          "crecimiento10Modelo": 0.008872133929083148,
+          "brecha": null,
+          "senal": "N/D sin TAM o sin participación"
+        }
+      }
+    },
+    "completas": 0,
+    "revisionId": "EPAM-20261029-R1",
+    "hojaId": "1xLERy3OATaxV-HGQdpB4q_7amBEdeDnNfdCHLFPQXwA"
   }
 }
