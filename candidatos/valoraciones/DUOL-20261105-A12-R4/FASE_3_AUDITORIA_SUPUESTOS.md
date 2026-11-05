@@ -95,3 +95,39 @@ El motor original se perturbó **de forma secuencial** elevando exclusivamente `
 5. Tres centros de matrices DCF Base continúan OK al terminar, sin errores de fórmulas en el panel F3 inspeccionado. La perturbación del ROIC fue revertida a 9,7%. No se actualizaron catálogos ni expediente publicado, no se corrió CI integral ni se certificó F5.
 
 **Decisión:** mantener R4 como candidato F3 y **no publicar** todavía. Conservar el resultado FCFF base 111,44 como caso de ROIC nuevo = WACC mientras se evalúan los CAP finitos y se reconcilia Stories. Si se acepta económicamente una ventaja persistente después de t10, debe cambiarse explícitamente `Escenarios e historias!N5` con evidencia empresarial, no para acercarse a la cotización.
+
+
+## Anexo F3 (05-nov-2026): conciliación matemática Base Damodaran ↔ Stories — CERRADA
+
+**Artefacto verificado:** [DUOL R4 F3, puente de historias al DCF Damodaran](https://docs.google.com/spreadsheets/d/1axMcBSdmRdPCTCITvVTlgluRF8z_80V87Gs-opRvJW0/edit#gid=1948788435). **Copia aislada de prueba, NO PUBLICAR.** Se preservaron las hojas originales, el catálogo y la aplicación. Esta actualización es solo de fórmula/enlace y control técnico; no incorpora nuevos hechos económicos.
+
+### Problema y causa
+
+El DCF original Damodaran (`Valuation output`) usa un crecimiento compuesto constante en años 2–5, derivado de `Input sheet!B29`, mientras la hoja `Escenarios e historias!24:27` modelaba crecimientos anuales diferentes por suscripción, anuncios, DET y compras en app. Año 5 de ingresos coincidente pero años 2–4 distintos; a partir de allí, la convergencia años 6–10 se iniciaba desde otra tasa. El segundo bloque Base tenía su propio DCF y resultaba **US$109,359924888** vs **US$111,442667851** del FCFF original. Año10 ingresos historias US$3.090,5669 M vs FCFF original US$3.256,7596 M. `K5=LISTO` no certificaba equivalencia.
+
+### Corrección mínima sin alterar la plantilla original
+
+1. Se creó la pestaña `Puente Base Damodaran` (sheetId `1948788435`) con series **RAW** por segmento en filas5:8, raw total9 y crecimiento10, que dependen de las cinco hipótesis de crecimiento de `Tesis de Inversión y Supuestos!B55:F58`. Esto conserva exactamente la historia y las curvas independientes que sustentan la monetización; no se perdieron los datos.
+2. `Input sheet!B27` toma `'Puente Base Damodaran'!C10` (crecimiento1) y `B29` calcula CAGR2–5 `('Puente Base Damodaran'!G9/'Puente Base Damodaran'!C9)^(1/4)-1`. **La dependencia procede del RAW, NO del total normalizado**, evitando un ciclo `Valuation output` → gate `K5` → `Escenarios` → `Input`.
+3. En el puente, filas11:12 replican matemáticamente el crecimiento y los ingresos de `Valuation output` sin citar las celdas restringidas por el gate. La primera mitad usa CAGR de años2–5; años6–10 convergen linealmente al g terminal según el motor Damodaran.
+4. En el puente, filas13:17 se conserva cada mix relativo RAW, asignándolo proporcionalmente al ingreso canónico años0–5; años6–terminal mantiene la mezcla del año5 y acompaña la misma curva de crecimiento agregado. `Escenarios e historias!B24:M27` hace referencia a estas cuatro filas; `B28:M28` suma esos cuatro componentes. **La asignación por segmentos normalizados es técnica, no una previsión anual independiente de cada producto**. Se documentó explícitamente en notas nativas y en el puente.
+5. Las fórmulas originales de `Valuation output` no se cambiaron. Se compararon **730 celdas originales**, incluyendo años Base, terminal y bloques alternativos Conservadora/Optimista/Disrupción, contra la copia fuente: **cero cambios** de `userEnteredValue`. Los cuatro escenarios principales `Escenarios e historias!A5:N10` también permanecen sin editar.
+6. Las filas30:44 del segundo bloque Base recalculan ahora EBIT, NOPAT, reinversión, FCFF, WACC, valor operativo, patrimonio y precio usando los mismos insumos. No se reemplazaron por valores fijos ni se borró el cálculo propio: se ha validado la identidad de las ecuaciones.
+7. Nuevo control reproducible en `Puente Base Damodaran!B34:M46`: 12 períodos (año0–terminal), comparaciones de ingresos, EBIT, NOPAT, reinversión, FCFF, WACC, VP FCFF, terminal, valor operativo, patrimonio y valor por acción. Diferencias dentro de tolerancia **1e-6**, `B45:M45 = 12/12 OK` y `B46 = OK`. Ningún error de fórmula en áreas inspeccionadas.
+
+### Resultados exactos y prueba de sensibilidad causal
+
+| Variable | Antes | Después |
+|---|---:|---:|
+| DCF Base FCFF original (USD/acción) | 111,442667851 | **111,442667851** |
+| DCF Base Stories (USD/acción) | 109,359924888 | **111,442667851** |
+| Diferencia Base/Stories (USD/acción) | 2,082742963 | **0** |
+| Ventas año10 FCFF / Stories (USD M) | 3.256,7596 / 3.090,5669 | **3.256,7596 / 3.256,7596** |
+| Sensibilidad DCF 3 centros (Crecimiento/ROIC/WACC, según hoja) | 3 OK | **3 OK** |
+| Promedio condicionado de historias | 120,507217205 | **120,507217205** |
+
+**Prueba dinámica y reversibilidad:** Se redujeron temporalmente, en la copia exclusiva, las hipótesis de penetración pagadora relativa de **1,0% a 0,8% anual** y precio/mezcla de **2,0% a 1,5% anual**. El modelo RAW ajustó crecimiento1 14,1765%→13,4854%, CAGR años2–5 13,5035%→12,7924%, ambos motores Base se movieron simultáneamente a **US$108,8795729645**, `B46=OK`, `K5=LISTO` y sensibilidades 3/3 OK. Revertidas las diez celdas, ambos valores regresaron **exactamente** a US$111,442667851 (diferencia vs baseline = 0). Esto descarta que la conciliación se deba a referencias fijas o a forzar manualmente el precio.
+
+### Estado posterior
+
+**CERRADO**: divergencia numérica del **escenario Base** entre FCFF canónico original y segundo motor descriptivo. Pendientes antes de publicar: (a) evidencia para prima ROW y cómo converge terminalmente, (b) margen EBIT económico28%, (c) **restauración/reconciliación del método original en los otros tres escenarios** — que las sumas Base coincidan no demuestra igualdad de modelos alternativos, (d) auditoría de cinco múltiplos y las matrices5×5, (e) CI completo y auditoría económica separada. El ROIC marginal terminal Base sigue **9,7%=WACC**, sin subirlo por afinidad al precio de mercado; sensibilidades CAP adicionales permanecen disponibles en `F3 ROIC marginal y fade`. No se fusionó PR, no se cambió catálogo, ni se desplegó a producción.
