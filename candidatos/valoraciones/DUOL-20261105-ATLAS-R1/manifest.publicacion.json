@@ -14,7 +14,7 @@
     "no_reemplazar_revision_actual": true,
     "ultima_revision_publicada": "DUOL-20261103-A12-R2",
     "auditStatus": "EN_REVISION CON BLOQUEOS",
-    "motivo": "Faltan múltiplos nativos y anclas verificadas FY+3, calibración de WACC/ERP y g, fuentes cohortes I+D, lease ASC842, NOL y SBC."
+    "motivo": "Faltan 5 múltiplos FY+3 con comparables/anclas verificadas, 3ª matriz DCF, fuentes cohortes I+D y lease ASC842, NOL/SBC, recertificación beta/ERP/Rf y QA de app."
   },
   "fuentes": {
     "estados": "https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit",
@@ -24,15 +24,15 @@
     "secQ3": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm"
   },
   "dcfCandidatoNoCertificado": {
-    "valorBase": 108.7472956,
-    "mos35": 70.68574212,
-    "conservador": 69.05621877,
-    "optimista": 168.3179221,
-    "promedioCondicional": 113.717183,
-    "estresIA": 58.31308339,
+    "valorBase": 112.0094207,
+    "mos35": 72.80612345,
+    "conservador": 81.0897775,
+    "optimista": 157.3441295,
+    "promedioCondicional": 115.6131871,
+    "estresIA": 68.31948158,
     "precioCorte": 157.02,
-    "pesoTerminalEV": 0.6320664638,
-    "observacion": "Salida de Atlas R1 actual; revisar g terminal 3% vs regla vigente 4%, WACC común entre historias y ERP/Rf del mismo corte antes de publicar."
+    "pesoTerminalEV": 0.6546617375,
+    "observacion": "G terminal de 4% y WACC común por historia corregidos. Pendiente recertificar beta/ERP/Rf de un mismo corte; las fuentes históricas y la valoración relativa no están certificadas."
   },
   "metodos": {
     "valorPrincipal": "DCF FCFF Base",
@@ -108,12 +108,13 @@
     "matrizRoicGCentro": true,
     "terceraMatrizDcf5x5": false,
     "fuentesCoherentesWacc": false,
-    "gTerminalConformeRegla": false,
+    "gTerminalConformeRegla": true,
     "convergenciaRoiInicial": true,
     "auditoriaASC842": "ESTIMACION_MATERIALIDAD_PENDIENTE",
     "CINativeRev": "NO_EJECUTADO",
     "qaApp": "NO_EJECUTADO",
-    "auditoriaEconomica": "PENDIENTE"
+    "auditoriaEconomica": "PENDIENTE",
+    "costoCapitalComunHistorias": true
   },
   "advertencia": "Candidato de revisión/ingeniería. No añadir a catalogo.json ni a la app hasta resolver gates. El valor intrínseco es DCF Base incluso cuando exista el ponderado DCF + múltiplos."
 }
