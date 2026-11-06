@@ -1,37 +1,44 @@
-# DUOL Atlas R1 · Auditoría de publicación — 6 noviembre 2026
+# DUOL Atlas R1 · Informe de promoción EN_REVISIÓN · 6-nov-2026
 
-**Estado actual:** CANDIDATO / PUBLICACIÓN BLOQUEADA por datos materiales sin verificar. La orden del usuario para completar y publicar está autorizada; no autoriza sustituir valores N/D por otros de una versión distinta. La ficha activa DUOL R2 y el catálogo de producción continúan intactos.
+**Corte financiero 2026-09-30 · mercado 2026-11-05.** DUOL Atlas R1 `DUOL-20261105-ATLAS-R1` reemplaza en el catálogo la selección de la revisión R2, **sin eliminar la R2 histórica**. El expediente no se anuncia como certificación económica, sino **EN_REVISION CON RESERVA MATERIAL**. La app debe mostrar la diferencia entre valor intrínseco DCF FCFF Base y precio combinado secundario.
 
-## Entregables reproducibles de la revisión
-- Estados y cohortes SEC: https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit
-- DCF, tres sensibilidades 5×5, WACC y materialidad: https://docs.google.com/spreadsheets/d/1YPtE7UWhIPCMhiENnRNCe-jX8mzoGEnjpv78P6TdNt4/edit
-- Múltiplos y pesos, con valores faltantes identificados: https://docs.google.com/spreadsheets/d/1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU/edit
-- Nivel 1 (historia → números): https://docs.google.com/document/d/1vJtGag0P7q8QRmHpz4WyNxfQDihK5KlEm9jtjIUAvZI/edit
-- Nivel 2 (supuestos, fórmulas y pruebas): https://docs.google.com/document/d/1TJ5dDsObHGPD8dTSX_gql6pF1pWJpf9QNWiwa0BrR-Q/edit
+## Valoración calculada y contratos de pesos
 
-## Resultado DCF, desde la hoja y NO CERTIFICADO ECONÓMICAMENTE
-Corte financiero **2026-09-30**, mercado **2026-11-05**. Base DCF FCFF **US$108,2272265**; MOS35% **US$70,3476972**. Conservador **US$78,8020985**, Optimista **US$151,3868611**, promedio condicional C/B/O 25/50/25 **US$111,6608532**. Stress IA independiente **US$66,6760002**. No ajustar al precio US$157,02. Caja + activos no operativos − lease = equity bridge sin doble conteo. WACC inicial12,6192%, terminal9,7%, g nominal terminal4%, ROIC marginal terminal11,5%.
+| Método | VP Base USD/acción | Peso global |
+|---|---:|---:|
+| DCF FCFF | 108,2272265 | 60% |
+| EV/FCFF | 150,9869857 | 15% |
+| EV/EBITDA (GAAP homogéneo con su propio ancla) | 164,2597591 | 10% |
+| P/E normalizado | 145,9776543 | 5% |
+| P/FCFE de propietario neto SBC | 108,8904186 | 5% |
+| P/OCF GAAP | 133,8273213 | 5% |
 
-## Puertas que sí cerraron en esta revisión
-1. **I+D SEC, 4/4 cohortes TTM septiembre conciliadas:** 188,566 (2023), 219,159 (2024), 293,162 (2025), 362,473 (2026), fórmulas FY+9M−9M; hoja de estados tab `12 Cohortes ID SEC` y export `05 Export Atlas` B37:B39; vinculado a converter.
-2. **WACC con tasa y ERP del mismo corte Damodaran 01-nov-2026:** Treasury10Y 5,29%, ERP4,41%, beta cash-corrected unlevered1,59, reapalancada1,60259 con leasing reconocido84,216M y equity7.976,616M; CRP 0,35pp es **juicio de analista**, stress CRP0–1pp mueve valoración de US$109,2533 a US$106,3628 (−1,72% máximo individual). Hoja DCF tab `20 WACC Damodaran 01Nov2026`.
-3. **WACC común a cuatro historias, g terminal USD4%**, WACC de 12,6192% a9,7%; ROC terminal ajustado por historia, disrupción no promediada.
-4. **Tres matrices DCF Base 5×5 con centro exactamente coincidente** con US$108,2272265: WACC/g `10 Sens WACC g`!E11, ROIC/g `11 Sens ROIC g`!E11, crecimiento explícito/margen EBIT `21 Sens crecimiento EBIT 5x5`!D11. Tercera matriz ejecuta **25 DCF completos**, recalcando ventas, reinversión, FCFF y VP diez años.
-5. **Dos niveles narrativos**: Nivel 1 extenso y Nivel 2 reproducible en dos Google Docs. Requieren adaptación final al contrato de app (14 capítulos) antes de publicar.
+**Valor múltiplos Base:** US$146,2719837 (40% global). **Valor combinado informativo Base:** US$123,4451294. **MOS35% SOLO DCF Base:** US$70,3476972. Escenarios DCF Conservador US$78,8021, Optimista US$151,3869 y estrés IA (sin ponderar) US$66,6760. Combinados secundarios Conservador US$92,6487, Optimista US$164,1769.
 
-## Puertas aún ABIERTAS / no acreditar
-1. **VALOR RELATIVO 40% GLOBAL — BLOQUEO MATERIAL.** Múltiplos EV/FCFF15%, EV/EBITDA10%, P/E5%, P/FCFE5%, P/OCF5%. Dentro del bloque 37,5/25/12,5/12,5/12,5%. Pesos suman 100%, pero los **cinco precios FY+3, valor presente y sus sensibilidades de Atlas permanecen N/D** por falta de anclas independientes de histórico FY+3, normalización consistente, peers y controles. P/S y P/BV tienen peso cero opcional. El libro de múltiplos tabs `12 POCF y comparables`, `13 Sens POCF`, `14 Ponderacion DCF y multiples`, `15 Históricos propios DUOL` contiene fórmulas y diagnósticos históricos; **los históricos no equivalen a comparables externos** ni permiten formar un valor combinado. No transportar cifras de R2/R4 porque el Google Sheet de R2 diverge materialmente de su JSON publicado.
-2. **SBC/dilución:** SEC Q3 reporta 50,8m acciones ya fully diluted y 156,596M SBC LTM. Guía SBC FY2026 ≈14% de ingresos y dilución bruta 3,5–4% antes de recompras. No volver a deducir RSU/opciones existentes; verificar emisión futura y recompras sin duplicar SBC modelada en EBIT. Stress 1% dilución neta diez años sería ~−9,47%/acción, pero NO se aplica sin comprobar doble conteo. Tab `22 Materialidad NOL lease SBC`.
-3. **Créditos fiscales/NOL 2026:** NOL federal111,199M, estatal72,425M, créditos76,419M (FY2025), DTA neto203,605M (Sep2026). Límite nominal superior no descontado de tres atributos ~US$107,84M ≈US$2,12/acción (1,96%). No sumar DTA a los mismos atributos. Falta transición de impuestos en efectivo y uso FY2026; no inyectar beneficio ficticio al DCF.
-4. **Arrendamientos ASC842:** pasivo84,216M reconocido, sin doble deuda; amortización ROU proxy7,279M sobre lease cost FY2025 12,071M. Estimación ±gasto total equivale aproximación ±US$0,835/acción (<0,8% individual), **no** prueba contabilidad completa.
-5. **Materialidad conjunta y fuentes:** NOL nominal 1,96% + máxima CRP ~1,72% + lease ~0,77% puede superar **3%** sin compensar signos, encima incertidumbre SBC; dictamen económico sigue PENDIENTE.
-6. **Integración técnica Atlas→app:** libros modulares Atlas no cuentan con las hojas nativas obligatorias `Financials Multiples`, `Descuento de múltiplos`, `Sensibilidad por múltiplo` de una misma revisión. Hace falta adaptador/evidencia de fórmula y contrato JSON. No crear una ficha aparentemente COMPLETA con N/D ponderado. No se ejecutó `bash scripts/controles_todas.sh`, QA autenticado Vercel móvil/escritorio ni regresión global.
+## Pruebas verificadas
+1. Cohortes I+D rolling 2023–2026: cuatro conciliaciones SEC con FY+9M−9M. Capitalización I+D 3 años y leasing ASC842 sin doble deuda.
+2. Costo capital Damodaran 01-nov-2026: Treasury 5,29%, ERP 4,41%, beta del sector reapalancada1,6026. WACC inicial12,6192% común a las historias, terminal9,70%, g terminal4%. ROIC marginal Base terminal11,5%.
+3. Tres matrices DCF Base 5×5 y cinco matrices múltiplos Base 5×5 con centros exactos, sin introducir valores fijos.
+4. Anclas de múltiplos propias DUOL FY2025/LTM2026 con ajuste de tasa 2025→2026, evaluación de cambio de ciclo y techo de crecimiento; cuatro pares LRN/PSO/EDU/TAL son únicamente diagnóstico y NO constituyen una mediana falsamente homogénea.
+5. `Financials Multiples`: 20 fundamentales de tres historias; `Descuento de múltiplos`: 15 combinaciones método×historia, 45 VP FY+1/2/3; `Sensibilidad por múltiplo`: siete rangos contractuales (5 OK, P/S/P/BV N/A) y 5 centros OK.
+6. Nivel 1 JMR 14 capítulos/8.151 palabras y Nivel2 12 controles de reproducibilidad más 18 secciones de explicación, ambas piezas con mismo revisionId y mismas cifras.
+7. GitHub CI: registro y drivers; validación de profundidad editorial; Método A profundidad editorial; Control JMR de ponderaciones. Deben pasar en el **SHA final** antes de fusionar.
 
-## Contratos y destino
-- Método JMR A-1.2: `modelo/REGLAS_VIGENTES.md` §§0A, 0B, 4A, 4B, 5A, 6 y 8A.
-- **Valor intrínseco principal** es DCF FCFF Base, MOS35% únicamente sobre el Base, **no** sobre el promedio de métodos ni de escenarios.
-- La valoración relativa y el combinado 60% DCF / 40% múltiplos deben publicarse separados **solo cuando sus fórmulas de la MISMA revisión den resultados válidos**.
-- La historia Disrupción es **separada y no ponderada**.
-- La app continúa usando `valoraciones/DUOL-20261103-A12-R2.json` y `analisis/DUOL-research-20261103-A12-R2.json`. La solicitud de publicar R1 está registrada; esta PR solo almacena avances candidatos.
+## Salvedades económicas materiales que permanecen visibles
+- Los cinco múltiplos relativos se eligen sobre el ciclo DUOL 2025–2026 y no una mediana certificada de pares homogéneos: el valor relativo es una referencia de mercado con prima de crecimiento potencialmente inestable. La ponderación 60/40 es una síntesis informativa, NO sustituye el valor intrínseco DCF Base.
+- SBC LTM156,596m y guía14% ventas; 50,8m acciones plenamente diluidas ya incluyen opciones/RSUs existentes, por lo que no se descuentan dos veces. La dilución futura exige revisión económica de recompras/entrega de títulos.
+- NOL e incentivos fiscales FY2025 implican un máximo nominal orientativo ≈US$2,12/acción sin descontar; no añadir dos veces DTA. Provisiones y utilización fiscal FY2026 pendientes de revisión detallada.
+- ASC842 lease84,216m ya incluido una sola vez; amortización ROU proxy y sensibilidad ≈US$0,83/acción.
+- Riesgo de IA separado: el valor bajo disrupción US$66,6760 no entra en el promedio 25/50/25.
+- QA visual de app y revisión económica independiente deben documentarse tras integración; no declarar certificado económico.
 
-**Decisión verificada 2026-11-06:** No fusionar/publicar la valoración incompleta de DUOL Atlas hasta controlar múltiples y las dependencias estructurales anteriores. No afirmar certificación, publicación ni app QA no ejecutadas.
+## Evidencia
+- [Libros y documentos DUOL Atlas](https://drive.google.com/drive/folders/19CKTHWd28ZsaXmm7Yei_T_KKfbh5hkZi)
+- [Estados financieros](https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit)
+- [DCF, historia y sensibilidades](https://docs.google.com/spreadsheets/d/1YPtE7UWhIPCMhiENnRNCe-jX8mzoGEnjpv78P6TdNt4/edit)
+- [Múltiplos, pesos y descuento](https://docs.google.com/spreadsheets/d/1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU/edit)
+- [Nivel1 — 14 capítulos](https://docs.google.com/document/d/1ID7E3D-TBBXGFnbMx4WiKcOcI5tyopAJlcXQ4BVJmo0/edit)
+- [Nivel2](https://docs.google.com/document/d/1TJ5dDsObHGPD8dTSX_gql6pF1pWJpf9QNWiwa0BrR-Q/edit)
+- [Snapshot de 5 matrices con SHA256](https://github.com/JuanMaRobledo/Modelo-JMR-datos/blob/codex/duol-atlas-r1-publicacion-gated-20261106/evidencia/atlas-duol-20261106/multiples_source.json)
+
+**No modificar la plantilla original GINZU ni borrar las revisiones previas.**
