@@ -14,25 +14,28 @@
     "no_reemplazar_revision_actual": true,
     "ultima_revision_publicada": "DUOL-20261103-A12-R2",
     "auditStatus": "EN_REVISION CON BLOQUEOS",
-    "motivo": "Faltan 5 múltiplos FY+3 con comparables/anclas verificadas, 3ª matriz DCF, fuentes cohortes I+D y lease ASC842, NOL/SBC, recertificación beta/ERP/Rf y QA de app."
+    "motivo": "Persisten cinco métodos relativos sin anclas FY+1/2/3 verificadas y matriz Base (peso global 40%); amortización ROU estimada, NOL FY2026 y dilución SBC con materialidad acumulada, compatibilidad Atlas→app y CI integral no comprobados."
   },
   "fuentes": {
     "estados": "https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit",
     "dcf": "https://docs.google.com/spreadsheets/d/1YPtE7UWhIPCMhiENnRNCe-jX8mzoGEnjpv78P6TdNt4/edit",
     "multiplos": "https://docs.google.com/spreadsheets/d/1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU/edit",
     "analisis": "https://docs.google.com/document/d/1vJtGag0P7q8QRmHpz4WyNxfQDihK5KlEm9jtjIUAvZI/edit",
-    "secQ3": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm"
+    "secQ3": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm",
+    "nivel2": "https://docs.google.com/document/d/1TJ5dDsObHGPD8dTSX_gql6pF1pWJpf9QNWiwa0BrR-Q/edit",
+    "wacc": "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "sec10Q": "https://financialfilings.com/filings/duolingo-inc/interim-quarterly-report/2026/75577152/"
   },
   "dcfCandidatoNoCertificado": {
-    "valorBase": 112.0094207,
-    "mos35": 72.80612345,
-    "conservador": 81.0897775,
-    "optimista": 157.3441295,
-    "promedioCondicional": 115.6131871,
-    "estresIA": 68.31948158,
+    "valorBase": 108.22722652829991,
+    "mos35": 70.34769724339495,
+    "conservador": 78.80209848,
+    "optimista": 151.3868611,
+    "promedioCondicional": 111.6608532,
+    "estresIA": 66.67600018,
     "precioCorte": 157.02,
-    "pesoTerminalEV": 0.6546617375,
-    "observacion": "G terminal de 4% y WACC común por historia corregidos. Pendiente recertificar beta/ERP/Rf de un mismo corte; las fuentes históricas y la valoración relativa no están certificadas."
+    "pesoTerminalEV": 0.6515016543,
+    "observacion": "Revisión actual: 4/4 I+D rolling SEC conciliadas, WACC inicial12.619% (Rf/ERP Damodaran 01Nov2026), g4%, WACC común, 3 matrices 5x5 OK, 25 re-proyecciones completas para la tercera. Nivel 2 redactado. La valoración relativa no es calculable todavía."
   },
   "metodos": {
     "valorPrincipal": "DCF FCFF Base",
@@ -106,7 +109,7 @@
     "identidadFCFFHistorico": true,
     "matrizWaccGCentro": true,
     "matrizRoicGCentro": true,
-    "terceraMatrizDcf5x5": false,
+    "terceraMatrizDcf5x5": true,
     "fuentesCoherentesWacc": false,
     "gTerminalConformeRegla": true,
     "convergenciaRoiInicial": true,
@@ -114,7 +117,33 @@
     "CINativeRev": "NO_EJECUTADO",
     "qaApp": "NO_EJECUTADO",
     "auditoriaEconomica": "PENDIENTE",
-    "costoCapitalComunHistorias": true
+    "costoCapitalComunHistorias": true,
+    "cohortesRd4SEC": true,
+    "waccMismoCorte": true,
+    "waccInicialComún": true,
+    "centroTresMatrices5x5": true,
+    "dcfBaseRecalculado": true,
+    "dilucionActualAccionesFullDilutedFuenteSEC": true,
+    "activosFiscalesMaterialidadCuantificada": true,
+    "dilucionFuturaTratamientoCompleto": false,
+    "cincoMetodosVerificados": false,
+    "nivel2Redactado": true
   },
-  "advertencia": "Candidato de revisión/ingeniería. No añadir a catalogo.json ni a la app hasta resolver gates. El valor intrínseco es DCF Base incluso cuando exista el ponderado DCF + múltiplos."
+  "advertencia": "Candidato de revisión/ingeniería. No añadir a catalogo.json ni a la app hasta resolver gates. El valor intrínseco es DCF Base incluso cuando exista el ponderado DCF + múltiplos.",
+  "ponderacionesStatus": {
+    "pesosGlobales": [
+      0.6,
+      0.15,
+      0.1,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "pesoBloque": 0.4,
+    "confirmadosSuma100": true,
+    "preciosRelativos": "N/D",
+    "combinado": "N/D",
+    "fuente": "Libro 03 pestaña 14, relativo pendiente cinco métodos",
+    "historia": "Históricos DUOL fecha consistente FY2024 FY2025 LTM2026 documentados en pestaña 15, no son pares externos"
+  }
 }
