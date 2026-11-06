@@ -2,7 +2,7 @@
   "ticker": "DUOL",
   "revisionId": "DUOL-20261105-ATLAS-R1",
   "modelo": "JMR Atlas (piloto)",
-  "metodo": "A-1.2 — candidato, pendiente controles vigentes",
+  "metodo": "A-1.2 · JMR Atlas R1 EN_REVISION con reserva económica",
   "tipo": "Empresa operativa",
   "moneda": "USD",
   "corte": {
@@ -10,11 +10,11 @@
     "mercado": "2026-11-05"
   },
   "status": {
-    "publicacion": "BLOQUEADA",
-    "no_reemplazar_revision_actual": true,
+    "publicacion": "LISTO_PARA_PROMOCION_EN_REVISION",
+    "no_reemplazar_revision_actual": false,
     "ultima_revision_publicada": "DUOL-20261103-A12-R2",
-    "auditStatus": "EN_REVISION CON BLOQUEOS",
-    "motivo": "Cinco métodos múltiplos FY+1/2/3 y VP siguen N/D pese a cuatro referentes exploratorios sin homogeneizar IFRS/GAAP, moneda, sector y riesgo; fuentes y R&D verificados, DCF matrices completos; SBC/NOL y QA app global pendientes."
+    "auditStatus": "EN_REVISION CON RESERVA ECONOMICA MATERIAL",
+    "motivo": "Múltiplos de anclas DUOL 2025/26 y corrección tasas calculados; 5 métodos FY+1/2/3 y matrices 5×5 conciliados. Falta auditoría visual económica posterior y confirmar ficha app tras merge."
   },
   "fuentes": {
     "estados": "https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit",
@@ -31,13 +31,13 @@
   "dcfCandidatoNoCertificado": {
     "valorBase": 108.22722652829991,
     "mos35": 70.34769724339495,
-    "conservador": 78.80209848,
-    "optimista": 151.3868611,
-    "promedioCondicional": 111.6608532,
-    "estresIA": 66.67600018,
+    "conservador": 78.80209848113216,
+    "optimista": 151.38686108932257,
+    "promedioCondicional": 111.66085315676364,
+    "estresIA": 66.67600017962008,
     "precioCorte": 157.02,
-    "pesoTerminalEV": 0.6515016543,
-    "observacion": "Revisión actual: 4/4 I+D rolling SEC conciliadas, WACC inicial12.619% (Rf/ERP Damodaran 01Nov2026), g4%, WACC común, 3 matrices 5x5 OK, 25 re-proyecciones completas para la tercera. Nivel 2 redactado. La valoración relativa no es calculable todavía."
+    "pesoTerminalEV": 0.6515016542998653,
+    "observacion": "4 cohortes SEC verificadas, 3 matrices DCF 5x5, WACC Damodaran coherente 2026-11-01, 14 capítulos N1 y 12 controles N2. Auditoría económica independiente PENDIENTE."
   },
   "metodos": {
     "valorPrincipal": "DCF FCFF Base",
@@ -49,36 +49,36 @@
         "metodo": "EV/FCFF",
         "pesoGlobal": 0.15,
         "pesoEnBloque": 0.375,
-        "valorPresente": null,
-        "estado": "N/D"
+        "valorPresente": 150.9869857240148,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
       },
       {
         "metodo": "EV/EBITDA",
         "pesoGlobal": 0.1,
         "pesoEnBloque": 0.25,
-        "valorPresente": null,
-        "estado": "N/D"
+        "valorPresente": 164.25975912678916,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
       },
       {
         "metodo": "P/E",
         "pesoGlobal": 0.05,
         "pesoEnBloque": 0.125,
-        "valorPresente": null,
-        "estado": "N/D"
+        "valorPresente": 145.97765433688846,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
       },
       {
         "metodo": "P/FCFE",
         "pesoGlobal": 0.05,
         "pesoEnBloque": 0.125,
-        "valorPresente": null,
-        "estado": "N/D"
+        "valorPresente": 108.89041855815363,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
       },
       {
         "metodo": "P/OCF",
         "pesoGlobal": 0.05,
         "pesoEnBloque": 0.125,
-        "valorPresente": null,
-        "estado": "N/D"
+        "valorPresente": 133.8273213357963,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
       },
       {
         "metodo": "P/S",
@@ -95,30 +95,30 @@
         "estado": "N/A opcional"
       }
     ],
-    "valorRelativoPonderado": null,
-    "valorCombinadoDCFMultiplos": null,
-    "interpretacion": "Pesos específicos DUOL tomados del esquema R2 como propuesta, sujetos a ratificación por historia. Los valores deben producirse en Atlas con anclas verificadas, no transportarse desde R2."
+    "valorRelativoPonderado": 146.27198370705764,
+    "valorCombinadoDCFMultiplos": 123.445129399803,
+    "interpretacion": "60% DCF principal y 40% 5 métodos secundarios con múltiplos anclados a ciclo propio DUOL y prima mercado bajo reserva material; MOS solo DCF Base."
   },
   "gates": {
     "cincoMetodos": [
-      "N/D",
-      "N/D",
-      "N/D",
-      "N/D",
-      "N/D"
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO"
     ],
     "pesos100pct": true,
     "identidadFCFFHistorico": true,
     "matrizWaccGCentro": true,
     "matrizRoicGCentro": true,
     "terceraMatrizDcf5x5": true,
-    "fuentesCoherentesWacc": false,
+    "fuentesCoherentesWacc": true,
     "gTerminalConformeRegla": true,
     "convergenciaRoiInicial": true,
     "auditoriaASC842": "ESTIMACION_MATERIALIDAD_PENDIENTE",
-    "CINativeRev": "NO_EJECUTADO",
-    "qaApp": "NO_EJECUTADO",
-    "auditoriaEconomica": "PENDIENTE",
+    "CINativeRev": "CUATRO_WORKFLOWS_APROBADOS_A_CONFIRMAR_EN_HEAD_FINAL",
+    "qaApp": "PENDIENTE_POSFUSION",
+    "auditoriaEconomica": "EN_REVISION_CON_SALVEDADES",
     "costoCapitalComunHistorias": true,
     "cohortesRd4SEC": true,
     "waccMismoCorte": true,
@@ -128,13 +128,21 @@
     "dilucionActualAccionesFullDilutedFuenteSEC": true,
     "activosFiscalesMaterialidadCuantificada": true,
     "dilucionFuturaTratamientoCompleto": false,
-    "cincoMetodosVerificados": false,
+    "cincoMetodosVerificados": true,
     "nivel2Redactado": true,
     "nivel1Estilo14": true,
     "peersExploratorios": 4,
-    "peersValidos": 0
+    "peersValidos": 0,
+    "matricesMultiples5x5": 5,
+    "metodosFY1FY2FY3": 15,
+    "preciosVP": 45,
+    "contratoAppNativo": true,
+    "indiceNivel1": 14,
+    "profundidadNivel1Palabras": 8151,
+    "apartadosNivel2": 12,
+    "comparablesExternoEconomicamenteHomogeneos": false
   },
-  "advertencia": "Candidato de revisión/ingeniería. No añadir a catalogo.json ni a la app hasta resolver gates. El valor intrínseco es DCF Base incluso cuando exista el ponderado DCF + múltiplos.",
+  "advertencia": "Apto para publicación EN_REVISION con reserva material específica de los múltiplos propios y SBC. No certificado; revisión visual económica independiente posterior. No aplicar MOS sobre ponderado ni incluir estrés IA.",
   "ponderacionesStatus": {
     "pesosGlobales": [
       0.6,
@@ -146,9 +154,17 @@
     ],
     "pesoBloque": 0.4,
     "confirmadosSuma100": true,
-    "preciosRelativos": "N/D",
-    "combinado": "N/D",
-    "fuente": "Libro 03 pestaña 14, relativo pendiente cinco métodos",
-    "historia": "Históricos DUOL fecha consistente FY2024 FY2025 LTM2026 documentados en pestaña 15, no son pares externos"
+    "preciosRelativos": {
+      "conservador": 113.41865646932763,
+      "base": 146.27198370705764,
+      "optimista": 183.36198214773907
+    },
+    "combinado": {
+      "conservador": 92.64872167641036,
+      "base": 123.445129399803,
+      "optimista": 164.17690951268918
+    },
+    "fuente": "Libro 03 'Financials Multiples', 'Descuento de múltiplos', 'Sensibilidad por múltiplo', 5 matrices 5x5",
+    "historia": "DUOL propios 2025/26 ajustados con tasas Damodaran, escenario FY3 VP, control de techo económico."
   }
 }
