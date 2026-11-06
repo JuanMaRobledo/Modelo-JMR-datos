@@ -61,8 +61,9 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | DUOL-20261029-A1 | SUSTITUIDA | 136.68 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
-| DUOL-20261103-A12-R2 | SUSTITUIDA | 139.11 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
-| DUOL-20261105-ATLAS-R1 | VIGENTE | 108.23 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
+| DUOL-20261103-A12-R2 | VIGENTE | 139.11 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
+| DUOL-20261105-ATLAS-R1 | SUSTITUIDA | 108.23 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
+
 
 ## EPAM
 
