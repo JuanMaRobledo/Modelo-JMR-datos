@@ -10,14 +10,14 @@
 - Nivel 1: https://docs.google.com/document/d/1vJtGag0P7q8QRmHpz4WyNxfQDihK5KlEm9jtjIUAvZI/edit
 
 ## 2. Valoración actual de Atlas (NO CERTIFICADA)
-DCF Base **US$108,7473**; MOS 35% **US$70,6857**. Conservador US$69,0562; Optimista US$168,3179; esperanza condicional 25/50/25 US$113,7172. Stress IA no ponderado US$58,3131. Contraste con DUOL R4 Base US$111,4427: no se calibró al precio. La app vigente mantiene DUOL R2, Base US$139,1087 y MOS US$90,4206 hasta una promoción válida.
+DCF Base **US$112,0094**; MOS 35% **US$72,8061**. Conservador US$81,0898; Optimista US$157,3441; esperanza condicional 25/50/25 US$115,6132. Stress IA no ponderado US$68,3195. Contraste con DUOL R4 Base US$111,4427: no se calibró al precio; ahora difiere aproximadamente +US$0,57. La app vigente mantiene DUOL R2, Base US$139,1087 y MOS US$90,4206 hasta una promoción válida.
 
 La ponderación **específica de DUOL** que se ha cableado en la hoja Atlas es 60% DCF y 40% múltiplos. Dentro del bloque: EV/FCFF 37,5%, EV/EBITDA 25%, P/E 12,5%, P/FCFE 12,5%, P/OCF 12,5%. En términos globales: 60%, 15%, 10%, 5%, 5%, 5%; P/S y P/BV con 0%. Son pesos de trabajo basados en DUOL R2 y deben ser ratificados por razones económicas para Atlas; NO se han copiado los valores relativos de R2.
 
 **Punto crítico:** los 5 valores presentes por múltiplos de Atlas son N/D. No existe aún mediana de pares certificada ni combinación DCF + múltiplos válida. El libro 03 ya contiene las fórmulas y las casillas de fuente/validación, el P/OCF y la ponderación global, pero *no* tiene derecho a producir un valor relativo numérico.
 
 ## 3. Puertas por cerrar (orden)
-1. **Marco de descuento y etapas:** El DCF Atlas usa g terminal 3% y diferentes WACC iniciales por escenario, mientras `modelo/REGLAS_VIGENTES.md` §2/§4 exige costo de capital común entre historias y g nominal USD 4% (si no hay excepción aprobada). El Rf 4,84% de 2026-11-05 y ERP 3,70% de 2026-10-01 no comparten corte; rehacer la reconciliación con `Cost of capital worksheet`, beta/ERP y estructura de capital. Revisar el peso terminal.
+1. **Marco de descuento y etapas:** El DCF Atlas se corrigió a g terminal 4% y a un WACC inicial común entre escenarios, como exigen `modelo/REGLAS_VIGENTES.md` §2/§4 y permite verificar esos dos controles de fórmulas. Sin embargo, el Rf 4,84% de 2026-11-05 y ERP 3,70% de 2026-10-01 no comparten corte; completar la reconciliación con `Cost of capital worksheet`, beta/ERP y estructura de capital. Revisar el peso terminal.
 2. **I+D rolling:** Tres cohortes LTM (293,16; 219,16; 188,57 USD M) heredadas de revisión DUOL R4, sin recertificación SEC periodo por periodo. La capitalización/EBIT económico es reproducible pero la autoridad de cada cohorte aún requiere contraste.
 3. **Arrendamientos ASC 842:** SEC muestra pasivo operating lease USD 84,216M y ROU asset USD 73,359M al 2026-09-30. Atlas añade leasing una sola vez al debt bridge, pero la amortización usada de 7,279M es una **estimación**, no un desglose confirmado. Medir sensibilidad conservando el modo GAAP apropiado.
 4. **SBC, NOL, activos fiscales y acciones:** SBC LTM USD 156,596M; la empresa estima 50,8M acciones plenamente diluidas y recompra títulos. Quedan por conciliar flujo de recompra, dilución futura, NOL y cash taxes sin confundir con el ingreso fiscal extraordinario FY2025.
