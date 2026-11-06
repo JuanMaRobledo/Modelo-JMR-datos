@@ -1,0 +1,170 @@
+{
+  "ticker": "DUOL",
+  "revisionId": "DUOL-20261105-ATLAS-R1",
+  "modelo": "JMR Atlas (piloto)",
+  "metodo": "A-1.2 · JMR Atlas R1 EN_REVISION con reserva económica",
+  "tipo": "Empresa operativa",
+  "moneda": "USD",
+  "corte": {
+    "financiero": "2026-09-30",
+    "mercado": "2026-11-05"
+  },
+  "status": {
+    "publicacion": "LISTO_PARA_PROMOCION_EN_REVISION",
+    "no_reemplazar_revision_actual": false,
+    "ultima_revision_publicada": "DUOL-20261103-A12-R2",
+    "auditStatus": "EN_REVISION CON RESERVA ECONOMICA MATERIAL",
+    "motivo": "Múltiplos de anclas DUOL 2025/26 y corrección tasas calculados; 5 métodos FY+1/2/3 y matrices 5×5 conciliados. Falta auditoría visual económica posterior y confirmar ficha app tras merge."
+  },
+  "fuentes": {
+    "estados": "https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit",
+    "dcf": "https://docs.google.com/spreadsheets/d/1YPtE7UWhIPCMhiENnRNCe-jX8mzoGEnjpv78P6TdNt4/edit",
+    "multiplos": "https://docs.google.com/spreadsheets/d/1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU/edit",
+    "analisis": "https://docs.google.com/document/d/1ID7E3D-TBBXGFnbMx4WiKcOcI5tyopAJlcXQ4BVJmo0/edit",
+    "secQ3": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm",
+    "nivel2": "https://docs.google.com/document/d/1TJ5dDsObHGPD8dTSX_gql6pF1pWJpf9QNWiwa0BrR-Q/edit",
+    "wacc": "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm",
+    "sec10Q": "https://financialfilings.com/filings/duolingo-inc/interim-quarterly-report/2026/75577152/",
+    "nivel1Anterior18": "https://docs.google.com/document/d/1vJtGag0P7q8QRmHpz4WyNxfQDihK5KlEm9jtjIUAvZI/edit",
+    "nivel1": "https://docs.google.com/document/d/1ID7E3D-TBBXGFnbMx4WiKcOcI5tyopAJlcXQ4BVJmo0/edit"
+  },
+  "dcfCandidatoNoCertificado": {
+    "valorBase": 108.22722652829991,
+    "mos35": 70.34769724339495,
+    "conservador": 78.80209848113216,
+    "optimista": 151.38686108932257,
+    "promedioCondicional": 111.66085315676364,
+    "estresIA": 66.67600017962008,
+    "precioCorte": 157.02,
+    "pesoTerminalEV": 0.6515016542998653,
+    "observacion": "4 cohortes SEC verificadas, 3 matrices DCF 5x5, WACC Damodaran coherente 2026-11-01, 14 capítulos N1 y 12 controles N2. Auditoría económica independiente PENDIENTE."
+  },
+  "metodos": {
+    "valorPrincipal": "DCF FCFF Base",
+    "mosSobre": "dcfBase",
+    "pesoGlobalDCF": 0.6,
+    "pesoGlobalMultiplos": 0.4,
+    "pesoBloque": [
+      {
+        "metodo": "EV/FCFF",
+        "pesoGlobal": 0.15,
+        "pesoEnBloque": 0.375,
+        "valorPresente": 150.9869857240148,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "pesoGlobal": 0.1,
+        "pesoEnBloque": 0.25,
+        "valorPresente": 164.25975912678916,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
+      },
+      {
+        "metodo": "P/E",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": 145.97765433688846,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
+      },
+      {
+        "metodo": "P/FCFE",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": 108.89041855815363,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
+      },
+      {
+        "metodo": "P/OCF",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": 133.8273213357963,
+        "estado": "CALCULADO_CON_RESERVA_MATERIAL"
+      },
+      {
+        "metodo": "P/S",
+        "pesoGlobal": 0,
+        "pesoEnBloque": 0,
+        "valorPresente": null,
+        "estado": "N/A opcional"
+      },
+      {
+        "metodo": "P/BV",
+        "pesoGlobal": 0,
+        "pesoEnBloque": 0,
+        "valorPresente": null,
+        "estado": "N/A opcional"
+      }
+    ],
+    "valorRelativoPonderado": 146.27198370705764,
+    "valorCombinadoDCFMultiplos": 123.445129399803,
+    "interpretacion": "60% DCF principal y 40% 5 métodos secundarios con múltiplos anclados a ciclo propio DUOL y prima mercado bajo reserva material; MOS solo DCF Base."
+  },
+  "gates": {
+    "cincoMetodos": [
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO",
+      "CALCULADO"
+    ],
+    "pesos100pct": true,
+    "identidadFCFFHistorico": true,
+    "matrizWaccGCentro": true,
+    "matrizRoicGCentro": true,
+    "terceraMatrizDcf5x5": true,
+    "fuentesCoherentesWacc": true,
+    "gTerminalConformeRegla": true,
+    "convergenciaRoiInicial": true,
+    "auditoriaASC842": "ESTIMACION_MATERIALIDAD_PENDIENTE",
+    "CINativeRev": "CUATRO_WORKFLOWS_APROBADOS_A_CONFIRMAR_EN_HEAD_FINAL",
+    "qaApp": "PENDIENTE_POSFUSION",
+    "auditoriaEconomica": "EN_REVISION_CON_SALVEDADES",
+    "costoCapitalComunHistorias": true,
+    "cohortesRd4SEC": true,
+    "waccMismoCorte": true,
+    "waccInicialComún": true,
+    "centroTresMatrices5x5": true,
+    "dcfBaseRecalculado": true,
+    "dilucionActualAccionesFullDilutedFuenteSEC": true,
+    "activosFiscalesMaterialidadCuantificada": true,
+    "dilucionFuturaTratamientoCompleto": false,
+    "cincoMetodosVerificados": true,
+    "nivel2Redactado": true,
+    "nivel1Estilo14": true,
+    "peersExploratorios": 4,
+    "peersValidos": 0,
+    "matricesMultiples5x5": 5,
+    "metodosFY1FY2FY3": 15,
+    "preciosVP": 45,
+    "contratoAppNativo": true,
+    "indiceNivel1": 14,
+    "profundidadNivel1Palabras": 8151,
+    "apartadosNivel2": 12,
+    "comparablesExternoEconomicamenteHomogeneos": false
+  },
+  "advertencia": "Apto para publicación EN_REVISION con reserva material específica de los múltiplos propios y SBC. No certificado; revisión visual económica independiente posterior. No aplicar MOS sobre ponderado ni incluir estrés IA.",
+  "ponderacionesStatus": {
+    "pesosGlobales": [
+      0.6,
+      0.15,
+      0.1,
+      0.05,
+      0.05,
+      0.05
+    ],
+    "pesoBloque": 0.4,
+    "confirmadosSuma100": true,
+    "preciosRelativos": {
+      "conservador": 113.41865646932763,
+      "base": 146.27198370705764,
+      "optimista": 183.36198214773907
+    },
+    "combinado": {
+      "conservador": 92.64872167641036,
+      "base": 123.445129399803,
+      "optimista": 164.17690951268918
+    },
+    "fuente": "Libro 03 'Financials Multiples', 'Descuento de múltiplos', 'Sensibilidad por múltiplo', 5 matrices 5x5",
+    "historia": "DUOL propios 2025/26 ajustados con tasas Damodaran, escenario FY3 VP, control de techo económico."
+  }
+}

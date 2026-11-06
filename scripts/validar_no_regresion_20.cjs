@@ -183,6 +183,39 @@ function run(){
       'DUOL R2: cinco matrices Base prioritarias no conciliadas');
     duolHistoricalProtected=1;
   }
+  // Nueva revisión DUOL Atlas R1: se preservan íntegramente las fotografías
+  // oficiales anteriores A1 y R2. La promoción legítima cambia solo la
+  // selección del catálogo; jamás recalcula ni sobrescribe las anteriores.
+  if(duolQ3 && duolQ3[1].rutaValoracion==='valoraciones/DUOL-20261105-ATLAS-R1.json'){
+    const a1=read('valoraciones/DUOL-20261029-A1.json');
+    const r2=read('valoraciones/DUOL-20261103-A12-R2.json');
+    const atlas=read(duolQ3[1].rutaValoracion);
+    assert.equal(a1.revisionId,'DUOL-20261029-A1');
+    assert.equal(a1.sheet_id,'14kzULOEY6QFSNF86yCBDZdiE8TNMSiY3abGWg4OH3Ts');
+    assert.ok(Math.abs(a1.valorPrincipal-136.6764524)<1e-7);
+    assert.equal(r2.revisionId,'DUOL-20261103-A12-R2');
+    assert.equal(r2.sheet_id,'1_-Rxwq04iuXvS1FNpYuwlaAkGEeBxUsuyblIZAx_Oqc');
+    assert.ok(Math.abs(r2.valorPrincipal-139.10868578744447)<1e-7,
+      'DUOL R2 histórica se reescribió');
+    assert.equal(atlas.revisionId,'DUOL-20261105-ATLAS-R1');
+    assert.equal(atlas.sheet_id,'1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU');
+    assert.ok(Math.abs(atlas.valorPrincipal-108.22722652829991)<1e-7,
+      'DUOL Atlas Base no corresponde a hoja fuente');
+    assert.ok(Math.abs(atlas.precioMOS-atlas.valorPrincipal*.65)<1e-7,
+      'DUOL Atlas MOS35% incorrecto');
+    const grids=atlas.sensibilidadMultiples?.matrices?.filter(m=>
+      m.prioritario&&m.estado==='OK'&&Array.isArray(m.matriz)&&
+      m.matriz.length===5&&m.matriz.every(row=>
+        row.length===5&&row.every(Number.isFinite))&&
+      Math.abs(m.matriz[2][2]-m.vp3Original)<1e-7);
+    assert.equal(grids?.length,5,'DUOL Atlas: cinco matrices Base sin conciliar');
+    const d=atlas.descuentoMultiples;
+    assert.ok(Math.abs(d.pesoDcf-.6)<1e-10&&Math.abs(d.pesoMultiplos-.4)<1e-10);
+    assert.ok(Math.abs(d.ponderadoHoy.base-
+      (d.dcfHoy.base*.6+d.multiplesHoy.base*.4))<1e-7,
+      'DUOL Atlas: ponderación no concilia');
+    duolHistoricalProtected=1; // foto A1/R2 conservadas y R1 validada
+  }
   assert.ok(snapshots+duolHistoricalProtected>=16,
     'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
