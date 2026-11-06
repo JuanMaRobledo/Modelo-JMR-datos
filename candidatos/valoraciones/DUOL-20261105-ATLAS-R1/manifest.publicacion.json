@@ -1,0 +1,119 @@
+{
+  "ticker": "DUOL",
+  "revisionId": "DUOL-20261105-ATLAS-R1",
+  "modelo": "JMR Atlas (piloto)",
+  "metodo": "A-1.2 — candidato, pendiente controles vigentes",
+  "tipo": "Empresa operativa",
+  "moneda": "USD",
+  "corte": {
+    "financiero": "2026-09-30",
+    "mercado": "2026-11-05"
+  },
+  "status": {
+    "publicacion": "BLOQUEADA",
+    "no_reemplazar_revision_actual": true,
+    "ultima_revision_publicada": "DUOL-20261103-A12-R2",
+    "auditStatus": "EN_REVISION CON BLOQUEOS",
+    "motivo": "Faltan múltiplos nativos y anclas verificadas FY+3, calibración de WACC/ERP y g, fuentes cohortes I+D, lease ASC842, NOL y SBC."
+  },
+  "fuentes": {
+    "estados": "https://docs.google.com/spreadsheets/d/1f3lPGhv8Lx0DzrA-vwXbLlD5JxzTcjPtj_Nn026mZJA/edit",
+    "dcf": "https://docs.google.com/spreadsheets/d/1YPtE7UWhIPCMhiENnRNCe-jX8mzoGEnjpv78P6TdNt4/edit",
+    "multiplos": "https://docs.google.com/spreadsheets/d/1K0yBSETJQkWjdAHRy6Os-3iQ5dmHW_bc88LTMXhUxYU/edit",
+    "analisis": "https://docs.google.com/document/d/1vJtGag0P7q8QRmHpz4WyNxfQDihK5KlEm9jtjIUAvZI/edit",
+    "secQ3": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026069474/q3fy26duolingo9-30x26share.htm"
+  },
+  "dcfCandidatoNoCertificado": {
+    "valorBase": 108.7472956,
+    "mos35": 70.68574212,
+    "conservador": 69.05621877,
+    "optimista": 168.3179221,
+    "promedioCondicional": 113.717183,
+    "estresIA": 58.31308339,
+    "precioCorte": 157.02,
+    "pesoTerminalEV": 0.6320664638,
+    "observacion": "Salida de Atlas R1 actual; revisar g terminal 3% vs regla vigente 4%, WACC común entre historias y ERP/Rf del mismo corte antes de publicar."
+  },
+  "metodos": {
+    "valorPrincipal": "DCF FCFF Base",
+    "mosSobre": "dcfBase",
+    "pesoGlobalDCF": 0.6,
+    "pesoGlobalMultiplos": 0.4,
+    "pesoBloque": [
+      {
+        "metodo": "EV/FCFF",
+        "pesoGlobal": 0.15,
+        "pesoEnBloque": 0.375,
+        "valorPresente": null,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "EV/EBITDA",
+        "pesoGlobal": 0.1,
+        "pesoEnBloque": 0.25,
+        "valorPresente": null,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/E",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": null,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/FCFE",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": null,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/OCF",
+        "pesoGlobal": 0.05,
+        "pesoEnBloque": 0.125,
+        "valorPresente": null,
+        "estado": "N/D"
+      },
+      {
+        "metodo": "P/S",
+        "pesoGlobal": 0,
+        "pesoEnBloque": 0,
+        "valorPresente": null,
+        "estado": "N/A opcional"
+      },
+      {
+        "metodo": "P/BV",
+        "pesoGlobal": 0,
+        "pesoEnBloque": 0,
+        "valorPresente": null,
+        "estado": "N/A opcional"
+      }
+    ],
+    "valorRelativoPonderado": null,
+    "valorCombinadoDCFMultiplos": null,
+    "interpretacion": "Pesos específicos DUOL tomados del esquema R2 como propuesta, sujetos a ratificación por historia. Los valores deben producirse en Atlas con anclas verificadas, no transportarse desde R2."
+  },
+  "gates": {
+    "cincoMetodos": [
+      "N/D",
+      "N/D",
+      "N/D",
+      "N/D",
+      "N/D"
+    ],
+    "pesos100pct": true,
+    "identidadFCFFHistorico": true,
+    "matrizWaccGCentro": true,
+    "matrizRoicGCentro": true,
+    "terceraMatrizDcf5x5": false,
+    "fuentesCoherentesWacc": false,
+    "gTerminalConformeRegla": false,
+    "convergenciaRoiInicial": true,
+    "auditoriaASC842": "ESTIMACION_MATERIALIDAD_PENDIENTE",
+    "CINativeRev": "NO_EJECUTADO",
+    "qaApp": "NO_EJECUTADO",
+    "auditoriaEconomica": "PENDIENTE"
+  },
+  "advertencia": "Candidato de revisión/ingeniería. No añadir a catalogo.json ni a la app hasta resolver gates. El valor intrínseco es DCF Base incluso cuando exista el ponderado DCF + múltiplos."
+}
