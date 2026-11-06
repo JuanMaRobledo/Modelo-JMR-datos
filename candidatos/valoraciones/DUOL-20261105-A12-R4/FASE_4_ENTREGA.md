@@ -24,13 +24,13 @@ Se conserva el motor del Excel: 17 pestañas. Comparación de rango A1:AA260 por
 
 MOS 35 % del Base = **USD 72,4377341033**; dato provisional, **no sustituye** el vigente. La diferencia entre proyecciones anuales auxiliares y CAGR uniforme del DCF original está identificada, no conciliada económicamente en historias no Base.
 
-Base: crecimiento año 1 14,1765 %, CAGR años 2–5 13,5035 %, margen EBIT objetivo 28 %, Sales-to-Capital 1–5 1,9, 6–10 1,400643, ROIC marginal terminal 9,7 %, WACC terminal 9,7 %, g terminal 4 %, WACC inicial 12,6833 %. El método de WACC del piloto se alimentó por entrada directa para reproducir candidato; el procedimiento oficial pide `Detailed` y verificación por hoja.
+Base: crecimiento año 1 14,1765 %, CAGR años 2–5 13,5035 %, margen EBIT objetivo 28 %, Sales-to-Capital 1–5 1,9, 6–10 1,400643, ROIC marginal terminal 9,7 %, WACC terminal 9,7 %, g terminal 4 %, WACC inicial 12,6833 %. **Actualización 5-nov:** WACC se pasó a `Detailed` en las cuatro copias operativas, usando beta global de la tabla, Rf/ERP y Ke; el cálculo del núcleo produce 12,6832839913 % y las cuatro valoraciones permanecieron idénticas. Véase `NOTA_10Q_WACC_NOL.md`.
 
 ## Salvedades materiales que bloquean F4
 
 1. **ASC 842**: deuda financiera 0 en la entrada no prueba inexistencia de arrendamientos económicos. Faltan conciliar pasivo corriente/no corriente, ROU, EBIT, ROIC, WACC y posible duplicación del conversor para mismo corte Q3 2026.
-2. **NOL**: se cargaron USD 111,199 M del candidato y se activó selector; saldo, fecha, utilización y conciliación fiscal aún no certificados con SEC. La Base depende de ello; sensibilidad NOL=0 pendiente.
-3. **WACC y riesgo país**: hay prima ROW proxy; WACC cargado directamente; exigir construcción reproducible Detailed, misma fecha Rf/ERP, pesos y deuda consistentes.
+2. **NOL**: se cargaron USD 111,199 M del candidato y se activó selector; saldo/fecha/utilización aún no certificados con SEC. La sensibilidad NOL=0 ya se ejecutó (USD 110,982427 vs 111,442668, diferencia 0,413 %): no material de forma aislada, pero pendiente conciliar fiscalidad y materialidad agregada. Véase `NOTA_10Q_WACC_NOL.md`.
+3. **WACC y riesgo país**: el modo Detailed ya calcula el WACC de las cuatro copias sin diferencias; queda pendiente validar el proxy ROW/ERP (no confundir coincidencia numérica con auditoría económica).
 4. **Terminal económico**: justificar ritmo de convergencia ROIC marginal vs ROIC existente y reinversión terminal. Falta control económico independiente.
 5. **Publicación técnica**: regenerar las tres matrices DCF 5×5 y sensibilidades de múltiplos para las cuatro copias y verificar centros; actualizar múltiplos FY+1/2/3 y análisis Nivel 1/2 al **mismo revision_id**; pruebas `controles_todas.sh`, registro, JSON, CI, despliegue y QA visual. **NO EJECUTADO** en este candidato.
 
