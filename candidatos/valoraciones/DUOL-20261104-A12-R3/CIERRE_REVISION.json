@@ -1,0 +1,492 @@
+{
+  "revision_id": "DUOL-20261104-A12-R3",
+  "ticker": "DUOL",
+  "estado": "CANDIDATO",
+  "publication_ready": false,
+  "updated_at": "2026-11-05T03:13:29.237Z",
+  "information_cutoff": "2026-11-04",
+  "accounting_cutoff": "2026-09-30",
+  "source": "live Google Sheets connector, conditional valuation while source reconciliations remain open",
+  "sheet_id": "1TdXRa1f1HL5JusQV3LDgEnb4GWKYXEbVd6lhQjGSqQA",
+  "sheet_url": "https://docs.google.com/spreadsheets/d/1TdXRa1f1HL5JusQV3LDgEnb4GWKYXEbVd6lhQjGSqQA/edit",
+  "backup": "https://docs.google.com/spreadsheets/d/1FGr0uQFMTBzfS_QJF3mDAqx7FDOiX0RkBtaZ1k245Rw/edit?usp=drivesdk",
+  "previous_provisional_base": 134.8958020587636,
+  "previous_published_base": 139.10868578744447,
+  "base_parameters": {
+    "revenue0": 1182.2959999999998,
+    "shares": 50.8,
+    "cash": 1373.901,
+    "nonoperating": 110.12,
+    "debt": 105.06128902772627,
+    "nol": 111.199,
+    "wacc": 0.1263763678405875,
+    "waccT": 0.097,
+    "tax0": 0.24,
+    "taxT": 0.25,
+    "margin1": 0.22302411869900923,
+    "marginT": 0.28,
+    "convergence": 5,
+    "sc1": 1.9,
+    "sc2": 1.400643007345897,
+    "roicT": 0.097,
+    "gT": 0.04,
+    "revenues": 3253.269408664558
+  },
+  "growth": [
+    0.14176464181896908,
+    0.16185807354589277,
+    0.14602196561715042,
+    0.12648425269604502,
+    0.10653559940982094
+  ],
+  "native_base": 106.97616733993537,
+  "native_mos": 69.534508770958,
+  "scenarios": [
+    {
+      "name": "Base · Adopción y monetización recurrente mejoran, con I+D y SBC disciplinadas",
+      "probability": 0.4,
+      "value": 106.97616733993537,
+      "margin": 0.28,
+      "sc1": 1.9,
+      "sc2": 1.400643007345897,
+      "roicT": 0.097
+    },
+    {
+      "name": "Conservadora · Usuarios aumentan pero conversión a pago y margen se normalizan",
+      "probability": 0.225,
+      "value": 81.02258442569295,
+      "margin": 0.235,
+      "sc1": 1.5,
+      "sc2": 2,
+      "roicT": 0.097
+    },
+    {
+      "name": "Optimista · Expansión internacional y mayor conversión elevan retorno",
+      "probability": 0.225,
+      "value": 171.7086341118289,
+      "margin": 0.31,
+      "sc1": 2.3,
+      "sc2": 2.7,
+      "roicT": 0.19
+    },
+    {
+      "name": "Disrupción · Tutores de IA presionan retención, precio y hábitos",
+      "probability": 0.15,
+      "value": 53.81571141680528,
+      "margin": 0.16,
+      "sc1": 1.3,
+      "sc2": 1.7,
+      "roicT": 0.097
+    }
+  ],
+  "matrices": [
+    [
+      [
+        113.26380081179131,
+        114.81631069570223,
+        116.57087113776274,
+        118.59647225212862,
+        120.99934119435669
+      ],
+      [
+        109.14901171087702,
+        110.18878523204889,
+        111.31223540241506,
+        112.5432292554629,
+        113.91695065803174
+      ],
+      [
+        105.64837023696484,
+        106.30763484317833,
+        106.97616733993537,
+        107.65407145046365,
+        108.34145172518018
+      ],
+      [
+        102.63392896776269,
+        103.00576063175116,
+        103.33946509398469,
+        103.6226606287976,
+        103.83816412556932
+      ],
+      [
+        100.01097357767769,
+        100.16248006079998,
+        100.24555422802662,
+        100.24147735901317,
+        100.12492698203053
+      ]
+    ],
+    [
+      [
+        103.41430156601729,
+        103.43670602382471,
+        103.3387317400331,
+        103.08264405984765,
+        102.61460029011623
+      ],
+      [
+        104.59204428928854,
+        104.95018480359266,
+        105.25629289867723,
+        105.49258132555282,
+        105.63364697055755
+      ],
+      [
+        105.64837023696484,
+        106.30763484317833,
+        106.97616733993537,
+        107.65407145046365,
+        108.34145172518018
+      ],
+      [
+        106.60113481722189,
+        107.53200154554975,
+        108.5274266398937,
+        109.6036507788146,
+        110.78378542542806
+      ],
+      [
+        107.46485597876331,
+        108.64194145330698,
+        109.93370843518302,
+        111.37102643161872,
+        112.99786363967145
+      ]
+    ],
+    [
+      [
+        84.57679265357025,
+        89.29416858599068,
+        94.01154451841111,
+        98.72892045083157,
+        103.44629638325198
+      ],
+      [
+        89.6043732722966,
+        94.89454464266379,
+        100.18471601303096,
+        105.47488738339814,
+        110.76505875376533
+      ],
+      [
+        95.12638534203636,
+        101.05127634098585,
+        106.97616733993537,
+        112.90105833888491,
+        118.82594933783439
+      ],
+      [
+        101.18786249850973,
+        107.81518667319956,
+        114.44251084788941,
+        121.06983502257927,
+        127.69715919726907
+      ],
+      [
+        107.83728989111529,
+        115.24100350326978,
+        122.64471711542427,
+        130.0484307275788,
+        137.45214433973325
+      ]
+    ]
+  ],
+  "multiple_centers": [
+    96.80080496441512,
+    76.83794628807868,
+    23.00261267633042,
+    17.35371048960805,
+    19.507775079768543
+  ],
+  "cash_flow_primary_facts": [
+    [
+      "NI",
+      414.065,
+      372.111,
+      103.783
+    ],
+    [
+      "DeferredTax",
+      -225.185,
+      -239.486,
+      23.727
+    ],
+    [
+      "SBC",
+      137.437,
+      101.175,
+      120.334
+    ],
+    [
+      "DA",
+      14.391,
+      10.583,
+      12.718
+    ],
+    [
+      "Accretion",
+      -1.851,
+      -1.458,
+      -0.983
+    ],
+    [
+      "Impairment",
+      0,
+      0,
+      2.134
+    ],
+    [
+      "DeferredRevenue",
+      123.321,
+      68.844,
+      17.362
+    ],
+    [
+      "Receivables",
+      -33.904,
+      4.434,
+      20.771
+    ],
+    [
+      "DeferredCost",
+      -22.501,
+      -14.408,
+      -3.525
+    ],
+    [
+      "Prepaid",
+      -15.791,
+      -11.734,
+      0.449
+    ],
+    [
+      "Payables",
+      1.617,
+      -2.813,
+      5.653
+    ],
+    [
+      "Accrued",
+      0.255,
+      -5.19,
+      21.33
+    ],
+    [
+      "Noncurrent",
+      -4.031,
+      -1.513,
+      4.722
+    ],
+    [
+      "CFO",
+      387.823,
+      280.545,
+      328.475
+    ],
+    [
+      "InvestmentPurchases",
+      -162.926,
+      -99.12,
+      -122.532
+    ],
+    [
+      "InvestmentMaturities",
+      115.747,
+      82.077,
+      118.277
+    ],
+    [
+      "Software",
+      -9.303,
+      -6.484,
+      -8.718
+    ],
+    [
+      "PPE",
+      -18.096,
+      -7.369,
+      -18.001
+    ],
+    [
+      "Acquisitions",
+      -33.1,
+      -33.1,
+      -5.006
+    ],
+    [
+      "CFI",
+      -107.678,
+      -63.996,
+      -35.98
+    ],
+    [
+      "OptionExercise",
+      12.57,
+      9.702,
+      5.977
+    ],
+    [
+      "Earnout",
+      -0.5,
+      -0.5,
+      0
+    ],
+    [
+      "Buybacks",
+      0,
+      0,
+      -76.455
+    ],
+    [
+      "Withholding",
+      -41.617,
+      0,
+      -18.799
+    ],
+    [
+      "CFF",
+      -29.547,
+      9.202,
+      -89.277
+    ],
+    [
+      "CashChange",
+      250.598,
+      225.751,
+      203.218
+    ]
+  ],
+  "income_primary_facts": [
+    [
+      "Revenue",
+      1037.589,
+      754.721,
+      899.428
+    ],
+    [
+      "CostRevenue",
+      288.132,
+      211.133,
+      244.46
+    ],
+    [
+      "R&D",
+      306.323,
+      226.767,
+      282.917
+    ],
+    [
+      "SalesMarketing",
+      125.677,
+      91.306,
+      121.412
+    ],
+    [
+      "G&A",
+      181.887,
+      133.399,
+      147.971
+    ],
+    [
+      "EBIT",
+      135.57,
+      92.116,
+      102.668
+    ],
+    [
+      "Interest",
+      45.231,
+      33.635,
+      36.068
+    ],
+    [
+      "OtherNet",
+      1.609,
+      2.158,
+      -2.251
+    ],
+    [
+      "EBT",
+      182.41,
+      127.909,
+      136.485
+    ],
+    [
+      "Tax",
+      -231.655,
+      -244.202,
+      32.702
+    ],
+    [
+      "NI",
+      414.065,
+      372.111,
+      103.783
+    ],
+    [
+      "DA",
+      14.391,
+      10.583,
+      12.718
+    ]
+  ],
+  "sources": {
+    "fy25": "https://www.sec.gov/Archives/edgar/data/1562088/000162828026012494/duol-20251231.htm",
+    "q3_pdf": "https://duolingo.gcs-web.com/static-files/f27581cd-cf47-4058-a316-2dcca04cfb00",
+    "risk": "https://pages.stern.nyu.edu/adamodar/New_Home_Page/home.htm"
+  },
+  "limits": [
+    "CLI authentication unavailable: no full controles_todas.sh run; equivalent native checks explicitly scoped.",
+    "Federal NOL111.199m at FY2025 has no verified Q3 roll-forward.",
+    "Lease converter uses FY2025 maturity schedule; full Q3 current liability not separately disclosed. B78=0 with recognized lease liabilities needs accounting reconciliation before promotion.",
+    "Legacy historical FCFF row39 and normalizations underlying multiples need reproducible recalculation; no published multiple certification.",
+    "R&D previous annual cohorts overlap LTM current window; homologous prior LTM cohorts need reconstruction.",
+    "No rendered native visual QA or independent economic audit."
+  ],
+  "dcf_fcfe_informative": {
+    "12": [
+      "Conservadora",
+      0.225,
+      81.02258442569295,
+      81.5734203981231,
+      0.0067985485322963335,
+      81.29800241190803
+    ],
+    "13": [
+      "Base",
+      0.4,
+      106.97616733993537,
+      107.2340883019958,
+      0.0024110132983250487,
+      107.10512782096558
+    ],
+    "14": [
+      "Optimista",
+      0.225,
+      171.7086341118289,
+      170.4887212256116,
+      -0.007104551803858605,
+      171.09867766872026
+    ],
+    "15": [
+      "Promedio ponderado por probabilidad (C/B/O renormalizadas)",
+      null,
+      117.24116600813714,
+      117.18543198369252,
+      -0.000475379308670032,
+      117.21329899591483
+    ]
+  },
+  "formula_template_check": {
+    "command": "python ejecutar_diff_captura.py",
+    "transport": "captured native connector cells, unmodified official diff algorithm",
+    "source_template": "1e-lbQmCkObfq74YLpWnMmIidmcdsJQ-6uN4oiHnNTEQ",
+    "scope": "official first400rows per tab, NOT all3600rows of sensitivity engine",
+    "replaced_with_number_or_blank": 0,
+    "additional_tabs": 15,
+    "passed": true,
+    "performed_before_final_primary_source_updates": true
+  },
+  "native_gate_decision": "REVISAR: clear unsupported B78=0 recognized lease amount. Formula B81 then blocks output automatically. All quoted prices are frozen conditional diagnostics, not current approved output."
+}
