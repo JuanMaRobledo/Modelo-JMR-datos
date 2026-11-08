@@ -37,3 +37,14 @@ Modelo/herramienta real: GPT-6 con conectores GitHub y Google Drive/Sheets/Docs 
 Resultado: CANDIDATO, no EN_REVISION. PASOS F4 de punta a punta siguen 0/3; esta corrección editorial no sustituye el cierre económico de F3. El análisis no puede declarar una cifra central hasta que el motor H2 la produzca.
 
 Primer siguiente paso exacto: completar H2 Tesis de Inversión y Supuestos!B81:F81, B93:F93 y B105:F105 con aperturas por entidad y eliminaciones; adjuntar utilidad atribuible a Mercado Pago y EBIT Commerce/corporativo; después ejecutar SOTP/DCF inverso/múltiplos/matrices de la misma H2 y los gates, incluido node scripts/validar_catalogo.cjs, antes de cualquier EN_REVISION.
+
+
+## Corrección visual de libros · 8-nov-2026 · GPT-6 (ChatGPT)
+
+- **APROBADO — Presentación visible:** H1 y H2 cuentan con pestaña `Presentación` sin imágenes; H1 resume históricos reales desde `Resumen/Resultados/Balance/Flujos`; H2 muestra precio de corte US$1.510, método SOTP y DCF Base/MOS/esperado **N/D** hasta que lo calcule H2.
+- **APROBADO — disposición visual:** H1 contiene 19 pestañas, 11 normalizadas de estados/ratios antes de las fuentes SEC. H2 oculta de modo reversible las 11 pestañas históricas dependientes del motor.
+- **PARCIAL — separación real:** los tabs históricos continúan en H2 (ocultos), porque eliminarlos produciría referencias rotas en `Input sheet`, `Trailing Valuation` y módulos vinculados. No se afirma que la transferencia H1→H2 ni la migración estén terminadas.
+- **APROBADO en alcance registrado — huella:** relectura `Huella motor!F2=0`, `F3=1883`. **NO_EJECUTADO** control integral de eliminación/sincronización ni `validar_catalogo.cjs` para MELI.
+- **Estado CANDIDATO:** análisis y salida siguen N/D por faltantes de perímetro SOTP. Sin publicación; F5 independiente.
+
+**Primer siguiente paso exacto:** migrar y probar los vínculos históricos H1→H2 para poder retirar físicamente las pestañas ocultas; completar independientemente apertura por entidad, EBIT Commerce y utilidad/FCFE de Mercado Pago antes de activar cifras de valoración.
