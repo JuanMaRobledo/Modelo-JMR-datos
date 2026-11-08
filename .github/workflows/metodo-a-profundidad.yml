@@ -25,5 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validar 16 análisis integrales y vínculo a revisión de valoración
-        run: node scripts/validar_profundidad_metodo_a.cjs
+      - name: Validar análisis A-1.2 conservados en el archivo
+        run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_profundidad_metodo_a.cjs
+      - name: Validar análisis y valoración Floyd de todas las empresas vigentes
+        run: node scripts/validar_profundidad_floyd.cjs
