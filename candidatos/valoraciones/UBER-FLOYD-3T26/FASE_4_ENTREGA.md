@@ -24,3 +24,21 @@
 - Conclusión: CANDIDATO. Adaptar y probar el contrato de publicación Floyd, completar el cierre editorial y verificar la ficha en preview antes de reemplazar el catálogo.
 
 PASOS F4: 3/5 de esta entrega ejecutados (reconciliación de valores, actualización parcial del análisis, exportación y prueba local). Integración de producción y publicación pendientes. Herramientas: conector Sheets/Docs, Node 24 y Python 3.12, ChatGPT Work.
+
+## Continuidad verificada · 8-nov-2026 · implementación Floyd
+
+**Aplicación:** `JuanMaRobledo/Modelo-JMR#188` fue fusionado (commit `190d25f`). Corrige la interpretación de escenarios: Floyd C=Optimista; las revisiones A-1.2 conservan C=Disrupción/D=Optimista. Las pruebas de la app reportaron 8 workflows exitosos y Vercel mostró despliegue de producción READY con el commit fusionado. Esto **solo actualiza el visor**, no el registro oficial de UBER.
+
+**Motor:** `JuanMaRobledo/JMR-valuation#212` es un borrador sin fusionar. Incorpora ruta Floyd en `consistencia_migracion.py` (M1 para tres historias y 3+5 matrices, M2 para promedio y MOS, M3 para conciliación editorial), además de pruebas de regresión. La última ejecución oficial documentada de M1/M2/M3 fue la anterior al cambio de motor, con los tres resultados FALSE. **No se ha ejecutado ni certificado el nuevo validador contra este expediente**; por tanto M1 y M2 siguen en estado NO CERTIFICADO y M3 sigue BLOQUEADO por pendientes editoriales, aunque las cifras de M2 tienen conciliación independiente.
+
+**Fuentes y análisis:** se incorporó `INVESTIGACION_EDITORIAL_F4_20261108.md` con fuentes primarias de resultados 3T26, competencia, autonomía/vehículos autónomos, contexto monetario, gobierno, recompras y Delivery Hero. Es material para cerrar capítulos, no una nueva valoración ni sustituto del artículo. Se mantiene **PENDIENTE** el TAM verificable y cuota objetivo, además de la revisión conjunta de beta/ERP/Rf y el flujo/reinversión frente a supuestos.
+
+**Coherencia de cortes:** el análisis candidato menciona un Treasury nominal 10 años de 4,94 % (30-oct-2026); la curva Treasury da 4,86 % el 6-nov-2026, fecha del precio de referencia. Identificar si el modelo adoptó deliberadamente el corte de factores del 30-oct y documentarlo o recalcular la sensibilidad de WACC si no; **no modificar automáticamente las cifras**.
+
+**Pendientes para reemplazar la ficha anterior:**
+1. Ejecutar y aprobar el nuevo gate Floyd de `JMR-valuation#212`, sus regresiones, los controles de hoja y la paridad JSON; fusionar solo con evidencia.
+2. Cerrar el artículo Nivel 1 y anexo Nivel 2 con fuentes, límites y comprobaciones de supuestos; resolver M3, TAM, fechas macro y puente Delivery Hero/SBC.
+3. Prueba end-to-end de candidato en preview y auditoría económica F5 independiente; no marcar artificialmente `controlesTecnicosAprobados`.
+4. Tras validar gates, fusionar el expediente `Modelo-JMR-datos#254`, promover la revisión Floyd como única ficha visible y comprobar enlace, catálogo y app con lectura posterior.
+
+**Estado:** CANDIDATO / NO PUBLICADO en el catálogo. El informe anterior es una instantánea válida de las comprobaciones de su fecha; esta sección distingue los cambios posteriores de los gates todavía no certificados.
