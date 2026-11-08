@@ -75,7 +75,8 @@ jobs:
       - run: node --test scripts/tests/nu_n2_reconciliation.test.cjs
       - run: node --test scripts/tests/anclas_uber_googl_fuente.test.cjs
       - run: node --test scripts/tests/intu_n2_dcf_repro.test.cjs
-      - run: node --test scripts/tests/capturas_matrices_fuente.test.cjs
+      - name: Auditoría de capturas de la cartera histórica A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs node --test scripts/tests/capturas_matrices_fuente.test.cjs
       - run: node --test scripts/tests/shak_formulas_evidencia.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
       - run: node scripts/validar_no_regresion_20.cjs
