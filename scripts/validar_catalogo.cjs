@@ -71,7 +71,66 @@ function validateBankNativeMatrices(v){
  * exige origen/revisión, integridad, centros VP3 y estado de integración
  * explícito. La auditoría económica independiente se realiza después.
  */
+
+/** El contrato Floyd usa cinco matrices nativas por empresa operativa, no siete.
+ *  F5 económica permanece pendiente después de publicar EN_REVISION. */
+function validateFloydNativeMatrices(v){
+  const s=v.sensibilidadMultiples||{},dcf=v.sensibilidadDCF||{};
+  const methods=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
+  assert.equal(v.perfil_valoracion,'Floyd');
+  assert.equal(v.version_metodo,'Floyd');
+  assert.equal(s.contrato,'base-native-five-priority-v1');
+  assert.equal(s.revisionId,v.revisionId);
+  assert.equal(s.sourceSheetId,v.sheet_id);
+  assert.match(String(s.resultadosSha256||''),/^[0-9a-f]{64}$/);
+  assert.equal(s.estadoPublicacion,'INTEGRADO_EN_REVISION');
+  assert.equal(s.controlesTecnicosAprobados,true);
+  assert.equal(s.certificado,false,'F5 no se puede autocertificar');
+  assert.equal(s.matrices?.length,5,'Floyd exige cinco matrices 5×5 Base');
+  assert.deepEqual(s.matrices.map(m=>m.metodo),methods);
+  assert.equal(dcf.matrices?.length,3,'Floyd exige tres matrices DCF');
+  const near=(a,b)=>Number.isFinite(a)&&Number.isFinite(b)&&
+    Math.abs(a-b)<=Math.max(1e-6,Math.abs(b)*1e-8);
+  const grid=x=>Array.isArray(x)&&x.length===5&&x.every(row=>
+    Array.isArray(row)&&row.length===5&&row.every(finiteNative));
+  const stories=v.valorEsperado?.historias||[];
+  assert.equal(stories.length,3);
+  assert.deepEqual(stories.map(h=>h.id).sort(),['A','B','C']);
+  assert.ok(stories.every(h=>finiteNative(h.valor)&&finiteNative(h.probabilidad)&&
+    h.probabilidad>=0&&h.probabilidad<=1));
+  const probs=stories.reduce((sum,h)=>sum+h.probabilidad,0);
+  const expected=stories.reduce((sum,h)=>sum+h.probabilidad*h.valor,0);
+  const base=stories.find(h=>h.id==='A').valor;
+  assert.ok(near(probs,1)&&near(expected,v.valorEsperado.valor));
+  assert.ok(near(base,v.valorPrincipal)&&near(base,v.valorEsperado.dcfBase));
+  assert.equal(v.valorEsperado.escenariosPromedio,3);
+  assert.equal(v.valorEsperado.disrupcionEnPromedio,false);
+  assert.ok(near(v.precioMOS,base*(1-v.mos))&&v.baseMOS==='dcfBase');
+  for(const m of dcf.matrices){
+    assert.equal(m.centroConciliado,true);
+    assert.ok(grid(m.valores));
+    assert.ok(near(m.valores[2][2],m.centro)&&near(m.centro,base));
+  }
+  for(let i=0;i<5;i++){
+    const m=s.matrices[i],selected=(v.descuentoMultiples?.metodos||[])
+       .find(x=>x.nombre===m.metodo);
+    assert.equal(m.estado,'OK');assert.equal(m.escenario,'base');
+    assert.equal(m.peso,0);
+    assert.equal(m.origen,"'Sensibilidad por múltiplo'!A"+(78+10*i)+":I"+(84+10*i));
+    assert.ok(grid(m.matriz)&&Array.isArray(m.fundamentalFY3)&&m.fundamentalFY3.length===5
+      &&m.fundamentalFY3.every(finiteNative)&&Array.isArray(m.multiploElegido)
+      &&m.multiploElegido.length===5&&m.multiploElegido.every(finiteNative));
+    assert.ok(near(m.matriz[2][2],m.centro)&&near(m.centro,m.vp3Original));
+    assert.ok(selected&&selected.peso===0&&near(m.centro,selected.base?.vp?.[2]));
+  }
+  assert.equal(v.auditPendingUserVisualReview,true);
+  assert.equal(v.auditoriaEconomica,'NO_REALIZADA');
+  assert.ok(v.salvedades?.length>=3);
+  return true;
+}
+
 function validateNativeMatrices(v){
+  if(v.perfil_valoracion==='Floyd')return validateFloydNativeMatrices(v);
   if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
   if(v.sensibilidadMultiples?.contrato==='bank-relative-ke-v1'||
      v.ticker==='NU'||/DCF FCFE (bancario|financiero)/i.test(v.metodoPrincipal||''))
@@ -281,7 +340,9 @@ function validate(root = path.join(__dirname, '..')) {
     // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
     // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
     // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
-    const h2 = [...a.articleHtml.matchAll(/<h2[^>]*>([\s\S]*?)<\/h2>/gi)]
+    const headingLevel=a.perfil_valoracion==='Floyd'?'h3':'h2';
+    const headingRe=new RegExp('<'+headingLevel+'[^>]*>([\\s\\S]*?)<\\/'+headingLevel+'>','gi');
+    const h2 = [...a.articleHtml.matchAll(headingRe)]
       .map(m => m[1].replace(/<[^>]+>/g, '').trim());
     const numbers = h2
       .map(h => /^(\d+)\.\s+/.exec(h))
@@ -424,7 +485,7 @@ function validate(root = path.join(__dirname, '..')) {
     // CI técnico no equivale a publicar resultados. Si una revisión carece de
     // sensibilidad por múltiplos, fallar EXPLÍCITAMENTE en vez de pasar el
     // registro como si estuviera auditado o dejar un TypeError opaco.
-    const contratoA = c.controlModeloA?.empresas?.[v.ticker]?.metodo === 'A-1.2';
+    const contratoA = ['A-1.2','Floyd'].includes(c.controlModeloA?.empresas?.[v.ticker]?.metodo);
     if (contratoA) {
       const s = v.sensibilidadMultiples;
       const grids = Array.isArray(s?.matrices) ? s.matrices : [];
@@ -461,5 +522,5 @@ function validate(root = path.join(__dirname, '..')) {
   return {valoraciones: vals.length, analisis: c.analisis.length,
     auditorias: c.auditorias.length};
 }
-module.exports = {validate,validateNativeMatrices,validateBankNativeMatrices,validateDcfFcfe};
+module.exports = {validate,validateNativeMatrices,validateFloydNativeMatrices,validateBankNativeMatrices,validateDcfFcfe};
 if (require.main === module) console.log(JSON.stringify(validate(), null, 2));

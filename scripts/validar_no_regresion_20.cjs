@@ -70,7 +70,26 @@ function run(){
     assert.ok((a.controlCobertura?.palabrasNivel1||0)>=7500,'KO: artículo no pasa profundidad');
     assert.equal(a.controlCobertura?.nivel2Apartados,12);
   }
-  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra,
+  const floyd=Object.entries(cat.controlModeloA?.empresas||{})
+    .filter(([,item])=>item.metodo==='Floyd');
+  assert.ok(floyd.length<=1,'No permitir altas Floyd desconocidas');
+  for(const [ticker,item] of floyd){
+    assert.equal(ticker,'UBER','La primera revisión Floyd debe ser UBER');
+    assert.equal(item.rutaValoracion,'valoraciones/UBER-FLOYD-3T26.json');
+    const original=read('valoraciones/UBER-20261030-A1.json');
+    const current=read(item.rutaValoracion);
+    const analysis=read('analisis/UBER-research-UBER-FLOYD-3T26.json');
+    assert.equal(original.revisionId,'UBER-20261030-A1','Histórico UBER fue modificado');
+    assert.equal(original.sheet_id,'1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58',
+      'Huella de origen A-1.2 no preservada');
+    assert.equal(current.perfil_valoracion,'Floyd');
+    assert.equal(current.version_metodo,'Floyd');
+    assert.equal(current.sensibilidadMultiples?.matrices?.length,5);
+    assert.equal(current.sensibilidadDCF?.matrices?.length,3);
+    assert.equal(analysis.linkedValuation?.sourcePath,item.rutaValoracion);
+    assert.equal(analysis.revisionId,current.revisionId);
+  }
+  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra-floyd.length,
     'Se perdieron revisiones A-1.2 anteriores o apareció un alta sin contrato');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];

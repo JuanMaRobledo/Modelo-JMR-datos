@@ -1790,7 +1790,7 @@
     {
       "ticker": "UBER",
       "revisionId": "UBER-20261030-A1",
-      "estado": "VIGENTE",
+      "estado": "SUSTITUIDA",
       "fecha": "2026-10-30",
       "anterior": null,
       "ordenAmbiguo": false,
@@ -1821,6 +1821,44 @@
         "sales_to_capital_1_5": null,
         "sales_to_capital_6_10": null,
         "costo_capital": null,
+        "g_terminal": "base.terminalGrowth (g terminal (esquema anterior))",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
+      "ticker": "UBER",
+      "revisionId": "UBER-FLOYD-3T26",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-06",
+      "anterior": "UBER-20261030-A1",
+      "ordenAmbiguo": false,
+      "metodo": "Floyd",
+      "metodoPrincipal": "DCF FCFF Base 10 años",
+      "valorPrincipal": 100.19381867706664,
+      "drivers": {
+        "crecimiento_1_5": 0.13384856539223677,
+        "margen_terminal": 0.18,
+        "sales_to_capital_1_5": 2.8,
+        "sales_to_capital_6_10": 2.5,
+        "costo_capital": 0.09365742923652458,
+        "g_terminal": 0.04,
+        "rentabilidad_terminal": 0.14
+      },
+      "variacion": {
+        "crecimiento_1_5": 0.021981139037938746,
+        "margen_terminal": -0.020000000000000018,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": 0.0,
+        "rentabilidad_terminal": 0.0
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimiento (crecimiento (esquema anterior))",
+        "margen_terminal": "base.margen (margen EBIT objetivo (esquema anterior))",
+        "sales_to_capital_1_5": "base.s2c (S/C 1-5 (esquema anterior))",
+        "sales_to_capital_6_10": "base.s2c610 (S/C 6-10 (esquema anterior))",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
         "g_terminal": "base.terminalGrowth (g terminal (esquema anterior))",
         "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
       }

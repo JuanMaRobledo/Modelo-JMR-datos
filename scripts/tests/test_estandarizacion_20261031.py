@@ -103,7 +103,14 @@ class EditorialTests(unittest.TestCase):
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
         # Altas canónicas verificadas: AMZN R5, PAGS A-1.2, AAPL R1, LULU R1 y KO R1; una ficha por emisor.
         # No aceptar altas desconocidas ni duplicaciones de empresas y revisiones oficiales.
-        self.assertEqual(len(selected),29)
+        self.assertEqual(len(selected),28)
+        floyd=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd']
+        self.assertEqual(len(floyd),1)
+        self.assertEqual(floyd[0]['ticker'],'UBER')
+        self.assertEqual(floyd[0]['revisionId'],'UBER-FLOYD-3T26')
+        self.assertEqual(re.findall(r'<h3[^>]*>(\d+)\.',floyd[0]['articleHtml']),list(map(str,range(1,15))))
+        self.assertEqual(floyd[0]['estado'],'EN_REVISION')
+        self.assertFalse(floyd[0]['controlCobertura']['auditoriaEconomicaIndependiente'])
         self.assertEqual(len([x for x in selected if x.get('ticker')=='KO' and x.get('revisionId')=='KO-20261103-A12-R1']),1)
         self.assertEqual(catalog['valoraciones'].count('valoraciones/KO-20261103-A12-R1.json'),1)
         self.assertEqual(catalog['analisis'].count('analisis/KO-research-KO-20261103-A12-R1.json'),1)
@@ -139,7 +146,9 @@ class EditorialTests(unittest.TestCase):
 
     def test_four_expansions_are_specific_and_do_not_certify(self):
         for ticker in ['SHAK','UBER','AFYA','DUOL']:
-            a=json.loads(active_analysis_path(ROOT,ticker).read_text())
+            a=json.loads((ROOT/'analisis/UBER-research-UBER-20261030-A1.json').read_text()) if ticker=='UBER' else json.loads(active_analysis_path(ROOT,ticker).read_text())
+            if ticker=='UBER':
+                self.assertEqual(a['revisionId'],'UBER-20261030-A1','La ampliación histórica no debe confundirse con Floyd')
             self.assertEqual(a['ampliacionEditorial20261031']['capitulosAmpliados'],list(range(1,15)))
             self.assertFalse(a['ampliacionEditorial20261031']['supuestosModificados'])
             self.assertFalse(a['ampliacionEditorial20261031']['auditoriaEconomicaEjecutada'])
