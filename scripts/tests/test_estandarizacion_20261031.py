@@ -103,14 +103,16 @@ class EditorialTests(unittest.TestCase):
         selected=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('version_metodo')=='A-1.2']
         # Altas canónicas verificadas: AMZN R5, PAGS A-1.2, AAPL R1, LULU R1 y KO R1; una ficha por emisor.
         # No aceptar altas desconocidas ni duplicaciones de empresas y revisiones oficiales.
-        self.assertEqual(len(selected),28)
+        self.assertEqual(len(selected),27)
         floyd=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd']
-        self.assertEqual(len(floyd),1)
-        self.assertEqual(floyd[0]['ticker'],'UBER')
-        self.assertEqual(floyd[0]['revisionId'],'UBER-FLOYD-3T26')
-        self.assertEqual(re.findall(r'<h3[^>]*>(\d+)\.',floyd[0]['articleHtml']),list(map(str,range(1,15))))
-        self.assertEqual(floyd[0]['estado'],'EN_REVISION')
-        self.assertFalse(floyd[0]['controlCobertura']['auditoriaEconomicaIndependiente'])
+        # Revisiones Floyd integradas de forma explícita, una por emisor (UBER y CMG).
+        esperado={'UBER':'UBER-FLOYD-3T26','CMG':'CMG-FLOYD-20261108-R1'}
+        self.assertEqual(len(floyd),len(esperado))
+        self.assertEqual({f['ticker']:f['revisionId'] for f in floyd},esperado)
+        for f in floyd:
+            self.assertEqual(re.findall(r'<h3[^>]*>(\d+)\.',f['articleHtml']),list(map(str,range(1,15))))
+            self.assertEqual(f['estado'],'EN_REVISION')
+            self.assertFalse(f['controlCobertura']['auditoriaEconomicaIndependiente'])
         self.assertEqual(len([x for x in selected if x.get('ticker')=='KO' and x.get('revisionId')=='KO-20261103-A12-R1']),1)
         self.assertEqual(catalog['valoraciones'].count('valoraciones/KO-20261103-A12-R1.json'),1)
         self.assertEqual(catalog['analisis'].count('analisis/KO-research-KO-20261103-A12-R1.json'),1)

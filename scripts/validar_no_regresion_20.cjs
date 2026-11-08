@@ -72,16 +72,30 @@ function run(){
   }
   const floyd=Object.entries(cat.controlModeloA?.empresas||{})
     .filter(([,item])=>item.metodo==='Floyd');
-  assert.ok(floyd.length<=1,'No permitir altas Floyd desconocidas');
+  // Revisiones Floyd integradas de forma explícita (una por emisor), cada una con su
+  // antecedente A-1.2 preservado (archivo y huella de hoja de origen intactos).
+  const FLOYD_ESPERADO={
+    UBER:{ruta:'valoraciones/UBER-FLOYD-3T26.json',original:'valoraciones/UBER-20261030-A1.json',
+      originalRevision:'UBER-20261030-A1',originalSheet:'1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58',
+      analisis:'analisis/UBER-research-UBER-FLOYD-3T26.json',valorOriginal:91.13793738151752},
+    CMG:{ruta:'valoraciones/CMG-FLOYD-20261108-R1.json',original:'valoraciones/CMG-20261028-A3.json',
+      originalRevision:'CMG-20261028-A3',originalSheet:'1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c',
+      analisis:'analisis/CMG-research-CMG-FLOYD-20261108-R1.json',valorOriginal:25.246494601933065}};
+  let floydHistoricoProtegido=0;
+  assert.ok(floyd.length<=Object.keys(FLOYD_ESPERADO).length,'No permitir altas Floyd desconocidas');
   for(const [ticker,item] of floyd){
-    assert.equal(ticker,'UBER','La primera revisión Floyd debe ser UBER');
-    assert.equal(item.rutaValoracion,'valoraciones/UBER-FLOYD-3T26.json');
-    const original=read('valoraciones/UBER-20261030-A1.json');
+    const exp=FLOYD_ESPERADO[ticker];
+    assert.ok(exp,'Alta Floyd no identificada: '+ticker);
+    assert.equal(item.rutaValoracion,exp.ruta);
+    const original=read(exp.original);
     const current=read(item.rutaValoracion);
-    const analysis=read('analisis/UBER-research-UBER-FLOYD-3T26.json');
-    assert.equal(original.revisionId,'UBER-20261030-A1','Histórico UBER fue modificado');
-    assert.equal(original.sheet_id,'1i0B9cPX-z5G7GtqGmU3lVbJP0l6AyhhYhF0x8pQ8B58',
+    const analysis=read(exp.analisis);
+    assert.equal(original.revisionId,exp.originalRevision,'Histórico '+ticker+' fue modificado');
+    assert.equal(original.sheet_id,exp.originalSheet,
       'Huella de origen A-1.2 no preservada');
+    assert.ok(Math.abs(original.valorPrincipal-exp.valorOriginal)<1e-7,
+      'El valor A-1.2 histórico de '+ticker+' fue alterado');
+    floydHistoricoProtegido++; // la fotografía A-1.2 sustituida sigue protegida
     assert.equal(current.perfil_valoracion,'Floyd');
     assert.equal(current.version_metodo,'Floyd');
     assert.equal(current.sensibilidadMultiples?.matrices?.length,5);
@@ -235,7 +249,7 @@ function run(){
       'DUOL Atlas: ponderación no concilia');
     duolHistoricalProtected=1; // foto A1/R2 conservadas y R1 validada
   }
-  assert.ok(snapshots+duolHistoricalProtected>=16,
+  assert.ok(snapshots+duolHistoricalProtected+floydHistoricoProtegido>=16,
     'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
     ' fotografías de baseline y '+duolHistoricalProtected+
