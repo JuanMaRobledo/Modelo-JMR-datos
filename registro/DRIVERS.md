@@ -188,7 +188,8 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| UBER-20261030-A1 | VIGENTE | 91.14 | 11.2 % | 20.0 % | N/D | N/D | N/D | 4.0 % | 14.0 % |
+| UBER-20261030-A1 | SUSTITUIDA | 91.14 | 11.2 % | 20.0 % | N/D | N/D | N/D | 4.0 % | 14.0 % |
+| UBER-FLOYD-3T26 | VIGENTE | 100.19 | 13.4 % (+2.2 pp) | 18.0 % (-2.0 pp) | 2.80 | 2.50 | 9.4 % | 4.0 % (+0.0 pp) | 14.0 % (+0.0 pp) |
 
 ## XP
 
