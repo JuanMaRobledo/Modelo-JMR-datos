@@ -6,7 +6,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| AAPL-20261103-A12-R1 | VIGENTE | 141.01 | 7.0 % | 36.0 % | 1.80 | 2.00 | 12.9 % | 4.0 % | 15.0 % |
+| AAPL-20261103-A12-R1 | SUSTITUIDA | 141.01 | 7.0 % | 36.0 % | 1.80 | 2.00 | 12.9 % | 4.0 % | 15.0 % |
 
 ## ADBE
 
@@ -14,20 +14,20 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | ADBE-20261028-A2 | SUSTITUIDA | 385.87 | 8.1 % | 38.5 % | 2.30 | 1.50 | N/D | 4.0 % | 23.0 % |
 | ADBE-20261028-R1 | SUSTITUIDA ⚠ orden ambiguo | 374.92 | 8.1 % | 38.5 % | 2.30 | 1.05 | N/D | 4.0 % | 20.0 % |
-| ADBE-20261028-A3 | VIGENTE ⚠ orden ambiguo | 432.29 | 8.7 % | 39.0 % | 2.85 | 2.15 | N/D | 4.0 % | 26.5 % |
+| ADBE-20261028-A3 | SUSTITUIDA ⚠ orden ambiguo | 432.29 | 8.7 % | 39.0 % | 2.85 | 2.15 | N/D | 4.0 % | 26.5 % |
 
 ## AFYA
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| AFYA-20261029-R1 | VIGENTE | 20.92 | N/D | 33.5 % | N/D | N/D | N/D | 4.0 % | 13.5 % |
+| AFYA-20261029-R1 | SUSTITUIDA | 20.92 | N/D | 33.5 % | N/D | N/D | N/D | 4.0 % | 13.5 % |
 
 ## AMZN
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | AMZN-20261102-A12-R2 | SUSTITUIDA | N/D | N/D | 17.0 % | 0.75 | N/D | N/D | N/D | N/D |
-| AMZN-20261102-A12-R5 | VIGENTE | 149.19 | 9.3 % | 15.8 % (-1.2 pp) | 0.72 (-0.03) | 1.65 | 8.2 % | 4.0 % | 11.5 % |
+| AMZN-20261102-A12-R5 | SUSTITUIDA | 149.19 | 9.3 % | 15.8 % (-1.2 pp) | 0.72 (-0.03) | 1.65 | 8.2 % | 4.0 % | 11.5 % |
 
 ## BSX
 
@@ -35,13 +35,13 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | BSX-20261028-R1 | SUSTITUIDA | 39.01 | 6.2 % | 26.0 % | N/D | 1.30 | N/D | 4.0 % | 11.0 % |
 | BSX-20261028-A2 | SUSTITUIDA | 41.17 | 6.2 % (+0.0 pp) | 26.0 % (+0.0 pp) | 1.30 | 1.40 (+0.10) | N/D | 4.0 % (+0.0 pp) | 12.5 % (+1.5 pp) |
-| BSX-20261028-A4 | VIGENTE | 41.76 | 4.9 % (-1.3 pp) | 25.5 % (-0.5 pp) | 1.50 (+0.20) | 1.70 (+0.30) | N/D | 4.0 % (+0.0 pp) | 15.0 % (+2.5 pp) |
+| BSX-20261028-A4 | SUSTITUIDA ⚠ orden ambiguo | 41.76 | 4.9 % | 25.5 % | 1.50 | 1.70 | N/D | 4.0 % | 15.0 % |
 
 ## CELH
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| CELH-20261028-A1 | VIGENTE | 34.85 | 8.8 % | 19.5 % | N/D | 1.40 | N/D | 4.0 % | 19.0 % |
+| CELH-20261028-A1 | SUSTITUIDA | 34.85 | 8.8 % | 19.5 % | N/D | 1.40 | N/D | 4.0 % | 19.0 % |
 
 ## CMG
 
@@ -49,27 +49,27 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | CMG-2026-10-28-R1-REINICIO | SUSTITUIDA | 24.94 | 10.0 % | 17.0 % | N/D | N/D | N/D | 4.0 % | 18.4 % |
 | CMG-20261028-A3 | SUSTITUIDA | 25.25 | 8.4 % (-1.6 pp) | 17.0 % (+0.0 pp) | 2.20 | 2.05 | N/D | 4.0 % (+0.0 pp) | 19.0 % (+0.6 pp) |
-| CMG-FLOYD-20261108-R1 | VIGENTE | 33.04 | 8.9 % (+0.5 pp) | 16.0 % (-1.0 pp) | 2.70 (+0.50) | 2.90 (+0.85) | 7.8 % | 4.0 % (+0.0 pp) | 22.0 % (+3.0 pp) |
+| CMG-FLOYD-20261108-R1 | SUSTITUIDA | 33.04 | 8.9 % (+0.5 pp) | 16.0 % (-1.0 pp) | 2.70 (+0.50) | 2.90 (+0.85) | 7.8 % | 4.0 % (+0.0 pp) | 22.0 % (+3.0 pp) |
 
 ## DPZ
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| DPZ-20261101-A1 | VIGENTE | 308.46 | 4.1 % | 21.2 % | 2.96 | 2.96 | 7.9 % | 4.0 % | 18.4 % |
+| DPZ-20261101-A1 | SUSTITUIDA | 308.46 | 4.1 % | 21.2 % | 2.96 | 2.96 | 7.9 % | 4.0 % | 18.4 % |
 
 ## DUOL
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | DUOL-20261029-A1 | SUSTITUIDA | 136.68 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
-| DUOL-20261103-A12-R2 | VIGENTE | 139.11 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
+| DUOL-20261103-A12-R2 | SUSTITUIDA | 139.11 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
 | DUOL-20261105-ATLAS-R1 | SUSTITUIDA | 108.23 | N/D | N/D | N/D | N/D | N/D | N/D | N/D |
 
 ## EPAM
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| EPAM-20261029-R1 | VIGENTE | 184.41 | 6.0 % | 13.5 % | 1.65 | 2.15 | N/D | 4.0 % | 16.0 % |
+| EPAM-20261029-R1 | SUSTITUIDA | 184.41 | 6.0 % | 13.5 % | 1.65 | 2.15 | N/D | 4.0 % | 16.0 % |
 
 ## GOOG
 
@@ -82,34 +82,34 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | GOOGL-20261029-R4 | SUSTITUIDA | 278.12 | 15.0 % | 38.0 % | 0.70 | 0.56 | N/D | 4.0 % | 18.0 % |
-| GOOGL-20261029-R5 | VIGENTE | 287.20 | 15.0 % (+0.0 pp) | 38.0 % (+0.0 pp) | 0.70 (+0.00) | 0.56 (+0.00) | N/D | 4.0 % (+0.0 pp) | 21.0 % (+3.0 pp) |
+| GOOGL-20261029-R5 | SUSTITUIDA ⚠ orden ambiguo | 287.20 | 15.0 % | 38.0 % | 0.70 | 0.56 | N/D | 4.0 % | 21.0 % |
 
 ## INTU
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | INTU-20261029-R1 | SUSTITUIDA | 506.85 | N/D | N/D | N/D | N/D | 8.9 % | 3.0 % | 26.0 % |
-| INTU-20261101-A12-R1 | VIGENTE | 402.00 | 8.1 % | 35.2 % | 0.97 | 0.97 | 9.9 % (+1.0 pp) | 4.0 % (+1.0 pp) | 18.0 % (-8.0 pp) |
+| INTU-20261101-A12-R1 | SUSTITUIDA | 402.00 | 8.1 % | 35.2 % | 0.97 | 0.97 | 9.9 % (+1.0 pp) | 4.0 % (+1.0 pp) | 18.0 % (-8.0 pp) |
 
 ## KO
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| KO-20261103-A12-R1 | VIGENTE | 59.49 | 3.3 % | 33.5 % | 1.70 | 1.60 | 7.7 % | 4.0 % | 18.0 % |
+| KO-20261103-A12-R1 | SUSTITUIDA | 59.49 | 3.3 % | 33.5 % | 1.70 | 1.60 | 7.7 % | 4.0 % | 18.0 % |
 
 ## LULU
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| LULU-20261103-A12-R1 | VIGENTE | 142.92 | 2.0 % | 17.5 % | 1.80 | 1.77 | 8.3 % | 3.0 % | 14.0 % |
+| LULU-20261103-A12-R1 | SUSTITUIDA | 142.92 | 2.0 % | 17.5 % | 1.80 | 1.77 | 8.3 % | 3.0 % | 14.0 % |
 
 ## MELI
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | MELI-20261028-A1 | SUSTITUIDA | 1471.70 | 24.5 % | 13.5 % | N/D | 2.20 | N/D | 4.0 % | 14.5 % |
+| MELI-20261028-A3 | SUSTITUIDA ⚠ orden ambiguo | 2029.87 | 25.6 % | 15.0 % | N/D | 2.70 | N/D | 4.0 % | 16.0 % |
 | MELI-20261028-R1 | SUSTITUIDA ⚠ orden ambiguo | 1299.80 | 20.6 % | 13.5 % | N/D | 2.20 | N/D | 4.0 % | 15.5 % |
-| MELI-20261028-A3 | VIGENTE ⚠ orden ambiguo | 2029.87 | 25.6 % | 15.0 % | N/D | 2.70 | N/D | 4.0 % | 16.0 % |
 
 ## META
 
@@ -117,26 +117,26 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | META-20261025-R5 | SUSTITUIDA | 726.65 | 16.7 % | 43.0 % | 0.45 | 0.54 | N/D | 4.0 % | 17.9 % |
 | META-20261031-A12-R1 | SUSTITUIDA | 780.63 | N/D | 44.0 % (+1.0 pp) | 0.52 (+0.07) | 0.55 (+0.01) | N/D | 3.5 % (-0.5 pp) | 18.7 % (+0.8 pp) |
-| META-20261101-A12-R1 | VIGENTE | 737.51 | 14.6 % | 44.0 % (+0.0 pp) | 0.52 (+0.00) | 0.55 (+0.00) | 9.3 % | 3.5 % (+0.0 pp) | 18.7 % (+0.0 pp) |
+| META-20261101-A12-R1 | SUSTITUIDA | 737.51 | 14.6 % | 44.0 % (+0.0 pp) | 0.52 (+0.00) | 0.55 (+0.00) | 9.3 % | 3.5 % (+0.0 pp) | 18.7 % (+0.0 pp) |
 
 ## MSFT
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| MSFT-20261028-R1 | VIGENTE | 480.84 | 14.8 % | 48.5 % | 0.85 | 1.60 | N/D | 4.0 % | 16.0 % |
+| MSFT-20261028-R1 | SUSTITUIDA | 480.84 | 14.8 % | 48.5 % | 0.85 | 1.60 | N/D | 4.0 % | 16.0 % |
 
 ## NFLX
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | NFLX-20261028-R1 | SUSTITUIDA | 68.93 | 9.1 % | 35.0 % | 1.20 | 1.20 | N/D | 4.0 % | 20.6 % |
-| NFLX-20261028-A2 | VIGENTE | 74.08 | 9.5 % (+0.4 pp) | 36.0 % (+1.0 pp) | 1.65 (+0.45) | 1.50 (+0.30) | N/D | 4.0 % (+0.0 pp) | 22.5 % (+1.9 pp) |
+| NFLX-20261028-A2 | SUSTITUIDA | 74.08 | 9.5 % (+0.4 pp) | 36.0 % (+1.0 pp) | 1.65 (+0.45) | 1.50 (+0.30) | N/D | 4.0 % (+0.0 pp) | 22.5 % (+1.9 pp) |
 
 ## NKE
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| NKE-20261029-R1 | VIGENTE | 37.73 | 3.0 % | 12.4 % | 1.50 | 2.30 | N/D | 4.0 % | 16.0 % |
+| NKE-20261029-R1 | SUSTITUIDA | 37.73 | 3.0 % | 12.4 % | 1.50 | 2.30 | N/D | 4.0 % | 16.0 % |
 
 ## NU
 
@@ -144,7 +144,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | NU-20261029-R1 | SUSTITUIDA | 18.33 | 22.5 % | N/D | N/D | N/D | 12.0 % | 4.0 % | 22.0 % |
 | NU-20261102-A12-R1 | SUSTITUIDA | 15.14 | 22.2 % (-0.3 pp) | N/D | N/D | N/D | 10.9 % (-1.1 pp) | 4.0 % (+0.0 pp) | 16.0 % (-6.0 pp) |
-| NU-20261102-A12-R3 | VIGENTE | 14.42 | 22.2 % (+0.0 pp) | N/D | N/D | N/D | 12.2 % (+1.3 pp) | 4.0 % (+0.0 pp) | 16.0 % (+0.0 pp) |
+| NU-20261102-A12-R3 | SUSTITUIDA ⚠ orden ambiguo | 14.42 | 22.2 % | N/D | N/D | N/D | 12.2 % | 4.0 % | 16.0 % |
 
 ## NVDA
 
@@ -152,38 +152,38 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | NVDA-20261025-R4 | SUSTITUIDA | 381.79 | 36.3 % | 58.7 % | 2.00 | 0.60 | N/D | 4.0 % | 27.2 % |
 | NVDA-20261031-A12-R1 | SUSTITUIDA | 201.45 | N/D | 53.0 % (-5.7 pp) | 2.20 (+0.20) | 0.70 (+0.10) | N/D | 3.5 % (-0.5 pp) | 28.7 % (+1.4 pp) |
-| NVDA-20261101-A12-R1 | VIGENTE | 205.95 | 23.6 % | 53.0 % (+0.0 pp) | 2.20 (+0.00) | 0.70 (+0.00) | 10.6 % | 3.5 % (+0.0 pp) | 28.7 % (+0.0 pp) |
+| NVDA-20261101-A12-R1 | SUSTITUIDA | 205.95 | 23.6 % | 53.0 % (+0.0 pp) | 2.20 (+0.00) | 0.70 (+0.00) | 10.6 % | 3.5 % (+0.0 pp) | 28.7 % (+0.0 pp) |
 
 ## NVO
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| NVO-20261029-R1 | VIGENTE | 63.43 | N/D | 43.5 % | N/D | N/D | N/D | 4.0 % | 23.0 % |
+| NVO-20261029-R1 | SUSTITUIDA | 63.43 | N/D | 43.5 % | N/D | N/D | N/D | 4.0 % | 23.0 % |
 
 ## ONON
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| ONON-20261029-R1 | VIGENTE | 40.81 | 14.0 % | 17.5 % | 1.65 | 2.00 | N/D | 4.0 % | 22.0 % |
+| ONON-20261029-R1 | SUSTITUIDA | 40.81 | 14.0 % | 17.5 % | 1.65 | 2.00 | N/D | 4.0 % | 22.0 % |
 
 ## PAGS
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| PAGS-20261030-A12-R1 | VIGENTE | 12.88 | 8.8 % | N/D | N/D | N/D | 12.5 % | 5.8 % | 13.9 % |
+| PAGS-20261030-A12-R1 | SUSTITUIDA | 12.88 | 8.8 % | N/D | N/D | N/D | 12.5 % | 5.8 % | 13.9 % |
 
 ## PYPL
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| PYPL-20261029-R1 | VIGENTE | 137.81 | 5.5 % | 23.5 % | 1.85 | 2.35 | N/D | 4.0 % | 20.0 % |
+| PYPL-20261029-R1 | SUSTITUIDA | 137.81 | 5.5 % | 23.5 % | 1.85 | 2.35 | N/D | 4.0 % | 20.0 % |
 
 ## SHAK
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | SHAK-REC-20261027-R1 | SUSTITUIDA | 24.13 | 11.0 % | 9.5 % | N/D | N/D | N/D | 4.0 % | 9.0 % |
-| SHAK-20261029-A12-R2 | VIGENTE | 35.49 | 13.8 % (+2.8 pp) | 10.5 % (+1.0 pp) | N/D | N/D | N/D | 4.0 % (+0.0 pp) | 11.0 % (+2.0 pp) |
+| SHAK-20261029-A12-R2 | SUSTITUIDA | 35.49 | 13.8 % (+2.8 pp) | 10.5 % (+1.0 pp) | N/D | N/D | N/D | 4.0 % (+0.0 pp) | 11.0 % (+2.0 pp) |
 
 ## UBER
 
@@ -197,10 +197,10 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | XP-JMR-20261026-R2 | SUSTITUIDA | 13.53 | 8.4 % | 31.0 % | N/D | N/D | N/D | 5.0 % | N/D |
-| XP-20261031-A12-R1 | VIGENTE | 14.48 | N/D | N/D | N/D | N/D | N/D | 5.0 % (+0.0 pp) | 17.8 % |
+| XP-20261031-A12-R1 | SUSTITUIDA | 14.48 | N/D | N/D | N/D | N/D | N/D | 5.0 % (+0.0 pp) | 17.8 % |
 
 ## ZTS
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
-| ZTS-20261029-R1 | VIGENTE | 98.32 | 3.1 % | 37.5 % | 1.25 | 1.80 | N/D | 4.0 % | 20.0 % |
+| ZTS-20261029-R1 | SUSTITUIDA | 98.32 | 3.1 % | 37.5 % | 1.25 | 1.80 | N/D | 4.0 % | 20.0 % |
