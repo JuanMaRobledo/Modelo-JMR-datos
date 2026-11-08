@@ -19,3 +19,20 @@
 **Estado CANDIDATO.** Sin cambio de catálogo ni despliegue. La huella de H2 se verificó en el alcance indicado en F3.
 
 **Primer siguiente paso exacto.** Cerrar las aperturas de Fintech en H2 `Tesis de Inversión y Supuestos!B81:F81`, `B93:F93` y `B105:F105` y anexar el resultado atribuible a cada bloque con eliminaciones. Solo después se activan DCF/inverso y múltiplos, se extrae JSON y se ejecutan los controles de MELI en el visor.
+
+
+## Verificación incremental · 8-nov-2026 · GPT-6 (ChatGPT)
+
+Modelo/herramienta real: GPT-6 con conectores GitHub y Google Drive/Sheets/Docs y cotejo SEC; esfuerzo de razonamiento no expuesto. No se utilizaron Work, terminal Node/Python, CI, Vercel ni visor autenticado. Mismo PR #260, revisión y rama.
+
+| Control | Estado actual | Evidencia y límites |
+|---|---|---|
+| Corrección de fuente primaria en análisis | APROBADO | El Google Doc existente y el análisis versionado ANALISIS_N1_N2.md incorporan en Nivel 2 §4: (a) los fondos de clientes no fondean la cartera, (b) las medidas de liquidez US$8.126m y US$6.902m no son caja libre de Commerce, (c) grupo emisor/garantes S-X 13-01 no equivale a Commerce o Fintech. Concuerda con H2 Tesis de Inversión y Supuestos!D44/D56/D61/D66. Lectura posterior de Sheets y Docs confirmó las ediciones. |
+| Nivel 1 (14 capítulos) y Nivel 2 (12 apartados) | PARCIAL para F4 financiera | Se conserva la estructura de la revisión con un único valor central SOTP=N/D. Las cifras de corridas Python anteriores figuran solo en conciliación. Faltan proyección H2, inverso, sensibilidad y múltiplos reales para completar tablas y juicio sobre precio. |
+| Integridad / fórmula | PARCIAL | Huella motor!F2:F3 leídos directamente: 0 diferencias dentro de 1.883 fórmulas registradas. No se ejecutó diff integral externo. Control de integridad!B2=PLANTILLA y B4=0/3 LISTO, de modo que no hay gate de empresa. |
+| Hoja→JSON→visor MELI y validadores de publicación | NO_EJECUTADO en esta sesión | No hubo extracción JSON ni validación de MELI con node scripts/validar_catalogo.cjs, ni de profundidad Floyd, ni QA visual de app. Los exits 0 registrados en la entrega anterior comprobaron otro catálogo con MELI Floyd fuera de su alcance. No se publicaron ni fusionaron cambios. |
+| Auditoría F5 | NO_EJECUTADO | Reservada por contrato a otra sesión/revisor. |
+
+Resultado: CANDIDATO, no EN_REVISION. PASOS F4 de punta a punta siguen 0/3; esta corrección editorial no sustituye el cierre económico de F3. El análisis no puede declarar una cifra central hasta que el motor H2 la produzca.
+
+Primer siguiente paso exacto: completar H2 Tesis de Inversión y Supuestos!B81:F81, B93:F93 y B105:F105 con aperturas por entidad y eliminaciones; adjuntar utilidad atribuible a Mercado Pago y EBIT Commerce/corporativo; después ejecutar SOTP/DCF inverso/múltiplos/matrices de la misma H2 y los gates, incluido node scripts/validar_catalogo.cjs, antes de cualquier EN_REVISION.
