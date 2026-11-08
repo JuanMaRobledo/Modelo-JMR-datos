@@ -4,6 +4,8 @@
 Corte contable 30 de septiembre de 2026. Mercado 6 de noviembre de 2026.  
 **Precio US$1.510,00. DCF Base oficial y precio con MOS 35 % oficial: N/D.**
 
+La revisión de supuestos del 8 de noviembre sitúa el caso central indicativo en **US$1.021,81 por acción**. La sección final documenta la actualización y sus matrices. Las secciones previas conservan la primera corrida como referencia.
+
 La prueba de expectativas mediante flujos al accionista da **US$1.310,55** en el caso central, **13,2 % por debajo** del cierre. El umbral mecánico del 65 % de ese resultado sería **US$851,86** y sirve solo para interpretar la prueba. La conclusión más robusta es que, con la trayectoria central de ventas, conversión de caja y una tasa de descuento de 12,5 %, el precio exige **10,48 % de margen neto** frente al **4,91 % LTM**. Esta simulación usa una aproximación consolidada de caja al accionista. La cifra oficial permanece pendiente hasta poder reproducir el puente de capital, fondeo y caja por negocio.
 
 [Históricos H1](https://docs.google.com/spreadsheets/d/1TF8KaMkn-Wc3csoCK1z9-IierhPhOBZwwdX7fiBYN6Q/edit) · [Maestra Floyd copiada y cargada parcialmente H2](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit) · [Expediente de MELI](https://drive.google.com/drive/folders/19PxkVBNMjk2Hb2e3WTSW9qK4PbL8xoQz)
@@ -222,3 +224,85 @@ Las matrices del diagnóstico usan dólares por acción y centro US$1.310,55. El
 H1 verifica EBIT, balance, variación de caja, deuda neta publicada y flujo ajustado al corte. H2 incorpora acciones básicas y en circulación, desgloses conciliados de gastos, balance y flujos, y el CAPEX operativo corregido. El desarrollo tecnológico reportado figura en otros gastos operativos, a la espera de delimitar I+D capitalizable. Para FY23, el EPS diluido oficial de US$19,46 está en H1 porque la fórmula estándar de H2 no recoge el método si convertido. Los ajustes y la activación del motor permanecen pendientes. Para publicar, primero reconstruir el puente separado entre saldos de fondeo, caja operativa/restringida, pérdidas, capital requerido y capacidad distribuible. Después repetir conciliación hoja → JSON → visor. F5 independiente, pendiente.
 
 Marco metodológico [Reglas JMR §4C](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md) · [Contrato Floyd](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/docs/CONTRATO_EJECUCION_FLOYD.md) · [Damodaran, valoración de servicios financieros](https://pages.stern.nyu.edu/~adamodar/pdfiles/country/val2dayEurope2026.pdf)
+
+## Revisión de supuestos · 8 de noviembre de 2026
+
+**Resultado indicativo actualizado: US$1.021,81 por acción.** El cierre de referencia fue US$1.510,00 el 6 de noviembre. El DCF Base y el MOS 35 % oficiales continúan N/D. Los dos niveles anteriores documentan la primera corrida de US$1.310,55. Esta revisión usa el mismo corte, 50,696802 millones de acciones, Ke ilustrativo de 12,5 % y crecimiento terminal nominal en USD de 3,5 %.
+
+### Crecimiento de Commerce y Fintech
+
+Los ingresos LTM reconstruidos suman US$38.523 millones: US$21.749 millones de Commerce, US$16.774 millones de Fintech y, dentro de Fintech, US$8.561 millones de crédito. Fórmula por línea: FY25 + 9M26 − 9M25. Los ingresos consolidados LTM crecieron 47,1 % frente a los 12 meses anteriores. En 3T26, los ingresos crecieron 45,1 % reportados y 41 % sin efecto cambiario. Commerce creció cerca de 47 % y Fintech 42 %. El crédito explica parte importante de la aceleración y obliga a proyectar el financiamiento que la sostiene. La Base anterior usaba 21,69 % anual compuesto a cinco años. La revisada usa 19,90 % y llega a US$95.472 millones de ingresos en el año 5.
+
+| Crecimiento USD | Año 1 | Año 2 | Año 3 | Año 4 | Año 5 |
+|---|---:|---:|---:|---:|---:|
+| Commerce central | 28 % | 24 % | 20 % | 17 % | 14 % |
+| Fintech central | 26 % | 22 % | 19 % | 16 % | 13 % |
+| Consolidado central | 27,13 % | 23,14 % | 19,57 % | 16,57 % | 13,58 % |
+
+Commerce conserva una trayectoria alta por la penetración, la frecuencia y la publicidad. Se descuenta una menor contribución del impulso promocional y del crecimiento desde una base pequeña. En Fintech, pagos y crédito siguen creciendo, con desaceleración explícita por la escala de cartera, su costo de fondeo y la evolución de pérdidas. Las tasas de los años 6–10 convergen linealmente al 3,5 % por negocio.
+
+### Márgenes y prueba de recuperación
+
+El EBIT pasó de 12,66 % en FY24 y 11,08 % en FY25 a 7,42 % LTM y 6,29 % en 3T26. El EBIT incremental 9M26 fue −3,55 % de los ingresos incrementales. La contribución directa sobre ingresos 9M26 cayó de 14,75 % a 8,70 % en Brasil, de 18,04 % a 14,77 % en México y de 43,24 % a 34,42 % en Argentina. Son contribuciones geográficas antes de gastos indirectos, con alcance distinto de los márgenes de Commerce y Fintech.
+
+El caso central parte de 7,0 % EBIT, llega a 10,0 % en el año 5 y a 11,5 % desde el año 7. La recuperación exige más densidad de rutas, una mezcla mayor de publicidad y una mejor contribución de cohortes crediticias. Como evidencia favorable, la dirección informó que el costo por envío en Brasil bajó 5 % en moneda local interanual. En contra, el envío gratis, la capacidad nueva y afiliados presionan el margen y el NIMAL trimestral cayó de 21,0 % a 20,1 %. Con carga no operativa de 0,75 pp de ventas y tasa fiscal de 27 %, el margen neto maduro central es 7,85 %, entre el 6,91 % de FY25 y el 9,20 % de FY24. La previsión de 9 % neto queda por encima del nuevo caso central.
+
+### ROIC y reinversión
+
+El ROE contable consolidado cayó de 36,0 % en FY25 a 26,2 % LTM, usando utilidad neta y patrimonio promedio de saldos comparables. La reinversión económica de la cartera y el capital exigido por cada unidad pueden diferir del patrimonio contable del grupo. El ROIC operativo y ventas/capital marginal de Commerce quedan N/D hasta separar EBIT después de impuestos, activos operativos y capital de trabajo de Mercado Pago. En Fintech se evalúan ROE incremental, capital retenido y caja distribuible. En un cálculo operativo el retorno marginal es margen NOPAT × ventas/capital marginal, con las dos variables referidas al mismo negocio. El margen EBIT de 15 % y las rotaciones 2,4–2,7× de A3 habrían implicado cerca de 26–30 % de retorno marginal con impuesto de 27 %, antes de cualquier ajuste de perímetro.
+
+El CAPEX operativo LTM fue US$1.642 millones, 4,26 % de ingresos. Por separado, la inversión neta de caja en cartera fue US$8.285 millones. El fondeo Fintech aportó US$3.316 millones, 40,0 % de ese desembolso, con US$4.969 millones por financiar a través del resto del puente. El flujo ajustado de US$1.206 millones equivale a 63,8 % de la utilidad LTM. Para 9M26 fue 33,3 %, frente a 49,9 % de 9M25. Estos cocientes sirven de ancla de conversión y contienen ajustes de circulante y liquidez. La parte que falta para llegar a utilidad no mide por sí sola la inversión en capital regulatorio.
+
+El diagnóstico central arranca con 45 % de utilidad retenida para reinversión y fricciones de caja, US$1.005 millones en año 1. Luego la retención sigue el crecimiento del año siguiente y baja a 32,23 % en año 5, cuando son US$2.078 millones. En el año 10 y la perpetuidad converge a 23,33 %, consistente con g/ROE = 3,5 %/15 %. El 15 % es un supuesto terminal de ROE, 2,5 pp por encima del Ke ilustrativo, frente a 12 % conservador y 18 % optimista. Esta proyección aproxima la caja a través de la retención. Volver a descontar CAPEX o el desembolso de cartera en las mismas cifras duplicaría reinversión.
+
+### Escenarios y valoración
+
+| Variable | Conservador | Central | Optimista |
+|---|---:|---:|---:|
+| CAGR de ingresos, años 1–5 | 14,56 % | 19,90 % | 25,46 % |
+| EBIT año 1 → año 7 | 6,3 → 8,0 % | 7,0 → 11,5 % | 8,0 → 14,5 % |
+| Margen neto maduro | 5,29 % | 7,85 % | 10,04 % |
+| Retención año 1 | 55 % | 45 % | 35 % |
+| ROE terminal | 12 % | 15 % | 18 % |
+| Valor indicativo USD/acción | 495,03 | **1.021,81** | 1.811,69 |
+
+La caída del caso central de US$1.310,55 a US$1.021,81 se explica por US$112,70 de menor crecimiento, US$158,35 de menor margen y US$17,68 de la trayectoria de retención. Es un puente secuencial que depende del orden de sustitución. El terminal aporta 56,36 % del valor central. Una retención de 35–55 % en año 1 produce US$1.044–999 manteniendo los demás supuestos. Un EBIT maduro de 10,5–12,5 % produce US$935–1.108. Un ROE terminal de 13–17 % produce US$980–1.054.
+
+El cierre de US$1.510 exige **17,15 % de EBIT maduro y 11,97 % neto** si se mantienen fijos crecimiento, retención, Ke, g y ROE de la nueva Base. Es un inverso condicionado. Una combinación distinta de crecimiento, conversión y costo de capital puede justificar el mismo precio. Los datos que validarían una recuperación son un margen EBIT superior a 10 % junto con conversión de utilidad a caja ajustada superior a 75 % durante más de un trimestre, contrastados con la estacionalidad y el ritmo de originación.
+
+### Fórmulas y matrices del caso central
+
+Retención del año t = g terminal / ROE terminal + pendiente × (crecimiento de ingresos del año t+1 − g terminal). La pendiente se calibra a la retención inicial de cada historia. Flujo al accionista aproximado = ventas × margen neto × (1 − retención). El VP de perpetuidad usa flujo del año 11 / (Ke − g), descontado 10 años. El valor por acción divide los VP por acciones ordinarias al corte. Las matrices reproducen el centro de US$1.021,81.
+
+#### Ke × g
+
+| Eje vertical / horizontal | 2,50 % | 3,00 % | 3,50 % | 4,00 % | 4,50 % |
+|---|---:|---:|---:|---:|---:|
+| 10,50 % | 1.335,25 | 1.358,12 | 1.384,54 | 1.415,36 | 1.451,71 |
+| 11,50 % | 1.154,10 | 1.166,04 | 1.179,68 | 1.195,40 | 1.213,65 |
+| 12,50 % | 1.010,73 | 1.015,90 | 1.021,81 | 1.028,61 | 1.036,49 |
+| 13,50 % | 894,75 | 895,64 | 896,76 | 898,13 | 899,83 |
+| 14,50 % | 799,23 | 797,39 | 795,49 | 793,51 | 791,47 |
+
+#### ROE terminal × g
+
+| Eje vertical / horizontal | 2,50 % | 3,00 % | 3,50 % | 4,00 % | 4,50 % |
+|---|---:|---:|---:|---:|---:|
+| 11,00 % | 946,48 | 934,97 | 922,45 | 908,75 | 893,69 |
+| 13,00 % | 983,55 | 981,66 | 979,77 | 977,90 | 976,07 |
+| 15,00 % | 1.010,73 | 1.015,90 | 1.021,81 | 1.028,61 | 1.036,49 |
+| 17,00 % | 1.031,51 | 1.042,08 | 1.053,96 | 1.067,39 | 1.082,69 |
+| 19,00 % | 1.047,92 | 1.062,75 | 1.079,34 | 1.098,01 | 1.119,16 |
+
+#### Ajuste al crecimiento de ambos negocios × margen EBIT objetivo
+
+| Eje vertical / horizontal | 9,50 % | 10,50 % | 11,50 % | 12,50 % | 13,50 % |
+|---|---:|---:|---:|---:|---:|
+| -4,00 % | 691,43 | 760,54 | 829,66 | 898,78 | 967,89 |
+| -2,00 % | 766,12 | 843,41 | 920,70 | 997,99 | 1.075,28 |
+| 0,00 % | 849,06 | 935,44 | 1.021,81 | 1.108,19 | 1.194,57 |
+| 2,00 % | 940,89 | 1.037,34 | 1.133,79 | 1.230,23 | 1.326,68 |
+| 4,00 % | 1.042,32 | 1.149,91 | 1.257,49 | 1.365,08 | 1.472,67 |
+
+
+Fuentes y método [10-Q 3T26 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm) · [10-K FY25 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm) · [10-Q 3T25 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959025000051/R4.htm) · [Carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm) · [Damodaran, crecimiento y retornos](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/growthrates.htm)
