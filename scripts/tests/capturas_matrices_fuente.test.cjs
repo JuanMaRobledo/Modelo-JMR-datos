@@ -29,7 +29,7 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   const ko=active.find(([ticker])=>ticker==='KO');
   const floyd=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='Floyd');
-  const FLOYD_RUTAS={UBER:'valoraciones/UBER-FLOYD-3T26.json',CMG:'valoraciones/CMG-FLOYD-20261108-R1.json'};
+  const FLOYD_RUTAS={UBER:'valoraciones/UBER-FLOYD-3T26.json',CMG:'valoraciones/CMG-FLOYD-20261108-R1.json',CELH:'valoraciones/CELH-FLOYD-20261108-R1.json'};
   assert.ok(floyd.length<=Object.keys(FLOYD_RUTAS).length,'Floyd se integra de forma explícita, no como captura parcial');
   const expectedLegacy=previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0)-floyd.length;
   assert.equal(active.length,expectedLegacy,

@@ -1,0 +1,1377 @@
+{
+  "ticker": "CELH",
+  "revisionId": "CELH-FLOYD-20261108-R1",
+  "revision_id": "CELH-FLOYD-20261108-R1",
+  "sheet_id": "1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU",
+  "estado": "EN_REVISION",
+  "publicationStatus": "EN_REVISION",
+  "perfil_valoracion": "Floyd",
+  "metodo_valoracion": "A",
+  "version_metodo": "Floyd",
+  "fecha_corte": "2026-11-06",
+  "fechaCorteContable": "2026-09-30",
+  "valorPrincipal": 32.55237472571646,
+  "precioMOS": 21.1590435717157,
+  "baseMOS": "dcfBase",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU/edit",
+  "nombreActivo": "Celsius Holdings, Inc.",
+  "market": "NASDAQ",
+  "moneda": "USD",
+  "precio": 32.16,
+  "precioReferenciaFecha": "2026-11-06",
+  "mos": 0.35,
+  "metodoPrincipal": "DCF FCFF Base 10 años",
+  "escenariosDCF": {
+    "version": "Floyd",
+    "revisionId": "CELH-FLOYD-20261108-R1",
+    "fecha": "2026-11-06",
+    "central": "A",
+    "principal": "DCF Base",
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "historia": "Base",
+        "probabilidad": 0.5,
+        "crecimiento": 0.0728813813046072,
+        "margen": 0.19,
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "roicTerminal": 0.11,
+        "valor": 32.55237472571646,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5,
+        "s2c": 3,
+        "s2c610": 2.5
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "historia": "Conservadora",
+        "probabilidad": 0.25,
+        "crecimiento": 0.04596470214719206,
+        "margen": 0.15,
+        "salesToCapital": 2.2,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.09,
+        "valor": 17.50130163057985,
+        "terminalGrowth": 0.03,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista",
+        "historia": "Optimista",
+        "probabilidad": 0.25,
+        "crecimiento": 0.09990908189157444,
+        "margen": 0.22,
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "roicTerminal": 0.14,
+        "valor": 52.87271148584002,
+        "terminalGrowth": 0.045,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      }
+    ]
+  },
+  "valorEsperado": {
+    "valor": 33.869690641963196,
+    "dcfBase": 32.55237472571646,
+    "historiaCentralId": "A",
+    "disrupcionEnPromedio": false,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "historia": "Base",
+        "probabilidad": 0.5,
+        "crecimiento": 0.0728813813046072,
+        "margen": 0.19,
+        "salesToCapital": 3,
+        "salesToCapital2": 2.5,
+        "roicTerminal": 0.11,
+        "valor": 32.55237472571646,
+        "terminalGrowth": 0.04,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.5,
+        "s2c": 3,
+        "s2c610": 2.5
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "historia": "Conservadora",
+        "probabilidad": 0.25,
+        "crecimiento": 0.04596470214719206,
+        "margen": 0.15,
+        "salesToCapital": 2.2,
+        "salesToCapital2": 2,
+        "roicTerminal": 0.09,
+        "valor": 17.50130163057985,
+        "terminalGrowth": 0.03,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista",
+        "historia": "Optimista",
+        "probabilidad": 0.25,
+        "crecimiento": 0.09990908189157444,
+        "margen": 0.22,
+        "salesToCapital": 3.5,
+        "salesToCapital2": 3,
+        "roicTerminal": 0.14,
+        "valor": 52.87271148584002,
+        "terminalGrowth": 0.045,
+        "estado": "LISTO",
+        "incluidaEnPromedio": true,
+        "pesoEnPromedio": 0.25
+      }
+    ],
+    "escenariosUnificados": {
+      "conservador": 17.50130163057985,
+      "base": 32.55237472571646,
+      "optimista": 52.87271148584002
+    },
+    "escenariosPromedio": 3,
+    "rango": {
+      "minimo": 17.50130163057985,
+      "maximo": 52.87271148584002
+    }
+  },
+  "sensibilidadDCF": {
+    "centro": 32.55237472571646,
+    "centroConciliado": true,
+    "matrices": [
+      {
+        "nombre": "WACC inicial × crecimiento terminal",
+        "ejeFilas": [
+          0.06037154025087527,
+          0.06537154025087527,
+          0.07037154025087528,
+          0.07537154025087528,
+          0.08037154025087527
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            38.35350101560811,
+            40.6052351902201,
+            43.465663151501346,
+            47.25598192381951,
+            52.57341633317723
+          ],
+          [
+            33.81538222533665,
+            35.38503621652542,
+            37.30833742165994,
+            39.74329121714567,
+            42.9596599445943
+          ],
+          [
+            30.118797873362784,
+            31.230926270583147,
+            32.55237472571646,
+            34.1639928319902,
+            36.19521110804225
+          ],
+          [
+            27.047732320842286,
+            27.84355988703002,
+            28.76343604432532,
+            29.849355602446586,
+            31.165242393440487
+          ],
+          [
+            24.45441835290008,
+            25.026288546194586,
+            25.670191224941323,
+            26.40764792021615,
+            27.2701128760521
+          ]
+        ],
+        "centro": 32.55237472571646,
+        "centroConciliado": true,
+        "origen": "'Sensibilidad DCF'!A5:F10"
+      },
+      {
+        "nombre": "ROIC terminal × crecimiento terminal",
+        "ejeFilas": [
+          0.1,
+          0.105,
+          0.11,
+          0.115,
+          0.12
+        ],
+        "ejeColumnas": [
+          0.03,
+          0.035,
+          0.04,
+          0.045,
+          0.05
+        ],
+        "valores": [
+          [
+            29.32883148921495,
+            30.194016345199945,
+            31.20474273096411,
+            32.41669004784429,
+            33.91898469720809
+          ],
+          [
+            29.742623404720963,
+            30.737159639448294,
+            31.910645204405814,
+            33.33194388715882,
+            35.11129376954979
+          ],
+          [
+            30.118797873362784,
+            31.230926270583147,
+            32.55237472571646,
+            34.1639928319902,
+            36.19521110804225
+          ],
+          [
+            30.462261518644446,
+            31.681756672923676,
+            33.13830167995661,
+            34.92368969466233,
+            37.18487476492667
+          ],
+          [
+            30.777103193485978,
+            32.09501787506916,
+            33.67540138801008,
+            35.62007848544511,
+            38.09206645040406
+          ]
+        ],
+        "centro": 32.55237472571646,
+        "centroConciliado": true,
+        "origen": "'Sensibilidad DCF'!A16:F21"
+      },
+      {
+        "nombre": "CAGR años 1–5 × margen EBIT objetivo",
+        "ejeFilas": [
+          0.032881381304607195,
+          0.05288138130460719,
+          0.0728813813046072,
+          0.0928813813046072,
+          0.1128813813046072
+        ],
+        "ejeColumnas": [
+          0.15,
+          0.17,
+          0.19,
+          0.21,
+          0.23
+        ],
+        "valores": [
+          [
+            18.87246718121675,
+            22.136712528918633,
+            25.400957876620517,
+            28.6652032243224,
+            31.929448572024285
+          ],
+          [
+            21.431370407168536,
+            25.111156932372822,
+            28.790943457577093,
+            32.470729982781386,
+            36.15051650798567
+          ],
+          [
+            24.266864933663605,
+            28.409619829690033,
+            32.55237472571646,
+            36.695129621742865,
+            40.83788451776929
+          ],
+          [
+            27.40605426054628,
+            32.06389877525597,
+            36.721743289965666,
+            41.379587804675346,
+            46.03743231938503
+          ],
+          [
+            30.878268445965208,
+            36.10840677772803,
+            41.338545109490845,
+            46.56868344125366,
+            51.79882177301648
+          ]
+        ],
+        "centro": 32.55237472571646,
+        "centroConciliado": true,
+        "origen": "'Sensibilidad DCF'!A27:F32"
+      }
+    ]
+  },
+  "metodos": [
+    {
+      "nombre": "DCF Damodaran",
+      "peso": 1,
+      "conservador": 17.50130163057985,
+      "base": 32.55237472571646,
+      "optimista": 52.87271148584002
+    },
+    {
+      "nombre": "EV/EBITDA",
+      "peso": 0,
+      "conservador": 14.352818120497538,
+      "base": 25.47453786815974,
+      "optimista": 37.89937193020554
+    },
+    {
+      "nombre": "EV/FCFF",
+      "peso": 0,
+      "conservador": 12.636166077672245,
+      "base": 22.594917176631753,
+      "optimista": 32.69535216280167
+    },
+    {
+      "nombre": "P/E",
+      "peso": 0,
+      "conservador": 19.179470931479244,
+      "base": 31.68255541091915,
+      "optimista": 45.90505087962298
+    },
+    {
+      "nombre": "P/FCFE",
+      "peso": 0,
+      "conservador": 17.846706695668463,
+      "base": 29.781994681502507,
+      "optimista": 42.394303606324684
+    },
+    {
+      "nombre": "P/OCF",
+      "peso": 0,
+      "conservador": 18.245418402887964,
+      "base": 29.17632750666911,
+      "optimista": 40.65374461692037
+    }
+  ],
+  "descuentoMultiples": {
+    "version": 3,
+    "costoPatrimonio": 0.07033111055186012,
+    "criterio": "Promedio 1-3 años",
+    "horizontes": [
+      1,
+      2,
+      3
+    ],
+    "pesoDcf": 1,
+    "pesoMultiplos": 0,
+    "dcfHoy": {
+      "conservador": 17.50130163057985,
+      "base": 32.55237472571646,
+      "optimista": 52.87271148584002
+    },
+    "multiplesHoy": null,
+    "ponderadoHoy": {
+      "conservador": 17.50130163057985,
+      "base": 32.55237472571646,
+      "optimista": 52.87271148584002
+    },
+    "metodos": [
+      {
+        "nombre": "EV/EBITDA",
+        "peso": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "objetivo": [
+            13.644727584518753,
+            16.873358836434463,
+            19.10584280816338
+          ],
+          "vp": [
+            12.748136955005975,
+            14.728728089676133,
+            15.581589316810506
+          ],
+          "consolidado": 14.352818120497538
+        },
+        "base": {
+          "objetivo": [
+            20.02533990069085,
+            30.70057550806423,
+            37.90816929876385
+          ],
+          "vp": [
+            18.709481302814634,
+            26.798483528866843,
+            30.915648772797745
+          ],
+          "consolidado": 25.47453786815974
+        },
+        "optimista": {
+          "objetivo": [
+            26.23534760947867,
+            45.981121880020716,
+            60.143958460904855
+          ],
+          "vp": [
+            24.511431416724673,
+            40.13684815181661,
+            49.04983622207534
+          ],
+          "consolidado": 37.89937193020554
+        }
+      },
+      {
+        "nombre": "EV/FCFF",
+        "peso": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "objetivo": [
+            11.187168162922552,
+            14.944894053582832,
+            17.670563696057286
+          ],
+          "vp": [
+            10.452062966902341,
+            13.04537424812765,
+            14.411061017986748
+          ],
+          "consolidado": 12.636166077672245
+        },
+        "base": {
+          "objetivo": [
+            15.28604474071944,
+            27.562096647121084,
+            36.10395333321451
+          ],
+          "vp": [
+            14.28160369256014,
+            24.058910323192276,
+            29.444237514142834
+          ],
+          "consolidado": 22.594917176631753
+        },
+        "optimista": {
+          "objetivo": [
+            18.46422064039663,
+            40.27398336643126,
+            56.011952408015844
+          ],
+          "vp": [
+            17.250942683406187,
+            35.1550960210393,
+            45.680017783959514
+          ],
+          "consolidado": 32.69535216280167
+        }
+      },
+      {
+        "nombre": "P/E",
+        "peso": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "objetivo": [
+            18.907824581032024,
+            22.44149743306905,
+            24.871685575588646
+          ],
+          "vp": [
+            17.66539755280326,
+            19.58914741403584,
+            20.283867827598637
+          ],
+          "consolidado": 19.179470931479244
+        },
+        "base": {
+          "objetivo": [
+            25.639406631985036,
+            38.07474875918309,
+            46.420290990888006
+          ],
+          "vp": [
+            23.954649527813334,
+            33.23538763045968,
+            37.85762907448444
+          ],
+          "consolidado": 31.68255541091915
+        },
+        "optimista": {
+          "objetivo": [
+            32.19612475144647,
+            55.66051578959122,
+            72.40430902787146
+          ],
+          "vp": [
+            30.08052782362481,
+            48.5859756995039,
+            59.048649115740226
+          ],
+          "consolidado": 45.90505087962298
+        }
+      },
+      {
+        "nombre": "P/FCFE",
+        "peso": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "objetivo": [
+            16.716603146504994,
+            20.977399192494598,
+            24.046408759751227
+          ],
+          "vp": [
+            15.61816056891587,
+            18.311138388622904,
+            19.61082112946662
+          ],
+          "consolidado": 17.846706695668463
+        },
+        "base": {
+          "objetivo": [
+            21.6187889513652,
+            36.10804707877072,
+            46.140075337814615
+          ],
+          "vp": [
+            20.19822533255023,
+            31.518656861849767,
+            37.62910185010752
+          ],
+          "consolidado": 29.781994681502507
+        },
+        "optimista": {
+          "objetivo": [
+            25.52391059290975,
+            51.99172687744583,
+            71.06044365783919
+          ],
+          "vp": [
+            23.846742696051958,
+            45.383495693642374,
+            57.95267242927971
+          ],
+          "consolidado": 42.394303606324684
+        }
+      },
+      {
+        "nombre": "P/OCF",
+        "peso": 0,
+        "estado": "CONTRASTE_SIN_PESO",
+        "conservador": {
+          "objetivo": [
+            17.905282642903526,
+            21.30850429424754,
+            23.79693281422117
+          ],
+          "vp": [
+            16.72873232066627,
+            18.60015950528957,
+            19.40736338270805
+          ],
+          "consolidado": 18.245418402887964
+        },
+        "base": {
+          "objetivo": [
+            23.46481726387271,
+            34.96631228722238,
+            43.019311484318365
+          ],
+          "vp": [
+            21.92295172264432,
+            30.522038378342664,
+            35.08399241902035
+          ],
+          "consolidado": 29.17632750666911
+        },
+        "optimista": {
+          "objetivo": [
+            28.176849975885105,
+            49.23920248766626,
+            64.56460665502033
+          ],
+          "vp": [
+            26.325358291563806,
+            42.98082153194999,
+            52.6550540272473
+          ],
+          "consolidado": 40.65374461692037
+        }
+      }
+    ]
+  },
+  "sensibilidadMultiples": {
+    "contrato": "base-native-five-priority-v1",
+    "revisionId": "CELH-FLOYD-20261108-R1",
+    "sourceSheetId": "1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU",
+    "estadoPublicacion": "INTEGRADO_EN_REVISION",
+    "controlesTecnicosAprobados": true,
+    "certificado": false,
+    "matrices": [
+      {
+        "metodo": "EV/EBITDA",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "origen": "'Sensibilidad por múltiplo'!A78:I84",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          640.3948439762182,
+          720.4441994732455,
+          800.4935549702727,
+          880.5429104673001,
+          960.5922659643272
+        ],
+        "multiploElegido": [
+          11.200000000000001,
+          12.6,
+          14,
+          15.400000000000002,
+          16.8
+        ],
+        "matriz": [
+          [
+            17.95170382745438,
+            20.83258048197513,
+            23.713457136495876,
+            26.59433379101663,
+            29.47521044553738
+          ],
+          [
+            20.832580481975125,
+            24.07356671831097,
+            27.314552954646807,
+            30.55553919098266,
+            33.79652542731849
+          ],
+          [
+            23.713457136495876,
+            27.314552954646814,
+            30.915648772797745,
+            34.51674459094869,
+            38.117840409099614
+          ],
+          [
+            26.59433379101663,
+            30.55553919098266,
+            34.51674459094869,
+            38.47794999091472,
+            42.43915539088075
+          ],
+          [
+            29.47521044553738,
+            33.7965254273185,
+            38.11784040909962,
+            42.43915539088075,
+            46.76047037266187
+          ]
+        ],
+        "centro": 30.915648772797745,
+        "vp3Original": 30.915648772797745
+      },
+      {
+        "metodo": "EV/FCFF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "origen": "'Sensibilidad por múltiplo'!A88:I94",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          429.95977379518,
+          483.7047455195775,
+          537.449717243975,
+          591.1946889683726,
+          644.93966069277
+        ],
+        "multiploElegido": [
+          16,
+          18,
+          20,
+          22,
+          24
+        ],
+        "matriz": [
+          [
+            17.01000062191523,
+            19.773164375743583,
+            22.53632812957194,
+            25.299491883400304,
+            28.06265563722865
+          ],
+          [
+            19.773164375743583,
+            22.881723598800484,
+            25.990282821857388,
+            29.098842044914292,
+            32.20740126797119
+          ],
+          [
+            22.53632812957194,
+            25.990282821857388,
+            29.444237514142834,
+            32.898192206428284,
+            36.35214689871372
+          ],
+          [
+            25.299491883400297,
+            29.098842044914292,
+            32.898192206428284,
+            36.697542367942276,
+            40.49689252945626
+          ],
+          [
+            28.06265563722866,
+            32.20740126797119,
+            36.35214689871372,
+            40.49689252945626,
+            44.641638160198795
+          ]
+        ],
+        "centro": 29.444237514142834,
+        "vp3Original": 29.444237514142834
+      },
+      {
+        "metodo": "P/E",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "origen": "'Sensibilidad por múltiplo'!A98:I104",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          430.65988332400025,
+          484.49236873950025,
+          538.3248541550003,
+          592.1573395705003,
+          645.9898249860003
+        ],
+        "multiploElegido": [
+          17.6,
+          19.8,
+          22,
+          24.200000000000003,
+          26.4
+        ],
+        "matriz": [
+          [
+            24.157696966513086,
+            27.202126323840055,
+            30.246555681167024,
+            33.290985038494,
+            36.33541439582096
+          ],
+          [
+            27.202126323840055,
+            30.627109350832896,
+            34.05209237782573,
+            37.47707540481858,
+            40.90205843181141
+          ],
+          [
+            30.246555681167024,
+            34.05209237782573,
+            37.85762907448444,
+            41.663165771143156,
+            45.46870246780187
+          ],
+          [
+            33.290985038494,
+            37.47707540481858,
+            41.66316577114316,
+            45.84925613746775,
+            50.035346503792326
+          ],
+          [
+            36.33541439582096,
+            40.90205843181141,
+            45.46870246780187,
+            50.035346503792326,
+            54.601990539782776
+          ]
+        ],
+        "centro": 37.85762907448444,
+        "vp3Original": 37.85762907448444
+      },
+      {
+        "metodo": "P/FCFE",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "origen": "'Sensibilidad por múltiplo'!A108:I114",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          428.07371701865526,
+          481.5829316459871,
+          535.092146273319,
+          588.601360900651,
+          642.1105755279829
+        ],
+        "multiploElegido": [
+          17.6,
+          19.8,
+          22,
+          24.200000000000003,
+          26.4
+        ],
+        "matriz": [
+          [
+            24.011439542911848,
+            27.037586722288662,
+            30.06373390166548,
+            33.08988108104229,
+            36.116028260419114
+          ],
+          [
+            27.037586722288662,
+            30.442002299087576,
+            33.846417875886495,
+            37.25083345268542,
+            40.65524902948433
+          ],
+          [
+            30.06373390166548,
+            33.846417875886495,
+            37.62910185010752,
+            41.41178582432854,
+            45.194469798549555
+          ],
+          [
+            33.08988108104229,
+            37.25083345268542,
+            41.41178582432854,
+            45.57273819597167,
+            49.73369056761479
+          ],
+          [
+            36.11602826041911,
+            40.65524902948433,
+            45.19446979854955,
+            49.73369056761478,
+            54.27291133668
+          ]
+        ],
+        "centro": 37.62910185010752,
+        "vp3Original": 37.62910185010752
+      },
+      {
+        "metodo": "P/OCF",
+        "escenario": "base",
+        "estado": "OK",
+        "peso": 0,
+        "origen": "'Sensibilidad por múltiplo'!A118:I124",
+        "unidadResultado": "USD/accion",
+        "fundamentalFY3": [
+          516.7043759860759,
+          581.2924229843354,
+          645.8804699825948,
+          710.4685169808544,
+          775.0565639791138
+        ],
+        "multiploElegido": [
+          13.600000000000001,
+          15.3,
+          17,
+          18.700000000000003,
+          20.4
+        ],
+        "matriz": [
+          [
+            22.38256950701606,
+            25.205107931905907,
+            28.02764635679575,
+            30.85018478168559,
+            33.672723206575434
+          ],
+          [
+            25.205107931905903,
+            28.38046365990698,
+            31.555819387908045,
+            34.731175115909124,
+            37.90653084391019
+          ],
+          [
+            28.027646356795742,
+            31.555819387908052,
+            35.08399241902035,
+            38.61216545013266,
+            42.14033848124495
+          ],
+          [
+            30.85018478168559,
+            34.731175115909124,
+            38.612165450132665,
+            42.4931557843562,
+            46.37414611857972
+          ],
+          [
+            33.67272320657543,
+            37.90653084391019,
+            42.14033848124495,
+            46.374146118579716,
+            50.60795375591448
+          ]
+        ],
+        "centro": 35.08399241902035,
+        "vp3Original": 35.08399241902035
+      }
+    ],
+    "resultadosSha256": "b56d5d2306ee49bfebc10022f50f745c7d4375cc69585dd211e8cdfbb53f0b97",
+    "resultadosHashMetodo": "SHA256 UTF8 JSON.stringify(sensibilidadMultiples.matrices)"
+  },
+  "dcfInverso": {
+    "replicaBase": 32.55237472571646,
+    "margenBaseFijo": {
+      "cagr5": 0.0728813813046072,
+      "margenObjetivo": 0.18810573089867832,
+      "valor": 32.16000009602185,
+      "crecimientoAnios": [
+        0.1,
+        0.1,
+        0.08,
+        0.07,
+        0.06,
+        0.055,
+        0.051,
+        0.048,
+        0.045,
+        0.042,
+        0.04,
+        0.04
+      ],
+      "margenAnios": [
+        0.13011154175748313,
+        0.13011154175748313,
+        0.16877433451827992,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832,
+        0.18810573089867832
+      ]
+    },
+    "crecimientoBaseFijo": {
+      "margenObjetivo": 0.19,
+      "valor": 32.16000005507748,
+      "crecimientoAnios": [
+        0.09738644547760487,
+        0.09738644547760487,
+        0.07738644547760487,
+        0.06738644547760488,
+        0.05738644547760486,
+        0.05238644547760486,
+        0.051,
+        0.048,
+        0.045,
+        0.042,
+        0.04,
+        0.04
+      ],
+      "margenAnios": [
+        0.13011154175748313,
+        0.13011154175748313,
+        0.1700371805858277,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19,
+        0.19
+      ],
+      "desplazamiento": -0.0026135545223951373,
+      "cagr5": 0.07026753875048541
+    },
+    "margenLtmFijo": {
+      "margenObjetivo": 0.13011154175748313,
+      "valor": 32.15999997829009,
+      "crecimientoAnios": [
+        0.20481058740988373,
+        0.20481058740988373,
+        0.18481058740988374,
+        0.17481058740988376,
+        0.16481058740988375,
+        0.15981058740988374,
+        0.051,
+        0.048,
+        0.045,
+        0.042,
+        0.04,
+        0.04
+      ],
+      "margenAnios": [
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313,
+        0.13011154175748313
+      ],
+      "desplazamiento": 0.10481058740988373,
+      "cagr5": 0.1777024712185027
+    },
+    "precio": 32.16,
+    "constantes": {
+      "wacc": 0.07037154025087528,
+      "preferentes": 1550.079,
+      "deuda": 674.703,
+      "caja": 700.617,
+      "opciones": 8261.890362511014,
+      "capitalBridge": 9786.055362511013
+    }
+  },
+  "puente": {
+    "operativo": 9847.59303956067,
+    "deuda": 674.703,
+    "minoritarios": 0,
+    "caja": 700.617,
+    "noOperativos": 0,
+    "opciones": 8261.890362511014,
+    "preferentes": 1550.079,
+    "accionesMillones": 253.803
+  },
+  "tasas": {
+    "wacc": 0.07037154025087528,
+    "fuenteWacc": "Input sheet!B36 / Cost of capital worksheet, Rf 4,94 % y ERP 3,42 % (Damodaran ERPNov26, 1-nov-2026; ERP madura 3,387 % más CRP de ingresos no estadounidenses)"
+  },
+  "fecha": "2026-11-06",
+  "fechaPublicacion": "2026-11-08",
+  "auditPendingUserVisualReview": true,
+  "auditoriaEconomica": "NO_REALIZADA",
+  "salvedades": [
+    "TAM sin dato confiable (N/D): las estimaciones públicas del mercado estadounidense de bebidas energéticas van de 19,6 a 28 mil millones de dólares según el alcance; el crecimiento se ata al ritmo orgánico del 3T-26 (7,6 %) y a motores por marca, y la prueba «posible» queda con reserva.",
+    "Beta (0,58 desapalancada de Beverage (Soft), 0,61 reapalancada), costo de deuda (6,5 %), volatilidad de opciones (50 %) y la valoración híbrida de los preferentes de PepsiCo (componente financiero 981,8 al 8 % + opciones de conversión 568,3 = 1.550,1; valor contable mezzanine 1.760,0; preferencia de liquidación 1.135,0) son hipótesis documentadas; cada 100 M de diferencia en los preferentes mueve el valor en ~US$0,39 por acción.",
+    "El EBIT base (LTM 412,4; 13,0 %) incluye 169,5 M de comisiones por terminación de distribuidores (582,0 M y 18,4 % sin ellas). El motor parte del margen reportado y converge al 19 % en 3 años; no se normalizó el año base para conservar la conciliación con la fuente. El efecto estimado de no normalizar es de ~US$0,8 por acción a la baja (cálculo aproximado, no aplicado).",
+    "61 % de los ingresos de 9M-26 son con parte relacionada (PepsiCo, también accionista preferente, distribuidor y capitán de categoría): la ruptura o renegociación del contrato es el factor de riesgo dominante; los «deferred other costs» (734,5 M) y los ingresos diferidos (456,2 M) con PepsiCo no se modelan por separado.",
+    "El 10-Q 3T-26 no desglosa los arrendamientos operativos (FY25: 18,2 M) ni actualiza las opciones; se usan el último dato del 10-K y se tratan como inmateriales (< 0,5 % del valor). Promedios ponderados del LTM = 9M-26.",
+    "Las recompras de 9M-26 (167,5 M) se tomaron del texto del 10-Q porque no figuran en el XBRL consultado; el precio de cierre histórico ajustado por split proviene de una sola fuente (Alpha Vantage).",
+    "La guía de la empresa para el 4T-26 y 2027 proviene de un resumen secundario de la presentación de resultados y no se verificó en el 8-K del 5-nov-2026; no condiciona las cifras de la hoja.",
+    "Scripts oficiales de auditoría de estados (estados_completos, auditar_ceros_materiales, auditar_estados_sec, diff_formulas_plantilla) no ejecutados: pruebas equivalentes por script propio y Huella motor.",
+    "Auditoría económica F5 por realizar en una sesión independiente; publicación EN_REVISION no equivale a dictamen sin reservas."
+  ],
+  "controlPublicacion": {
+    "dcfBaseConcilia": true,
+    "probabilidadesSuman1": true,
+    "centrosDcfVerificados": 3,
+    "centrosMultiplesVerificados": 5,
+    "integridadHoja": "Control de integridad de la hoja de valoración: 0 diferencias de 1883 fórmulas frente a la Maestra Floyd (capas 2-4 OK)",
+    "visorEndToEnd": "NO_EJECUTADO",
+    "gatePerfil": "PARCIAL: validar_catalogo, validar_profundidad_floyd y registro_revisiones --check aprobados localmente; validar_no_regresion_20 y pruebas legacy fallan igual que en main (conteo A-1.2)",
+    "auditoriaEconomicaRealizada": false,
+    "perfil": "Floyd",
+    "revisionId": "CELH-FLOYD-20261108-R1",
+    "fechaComprobacion": "2026-11-08",
+    "replicaIndependiente": "NO_EJECUTADA como réplica independiente: el DCF inverso volvió a leer la hoja y reprodujo la Base (32,55237)",
+    "ciMotor": "por ejecutar en PR",
+    "ciApp": "sin cambios en la app"
+  },
+  "libros": {
+    "historicos": "https://docs.google.com/spreadsheets/d/1MLwY0b7u4pKUgu5hDzj0hN2S73yu_Ng323zAcUCY8qg/edit",
+    "valoracion": "https://docs.google.com/spreadsheets/d/1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU/edit",
+    "analisis": "https://docs.google.com/document/d/16sOYz9JwdIr9-QJoWWOtPTHo0roOt8Nlts9XUIbVggM/edit"
+  },
+  "contratoLibros": "floyd-h1-h2-separados-v1",
+  "dcfFCFE": {
+    "version": "1",
+    "estado": "INFORMATIVO",
+    "pestana": "DCF FCFE",
+    "alimentaValorPrincipal": false,
+    "sinMOS": true,
+    "ponderadoNoEntraEnValorPrincipal": true,
+    "supuestos": {
+      "ke": 0.07033111055186012,
+      "kd": 0.065,
+      "pesoDeuda": 0.06645107087615637,
+      "pesoPatrimonio": 0.7845561677112988,
+      "pesoFcfeEnPonderado": 0.5,
+      "preferentesPonderadas": 0.011953343980215596
+    },
+    "historias": {
+      "conservador": {
+        "probabilidad": 0.25,
+        "dcfFCFF": 17.50130163057985,
+        "dcfFCFE": 17.59042759815423,
+        "diferencia": 0.005092533655819631,
+        "ponderadoFcffFcfe": 17.54586461436704
+      },
+      "base": {
+        "probabilidad": 0.5,
+        "dcfFCFF": 32.55237472571646,
+        "dcfFCFE": 31.74693199559145,
+        "diferencia": -0.024742979180831015,
+        "ponderadoFcffFcfe": 32.14965336065396
+      },
+      "optimista": {
+        "probabilidad": 0.25,
+        "dcfFCFF": 52.87271148584002,
+        "dcfFCFE": 50.51234451904253,
+        "diferencia": -0.04464244220630953,
+        "ponderadoFcffFcfe": 51.69252800244128
+      }
+    },
+    "promedio": {
+      "dcfFCFF": 33.869690641963196,
+      "dcfFCFE": 32.89915902709491,
+      "diferencia": -0.028654870961999146,
+      "ponderadoFcffFcfe": 33.38442483452906
+    },
+    "controles": {
+      "promedioFcffHoja": 33.869690641963196,
+      "concilia": true,
+      "dcfFcffBaseHoja": 32.55237472571646
+    },
+    "baseDetalle": {
+      "anios": [
+        "Base year",
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        "Terminal year"
+      ],
+      "filas": {
+        "ingresos": [
+          3169.396,
+          3486.3356000000003,
+          3765.2424480000004,
+          4028.809419360001,
+          4270.537984521601,
+          4505.417573670289,
+          4735.193869927473,
+          4962.483175683992,
+          5185.794918589771,
+          5403.598305170542,
+          5619.742237377363,
+          5844.531926872458
+        ],
+        "ebit": [
+          412.375,
+          453.61250000000007,
+          640.2312100800001,
+          765.4737896784002,
+          811.4022170591043,
+          856.0293389973549,
+          899.6868352862199,
+          942.8718033799585,
+          985.3010345320566,
+          1026.683677982403,
+          1067.751025101699,
+          1110.461066105767
+        ],
+        "tasaImpuesto": [
+          0.19262303430294145,
+          0.19262303430294145,
+          0.19262303430294145,
+          0.19262303430294145,
+          0.19262303430294145,
+          0.19262303430294145,
+          0.20409842744235315,
+          0.21557382058176486,
+          0.22704921372117656,
+          0.23852460686058827,
+          0.24999999999999997,
+          0.25
+        ],
+        "ebitDespuesImpuestos": [
+          332.9420762293245,
+          366.23628385225703,
+          516.9079317389466,
+          618.0259056311751,
+          655.1074599690456,
+          691.1383702673431,
+          716.062167013715,
+          739.6133264065222,
+          761.5892093628913,
+          781.7943573214675,
+          800.8132688262743,
+          832.8457995793253
+        ],
+        "reinversion": [
+          null,
+          92.96894933333336,
+          87.85565712000016,
+          80.57618838720009,
+          78.29319638289599,
+          76.59209875239473,
+          90.91572230260753,
+          89.32469716231171,
+          87.12135463230807,
+          86.45757288272871,
+          89.91587579803782,
+          302.8530180288456
+        ],
+        "fcff": [
+          null,
+          273.2673345189237,
+          429.0522746189464,
+          537.449717243975,
+          576.8142635861497,
+          614.5462715149484,
+          625.1464447111075,
+          650.2886292442105,
+          674.4678547305832,
+          695.3367844387387,
+          710.8973930282365,
+          529.9927815504798
+        ],
+        "endeudamientoNeto": [
+          null,
+          6.177886241431126,
+          5.8381024981524225,
+          5.354374005448361,
+          5.202666741960651,
+          5.089626982748951,
+          6.0414471064875235,
+          5.935721782123979,
+          5.789307311498257,
+          5.74519830341066,
+          5.9750062355470845,
+          20.124907366092682
+        ],
+        "deudaCierre": [
+          674.703,
+          680.8808862414311,
+          686.7189887395836,
+          692.0733627450319,
+          697.2760294869926,
+          702.3656564697416,
+          708.4071035762291,
+          714.3428253583531,
+          720.1321326698514,
+          725.8773309732621,
+          731.8523372088092,
+          null
+        ],
+        "intereses": [
+          null,
+          43.855695,
+          44.25725760569302,
+          44.636734268072935,
+          44.98476857842707,
+          45.32294191665452,
+          45.653767670533206,
+          46.046461732454894,
+          46.43228364829296,
+          46.808588623540345,
+          47.18202651326204,
+          47.5704019185726
+        ],
+        "ahorroFiscal": [
+          null,
+          8.447617042364337,
+          8.524967249935523,
+          8.598063196090296,
+          8.66510262099224,
+          8.730242595521966,
+          9.31786218837437,
+          9.926411679937333,
+          10.54241349362356,
+          11.165000199128965,
+          11.795506628315508,
+          11.89260047964315
+        ],
+        "fcfe": [
+          null,
+          244.03714280271916,
+          399.1580867613413,
+          506.7654201774407,
+          545.6972643706755,
+          583.0431991765649,
+          594.8519863354363,
+          620.104300973817,
+          644.3672918874122,
+          665.438394317738,
+          681.485879378837,
+          514.439887477643
+        ],
+        "ke": [
+          null,
+          0.07033111055186012,
+          0.07033111055186012,
+          0.07033111055186012,
+          0.07033111055186012,
+          0.07033111055186012,
+          0.07361920139352719,
+          0.07690729223519427,
+          0.08019538307686135,
+          0.08348347391852842,
+          0.0867715647601955,
+          0.08677156476019553
+        ],
+        "factorDescuento": [
+          null,
+          0.9342903239394793,
+          0.8728984094069372,
+          0.8155405376910636,
+          0.761951633145161,
+          0.7118840381574079,
+          0.6630693985664587,
+          0.6157163233524151,
+          0.5700045871318113,
+          0.5260851695968483,
+          0.4840807274092905,
+          null
+        ],
+        "vpFcfe": [
+          null,
+          228.00154120241746,
+          348.42445903589106,
+          413.2877432547478,
+          415.79492179008287,
+          415.0591470500269,
+          394.4281488155011,
+          381.80834029061805,
+          367.29231217352776,
+          350.0772705309016,
+          329.8941802088674,
+          null
+        ]
+      },
+      "puente": {
+        "valorTerminal": 10998.988169740514,
+        "vpValorTerminal": 5324.398193974169,
+        "sumaVpPatrimonio": 8968.466258326753,
+        "probFracaso": 0,
+        "patrimonioOperaciones": 8968.466258326753,
+        "cajaNoOperativosNetos": -910.9996770496567,
+        "patrimonioComun": 8057.466581277096,
+        "valorPorAccionFcfe": 31.74693199559145,
+        "valorPorAccionFcff": 32.55237472571646,
+        "diferencia": -0.024742979180831015
+      }
+    },
+    "nota": "Informativo: mismo motor y supuestos que el DCF FCFF; solo añade la deuda (endeudamiento neto con razón deuda/valor constante, intereses y ahorro fiscal) y descuenta al costo del patrimonio. No sustituye el valor principal, no lleva MOS y el ponderado FCFF/FCFE no entra en el valor principal. Con supuestos coherentes FCFE ≈ FCFF; una diferencia grande señala incoherencia entre deuda, Kd, pesos y WACC, no un valor alternativo.",
+    "revisionId": "CELH-FLOYD-20261108-R1",
+    "hojaId": "1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU"
+  }
+}

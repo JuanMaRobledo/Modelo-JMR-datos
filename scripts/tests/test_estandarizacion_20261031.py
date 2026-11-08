@@ -105,8 +105,8 @@ class EditorialTests(unittest.TestCase):
         # No aceptar altas desconocidas ni duplicaciones de empresas y revisiones oficiales.
         self.assertEqual(len(selected),27)
         floyd=[json.loads(p.read_text()) for p in files if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd']
-        # Revisiones Floyd integradas de forma explícita, una por emisor (UBER y CMG).
-        esperado={'UBER':'UBER-FLOYD-3T26','CMG':'CMG-FLOYD-20261108-R1'}
+        # Revisiones Floyd integradas de forma explícita, una por emisor (UBER, CMG y CELH).
+        esperado={'UBER':'UBER-FLOYD-3T26','CMG':'CMG-FLOYD-20261108-R1','CELH':'CELH-FLOYD-20261108-R1'}
         self.assertEqual(len(floyd),len(esperado))
         self.assertEqual({f['ticker']:f['revisionId'] for f in floyd},esperado)
         for f in floyd:

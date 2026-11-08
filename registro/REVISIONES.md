@@ -12,7 +12,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 | AFYA | — (fuera del catálogo) | AFYA-20261029-R1 |
 | AMZN | — (fuera del catálogo) | AMZN-20261102-A12-R2, AMZN-20261102-A12-R5 |
 | BSX | — (fuera del catálogo) | BSX-20261028-R1, BSX-20261028-A2, BSX-20261028-A4 |
-| CELH | — (fuera del catálogo) | CELH-20261028-A1 |
+| CELH | CELH-FLOYD-20261108-R1 | CELH-20261028-A1 |
 | CMG | CMG-FLOYD-20261108-R1 | CMG-2026-10-28-R1-REINICIO, CMG-20261028-A3 |
 | DPZ | — (fuera del catálogo) | DPZ-20261101-A1 |
 | DUOL | — (fuera del catálogo) | DUOL-20261029-A1, DUOL-20261103-A12-R2, DUOL-20261105-ATLAS-R1 |

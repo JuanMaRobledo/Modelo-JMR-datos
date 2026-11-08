@@ -42,6 +42,7 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
 |---|---|---|---|---|---|---|---|---|---|
 | CELH-20261028-A1 | SUSTITUIDA | 34.85 | 8.8 % | 19.5 % | N/D | 1.40 | N/D | 4.0 % | 19.0 % |
+| CELH-FLOYD-20261108-R1 | VIGENTE | 32.55 | 7.3 % (-1.5 pp) | 19.0 % (-0.5 pp) | 3.00 | 2.50 (+1.10) | 7.0 % | 4.0 % (+0.0 pp) | 11.0 % (-8.0 pp) |
 
 ## CMG
 

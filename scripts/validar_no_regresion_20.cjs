@@ -80,7 +80,10 @@ function run(){
       analisis:'analisis/UBER-research-UBER-FLOYD-3T26.json',valorOriginal:91.13793738151752},
     CMG:{ruta:'valoraciones/CMG-FLOYD-20261108-R1.json',original:'valoraciones/CMG-20261028-A3.json',
       originalRevision:'CMG-20261028-A3',originalSheet:'1JnByF8jZrxq7dk0opV29wugI19c9HWkifljzUFpkD9c',
-      analisis:'analisis/CMG-research-CMG-FLOYD-20261108-R1.json',valorOriginal:25.246494601933065}};
+      analisis:'analisis/CMG-research-CMG-FLOYD-20261108-R1.json',valorOriginal:25.246494601933065},
+    CELH:{ruta:'valoraciones/CELH-FLOYD-20261108-R1.json',original:'valoraciones/CELH-20261028-A1.json',
+      originalRevision:'CELH-20261028-A1',originalSheet:'1xqXfx9bD8XCGzgWtDnQP_9X0x_Cq94rID4w_w5mPyUo',
+      analisis:'analisis/CELH-research-CELH-FLOYD-20261108-R1.json',valorOriginal:34.85258305}};
   let floydHistoricoProtegido=0;
   assert.ok(floyd.length<=Object.keys(FLOYD_ESPERADO).length,'No permitir altas Floyd desconocidas');
   for(const [ticker,item] of floyd){

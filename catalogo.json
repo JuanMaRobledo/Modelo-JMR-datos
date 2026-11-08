@@ -1,14 +1,16 @@
 {
-  "version": "FLOYD-UBER-CMG-20261108-R3",
+  "version": "FLOYD-UBER-CMG-CELH-20261108-R4",
   "actualizadoEl": "2026-11-08",
-  "nota": "Floyd R3: UBER y CMG son los únicos expedientes activos EN_REVISION; históricos, valoración y análisis viven en libros separados por ticker. F5 económica y revisión visual pendientes en ambos. Los expedientes anteriores se preservan en archivoFloyd; no se destruyen. ",
+  "nota": "Floyd R4: UBER, CMG y CELH son los únicos expedientes activos EN_REVISION; históricos, valoración y análisis viven en libros separados por ticker. F5 económica y revisión visual pendientes en los tres. Los expedientes anteriores se preservan en archivoFloyd; no se destruyen. ",
   "valoraciones": [
     "valoraciones/UBER-FLOYD-3T26.json",
-    "valoraciones/CMG-FLOYD-20261108-R1.json"
+    "valoraciones/CMG-FLOYD-20261108-R1.json",
+    "valoraciones/CELH-FLOYD-20261108-R1.json"
   ],
   "analisis": [
     "analisis/UBER-research-UBER-FLOYD-3T26.json",
-    "analisis/CMG-research-CMG-FLOYD-20261108-R1.json"
+    "analisis/CMG-research-CMG-FLOYD-20261108-R1.json",
+    "analisis/CELH-research-CELH-FLOYD-20261108-R1.json"
   ],
   "auditorias": [],
   "controlModeloA": {
@@ -35,6 +37,13 @@
       },
       "CMG": {
         "rutaValoracion": "valoraciones/CMG-FLOYD-20261108-R1.json",
+        "metodo": "Floyd",
+        "estado": "INCOMPLETA_EN_REVISION",
+        "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
+        "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista, múltiplos como contraste con peso 0. Control técnico F4 integrado; F5 económico independiente y revisión visual por realizar."
+      },
+      "CELH": {
+        "rutaValoracion": "valoraciones/CELH-FLOYD-20261108-R1.json",
         "metodo": "Floyd",
         "estado": "INCOMPLETA_EN_REVISION",
         "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
@@ -88,11 +97,31 @@
       ],
       "alcance": "Pareja activa única CMG Floyd R1; libros históricos y valoración separados; F5 económica pendiente",
       "revisionAnterior": "CMG-20261028-A3"
+    },
+    "CELH": {
+      "fecha": "2026-11-08",
+      "revisionId": "CELH-FLOYD-20261108-R1",
+      "metodo": "Floyd",
+      "valorPorAccion": 32.55237472571646,
+      "mos35": 21.1590435717157,
+      "moneda": "USD",
+      "precioReferencia": 32.16,
+      "fechaPrecioReferencia": "2026-11-06",
+      "corteContable": "2026-09-30",
+      "sheetId": "1i7KsD5LJ98XOVjVPrS355weuaSuNo_ISuMVSHS_4MhU",
+      "estadoSeleccion": "FLOYD_F4_SELECCIONADO_EN_REVISION",
+      "estado": "EN_REVISION",
+      "auditoriaEconomica": "NO_REALIZADA",
+      "reservas": [
+        "Auditoría económica F5 independiente y QA visual pendientes; no equivale a certificación."
+      ],
+      "alcance": "Pareja activa única CELH Floyd R1; libros históricos y valoración separados; F5 económica pendiente",
+      "revisionAnterior": "CELH-20261028-A1"
     }
   },
   "archivoFloyd": {
     "fechaArchivo": "2026-11-08",
-    "motivo": "Migración progresiva a Floyd. Solo UBER y CMG activos EN_REVISION; las otras 27 parejas se conservan en solo lectura, sin borrar hojas, datos ni análisis. Cada próxima empresa solo se activa tras validar su propia revisión Floyd y sus fuentes.",
+    "motivo": "Migración progresiva a Floyd. Solo UBER, CMG y CELH activos EN_REVISION; las otras 26 parejas se conservan en solo lectura, sin borrar hojas, datos ni análisis. Cada próxima empresa solo se activa tras validar su propia revisión Floyd y sus fuentes.",
     "valoraciones": [
       "valoraciones/AMZN-20261102-A12-R5.json",
       "valoraciones/META-20261101-A12-R1.json",
