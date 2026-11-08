@@ -91,13 +91,18 @@ jobs:
       - run: node scripts/auditar_integridad.cjs
       # Tras un rechazo financiero los diagnósticos independientes continúan,
       # pero GitHub conserva la conclusión failure; no hay continue-on-error.
-      - run: node --test scripts/tests/*.test.cjs
+      - name: Tests Floyd (catálogo activo con libros separados)
+        run: node --test scripts/tests/validar_catalogo.test.cjs
         if: ${{ !cancelled() }}
-      - run: python3 scripts/verificar_cierre_multiplos.py
+      - name: Suite financiera histórica sobre el archivo (sin reactivarlo)
+        run: node scripts/ci_catalogo_legacy.cjs node --test $(find scripts/tests -maxdepth 1 -name '*.test.cjs' ! -name 'validar_catalogo.test.cjs' | sort)
+        if: ${{ !cancelled() }}
+      - name: Verificar múltiplos de revisiones históricas conservadas
+        run: node scripts/ci_catalogo_legacy.cjs python3 scripts/verificar_cierre_multiplos.py
         if: ${{ !cancelled() }}
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
         if: ${{ !cancelled() }}
-      - name: Gate financiero obligatorio del catálogo Método A
+      - name: Gate financiero obligatorio del catálogo Floyd
         if: ${{ !cancelled() }}
         run: node scripts/validar_catalogo.cjs
 
