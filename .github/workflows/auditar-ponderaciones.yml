@@ -75,29 +75,37 @@ jobs:
       - run: node --test scripts/tests/nu_n2_reconciliation.test.cjs
       - run: node --test scripts/tests/anclas_uber_googl_fuente.test.cjs
       - run: node --test scripts/tests/intu_n2_dcf_repro.test.cjs
-      - run: node --test scripts/tests/capturas_matrices_fuente.test.cjs
+      - name: Auditoría de capturas de la cartera histórica A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs node --test scripts/tests/capturas_matrices_fuente.test.cjs
       - run: node --test scripts/tests/shak_formulas_evidencia.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
-      - run: node scripts/validar_no_regresion_20.cjs
+      - name: Asegurar no regresión de las 16 revisiones históricas A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_no_regresion_20.cjs
       - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_full_snapshot_candidate.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
-      - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
+      - name: Validar estándares editoriales del archivo A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
       # Ejecutar las pruebas independientes primero para exponer todos los
       # errores de una pasada. El gate financiero obligatorio sigue al final:
       # un catálogo incompleto mantiene el workflow en rojo, sin excepciones.
       - run: node scripts/auditar_integridad.cjs
       # Tras un rechazo financiero los diagnósticos independientes continúan,
       # pero GitHub conserva la conclusión failure; no hay continue-on-error.
-      - run: node --test scripts/tests/*.test.cjs
+      - name: Tests Floyd (catálogo activo con libros separados)
+        run: node --test scripts/tests/validar_catalogo.test.cjs
         if: ${{ !cancelled() }}
-      - run: python3 scripts/verificar_cierre_multiplos.py
+      - name: Suite financiera histórica sobre el archivo (sin reactivarlo)
+        run: node scripts/ci_catalogo_legacy.cjs node --test $(find scripts/tests -maxdepth 1 -name '*.test.cjs' ! -name 'validar_catalogo.test.cjs' | sort)
+        if: ${{ !cancelled() }}
+      - name: Verificar múltiplos de revisiones históricas conservadas
+        run: node scripts/ci_catalogo_legacy.cjs python3 scripts/verificar_cierre_multiplos.py
         if: ${{ !cancelled() }}
       - run: python3 -m unittest discover -s scripts/tests -p test_reviewed_snapshot_release.py -v
         if: ${{ !cancelled() }}
-      - name: Gate financiero obligatorio del catálogo Método A
+      - name: Gate financiero obligatorio del catálogo Floyd
         if: ${{ !cancelled() }}
         run: node scripts/validar_catalogo.cjs
 

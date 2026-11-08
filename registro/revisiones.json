@@ -2,8 +2,10 @@
   "descripcion": "Revisión VIGENTE (catálogo) y SUSTITUIDAS por emisor. Las sustituidas se conservan como evidencia y no son insumo de revisiones nuevas (REGLAS_VIGENTES §10). Generado por scripts/registro_revisiones.py; no editar a mano.",
   "emisores": {
     "AAPL": {
-      "vigente": "AAPL-20261103-A12-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "AAPL-20261103-A12-R1"
+      ],
       "rutas": {
         "AAPL-20261103-A12-R1": [
           "valoraciones/AAPL-20261103-A12-R1.json"
@@ -11,10 +13,11 @@
       }
     },
     "ADBE": {
-      "vigente": "ADBE-20261028-A3",
+      "vigente": null,
       "sustituidas": [
         "ADBE-20261028-A2",
-        "ADBE-20261028-R1"
+        "ADBE-20261028-R1",
+        "ADBE-20261028-A3"
       ],
       "rutas": {
         "ADBE-20261028-A2": [
@@ -29,8 +32,10 @@
       }
     },
     "AFYA": {
-      "vigente": "AFYA-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "AFYA-20261029-R1"
+      ],
       "rutas": {
         "AFYA-20261029-R1": [
           "valoraciones/AFYA-20261029-R1.json"
@@ -38,9 +43,10 @@
       }
     },
     "AMZN": {
-      "vigente": "AMZN-20261102-A12-R5",
+      "vigente": null,
       "sustituidas": [
-        "AMZN-20261102-A12-R2"
+        "AMZN-20261102-A12-R2",
+        "AMZN-20261102-A12-R5"
       ],
       "rutas": {
         "AMZN-20261102-A12-R2": [
@@ -52,10 +58,11 @@
       }
     },
     "BSX": {
-      "vigente": "BSX-20261028-A4",
+      "vigente": null,
       "sustituidas": [
         "BSX-20261028-R1",
-        "BSX-20261028-A2"
+        "BSX-20261028-A2",
+        "BSX-20261028-A4"
       ],
       "rutas": {
         "BSX-20261028-R1": [
@@ -70,8 +77,10 @@
       }
     },
     "CELH": {
-      "vigente": "CELH-20261028-A1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "CELH-20261028-A1"
+      ],
       "rutas": {
         "CELH-20261028-A1": [
           "valoraciones/CELH-20261028-A1.json"
@@ -97,8 +106,10 @@
       }
     },
     "DPZ": {
-      "vigente": "DPZ-20261101-A1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "DPZ-20261101-A1"
+      ],
       "rutas": {
         "DPZ-20261101-A1": [
           "candidatos/valoraciones/DPZ-20261101-A1/VALORACION_A12_EN_REVISION.json",
@@ -107,9 +118,10 @@
       }
     },
     "DUOL": {
-      "vigente": "DUOL-20261103-A12-R2",
+      "vigente": null,
       "sustituidas": [
         "DUOL-20261029-A1",
+        "DUOL-20261103-A12-R2",
         "DUOL-20261105-ATLAS-R1"
       ],
       "rutas": {
@@ -125,8 +137,10 @@
       }
     },
     "EPAM": {
-      "vigente": "EPAM-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "EPAM-20261029-R1"
+      ],
       "rutas": {
         "EPAM-20261029-R1": [
           "valoraciones/EPAM-20261029-R1.json"
@@ -145,9 +159,10 @@
       }
     },
     "GOOGL": {
-      "vigente": "GOOGL-20261029-R5",
+      "vigente": null,
       "sustituidas": [
-        "GOOGL-20261029-R4"
+        "GOOGL-20261029-R4",
+        "GOOGL-20261029-R5"
       ],
       "rutas": {
         "GOOGL-20261029-R4": [
@@ -159,9 +174,10 @@
       }
     },
     "INTU": {
-      "vigente": "INTU-20261101-A12-R1",
+      "vigente": null,
       "sustituidas": [
-        "INTU-20261029-R1"
+        "INTU-20261029-R1",
+        "INTU-20261101-A12-R1"
       ],
       "rutas": {
         "INTU-20261029-R1": [
@@ -174,8 +190,10 @@
       }
     },
     "KO": {
-      "vigente": "KO-20261103-A12-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "KO-20261103-A12-R1"
+      ],
       "rutas": {
         "KO-20261103-A12-R1": [
           "valoraciones/KO-20261103-A12-R1.json"
@@ -183,8 +201,10 @@
       }
     },
     "LULU": {
-      "vigente": "LULU-20261103-A12-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "LULU-20261103-A12-R1"
+      ],
       "rutas": {
         "LULU-20261103-A12-R1": [
           "valoraciones/LULU-20261103-A12-R1.json"
@@ -192,28 +212,30 @@
       }
     },
     "MELI": {
-      "vigente": "MELI-20261028-A3",
+      "vigente": null,
       "sustituidas": [
         "MELI-20261028-A1",
+        "MELI-20261028-A3",
         "MELI-20261028-R1"
       ],
       "rutas": {
         "MELI-20261028-A1": [
           "valoraciones/MELI-20261028-A1.json"
         ],
-        "MELI-20261028-R1": [
-          "valoraciones/MELI-20261028-R1.json"
-        ],
         "MELI-20261028-A3": [
           "valoraciones/MELI-20261028-A3.json"
+        ],
+        "MELI-20261028-R1": [
+          "valoraciones/MELI-20261028-R1.json"
         ]
       }
     },
     "META": {
-      "vigente": "META-20261101-A12-R1",
+      "vigente": null,
       "sustituidas": [
         "META-20261025-R5",
-        "META-20261031-A12-R1"
+        "META-20261031-A12-R1",
+        "META-20261101-A12-R1"
       ],
       "rutas": {
         "META-20261025-R5": [
@@ -229,8 +251,10 @@
       }
     },
     "MSFT": {
-      "vigente": "MSFT-20261028-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "MSFT-20261028-R1"
+      ],
       "rutas": {
         "MSFT-20261028-R1": [
           "valoraciones/MSFT-20261028-R1.json"
@@ -238,9 +262,10 @@
       }
     },
     "NFLX": {
-      "vigente": "NFLX-20261028-A2",
+      "vigente": null,
       "sustituidas": [
-        "NFLX-20261028-R1"
+        "NFLX-20261028-R1",
+        "NFLX-20261028-A2"
       ],
       "rutas": {
         "NFLX-20261028-R1": [
@@ -252,8 +277,10 @@
       }
     },
     "NKE": {
-      "vigente": "NKE-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "NKE-20261029-R1"
+      ],
       "rutas": {
         "NKE-20261029-R1": [
           "valoraciones/NKE-20261029-R1.json"
@@ -261,10 +288,11 @@
       }
     },
     "NU": {
-      "vigente": "NU-20261102-A12-R3",
+      "vigente": null,
       "sustituidas": [
         "NU-20261029-R1",
-        "NU-20261102-A12-R1"
+        "NU-20261102-A12-R1",
+        "NU-20261102-A12-R3"
       ],
       "rutas": {
         "NU-20261029-R1": [
@@ -280,10 +308,11 @@
       }
     },
     "NVDA": {
-      "vigente": "NVDA-20261101-A12-R1",
+      "vigente": null,
       "sustituidas": [
         "NVDA-20261025-R4",
-        "NVDA-20261031-A12-R1"
+        "NVDA-20261031-A12-R1",
+        "NVDA-20261101-A12-R1"
       ],
       "rutas": {
         "NVDA-20261025-R4": [
@@ -299,8 +328,10 @@
       }
     },
     "NVO": {
-      "vigente": "NVO-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "NVO-20261029-R1"
+      ],
       "rutas": {
         "NVO-20261029-R1": [
           "valoraciones/NVO-20261029-R1.json"
@@ -308,8 +339,10 @@
       }
     },
     "ONON": {
-      "vigente": "ONON-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "ONON-20261029-R1"
+      ],
       "rutas": {
         "ONON-20261029-R1": [
           "valoraciones/ONON-20261029-R1.json"
@@ -317,8 +350,10 @@
       }
     },
     "PAGS": {
-      "vigente": "PAGS-20261030-A12-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "PAGS-20261030-A12-R1"
+      ],
       "rutas": {
         "PAGS-20261030-A12-R1": [
           "valoraciones/PAGS-20261030-A12-R1.json"
@@ -326,8 +361,10 @@
       }
     },
     "PYPL": {
-      "vigente": "PYPL-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "PYPL-20261029-R1"
+      ],
       "rutas": {
         "PYPL-20261029-R1": [
           "valoraciones/PYPL-20261029-R1.json"
@@ -335,9 +372,10 @@
       }
     },
     "SHAK": {
-      "vigente": "SHAK-20261029-A12-R2",
+      "vigente": null,
       "sustituidas": [
-        "SHAK-REC-20261027-R1"
+        "SHAK-REC-20261027-R1",
+        "SHAK-20261029-A12-R2"
       ],
       "rutas": {
         "SHAK-REC-20261027-R1": [
@@ -363,9 +401,10 @@
       }
     },
     "XP": {
-      "vigente": "XP-20261031-A12-R1",
+      "vigente": null,
       "sustituidas": [
-        "XP-JMR-20261026-R2"
+        "XP-JMR-20261026-R2",
+        "XP-20261031-A12-R1"
       ],
       "rutas": {
         "XP-JMR-20261026-R2": [
@@ -378,8 +417,10 @@
       }
     },
     "ZTS": {
-      "vigente": "ZTS-20261029-R1",
-      "sustituidas": [],
+      "vigente": null,
+      "sustituidas": [
+        "ZTS-20261029-R1"
+      ],
       "rutas": {
         "ZTS-20261029-R1": [
           "valoraciones/ZTS-20261029-R1.json"

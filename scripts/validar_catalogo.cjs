@@ -79,6 +79,17 @@ function validateFloydNativeMatrices(v){
   const methods=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
   assert.equal(v.perfil_valoracion,'Floyd');
   assert.equal(v.version_metodo,'Floyd');
+  // Contrato universal para toda empresa Floyd, no una excepción por ticker.
+  // El catálogo siempre apunta a dos libros Sheets y al documento de análisis.
+  assert.equal(v.contratoLibros,'floyd-h1-h2-separados-v1',v.ticker+': contrato de libros Floyd ausente');
+  const books=v.libros||{};
+  const sheetId=u=>/^https:\/\/docs\.google\.com\/spreadsheets\/d\/([A-Za-z0-9_-]+)\/edit(?:[?#].*)?$/.exec(String(u||''))?.[1];
+  const analysisId=/^https:\/\/docs\.google\.com\/document\/d\/([A-Za-z0-9_-]+)\/edit(?:[?#].*)?$/.exec(String(books.analisis||''))?.[1];
+  const historicId=sheetId(books.historicos),modelId=sheetId(books.valoracion);
+  assert.ok(historicId&&modelId&&historicId!==modelId,v.ticker+': Históricos y Valoración deben ser dos libros válidos y distintos');
+  assert.ok(analysisId,v.ticker+': documento de análisis Floyd ausente');
+  assert.equal(modelId,v.sheet_id,v.ticker+': valoracion vinculada a hoja incorrecta');
+  assert.equal(books.valoracion,v.hojaGoogle,v.ticker+': hojaGoogle debe ser la misma Valoración');
   assert.equal(s.contrato,'base-native-five-priority-v1');
   assert.equal(s.revisionId,v.revisionId);
   assert.equal(s.sourceSheetId,v.sheet_id);
@@ -105,7 +116,7 @@ function validateFloydNativeMatrices(v){
   assert.ok(near(base,v.valorPrincipal)&&near(base,v.valorEsperado.dcfBase));
   assert.equal(v.valorEsperado.escenariosPromedio,3);
   assert.equal(v.valorEsperado.disrupcionEnPromedio,false);
-  assert.ok(near(v.precioMOS,base*(1-v.mos))&&v.baseMOS==='dcfBase');
+  assert.ok(near(v.precioMOS,base*(1-v.mos))&&v.baseMOS==='dcfBase',v.ticker+': MOS no corresponde a DCF Base');
   for(const m of dcf.matrices){
     assert.equal(m.centroConciliado,true);
     assert.ok(grid(m.valores));
