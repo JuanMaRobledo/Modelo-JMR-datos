@@ -79,7 +79,8 @@ jobs:
         run: node scripts/ci_catalogo_legacy.cjs node --test scripts/tests/capturas_matrices_fuente.test.cjs
       - run: node --test scripts/tests/shak_formulas_evidencia.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
-      - run: node scripts/validar_no_regresion_20.cjs
+      - name: Asegurar no regresión de las 16 revisiones históricas A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_no_regresion_20.cjs
       - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_full_snapshot_candidate.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
