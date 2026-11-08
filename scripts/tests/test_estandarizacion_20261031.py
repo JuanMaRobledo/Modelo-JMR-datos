@@ -108,7 +108,7 @@ class EditorialTests(unittest.TestCase):
         self.assertEqual(len(floyd),1)
         self.assertEqual(floyd[0]['ticker'],'UBER')
         self.assertEqual(floyd[0]['revisionId'],'UBER-FLOYD-3T26')
-        self.assertEqual(re.findall(r'<h3[^>]*>(\\d+)\\.',floyd[0]['articleHtml']),list(map(str,range(1,15))))
+        self.assertEqual(re.findall(r'<h3[^>]*>(\d+)\.',floyd[0]['articleHtml']),list(map(str,range(1,15))))
         self.assertEqual(floyd[0]['estado'],'EN_REVISION')
         self.assertFalse(floyd[0]['controlCobertura']['auditoriaEconomicaIndependiente'])
         self.assertEqual(len([x for x in selected if x.get('ticker')=='KO' and x.get('revisionId')=='KO-20261103-A12-R1']),1)
