@@ -116,7 +116,7 @@ function validateFloydNativeMatrices(v){
   assert.ok(near(base,v.valorPrincipal)&&near(base,v.valorEsperado.dcfBase));
   assert.equal(v.valorEsperado.escenariosPromedio,3);
   assert.equal(v.valorEsperado.disrupcionEnPromedio,false);
-  assert.ok(near(v.precioMOS,base*(1-v.mos))&&v.baseMOS==='dcfBase');
+  assert.ok(near(v.precioMOS,base*(1-v.mos))&&v.baseMOS==='dcfBase',v.ticker+': MOS no corresponde a DCF Base');
   for(const m of dcf.matrices){
     assert.equal(m.centroConciliado,true);
     assert.ok(grid(m.valores));
