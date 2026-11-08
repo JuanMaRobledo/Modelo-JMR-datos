@@ -29,13 +29,14 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   const ko=active.find(([ticker])=>ticker==='KO');
   const floyd=Object.entries(catalog.controlModeloA.empresas)
     .filter(([,v])=>v.metodo==='Floyd');
-  assert.ok(floyd.length<=1,'Floyd se integra de forma explícita, no como captura parcial');
+  const FLOYD_RUTAS={UBER:'valoraciones/UBER-FLOYD-3T26.json',CMG:'valoraciones/CMG-FLOYD-20261108-R1.json'};
+  assert.ok(floyd.length<=Object.keys(FLOYD_RUTAS).length,'Floyd se integra de forma explícita, no como captura parcial');
   const expectedLegacy=previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0)-floyd.length;
   assert.equal(active.length,expectedLegacy,
     'No permitir altas desconocidas sin catálogo reconciliado');
   for(const [ticker,entry] of floyd){
-    assert.equal(ticker,'UBER','El primer expediente Floyd debe estar identificado');
-    assert.equal(entry.rutaValoracion,'valoraciones/UBER-FLOYD-3T26.json');
+    assert.ok(FLOYD_RUTAS[ticker],'El expediente Floyd debe estar identificado: '+ticker);
+    assert.equal(entry.rutaValoracion,FLOYD_RUTAS[ticker]);
     assert.ok(catalog.valoraciones.includes(entry.rutaValoracion));
     const val=JSON.parse(fs.readFileSync(path.join(root,entry.rutaValoracion),'utf8'));
     assert.equal(val.perfil_valoracion,'Floyd');
@@ -116,6 +117,7 @@ for(const file of files){
     const historicalSources={
       INTU:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json',
       UBER:'valoraciones/UBER-20261030-A1.json',
+      CMG:'valoraciones/CMG-20261028-A3.json',
       DUOL:'valoraciones/DUOL-20261029-A1.json',
     };
     const declared=historicalSources[ticker]
