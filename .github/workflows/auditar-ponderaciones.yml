@@ -86,7 +86,8 @@ jobs:
       - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
       - run: python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
-      - run: python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
+      - name: Validar estándares editoriales del archivo A-1.2
+        run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
       # Ejecutar las pruebas independientes primero para exponer todos los
       # errores de una pasada. El gate financiero obligatorio sigue al final:
       # un catálogo incompleto mantiene el workflow en rojo, sin excepciones.
