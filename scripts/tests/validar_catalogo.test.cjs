@@ -24,9 +24,22 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
  }
  const tickers=c.valoraciones.map(p=>JSON.parse(fs.readFileSync(path.join(root,p))).ticker);
  assert.equal(new Set(tickers).size,tickers.length,'Una revisión activa por ticker');
- assert.deepEqual(tickers,['UBER'],'Solo UBER puede aparecer como expediente vigente');
- for(const t of ['META','NFLX','NKE','NVDA','CMG'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
- assert.equal(c.archivoFloyd.valoraciones.length,28,'Deben conservarse 28 expedientes archivados');
+ assert.equal(c.archivoFloyd.analisis.length,27);
+ for(const ticker of tickers){
+   const v=JSON.parse(fs.readFileSync(path.join(root,c.valoraciones.find(p=>p.startsWith('valoraciones/'+ticker+'-')))));
+   const a=JSON.parse(fs.readFileSync(path.join(root,c.analisis.find(p=>p.startsWith('analisis/'+ticker+'-')))));
+   assert.equal(v.perfil_valoracion,'Floyd');
+   assert.equal(a.revisionId,v.revisionId);
+   assert.equal(v.contratoLibros,'floyd-h1-h2-separados-v1');
+   assert.ok(v.libros.historicos&&v.libros.valoracion&&v.libros.analisis);
+   assert.notEqual(v.libros.historicos,v.libros.valoracion);
+   assert.equal(v.libros.valoracion,v.hojaGoogle);
+   assert.equal(a.documentos.nivel1,v.libros.analisis);
+ }
+
+ assert.deepEqual(tickers,['UBER','CMG'],'Solo las revisiones Floyd de UBER y CMG pueden estar vigentes');
+ for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
+ assert.equal(c.archivoFloyd.valoraciones.length,27,'Deben conservarse 27 expedientes archivados');
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
 test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a DCF Base/);});
