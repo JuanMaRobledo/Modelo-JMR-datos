@@ -1,14 +1,10 @@
 # MercadoLibre · JMR Floyd · 3T 2026
 
-**MELI-FLOYD-3T26-R1 · CANDIDATO · acción ordinaria Nasdaq · USD**  
-Corte contable 30 de septiembre de 2026. Mercado 6 de noviembre de 2026.  
-**Precio US$1.510,00. DCF Base oficial y precio con MOS 35 % oficial: N/D.**
+**MELI-FLOYD-3T26-R1 · CANDIDATO · Acción ordinaria Nasdaq · USD**
+**Corte contable 30-sep-2026 · Cierre de mercado US$1.510 al 6-nov-2026**
+**DCF Base SOTP, valor esperado y precio con MOS 35 % · N/D**
 
-La revisión de supuestos del 8 de noviembre sitúa el caso central indicativo en **US$1.021,81 por acción**. La sección final documenta la actualización y sus matrices. Las secciones previas conservan la primera corrida como referencia.
-
-La prueba de expectativas mediante flujos al accionista da **US$1.310,55** en el caso central, **13,2 % por debajo** del cierre. El umbral mecánico del 65 % de ese resultado sería **US$851,86** y sirve solo para interpretar la prueba. La conclusión más robusta es que, con la trayectoria central de ventas, conversión de caja y una tasa de descuento de 12,5 %, el precio exige **10,48 % de margen neto** frente al **4,91 % LTM**. Esta simulación usa una aproximación consolidada de caja al accionista. La cifra oficial permanece pendiente hasta poder reproducir el puente de capital, fondeo y caja por negocio.
-
-[Históricos H1](https://docs.google.com/spreadsheets/d/1TF8KaMkn-Wc3csoCK1z9-IierhPhOBZwwdX7fiBYN6Q/edit) · [Maestra Floyd copiada y cargada parcialmente H2](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit) · [Expediente de MELI](https://drive.google.com/drive/folders/19PxkVBNMjk2Hb2e3WTSW9qK4PbL8xoQz)
+[H1 Históricos](https://docs.google.com/spreadsheets/d/1TF8KaMkn-Wc3csoCK1z9-IierhPhOBZwwdX7fiBYN6Q/edit) · [H2 Valoración](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit) · [PR #260](https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/260)
 
 ## Nivel 1 · Análisis fundamental
 
@@ -30,7 +26,7 @@ La compañía informó alrededor de 94 millones de compradores activos, 22 % má
 
 ### 5. Ciclos de la empresa, del mercado y de la macroeconomía
 
-MELI sigue en crecimiento alto según la clasificación JMR. La escala de ingresos no ha venido acompañada de un perfil de madurez en caja, y el grupo está financiando una cartera que creció 62 % interanual en el trimestre. En Brasil, Selic de 13,75 % desde el 5 de noviembre implica un costo relevante para pasivos ligados a CDI y condiciona la demanda financiada. En USD, el Treasury de diez años cerró en 4,86 %. La exposición a Argentina añade dispersión por inflación y traducción a dólares. Una caída del precio de 12,05 % en la primera sesión posterior al informe sugiere una revisión de expectativas de MELI en esa fecha. La amplitud del ciclo de mercado regional requiere evidencia adicional. Conservo la previa de alto crecimiento renormalizada entre las tres historias como referencia ilustrativa, con 26,47 % / 47,06 % / 26,47 % y sin cambios por sentimiento.
+MELI sigue en crecimiento alto según la clasificación JMR. La escala de ingresos no ha venido acompañada de un perfil de madurez en caja, y el grupo está financiando una cartera que creció 62 % interanual en el trimestre. En Brasil, Selic de 13,75 % desde el 5 de noviembre implica un costo relevante para pasivos ligados a CDI y condiciona la demanda financiada. En USD, el Treasury de diez años cerró en 4,86 %. La exposición a Argentina añade dispersión por inflación y traducción a dólares. Una caída del precio de 12,05 % en la primera sesión posterior al informe sugiere una revisión de expectativas de MELI en esa fecha. En términos de Howard Marks, la reacción muestra un cambio en las expectativas del emisor. La información revisada no permite diagnosticar la tolerancia al riesgo de todo el mercado regional. Se mantiene la previa JMR de alto crecimiento renormalizada a tres historias. La combinación de crecimiento fuerte y margen descendente justifica observar el ciclo de crédito por separado del ciclo bursátil.
 
 ### 6. Historia financiera y calidad de resultados
 
@@ -38,23 +34,30 @@ Los ingresos fueron US$15.107 millones en 2023, US$20.777 millones en 2024, US$2
 
 ### 7. Reinversión, eficiencia del capital y retornos
 
-La inversión neta en cartera LTM fue US$8.285 millones y el fondeo Fintech neto aportó US$3.316 millones. La inversión de cartera después de ese fondeo fue US$4.969 millones, antes de ajustes por fondos restringidos, pérdidas, otros movimientos y el resto del negocio. ROE consolidado LTM de 26,2 % frente a 36,0 % FY25 mide rendimiento del patrimonio contable promedio del grupo y sirve como referencia histórica. Para inferir el retorno marginal del crédito se necesitan los requerimientos de capital incremental, el costo del fondeo y el resultado por producto. La rotación industrial ventas/capital de la revisión A3 no resuelve el requerimiento de capital de una cartera financiera.
+La inversión neta en cartera LTM fue US$8.285 millones y el fondeo Fintech neto aportó US$3.316 millones. La inversión de cartera después de ese fondeo fue US$4.969 millones, antes de ajustes por fondos restringidos, pérdidas, otros movimientos y el resto del negocio. ROE consolidado LTM de 26,2 % frente a 36,0 % FY25 mide rendimiento del patrimonio contable promedio del grupo y sirve como referencia histórica. Para inferir el retorno marginal del crédito se necesitan los requerimientos de capital incremental, el costo del fondeo y el resultado por producto. Un ROE incremental exige medir cuánto aumenta la utilidad normalizada por cada dólar adicional de capital. El crecimiento de cartera y el gasto en pérdidas afectan esa relación en momentos diferentes. La rotación de capital industrial queda reservada al negocio operativo.
 
 ### 8. Dirección, gobierno y asignación de capital
 
 MELI está reinvirtiendo en logística, subsidios de envío, tecnología, marca y crédito. El 10-Q muestra US$1.215 millones de CAPEX 9M26, y US$2.173 millones de desarrollo de producto y tecnología contabilizado en resultados. La política de asignación debe juzgarse por la vida útil y los retornos de ambos desembolsos. Las acciones en circulación permanecieron prácticamente estables respecto de FY25. El programa de retención a largo plazo incluye remuneración devengada en caja y otros componentes. Antes de una publicación hay que separar el costo económico de compensación del eventual efecto de instrumentos dilutivos. La acción que se valora es la ordinaria de Nasdaq.
 
+
 ### 9. Método de valoración
 
-El método económico a evaluar es un SOTP con FCFF para Commerce y las operaciones de pagos separables, y FCFE para crédito u otras actividades cuyo fondeo sea parte de la operación. La Nota 7 del 10-Q concilia EBIT por contribución geográfica y desagrega ingresos Commerce/Fintech, pero no permite asignar con precisión EBIT y capital por esas líneas. El diagnóstico complementario proyecta el flujo al accionista consolidado a partir de utilidad neta y conversión de caja. No suma caja disponible ni deduce deuda por separado. La reconciliación de ese valor con el FCFF de Simple Ginzu queda pendiente de establecer el perímetro económico.
+El método elegido es la suma de partes. Commerce y los costos corporativos se proyectarán con FCFF en Floyd. Mercado Pago, incluidos crédito y la actividad de pagos y adquirencia que comparte fondeo, saldos y capital, se proyectará con FCFE. Primero se asignan ingresos, pérdidas, intereses, costos compartidos e impuestos. Después se elimina la financiación interna y se reconcilian las dos partes con el grupo. Así, una misma cartera financiada no aparece a la vez en el capital operativo de Commerce y en la caja de Fintech.
+
+La nota de segmentos muestra contribución por país y una deducción corporativa común. El dato sirve para entender la exposición geográfica y los costos compartidos. Un margen por país combina crédito, adquirencia y comercio y no permite inferir el EBIT de Commerce o la utilidad después de fondeo de Mercado Pago. H2 conserva el motor protegido y el SOTP Base queda N/D hasta separar ambos bloques.
 
 ### 10. Supuestos económicos
 
-El caso central supone crecimientos explícitos de 30 %, 25 %, 21 %, 18 % y 15 % en años 1–5. Es una desaceleración frente al 47,8 % de ingresos 9M26 e incorpora una base de comparación mayor, menor impulso promocional y maduración de cartera. El margen neto se recupera a 9 % en el año 7, por encima del 6,91 % FY25 y cerca del 9,20 % de 2024. Requiere más publicidad, productividad logística y cosecha de cohortes. La conversión arranca en 62 %, cerca del 63,8 % LTM, y llega a 80 % en el año 10. Es el supuesto más sensible al capital exigido para crecer. El 15 % de ROE terminal normaliza el retorno frente a las cifras contables recientes. El 12,5 % de descuento es una hipótesis de estrés común para los escenarios, con sensibilidad 10,5–14,5 %. El crecimiento terminal de 3,5 % nominal USD queda por debajo de la tasa libre observada y usa una retención consistente con el ROE.
+Para Commerce, la prueba de crecimiento partirá de compradores, frecuencia, artículos y monetización de servicios, más ventas directas en su propia base. La publicidad mejora la mezcla si genera ingreso incremental y si su margen supera el costo de atraer el pedido. El ahorro de entrega se mide después de incentivos. Ventas/capital marginal se estima con capacidad y reinversión incremental y se contrasta con pares comparables antes de asignar un ROIC terminal.
+
+En Mercado Pago, la utilidad depende de la maduración de cohortes, pérdida, costo de fondeo y gastos de originación. Una cartera mayor puede aumentar utilidad y reducir el efectivo disponible al mismo tiempo. La retención debe salir del patrimonio requerido para financiar la proyección y proteger la operación en cada entidad. La tasa terminal de referencia en USD es 9,70 % antes del ajuste Brasil. El g de referencia es 4,0 % bajo el techo de 5,29 %. Las tasas de los dos bloques quedan pendientes.
 
 ### 11. Escenarios y precio
 
-La Conservadora supone pérdida de eficiencia promocional y persistencia del costo de cohortes. El caso central supone normalización parcial. La Optimista requiere que se mantenga el crecimiento de Commerce y que Fintech mejore pérdidas y conversión a la vez. El rango indicativo de US$507–2.250 mide la amplitud de supuestos económicos. La caída reciente acercó el precio a la simulación central, aunque el cierre sigue por encima de ella. Al mismo precio, el inverso de margen exige 10,48 % con las otras hipótesis del caso central. A3 reportaba US$2.029,87 con corte anterior y margen EBIT objetivo de 15 %, distinto alcance y reserva de fondeo. Su diferencia frente a esta prueba combina cambios de método, de información y de supuestos.
+La **Conservadora (26,47 %)** combina menor eficiencia de subsidios, presión de costos logísticos y mayor consumo de capital por cohortes de crédito recientes. La **Base (47,06 %)** supone una mejora gradual conforme la densidad de pedidos reduce el costo unitario y maduran las tarjetas. La **Optimista (26,47 %)** exige que publicidad, logística y cohortes mejoren la caja conjuntamente. Los pesos son una previa de etapa de crecimiento y todavía no dan lugar a un valor esperado.
+
+Frente al cierre de US$1.510, el contraste definitivo será el margen EBIT maduro de Commerce que iguala el SOTP al precio, manteniendo los demás supuestos Base, incluido el FCFE de Fintech. Hasta cerrar la separación y obtener un SOTP calculado en H2, ese margen implícito, la distancia entre precio y valor y el MOS quedan N/D.
 
 ### 12. Riesgos y tesis contraria
 
@@ -66,7 +69,7 @@ En el siguiente informe, contrastar margen EBIT y flujo ajustado con las tasas d
 
 ### 14. Fuentes, límites y estado
 
-Los estados y notas del 10-Q de 3T26 y 10-K FY25 son las fuentes primarias. La carta y la presentación sirven para KPIs y la conciliación de caja. El precio está fechado y se contrastó entre serie histórica, Stock Analysis y Financial Times. La incertidumbre decisiva recae en la asignación de resultados, capital y fondos efectivamente distribuibles de Fintech. El expediente queda CANDIDATO, con F5 independiente pendiente. [SEC 10-Q](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm) · [SEC 10-K](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm) · [Carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm) · [Precio](https://stockanalysis.com/stocks/meli/history/) · [Treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve) · [Copom 4-nov](https://okai.com.br/banco-central/documentos/2026-11-04/comunicado-n-46-230)
+Los estados y notas del 10-Q de 3T26 y 10-K FY25 son las fuentes primarias. La carta y la presentación sirven para KPIs y la conciliación de caja. El precio está fechado y se contrastó entre serie histórica, Stock Analysis y Financial Times. La incertidumbre decisiva recae en la asignación de resultados, capital y fondos efectivamente distribuibles de Fintech. El expediente queda CANDIDATO. El próximo dato que cambia el estado es el balance de apertura por unidad, con utilidad y patrimonio de Mercado Pago y EBIT de Commerce después de asignar los costos corporativos. F5 corresponde a una sesión independiente. [SEC 10-Q](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm) · [SEC 10-K](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm) · [Carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm) · [Precio](https://stockanalysis.com/stocks/meli/history/) · [Treasury](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value_month=202611&type=daily_treasury_yield_curve) · [Copom 4-nov](https://okai.com.br/banco-central/documentos/2026-11-04/comunicado-n-46-230)
 
 ## Nivel 2 · Soporte cuantitativo
 
@@ -95,214 +98,94 @@ Flujos LTM = FY25 + 9M26 − 9M25. Los saldos usan el balance de septiembre de 2
 
 ### 4. Puente contable a económico
 
-El balance incluye US$17.400 millones de fondos de clientes, US$14.559 millones de caja restringida, US$13.040 millones de cartera neta, US$4.844 millones de provisiones acumuladas y US$13.190 millones de préstamos y otros pasivos financieros. Esta última cifra incluye US$4.164 millones de deuda colateralizada y US$116 millones de arriendos financieros. Los pasivos de arriendo operativo suman US$2.964 millones. El emisor reporta deuda bruta de US$16.154 millones y liquidez disponible de US$8.126 millones, incluidas inversiones y activos digitales. El puente reproduce US$8.028 millones de deuda neta consolidada, frente a US$4.682 millones en FY25. La disponibilidad reportada y el excedente distribuible son magnitudes distintas.
+El panel de H2 `Tesis de Inversión y Supuestos!A40:D76` registra la apertura económica. Importes en USD millones.
 
-Una reclasificación de US$1.000 millones en el puente de caja/deuda movería el valor en US$19,73 por acción, manteniendo el valor operativo fijo. La diferencia entre la caja e inversiones consolidadas de US$23.390 millones y la liquidez disponible de US$8.126 millones equivale mecánicamente a US$301,08 por acción. Esa diferencia no es una corrección adicional del DCF ni una estimación de error. Muestra la escala del perímetro que hay que conciliar. El fondeo reportado en flujos identifica movimientos de Fintech, pero no entrega una asignación de todos los saldos al corte ni capital distribuible por unidad. El gasto de tecnología, activo I+D, impuestos y arrendamientos se ajustarán en el motor compatible cuando se pueda separar su perímetro. En el diagnóstico se mantienen los efectos en la utilidad y caja de referencia.
+| Saldo o control | 31-dic-2025 | 30-sep-2026 | Fuente y uso |
+|---|---:|---:|---|
+| Cartera bruta / provisión acumulada / neta | 12.508 / 3.143 / 9.365 | 17.884 / 4.844 / 13.040 | 10-Q, nota 5. La cartera neta titulizada de 3.733 al corte está incluida. |
+| Fondos por pagar a clientes | 13.029 | 17.400 | Pasivo operativo del bloque financiero. |
+| Caja restringida | 9.867 | 14.559 | Nota 3. Garantías 14.181, titulización 289 y Meli Dólar y otros 89 al corte. Diferencia de control 0 en ambas fechas. |
+| Medios de pago, activos / pasivos corrientes | 6.893 / 3.584 | 9.055 / 5.464 | Saldo de liquidación. Requiere conciliar por entidad y vencimiento. |
+| Pasivos financieros | 9.193 | 13.190 | Nota 10. Incluyen deuda colateralizada y leases financieros. |
+| Deuda colateralizada incluida / bonos senior de matriz incluidos | 2.852 / 1.643 | 4.164 / 2.253 | Notas 10–11. Los bonos identificados no representan todo el endeudamiento corporativo. |
+| Pasivos financieros aún por asignar | 4.698 | 6.773 | Residuo de la clasificación inicial. No es deuda corporativa atribuible. |
+| Arrendamientos operativos ASC 842 | 2.199 | 2.964 | Nota 12. Ya reconocidos. Con la renta operativa en EBIT, se excluyen de la deuda de valoración. |
+| Deuda bruta / liquidez disponible / deuda neta del emisor | 11.392 / 6.710 / 4.682 | 16.154 / 8.126 / 8.028 | MD&A. Puente consolidado que incluye leases operativos en deuda bruta. |
+| Fondeo completo Fintech / caja excedentaria Commerce | N/D | N/D | Falta separar recursos por titular y destino, y eliminar saldos internos. |
+| Patrimonio, capital requerido, colchón y capital distribuible Fintech | N/D | N/D | Faltan perímetro legal, deducciones y capacidad de transferencia por entidad. |
 
-### 5. Supuestos del diagnóstico por historia
+Para los activos de clientes se necesita conciliar garantías, inversiones restringidas, saldos de liquidación y fondos por pagar por entidad. Restar los fondos por pagar de la caja restringida no identifica fondeo libre ni un déficit real. La nota 3 también identifica restricciones en inversiones que quedan fuera del renglón de caja restringida. El 10-Q presenta EBIT por geografía y muestra ingresos por vertical, sin resultado y capital completo por línea. H2 calcula US$19,73 por acción por cada US$1.000 millones de reclasificación del puente con EV fijo. Ese importe mide escala. Falta un SOTP Base válido y un rango de asignaciones sustentadas para aplicar los umbrales del §4B.
 
-| Palanca | Conservadora | Central | Optimista |
-|---|---:|---:|---:|
-| Crecimiento años 1–5 | 22 / 17 / 14 / 11 / 9 % | 30 / 25 / 21 / 18 / 15 % | 36 / 30 / 25 / 22 / 19 % |
-| Margen neto desde año 7 | 5,5 % | 9,0 % | 11,5 % |
-| Conversión de utilidad a caja año 1 → 10 | 50 → 70 % | 62 → 80 % | 72 → 86 % |
-| ROE terminal | 11 % | 15 % | 19 % |
-| Ke ilustrativo / g terminal | 12,5 / 3,5 % | 12,5 / 3,5 % | 12,5 / 3,5 % |
+### 5. Supuestos económicos por historia
 
-Crecimiento de años 6–10 converge linealmente a g. Margen parte del 4,91 % LTM y converge linealmente a año 7. Conversión mejora linealmente entre años 1 y 10. La Conservadora es un estrés económico con continuidad del negocio. La probabilidad de fracaso para la hoja oficial queda pendiente junto con el valor de recuperación.
+| Palanca | Rango defendible y evidencia | Entrada o soporte H2 |
+|---|---|---|
+| Crecimiento Commerce | Conservadora por debajo de Base, Optimista por encima si mejoran frecuencia y ads. Compradores +22 % y artículos +36 % en el 3T. Una parte del crecimiento coincide con incentivos de envío. Trayectoria numérica N/D. | `Escenarios e historias!C29:L29`, `C53:L53`, `C101:L101` |
+| Margen Commerce | Base recupera parte del margen por densidad y publicidad. En el grupo, EBIT trimestral pasó de 724 a 676 pese al crecimiento. Faltan contribución por pedido y EBIT separado para fijar un intervalo en puntos porcentuales. | `D5:D8`, vínculos `F121/F151/F181` |
+| Impuesto | Efectivo a marginal por perímetro. El grupo registra 26,46 % efectivo LTM en H2. Geografía y mezcla requieren conciliación por bloque antes de fijar el marginal. | `Input sheet!B24:B25` |
+| S/C y ROIC Commerce | Menor S/C en Conservadora si cae utilización y mayor en Optimista si la capacidad instalada absorbe tráfico. El CAPEX de grupo no define la reinversión marginal Commerce. Sin ventaja terminal, ROIC converge a WACC. | `Escenarios e historias!E5:G8` |
+| Crédito y retención | NIMAL 20,1 % y mora 15–90 días 7,0 %. La mora estable y la maduración favorecen Base. El 40 % de cobertura LTM de inversión en cartera con fondeo neto es una referencia de flujo. El intervalo numérico de retención queda N/D. | `Tesis de Inversión y Supuestos!A78:H118` |
+| Riesgo y fracaso | Un costo sistemático por negocio para las tres historias. Recuperación y probabilidad de fracaso N/D y reservadas exclusivamente para Conservadora. | `Cost of capital worksheet!B12:B14`; `Input sheet!B52:B55` |
+
+Las tres historias y sus disparadores están en H2, filas 117–141, 147–171 y 177–201. Ejemplos de falsación son NIMAL inferior a 18 % durante dos trimestres, o NIMAL superior a 22 % con mora temprana ≤7 % durante dos trimestres. Son umbrales de seguimiento propuestos. El TAM homogéneo y las pruebas numéricas de las 3P quedan con reserva.
 
 ### 6. Costo de capital
 
-Treasury USD a diez años = 4,86 % al 6-nov. El 12,5 % en el diagnóstico incorpora un diferencial agregado de 7,64 pp sobre esa referencia. Es un supuesto explícito sometido a sensibilidad. Un costo de capital oficial requiere prima madura de corte, beta y exposición a Brasil, México y Argentina, además de separar fondeo operativo de deuda corporativa y estimar su costo de mercado. WACC y Ke oficiales, N/D. Las ponderaciones del riesgo país no deben basarse en el domicilio societario ni trasladarse mecánicamente desde A3.
+Damodaran publica para el **1-nov-2026** Treasury de **5,29 %** y prima madura implícita con payout ajustado de **4,41 %**. Ambos insumos usan la misma convención de tasa libre. H2 selecciona `Detailed` en `Cost of capital worksheet!B12`. El panel `L83:N91` calcula la referencia terminal sin riesgo país con beta 1, **9,70 %**. En `Input sheet!B35/B68/B69` constan Rf y el g estándar de **4,0 %**. Falta cuantificar la fracción de CRP Brasil que corresponde conservar por bloque y verificar si Fintech requiere un g propio.
 
-### 7. Proyección anual
+Para Commerce se necesita beta sectorial desapalancada y reapalancada con la estructura del bloque, costo de deuda consistente con su fondeo atribuible, pesos de mercado y prima por exposición económica. Para Fintech corresponde un Ke con beta de patrimonio de comparables de la actividad financiera y exposición geográfica del perímetro. Los proxies consolidados no cierran estas dos tasas. `Cost of capital worksheet!B63/E63/B14` e `Input sheet!B36` siguen sin salida numérica oficial. [Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/home.htm)
 
-Ventas = ventas previas × (1 + crecimiento). Utilidad = ventas × margen neto. Flujo indicativo = utilidad × conversión. Retención implícita = utilidad − flujo. VP = flujo / (1 + Ke)^año. La retención combina la inversión implícita del grupo y no estima por separado CAPEX, capital regulatorio ni Sales-to-Capital.
+### 7. Proyección y reinversión
 
-#### Conservadora
+El FCFF Commerce de Floyd usará NOPAT menos reinversión, con ventas/capital marginal y rezago según el motor y una conciliación explícita del CAPEX, capital de trabajo e intangibles. Las obligaciones ASC 842 se toman una vez con base consistente entre EBIT, capital invertido y deuda. La línea amplia de tecnología no identifica I+D capitalizable por sí sola. Las opciones, RSU, NOL e inversiones no operativas requieren comprobación antes de publicar.
 
-| Año | Crec. | Ventas | Margen neto | Utilidad | Conversión | Retención | Flujo | VP |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 22,0 % | 46.998 | 5,0 % | 2.346 | 50,0 % | 1.173 | 1.173 | 1.043 |
-| 2 | 17,0 % | 54.988 | 5,1 % | 2.791 | 52,2 % | 1.334 | 1.458 | 1.152 |
-| 3 | 14,0 % | 62.686 | 5,2 % | 3.235 | 54,4 % | 1.474 | 1.761 | 1.237 |
-| 4 | 11,0 % | 69.581 | 5,2 % | 3.650 | 56,7 % | 1.582 | 2.068 | 1.291 |
-| 5 | 9,0 % | 75.844 | 5,3 % | 4.043 | 58,9 % | 1.662 | 2.381 | 1.321 |
-| 6 | 7,9 % | 81.835 | 5,4 % | 4.432 | 61,1 % | 1.723 | 2.708 | 1.336 |
-| 7 | 6,8 % | 87.400 | 5,5 % | 4.807 | 63,3 % | 1.763 | 3.044 | 1.335 |
-| 8 | 5,7 % | 92.382 | 5,5 % | 5.081 | 65,6 % | 1.750 | 3.331 | 1.298 |
-| 9 | 4,6 % | 96.632 | 5,5 % | 5.315 | 67,8 % | 1.713 | 3.602 | 1.248 |
-| 10 | 3,5 % | 100.014 | 5,5 % | 5.501 | 70,0 % | 1.650 | 3.851 | 1.186 |
-
-#### Base de diagnóstico
-
-| Año | Crec. | Ventas | Margen neto | Utilidad | Conversión | Retención | Flujo | VP |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 30,0 % | 50.080 | 5,5 % | 2.750 | 62,0 % | 1.045 | 1.705 | 1.515 |
-| 2 | 25,0 % | 62.600 | 6,1 % | 3.803 | 64,0 % | 1.369 | 2.434 | 1.923 |
-| 3 | 21,0 % | 75.746 | 6,7 % | 5.045 | 66,0 % | 1.715 | 3.330 | 2.339 |
-| 4 | 18,0 % | 89.380 | 7,2 % | 6.476 | 68,0 % | 2.072 | 4.404 | 2.749 |
-| 5 | 15,0 % | 102.787 | 7,8 % | 8.049 | 70,0 % | 2.415 | 5.634 | 3.126 |
-| 6 | 12,7 % | 115.841 | 8,4 % | 9.748 | 72,0 % | 2.730 | 7.019 | 3.462 |
-| 7 | 10,4 % | 127.889 | 9,0 % | 11.510 | 74,0 % | 2.993 | 8.517 | 3.735 |
-| 8 | 8,1 % | 138.248 | 9,0 % | 12.442 | 76,0 % | 2.986 | 9.456 | 3.685 |
-| 9 | 5,8 % | 146.266 | 9,0 % | 13.164 | 78,0 % | 2.896 | 10.268 | 3.557 |
-| 10 | 3,5 % | 151.385 | 9,0 % | 13.625 | 80,0 % | 2.725 | 10.900 | 3.357 |
-
-#### Optimista
-
-| Año | Crec. | Ventas | Margen neto | Utilidad | Conversión | Retención | Flujo | VP |
-|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | 36,0 % | 52.391 | 5,8 % | 3.064 | 72,0 % | 858 | 2.206 | 1.961 |
-| 2 | 30,0 % | 68.109 | 6,8 % | 4.625 | 73,6 % | 1.223 | 3.402 | 2.688 |
-| 3 | 25,0 % | 85.136 | 7,7 % | 6.583 | 75,1 % | 1.638 | 4.944 | 3.473 |
-| 4 | 22,0 % | 103.866 | 8,7 % | 9.009 | 76,7 % | 2.102 | 6.907 | 4.312 |
-| 5 | 19,0 % | 123.600 | 9,6 % | 11.885 | 78,2 % | 2.588 | 9.297 | 5.159 |
-| 6 | 15,9 % | 143.253 | 10,6 % | 15.125 | 79,8 % | 3.059 | 12.066 | 5.952 |
-| 7 | 12,8 % | 161.589 | 11,5 % | 18.583 | 81,3 % | 3.469 | 15.114 | 6.627 |
-| 8 | 9,7 % | 177.263 | 11,5 % | 20.385 | 82,9 % | 3.488 | 16.897 | 6.586 |
-| 9 | 6,6 % | 188.962 | 11,5 % | 21.731 | 84,4 % | 3.380 | 18.350 | 6.357 |
-| 10 | 3,5 % | 195.576 | 11,5 % | 22.491 | 86,0 % | 3.149 | 19.342 | 5.956 |
-
+Para cada año de Fintech, H2 arma cartera neta como cartera bruta menos provisión. El patrimonio requerido se calcula como el mayor entre el objetivo regulatorio con colchón y los activos netos menos el fondeo asignado. El flujo preliminar de H2 resta de utilidad neta el incremento positivo de patrimonio requerido. Cualquier liberación de capital requiere evidencia de transferibilidad. El esquema conserva N/D mientras las aperturas y los saldos anuales no estén cargados. El 26,22 % sobre patrimonio promedio y el 23,05 % sobre patrimonio de cierre explican la referencia de aproximadamente 24 % del grupo. El 45 % de retención previa llevaba a un ROE incremental cercano a 60 % bajo la trayectoria diagnóstica. La comparación hace visible la exigencia del supuesto, pero el ROE Fintech se reconstruye con su propio patrimonio y utilidad.
 
 ### 8. Terminal y puente a la acción
 
-Valor terminal = ventas del año 10 × (1 + g) × margen maduro × (1 − g / ROE terminal) ÷ (Ke − g). El año 11 usa reinversión terminal de 23,33 % de utilidad en el caso central. El terminal representa 55,68 % del valor central. La suma de VP de flujos y VP terminal se divide por 50,696802 millones de acciones. Esta prueba valora la caja al accionista bajo su propia definición de conversión y prescinde de un ajuste independiente de caja o deuda. FCFF oficial, DCF por FCFE oficial informativo, EV a equity y MOS oficial, N/D.
+Valor patrimonial de Commerce = VP de FCFF más activos no operativos atribuibles menos deuda corporativa y otros derechos que no estén ya reflejados en los flujos. Valor patrimonial Fintech = VP de FCFE más capital inicial efectivamente distribuible si queda fuera de esos flujos. En estabilidad, Commerce reinvierte según g/ROIC y Fintech retiene según g/ROE. La suma atribuible se divide por acciones, después de conciliar derechos dilutivos una sola vez. El valor esperado pondera las tres historias y el MOS aplica únicamente al DCF Base SOTP. Ambas salidas son N/D.
 
-### 9. Historias, probabilidad y resultado
+### 9. Escenarios, probabilidad y resultado
 
-| Historia | Peso ilustrativo | USD/acción |
-|---|---:|---:|
-| Conservadora | 26,47 % | 507,49 |
-| Central | 47,06 % | 1.310,55 |
-| Optimista | 26,47 % | 2.249,62 |
-| Esperado indicativo | 100 % | 1.346,55 |
+| Historia | Previa normalizada | H2 |
+|---|---:|---|
+| Conservadora | 26,47 % | N/D |
+| Base | 47,06 % | N/D |
+| Optimista | 26,47 % | N/D |
+| Total | 100,00 % | Orden y valor esperado pendientes |
 
-Los pesos son 22,5/85, 40/85 y 22,5/85. Surgen de renormalizar la previa histórica de crecimiento alto. Su promedio corresponde al diagnóstico, con peso cero en el expediente oficial hasta cerrar el método y el puente.
+Las probabilidades se obtienen normalizando 22,5 / 40 / 22,5 sobre 85, previa JMR de alto crecimiento. El caso de fracaso se reserva para Conservadora y sigue pendiente de parametrización. La mayor objeción a la Base es que más volumen y más crédito puedan perpetuar el consumo de capital. La utilidad ajustada por pérdidas de cohortes antiguas y el costo por pedido después de subsidios son las pruebas que permitirán discriminar entre historias.
 
 ### 10. Múltiplos
 
-Capitalización de US$76.552,17 millones. P/E LTM de 40,50× y precio/flujo ajustado LTM de 63,48×. P/OCF GAAP de 5,51× ilustra el efecto de fondos de clientes en el denominador y se descarta como ancla. EV/EBITDA y EV/FCFF requieren un EV y un flujo con perímetros consistentes. P/FCFE y VP FY+3 requieren flujo distribuible y anclas comparables. P/E FY+3 necesita una selección documentada de pares, horizonte y ajuste por riesgo/crecimiento. Los anclajes y matrices FY+3 quedan N/D. Peso de los múltiplos, cero. P/BV LTM de 9,34× es descriptivo y se omite de los valores prospectivos por mezclar patrimonio de actividades distintas.
+| Método | Hoja nativa | Ancla FY+3 / matriz 5×5 |
+|---|---|---|
+| EV/EBITDA | EVEBITDA | N/D. EBITDA Commerce y deuda del perímetro. |
+| EV/FCFF | EVFCFF | N/D. FCFF positivo y comparable de Commerce. |
+| P/E | PE | N/D. Utilidad forward comparable. P/E LTM de grupo **40,50×**, solo contraste histórico de H1. |
+| P/FCFE | PFCFE | N/D. Utilidad distribuible y capital retenido coherentes con el perímetro. |
+| P/OCF | POCF | N/D. CFO comparable después de resolver el efecto de fondos de clientes y pagos. |
 
-### 11. Sensibilidades 5×5 e inverso
+El múltiplo de **63,48×** sobre flujo ajustado del emisor es un contraste de caja en H1, no un ancla P/OCF o P/FCFE. Los cinco centros se concilian con el VP FY+3 de su método cuando estén disponibles.
 
-Las matrices del diagnóstico usan dólares por acción y centro US$1.310,55. El inverso varía solo el margen neto objetivo, preservando crecimiento, conversión, tasas y ROE terminal. La raíz es 10,4787 %. El centro de cada matriz reproduce el mismo caso central.
+### 11. Inverso, sensibilidades y conciliación histórica
 
-#### Ke × g
+**Única definición del inverso.** Margen EBIT maduro de Commerce que, fijando las restantes entradas Base y el FCFE de Mercado Pago, reproduce US$1.510 por acción en H2. El inverso y las tres matrices 5×5 del DCF, con sus centros, quedan N/D. El bloque FCFE informativo de la plantilla tampoco sustituye el FCFE propio de Mercado Pago.
 
-| Eje vertical / horizontal | 2,5 % | 3,0 % | 3,5 % | 4,0 % | 4,5 % |
-|---|---:|---:|---:|---:|---:|
-| 10,5 % | 1.671,86 | 1.719,35 | 1.771,78 | 1.830,24 | 1.896,21 |
-| 11,5 % | 1.443,87 | 1.476,33 | 1.511,36 | 1.549,46 | 1.591,24 |
-| 12,5 % | 1.263,64 | 1.286,43 | 1.310,55 | 1.336,21 | 1.363,68 |
-| 13,5 % | 1.118,00 | 1.134,36 | 1.151,37 | 1.169,11 | 1.187,67 |
-| 14,5 % | 998,18 | 1.010,15 | 1.022,38 | 1.034,90 | 1.047,72 |
+| Palanca | A-1.2 MELI-20261028-A3, archivada | Floyd R1, corte 30-sep-2026 |
+|---|---|---|
+| Base | US$2.029,87 en `valorPrincipal` | N/D. SOTP y puente por perímetro pendientes. |
+| Actividad y margen | Proyección Commerce/Fintech con 15 % EBIT objetivo consolidado | Comercio proyectado con su EBIT y costos corporativos. Fintech con utilidad después de fondeo y pérdidas. |
+| Reinversión y retorno | S/C 2,40 / 2,70 y ROIC terminal 16 % | S/C y ROIC solo Commerce. Fintech retiene según cartera, fondeo y patrimonio requerido. |
+| Costo de capital | WACC 10,8 % → 10,2 % | Detailed por Commerce y Ke por Fintech, pendientes. Referencia beta 1 de 9,70 % antes del ajuste Brasil. |
+| g terminal | 4,0 % | 4,0 % como referencia con techo Rf. Fintech requiere confirmar su trayectoria estable. |
+| Patrimonio | DCF histórico y puente consolidado | Suma de patrimonios de ambos bloques y eliminación de duplicados. |
+| Atribución del cambio | `metodos[0].base` de A3 registra otra salida (US$2.817,58) | Se conserva como antecedente la cifra solicitada `valorPrincipal`. Puente monetario por palanca N/D hasta contar con Base Floyd. |
 
-#### ROE terminal × g
-
-| Eje vertical / horizontal | 2,5 % | 3,0 % | 3,5 % | 4,0 % | 4,5 % |
-|---|---:|---:|---:|---:|---:|
-| 11,0 % | 1.213,66 | 1.222,09 | 1.229,80 | 1.236,63 | 1.242,39 |
-| 13,0 % | 1.242,50 | 1.259,21 | 1.276,39 | 1.294,08 | 1.312,36 |
-| 15,0 % | 1.263,64 | 1.286,43 | 1.310,55 | 1.336,21 | 1.363,68 |
-| 17,0 % | 1.279,81 | 1.307,25 | 1.336,68 | 1.368,43 | 1.402,92 |
-| 19,0 % | 1.292,57 | 1.323,68 | 1.357,30 | 1.393,87 | 1.433,90 |
-
-#### Ajuste al crecimiento 1–5 × margen neto objetivo
-
-| Eje vertical / horizontal | 7,0 % | 8,0 % | 9,0 % | 10,0 % | 11,0 % |
-|---|---:|---:|---:|---:|---:|
-| -4,0 % | 843,98 | 951,96 | 1.059,93 | 1.167,91 | 1.275,89 |
-| -2,0 % | 937,61 | 1.058,36 | 1.179,12 | 1.299,88 | 1.420,63 |
-| 0,0 % | 1.040,80 | 1.175,67 | 1.310,55 | 1.445,43 | 1.580,31 |
-| 2,0 % | 1.154,40 | 1.304,86 | 1.455,32 | 1.605,78 | 1.756,23 |
-| 4,0 % | 1.279,34 | 1.446,97 | 1.614,60 | 1.782,23 | 1.949,85 |
-
+**Réplicas de control retiradas del análisis económico.** En el diagnóstico previo de US$1.021,81, el VP terminal era US$575,87 por acción. Si solo cambia el denominador terminal de 12,5 % a 9,7 % con g de 3,5 % y el descuento de los diez años intacto, el control da US$1.281,88. Con g de 4,0 %, recalculando la trayectoria del diagnóstico, el mismo cambio de denominador da US$1.320,59. Si el descuento explícito converge también entre los años 6 y 10, el resultado a g de 3,5 % sube a US$1.356,88. El rango depende de qué tasa cambia, cuándo cambia y cómo se trata g. Es una diferencia superior a los umbrales de §4B en la réplica. Su impacto sobre el valor oficial queda sin cuantificar. El historial de las corridas anteriores está en el PR y en los scripts de control.
 
 ### 12. Trazabilidad y cierre
 
-H1 verifica EBIT, balance, variación de caja, deuda neta publicada y flujo ajustado al corte. H2 incorpora acciones básicas y en circulación, desgloses conciliados de gastos, balance y flujos, y el CAPEX operativo corregido. El desarrollo tecnológico reportado figura en otros gastos operativos, a la espera de delimitar I+D capitalizable. Para FY23, el EPS diluido oficial de US$19,46 está en H1 porque la fórmula estándar de H2 no recoge el método si convertido. Los ajustes y la activación del motor permanecen pendientes. Para publicar, primero reconstruir el puente separado entre saldos de fondeo, caja operativa/restringida, pérdidas, capital requerido y capacidad distribuible. Después repetir conciliación hoja → JSON → visor. F5 independiente, pendiente.
+H1 conserva los históricos y H2 contiene el puente de apertura, las hipótesis de escenarios y la estructura FCFE. La comparación de la huella registrada contra la Maestra Floyd y la relectura de H2 dieron 0 diferencias en 1.883 fórmulas del perímetro cubierto. El traspaso integral, el DCF, las anclas y las matrices oficiales requieren aún el cierre material de F3. Los validadores del repositorio se ejecutan sobre el catálogo vigente, donde esta revisión no está activa. El expediente sigue **CANDIDATO** y F5 queda para otra sesión.
 
-Marco metodológico [Reglas JMR §4C](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/modelo/REGLAS_VIGENTES.md) · [Contrato Floyd](https://github.com/JuanMaRobledo/Modelo-JMR/blob/main/docs/CONTRATO_EJECUCION_FLOYD.md) · [Damodaran, valoración de servicios financieros](https://pages.stern.nyu.edu/~adamodar/pdfiles/country/val2dayEurope2026.pdf)
-
-## Revisión de supuestos · 8 de noviembre de 2026
-
-**Resultado indicativo actualizado: US$1.021,81 por acción.** El cierre de referencia fue US$1.510,00 el 6 de noviembre. El DCF Base y el MOS 35 % oficiales continúan N/D. Los dos niveles anteriores documentan la primera corrida de US$1.310,55. Esta revisión usa el mismo corte, 50,696802 millones de acciones, Ke ilustrativo de 12,5 % y crecimiento terminal nominal en USD de 3,5 %.
-
-### Crecimiento de Commerce y Fintech
-
-Los ingresos LTM reconstruidos suman US$38.523 millones: US$21.749 millones de Commerce, US$16.774 millones de Fintech y, dentro de Fintech, US$8.561 millones de crédito. Fórmula por línea: FY25 + 9M26 − 9M25. Los ingresos consolidados LTM crecieron 47,1 % frente a los 12 meses anteriores. En 3T26, los ingresos crecieron 45,1 % reportados y 41 % sin efecto cambiario. Commerce creció cerca de 47 % y Fintech 42 %. El crédito explica parte importante de la aceleración y obliga a proyectar el financiamiento que la sostiene. La Base anterior usaba 21,69 % anual compuesto a cinco años. La revisada usa 19,90 % y llega a US$95.472 millones de ingresos en el año 5.
-
-| Crecimiento USD | Año 1 | Año 2 | Año 3 | Año 4 | Año 5 |
-|---|---:|---:|---:|---:|---:|
-| Commerce central | 28 % | 24 % | 20 % | 17 % | 14 % |
-| Fintech central | 26 % | 22 % | 19 % | 16 % | 13 % |
-| Consolidado central | 27,13 % | 23,14 % | 19,57 % | 16,57 % | 13,58 % |
-
-Commerce conserva una trayectoria alta por la penetración, la frecuencia y la publicidad. Se descuenta una menor contribución del impulso promocional y del crecimiento desde una base pequeña. En Fintech, pagos y crédito siguen creciendo, con desaceleración explícita por la escala de cartera, su costo de fondeo y la evolución de pérdidas. Las tasas de los años 6–10 convergen linealmente al 3,5 % por negocio.
-
-### Márgenes y prueba de recuperación
-
-El EBIT pasó de 12,66 % en FY24 y 11,08 % en FY25 a 7,42 % LTM y 6,29 % en 3T26. El EBIT incremental 9M26 fue −3,55 % de los ingresos incrementales. La contribución directa sobre ingresos 9M26 cayó de 14,75 % a 8,70 % en Brasil, de 18,04 % a 14,77 % en México y de 43,24 % a 34,42 % en Argentina. Son contribuciones geográficas antes de gastos indirectos, con alcance distinto de los márgenes de Commerce y Fintech.
-
-El caso central parte de 7,0 % EBIT, llega a 10,0 % en el año 5 y a 11,5 % desde el año 7. La recuperación exige más densidad de rutas, una mezcla mayor de publicidad y una mejor contribución de cohortes crediticias. Como evidencia favorable, la dirección informó que el costo por envío en Brasil bajó 5 % en moneda local interanual. En contra, el envío gratis, la capacidad nueva y afiliados presionan el margen y el NIMAL trimestral cayó de 21,0 % a 20,1 %. Con carga no operativa de 0,75 pp de ventas y tasa fiscal de 27 %, el margen neto maduro central es 7,85 %, entre el 6,91 % de FY25 y el 9,20 % de FY24. La previsión de 9 % neto queda por encima del nuevo caso central.
-
-### ROIC y reinversión
-
-El ROE contable consolidado cayó de 36,0 % en FY25 a 26,2 % LTM, usando utilidad neta y patrimonio promedio de saldos comparables. La reinversión económica de la cartera y el capital exigido por cada unidad pueden diferir del patrimonio contable del grupo. El ROIC operativo y ventas/capital marginal de Commerce quedan N/D hasta separar EBIT después de impuestos, activos operativos y capital de trabajo de Mercado Pago. En Fintech se evalúan ROE incremental, capital retenido y caja distribuible. En un cálculo operativo el retorno marginal es margen NOPAT × ventas/capital marginal, con las dos variables referidas al mismo negocio. El margen EBIT de 15 % y las rotaciones 2,4–2,7× de A3 habrían implicado cerca de 26–30 % de retorno marginal con impuesto de 27 %, antes de cualquier ajuste de perímetro.
-
-El CAPEX operativo LTM fue US$1.642 millones, 4,26 % de ingresos. Por separado, la inversión neta de caja en cartera fue US$8.285 millones. El fondeo Fintech aportó US$3.316 millones, 40,0 % de ese desembolso, con US$4.969 millones por financiar a través del resto del puente. El flujo ajustado de US$1.206 millones equivale a 63,8 % de la utilidad LTM. Para 9M26 fue 33,3 %, frente a 49,9 % de 9M25. Estos cocientes sirven de ancla de conversión y contienen ajustes de circulante y liquidez. La parte que falta para llegar a utilidad no mide por sí sola la inversión en capital regulatorio.
-
-El diagnóstico central arranca con 45 % de utilidad retenida para reinversión y fricciones de caja, US$1.005 millones en año 1. Luego la retención sigue el crecimiento del año siguiente y baja a 32,23 % en año 5, cuando son US$2.078 millones. En el año 10 y la perpetuidad converge a 23,33 %, consistente con g/ROE = 3,5 %/15 %. El 15 % es un supuesto terminal de ROE, 2,5 pp por encima del Ke ilustrativo, frente a 12 % conservador y 18 % optimista. Esta proyección aproxima la caja a través de la retención. Volver a descontar CAPEX o el desembolso de cartera en las mismas cifras duplicaría reinversión.
-
-### Escenarios y valoración
-
-| Variable | Conservador | Central | Optimista |
-|---|---:|---:|---:|
-| CAGR de ingresos, años 1–5 | 14,56 % | 19,90 % | 25,46 % |
-| EBIT año 1 → año 7 | 6,3 → 8,0 % | 7,0 → 11,5 % | 8,0 → 14,5 % |
-| Margen neto maduro | 5,29 % | 7,85 % | 10,04 % |
-| Retención año 1 | 55 % | 45 % | 35 % |
-| ROE terminal | 12 % | 15 % | 18 % |
-| Valor indicativo USD/acción | 495,03 | **1.021,81** | 1.811,69 |
-
-La caída del caso central de US$1.310,55 a US$1.021,81 se explica por US$112,70 de menor crecimiento, US$158,35 de menor margen y US$17,68 de la trayectoria de retención. Es un puente secuencial que depende del orden de sustitución. El terminal aporta 56,36 % del valor central. Una retención de 35–55 % en año 1 produce US$1.044–999 manteniendo los demás supuestos. Un EBIT maduro de 10,5–12,5 % produce US$935–1.108. Un ROE terminal de 13–17 % produce US$980–1.054.
-
-El cierre de US$1.510 exige **17,15 % de EBIT maduro y 11,97 % neto** si se mantienen fijos crecimiento, retención, Ke, g y ROE de la nueva Base. Es un inverso condicionado. Una combinación distinta de crecimiento, conversión y costo de capital puede justificar el mismo precio. Los datos que validarían una recuperación son un margen EBIT superior a 10 % junto con conversión de utilidad a caja ajustada superior a 75 % durante más de un trimestre, contrastados con la estacionalidad y el ritmo de originación.
-
-### Fórmulas y matrices del caso central
-
-Retención del año t = g terminal / ROE terminal + pendiente × (crecimiento de ingresos del año t+1 − g terminal). La pendiente se calibra a la retención inicial de cada historia. Flujo al accionista aproximado = ventas × margen neto × (1 − retención). El VP de perpetuidad usa flujo del año 11 / (Ke − g), descontado 10 años. El valor por acción divide los VP por acciones ordinarias al corte. Las matrices reproducen el centro de US$1.021,81.
-
-#### Ke × g
-
-| Eje vertical / horizontal | 2,50 % | 3,00 % | 3,50 % | 4,00 % | 4,50 % |
-|---|---:|---:|---:|---:|---:|
-| 10,50 % | 1.335,25 | 1.358,12 | 1.384,54 | 1.415,36 | 1.451,71 |
-| 11,50 % | 1.154,10 | 1.166,04 | 1.179,68 | 1.195,40 | 1.213,65 |
-| 12,50 % | 1.010,73 | 1.015,90 | 1.021,81 | 1.028,61 | 1.036,49 |
-| 13,50 % | 894,75 | 895,64 | 896,76 | 898,13 | 899,83 |
-| 14,50 % | 799,23 | 797,39 | 795,49 | 793,51 | 791,47 |
-
-#### ROE terminal × g
-
-| Eje vertical / horizontal | 2,50 % | 3,00 % | 3,50 % | 4,00 % | 4,50 % |
-|---|---:|---:|---:|---:|---:|
-| 11,00 % | 946,48 | 934,97 | 922,45 | 908,75 | 893,69 |
-| 13,00 % | 983,55 | 981,66 | 979,77 | 977,90 | 976,07 |
-| 15,00 % | 1.010,73 | 1.015,90 | 1.021,81 | 1.028,61 | 1.036,49 |
-| 17,00 % | 1.031,51 | 1.042,08 | 1.053,96 | 1.067,39 | 1.082,69 |
-| 19,00 % | 1.047,92 | 1.062,75 | 1.079,34 | 1.098,01 | 1.119,16 |
-
-#### Ajuste al crecimiento de ambos negocios × margen EBIT objetivo
-
-| Eje vertical / horizontal | 9,50 % | 10,50 % | 11,50 % | 12,50 % | 13,50 % |
-|---|---:|---:|---:|---:|---:|
-| -4,00 % | 691,43 | 760,54 | 829,66 | 898,78 | 967,89 |
-| -2,00 % | 766,12 | 843,41 | 920,70 | 997,99 | 1.075,28 |
-| 0,00 % | 849,06 | 935,44 | 1.021,81 | 1.108,19 | 1.194,57 |
-| 2,00 % | 940,89 | 1.037,34 | 1.133,79 | 1.230,23 | 1.326,68 |
-| 4,00 % | 1.042,32 | 1.149,91 | 1.257,49 | 1.365,08 | 1.472,67 |
-
-
-Fuentes y método [10-Q 3T26 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm) · [10-K FY25 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000006/meli-20251231.htm) · [10-Q 3T25 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109959025000051/R4.htm) · [Carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm) · [Damodaran, crecimiento y retornos](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/growthrates.htm)
+**Primer paso exacto.** Completar las aperturas de Fintech en `Tesis de Inversión y Supuestos!B81:F81`, `B93:F93` y `B105:F105` con una conciliación por entidad al 30-sep-2026 de cartera, provisiones, fondeo, otros activos/pasivos netos y capital objetivo. Adjuntar utilidad de Mercado Pago y EBIT Commerce/corporativo, conciliados con el 10-Q y sin transferencias internas duplicadas.
