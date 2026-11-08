@@ -24,7 +24,9 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
  }
  const tickers=c.valoraciones.map(p=>JSON.parse(fs.readFileSync(path.join(root,p))).ticker);
  assert.equal(new Set(tickers).size,tickers.length,'Una revisión activa por ticker');
- for(const t of ['META','NFLX','NKE','NVDA'])assert.ok(tickers.includes(t),'Se perdió un estudio existente: '+t);
+ assert.deepEqual(tickers,['UBER'],'El catálogo Floyd solo debe publicar UBER');
+ for(const t of ['META','NFLX','NKE','NVDA','CMG'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('valoraciones/'+t+'-')),'Falta respaldo en archivo: '+t);
+ assert.equal(c.archivoFloyd.valoraciones.length,28,'El archivo debe conservar las 28 fichas retiradas');
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
 test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a DCF Base/);});
@@ -39,19 +41,19 @@ test('archivo histórico preservado y excluido del catálogo público', () => {
 test('rechaza revisión financiera editorial discordante', t => {
   const tmp=fixture(t,dir=>{
     const c=require(path.join(dir,'catalogo.json'));
-    const p=path.join(dir,c.analisis.find(x=>x.includes('/NFLX-')));
+    const p=path.join(dir,c.analisis.find(x=>x.includes('/UBER-')));
     const a=JSON.parse(fs.readFileSync(p));
-    a.revisionId='NFLX-OTRA-REVISION';
+    a.revisionId='UBER-OTRA-REVISION';
     fs.writeFileSync(p,JSON.stringify(a));
   });
   assert.throws(()=>validate(tmp),/Revisión financiera distinta/);
 });
 
-test('XP FCFE A-1.2 activo usa contraste historico R2 no certificado',()=>{
+test('XP FCFE A-1.2 permanece archivado íntegramente sin certificar',()=>{
  const c=require(path.join(root,'catalogo.json'));
- const p=c.valoraciones.find(p=>p.startsWith('valoraciones/XP-'));
+ const p=c.archivoFloyd.valoraciones.find(p=>p.startsWith('valoraciones/XP-'));
  const v=JSON.parse(fs.readFileSync(path.join(root,p)));
- const ap=c.analisis.find(p=>p.startsWith('analisis/XP-'));
+ const ap=c.archivoFloyd.analisis.find(p=>p.startsWith('analisis/XP-'));
  const a=JSON.parse(fs.readFileSync(path.join(root,ap)));
  assert.equal(v.revisionId,'XP-20261031-A12-R1');
  assert.equal(v.version_metodo,'A-1.2');
