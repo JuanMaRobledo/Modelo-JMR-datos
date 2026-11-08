@@ -27,8 +27,22 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   const aapl=active.find(([ticker])=>ticker==='AAPL');
   const lulu=active.find(([ticker])=>ticker==='LULU');
   const ko=active.find(([ticker])=>ticker==='KO');
-  assert.equal(active.length,previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0),
+  const floyd=Object.entries(catalog.controlModeloA.empresas)
+    .filter(([,v])=>v.metodo==='Floyd');
+  assert.ok(floyd.length<=1,'Floyd se integra de forma explícita, no como captura parcial');
+  const expectedLegacy=previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0)-floyd.length;
+  assert.equal(active.length,expectedLegacy,
     'No permitir altas desconocidas sin catálogo reconciliado');
+  for(const [ticker,entry] of floyd){
+    assert.equal(ticker,'UBER','El primer expediente Floyd debe estar identificado');
+    assert.equal(entry.rutaValoracion,'valoraciones/UBER-FLOYD-3T26.json');
+    assert.ok(catalog.valoraciones.includes(entry.rutaValoracion));
+    const val=JSON.parse(fs.readFileSync(path.join(root,entry.rutaValoracion),'utf8'));
+    assert.equal(val.perfil_valoracion,'Floyd');
+    assert.equal(val.sensibilidadMultiples.matrices.length,5);
+    assert.equal(val.sensibilidadDCF.matrices.length,3);
+    assert.ok(val.sensibilidadMultiples.matrices.every(m=>m.estado==='OK'&&near(m.matriz[2][2],m.centro)));
+  }
   if(pags)assert.equal(pags[1].rutaValoracion,'valoraciones/PAGS-20261030-A12-R1.json','PAGS exige revision A-1.2 vigente unica');
   if(amzn)assert.equal(amzn[1].rutaValoracion,'valoraciones/AMZN-20261102-A12-R5.json','AMZN exige revisión R5 activa única');
   if(aapl){
@@ -101,6 +115,7 @@ for(const file of files){
     // nunca a la revisión activa posterior ni se reescriben para forzar conciliación.
     const historicalSources={
       INTU:'candidatos/valoraciones/INTU-20261029-R1/VALORACION_A12_EN_REVISION.json',
+      UBER:'valoraciones/UBER-20261030-A1.json',
       DUOL:'valoraciones/DUOL-20261029-A1.json',
     };
     const declared=historicalSources[ticker]
