@@ -350,7 +350,7 @@
         "multiploElegido": [
           14.4,
           16.2,
-          18.0,
+          18,
           19.8,
           21.599999999999998
         ],
@@ -411,7 +411,7 @@
         "multiploElegido": [
           20.8,
           23.400000000000002,
-          26.0,
+          26,
           28.6,
           31.2
         ],
@@ -472,7 +472,7 @@
         "multiploElegido": [
           20.8,
           23.400000000000002,
-          26.0,
+          26,
           28.6,
           31.2
         ],
@@ -531,11 +531,11 @@
           1734.754845464885
         ],
         "multiploElegido": [
-          20.0,
+          20,
           22.5,
-          25.0,
+          25,
           27.500000000000004,
-          30.0
+          30
         ],
         "matriz": [
           [
@@ -594,7 +594,7 @@
         "multiploElegido": [
           14.4,
           16.2,
-          18.0,
+          18,
           19.8,
           21.599999999999998
         ],
@@ -1094,5 +1094,290 @@
     "replicaIndependiente": "Base 33,04246; Conservadora 21,47111; Optimista 43,77785 (diferencia < 1e-5 con la hoja)",
     "ciMotor": "por ejecutar en PR",
     "ciApp": "sin cambios en la app; 195/195 pruebas locales"
+  },
+  "libros": {
+    "historicos": "https://docs.google.com/spreadsheets/d/14ONchw6fXR9tSQs_OlQ3_Nio6d1vobUcH9LLgyZ6REs/edit",
+    "valoracion": "https://docs.google.com/spreadsheets/d/1f7BMt0ynbvjFUT84ftUmkPfxyJvmPvcqQ-7GW7EWtAY/edit",
+    "analisis": "https://docs.google.com/document/d/1pXWB3fkJpblgUpe6tljf2m6XXVYzCyFkGNJKUI-f-VA/edit"
+  },
+  "contratoLibros": "floyd-h1-h2-separados-v1",
+  "dcfFCFE": {
+    "version": "1",
+    "estado": "INFORMATIVO",
+    "pestana": "DCF FCFE",
+    "alimentaValorPrincipal": false,
+    "sinMOS": true,
+    "ponderadoNoEntraEnValorPrincipal": true,
+    "supuestos": {
+      "ke": 0.078476922825,
+      "kd": 0.056,
+      "pesoDeuda": 0,
+      "pesoPatrimonio": 1,
+      "pesoFcfeEnPonderado": 0.5,
+      "preferentesPonderadas": 0
+    },
+    "historias": {
+      "conservador": {
+        "probabilidad": 0.25,
+        "dcfFCFF": 21.471111286654853,
+        "dcfFCFE": 21.47111128665486,
+        "diferencia": 2.220446049250313e-16,
+        "ponderadoFcffFcfe": 21.471111286654857
+      },
+      "base": {
+        "probabilidad": 0.5,
+        "dcfFCFF": 33.04245907913879,
+        "dcfFCFE": 33.0424590791388,
+        "diferencia": 4.440892098500626e-16,
+        "ponderadoFcffFcfe": 33.042459079138794
+      },
+      "optimista": {
+        "probabilidad": 0.25,
+        "dcfFCFF": 43.77784570069061,
+        "dcfFCFE": 43.777845700690634,
+        "diferencia": 4.440892098500626e-16,
+        "ponderadoFcffFcfe": 43.77784570069062
+      }
+    },
+    "promedio": {
+      "dcfFCFF": 32.83346878640576,
+      "dcfFCFE": 32.833468786405774,
+      "diferencia": 4.440892098500626e-16,
+      "ponderadoFcffFcfe": 32.83346878640577
+    },
+    "controles": {
+      "promedioFcffHoja": 32.83346878640576,
+      "concilia": true,
+      "dcfFcffBaseHoja": 33.04245907913879
+    },
+    "baseDetalle": {
+      "anios": [
+        "Base year",
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        "Terminal year"
+      ],
+      "filas": {
+        "ingresos": [
+          12713.477,
+          13921.257315,
+          15174.170473350003,
+          16539.845815951503,
+          17978.81240193928,
+          19471.05383130024,
+          20989.79603014166,
+          22501.06134431186,
+          23963.63033169213,
+          25353.520890930275,
+          26671.90397725865,
+          27738.780136349
+        ],
+        "ebit": [
+          1794.941,
+          1965.4603949999998,
+          2256.5580086244004,
+          2521.890596451144,
+          2808.95253132634,
+          3115.3686130080387,
+          3358.367364822666,
+          3600.169815089898,
+          3834.180853070741,
+          4056.563342548844,
+          4267.504636361385,
+          4438.20482181584
+        ],
+        "tasaImpuesto": [
+          0.24738051583604076,
+          0.24738051583604076,
+          0.24738051583604076,
+          0.24738051583604076,
+          0.24738051583604076,
+          0.24738051583604076,
+          0.24790441266883262,
+          0.24842830950162448,
+          0.24895220633441634,
+          0.2494761031672082,
+          0.25000000000000006,
+          0.25
+        ],
+        "ebitDespuesImpuestos": [
+          1350.9075695247413,
+          1479.2437886295916,
+          1698.3295244369474,
+          1898.0239998189995,
+          2114.072405167877,
+          2344.6871185026994,
+          2525.813275720128,
+          2705.785714008339,
+          2879.653070213605,
+          3044.5477275988137,
+          3200.6284772710383,
+          3328.65361636188
+        ],
+        "reinversion": [
+          null,
+          464.0419105000007,
+          505.80568244500006,
+          532.950587402881,
+          552.6820108744289,
+          562.4971106820077,
+          521.125970403517,
+          504.3341335794033,
+          479.27260663384317,
+          454.6148573546126,
+          367.8883307208099,
+          605.2097484294327
+        ],
+        "fcff": [
+          null,
+          1015.2018781295908,
+          1192.5238419919474,
+          1365.0734124161186,
+          1561.3903942934483,
+          1782.1900078206918,
+          2004.687305316611,
+          2201.4515804289354,
+          2400.380463579762,
+          2589.9328702442012,
+          2832.7401465502285,
+          2723.443867932447
+        ],
+        "endeudamientoNeto": [
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "deudaCierre": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null
+        ],
+        "intereses": [
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ahorroFiscal": [
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "fcfe": [
+          null,
+          1015.2018781295908,
+          1192.5238419919474,
+          1365.0734124161186,
+          1561.3903942934483,
+          1782.1900078206918,
+          2004.687305316611,
+          2201.4515804289354,
+          2400.380463579762,
+          2589.9328702442012,
+          2832.7401465502285,
+          2723.443867932447
+        ],
+        "ke": [
+          null,
+          0.078476922825,
+          0.078476922825,
+          0.078476922825,
+          0.078476922825,
+          0.078476922825,
+          0.07943542826,
+          0.08039393369499999,
+          0.08135243912999998,
+          0.08231094456499997,
+          0.08326944999999997,
+          0.08326945
+        ],
+        "factorDescuento": [
+          null,
+          0.9272335632185482,
+          0.8597620807589655,
+          0.7972002576623288,
+          0.739190835510986,
+          0.6854025523093473,
+          0.6349639212918781,
+          0.5877151856270337,
+          0.5435001248065606,
+          0.502166339105998,
+          0.4635654952754349,
+          null
+        ],
+        "vpFcfe": [
+          null,
+          941.3292548442628,
+          1025.2867797456724,
+          1088.236876106124,
+          1154.165470116602,
+          1221.5175800605177,
+          1272.9041123478837,
+          1293.8265242407185,
+          1304.6070815388305,
+          1300.57710798082,
+          1313.1605890221647,
+          null
+        ]
+      },
+      "puente": {
+        "valorTerminal": 62941.49493308668,
+        "vpValorTerminal": 29177.505272032602,
+        "sumaVpPatrimonio": 41093.1166480362,
+        "probFracaso": 0,
+        "patrimonioOperaciones": 41093.1166480362,
+        "cajaNoOperativosNetos": 875.7297088728633,
+        "patrimonioComun": 41968.84635690907,
+        "valorPorAccionFcfe": 33.0424590791388,
+        "valorPorAccionFcff": 33.04245907913879,
+        "diferencia": 4.440892098500626e-16
+      }
+    },
+    "nota": "Informativo: mismo motor y supuestos que el DCF FCFF; solo añade la deuda (endeudamiento neto con razón deuda/valor constante, intereses y ahorro fiscal) y descuenta al costo del patrimonio. No sustituye el valor principal, no lleva MOS y el ponderado FCFF/FCFE no entra en el valor principal. Con supuestos coherentes FCFE ≈ FCFF; una diferencia grande señala incoherencia entre deuda, Kd, pesos y WACC, no un valor alternativo.",
+    "revisionId": "CMG-FLOYD-20261108-R1",
+    "hojaId": "1f7BMt0ynbvjFUT84ftUmkPfxyJvmPvcqQ-7GW7EWtAY"
   }
 }
