@@ -283,3 +283,51 @@ Por pedido del usuario se aisló un **contraste Commerce-only** en **la misma H2
 **Controles realizados:** lectura nativa de salidas B184/B218/B252, huella/entrada protegida, fórmulas de matriz, escritura exclusiva en rango antes vacío y relectura con fórmulas efectivas; centro 5×5=Base. **No ejecutado** CI completo, comparación integral independiente de toda la huella, auditoría F5, valoración FCFF principal (industrial por perímetro) ni integración JSON→app. En H2 `Control de integridad!B2=PLANTILLA` y `B4=0/3 LISTO`; precio oficial N/D. Al cambiar supuestos de V4, recalcular primero la fuente H2 y volver a comprobar anclas de la matriz.
 
 **Primer siguiente paso exacto para cierre definitivo Commerce:** construir puente atribuido de EBIT y gastos corporativos (Commerce vs Fintech, eliminaciones) al 30-sep-2026, capital reinvertido de logística/tecnología y deuda/caja atribuible, ajustar contratos de pagos entre negocios, WACC bottom-up verificable y DCF FCFF Floyd de comercio; luego ejecutar pruebas y, solo si cumple, evaluar promoción como valoración parcial etiquetada sin atribuir a todo MELI.
+
+
+## F3 adicional · VALORACIÓN CONSOLIDADA SOLICITADA (Commerce + Mercado Pago EN UNA SOLA EMPRESA) · 9-nov-2026
+
+**Identidad y alcance:** `MELI-FLOYD-3T26-R1`, perfil Floyd, mismo H1/H2, PR #260 y documento; 9-nov-2026 · GPT-6/ChatGPT, conectores GitHub y Google Sheets/Docs. Corte SEC 30-sep-2026; referencia de mercado 6-nov-2026 (US$1.510). El usuario cambió el alcance desde el carve-out Commerce al **consolidado**. **No valorar por separado ni sumar EV Commerce + FCFE Fintech** en este contraste. Esta salida es **alternativa condicional**, **no** autoriza ignorar la regla de financiación mixta de `REGLAS_VIGENTES §4C`, ni reemplazar el SOTP oficial sin cierre económico.
+
+**Nueva implementación verificable:** H2 `Tesis de Inversión y Supuestos!A606:L757`, en las **mismas 45 pestañas**. Se extendió la misma pestaña (sin crear libros/revisión/pestañas adicionales). Fórmulas nativas del bloque vinculan las series de ingresos Comercio y Fintech proyectadas antes (como **drivers de ingresos**, NO valores descontados) y las fusionan ANTES de calcular margen/utilidad/flujos **del grupo**. Fuente de nivel inicial: `H1 Resumen!B6:B13` y SEC. Los valores originales `B184/B218/B252` y el SOTP condicional V4 permanecen intactos.
+
+### Método económico y razones de selección
+
+El **FCFF industrial consolidado simple** sería engañoso: el EBIT de MELI combina ingresos financieros y provisiones; el capital de cartera y los pasivos de pagos/crédito son parte del producto de la actividad. En lugar de valorar separadamente la banca ni descontar `CFO−CAPEX` como flujo distribuible, este ensayo proyecta un único **FCFE económico de equity consolidado**, descontado a un **Ke USD** común. Fórmula por año: `ingresos_t = ingresosCommerce_t + ingresosFintech_t`; `NI_t = ingresos_t × margenNetoConsolidado_t`; `ROE_objetivo_t` converge entre `NI_LTM/equity_SEP26 ≈ 23,05%` y objetivo terminal; `Equity_Requerido_t = MAX(Equity_Requerido_(t−1), NI_t / ROE_objetivo_t)`; `Retención_t = ΔEquity_Requerido_t`; `FCFE_t = NI_t − Retención_t`; `VP = ∑ FCFE_t/(1+Ke)^t + [NI_10(1+g)(1−g/ROEterminal)/(Ke−g)]/(1+Ke)^10`. Se aplica el factor fracaso sólo a Conservadora, sin doble descuento de bonos, depósitos o deuda crediticia en el puente de equity. La identidad marginal `NI−ΔEquity=FCFE` se comprueba con fórmula para diez años.
+
+**Dato fuente / inferencia:** SEC FY2025+9M26−9M25: ingresos grupo US$38.523m, EBIT US$2.859m, beneficio neto US$1.890m, patrimonio al 30-sep-2026 US$8.200m, ROE LTM sobre saldos promedio 26,2%, ROE NI/equity final 23,05%. SEC flujo operativo LTM US$13.896m **inflado por movimientos de fondos de clientes**; ajuste no-GAAP del emisor LTM US$1.206m (63,8% de NI), en H2 `E347`. El flujo ajustado **no equivale** a FCFE distribuible ni se proyecta como pago regulatorio. Fuente: [SEC 10-Q](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm) y [carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm). El Q3'26 tuvo ventas +45% pero margen EBIT 6,3%; los márgenes netos futuros NO se infieren de ventas históricas sin pérdidas crediticias.
+
+### Historias unificadas y supuestos (USD nominal)
+
+| Hipótesis | Conservadora | Base | Optimista | Evidencia |
+|---|---:|---:|---:|---|
+| Ingresos iniciales consolidados | 38.523 | 38.523 | 38.523 | SEC LTM; suma Commerce+Fintech |
+| Ingresos año10 US$m | 141.815,52 | 214.519,70 | 276.212,28 | Fórmulas existentes de drivers de ingresos V4; **pronósticos** |
+| Margen NI año1 | 3,8% | 4,3% | 4,8% | Hipótesis presión por pérdidas de crédito y logística |
+| Margen NI año10 | 5,0% | 5,8% | 7,0% | Hipótesis normalización cohortes/Ads/eficiencia |
+| ROE requerido año10 | 13% | 16% | 19% | Hipótesis de patrimonio de cierre requerido; RWA NO acreditado |
+| Ke USD común | 14,0% | 14,0% | 14,0% | Hipótesis de riesgo de equity; **NO** Ke bottom-up oficial |
+| g estable USD | 4,0% | 4,0% | 4,0% | REGLAS_VIGENTES §4; comprobación g menor Ke |
+| Probabilidades | 26,47% | 47,06% | 26,47% | Previa Floyd existente; no se modificó |
+| Fracaso explícito | 4% | 0% | 0% | Hipótesis previa de Conservadora, no pérdida histórica SEC |
+
+### Salida realmente calculada en Google Sheets, no números manuales
+
+| Métrica | Conservadora | Base | Optimista |
+|---|---:|---:|---:|
+| Patrimonio valor presente (US$m) | 13.075,76 | **25.334,04** | 42.560,12 |
+| **Valor patrimonial/acción (US$)** | 257,92 | **499,72** | 839,50 |
+| Equity requerido año10 (US$m) | 54.544,43 | **77.763,39** | 101.762,42 |
+| VP FCFE años 1–10 (US$m) | −150,81 | **−844,25** | −261,54 |
+| VP terminal (US$m) | 13.771,39 | **26.178,29** | 42.821,66 |
+| Proporción VP terminal/valor antes fracaso | 101,1% | **103,3%** | 100,6% |
+
+Promedio ponderado **US$525,66/acción**. **MOS 35% de la Base simulada = US$324,82**, no MOS oficial. Base relativa al precio 6-nov US$1.510 = **−66,9%**; la salida no fue calibrada al precio. El modelo Base requiere net income año10 **US$12.442,14m** y patrimonio libro año10 **US$77.763,39m**, frente a equity inicial US$8.200m; reinversión adicional acumulada **US$69.563,39m**. En años 2–8 la capacidad modelada de distribución FCFE es negativa; no es licencia para inventar emisión ni dividendos futuros.
+
+**Sensibilidades calculadas (no solo etiquetas):** `A708:F715` Ke 12–16% × g2–6%; `A717:F724` Ke 12–16% × ROE terminal14–18%; `A726:F733` Ke 12–16% × margenNI año10 4,6–7,0%. Sus tres **centros** son **US$499,72** y controles `B715=B724=B733=0,0000`, relectura nativa. El primer barrido conserva FCFE explícito y ajusta terminal; el segundo y tercero recalculan distribución y patrimonio requerido con identidad de sumas descontadas, suponiendo inversión requerida monotónica Base. Estrés de **US$1.000m adicionales retenidos cada año1–5**: VP US$3.433,08m; **−US$67,72/acción (−13,55%)**; hipótesis ilustrativa, **NO** traslación automática de déficit de fondeo crediticio.
+
+**Estado económico y gates:** la fila `Input sheet!A1` sigue vacía, las tres historias oficiales `Escenarios e historias!K5/K6/K8=PENDIENTE` y `Control de integridad!B2=PLANTILLA`, B4=0/3 LISTO. La valoración consolidada **no** es salida directa de Simple Ginzu FCFF ni del FCFE financiero certificado; requiere aprobación de método como alternativa Floyd, y no sustituye el valor oficial ni el MOS por reglas. Ke14% no está construido y conciliado con beta/country ERP; falta comparar el equity requerido/ROE agregado con capital regulatorio exigible, reservas y restricciones de transferencia de Mercado Pago por país; ni se ha validado capacidad de reinversión de negocio Comercio ni gasto tecnología/capex normalizado. US$69.563m de equity adicional es una reserva **material** imposible de declarar cubierta sólo con NI y balance del grupo. La dependencia >100% de terminal y la decisión de mercado hacen que el efecto no pueda acotarse en <2% individual/<3% total.
+
+**Controles efectuados:** lectura SEC primario y H1/H2; extensión únicamente de `Tesis`; tres bloques de diez años con fórmulas, ingresos y reconcilia 0; fuente año0 e indicadores; tres matrices centradas con 0 diferencias y estrés de capital. `NO_EJECUTADO`: CI/Node, auditoría de datos regulados por entidad, `Cost of capital worksheet` y WACC/Ke oficial, múltiplos propios y sus matrices, DCF inverso oficial, huella integral postcambio y auditoría independiente F5. **Estado: CANDIDATO**. Ver más en [H2](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit).
+
+**Siguiente paso material exacto:** contrastar la serie de equity requerido contra capital regulatorio/buffers/negocios y financiación de cartera en SEC e informes BCB/CNBV/BCRA, incluir costes corporativos y capital invertido Comercio sin duplicar, estimar Ke bottom-up y volver a correr la valoración integrada. No publicar hasta resolver su efecto y correr los gates del contrato Floyd.
