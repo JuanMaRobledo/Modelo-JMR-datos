@@ -48,3 +48,14 @@ Primer siguiente paso exacto: completar H2 Tesis de Inversión y Supuestos!B81:F
 - **Estado CANDIDATO:** análisis y salida siguen N/D por faltantes de perímetro SOTP. Sin publicación; F5 independiente.
 
 **Primer siguiente paso exacto:** migrar y probar los vínculos históricos H1→H2 para poder retirar físicamente las pestañas ocultas; completar independientemente apertura por entidad, EBIT Commerce y utilidad/FCFE de Mercado Pago antes de activar cifras de valoración.
+
+
+## Estado de entrega tras reestructuración definitiva · 8-nov-2026 · GPT-6 (ChatGPT)
+
+La sección previa «once pestañas ocultas» quedó **SUPERADA**: H2 conserva **45** pestañas y las once históricas fueron **eliminadas físicamente** después de migrar sus datos/415 referencias a una sola `Traspaso H1`, de origen estático (sin IMPORTRANGE). H1 contiene **19** pestañas con Presentación y paneles de estados/ratios normalizados; las dos Presentaciones carecen de imágenes. Pruebas: **12.155 celdas**, **1.554 valores**, **0 diferencias** fuente/traspaso; lecturas de la huella 0 diferencias sobre 1.883 fórmulas registradas; no hay vínculos remanentes a las pestañas eliminadas en el alcance escaneado.
+
+Se actualizó **el mismo** Google Doc Nivel 1/Nivel 2 y `ANALISIS_N1_N2.md` para añadir: desglose de ingresos LTM (Commerce 21.749 y Fintech 16.774 US$m), alcance F2 y sincronización no automática, I+D como proxy y deuda US GAAP arrendamientos. No se cambiaron 14 capítulos ni 12 apartados.
+
+**F4 SIGUE NO COMPLETADA:** faltan importes del SOTP oficial, N1/N2 cuantitativos de esos importes, matrices, valor inverso, anclas, gates de MELI, JSON de publicación, catálogo y QA de app. `Input sheet!A1` está en blanco a propósito porque activarlo antes de completar la economía producía errores de división por cero; ninguna valoración fue calculada. F5 queda reservada a auditor independiente. **No publicar ni pasar a EN_REVISION; estado CANDIDATO.**
+
+**Primer siguiente paso material:** publicar por fuente entidad los tres bloques de apertura de Fintech en `Tesis de Inversión y Supuestos!B81:F81, B93:F93, B105:F105`, el EBIT Commerce/corporativo y el resultado de Mercado Pago con eliminaciones, cargas de capital y fondeo. Ejecutar posteriormente los tres escenarios, SOTP, múltiplos, matrices, inverse DCF y validación de JSON/catálogo/visor sobre ese libro.
