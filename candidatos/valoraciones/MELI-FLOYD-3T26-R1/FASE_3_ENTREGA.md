@@ -68,3 +68,41 @@ Primer siguiente paso exacto: obtener y conciliar la apertura de Mercado Pago al
 H2 ahora recibe los 2.687 valores fuente de H1 (11 bloques) por `Traspaso H1`, con comparación 12.155/12.155 y cero discrepancias. Las fórmulas de Input sheet y módulos históricos están vinculadas a esa fotografía; la captura es estática, no sincroniza nuevas modificaciones de H1 por sí sola. Se verificaron saldos de ventas LTM 38.523, EBIT 2.859, interés 235, equity 8.200 y deuda financiera 13.190 US$m en `Input sheet`.
 
 **El estado de F3 sigue PENDIENTE:** NO existe cierre documentado de las utilidades atribuibles Commerce/Fintech, capital regulatorio excedentario/distribuible Fintech, fondeo atribuible, reinversión por unidad ni Ke/WACC validado. `Input sheet!A1` no se activó porque el motor muestra resultados no válidos antes de completar historias. `Tesis de Inversión y Supuestos!B61:C66` sigue N/D y `Escenarios e historias!K5/K6/K8` siguen PENDIENTE. No calcular ni presentar SOTP, MOS 35 %, matriz 5×5, DCF inverso o valor esperado a partir de cifras no verificadas. **No publicación ni fusión.**
+
+
+## F3 · SOTP condicional reproducible — hipótesis no validadas (8-nov-2026)
+
+Se ejecutó **una valoración numérica de contraste exclusivamente hipotética** *en el H2 ya existente* mediante ampliación de `Tesis de Inversión y Supuestos` de 120 a 310 filas (`A121:H309`). Se preservaron **H1, H2, nombres de libros, las 45 pestañas y las 1.883 huellas originales**; no se creó otro libro/revisión ni se cambió `Valuation output`, `Input sheet!A1`, `Tesis!B61:C66/B69` ni las celdas oficiales de escenarios, SOTP, MOS o app. Es una prueba de la materialidad de los datos ausentes, **NO una propuesta oficial que supere el gate de §4C**.
+
+### Resultado del ejercicio, cierre 30-sep-2026, precio US$1.510 (06-nov-2026)
+
+| Historia | EV Commerce FCFF (US$m) | Equity Fintech + residual FCFE (US$m) | Bonos corporativos supuestos deducidos (US$m) | Equity condicionado (US$m) | US$/acción | 35% MOS condicional |
+|---|---:|---:|---:|---:|---:|---:|
+| Conservadora | 12.817,38 | 8.419,39 | 2.253 | 18.224,42 | **359,48** | 233,66 |
+| Base | 33.408,69 | 14.921,67 | 2.253 | 46.077,36 | **908,88** | **590,77** |
+| Optimista | 67.769,16 | 21.515,19 | 2.253 | 87.031,35 | **1.716,70** | 1.115,86 |
+
+Probabilidades originales Floyd: Conservadora 26,4706%, Base 47,0588%, Optimista 26,4706%; **esperado condicional US$977,29/acción**. Base −39,8% respecto al precio US$1.510; **NO hay Base oficial ni MOS oficial**. Los valores y el cuadro se enlazan nativamente en `Presentación!A46:L55` como **HIPOTÉTICOS**, manteniendo `Presentación!D6,G6,J6=N/D` en los resultados oficiales.
+
+**Datos observados SEC:** Commerce ingresos LTM US$21.749m, Fintech ingresos LTM US$16.774m, EBIT consolidado US$2.859m, utilidad neta US$1.890m, acciones aprox 50,697m, bonos senior matriz US$2.253m, otros pasivos financieros por asignar US$6.773m, clientes US$17.400m y liquidez restringida US$14.559m. Fuentes: [SEC 10-Q 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm), [carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm), H1 verificado. En 3T26 el grupo creció 45% en ingresos USD pero margen operativo de solo 6,3% por inversión en envíos/marketing; la historia no presume expansión inmediata.
+
+**Hipótesis materiales no reveladas (todas rotuladas en H2, NO SEC):** 7% de margen EBIT actual de Commerce ⇒ EBIT Commerce supuesto US$1.522,43m, NOPAT US$1.096,15m tras impuestos normalizados 28%; el **residuo analítico** US$793,85m = NI consolidada US$1.890m − NOPAT Commerce estimado. Ese residuo **contiene Mercado Pago + corporativo + financiación + diferencias fiscales** y **NO es utilidad neta publicada de Fintech**; prolongarlo como utilidad Fintech es solo *hipótesis de cierre contable con riesgo material*. No se llenaron artificialmente las filas de capital y utilidad desagregada pendientes.
+
+La Base condicional: Commerce ingreso +28% año 1, +21% a/a años 2–5, convergencia a +4,5% año 10; EBIT 7%→12% año10; S/C marginal 2,2 (1–5)→2,0 (6–10); ROIC terminal 14%, g 4%, WACC 11,2%. Fintech +residual utilidad +30% año1, +25% años2–5, +5,5% año10; ROE **marginal supuesto** 25%, ROE estable 16%, g 4%, Ke 13,8%. **Tasas iguales en las tres historias:** no se cargan tasas menores para Optimista ni mayores para Conservadora para fabricar spread. En Conservadora se aplica además una hipótesis de fracaso del 4%, sin aval empírico, solo al valor condicionado de esa historia. Cero caja adicional **presunta para puente**, no afirmación de caja libre real igual a cero.
+
+Método explícito, años 1–10 con fórmulas Sheets (no números pegados): `Commerce FCFF_t=Revenue_t×Margin_t×(1−Tax)−ΔRevenue_t/SalesToCapital_t`, terminal `NOPAT_10(1+g)(1−g/ROIC_terminal)/(WACC−g)`; `Fintech residual FCFE_t=NI_t−ΔNI_t/ROE_incremental`, terminal `NI_10(1+g)(1−g/ROE_terminal)/(Ke−g)`. `Equity condicional=PV Commerce FCFF+PV residual FCFE−bonos holdco + caja libre hipotética cero`; evita descontar otra vez fondeo incluido ya en beneficio financiero. Esta fórmula **no certifica** RWA ni patrimonio económico inicial.
+
+### Sensibilidad e impacto de incógnitas materiales
+
+`Tesis!B277:F281` matriz **5×5** WACC Commerce (9,2–13,2%) × margen EBIT año10 (8–16%), equiv. por acción **US$453,09–1.793,94**; su centro `D279=908,88`. `Tesis!B288:F292` matriz **5×5** Ke Fintech (11,8–15,8%) × ROE marginal (18–32%), equiv. **US$782,09–1.059,36**; su centro `D290=908,88`. Ambas conservan demás supuestos y finanzas constantes. Si se asigna al holding 50% de US$6.773m sin atribuir, Base condicional baja **US$908,88→842,08**; con 100%, **US$775,28** (−US$133,60 por acción). Esta es una hipótesis adversa, NO decisión real de asignación.
+
+Inverso **parcial**, no oficial: mantener hipótesis resto y resolver por sensibilidad lineal el margen Commerce año 10 que igualaría precio US$1.510: **19,6%**, vs 12% en Base; brecha de equity ≈US$30.474,81m. No subir márgenes para llegar a cotización. La incertidumbre individual supera los umbrales §4B; **no se puede declarar salvedad inmaterial**.
+
+### QA técnico real de esta simulación
+
+- Google Sheets devolvió **0 errores en los rangos de hipótesis y matrices** tras corregir dos errores de sintaxis de construcción de escenario y separadores decimales. En `Tesis!C302=0` conciliación de EBIT por puente analítico; `C303=7,2%` spread WACC−g; `C304=9,8%` spread Ke−g; `C305=100%` probabilidades; `C306=OK` orden de escenarios.
+- Los centros de **ambas** matrices 5×5 reconciliaron con la Base condicional a una precisión numérica de Google Sheets.
+- Huella registrada permanece 0/1.883; Control de integridad muestra `PLANTILLA`, `0/3 LISTO` y ninguna compuerta económica aprobada, **por diseño**: falta SOTP verificable. No se ejecutó validador externo del motor sobre esta simulación, ni JSON, pruebas end-to-end o publicación.
+- **F3 oficial queda PENDIENTE.** Para convertir la simulación en una valoración SOTP oficial es obligatoria una separación con fuentes por entidad de EBIT Commerce, utilidad y patrimonio Fintech, capital regulatorio/distribuible, deuda y saldos internos, costo de capital auditable, historias y múltiplos aplicables. No se cambia `valorPrincipal` ni `baseMOS` del catálogo.
+
+Identidad del ejecutor: GPT-6 en ChatGPT, herramientas Google Sheets, GitHub y consulta SEC. No se usó Claude, Work, Node/Python de repositorio, Vercel ni app para publicar. La cifra es ilustrativa, no recomendación de inversión.
