@@ -1,14 +1,16 @@
 {
-  "version": "FLOYD-UBER-CMG-20261108-R3",
-  "actualizadoEl": "2026-11-08",
-  "nota": "Floyd R3: UBER y CMG son los únicos expedientes activos EN_REVISION; históricos, valoración y análisis viven en libros separados por ticker. F5 económica y revisión visual pendientes en ambos. Los expedientes anteriores se preservan en archivoFloyd; no se destruyen. ",
+  "version": "FLOYD-UBER-CMG-AAPL-20261109-R4",
+  "actualizadoEl": "2026-11-09",
+  "nota": "Floyd R4: UBER, CMG y AAPL son los expedientes activos EN_REVISION; históricos, valoración y análisis viven en libros separados por ticker. F5 económica y revisión visual pendientes en todos. Los expedientes anteriores (incluida AAPL A-1.2 R1) se preservan en archivoFloyd; no se destruyen. ",
   "valoraciones": [
     "valoraciones/UBER-FLOYD-3T26.json",
-    "valoraciones/CMG-FLOYD-20261108-R1.json"
+    "valoraciones/CMG-FLOYD-20261108-R1.json",
+    "valoraciones/AAPL-FLOYD-FY26-R1.json"
   ],
   "analisis": [
     "analisis/UBER-research-UBER-FLOYD-3T26.json",
-    "analisis/CMG-research-CMG-FLOYD-20261108-R1.json"
+    "analisis/CMG-research-CMG-FLOYD-20261108-R1.json",
+    "analisis/AAPL-research-AAPL-FLOYD-FY26-R1.json"
   ],
   "auditorias": [],
   "controlModeloA": {
@@ -35,6 +37,13 @@
       },
       "CMG": {
         "rutaValoracion": "valoraciones/CMG-FLOYD-20261108-R1.json",
+        "metodo": "Floyd",
+        "estado": "INCOMPLETA_EN_REVISION",
+        "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
+        "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista, múltiplos como contraste con peso 0. Control técnico F4 integrado; F5 económico independiente y revisión visual por realizar."
+      },
+      "AAPL": {
+        "rutaValoracion": "valoraciones/AAPL-FLOYD-FY26-R1.json",
         "metodo": "Floyd",
         "estado": "INCOMPLETA_EN_REVISION",
         "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
@@ -88,6 +97,27 @@
       ],
       "alcance": "Pareja activa única CMG Floyd R1; libros históricos y valoración separados; F5 económica pendiente",
       "revisionAnterior": "CMG-20261028-A3"
+    },
+    "AAPL": {
+      "fecha": "2026-11-09",
+      "revisionId": "AAPL-FLOYD-FY26-R1",
+      "metodo": "Floyd",
+      "valorPorAccion": 179.80606168660404,
+      "mos35": 116.87394009629263,
+      "moneda": "USD",
+      "precioReferencia": 342.37,
+      "fechaPrecioReferencia": "2026-11-06",
+      "corteContable": "2026-09-26",
+      "sheetId": "1gtAc2TclEjszznAC8tfDGiOviq3bagTA7AzOh2r1h0c",
+      "estadoSeleccion": "FLOYD_F4_SELECCIONADO_EN_REVISION",
+      "estado": "EN_REVISION",
+      "auditoriaEconomica": "NO_REALIZADA",
+      "reservas": [
+        "Auditoría económica F5 independiente y QA visual pendientes; no equivale a certificación.",
+        "Nivel 1 por debajo de 7.500 palabras (PENDIENTE_EDITORIAL); limitación del año −1 de I+D en el conversor (+0,7 % en el Base) documentada."
+      ],
+      "alcance": "Pareja activa única AAPL Floyd R1; libros históricos y valoración separados; F5 económica pendiente",
+      "revisionAnterior": "AAPL-20261103-A12-R1"
     }
   },
   "archivoFloyd": {

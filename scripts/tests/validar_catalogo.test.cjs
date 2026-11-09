@@ -37,7 +37,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
    assert.equal(a.documentos.nivel1,v.libros.analisis);
  }
 
- assert.deepEqual(tickers,['UBER','CMG'],'Solo las revisiones Floyd de UBER y CMG pueden estar vigentes');
+ assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Solo las revisiones Floyd de UBER, CMG y AAPL pueden estar vigentes');
  for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
  assert.equal(c.archivoFloyd.valoraciones.length,27,'Deben conservarse 27 expedientes archivados');
 });
