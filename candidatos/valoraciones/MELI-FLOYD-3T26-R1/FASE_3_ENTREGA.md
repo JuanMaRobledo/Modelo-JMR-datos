@@ -1,3 +1,28 @@
+## REEMPLAZA LA ARQUITECTURA DE VALORACIÓN ANTERIOR · MELI · 9-nov-2026
+
+**Orden vigente del usuario:** valorar COMMERCE y FINTECH en libros nativos Google separados, luego conectar ambos mediante un SOTP. Impuesto operativo futuro del **20%**, crédito por NI después de impuestos; no usar un DCF industrial consolidado de Mercado Pago. Los modelos anteriores y la simulación todo-Commerce US$1.154,65 son **ARCHIVO / NO VIGENTES**. Se mantienen como trazabilidad, nunca valor central vigente. La revisión es la misma `MELI-FLOYD-3T26-R1`; se reemplazó la arquitectura, no la identidad ni el PR.
+
+**Libros confirmados y montados en** `AAA Finanzas/Modelo JMR Floyd/Análisis/MELI`:
+- Commerce FCFF independiente: https://docs.google.com/spreadsheets/d/1HVEVCAzVg1XWTPLSu4p8mwc5zRNE9ffrnCl7_xmuEJo/edit
+- Fintech: pagos servicios TPV×monetización PROXY FCFF + crédito FCFE: https://docs.google.com/spreadsheets/d/15RfaeEpXFpAPUEger_ZSeWnZqmyZ_5bEuttU5rHRn24/edit
+- SOTP nuevo, enlaces `IMPORTRANGE` dinámicos, no snapshots: https://docs.google.com/spreadsheets/d/1ghCbFgsnsiMO9Gs_9ZOBhMuO0GmRYNGNkUGoO5ndfIE/edit
+- Nota cualitativa/cuanti de reconstrucción: https://docs.google.com/document/d/1SbnSJdO-VHcW2j_E2WQCuifl8l8Sq3eP2KBB5og240o/edit
+- Respaldo histórico H1 SEC sigue en carpeta de MELI.
+
+**Salidas calculadas en hojas** (US$m):
+Commerce EV: C15.332,45 / B36.988,08 / O57.569,44.
+Pagos EV: C6.323,84 / B16.272,02 / O33.256,69.
+Crédito equity: C−616,51 / B1.189,66 / O5.342,05.
+Bonos holdco −2.253m UNA SOLA VEZ; caja transferible +0 y opciones −0 son placeholders **SIN EVIDENCIA**. Acciones50,696802m.
+SOTP US$/acción: CONS355,748405 / BASE1.029,586819 / OPT1.852,487066, ESPERADO1.069,044363. MOS35% Base US$669,231432. Precio antiguo de referencia US$1.510 (6-nov-2026). Impuesto operativo20% y NIM crediticia neta sin aplicar doble tasa.
+
+**Control re-leído:** ingresos Commerce21.749m + Fintech16.774m = Consolidado38.523m; Pagos8.213m + Crédito8.561m = Fintech16.774m. Revenue y capital por país suman cero diferencias. Dos matrices SOTP WACC×WACC y WACC Pago×Ke Crédito 5×5 con centros exactamente Base US$1.029,586819 y deltas de control numéricos próximos a cero. Fórmulas de proyección 3×10 en cada negocio; DCF de terminal reconciliado con ROIC. Datos fuente FY25/9M26/9M25, no valores calculados manualmente. `IMPORTRANGE` Google entre libros fue PROBADO y devolvió importes válidos.
+
+**SALVEDADES SIN CERRAR:** EBIT Commerce8%/Pagos10% SUPUESTOS por ausencia SEC EBIT vertical; línea financial-services includes interés y financiación, no puro TPV-fee; NI crediticia inicial2,5%, RWA ratio100%, buffers10/12/15% SUPUESTOS, crédito Base ROE terminal14% inferior a Ke15,94%; beta/DV/Kd no bottom-up; CRP Ene26/Rf/ERP Nov26 mixtos; cash/opciones/bonos y gastos/sinergias corporativos no asignados. Se reconstruyeron **motores sectoriales desde cero**, NO una copia cuya paridad con las1.883 fórmulas Ginzu esté validada. F3 CANDIDATO con controles matemáticos pero SIN gate financiero ni F5. **No publicar**.
+
+
+---
+
 # F3 · MELI-FLOYD-3T26-R1 · CANDIDATO
 
 **MercadoLibre, MELI · acción ordinaria Nasdaq · USD nominal · perfil Floyd.** Corte contable 30-sep-2026, cierre US$1.510 al 6-nov-2026. Trabajo del 8-nov-2026 (Colombia). OpenAI Codex en ChatGPT Work, familia GPT-6, variante y esfuerzo de razonamiento no expuestos a esta sesión. Google Sheets/Docs y GitHub conectados, Git local y Node/Python para controles, SEC/NYU Stern para fuentes.
