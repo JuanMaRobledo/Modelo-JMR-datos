@@ -49,3 +49,24 @@ El traspaso unidireccional congela **valores efectivos, no fórmulas**, desde H1
 **Resultado:** F2 terminada **en el alcance de separación física, carga y control reproducible de datos disponibles**. No resuelve el perímetro económico F3 de una fintech y no equivale a auditoría de una empresa. Nuevas adiciones en N2 del análisis, enlazado al mismo Google Doc y Markdown.
 
 **Primer siguiente paso para F3:** identificar con fuente primaria por entidad y con eliminaciones el EBIT Commerce/corporativo, utilidad neta Mercado Pago, fondeo total, patrimonio regulatorio requerido, buffer y exceso distribuible; mientras falten y no pueda cuantificarse su materialidad, mantener DCF SOTP en N/D.
+
+
+## H1 · cierre de cobertura SEC antes de avanzar a H2 · 8-nov-2026
+
+**Alcance de esta intervención: H1 EXCLUSIVAMENTE; no se leyó, modificó, sincronizó ni recalculó H2.** Fuente H1 existente: [MELI Históricos](https://docs.google.com/spreadsheets/d/1TF8KaMkn-Wc3csoCK1z9-IierhPhOBZwwdX7fiBYN6Q/edit).
+
+La serie normalizada H1 2016–2025/LTM Sep-2026 se completó en ingresos, resultado operativo, gasto e ingreso financiero (incluida presentación reexpresada FY2022), EPS básicos/diluidos SEC y acciones básicas promedio, cuentas por cobrar de comercio y liquidaciones de tarjetas, PPE/intangibles/goodwill, proveedores, patrimonio, pasivos residuales, flujos CFO/CFI/CFF, inversión de PP&E y activos intangibles, deuda recibida/pagada, emisiones, recompra y dividendos comunes. Se repoblaron saldos de apertura FY2015 en auxiliares y algunos de septiembre 2025 para LTM. Se incorporaron **10 múltiplos históricos** y equivalentes mecánicos por P/E, P/S, EV/EBITDA sin confundirlos con DCF SOTP. Los renglones imposibles de desagregar con base SEC permanecen explícitos como **N/D** en sus celdas, no cero.
+
+**Reclasificación crítica 2022–2023:** el 10-K FY2024 (https://www.sec.gov/Archives/edgar/data/1099590/000109959025000007/meli-20241231.htm) reexpresó FY2022 ventas 10.537→10.780, costo 5.374→5.582, margen bruto 5.163→5.198 y EBIT 1.034→1.069 US$m, con gasto financiero no operativo 321→135 e ingreso financiero 265→44, sin modificar utilidad antes de impuestos 780. FY2023 ingresos 14.473→15.107, costo 7.267→7.517, utilidad bruta 7.206→7.590 y EBIT 1.823→2.207. H1 usa la presentación comparable reexpresada, con tabla y fuente en `Fuentes!J1:N13`. **No trasladar los números originales de 2022 al comparativo FY2024.**
+
+**CAPEX:** H1 `Flujos!B9:H9` fue conciliado como PPE + compra de intangibles (2016 68,958; 2017 55,189; 2018 93,328; 2019 136,870; 2020 247,141; 2021 609; 2022 455; US$m). `Flujos!B12:H12` conserva PPE sin intangible y fila13 la diferencia. 2025 CAPEX contable 1.343 vs operativo 1.327, con diferencia de 16 activos digitales, y LTM 1.642. `Cash Flow Statement!B15:L15` usa inversión GAAP firmada; P/FCF/FCF/ratios se recalcularon.
+
+**Controles realmente ejecutados sobre los 19 tabs H1:**
+- 11 períodos × 6 identidades (resultado no operativo; conciliación EBIT, balance ajustado por preferente FY2019, CFO, CFI y CFF) = **66/66** con residuo ≤ US$0,001m.
+- Barrido directo Google Sheets: **0 errores de cálculo**. **10 métodos** de múltiplos históricos con precio, min, P25, mediana/promedio 5 años, mediana histórica, posición, N válido y precio implícito histórico secundario.
+- **112 referencias N/D en el rango leído (incluye menciones en fuentes)**: no es falsamente «todas las cuentas publicadas», sino desgloses no disponibles como entidades separadas. Entre ellos: cuentas por pagar vs gastos devengados (una sola línea SEC), anticipos no desglosados, flujos por impuestos/cortos y largo plazo de préstamos no segregados por tenor, FCFF económico no aplicable sin carve-out Commerce/Fintech. Todos quedan identificados; no se estiman como 0.
+- LTM ingresos 38.523, EBIT 2.859, precio corte 1.510 USD; FY2021 FCF contable 356 tras intangibles incluidos; FY2025 FCF contable 10.773 y no 10.789 tras CAPEX GAAP 1.343; NO representan FCFE del negocio Fintech.
+
+**Fase F2, H1: CERRADA PARA DATOS SEC DISPONIBLES; F2 completa de punta a punta no se revalida en esta intervención.** El usuario exige explícitamente no trabajar H2 hasta revisar el histórico y autorizar su continuación. No se realizaron modificaciones de H2, no se publicó, no se fusionó PR. Estado de la revisión Floyd permanece **CANDIDATO**.
+
+Herramientas reales: GPT-6 en ChatGPT con web SEC, conector Google Sheets y GitHub. Esfuerzo de razonamiento no expuesto; no se ejecutó Python, Node, QA/app ni auditoría F5.
