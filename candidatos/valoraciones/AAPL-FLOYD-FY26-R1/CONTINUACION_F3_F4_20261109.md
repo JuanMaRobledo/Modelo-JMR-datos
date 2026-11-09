@@ -13,12 +13,11 @@ Libros: H1 `1MHlhgbWgRGysN11_LnyBS94aueV4KijXnqKvLhN5U98` · H2 `1gtAc2TclEjszzn
 ## DCF inverso (réplica externa del motor, error 0,0002 USD/acción frente a H2; script no versionado)
 Precio 342,37, resto en Base: crecimiento años 1-5 ≈ 24,6 % (Base 7,0 %); margen objetivo año 10 ≈ 76,3 % (Base 36 %); WACC paralelo −2,49 pp (inicial 7,53 %, terminal 6,07 %); con margen 40 %: crecimiento ≈ 21,9 %. Sales-to-Capital no explica el precio (100x → 188,10). **No está escrito aún en H2/Tesis.**
 
-## HALLAZGO MATERIAL abierto (no corregido)
-`R& D converter!B12` = `'Income Statement'!K10` (FY2026) como «año −1», pero LTM (L) = FY2026. Resultado: FY2026 (45.765) entra dos veces y FY2024 (31.370) no entra. Activo de investigación 87.791,7 y amortización 37.228,3 (esperado con FY2025/24/23: 79.255 y 31.945; ajuste EBIT +13.820 en lugar de +8.537). Afecta EBIT inicial, margen año 0 (34,79 %), capital invertido (144.517) y por tanto el DCF Base. Corregir implica re-cablear B12:B15 (rango de entrada) y recalcular todo; el H3 actual cita las cifras con error.
+## Hallazgo I+D (resuelto como LIMITACIÓN DOCUMENTADA, no como corrección)
+`R& D converter!B12` = `'Income Statement'!K10` (FY2026) como «año −1» mientras LTM (L) = FY2026: FY2026 entra dos veces y FY2024 no entra (activo 87.791,7 vs 79.255; ajuste EBIT +8.537 vs +13.820). Con autorización del usuario se re-cableó B12:B21 (J10…B10): `Huella motor` pasó a **10 diferencias / 1883**, `Escenarios e historias!H5:H12` quedaron en blanco (gate) y el semáforo marcó INTEGRIDAD FALLA. Se **revirtió exactamente** (0 diferencias, valores 179,8060617 / 115,715746 / 236,7237544 restaurados; verificado). Impacto estimado por réplica externa de la corrección: Cons 116,82 (+0,95 %) · Base 181,05 (+0,69 %) · Opt 238,09 (+0,58 %) → inmaterial y acotado; corregir requiere mantenimiento de plantilla con respaldo y regresión. Vida de I+D (F7) 2/3/5 años, DCF Cons/Base/Opt: 115,10/179,12/235,97 · 115,72/179,81/236,72 · 116,48/180,67/237,67 (F7 restaurado a 3). Notas escritas en `Control de integridad!A9:A13`.
 
 ## Pendiente (bloquea EN_REVISION)
-- Decidir/corregir hallazgo R&D y recalcular tres historias, matrices, JSON.
-- Prueba de vida I+D 2/3/5 años; DCF inverso en H2.
+- Escribir el DCF inverso en `Tesis de Inversión y Supuestos` (hoja aún sin llenar; solo está en `Control de integridad!A9:A13`).
 - Cotejo FY2017-FY2023 de H1 contra 10-K (NO_EJECUTADO).
 - Hoja `Tesis de Inversión y Supuestos` sigue con la plantilla sin llenar ([TICKER]).
 - Reescribir H3 (Nivel 1 14 caps + Nivel 2 12 apart.) con cifras finales: **sin herramienta de escritura en Docs en esta sesión**.
