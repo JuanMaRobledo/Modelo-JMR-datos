@@ -16,11 +16,17 @@ Precio 342,37, resto en Base: crecimiento años 1-5 ≈ 24,6 % (Base 7,0 %); mar
 ## Hallazgo I+D (resuelto como LIMITACIÓN DOCUMENTADA, no como corrección)
 `R& D converter!B12` = `'Income Statement'!K10` (FY2026) como «año −1» mientras LTM (L) = FY2026: FY2026 entra dos veces y FY2024 no entra (activo 87.791,7 vs 79.255; ajuste EBIT +8.537 vs +13.820). Con autorización del usuario se re-cableó B12:B21 (J10…B10): `Huella motor` pasó a **10 diferencias / 1883**, `Escenarios e historias!H5:H12` quedaron en blanco (gate) y el semáforo marcó INTEGRIDAD FALLA. Se **revirtió exactamente** (0 diferencias, valores 179,8060617 / 115,715746 / 236,7237544 restaurados; verificado). Impacto estimado por réplica externa de la corrección: Cons 116,82 (+0,95 %) · Base 181,05 (+0,69 %) · Opt 238,09 (+0,58 %) → inmaterial y acotado; corregir requiere mantenimiento de plantilla con respaldo y regresión. Vida de I+D (F7) 2/3/5 años, DCF Cons/Base/Opt: 115,10/179,12/235,97 · 115,72/179,81/236,72 · 116,48/180,67/237,67 (F7 restaurado a 3). Notas escritas en `Control de integridad!A9:A13`.
 
+## Cierres adicionales (9-nov-2026, 2.ª parte)
+- **Cotejo H1 FY2017-FY2026 contra XBRL de los 10-K (SEC data.sec.gov companyfacts): APROBADO.** 170 comparaciones (10 FY × 17 partidas), 168 exactas. Diferencias: FY2017 CFO (H1 63.598 = 10-K original acc. 0000320193-17-000070; 10-K posteriores reexpresan a 64.225) y cuentas por pagar (49.049 vs 44.242). Inmaterial.
+- `Tesis de Inversión y Supuestos` llenada (historia, tabla de escenarios, ajustes, conclusión, DCF inverso).
+- **H3 reescrito en el mismo documento** (`1SfPYnHbSKUh7_0ziFsPTYOI5gIg-pRJDLIb8P2gU-xs`, 27 reemplazos puntuales, 0 errores): ROIC escalón cuantificado, I+D (2/3/5 años y limitación del año −1), múltiplos (anclas y VP3), DCF inverso, cotejo SEC y control final. Estado en el doc: CANDIDATO_REVISADO.
+- `Control de integridad` H2: 0 diferencias / 1883 fórmulas; 3/3 LISTO; compuertas APTO CON AVISOS JUSTIFICADOS (verificado tras revertir el cambio de I+D).
+
 ## Pendiente (bloquea EN_REVISION)
-- Escribir el DCF inverso en `Tesis de Inversión y Supuestos` (hoja aún sin llenar; solo está en `Control de integridad!A9:A13`).
-- Cotejo FY2017-FY2023 de H1 contra 10-K (NO_EJECUTADO).
-- Hoja `Tesis de Inversión y Supuestos` sigue con la plantilla sin llenar ([TICKER]).
-- Reescribir H3 (Nivel 1 14 caps + Nivel 2 12 apart.) con cifras finales: **sin herramienta de escritura en Docs en esta sesión**.
-- `Huella motor`/diff contra Maestra, `validar_catalogo`, `validar_profundidad_floyd`, JSON de valoración/análisis, catálogo: NO_EJECUTADO.
+- **JSON de valoración** `valoraciones/AAPL-FLOYD-FY26-R1.json` (~25 KB: escenarios, sensibilidades, múltiplos, dcfInverso, puente, tasas, dcfFCFE, libros, contratoLibros, salvedades) y **JSON de análisis** `analisis/AAPL-research-AAPL-FLOYD-FY26-R1.json` (~190 KB con articleHtml/calculationHtml/html). No generados: no hay canal para volcar las hojas/doc a archivos desde esta sesión y transcribirlos a mano arriesga errores. Requiere un script con acceso a la API de Sheets/Docs.
+- Pestaña `DCF FCFE` de H2 (informativa; el contrato exige registrarla en `dcfFCFE`): no revisada en esta continuación.
+- `catalogo.json` (mover AAPL A-1.2 R1 a `archivoFloyd` sin borrar y activar la nueva ficha), `validar_catalogo.cjs`, `validar_profundidad_floyd.cjs`, tests y CI, despliegue y confirmación en la app: NO_EJECUTADO.
+- Comparación celda a celda contra la Maestra (distinta de `Huella motor`): NO_EJECUTADO.
+- Limitación abierta del motor: año −1 de I+D (impacto +0,7 % en Base).
 - F5 independiente: NO_EJECUTADA.
-Siguiente paso exacto: decidir la corrección del puente I+D (año −1 = FY2025) y, con escritura en Docs, rehacer H3.
+Siguiente paso exacto: generar los dos JSON con un script (Sheets/Docs API) y ejecutar los validadores; solo entonces actualizar el catálogo.
