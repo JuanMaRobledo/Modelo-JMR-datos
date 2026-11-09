@@ -331,3 +331,39 @@ Promedio ponderado **US$525,66/acción**. **MOS 35% de la Base simulada = US$324
 **Controles efectuados:** lectura SEC primario y H1/H2; extensión únicamente de `Tesis`; tres bloques de diez años con fórmulas, ingresos y reconcilia 0; fuente año0 e indicadores; tres matrices centradas con 0 diferencias y estrés de capital. `NO_EJECUTADO`: CI/Node, auditoría de datos regulados por entidad, `Cost of capital worksheet` y WACC/Ke oficial, múltiplos propios y sus matrices, DCF inverso oficial, huella integral postcambio y auditoría independiente F5. **Estado: CANDIDATO**. Ver más en [H2](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit).
 
 **Siguiente paso material exacto:** contrastar la serie de equity requerido contra capital regulatorio/buffers/negocios y financiación de cartera en SEC e informes BCB/CNBV/BCRA, incluir costes corporativos y capital invertido Comercio sin duplicar, estimar Ke bottom-up y volver a correr la valoración integrada. No publicar hasta resolver su efecto y correr los gates del contrato Floyd.
+
+
+## F3 · Dos motores Damodaran (Commerce FCFF + Mercado Pago FCFE financiero) · 9-nov-2026
+
+**Actualiza el CONTRASTE del FCFE CONSOLIDADO anterior, NO lo publica.** 9-nov-2026 · revisión MELI-FLOYD-3T26-R1, mismo H2, corte contable 30-sep-2026 y precio 6-nov-2026 US$1.510. Por orden expresa del usuario se rehízo como SOTP: Commerce FCFF/WACC y bloque Mercado Pago **más residuo corporativo no separable** FCFE modificado/Ke. Esta arquitectura respeta método §4C de REGLAS_VIGENTES. No se usa el `DCF FCFE` preexistente como modelo bancario, porque éste es la equivalencia industrial FCFF→FCFE del `Valuation output`. Se preservan motor Damodaran Simple Ginsu y hojas H1/H2 originales; **se añaden dos pestañas dentro de la MISMA H2**, ninguna revisión ni libro adicional:
+
+- `MP FCFE Damodaran` (gid 2026110901): inputs/B5:D18 y tres bloques de 10 años filas 23–39, 43–59, 63–79. Metodología financiera de [Damodaran](https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/bankvaluedriver.htm): `FCFE_financiero=NI_perímetro−Δcapital_requerido`; `retención=MAX(Δutilidad/ROE_marginal; Δcartera_bruta × factor_RWA × capital_objetivo)`; `PV=ΣFCFE/(1+Ke)^t+NI10(1+g)(1−g/ROEterminal)/[(Ke−g)(1+Ke)^10]`. Es **adaptación de la teoría de Damodaran**, no copia literal de `fcfeginzu.xls`; para financieras Damodaran publica además `divginzu.xls` y `eqexret.xls` ([catálogo oficial](https://pages.stern.nyu.edu/adamodar/New_Home_Page/spreadsh.htm)). Se identifica separadamente fondo de clientes US$17.400m (NO fondos para préstamos) y financiación securitizada US$4.164m (NO deuda comercial deducible sin bridge).
+- `Puente SOTP Floyd` (gid 2026110902): ingresos 9M26 por país/vertical, prima país, Ke, WACC, EV Commerce FCFF a nuevo WACC con diez FCFF anuales V4, equity MP del nuevo módulo, bonos holdco una sola vez, caja/options SOLO si atribuible. Tres historias y probabilidad Floyd, **dos matrices 5×5** con centros de chequeo.
+
+**Crecimiento intacto:** Commerce Base 32% año1, 23% años2–5, convergencia a 5% año10; Fintech ingresos Base 34% año1, 24% años2–5, 6% año10. La utilidad proxy (NO utilidad Fintech revelada SEC) parte de `Tesis!C134=US$805,7376m` = EBIT total menos EBIT Commerce supuesto, neto normalizado de impuesto28%, **incluye costos corporativos y NO equivale a NI de Mercado Pago**. Su trayectoria Base 32% crecimiento año1, 24% años2–5, 5% año10. Base ROE incremental supuesto19%, terminal14%; `RWA/cartera=100%` supuesto, retención prudencial ilustrativa12% de Δcartera bruta. Conservador ROE marginal17%, ROE terminal13%, capital15%; Optimista26%/18%/10%. La inversión financiera se carga SOLO sobre el perímetro financiero proxy, no sobre todo el patrimonio de MELI. **El hecho de que el cálculo ya arroje un número no prueba saldo de capital regulatorio real ni distribución libre.**
+
+**Riesgo país ponderado, no Brasil 100%:** Fuente primaria [SEC 10-Q 9M26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm), ingresos por país:
+
+| Mercado | Commerce US$m | Fintech US$m | Prima país Damodaran enero26 | % ventas Commerce | % ingresos Fintech |
+|---|---:|---:|---:|---:|---:|
+| Brasil | 9.815 | 6.490 | 3,34% | 58,52% | 49,95% |
+| México | 4.098 | 2.644 | 2,54% | 24,44% | 20,35% |
+| Argentina | 1.908 | 3.447 | 16,02% | 11,38% | 26,53% |
+| Otros | 950 | 412 | **2,54% solo proxy** | 5,66% | 3,17% |
+| TOTAL | 16.771 | 12.993 | — | 100% | 100% |
+
+Prima país ponderada **Commerce 4,5418%**; **Fintech 6,5158%**. NO son solo Brasil ni representan ventas en todo el mundo; se basan en principales países latinoamericanos divulgados. El proxy `Otros` se sustituirá por participación de países cuando SEC dé el detalle. **Mezcla temporal de fuentes:** country premiums de [Damodaran enero26](https://pages.stern.nyu.edu/adamodar/New_Home_Page/datafile/ctryprem.htm), Rf5,29% y ERP maduro4,41% de paquete Damodaran **1-nov-2026** ya registrado en H2; esto **NO** forma un paquete de costo de capital cerrado; ilustración de efecto y sensibilidad únicamente. Beta Commerce 1,05 y beta Fintech1,10 **analistas, no observadas**; lambda país=1; Commerce deuda a mercado20% y Kd8,5% **hipótesis sin atribución fuente**; impuesto28%. Cálculo `Puente!B20` **WACC Commerce 12,7938%**, `C20` **Ke Fintech 16,6568%**, g USD **4,0%** (regla §4). La mayor CRP fintech se explica por concentración Argentina y NO supone todo riesgo brasileño.
+
+**Resultados económicos reales leídos de fórmulas en la misma H2:**
+
+| Historia | EV Commerce FCFF USDm | Equity MP+corporativo proxy FCFE USDm | Bonos supuestos USDm | SOTP equity US$m | USD/acc |
+|---|---:|---:|---:|---:|---:|
+| Conservadora | 12.642,39 | 5.389,45 | 2.253 | 15.778,84 | **311,24** |
+| Base | 32.016,91 | 7.627,12 | 2.253 | 37.391,02 | **737,54** |
+| Optimista | 50.733,91 | 12.761,61 | 2.253 | 61.242,51 | **1.208,02** |
+
+Esperado ponderado Floyd 26,4706/47,0588/26,4706% = **US$749,23/acc.**; **MOS35% Base condicional = US$479,40**. Contra precio histórico de US$1.510 Base −51,16%; no ajustar a cotización. Comparado con V4 condicional anterior Base1.022,40, cambia **−US$284,86/acción**, principalmente por WACC/Ke regionales más altos y actualización de g terminal3,5→4,0%, no por rebaja del crecimiento. **Incertidumbre material y NO aprobada**.
+
+**Sensibilidad actual independiente del centro:** `Puente!A49:F57`, WACC Commerce±2pp × Ke MP±2pp: centro `D54=737,542063`, control `B57≈0`; `Puente!A59:F66`, WACC Commerce±2pp × ROE marginal MP15/17/19/21/23%: centro `D63=737,542063`, `B66≈0`. El rango del primer cuadro va ~US$497,77–1.136,30, revelando fragilidad del descuento; segundo ~US$487,72–1.113,32. No se extrajeron matrices de múltiplos oficiales. Google releyó 0 errores de fórmula en ambas matrices después de corregir el formato decimal de los ejes.
+
+**Bloqueos no delegables/inmateriales:** faltan NI MP por país/institución y gastos corporativos asignados, patrimonio prudencial realmente elegible y buffers, capital liberable/restringido, atribución completa deuda corporativa vs financiera (US$6.773m sin atribuir), beta de negocio y deuda valor de mercado, CRP mismo corte y composición `Otros`, impuestos, opciones/RSU. **No son salvedades pequeñas**: una entrada puede variar cientos de dólares/acción. Las cinco valoraciones de múltiplos oficiales, inverso único, F3 nativo y auditoría F5 independiente siguen sin pasar. `Input sheet!A1` permanece vacío; `Control de integridad` PLANTILLA/0 de 3 LISTO; **CANDIDATO; no fusionar/publicar**. Fuente H2: https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit.
