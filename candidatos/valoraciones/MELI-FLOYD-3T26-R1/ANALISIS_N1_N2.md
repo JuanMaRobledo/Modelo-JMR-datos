@@ -1,3 +1,22 @@
+## NOTA DE ALCANCE · 9-nov-2026 · ARQUITECTURA VIGENTE
+
+**Los análisis narrativos anteriores en este archivo son antecedentes históricos.** El valor base US$815,67 (SOTP anterior) y el experimento US$1.154,65 (todo MELI Commerce) están RETIRADOS; no son la valoración sectorial vigente. Se reemplazaron los libros, con autorización expresa del usuario, conservando la revisión `MELI-FLOYD-3T26-R1`.
+
+Nuevos libros:
+Commerce https://docs.google.com/spreadsheets/d/1HVEVCAzVg1XWTPLSu4p8mwc5zRNE9ffrnCl7_xmuEJo/edit
+Fintech https://docs.google.com/spreadsheets/d/15RfaeEpXFpAPUEger_ZSeWnZqmyZ_5bEuttU5rHRn24/edit
+SOTP https://docs.google.com/spreadsheets/d/1ghCbFgsnsiMO9Gs_9ZOBhMuO0GmRYNGNkUGoO5ndfIE/edit
+Nuevo documento sectorial https://docs.google.com/document/d/1SbnSJdO-VHcW2j_E2WQCuifl8l8Sq3eP2KBB5og240o/edit
+
+**Preliminar:** Commerce EV Base US$36.988,08m; Fintech Pagos EV Base US$16.272,02m; Fintech Crédito EQUITY Base US$1.189,66m; menos bonos Holdco2.253m una vez => equity grupo US$52.196,76m /50,696802m acciones = **Base US$1.029,59/acción**, MOS35% US$669,23/acción. Conservadora US$355,75, Optimista US$1.852,49, esperado US$1.069,04. Impuesto futuro operativo20% por instrucción expresa, NI créditicia ya neta. Fuente financiera FY25+9M26−9M25: Commerce21.749m, Fintech16.774m (servicios+POS8.213m, crédito8.561m), grupo38.523m, EBIT grupo2859m.
+
+**Problema económico fundamental:** SEC NO reporta EBIT Commerce y Pagos ni NI/RWA por actividad crediticia. Commerce8% de margen EBIT inicial, Pagos10% EBIT inicial, Crédito NI margen2,5% y capital objetivo12% RWA Base son hipótesis no verificadas. La monetización «pagos» usa SERVICIOS FINANCIEROS/TPV y mezcla ingresos por inversiones/intereses: no es take rate puro. CRP país se pesa por ingresos por negocio, fechas Jan26/Nov26 no homogéneas. ROE crédito Base terminal14% menor a Ke15,94%. Ratios y betas por negocio no observados; caja libre y opciones 0 placeholders (no ausencia real). ~89% del EV de Commerce Base es terminal. **Ningún valor nuevo puede certificar F4/F5 ni publicación aún.**
+
+Véase el documento sectorial nativo para método, fórmulas, principales riesgos y fuentes, y FASE_3_ENTREGA.md para controles y tablas. Actualizar N1 14 capítulos y N2 12 apartados con estos nuevos libros antes de publicar en la app.
+
+
+---
+
 # MercadoLibre · JMR Floyd · 3T 2026
 
 **MELI-FLOYD-3T26-R1 · CANDIDATO · Acción ordinaria Nasdaq · USD**
