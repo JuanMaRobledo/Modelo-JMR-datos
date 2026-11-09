@@ -61,3 +61,10 @@ Primer siguiente paso exacto: obtener y conciliar la apertura de Mercado Pago al
 **Pruebas:** traspaso H1/H2 (12.155 comparaciones, 1.554 valores, 0 discrepancias), huella registrada 0/1.883 con actualización identificada de 31 fórmulas por referencias. No hay resultado de F3 aprobado. No se ejecutó una corrida válida de SOTP del motor ni gates de publicación de MELI. No sustituir por DCF industrial, A-1.2 o scripts aislados.
 
 **Materialidad:** ingresos Commerce vs Fintech no determinan ganancias, capital regulatorio transferible ni fondeo; US$6.773m de pasivos financieros sin asignación económica documentada. La incertidumbre puede mover considerablemente el precio/acción y no está cuantificada; no calificarla como inmaterial. Estado CANDIDATO.
+
+
+## Control de frontera F2→F3 tras actualizar H2 · 8-nov-2026
+
+H2 ahora recibe los 2.687 valores fuente de H1 (11 bloques) por `Traspaso H1`, con comparación 12.155/12.155 y cero discrepancias. Las fórmulas de Input sheet y módulos históricos están vinculadas a esa fotografía; la captura es estática, no sincroniza nuevas modificaciones de H1 por sí sola. Se verificaron saldos de ventas LTM 38.523, EBIT 2.859, interés 235, equity 8.200 y deuda financiera 13.190 US$m en `Input sheet`.
+
+**El estado de F3 sigue PENDIENTE:** NO existe cierre documentado de las utilidades atribuibles Commerce/Fintech, capital regulatorio excedentario/distribuible Fintech, fondeo atribuible, reinversión por unidad ni Ke/WACC validado. `Input sheet!A1` no se activó porque el motor muestra resultados no válidos antes de completar historias. `Tesis de Inversión y Supuestos!B61:C66` sigue N/D y `Escenarios e historias!K5/K6/K8` siguen PENDIENTE. No calcular ni presentar SOTP, MOS 35 %, matriz 5×5, DCF inverso o valor esperado a partir de cifras no verificadas. **No publicación ni fusión.**
