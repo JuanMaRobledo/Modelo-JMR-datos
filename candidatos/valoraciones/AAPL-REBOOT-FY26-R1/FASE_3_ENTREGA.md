@@ -43,11 +43,11 @@ Apple vende un ecosistema de dispositivos (iPhone, 53 % de los ingresos) cuyo pa
 |---|---|---|---|
 | Crecimiento año 1 | B26 | 6,0 % | después de FY2026 normaliza: hardware +3–4 %, Servicios +12 % |
 | CAGR años 2–5 | B28 | 5,5 % | Servicios 26 % → 33 % de la mezcla a ~11 %; hardware ~3 % |
-| Margen año 1 / objetivo | B27 / B29 | 36,6 % / 37,0 %, año 5 | parte del margen actual ajustado; +0,4 pb por mezcla de Servicios, compensado por I+D de IA (9,6 % de ventas, +32 % en FY2026) |
+| Margen año 1 / objetivo | B27 / B29 | 36,6 % / 37,0 %, año 5 | parte del margen actual ajustado; +0,4 puntos por mezcla de Servicios, compensado por I+D de IA (9,6 % de ventas, +32 % en FY2026) |
 | Ventas/capital 1–10 | B31–B32 | 3,0 | actual 2,67 (con I+D); industria 3,62 |
 | ROIC terminal | B48–B49 | 44,76 % | ventaja durable: promedio de la industria (regla del moat: gana sobre su costo de capital >3 años, ventaja identificable, sin erosión visible) |
 | Fracaso | B51 | No | riesgo en los flujos, no en la probabilidad |
-**Evidencia a favor:** ingresos FY2017–26 CAGR 8,5 %; Servicios con margen alto y recurrente; ROIC actual 81 %; recompras 86.390 y dividendos 15.721 en FY2026. **En contra:** FY2026 es un año atípico (iPhone +21 %); regulación de App Store (UE, EE. UU.); pagos de Google por búsqueda (~20.000, riesgo judicial); aranceles y China (Greater China +28 % en FY2026 tras −3 % en FY2025). **Objeción más fuerte a la Base:** un margen de 37 % a diez años exige que Servicios compense la presión sobre comisiones y el costo de I+D de IA; la historia Conservadora recoge ese riesgo.
+**Evidencia a favor:** ingresos FY2017–26 CAGR 8,5 %; Servicios con margen alto y recurrente; ROIC actual 81 %; recompras 86.390 y dividendos 15.721 en FY2026. **En contra:** FY2026 es un año atípico (iPhone +21 %); regulación de App Store (UE, EE. UU.); pagos de Google por búsqueda (del orden de 20.000 anuales, dato público no verificado en esta revisión; riesgo judicial); aranceles y China (Greater China +28 % en FY2026 tras −4 % en FY2025). **Objeción más fuerte a la Base:** un margen de 37 % a diez años exige que Servicios compense la presión sobre comisiones y el costo de I+D de IA; la historia Conservadora recoge ese riesgo.
 **Disparadores:** (1) ruptura: ingresos de Servicios <+8 % dos trimestres seguidos; (2) cambio: margen operativo trimestral <33 %; (3) desplazamiento: caída de la base instalada o de la tasa de renovación de iPhone.
 
 ### Conservadora · «Erosión del ecosistema» (25 %)
@@ -55,7 +55,7 @@ Regulación y competencia reducen comisiones de App Store y los pagos de búsque
 | Palanca | Celda | Valor | Vínculo |
 |---|---|---|---|
 | Crecimiento año 1 / CAGR 2–5 | B26 / B28 | 2,5 % / 2,0 % | hardware plano, Servicios +6 % |
-| Margen año 1 / objetivo | B27 / B29 | 35,5 % / 31,0 % año 5 | −5,5 pb: comisiones, pérdida de ~20.000 de pagos de búsqueda, aranceles |
+| Margen año 1 / objetivo | B27 / B29 | 35,5 % / 31,0 % año 5 | −5,5 puntos: comisiones, pérdida de pagos de búsqueda (del orden de 20.000 anuales, no verificado), aranceles |
 | Ventas/capital | B31–B32 | 2,4 | más capital por dólar de ventas (cómputo para IA) |
 | ROIC terminal | B48 | No → costo de capital | la erosión de la ventaja se refleja aquí (regla del moat) |
 | Fracaso | B51–B54 | Sí · 5 % · 60 % del valor | desplazamiento de la plataforma; **solo en esta historia** |
@@ -73,7 +73,7 @@ El ciclo de IA genera renovaciones de iPhone más frecuentes y nuevas categoría
 
 ### Pruebas 3P (señales de `Diagnostics`; el juicio es mío)
 - **Posible:** participación de mercado **N/D** (no hay TAM homogéneo y confiable para smartphones + servicios digitales; no se inventa). Ventas del año 10: 787.302 (Base) frente a 478.834 hoy.
-- **Plausible (Base):** margen año 10 37,0 % frente a 22,5 % de la industria *Computers/Peripherals*: **REVISAR**, sustentado por el ecosistema y el 26 % de Servicios (la propia Apple ya gana 36,5 % ajustado hace tres años); ventas/capital 3,0 frente a 3,62 de la industria: ok; ROIC terminal 44,76 % = industria: ok; ROIC del año 10 de 80 % frente a 44,76 % terminal: la eficiencia transitoria no se perpetúa. Juicio: **Con reserva** por margen.
+- **Plausible (Base):** margen año 10 37,0 % frente a 22,5 % de la industria *Computers/Peripherals*: **REVISAR**, sustentado por el ecosistema y el 26 % de Servicios (la propia Apple ya gana 36,5 % ajustado en FY2026 (la historia no exige que lo supere en más de 0,5 puntos)); ventas/capital 3,0 frente a 3,62 de la industria: ok; ROIC terminal 44,76 % = industria: ok; ROIC del año 10 de 80 % frente a 44,76 % terminal: la eficiencia transitoria no se perpetúa. Juicio: **Con reserva** por margen.
 - **Probable (Base):** CAGR 5,5–6,0 % frente a 6,7 % de la industria y 8,5 % histórico de Apple; el valor de los 10 años es 36 % del total y el terminal 64 %. Juicio: **Sí**.
 
 ## DCF inverso y sensibilidades (hoja `Sensibilidades DCF` del libro Base)
