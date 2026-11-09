@@ -161,3 +161,64 @@ Las cifras externas se registraron como comparables **diagnósticos sin peso ofi
 - **Bloqueos F3**: resultados netos por negocio, costos corporativos y eliminaciones, capital elegible/RWA por institución Mercado Pago, caja excedentaria Commerce, deuda completa por perímetro, valoración de I+D (proxy), beta/ERP/riesgo país y Ke/WACC verificados, RSU y tres escenarios OFICIALES + múltiplos. Ausencia de los datos impide acotar SOTP Base con calidad publicable. **CANDIDATO; sin publicación, sin nueva revisión; F5 independiente posterior**.
 
 Identidad y herramientas: GPT-6 en ChatGPT; web SEC, AZ y pares, conectores Google Sheets/Docs, GitHub; cálculos independientes de verificación. No Work ni validadores Python/Node del repositorio, ni despliegue. Cambios por Sheets en H2 y por Google Docs en el documento N1/N2; no se alteró el modelo Damodaran ni se certificó un guardrail no ejecutado.
+
+
+## F3 · Revaloración integral V4 con ROIC/S-C coherentes y IF.data Brasil (8-nov-2026)
+
+**Este apartado actualiza y prevalece sobre las cifras y supuestos condicionales V1–V3 del mismo expediente MELI-FLOYD-3T26-R1, PR #260, rama meli-floyd-3t26-r1. NO es una nueva revisión/libro.** H1 existente 19 hojas, H2 existente 45 pestañas, motor Damodaran y libro R&D/leases conservados. H1 añejo de SEC intacto salvo nueva fuente regulatoria brasileña **`Mercado Pago!A30:E52`**; H2 `Tesis de Inversión y Supuestos!A121:L584` contiene el SOTP condicional vivo. `Input sheet!A1`, `Valuation output`, y Base/MOS oficial siguen en N/D/PLANTILLA por compuertas económicas.
+
+**Hechos primarios**: FY2016 ventas US$844,396m a FY2025 US$28.893m = CAGR histórico 48,07%; FY2021-25 CAGR 42,19%; 9M2026 ingresos 29.764m vs 20.134m = +47,83%. Q3 +45% ventas; Commerce+47%, Fintech+42%, Ads+58%, EBIT margin consolidado6,3% bajo inversión en logística/envíos/marketing. LTM Commerce US$21.749m, Fintech US$16.774m, EBIT grupo US$2.859m, NI grupo US$1.890m. [Carta SEC Q3'26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm). No extrapolar 45% por 10 años ni convertir NI de grupo en NI de Fintech.
+
+**Historia de supuestos V4, coherente bajo Damodaran**. EBIT inicial Commerce 8% LTM en TODAS las historias —hipótesis no publicada, mejor que usar tres históricos incompatibles—; NOPAT operacional residual Fintech+corporativo tras 28% impuesto supuesto. Tasa USD fija entre las tres: WACC Commerce 11,4%, Ke Fintech13,7%, g perpetuo3,5%, impuestos28%; US 10Y 6-nov-26 ~4,86% y ERP Damodaran inicio octubre26 3,70% son ANCLAS de referencia, no tasas por negocio derivadas completamente. Falta beta bottom-up, país, leverage y escudos fiscales por entidad, por tanto tasas no oficiales.
+
+| Parámetro | Conservadora | BASE | Optimista |
+|---|---:|---:|---:|
+| Commerce crecimiento ingresos 1 año desde 3T26 LTM | 24% | **32%** | 36% |
+| Commerce crecimiento anual años2–5 | 17% | **23%** | 26% |
+| Commerce crecimiento año10 | 4% | **5%** | 6,5% |
+| Commerce margen EBIT inicial | 8% | **8%** | 8% |
+| Commerce margen EBIT año10 | 10,5% | **14%** | 16% |
+| Sales-to-capital MARGINAL años1–5 | 1,70× | **2,00×** | 2,30× |
+| ROIC terminal Commerce | 11,5% | **15%** | 17% |
+| S/C marginal año10 = ROIC/[margen EBIT(1-tax)] | 1,52× | **1,49×** | 1,48× |
+| Fintech+corp crecimiento resultado operacional residual año1 | 18% | **32%** | 36% |
+| Fintech+corp crecimiento resultado residual años2–5 | 16% | **24%** | 29% |
+| Fintech+corp crecimiento resultado residual año10 | 4% | **5%** | 7% |
+| ROE incremental proxy Fintech+corporativo | 17% | **19%** | 26% |
+| ROE terminal proxy | 13% | **14%** | 18% |
+| Fintech ventas crecimiento año1 / años2–5 / año10 | 24/18/4% | **34/24/6%** | 40/28/8% |
+| Crédito bruto crecimiento año1 / años2–5 / año10 | 20/15/5% | **28/22/8%** | 35/28/10% |
+| Piso económico capital retenido ∕ variación de crédito bruto | 15% | **12%** | 10% |
+
+**Corrección CRÍTICA**: Original `Commerce FCF = NOPAT − Δventas/S-C` mantenía S/C año10 2× y márgenes 12%, lo que implicaba ROIC incremental ~20,16% frente ROIC terminal declarado 14%. En V4 el S/C de año 10 **se deriva** de ROIC_terminal/[EBIT_margin_terminal(1−tax)] y años6–10 se interpolan desde S/C marginal años1–5. Identidad `ROIC incremental año10 = EBIT(1−tax)×S/C = ROIC terminal`, **cero diferencia en 3 historias**, sin salto en reinversión. Fintech retiene **MAX(Δresultado/ROE marginal; Δcartera bruta×ratio de capital ilustrativo)** por año. Ese piso NO es RWA ni requisito regulatorio, no define accionistas libres; el año10 Base préstamos brutos hipotéticos US$95.650m y ingresos totales proyectados US$214.520m (CAGR LTM→2036 **18,7%**, ambicioso y sujeto a TAM); no tratar como predicción SEC. La plataforma lleva explícitos ingresos Fintech, NI margin proxy, crecimiento de cartera y capital retenido en 10 años.
+
+**Capital bancario real de BRASIL, no proxy conglomerado MELI**: BCB IF.data, conglomerado `MERCADO PAGO IP - PRUDENCIAL` código 1000084820, Jun2026, activos R$125.043m, patrimonio R$6.990,576m, capital PR~R$6.985,1m, RWA~R$50.440m, Basilea~13,85%, mínimo citado10,5%, exceso aritmético R$1.688,9m (**NO capital distribuible**). Crédito R$33.700m, depósitos/captaciones R$75.181m, beneficio 1S26 R$104,257m; ROE2025 anual según una fuente IFdata ~12,0%, ROE parcial 2026 ~3,6%, ROE trailing según otro cálculo ~6,99%: **convenciones distintas; NO promediarlas ni llamar eso ROE consolidado Mercado Pago**. Por prudencia ROE marginal BASE reducida 22→19% y terminal 15→14%, sin convertir BRL a USD ni copiar Basilea sobre el ratio capital/cartera. Fuente primaria [IF.data BCB](https://www3.bcb.gov.br/ifdata/), referencias de reproducción: [DadosBancarios](https://www.dadosbancarios.com.br/instituicao/mercado-pago-ip-prudencial-1000084820/), [RendaFixa](https://rendafixa.finance/relatorios/instituicao/mercado-pago-ip-1000084820).
+
+### Valores actuales de tres historias — estimaciones CONDICIONALES, nunca oficiales
+
+| Historia | VP Commerce FCFF (US$m) | VP Fintech+corporativo FCFE proxy (US$m) | Bonos holdco a restar una vez (US$m) | US$/acción | MOS condicional 35% |
+|---|---:|---:|---:|---:|---:|
+| Conservadora | 17.466,30 | 8.271,87 | 2.253 | **444,72** | 289,07 |
+| BASE | **42.059,11** | **12.026,23** | 2.253 | **1.022,40** | **664,56** |
+| Optimista | 65.323,95 | 19.296,85 | 2.253 | **1.624,71** | 1.056,06 |
+| Esperado ponderado | — | — | — | **1.028,92** | NO aplicar |
+
+Equity Base condicional US$51.832,34m / acciones 50,696802m, precio de referencia 6-nov26 US$1.510; Base **−32,3%** frente a mercado, no ajustar valor a AZ US$2.339. Historial guardado: V1 Base908,88 (utilidad residual NI mezclada); V2=971,35 normalizada NOPAT; V3=1.053,41 primera reconvergencia sin IF.data; V4=1.022,40 revisando ROE Brasil. El modelo no suma caja libre adicional por no tener liberación validada; se resta bono corporativo por suposición US$2.253m, **US$6.773m de deuda sin asignar** permanece material. V4 no puede denominarse FCFE puro bancario si la utilidad residual incluye corporativo y falta patrimonio exigible/regulatorio por entidad.
+
+### Sensibilidades y QA de V4
+
+Todas las 4 matrices 5×5 del H2 tienen **centro exacto US$1.022,3986** (no extrapolación lineal de S/C):
+- WACC Commerce 9,4–13,4% × margen EBIT terminal 10–18%: rango **US$519–1.985**.
+- Ke Fintech 11,7–15,7% × ROE marginal 13–25%, preservando piso de crédito: **US$875–1.174**.
+- ROIC terminal 11–19% × S/C marginal temprano1,5–2,5×, convergencia permanente: **US$745–1.186**.
+- WACC Commerce9,4–13,4% × g terminal USD1,5–5,5%: **US$719–1.870**.
+- DCF inverso numérico 26 bisecciones: margen Commerce año10 **20,1011%** para igualar precio US$1.510, resto constante, error numérico US$0,000023/acción. Base supuesta solo14%; no elevar margen por cotización.
+- Salida de múltiplos Commerce 10×,12×,13×,15×,18× EV/EBITDA como control; EBITDA proxy usa D&A consolidada no desglosada por negocio. NO Base alternativa.
+- VP de perpetuidad representa **95,1%** del VP Commerce y **79,3%** del VP Fintech, dependencia extrema de terminal y costo capital.
+- Resultado independiente de las fórmulas H2 verificado en Python con los mismos 3 conjuntos de hipótesis: Conservadora 444,7177, Base 1.022,3986, Optimista 1.624,7140; promedio 1.028,9195, MOS664,5591.
+- `Tesis!B537:D537=0` convergencia ROIC en 3 historias, retención financiera mínima válida (márgenes >0 en `B538:D538`), `B550:D550=MECÁNICO OK`; 4 puntos de conciliación adjusted FCF del emisor cero, Input A1 vacío, huella registrada 0/1.883.
+- Barrido amplio nativo de las **44 pestañas NO puente**: se inspeccionaron ~**24.407 fórmulas**, cero errores y ninguna referencia a hojas históricas eliminadas (filas principales ≤310; Tesis hasta605; Huella1884; sensibilidad hasta3600). Esto **NO es auditoría financiera/QA CI independiente**.
+
+### Estado oficial
+
+**CANDIDATO y PR #260 abierto en draft**. No se modificó `Valuation output`, los 3 escenarios oficiales ni `valorPrincipal`, no se fusionó ni publicó. F3 todavía requiere: EBIT Commerce realmente atribuido, utilidad de bancos Mercado Pago por país, saldos RWA y capital elegible / buffers / excedentes transferibles, créditos e impuestos intragrupo, caja y deuda por perímetro, WACC y Ke con beta/ERP/país y ponderaciones verificadas, RSU, cinco múltiplos independientes oficiales y gates. Los datos brasileños parciales no se suman al equity de MELI ni permiten F4 publicación. F5 reservada.
