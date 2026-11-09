@@ -18,10 +18,21 @@
 
 Los cinco libros son copias directas de Drive de plantillas ya verificadas (motor Ginzu original sin cambios; 0 errores en H y M). La carpeta ya contenía tres archivos Floyd de un intento previo (`AAPL-FLOYD-FY26-R1`); **no se usan como insumo** y no se modificaron.
 
-## Mercado y tasas
-- **Tasa libre (Treasury 10 años), 2026-11-06:** 4,86 % (FMP `treasury-rates`).
-- **Alerta:** `JMR-valuation/reference/corte_vigente.json` registra Rf = 5,29 % al 2026-09-30 como «FRED DGS10»; ese valor coincide con el Treasury a 20 años de FMP (5,29 %), no con el de 10 años. Verificar contra FRED antes de usar esa referencia en otras empresas.
-- **Prima de riesgo (ERP): decisión pendiente para R3.** El repositorio registra 3,70 % como ERP de mercado maduro (Damodaran, oct-2026); la búsqueda web da 4,14 % de ERP implícita del S&P 500 al 1-sep-2026, y no se localizó el dato de nov-2026. En el libro DCF la hoja `Country equity risk premiums` usa un ERP maduro en B1.
+## Mercado y tasas (verificadas el 2026-11-09)
+- **Tasa libre (Treasury 10 años, FRED DGS10):** 4,86 % el 2026-11-06, la fecha del precio. Coincide exactamente con FMP `treasury-rates`. FRED aún no publica el 9-nov; FMP da 4,88 % ese día (referencia). Se usa **4,86 %**, alineada con el precio.
+- **Corrección a la versión anterior de esta entrega:** `JMR-valuation/reference/corte_vigente.json` (Rf 5,29 % al 2026-09-30) **es correcto**: FRED DGS10 de ese día es 5,29 %. La sospecha de que fuera el Treasury a 20 años era un error de comparación. No hay nada que corregir.
+- **Prima de riesgo de Damodaran (archivos oficiales descargados de `pages.stern.nyu.edu/~adamodar/pc/implprem/`):**
+  | Dato | Oct-2026 | **Nov-2026** |
+  |---|---|---|
+  | S&P 500 al inicio del mes | 7.651,54 | **7.580,07** |
+  | Treasury 10 años usado | 5,29 % | **4,94 %** |
+  | ERP implícita con Treasury como tasa libre (calculadora C45) | 3,70 % | **3,387 %** |
+  | ERP implícita con tasa libre ajustada por riesgo de default (C44) | 3,917 % | 3,607 % (tasa libre ajustada 4,72 %) |
+  | Rendimiento esperado implícito del S&P 500 | 8,99 % | 8,33 % |
+  El 3,70 % del repositorio (`erp_madura`) es el C45 de octubre, así que el repositorio sigue la práctica «ERP implícita del mes con el Treasury como tasa libre».
+  Otras variantes de la serie mensual de noviembre: T12m 3,79 %; con pago sostenible 4,41 %; suavizada 5,81 %; normalizada 3,39 %; rendimiento neto de caja 3,43 %.
+- **ERP propuesta para R3: 3,387 %** (nov-2026, C45), con Treasury 4,86 %. Es una entrada de `Country equity risk premiums!B1`, que en el original de Damodaran dice 4,23 % «actualizado el 1-ene-2026»; el propio original indica que cambiar B1 actualiza todas las primas por país. **Pendiente de confirmación del usuario** antes de escribirla en los libros DCF. Las primas por país de esa hoja (enero 2026) no se tocan.
+- Nota: Moody's rebajó a EE. UU. a Aa1 en 2025; Damodaran reporta también una versión con tasa libre ajustada (4,72 % y ERP 3,607 %). La suma tasa libre + ERP queda casi igual (8,25 % frente a 8,33 % implícito).
 
 ## Idoneidad del motor
 AAPL es una empresa operativa con FCFF positivo, sin banco ni holding. Idoneidad Simple Ginzu FCFF: **sí**.
@@ -36,8 +47,8 @@ AAPL es una empresa operativa con FCFF positivo, sin banco ni holding. Idoneidad
 | Copias creadas y aisladas | APROBADO (IDs verificados en Drive) |
 | Guía y empresa del libro H cargada | APROBADO |
 | Integridad del motor DCF en las copias | APROBADO por herencia de la plantilla verificada; **no se re-verificó cada copia** |
-| Rf verificada | PARCIAL (una sola fuente: FMP) |
-| ERP definida | NO_EJECUTADO (pendiente de decisión) |
+| Rf verificada | APROBADO (FRED DGS10 y FMP coinciden: 4,86 % al 2026-11-06) |
+| ERP definida | PARCIAL (propuesta 3,387 %, nov-2026, Damodaran C45; falta confirmación y no se ha escrito en los libros) |
 | Análisis con plantilla Reboot | NO_EJECUTADO (plantilla Floyd provisional) |
 | `PASOS` | 6/6 de R1 · `AISLAMIENTO=OK` solo para los cinco libros |
 
