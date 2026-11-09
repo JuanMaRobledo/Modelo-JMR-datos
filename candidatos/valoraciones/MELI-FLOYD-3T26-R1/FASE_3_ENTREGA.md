@@ -106,3 +106,58 @@ Inverso **parcial**, no oficial: mantener hipótesis resto y resolver por sensib
 - **F3 oficial queda PENDIENTE.** Para convertir la simulación en una valoración SOTP oficial es obligatoria una separación con fuentes por entidad de EBIT Commerce, utilidad y patrimonio Fintech, capital regulatorio/distribuible, deuda y saldos internos, costo de capital auditable, historias y múltiplos aplicables. No se cambia `valorPrincipal` ni `baseMOS` del catálogo.
 
 Identidad del ejecutor: GPT-6 en ChatGPT, herramientas Google Sheets, GitHub y consulta SEC. No se usó Claude, Work, Node/Python de repositorio, Vercel ni app para publicar. La cifra es ilustrativa, no recomendación de inversión.
+
+
+## F3 · conciliación cruzada AZ Stocks/SEC y corrección del proxy Fintech (8-nov-2026)
+
+**Este cierre actualiza y prevalece sobre el contraste condicional previo**, sin borrar las cifras antiguas ni cambiar el motor oficial. Se trabajó exclusivamente en la misma H1 de 19 pestañas, H2 de 45 y este PR #260; no se crearon libros/revisiones. Origen: [H1](https://docs.google.com/spreadsheets/d/1TF8KaMkn-Wc3csoCK1z9-IierhPhOBZwwdX7fiBYN6Q/edit); [H2](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit). Datos SEC Q3 2026 y FY2025, consultas 8-nov-2026. En H2 las fórmulas del análisis viven en `Tesis de Inversión y Supuestos!A121:H430`; el SOTP official `B69`, `Input sheet!A1`, `Valuation output`, `Escenarios e historias` y las compuertas financieras no se activaron.
+
+### 1. Actualización de la tesis AZ Stocks: problemas de fecha/método
+
+[AZ Stocks, 12-jul-2026](https://azstocks.substack.com/p/mercadolibre-english-version) publica una **Base US$2.339/acción**, 40% DCF de perpetuidad (g 2,5%) y 60% DCF terminal a 13× EV/EBITDA; WACC 11,6%; deuda neta US$6.712m a corte anterior. Ventas FY2026 +37%, EBIT FY2026 8%, EBIT terminal **15,8% del CONSOLIDADO**; CAPEX/ventas 5,2% FY26 descendiendo. No equivale a un SOTP FCFF Commerce + FCFE Mercado Pago y NO es precio actualizado a 3T26.
+
+Datos SEC: FY25 ingresos 28.893m, 9M25 20.134m, 9M26 29.764m, Q4'25 8.759m; ingresos 3T26 10.750m (+45,1% interanual), EBIT 676m (6,3%); EBIT 9M26 1.970m. El escenario AZ FY26 +37% implica ventas 39.583,41m, Q4'26 9.819,41m, **+12,1% interanual**. Su FY26 EBIT 8% exige Q4 EBIT 1.196,67m y **margen Q4 12,2%**, muy distinto a 6,3% en Q3. **No es imposible**, pero sin evidencia del rebote no es una Base contemporánea. La comprobación alternativa Q4 ventas +40%/EBIT Q4 7,5% implica FY26 ventas 42.026,6m (+45,5%) y margen EBIT FY26 6,88%; ambos son SUPUESTOS ilustrativos, no guía SEC. Todo queda por fórmula en `Tesis!B314:B336`.
+
+### 2. Conciliación obligatoria de caja: 4 de 4 períodos a cero
+
+SEC FY25 y [carta Q3 2026](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm): en 9M26 (US$m) **8.687 CFO + 38 ajuste − 3.574 fondos restringidos − 1.215 CAPEX − 6.212 nueva cartera + 2.719 fondeo Fintech = 443 ajustado**. FY25=1.481, 9M25=718, LTM=1.206, todos con residuo 0 en `Tesis!B341:E349` y en H1 `Mercado Pago!B3:G11`. En cambio CFO−CAPEX GAAP 9M26=7.472 y LTM=12.254, un factor LTM **10,16×** sobre el ajustado (brecha **US$11.048m**). El FCF simple/OCF de varios modelos (y ratios P/FCF) es **no distribuible** si incluye flujos de clientes/crédito, independientemente de que la provisión haya sido no monetaria al devengo.
+
+La SEC también presenta 9M26 fondeo neto de Fintech **+2.719** y de Commerce+corporativo **+974**. GAAP neto de emisión/amortización de préstamos **+3.860**; diferencia de perímetro de caja **167** (FY25 57, 9M25 40, LTM 184). Eso ayuda a CLASIFICAR el flujo histórico, **no prueba el stock de pasivos atribuible por entidad al 30-sep-2026 ni el capital distribuible**. `Tesis!A350:F355` contiene los residuos. Sigue sin asignar US$6.773m en pasivos financieros del balance, que NO se imputan sin soporte.
+
+### 3. Corrección de normalización por intereses/FX/impuestos (no doble contar bonos)
+
+**Error demostrado del ejercicio previo:** se usaba "Fintech utilidad" = NI grupo (1.890) − Commerce NOPAT supuesto (1.096,15) = **793,85 US$m**. Esa NI incluía intereses/gastos corporativos y FX mientras los bonos de matriz US$2.253m se deducían por separado del EV Commerce; la interpretación mezclaba FCFF y FCFE.
+
+**Corrección ejecutada en `Tesis!B134:D134`:** NOPAT operativo residual = (EBIT grupo 2.859 − Commerce EBIT supuesto 1.522,43) × (1−28%) = **962,33 US$m**. El puente de US$168,48m se atribuye exactamente a ingreso financiero LTM +120, gasto −235, FX −174, y diferencia entre impuesto GAAP 680 y tributación normalizada a 28%; resultado antes de impuestos 2.570 y neto 1.890, ambos conciliados; `Tesis!B375=0`. **Importante**: 962,33 es un proxy operativo mixto **Fintech+corporativo**, NO utilidad Fintech revelada, no FCFE distribuible ni ROE por entidad. Se conserva un solo cargo por bonos dentro de las hipótesis y el riesgo de atribución de deuda no se resuelve por la sola normalización.
+
+Resultados condicionales después de la corrección (US$/acción):
+
+| Historia | Antes | Después | MOS hipotético al 35% |
+|---|---:|---:|---:|
+| Conservadora | 359,48 | 393,31 | 255,65 |
+| Base | **908,88** | **971,35** | **631,38** |
+| Optimista | 1.716,70 | 1.806,77 | 1.174,40 |
+| Esperado ponderado | 977,29 | **1.039,48** | NO corresponde |
+
+La Base sube US$62,47/acción solo por normalización; el supuesto central 7% EBIT Commerce, ROE/Ke Fintech, 11,2% WACC Commerce y 14% ROIC terminal permanecen hipótesis, sin separación fuente. Respecto a cotización de corte US$1.510, la Base es ~−35,7%. Base/MOS oficiales permanecen N/D y sin publicación. Historial antes→después en `Tesis!A360:C384`. Huella del motor oficial no alterada.
+
+### 4. Atribución verificable de la diferencia con AZ: terminal
+
+Sin tocar el crecimiento ni reinversión de JMR, `Tesis!A408:F421` aplica el **13× EBITDA de AZ al terminal de Commerce exclusivamente** (NO al consolidado de AZ). Commerce año 10 ventas 100.563,95m, EBIT 12.067,67m; D&A/ventas proxy 2,81% de LTM consolidado (no SEC segmentado) ⇒ EBITDA 14.892,23m. VP terminal Commerce por perpetuidad **31.008,52m**, a 13× EBITDA **66.966,11m**, **delta +35.957,60m = +US$709,27 por acción**; con el peso 60% de AZ aplicado SOLO a esta palanca, Base condicional alterna aprox **US$1.396,91**, frente a 971,35; **31,1% de la brecha** contra 2.339 se explica por terminal/método bajo este experimento. No atribuir el 68,9% restante a margen, tasa o ROE sin calcular cada contrafactual de perímetro homogéneo. La aplicación de 13× **no convierte** la cifra JMR en Base válida.
+
+### 5. Contraste de otros modelos y sesgos de caja
+
+- [Alpha Spread](https://www.alphaspread.com/security/nasdaq/meli/summary) muestra una cifra online aprox US$3.184,08 y un [modelo FCFE](https://www.alphaspread.com/security/nasdaq/meli/dcf-valuation) con descuento 8,6%, crecimiento 21,6%, net margin 4,9→7,6%, siete años y salida 1,7× ventas. No equivale a tasas ni flujos Floyd; la cifra publicada previamente como 3.306 no es la página consultada ahora.
+- [Manfredi Investment](https://manfredinvestment.com/informes/meli) (corte 2T26) DCF Base ~US$1.957,44 con WACC 12%, g 3%, FCF ≈ ventas × (margen OCF − CAPEX/ventas). La metodología que proyecta CFO temprano **no resuelve el financiamiento de cartera ni fondos clientes**; ancla CFO LTM junio ~13.905m y presupone margen OCF año 1 32%, distinto de flujo ajustado LTM Sep de solo 1.206m. No trasladar su cash flow a FCFE.
+- [Faircurve](https://faircurve.io/research/MELI) 7-nov-2026 US$1.755,07: múltiplos forward EV/EBITDA, 2.000 simulaciones, pares mayormente retail, no son financieros latinoamericanos. Reporta FCF/net income 6,21× como calidad; por las notas SEC ese dato requiere ajustar depósitos/clientes/crédito antes de interpretarse como caja del accionista.
+- [SweetValueLab](https://sweetvaluelab.com/stocks/meli) modelo 5 años perpetuo ≈US$1.523,33 vs 10 años ≈US$2.213,69; gran sensibilidad a horizonte/salida, mismo riesgo de ratios de FCF sin limpieza crediticia. Datos de página dinámica, snapshot consulta 8-nov-2026.
+
+Las cifras externas se registraron como comparables **diagnósticos sin peso oficial** en `Tesis!A387:F430`.
+
+### 6. Estado, pruebas y salvedades
+
+- QA nativo Sheets: EBIT→NI según SEC 2.859 + 120 −235 −174 −680 = 1.890; impuestos y NOPAT residuo 0; ajustes CFO 4/4 = 0; centros de matrices 5×5 tras recalcular = Base condicional; tasas terminales WACC Commerce − g=7,2pts; Ke Fintech − g=9,8pts. Huella registrada 0/1.883; compuertas `0/3 LISTO`, `PLANTILLA` por `Input sheet!A1` deliberadamente vacío.
+- **Materialidad** §4B: efectos separados superiores al 2% (normalización +US$62,47, valor terminal +US$709,27, deuda no atribuida hasta −US$133,60/acción). Ninguno es inmaterial; no son recomendaciones de ajustes sin atribución financiera.
+- **Bloqueos F3**: resultados netos por negocio, costos corporativos y eliminaciones, capital elegible/RWA por institución Mercado Pago, caja excedentaria Commerce, deuda completa por perímetro, valoración de I+D (proxy), beta/ERP/riesgo país y Ke/WACC verificados, RSU y tres escenarios OFICIALES + múltiplos. Ausencia de los datos impide acotar SOTP Base con calidad publicable. **CANDIDATO; sin publicación, sin nueva revisión; F5 independiente posterior**.
+
+Identidad y herramientas: GPT-6 en ChatGPT; web SEC, AZ y pares, conectores Google Sheets/Docs, GitHub; cálculos independientes de verificación. No Work ni validadores Python/Node del repositorio, ni despliegue. Cambios por Sheets en H2 y por Google Docs en el documento N1/N2; no se alteró el modelo Damodaran ni se certificó un guardrail no ejecutado.
