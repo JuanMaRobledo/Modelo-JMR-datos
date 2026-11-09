@@ -1,3 +1,25 @@
+## CAMBIO DE ARQUITECTURA · 9-nov-2026 · PREVALECE SOBRE LOS VALORES Y MOTORES MANUALES ANTERIORES
+
+**Orden vigente:** repetir MELI usando las HOJAS de Damodaran y el protocolo JMR Floyd. Commerce = Simple Ginzu FCFF original de la Maestra Floyd; Fintech = `fcfebankvaluation.xlsx` original de Damodaran con módulo de pagos operativos separado; SOTP = maestra JMR con siete múltiplos, anclas FY+1/2/3 y sensibilidad propia. **No reutilizar los valores anteriores US$815,67 / US$1.154,65 / US$1.029,59 como valor intrínseco vigente.** Misma revisión `MELI-FLOYD-3T26-R1`, mismo PR #260, sin activar catálogo ni publicar.
+
+**Artefactos activos en Drive** `AAA Finanzas/Modelo JMR Floyd/Análisis/MELI`:
+- Commerce, copia del maestro Floyd con 54 pestañas, motor Ginzu, convertidores y múltiplos: https://docs.google.com/spreadsheets/d/1YDbKTtQ7bGnvw3tsjXIp_Lm74hh_DTBpGrubtsOVuYc/edit
+- Fintech, insumos SEC y controles **A LA ESPERA DE IMPORTAR EL XLSX ORIGINAL**: https://docs.google.com/spreadsheets/d/1LKPNVkdLSz_MsaOcpB1XG2S1Yg20BGtlDnNxsxen__g/edit
+- SOTP, copia de la maestra Floyd con pestañas `MELI · SOTP`, `MELI · Vínculos`, `MELI · Múltiplos`, `MELI · Auditoría`: https://docs.google.com/spreadsheets/d/1Jr6UH6FAjx-cqrEcENXOeLLZHqBkgEFk_4bZlTxzxlU/edit
+- Documento de control y fuentes: https://docs.google.com/document/d/1mAJMvf-6As-RiyP6Xg3ACCoiot47gssHJz3uODWd6ks/edit
+- FUENTE FÍSICA FINANCIERA DE NYU: https://pages.stern.nyu.edu/~adamodar/pc/fcfebankvaluation.xlsx
+
+**Ejecutado y verificado:** copia simple Ginzu maestro sin sustituir fórmulas, `Control de integridad!B3 = 0 diferencias / 1883 fórmulas`, modo PLANTILLA, 0/3 historias LISTO. Se cargó a `Income Statement!K3/L3` Commerce FY2025 US$16.294m y LTM US$21.749m desde cuentas SEC por fórmula. En `K12/L12` EBIT a margen8% explícitamente **proxy**, no resultado SEC de Commerce; `Input sheet!B25` tasa futura 20% solicitada; `Escenarios e historias` drivers vinculados a `MELI Comercio Supuestos`, sin activar `Input sheet!A1` por faltantes. Fintech: LTM servicios+POS US$8.213m y crédito8.561m, total US$16.774m, con TPV LTM380.633m, pero no hay NI crediticia ni capital requerido reportado. SOTP importó desde Commerce las celdas de EV operativo oficiales `Valuation output!B26/B77/B128`, todavía N/D según gates; puente N/D correctamente. Siete pestañas y matriz de múltiplos originales conservadas, datos de peers y anclas no inventados. Todos en CANDIDATO.
+
+**Bloqueo de origen verificado:** `fcfebankvaluation.xlsx` es el archivo oficial adecuado indicado expresamente por Damodaran para financieras con FCFE/dividendos potenciales (clase NYU 2025); **no se pudo obtener/importar su contenido binario en la sesión**, y no se ha afirmado haber restaurado fórmulas originales en el libro Fintech. El módulo `Motor Bank FCFE` del libro Fintech tiene un registro de parámetros y N/D, **no es una réplica numérica**. Próxima entrada necesaria: XLSX original de NYU disponible como archivo. Se conserva la fuente y su enlace para importar sin reconstrucción falsa.
+
+**Siguientes gates:** obtener/aislar EBIT Commerce y resultado/capital Reg crediticio; separar ingresos de processing/float/interés; I+D, leasing y ROIC incremental por negocio; WACC/Ke CRP homogéneos; CAPEX, senior debt/caja libre/RSU por perímetro; proyecciones originales F3; múltiplos comparables y anclas FY+1/2/3; matrices5×5; N1/N2 íntegros F4 y auditoría F5. No fusionar, no catálogo, no aplicación hasta paso de controles.
+
+**Retiro reversible comprobado:** H2/Doc viejos y luego 3 libros simplificados Commerce/Fintech/SOTP y su nota se trasladaron a `Archivo · valoraciones MELI sustituidas` dentro de la misma carpeta de MELI, sin eliminación irreversible:
+https://drive.google.com/drive/folders/1hoaCU-zqr8OuAQGZmch9een0AP_DhnCe
+
+---
+
 ## NOTA DE ALCANCE · 9-nov-2026 · ARQUITECTURA VIGENTE
 
 **Los análisis narrativos anteriores en este archivo son antecedentes históricos.** El valor base US$815,67 (SOTP anterior) y el experimento US$1.154,65 (todo MELI Commerce) están RETIRADOS; no son la valoración sectorial vigente. Se reemplazaron los libros, con autorización expresa del usuario, conservando la revisión `MELI-FLOYD-3T26-R1`.
