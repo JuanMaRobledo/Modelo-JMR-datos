@@ -59,3 +59,12 @@ Se actualizó **el mismo** Google Doc Nivel 1/Nivel 2 y `ANALISIS_N1_N2.md` para
 **F4 SIGUE NO COMPLETADA:** faltan importes del SOTP oficial, N1/N2 cuantitativos de esos importes, matrices, valor inverso, anclas, gates de MELI, JSON de publicación, catálogo y QA de app. `Input sheet!A1` está en blanco a propósito porque activarlo antes de completar la economía producía errores de división por cero; ninguna valoración fue calculada. F5 queda reservada a auditor independiente. **No publicar ni pasar a EN_REVISION; estado CANDIDATO.**
 
 **Primer siguiente paso material:** publicar por fuente entidad los tres bloques de apertura de Fintech en `Tesis de Inversión y Supuestos!B81:F81, B93:F93, B105:F105`, el EBIT Commerce/corporativo y el resultado de Mercado Pago con eliminaciones, cargas de capital y fondeo. Ejecutar posteriormente los tres escenarios, SOTP, múltiplos, matrices, inverse DCF y validación de JSON/catálogo/visor sobre ese libro.
+
+
+## F4 · actualización por conciliación externa del 8-nov-2026
+
+El análisis Nivel 2 existente y el documento Google nativo fueron ampliados **sin cambiar los 14 capítulos del Nivel 1 ni los 12 apartados del Nivel 2**; el anexo reconcilia datos SEC FY25/3T26, AZ Stocks y otros valuadores con la hoja H2 de esta **misma revisión**.
+
+La simulación SOTP condicional de la Base fue **corregida de US$908,88→US$971,35/acción** por doble uso de intereses/FX corporativos frente a bonos. Conservadora393,31, Optimista1.806,77, esperado1.039,48, MOS condicional631,38; todas esas cifras son H2 Tesis, **no DCF/SOTP oficial**. Reconciliación NOPAT–NI 0, cuatro identidades FCF ajustado cero, 0 errores rango evaluado, huella registrada 0/1.883. Se documenta brecha AZ US$2.339 y terminal 13× EBITDA no equivalente a perpetuidad.
+
+**F4 sigue 0/3 oficial**: Base/MOS/esperado oficiales en Presentación H2 continúan N/D, Input A1 vacío por protección, 0/3 escenarios oficiales listos, sin nuevos JSON/catálogo/visor, sin publicación ni fusión. F5 reservada. [FASE_3_ENTREGA.md](FASE_3_ENTREGA.md) documenta controles realizados y no ejecutados.
