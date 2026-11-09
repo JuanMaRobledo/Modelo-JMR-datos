@@ -27,10 +27,10 @@ Fuente primaria: **XBRL del 10-K de la SEC** (`companyfacts`, CIK 0000320193; 10
 ## Ajustes y salvedades materiales
 1. **Split 4:1 (31-ago-2020):** acciones de FY2017 (promedio y cierre) y cierre de FY2018 no estaban reexpresadas en el XBRL; se multiplicaron por 4 para ser comparables con los precios ajustados. Con esto el EPS y la capitalización son consistentes.
 2. **Intereses FY2024–FY2026:** Apple dejó de divulgarlos por separado; cobertura de intereses sin dato.
-3. **Intangibles y goodwill:** no se presentan en el balance (están en otros activos no corrientes), pero las notas informan intangibles de 13.301 (FY2025) y 25.700 (FY2026). Quedaron sin separar; ratios tangibles sin dato. **Decisión pendiente del usuario.**
+3. **Intangibles (decisión del usuario: «hazlo con el 10-K»):** se separaron del balance con las notas del 10-K (`IntangibleAssetsNetExcludingGoodwill`): 13.301 en FY2025 y 25.700 en FY2026 (LTM igual a FY2026); «otros activos LP» baja en el mismo importe. Antes de FY2025 las notas no informan el dato. **Goodwill:** el 10-K no lo informa en ningún año; se trató como 0 solo en FY2025–26 y LTM, como **supuesto** para habilitar los ratios tangibles. Resultado: retorno sobre activos tangibles 36,5 %, intangibles/activos 0,06x y valor libro tangible por acción 5,94 en FY2026 y LTM; antes de FY2026 siguen sin dato. FMP muestra 20.278 de intangibles en FY2026 (definición distinta); manda el 10-K.
 4. **Residuales derivados (declarados):** otros activos LP, otros pasivos CP/LP, otros operativos/inversión/financiación del flujo de caja.
 5. **Signo de «otros ajustes» del flujo de caja** corregido tras el contraste con FMP (un ingreso no monetario positivo resta del flujo).
 6. **Alerta anterior retirada:** la tasa libre del repositorio (5,29 % al 30-sep) es correcta (FRED DGS10).
 
 ## Siguiente paso exacto
-R3: cargar en el `Input sheet` de los tres libros DCF las entradas desde H (ingresos, EBIT, deuda, caja, acciones, impuestos, etc., LTM = FY2026) y escribir las tres historias. Primero decidir si se separan los intangibles (punto 3) y definir la tasa de impuesto marginal, la beta/industria (Damodaran) y las historias con sus probabilidades.
+R3: cargar en el `Input sheet` de los tres libros DCF las entradas desde H (ingresos, EBIT, deuda, caja, acciones, impuestos, etc., LTM = FY2026) y escribir las tres historias. Definir la tasa de impuesto marginal, la beta/industria (Damodaran) y las historias con sus probabilidades.
