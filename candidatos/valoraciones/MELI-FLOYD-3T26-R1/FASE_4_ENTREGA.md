@@ -104,3 +104,16 @@ Se añadieron fórmulas enlazadas y matriz 5×5 `Tesis de Inversión y Supuestos
 **Estado: CANDIDATO.** Se efectuaron la lectura/escritura/relectura parcial de H2 y actualización documental. **NO_EJECUTADO:** CI de publicación de MELI, prueba integral del modelo, extracción JSON, fusión, despliegue, QA visual o auditoría F5. La orden de omitir Fintech **no** autoriza presentar Commerce EV/acción como valor oficial de MELI.
 
 **Primer siguiente paso exacto:** completar EBIT y costes corporativos atribuibles a Commerce, deuda neta segregada y WACC de la unidad; comprobar ajuste económico de flujos por servicios de pago prestados por Fintech antes de activar el FCFF principal y aspirar a EN_REVISION.
+
+
+## F4 · Anexo CONSOLIDADO 9-nov-2026 · no promoción
+
+9-nov-2026 · GPT-6/ChatGPT, conectores GitHub y Google Sheets/Docs. Corte SEC 30-sep-2026; referencia de mercado 6-nov-2026 (US$1.510). El usuario solicitó explícitamente una valoración de **MercadoLibre consolidado**, sin SOTP ni carve-out. Se ejecutó en el mismo H2, **única** simulación FCFE del grupo con ingresos Commerce+Fintech consolidados antes de NI y reinversión, diez años, tres escenarios Floyd y Ke común; la fuente nativa está en [H2 `Tesis de Inversión y Supuestos!A606:L757`](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit). Se añadieron 3 matrices 5×5 y controles.
+
+**Resultados leídos y confirmados:** Conserv US$257,92, Base US$499,72, Opt US$839,50 por acción; esperado US$525,66; MOS35% Base **US$324,82**, **TODOS CONDICIONALES**; precio referencia US$1.510 (6-nov-2026); Base −66,9%. NI grupo LTM US$1.890m, ingresos US$38.523m, ROE cierre ~23,05%; margen NI Base 4,3%→5,8%, ROE cierre 23,05%→16%, Ke14% supuesto y g4%. Proyecta patrimonio requerido US$77.763,39m año10; FCFE explícito VP negativo US$844,25m, TV PV positivo US$26.178,29m, terminal >100% del equity. **Hallazgo material, no error aritmético:** la necesidad de capital extrapolada no se ha demostrado por regulación/entidad y domina el valor. El resultado a US$500 no significa que el mercado valore MELI correctamente o incorrectamente sin verificar estos supuestos.
+
+**Reconciliación Sheets:** `Tesis!B715/B724/B733=0,0000` y `B650/B672/B694=0`; fuentes año0 enlazadas y matrices reproducibles; `Control de integridad!B2=PLANTILLA, B4=0/3 LISTO`, `Input sheet!A1` vacío. Los presupuestos regulados, dilución/SBC, Ke formal, contabilidad separada de pérdidas de crédito y coste de capital requerirán cierre.
+
+**CI/GitHub/visor:** los cambios de este tramo están confinados a H2 y este expediente; **NO_EJECUTADO** correr scripts CI integrales, extracción JSON, comparables y anclas, pruebas Vercel, QA de app o publicación. **Estado MELI-FLOYD-3T26-R1: CANDIDATO**, PR #260 se mantiene abierto/draft. Se conserva SOTP condicional anterior y Commerce-only como contrastes identificados, no valores oficiales. F5 independiente pendiente.
+
+**Siguiente paso exacto:** validar requerida reinversión patrimonial US$69.563,39m en Base con ROE/provisión/fondeo/activos por país + funcionamiento financiero de Commerce, recalcular costo patrimonial común y contrastar VI usando el método exacto, antes de proponer promoción.
