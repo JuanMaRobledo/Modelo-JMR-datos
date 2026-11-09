@@ -1,3 +1,18 @@
+## CAMBIO DE EXPEDIENTE POR ORDEN DEL USUARIO · 9-nov-2026
+
+**Nueva fuente para el análisis de MELI:** dos libros independientes Commerce / Fintech y un SOTP que los enlaza de forma automática (archivos y cifras en F3 al final). Documentación narrativa candidata: https://docs.google.com/document/d/1SbnSJdO-VHcW2j_E2WQCuifl8l8Sq3eP2KBB5og240o/edit
+
+**RETIRO CONFIRMADO DE CARPETA ACTIVA:** el H2 anterior (`1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0`) y el Google Doc anterior (`1bv2hPD1XvgVM2Vz3WjQdX8Sh1bLo0FXEhqPc3GZCxVk`) se **renombraron ARCHIVO y movieron** a `AAA Finanzas/Modelo JMR Floyd/Análisis/MELI/Archivo · valoraciones MELI sustituidas`:
+https://drive.google.com/drive/folders/1hoaCU-zqr8OuAQGZmch9een0AP_DhnCe
+No se borró definitivamente ningún respaldo ni se alteró H1 de fuentes históricas. Los enlaces antiguos siguen resolviendo pero **NO son vigentes**. La carpeta activa contiene solamente los tres libros de nueva valoración, la nueva nota y H1.
+
+**SOTP Base=US$1.029,586819; MOS35%=US$669,231432; CONS355,75; OPT1.852,49; esperado1.069,04**, todos CANDIDATO, no valor aprobado. Fintech book separa TPV-Pagos FCFF de crédito FCFE y evita restar fondos de clientes como deuda industrial. Usuario pide impuesto20% futuro; evita aplicar otra vez a NI crediticia.
+
+F4 no se certifica: falta cerrar EBIT/NI por vertical, CRP misma fecha, riesgo país, fondeo por entidad, caja libre, ajustes de opciones, I+D/leases y 5 múltiplos, análisis de14 capítulos/12 apartados actualizado con datos de nuevos libros, gates Sheets→JSON→visor y auditoría económica F5. Los motores nuevos son adaptaciones sectoriales nuevas y NO han pasado huella contra la maestra Ginzu. No fusionar, no catálogo ni app.
+
+
+---
+
 # F4 · MELI-FLOYD-3T26-R1 · CANDIDATO
 
 **MELI · Floyd · acción ordinaria Nasdaq · USD.** Corte contable 30-sep-2026, precio US$1.510 al 6-nov-2026. Corrección del 8-nov-2026 (Colombia). OpenAI Codex en ChatGPT Work, familia GPT-6, variante y esfuerzo no expuestos a la sesión. Rama `meli-floyd-3t26-r1`, base de trabajo `451d84ba675f42998c2488d5f617acd9c19d2f57`, [PR #260](https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/260).
