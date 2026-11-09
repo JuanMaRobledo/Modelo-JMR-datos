@@ -1,3 +1,9 @@
+## CORRECCIÓN DEL PERÍMETRO FINTECH (DECISIÓN USUARIO · 9-nov-2026)
+
+**La plantilla de banco tradicional `fcfebankvaluation.xlsx` NO es obligatoria ni bloquea la valoración de MELI.** Fintech Mercado Pago se aborda como negocio mixto: **pagos/acquiring asset-light con FCFF Damodaran**, delimitando procesamiento operativo de intereses, inversiones/float y crédito; más **crédito con FCFE ajustado por capital incremental, cartera, provisiones y Ke**, sin asumir que toda Fintech es banco ni que toda la cartera sea asset-light. La referencia Bank FCFE queda como comparación opcional, no motor obligatorio. SOTP JMR suma Commerce EV + Pagos EV + Crédito Equity, ajusta deuda holdco, caja libre y RSU una vez, y contrasta múltiplos EV/EBITDA, EV/FCFF, P/E, P/FCFE y P/BV por perímetro. **F3 continúa EN_REVISIÓN** por carve-out ingresos/EBIT de pagos, NI real de crédito, capital, riesgos, betas y fuentes; no por el XLSX Bank. Las anotaciones previas que exigen importar Bank FCFE se consideran sustituidas por esta decisión.
+
+---
+
 ## CAMBIO DE ARQUITECTURA · 9-nov-2026 · PREVALECE SOBRE LOS VALORES Y MOTORES MANUALES ANTERIORES
 
 **Orden vigente:** repetir MELI usando las HOJAS de Damodaran y el protocolo JMR Floyd. Commerce = Simple Ginzu FCFF original de la Maestra Floyd; Fintech = `fcfebankvaluation.xlsx` original de Damodaran con módulo de pagos operativos separado; SOTP = maestra JMR con siete múltiplos, anclas FY+1/2/3 y sensibilidad propia. **No reutilizar los valores anteriores US$815,67 / US$1.154,65 / US$1.029,59 como valor intrínseco vigente.** Misma revisión `MELI-FLOYD-3T26-R1`, mismo PR #260, sin activar catálogo ni publicar.
