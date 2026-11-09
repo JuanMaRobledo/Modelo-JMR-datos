@@ -65,19 +65,8 @@ jobs:
       # Diagnóstico informativo y sus pruebas ANTES del gate; nunca publica.
       - run: node --test scripts/tests/inventariar_cobertura_a.test.cjs
       - run: node --test scripts/tests/validar_matrices_nativas.test.cjs
-      - run: node --test scripts/tests/contrato_nativo_a12.test.cjs
-      - run: node --test scripts/tests/msft_discount_native.test.cjs
-      - run: node --test scripts/tests/nu_fcfe_bancario.test.cjs
-      - run: node --test scripts/tests/anclas_uber_googl.test.cjs
-      - run: node --test scripts/tests/ponderaciones_no_sobrescribir.test.cjs
-      - run: node --test scripts/tests/capturas_descuentos_pendientes.test.cjs
-      - run: node --test scripts/tests/nu_fcfe_bank_25_formulas.test.cjs
-      - run: node --test scripts/tests/nu_n2_reconciliation.test.cjs
-      - run: node --test scripts/tests/anclas_uber_googl_fuente.test.cjs
-      - run: node --test scripts/tests/intu_n2_dcf_repro.test.cjs
       - name: Auditoría de capturas de la cartera histórica A-1.2
         run: node scripts/ci_catalogo_legacy.cjs node --test scripts/tests/capturas_matrices_fuente.test.cjs
-      - run: node --test scripts/tests/shak_formulas_evidencia.test.cjs
       - run: node scripts/inventariar_cobertura_a.cjs
       - name: Asegurar no regresión de las 16 revisiones históricas A-1.2
         run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_no_regresion_20.cjs

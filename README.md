@@ -13,3 +13,6 @@ Repositorio público de datos utilizado por el [Visor Modelo JMR](https://juanma
 Los tokens de acceso no se almacenan en este repositorio. Las escrituras se realizan mediante la API de contenidos de GitHub con un token guardado únicamente en el navegador del usuario.
 
 Este repositorio no debe utilizarse para datos personales, posiciones de cartera, credenciales ni información confidencial.
+
+## Reboot 9-nov-2026
+Todo el contenido anterior (A-1.2 y Floyd R1–R3) vive sin modificar en `archivo-v1/` (reversible por git). En la raíz solo permanecen los expedientes de UBER y CMG (Floyd, EN_REVISION, por reconfigurar) y CELH (en reconfiguración). Las nuevas valoraciones siguen el esquema de tres libros del plan de reboot (Históricos · DCF · Múltiplos) más el documento de análisis.
