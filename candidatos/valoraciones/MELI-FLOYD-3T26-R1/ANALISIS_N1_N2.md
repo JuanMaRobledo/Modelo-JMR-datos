@@ -238,3 +238,23 @@ Fuentes: [MELI Q3'26 SEC](https://www.sec.gov/Archives/edgar/data/1099590/000109
 El 10-Q 3T26 publica para los **nueve meses de 2026 vs nueve meses de 2025**, en USD reportados: **Brasil Commerce +53,1% / Fintech +56,3%; México Commerce +45,4% / Fintech +69,5%; Argentina Commerce +28,1% / Fintech +20,5%; grupo Commerce +48,2% / Fintech +47,4%**. La administración señala que la traslación cambiaria **impulsó** las ventas reportadas en Brasil y México (variación de la tasa de cambio promedio frente a USD de −8,9% y −10,9%, respectivamente) y **las redujo** en Argentina (+22,2%). Estos movimientos son de tipo de cambio promedio reportado, **no tasas de crecimiento real ni un ajuste de ventas constante verificado**. El DCF debe separar volúmenes, monetización, inflación local, mezcla, ventas de producto propio y cambio. El ingreso Fintech +69,5% de México no es evidencia de ROE financiero marginal 19% ni de capital liberable.
 
 El documento también atribuye al incremento interanual de 9M26 de Commerce US$5.455m: **US$3.683m de servicios** (vinculados a GMV) y **US$1.772m de ventas propias**; crecimiento de Fintech **US$4.175m**: **US$2.703m de crédito** y **US$1.466m de servicios financieros**. Se trata de **incrementos de ingresos** no de contribución EBIT o flujo al accionista. Fuente: [SEC 10-Q 30-sep-2026](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm), tabla por país y MD&A. La senda Base V4 +32% Commerce/+34% Fintech año1 y +23%/+24% años2–5 permanece **hipótesis no cerrada** hasta puentear drivers locales/TAM. No se sustituyen entradas oficiales ni el valor N/D por esta tabla.
+
+
+### Anexo Nivel 2 — Commerce separado, sin valorar Mercado Pago (9-nov-2026)
+
+Se calculó en el **mismo libro H2** una variante solicitada por el usuario para estimar el valor económico del negocio **Commerce exclusivamente**, sin flujo ni patrimonio Fintech. No es una cuarta historia, otro libro ni sustitución oficial de la valoración integral SOTP. Puede consultarse en [H2, Tesis de Inversión y Supuestos!A586:J605](https://docs.google.com/spreadsheets/d/1wkFwjzufTR8KqrLSc7gxmxuB_qepFjEDc-LMuFi5oR0/edit).
+
+| Escenario | EV Commerce (US$m) | EV Commerce/acción (US$) | Equity/acción ilustrativo tras deducir US$2.253m de bonos |
+|---|---:|---:|---:|
+| Conservadora | 17.466,30 | 344,52 | 300,08 |
+| Base | 42.059,11 | 829,62 | 785,18 |
+| Optimista | 65.323,95 | 1.288,52 | 1.244,08 |
+| Valor esperado | 41.707,59 | 822,69 | 778,25 |
+
+El **valor con MOS35% de US$510,37** solo correspondería al equity Base **hipotético** de US$785,18 si la totalidad de bonos corporativos de US$2.253m fuera asignable a Commerce y no hubiera otras obligaciones/caja atribuible; no es el MOS oficial de MELI. El valor operativo principal **US$829,62/acción equivalente no es precio patrimonial**.
+
+**Puente FCFF:** los VP anuales Base Commerce años 1–10 suman **US$2.075,04m**; el VP de la perpetuidad es **US$39.984,07m** (95,07% del EV); suma **US$42.059,11m**. Crecimiento Commerce 32% año1, 23% años2–5, 5% año10; margen EBIT supuesto 8→14%; S/C inicial 2×, ROIC terminal15%, WACC11,4% provisional, g3,5% USD, impuestos28%. El EBIT real de Commerce no está publicado por vertical y su estimación puede excluir parte de costes corporativos que hoy queda en el residuo Fintech+corporativo; tanto esa asignación como la financiación y los costes de pago intragrupo siguen materiales.
+
+**Sensibilidad:** matriz 5×5 nativa de Commerce EV/acción, WACC 9,4–13,4% y margen EBIT terminal10–18%, resultado US$326–1.792 por acción equivalente, **centro US$829,62 con diferencia 0,0000**. El centro refiere **el EV del Commerce**, no el precio total de una acción de MELI. Precio MELI de US$1.510 al 6-nov-2026 implica capitalización US$76.552,17m y una diferencia de US$34.493,06m frente a Commerce EV; esa diferencia mezcla Fintech y otras partidas, **no es tasación de Mercado Pago**.
+
+Corte 30-sep-2026; [SEC 10-Q](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm), [carta 3T26](https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm); H1 aporta Commerce LTM US$21.749m. **Estado CANDIDATO, oficial SOTP N/D; no publicado, F5 independiente**. No debe interpretarse «sin contar Fintech» como si Commerce pudiera operar sin servicios de pago: los márgenes de una separación empresarial real necesitarían precios de transferencia y costes autónomos.
