@@ -1,16 +1,14 @@
-# CELH Floyd R1–R6 · R2 históricos y normalización
+# CELH Floyd R2 — entrega actualizada
+Revisión `CELH-REBOOT-3T26-R1`; fecha 10-nov-2026; responsable de ejecución ChatGPT GPT-6. **PARCIAL — no certificada**.
 
-- Agente: ChatGPT GPT-6, Google Sheets conectado, lectura SEC primaria. Revisión: `CELH-REBOOT-3T26-R1`.
-- **Libro H:** https://docs.google.com/spreadsheets/d/1EUBryCf1jKcrQHNywOcUM4H9COQnNkDPw_CSXlxm9WU/edit.
-- Acciones efectivas: 236 updates iniciales de celdas de entrada y encabezados con nota SEC, 19 updates auxiliares/documentales y 2 fuentes Rf/ERP; NO se han sobreescrito indicadores calculados ni fórmulas existentes durante estas escrituras selectivas.
-- Fuente FY2023–2025 (10-K 2025) https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm: Income Statement I:K, Cash Flow Statement I:K. Balance Sheet J:K (FY24/FY25).
-- Fuente 3T2026 (10-Q) https://www.sec.gov/Archives/edgar/data/1341766/000134176626000062/celh-20260930.htm: 9M26 y 9M25 para LTM, balance L = 2026-09-30, EERR/CF L = FY2025+9M26−9M25. `Fuentes y clasificación` filas 4–18 registran datos, períodos, unidades, clasificación y estados.
-- Conciliación **aritmética independiente**: ingresos LTM = 2515,269+2447,768−1793,641=**3169,396** USD M; EBIT =141,062+386,310−114,997=**412,375**; CFO =359,442+450,184−478,880=**330,746**; CAPEX = −36,067−51,208+25,539 = **−61,736**. Estados históricos CFO: 2023 **141,218**; 2024 **262,898**; 2025 **359,442**; LTM **330,746** (todas las sumas aritméticas concilian).
-- Balances activos=pasivos+mezzanine+comunes: FY2024 **1766,881**, FY2025 **5119,621**, 9M2026 **5152,385** USD M (reconciliación independiente, no se ha probado aún validador específico).
-- Inventario verificado, nota 6: FY2024 **131,165**, FY2025 **337,698**, 2026-09-30 **371,814** USD M.
-- Adquisiciones: Alani Nu 2025-04-01, Rockstar 2025-08-28; ventas 9M26 GAAP **2447,768**, 9M25 **1793,641** (+36,47%); 9M25 pro forma **2208,397** => +10,84% pro forma. CELSIUS 9M26 **1091,732** vs 9M25 **1148,293** (−4,93%). Alani Nu y Rockstar no son comparables de nueve meses FY2025.
-- Terminación distribuidores: FY2025 **327,461**, 9M26 **88,768**, 9M25 **246,707**, LTM **169,522**. EBIT GAAP LTM 412,375 (13,01%). Ajuste hipotético suma fees -> 581,897 (18,36%) solo **diagnóstico**, no EBIT normalizado aprobado.
-- Pepsi Series A/B en mezzanine FY2025 y 9M26 **1759,975** valor CONTABLE, vs 9M26 nominal liquidación **1135,0**, conversión potencial **33,3 M** comunes. Las tres cifras NO son intercambiables. No descontar preferente y diluir por conversión simultáneamente.
-- PASOS **4/10**: 3 FY EERR/CF, 2 FY BS, 9M LTM y conciliaciones básicas. **APROBADO** CFO/balance aritmético, inventarios y pro forma SEC; **PARCIAL** clasificación de otros rubros y preferentes; **NO_EJECUTADO** FY2016–2022, verificación independiente de ratios ROIC/ROE/ROA en dos períodos, diff de fórmulas, `estados_completos.py`, `auditar_ceros_materiales.py`, `auditar_estados_sec.py`.
-- LIMITACIONES MATERIALES: FY2016–2022 faltantes; dilución económica de preferentes sin bridge definitivo; adquisición y flujos recurrentes no normalizados; algunas subpartidas de deuda/lease no desagregadas; shares weighted LTM pendiente.
-- Estado **CANDIDATO**. Siguiente fase R2: completar años faltantes con 10-K/filings primarios y cerrar subcuentas; antes de R3 cargar DCF únicamente tras normalización y controles.
+**H original:** https://docs.google.com/spreadsheets/d/1EUBryCf1jKcrQHNywOcUM4H9COQnNkDPw_CSXlxm9WU/edit
+
+**Cobertura:** Income Statement/Balance Sheet/Cash Flow 2016–2025, LTM a 30-sep-2026, y entradas auxiliares; diez FY alimentados sin convertir faltantes en cero. SEC 10-K FY2017, FY2019, FY2022, FY2025 y SEC 10-Q 3T2025/3T2026; URLs, período/escala y celdas se anotan en H.
+
+**Comprobaciones parciales:** ventas LTM = 2.515,269 + 2.447,768 − 1.793,641 = 3.169,396 M USD; EBIT LTM = 141,062 + 386,310 − 114,997 = 412,375 M; CFO LTM = 359,442 + 450,184 − 478,880 = 330,746 M; CAPEX LTM 61,736 M de salida. Balance 9M2026 US$5.152,385 M = pasivo 2.117,042 + capital preferente mezzanine 1.759,975 + común 1.275,368. Fuente principal: https://www.sec.gov/Archives/edgar/data/1341766/000134176626000062/celh-20260930.htm .
+
+**Distinción M&A:** reportado 9M2026 +36,5% frente a pro forma +10,8%; no tratar diferencias como orgánicas. CELSIUS -4,9% 9M; Alani Nu +23,5% 3T comparable (no nueve meses comparable); Rockstar sin 3T2025 completo. Preferentes y deuda corriente separadas de compensaciones DSD.
+
+**Bloqueos:** cotejo integral de cada subcuenta SEC FY2016-2025; lease/arrendamiento incluido en otros pasivos y efectivo restringido FY2025; aplicación de stock splits y acciones medias completas; revisión de gastos de integración, I+D, SBC, NOL e impuestos. Se requiere verificar EBITDA, EBIT, balance y reconciliación CFO, CFI, CFF por cada FY y LTM sin agregar ceros no sustentados. Ratios por fórmulas originales, no manuales.
+
+**PASOS 6/10** (diez FY y LTM presentes, conciliación primaria de principales cifras, fuente por celda); **AISLAMIENTO=PARCIAL** mientras falte auditoría. R3 cuantificación provisional no acredita esta fase completa.
