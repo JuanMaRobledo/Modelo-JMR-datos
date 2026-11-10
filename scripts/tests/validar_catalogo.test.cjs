@@ -43,12 +43,12 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
    assert.equal(v.libros.valoracion,v.hojaGoogle);
  }
 
- assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes: UBER Floyd R5, CMG y AAPL Floyd R1–R6');
+ assert.deepEqual(tickers,['UBER','CMG','AAPL','MELI','MSFT'],'Vigentes en rama: UBER, CMG, AAPL, MELI y MSFT Floyd R1–R6');
  for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('archivo-v1/valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
  assert.equal(c.archivoFloyd.valoraciones.length,47,'Deben conservarse 47 registros archivados en archivo-v1');
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
-test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde (?:a|al) DCF Base/);});
+test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a(l)? DCF Base/);});
 
 test('archivo histórico preservado y excluido del catálogo público', () => {
   assert.ok(fs.existsSync(path.join(root,'archivo-v1/auditorias/archivo/NFLX-auditoria-2026-10-22.md')));

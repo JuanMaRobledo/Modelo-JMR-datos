@@ -279,10 +279,10 @@ def main():
         for nombre, contenido in archivos.items():
             p = OUT / nombre
             if not p.exists() or p.read_text(encoding="utf-8") != contenido:
-                if p.exists() and nombre in ("DRIVERS.md", "drivers.json"):
+                if p.exists() and nombre == "DRIVERS.md":
                     import difflib
                     actual = p.read_text(encoding="utf-8")
-                    print(f"DIFERENCIA EXACTA {nombre}:", file=sys.stderr)
+                    print("DIFERENCIA EXACTA DRIVERS.md:", file=sys.stderr)
                     print("".join(difflib.unified_diff(actual.splitlines(keepends=True), contenido.splitlines(keepends=True), fromfile="en-repositorio", tofile="generado")), file=sys.stderr)
                 errores.append(f"registro/{nombre} desactualizado: ejecutar python3 scripts/registro_revisiones.py")
     else:

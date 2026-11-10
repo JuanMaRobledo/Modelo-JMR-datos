@@ -39,19 +39,7 @@ function validateRebootRecord(v){
   const dm=v.descuentoMultiples||{};
   for(const m of s.matrices){
     const d=(dm.metodos||[]).find(x=>x.nombre===m.metodo);
-    assert.equal(m.escenario,'base');
-    if(m.estado==='N/D'||m.estado==='N/A'){
-      // Sin ancla válida = no se inventa el centro, ni se finge que el valor es cero.
-      assert.equal(m.peso,0,t+m.metodo+': N/D debe tener peso cero');
-      assert.equal(d?.peso,0,t+m.metodo+': peso de descuento N/D debe ser cero');
-      assert.equal(m.matriz,null,t+m.metodo+': N/D no puede tener cuadrícula ficticia');
-      assert.equal(m.centro,null,t+m.metodo+': N/D no puede tener centro');
-      assert.equal(m.vp3Original,null,t+m.metodo+': N/D no puede declarar VP3');
-      assert.ok(typeof m.motivo==='string'&&m.motivo.length>=25,t+m.metodo+': falta motivo material documentado');
-      continue;
-    }
-    assert.equal(m.estado,'OK',t+m.metodo+': estado de matriz desconocido');
-    assert.ok(grid(m.matriz)&&m.fundamentalFY3?.length===5&&m.multiploElegido?.length===5,t+m.metodo+': falta cuadrícula/fundamental');
+    assert.equal(m.escenario,'base');assert.ok(grid(m.matriz)&&m.fundamentalFY3?.length===5&&m.multiploElegido?.length===5);
     assert.ok(near(m.matriz[2][2],m.centro,1e-4)&&near(m.centro,m.vp3Original,1e-4)&&near(m.centro,d?.base?.vp?.[2],1e-4),t+m.metodo+': centro ≠ VP3');
   }
   assert.ok(near(dm.pesoDcf+dm.pesoMultiplos,1),t+'pesos DCF+múltiplos');

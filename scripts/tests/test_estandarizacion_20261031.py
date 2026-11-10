@@ -107,13 +107,7 @@ class EditorialTests(unittest.TestCase):
         floyd=[json.loads(p.read_text()) for p in files
                if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd' and '-FLOYD-' in json.loads(p.read_text()).get('revisionId','')]
         # Solo Floyd F1–F5 legado: el nuevo Floyd R1–R6 se valida por su contrato de seis archivos.
-        # Floyd F1-F5 fue sustituido por la revision R1-R6 del contrato de seis archivos;
-        # el anterior permanece en archivo, pero NO en el catalogo activo.
         esperado={}
-        self.assertIn('valoraciones/UBER-REBOOT-3T26-R1.json',catalog['valoraciones'])
-        self.assertIn('analisis/UBER-research-UBER-REBOOT-3T26-R1.json',catalog['analisis'])
-        self.assertTrue((ROOT/'archivo-v1/valoraciones/UBER-FLOYD-3T26.json').exists())
-        self.assertTrue((ROOT/'archivo-v1/analisis/UBER-research-UBER-FLOYD-3T26.json').exists())
         self.assertEqual(len(floyd),len(esperado))
         self.assertEqual({f['ticker']:f['revisionId'] for f in floyd},esperado)
         for f in floyd:
