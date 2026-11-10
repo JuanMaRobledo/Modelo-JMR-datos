@@ -71,7 +71,7 @@ function run(){
     assert.equal(a.controlCobertura?.nivel2Apartados,12);
   }
   const floyd=Object.entries(cat.controlModeloA?.empresas||{})
-    .filter(([,item])=>item.metodo==='Floyd');
+    .filter(([,item])=>item.metodo==='Floyd' && /-FLOYD-/.test(item.rutaValoracion||'')); // solo legado F1–F5; Floyd R1–R6 se valida por contrato aparte
   // Revisiones Floyd integradas de forma explícita (una por emisor), cada una con su
   // antecedente A-1.2 preservado (archivo y huella de hoja de origen intactos).
   const FLOYD_ESPERADO={
