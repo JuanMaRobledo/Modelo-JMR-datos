@@ -33,7 +33,14 @@ for(const [ticker,selection] of Object.entries(archive.controlModeloA||{})){
   });
   if(sameRevision.length<1)throw new Error('Falta análisis archivado '+ticker+' / '+v.revisionId);
   // Análisis editable previo de mismo revisionId: escoger el de ruta más específica si existen duplicados.
-  const analysis=resolveRel(sameRevision.sort((a,b)=>a.length-b.length)[0]);
+  const rank = rel => {
+    const name=path.basename(rel);
+    if(name===ticker+'-research-'+v.revisionId+'.json')return 0;
+    if(name.includes('-research-'))return 1;
+    if(name.includes('CANDIDATO'))return 3;
+    return 2;
+  };
+  const analysis=resolveRel(sameRevision.sort((a,b)=>rank(a)-rank(b)||a.length-b.length)[0]);
   canonicalValuations.push(selection.rutaValoracion); // ruta lógica histórica, respaldada por overlay temporal
   canonicalAnalysis.push(analysis.startsWith('archivo-v1/')?analysis.slice(11):analysis);
 }

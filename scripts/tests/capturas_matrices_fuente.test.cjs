@@ -31,7 +31,10 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
     .filter(([,v])=>v.metodo==='Floyd' && /-FLOYD-/.test(v.rutaValoracion||'')); // Floyd F1–F5, no Floyd R1–R6
   const FLOYD_RUTAS={UBER:'valoraciones/UBER-FLOYD-3T26.json',CMG:'valoraciones/CMG-FLOYD-20261108-R1.json'};
   assert.ok(floyd.length<=Object.keys(FLOYD_RUTAS).length,'Floyd se integra de forma explícita, no como captura parcial');
-  const expectedLegacy=previous+(amzn?1:0)+(pags?1:0)+(aapl?1:0)+(lulu?1:0)+(ko?1:0)-floyd.length;
+  // Sólo las selecciones A-1.2 archivadas que no fueron reemplazadas por Floyd R1–R6.
+  // La identidad se valida contra el registro del archivo, no contra un contador obsoleto.
+  const expectedLegacy=Object.entries(catalog.archivoFloyd.controlModeloA)
+    .filter(([ticker,v])=>v.metodo==='A-1.2' && catalog.controlModeloA.empresas[ticker]?.metodo==='A-1.2').length;
   assert.equal(active.length,expectedLegacy,
     'No permitir altas desconocidas sin catálogo reconciliado');
   for(const [ticker,entry] of floyd){
