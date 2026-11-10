@@ -1,14 +1,14 @@
 {
- "version": "FLOYD-R1R6-20261110-R1",
+ "version": "FLOYD-R1R6-UBER-R5-20261110",
  "actualizadoEl": "2026-11-10",
  "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL/CMG son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. UBER Reboot R3–R4 conciliados, R5/CI aún pendiente; su vieja ficha Floyd F1–F5 no se retira hasta validación y publicación. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
  "valoraciones": [
-  "valoraciones/UBER-FLOYD-3T26.json",
+  "valoraciones/UBER-REBOOT-3T26-R1.json",
   "valoraciones/CMG-REBOOT-3T26-R1.json",
   "valoraciones/AAPL-REBOOT-FY26-R1.json"
  ],
  "analisis": [
-  "analisis/UBER-research-UBER-FLOYD-3T26.json",
+  "analisis/UBER-research-UBER-REBOOT-3T26-R1.json",
   "analisis/CMG-research-CMG-REBOOT-3T26-R1.json",
   "analisis/AAPL-research-AAPL-REBOOT-FY26-R1.json"
  ],
@@ -29,11 +29,11 @@
   "nota": "P/S y P/BV son complementarios y no bloqueantes, salvo métrica esencial en casos financieros como P/BV para bancos. Ninguna valoración A se marca COMPLETA hasta conciliar los criterios.",
   "empresas": {
    "UBER": {
-    "rutaValoracion": "valoraciones/UBER-FLOYD-3T26.json",
+    "rutaValoracion": "valoraciones/UBER-REBOOT-3T26-R1.json",
     "metodo": "Floyd",
-    "estado": "INCOMPLETA_EN_REVISION",
-    "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
-    "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista. Control técnico F4 integrado; F5 económico independiente y revisión visual pendientes."
+    "estado": "COMPLETA_EN_REVISION",
+    "multiplos": "CUATRO_MATRICES_5X5_OK + EV_FCFF_N_D_PESO_CERO",
+    "diagnostico": "Floyd R1–R6, R5 conciliada y fuentes SEC materiales registradas, R6 independiente pendiente."
    },
    "CMG": {
     "rutaValoracion": "valoraciones/CMG-REBOOT-3T26-R1.json",
@@ -53,30 +53,34 @@
  },
  "seleccionesDefinitivas": {
   "UBER": {
-   "fecha": "2026-11-08",
-   "revisionId": "UBER-FLOYD-3T26",
+   "fecha": "2026-11-10",
+   "revisionId": "UBER-REBOOT-3T26-R1",
    "metodo": "Floyd",
-   "valorPorAccion": 100.19381867706664,
-   "mos35": 65.12598214009333,
+   "valorPorAccion": 98.73828565550879,
+   "mos35": 64.17988567608072,
    "moneda": "USD",
    "precioReferencia": 68.59,
    "fechaPrecioReferencia": "2026-11-06",
    "corteContable": "2026-09-30",
-   "sheetId": "1jMzDqRnTiBdbeFJmB0UH4aLdthBtC1JtiRhl8PEQBcg",
-   "estadoSeleccion": "FLOYD_F4_SELECCIONADO_EN_REVISION",
+   "sheetId": "14QlydMFli2pxdG4agUYOAXL8QIE99P-3UDE7vwK8CaM",
+   "estadoSeleccion": "FLOYD_R5_EN_REVISION",
    "estado": "EN_REVISION",
    "autorizacion": "Termina de revisar y publica; reemplaza A-1.2",
    "auditoriaEconomica": "NO_REALIZADA",
    "reservas": [
-    "TAM y cuota global de Mobility/Delivery/Freight no verificables en una unidad homogénea; no se extrapola del GB.",
-    "Rf y factores WACC al 30-oct-2026 versus precio 06-nov-2026: diferencia Treasury 8 pb; sensibilidad económica y beta/costo deuda no confirmados por cotización única.",
-    "ROIC implícito año 10 Base 32,77 % frente a ROIC terminal 14 %: erosión asumida; vigilar margen, reinversión y AV.",
-    "Arrendamientos ASC842 por 2.073 USDm: permanecen como gasto operativo, no se añaden a deuda para evitar doble conteo; la alternativa capitalizada requiere auditoría F5.",
-    "Posibles activos fiscales/NOL no cuantificados a valor incremental por jurisdicción; se aplica impuesto normalizado 25 %.",
-    "F5 independiente por realizar; publicación EN_REVISION no equivale a dictamen sin reservas."
+    "R6 auditoria economica independiente NO_REALIZADA. EN_REVISION no certifica supuestos ni valor razonable.",
+    "EV/FCFF N/D peso cero sin matriz 5x5 al carecer de ancla historica positiva y fiable.",
+    "Activos no operativos 11473 millones USD se incluyen a valor de libro, sin precio de realizacion probado. Excluirlos reduce DCF Base hasta aproximadamente 5.44 USD/accion.",
+    "P/OCF refleja ajustes CFO residuales supuestos ligados a SBC/seguros, estimados en 3.653% de ventas Base: no son flujos de caja verificados.",
+    "Acciones 2107.437 millones incluyen 65.539 millones RSU futuras; opciones 5.549 millones con valor economico 185.823 millones. Reexaminar doble conteo SBC.",
+    "FY2025 utilidad GAAP afectada por beneficio fiscal extraordinario; impuesto normalizado 25%, NOL inicial 0 como supuestos. PE pondera solo 4% total.",
+    "Arrendamientos ASC842 tratados como gasto operativo y no sumados nuevamente como deuda por ausencia de ajuste EBIT simultaneo.",
+    "Periodos FY2017-2023 no se confrontaron partida por partida contra SEC en R5; FY2024 FY2025 y LTM se cotejaron materialmente.",
+    "ROIC terminal, WACC, beta 1.20, crecimiento, margen, ventas/capital, I+D capitalizada y reservas de seguro son decisiones economicas a evaluar en R6.",
+    "Precio congelado 68.59 USD/accion a 2026-11-06 en libro M; GOOGLEFINANCE no modifica el corte economico del expediente."
    ],
-   "alcance": "Una sola pareja activa UBER-FLOYD-3T26, 7 pestañas; A-1.2 histórico preservado en Git; F5 independiente pendiente",
-   "revisionAnterior": "UBER-20261030-A1"
+   "alcance": "R1-R5 6 artefactos; 3 DCF, H, M y A. R6 pendiente; CI y app por verificar.",
+   "revisionAnterior": "UBER-FLOYD-3T26"
   },
   "CMG": {
    "fecha": "2026-11-10",
@@ -169,7 +173,8 @@
    "archivo-v1/valoraciones/XP-20261026-R2.json",
    "archivo-v1/valoraciones/XP-20261031-A12-R1.json",
    "archivo-v1/valoraciones/ZTS-20261029-R1.json",
-   "archivo-v1/valoraciones/CMG-FLOYD-20261108-R1.json"
+   "archivo-v1/valoraciones/CMG-FLOYD-20261108-R1.json",
+   "archivo-v1/valoraciones/UBER-FLOYD-3T26.json"
   ],
   "analisis": [
    "archivo-v1/analisis/AAPL-research-1791720000000-ia26.json",
@@ -242,7 +247,8 @@
    "archivo-v1/analisis/XP-research-20261031-A12-R1.json",
    "archivo-v1/analisis/ZTS-research-1790597701210-r0ase.json",
    "archivo-v1/analisis/ZTS-research-ZTS-20261029-R1.json",
-   "archivo-v1/analisis/CMG-research-CMG-FLOYD-20261108-R1.json"
+   "archivo-v1/analisis/CMG-research-CMG-FLOYD-20261108-R1.json",
+   "archivo-v1/analisis/UBER-research-UBER-FLOYD-3T26.json"
   ],
   "auditorias": [
    "archivo-v1/auditorias/narrativas/ADBE.md",

@@ -251,6 +251,20 @@ function run(){
       'DUOL Atlas: ponderación no concilia');
     duolHistoricalProtected=1; // foto A1/R2 conservadas y R1 validada
   }
+  // La transición Floyd R5 preserva el Uber F1-F5 en archivo-v1 y en el árbol
+  // original no activo. Sigue contando como fotografía protegida, pero solo
+  // tras verificar igualdad exacta y el valor Base de la revisión histórica.
+  if(cat.controlModeloA?.empresas?.UBER?.rutaValoracion==='valoraciones/UBER-REBOOT-3T26-R1.json'){
+    const prev=read('valoraciones/UBER-FLOYD-3T26.json');
+    const archived=read('archivo-v1/valoraciones/UBER-FLOYD-3T26.json');
+    const archivedAnalysis=read('archivo-v1/analisis/UBER-research-UBER-FLOYD-3T26.json');
+    assert.deepEqual(archived,prev,'Se alteró la fotografía Floyd anterior');
+    assert.equal(prev.revisionId,'UBER-FLOYD-3T26');
+    assert.ok(Math.abs(prev.valorPrincipal-100.19381867706664)<1e-8,'Floyd previo cambió de valor');
+    assert.equal(archivedAnalysis.revisionId,prev.revisionId,'Floyd previo sin su análisis');
+    assert.ok(cat.archivoFloyd.valoraciones.includes('archivo-v1/valoraciones/UBER-FLOYD-3T26.json'));
+    floydHistoricoProtegido++;
+  }
   assert.ok(snapshots+duolHistoricalProtected+floydHistoricoProtegido>=16,
     'Desaparecieron fotografías financieras de control');
   console.log('PASS no regresión: '+htmlPairs+'/'+aEntries.length+' expedientes vinculados; '+snapshots+
