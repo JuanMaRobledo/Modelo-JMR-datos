@@ -4,6 +4,7 @@
 const fs=require('node:fs'), path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const cat=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
+const archivePath=rel=>fs.existsSync(path.join(root,rel))?path.join(root,rel):path.join(root,'archivo-v1',rel);
 const historicalDepth='MELI CELH ADBE BSX CMG NFLX GOOGL MSFT NKE PYPL EPAM ZTS ONON NU NVO INTU'.split(' ');
 // Reescrituras completas con el índice vigente de 14 capítulos (1-nov-2026). El análisis anterior se conserva íntegro y
 // sus 18 bloques históricos se siguen exigiendo en el archivo conservado; la revisión nueva debe cumplir el mínimo por
@@ -50,7 +51,7 @@ for(const t of selected){
  if(a.ampliacionEconomica?.auditoriaEconomicaEjecutada===true)errors.push(t+': editorial expansion must not certify financial audit');
  const reescrita=REESCRITAS[t]&&REESCRITAS[t].revision===a.revisionId;
  if(reescrita){
-   const old=JSON.parse(fs.readFileSync(path.join(root,REESCRITAS[t].anterior),'utf8')).articleHtml||'';
+   const old=JSON.parse(fs.readFileSync(archivePath(REESCRITAS[t].anterior),'utf8')).articleHtml||'';
    if((old.match(/data-jmr-longform=/g)||[]).length!==18||(old.match(/data-jmr-deep-20261029=/g)||[]).length!==18)
      errors.push(t+': bloques históricos de profundidad económica (18) perdidos en el análisis conservado');
    const per=[...h.matchAll(/<section id="jmr-n1-chapter-\d+">([\s\S]*?)<\/section>/g)].map(m=>words(m[1]));
