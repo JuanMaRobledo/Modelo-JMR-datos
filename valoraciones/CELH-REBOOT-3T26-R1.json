@@ -300,39 +300,45 @@
     ]
   },
   "sensibilidadMultiples": {
-    "estado": "NO_EJECUTADA",
-    "matrices": []
+    "estado": "NO_CERTIFICADA",
+    "matrices": [],
+    "motivo": "M no supera preparación; falta metodología para FCFE/OCF después de preferentes y sincronización aprobada"
   },
   "metodos": [
     {
       "nombre": "EV/EBITDA",
       "valor": null,
-      "peso": null,
-      "estado": "PENDIENTE"
+      "peso": 0,
+      "estado": "N/D — DATOS/ANCLAS NO CERTIFICADOS",
+      "motivo": "Compuerta R4 no superada; no inventar valor ni peso"
     },
     {
       "nombre": "EV/FCFF",
       "valor": null,
-      "peso": null,
-      "estado": "PENDIENTE"
+      "peso": 0,
+      "estado": "N/D — DATOS/ANCLAS NO CERTIFICADOS",
+      "motivo": "Compuerta R4 no superada; no inventar valor ni peso"
     },
     {
       "nombre": "P/E",
       "valor": null,
-      "peso": null,
-      "estado": "PENDIENTE"
+      "peso": 0,
+      "estado": "N/D — DATOS/ANCLAS NO CERTIFICADOS",
+      "motivo": "Compuerta R4 no superada; no inventar valor ni peso"
     },
     {
       "nombre": "P/FCFE",
       "valor": null,
-      "peso": null,
-      "estado": "PENDIENTE"
+      "peso": 0,
+      "estado": "N/D — DATOS/ANCLAS NO CERTIFICADOS",
+      "motivo": "Compuerta R4 no superada; no inventar valor ni peso"
     },
     {
       "nombre": "P/OCF",
       "valor": null,
-      "peso": null,
-      "estado": "PENDIENTE"
+      "peso": 0,
+      "estado": "N/D — DATOS/ANCLAS NO CERTIFICADOS",
+      "motivo": "Compuerta R4 no superada; no inventar valor ni peso"
     }
   ],
   "dcfInverso": {
@@ -375,9 +381,12 @@
     "preferentesValorContable_musd": 1759.975,
     "preferentesLiquidacionNominal_musd": 1135,
     "preferentesAccionesConvertibles_millones": 33.3,
-    "cobertura": "FY2016–FY2025 + LTM, entradas disponibles; cotejo integral SEC pendiente",
+    "cobertura": "FY2016–FY2025 + LTM alimentados en H (no equivalen a auditoría SEC completa)",
     "ventasFY2016_musd": 22.760987,
-    "ventasFY2025_musd": 2515.269
+    "ventasFY2025_musd": 2515.269,
+    "cotejo": "PARCIAL",
+    "ingresosFY2016": 22.760987,
+    "ingresosFY2025": 2515.269
   },
   "fuentes": [
     "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000024/celh-20251231.htm",
@@ -385,38 +394,108 @@
     "https://chartexchange.com/symbol/nasdaq-celh/historical"
   ],
   "controles": {
-    "R1": "PARCIAL",
-    "R2": "PARCIAL",
-    "R3": "NO_EJECUTADO",
-    "R4": "NO_EJECUTADO",
-    "R5": "BORRADOR_NO_PUBLICABLE",
-    "R6": "RESERVADA"
+    "R1": {
+      "estado": "PARCIAL",
+      "realizado": [
+        "Seis archivos copiados",
+        "SEC 10-K/10-Q 2016-2025+LTM identificados",
+        "Precio y tasas fechados"
+      ],
+      "pendiente": [
+        "Diff 1297 formulas 76 comentarios vs maestra",
+        "Verificación completa de enlaces y valores estructurales"
+      ]
+    },
+    "R2": {
+      "estado": "PARCIAL",
+      "realizado": [
+        "10 FY 2016–2025 y LTM cargados en H",
+        "Comprobaciones aritméticas de EBIT/CFO y balances principales"
+      ],
+      "pendiente": [
+        "Cotejo granular SEC de flujos y partidas 2016-2025",
+        "Cash restricted FY2025, vencimientos/leases y SBC/opciones",
+        "Fuentes para ausencia de valores vs ceros"
+      ]
+    },
+    "R3": {
+      "estado": "PARCIAL_ECONOMICA",
+      "realizado": [
+        "Tres DCF independientes numéricos Ginsu",
+        "75 corridas 3 matrices 5x5 DCF",
+        "Inverso con precio 33.19"
+      ],
+      "pendiente": [
+        "Valor temporal y derechos contingentes Pepsi A/B",
+        "ROIC año 10 17.40% vs terminal 11%",
+        "Revisar EBIT normalizado y Capex/sales-capital"
+      ]
+    },
+    "R4": {
+      "estado": "BLOQUEADO",
+      "realizado": [
+        "M tiene inputs históricos 10 FY y valores DCF de fotografía",
+        "Inventario de cinco métodos",
+        "Prueba de IMPORTRANGE revertida tras lectura del contrato"
+      ],
+      "pendiente": [
+        "Traspaso scripts aprobados SHA256 H→D/H→M/D→M/M→D-B",
+        "M gate B60/B64 NO PUBLICAR",
+        "Cinco múltiplos FY+1/2/3 y 5 matrices",
+        "Interpretar preferentes distinto de minoritarios"
+      ]
+    },
+    "R5": {
+      "estado": "CANDIDATO_NO_PUBLICADO",
+      "realizado": [
+        "Documento A 14+12",
+        "Dos JSON en rama PR265",
+        "Revisión anterior no eliminada"
+      ],
+      "pendiente": [
+        "CI registro drivers",
+        "Validadores oficiales integridad/hojas",
+        "App vista 7 pestañas y reconcilia los seis documentos",
+        "Promoción EN_REVISION"
+      ]
+    },
+    "R6": {
+      "estado": "RESERVADA",
+      "realizado": [],
+      "pendiente": [
+        "Sesión/agente independiente"
+      ]
+    }
   },
   "auditPendingUserVisualReview": true,
   "auditoriaEconomica": "R6_PENDIENTE_SESION_INDEPENDIENTE",
   "salvedades": [
-    "Histórico: FY2016–2022 aún no cargados, FY2023 y otras partidas de balance pendientes.",
-    "Preferentes Pepsi A/B: reclamo económico no derivado de valor contable $1,759.975M ni preferencia nominal $1,135M; conversión ~33.3M comunes; prohibido doble descuento/dilución.",
-    "Beta, costo de deuda, WACC, ROIC normalizado, reinversión y Sales-to-Capital pendientes.",
-    "DFC D-B/D-C/D-O son copias íntegras pero todavía contienen números del ejemplo Almarai; ningún resultado es válido para CELH.",
-    "M y presentación conservan valores ejemplo; no existen matrices de sensibilidad 5×5 ni múltiples anclas acreditadas.",
-    "No pasaron aún validadores, CI, QA app ni conciliación hoja-JSON-catálogo.",
-    "La valoración de preferentes es una aproximación estática, no incorpora el calendario ni el valor temporal de convertibilidad y dividendos del 5%.",
-    "Múltiplos 5×5 y anclas FY+1/2/3 no conciliados con M; libro M controla NO PUBLICAR.",
-    "Faltan validadores completos SEC, ROIC terminal convergencia años6–10 no modelable sin cambiar fórmulas.",
-    "Cotización del libro M es GOOGLEFINANCE vivo y difiere del precio de cierre fechado.",
-    "Options/SBC, fuentes de derechos preferentes y beta/normalización por R6 requieren revisión independiente."
+    "Valor por acción US$27,07 es modelo PROVISIONAL: puente estático Pepsi A/B (sin opciones temporales 2031–2038, dividendos 5%, conversiones condicionadas, redención). No apto para EN_REVISION.",
+    "Coste de capital 7,398% inicial excluye preferred de la estructura de financiación por ausencia valor de mercado actual; coste de preferred/reparto por acciones no auditado.",
+    "Diez FY + LTM cargados en H, cotejo documental granular del SEC incompleto; ratios y clasificación de caja restringida, arrendamientos, RSU/SBC faltantes.",
+    "ROIC de la Base en año10 ≈17,40% mientras terminal override 11%, discontinuidad económica que requiere justificar o revisar supuestos; motor 17 hojas no editable.",
+    "FCFF y márgenes dependen de addback de cargos por terminación de distribuidores (Base 92,625 M) aún no demostrado no recurrente.",
+    "M falta completar los cinco múltiplos, anclas FY+1/FY+2/FY+3, sensibilidades propias, pesos y conciliación M→D-B; estado M B60 FALTAN DATOS Y SUPUESTOS, B64 NO PUBLICAR.",
+    "Contrato vigente prohíbe IMPORTRANGE: prueba temporal en entradas M y D revertida con lectura de comprobación 0 IMPORTRANGE en áreas modificadas; sincronizador script SHA-256 no ejecutado ni identificado inequívocamente.",
+    "Integridad completa motor 1.297 fórmulas/76 comentarios, CI, validadores, app y cotejo JSON/catálogo no aprobados. PR #265 borrador sin fusión; R6 independiente NO ejecutada."
   ],
   "controlPublicacion": {
     "aprobado": false,
     "estado": "NO_PUBLICAR",
-    "motivos": [
-      "La valoración de preferentes es una aproximación estática, no incorpora el calendario ni el valor temporal de convertibilidad y dividendos del 5%.",
-      "Múltiplos 5×5 y anclas FY+1/2/3 no conciliados con M; libro M controla NO PUBLICAR.",
-      "Faltan validadores completos SEC, ROIC terminal convergencia años6–10 no modelable sin cambiar fórmulas.",
-      "Cotización del libro M es GOOGLEFINANCE vivo y difiere del precio de cierre fechado.",
-      "Options/SBC, fuentes de derechos preferentes y beta/normalización por R6 requieren revisión independiente."
-    ]
+    "causas": [
+      "Valor por acción US$27,07 es modelo PROVISIONAL: puente estático Pepsi A/B (sin opciones temporales 2031–2038, dividendos 5%, conversiones condicionadas, redención). No apto para EN_REVISION.",
+      "Coste de capital 7,398% inicial excluye preferred de la estructura de financiación por ausencia valor de mercado actual; coste de preferred/reparto por acciones no auditado.",
+      "Diez FY + LTM cargados en H, cotejo documental granular del SEC incompleto; ratios y clasificación de caja restringida, arrendamientos, RSU/SBC faltantes.",
+      "ROIC de la Base en año10 ≈17,40% mientras terminal override 11%, discontinuidad económica que requiere justificar o revisar supuestos; motor 17 hojas no editable.",
+      "FCFF y márgenes dependen de addback de cargos por terminación de distribuidores (Base 92,625 M) aún no demostrado no recurrente.",
+      "M falta completar los cinco múltiplos, anclas FY+1/FY+2/FY+3, sensibilidades propias, pesos y conciliación M→D-B; estado M B60 FALTAN DATOS Y SUPUESTOS, B64 NO PUBLICAR.",
+      "Contrato vigente prohíbe IMPORTRANGE: prueba temporal en entradas M y D revertida con lectura de comprobación 0 IMPORTRANGE en áreas modificadas; sincronizador script SHA-256 no ejecutado ni identificado inequívocamente.",
+      "Integridad completa motor 1.297 fórmulas/76 comentarios, CI, validadores, app y cotejo JSON/catálogo no aprobados. PR #265 borrador sin fusión; R6 independiente NO ejecutada."
+    ],
+    "puertaGitHub": "PR #265 draft; sin fusion",
+    "catalogoModificado": false,
+    "appVerificada": false,
+    "fecha": "2026-11-10"
   },
   "fecha": "2026-11-10",
   "valoradoPeroNoPublicable": true,
