@@ -28,7 +28,7 @@ test('MOS histórico redondeado es válido; diferencia de un centavo se rechaza'
 
 test('UBER Floyd: contrato nuevo independiente del relativo histórico',()=>{
  const {validateFloydNativeMatrices}=require('../validar_catalogo.cjs');
- const val=JSON.parse(fs.readFileSync(path.join(root,'archivo-v1/valoraciones/UBER-FLOYD-3T26.json'),'utf8'));
+ const val=JSON.parse(fs.readFileSync(path.join(root,'valoraciones/UBER-FLOYD-3T26.json'),'utf8'));
  assert.equal(validateFloydNativeMatrices(val),true);
  const bad=structuredClone(val);
  bad.sensibilidadMultiples.matrices[0].matriz[2][2]+=1;
