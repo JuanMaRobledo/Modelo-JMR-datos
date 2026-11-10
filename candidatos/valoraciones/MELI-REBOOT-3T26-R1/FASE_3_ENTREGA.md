@@ -50,14 +50,14 @@ Probabilidades **25 / 50 / 25**; sin probabilidad de fracaso (cobertura de inter
 - **Conservadora:** el margen no se recupera (9 %), el crecimiento cae a un dígito alto y no hay ventaja en el terminal.
 
 ### Pruebas de las tres preguntas
-- **Posible:** ingresos del año 5 de 100.427 M en la Base (×2,6 en cinco años) frente a ×3,8 en 2020–2025 (cifras comparables en la serie); participación de mercado **N/D** (sin TAM verificado).
+- **Posible:** ingresos del año 5 de 100.427 M en la Base (×2,6 en cinco años) frente a ×7,3 entre FY2020 y FY2025 (3.974 → 28.893 M); participación de mercado **N/D** (sin TAM verificado).
 - **Plausible:** margen objetivo ajustado de 13,5 % frente a 9,4 % hoy y 11,1 % contable en FY2025: **REVISAR**. La reinversión de la Base (ventas/capital 3,2) implica ≈ 37 centavos de capital por dólar nuevo de ventas, con un capital invertido del año base de solo ≈6.100 (el fondeo del crédito es pasivo operativo), y un ROIC contable de 36 % → 43 %: **alto y frágil**. Juicio: **Con reserva**.
 - **Probable:** 21 % anual a cinco años frente a +48 % LTM y +39 % en FY2025; valor terminal = 77 % del valor operativo. Juicio: **Con reserva**.
 
 ## Puntos críticos para R4–R6
 1. **El precio queda por debajo de todas las celdas de las dos matrices** (mínimo 1.673,69, con 15 % de crecimiento y 10,5 % de margen). Para igualar 1.510 harían falta 9,6 % de crecimiento anual, o un margen ajustado de 8,4 %, o un costo de capital inicial de 21,2 %. Es una lectura de que el mercado descuenta un deterioro del crédito mayor que el de nuestras tres historias. **No lo tomo como prueba de que la acción esté barata: lo más probable es que mis supuestos de margen y reinversión sean favorables** (el margen cayó en los dos últimos años y la provisión no ha tocado techo). R6 debe cuestionar sobre todo margen, ventas/capital y beta.
 2. **Tratamiento del fondeo del crédito.** Es la decisión que más mueve el valor y cambió frente a R1 (ver «Deuda»). Si en cambio se restara todo como deuda (≈ 13.200 frente a 2.369), el valor del patrimonio bajaría ≈ 10.800 M (≈ 213 por acción) **sin** devolver el costo de fondeo al EBIT: sería una doble cuenta, no una alternativa válida.
-3. **Beta y mapeo de industrias.** Con beta directa de 1,30 el costo de capital inicial sube a 14,39 % y el DCF Base baja a 2.289,61. Con 1,20 (como UBER) quedaría ≈ 2.4xx.
+3. **Beta y mapeo de industrias.** Con beta directa de 1,30 el costo de capital inicial sube a 14,39 % y el DCF Base baja a 2.289,61. Con 1,20 (como UBER) el costo de capital inicial sería 13,66 % y el DCF Base 2.263,92.
 4. **Costo de capital moderado para una empresa con 18 % de ingresos en Argentina y 55 % en Brasil**; la ERP ponderada (7,56 %) ya lo recoge, pero sin riesgo de convertibilidad ni de crédito soberano adicional.
 5. **Moneda:** todo en dólares con tasa libre de dólares; las cifras de Argentina se convierten a un tipo de cambio que se devalúa. Sin ajuste adicional.
 
