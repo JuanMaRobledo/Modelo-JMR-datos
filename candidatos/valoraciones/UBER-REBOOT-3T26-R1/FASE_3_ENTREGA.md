@@ -31,10 +31,11 @@
 - Historias y probabilidades 25/50/25 conservadas. La asignación de riesgo a la plataforma (beta 1,20), márgenes y ROIC son juicios de valoración, no datos contables reportados. Riesgo de autonomía, seguros, litigios, S/C y valor de participadas no certifican por sí solos el escenario.
 
 ## Sensibilidades verificadas contra el motor vivo — beta 1,20
-Las celdas de las dos matrices 5×5 se sustituyeron por **50 valores recalculados con cambios temporales exclusivamente de entradas**, restaurando al final `Input sheet!B26=.11, B28=.14, B29=.18, B68=.04` y `Cost of capital worksheet!B22=1.20`.
+Las celdas de las tres matrices 5×5 se construyeron por **75 valores recalculados con cambios temporales exclusivamente de entradas**, restaurando al final `Input sheet!B26=.11, B28=.14, B29=.18, B68=.04` y `Cost of capital worksheet!B22=1.20`.
 
 - **Matriz A** `Sensibilidades DCF!B6:F10`: CAGR años 2–5 (10%,12%,14%,16%,18%) × margen ajustado (14%,16%,18%,20%,22%). Centro **98,7382856555**.
 - **Matriz B** `Sensibilidades DCF!B14:F18`: WACC inicial aprox. 9%,9,5%,10%,10,5%,11% (recalculado vía beta temporal; costo estable fijo) × g terminal 3%,3,5%,4%,4,5%,4,8%. Centro **98,7382856555**.
+- **Matriz C · ROIC terminal × g** `Sensibilidades DCF!B37:F41`: 25 corridas adicionales con beta 1,20, WACC estable 8,247% y ejes ROIC terminal 9%, 11%, 13,23%, 15%, 17% y g 3%, 3,5%, 4%, 4,5%, 4,8%. Centro **98,7382856555**, extremos **81,4284 y 119,5899**. Se restauraron `Input sheet!B49=13,23%` y `B68=4%`; `Sensibilidades DCF!B42` controla diferencia central **0**.
 - `Sensibilidades DCF!B28:B29` se convirtió a fórmulas de diferencia entre centros y `Valuation output!B33`, ambas objetivo **0**. `B30` y `B31` vinculados al valor y precio vivos.
 - **DCF inverso** sobre precio 68,59 USD: crecimiento anual igual para años 1–5 ≈6,15% con margen Base; margen objetivo ≈12,6412% con crecimiento Base; crecimiento ≈8,51% con margen objetivo 16%; WACC inicial ≈16,51% manteniendo WACC estable 8,247%. Son contrafactuales de una variable, NO reemplazan la beta 1,20 aprobada.
 
@@ -43,7 +44,7 @@ Las celdas de las dos matrices 5×5 se sustituyeron por **50 valores recalculado
 |---|---|
 | Tres historias calculadas del modelo vivo, costos comunes y orden Conservadora ≤ Base ≤ Optimista | **APROBADO** |
 | Ponderaciones 25/50/25; MOS = 0,65 × DCF Base | **APROBADO** |
-| Matrices A y B 5×5 por corridas; ambos centros iguales al Base; retorno a entradas originales | **APROBADO** |
+| Matrices A, B y C 5×5 por corridas; tres centros iguales al Base; retorno a entradas originales | **APROBADO** |
 | DCF inverso con distintas entradas, restauración final | **APROBADO** |
 | Fuentes primarias, caja restringida, inversiones y NOL con dictamen económico final | **PARCIAL** (ver R2, R6) |
 | Comparación de fórmulas y notas de las tres copias contra sus plantillas Reboot (XLSX exportados) | **APROBADO**, 1.225 fórmulas iguales por copia + 5 sustituciones de supuestos; 76 notas iguales |
@@ -60,3 +61,5 @@ Se exportaron a XLSX desde Google Drive las dos **plantillas Reboot oficiales** 
 - Cada copia UBER (Base, Conservadora y Optimista): **1.225** fórmulas dentro de las 17 hojas. **0 fórmulas modificadas** y **0 fórmulas nuevas** frente a la plantilla; exactamente **5 celdas que eran fórmulas predeterminadas del Input sheet** pasaron a entradas económicas deliberadas: **B27** margen del año 1, **B28** crecimiento años 2–5, **B29** margen objetivo, **B32** ventas/capital años 6–10 y **B62** NOL condicional (cero). No son fórmulas de cálculo del motor y se documenta la diferencia, no se encubre.
 - Las **76 notas originales** por copia corresponden **100% en dirección y contenido** a sus respectivas plantillas; sin diferencias observadas.
 - **Resultado:** APROBADO el cotejo estructural del motor exportado y de notas para las tres copias, **con cinco excepciones de entradas del Input sheet justificadas**. No equivale a certificar toda la economía de los supuestos ni a auditar la lógica original del motor.
+
+**Ampliación R5 (10-nov-2026):** tercera matriz ROIC terminal × g registrada en hoja añadida; 25 valores obtenidos mediante motor vivo, sin alterar fórmulas originales y con control de centro cero. El documento de análisis del mismo expediente refleja ya las tres sensibilidades.
