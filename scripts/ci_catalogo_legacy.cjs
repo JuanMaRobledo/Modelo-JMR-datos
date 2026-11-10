@@ -35,7 +35,7 @@ for(const [ticker,selection] of Object.entries(archive.controlModeloA||{})){
   // Análisis editable previo de mismo revisionId: escoger el de ruta más específica si existen duplicados.
   const analysis=resolveRel(sameRevision.sort((a,b)=>a.length-b.length)[0]);
   canonicalValuations.push(selection.rutaValoracion); // ruta lógica histórica, respaldada por overlay temporal
-  canonicalAnalysis.push(analysis.replace(/^archivo-v1\\//,''));
+  canonicalAnalysis.push(analysis.startsWith('archivo-v1/')?analysis.slice(11):analysis);
 }
 const combined={
   ...active,
