@@ -1,18 +1,20 @@
 {
  "version": "FLOYD-R1R6-20261110-R1",
  "actualizadoEl": "2026-11-10",
- "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL, CMG, UBER y MELI son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. Las fichas Floyd F1–F5 de CMG y UBER pasaron a archivo-v1/. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
+ "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL, CMG, UBER, MELI y MSFT son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. Las fichas Floyd F1–F5 de CMG y UBER pasaron a archivo-v1/. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
  "valoraciones": [
   "valoraciones/UBER-REBOOT-3T26-R1.json",
   "valoraciones/CMG-REBOOT-3T26-R1.json",
   "valoraciones/AAPL-REBOOT-FY26-R1.json",
-  "valoraciones/MELI-REBOOT-3T26-R1.json"
+  "valoraciones/MELI-REBOOT-3T26-R1.json",
+  "valoraciones/MSFT-REBOOT-3T26-R1.json"
  ],
  "analisis": [
   "analisis/UBER-research-UBER-REBOOT-3T26-R1.json",
   "analisis/CMG-research-CMG-REBOOT-3T26-R1.json",
   "analisis/AAPL-research-AAPL-REBOOT-FY26-R1.json",
-  "analisis/MELI-research-MELI-REBOOT-3T26-R1.json"
+  "analisis/MELI-research-MELI-REBOOT-3T26-R1.json",
+  "analisis/MSFT-research-MSFT-REBOOT-3T26-R1.json"
  ],
  "auditorias": [],
  "controlModeloA": {
@@ -57,6 +59,13 @@
     "estado": "INCOMPLETA_EN_REVISION",
     "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
     "diagnostico": "Modelo JMR Floyd R1–R6: tres DCF, Múltiplos Atlas e Históricos. FCFF consolidado con el fondeo del crédito como pasivo operativo (excepción declarada). R6 económico independiente y revisión visual pendientes."
+   },
+   "MSFT": {
+    "rutaValoracion": "valoraciones/MSFT-REBOOT-3T26-R1.json",
+    "metodo": "Floyd",
+    "estado": "INCOMPLETA_EN_REVISION",
+    "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
+    "diagnostico": "Modelo JMR Floyd R1–R6: tres DCF, Múltiplos Atlas e Históricos. Arrendamientos financieros tratados como deuda; precio sobre el DCF Base. R6 económico independiente y revisión visual pendientes."
    }
   }
  },

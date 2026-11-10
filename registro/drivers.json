@@ -154,6 +154,44 @@
       }
     },
     {
+      "ticker": "MSFT",
+      "revisionId": "MSFT-REBOOT-3T26-R1",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-06",
+      "anterior": null,
+      "ordenAmbiguo": false,
+      "metodo": "Floyd",
+      "metodoPrincipal": "DCF FCFF Base 10 años",
+      "valorPrincipal": 496.207789286677,
+      "drivers": {
+        "crecimiento_1_5": 0.14789002655013372,
+        "margen_terminal": 0.46,
+        "sales_to_capital_1_5": 0.8,
+        "sales_to_capital_6_10": 1.2,
+        "costo_capital": 0.104942900273807,
+        "g_terminal": 0.04,
+        "rentabilidad_terminal": 0.18
+      },
+      "variacion": {
+        "crecimiento_1_5": null,
+        "margen_terminal": null,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": null,
+        "rentabilidad_terminal": null
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimiento (crecimiento (esquema anterior))",
+        "margen_terminal": "base.margen (margen EBIT objetivo (esquema anterior))",
+        "sales_to_capital_1_5": "base.s2c (S/C 1-5 (esquema anterior))",
+        "sales_to_capital_6_10": "base.s2c610 (S/C 6-10 (esquema anterior))",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
+        "g_terminal": "base.terminalGrowth (g terminal (esquema anterior))",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
       "ticker": "UBER",
       "revisionId": "UBER-REBOOT-3T26-R1",
       "estado": "VIGENTE",

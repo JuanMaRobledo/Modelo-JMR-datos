@@ -26,6 +26,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | MELI-REBOOT-3T26-R1 | VIGENTE | 2536.95 | 21.1 % | 13.5 % | 3.20 | 3.00 | 11.7 % | 4.0 % | 14.0 % |
 
+## MSFT
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| MSFT-REBOOT-3T26-R1 | VIGENTE | 496.21 | 14.8 % | 46.0 % | 0.80 | 1.20 | 10.5 % | 4.0 % | 18.0 % |
+
 ## UBER
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
