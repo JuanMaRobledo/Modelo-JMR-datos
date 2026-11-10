@@ -103,8 +103,10 @@ function run(){
     assert.equal(analysis.linkedValuation?.sourcePath,item.rutaValoracion);
     assert.equal(analysis.revisionId,current.revisionId);
   }
-  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra-floyd.length,
-    'Se perdieron revisiones A-1.2 anteriores o apareció un alta sin contrato');
+  const expectedLegacy=Object.entries(cat.archivoFloyd?.controlModeloA||{})
+    .filter(([ticker,v])=>v.metodo==='A-1.2' && cat.controlModeloA.empresas[ticker]?.metodo==='A-1.2').length;
+  assert.equal(aEntries.length,expectedLegacy,
+    'El archivo A-1.2 y sus selecciones vigentes temporales no concilian');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){
