@@ -51,7 +51,7 @@ Probabilidades **25 / 50 / 25**; sin probabilidad de fracaso (cobertura de inter
 
 ### Pruebas de las tres preguntas
 - **Posible:** ingresos del año 5 de 100.427 M en la Base (×2,6 en cinco años) frente a ×7,3 entre FY2020 y FY2025 (3.974 → 28.893 M); participación de mercado **N/D** (sin TAM verificado).
-- **Plausible:** margen objetivo ajustado de 13,5 % frente a 9,4 % hoy y 11,1 % contable en FY2025: **REVISAR**. La reinversión de la Base (ventas/capital 3,2) implica ≈ 37 centavos de capital por dólar nuevo de ventas, con un capital invertido del año base de solo ≈6.100 (el fondeo del crédito es pasivo operativo), y un ROIC contable de 36 % → 43 %: **alto y frágil**. Juicio: **Con reserva**.
+- **Plausible:** margen objetivo ajustado de 13,5 % frente a 9,4 % hoy y 11,1 % contable en FY2025: **REVISAR**. La reinversión de la Base (ventas/capital 3,2) implica ≈ 37 centavos de capital por dólar nuevo de ventas, con un capital invertido del año base de solo 7.357 (el fondeo del crédito es pasivo operativo), y un ROIC contable de 36 % → 43 %: **alto y frágil**. Juicio: **Con reserva**.
 - **Probable:** 21 % anual a cinco años frente a +48 % LTM y +39 % en FY2025; valor terminal = 77 % del valor operativo. Juicio: **Con reserva**.
 
 ## Puntos críticos para R4–R6

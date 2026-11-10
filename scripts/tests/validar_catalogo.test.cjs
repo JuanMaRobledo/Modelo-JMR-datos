@@ -43,7 +43,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
    assert.equal(v.libros.valoracion,v.hojaGoogle);
  }
 
- assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes en rama: UBER legado aún activo, CMG y AAPL Floyd R1–R6');
+ assert.deepEqual(tickers,['UBER','CMG','AAPL','MELI'],'Vigentes en rama: UBER, CMG, AAPL y MELI Floyd R1–R6');
  for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('archivo-v1/valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
  assert.equal(c.archivoFloyd.valoraciones.length,47,'Deben conservarse 47 registros archivados en archivo-v1');
 });

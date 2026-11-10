@@ -20,6 +20,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | CMG-REBOOT-3T26-R1 | VIGENTE | 32.28 | 8.9 % | 16.0 % | 2.70 | 2.90 | 7.7 % | 4.0 % | 18.4 % |
 
+## MELI
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| MELI-REBOOT-3T26-R1 | VIGENTE | 2536.95 | 21.1 % | 13.5 % | 3.20 | 3.00 | 11.7 % | 4.0 % | 14.0 % |
+
 ## UBER
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |

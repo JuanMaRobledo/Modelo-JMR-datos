@@ -20,3 +20,6 @@ Las revisiones Floyd (UBER-FLOYD-3T26, CMG-FLOYD-20261108-R1) siguen activas en 
 - UBER: clasificar inversiones LP (participaciones en otras empresas, valores disponibles para la venta, inversiones restringidas de seguros) para caja y activos no operativos; revisar el efecto de la liberación de valuation allowance en la tasa de impuestos.
 - Costo de capital: Rf 4,86 %, ERP madura 3,387 %, beta por industria de Damodaran (Restaurant/Dining para CMG; mezcla Transportation/Software para UBER) y calificación de UBER.
 - Motor local de réplica: `engine.py` de AAPL requiere parametrizarse por empresa.
+
+## MELI (revisión nueva)
+MELI-REBOOT-3T26-R1: R1–R5 hechas el 2026-11-10 (CANDIDATO→EN_REVISION), DCF Cons 908,33 · Base 2.536,95 · Opt 4.120,94, múltiplos 1.116 · 1.783 · 2.486; R6 pendiente. Detalle y salvedades en `MELI-REBOOT-3T26-R1/FASE_*_ENTREGA.md`.
