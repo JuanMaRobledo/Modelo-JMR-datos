@@ -2,6 +2,44 @@
   "descripcion": "Drivers de la historia Base por revisión, leídos solo de campos estructurados (null = N/D, sin rellenar). 'origen' indica el campo de cada valor; 'variacion' es la diferencia frente a la revisión anterior del mismo emisor. Generado por scripts/registro_revisiones.py; no editar a mano.",
   "revisiones": [
     {
+      "ticker": "AAPL",
+      "revisionId": "AAPL-REBOOT-FY26-R1",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-06",
+      "anterior": null,
+      "ordenAmbiguo": false,
+      "metodo": "Floyd",
+      "metodoPrincipal": "DCF FCFF Base 10 años",
+      "valorPrincipal": 209.576146771055,
+      "drivers": {
+        "crecimiento_1_5": 0.055998109638297766,
+        "margen_terminal": 0.37,
+        "sales_to_capital_1_5": 3,
+        "sales_to_capital_6_10": 3,
+        "costo_capital": 0.1025195876573334,
+        "g_terminal": 0.04,
+        "rentabilidad_terminal": 0.4476
+      },
+      "variacion": {
+        "crecimiento_1_5": null,
+        "margen_terminal": null,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": null,
+        "rentabilidad_terminal": null
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimiento (crecimiento (esquema anterior))",
+        "margen_terminal": "base.margen (margen EBIT objetivo (esquema anterior))",
+        "sales_to_capital_1_5": "base.s2c (S/C 1-5 (esquema anterior))",
+        "sales_to_capital_6_10": "base.s2c610 (S/C 6-10 (esquema anterior))",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
+        "g_terminal": "base.terminalGrowth (g terminal (esquema anterior))",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
       "ticker": "CELH",
       "revisionId": "CELH-20261028-A1",
       "estado": "SUSTITUIDA",
@@ -41,22 +79,22 @@
     },
     {
       "ticker": "CMG",
-      "revisionId": "CMG-FLOYD-20261108-R1",
+      "revisionId": "CMG-REBOOT-3T26-R1",
       "estado": "VIGENTE",
       "fecha": "2026-11-06",
       "anterior": null,
       "ordenAmbiguo": false,
       "metodo": "Floyd",
       "metodoPrincipal": "DCF FCFF Base 10 años",
-      "valorPrincipal": 33.04245907913879,
+      "valorPrincipal": 32.2836847608869,
       "drivers": {
-        "crecimiento_1_5": 0.08899283705078087,
+        "crecimiento_1_5": 0.08939641090490236,
         "margen_terminal": 0.16,
         "sales_to_capital_1_5": 2.7,
         "sales_to_capital_6_10": 2.9,
-        "costo_capital": 0.078476922825,
+        "costo_capital": 0.0768154743198044,
         "g_terminal": 0.04,
-        "rentabilidad_terminal": 0.22
+        "rentabilidad_terminal": 0.1836
       },
       "variacion": {
         "crecimiento_1_5": null,

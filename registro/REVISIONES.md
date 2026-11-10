@@ -7,6 +7,7 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 
 | Emisor | Vigente | Sustituidas |
 |---|---|---|
+| AAPL | AAPL-REBOOT-FY26-R1 | — |
 | CELH | — (fuera del catálogo) | CELH-20261028-A1 |
-| CMG | CMG-FLOYD-20261108-R1 | — |
+| CMG | CMG-REBOOT-3T26-R1 | — |
 | UBER | UBER-FLOYD-3T26 | — |
