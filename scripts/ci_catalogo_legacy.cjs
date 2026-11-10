@@ -23,7 +23,8 @@ for(const [ticker,selection] of Object.entries(archive.controlModeloA||{})){
   const valPath=resolveRel(selection.rutaValoracion);
   if(!valPath)throw new Error('Falta valoración A-1.2 archivada '+ticker+': '+selection.rutaValoracion);
   const v=JSON.parse(fs.readFileSync(path.join(root,valPath),'utf8'));
-  const sameRevision=(archive.analisis||[]).filter(rel=>{
+  const candidates=[...(archive.analisis||[]),...fs.readdirSync(path.join(root,'analisis')).filter(x=>x.endsWith('.json')).map(x=>'analisis/'+x)];
+  const sameRevision=candidates.filter(rel=>{
     const p=resolveRel(rel);
     if(!p)return false;
     try{const a=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
