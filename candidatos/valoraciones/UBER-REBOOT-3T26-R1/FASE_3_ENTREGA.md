@@ -1,76 +1,55 @@
-# UBER-REBOOT-3T26-R1 · Fase R3 (historias y DCF)
+# UBER-REBOOT-3T26-R1 · R3 — cierre del DCF con beta 1,20
 
-- **Fecha:** 2026-11-10 · **Agente:** Claude (Code, nube): Sheets, SEC (10-K FY2025 y 10-Q 3T-2026, XBRL y texto), LibreOffice (recálculo local del motor).
-- **Libros:** DCF Base `14QlydMFli2pxdG4agUYOAXL8QIE99P-3UDE7vwK8CaM` · Conservadora `1TUDP8WvRpjtm5AbCpGkKkfyAlItRuufIAAEkFp95aHA` · Optimista `1f7Fzs7TBezRNa4E0lwHoh8fcPXTGn0d09HTatCaDLRU`. Estado **CANDIDATO** (R4 pendiente; sin R6). La revisión Floyd `UBER-FLOYD-3T26` sigue activa en el catálogo.
-- **Motor:** fcffsimpleginzu original; entradas en `Input sheet`, `Cost of capital worksheet`, `R& D converter` y `Country equity risk premiums!B1`. Cálculo iterativo habilitado y arreglo de `Option value!B17`. **Integridad de fórmulas y comentarios no re-verificada** en estas copias.
+**Fecha de revisión:** 2026-11-10. **Modelo/ejecutor:** GPT-6, ChatGPT, herramientas GitHub/Google Sheets conectadas. **Estado:** R3 cálculos y sensibilidades conciliados; integridad completa de todas las fórmulas y comentarios por copia **NO_EJECUTADA**; publicación R5 y auditoría R6 **NO_EJECUTADAS**.
 
-## Resultado
-| | Conservadora | **Base** | Optimista | Esperado (25/50/25) |
-|---|---|---|---|---|
-| Valor por acción | 49,54 | **108,62** | 164,91 | 107,92 |
-| Frente al precio (68,59, 6-nov-2026) | −27,8 % | **+58,4 %** | +140,4 % | +57,3 % |
+## Identidad e insumos
+- Emisor UBER; corte contable 2026-09-30, precio de referencia fechado **68,59 USD** (2026-11-06). Ejecución sobre la revisión ya existente; no se creó otro libro ni se usó el archivo histórico Floyd como fuente.
+- H: https://docs.google.com/spreadsheets/d/176tcVAz_RzHluf4kyjEEsMjDcDosldPdB5FBifO9YQA/edit
+- DCF Base: https://docs.google.com/spreadsheets/d/14QlydMFli2pxdG4agUYOAXL8QIE99P-3UDE7vwK8CaM/edit
+- DCF Conservadora: https://docs.google.com/spreadsheets/d/1TUDP8WvRpjtm5AbCpGkKkfyAlItRuufIAAEkFp95aHA/edit
+- DCF Optimista: https://docs.google.com/spreadsheets/d/1f7Fzs7TBezRNa4E0lwHoh8fcPXTGn0d09HTatCaDLRU/edit
+- Múltiplos: https://docs.google.com/spreadsheets/d/19fe8FcQ32d3yf169i-XA7F-c4IGhWTCNl_QO4WgCwA4/edit
+- Análisis (sexto archivo): pendiente de R5.
+- **Decisión expresa del usuario:** beta apalancada = **1,20** en los tres motores, como `Cost of capital worksheet!B21 = Direct Input` y `B22=1.20`. La beta bottom-up = 0,822 de la entrega antigua se conserva solo como sensibilidad histórica, **no es el supuesto vigente**.
 
-**Precio con MOS 35 % = 0,65 × 108,62 = 70,60 USD.** El precio de mercado (68,59) está **por debajo** del precio con MOS: según esta revisión Uber estaría en zona de compra. **Esta conclusión depende del costo de capital** (ver «Punto crítico»). Réplica local = Google Sheets en las tres historias (49,5444 / 108,6198 / 164,9058).
+## Valores vivos conciliados (USD/acción)
+| DCF | Conservadora | Base | Optimista |
+|---|---:|---:|---:|
+| `Valuation output!B33` | 45,29115176 | **98,73828566** | 149,66887071 |
+| Probabilidad | 25% | 50% | 25% |
+| WACC inicial (común) | 9,999723886% | 9,999723886% | 9,999723886% |
+| WACC estable | 8,247% | 8,247% | 8,247% |
+| Costo de patrimonio Ke | 10,48752249% | 10,48752249% | 10,48752249% |
 
-## Punto crítico para R6: la beta
-Las reglas (§4A) piden WACC «Detailed» con beta bottom-up multinegocio cuando hay líneas de negocio distintas. Se aplicó: Mobility → Transportation (0,712), Delivery → Business & Consumer Services (0,806), Freight → Trucking (0,869), ponderadas por ingresos LTM → beta desapalancada 0,770, apalancada 0,822, Ke 8,72 %, **costo de capital inicial 8,37 %**. La revisión Floyd usó una beta directa de 1,20 y ERP de 4,08 % (WACC 9,37 %). **Con beta 1,20 en este mismo libro el costo de capital sería 10,00 % y el DCF Base 98,74** (MOS 64,18, por debajo del precio: no habría zona de compra). Mi opinión: las medias de «Transportation» y «Trucking» describen empresas de activos físicos y pueden subestimar el riesgo de una plataforma de consumo discrecional; la asignación de industrias es un juicio mío, no un dato. No se cambió la regla; se deja la sensibilidad en la hoja y este aviso.
+**Promedio ponderado:** 98,10914844 USD. **MOS 35% exclusivamente sobre DCF Base:** 64,17988568 USD. Precio fechado 68,59: descuento frente al Base `1−68.59/98.73828566=30,53%`; **NO cumple MOS 35%** a este precio de referencia.
 
-## Entradas comunes
-| Entrada | Valor | Fuente / criterio |
-|---|---|---|
-| Ingresos LTM · EBIT LTM | 56.526 · 7.034 | H (XBRL): FY2025 + 9M-2026 − 9M-2025 |
-| Año anterior (FY2025) | 52.017 · 5.565 | 10-K |
-| I+D capitalizada | Sí, 3 años | I+D LTM 4.152; FY2025 3.402; FY2024 3.109; FY2023 3.164 → EBIT ajustado 7.961, margen 14,08 % |
-| Patrimonio contable | 28.575 | Total con no controladoras |
-| Deuda | 15.664 | Deuda LP neta (incluye notas convertibles y canjeables); **sin arrendamientos** (1.897 + 176), por la regla acordada |
-| Caja | 10.068 | Efectivo 9.558 + inversiones CP 510. **Excluye** caja e inversiones restringidas (11.372), que respaldan las reservas de seguros (13.709) |
-| Activos no operativos | 11.473 | Inversiones 7.975 (Didi 2.061; Grab 1.667; Aurora 870; otras) + método de participación 3.498 (Delivery Hero 3.372), a valor en libros. Floyd usó 12.567; la diferencia (1.094) no la pude reconstruir |
-| Minoritarios | 1.304 | No redimibles 916 + redimibles 388 (valor en libros) |
-| Acciones | 2.107,437 | 2.041,898 (portada del 10-Q) + 65,539 RSU no devengadas (todas; conservador) |
-| Opciones | 5,549 M a 52,23 · 4,27 años · volatilidad 40 % | 10-Q Nota 7; **volatilidad supuesta**; valor 185,8 M |
-| Impuesto efectivo / marginal | 25,17 % / 25 % | 1.238 / 4.919 LTM; FY2024–25 tuvieron beneficios por liberación de provisión, no representativos |
-| Tasa libre · g terminal | 4,86 % · 4,0 % | FRED DGS10; regla |
-| ERP | 4,69 % inicial | Regiones (ingresos LTM): Norteamérica 29.543 (3,60 %), EMEA 15.905 (5,87 %), Asia 6.987 (4,88 %), Latinoamérica 4.091 (7,62 %); madura 3,387 % |
-| Costo de la deuda | 6,10 % antes de impuestos (entrada directa) | **Estimación mía**: Rf 4,86 % + diferencial ≈ 1,25 % observado en las notas a 10 años de 2024; vencimiento medio 7,5 años (calculado de la Nota 5). No verifiqué la calificación crediticia |
-| Pesos de mercado | 91,75 % / 8,25 % | Capitalización 144.549; deuda a mercado 12.998 |
-| Costo de capital | **8,37 % inicial** · 8,25 % estable | Común a las tres historias |
+## Supuestos y relato económico vigente
+- LTM ingresos **56.526 USDm**; EBIT contable **7.034 USDm**; EBIT ajustado por capitalización de I+D **7.961 USDm** (costos de I+D LTM 4.152; vida tres años); efectivo más inversiones CP 10.068 USDm; deuda 15.664 USDm sin capitalización adicional ASC842; activos no operativos 11.473 USDm como proxy libro; minoritarios 1.304 USDm; acciones ajustadas 2.107,437 millones.
+- Rf 4,86%; ERP geográfica efectiva 4,6896021%; Ke 10,4875%; costo de deuda antes de impuesto 6,10%, estimado y aún pendiente de verificación de rating; WACC inicial 9,9997% y estable 8,247%. La ERP madura 3,387% y el mix geográfico proceden de la entrega R3 anterior.
+- Año 1 / crecimiento CAGR años 2–5: Conservadora 7,0% / 9,75%; Base 11,0% / 14,0%; Optimista 13,0% / 16,25%.
+- Margen operativo objetivo ajustado: 13% / 18% / 22%, sobre 14,08% actual; ventas/capital años 1–5: 2,0 / 2,8 / 3,4; años 6–10: 1,8 / 2,5 / 3,0; ROIC terminal 8,247% / 13,23% / 18,21%; g terminal 4,0% en las tres historias.
+- Historias y probabilidades 25/50/25 conservadas. La asignación de riesgo a la plataforma (beta 1,20), márgenes y ROIC son juicios de valoración, no datos contables reportados. Riesgo de autonomía, seguros, litigios, S/C y valor de participadas no certifican por sí solos el escenario.
 
-## Historias (punto de partida: Floyd; cambios declarados)
-**Tipo: crecimiento**; probabilidades 50 / 25 / 25 (las de Floyd). Sin fracaso: cobertura de intereses de 14x.
-| Palanca | Conservadora | **Base** | Optimista |
-|---|---|---|---|
-| Crecimiento año 1 (B26) | 7,0 % | 11,0 % | 13,0 % |
-| CAGR años 2–5 (B28) | 9,75 % | 14,0 % | 16,25 % |
-| CAGR 5 años resultante | 9,2 % | 13,4 % | 15,6 % |
-| Margen año 1 → objetivo año 5 (ajustado por I+D) | 14,08 % → 13 % | 14,08 % → 18 % | 14,08 % → 22 % |
-| Ventas/capital 1–5 · 6–10 | 2,0 · 1,8 | 2,8 · 2,5 | 3,4 · 3,0 |
-| ROIC terminal | costo de capital (8,25 %) | 13,23 % | 18,21 % |
-| Valor por acción | 49,54 | 108,62 | 164,91 |
+## Sensibilidades verificadas contra el motor vivo — beta 1,20
+Las celdas de las dos matrices 5×5 se sustituyeron por **50 valores recalculados con cambios temporales exclusivamente de entradas**, restaurando al final `Input sheet!B26=.11, B28=.14, B29=.18, B68=.04` y `Cost of capital worksheet!B22=1.20`.
 
-- CAGR a 5 años, márgenes y ventas/capital son los de Floyd. El año 1 se fijó por debajo del resto porque el cambio de modelo de negocio en Reino Unido reduce los ingresos reportados de Mobility (−1.100 M en el 3T-2026; Mobility −2 % con reservas brutas +18 %): los ingresos crecieron 9,6 % en el trimestre y 12 % en nueve meses.
-- **ROIC terminal por la regla (§4):** industria ponderada por segmentos = 18,21 %. Optimista: ventaja durable = industria. Base: ventaja que se desvanece = punto medio con el costo de capital (13,23 %), porque Uber gana sobre su costo de capital hace menos de tres años (EBIT positivo desde 2023; ROIC actual 14,3 %). Conservadora: sin ventaja. Floyd usaba 14 / 9 / 17 %.
-- Diferencia frente a Floyd (Base 100,19): costo de capital 8,37 % frente a 9,37 % (sube el valor) y activos no operativos 11.473 frente a 12.567 (lo baja).
+- **Matriz A** `Sensibilidades DCF!B6:F10`: CAGR años 2–5 (10%,12%,14%,16%,18%) × margen ajustado (14%,16%,18%,20%,22%). Centro **98,7382856555**.
+- **Matriz B** `Sensibilidades DCF!B14:F18`: WACC inicial aprox. 9%,9,5%,10%,10,5%,11% (recalculado vía beta temporal; costo estable fijo) × g terminal 3%,3,5%,4%,4,5%,4,8%. Centro **98,7382856555**.
+- `Sensibilidades DCF!B28:B29` se convirtió a fórmulas de diferencia entre centros y `Valuation output!B33`, ambas objetivo **0**. `B30` y `B31` vinculados al valor y precio vivos.
+- **DCF inverso** sobre precio 68,59 USD: crecimiento anual igual para años 1–5 ≈6,15% con margen Base; margen objetivo ≈12,6412% con crecimiento Base; crecimiento ≈8,51% con margen objetivo 16%; WACC inicial ≈16,51% manteniendo WACC estable 8,247%. Son contrafactuales de una variable, NO reemplazan la beta 1,20 aprobada.
 
-### Pruebas de las tres preguntas
-- **Posible:** ingresos del año 5 de 105.972 M (×1,9) y del año 10 muy superiores; participación de mercado **N/D** (sin TAM verificado de movilidad y reparto). Las reservas brutas crecen 18 % en Mobility.
-- **Plausible:** margen objetivo 18 % frente a 9,2 % de las industrias ponderadas y 14,1 % hoy: **REVISAR**; se apoya en el apalancamiento operativo observado (EBIT de −1.832 en FY2022 a 7.034 LTM). Juicio: **Con reserva**.
-- **Probable:** 13,4 % anual a cinco años frente a 18 % en FY2024–25 y 12 % en 2026; valor terminal = 72 % del valor operativo. Juicio: **Con reserva** (dependencia alta del valor terminal y de la conducción autónoma, no modelada).
-
-## DCF inverso y sensibilidades (hoja `Sensibilidades DCF` del libro Base)
-- El precio de 68,59 equivale a creer, una variable a la vez: **crecimiento de 4,35 % anual** cinco años, o **margen objetivo de 11,55 %**, o 6,6 % de crecimiento con margen de 16 %. Con el costo de capital inicial no se llega: aun con 15 % el valor es 74,44.
-- Matriz A (CAGR × margen): 71,59 a 158,67. Matriz B (costo de capital inicial × g): 92,92 a 128,05. El precio queda por debajo de todas las celdas.
-
-## Controles
-| Control | Estado |
+## Comprobaciones
+| Control | Resultado |
 |---|---|
-| Réplica local vs Google Sheets (tres historias) | APROBADO |
-| Costo de capital común; probabilidades 100 %; Cons ≤ Base ≤ Opt; costo de capital estable > g | APROBADO |
-| Beta bottom-up por la regla | APLICADA, **en disputa** (ver punto crítico) |
-| Activos no operativos a valor en libros (participaciones cotizadas y no cotizadas) | PARCIAL: no se llevaron a valor de mercado |
-| Reservas de seguros y caja restringida fuera del puente | SUPUESTO declarado |
-| Costo de la deuda y volatilidad de opciones | ESTIMADOS |
-| Motor original sin cambios | NO re-verificado |
-| Auditoría económica independiente | **NO_EJECUTADA (R6)** |
+| Tres historias calculadas del modelo vivo, costos comunes y orden Conservadora ≤ Base ≤ Optimista | **APROBADO** |
+| Ponderaciones 25/50/25; MOS = 0,65 × DCF Base | **APROBADO** |
+| Matrices A y B 5×5 por corridas; ambos centros iguales al Base; retorno a entradas originales | **APROBADO** |
+| DCF inverso con distintas entradas, restauración final | **APROBADO** |
+| Fuentes primarias, caja restringida, inversiones y NOL con dictamen económico final | **PARCIAL** (ver R2, R6) |
+| Huella integral fórmulas/comentarios **de cada copia** contra el archivo maestro Damodaran | **NO_EJECUTADO** (en R1 la plantilla sí se cotejó, no estas copias) |
+| Análisis R5, integración app y auditoría independiente R6 | **NO_EJECUTADO** |
 
-## Siguiente paso exacto
-R4: cargar 03 MÚLTIPLOS (`19fe8FcQ32d3yf169i-XA7F-c4IGhWTCNl_QO4WgCwA4`) con los estados de H y los supuestos de la Base, elegir múltiplos de salida y pesos, y conciliar el `Resumen de valoraciones`. Antes conviene que el usuario decida si acepta la beta bottom-up o prefiere otra.
+**PASOS R3: 5/6 técnicos/económicos realizados; compuerta documental de motor sin verificar.** No significa publicación ni certificación.
+
+## Continuidad
+R4 utilizará este conjunto y **solo** el H Reboot; traspaso H→M y DCF→M, cinco múltiplos y matrices de sensibilidad individuales. La hoja de Múltiplos se mantiene secundaria; su propia puerta puede declarar `NO PUBLICAR` hasta cubrir fuentes y métodos. El estado vigente de catálogo para UBER continúa siendo Floyd anterior; esta revisión Reboot permanece **CANDIDATO**. 
