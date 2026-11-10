@@ -5,7 +5,7 @@
 | R1 corte e identidad | HECHA (5 libros creados) | HECHA (5 libros creados) |
 | R2 Históricos | HECHA (SEC XBRL; FY2017–FY2025 + LTM) | HECHA (FY2016–FY2025 + LTM) |
 | R3 historias y DCF | PENDIENTE | HECHA (Cons 17,69 · Base 32,28 · Opt 40,47) |
-| R4 múltiplos y resumen | PENDIENTE | PENDIENTE |
+| R4 múltiplos y resumen | PENDIENTE | HECHA (múltiplos 26,32 · 35,46 · 44,33; CONCILIADO) |
 | R5 análisis y publicación | PENDIENTE | PENDIENTE |
 | R6 auditoría independiente | PENDIENTE | PENDIENTE |
 

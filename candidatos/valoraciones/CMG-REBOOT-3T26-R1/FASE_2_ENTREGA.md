@@ -24,3 +24,6 @@
 
 ## Siguiente paso exacto
 R3: fijar las tres historias (crecimiento, margen, ventas/capital, ROIC terminal, fracaso solo en la Conservadora), cargar las entradas comunes del motor Ginzu en los tres libros DCF y calcular costo de capital común con Rf 4,86 % y ERP madura 3,387 %. Según la instrucción del usuario (reconfigurar desde las Floyd), las historias de partida son las de la revisión Floyd vigente, revisadas contra estos Históricos antes de usarlas.
+
+## Corrección posterior (R4, 2026-11-10)
+- **Impuestos FY2018:** el XBRL entregó −91,9 M (signo invertido); NI = utilidad antes de impuestos − impuestos exige +91,883. Se corrigió en `01 HISTÓRICOS` (`Income Statement!D20`) y en el libro de Múltiplos. `R2_evidencia/payload_CMG.json` conserva el valor original con signo erróneo; el libro es el vigente. La tasa efectiva FY2018 pasa de −34,2 % a 34,2 %.
