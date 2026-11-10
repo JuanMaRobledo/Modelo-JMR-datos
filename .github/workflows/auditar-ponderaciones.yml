@@ -72,9 +72,9 @@ jobs:
         run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_no_regresion_20.cjs
       - run: python3 -m unittest discover -s scripts/tests -p test_integrar_matrices_nativas.py -v
       - run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_shak_full_snapshot_candidate.py -v
-      - run: python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
-      - run: python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
-      - run: python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
+      - run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_shak_integration_dry_run.py -v
+      - run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_meli_descuentos_nativos.py -v
+      - run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_meli_integration_dry_run.py -v
       - name: Validar estándares editoriales del archivo A-1.2
         run: node scripts/ci_catalogo_legacy.cjs python3 -m unittest discover -s scripts/tests -p test_estandarizacion_20261031.py -v
       # Ejecutar las pruebas independientes primero para exponer todos los
