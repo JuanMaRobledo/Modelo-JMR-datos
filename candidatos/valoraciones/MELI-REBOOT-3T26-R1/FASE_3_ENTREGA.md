@@ -7,7 +7,7 @@
 ## Resultado
 | | Conservadora | **Base** | Optimista | Esperado (25/50/25) |
 |---|---|---|---|---|
-| Valor por acción | 908,33 | **2.536,95** | 4.120,94 | 2.526,04 |
+| Valor por acción | 908,33 | **2.536,95** | 4.120,94 | 2.525,79 |
 | Frente al precio (1.510,00 · 6-nov-2026) | −39,8 % | **+68,0 %** | +172,9 % | +67,3 % |
 
 **Precio con MOS 35 % = 0,65 × 2.536,95 = 1.649,02 USD**: el precio de mercado queda **por debajo** del precio con MOS (en zona de compra según la regla). Réplica local = Google Sheets en las tres historias (2.536,95 / 908,33 / 4.120,94). **Advertencia:** el rango es muy amplio y el resultado depende de supuestos que el historial no prueba (ver «Puntos críticos»).
