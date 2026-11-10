@@ -2,7 +2,7 @@ import sys,json,time
 sys.path.insert(0,'.')
 from eng import *
 from concurrent.futures import ProcessPoolExecutor
-W0=0.0837486217909645;P=68.59
+W0=0.0999972388628437;P=68.59
 def val(a):
     tag,story,over,coc=a
     try: return tag,run(story,over,tag,coc)['value']
@@ -27,7 +27,7 @@ def r_g40(x,tag): return run('base',{'B26':x,'B28':x,'B29':0.16},'r4'+tag)['valu
 def r_w(x,tag): return run('base',{},'rw'+tag,{'B11':'I will input','B12':x})['value']
 def solve(k):
     return {'g':lambda:('crecimiento',bis('g',0.02,0.14,r_growth,True)),'m':lambda:('margen',bis('m',0.08,0.18,r_margin,True)),
-            'g18':lambda:('crec_con_margen16',bis('h',0.02,0.16,r_g40,True)),'w':lambda:('wacc',bis('w',W0,0.15,r_w,False))}[k]()
+            'g18':lambda:('crec_con_margen16',bis('h',0.02,0.16,r_g40,True)),'w':lambda:('wacc',bis('w',W0,0.2,r_w,False))}[k]()
 if __name__=='__main__':
     t0=time.time();res={}
     with ProcessPoolExecutor(4) as ex:

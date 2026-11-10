@@ -1,14 +1,14 @@
 {
  "version": "FLOYD-R1R6-20261110-R1",
  "actualizadoEl": "2026-11-10",
- "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL/CMG son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. UBER Reboot R3–R4 conciliados, R5/CI aún pendiente; su vieja ficha Floyd F1–F5 no se retira hasta validación y publicación. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
+ "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL, CMG y UBER son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. Las fichas Floyd F1–F5 de CMG y UBER pasaron a archivo-v1/. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
  "valoraciones": [
-  "valoraciones/UBER-FLOYD-3T26.json",
+  "valoraciones/UBER-REBOOT-3T26-R1.json",
   "valoraciones/CMG-REBOOT-3T26-R1.json",
   "valoraciones/AAPL-REBOOT-FY26-R1.json"
  ],
  "analisis": [
-  "analisis/UBER-research-UBER-FLOYD-3T26.json",
+  "analisis/UBER-research-UBER-REBOOT-3T26-R1.json",
   "analisis/CMG-research-CMG-REBOOT-3T26-R1.json",
   "analisis/AAPL-research-AAPL-REBOOT-FY26-R1.json"
  ],
@@ -29,11 +29,11 @@
   "nota": "P/S y P/BV son complementarios y no bloqueantes, salvo métrica esencial en casos financieros como P/BV para bancos. Ninguna valoración A se marca COMPLETA hasta conciliar los criterios.",
   "empresas": {
    "UBER": {
-    "rutaValoracion": "valoraciones/UBER-FLOYD-3T26.json",
+    "rutaValoracion": "valoraciones/UBER-REBOOT-3T26-R1.json",
     "metodo": "Floyd",
     "estado": "INCOMPLETA_EN_REVISION",
-    "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
-    "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista. Control técnico F4 integrado; F5 económico independiente y revisión visual pendientes."
+    "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
+    "diagnostico": "Modelo JMR Floyd R1–R6: tres DCF (beta 1,20 por decisión del usuario), Múltiplos Atlas e Históricos. R6 económico independiente y revisión visual pendientes."
    },
    "CMG": {
     "rutaValoracion": "valoraciones/CMG-REBOOT-3T26-R1.json",
@@ -169,7 +169,8 @@
    "archivo-v1/valoraciones/XP-20261026-R2.json",
    "archivo-v1/valoraciones/XP-20261031-A12-R1.json",
    "archivo-v1/valoraciones/ZTS-20261029-R1.json",
-   "archivo-v1/valoraciones/CMG-FLOYD-20261108-R1.json"
+   "archivo-v1/valoraciones/CMG-FLOYD-20261108-R1.json",
+   "archivo-v1/valoraciones/UBER-FLOYD-3T26.json"
   ],
   "analisis": [
    "archivo-v1/analisis/AAPL-research-1791720000000-ia26.json",
@@ -242,7 +243,8 @@
    "archivo-v1/analisis/XP-research-20261031-A12-R1.json",
    "archivo-v1/analisis/ZTS-research-1790597701210-r0ase.json",
    "archivo-v1/analisis/ZTS-research-ZTS-20261029-R1.json",
-   "archivo-v1/analisis/CMG-research-CMG-FLOYD-20261108-R1.json"
+   "archivo-v1/analisis/CMG-research-CMG-FLOYD-20261108-R1.json",
+   "archivo-v1/analisis/UBER-research-UBER-FLOYD-3T26.json"
   ],
   "auditorias": [
    "archivo-v1/auditorias/narrativas/ADBE.md",
@@ -455,6 +457,13 @@
     "estado": "EN_REVISION_AUDITORIA_ECONOMICA_PENDIENTE",
     "multiplos": "CINCO_MATRICES_NATIVAS_5X5_Y_TRES_DCF_5X5_CENTROS_OK",
     "diagnostico": "KO R1: DCF Base US$64,026942, MOS35% US$41,617513, precio US$94,80 03-nov-2026; cuatro historias LISTO, 3 matrices DCF5x5 y 5 relativas5x5 nativas conciliadas. Nivel1 14 capítulos 10.308 palabras, Nivel2 12 apartados, hoja46 pestañas, FY2016–2025+LTM y leases2019–21 reparados; supuestos ROIC marginal terminal18%, S/C1,7→1,6, EBIT33,5%, WACC7,3646→8,61%. CCBA/Asia, IRS +3,8pp, FV4 holdings menores, opciones y beta ERP pendientes de auditoría económica. EN_REVISION no certificado; revisar etapa F5. La captura nativa contiene SHA-256 0511c15fd477… verificable contra el payload numérico; prueba de catálogo actualizada para KO sin deshabilitar controles. Estado de publicación condicionado al cierre de CI y QA."
+   },
+   "UBER": {
+    "rutaValoracion": "valoraciones/UBER-FLOYD-3T26.json",
+    "metodo": "Floyd",
+    "estado": "INCOMPLETA_EN_REVISION",
+    "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
+    "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista. Control técnico F4 integrado; F5 económico independiente y revisión visual pendientes."
    }
   },
   "seleccionesDefinitivas": {

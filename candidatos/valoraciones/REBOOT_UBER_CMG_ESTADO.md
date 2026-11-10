@@ -5,8 +5,8 @@
 | R1 corte e identidad | HECHA (5 libros creados) | HECHA (5 libros creados) |
 | R2 Históricos | HECHA (SEC XBRL; FY2017–FY2025 + LTM) | HECHA (FY2016–FY2025 + LTM) |
 | R3 historias y DCF | HECHA (Cons 45,29 · Base 98,74 · Opt 149,67; beta 1,20 por decisión del usuario) | HECHA (Cons 17,69 · Base 32,28 · Opt 40,47) |
-| R4 múltiplos y resumen | HECHA (múltiplos 40,65 · 71,05 · 106,02; CONCILIADO) | HECHA (múltiplos 26,32 · 35,46 · 44,33; CONCILIADO) |
-| R5 análisis y publicación | PENDIENTE | HECHA (EN_REVISION; reemplaza a la Floyd en el catálogo) |
+| R4 múltiplos y resumen | HECHA (múltiplos 40,24 · 70,31 · 104,90; CONCILIADO) | HECHA (múltiplos 26,32 · 35,46 · 44,33; CONCILIADO) |
+| R5 análisis y publicación | HECHA (EN_REVISION; reemplaza a la Floyd en el catálogo) | HECHA (EN_REVISION; reemplaza a la Floyd en el catálogo) |
 | R6 auditoría independiente | PENDIENTE | PENDIENTE |
 
 Las revisiones Floyd (UBER-FLOYD-3T26, CMG-FLOYD-20261108-R1) siguen activas en el catálogo hasta que cada versión Reboot pase sus puertas.

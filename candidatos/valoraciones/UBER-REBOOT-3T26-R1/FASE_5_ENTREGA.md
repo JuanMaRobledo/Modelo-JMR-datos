@@ -1,34 +1,29 @@
-# UBER-REBOOT-3T26-R1 · R5 — investigación creada, integración pendiente
-**Fecha:** 2026-11-10. **Agente:** GPT-6, ChatGPT. **Estado:** CANDIDATO — NO PUBLICAR; R6 auditoría independiente NO_EJECUTADA. **PASOS R5: 1/4** (A creada; JSON, validadores y publicación pendientes).
+# UBER-REBOOT-3T26-R1 · Fase R5 (análisis y publicación EN_REVISION)
 
-## Evidencia del sexto documento
-Documento nativo Google Docs creado **en la misma carpeta UBER de Drive**, sin usar como insumo ni copiar el análisis Floyd anterior:
-- A: https://docs.google.com/document/d/1O7sHw19zYtntbAaDWErrmkhUX8pN4RdPtBFqLfN6MMA/edit
-- 14 capítulos narrativos de Nivel 1 y 12 apartados cuantitativos de Nivel 2, títulos Google Docs para navegación, históricos, puente GAAP→económico, beta aprobada, escenarios, 10 años de DCF por historia, puente hasta acción, múltiplos FY+1/2/3 y VP, DCF inverso y sensibilidad.
-- Cinco libros operativos: H `176tcVAz_RzHluf4kyjEEsMjDcDosldPdB5FBifO9YQA`, D-B `14QlydMFli2pxdG4agUYOAXL8QIE99P-3UDE7vwK8CaM`, D-C `1TUDP8WvRpjtm5AbCpGkKkfyAlItRuufIAAEkFp95aHA`, D-O `1f7Fzs7TBezRNa4E0lwHoh8fcPXTGn0d09HTatCaDLRU`, M `19fe8FcQ32d3yf169i-XA7F-c4IGhWTCNl_QO4WgCwA4`.
+- **Fecha:** 2026-11-10 · **Agente:** Claude (Code, nube). Reemplaza el R5 parcial de ChatGPT (documento `1O7sHw19zYtntbAaDWErrmkhUX8pN4RdPtBFqLfN6MMA`, que citaba múltiplos distintos): por decisión del usuario se rehízo.
+- **Estado:** **EN_REVISION** · auditoría económica independiente (R6) **NO EJECUTADA** · QA visual de la app pendiente.
 
-## Reconciliación económica sin nuevo ajuste
-Beta apalancada usuario **1,20** en los tres libros; ERP geográfica 4,6896%; Ke 10,4875%; WACC inicial 9,9997%; estable 8,247%; g 4%.
-DCF (Cons/Base/Opt) **45,29115176 / 98,73828566 / 149,66887071 USD/acción**. Esperado (25/50/25) **98,10914844**. MOS 35% Base **64,17988568** frente a precio fechado **68,59 (2026-11-06)**; no alcanza MOS35%.
-Múltiplos totales combinados (Cons/Base/Opt) 49,27756 / 94,44358 / 136,81749; EV/FCFF **N/D** con peso 0 por ancla insuficiente, no sustituir con cero.
-**Matrices DCF**: A crecimiento×margen, B WACC×g, C ROIC terminal×g; 25 corridas cada una = 75. Centros **98,7382856555** y controles de diferencia 0 contra DCF Base. Matriz C en D-B `Sensibilidades DCF!A35:F42`, rangos ROIC9%–17%, g3%–4,8%, extremos **81,4284–119,5899**. Entradas restauradas `Input sheet!B49=0.1323` y `B68=0.04`.
-Matriz 5×5 por múltiplo activo EV/EBITDA, PE, PFCFE, POCF: controles centrales FY+3 = OK, no equivalen a VP3; anclas históricas y ajuste CFO residual siguen bajo reserva.
-**Motor**: cotejo por exportación XLSX de plantillas y DCF: 1.225 fórmulas del motor iguales en cada copia más 5 sustituciones deliberadas en entradas de `Input sheet` (B27/B28/B29/B32/B62); 76 notas originales iguales por copia, cero diferencias de contenido/dirección. No se editaron las 17 hojas originales salvo entradas.
-**SEC/IR**: se contrastó el 10-Q 3T26, 10-K FY2025 y resultados de 4-nov-2026: ingresos 9M2026 42.160 USDm, caja septiembre 9.558 USDm, inversiones CP 510, viajes 3T2026 4.061 millones, Gross Bookings 59.819 USDm. Ver el análisis A para URLs primarias y límites.
-**Fuente de datos vs juicio:** históricos SEC; R&D capitalizada 3 años, beta1.20, márgenes18% Base, ventas/capital2,8→2,5, ROIC terminal13,23%, costo deuda6,10% son elecciones analíticas. Ninguna de estas decisiones constituye un hecho auditado.
+## Entregables
+- **Sexto archivo:** Google Doc `1rTADOh6ToqyWA598V2cCwjnpGxn84-eNZlErMQAKEB8` (Nivel 1: 14 capítulos, 4.469 palabras; Nivel 2: 12 apartados, 3.914 palabras), en la carpeta UBER de Drive.
+- **JSON:** `valoraciones/UBER-REBOOT-3T26-R1.json` y `analisis/UBER-research-UBER-REBOOT-3T26-R1.json` (perfil `Floyd`, el nombre oficial vigente del modelo R1–R6; contrato `jmr-reboot-3libros-v1`). Generados con `R5_evidencia/build_json.py` a partir de los motores recalculados (`R3_evidencia/motor/*.xlsx`), `sens_res.json` y las lecturas del libro de Múltiplos (`R5_evidencia/datos.py`).
+- **Catálogo:** UBER-REBOOT-3T26-R1 sustituye a UBER-FLOYD-3T26, cuyos JSON pasan a `archivo-v1/`. Registro regenerado.
 
-## Comp puerta R5
+## Cifras publicadas
+DCF 45,29 / **98,74** / 149,67 · esperado 98,11 · MOS 35 % sobre la Base 64,18 · precio 68,59 (6-nov-2026) · múltiplos 40,24 / 70,31 / 104,90 · combinado 75/25: 44,03 / 91,63 / 138,48. Dos matrices DCF 5×5 (centro 98,7383) y cinco matrices 5×5 de múltiplos (centro = VP3 Base) con SHA-256 `5ed8d799…a88f`.
+
+## Controles ejecutados
 | Control | Resultado |
 |---|---|
-| Sexto documento A creado con índice 14+12 y magnitudes de revisión | **HECHO**, requiere revisión visual/económica de contenido |
-| H / tres D / M y matemáticas R3–R4 | **APROBADO** técnicamente, con salvedades descritas |
-| Anclas históricas de los cuatro múltiplos y ajuste CFO residual | **PARCIAL**, R4 pendiente de dictamen |
-| Fuente primaria por toda línea y valor económico participadas/caja/minoritarios | **PARCIAL** |
-| `M!Supuestos y control!B63` AUDITADO | **NO** (permanece PENDIENTE) |
-| `M!Supuestos y control!B64` estado para publicar | **NO PUBLICAR** |
-| JSON revisión par (valoración/análisis) y validadores, catálogo, app | **NO_EJECUTADO** |
-| Integración de PR app #193, motor #215, datos #263 | **NO_EJECUTADO** |
-| Auditoría externa R6 | **NO_EJECUTADO** |
+| `scripts/validar_reboot.cjs` (registro + análisis de AAPL, CMG y UBER) | PASS |
+| `node --test scripts/tests/validar_catalogo.test.cjs` | 7/7 (contadores de archivo 47/72 y regex de MOS actualizados) |
+| `scripts/auditar_integridad.cjs`, `validar_profundidad_floyd.cjs`, `registro_revisiones.py --check` | OK |
+| Pruebas que ya fallaban antes de este cambio (`capturas_matrices_fuente`, `relativos_revision`, `test_estandarizacion_20261031`, `validar_no_regresion_20` por rutas de INTU) | Mismo conjunto de fallos que en la rama sin los cambios de UBER; no se tocaron |
+| CI de GitHub | NO ejecutado desde aquí |
+| QA visual de la app | NO ejecutado |
+| R6 | NO ejecutada |
 
-## Siguiente paso exacto
-Completar fuentes y anclas económicas de M (EV/FCFF justificar N/D o cuantificar con serie normalizada; CFO residual, minoritarios y reservas, fiscalidad, deuda y acciones), registrar si hay salvedades materiales; crear par JSON en branch sin modificar catálogo principal, ejecutar validadores y prueba del contrato Reboot de PR #193/#215/#263; solo entonces publicar EN_REVISION si puerta completa. R6 debe quedar en otra sesión/agente.
+## Salvedades (también en el JSON)
+Beta 1,20 por decisión del usuario (la bottom-up 0,82 daría Base 108,62); valor terminal 71 % del valor; arrendamientos fuera de la deuda por decisión del usuario; activos no operativos a valor en libros; «otros ajustes» del flujo de caja (6.540 M) sin desglosar; costo de la deuda y volatilidad de opciones supuestos; verificación documental pendiente; EV/FCFF con el valor de FY2025; P/E poco fiable; fórmulas del motor no re-verificadas por mí (ChatGPT dejó un cotejo estructural en `FASE_3_ENTREGA.md` que no repetí).
+
+## Siguiente paso
+R6 por un agente independiente; CELH sigue pendiente de reconfigurar; revisar y fusionar PR #193/#215/#263 solo tras CI.

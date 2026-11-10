@@ -107,7 +107,7 @@ class EditorialTests(unittest.TestCase):
         floyd=[json.loads(p.read_text()) for p in files
                if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd' and '-FLOYD-' in json.loads(p.read_text()).get('revisionId','')]
         # Solo Floyd F1–F5 legado: el nuevo Floyd R1–R6 se valida por su contrato de seis archivos.
-        esperado={'UBER':'UBER-FLOYD-3T26'}
+        esperado={}
         self.assertEqual(len(floyd),len(esperado))
         self.assertEqual({f['ticker']:f['revisionId'] for f in floyd},esperado)
         for f in floyd:
