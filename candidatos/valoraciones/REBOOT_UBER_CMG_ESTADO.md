@@ -6,7 +6,7 @@
 | R2 Históricos | HECHA (SEC XBRL; FY2017–FY2025 + LTM) | HECHA (FY2016–FY2025 + LTM) |
 | R3 historias y DCF | PENDIENTE | HECHA (Cons 17,69 · Base 32,28 · Opt 40,47) |
 | R4 múltiplos y resumen | PENDIENTE | HECHA (múltiplos 26,32 · 35,46 · 44,33; CONCILIADO) |
-| R5 análisis y publicación | PENDIENTE | PENDIENTE |
+| R5 análisis y publicación | PENDIENTE | HECHA (EN_REVISION; reemplaza a la Floyd en el catálogo) |
 | R6 auditoría independiente | PENDIENTE | PENDIENTE |
 
 Las revisiones Floyd (UBER-FLOYD-3T26, CMG-FLOYD-20261108-R1) siguen activas en el catálogo hasta que cada versión Reboot pase sus puertas.

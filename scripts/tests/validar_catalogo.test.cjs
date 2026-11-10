@@ -24,7 +24,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
  }
  const tickers=c.valoraciones.map(p=>JSON.parse(fs.readFileSync(path.join(root,p))).ticker);
  assert.equal(new Set(tickers).size,tickers.length,'Una revisión activa por ticker');
- assert.equal(c.archivoFloyd.analisis.length,70);
+ assert.equal(c.archivoFloyd.analisis.length,71);
  for(const ticker of tickers){
    const v=JSON.parse(fs.readFileSync(path.join(root,c.valoraciones.find(p=>p.startsWith('valoraciones/'+ticker+'-')))));
    const a=JSON.parse(fs.readFileSync(path.join(root,c.analisis.find(p=>p.startsWith('analisis/'+ticker+'-')))));
@@ -45,7 +45,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
 
  assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes: UBER y CMG (Floyd, a reconfigurar) y AAPL (Reboot piloto)');
  for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('archivo-v1/valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
- assert.equal(c.archivoFloyd.valoraciones.length,45,'Deben conservarse 45 registros archivados en archivo-v1');
+ assert.equal(c.archivoFloyd.valoraciones.length,46,'Deben conservarse 46 registros archivados en archivo-v1');
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
 test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a DCF Base/);});

@@ -1,15 +1,15 @@
 {
- "version": "REBOOT-20261109-R1",
- "actualizadoEl": "2026-11-09",
- "nota": "Reboot 9-nov-2026: AAPL es la primera valoración del nuevo modelo (Reboot, EN_REVISION); UBER y CMG (Floyd EN_REVISION) se reconfigurarán; CELH en reconfiguración. Todo lo anterior en archivo-v1/.",
+ "version": "REBOOT-20261110-R2",
+ "actualizadoEl": "2026-11-10",
+ "nota": "Reboot: AAPL y CMG en el nuevo modelo (Reboot, EN_REVISION, R6 pendiente); UBER sigue en Floyd EN_REVISION hasta su reconfiguración (R1–R2 hechas); CELH en reconfiguración. Lo anterior, incluida CMG Floyd, en archivo-v1/.",
  "valoraciones": [
   "valoraciones/UBER-FLOYD-3T26.json",
-  "valoraciones/CMG-FLOYD-20261108-R1.json",
+  "valoraciones/CMG-REBOOT-3T26-R1.json",
   "valoraciones/AAPL-REBOOT-FY26-R1.json"
  ],
  "analisis": [
   "analisis/UBER-research-UBER-FLOYD-3T26.json",
-  "analisis/CMG-research-CMG-FLOYD-20261108-R1.json",
+  "analisis/CMG-research-CMG-REBOOT-3T26-R1.json",
   "analisis/AAPL-research-AAPL-REBOOT-FY26-R1.json"
  ],
  "auditorias": [],
@@ -36,11 +36,11 @@
     "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista. Control técnico F4 integrado; F5 económico independiente y revisión visual pendientes."
    },
    "CMG": {
-    "rutaValoracion": "valoraciones/CMG-FLOYD-20261108-R1.json",
-    "metodo": "Floyd",
+    "rutaValoracion": "valoraciones/CMG-REBOOT-3T26-R1.json",
+    "metodo": "Reboot",
     "estado": "INCOMPLETA_EN_REVISION",
-    "multiplos": "CINCO_MATRICES_BASE_5X5_CONCILIADAS",
-    "diagnostico": "Modelo JMR Floyd, escenarios Base/Conservador/Optimista, múltiplos como contraste con peso 0. Control técnico F4 integrado; F5 económico independiente y revisión visual por realizar."
+    "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
+    "diagnostico": "Modelo JMR Reboot: tres DCF, Múltiplos Atlas e Históricos. R6 económico independiente y revisión visual pendientes."
    },
    "AAPL": {
     "rutaValoracion": "valoraciones/AAPL-REBOOT-FY26-R1.json",
@@ -79,24 +79,25 @@
    "revisionAnterior": "UBER-20261030-A1"
   },
   "CMG": {
-   "fecha": "2026-11-08",
-   "revisionId": "CMG-FLOYD-20261108-R1",
-   "metodo": "Floyd",
-   "valorPorAccion": 33.04245907913879,
-   "mos35": 21.47759840144021,
+   "fecha": "2026-11-10",
+   "revisionId": "CMG-REBOOT-3T26-R1",
+   "metodo": "Reboot",
+   "valorPorAccion": 32.2836847608869,
+   "mos35": 20.984395094576485,
    "moneda": "USD",
    "precioReferencia": 34.43,
    "fechaPrecioReferencia": "2026-11-06",
    "corteContable": "2026-09-30",
-   "sheetId": "1f7BMt0ynbvjFUT84ftUmkPfxyJvmPvcqQ-7GW7EWtAY",
-   "estadoSeleccion": "FLOYD_F4_SELECCIONADO_EN_REVISION",
+   "sheetId": "1asO4BR42MypptINAooJ3hP6joY5fFUYDB5IM2NSDo7U",
+   "estadoSeleccion": "REBOOT_R5_EN_REVISION",
    "estado": "EN_REVISION",
    "auditoriaEconomica": "NO_REALIZADA",
    "reservas": [
-    "Auditoría económica F5 independiente y QA visual pendientes; no equivale a certificación."
+    "Auditoría económica independiente R6 y QA visual pendientes; no equivale a certificación.",
+    "Verificación documental de la serie histórica pendiente."
    ],
-   "alcance": "Pareja activa única CMG Floyd R1; libros históricos y valoración separados; F5 económica pendiente",
-   "revisionAnterior": "CMG-20261028-A3"
+   "alcance": "Reconfiguración de CMG al perfil Reboot: tres DCF + Múltiplos + Históricos + Análisis",
+   "revisionAnterior": "CMG-FLOYD-20261108-R1"
   },
   "AAPL": {
    "fecha": "2026-11-09",
@@ -167,7 +168,8 @@
    "archivo-v1/valoraciones/UBER-20261030-A1.json",
    "archivo-v1/valoraciones/XP-20261026-R2.json",
    "archivo-v1/valoraciones/XP-20261031-A12-R1.json",
-   "archivo-v1/valoraciones/ZTS-20261029-R1.json"
+   "archivo-v1/valoraciones/ZTS-20261029-R1.json",
+   "archivo-v1/valoraciones/CMG-FLOYD-20261108-R1.json"
   ],
   "analisis": [
    "archivo-v1/analisis/AAPL-research-1791720000000-ia26.json",
@@ -239,7 +241,8 @@
    "archivo-v1/analisis/XP-research-20261026-r2.json",
    "archivo-v1/analisis/XP-research-20261031-A12-R1.json",
    "archivo-v1/analisis/ZTS-research-1790597701210-r0ase.json",
-   "archivo-v1/analisis/ZTS-research-ZTS-20261029-R1.json"
+   "archivo-v1/analisis/ZTS-research-ZTS-20261029-R1.json",
+   "archivo-v1/analisis/CMG-research-CMG-FLOYD-20261108-R1.json"
   ],
   "auditorias": [
    "archivo-v1/auditorias/narrativas/ADBE.md",
