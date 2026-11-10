@@ -13,7 +13,10 @@ function validateLedger(s,{optional=false}={}){
 const mosNear=(a,b)=>finite(a)&&finite(b)&&Math.abs(a-b)<=0.005000001;
 function vFcffFY3(j){return j?.nivel2ProyeccionBase?.[2]?.fcff;}
 function validateRecord(j){
- if(j.perfil_valoracion==='Floyd')return require('./validar_catalogo.cjs').validateFloydNativeMatrices(j);
+ // Floyd R1–R6 usa el contrato técnico nacido en Reboot. No inferir motor por perfil.
+ if(j.contratoLibros==='jmr-reboot-3libros-v1')return require('./validar_reboot.cjs').validateRebootRecord(j);
+ // Floyd F1–F5 queda únicamente como expediente histórico de dos libros.
+ if(j.contratoLibros==='floyd-h1-h2-separados-v1')return require('./validar_catalogo.cjs').validateFloydNativeMatrices(j);
  if(j.perfil_valoracion==='Reboot')return require('./validar_reboot.cjs').validateRebootRecord(j);
  if(j.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(j);
  // Contrato formal del expediente META R4 (análisis privado): DCF oficial
