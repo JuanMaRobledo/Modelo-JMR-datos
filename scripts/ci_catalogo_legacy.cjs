@@ -11,23 +11,75 @@ const original=fs.readFileSync(file,'utf8');
 const active=JSON.parse(original),archive=active.archivoFloyd;
 if(!archive || !Array.isArray(archive.valoraciones)||!Array.isArray(archive.analisis))
   throw new Error('Falta archivoFloyd: no se puede reconstruir el catálogo histórico para auditoría');
+// Reconstruir UNA pareja por empresa histórica, no todas las versiones archivadas.
+// Las rutas físicas se mantienen dentro de archivo-v1; jamás tocar el catálogo publicado.
+const resolveRel = rel => {
+  const options = [rel, 'archivo-v1/'+rel];
+  return options.find(x=>fs.existsSync(path.join(root,x))) || null;
+};
+const canonicalValuations=[],canonicalAnalysis=[];
+for(const [ticker,selection] of Object.entries(archive.controlModeloA||{})){
+  if(selection.metodo!=='A-1.2')continue;
+  const valPath=resolveRel(selection.rutaValoracion);
+  if(!valPath)throw new Error('Falta valoración A-1.2 archivada '+ticker+': '+selection.rutaValoracion);
+  const v=JSON.parse(fs.readFileSync(path.join(root,valPath),'utf8'));
+  const candidates=[...(archive.analisis||[]),...fs.readdirSync(path.join(root,'analisis')).filter(x=>x.endsWith('.json')).map(x=>'analisis/'+x)];
+  const sameRevision=candidates.filter(rel=>{
+    const p=resolveRel(rel);
+    if(!p)return false;
+    try{const a=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
+      return a.ticker===ticker && a.revisionId===v.revisionId;
+    }catch{return false}
+  });
+  if(sameRevision.length<1)throw new Error('Falta análisis archivado '+ticker+' / '+v.revisionId);
+  // Análisis editable previo de mismo revisionId: escoger el de ruta más específica si existen duplicados.
+  const rank = rel => {
+    const name=path.basename(rel);
+    if(name===ticker+'-research-'+v.revisionId+'.json')return 0;
+    if(name.includes('-research-'))return 1;
+    if(name.includes('CANDIDATO'))return 3;
+    return 2;
+  };
+  const analysis=resolveRel(sameRevision.sort((a,b)=>rank(a)-rank(b)||a.length-b.length)[0]);
+  canonicalValuations.push(selection.rutaValoracion); // ruta lógica histórica, respaldada por overlay temporal
+  canonicalAnalysis.push(analysis.startsWith('archivo-v1/')?analysis.slice(11):analysis);
+}
 const combined={
   ...active,
-  valoraciones:[...archive.valoraciones,...active.valoraciones],
-  analisis:[...archive.analisis,...active.analisis],
+  valoraciones:[...new Set([...canonicalValuations,...active.valoraciones])],
+  analisis:[...new Set([...canonicalAnalysis,...active.analisis])],
   auditorias:[...archive.auditorias],
   controlModeloA:{...active.controlModeloA,empresas:{...archive.controlModeloA,...active.controlModeloA.empresas}},
   seleccionesDefinitivas:{...archive.seleccionesDefinitivas,...active.seleccionesDefinitivas}
 };
 const args=process.argv.slice(2);
 if(!args.length)throw new Error('Uso: node scripts/ci_catalogo_legacy.cjs COMANDO [ARG...]');
+// Los tests antiguos usan rutas previas a archive-v1. Restaurar solo EN EL RUNNER
+// con symlinks transitorios, sin tocar los JSON ni el catálogo de la app.
+const transient=[];
+function overlay(src,dst){
+  if(fs.existsSync(dst)){
+    if(fs.statSync(src).isDirectory() && fs.statSync(dst).isDirectory()){
+      for(const name of fs.readdirSync(src))overlay(path.join(src,name),path.join(dst,name));
+    }
+    return; // nunca sobrescribir un archivo actual ni la revisión vigente
+  }
+  fs.mkdirSync(path.dirname(dst),{recursive:true});
+  fs.symlinkSync(src,dst,fs.statSync(src).isDirectory()?'dir':'file');
+  transient.push(dst);
+}
 let code=1;
 try{
+  for(const name of fs.readdirSync(path.join(root,'archivo-v1'))){
+    if(['.gitkeep'].includes(name))continue;
+    overlay(path.join(root,'archivo-v1',name),path.join(root,name));
+  }
   fs.writeFileSync(file,JSON.stringify(combined,null,2)+'\n');
   const p=spawnSync(args[0],args.slice(1),{stdio:'inherit',cwd:root,env:{...process.env,JMR_CI_ARCHIVO_LEGADO:'1'}});
   code=p.status??1;
   if(p.error)console.error(p.error);
 }finally{
   fs.writeFileSync(file,original);
+  for(const rel of transient.reverse())fs.unlinkSync(rel);
 }
 process.exitCode=code;

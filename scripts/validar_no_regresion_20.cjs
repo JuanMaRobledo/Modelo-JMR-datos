@@ -71,7 +71,7 @@ function run(){
     assert.equal(a.controlCobertura?.nivel2Apartados,12);
   }
   const floyd=Object.entries(cat.controlModeloA?.empresas||{})
-    .filter(([,item])=>item.metodo==='Floyd');
+    .filter(([,item])=>item.metodo==='Floyd' && /-FLOYD-/.test(item.rutaValoracion||'')); // solo legado F1–F5; Floyd R1–R6 se valida por contrato aparte
   // Revisiones Floyd integradas de forma explícita (una por emisor), cada una con su
   // antecedente A-1.2 preservado (archivo y huella de hoja de origen intactos).
   const FLOYD_ESPERADO={
@@ -103,8 +103,10 @@ function run(){
     assert.equal(analysis.linkedValuation?.sourcePath,item.rutaValoracion);
     assert.equal(analysis.revisionId,current.revisionId);
   }
-  assert.equal(aEntries.length,20-DEGRADADAS.length+nuevas+extra-floyd.length,
-    'Se perdieron revisiones A-1.2 anteriores o apareció un alta sin contrato');
+  const expectedLegacy=Object.entries(cat.archivoFloyd?.controlModeloA||{})
+    .filter(([ticker,v])=>v.metodo==='A-1.2' && cat.controlModeloA.empresas[ticker]?.metodo==='A-1.2').length;
+  assert.equal(aEntries.length,expectedLegacy,
+    'El archivo A-1.2 y sus selecciones vigentes temporales no concilian');
   let snapshots=0,htmlPairs=0;
   const withoutSnapshot=[];
   for(const [ticker,item] of aEntries){

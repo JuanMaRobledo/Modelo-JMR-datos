@@ -22,7 +22,7 @@ for(const rel of active){
   const paras=(html.match(/<p\b/ig)||[]).length;
   // Floyd conserva 14 capítulos h3 bajo el título Nivel 1 h2;
   // el esquema previo utiliza h2 para los capítulos.
-  const headings=(html.match(d.perfil_valoracion==='Floyd'?/<h3\b/ig:/<h2\b/ig)||[]).length;
+  const headings=(html.match(['Floyd','Reboot'].includes(d.perfil_valoracion)?/<h3\b/ig:/<h2\b/ig)||[]).length;
   const ticker=path.basename(rel).split('-')[0];
   const rev=d.valoracionRevisionId||d.revisionId;
   let errors=[];

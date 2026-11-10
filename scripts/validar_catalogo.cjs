@@ -141,6 +141,7 @@ function validateFloydNativeMatrices(v){
 }
 
 function validateNativeMatrices(v){
+  if(v.contratoLibros==='jmr-reboot-3libros-v1')return require('./validar_reboot.cjs').validateRebootRecord(v);
   if(v.perfil_valoracion==='Floyd')return validateFloydNativeMatrices(v);
   if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
   if(v.sensibilidadMultiples?.contrato==='bank-relative-ke-v1'||
@@ -351,7 +352,7 @@ function validate(root = path.join(__dirname, '..')) {
     // Contrato editorial 2026-10-30: Nivel 1 = 14 capítulos, ciclos independientes.
     // Los expedientes anteriores siguen siendo visibles, pero NO se certifican
     // como migrados. Solo tres revisiones históricas publicadas tienen excepción.
-    const headingLevel=a.perfil_valoracion==='Floyd'?'h3':'h2';
+    const headingLevel=['Floyd','Reboot'].includes(a.perfil_valoracion)?'h3':'h2';
     const headingRe=new RegExp('<'+headingLevel+'[^>]*>([\\s\\S]*?)<\\/'+headingLevel+'>','gi');
     const h2 = [...a.articleHtml.matchAll(headingRe)]
       .map(m => m[1].replace(/<[^>]+>/g, '').trim());
@@ -497,7 +498,10 @@ function validate(root = path.join(__dirname, '..')) {
     // sensibilidad por múltiplos, fallar EXPLÍCITAMENTE en vez de pasar el
     // registro como si estuviera auditado o dejar un TypeError opaco.
     const contratoA = ['A-1.2','Floyd'].includes(c.controlModeloA?.empresas?.[v.ticker]?.metodo);
-    if (contratoA) {
+    if (v.contratoLibros === 'jmr-reboot-3libros-v1') {
+      // Floyd R1–R6 (alias histórico Reboot): libros separados y cinco matrices derivadas del libro M.
+      require('./validar_reboot.cjs').validateRebootRecord(v);
+    } else if (contratoA) {
       const s = v.sensibilidadMultiples;
       const grids = Array.isArray(s?.matrices) ? s.matrices : [];
       // Método A vigente: sensibilidades de múltiplos SOLO Base, matrices 5x5

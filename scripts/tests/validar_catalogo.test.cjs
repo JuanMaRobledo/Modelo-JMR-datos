@@ -24,28 +24,34 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
  }
  const tickers=c.valoraciones.map(p=>JSON.parse(fs.readFileSync(path.join(root,p))).ticker);
  assert.equal(new Set(tickers).size,tickers.length,'Una revisión activa por ticker');
- assert.equal(c.archivoFloyd.analisis.length,27);
+ assert.equal(c.archivoFloyd.analisis.length,71);
  for(const ticker of tickers){
    const v=JSON.parse(fs.readFileSync(path.join(root,c.valoraciones.find(p=>p.startsWith('valoraciones/'+ticker+'-')))));
    const a=JSON.parse(fs.readFileSync(path.join(root,c.analisis.find(p=>p.startsWith('analisis/'+ticker+'-')))));
-   assert.equal(v.perfil_valoracion,'Floyd');
    assert.equal(a.revisionId,v.revisionId);
+   assert.equal(a.documentos.nivel1,v.libros.analisis);
+   if(v.contratoLibros==='jmr-reboot-3libros-v1'){
+     assert.equal(v.contratoLibros,'jmr-reboot-3libros-v1');
+     assert.ok(v.libros.historicos&&v.libros.dcf.base&&v.libros.dcf.conservadora&&v.libros.dcf.optimista&&v.libros.multiplos&&v.libros.analisis);
+     assert.equal(v.libros.dcf.base,v.hojaGoogle);
+     continue;
+   }
+   assert.equal(v.perfil_valoracion,'Floyd');
    assert.equal(v.contratoLibros,'floyd-h1-h2-separados-v1');
    assert.ok(v.libros.historicos&&v.libros.valoracion&&v.libros.analisis);
    assert.notEqual(v.libros.historicos,v.libros.valoracion);
    assert.equal(v.libros.valoracion,v.hojaGoogle);
-   assert.equal(a.documentos.nivel1,v.libros.analisis);
  }
 
- assert.deepEqual(tickers,['UBER','CMG'],'Solo las revisiones Floyd de UBER y CMG pueden estar vigentes');
- for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
- assert.equal(c.archivoFloyd.valoraciones.length,27,'Deben conservarse 27 expedientes archivados');
+ assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes en rama: UBER legado aún activo, CMG y AAPL Floyd R1–R6');
+ for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('archivo-v1/valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
+ assert.equal(c.archivoFloyd.valoraciones.length,46,'Deben conservarse 46 registros archivados en archivo-v1');
 });
 test('rechaza análisis enlazado a otra valoración',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.analisis[0]);const a=JSON.parse(fs.readFileSync(p));a.linkedValuation.sourcePath='valoraciones/OTRA.json';fs.writeFileSync(p,JSON.stringify(a));});assert.throws(()=>validate(tmp),/valoración del catálogo ausente o ambigua/);});
 test('rechaza MOS que no deriva del DCF principal',t=>{const tmp=fixture(t,dir=>{const c=require(path.join(dir,'catalogo.json'));const p=path.join(dir,c.valoraciones[0]);const v=JSON.parse(fs.readFileSync(p));v.precioMOS=0;fs.writeFileSync(p,JSON.stringify(v));});assert.throws(()=>validate(tmp),/DCF y MOS|MOS no corresponde a DCF Base/);});
 
 test('archivo histórico preservado y excluido del catálogo público', () => {
-  assert.ok(fs.existsSync(path.join(root,'auditorias/archivo/NFLX-auditoria-2026-10-22.md')));
+  assert.ok(fs.existsSync(path.join(root,'archivo-v1/auditorias/archivo/NFLX-auditoria-2026-10-22.md')));
   assert.ok(!require(path.join(root,'catalogo.json')).auditorias.some(p => p.includes('/archivo/')));
   const c=require(path.join(root,'catalogo.json'));
   assert.ok(c.auditorias.every(p=>!p.includes('/archivo/')));
@@ -64,9 +70,9 @@ test('rechaza revisión financiera editorial discordante', t => {
 
 test('XP FCFE A-1.2 archivado conserva su contraste R2 no certificado',()=>{
  const c=require(path.join(root,'catalogo.json'));
- const p=c.archivoFloyd.valoraciones.find(p=>p.startsWith('valoraciones/XP-'));
+ const p=c.archivoFloyd.valoraciones.find(p=>p==='archivo-v1/valoraciones/XP-20261031-A12-R1.json');
  const v=JSON.parse(fs.readFileSync(path.join(root,p)));
- const ap=c.archivoFloyd.analisis.find(p=>p.startsWith('analisis/XP-'));
+ const ap=c.archivoFloyd.analisis.find(p=>p.includes('XP-research-20261031-A12-R1'));
  const a=JSON.parse(fs.readFileSync(path.join(root,ap)));
  assert.equal(v.revisionId,'XP-20261031-A12-R1');
  assert.equal(v.version_metodo,'A-1.2');
@@ -79,7 +85,18 @@ test('XP FCFE A-1.2 archivado conserva su contraste R2 no certificado',()=>{
  assert.ok(v.sensibilidadMultiples.matrices.every(m=>m.peso===0&&m.anclaCertificada===false));
  assert.ok(Math.abs(v.valorPrincipal-14.475590094736917)<1e-8);
  assert.ok(Math.abs(v.precioMOS-v.valorPrincipal*.65)<1e-8);
- assert.equal(a.linkedValuation.sourcePath,p);
+ assert.equal(path.basename(a.linkedValuation.sourcePath),path.basename(p));
  assert.ok(!c.auditorias.includes('auditorias/narrativas/XP.md'));
- assert.ok(fs.existsSync(path.join(root,'valoraciones/XP-20261026-R2.json')));
+ assert.ok(fs.existsSync(path.join(root,'archivo-v1/valoraciones/XP-20261026-R2.json')));
+});
+test('Reboot: rechaza matriz de múltiplos alterada (SHA-256) y libros repetidos',t=>{
+  const {validateRebootRecord}=require('../validar_reboot.cjs');
+  const v=JSON.parse(fs.readFileSync(path.join(root,'valoraciones/AAPL-REBOOT-FY26-R1.json')));
+  assert.equal(validateRebootRecord(v),true);
+  const a=JSON.parse(JSON.stringify(v));a.sensibilidadMultiples.matrices[0].matriz[0][0]+=1;
+  assert.throws(()=>validateRebootRecord(a),/SHA-256/);
+  const b=JSON.parse(JSON.stringify(v));b.libros.multiplos=b.libros.historicos;
+  assert.throws(()=>validateRebootRecord(b),/distintos/);
+  const c=JSON.parse(JSON.stringify(v));c.valorEsperado.historias.find(h=>h.id==='B').valor=c.valorPrincipal+1;
+  assert.throws(()=>validateRebootRecord(c));
 });

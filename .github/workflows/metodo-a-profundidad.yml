@@ -7,6 +7,7 @@ on:
       - 'valoraciones/**'
       - 'catalogo.json'
       - 'scripts/validar_profundidad_metodo_a.cjs'
+      - 'scripts/validar_reboot.cjs'
       - '.github/workflows/metodo-a-profundidad.yml'
   push:
     branches: [main]
@@ -15,6 +16,7 @@ on:
       - 'valoraciones/**'
       - 'catalogo.json'
       - 'scripts/validar_profundidad_metodo_a.cjs'
+      - 'scripts/validar_reboot.cjs'
       - '.github/workflows/metodo-a-profundidad.yml'
 
 jobs:
@@ -29,3 +31,5 @@ jobs:
         run: node scripts/ci_catalogo_legacy.cjs node scripts/validar_profundidad_metodo_a.cjs
       - name: Validar análisis y valoración Floyd de todas las empresas vigentes
         run: node scripts/validar_profundidad_floyd.cjs
+      - name: Validar análisis y valoración Reboot de todas las empresas vigentes
+        run: node scripts/validar_reboot.cjs
