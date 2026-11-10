@@ -1,6 +1,6 @@
 # UBER-REBOOT-3T26-R1 · R3 — cierre del DCF con beta 1,20
 
-**Fecha de revisión:** 2026-11-10. **Modelo/ejecutor:** GPT-6, ChatGPT, herramientas GitHub/Google Sheets conectadas. **Estado:** R3 cálculos y sensibilidades conciliados; integridad completa de todas las fórmulas y comentarios por copia **NO_EJECUTADA**; publicación R5 y auditoría R6 **NO_EJECUTADAS**.
+**Fecha de revisión:** 2026-11-10. **Modelo/ejecutor:** GPT-6, ChatGPT, herramientas GitHub/Google Sheets conectadas. **Estado:** R3 cálculos y sensibilidades conciliados; cotejo estructural de fórmulas y notas **APROBADO con cinco sustituciones de entradas documentadas**; publicación R5 y auditoría R6 **NO_EJECUTADAS**.
 
 ## Identidad e insumos
 - Emisor UBER; corte contable 2026-09-30, precio de referencia fechado **68,59 USD** (2026-11-06). Ejecución sobre la revisión ya existente; no se creó otro libro ni se usó el archivo histórico Floyd como fuente.
@@ -46,10 +46,17 @@ Las celdas de las dos matrices 5×5 se sustituyeron por **50 valores recalculado
 | Matrices A y B 5×5 por corridas; ambos centros iguales al Base; retorno a entradas originales | **APROBADO** |
 | DCF inverso con distintas entradas, restauración final | **APROBADO** |
 | Fuentes primarias, caja restringida, inversiones y NOL con dictamen económico final | **PARCIAL** (ver R2, R6) |
-| Huella integral fórmulas/comentarios **de cada copia** contra el archivo maestro Damodaran | **NO_EJECUTADO** (en R1 la plantilla sí se cotejó, no estas copias) |
+| Comparación de fórmulas y notas de las tres copias contra sus plantillas Reboot (XLSX exportados) | **APROBADO**, 1.225 fórmulas iguales por copia + 5 sustituciones de supuestos; 76 notas iguales |
 | Análisis R5, integración app y auditoría independiente R6 | **NO_EJECUTADO** |
 
-**PASOS R3: 5/6 técnicos/económicos realizados; compuerta documental de motor sin verificar.** No significa publicación ni certificación.
+**PASOS R3: 6/6 verificaciones de construcción completadas, con salvedades económicas que corresponden a R5/R6.** No significa publicación ni certificación.
 
 ## Continuidad
 R4 utilizará este conjunto y **solo** el H Reboot; traspaso H→M y DCF→M, cinco múltiplos y matrices de sensibilidad individuales. La hoja de Múltiplos se mantiene secundaria; su propia puerta puede declarar `NO PUBLICAR` hasta cubrir fuentes y métodos. El estado vigente de catálogo para UBER continúa siendo Floyd anterior; esta revisión Reboot permanece **CANDIDATO**. 
+
+## Verificación integral de fórmulas y notas — 2026-11-10 (completada)
+Se exportaron a XLSX desde Google Drive las dos **plantillas Reboot oficiales** (02 y 02b) y los tres libros DCF de la revisión actual; se compararon estructuralmente los XML de las 17 hojas originales de cada motor, celda por celda, sin modificar el libro:
+- Plantillas exportadas: **1.230** celdas con fórmula en las 17 hojas del motor y **76** notas/comentarios de Damodaran. La cifra 1.230 es el conteo de fórmulas realmente preservadas en el XLSX exportado, distinta del recuento 1.297 que figuraba en la descripción histórica de plantilla; no se extrapola un control no ejecutado sobre versiones anteriores.
+- Cada copia UBER (Base, Conservadora y Optimista): **1.225** fórmulas dentro de las 17 hojas. **0 fórmulas modificadas** y **0 fórmulas nuevas** frente a la plantilla; exactamente **5 celdas que eran fórmulas predeterminadas del Input sheet** pasaron a entradas económicas deliberadas: **B27** margen del año 1, **B28** crecimiento años 2–5, **B29** margen objetivo, **B32** ventas/capital años 6–10 y **B62** NOL condicional (cero). No son fórmulas de cálculo del motor y se documenta la diferencia, no se encubre.
+- Las **76 notas originales** por copia corresponden **100% en dirección y contenido** a sus respectivas plantillas; sin diferencias observadas.
+- **Resultado:** APROBADO el cotejo estructural del motor exportado y de notas para las tres copias, **con cinco excepciones de entradas del Input sheet justificadas**. No equivale a certificar toda la economía de los supuestos ni a auditar la lógica original del motor.
