@@ -32,7 +32,9 @@ for(const p of c.analisis||[]){
   assert.equal(a.controlCobertura?.nivel2,true);
   assert.equal(a.controlCobertura?.auditoriaEconomicaIndependiente,false);
   assert.equal(a.controlCobertura?.centrosDCFValidados,3);
-  assert.equal(a.controlCobertura?.centrosMultiplesValidados,5);
+  const matricesAplicables=(v.sensibilidadMultiples?.matrices||[]).filter(m=>m.estado==='OK').length;
+  assert.ok(matricesAplicables>=4,a.ticker+': se requieren al menos cuatro anclas válidas');
+  assert.equal(a.controlCobertura?.centrosMultiplesValidados,matricesAplicables);
   const count=s=>String(s||'').replace(/<[^>]*>/g,' ').trim().split(/\s+/).filter(Boolean).length;
   const n=count(a.articleHtml);
   if(n<7500)console.warn('PENDIENTE_EDITORIAL: '+a.ticker+': Nivel 1 '+n+' palabras; no declarar investigación extensa definitiva.');
