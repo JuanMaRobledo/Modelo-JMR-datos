@@ -105,7 +105,7 @@ class EditorialTests(unittest.TestCase):
         # No aceptar altas desconocidas ni duplicaciones de empresas y revisiones oficiales.
         self.assertEqual(len(selected),27)
         floyd=[json.loads(p.read_text()) for p in files
-               if json.loads(p.read_text()).get('contratoLibros')=='floyd-h1-h2-separados-v1']
+               if json.loads(p.read_text()).get('perfil_valoracion')=='Floyd' and '-FLOYD-' in json.loads(p.read_text()).get('revisionId','')]
         # Solo Floyd F1–F5 legado: el nuevo Floyd R1–R6 se valida por su contrato de seis archivos.
         esperado={'UBER':'UBER-FLOYD-3T26'}
         self.assertEqual(len(floyd),len(esperado))
