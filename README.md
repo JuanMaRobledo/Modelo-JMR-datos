@@ -14,5 +14,5 @@ Los tokens de acceso no se almacenan en este repositorio. Las escrituras se real
 
 Este repositorio no debe utilizarse para datos personales, posiciones de cartera, credenciales ni información confidencial.
 
-## Reboot 9-nov-2026
-Todo el contenido anterior (A-1.2 y Floyd R1–R3) vive sin modificar en `archivo-v1/` (reversible por git). En la raíz solo permanecen los expedientes de UBER y CMG (Floyd, EN_REVISION, por reconfigurar) y CELH (en reconfiguración). Las nuevas valoraciones siguen el esquema de tres libros del plan de reboot (Históricos · DCF · Múltiplos) más el documento de análisis.
+## Floyd R1–R6 oficial · 10-nov-2026
+El modelo desarrollado como Reboot pasa a llamarse **Floyd R1–R6**: seis archivos (H, tres DCF, M, análisis). Las revisiones previas preservan su `revisionId` REBOOT como identificador inmutable y el contrato `jmr-reboot-3libros-v1` como ID técnico. El antiguo Floyd F1–F5 y A-1.2 se archivan en `archivo-v1/` sin alterar sus datos. En la rama candidata UBER conserva temporalmente la publicación anterior hasta superar R5 y las pruebas de integración. No confundir una rama PR con el catálogo de producción.. Las nuevas valoraciones siguen el esquema de tres libros del plan de reboot (Históricos · DCF · Múltiplos) más el documento de análisis.

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 'use strict';
-// Gate estructural del perfil Reboot (contrato jmr-reboot-3libros-v1): seis archivos, tres DCF, M y análisis.
+// Gate estructural del perfil Floyd R1–R6 (alias histórico Reboot) (contrato jmr-reboot-3libros-v1): seis archivos, tres DCF, M y análisis.
 // La calidad económica la audita R6 independiente; este validador NO la certifica.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
 const near=(a,b,t=1e-6)=>Number.isFinite(a)&&Number.isFinite(b)&&Math.abs(a-b)<=Math.max(t,Math.abs(b)*1e-8);
@@ -10,7 +10,8 @@ const METHODS=['EV/EBITDA','EV/FCFF','P/E','P/FCFE','P/OCF'];
 const grid=x=>Array.isArray(x)&&x.length===5&&x.every(r=>Array.isArray(r)&&r.length===5&&r.every(Number.isFinite));
 function validateRebootRecord(v){
   const t=v.ticker+': ';
-  assert.equal(v.perfil_valoracion,'Reboot',t+'perfil');assert.equal(v.version_metodo,'Reboot',t+'versión de método');
+  assert.ok(['Floyd','Reboot'].includes(v.perfil_valoracion),t+'perfil Floyd R1–R6 o alias Reboot');
+  assert.equal(v.version_metodo,v.perfil_valoracion,t+'versión de método incoherente con perfil');
   assert.equal(v.contratoLibros,'jmr-reboot-3libros-v1',t+'contrato de libros Reboot ausente');
   const L=v.libros||{},ids=[sheetId(L.historicos),sheetId(L.dcf?.base),sheetId(L.dcf?.conservadora),sheetId(L.dcf?.optimista),sheetId(L.multiplos)];
   assert.ok(ids.every(Boolean),t+'los cinco libros Sheets deben ser URLs válidas');
@@ -53,7 +54,7 @@ function validateRebootRecord(v){
 }
 function validateRebootAnalysis(a,v){
   const t=a.ticker+': ',count=s=>String(s||'').replace(/<[^>]*>/g,' ').trim().split(/\s+/).filter(Boolean).length;
-  assert.equal(a.perfil_valoracion,'Reboot');assert.equal(a.revisionId,v.revisionId);assert.equal(a.status,'EN_REVISION',t+'no declarar sin auditoría R6');
+  assert.equal(a.perfil_valoracion,v.perfil_valoracion);assert.equal(a.revisionId,v.revisionId);assert.equal(a.status,'EN_REVISION',t+'no declarar sin auditoría R6');
   assert.equal(a.documentos?.nivel1,v.libros.analisis);assert.equal(a.documentos?.nivel2,v.libros.analisis);
   const h3=s=>[...String(s).matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>/gi)].map(m=>m[1].replace(/<[^>]+>/g,'').trim());
   const nums=s=>h3(s).map(x=>/^(\d+)\.\s+/.exec(x)).filter(Boolean).map(m=>+m[1]);
@@ -76,9 +77,9 @@ module.exports={validateRebootRecord,validateRebootAnalysis};
 if(require.main===module){
   const root=path.resolve(__dirname,'..'),c=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
   const vals=new Map();let n=0;
-  for(const p of c.valoraciones){const v=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));if(v.perfil_valoracion==='Reboot'){validateRebootRecord(v);vals.set(v.ticker,{v,p});}}
+  for(const p of c.valoraciones){const v=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));if(v.contratoLibros==='jmr-reboot-3libros-v1'){validateRebootRecord(v);vals.set(v.ticker,{v,p});}}
   for(const p of c.analisis){const a=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));const o=vals.get(a.ticker);if(!o)continue;
-    assert.equal(a.linkedValuation?.sourcePath,o.p);const w=validateRebootAnalysis(a,o.v);n++;console.log('REBOOT '+a.ticker+' '+o.v.revisionId+' · Nivel1 '+w+' palabras · R6 pendiente');}
+    assert.equal(a.linkedValuation?.sourcePath,o.p);const w=validateRebootAnalysis(a,o.v);n++;console.log('FLOYD R1–R6 '+a.ticker+' '+o.v.revisionId+' · Nivel1 '+w+' palabras · R6 pendiente');}
   assert.equal(n,vals.size,'Empresa Reboot sin análisis activo');
-  console.log('PASS estructural Reboot: '+vals.size+' empresas. No sustituye R6 ni QA visual.');
+  console.log('PASS estructural Floyd R1–R6: '+vals.size+' empresas. No sustituye R6 ni QA visual.');
 }

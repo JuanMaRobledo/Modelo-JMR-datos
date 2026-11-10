@@ -30,7 +30,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
    const a=JSON.parse(fs.readFileSync(path.join(root,c.analisis.find(p=>p.startsWith('analisis/'+ticker+'-')))));
    assert.equal(a.revisionId,v.revisionId);
    assert.equal(a.documentos.nivel1,v.libros.analisis);
-   if(v.perfil_valoracion==='Reboot'){
+   if(v.contratoLibros==='jmr-reboot-3libros-v1'){
      assert.equal(v.contratoLibros,'jmr-reboot-3libros-v1');
      assert.ok(v.libros.historicos&&v.libros.dcf.base&&v.libros.dcf.conservadora&&v.libros.dcf.optimista&&v.libros.multiplos&&v.libros.analisis);
      assert.equal(v.libros.dcf.base,v.hojaGoogle);
@@ -43,7 +43,7 @@ test('catálogo vigente conserva vínculos únicos y auditorías disponibles sin
    assert.equal(v.libros.valoracion,v.hojaGoogle);
  }
 
- assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes: UBER y CMG (Floyd, a reconfigurar) y AAPL (Reboot piloto)');
+ assert.deepEqual(tickers,['UBER','CMG','AAPL'],'Vigentes en rama: UBER legado aún activo, CMG y AAPL Floyd R1–R6');
  for(const t of ['META','NFLX','NKE','NVDA','KO'])assert.ok(c.archivoFloyd.valoraciones.some(p=>p.startsWith('archivo-v1/valoraciones/'+t+'-')),'Falta empresa archivada: '+t);
  assert.equal(c.archivoFloyd.valoraciones.length,46,'Deben conservarse 46 registros archivados en archivo-v1');
 });

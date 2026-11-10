@@ -1,7 +1,7 @@
 {
- "version": "REBOOT-20261110-R2",
+ "version": "FLOYD-R1R6-20261110-R1",
  "actualizadoEl": "2026-11-10",
- "nota": "Reboot: AAPL y CMG en el nuevo modelo (Reboot, EN_REVISION, R6 pendiente); UBER sigue en Floyd EN_REVISION hasta su reconfiguración (R1–R2 hechas); CELH en reconfiguración. Lo anterior, incluida CMG Floyd, en archivo-v1/.",
+ "nota": "Floyd oficial R1–R6 (modelo desarrollado como Reboot): AAPL/CMG son revisiones nuevas EN_REVISION en la rama candidata, auditoría R6 pendiente. UBER Reboot R3–R4 conciliados, R5/CI aún pendiente; su vieja ficha Floyd F1–F5 no se retira hasta validación y publicación. El histórico A-1.2 y Floyd anterior se conserva en archivo-v1/.",
  "valoraciones": [
   "valoraciones/UBER-FLOYD-3T26.json",
   "valoraciones/CMG-REBOOT-3T26-R1.json",
@@ -37,17 +37,17 @@
    },
    "CMG": {
     "rutaValoracion": "valoraciones/CMG-REBOOT-3T26-R1.json",
-    "metodo": "Reboot",
+    "metodo": "Floyd",
     "estado": "INCOMPLETA_EN_REVISION",
     "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
-    "diagnostico": "Modelo JMR Reboot: tres DCF, Múltiplos Atlas e Históricos. R6 económico independiente y revisión visual pendientes."
+    "diagnostico": "Modelo JMR Floyd R1–R6: tres DCF, Múltiplos Atlas e Históricos. R6 económico independiente y revisión visual pendientes."
    },
    "AAPL": {
     "rutaValoracion": "valoraciones/AAPL-REBOOT-FY26-R1.json",
-    "metodo": "Reboot",
+    "metodo": "Floyd",
     "estado": "INCOMPLETA_EN_REVISION",
     "multiplos": "CINCO_MATRICES_BASE_5X5_DERIVADAS_DEL_LIBRO",
-    "diagnostico": "Modelo JMR Reboot: tres DCF (Conservadora, Base, Optimista), Múltiplos Atlas y Históricos. R6 económico independiente y revisión visual pendientes."
+    "diagnostico": "Modelo JMR Floyd R1–R6: tres DCF (Conservadora, Base, Optimista), Múltiplos Atlas y Históricos. R6 económico independiente y revisión visual pendientes."
    }
   }
  },
@@ -81,7 +81,7 @@
   "CMG": {
    "fecha": "2026-11-10",
    "revisionId": "CMG-REBOOT-3T26-R1",
-   "metodo": "Reboot",
+   "metodo": "Floyd",
    "valorPorAccion": 32.2836847608869,
    "mos35": 20.984395094576485,
    "moneda": "USD",
@@ -96,13 +96,13 @@
     "Auditoría económica independiente R6 y QA visual pendientes; no equivale a certificación.",
     "Verificación documental de la serie histórica pendiente."
    ],
-   "alcance": "Reconfiguración de CMG al perfil Reboot: tres DCF + Múltiplos + Históricos + Análisis",
+   "alcance": "Reconfiguración de CMG al Floyd R1–R6: tres DCF + Múltiplos + Históricos + Análisis",
    "revisionAnterior": "CMG-FLOYD-20261108-R1"
   },
   "AAPL": {
    "fecha": "2026-11-09",
    "revisionId": "AAPL-REBOOT-FY26-R1",
-   "metodo": "Reboot",
+   "metodo": "Floyd",
    "valorPorAccion": 209.576146771055,
    "mos35": 136.22449540118575,
    "moneda": "USD",
@@ -117,12 +117,12 @@
     "Auditoría económica independiente R6 y QA visual pendientes; no equivale a certificación.",
     "Verificación documental FY2017–FY2023 pendiente."
    ],
-   "alcance": "Piloto del perfil Reboot: tres DCF + Múltiplos + Históricos + Análisis, contrato jmr-reboot-3libros-v1"
+   "alcance": "Piloto del Floyd R1–R6: tres DCF + Múltiplos + Históricos + Análisis, contrato jmr-reboot-3libros-v1"
   }
  },
  "archivoFloyd": {
   "fechaArchivo": "2026-11-09",
-  "motivo": "Reboot Modelo JMR 9-nov-2026: todos los registros anteriores (A-1.2 y Floyd R1-R3) se movieron sin modificarse a archivo-v1/ (reversible por git). Solo permanecen en la raíz UBER, CMG (Floyd EN_REVISION) y CELH (en reconfiguración).",
+  "motivo": "Archivo no destructivo de revisiones A-1.2 y Floyd F1–F5 anterior al Floyd R1–R6 (antes denominado Reboot). Mantener los JSON intactos y disponibles para consulta, no como insumos del modelo nuevo; UBER antiguo seguirá visible hasta reemplazo R5 validado.",
   "valoraciones": [
    "archivo-v1/valoraciones/AAPL-20261103-A12-R1.json",
    "archivo-v1/valoraciones/ADBE-20261028-A2.json",
