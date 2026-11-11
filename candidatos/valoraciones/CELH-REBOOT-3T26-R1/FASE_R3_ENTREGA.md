@@ -17,3 +17,6 @@ Tres DCF originales separados (motor de 17 hojas, sin editar fórmulas):
 **Puntos materialmente pendientes:** discontinuidad ROIC año10 (~17,40%) vs terminal (11%); Ginsu input B29, B32 heredadas dependen de B27/B31 e impiden trayectorias independientes margen/S/C en dos períodos sin cambiar fórmulas; valoración separada de preferentes con sus dividendos y opciones; RSU y tratamientos leases/caja restringida; auditoría diff motor 1.297 fórmulas/76 comentarios; sincronización oficial SHA-256. R6 independiente NO ejecutada.
 
 **PASOS 4/6; AISLAMIENTO=PARCIAL.** No hay publicación.
+
+## Actualización de cierre técnico (10-nov-2026)
+Se documentó sensibilidad de valor temporal de preferentes Pepsi en `PEPSI_PREFERENTES_DIAGNOSTICO_R3.md`: Base estático US$27,07 frente a escenario diagnóstico Black–Scholes simplificado US$25,58, diferendo aproximado US$1,50/acción. Usa 60% volatilidad y 90% condicionante citados por SEC *para la modificación de 2025*, no recalibrados al corte 2026. No sustituye DCF, no constituye reclamo preferente contractual certificado; publicar sigue bloqueado. R6 reservado.
