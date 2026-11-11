@@ -18,3 +18,6 @@ La copia conserva **16 hojas originales**: cinco métodos EV/EBITDA, EV/FCFF, P/
 **No deben asignarse precios ni pesos ficticios**; los cinco valores/pesos siguen N/D o 0 por inhabilitación, no hay combinado secundario. Faltan las cinco matrices 5×5 y conciliación centro. `Resumen de valoraciones` / `Presentación` de D-B **no están certificados** para CELH. El precio GOOGLEFINANCE de M es variable y no reemplaza corte fechado US$33,19.
 
 **PASOS 1/4**: estructura/candidatura con datos y fuentes, sin anclas verificadas ni compuerta. **Controles NO_APROBADOS**. Referencia detallada `CONTROL_PEPSI_Y_SINCRONIZACION.md`.
+
+## Actualización de infraestructura (10-nov-2026)
+El mantenimiento de sincronización está disponible en `Modelo-JMR/main`, PR#196 fusionado, con script `scripts/floyd-r1r6-sync.mjs` y 650 mapeos de CELH; suite de pruebas aprobada. **Sin ejecución real de transferencias SHA-256** ni comprobación de destino: M conserva fotografías, B60 «FALTAN DATOS Y SUPUESTOS», B64 «NO PUBLICAR». No se transfieren B33 pre-Pepsi como valor ordinario, ni se consideran representables las preferentes mezzanine como NCI. Instrucciones de cierre: `R4_R5_CIERRE_PUBLICACION.md`.
