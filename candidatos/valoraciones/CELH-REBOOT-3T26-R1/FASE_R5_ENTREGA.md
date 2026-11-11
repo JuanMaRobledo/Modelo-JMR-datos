@@ -1,4 +1,7 @@
 # CELH Floyd R5 — análisis, JSON y puerta de publicación
+
+**ACTUALIZACIÓN CRÍTICA 10/11/2026:** JSON valoración y análisis candidato actualizados y mutuamente enlazados con Base ordinaria US$25,51273; precio MOS Base16,58328; esperado26,54259. El Google Doc A contiene puente económico Pepsi A/B, riesgos de probabilidades, 75 matrices recalculadas y DCF inverso actual 15,987225%; el antiguo Base27,07 era puente estático y no debe presentarse en app. El DCF Ginsu `Valuation output!B33` sigue mostrando el valor pre-preferentes, correcto por motor, y requiere enlace de resultado de puente a Presentación mediante mantenimiento automatizado SHA256 antes de publicar. R4 cinco múltiplos/CI/app siguen sin cierre. PR#265 CANDIDATO NO PUBLICADO.
+
 Revisión `CELH-REBOOT-3T26-R1` · 10-nov-2026 · ChatGPT GPT-6.
 
 **Estado final real: CANDIDATO, NO PUBLICADO. PR en borrador:** https://github.com/JuanMaRobledo/Modelo-JMR-datos/pull/265 ; no fusionar ni modificar catalogo.json de main.
