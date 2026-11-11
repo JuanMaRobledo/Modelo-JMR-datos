@@ -259,5 +259,54 @@
     "restoredInputB26": 0.11,
     "restoredGinsuB29": 7995.429897101783,
     "caveat": "Holding EBIT sustainable505M, S/C1.9, riskfree/ERP and WACC original; only g input changed. Risk of Ginsu WACC omitting preferred remains."
+  },
+  "waccPreferredCheck": {
+    "status": "ANALISIS_SENSIBILIDAD_SIN_CAMBIAR_GINSU",
+    "marketCommonEquity": 8354.75275,
+    "preferredMarketValue": 1573.237514855562,
+    "debtMarketProxy": 674.703,
+    "totalFinancingMarket": 10602.693264855561,
+    "weights": {
+      "commonEquity": 0.7879840094679769,
+      "preferred": 0.1483809326136338,
+      "debt": 0.06363505791838932
+    },
+    "costCommon": 0.07571574578858914,
+    "costDebtPretax": 0.07,
+    "taxMarginal": 0.25,
+    "ratePreferenceSensitivity": [
+      {
+        "rate": 0.05,
+        "wacc": 0.07042268411774769,
+        "differenceToGinsuPP": -0.35576327454137635
+      },
+      {
+        "rate": 0.07,
+        "wacc": 0.07339030277002036,
+        "differenceToGinsuPP": -0.05900140931410919
+      },
+      {
+        "rate": 0.075,
+        "wacc": 0.07413220743308853,
+        "differenceToGinsuPP": 0.01518905699270795
+      },
+      {
+        "rate": 0.08,
+        "wacc": 0.0748741120961567,
+        "differenceToGinsuPP": 0.08937952329952509
+      },
+      {
+        "rate": 0.09,
+        "wacc": 0.07635792142229304,
+        "differenceToGinsuPP": 0.23776045591315936
+      },
+      {
+        "rate": 0.11,
+        "wacc": 0.07932554007456571,
+        "differenceToGinsuPP": 0.5345223211404265
+      }
+    ],
+    "ginsuInitialWacc": 0.07398031686316145,
+    "interpretation": "Cost preferred 7.5% is a proxy between debt (7%) and common Ke(7.57%) but not empirically solved for hybrid and differs from 9% credit coupon/redemption discount used for pricing; stress 5–11% spans WACC 7.04–7.93. Stable WACC remains 9.11% in Ginsu; no formula/input change."
   }
 }
