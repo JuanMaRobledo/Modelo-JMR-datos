@@ -1,0 +1,249 @@
+{
+  "revisionId": "CELH-REBOOT-3T26-R1",
+  "fechaValoracion": "2026-11-10",
+  "status": "CANDIDATO_AUDITORIA_PENDIENTE",
+  "unidad": "USD millones salvo precio por accion",
+  "perfil": "Floyd R1-R6",
+  "metodo": "Valor razonable estimado a spot mercado de cada serie preferente (cupon + derecho conversión + opción rescate; distribución 2031/2032); restar valor de claims a patrimonio Ginsu antes de preferentes y dividir por comunes presentes",
+  "fuentes": {
+    "SEC": "https://www.sec.gov/Archives/edgar/data/1341766/000134176626000062/celh-20260930.htm",
+    "damodaran": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/debttosubtract.htm",
+    "volatilidad2026_90d": "https://www.alphaquery.com/stock/CELH/volatility-option-statistics/90-day/iv-mean",
+    "volatilidadHistorica2026": "https://marketchameleon.com/Overview/CELH/IV/",
+    "derivadoOriginal": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_R3_CELH.json"
+  },
+  "balance": {
+    "commonEquityBook": 1275.368,
+    "pepsiMezzanineBook": 1759.975,
+    "preferredLiquidationTotal": 1135,
+    "preferredBookExcludedFromDirectSubtraction": true,
+    "sharesCommonOutstandingM": 251.725,
+    "series": [
+      {
+        "id": "A",
+        "nominal": 550,
+        "carrying": 852.355,
+        "sharesPotentialM": 22,
+        "strike": 25,
+        "dividend": 0.05
+      },
+      {
+        "id": "B",
+        "nominal": 585,
+        "carrying": 907.62,
+        "sharesPotentialM": 11.3,
+        "strike": 51.75,
+        "dividend": 0.05
+      }
+    ]
+  },
+  "contract": {
+    "automaticConversionEarliest": "2031-08-28",
+    "trigger": "Condicion participación mercado Pepsi-DSD y VWAP diez días superior al strike; evento de terminación distribución puede anticipar conversión",
+    "optionalIssuerConversion": "2032-08-28",
+    "holderRedemptionDates": [
+      "2032-08-28",
+      "2035-08-28",
+      "2038-08-28"
+    ],
+    "holderRedemptionInstallmentsMonths": [
+      0,
+      15,
+      30
+    ],
+    "missedRedemptionPenaltyRates": [
+      0.08,
+      0.1,
+      0.12
+    ],
+    "commonParticipation": "As-converted cuando hay dividendos sobre comunes; no hubo dividendos ordinarios 9M2026",
+    "baseCouponsCash": true,
+    "undistributedPreferredDividendsAsOfSep2026": 0,
+    "preferenceOrder": "junior deuda y senior comunes"
+  },
+  "hipotesis": {
+    "spotMarket": 33.19,
+    "spotDate": "2026-11-09",
+    "riskfree": 0.0488,
+    "volAnual": 0.54,
+    "volSrc": "historical 1Y 54.2%; 90d IV48.09%; fair value SEC 2025 vol60%",
+    "marketShareThresholdProbability": 0.75,
+    "marketShareProbabilityIsAssumption": true,
+    "preferredCashDiscountRate": 0.09,
+    "preferredCreditRateIsAssumption": true,
+    "noCommonDividends": true,
+    "noPreferredPIK": true,
+    "earliestRedemptionAssumed": 2032,
+    "default": "no modelado",
+    "stockProcess": "lognormal neutral al riesgo; 2031 1 checkpoint, 2032 1 checkpoint con expectativas condicionales analiticas",
+    "distinction": "Preferred claims se valoran al spot observado; complemento autofijado en precio intrinseco solo sensibilidad. Evita doble descontar carrying y convertir shares."
+  },
+  "pricingMarket": {
+    "seriesA": {
+      "couponPV": 116.47677838623947,
+      "conversionPV": 646.0489499646078,
+      "redemptionPV": 163.53875453519748,
+      "value": 926.0644828860447,
+      "pConvert2031": 0.329132080078125,
+      "pConvert2032": 0.145619283131244,
+      "pRedeem": 0.5252486367906283
+    },
+    "seriesB": {
+      "couponPV": 126.83663414117164,
+      "conversionPV": 274.55022734434175,
+      "redemptionPV": 245.78617048400395,
+      "value": 647.1730319695173,
+      "pConvert2031": 0.16571044921875,
+      "pConvert2032": 0.09211080266731177,
+      "pRedeem": 0.7421787481139352
+    },
+    "preferredTotal": 1573.237514855562,
+    "formula": "EquityComunes_s = EquityPrePreferentesGinsu_s − PVpreferenteA − PVpreferenteB; ValorAccion_s = EquityComunes_s / 251.725",
+    "escenarios": {
+      "conservadora": {
+        "equity_preferred": 4442.90687213692,
+        "common_market_anchor": 11.400017309688582,
+        "common_fixed_point": 13.407163526768485
+      },
+      "base": {
+        "equity_preferred": 7995.429897101783,
+        "common_market_anchor": 25.512731680390193,
+        "common_fixed_point": 26.270672988945357
+      },
+      "optimista": {
+        "equity_preferred": 12584.920113229273,
+        "common_market_anchor": 43.744890648023485,
+        "common_fixed_point": 42.65492802674957
+      }
+    },
+    "valorBase": 25.512731680390193,
+    "valorEsperado": 26.542592829623114,
+    "precioMOS35Base": 16.583275592253624
+  },
+  "pricingFixedPoint": {
+    "metodo": "Resolver Epre = p×251.725 + PVprefA(p) + PVprefB(p)",
+    "escenarios": {
+      "conservadora": {
+        "equity_preferred": 4442.90687213692,
+        "common_market_anchor": 11.400017309688582,
+        "common_fixed_point": 13.407163526768485
+      },
+      "base": {
+        "equity_preferred": 7995.429897101783,
+        "common_market_anchor": 25.512731680390193,
+        "common_fixed_point": 26.270672988945357
+      },
+      "optimista": {
+        "equity_preferred": 12584.920113229273,
+        "common_market_anchor": 43.744890648023485,
+        "common_fixed_point": 42.65492802674957
+      }
+    },
+    "valorBase": 26.270672988945357,
+    "valorEsperado": 27.150859382852193,
+    "MOS35Base": 17.07593744281448,
+    "nota": "Alternativa de valoracion intrinseca autofijada; menor adecuacion que spot observable para estimar valor de mercado preferente"
+  },
+  "sensibilidad": {
+    "volatilidadVsProbabilidad2031": {
+      "volatilidades": [
+        0.4,
+        0.48,
+        0.54,
+        0.6,
+        0.8
+      ],
+      "probabilidades": [
+        0.5,
+        0.75,
+        0.9
+      ],
+      "valoresBase": [
+        [
+          25.82877778667254,
+          25.8408782033269,
+          25.848138453319404
+        ],
+        [
+          25.63928361769232,
+          25.651986916045807,
+          25.65960889505775
+        ],
+        [
+          25.499516287802994,
+          25.512731680390193,
+          25.52066091594239
+        ],
+        [
+          25.36414879481993,
+          25.377863972289198,
+          25.386093078770646
+        ],
+        [
+          24.964865871326378,
+          24.97968139963382,
+          24.9885707166182
+        ]
+      ],
+      "centro": 25.512731680390193
+    },
+    "costePreferente": [
+      {
+        "tasa": 0.07,
+        "base": 25.216484799062652
+      },
+      {
+        "tasa": 0.09,
+        "base": 25.512731680390193
+      },
+      {
+        "tasa": 0.11,
+        "base": 25.77311903176096
+      },
+      {
+        "tasa": 0.125,
+        "base": 25.947680535252353
+      }
+    ],
+    "rescatePrimeraFecha": [
+      {
+        "inicio": 2032,
+        "base": 25.512731680390193
+      },
+      {
+        "inicio": 2035,
+        "base": 25.633518678210052
+      },
+      {
+        "inicio": 2038,
+        "base": 25.725995717616716
+      }
+    ]
+  },
+  "limitacionesMateriales": [
+    "La condición de market share no es observable y se representa con una única probabilidad analítica, independiente del precio; no modela su evolución continua.",
+    "La prueba de VWAP diez días se aproxima por spot en dos fechas, no path continuo de 2031 a 2032.",
+    "La opción por terminación del contrato de distribución y cambio de control no lleva probabilidad ni valor separado.",
+    "No se simulan restricciones legales al rescate ni penalidades de demora 8/10/12% porque el escenario base supone pagos puntuales.",
+    "La elección cash vs PIK y dividendos comunes participativos se fijan cash-only y common=0 conforme al corte SEC.",
+    "El modelo no recalcula WACC de Ginsu para incluir preferred; la convención de costo de preferente Ginsu como dividend yield no representa un convertible. Queda salvedad material para R3.",
+    "Quedan sin tratar RSU/PSU, opciones laborales y normalizacion EBIT y ROIC terminal del DCF.",
+    "Vol54% es historica 1Y, no volatilidad implicita larga de 2031/2032; descuento preferente9% y probabilidad mercado75% son supuestos.",
+    "Contraste SEC histórico US$907.9M de B a emisión 2025 no constituye validación de valor2026."
+  ],
+  "controles": {
+    "sumaSerieA_B": true,
+    "mos35": true,
+    "probabilidadesPorSerie": true,
+    "modeloOriginalGinsuInalterado": true,
+    "publicable": false,
+    "R6": "NO_EJECUTADA"
+  },
+  "reproducibilidad": {
+    "archivoLocal": "celh_pepsi_waterfall.py",
+    "sha256ModeloLocal": "cb6ae47ebda2564b649bf2da47e6905e232903808ae5172b0dd7ba10bb371bf7",
+    "sha256SalidaLocal": "6c69db5808b8412a1d25a7ba03ec34dcdab9e351a3083507f0737ab7ca6471a4",
+    "cuadraturaDeterminista": 8192,
+    "tests": "5 pruebas locales aprobadas"
+  }
+}
