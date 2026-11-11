@@ -28,39 +28,39 @@
   "precioReferenciaFecha": "2026-11-09",
   "mos": 0.35,
   "baseMOS": "dcfBase",
-  "metodoPrincipal": "DCF FCFF Ginsu 10 años + puente preferente A/B estático PROVISIONAL",
-  "valorPrincipal": 27.07253592876713,
-  "precioMOS": 17.597148353698636,
+  "metodoPrincipal": "DCF FCFF Damodaran/Ginsu + valor economico estimado al spot observado de las preferentes Pepsi A/B; CANDIDATO NO PUBLICABLE",
+  "valorPrincipal": 25.512731680390193,
+  "precioMOS": 16.583275592253624,
   "valorEsperado": {
-    "valor": 27.781338740856725,
+    "valor": 26.542592829623114,
     "probabilidades": {
       "conservadora": 0.25,
       "base": 0.5,
       "optimista": 0.25
     },
-    "nota": "Ponderación analítica provisional, no probabilidad empírica",
-    "dcfBase": 27.07253592876713,
+    "nota": "Ponderacion preliminar 25/50/25; ajuste económico preferentes mercado constante al 9-nov-2026, derechos 2031/32 por escenario probabilístico, no auditado",
+    "dcfBase": 25.512731680390193,
     "escenariosPromedio": 3,
     "disrupcionEnPromedio": false,
     "historias": [
       {
         "id": "B",
         "nombre": "Conservadora",
-        "valor": 13.14095489973948,
+        "valor": 11.400017309688582,
         "probabilidad": 0.25,
         "estado": "PRELIMINAR"
       },
       {
         "id": "A",
         "nombre": "Base",
-        "valor": 27.07253592876713,
+        "valor": 25.512731680390193,
         "probabilidad": 0.5,
         "estado": "PRELIMINAR"
       },
       {
         "id": "C",
         "nombre": "Optimista",
-        "valor": 43.839328206153155,
+        "valor": 43.744890648023485,
         "probabilidad": 0.25,
         "estado": "PRELIMINAR"
       }
@@ -79,7 +79,7 @@
       {
         "id": "B",
         "nombre": "Conservadora",
-        "valor": 13.14095489973948,
+        "valor": 11.400017309688582,
         "probabilidad": 0.25,
         "valorEquityAntesPreferentes": 4442.90687213692,
         "valorGinsuAntesPreferentes": 17.649843567928972,
@@ -92,12 +92,14 @@
         "terminalGrowth": 0.03,
         "ebitNormalizado": 412.375,
         "mecanismo": "Celsius estancada, Alani desacelera, Rockstar recuperación modesta; sin addback de terminación.",
-        "estado": "PRELIMINAR"
+        "estado": "PRELIMINAR_PUENTE_PEPSI_PROBABILISTICO",
+        "valorPreferentesMercado": 1573.237514855562,
+        "observacion": "El Ginsu original B33 no resta estos derechos; valor ordinario proviene del puente externo documentado"
       },
       {
         "id": "A",
         "nombre": "Base",
-        "valor": 27.07253592876713,
+        "valor": 25.512731680390193,
         "probabilidad": 0.5,
         "valorEquityAntesPreferentes": 7995.429897101783,
         "valorGinsuAntesPreferentes": 31.762557938630582,
@@ -110,12 +112,14 @@
         "terminalGrowth": 0.03,
         "ebitNormalizado": 505,
         "mecanismo": "Celsius estabiliza, Alani expande comparable, Rockstar recuperación gradual; addback ~55% terminación.",
-        "estado": "PRELIMINAR"
+        "estado": "PRELIMINAR_PUENTE_PEPSI_PROBABILISTICO",
+        "valorPreferentesMercado": 1573.237514855562,
+        "observacion": "El Ginsu original B33 no resta estos derechos; valor ordinario proviene del puente externo documentado"
       },
       {
         "id": "C",
         "nombre": "Optimista",
-        "valor": 43.839328206153155,
+        "valor": 43.744890648023485,
         "probabilidad": 0.25,
         "valorEquityAntesPreferentes": 12584.920113229273,
         "valorGinsuAntesPreferentes": 49.994716906263875,
@@ -128,22 +132,28 @@
         "terminalGrowth": 0.03,
         "ebitNormalizado": 565,
         "mecanismo": "Tres marcas ganan distribución y margen; addback ~90% de terminación.",
-        "estado": "PRELIMINAR"
+        "estado": "PRELIMINAR_PUENTE_PEPSI_PROBABILISTICO",
+        "valorPreferentesMercado": 1573.237514855562,
+        "observacion": "El Ginsu original B33 no resta estos derechos; valor ordinario proviene del puente externo documentado"
       }
     ],
     "notas": [
       "Modelo no diferencia g año1 vs años2–5 ni S/C año1–5 vs6–10 al conservar fórmulas originales.",
       "Diferencias en EBIT inicial entre DCF son normalización económica, no datos GAAP diferentes.",
-      "Waterfall Pepsi A/B simplificado: dividendos y condiciones temporales requieren valoración económica antes de publicación."
+      "Waterfall Pepsi A/B simplificado: dividendos y condiciones temporales requieren valoración económica antes de publicación.",
+      "Pepsi A/B: el capital preferente se descuenta una sola vez a valor económico estimado al spot CELH observado USD33.19; no descontar carrying USD1759.975 ni sumar 33.3M acciones emitidas de forma inmediata.",
+      "Vol 54% histórico1Y, q market share 75%, tasa de descuento parte preferente9% son hipótesis con sensibilidad; fuente SEC y reportes de mercado en expediente."
     ]
   },
   "sensibilidadDCF": {
-    "estado": "CORRIDAS_GINSU_PROVISIONALES",
-    "centro": 27.07253592876713,
+    "estado": "R3_ECONOMICO_CANDIDATO_NO_CERTIFICADO",
+    "centro": 25.512731680390193,
     "centroConciliado": true,
     "matrices": [
       {
         "nombre": "Crecimiento FY+1 y FY2–5 × EBIT sostenible",
+        "etiquetaFilas": "CAGR anual primeros cinco años",
+        "etiquetaColumnas": "EBIT sostenible LTM USD millones",
         "ejeFilas": [
           0.07,
           0.09,
@@ -158,50 +168,57 @@
           535,
           565
         ],
-        "etiquetaFilas": "CAGR anual primeros cinco años",
-        "etiquetaColumnas": "EBIT sostenible LTM USD millones",
         "valores": [
           [
-            18.711241137963,
-            20.501642858654,
-            22.292044579345,
-            24.082446300036,
-            25.802694923802
+            16.970303547912106,
+            18.760705268603104,
+            20.5511069892941,
+            22.341508709985103,
+            24.131910430676896
           ],
           [
-            20.659690145691,
-            22.65651652001,
-            24.653342894329,
-            26.517540813409,
-            28.353876986851
+            18.9187525556401,
+            20.915578929959104,
+            22.912405304278103,
+            24.90923167859695,
+            26.906058052915792
           ],
           [
-            22.802520864269,
-            25.025836992711,
-            27.072535928767,
-            29.119234864823,
-            31.165933800879
+            21.061583274218105,
+            23.287157477303634,
+            25.512731680390054,
+            27.73830588347647,
+            29.963880086562888
           ],
           [
-            25.145394796305,
-            27.424937123977,
-            29.70447945165,
-            31.984021779322,
-            34.263564106994
+            23.41716426959191,
+            25.89593166910336,
+            28.37469906861589,
+            30.85346646812733,
+            33.33223386763877
           ],
           [
-            27.525537331493,
-            30.062511037059,
-            32.599484742624,
-            35.136458448189,
-            37.673432153754
+            26.00532402902914,
+            28.76402152652066,
+            31.522719024011096,
+            34.281416521501534,
+            37.040114018991964
           ]
         ],
-        "centro": 27.072535928767,
-        "centroConciliado": true
+        "centro": 25.512731680390054,
+        "centroConciliado": true,
+        "evidencia": {
+          "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+          "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+          "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+          "nuevasCorridasGinsu": false
+        },
+        "equityBeforePreferredCentre": 7995.429897101748
       },
       {
         "nombre": "WACC inicial × crecimiento terminal",
+        "etiquetaFilas": "WACC inicial modificado por ERP Damodaran",
+        "etiquetaColumnas": "g terminal nominal USD",
         "ejeFilas": [
           0.06833321174134727,
           0.07115676430225437,
@@ -216,50 +233,57 @@
           0.035,
           0.04
         ],
-        "etiquetaFilas": "WACC inicial modificado por ERP Damodaran",
-        "etiquetaColumnas": "g terminal nominal USD",
         "valores": [
           [
-            26.946468759644,
-            27.469705433429,
-            28.054266671207,
-            28.715963240801,
-            29.47678421463
+            25.375646623807697,
+            25.944612592749195,
+            26.58026270620945,
+            27.299789545069785,
+            28.127103959853162
           ],
           [
-            26.471192817828,
-            26.984751742912,
-            27.558514675673,
-            28.208003588972,
-            28.954805909592
+            24.858833009055154,
+            25.41727542347016,
+            26.041183492871312,
+            26.747435763375908,
+            27.559506337262917
           ],
           [
-            26.005266312763,
-            26.509347887406,
-            27.072535928767,
-            27.710069544728,
-            28.443142763624
+            24.352185943412415,
+            24.90032271575984,
+            25.512731680390054,
+            26.20598379690182,
+            27.003125387297324
           ],
           [
-            25.548480917248,
-            26.043280939189,
-            26.596112376943,
-            27.221937268071,
-            27.941564301459
+            23.855478892514242,
+            24.393522932660435,
+            24.994670158002428,
+            25.675190242713967,
+            26.45771049185144
           ],
           [
-            25.100633457249,
-            25.586343239788,
-            26.129031365179,
-            26.743388463402,
-            27.449845759426
+            23.368490925533504,
+            23.896650266979478,
+            24.486767685283784,
+            25.154817726841397,
+            25.923017243592493
           ]
         ],
-        "centro": 27.072535928767,
-        "centroConciliado": true
+        "centro": 25.512731680390054,
+        "centroConciliado": true,
+        "evidencia": {
+          "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+          "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+          "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+          "nuevasCorridasGinsu": false
+        },
+        "equityBeforePreferredCentre": 7995.429897101748
       },
       {
         "nombre": "ROIC terminal × crecimiento terminal",
+        "etiquetaFilas": "ROIC perpetuo",
+        "etiquetaColumnas": "g terminal nominal USD",
         "ejeFilas": [
           0.08,
           0.095,
@@ -274,55 +298,61 @@
           0.035,
           0.04
         ],
-        "etiquetaFilas": "ROIC perpetuo",
-        "etiquetaColumnas": "g terminal nominal USD",
         "valores": [
           [
-            24.574264985529,
-            24.559403799483,
-            24.498710030416,
-            24.378870299668,
-            24.181342664512
+            22.8333273954781,
+            22.818466209432103,
+            22.757772440365105,
+            22.637932709617104,
+            22.440405074461104
           ],
           [
-            25.417146783687,
-            25.703229062338,
-            26.005783970153,
-            26.328479054931,
-            26.676404889751
+            23.712666554808468,
+            24.023751555200747,
+            24.35274884248513,
+            24.703646496992462,
+            25.08197999241844
           ],
           [
-            26.005266312763,
-            26.509347887406,
-            27.072535928767,
-            27.710069544728,
-            28.443142763624
+            24.352185943412415,
+            24.90032271575984,
+            25.512731680390054,
+            26.20598379690182,
+            27.003125387297324
           ],
           [
-            26.452237154861,
-            27.121998194457,
-            27.883267417314,
-            28.760078316974,
-            29.785863547767
+            24.838220678751675,
+            25.566516797784015,
+            26.394318637198182,
+            27.347760144833234,
+            28.46319588740475
           ],
           [
-            26.803428530795,
-            27.603366292855,
-            28.520270729744,
-            29.585085209453,
-            30.840858449594
+            25.22010511366094,
+            26.089955005089575,
+            27.08699410326195,
+            28.244870132493634,
+            29.610394137489543
           ]
         ],
-        "centro": 27.072535928767,
-        "centroConciliado": true
+        "centro": 25.512731680390054,
+        "centroConciliado": true,
+        "evidencia": {
+          "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+          "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+          "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+          "nuevasCorridasGinsu": false
+        },
+        "equityBeforePreferredCentre": 7995.429897101748
       }
     ],
-    "fuente": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_R3_CELH.json",
+    "fuente": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_PEPSI_R3_V2.json",
     "limitaciones": [
-      "Matrices derivadas de Ginsu pero puente opcional A/B es aproximación estática, no árbol de opciones con fechas/dividendos.",
-      "Escenarios no cambian crecimiento año1 vs FY2-5 ni S/C 1-5 vs6-10: ambos campos dependientes de fórmulas originales inalterables.",
-      "Múltiplos y sensibilidad individuales no aprobados; no publicar.",
-      "Ponderaciones 25/50/25 provisionales, por cerrar por evidencia."
+      "Modelo de preferred es diagnóstico híbrido con supuestos y derechos no observados, no certificado.",
+      "Reutiliza las 75 corridas Ginsu conservadas y reconstruye equity pre-preferente desde resultados posteriores al antiguo waterfall estático; no representa nuevas corridas.",
+      "La valoración de claims es spot mercado y no varía al cambiar WACC ni ROIC del DCF; son sensibilidades parciales con otros factores constantes.",
+      "La versión base original 27.07 USD sigue preservada en su archivo y no debe borrarse.",
+      "Las 75 celdas usan las corridas ya efectuadas en Ginsu, con transformación del puente preferente; no se atribuyen nuevas corridas."
     ]
   },
   "sensibilidadMultiples": {
@@ -368,13 +398,19 @@
     }
   ],
   "dcfInverso": {
-    "estado": "EJECUTADO_PROVISIONAL",
-    "precio": 33.19,
-    "fecha": "2026-11-09",
-    "crecimientoAnual1a5Implicito": 0.1538567,
-    "ebitNormalizadoImplicito": 594.6682550149083,
-    "margenEBITNormalizadoImplicito": 0.18762825945855557,
-    "nota": "Despeje mediante corridas del Ginsu manteniendo demás inputs Base; no identifica única combinación económica."
+    "estado": "PENDIENTE_RECALCULO_CON_PUENTE_MARKET_ANCHOR",
+    "nota": "El DCF inverso publicado en la evidencia anterior se resolvió contra puente estático, NO contra claim preferred mercado1573.238M. No presentar 15.3857% como umbral actualizado.",
+    "referenciaHistorica": {
+      "estado": "EJECUTADO_PROVISIONAL",
+      "precio": 33.19,
+      "fecha": "2026-11-09",
+      "crecimientoAnual1a5Implicito": 0.1538567,
+      "ebitNormalizadoImplicito": 594.6682550149083,
+      "margenEBITNormalizadoImplicito": 0.18762825945855557,
+      "nota": "Despeje mediante corridas del Ginsu manteniendo demás inputs Base; no identifica única combinación económica."
+    },
+    "precioObjetivo": 33.19,
+    "patrimonioGinsuPrePreferenteRequerido": 9927.990264855562
   },
   "tasas": {
     "riskFree": {
@@ -445,16 +481,18 @@
       ]
     },
     "R3": {
-      "estado": "PARCIAL_ECONOMICA",
+      "estado": "CUANTIFICADO_NO_CERTIFICADO",
       "realizado": [
-        "Tres DCF independientes numéricos Ginsu",
-        "75 corridas 3 matrices 5x5 DCF",
-        "Inverso con precio 33.19"
+        "Serie A/B modeladas con cupones cash5% y conversión 2031/32 y rescates 3 cuotas; market claim1573.2375 M",
+        "Precios escenario C/B/O 11.4000 /25.5127 /43.7449 y MOS35 Base16.5833",
+        "75 sensitividades derivadas aritméticamente de 75 corridas Ginsu previas, centradas 25.5127",
+        "Archivo Python stdlib reproducible + dataset JSON con escenarios y sensibilidades"
       ],
       "pendiente": [
-        "Valor temporal y derechos contingentes Pepsi A/B",
-        "ROIC año 10 17.40% vs terminal 11%",
-        "Revisar EBIT normalizado y Capex/sales-capital"
+        "WACC preferente coherente con equity económico; condiciones legales completas en 2031–38",
+        "Probabilidades y descuento preferente no calibrados a maturidad 5+ años",
+        "DCF inverso a nuevo puente",
+        "M y presentación de D-B"
       ]
     },
     "R4": {
@@ -496,29 +534,29 @@
   "auditPendingUserVisualReview": true,
   "auditoriaEconomica": "R6_PENDIENTE_SESION_INDEPENDIENTE",
   "salvedades": [
-    "Valor por acción US$27,07 es modelo PROVISIONAL: puente estático Pepsi A/B (sin opciones temporales 2031–2038, dividendos 5%, conversiones condicionadas, redención). No apto para EN_REVISION.",
-    "Coste de capital 7,398% inicial excluye preferred de la estructura de financiación por ausencia valor de mercado actual; coste de preferred/reparto por acciones no auditado.",
-    "Diez FY + LTM cargados en H, cotejo documental granular del SEC incompleto; ratios y clasificación de caja restringida, arrendamientos, RSU/SBC faltantes.",
-    "ROIC de la Base en año10 ≈17,40% mientras terminal override 11%, discontinuidad económica que requiere justificar o revisar supuestos; motor 17 hojas no editable.",
-    "FCFF y márgenes dependen de addback de cargos por terminación de distribuidores (Base 92,625 M) aún no demostrado no recurrente.",
-    "M falta completar los cinco múltiplos, anclas FY+1/FY+2/FY+3, sensibilidades propias, pesos y conciliación M→D-B; estado M B60 FALTAN DATOS Y SUPUESTOS, B64 NO PUBLICAR.",
-    "Contrato vigente prohíbe IMPORTRANGE: prueba temporal en entradas M y D revertida con lectura de comprobación 0 IMPORTRANGE en áreas modificadas; sincronizador script SHA-256 no ejecutado ni identificado inequívocamente.",
-    "Integridad completa motor 1.297 fórmulas/76 comentarios, CI, validadores, app y cotejo JSON/catálogo no aprobados. PR #265 borrador sin fusión; R6 independiente NO ejecutada."
+    "El puente económico Pepsi se cuantificó a mercado y tiene 5 pruebas locales, pero sigue sensibilidad: 54% volatilidad (1 año hist), prob market share75% y descuento preferente9% son supuestos, no observables a vencimiento2031–32.",
+    "Rights faltantes para certificación: VWAP continuo 10 días, condición de cuota mercado dinámica, terminación DSD, cambio control, rescate impago (8%/10%/12%), PIK y posibles dividendos comunes.",
+    "El WACC FCFF del Ginsu no incorpora costo económico de capital convertible de Pepsi: tratar preferred como dividend yield de hoja CoC no es válido sin modelarlo por separado.",
+    "El valor por acción Ginsu B33 sigue siendo pre-preferente; presentación de D-B no es coherente aún con el puente externamente calculado y requiere el traspaso SHA-256 aprobado.",
+    "M todavía exige 5 múltiplos FY1/2/3 y matrices, estado de control NO PUBLICAR; no crear salidas inventadas.",
+    "ROIC año10 vs terminal y EBIT normalizado, SBC, caja restringida, cobertura SEC histórica y motor diff todavía necesitan QA.",
+    "El DCF inverso con puente anterior debe recalcularse con claim preferente mercado actual antes de usarlo en análisis.",
+    "CI global ponderaciones falla por historias de MELI/MSFT/UBER (fuera de CELH); R6 independiente no ejecutada."
   ],
   "controlPublicacion": {
     "aprobado": false,
     "estado": "NO_PUBLICAR",
     "causas": [
-      "Valor por acción US$27,07 es modelo PROVISIONAL: puente estático Pepsi A/B (sin opciones temporales 2031–2038, dividendos 5%, conversiones condicionadas, redención). No apto para EN_REVISION.",
-      "Coste de capital 7,398% inicial excluye preferred de la estructura de financiación por ausencia valor de mercado actual; coste de preferred/reparto por acciones no auditado.",
-      "Diez FY + LTM cargados en H, cotejo documental granular del SEC incompleto; ratios y clasificación de caja restringida, arrendamientos, RSU/SBC faltantes.",
-      "ROIC de la Base en año10 ≈17,40% mientras terminal override 11%, discontinuidad económica que requiere justificar o revisar supuestos; motor 17 hojas no editable.",
-      "FCFF y márgenes dependen de addback de cargos por terminación de distribuidores (Base 92,625 M) aún no demostrado no recurrente.",
-      "M falta completar los cinco múltiplos, anclas FY+1/FY+2/FY+3, sensibilidades propias, pesos y conciliación M→D-B; estado M B60 FALTAN DATOS Y SUPUESTOS, B64 NO PUBLICAR.",
-      "Contrato vigente prohíbe IMPORTRANGE: prueba temporal en entradas M y D revertida con lectura de comprobación 0 IMPORTRANGE en áreas modificadas; sincronizador script SHA-256 no ejecutado ni identificado inequívocamente.",
-      "Integridad completa motor 1.297 fórmulas/76 comentarios, CI, validadores, app y cotejo JSON/catálogo no aprobados. PR #265 borrador sin fusión; R6 independiente NO ejecutada."
+      "El puente económico Pepsi se cuantificó a mercado y tiene 5 pruebas locales, pero sigue sensibilidad: 54% volatilidad (1 año hist), prob market share75% y descuento preferente9% son supuestos, no observables a vencimiento2031–32.",
+      "Rights faltantes para certificación: VWAP continuo 10 días, condición de cuota mercado dinámica, terminación DSD, cambio control, rescate impago (8%/10%/12%), PIK y posibles dividendos comunes.",
+      "El WACC FCFF del Ginsu no incorpora costo económico de capital convertible de Pepsi: tratar preferred como dividend yield de hoja CoC no es válido sin modelarlo por separado.",
+      "El valor por acción Ginsu B33 sigue siendo pre-preferente; presentación de D-B no es coherente aún con el puente externamente calculado y requiere el traspaso SHA-256 aprobado.",
+      "M todavía exige 5 múltiplos FY1/2/3 y matrices, estado de control NO PUBLICAR; no crear salidas inventadas.",
+      "ROIC año10 vs terminal y EBIT normalizado, SBC, caja restringida, cobertura SEC histórica y motor diff todavía necesitan QA.",
+      "El DCF inverso con puente anterior debe recalcularse con claim preferente mercado actual antes de usarlo en análisis.",
+      "CI global ponderaciones falla por historias de MELI/MSFT/UBER (fuera de CELH); R6 independiente no ejecutada."
     ],
-    "puertaGitHub": "PR #265 draft; sin fusion",
+    "puertaGitHub": "PR #265 draft, no fusion",
     "catalogoModificado": false,
     "appVerificada": false,
     "fecha": "2026-11-10"
@@ -562,6 +600,103 @@
         "precio": 43.839328206153155
       }
     ],
-    "limite": "Conversión no actualmente exigible. No incluye PV dividendos ni opción redención/permisos contractuales; no certificado."
+    "limite": "Conversión no actualmente exigible. No incluye PV dividendos ni opción redención/permisos contractuales; no certificado.",
+    "estado": "LEGADO_ESTATICO_NO_UTILIZAR_COMO_BASE_ACTUAL",
+    "valorAnteriorPrincipal": 27.07253592876713,
+    "observacion": "El puente estático C13.14 B27.07 O43.84 se preserva solo como diagnóstico histórico; reemplazado por puente externo market-based en puentePepsiEconomico."
+  },
+  "puentePepsiEconomico": {
+    "estado": "CUANTIFICADO_CON_RESERVAS_NO_CERTIFICADO",
+    "fuente": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/PEPSI_ECONOMICO_R3_V2.json",
+    "codigo": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/PEPSI_WATERFALL_R3.py",
+    "fechaFuenteSEC": "2026-09-30",
+    "fechaPrecio": "2026-11-09",
+    "preferredBook": 1759.975,
+    "liquidationPreference": 1135,
+    "estimatedMarketValuePreferred": 1573.237514855562,
+    "valueSeriesA": 926.0644828860447,
+    "valueSeriesB": 647.1730319695173,
+    "marketSpot": 33.19,
+    "escenarios": {
+      "Conservadora": 11.400017309688582,
+      "Base": 25.512731680390193,
+      "Optimista": 43.744890648023485
+    },
+    "base": 25.512731680390193,
+    "esperado": 26.542592829623114,
+    "MOS35": 16.583275592253624,
+    "assumptions": {
+      "vol": 0.54,
+      "marketShareTriggerProbability": 0.75,
+      "preferredCreditDiscountRate": 0.09,
+      "riskfree": 0.0488
+    },
+    "alternativeFixedPoint": 26.270672988945357,
+    "limitations": [
+      "La condición de market share no es observable y se representa con una única probabilidad analítica, independiente del precio; no modela su evolución continua.",
+      "La prueba de VWAP diez días se aproxima por spot en dos fechas, no path continuo de 2031 a 2032.",
+      "La opción por terminación del contrato de distribución y cambio de control no lleva probabilidad ni valor separado.",
+      "No se simulan restricciones legales al rescate ni penalidades de demora 8/10/12% porque el escenario base supone pagos puntuales.",
+      "La elección cash vs PIK y dividendos comunes participativos se fijan cash-only y common=0 conforme al corte SEC.",
+      "El modelo no recalcula WACC de Ginsu para incluir preferred; la convención de costo de preferente Ginsu como dividend yield no representa un convertible. Queda salvedad material para R3.",
+      "Quedan sin tratar RSU/PSU, opciones laborales y normalizacion EBIT y ROIC terminal del DCF.",
+      "Vol54% es historica 1Y, no volatilidad implicita larga de 2031/2032; descuento preferente9% y probabilidad mercado75% son supuestos.",
+      "Contraste SEC histórico US$907.9M de B a emisión 2025 no constituye validación de valor2026."
+    ],
+    "sourceNote": "Valor mercado estimado condicionado a derechos futuros; no es cotizacion independiente de Series A/B."
+  },
+  "puenteEstaticoLegado": {
+    "valorBase": 27.07253592876713,
+    "expected": 27.781338740856725,
+    "mos": 17.597148353698636,
+    "puente": {
+      "metodologia": "A/B en preferred claim o acciones potenciales según umbral de precio, solo aproximación estática",
+      "commonShareCount": 251.725,
+      "preferredA": {
+        "liquidacion": 550,
+        "conversionShares": 22,
+        "conversionPrice": 25
+      },
+      "preferredB": {
+        "liquidacion": 585,
+        "conversionShares": 11.3,
+        "conversionPrice": 51.75
+      },
+      "contableMezzanine": 1759.975,
+      "escenarios": [
+        {
+          "nombre": "Conservadora",
+          "A": "RECLAMO_550",
+          "B": "RECLAMO_585",
+          "acciones": 251.725,
+          "precio": 13.14095489973948
+        },
+        {
+          "nombre": "Base",
+          "A": "CONVERSION_22M_CONDICIONADA",
+          "B": "RECLAMO_585",
+          "acciones": 273.725,
+          "precio": 27.07253592876713
+        },
+        {
+          "nombre": "Optimista",
+          "A": "CONVERSION_22M_CONDICIONADA",
+          "B": "RECLAMO_585",
+          "acciones": 273.725,
+          "precio": 43.839328206153155
+        }
+      ],
+      "limite": "Conversión no actualmente exigible. No incluye PV dividendos ni opción redención/permisos contractuales; no certificado."
+    },
+    "dcfInverso": {
+      "estado": "EJECUTADO_PROVISIONAL",
+      "precio": 33.19,
+      "fecha": "2026-11-09",
+      "crecimientoAnual1a5Implicito": 0.1538567,
+      "ebitNormalizadoImplicito": 594.6682550149083,
+      "margenEBITNormalizadoImplicito": 0.18762825945855557,
+      "nota": "Despeje mediante corridas del Ginsu manteniendo demás inputs Base; no identifica única combinación económica."
+    },
+    "fuente": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_R3_CELH.json"
   }
 }
