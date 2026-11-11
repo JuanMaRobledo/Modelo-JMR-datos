@@ -398,19 +398,18 @@
     }
   ],
   "dcfInverso": {
-    "estado": "PENDIENTE_RECALCULO_CON_PUENTE_MARKET_ANCHOR",
-    "nota": "El DCF inverso publicado en la evidencia anterior se resolvió contra puente estático, NO contra claim preferred mercado1573.238M. No presentar 15.3857% como umbral actualizado.",
-    "referenciaHistorica": {
-      "estado": "EJECUTADO_PROVISIONAL",
-      "precio": 33.19,
-      "fecha": "2026-11-09",
-      "crecimientoAnual1a5Implicito": 0.1538567,
-      "ebitNormalizadoImplicito": 594.6682550149083,
-      "margenEBITNormalizadoImplicito": 0.18762825945855557,
-      "nota": "Despeje mediante corridas del Ginsu manteniendo demás inputs Base; no identifica única combinación económica."
-    },
-    "precioObjetivo": 33.19,
-    "patrimonioGinsuPrePreferenteRequerido": 9927.990264855562
+    "estado": "VERIFICADO_CON_MOTOR_Y_RESTAURACION",
+    "precio": 33.19,
+    "fecha": "2026-11-09",
+    "equityPrePreferentesObjetivo": 9927.990264855562,
+    "growthAnio1a5Implicito": 0.15987225262451948,
+    "EBITnormalizadoBase": 505,
+    "salesCapitalBase": 1.9,
+    "preferredMarketClaim": 1573.237514855562,
+    "salidaGinsuComprobada": 9928.005067145485,
+    "precioComunComprobado": 33.19005880341612,
+    "origen": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/PEPSI_ECONOMICO_R3_V2.json",
+    "nota": "DCF inverso recalculado con nuevo valor mercado de preferentes y Ginsu original. Input sheet B26 de D-B restaurado a 11%. Hipotesis no son prediccion de crecimiento; WACC de preferred no integrado al motor."
   },
   "tasas": {
     "riskFree": {
@@ -540,8 +539,8 @@
     "El valor por acción Ginsu B33 sigue siendo pre-preferente; presentación de D-B no es coherente aún con el puente externamente calculado y requiere el traspaso SHA-256 aprobado.",
     "M todavía exige 5 múltiplos FY1/2/3 y matrices, estado de control NO PUBLICAR; no crear salidas inventadas.",
     "ROIC año10 vs terminal y EBIT normalizado, SBC, caja restringida, cobertura SEC histórica y motor diff todavía necesitan QA.",
-    "El DCF inverso con puente anterior debe recalcularse con claim preferente mercado actual antes de usarlo en análisis.",
-    "CI global ponderaciones falla por historias de MELI/MSFT/UBER (fuera de CELH); R6 independiente no ejecutada."
+    "CI global ponderaciones falla por historias de MELI/MSFT/UBER (fuera de CELH); R6 independiente no ejecutada.",
+    "El DCF inverso Ginsu a precio33.19 indica crecimiento ~15.987% en años1–5 con puente de preferred market-based, pero no resuelve costo híbrido WACC ni exige que esta tasa sea probable."
   ],
   "controlPublicacion": {
     "aprobado": false,
