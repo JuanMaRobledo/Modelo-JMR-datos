@@ -21,3 +21,9 @@ Criterio de aceptación de una definición: **escribir lo que el vínculo escrib
 **Controles de consistencia D ↔ M (solo lectura):** 18/18 `CONSISTENTE` en UBER (crecimiento año 1, CAGR 2–5, ventas/capital 1–5 y 6–10, g terminal, ROIC terminal efectivo — si el selector «override» está en No, el efectivo es el costo de capital terminal). El margen objetivo no se controla por tener M una base contable distinta (ajuste de I+D); queda como pendiente.
 **Orden y dependencias:** `order()` + `despues=` (dependencias que pasan por fórmulas: entrada de D → resultado de D → M/Resumen). Orden efectivo: H→D, H→M, D→M, D→Resumen, M→Resumen.
 **Huellas:** `registrar_huellas()` escribe en el Resumen de D‑B la huella de grupo (SHA‑256 de las huellas de origen) y la fecha de carga, sustituyendo el hash del JSON de valores de la plantilla.
+
+## Actualización tras CMG
+- `Inventories` (BS de M) ← `Entradas históricas auxiliares!B3:L3` de H; `Other Current Assets` = H − inventario (`resta`).
+- Los blancos de H **no** se convierten en 0 salvo declaración en la config (`ceros`: etiquetas de M y destinos de D). UBER: ninguno; CMG: `Interest and Investment Income`, `Interest Expense`, `Net Intangible Assets`, `Long-Term Investments`, `Input sheet!B13`.
+- Piezas de `R& D converter` solo si D‑x tiene `Input sheet!B16 = Yes`.
+- Ejecutor genérico y reversión: ver `ETAPA_4_ENTREGA.md` §6. Plan para producción: `PLAN_APLICACION_UBER_REAL.md`.
