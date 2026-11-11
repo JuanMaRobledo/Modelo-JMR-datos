@@ -1,6 +1,6 @@
 # Etapa 4 · Sincronización y recálculo — ENTREGA
 
-**Estado: PARCIAL (avanzado).** Prueba obligatoria ejecutada en copias aisladas de UBER (APROBADA). Componente de sincronización probado en memoria (8/8) **y, desde que se dispuso de la cuenta de servicio, ejecutado contra la API real de Google Sheets** para el tramo D‑C → `Resumen` (4 vínculos, ciclo completo). Los demás tramos (H→D, H→M, D‑B→M, D‑O→Resumen, M→Resumen) siguen NO_EJECUTADOS. 2026‑11‑11.
+**Estado: PARCIAL (muy avanzado; ver sección 5).** Prueba obligatoria ejecutada en copias aisladas de UBER (APROBADA). Componente de sincronización probado en memoria (8/8) **y, desde que se dispuso de la cuenta de servicio, ejecutado contra la API real de Google Sheets** para el tramo D‑C → `Resumen` (4 vínculos, ciclo completo). Los demás tramos (H→D, H→M, D‑B→M, D‑O→Resumen, M→Resumen) siguen NO_EJECUTADOS. 2026‑11‑11.
 
 ## 1 · Prueba obligatoria (ejecutada, con los valores medidos)
 Copias: D‑B prototipo `15P2WOocyh5d12s1dQz4-zO1Rxl80a327Ib4drkkT480`; D‑C `1evMw-L6WA86Usu1u0P3CSa1RTrzlDEJJQz6Cj3KHXlQ`. Los libros de producción **no se tocaron**.
@@ -60,6 +60,22 @@ Vínculos: D‑C (copia) `Valuation output!B33`, `Input sheet!B35`, `Valuation o
 
 Hallazgo de la prueba real: la API limita a 60 lecturas/min por usuario; la primera corrida falló con **429**. El backend ahora reintenta con espera (429/5xx) y tiene prueba (8/8). El vínculo `dc_valor` necesitó 3 intentos por esa cuota; el manifiesto los registra.
 Con esto queda demostrado que **la huella del contenido detecta el rancio que la plantilla actual no detectaba** (E1‑2) y que la propagación al Resumen/Presentación es idempotente y reversible.
+
+## 5 · Todos los tramos definidos y ejecutados sobre copias (API real)
+Definición completa en `etapa4/VINCULOS_FLOYD.md`; evidencia en `etapa4/definicion_vinculos_UBER.json`, `manifiesto_UBER_completo.json`, `log_completo_*.json`. Copias aisladas (lista cerrada de escritura): H `1DezcVZb…`, D‑B prototipo `15P2WOoc…`, D‑C `1evMw-L6…`, D‑O `115DrjMg…`, M `1pmNfv8X…`.
+**Resultado: 13 vínculos (H→D ×3, H→M ×4, D→M ×3, D→Resumen ×2, M→Resumen ×1); 141 piezas, 137 idénticas a lo cargado por la IA y 4 con diferencia ≈ 2·10⁻¹² (redondeo del Ke); 18/18 controles de consistencia D↔M.**
+
+| Paso | DCF Base / Cons. / Opt. | M múltiplos Base | Ingresos LTM en D y M | Estado |
+|---|---|---|---|---|
+| Inicial | 98,7383 / 45,2912 / 149,6689 | 70,3069 | 56 526 | 13 PENDIENTE |
+| Sync (dry‑run antes) | sin cambio | sin cambio | sin cambio | 13 ESCRITO → 13 FRESCO |
+| Repetir | — | — | — | 13 SIN_CAMBIO |
+| **Editar `H!Income Statement!L3` 56 526 → 57 526** | sin cambio (rancios) | — | — | **OBSOLETO: `h_a_db`, `h_a_dc`, `h_a_do`, `h_a_m_income`**; balance, caja y precio siguen FRESCO |
+| Sync | **100,4482 / 46,0556 / 152,2798** | **71,1742** | **57 526** en D‑B, D‑C, D‑O y M | 13 FRESCO; Presentación igual a D y M |
+| Restaurar L3 y sync | 98,7383 / 45,2912 / 149,6689 | 70,3069 | 56 526 | idéntico al inicial |
+
+La cascada confirma que el sistema detecta qué depende y qué no (sin falsos obsoletos) y que propaga por H → D → M → Resumen → Presentación en una sola corrida, y que es reversible. Pruebas automáticas: 13/13 (`tests/test_floyd_sync.py`).
+**Estado frente al criterio de la etapa:** sincronización H→DCF, H→M, D‑B→M, D‑C/D‑O/M→Resumen **EJECUTADA en copias: APROBADO**. **Pendiente:** aplicar a los libros reales (solo tras tu aprobación, con respaldo), integrar `pytest` y `--dry-run` en CI, probar con una 2.ª empresa (CMG) para validar la generalidad de las reglas por etiqueta, y control del margen objetivo.
 
 ## Siguiente paso
 Etapa 5: flujo corto compartido ChatGPT/Claude (un punto de entrada). Luego Etapa 6 (CI/pruebas) con el nuevo test. Para cerrar Etapa 4 hace falta que el usuario provea una cuenta de servicio (o autorice ejecutar el backend) para la prueba real entre libros.
