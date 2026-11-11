@@ -18,3 +18,9 @@ Documento A tiene 14 capítulos Nivel1 +12 apartados Nivel2, reescrito con 3 DCF
 **CI previo PR#265** (commit bab106d175eb004b5f0544d76e9ce260129ae0b2): 3 success — Método A profundidad editorial, Validación de profundidad editorial, Control JMR ponderaciones; 1 failure — Registro de revisiones y drivers (run 42875443823, job 130037391890) por discrepancias en registros generados. **No inferir CI nuevo** a partir de los checks anteriores. No cambiar catálogo/registro para ocultar estados. No hay QA app ni despliegue acreditado. R6 independiente NO ejecutada.
 
 **PASOS 2/6**, análisis y JSON sí, controles económicos/CI/QA/publicación no. AISLAMIENTO=PARCIAL. Siguiente: identificar y ejecutar sincronización contractual SHA-256 con permisos de seis libros, cerrar clasificación preferentes sin cambiar tablas ni fórmulas, ejecutar scripts de auditoría y finalmente controles de publicación.
+
+## CI más reciente del PR #265 (10-nov-2026, commit baae410430d03f38abeae213bde29cb73caaeabd)
+- **APROBADO**: Registro de revisiones y drivers; Prueba registro de candidatos Floyd; Validación de profundidad editorial; Método A · profundidad editorial.
+- **FALLIDO**: Control JMR de ponderaciones, por fixtures históricos de MELI y MSFT (referencias de captura) y UBER Floyd legado, no por la prueba específica de CELH. No modificar otras empresas desde este candidato.
+- PR mantenimiento #196 en Modelo-JMR y PR#266 en Modelo-JMR-datos fusionados; ni el script de transferencia ni M completo han pasado pruebas en vivo; no promover `EN_REVISION`.
+- Análisis Google Doc y JSON sincronizados para reflejar sensibilidad Pepsi, manteniendo valor principal estático **provisional** US$27,07 y su alternativa diagnóstica US$25,58 sólo en narrativa, sin mezclarlas.
