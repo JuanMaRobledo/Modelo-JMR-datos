@@ -1,4 +1,7 @@
 # CELH Floyd R3 — historias, DCF y sensibilidad
+
+**ACTUALIZACIÓN ECONÓMICA ACTUAL 10/11/2026:** El ajuste estático C13,14/B27,07/O43,84 descrito más abajo queda solo como legado. Nuevo valor de mercado estimado de preferentes Pepsi al spot CELH33,19: Serie A926,064M + Serie B647,173M = 1.573,238M. Tras descontarlo una sola vez al equity Ginsu pre-preferentes y dividir entre251,725M comunes, valor ordinario C11,4000 / Base25,5127 / O43,7449 USD/acción; esperado26,5426, MOS35% Base16,5833. Evidencia: `PEPSI_TRATAMIENTO_ECONOMICO_R3.md`, código `PEPSI_WATERFALL_R3.py`, datos `PEPSI_ECONOMICO_R3_V2.json` y 75 matrices derivadas `SENSIBILIDADES_PEPSI_R3_V2.json`. El nuevo DCF inverso verificado en Ginsu al precio33,19 exige crecimiento FY1–5 15,987225% y se restauró B26=11%; WACC de financiación preferente sujeto a sensibilidad independiente. **CANDIDATO / R3 económico cuantificado con salvedades; NO certifica publicación.**
+
 Revisión `CELH-REBOOT-3T26-R1`; 10-nov-2026; ChatGPT GPT-6. **PARCIAL ECONÓMICA**, no dictamen de compra.
 
 Tres DCF originales separados (motor de 17 hojas, sin editar fórmulas):
