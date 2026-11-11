@@ -76,7 +76,8 @@
     "earliestRedemptionAssumed": 2032,
     "default": "no modelado",
     "stockProcess": "lognormal neutral al riesgo; 2031 1 checkpoint, 2032 1 checkpoint con expectativas condicionales analiticas",
-    "distinction": "Preferred claims se valoran al spot observado; complemento autofijado en precio intrinseco solo sensibilidad. Evita doble descontar carrying y convertir shares."
+    "distinction": "Preferred claims se valoran al spot observado; complemento autofijado en precio intrinseco solo sensibilidad. Evita doble descontar carrying y convertir shares.",
+    "riskNeutralProbabilitiesNote": "Probabilidades modeladas bajo medida neutral al riesgo para valor de opciones, NO proyeccion fisica de evento de rescate. La SEC declara conversion como liquidacion mas probable en su pronostico, lo que no es comparable directamente con probabilidades neutrales al riesgo."
   },
   "pricingMarket": {
     "seriesA": {
@@ -237,7 +238,8 @@
     "probabilidadesPorSerie": true,
     "modeloOriginalGinsuInalterado": true,
     "publicable": false,
-    "R6": "NO_EJECUTADA"
+    "R6": "NO_EJECUTADA",
+    "inverseNumericalVerified": true
   },
   "reproducibilidad": {
     "archivoLocal": "celh_pepsi_waterfall.py",
@@ -245,5 +247,17 @@
     "sha256SalidaLocal": "6c69db5808b8412a1d25a7ba03ec34dcdab9e351a3083507f0737ab7ca6471a4",
     "cuadraturaDeterminista": 8192,
     "tests": "5 pruebas locales aprobadas"
+  },
+  "dcfInverso": {
+    "estado": "VERIFICADO_CON_CORRIDA_GINSU_TEMPORAL_Y_RESTAURACION",
+    "precioObjetivo": 33.19,
+    "targetEquityBeforePreferredMUSD": 9927.990264855562,
+    "crecimiento1a5Requerido": 0.15987225262451948,
+    "inputSheetTemporal": "D-B Input sheet B26",
+    "outputGinsuVerified": 9928.005067145485,
+    "commonPerShareVerified": 33.19005880341612,
+    "restoredInputB26": 0.11,
+    "restoredGinsuB29": 7995.429897101783,
+    "caveat": "Holding EBIT sustainable505M, S/C1.9, riskfree/ERP and WACC original; only g input changed. Risk of Ginsu WACC omitting preferred remains."
   }
 }
