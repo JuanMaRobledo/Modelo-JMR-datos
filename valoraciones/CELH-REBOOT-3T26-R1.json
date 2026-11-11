@@ -485,13 +485,15 @@
         "Serie A/B modeladas con cupones cash5% y conversión 2031/32 y rescates 3 cuotas; market claim1573.2375 M",
         "Precios escenario C/B/O 11.4000 /25.5127 /43.7449 y MOS35 Base16.5833",
         "75 sensitividades derivadas aritméticamente de 75 corridas Ginsu previas, centradas 25.5127",
-        "Archivo Python stdlib reproducible + dataset JSON con escenarios y sensibilidades"
+        "Archivo Python stdlib reproducible + dataset JSON con escenarios y sensibilidades",
+        "Revisión de WACC adicional: capital mercado común78,80% + preferred14,84% + deuda6,36%; con k_pref supuesto7,5%, WACC7,413%, 0,015pp mayor que Ginsu7,398% (mantenimiento económico externo).",
+        "DCF inverso actualizado mediante motor a crecimiento FY1–5 15,987225%, restaurado a11% y equity Base original US$7995,43M."
       ],
       "pendiente": [
         "WACC preferente coherente con equity económico; condiciones legales completas en 2031–38",
         "Probabilidades y descuento preferente no calibrados a maturidad 5+ años",
-        "DCF inverso a nuevo puente",
-        "M y presentación de D-B"
+        "M y presentación de D-B",
+        "Validar descuento de la pata convertibles y WACC de corto/terminal completo; no reemplazar fórmula CoC de Damodaran."
       ]
     },
     "R4": {
@@ -535,7 +537,7 @@
   "salvedades": [
     "El puente económico Pepsi se cuantificó a mercado y tiene 5 pruebas locales, pero sigue sensibilidad: 54% volatilidad (1 año hist), prob market share75% y descuento preferente9% son supuestos, no observables a vencimiento2031–32.",
     "Rights faltantes para certificación: VWAP continuo 10 días, condición de cuota mercado dinámica, terminación DSD, cambio control, rescate impago (8%/10%/12%), PIK y posibles dividendos comunes.",
-    "El WACC FCFF del Ginsu no incorpora costo económico de capital convertible de Pepsi: tratar preferred como dividend yield de hoja CoC no es válido sin modelarlo por separado.",
+    "El WACC FCFF Ginsu sin precio preferente muestra efecto +0,015 pp al ponderar claims Pepsi14,84% del capital a costo preferente hipotético7,5%; el intervalo costo preferred7-9% induce WACC7,339-7,636%, por lo que se requiere certificar costo híbrido y exposición terminal antes de publicar.",
     "El valor por acción Ginsu B33 sigue siendo pre-preferente; presentación de D-B no es coherente aún con el puente externamente calculado y requiere el traspaso SHA-256 aprobado.",
     "M todavía exige 5 múltiplos FY1/2/3 y matrices, estado de control NO PUBLICAR; no crear salidas inventadas.",
     "ROIC año10 vs terminal y EBIT normalizado, SBC, caja restringida, cobertura SEC histórica y motor diff todavía necesitan QA.",
@@ -697,5 +699,54 @@
       "nota": "Despeje mediante corridas del Ginsu manteniendo demás inputs Base; no identifica única combinación económica."
     },
     "fuente": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_R3_CELH.json"
+  },
+  "waccPepsiSensibilidad": {
+    "status": "ANALISIS_SENSIBILIDAD_SIN_CAMBIAR_GINSU",
+    "marketCommonEquity": 8354.75275,
+    "preferredMarketValue": 1573.237514855562,
+    "debtMarketProxy": 674.703,
+    "totalFinancingMarket": 10602.693264855561,
+    "weights": {
+      "commonEquity": 0.7879840094679769,
+      "preferred": 0.1483809326136338,
+      "debt": 0.06363505791838932
+    },
+    "costCommon": 0.07571574578858914,
+    "costDebtPretax": 0.07,
+    "taxMarginal": 0.25,
+    "ratePreferenceSensitivity": [
+      {
+        "rate": 0.05,
+        "wacc": 0.07042268411774769,
+        "differenceToGinsuPP": -0.35576327454137635
+      },
+      {
+        "rate": 0.07,
+        "wacc": 0.07339030277002036,
+        "differenceToGinsuPP": -0.05900140931410919
+      },
+      {
+        "rate": 0.075,
+        "wacc": 0.07413220743308853,
+        "differenceToGinsuPP": 0.01518905699270795
+      },
+      {
+        "rate": 0.08,
+        "wacc": 0.0748741120961567,
+        "differenceToGinsuPP": 0.08937952329952509
+      },
+      {
+        "rate": 0.09,
+        "wacc": 0.07635792142229304,
+        "differenceToGinsuPP": 0.23776045591315936
+      },
+      {
+        "rate": 0.11,
+        "wacc": 0.07932554007456571,
+        "differenceToGinsuPP": 0.5345223211404265
+      }
+    ],
+    "ginsuInitialWacc": 0.07398031686316145,
+    "interpretation": "Cost preferred 7.5% is a proxy between debt (7%) and common Ke(7.57%) but not empirically solved for hybrid and differs from 9% credit coupon/redemption discount used for pricing; stress 5–11% spans WACC 7.04–7.93. Stable WACC remains 9.11% in Ginsu; no formula/input change."
   }
 }
