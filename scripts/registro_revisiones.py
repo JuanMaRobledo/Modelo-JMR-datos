@@ -155,6 +155,12 @@ def recolectar():
         if not t:
             continue
         rev = revision_id(d, p)
+        # Un expediente que todavía es CANDIDATO no ha sido sustituido:
+        # nunca fue publicado. No debe entrar al registro oficial como
+        # SUSTITUIDA ni obligar a reescribir los registros generados al
+        # abrir un PR de trabajo. Se registra cuando pasa la puerta R5.
+        if (d.get("estado") == "CANDIDATO" or d.get("publicationStatus") == "CANDIDATO") and vigentes.get(t) != rev:
+            continue
         rel = p.relative_to(ROOT).as_posix()
         if rev in revisiones:  # misma revisión en valoraciones/ y candidatos/
             revisiones[rev]["rutas"].append(rel)
