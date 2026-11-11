@@ -1,3 +1,5 @@
+> **Superado si se adopta el libro único** (`etapa2b/LIBRO_UNICO.md`): en esa arquitectura no hay sincronización entre libros. Vigente solo para las revisiones heredadas de seis libros.
+
 # Plan de aplicación de los vínculos a los libros REALES de UBER (pendiente de aprobación)
 
 **No ejecutado.** Solo se hizo lectura de producción (`configs/uber_real_solo_lectura.json`, `escribibles: []`: el ejecutor se niega a escribir). Evidencia: `etapa4/uber_real_solo_lectura/definicion.json`.

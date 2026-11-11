@@ -1,5 +1,7 @@
 # Etapa 2 · Decisión de arquitectura con pruebas — ENTREGA
 
+> **REVISADA (2026‑11‑11, por instrucción del usuario):** el veredicto «B y C bloqueadas» se refinó: la fusión es viable cambiando solo el nombre de hoja referenciado en dos motores, con equivalencia verificada celda a celda. Ver `etapa2b/LIBRO_UNICO.md`. Lo que sigue es el análisis original.
+
 **Estado: PARCIAL** (una prueba decisiva ejecutada; varios criterios son estimaciones declaradas) · 2026-11-11
 Sin migración. Plantillas oficiales y libros de UBER **no modificados**. Pruebas solo en copias aisladas en `Drive/Modelo JMR/02 Pruebas y desarrollo` (`1OrleslgyCSLlQdzX0KshFnsiKC9kwC6x`).
 
