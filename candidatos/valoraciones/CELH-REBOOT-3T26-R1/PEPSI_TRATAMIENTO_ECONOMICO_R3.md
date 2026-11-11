@@ -83,6 +83,12 @@ Tres matrices DCF 5×5 de crecimiento+EBIT, WACC+g y ROIC terminal+g están en `
 
 El patrimonio Ginsu **pre-preferente requerido** para justificar US$33,19 del mercado con el claim híbrido del mercado es **US$9.927,990 M**. Con EBIT sostenible Base505 M, ventas/capital1,9, tasa WACC original y demás variables constantes, Input Sheet!B26 del Ginsu Base reejecutado con crecimiento **15,987225%** produjo B29 US$9.928,005 M y acción post-Pepsi US$33,19006. **Se restauró el input B26 al 11%** y su salida original B29 US$7.995,430 M, verificado tras la prueba. La tasa inversa antigua15,386% del puente estático NO es vigente.
 
+### Control complementario: WACC con preferentes como tercera fuente de capital
+
+No se usa la fórmula estándar del Ginsu `costo preferred=dividendo/valor de mercado` para declarar el rendimiento requerido de un convertible, pues ese dividend yield no remunera los derechos de opción. Como prueba económica independiente, al spot33,19 USD el mercado implícito de comunes es US$8.354,753 M, la preferente híbrida estimada US$1.573,238 M y deuda financiera proxy US$674,703 M. La estructura aproximada de valor de mercado es **78,80% común /14,84% preferente /6,36% deuda**.
+
+Con Ke7,5716%, deuda pretax7% y fiscal marginal25%, un costo de capital preferente *supuesto* del 7,5% produce WACC combinado **7,4132%** frente al Ginsu inicial **7,3980%** (delta +0,0152 puntos porcentuales). El rango 7%–9% de rendimiento requerido preferente genera WACC **7,3390%–7,6358%**, desviación de -0,059 a +0,238 puntos porcentuales respecto del original; rango más amplio 5%–11% produce 7,0423%–7,9326%. Esto es sensibilidad y **no una estimación verificada del rendimiento requerido**; no se modifica ninguna fórmula, y el 9% usado para descontar cupones/rescates de la preferente no debe confundirse con el coste total esperado de una opción híbrida. Ginsu conserva WACC terminal9,11%; queda salvedad de coherencia de financiación.
+
 ## 5. Controles, salvedades materiales y criterio de publicación
 
 **Cinco pruebas locales del modelo numérico pasaron**: suma de probabilidades por serie, reconciliación de VP componentes, precio residual, consistencia de shocks y convergencia 8.192→32.768 nodos. Código de investigación: `PEPSI_WATERFALL_R3.py` (Python stdlib, reproduce bridge mercado) y descarga de ejecución completa `celh_pepsi_waterfall.py`; parámetros y salida en `PEPSI_ECONOMICO_R3_V2.json`. El motor 17 hojas de Damodaran no cambió.
