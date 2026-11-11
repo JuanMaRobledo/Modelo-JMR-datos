@@ -6,7 +6,7 @@ Rama `ccr-72d28f93-tn5jri` (datos y JMR-valuation). Sin PR, sin fusiones, sin ca
 |---|---|---|
 | 0 Inventario y archivo | PARCIAL | `ETAPA_0_ENTREGA.md`, `etapa0/` (665 filas Drive, 3 294 archivos de repos, 18 traslados reversibles) |
 | 1 Auditoría funcional | PARCIAL | `ETAPA_1_ENTREGA.md` (9 hallazgos; corregido en Etapa 4) |
-| 2 Arquitectura | **REVISADA: libro único viable (prototipo verificado)** | `ETAPA_2_ENTREGA.md` (análisis original) y `etapa2b/LIBRO_UNICO.md` (libro único H + 3 motores + M + Presentación, fórmulas entre hojas; UBER y CMG: 0 diferencias en motores, M y H) |
+| 2 Arquitectura | **REVISADA: libro único viable; plantilla candidata validada** | `ETAPA_2_ENTREGA.md` (análisis original) y `etapa2b/LIBRO_UNICO.md` (libro único; UBER y CMG: 0 diferencias en motores, M y H) y `etapa2b/PLANTILLA_UNICA.md` (plantilla candidata; `Input sheet` 100 % desde H; 4 defectos de plantillas oficiales corregidos) |
 | 3 Prototipo y diseño | PARCIAL | `ETAPA_3_ENTREGA.md`, `etapa3/` (hoja verificada; app NO_EJECUTADO por acceso) |
 | 4 Sincronización y recálculo | **APROBADO en copias de UBER y CMG** / pendiente de aplicar a libros reales | `ETAPA_4_ENTREGA.md` §5–6, `etapa4/VINCULOS_FLOYD.md`, `etapa4/PLAN_APLICACION_UBER_REAL.md`; código en `JMR-valuation/scripts/floyd_sync` (14/14 pruebas; ejecutor genérico con respaldo y reversión) |
 | 5 Flujo compartido | PARCIAL | `ETAPA_5_6_ENTREGA.md`, `scripts/validar_entregas_floyd.py` |

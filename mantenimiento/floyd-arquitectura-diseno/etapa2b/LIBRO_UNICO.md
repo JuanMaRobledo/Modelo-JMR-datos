@@ -1,5 +1,7 @@
 # Libro único: H + tres motores + M + Presentación en UN libro, con fórmulas entre hojas
 
+> **Actualización:** el `Input sheet` toma ahora todas las cifras de la empresa desde H y existe una plantilla candidata validada: ver `PLANTILLA_UNICA.md`. Esta nota describe el prototipo inicial.
+
 **Estado: PROTOTIPO VERIFICADO en copias aisladas de UBER y CMG. No adoptado; producción sin tocar.** 2026‑11‑11. Reemplaza, para las revisiones nuevas, el esquema de varios libros con sincronización por scripts (`floyd_sync`), a petición del usuario («innecesariamente complicado»).
 
 ## Qué cambia respecto del veredicto de la Etapa 2
