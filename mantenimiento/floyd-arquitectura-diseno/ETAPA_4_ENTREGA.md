@@ -1,6 +1,6 @@
 # Etapa 4 · Sincronización y recálculo — ENTREGA
 
-**Estado: PARCIAL.** Prueba obligatoria ejecutada en copias aisladas de UBER (APROBADA para lo que mide). Componente de sincronización **escrito y probado sin red** (7/7 pruebas); su backend real contra Google Sheets **NO_EJECUTADO** (sin credenciales de API en esta sesión). 2026‑11‑11.
+**Estado: PARCIAL (avanzado).** Prueba obligatoria ejecutada en copias aisladas de UBER (APROBADA). Componente de sincronización probado en memoria (8/8) **y, desde que se dispuso de la cuenta de servicio, ejecutado contra la API real de Google Sheets** para el tramo D‑C → `Resumen` (4 vínculos, ciclo completo). Los demás tramos (H→D, H→M, D‑B→M, D‑O→Resumen, M→Resumen) siguen NO_EJECUTADOS. 2026‑11‑11.
 
 ## 1 · Prueba obligatoria (ejecutada, con los valores medidos)
 Copias: D‑B prototipo `15P2WOocyh5d12s1dQz4-zO1Rxl80a327Ib4drkkT480`; D‑C `1evMw-L6WA86Usu1u0P3CSa1RTrzlDEJJQz6Cj3KHXlQ`. Los libros de producción **no se tocaron**.
@@ -33,15 +33,33 @@ Nota: ese control solo cubre la matriz dentro del mismo libro. **No se puede det
 - Estados: `FRESCO` / `OBSOLETO` (`check`, sin escribir) / `ERROR` / `PENDIENTE`; manifiesto JSON con origen, destino, revisión, fecha, SHA origen/destino, intentos y error.
 - **Idempotente** (si nada cambió, `SIN_CAMBIO`), **reanudable** (manifiesto guardado tras cada vínculo), reintentos con espera 2/4/8 s, verificación posterior por lectura, `dry_run`, **orden topológico con detección de ciclos**.
 - Pruebas ejecutadas (7/7): escritura + idempotencia; detección de edición del origen y de pegado manual en el destino; dry‑run sin escrituras; reanudación tras fallo; orden y ciclos; cadena H→D→M en una corrida; verificación posterior fallida = ERROR.
-- **NO_EJECUTADO:** `GoogleSheetsBackend` (necesita cuenta de servicio con edición en los libros); definición de los vínculos H→D (hlib/mapping por revisión), H→M y el Resumen sobre datos reales; integración en CI. Falta además registrar `Resumen!C10/E10/B33` con la huella nueva (hoy hash de JSON de valores transferidos).
+- **Pendiente:** vínculos H→D (hlib/mapping por revisión), H→M, D‑B→M, D‑O→Resumen y M→Resumen sobre datos reales; integración en CI; registrar `Resumen!C10/E10/B33` con la huella nueva (hoy hash de JSON de valores transferidos).
 
 ## 3 · Estado frente a los criterios de la etapa
 | Criterio | Estado |
 |---|---|
 | Medir inicial, cambiar entrada, recalcular, comprobar dependientes y no dependientes, restaurar y verificar | **APROBADO** (copias) |
-| Sincronización H→DCF, H→M, D‑B→M, D‑C/D‑O/M→Resumen realmente ejecutable | **NO_EJECUTADO** (componente probado en memoria; sin credenciales) |
+| Sincronización H→DCF, H→M, D‑B→M, D‑C/D‑O/M→Resumen realmente ejecutable | **PARCIAL**: D‑C→Resumen ejecutado en API real (sección 4); resto NO_EJECUTADO |
 | Registro origen/destino/revisión/fecha/SHA/estado/errores/orden sin ciclos | **Implementado y probado** (en memoria) |
 | «No afirmar automatización funcional sin ejecutar y documentar» | **Se cumple: no se afirma** |
+
+## 4 · Prueba real entre libros (API de Google Sheets, cuenta de servicio)
+Script `JMR-valuation/scripts/floyd_sync/prueba_real_copias.py`; la credencial se lee de `GOOGLE_SERVICE_ACCOUNT_JSON_CONTENT` (no se guarda en Git) y una **lista cerrada** impide escribir fuera de las dos copias (`assert` en el backend). Evidencia: `etapa4/manifiesto_UBER_prueba.json`, `etapa4/log_paso1|2|3.json`.
+Vínculos: D‑C (copia) `Valuation output!B33`, `Input sheet!B35`, `Valuation output!B17`, `Cost of capital worksheet!B62` → `Resumen de valoraciones!C5:C8` del prototipo D‑B.
+
+| Paso | D‑C valor | Resumen C5 | Presentación Conservadora / esperado | Estado de vínculos |
+|---|---|---|---|---|
+| 0 inicial | 45,2912 | 45,2912 | 45,2912 / 98,1091 | 4 PENDIENTE |
+| `dry_run` | — | sin escrituras | — | 4 DRY_RUN |
+| 1 sync | 45,2912 | 45,2912 | 45,2912 / 98,1091 | 4 ESCRITO → 4 FRESCO |
+| 2 repetir | — | — | — | 4 SIN_CAMBIO (idempotente) |
+| 3 editar `Input sheet!B28` D‑C (9,75 % → 11 %) | **46,9633** | 45,2912 (rancio) | 45,2912 / 98,1091 | **`dc_valor` OBSOLETO**; los otros 3 FRESCO |
+| 4 sync | 46,9633 | **46,9633** | **46,9633 / 98,5272** | solo `dc_valor` ESCRITO; 4 FRESCO |
+| 5 restaurar B28 | 45,2912 | 46,9633 (rancio) | 46,9633 / 98,5272 | `dc_valor` OBSOLETO |
+| 6 sync | 45,2912 | **45,2912** | **45,2912 / 98,1091** | 4 FRESCO (estado original) |
+
+Hallazgo de la prueba real: la API limita a 60 lecturas/min por usuario; la primera corrida falló con **429**. El backend ahora reintenta con espera (429/5xx) y tiene prueba (8/8). El vínculo `dc_valor` necesitó 3 intentos por esa cuota; el manifiesto los registra.
+Con esto queda demostrado que **la huella del contenido detecta el rancio que la plantilla actual no detectaba** (E1‑2) y que la propagación al Resumen/Presentación es idempotente y reversible.
 
 ## Siguiente paso
 Etapa 5: flujo corto compartido ChatGPT/Claude (un punto de entrada). Luego Etapa 6 (CI/pruebas) con el nuevo test. Para cerrar Etapa 4 hace falta que el usuario provea una cuenta de servicio (o autorice ejecutar el backend) para la prueba real entre libros.

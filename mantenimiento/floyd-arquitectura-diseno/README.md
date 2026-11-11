@@ -8,7 +8,7 @@ Rama `ccr-72d28f93-tn5jri` (datos y JMR-valuation). Sin PR, sin fusiones, sin ca
 | 1 Auditoría funcional | PARCIAL | `ETAPA_1_ENTREGA.md` (9 hallazgos; corregido en Etapa 4) |
 | 2 Arquitectura | PARCIAL | `ETAPA_2_ENTREGA.md`: se mantiene A (6 artefactos); B y C bloqueadas por prueba |
 | 3 Prototipo y diseño | PARCIAL | `ETAPA_3_ENTREGA.md`, `etapa3/` (hoja verificada; app NO_EJECUTADO por acceso) |
-| 4 Sincronización y recálculo | PARCIAL | `ETAPA_4_ENTREGA.md`; código en `JMR-valuation/scripts/floyd_sync` (7/7 pruebas en memoria; backend real NO_EJECUTADO) |
+| 4 Sincronización y recálculo | PARCIAL (avanzado) | `ETAPA_4_ENTREGA.md`; código en `JMR-valuation/scripts/floyd_sync` (8/8 pruebas; **API real ejecutada en el tramo D‑C→Resumen**; resto de tramos pendiente) |
 | 5 Flujo compartido | PARCIAL | `ETAPA_5_6_ENTREGA.md`, `scripts/validar_entregas_floyd.py` |
 | 6 CI y prueba integral | PARCIAL / NO_EJECUTADO | `ETAPA_5_6_ENTREGA.md` |
 | 7 Adopción y archivo definitivo | NO_EJECUTADO | requiere aprobación de decisiones abajo |
@@ -20,7 +20,7 @@ Rama `ccr-72d28f93-tn5jri` (datos y JMR-valuation). Sin PR, sin fusiones, sin ca
 - Libros de producción (UBER y demás), plantillas R1–R6 y motor Damodaran: **sin modificar**.
 
 ## Decisiones y accesos que se necesitan del usuario
-1. Credencial de API de Sheets (cuenta de servicio con edición) para ejecutar la sincronización real y la prueba entre libros.
+1. ~~Credencial de API de Sheets~~ **Recibida** (cuenta de servicio). Pendiente: definir con el usuario los vínculos H→D, H→M, D‑B→M, D‑O y M→Resumen y ejecutarlos en copias.
 2. Sesión de solo lectura (o capturas) de la ficha de la app para QA desktop/móvil.
 3. Unificar los tres `AGENTS.md`, fijar `main` como ref y añadir `GEMINI.md` (toca el contrato).
 4. Elegir la paleta de `expediente.html` (índigo/pizarra actual) frente a los tokens JMR de `visor.html`.
