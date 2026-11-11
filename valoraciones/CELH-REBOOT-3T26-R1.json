@@ -38,7 +38,33 @@
       "base": 0.5,
       "optimista": 0.25
     },
-    "nota": "Ponderación analítica provisional, no probabilidad empírica"
+    "nota": "Ponderación analítica provisional, no probabilidad empírica",
+    "dcfBase": 27.07253592876713,
+    "escenariosPromedio": 3,
+    "disrupcionEnPromedio": false,
+    "historias": [
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "valor": 13.14095489973948,
+        "probabilidad": 0.25,
+        "estado": "PRELIMINAR"
+      },
+      {
+        "id": "A",
+        "nombre": "Base",
+        "valor": 27.07253592876713,
+        "probabilidad": 0.5,
+        "estado": "PRELIMINAR"
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista",
+        "valor": 43.839328206153155,
+        "probabilidad": 0.25,
+        "estado": "PRELIMINAR"
+      }
+    ]
   },
   "escenariosDCF": {
     "version": "Floyd R1–R6",
@@ -51,7 +77,7 @@
     "roicBaseContableAjustadoPreferentes": 0.1354826397299953,
     "historias": [
       {
-        "id": "C",
+        "id": "B",
         "nombre": "Conservadora",
         "valor": 13.14095489973948,
         "probabilidad": 0.25,
@@ -69,7 +95,7 @@
         "estado": "PRELIMINAR"
       },
       {
-        "id": "B",
+        "id": "A",
         "nombre": "Base",
         "valor": 27.07253592876713,
         "probabilidad": 0.5,
@@ -87,7 +113,7 @@
         "estado": "PRELIMINAR"
       },
       {
-        "id": "O",
+        "id": "C",
         "nombre": "Optimista",
         "valor": 43.839328206153155,
         "probabilidad": 0.25,
