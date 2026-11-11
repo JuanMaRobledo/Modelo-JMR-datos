@@ -8,7 +8,7 @@ REQ = {  # campo → patrón (insensible a mayúsculas)
     "ticker/revisión": r"[A-Z]{1,6}-(REBOOT|FLOYD)-[A-Z0-9]+-R\d",
     "fecha": r"20\d\d-\d\d-\d\d",
     "agente/modelo": r"agente|modelo",
-    "id de archivos": r"[0-9A-Za-z_-]{33,}",
+    "id de archivos": r"[0-9A-Za-z_-]{33,}",   # libro único: 1 libro + Doc A; heredadas: 6 archivos
     "PASOS n/n": r"PASOS[^\n]{0,40}\d+\s*/\s*\d+",
     "AISLAMIENTO": r"AISLAMIENTO\s*=\s*(OK|NO_EJECUTADO|PARCIAL)",
     "controles APROBADO/PARCIAL/NO_EJECUTADO": r"APROBADO|PARCIAL|NO_EJECUTADO",

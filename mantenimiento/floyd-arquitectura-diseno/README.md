@@ -11,7 +11,7 @@ Rama `ccr-72d28f93-tn5jri` (datos y JMR-valuation). Sin PR, sin fusiones, sin ca
 | 4 Sincronización y recálculo | **APROBADO en copias de UBER y CMG** / pendiente de aplicar a libros reales | `ETAPA_4_ENTREGA.md` §5–6, `etapa4/VINCULOS_FLOYD.md`, `etapa4/PLAN_APLICACION_UBER_REAL.md`; código en `JMR-valuation/scripts/floyd_sync` (14/14 pruebas; ejecutor genérico con respaldo y reversión) |
 | 5 Flujo compartido | PARCIAL | `ETAPA_5_6_ENTREGA.md`, `scripts/validar_entregas_floyd.py` |
 | 6 CI y prueba integral | PARCIAL / NO_EJECUTADO | `ETAPA_5_6_ENTREGA.md` |
-| 7 Adopción y archivo definitivo | NO_EJECUTADO | requiere aprobación de decisiones abajo |
+| 7 Adopción y archivo definitivo | **PARCIAL (11-nov-2026)** | Hecho: plantilla `04 LIBRO ÚNICO` publicada; 01/02b/03 archivadas (ID intactos); contrato, `AGENTS.md`/`CLAUDE.md` (idénticos en los 3 repos), órdenes, prompt maestro, reglas v39, habilidades y app (`floyd-libro-unico-v1`) en la rama. **Pendiente:** fusionar los PR (rama `ccr-72d28f93-tn5jri` en los 3 repos), QA visual de la app con sesión, migrar UBER/CMG, registrar fuentes de las filas nuevas de H |
 
 ## Cambios efectuados fuera de Git (Drive)
 - Creadas `90 Archivo histórico` (`1W-kuAg4Fd4NwGleefGp2Y1A0eq1my1Vn`) y `02 Pruebas y desarrollo` (`1OrleslgyCSLlQdzX0KshFnsiKC9kwC6x`).
@@ -22,10 +22,15 @@ Rama `ccr-72d28f93-tn5jri` (datos y JMR-valuation). Sin PR, sin fusiones, sin ca
 - Libros de producción (UBER y demás), plantillas R1–R6 y motor Damodaran: **sin modificar**.
 
 ## Decisiones y accesos que se necesitan del usuario
-1. **Decidir la adopción del libro único** (cambio de contrato: 6 artefactos → 2; app lee pestañas de un libro; nuevo `contratoLibros`) y construir la plantilla oficial.
+1. ~~Decidir la adopción del libro único~~ **Aprobada y aplicada en las ramas (11-nov-2026)**: (cambio de contrato: 6 artefactos → 2; app lee pestañas de un libro; nuevo `contratoLibros`) y construir la plantilla oficial.
 1b. ~~Credencial de API de Sheets~~ **Recibida** (cuenta de servicio). Vínculos definidos y ejecutados en copias.
 2. Sesión de solo lectura (o capturas) de la ficha de la app para QA desktop/móvil.
 3. Unificar los tres `AGENTS.md`, fijar `main` como ref y añadir `GEMINI.md` (toca el contrato).
 4. Elegir la paleta de `expediente.html` (índigo/pizarra actual) frente a los tokens JMR de `visor.html`.
 5. Decidir el legado A‑1.2/Atlas/manual (470 filas PENDIENTE_DE_CLASIFICAR; 29 pruebas Python obsoletas; plantilla maestra `19PRUFiY…` vs `1OYhz6ul…`).
 6. Aprobar llevar a la plantilla 02b: `Presentación` nueva, filas de metadatos en `Resumen` y control de sensibilidades vivo (Etapa 7, con PR separado y rollback).
+
+## Estado de adopción (11-nov-2026)
+- Drive: plantilla `04 LIBRO ÚNICO` (`1T1Cs2HGlVSe5_5OwqGGQvsN1k1KJaweXZEUM3HGttKk`) en la carpeta oficial; plantillas 01, 02b y 03 en `90 Archivo histórico/Plantillas Reboot (seis libros) · sustituidas por el libro único` (`1JDHE-KxtskH18quy5WjfajprbE_CDInH`). La 02 (motor original) sigue en su sitio: la usa `construir_plantilla`.
+- Sin fusionar: ningún PR abierto; las tres ramas contienen todo. Hasta fusionar, `main` sigue con el contrato de seis libros.
+- Revisiones existentes (UBER, CMG, MELI, MSFT, AAPL): siguen en `jmr-reboot-3libros-v1`; no migradas.
