@@ -3,7 +3,7 @@
 - **Ticker / revisión:** ORCL · ORCL-FLOYD-FY26Q1FY27-R1 · corte contable 2026-08-31 · precio 117,98 (2026-11-10) · fecha 2026-11-12.
 - **Agente:** Claude Code (sesión del 12-nov-2026). Revisión interna; no es auditoría R6.
 - **Libro único:** `18XcbMlHfKMC6E4I3MvudGm4B1Vv0ruUwmFkgYKMHZmc` · **Doc A:** `1OBla-wu5FcEgRfLriNPMQy_5-ItubT60Lg0IyXyRjN0`.
-- **Decisión:** **NO publicada.** Regla del usuario (12-nov-2026): no se publican valoraciones con fallas críticas abiertas ni incompletas. Los JSON quedan en esta carpeta, fuera del catálogo. Candados del libro sin modificar: R2 `NO CERRADO`, `ESTADO PARA PUBLICAR = NO PUBLICAR`.
+- **Decisión:** **NO publicada.** Regla del usuario (12-nov-2026): no se publican valoraciones con fallas críticas abiertas ni incompletas. Los JSON quedan en esta carpeta, fuera del catálogo. Candados del libro sin modificar: R2 conciliado con excepción §4B-bis (8 N/D de inventarios), `ESTADO PARA PUBLICAR = NO PUBLICAR`.
 - **Valores (leídos del libro):** DCF Base 174,36 · Conservadora 47,96 · Optimista 215,97 · esperado 153,16 · precio con MOS 113,34 · múltiplos Base 151,41.
 
 ## Controles
