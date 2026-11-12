@@ -1,3 +1,5 @@
+> ANTECEDENTE VÁLIDO DE REGRESIÓN. Ahora el selector fiscal separado está implantado en el candidato; la maestra sigue intacta. Ver MANTENIMIENTO_FISCAL_204.md y9regresiones adicionales. Los resultados brutos no son valores certificados del común.
+
 # XRX-FLOYD-20261112-R1 — Tres Ginsu: prueba fiscal completa, copia temporal
 
 **12-nov-2026. Evidencia reproducible, NO DCF aprobado del patrimonio común.**

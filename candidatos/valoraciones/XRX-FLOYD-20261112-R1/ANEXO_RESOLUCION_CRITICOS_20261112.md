@@ -1,3 +1,5 @@
+> ANTECEDENTE NO VIGENTE: importes y estados previos a la reparación fiscal/EBITDA. El informe vigente es INFORME_CIERRE_ECONOMICO_20261112.md; conservar como evidencia de evolución, no como output actual.
+
 # XRX · Investigación y solución de asuntos críticos · 12-nov-2026
 
 Revisión única: XRX-FLOYD-20261112-R1. Estado CANDIDATO, no publicar.
