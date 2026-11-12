@@ -23,7 +23,7 @@ def revisar(d):
     return out
 if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    dirs = [RAIZ / a for a in args] if args else sorted(p for p in RAIZ.iterdir() if p.is_dir() and "-REBOOT-" in p.name)
+    dirs = [RAIZ / a for a in args] if args else sorted(p for p in RAIZ.iterdir() if p.is_dir() and re.search(r"-(REBOOT|FLOYD)-", p.name))
     res = [r for d in dirs for r in revisar(d)]
     print(json.dumps(res, ensure_ascii=False, indent=1))
     tot = sum(len(r["faltan"]) for r in res)

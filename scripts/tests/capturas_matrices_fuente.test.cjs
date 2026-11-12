@@ -28,7 +28,7 @@ test('ninguna captura de solo rango contamina el catálogo de valoraciones',()=>
   const lulu=active.find(([ticker])=>ticker==='LULU');
   const ko=active.find(([ticker])=>ticker==='KO');
   const floyd=Object.entries(catalog.controlModeloA.empresas)
-    .filter(([,v])=>v.metodo==='Floyd' && /-FLOYD-/.test(v.rutaValoracion||'')); // Floyd F1–F5, no Floyd R1–R6
+    .filter(([,v])=>v.metodo==='Floyd' && v.rutaValoracion && JSON.parse(fs.readFileSync(path.join(root,v.rutaValoracion),'utf8')).contratoLibros==='floyd-h1-h2-separados-v1'); // Floyd F1–F5, no Floyd R1–R6
   const FLOYD_RUTAS={UBER:'valoraciones/UBER-FLOYD-3T26.json',CMG:'valoraciones/CMG-FLOYD-20261108-R1.json'};
   assert.ok(floyd.length<=Object.keys(FLOYD_RUTAS).length,'Floyd se integra de forma explícita, no como captura parcial');
   // Sólo las selecciones A-1.2 archivadas que no fueron reemplazadas por Floyd R1–R6.
@@ -122,6 +122,8 @@ for(const file of files){
       UBER:'valoraciones/UBER-20261030-A1.json',
       CMG:'valoraciones/CMG-20261028-A3.json',
       DUOL:'valoraciones/DUOL-20261029-A1.json',
+      MELI:catalog.archivoFloyd.controlModeloA.MELI.rutaValoracion,
+      MSFT:catalog.archivoFloyd.controlModeloA.MSFT.rutaValoracion,
     };
     const declared=historicalSources[ticker]
       ?{rutaValoracion:historicalSources[ticker]}
