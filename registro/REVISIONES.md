@@ -12,5 +12,6 @@ Generado por `scripts/registro_revisiones.py` desde `catalogo.json`. **No editar
 | CMG | CMG-REBOOT-3T26-R1 | — |
 | MELI | MELI-REBOOT-3T26-R1 | — |
 | MSFT | MSFT-REBOOT-3T26-R1 | — |
+| NVDA | NVDA-FLOYD-FY26Q2FY27-R1 | — |
 | ORCL | ORCL-FLOYD-FY26Q1FY27-R1 | — |
 | UBER | UBER-REBOOT-3T26-R1 | — |

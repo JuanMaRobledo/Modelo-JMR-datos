@@ -32,6 +32,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | MSFT-REBOOT-3T26-R1 | VIGENTE | 496.21 | 14.8 % | 46.0 % | 0.80 | 1.20 | 10.5 % | 4.0 % | 18.0 % |
 
+## NVDA
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| NVDA-FLOYD-FY26Q2FY27-R1 | VIGENTE | 176.48 | 16.0 % | 52.0 % | 1.45 | 1.21 | 11.3 % | 3.5 % | 20.0 % |
+
 ## ORCL
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
