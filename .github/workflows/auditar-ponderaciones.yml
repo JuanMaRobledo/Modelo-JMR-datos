@@ -8,6 +8,8 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/validar_reboot.cjs'
       - 'scripts/preflight_floyd.cjs'
+      - 'scripts/preflight_sectorial.cjs'
+      - 'reference/procesos-sectoriales/**'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/validar_no_regresion_20.cjs'
       - 'scripts/integrar_matrices_nativas.py'
@@ -36,6 +38,8 @@ on:
       - 'scripts/validar_catalogo.cjs'
       - 'scripts/validar_reboot.cjs'
       - 'scripts/preflight_floyd.cjs'
+      - 'scripts/preflight_sectorial.cjs'
+      - 'reference/procesos-sectoriales/**'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/integrar_matrices_nativas.py'
       - 'scripts/integrar_descuentos_nativos.py'
@@ -88,7 +92,7 @@ jobs:
       # Tras un rechazo financiero los diagnósticos independientes continúan,
       # pero GitHub conserva la conclusión failure; no hay continue-on-error.
       - name: Tests Floyd (catálogo activo por contrato)
-        run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/floyd_proceso.test.cjs
+        run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/floyd_proceso.test.cjs scripts/tests/preflight_sectorial.test.cjs
         if: ${{ !cancelled() }}
       - name: Suite financiera histórica sobre el archivo (sin reactivarlo)
         run: node scripts/ci_catalogo_legacy.cjs node --test $(find scripts/tests -maxdepth 1 -name '*.test.cjs' ! -name 'validar_catalogo.test.cjs' | sort)

@@ -4,6 +4,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {validateRebootRecord,validateRebootAnalysis}=require('./validar_reboot.cjs');
 function preflight(v,a,c,valuationPath){
+  if(v.perfilEmpresa && v.perfilEmpresa!=='operativa')throw Error('Perfil '+v.perfilEmpresa+': usar preflight_sectorial.cjs y un motor compatible; no Ginsu industrial');
   validateRebootRecord(v);validateRebootAnalysis(a,v);
   assert.equal(v.contratoLibros,'floyd-libro-unico-v1','Las revisiones nuevas usan libro único');
   assert.equal(a.ticker,v.ticker,'Ticker del análisis distinto');
