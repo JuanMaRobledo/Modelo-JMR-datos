@@ -1,4 +1,4 @@
-# ORCL-FLOYD-FY26Q1FY27-R1 · Entrega R5 (candidato NO publicado)
+# ORCL-FLOYD-FY26Q1FY27-R1 · Entrega R5 (publicada EN_REVISION)
 
 - **Ticker / revisión:** ORCL · ORCL-FLOYD-FY26Q1FY27-R1 · corte contable 2026-08-31 · precio 117,98 (2026-11-10) · fecha 2026-11-12.
 - **Agente:** Claude Code (sesión del 12-nov-2026). Revisión interna; no es auditoría R6.
@@ -37,3 +37,8 @@ Cargar el 10-Q del trimestre que cierra el 30-nov-2026, conciliar caja, deuda y 
 - Nivel 1: 4.256 palabras; Nivel 2: 2.535 palabras.
 
 **Siguiente paso exacto:** el usuario marca `Supuestos y control!B63 = AUDITADO`; después `MODE=pub` regenera los JSON como `EN_REVISION`, se mueven a `valoraciones/` y `analisis/`, se añade al catálogo y se fusiona el PR.
+
+
+## Publicación (12-nov-2026)
+
+El usuario aprobó expresamente (a) el candado `Supuestos y control!B63 = AUDITADO` con la evidencia anterior, (b) el tratamiento pro forma de la emisión de noviembre (P-01, salvedad no bloqueante §4B) y (c) publicar con `validar_catalogo` y `auditar_integridad` en rojo, igual que las otras cinco fichas. Estado del libro tras marcar B63: `ESTADO PARA PUBLICAR = EN_REVISION · FALTA AUDITORÍA ECONÓMICA`; asuntos abiertos 11, críticos 0. Publicada `EN_REVISION`; auditoría independiente R6 y QA visual pendientes. Los JSON viven en `valoraciones/` y `analisis/` y están en `catalogo.json`.
