@@ -32,6 +32,12 @@ Generado por `scripts/registro_revisiones.py`. **No editar a mano.** Valores de 
 |---|---|---|---|---|---|---|---|---|---|
 | MSFT-REBOOT-3T26-R1 | VIGENTE | 496.21 | 14.8 % | 46.0 % | 0.80 | 1.20 | 10.5 % | 4.0 % | 18.0 % |
 
+## ORCL
+
+| Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
+|---|---|---|---|---|---|---|---|---|---|
+| ORCL-FLOYD-FY26Q1FY27-R1 | VIGENTE | 174.36 | 26.0 % | 32.8 % | 0.55 | 1.64 | 10.4 % | 5.0 % | 12.0 % |
+
 ## UBER
 
 | Revisión | Estado | Valor Base | Crec. 1-5 | Margen term. | S/C 1-5 | S/C 6-10 | WACC/Ke | g term. | ROIC/ROE term. |
