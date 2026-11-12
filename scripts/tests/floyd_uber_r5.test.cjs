@@ -14,7 +14,7 @@ test('EV/FCFF: N/D solo con peso cero y sin matriz ficticia; si OK, matriz 5×5'
   else{assert.equal(m.estado,'OK');assert.equal(m.matriz.length,5);}
 });
 test('Floyd antiguo de UBER archivado y fuera del catálogo',()=>{
-  assert.ok(!has('valoraciones/UBER-FLOYD-3T26.json'));
+  if(!process.env.JMR_CI_ARCHIVO_LEGADO)assert.ok(!has('valoraciones/UBER-FLOYD-3T26.json'));
   assert.ok(has('archivo-v1/valoraciones/UBER-FLOYD-3T26.json'));
   assert.ok(has('archivo-v1/analisis/UBER-research-UBER-FLOYD-3T26.json'));
   assert.ok(!c.valoraciones.includes('valoraciones/UBER-FLOYD-3T26.json'));

@@ -37,6 +37,10 @@ OBSOLETOS. Input/fórmula restaurados; sellos, excepción y ticker de prueba bor
 No se ejecutó una valoración económica nueva ni se certificó R6. El formato se
 revisó por API; no se realizó revisión visual de Google Sheets en navegador.
 
-La instalación en la maestra fue bloqueada por revisión automática de permisos
-(por interpretar autorización limitada a la copia). La maestra permanece intacta.
-La adopción en producción y los merges de los PR quedan pendientes de aprobación.
+La instalación fue bloqueada inicialmente por revisión automática (autorización
+limitada a copia). Tras aprobación expresa adicional del usuario, se instaló el
+12-nov-2026 en la maestra, con respaldo y prueba previa. Readback: 85 pestañas,
+B63 PENDIENTE, B64 NO PUBLICAR, ninguna excepción ni sello heredado.
+El usuario autorizó fusionar los PR tras pasar sus controles.
+Se corrigieron también pruebas históricas: contrato por campo, capturas ligadas
+a su revisión de origen y distinción del overlay transitorio del archivo.
