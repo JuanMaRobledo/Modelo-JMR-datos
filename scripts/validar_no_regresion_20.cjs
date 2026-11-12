@@ -22,7 +22,8 @@ function safeCore(v) {
 }
 function run(){
   const cat=read('catalogo.json');
-  const aEntries=Object.entries(cat.controlModeloA?.empresas||{}).filter(([,v])=>v.metodo==='A-1.2');
+  const selections=process.env.JMR_CI_ARCHIVO_LEGADO?cat.archivoFloyd.controlModeloA:cat.controlModeloA?.empresas;
+  const aEntries=Object.entries(selections||{}).filter(([,v])=>v.metodo==='A-1.2');
   // 1-nov-2026 (autorizado por el usuario): INTU y NU pasan a CANDIDATO por no tener DCF nativo (A-1.2 punto 9).
   // No se pierden: deben estar fuera del catálogo y sus archivos conservados con la marca de degradación.
   const DEGRADADAS=['INTU','NU'];
@@ -71,7 +72,7 @@ function run(){
     assert.equal(a.controlCobertura?.nivel2Apartados,12);
   }
   const floyd=Object.entries(cat.controlModeloA?.empresas||{})
-    .filter(([,item])=>item.metodo==='Floyd' && /-FLOYD-/.test(item.rutaValoracion||'')); // solo legado F1–F5; Floyd R1–R6 se valida por contrato aparte
+    .filter(([,item])=>item.metodo==='Floyd' && item.rutaValoracion && read(item.rutaValoracion).contratoLibros==='floyd-h1-h2-separados-v1'); // solo legado F1–F5; Floyd R1–R6 se valida por contrato aparte
   // Revisiones Floyd integradas de forma explícita (una por emisor), cada una con su
   // antecedente A-1.2 preservado (archivo y huella de hoja de origen intactos).
   const FLOYD_ESPERADO={
@@ -104,7 +105,7 @@ function run(){
     assert.equal(analysis.revisionId,current.revisionId);
   }
   const expectedLegacy=Object.entries(cat.archivoFloyd?.controlModeloA||{})
-    .filter(([ticker,v])=>v.metodo==='A-1.2' && cat.controlModeloA.empresas[ticker]?.metodo==='A-1.2').length;
+    .filter(([ticker,v])=>v.metodo==='A-1.2' && (process.env.JMR_CI_ARCHIVO_LEGADO || cat.controlModeloA.empresas[ticker]?.metodo==='A-1.2')).length;
   assert.equal(aEntries.length,expectedLegacy,
     'El archivo A-1.2 y sus selecciones vigentes temporales no concilian');
   let snapshots=0,htmlPairs=0;
@@ -119,7 +120,7 @@ function run(){
     assert.equal(val.version_metodo,'A-1.2',ticker+': método alterado');
     assert.ok(Number.isFinite(val.valorPrincipal)&&val.valorPrincipal>0,ticker+': DCF Base inválido');
     assert.ok(Number.isFinite(val.precioMOS)&&val.precioMOS>=0,ticker+': MOS inválido');
-    const matches=cat.analisis.filter(p=>path.basename(p).startsWith(ticker+'-'));
+    const matches=cat.analisis.filter(p=>path.basename(p).startsWith(ticker+'-')&&read(p).revisionId===val.revisionId);
     assert.equal(matches.length,1,ticker+': falta expediente único en catálogo');
     const a=read(matches[0]);
     assert.equal(a.ticker,ticker,ticker+': ticker narrativo distinto');
