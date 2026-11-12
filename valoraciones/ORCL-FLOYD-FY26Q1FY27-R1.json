@@ -364,7 +364,7 @@
   ]
  },
  "sensibilidadMultiples": {
-  "contrato": "floyd-libro-unico-cinco-v1",
+  "contrato": "reboot-atlas-cinco-v1",
   "revisionId": "ORCL-FLOYD-FY26Q1FY27-R1",
   "sourceSheetId": "18XcbMlHfKMC6E4I3MvudGm4B1Vv0ruUwmFkgYKMHZmc",
   "estadoPublicacion": "INTEGRADO_EN_REVISION",
@@ -499,7 +499,8 @@
     "centro": null,
     "vp3Original": null,
     "unidadFundamental": "FCFF FY+3 (M USD)",
-    "motivo": "FCFF negativo en FY+1 a FY+3 por el CAPEX de centros de datos: el múltiplo no es significativo y no se convierte un flujo negativo en un valor positivo."
+    "motivo": "FCFF negativo en FY+1 a FY+3 por el CAPEX de centros de datos: el múltiplo no es significativo y no se convierte un flujo negativo en un valor positivo.",
+    "estadoFuente": "N/D"
    },
    {
     "metodo": "P/E",
@@ -811,7 +812,7 @@
     "derivacion": "matriz = cuadrícula del libro (precio objetivo FY+3 sin dividendos, en matrizPrecioObjetivoFY3) × (valor presente a 3 años / centro de la cuadrícula): a valor presente, con dividendos y descuento al Ke de la Base; el centro reproduce vp3Original."
    }
   ],
-  "resultadosSha256": "38cc519374a7cb7e06fa805c25d06b8eae99f893118f333ed621b70e1ef7529b",
+  "resultadosSha256": "b059557aca90fe6c71234a57904b395e2046f9fd85ade951042af24557a41368",
   "resultadosHashMetodo": "SHA256 UTF8 JSON.stringify(sensibilidadMultiples.matrices)"
  },
  "metodos": [
@@ -942,7 +943,8 @@
     "estado": "N/A: flujo negativo",
     "conservador": null,
     "base": null,
-    "optimista": null
+    "optimista": null,
+    "motivo": "FCFF negativo en FY+1 a FY+3 por el CAPEX de centros de datos: múltiplo no significativo; no se convierte un flujo negativo en un valor positivo."
    },
    {
     "nombre": "P/E",
