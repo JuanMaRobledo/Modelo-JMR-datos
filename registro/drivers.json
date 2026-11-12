@@ -192,6 +192,44 @@
       }
     },
     {
+      "ticker": "NVDA",
+      "revisionId": "NVDA-FLOYD-FY26Q2FY27-R1",
+      "estado": "VIGENTE",
+      "fecha": "2026-11-12",
+      "anterior": null,
+      "ordenAmbiguo": false,
+      "metodo": "Floyd",
+      "metodoPrincipal": "DCF FCFF Damodaran Simple Ginzu 10 años · Base",
+      "valorPrincipal": 176.48445877356448,
+      "drivers": {
+        "crecimiento_1_5": 0.16,
+        "margen_terminal": 0.52,
+        "sales_to_capital_1_5": 1.45,
+        "sales_to_capital_6_10": 1.21,
+        "costo_capital": 0.11302543528208475,
+        "g_terminal": 0.035,
+        "rentabilidad_terminal": 0.2
+      },
+      "variacion": {
+        "crecimiento_1_5": null,
+        "margen_terminal": null,
+        "sales_to_capital_1_5": null,
+        "sales_to_capital_6_10": null,
+        "costo_capital": null,
+        "g_terminal": null,
+        "rentabilidad_terminal": null
+      },
+      "origen": {
+        "crecimiento_1_5": "base.crecimiento (crecimiento (esquema anterior))",
+        "margen_terminal": "base.margen (margen EBIT objetivo (esquema anterior))",
+        "sales_to_capital_1_5": "base.s2c (S/C 1-5 (esquema anterior))",
+        "sales_to_capital_6_10": "base.s2c610 (S/C 6-10 (esquema anterior))",
+        "costo_capital": "raiz.tasas.wacc (WACC inicial)",
+        "g_terminal": "base.terminalGrowth (g terminal (esquema anterior))",
+        "rentabilidad_terminal": "base.roicTerminal (ROIC terminal)"
+      }
+    },
+    {
       "ticker": "ORCL",
       "revisionId": "ORCL-FLOYD-FY26Q1FY27-R1",
       "estado": "VIGENTE",
