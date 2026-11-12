@@ -74,4 +74,37 @@ assert v['revisionId']==a['revisionId']=='XRX-FLOYD-20261112-R1'
 assert v['estado']=='CANDIDATO' and v['valorPrincipal'] is None and v['precioMOS'] is None
 assert a['html']==a['articleHtml']+a['calculationHtml']
 assert a['articleHtml'].count('<h3>')==14 and a['calculationHtml'].count('<h3>')==12
-print(json.dumps({'regresionesFiscales':9,'EBITDAConciliados':11,'corridasMatrices':75,'centrosDiferencia':0,'inversosValidos':4,'stressAislados':14,'stressConjuntos':3,'celdasMotorInspeccionadas':148302,'formulasCalculoDamodaranModificadas':0,'estado':'CANDIDATO','r6':'PENDIENTE INDEPENDIENTE'},ensure_ascii=False))
+# Evidencia vigente después de la autorización explícita. Lo anterior queda
+# como regresión del mantenimiento fiscal, no como valoración vigente.
+AUTH=ROOT/'AUTORIZACION_EVIDENCIA'
+def auth(n):return json.loads((AUTH/('xrx-autorizacion-'+n+'.json')).read_text())
+new=auth('salidas')
+core={'structuredContent':{'sheets':sum([auth('integridad-'+str(i))['structuredContent']['sheets']for i in range(9)],[])}}
+for title,sc in [('Input sheet',(8,4)),('Input sheet · C',(12,8)),('Input sheet · O',(2.1,2.1))]:
+    assert tuple(cell(core,title,r,2)['userEnteredValue']['numberValue']for r in [31,32])==sc
+assert num(new,'Valuation output',33,2)==-10.935767379800657
+assert abs(num(new,'Valuation output',9,3)-109.212)<1e-9
+nr=auth('75-corridas');assert len(nr)==25
+proof=auth('antes-sellos')['proof'];count=0
+for n in nr:
+    for family,start in [('A',6),('B',14),('C',37)]:
+        r,c=start+n['i'],2+n['j']
+        actual=cell(proof,'Sensibilidades DCF',r,c)
+        assert 'formulaValue' not in actual['userEnteredValue']
+        assert abs(actual['effectiveValue']['numberValue']-n[family]['value'])<1e-10
+        count+=1
+assert count==75
+for f in ['A','B','C']:assert nr[12][f]['value']==num(new,'Valuation output',33,2)
+roots=auth('inversos-tres')['results']+[auth('inverso-wacc')]
+for r in roots:assert abs(r['difference'])<5e-9
+for i,r in enumerate(roots):assert num(proof,'Sensibilidades DCF',22+i,2)==r['root']
+gates=auth('sellos-y-gates')['gates']
+for row in [2,3]:assert cell(gates,'Control de revisión',row,2)['effectiveValue']['stringValue']=='VIGENTE'
+assert cell(gates,'Resumen de valoraciones',17,2)['effectiveValue']['stringValue'].startswith('N/M')
+integrity=auth('integridad-resumen')
+assert integrity['celdasInspeccionadas']==148302
+assert integrity['fiscalB23']==3 and integrity['inputsSC']==6
+assert not integrity['cambiosNoAutorizados'] and not integrity['comentariosFormatoValidacionesCambiados']
+assert integrity['formulasCalculoDamodaranModificadas']==0
+assert v['salidasBrutasGinsuDiagnostico']['base']==num(new,'Valuation output',33,2)
+print(json.dumps({'regresionesFiscalesAntecedentes':9,'EBITDAConciliados':11,'corridasMatricesVigentes':75,'centrosDiferencia':0,'inversosVigentes':4,'inputsSC':6,'MOS':'N/M','sellos':'VIGENTE','stressAisladosAntecedentes':14,'stressConjuntosAntecedentes':3,'celdasMotorInspeccionadas':148302,'formulasCalculoDamodaranModificadas':0,'estado':'CANDIDATO','r6':'PENDIENTE INDEPENDIENTE'},ensure_ascii=False))

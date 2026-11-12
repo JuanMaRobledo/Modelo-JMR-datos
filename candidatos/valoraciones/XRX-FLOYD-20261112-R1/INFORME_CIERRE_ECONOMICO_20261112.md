@@ -4,6 +4,8 @@ Revisión **XRX-FLOYD-20261112-R1**. USD millones salvo precio/acciones. Corte c
 
 ## 1. Hallazgos nuevos y correcciones efectivamente implantadas
 
+**Autorización ejecutada:** tras «Si autorizo», se instalaron los seis S/C, se recalcularon y cargaron las 75 sensibilidades y cuatro inversos para esos mismos inputs, y se implantó la guardia MOS. Firmas de matrices e inversos: VIGENTE. No se adoptó el WACC experimental ni se publicó la revisión.
+
 **Fiscalidad:** se instaló en el candidato una separación entre ETR histórica y tasa prospectiva, después de nueve regresiones reales. `Income Statement!L29` sigue en −6,402164%; `Control económico XRX!B3` la muestra. `B4` activa las hipótesis prospectivas `B5:D5=25%`; los tres `Input sheet!B23` conservan el enlace histórico dentro de un selector reversible. No se modificó ninguna fórmula de `Valuation output`, ni la maestra. El 25% es una hipótesis de impuesto sobre operación desapalancada, sin NOL inicial reconocido; no es una cifra fiscal reportada ni un calendario de caja por jurisdicción ya validado.
 
 **EBITDA:** se corrigió `M · Income Statement!B27:L27`. La fórmula anterior daba prioridad a D&A separada en resultados e ignoraba D&A embebida en costes. LTM: EBIT −653 + D&A total de caja 403 = **−250**, frente al −529 anterior, que sólo añadía 124. Once columnas concilian ahora exactamente con el EBITDA ya calculado en H. No cambia EBIT, PBT ni caja. La normalización mínima de contraste es −250 + goodwill 959 − IEEPA 105 = **604**. La cifra anterior 430 no era una normalización válida del EBITDA consolidado completo.
@@ -26,14 +28,14 @@ URLs: https://www.sec.gov/Archives/edgar/data/1770450/000177045026000051/xrx-202
 
 El crecimiento adquirido de Lexmark desde julio2025 no demuestra crecimiento orgánico. La contracción pro forma, menor originación financiera y menor venta de cartera coexisten con mejora de equipos y sinergias. La recurrencia de servicios depende del parque y del uso. Las reestructuraciones recurrentes, las contribuciones a pensiones y la inversión en equipos/software impiden transformar EBITDA ajustado en caja automáticamente.
 
-| Palanca | Oficial después de reparar impuestos | Propuesta en copia / justificación |
+| Palanca | Antes de autorización | Oficial vigente / justificación |
 |---|---|---|
 | Ingresos C/B/O año1 | −8% /−5% /−2% | Se conservan; no se fuerza recuperación adquirida |
 | CAGR años2–5 C/B/O | −6% /−3% /+0,5% | Se conserva; estabilización sólo en O |
 | Margen año1 C/B/O | −1% /1,5% /3% | Se conserva, sujeto al puente de caja/pensiones |
 | Margen objetivo / convergencia | 3% año9 /6% año7 /8,5% año6 | Se conserva como hipótesis; no se vuelve ahorro neto cada anuncio bruto |
-| S/C años1–5 C/B/O | 1,1 /1,5 /1,8 | **12 /8 /2,1**, no instalado; en contracción limita capital recuperable, no mide eficiencia de expansión |
-| S/C años6–10 C/B/O | 1,8 /2,1 /2,2 | **8 /4 /2,1**, no instalado |
+| S/C años1–5 C/B/O | 1,1 /1,5 /1,8 | **12 /8 /2,1**, implantado tras autorización; en contracción limita capital recuperable, no mide eficiencia de expansión |
+| S/C años6–10 C/B/O | 1,8 /2,1 /2,2 | **8 /4 /2,1**, implantado tras autorización |
 | Tipo inicial del motor | **25% ya implantado**; antes −6,4% | 0% y35% como sensibilidad; no reconocer8100 de NOL por omisión |
 | WACC común | 10,30%, todavía provisional | Componentes y contraste22,075% en copia; **no definitivo ni instalado** |
 | Rf /ERP | Rf4,98% y ERP auxiliar6% | Par mensual5,29%/4,41% sólo en estudio; no mezclar fechas |
@@ -45,18 +47,18 @@ La cartera neta baja de1402 a1209 y los equipos para clientes de299 a272 entre d
 
 El CFO9M consume97 en inventarios y52 en AR/cartera facturada; los equipos consumen92 frente a114 de depreciación/obsolescencia. El subtotal parcial152−97−52+114−92=**25** no es FCFF ni una conciliación completa de originaciones. Es una prueba de que extrapolar146 anuales de recuperación neta exige evidencia adicional. Su equivalente anual meramente indicativo es33,33; no se lo presenta como LTM.
 
-| Primer año Base | Original | Oficial: sólo fiscal25% | Propuesta S/C8 con fiscal25% |
+| Primer año Base | Original | Antecedente: sólo fiscal25% | Oficial S/C8 con fiscal25% |
 |---|---:|---:|---:|
 | EBIT |109,212|109,212|109,212|
 | NOPAT |116,202|81,909|81,909|
 | Reinversión |−145,616|−145,616|**−27,303**|
 | FCFF |261,818|227,525|**109,212**|
 
-Todos son resultados de Ginsu, no un DCF manual. La liberación pasa de55,6% del FCFF original a25% en la propuesta. El primer efecto fiscal reduce EV Base3195,321→2830,053 (−365,269). El cambio aislado de S/C, manteniendo WACC10,3%, Rf4,98% y el resto, reduce EV2830,053→**2367,260** (−462,793; −3,474 por acción bruta). La reinversión sigue siendo una estimación pendiente de validar, no un saldo reportado.
+Todos son resultados de Ginsu, no un DCF manual. La liberación pasa de55,6% del FCFF original a25% en el oficial vigente. El primer efecto fiscal reduce EV Base3195,321→2830,053 (−365,269). El cambio aislado de S/C, manteniendo WACC10,3%, Rf4,98% y el resto, reduce EV2830,053→**2367,260** (−462,793; −3,474 por acción bruta). La reinversión sigue siendo una estimación pendiente de validar, no un saldo reportado.
 
 ## 5. Capital invertido, retorno y sostenibilidad
 
-En la propuesta Base el capital de Ginsu va de3606 a3367,818 en año10: recuperación acumulada238,182, frente a883,428 con los S/C anteriores. El ROIC año10 es7,83%; la mejora procede en buena medida del margen sobre activos existentes. **RONIC no se infiere** dividiendo una mejora de beneficio por inversión negativa. Los coeficientes8/4 de contracción no equivalen a un ROIC marginal extraordinario.
+En el oficial Base el capital de Ginsu va de3606 a3367,818 en año10: recuperación acumulada238,182, frente a883,428 con los S/C anteriores. El ROIC año10 es7,83%; la mejora procede en buena medida del margen sobre activos existentes. **RONIC no se infiere** dividiendo una mejora de beneficio por inversión negativa. Los coeficientes8/4 de contracción no equivalen a un ROIC marginal extraordinario.
 
 Ginsu produce FCFF terminal262,201 con g−1% y reinversión terminal0 por su fórmula original para g≤0. Ese resultado presupone que inversión bruta de mantenimiento y depreciación se compensan y que no queda inversión neta adicional; no demuestra que Xerox publique ese CAPEX de mantenimiento. La guía95 de CAPEX excluye los equipos para clientes dentro de CFO. I+D capitalizada: gasto258, activo475, amortización216,667 y EBIT ajustado−611,667; su reinversión no es ahorro gratis. No se impone convergencia efectiva del ROIC a9,70%: para g≤0 el selector terminal no financia nueva expansión.
 
@@ -74,7 +76,7 @@ El riesgo explícito de Ginsu permanece sólo en Conservadora conforme a JMR:20%
 
 FY25: NOL6500 que caducan2026–2045 y1600 indefinidos; DTA2242, allowance1933, neto309. El gasto fiscal9M26 de59 no es evidencia de impuestos pagados59. La nota19 explica beneficios gravables en unas jurisdicciones y pérdidas sin beneficio en otras. No se inventó un calendario de NOL por país ni se cargó8100 como escudo realizable.
 
-La reparación técnica elimina el crédito negativo sobre EBIT positivo. Con los supuestos originales restantes, las tres corridas fiscales25% reales dan C−15,728920/B−7,461577/O3,407055 por acción **bruta**, contra−15,450415/−4,719501/8,583045 anteriores. Nueve resultados de regresión coinciden exactamente con la evidencia del #204. La trayectoria fiscal prospectiva es todavía una normalización con sensibilidad, no una auditoría tributaria final.
+La reparación técnica elimina el crédito negativo sobre EBIT positivo. Como regresión antecedente, con los supuestos originales restantes, las tres corridas fiscales25% reales dan C−15,728920/B−7,461577/O3,407055 por acción **bruta**, contra−15,450415/−4,719501/8,583045 anteriores. Nueve resultados de regresión coinciden exactamente con la evidencia del #204. La trayectoria fiscal prospectiva es todavía una normalización con sensibilidad, no una auditoría tributaria final.
 
 ## 8. Puente al común y derechos
 
@@ -86,9 +88,9 @@ Pensiones:989+146 de pasivos brutos, prepaid578 FY25 y aportes160 guiados. No se
 
 ## 9. Valores: separar salidas definitivas de hipótesis
 
-**Oficial:** tres Ginsu calculados con reparación fiscal, pero S/C/WACC y puente no aprobados. Sus salidas−15,7289/−7,4616/+3,4071 **no son precios negativos/positivos certificados del común**.
+**Oficial vigente:** tres Ginsu con fiscal25% y S/C autorizados; WACC10,3% todavía provisional y puente al común no certificado. Salidas brutas C−24,2169565532 / B−10,9357673798 / O+3,4852555643USD/acción; EV C598,0894374 / B2367,2600856 / O4288,2665689millones. **No son precios certificados del común**. Un residual negativo no es un precio negativo.
 
-**Propuesta en copia**, S/C nuevos, par mensual y WACC experimental22,075%:
+**Estudio de contraste en copia, no implantado**, S/C nuevos, par mensual y WACC experimental22,075%:
 
 | USDm / acción | Conservadora | Base | Optimista |
 |---|---:|---:|---:|
@@ -109,24 +111,24 @@ No se publica esperado ni MOS como valor certificado. Una ponderación explorato
 
 EV/EBITDA: **normalización mínima justificable604**, aún no denominador recurrente definitivo; contraste guía739−105=634, con diferencias de ajustes/licencias/perímetro. P/E reportado: N/M por pérdidas. EV/FCFF y P/FCFE: N/D normalizado hasta capital/financiación/derechos; no inventar flujos positivos. P/OCF: CFO131 positivo, pero cartera impide usarlo sin normalización. No se asignaron pesos para aparentar dos métodos y80% de cobertura. Canon (guía FY26 margen operativo~9,6%) y Ricoh (beneficio operativo FY25 90,7 sobre ventas2608,3) son referencias de economía operativa, no múltiplos intercambiables: mezcla, moneda y financiación difieren; no se inventó una mediana de pares.
 
-Se recalcularon **75 sensibilidades fiscales** con los inputs que SÍ están implantados en el original; tres centros−7,4615768076, diferencia0. Se guardan las corridas completas y restauraciones. Los nuevos S/C/WACC del estudio tienen14 sensibilidades aisladas y3 conjuntas adicionales; **no se las confunde con75 matrices publicadas de una nueva Base aprobada**.
+Se recalcularon y cargaron **75 sensibilidades con los S/C autorizados y fiscal25%**: tres matrices5×5, tres centros−10,935767379800657, diferencia0. Las75celdas numéricas se releyeron y conciliaron; la copia técnica se restauró a C/B/O vigente. Firmas matrices e inversos VIGENTE; centros coherentes. Las14sensibilidades aisladas y3conjuntas anteriores se conservan como estudios diferenciados, no como matrices vigentes.
 
-Cuatro inversos brutos del caso fiscal oficial: crecimiento **sólo del año1**32,9261% (años2–5 se mantienen−3%); margen objetivo9,3504%; crecimiento sólo año1 con margen conservador106,8804%; WACC3,6761%, por debajo delRf4,98%. Error máximo de precio<0,000004. No son inversos certificados del valor común. El rótulo antiguo «años1–5» confundía el input B26 con B28; no se certifica el anterior ensayo conjunto sin intervalo acotado como si fuera una raíz.
+Cuatro inversos brutos recalculados y cargados, objetivo1,02: crecimiento **sólo año1**58,9128007% (años2–5 quedan−3%); margen objetivo10,7227304%; crecimiento sólo año1 con margen3%=177,5083545%; WACCinicial1,0271104%, inferior alRf4,98%. Error máximo4,42e−9USD en verificación nativa. B26no cambia los cinco primeros años. No son inversos del común certificado.
 
 ## 12. Pruebas e integridad; qué está cerrado realmente
 
 - Nueve regresiones fiscales nativas: diferencias0; ETR histórica intacta.
 - Once EBITDA H↔M: diferencias0; EBIT/PBT/caja no alterados.
 - Inspección de148302 celdas en51pestañas, A1:AA220, con3736 fórmulas previas: ninguna fórmula de cálculo Damodaran modificada, ningún comentario/formato/validación cambiado en los motores. Se registran por separado los nuevos enlaces de entrada; no se dice que no cambió ningún vínculo.
-- 75 corridas y4 raíces fiscales válidas registradas;14stress y3conjuntos. Lag0 y1 comparan diez años y terminal, no sólo el año1.
+- 75 corridas y4 raíces vigentes con S/C autorizados cargadas y conciliadas;14stress y3conjuntos. Lag0 y1 comparan diez años y terminal, no sólo el año1.
 - Las22 conciliaciones históricas anteriores siguen válidas porque H no se ha reescrito; no se repitieron innecesariamente. La inspección no se presenta como QA visual ni R6.
 
-**Limitación de aprobación automática:** fueron rechazadas la carga de75valores estáticos (pese a verificar0fórmulas), la instalación de los S/C propuestos y la guardia MOS. Se solicitó autorización específica al usuario; no se eludió por script ni por otra cuenta. La guardia fue probada en copia: Base negativo→N/M; Base positivo1,019999→MOS0,662999. El original todavía muestra su importe MOS negativo mecánico, claramente advertido como NO UTILIZABLE, y firmas OBSOLETO. No se cerraron artificialmente los asuntos completos ni se marcó una corrida no cargada como vigente.
+**Autorización resuelta:** los rechazos automáticos anteriores quedaron superados por la autorización explícita «Si autorizo». Se ejecutaron las tres actuaciones solicitadas: seis S/C,75entradas estáticas y4inversos recién recalculados, guardiaMOS. Los sellos se actualizaron sólo después de conciliar lecturas y restaurar la copia. `Resumen de valoraciones!B17` y Presentación muestran N/M; no se ofrece MOS negativo. La inspección final de148302celdas identifica exactamente6inputsS/C y3enlaces fiscales ya documentados;0fórmulas de cálculo Damodaran alteradas,0cambios de formato/comentarios/validación en motores. El cierre técnico no certifica derechos comunes ni resuelve los asuntos económicos abiertos.
 
 ## 13. R2–R5, PR, CI y publicación
 
 R2 **NO CERRADO**:19indicadores derivados de leases propios LTM, no19fuentes independientes. FY25operativos327/financieros8 y sep25operativos339 están verificados; sep26no tiene desglose propio verificado tras revisar PDF/notas y búsqueda XBRL (accesoXML no conseguido). Al tratar rentas como gasto en Ginsu sin conversión, la ausencia no entra por19canales al DCF; aun así los ratios de deuda/EV no admiten la excepción automática §4B-bis. No se imputa0 ni se arrastra327 como histórico2026.
 
-R3 **PARCIAL**: fiscal reparada; propuestas de capital y riesgo calculadas; matrices/inversos oficiales obsoletos hasta cargar y validar. R4 **PARCIAL**: error EBITDA reparado; normalización y cobertura no aprobadas. R5: análisis y evidencia de esta misma revisión actualizados; **CANDIDATO / NO PUBLICAR**. Se completa el PR existente277 como evidencia candidata; CI técnico no sustituye estos gates. Catálogo y app no se promueven ni se finge una ficha publicada. R6 queda como auditoría económica independiente posterior, no como excusa para impedir el cierre deR5 cuando cumpla sus propios controles.
+R3 **PARCIAL ECONÓMICO / CORRIDAS TÉCNICAS VIGENTES**: fiscal y S/C implantados;75sensibilidades y4inversos cargados y conciliados. WACC y puente económico siguen pendientes. R4 **PARCIAL**: error EBITDA reparado; normalización y cobertura no aprobadas. R5: análisis y evidencia de esta misma revisión actualizados; **CANDIDATO / NO PUBLICAR**. Se completa el PR existente277 como evidencia candidata; CI técnico no sustituye estos gates. Catálogo y app no se promueven ni se finge una ficha publicada. R6 queda como auditoría económica independiente posterior, no como excusa para impedir el cierre deR5 cuando cumpla sus propios controles.
 
-Siguiente prueba exacta: tras autorización específica, instalar sólo S/C, cargar las75salidas estáticas fiscales y la guardiaMOS; recalcular de nuevo las matrices/inversos porque S/Ccambia. Antes de certificar valor común, resolver coste financiero por instrumentos/riesgo, puente postcorte75ABL/caja, impuestos realizables, derechos/opción y el saldo de leases o el mantenimiento contractual admisible. No se autoriza adoptar22,075% ni publicar por aprobar esas tres escrituras.
+Siguiente prueba exacta: antes de certificar valor común, contrastar costes/YTM por instrumento y riesgo de refinanciación; conciliar el puente postcorte75ABL/caja y los derechos prioritarios; validar impuestos realizables y mantenimiento/capital cautivo; recuperar el saldo propio de leases o tramitar el mantenimiento contractual admisible sin inventar históricos. Si cambian inputs materiales, invalidar y volver a ejecutar las corridas afectadas. La autorización de estas tres escrituras no adopta22,075% ni publica.

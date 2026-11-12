@@ -12,7 +12,7 @@
   "candidata": true,
   "contratoLibros": "floyd-libro-unico-v1",
   "contratoPendiente": null,
-  "metodoPrincipal": "FCFF consolidado Base (seleccionado; NO CALCULADO)",
+  "metodoPrincipal": "FCFF consolidado Base calculado; puente al común no certificado",
   "fechaValoracion": "2026-11-12",
   "fechaCorteContable": "2026-09-30",
   "precioReferenciaFecha": "2026-11-11",
@@ -90,9 +90,9 @@
   "fases": {
     "R1": "PARCIAL: riesgo/precio/corte verificados; WACC definitivo pendiente",
     "R2": "NO CERRADO:19ND",
-    "R3": "PARCIAL: tres motores fiscales calculados,75 matrices/4inversos recalculados en copia; no cargados",
+    "R3": "PARCIAL ECONÓMICO: S/C y fiscal implantados;75 sensibilidades y4 inversos cargados, conciliados y VIGENTE",
     "R4": "PARCIAL: EBITDA corregido, cobertura no aprobada",
-    "R5": "CANDIDATO: Doc actualizado, no publicación",
+    "R5": "CANDIDATO: Doc y datos misma revisión actualizados tras autorización; NO PUBLICAR",
     "R6": "PENDIENTE INDEPENDIENTE"
   },
   "salvedades": [
@@ -177,8 +177,8 @@
       "titulo": "FCFF consolidado seleccionado; proyección de capital financiero pendiente",
       "severidad": "MATERIAL",
       "evidencia": "Income Statement!L12/L15/L19; cartera y fondeo Q26",
-      "impacto": "INVESTIGADO Y PROBADO EN COPIA. CFO9M: liberación cartera152, consumo inventarios97, AR52, equipo neto22; subtotal parcial25m, no FCFF. S/C propuesto C12/8, B8/4, O2,1/2,1 limita recuperación; Base NOPAT81,909/reinversión−27,303/FCFF109,212. Con WACC10,3% y resto constante, EVBase2830,0527→2367,2601m (−462,7926m). Propuesta no instalada: auto review exige autorización específica.",
-      "accion": "Confirmación específica pendiente sobre S/C; no introducirlo por otra vía. Validar originación/cobro/ventas122m, pérdidas, mantenimiento, I+D y NWC. La liberación no es flujo recurrente perpetuo ni caja libre inmediata del común.",
+      "impacto": "IMPLANTADO tras autorización «Si autorizo»: S/C C12/8, B8/4, O2,1/2,1. Base NOPAT81,909, reinversión−27,303 y FCFF109,212m. EVBase2830,0527→2367,2601m (−462,7926m) manteniendo WACC10,3%. CFO9M: cartera152, inventarios−97, AR−52, equipo neto22; subtotal25 no es FCFF.",
+      "accion": "Escrituras y recálculo cerrados técnicamente. Validar originación/cobro/ventas122m, pérdidas, mantenimiento, I+D y NWC; la liberación no es flujo perpetuo ni caja inmediata del común. Permanece abierto el juicio económico.",
       "dependencia": "R2 y supuestos R3",
       "estado": "ABIERTO"
     },
@@ -227,7 +227,7 @@
       "titulo": "Tipo efectivo histórico negativo no representativo para DCF",
       "severidad": "CRÍTICO",
       "evidencia": "Income Statement!L29 histórico→Control económico XRX!B3; prospectivoB5:D5→Input sheet B23 de C/B/O",
-      "impacto": "CORRECCIÓN TÉCNICA IMPLANTADA #204: ETR histórica−6,402164% permanece; selector fiscal separado usa25% inicial prospectivo como hipótesis sin reconocer NOL anteriores.9/9resultados de regresión exactos (histórico,0%,25%×3). Oficial bruto C−15,7289196/B−7,4615768/O3,4070555. EVBase3195,3212→2830,0527m por impuesto:−365,2685m. DTA2242/allowance1933/neto309 FY25; NOLnominal8100 no cargado como realizable.",
+      "impacto": "REPARACIÓN #204 IMPLANTADA: ETR histórica−6,402164% intacta; prospectivo25% hipótesis sin NOL inicial reconocido.9/9regresiones exactas con S/C anterior. Con S/C autorizado, brutos C−24,2169566/B−10,9357674/O3,4852556. Efecto fiscal aislado anterior: EVBase−365,2685m. DTA2242/allowance1933/neto309; NOL8100 no reconocido automáticamente.",
       "accion": "Mantener abierto el juicio fiscal por jurisdicción y caja;59m9M es gasto contable, no prueba de impuesto pagado. Defecto de crédito fiscal negativo ya reparado sin tocar Valuation output; maestra no modificada. Issue204 sigue abierto para revisión técnica/regresión ampliada; no confundir reparación implantada con R3/R5cerradas.",
       "dependencia": "Impuestos y compatibilidad del motor",
       "estado": "ABIERTO"
@@ -237,8 +237,8 @@
       "titulo": "Salida Base Ginsu negativa y MOS / precio del común no interpretables",
       "severidad": "CRÍTICO",
       "evidencia": "Valuation output!B29:B33; Resumen de valoraciones!B16:B18; Sensibilidades DCF!D8/D16/D39",
-      "impacto": "OFICIAL tras fiscal25%: Base bruto−7,4616 NO precio negativo. Se ejecutaron75corridas nuevas y4inversos brutos; centros−7,4615768 exactos. La carga de75entradas estáticas y guardiaMOS fue rechazada por auto review; original conserva OBSOLETO y MOS negativo mecánico NO UTILIZABLE. En copia guardiaMOS pasa negativo→N/M y positivo1,019999→0,662999. No mostrar ese MOS como compra.",
-      "accion": "Autorización específica pendiente para75entradas estáticas verificadas(sin fórmulas) y guardiaMOS fuera de Ginsu. No sellar firmas antes de cargar/conciliar. Reconciliar común y opcionalidad; con S/C propuesto Base residual0 en14stresscases, pero eso NO prueba valor total de opción0.",
+      "impacto": "75 nuevas corridas y4inversos cargados tras autorización «Si autorizo», con S/C vigente. Centros−10,9357673798 exactos; firmas matrices e inversos VIGENTE. GuardiaMOS implantada: N/M para Base no positivo. Son residuales brutos, no precios certificados del común.",
+      "accion": "Carga, conciliación, restauración y sellos completados;0fórmulas de cálculo Damodaran alteradas. Permanece reconciliar derechos comunes, deuda/riesgo, hechos postcorte y opcionalidad. Las sensibilidades conjuntas favorables impiden certificar un valor total0.",
       "dependencia": "Derechos económicos y conciliación EV común",
       "estado": "ABIERTO"
     },
@@ -304,27 +304,19 @@
   "baseMOSDescripcion": "DCF FCFF consolidado Base al patrimonio común",
   "versionCalibracion": "A-1.2",
   "salidasBrutasGinsuDiagnostico": {
-    "conservadora": -15.72891960151994,
-    "base": -7.461576807613708,
-    "optimista": 3.407055469700554,
+    "conservadora": -24.216956553181635,
+    "base": -10.935767379800657,
+    "optimista": 3.485255564323339,
     "moneda": "USD/accion",
-    "nota": "NO precios intrinsecos del comun; WACC10,3 y S/C antiguo; fiscal25%hipotesis"
-  },
-  "propuestaNoImplantada": {
-    "sc15": {
-      "conservadora": 12,
-      "base": 8,
-      "optimista": 2.1
+    "nota": "NO precios intrínsecos certificados del común; S/C autorizados,fiscal25% hipótesis,WACC10,3% provisional",
+    "EV_USDm": {
+      "conservadora": 598.0894374124143,
+      "base": 2367.260085555595,
+      "optimista": 4288.2665689267415
     },
-    "sc610": {
-      "conservadora": 8,
-      "base": 4,
-      "optimista": 2.1
-    },
-    "baseFCFF1": 109.212,
-    "baseEV_MismoWACC10_3": 2367.260085555595,
-    "deltaEVSoloSC": -462.79259380538,
-    "estado": "Autorizacion especifica solicitada tras rechazo automatico; no adoptado WACCexperimental"
+    "FCFF_Base_Y1_USDm": 109.212,
+    "NOPAT_Base_Y1_USDm": 81.909,
+    "reinversion_Base_Y1_USDm": -27.303
   },
   "controlCierreEconomico": "ESTADO_CIERRE_ECONOMICO.json",
   "notaPublicacion": "No se modifica catalogo. Base/esperado/MOScomun siguen N/D; R6independiente pendiente.",
@@ -358,5 +350,21 @@
     "formulasCalculoGinsuModificadas": 0,
     "regresionesExactas": 9,
     "compatibilidadApp": "NO_VERIFICADA"
+  },
+  "reinversionImplantada": {
+    "sc15": {
+      "conservadora": 12,
+      "base": 8,
+      "optimista": 2.1
+    },
+    "sc610": {
+      "conservadora": 8,
+      "base": 4,
+      "optimista": 2.1
+    },
+    "baseFCFF1": 109.212,
+    "baseEV_MismoWACC10_3": 2367.260085555595,
+    "deltaEVSoloSC": -462.79259380538,
+    "estado": "IMPLANTADA: autorización explícita «Si autorizo»; nuevo recálculo75+4 vigente; no incluye adoptar WACCexperimental"
   }
 }
