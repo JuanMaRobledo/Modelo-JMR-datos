@@ -1205,5 +1205,137 @@
   "unico": "https://docs.google.com/spreadsheets/d/18XcbMlHfKMC6E4I3MvudGm4B1Vv0ruUwmFkgYKMHZmc/edit",
   "analisis": "https://docs.google.com/document/d/1OBla-wu5FcEgRfLriNPMQy_5-ItubT60Lg0IyXyRjN0/edit"
  },
- "contratoLibros": "floyd-libro-unico-v1"
+ "contratoLibros": "floyd-libro-unico-v1",
+ "asuntosPorRevisar": [
+  {
+   "id": "P-01",
+   "asunto": "Emisión de noviembre de 2026 (86,2 M de acciones, US$10.000 M de notas y conversión máxima de la Serie D) no está en el motor. Reclasificado el 12-nov con datos del prospecto 424B5, el 8-K y la DEF 14A: valor pro forma a la fecha del balance, no la caja real al 10-nov.",
+   "severidad": "MENOR",
+   "evidencia": "Puente EEFF A114:E120; Fuentes y clasificación filas 831–832 y 843–846; Supuestos y control H77",
+   "impacto": "Base 174,36 → 171,01 (−1,92 % individual, 2,17 % acumulado con las acciones a empleados): salvedad no bloqueante §4B. El precio sigue entre el precio con MOS pro forma (111,16) y el valor pro forma. Estrés 164,68 (−5,55 %) duplica el CAPEX proyectado y no es un valor.",
+   "accion": "Revisar con el 10-Q del trimestre de noviembre y, si cambia el uso de los fondos, actualizar. El EV de mercado postcorte (Puente fila 90) sigue N/D y no afecta al valor.",
+   "dependeDe": "10-Q de noviembre (externo)",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-02",
+   "asunto": "Análisis fundamental en primera versión: Nivel 1 de 14 capítulos (≈4.250 palabras) y Nivel 2 de 12 apartados; falta la investigación extensa (≥7.500 palabras) y contrastar gobierno corporativo y clientes con fuentes primarias.",
+   "severidad": "MATERIAL",
+   "evidencia": "Documento de análisis ORCL; JSON de análisis en el repositorio de datos",
+   "impacto": "No cambia el valor.",
+   "accion": "Ampliar el Nivel 1 y verificar los datos marcados como no contrastados (capítulos 8 y 12).",
+   "dependeDe": "Trabajo interno R5",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-03",
+   "asunto": "Auditoría económica independiente (R6) no realizada.",
+   "severidad": "MATERIAL",
+   "evidencia": "Supuestos y control B48",
+   "impacto": "Sin cuantificar; los supuestos de crecimiento 26 % y margen 32,8 % no están contrastados por un tercero.",
+   "accion": "Ejecutar R6 con un auditor distinto del autor.",
+   "dependeDe": "Decisión del usuario",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-04",
+   "asunto": "Pesos de múltiplos sin justificación escrita: EV/EBITDA 55 % con CAPEX/ingresos de 105 % (LTM).",
+   "severidad": "MATERIAL",
+   "evidencia": "Resumen de valoraciones filas 24–30; Supuestos y control H73",
+   "impacto": "Afecta al combinado de múltiplos (151,41), valor secundario; no al DCF Base.",
+   "accion": "Justificar los pesos o reponderar hacia P/OCF y P/E; documentar.",
+   "dependeDe": "Decisión del usuario",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-05",
+   "asunto": "Historia Conservadora muy alejada (47,96 frente a 174,36) con el mismo costo de capital; coherencia económica de la historia sin revisar.",
+   "severidad": "MATERIAL",
+   "evidencia": "Resumen de valoraciones C5:E8; Input sheet · C",
+   "impacto": "Afecta al esperado ponderado (153,16), valor secundario.",
+   "accion": "Revisar crecimiento 19 %/13 %, margen 29 % y Sales-to-Capital 0,33 de la Conservadora.",
+   "dependeDe": "Auditoría económica",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-06",
+   "asunto": "Fuentes primarias contrastadas contra la SEC el 12-nov-2026 y candado B63 = AUDITADO aprobado por el usuario.",
+   "severidad": "MATERIAL",
+   "evidencia": "Supuestos y control B63:C63; contraste XBRL 10-K/10-Q",
+   "impacto": "Ninguno sobre el valor. Balance: 66 de 66 comparables coinciden (patrimonio difiere exactamente en los minoritarios, 11 de 11); resultados y flujo 90 de 90; LTM reproducido; motores: 1.968 de 1.975 fórmulas idénticas a la plantilla.",
+   "accion": "Repetir el contraste en cada corte.",
+   "dependeDe": "Aprobado por el usuario el 12-nov-2026",
+   "estado": "CERRADO"
+  },
+  {
+   "id": "P-07",
+   "asunto": "R2: 8 indicadores de eficiencia dependientes de inventarios FY2026 y LTM siguen N/D porque Oracle no reporta el saldo (último: US$303 M, mayo 2025).",
+   "severidad": "MENOR",
+   "evidencia": "Eficiencia de capital K13:L15 y K18:L18; Entradas históricas auxiliares D64:E64",
+   "impacto": "Cero en DCF y múltiplos (NWC agregado). Hasta US$0,96/acción aun con 10× el saldo (<1 %).",
+   "accion": "Excepción §4B-bis aprobada. Revisar en cada corte si Oracle vuelve a reportar el saldo.",
+   "dependeDe": "Aprobada por el usuario el 12-nov-2026",
+   "estado": "CERRADO"
+  },
+  {
+   "id": "P-08",
+   "asunto": "Matrices B y C incluyen columnas con g de 5,98 % y 6,98 %, superiores a la tasa libre de riesgo (4,98 %).",
+   "severidad": "MENOR",
+   "evidencia": "Sensibilidades DCF filas 19 y 43; Presentación A26",
+   "impacto": "Ninguno sobre el Base; esas columnas no son admisibles para decidir.",
+   "accion": "Rehacer las corridas con ejes de g menores o iguales a Rf.",
+   "dependeDe": "Trabajo interno",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-09",
+   "asunto": "Margen operativo converge en el año 1 (Input sheet B30 = 1).",
+   "severidad": "MENOR",
+   "evidencia": "Input sheet B27:B30",
+   "impacto": "Pequeño: margen objetivo 32,82 % frente a 32,12 % actual.",
+   "accion": "Justificar frente a la expansión de capacidad o alargar la convergencia.",
+   "dependeDe": "Auditoría económica",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-10",
+   "asunto": "DCF inverso: dos de cuatro valores interpolados entre corridas reales (±0,01 pp); valores estáticos.",
+   "severidad": "MENOR",
+   "evidencia": "Sensibilidades DCF B22:B25",
+   "impacto": "Ninguno sobre el Base.",
+   "accion": "Rehacer si cambia cualquier supuesto.",
+   "dependeDe": "Trabajo interno",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-11",
+   "asunto": "Prueba de plantilla vacía con una empresa nueva no ejecutada.",
+   "severidad": "MENOR",
+   "evidencia": "Plantilla maestra",
+   "impacto": "Ninguno sobre ORCL.",
+   "accion": "Cargar una empresa de prueba en una copia autorizada y verificar la cadena completa.",
+   "dependeDe": "Autorización de copia",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-12",
+   "asunto": "Los validadores de catálogo (validar_catalogo y auditar_integridad) no reconocen el contrato floyd-libro-unico-v1 y fallan para todas las fichas vigentes, no solo ORCL.",
+   "severidad": "MATERIAL",
+   "evidencia": "scripts/validar_catalogo.cjs línea 84; scripts/auditar_integridad.cjs línea 124",
+   "impacto": "Ninguno sobre el valor; la puerta de integración no puede certificar la ficha.",
+   "accion": "Adaptar los validadores al libro único.",
+   "dependeDe": "Trabajo interno del modelo",
+   "estado": "ABIERTO"
+  },
+  {
+   "id": "P-13",
+   "asunto": "Publicada EN_REVISION el 12-nov-2026. Falta la revisión visual de la ficha en la app y la auditoría independiente R6.",
+   "severidad": "MATERIAL",
+   "evidencia": "Catálogo, commit de fusión del PR 270",
+   "impacto": "Ninguno sobre el valor.",
+   "accion": "Revisar la ficha en la app y ejecutar R6.",
+   "dependeDe": "Usuario / auditor independiente",
+   "estado": "ABIERTO"
+  }
+ ]
 }
