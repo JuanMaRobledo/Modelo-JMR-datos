@@ -1240,13 +1240,13 @@
   "salvedades": [
     "NVDA-R5-03 [MATERIAL]: Referencias históricas parciales por partida. Impacto no medido para renglones antiguos; recaptura LTM reciente conciliada. Mantener salvedad rastreable; completar trazabilidad fina en R6 o mantenimiento si cambia decisión",
     "NVDA-R5-05 [MENOR]: Base de acciones y dilución futura. Variación mecánica de denominador ~0,6%, dentro materialidad, RSU por auditar. Mantener supuesto documentado; no cambiar antes de revisar derechos económicos",
-    "NVDA-R5-06 [CRÍTICO]: Par JSON, catálogo y aplicación. No existe ficha Floyd de NVDA activa hasta integrar el PR y QA. Construir par JSON de revisión única, preflight, fusionar con CI y comprobar visor",
+    "NVDA-R5-06 [MATERIAL]: Ficha Floyd integrada: QA visual de producción pendiente. No cambia el valor intrínseco, solo la evidencia de presentación efectiva. Verificar tras merge ficha NVDA y siete pestañas en navegador autenticado, incluida vista móvil",
     "NVDA-R5-09 [MATERIAL]: Inversiones no cotizadas añadidas como activo no operativo. Valor no líquido; descuento posible por método de valoración, concentración de cliente; efecto por estimar. Explicar si está fuera del FCFF y valorar su recuperabilidad en R6; vigilar >2% de valor"
   ],
   "asuntosPorRevisarResumen": {
     "pestana": "Asuntos por revisar",
     "abiertos": 4,
-    "criticosAbiertos": 1
+    "criticosAbiertos": 0
   },
   "controlPublicacion": {
     "dcfBaseConcilia": true,
@@ -1257,13 +1257,14 @@
     "revisionId": "NVDA-FLOYD-FY26Q2FY27-R1",
     "fechaComprobacion": "2026-11-12",
     "replicaIndependiente": "Corridas originales motor Damodaran 75 puntos y 4 inversos en copia aislada; matrices reinstaladas, firmas B5:B31 comparadas 27/27; no es auditoría económica independiente R6.",
-    "integridadMotor": "H inputs y sellos intactos en sus hojas de Ginsu; diferencia de fórmulas respecto plantilla no ejecutada por este agente.",
+    "integridadMotor": "Cotejo no destructivo de 773 posiciones con fórmulas de Presentación, Inputs/Outputs de los tres Ginsu y M · Income Statement: 769 idénticas, cuatro fórmulas maestras reemplazadas únicamente en entradas económicas autorizadas de Input sheet Base. Control de revisión: 27/27 firmas coinciden tras 75 corridas y cuatro inversos; no implica auditoría económica independiente.",
     "visorEndToEnd": "QA_BROWSER_VISUAL_PENDIENTE",
     "auditoriaEconomicaRealizada": false,
     "gateR2": "CONCILIADO · PENDIENTE AUDITORÍA MATERIAL (histórico 10FY; LTM y balance SEC reconciliados)",
     "estadoParaPublicarLibro": "EN_REVISION · FALTA AUDITORÍA ECONÓMICA",
-    "decisionPublicacion": "Promoción EN_REVISION solo después de par JSON, preflight, CI y app; materialidad de desviaciones menores autorizada.",
-    "revisionAnterior": "NVDA-20261101-A12-R1; archivada, no insumo."
+    "decisionPublicacion": "R5 estructural y cuatro workflows CI aprobados en PR #276; EN_REVISION para su publicación. Salvedades no críticas visibles, QA de visor y R6 por realizar.",
+    "revisionAnterior": "NVDA-20261101-A12-R1; archivada, no insumo.",
+    "ciWorkflows": "Registro de revisiones y drivers: PASA; Validación profundidad editorial: PASA; Método A profundidad editorial: PASA; Control JMR ponderaciones: PASA (commit 2ffe7c1b...)."
   },
   "libros": {
     "unico": "https://docs.google.com/spreadsheets/d/1XLRmnAEGenqe1YCTYdGmdbeKyfvmEDQs8v8Bmnc3mRs/edit",
@@ -1323,11 +1324,11 @@
     },
     {
       "id": "NVDA-R5-06",
-      "asunto": "Par JSON, catálogo y aplicación",
-      "severidad": "CRÍTICO",
-      "evidencia": "Pendiente crear e integrar JSON valoración/análisis; catálogo aún apunta A-1.2",
-      "impacto": "No existe ficha Floyd de NVDA activa hasta integrar el PR y QA",
-      "accion": "Construir par JSON de revisión única, preflight, fusionar con CI y comprobar visor",
+      "asunto": "Ficha Floyd integrada: QA visual de producción pendiente",
+      "severidad": "MATERIAL",
+      "evidencia": "PR #276 contiene par JSON, catálogo y cuatro workflows CI exitosos; navegación autenticada aún no probada",
+      "impacto": "No cambia el valor intrínseco, solo la evidencia de presentación efectiva",
+      "accion": "Verificar tras merge ficha NVDA y siete pestañas en navegador autenticado, incluida vista móvil",
       "dependeDe": "R5",
       "estado": "ABIERTO"
     },
