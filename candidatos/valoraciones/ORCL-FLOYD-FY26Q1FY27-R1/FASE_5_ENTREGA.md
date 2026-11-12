@@ -21,7 +21,7 @@
 | Auditoría económica independiente R6 | NO_EJECUTADO |
 
 ## Pendientes
-Registrados en la pestaña «Asuntos por resolver» del libro (P-01 a P-13). Crítico abierto: P-01, emisión de noviembre no incorporada al DCF (Base 174,36 → 164,68–171,01 según la caja conservada).
+Registrados en la pestaña «Asuntos por revisar» del libro (P-01 a P-13). Crítico abierto: P-01, emisión de noviembre no incorporada al DCF (Base 174,36 → 164,68–171,01 según la caja conservada).
 
 ## Siguiente paso exacto
 Cargar el 10-Q del trimestre que cierra el 30-nov-2026, conciliar caja, deuda y acciones en `Puente EEFF!A81:G90` e incorporar el pro forma al motor; después, R6.
