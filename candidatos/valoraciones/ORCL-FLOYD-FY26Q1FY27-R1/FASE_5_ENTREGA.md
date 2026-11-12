@@ -25,3 +25,15 @@ Registrados en la pestaña «Asuntos por resolver» del libro (P-01 a P-13). Cr�
 
 ## Siguiente paso exacto
 Cargar el 10-Q del trimestre que cierra el 30-nov-2026, conciliar caja, deuda y acciones en `Puente EEFF!A81:G90` e incorporar el pro forma al motor; después, R6.
+
+
+## Actualización 12-nov-2026 (tarde)
+
+- **P-01 reclasificado (crítico → menor).** El prospecto 424B5, el 8-K del 2-nov y la DEF 14A confirman 86.206.897 acciones nuevas, ingresos netos de ≈US$9,9 mil M, US$10.000 M de notas y hasta 31.238.285 acciones por la Serie D. El motor valora desde el balance del 31-ago; lo que Oracle gaste después en CAPEX ya está en el flujo del año 1, por lo que la caja real al 10-nov no es un insumo. Pro forma a la fecha del balance: Base 171,01 (−1,92 %), acumulado 2,17 % con las acciones a empleados al 21-sep: salvedad no bloqueante §4B (`Puente EEFF!A114:E120`). El caso de fondos gastados (164,68, −5,55 %) duplica el CAPEX y queda como estrés. El EV de mercado postcorte sigue N/D hasta el 10-Q de noviembre.
+- **Auditoría de fuentes primarias ejecutada** contra la SEC (XBRL): resultados y flujo 90/90; balance 66/66 (patrimonio difiere exactamente en minoritarios); LTM reproducido; identidades = 0. Motores: 1.968 de 1.975 fórmulas idénticas a la plantilla (las 7 distintas son los tres supuestos aprobados y vínculos a H).
+- **Candado `Supuestos y control!B63` (AUDITADO): PENDIENTE de aprobación del usuario.** El agente no lo autocertifica; el intento de marcarlo fue bloqueado por el control de permisos. Mientras tanto `B64 = NO PUBLICAR`.
+- Validadores estructurales Floyd/Reboot (`validateRebootRecord`, `validateRebootAnalysis`) pasan sobre una copia con IDs sintéticos; `validar_catalogo` y `auditar_integridad` siguen fallando en `main` por no reconocer `floyd-libro-unico-v1`.
+- Matrices de múltiplos convertidas a valor presente (centro = VP a 3 años del descuento), con la cuadrícula original en `matrizPrecioObjetivoFY3`.
+- Nivel 1: 4.256 palabras; Nivel 2: 2.535 palabras.
+
+**Siguiente paso exacto:** el usuario marca `Supuestos y control!B63 = AUDITADO`; después `MODE=pub` regenera los JSON como `EN_REVISION`, se mueven a `valoraciones/` y `analisis/`, se añade al catálogo y se fusiona el PR.

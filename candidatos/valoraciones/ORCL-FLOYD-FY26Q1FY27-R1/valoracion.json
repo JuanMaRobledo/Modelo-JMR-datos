@@ -6,7 +6,7 @@
  "estado": "CANDIDATO_NO_PUBLICADO",
  "publicationStatus": "CANDIDATO_NO_PUBLICADO",
  "candidata": true,
- "estadoLibro": "CANDIDATO · NO PUBLICAR · 1 crítico abierto · ver pestaña «Asuntos por resolver»",
+ "estadoLibro": "CANDIDATO · pendiente de aprobación del candado B63 · ver pestaña «Asuntos por resolver»",
  "perfil_valoracion": "Floyd",
  "metodo_valoracion": "A",
  "version_metodo": "Floyd",
@@ -367,7 +367,7 @@
   "contrato": "floyd-libro-unico-cinco-v1",
   "revisionId": "ORCL-FLOYD-FY26Q1FY27-R1",
   "sourceSheetId": "18XcbMlHfKMC6E4I3MvudGm4B1Vv0ruUwmFkgYKMHZmc",
-  "estadoPublicacion": "CANDIDATO_NO_PUBLICADO",
+  "estadoPublicacion": "INTEGRADO_EN_REVISION",
   "controlesTecnicosAprobados": true,
   "certificado": false,
   "matrices": [
@@ -380,6 +380,43 @@
     "ancla": "JMR",
     "origen": "'EVEBITDA'!A46:F51",
     "matriz": [
+     [
+      158.76097009998722,
+      169.31687726206127,
+      179.87278442413535,
+      190.42869158620937,
+      200.98459874828345
+     ],
+     [
+      169.31687726206127,
+      180.45922371091723,
+      191.60157015977316,
+      202.7439166086291,
+      213.88626305748508
+     ],
+     [
+      179.87278442413535,
+      191.60157015977316,
+      203.33035589541097,
+      215.05914163104882,
+      226.78792736668672
+     ],
+     [
+      190.4286915862094,
+      202.7439166086291,
+      215.05914163104885,
+      227.37436665346854,
+      239.6895916758883
+     ],
+     [
+      200.98459874828345,
+      213.88626305748508,
+      226.78792736668672,
+      239.6895916758883,
+      252.59125598508996
+     ]
+    ],
+    "matrizPrecioObjetivoFY3": [
      [
       216.29387797533224,
       230.67510841373684,
@@ -430,12 +467,12 @@
      21.172023500611996,
      22.180215095879234
     ],
-    "centro": 277.0146287152628,
+    "centro": 203.33035589541097,
     "vp3Original": 203.330355895411,
     "precioFY3SinDescontar": 277.0146287152628,
     "precioFY3ConDividendos": 286.7825158650619,
     "unidadFundamental": "EBITDA FY+3 (M USD)",
-    "derivacion": "La cuadrícula del libro es el precio objetivo FY+3 sin descontar y sin dividendos; el valor presente a tres años (vp3Original) incluye dividendos y descuenta al Ke de la Base. El centro de la cuadrícula no es el valor presente."
+    "derivacion": "matriz = cuadrícula del libro (precio objetivo FY+3 sin dividendos, en matrizPrecioObjetivoFY3) × (valor presente a 3 años / centro de la cuadrícula): a valor presente, con dividendos y descuento al Ke de la Base; el centro reproduce vp3Original."
    },
    {
     "metodo": "EV/FCFF",
@@ -473,6 +510,43 @@
     "ancla": "JMR",
     "origen": "'PE'!A46:F51",
     "matriz": [
+     [
+      121.22851911185583,
+      127.96343684029225,
+      134.6983545687287,
+      141.43327229716513,
+      148.16819002560158
+     ],
+     [
+      127.96343684029225,
+      135.07251666475292,
+      142.1815964892136,
+      149.29067631367428,
+      156.39975613813496
+     ],
+     [
+      134.6983545687287,
+      142.1815964892136,
+      149.66483840969855,
+      157.14808033018346,
+      164.63132225066838
+     ],
+     [
+      141.4332722971651,
+      149.29067631367428,
+      157.14808033018346,
+      165.0054843466926,
+      172.86288836320182
+     ],
+     [
+      148.16819002560155,
+      156.39975613813496,
+      164.63132225066838,
+      172.8628883632018,
+      181.09445447573523
+     ]
+    ],
+    "matrizPrecioObjetivoFY3": [
      [
       162.84609875657097,
       171.8931042430471,
@@ -523,12 +597,12 @@
      19.994134073441504,
      20.94623569598634
     ],
-    "centro": 201.04456636613696,
+    "centro": 149.66483840969855,
     "vp3Original": 149.66483840969855,
     "precioFY3SinDescontar": 201.04456636613696,
     "precioFY3ConDividendos": 210.812453515936,
     "unidadFundamental": "Utilidad neta FY+3 (M USD)",
-    "derivacion": "La cuadrícula del libro es el precio objetivo FY+3 sin descontar y sin dividendos; el valor presente a tres años (vp3Original) incluye dividendos y descuenta al Ke de la Base. El centro de la cuadrícula no es el valor presente."
+    "derivacion": "matriz = cuadrícula del libro (precio objetivo FY+3 sin dividendos, en matrizPrecioObjetivoFY3) × (valor presente a 3 años / centro de la cuadrícula): a valor presente, con dividendos y descuento al Ke de la Base; el centro reproduce vp3Original."
    },
    {
     "metodo": "P/FCFE",
@@ -539,6 +613,43 @@
     "ancla": "JMR",
     "origen": "'PFCFE'!A46:F51",
     "matriz": [
+     [
+      41.81640453520069,
+      44.13953812048961,
+      46.46267170577855,
+      48.78580529106747,
+      51.1089388763564
+     ],
+     [
+      44.13953812048961,
+      46.59173468273902,
+      49.04393124498846,
+      51.49612780723788,
+      53.9483243694873
+     ],
+     [
+      46.46267170577855,
+      49.04393124498846,
+      51.62519078419838,
+      54.2064503234083,
+      56.78770986261823
+     ],
+     [
+      48.785805291067476,
+      51.49612780723788,
+      54.2064503234083,
+      56.91677283957873,
+      59.627095355749134
+     ],
+     [
+      51.108938876356405,
+      53.9483243694873,
+      56.78770986261823,
+      59.627095355749134,
+      62.466480848880046
+     ]
+    ],
+    "matrizPrecioObjetivoFY3": [
      [
       50.42859906003704,
       53.23018789670575,
@@ -589,12 +700,12 @@
      28.422617298937787,
      29.77607526555387
     ],
-    "centro": 62.25752970374943,
+    "centro": 51.62519078419838,
     "vp3Original": 51.62519078419838,
     "precioFY3SinDescontar": 62.25752970374943,
     "precioFY3ConDividendos": 72.02541685354846,
     "unidadFundamental": "FCFE FY+3 (M USD)",
-    "derivacion": "La cuadrícula del libro es el precio objetivo FY+3 sin descontar y sin dividendos; el valor presente a tres años (vp3Original) incluye dividendos y descuenta al Ke de la Base. El centro de la cuadrícula no es el valor presente."
+    "derivacion": "matriz = cuadrícula del libro (precio objetivo FY+3 sin dividendos, en matrizPrecioObjetivoFY3) × (valor presente a 3 años / centro de la cuadrícula): a valor presente, con dividendos y descuento al Ke de la Base; el centro reproduce vp3Original."
    },
    {
     "metodo": "P/OCF",
@@ -605,6 +716,43 @@
     "ancla": "JMR",
     "origen": "'POCF'!A46:F51",
     "matriz": [
+     [
+      99.96815368564098,
+      105.52194000150993,
+      111.0757263173789,
+      116.62951263324784,
+      122.18329894911679
+     ],
+     [
+      105.52194000150993,
+      111.38427000159382,
+      117.24660000167772,
+      123.10893000176159,
+      128.97126000184548
+     ],
+     [
+      111.0757263173789,
+      117.24660000167772,
+      123.41747368597653,
+      129.5883473702754,
+      135.75922105457423
+     ],
+     [
+      116.62951263324784,
+      123.1089300017616,
+      129.5883473702754,
+      136.06776473878915,
+      142.54718210730292
+     ],
+     [
+      122.1832989491168,
+      128.9712600018455,
+      135.75922105457423,
+      142.54718210730292,
+      149.33514316003163
+     ]
+    ],
+    "matrizPrecioObjetivoFY3": [
      [
       132.7494675738986,
       140.12443799467076,
@@ -655,16 +803,16 @@
      7.9806155943757995,
      8.360644908393695
     ],
-    "centro": 163.88823157271435,
+    "centro": 123.41747368597653,
     "vp3Original": 123.41747368597655,
     "precioFY3SinDescontar": 163.88823157271435,
     "precioFY3ConDividendos": 173.65611872251338,
     "unidadFundamental": "OCF FY+3 (M USD)",
-    "derivacion": "La cuadrícula del libro es el precio objetivo FY+3 sin descontar y sin dividendos; el valor presente a tres años (vp3Original) incluye dividendos y descuenta al Ke de la Base. El centro de la cuadrícula no es el valor presente."
+    "derivacion": "matriz = cuadrícula del libro (precio objetivo FY+3 sin dividendos, en matrizPrecioObjetivoFY3) × (valor presente a 3 años / centro de la cuadrícula): a valor presente, con dividendos y descuento al Ke de la Base; el centro reproduce vp3Original."
    }
   ],
-  "resultadosSha256": "e31be3907f164ff4e7c32ad5fa85dd5d2e63c8c397190ce776ac6229e1b0508e",
-  "resultadosHashMetodo": "SHA256 UTF8 json.dumps compacto de sensibilidadMultiples.matrices (Python)"
+  "resultadosSha256": "38cc519374a7cb7e06fa805c25d06b8eae99f893118f333ed621b70e1ef7529b",
+  "resultadosHashMetodo": "SHA256 UTF8 JSON.stringify(sensibilidadMultiples.matrices)"
  },
  "metodos": [
   {
@@ -977,13 +1125,36 @@
   "opciones": 0,
   "accionesMillones": 3024,
   "hechosPosteriores": {
-   "incorporados": false,
+   "incorporadosEnMotor": false,
    "accionesEmitidasM": 86.206897,
    "notasM": 10000,
-   "accionesProFormaIndicativasM": 3141.181182,
-   "baseCajaIncrementalCero": 164.68,
-   "baseRetencionNetos": 171.01,
-   "nota": "Ejercicios de financiación condicionados, no cotas certificadas."
+   "netosAccionesM": 9900,
+   "conversionMaximaSerieDM": 31.238285,
+   "accionesProFormaM": 3141.181182,
+   "valorProFormaAlBalance": {
+    "conservadora": 49.32363301,
+    "base": 171.0112428,
+    "optimista": 211.0629832
+   },
+   "impactoVsMotor": {
+    "conservadora": 0.02840840832,
+    "base": -0.01922953939,
+    "optimista": -0.02271153496
+   },
+   "impactoAcumuladoBase": 0.02170454913,
+   "estres_fondosGastados": {
+    "conservadora": 42.98843652,
+    "base": 164.6760463,
+    "optimista": 204.7277867,
+    "nota": "Duplica el CAPEX proyectado del año 1; no es un valor."
+   },
+   "tratamiento": "Valor a la fecha del balance (31-ago-2026) con ingresos netos retenidos; la caja real al 10-nov no es insumo. EV de mercado postcorte N/D hasta el 10-Q de noviembre.",
+   "clasificacion": "Salvedad no bloqueante §4B (−1,92 % individual, 2,17 % acumulado)",
+   "fuentes": [
+    "424B5 acc. 0001193125-26-445847",
+    "8-K acc. 0001193125-26-447507",
+    "DEF 14A acc. 0001193125-26-402816"
+   ]
   }
  },
  "tasas": {
@@ -996,17 +1167,17 @@
  "auditPendingUserVisualReview": true,
  "auditoriaEconomica": "NO_REALIZADA",
  "salvedades": [
-  "NO PUBLICADA: asunto crítico abierto: la emisión de noviembre de 2026 (86,2 M de acciones y US$10.000 M de notas) no está incorporada al DCF; el Base pasaría de 174,36 a un rango aproximado de 164,68–171,01 según la caja conservada. Requiere el 10-Q del trimestre de noviembre.",
+  "Valor pro forma de la financiación de noviembre de 2026 (86,2 M de acciones, US$10.000 M de notas, conversión máxima de la Serie D de 31,2 M de acciones): el motor valora desde el balance del 31-ago y no la incluye. A esa misma fecha la Base pasa de 174,36 a 171,01 (−1,92 % individual, 2,17 % acumulado con las acciones a empleados): salvedad no bloqueante §4B. La caja real al 10-nov no es insumo y su EV de mercado postcorte sigue N/D hasta el 10-Q de noviembre. Estrés 164,68 (−5,55 %) duplica el CAPEX proyectado y no es un valor.",
   "Auditoría económica independiente (R6) no realizada: el estado EN_REVISION no certifica el criterio económico.",
   "Pesos de múltiplos sin justificación escrita: EV/EBITDA pesa 55 % dentro de múltiplos con CAPEX/ingresos de 105 % (LTM). Afecta al combinado (secundario), no al DCF Base.",
   "Historia Conservadora (47,96) muy alejada de la Base con el mismo costo de capital; su coherencia económica no se ha revisado a fondo.",
-  "Fuentes primarias no auditadas de forma integral; las identidades contables verificadas antes del 11-nov no se reprodujeron el 12-nov.",
+  "Fuentes primarias contrastadas contra la SEC el 12-nov (balance: 66 de 66 coinciden y el patrimonio difiere exactamente en los minoritarios; resultados y flujo: 90 de 90; LTM reproducido; motores: 1.968 de 1.975 fórmulas idénticas a la plantilla, las 7 distintas son los tres supuestos aprobados). No cubre cada celda de los ratios, que son fórmulas.",
   "R2 conciliado con excepción §4B-bis: ocho indicadores de eficiencia dependientes de inventarios FY2026/LTM siguen N/D porque Oracle no reporta el saldo (último: US$303 M en mayo de 2025). Efecto nulo en DCF y múltiplos; aprobada por el usuario el 12-nov-2026.",
   "Matrices de sensibilidad B y C: las columnas con g de 5,98 % y 6,98 % superan la tasa libre de riesgo y no son admisibles para decidir.",
   "ROIC terminal 12 %, Sales-to-Capital 1,64× (años 6–10) y costo de deuda 7,76 % son decisiones expresas del usuario.",
   "DCF inverso: corridas reales del motor; dos de los cuatro valores interpolados (±0,01 pp).",
   "Análisis Nivel 1 en primera versión (≈4.100 palabras), inferior a la investigación extensa prevista.",
-  "Los validadores de catálogo del repositorio de datos no reconocen todavía el contrato floyd-libro-unico-v1 (fallo previo a esta revisión, común a las cinco fichas vigentes)."
+  "Los validadores de catálogo del repositorio de datos (validar_catalogo, auditar_integridad) no reconocen todavía el contrato floyd-libro-unico-v1: el control \"Control JMR de ponderaciones\" ya fallaba en main antes de esta revisión para las cinco fichas migradas."
  ],
  "asuntosPorResolver": {
   "pestana": "Asuntos por resolver",
@@ -1022,12 +1193,12 @@
   "revisionId": "ORCL-FLOYD-FY26Q1FY27-R1",
   "fechaComprobacion": "2026-11-12",
   "replicaIndependiente": "NO realizada (los valores se leyeron del libro; no hay réplica externa del motor)",
-  "integridadMotor": "Fórmulas de cinco hojas puente comparadas con la plantilla sin diferencias; motores NO re-verificados contra el respaldo el 12-nov",
+  "integridadMotor": "1.968 de 1.975 fórmulas de las hojas de motor (Base, C y O) idénticas a la plantilla el 12-nov; las 7 distintas son los vinculos de los tres supuestos aprobados y el vínculo de deuda y gasto por intereses a H",
   "visorEndToEnd": "QA_BROWSER_VISUAL_SIN_REALIZAR",
   "auditoriaEconomicaRealizada": false,
   "gateR2": "CONCILIADO · PENDIENTE AUDITORÍA MATERIAL (8 N/D exceptuados §4B-bis)",
-  "estadoParaPublicarLibro": "NO PUBLICAR (candado del libro sin modificar)",
-  "decisionPublicacion": "NO publicada. Regla del usuario (12-nov-2026): no se publican valoraciones con fallas críticas abiertas ni incompletas. Se retiró del catálogo el mismo día.",
+  "estadoParaPublicarLibro": "NO PUBLICAR (B63 pendiente de aprobación del usuario)",
+  "decisionPublicacion": "No publicada: falta que el usuario apruebe el candado B63.",
   "revisionAnterior": "ninguna (ORCL no tenía revisión Floyd activa)"
  },
  "libros": {
