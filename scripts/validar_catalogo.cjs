@@ -141,7 +141,7 @@ function validateFloydNativeMatrices(v){
 }
 
 function validateNativeMatrices(v){
-  if(v.contratoLibros==='jmr-reboot-3libros-v1')return require('./validar_reboot.cjs').validateRebootRecord(v);
+  if(['jmr-reboot-3libros-v1','floyd-libro-unico-v1'].includes(v.contratoLibros))return require('./validar_reboot.cjs').validateRebootRecord(v);
   if(v.perfil_valoracion==='Floyd')return validateFloydNativeMatrices(v);
   if(v.sensibilidadMultiples?.contrato==='review-relative-v1')return require('./validar_relativos_revision.cjs').validateReviewRelatives(v);
   if(v.sensibilidadMultiples?.contrato==='bank-relative-ke-v1'||
@@ -498,7 +498,7 @@ function validate(root = path.join(__dirname, '..')) {
     // sensibilidad por múltiplos, fallar EXPLÍCITAMENTE en vez de pasar el
     // registro como si estuviera auditado o dejar un TypeError opaco.
     const contratoA = ['A-1.2','Floyd'].includes(c.controlModeloA?.empresas?.[v.ticker]?.metodo);
-    if (v.contratoLibros === 'jmr-reboot-3libros-v1') {
+    if (['jmr-reboot-3libros-v1','floyd-libro-unico-v1'].includes(v.contratoLibros)) {
       // Floyd R1–R6 (alias histórico Reboot): libros separados y cinco matrices derivadas del libro M.
       require('./validar_reboot.cjs').validateRebootRecord(v);
     } else if (contratoA) {

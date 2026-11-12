@@ -12,13 +12,28 @@ function validateRebootRecord(v){
   const t=v.ticker+': ';
   assert.ok(['Floyd','Reboot'].includes(v.perfil_valoracion),t+'perfil Floyd R1–R6 o alias Reboot');
   assert.equal(v.version_metodo,v.perfil_valoracion,t+'versión de método incoherente con perfil');
-  assert.equal(v.contratoLibros,'jmr-reboot-3libros-v1',t+'contrato de libros Reboot ausente');
-  const L=v.libros||{},ids=[sheetId(L.historicos),sheetId(L.dcf?.base),sheetId(L.dcf?.conservadora),sheetId(L.dcf?.optimista),sheetId(L.multiplos)];
-  assert.ok(ids.every(Boolean),t+'los cinco libros Sheets deben ser URLs válidas');
-  assert.equal(new Set(ids).size,5,t+'los cinco libros Sheets deben ser distintos');
-  assert.ok(docId(L.analisis),t+'documento de análisis ausente');
-  assert.equal(L.dcf.base,v.hojaGoogle,t+'hojaGoogle debe ser el DCF Base');
-  assert.equal(ids[1],v.sheet_id,t+'sheet_id debe ser el DCF Base');
+  assert.ok(['jmr-reboot-3libros-v1','floyd-libro-unico-v1'].includes(v.contratoLibros),t+'contrato Floyd desconocido');
+  const unico=v.contratoLibros==='floyd-libro-unico-v1';
+  const L=v.libros||{};
+  let multiplesId;
+  if(unico){
+    const id=sheetId(L.unico);
+    assert.ok(id,t+'libro único debe ser una URL Sheets válida');
+    assert.ok(docId(L.analisis),t+'documento de análisis ausente');
+    assert.notEqual(id,docId(L.analisis),t+'libro y análisis deben ser distintos');
+    assert.equal(L.unico,v.hojaGoogle,t+'hojaGoogle debe ser el libro único');
+    assert.equal(id,v.sheet_id,t+'sheet_id debe ser el libro único');
+    assert.ok(!L.dcf&&!L.historicos&&!L.multiplos,t+'no mezclar arquitectura única y heredada');
+    multiplesId=id;
+  }else{
+    const ids=[sheetId(L.historicos),sheetId(L.dcf?.base),sheetId(L.dcf?.conservadora),sheetId(L.dcf?.optimista),sheetId(L.multiplos)];
+    assert.ok(ids.every(Boolean),t+'los cinco libros Sheets deben ser URLs válidas');
+    assert.equal(new Set(ids).size,5,t+'los cinco libros Sheets deben ser distintos');
+    assert.ok(docId(L.analisis),t+'documento de análisis ausente');
+    assert.equal(L.dcf.base,v.hojaGoogle,t+'hojaGoogle debe ser el DCF Base');
+    assert.equal(ids[1],v.sheet_id,t+'sheet_id debe ser el DCF Base');
+    multiplesId=ids[4];
+  }
   const st=v.valorEsperado?.historias||[];
   assert.deepEqual(st.map(h=>h.id).sort(),['A','B','C'],t+'tres historias A/B/C');
   assert.ok(st.every(h=>Number.isFinite(h.valor)&&h.probabilidad>=0&&h.probabilidad<=1));
@@ -33,7 +48,7 @@ function validateRebootRecord(v){
   const sd=v.sensibilidadDCF||{};assert.ok(sd.matrices?.length>=2,t+'faltan matrices DCF');
   for(const m of sd.matrices){assert.ok(grid(m.valores),t+'matriz DCF no 5×5');assert.equal(m.centroConciliado,true);assert.ok(near(m.valores[2][2],A)&&near(m.centro,A),t+'centro de matriz DCF ≠ Base');}
   const s=v.sensibilidadMultiples||{};
-  assert.equal(s.revisionId,v.revisionId);assert.equal(sheetId(L.multiplos),s.sourceSheetId);assert.equal(s.certificado,false,t+'no autocertificar');
+  assert.equal(s.revisionId,v.revisionId);assert.equal(multiplesId,s.sourceSheetId);assert.equal(s.certificado,false,t+'no autocertificar');
   assert.deepEqual((s.matrices||[]).map(m=>m.metodo),METHODS,t+'cinco matrices en orden');
   assert.equal(s.resultadosSha256,crypto.createHash('sha256').update(JSON.stringify(s.matrices),'utf8').digest('hex'),t+'SHA-256 de matrices no coincide');
   const dm=v.descuentoMultiples||{};
@@ -89,7 +104,7 @@ module.exports={validateRebootRecord,validateRebootAnalysis};
 if(require.main===module){
   const root=path.resolve(__dirname,'..'),c=JSON.parse(fs.readFileSync(path.join(root,'catalogo.json'),'utf8'));
   const vals=new Map();let n=0;
-  for(const p of c.valoraciones){const v=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));if(v.contratoLibros==='jmr-reboot-3libros-v1'){validateRebootRecord(v);vals.set(v.ticker,{v,p});}}
+  for(const p of c.valoraciones){const v=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));if(['jmr-reboot-3libros-v1','floyd-libro-unico-v1'].includes(v.contratoLibros)){validateRebootRecord(v);vals.set(v.ticker,{v,p});}}
   for(const p of c.analisis){const a=JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));const o=vals.get(a.ticker);if(!o)continue;
     assert.equal(a.linkedValuation?.sourcePath,o.p);const w=validateRebootAnalysis(a,o.v);n++;console.log('FLOYD R1–R6 '+a.ticker+' '+o.v.revisionId+' · Nivel1 '+w+' palabras · R6 pendiente');}
   assert.equal(n,vals.size,'Empresa Reboot sin análisis activo');

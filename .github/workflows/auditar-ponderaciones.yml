@@ -6,6 +6,8 @@ on:
       - 'auditorias/ponderaciones-38-2026-10-18.json'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/validar_reboot.cjs'
+      - 'scripts/preflight_floyd.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/validar_no_regresion_20.cjs'
       - 'scripts/integrar_matrices_nativas.py'
@@ -32,6 +34,8 @@ on:
       - 'valoraciones/**'
       - 'scripts/auditar_ponderaciones.cjs'
       - 'scripts/validar_catalogo.cjs'
+      - 'scripts/validar_reboot.cjs'
+      - 'scripts/preflight_floyd.cjs'
       - 'scripts/inventariar_cobertura_a.cjs'
       - 'scripts/integrar_matrices_nativas.py'
       - 'scripts/integrar_descuentos_nativos.py'
@@ -83,8 +87,8 @@ jobs:
       - run: node scripts/auditar_integridad.cjs
       # Tras un rechazo financiero los diagnósticos independientes continúan,
       # pero GitHub conserva la conclusión failure; no hay continue-on-error.
-      - name: Tests Floyd (catálogo activo con libros separados)
-        run: node --test scripts/tests/validar_catalogo.test.cjs
+      - name: Tests Floyd (catálogo activo por contrato)
+        run: node --test scripts/tests/validar_catalogo.test.cjs scripts/tests/floyd_proceso.test.cjs
         if: ${{ !cancelled() }}
       - name: Suite financiera histórica sobre el archivo (sin reactivarlo)
         run: node scripts/ci_catalogo_legacy.cjs node --test $(find scripts/tests -maxdepth 1 -name '*.test.cjs' ! -name 'validar_catalogo.test.cjs' | sort)
