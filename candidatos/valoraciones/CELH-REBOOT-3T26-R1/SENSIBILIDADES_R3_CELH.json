@@ -1,0 +1,231 @@
+{
+  "revisionId": "CELH-REBOOT-3T26-R1",
+  "moneda": "USD por accion ordinaria",
+  "fecha": "2026-11-10",
+  "estado": "CANDIDATO_PROVISIONAL",
+  "contratoLibros": "jmr-reboot-3libros-v1",
+  "source": {
+    "libroDCFBase": "https://docs.google.com/spreadsheets/d/1nZ0USHr2Wa_MX6ykOCsmJuLMFdDJrtBUFQFwOkFib40/edit",
+    "celdasModificadas": {
+      "growth": "Input sheet!B26",
+      "ebit": "Input sheet!B12",
+      "gStable": "Input sheet!B68",
+      "roicTerminal": "Input sheet!B49",
+      "ERP": "Cost of capital worksheet!B26"
+    },
+    "salida": "Valuation output!B29 (patrimonio consolidado antes de preferentes)",
+    "restauracion": "2026-11-10; B26=.11; B12=505; B68=.03; B49=.11; CoC B26=.0441",
+    "puenteProvisional": "Resolver A y B independientemente: A 550M pref o 22M acciones según valor por accion >=25; B 585M pref o 11.3M acciones si >=51.75. Conversión y rescate legalmente posteriores/condicionados y dividendos 5% aún NO valorados estocásticamente."
+  },
+  "precioReferencia": 33.19,
+  "fechaPrecio": "2026-11-09",
+  "valorBaseProvisional": 27.07253592876713,
+  "valorEsperadoProvisional": 27.781338740856725,
+  "precioMosBaseProvisional": 17.597148353698636,
+  "matrices": [
+    {
+      "nombre": "Crecimiento FY+1 y FY2–5 × EBIT sostenible",
+      "ejeFilas": [
+        0.07,
+        0.09,
+        0.11,
+        0.13,
+        0.15
+      ],
+      "ejeColumnas": [
+        445,
+        475,
+        505,
+        535,
+        565
+      ],
+      "etiquetaFilas": "CAGR anual primeros cinco años",
+      "etiquetaColumnas": "EBIT sostenible LTM USD millones",
+      "valores": [
+        [
+          18.711241137963,
+          20.501642858654,
+          22.292044579345,
+          24.082446300036,
+          25.802694923802
+        ],
+        [
+          20.659690145691,
+          22.65651652001,
+          24.653342894329,
+          26.517540813409,
+          28.353876986851
+        ],
+        [
+          22.802520864269,
+          25.025836992711,
+          27.072535928767,
+          29.119234864823,
+          31.165933800879
+        ],
+        [
+          25.145394796305,
+          27.424937123977,
+          29.70447945165,
+          31.984021779322,
+          34.263564106994
+        ],
+        [
+          27.525537331493,
+          30.062511037059,
+          32.599484742624,
+          35.136458448189,
+          37.673432153754
+        ]
+      ],
+      "centro": 27.072535928767,
+      "centroConciliado": true
+    },
+    {
+      "nombre": "WACC inicial × crecimiento terminal",
+      "ejeFilas": [
+        0.06833321174134727,
+        0.07115676430225437,
+        0.07398031686316145,
+        0.07680386942406855,
+        0.07962742198497566
+      ],
+      "ejeColumnas": [
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+      ],
+      "etiquetaFilas": "WACC inicial modificado por ERP Damodaran",
+      "etiquetaColumnas": "g terminal nominal USD",
+      "valores": [
+        [
+          26.946468759644,
+          27.469705433429,
+          28.054266671207,
+          28.715963240801,
+          29.47678421463
+        ],
+        [
+          26.471192817828,
+          26.984751742912,
+          27.558514675673,
+          28.208003588972,
+          28.954805909592
+        ],
+        [
+          26.005266312763,
+          26.509347887406,
+          27.072535928767,
+          27.710069544728,
+          28.443142763624
+        ],
+        [
+          25.548480917248,
+          26.043280939189,
+          26.596112376943,
+          27.221937268071,
+          27.941564301459
+        ],
+        [
+          25.100633457249,
+          25.586343239788,
+          26.129031365179,
+          26.743388463402,
+          27.449845759426
+        ]
+      ],
+      "centro": 27.072535928767,
+      "centroConciliado": true
+    },
+    {
+      "nombre": "ROIC terminal × crecimiento terminal",
+      "ejeFilas": [
+        0.08,
+        0.095,
+        0.11,
+        0.125,
+        0.14
+      ],
+      "ejeColumnas": [
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+      ],
+      "etiquetaFilas": "ROIC perpetuo",
+      "etiquetaColumnas": "g terminal nominal USD",
+      "valores": [
+        [
+          24.574264985529,
+          24.559403799483,
+          24.498710030416,
+          24.378870299668,
+          24.181342664512
+        ],
+        [
+          25.417146783687,
+          25.703229062338,
+          26.005783970153,
+          26.328479054931,
+          26.676404889751
+        ],
+        [
+          26.005266312763,
+          26.509347887406,
+          27.072535928767,
+          27.710069544728,
+          28.443142763624
+        ],
+        [
+          26.452237154861,
+          27.121998194457,
+          27.883267417314,
+          28.760078316974,
+          29.785863547767
+        ],
+        [
+          26.803428530795,
+          27.603366292855,
+          28.520270729744,
+          29.585085209453,
+          30.840858449594
+        ]
+      ],
+      "centro": 27.072535928767,
+      "centroConciliado": true
+    }
+  ],
+  "dcfInverso": {
+    "precioMercado": 33.19,
+    "crecimiento1a5Implicito": 0.1538567,
+    "EBITnormalizadoImplicito": 594.6682550149083,
+    "margenImplicito": 0.18762825945855557,
+    "referenciaGinsu": "Valuation output B29 y waterfall; verificación centro con corrida real: EBIT 594.668255 -> USD 33.19"
+  },
+  "limitaciones": [
+    "Matrices derivadas de Ginsu pero puente opcional A/B es aproximación estática, no árbol de opciones con fechas/dividendos.",
+    "Escenarios no cambian crecimiento año1 vs FY2-5 ni S/C 1-5 vs6-10: ambos campos dependientes de fórmulas originales inalterables.",
+    "Múltiplos y sensibilidad individuales no aprobados; no publicar.",
+    "Ponderaciones 25/50/25 provisionales, por cerrar por evidencia."
+  ],
+  "centros": [
+    {
+      "nombre": "Crecimiento FY+1 y FY2–5 × EBIT sostenible",
+      "centro": 27.072535928767,
+      "delta": -1.3145040611561853e-13
+    },
+    {
+      "nombre": "WACC inicial × crecimiento terminal",
+      "centro": 27.072535928767,
+      "delta": -1.3145040611561853e-13
+    },
+    {
+      "nombre": "ROIC terminal × crecimiento terminal",
+      "centro": 27.072535928767,
+      "delta": -1.3145040611561853e-13
+    }
+  ]
+}
