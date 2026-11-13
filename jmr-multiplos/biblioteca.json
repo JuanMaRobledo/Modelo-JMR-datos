@@ -1,0 +1,480 @@
+{
+ "schemaVersion": "jmr-biblioteca-1",
+ "app": "jmr-multiplos",
+ "files": {
+  "catalogo.json": {
+   "schemaVersion": "jmr-multiplos-catalogo-1",
+   "empresas": [
+    {
+     "ticker": "ORCL",
+     "company": "Oracle Corporation",
+     "perfil": "operativa",
+     "asOf": "2026-11-13",
+     "currency": "USD",
+     "precio": 127.11,
+     "valorBase": 156.13329817860506,
+     "precioMOS": 101.48664381609329,
+     "brecha": 0.22833213892380666,
+     "v2Ref": 55.6560059420807,
+     "estado": "EN_PROCESO",
+     "estadoDeclarado": "EN_PROCESO",
+     "visibilidadApp": "PUBLICADA_PARA_REVISION",
+     "aprobacionUsuario": null,
+     "solicitudExpresa": "2026-11-13",
+     "controles": {
+      "bloqueos": 0,
+      "errores": 1,
+      "avisos": 1
+     },
+     "archivo": "empresas/ORCL.json"
+    }
+   ]
+  },
+  "empresas/ORCL.json": {
+   "schemaVersion": "jmr-multiplos-0.1",
+   "ticker": "ORCL",
+   "company": "Oracle Corporation",
+   "profile": "operativa",
+   "currency": "USD",
+   "units": "millones, excepto valor/acción",
+   "asOf": "2026-11-13",
+   "estado": "EN_PROCESO",
+   "solicitudExpresa": {
+    "fecha": "2026-11-13",
+    "texto": "Haz el análisis por múltiplos de ORCL (primera empresa de JMR múltiplos)"
+   },
+   "market": {
+    "fecha": "2026-11-13",
+    "sharePrice": 127.11,
+    "shares": 2914,
+    "debt": 129541,
+    "cash": 31894,
+    "minority": 5502,
+    "nonOperatingAssets": 0,
+    "optionsValue": 0,
+    "preferred": 0
+   },
+   "v2Ref": {
+    "ticker": "ORCL",
+    "valorBase": 55.6560059420807,
+    "nota": "DCF Base del expediente V2 (ORCL-V2-FY26-R1). Informativo; no se promedia con los múltiplos."
+   },
+   "history": [
+    {
+     "year": 2017,
+     "revenue": 37728,
+     "cogs": 4454,
+     "ebit": 12710,
+     "interestExpense": 1798,
+     "pretaxIncome": 11517,
+     "taxExpense": 2182,
+     "netIncome": 9335,
+     "operatingCF": 14126,
+     "capex": 2021,
+     "da": 2451,
+     "changeNWC": -1224,
+     "cash": 66078,
+     "debt": 57909,
+     "equity": 54246,
+     "minority": 386,
+     "nonoperatingAssets": 0,
+     "shares": 4217,
+     "assets": 134991,
+     "sharePrice": 45.39
+    },
+    {
+     "year": 2018,
+     "revenue": 39383,
+     "cogs": 8060,
+     "ebit": 13264,
+     "interestExpense": 2025,
+     "pretaxIncome": 12424,
+     "taxExpense": 8837,
+     "netIncome": 3587,
+     "operatingCF": 15386,
+     "capex": 1736,
+     "da": 2785,
+     "changeNWC": -8135,
+     "cash": 67261,
+     "debt": 60619,
+     "equity": 46224,
+     "minority": 498,
+     "nonoperatingAssets": 0,
+     "shares": 4238,
+     "assets": 137264,
+     "sharePrice": 46.72
+    },
+    {
+     "year": 2019,
+     "revenue": 39506,
+     "cogs": 7995,
+     "ebit": 13535,
+     "interestExpense": 2082,
+     "pretaxIncome": 12268,
+     "taxExpense": 1185,
+     "netIncome": 11083,
+     "operatingCF": 14551,
+     "capex": 1660,
+     "da": 2919,
+     "changeNWC": 260,
+     "cash": 37827,
+     "debt": 56167,
+     "equity": 22363,
+     "minority": 578,
+     "nonoperatingAssets": 0,
+     "shares": 3732,
+     "assets": 108709,
+     "sharePrice": 50.6
+    },
+    {
+     "year": 2020,
+     "revenue": 39068,
+     "cogs": 7938,
+     "ebit": 13896,
+     "interestExpense": 1995,
+     "pretaxIncome": 12063,
+     "taxExpense": 1928,
+     "netIncome": 10135,
+     "operatingCF": 13139,
+     "capex": 1564,
+     "da": 2968,
+     "changeNWC": 1187,
+     "cash": 43057,
+     "debt": 71597,
+     "equity": 12717,
+     "minority": 643,
+     "nonoperatingAssets": 0,
+     "shares": 3294,
+     "assets": 115438,
+     "sharePrice": 53.77
+    },
+    {
+     "year": 2021,
+     "revenue": 40479,
+     "cogs": 7855,
+     "ebit": 15213,
+     "interestExpense": 2496,
+     "pretaxIncome": 12999,
+     "taxExpense": -747,
+     "netIncome": 13746,
+     "operatingCF": 15887,
+     "capex": 2135,
+     "da": 2916,
+     "changeNWC": 148,
+     "cash": 46554,
+     "debt": 84245,
+     "equity": 5952,
+     "minority": 714,
+     "nonoperatingAssets": 0,
+     "shares": 3022,
+     "assets": 131107,
+     "sharePrice": 78.74
+    },
+    {
+     "year": 2022,
+     "revenue": 42440,
+     "cogs": 8877,
+     "ebit": 10926,
+     "interestExpense": 2755,
+     "pretaxIncome": 7649,
+     "taxExpense": 932,
+     "netIncome": 6717,
+     "operatingCF": 9539,
+     "capex": 4511,
+     "da": 3122,
+     "changeNWC": 1987,
+     "cash": 21902,
+     "debt": 75859,
+     "equity": -5768,
+     "minority": 452,
+     "nonoperatingAssets": 0,
+     "shares": 2786,
+     "assets": 109297,
+     "sharePrice": 71.92
+    },
+    {
+     "year": 2023,
+     "revenue": 49954,
+     "cogs": 13564,
+     "ebit": 13093,
+     "interestExpense": 3505,
+     "pretaxIncome": 9126,
+     "taxExpense": 623,
+     "netIncome": 8503,
+     "operatingCF": 17165,
+     "capex": 8695,
+     "da": 6108,
+     "changeNWC": -513,
+     "cash": 10187,
+     "debt": 90481,
+     "equity": 1556,
+     "minority": 483,
+     "nonoperatingAssets": 0,
+     "shares": 2766,
+     "assets": 134384,
+     "sharePrice": 105.94
+    },
+    {
+     "year": 2024,
+     "revenue": 52961,
+     "cogs": 15143,
+     "ebit": 15353,
+     "interestExpense": 3514,
+     "pretaxIncome": 11741,
+     "taxExpense": 1274,
+     "netIncome": 10467,
+     "operatingCF": 18673,
+     "capex": 6866,
+     "da": 6139,
+     "changeNWC": 488,
+     "cash": 10661,
+     "debt": 86869,
+     "equity": 9239,
+     "minority": 535,
+     "nonoperatingAssets": 0,
+     "shares": 2823,
+     "assets": 140976,
+     "sharePrice": 117.19
+    },
+    {
+     "year": 2025,
+     "revenue": 57399,
+     "cogs": 16927,
+     "ebit": 17678,
+     "interestExpense": 3578,
+     "pretaxIncome": 14160,
+     "taxExpense": 1717,
+     "netIncome": 12443,
+     "operatingCF": 20821,
+     "capex": 21215,
+     "da": 6174,
+     "changeNWC": 1500,
+     "cash": 11203,
+     "debt": 92568,
+     "equity": 20969,
+     "minority": 518,
+     "nonoperatingAssets": 0,
+     "shares": 2866,
+     "assets": 168361,
+     "sharePrice": 165.53
+    },
+    {
+     "year": 2026,
+     "revenue": 67357,
+     "cogs": 23021,
+     "ebit": 20606,
+     "interestExpense": 4599,
+     "pretaxIncome": 19554,
+     "taxExpense": 2467,
+     "netIncome": 17087,
+     "operatingCF": 31977,
+     "capex": 55663,
+     "da": 9294,
+     "changeNWC": -4135,
+     "cash": 31894,
+     "debt": 129541,
+     "equity": 43056,
+     "minority": 5502,
+     "nonoperatingAssets": 0,
+     "shares": 2914,
+     "assets": 261759,
+     "sharePrice": 225.78
+    }
+   ],
+   "comparables": [
+    {
+     "ticker": "MSFT",
+     "fuente": "FMP metrics-ratios-ttm y key-metrics-ttm (consulta del 2026-11-13)",
+     "fecha": "2026-11-13",
+     "evEbitda": 17.960358918094556,
+     "evFcff": null,
+     "evVentas": 11.557627955952604,
+     "pe": 27.285416666666666,
+     "pFcfe": null,
+     "pOcf": 19.86099960179295,
+     "pBv": 8.268349553356046
+    },
+    {
+     "ticker": "ADBE",
+     "fuente": "FMP metrics-ratios-ttm y key-metrics-ttm (consulta del 2026-11-13)",
+     "fecha": "2026-11-13",
+     "evEbitda": 9.475457706583317,
+     "evFcff": null,
+     "evVentas": 3.7354538313438583,
+     "pe": 13.54206128133705,
+     "pFcfe": null,
+     "pOcf": 8.885489542846567,
+     "pBv": 8.161900714042844
+    }
+   ],
+   "pesos": {
+    "EV/EBITDA": 0.4,
+    "P/E": 0.4,
+    "P/OCF": 0.2
+   },
+   "justificacionPesos": "Oracle es una operativa madura con EBITDA y utilidad positivos: EV/EBITDA y P/E pesan 40 % cada uno por ser los más comparables con su propio histórico y con pares. P/OCF pesa solo 20 % porque en FY2026 ignora un capex de US$ 55.663 M frente a un flujo operativo de US$ 31.977 M. EV/FCFF queda fuera (FCFF FY2026 = −US$ 24.228 M, N/M). P/FCFE queda fuera: su FCFE de FY2026 (US$ 11.826 M) existe solo porque la deuda subió US$ 36.973 M; es decir, es crédito y no generación de caja.",
+   "escenarios": {
+    "conservador": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    },
+    "base": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    },
+    "optimista": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    }
+   },
+   "analysis": {
+    "resumen": "Valoración relativa de Oracle (FY2026, cierre 31-may-2026) con EV/EBITDA, P/E y P/OCF. Base US$ 156,13 por acción (conservador 106,13; optimista 191,15) frente a un precio de US$ 127,11 (brecha +22,8 %) y un precio con MOS del 35 % de US$ 101,49. El DCF Base de V2 es US$ 55,66: no se promedia ni se concilia con este resultado; la distancia entre ambos es la señal que hay que explicar, no corregir.",
+    "calidad": "Márgenes: EBITDA de US$ 29.900 M (44,4 % de ingresos), utilidad neta de US$ 17.087 M (25,4 %) y flujo operativo de US$ 31.977 M. Los múltiplos propios subieron de ~12× EV/EBITDA (FY2017–FY2020) a 25,5× en FY2026, y el P/E de ~17–20× (salvo FY2018) a 38,5×. Hoy cotiza a 15,8× EV/EBITDA y 21,7× P/E sobre las cifras de FY2026, por debajo de la mediana de la referencia (propios + pares: 16,6× y 28,6×) pero con apalancamiento mucho mayor (deuda financiera de US$ 129.541 M, 4,3× EBITDA bruto).",
+    "riesgos": "1) Capex: FY2026 invirtió US$ 55.663 M (1,7× su flujo operativo); los tres múltiplos usados son previos a ese capex, por lo que el valor por múltiplos supone que el gasto rendirá como el negocio histórico. El DCF de V2 sí lo descuenta, y por eso es mucho menor. 2) Referencia sesgada al alza: la mediana propia incorpora FY2025–FY2026, cuando el precio de cierre de ejercicio fue de US$ 165,53 y 225,78 (la acción cayó ~44 % desde mayo de 2026). 3) Solo dos pares con datos (Microsoft y Adobe), de perfiles muy distintos (17,96× y 9,48× EV/EBITDA). 4) Los pares son TTM de noviembre de 2026 y Oracle FY2026 (mayo): no es el mismo período. 5) Arrendamientos operativos fuera de la deuda, igual que en V2.",
+    "conclusion": "Lectura por múltiplos: la acción no parece cara frente a su propia historia ni frente a la mediana de la referencia, pero el resultado depende de que el capex de la fase de IA genere retornos comparables a los del negocio anterior. Con una brecha de +22,8 % sobre el precio y +180 % sobre el DCF de V2, el hallazgo útil es la divergencia: los múltiplos históricos valoran el negocio que fue, y el DCF valora el que Oracle está construyendo con deuda. Sin auditoría ni aprobación del propietario; es un complemento, no una recomendación."
+   },
+   "sources": [
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2026 (cerrado el 31-may-2026)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2025 (cerrado el 31-may-2025)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2024 (cerrado el 31-may-2024)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2023 (cerrado el 31-may-2023)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2022 (cerrado el 31-may-2022)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2021 (cerrado el 31-may-2021)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2020 (cerrado el 31-may-2020)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2019 (cerrado el 31-may-2019)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2018 (cerrado el 31-may-2018)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Oracle Corporation · Form 10-K del año fiscal 2017 (cerrado el 31-may-2017)",
+     "url": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs"
+    },
+    {
+     "documento": "Financial Modeling Prep · metrics-ratios-ttm y key-metrics-ttm de MSFT y ADBE, consulta del 2026-11-13 (múltiplos TTM)",
+     "url": "https://site.financialmodelingprep.com/developer/docs"
+    },
+    {
+     "documento": "Alpha Vantage · TIME_SERIES_MONTHLY de ORCL (cierres de mayo de 2017 a 2026 como precio de cierre de cada ejercicio fiscal)",
+     "url": "https://www.alphavantage.co/documentation/"
+    }
+   ],
+   "asuntosPorRevisar": [
+    {
+     "id": "A1",
+     "asunto": "Solo hay dos comparables con datos (Microsoft y Adobe). IBM, Salesforce, Intuit y ServiceNow no se pudieron obtener: sus planes de datos no incluyen esos símbolos o no tienen créditos. La selección de pares debe ser aprobada por el propietario.",
+     "severidad": "MATERIAL",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A2",
+     "asunto": "Los tres múltiplos son previos al capex de US$ 55.663 M de FY2026 (flujo operativo US$ 31.977 M). El valor por múltiplos no descuenta esa inversión; el DCF de V2 sí.",
+     "severidad": "CRÍTICO",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A3",
+     "asunto": "La referencia propia incluye FY2025–FY2026 con precios de cierre de US$ 165,53 y 225,78; el precio actual es 127,11. Evaluar una referencia que excluya ese pico o una ponderada por antigüedad.",
+     "severidad": "MATERIAL",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A4",
+     "asunto": "No hay LTM de Oracle: el 10-Q de agosto de 2026 no se incorporó. Los pares son TTM de noviembre de 2026 y Oracle es FY a mayo de 2026.",
+     "severidad": "MATERIAL",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A5",
+     "asunto": "Precio: se usa 127,11 (corte de V2); Alpha Vantage muestra 125,37 el 2026-11-13. Diferencia de 1,4 % en el precio y en la brecha.",
+     "severidad": "MENOR",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A6",
+     "asunto": "FY2018: P/E de 55,2× por utilidad deprimida (US$ 3.587 M, efecto de la reforma fiscal de EE. UU.); es un valor atípico dentro de la referencia. La mediana lo tolera, el P75 y el máximo no.",
+     "severidad": "MENOR",
+     "estado": "ABIERTO"
+    },
+    {
+     "id": "A7",
+     "asunto": "Arrendamientos operativos fuera de la deuda y activos no operativos en 0, igual que en V2; sin auditoría independiente ni aprobación del propietario.",
+     "severidad": "MENOR",
+     "estado": "ABIERTO"
+    }
+   ],
+   "provenance": [
+    {
+     "destino": "history[*] (estados, balance, flujos)",
+     "documento": "Expediente V2 ORCL-V2-FY26-R1 (docs/v2/empresas/ORCL.json), derivado de los Forms 10-K FY2017–FY2026",
+     "periodo": "FY2017–FY2026",
+     "unidades": "USD millones",
+     "moneda": "USD",
+     "ajuste": "Sin ajustes; mismas cifras y definiciones que V2."
+    },
+    {
+     "destino": "history[*].sharePrice",
+     "documento": "Alpha Vantage TIME_SERIES_MONTHLY ORCL (cierre del último día hábil de mayo)",
+     "periodo": "FY2017–FY2026",
+     "unidades": "USD por acción",
+     "moneda": "USD",
+     "ajuste": "Sustituye el único precio que traía el histórico de V2 (el actual) para no incluir el precio de hoy en la referencia propia."
+    },
+    {
+     "destino": "market",
+     "documento": "Expediente V2 ORCL: precio 127,11, 2.914 M de acciones, deuda 129.541, caja 31.894, minoritarias 5.502",
+     "periodo": "2026-11-13",
+     "unidades": "USD millones",
+     "moneda": "USD",
+     "ajuste": "Precio tomado de V2 para comparar a igual precio; Alpha Vantage muestra un cierre de 125,37 el mismo día."
+    },
+    {
+     "destino": "comparables",
+     "documento": "FMP metrics-ratios-ttm / key-metrics-ttm (MSFT, ADBE)",
+     "periodo": "TTM a 2026-11-13",
+     "unidades": "múltiplos (×)",
+     "moneda": "USD",
+     "ajuste": "Solo EV/EBITDA, P/E, P/OCF, P/B y EV/Ventas; EV/FCF de FMP no equivale a EV/FCFF y no se usa."
+    }
+   ],
+   "libro": {
+    "id": "ORCL-MULT-FY26-R1",
+    "archivo": "data/libros/ORCL-multiplos.xlsx",
+    "sha256": "8266f5528d55aebb858641553e287865fb624715a88bf8ebf0416c6f2c2319d5",
+    "plantilla": "plantilla/PLANTILLA_JMR_MULTIPLOS.xlsx",
+    "valores": {
+     "conservador": 106.128155781392,
+     "base": 156.133298178605,
+     "optimista": 191.15244502406
+    }
+   }
+  }
+ }
+}
