@@ -634,7 +634,8 @@
     "El valor de opciones (29,824 M), 2,292 M de RSU, tratamiento de arrendamientos operativos, NOL y WACC requieren revisión documental independiente.",
     "Los múltiplos históricos deben revisarse antes de publicación: los cálculos emplean deuda financiera sin arrendamientos y distintas bases de acciones.",
     "Documentos V2: 10-K FY2020–FY2025 copiados a su carpeta propia; faltan 10-K individuales FY2016–FY2019 y cotejo contra originales para certificar la década.",
-    "Revisión V2 13-nov: en 3T2026 crecimiento orgánico 2,5 % y guía FY2026 3,5–3,7 % nominal; Base 6,5 % el año siguiente requiere evidencia adicional. El 69,5 % del EV Base es valor terminal. Ver análisis de 14 capítulos y revisiónEconomicaV2."
+    "Revisión V2 13-nov: en 3T2026 crecimiento orgánico 2,5 % y guía FY2026 3,5–3,7 % nominal; Base 6,5 % el año siguiente requiere evidencia adicional. El 69,5 % del EV Base es valor terminal. Ver análisis de 14 capítulos y revisiónEconomicaV2.",
+    "Sin libro oficial de Damodaran asociado (controles P06/P07 abiertos) y WACC heredado de Floyd sin recalcular beta, prima ni estructura de capital. El motor V2 da +0,08 % frente al libro de Damodaran con los mismos insumos (130,20/210,69/316,66 frente a 130,10/210,59/316,56). Ver informe «V2_vs_Floyd_Contraste_y_errores» (Drive, carpeta MELI)."
    ],
    "driveV2": {
     "carpetaExpediente": "https://drive.google.com/drive/folders/1SEsfnjrdTD8CQB8Hs7DsF1L5wweMRxp1",
@@ -2231,7 +2232,9 @@
     "WACC de continuidad; falta auditoría económica independiente.",
     "Los datos históricos no divulgados de forma homogénea se dejan vacíos.",
     "Descuento de 30 % a las participaciones privadas y dilución trimestral son aproximaciones.",
-    "Modelo de I+D conserva los flujos y los impuestos del caso GAAP; no supone beneficios fiscales nuevos."
+    "Modelo de I+D conserva los flujos y los impuestos del caso GAAP; no supone beneficios fiscales nuevos.",
+    "Contraste con Floyd (14-nov-2026): Base Floyd US$176,48 frente a V2 196,05 (+11,1 %). El motor V2 reproduce Floyd con 0,00 %; el paso que más pesa es el crecimiento (V2 42 % y 22 % frente a 28 % y 16 % de Floyd: −64,56 por acción) y no tiene evidencia contraria documentada. Ver informe «V2_vs_Floyd_Contraste_y_errores» (Drive, carpeta MELI).",
+    "Floyd usa tasa libre 4,33 % (Treasury 5,10 % el 12-nov) y un precio de 198,69 el 11-nov que no concilia con el cierre de 162,85 (FMP): la brecha frente a Floyd no debe leerse como error de V2 sin verificar esos dos datos."
    ],
    "justificaciones": {
     "conservador": {
@@ -3397,7 +3400,12 @@
       "texto": "El propietario dejó la auditoría de la IA como PROVISIONAL (informeAuditoria.estado). La aprobación del propietario de R3 no cambia."
      }
     ]
-   }
+   },
+   "warnings": [
+    "Contraste con Floyd (14-nov-2026): Base Floyd US$174,36 frente a V2 96,38. El motor V2 reproduce Floyd con 0,00 % usando sus insumos y coincide con el libro de Damodaran; la brecha viene de insumos (crecimiento años 2–5 +30, margen +36, ventas/capital +29 por acción). Ver informe «V2_vs_Floyd_Contraste_y_errores» (Drive, carpeta MELI).",
+    "Tasa libre de 4,50 % «normalizada» frente a Treasury a 10 años de 5,15 % el 13-nov (4,98 % el 10-nov): con 5,15 % en el WACC el Base sería 74,13 (−22,25) y 82,10 si g = tasa libre. Prima de mercado maduro 4,23 % (enero), distinta de la usada en MELI R4/R3 (3,387 % de noviembre). Criterio documentado en la auditoría, no verificado como error; no cambia el valor publicado.",
+    "El balance es el de FY2026 (31-may); Floyd usa el LTM de agosto (ingresos 71.776, deuda 169.143, acciones 3.024): efecto neto −2,41 en el Base."
+   ]
   },
   "analisis/ORCL.json": {
    "schemaVersion": "jmr-v2-analisis-2",
