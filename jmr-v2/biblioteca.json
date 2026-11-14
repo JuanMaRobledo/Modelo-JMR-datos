@@ -1494,7 +1494,112 @@
     "independenciaR3": "PENDIENTE: R3 fue elaborada por el mismo emisor del informe",
     "estado": "PROVISIONAL",
     "etiqueta": "Auditoría de IA · provisional",
-    "nota": "Decisión del propietario, 14-nov-2026: la auditoría de la IA se mantiene como provisional hasta que la revise un tercero distinto de su emisor. No es una auditoría independiente ni firmada."
+    "nota": "Decisión del propietario, 14-nov-2026: la auditoría de la IA se mantiene como provisional hasta que la revise un tercero distinto de su emisor. No es una auditoría independiente ni firmada.",
+    "pruebasEstres": {
+     "fuente": "Informe de auditoría de IA (Gemini, provisional), sección 7.5. Informativo: lo calculó el emisor del informe con su libro; este motor no lo reproduce y no modifica el DCF.",
+     "filas": [
+      {
+       "tipo": "base",
+       "escenario": "Escenario Base R3 (corte FY2026)",
+       "valorEmpresa": 389413,
+       "patrimonioComun": 280863,
+       "acciones": 2914,
+       "valorPorAccion": 96.38,
+       "precioMOS": 62.65,
+       "impactoVsBase": 0
+      },
+      {
+       "tipo": "opciones",
+       "escenario": "Deducción explícita de opciones Black-Scholes (Option value!B29 = 1.176 M)",
+       "valorEmpresa": 389413,
+       "patrimonioComun": 279686.8,
+       "acciones": 2914,
+       "valorPorAccion": 95.98,
+       "precioMOS": 62.39,
+       "impactoVsBase": -0.4
+      },
+      {
+       "tipo": "acciones",
+       "escenario": "Acciones al cierre de FY2026 + RSUs dilutivas (2.934,5 M)",
+       "valorEmpresa": 389413,
+       "patrimonioComun": 280863,
+       "acciones": 2934.5,
+       "valorPorAccion": 95.71,
+       "precioMOS": 62.21,
+       "impactoVsBase": -0.67
+      },
+      {
+       "tipo": "preferente",
+       "escenario": "Conversión de la Serie D en 31,24 M de acciones (sin deducir 4.954 M)",
+       "valorEmpresa": 389413,
+       "patrimonioComun": 285817,
+       "acciones": 2945.2,
+       "valorPorAccion": 97.04,
+       "precioMOS": 63.08,
+       "impactoVsBase": 0.66
+      },
+      {
+       "tipo": "proforma",
+       "escenario": "Proforma LTM Q1 FY2027 + ofertas de noviembre de 2026 (+227,2 M de acciones; caja y deuda reales)",
+       "valorEmpresa": 395700.7,
+       "patrimonioComun": 304953.7,
+       "acciones": 3144,
+       "valorPorAccion": 97,
+       "precioMOS": 63.05,
+       "impactoVsBase": 0.61
+      },
+      {
+       "tipo": "dilucion",
+       "escenario": "Estrés: +8 % de acciones sin entrada de caja",
+       "valorEmpresa": 389413,
+       "patrimonioComun": 280863,
+       "acciones": 3147.1,
+       "valorPorAccion": 89.24,
+       "precioMOS": 58.01,
+       "impactoVsBase": -7.14
+      },
+      {
+       "tipo": "capex",
+       "escenario": "Estrés: capex extraordinario improductivo de +15.000 M en valor presente",
+       "valorEmpresa": 374413,
+       "patrimonioComun": 265863,
+       "acciones": 2914,
+       "valorPorAccion": 91.24,
+       "precioMOS": 59.3,
+       "impactoVsBase": -5.15
+      },
+      {
+       "tipo": "capex",
+       "escenario": "Estrés: capex extraordinario improductivo de +30.000 M en valor presente",
+       "valorEmpresa": 359413,
+       "patrimonioComun": 250863,
+       "acciones": 2914,
+       "valorPorAccion": 86.09,
+       "precioMOS": 55.96,
+       "impactoVsBase": -10.29
+      },
+      {
+       "tipo": "capex",
+       "escenario": "Estrés: capex extraordinario improductivo de +50.000 M en valor presente",
+       "valorEmpresa": 339413,
+       "patrimonioComun": 230863,
+       "acciones": 2914,
+       "valorPorAccion": 79.23,
+       "precioMOS": 51.5,
+       "impactoVsBase": -17.16
+      },
+      {
+       "tipo": "capex",
+       "escenario": "Estrés: capex extraordinario improductivo de +75.000 M en valor presente",
+       "valorEmpresa": 314413,
+       "patrimonioComun": 205863,
+       "acciones": 2914,
+       "valorPorAccion": 70.65,
+       "precioMOS": 45.92,
+       "impactoVsBase": -25.74
+      }
+     ]
+    }
    },
    "auditoriaUsuario": {
     "resultado": "APROBADA",
