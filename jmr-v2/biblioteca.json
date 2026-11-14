@@ -42,8 +42,12 @@
      "estadoPermitido": "EN_REVISION",
      "estadoDeclarado": "EN_REVISION",
      "visibilidadApp": "PUBLICADA_PARA_REVISION",
-     "visorAuditoria": "pendientes",
-     "aprobacionUsuario": null,
+     "visorAuditoria": "auditadas",
+     "aprobacionUsuario": {
+      "fecha": "2026-11-14",
+      "aprobadaPor": "JuanMaRobledo",
+      "revisionSha256": "f6a3ca5e2e9233a4582b6adb884c64221b6e3a3cd0c491ca944e33df20c0e707"
+     },
      "controles": {
       "bloqueos": 0,
       "errores": 1,
@@ -1479,8 +1483,27 @@
     "conclusionDelInforme": "NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE (conclusión del informe; no es una recomendación del modelo)",
     "responsable": "No declarado en el informe (\"equipo de auditoría independiente\"). El propietario debe confirmar quién lo emitió antes de registrarlo como auditoría firmada.",
     "registradoPor": "Claude (IA), a partir del informe del 13-nov-2026",
-    "aprobacionPropietario": null,
+    "aprobacionPropietario": {
+     "fecha": "2026-11-14",
+     "aprobadaPor": "JuanMaRobledo",
+     "referencia": "auditoriaUsuario"
+    },
     "limitaciones": "El análisis fundamental R3 «AUDITADO» en Drive está vacío; los capítulos de esta revisión los actualizó la IA con las cifras del informe. Las justificaciones por escenario del libro R3 estaban en blanco y se redactaron desde el informe."
+   },
+   "auditoriaUsuario": {
+    "resultado": "APROBADA",
+    "aprobadaPor": "JuanMaRobledo",
+    "fecha": "2026-11-14",
+    "revisionSha256": "f6a3ca5e2e9233a4582b6adb884c64221b6e3a3cd0c491ca944e33df20c0e707",
+    "evidencia": "Aprobación expresa del propietario en la sesión de trabajo del 14-nov-2026 (mensaje «Apruebo»), tras revisar el informe de auditoría independiente R3 y los asuntos abiertos.",
+    "alcance": "Revisión ORCL-V2-FY26-R3 (valoración y análisis) tal como está publicada: base US$ 96,38, conservador 23,96, optimista 188,31.",
+    "salvedadesAceptadas": [
+     "Concentración y calidad crediticia del RPO de IA (638.000–664.000 M)",
+     "Economía unitaria de renovación de GPUs en ciclo de 6 años",
+     "Entrada a balance de 288.000 M de arrendamientos no iniciados",
+     "Capítulos de análisis 1, 3, 5, 6, 7, 9, 10, 11, 12 y 14 actualizados por IA con las cifras del informe, sin auditoría de tercero",
+     "Informe de auditoría sin responsable declarado: no se registra como auditoría firmada (control P02)"
+    ]
    }
   },
   "analisis/ORCL.json": {
