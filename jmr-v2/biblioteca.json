@@ -151,18 +151,14 @@
      "currency": "USD",
      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
      "precio": 127.11,
-     "valorBase": 96.38400901599742,
-     "precioMOS": 62.649605860398324,
-     "estado": "EN_REVISION",
+     "valorBase": 114.8991107683888,
+     "precioMOS": 74.68442199945272,
+     "estado": "EN_PROCESO",
      "estadoPermitido": "EN_REVISION",
-     "estadoDeclarado": "EN_REVISION",
+     "estadoDeclarado": "EN_PROCESO",
      "visibilidadApp": "PUBLICADA_PARA_REVISION",
-     "visorAuditoria": "auditadas",
-     "aprobacionUsuario": {
-      "fecha": "2026-11-14",
-      "aprobadaPor": "JuanMaRobledo",
-      "revisionSha256": "f6a3ca5e2e9233a4582b6adb884c64221b6e3a3cd0c491ca944e33df20c0e707"
-     },
+     "visorAuditoria": "pendientes",
+     "aprobacionUsuario": null,
      "controles": {
       "bloqueos": 0,
       "errores": 1,
@@ -4434,56 +4430,23 @@
    "currency": "USD",
    "units": "millones, excepto valor/acción",
    "asOf": "2026-11-13",
-   "estado": "EN_REVISION",
+   "estado": "EN_PROCESO",
    "financials": {
-    "revenue": 67357,
-    "debt": 137242,
-    "cash": 31894,
-    "minority": 5502,
-    "nonOperatingAssets": 2300,
-    "nonoperatingAssets": 2300,
+    "revenue": 71776,
+    "debt": 133038,
+    "cash": 37077,
+    "minority": 5378,
+    "nonOperatingAssets": 2400,
+    "nonoperatingAssets": 2400,
     "optionsValue": 0,
-    "shares": 2914,
+    "shares": 3024,
     "sharePrice": 127.11,
-    "effectiveTaxRate": 0.126163444819474,
+    "effectiveTaxRate": 0.129474555995215,
     "nol": 0,
-    "operatingLeaseLiabilities": 30190,
-    "debtIncludesFinanceLeases": true
+    "debtIncludesFinanceLeases": true,
+    "operatingLeaseLiabilities": 34621
    },
    "history": [
-    {
-     "year": 2017,
-     "revenue": 37728,
-     "cogs": 4454,
-     "ebit": 12710,
-     "interestExpense": 1798,
-     "nonOperatingIncome": 605,
-     "pretaxIncome": 11517,
-     "taxExpense": 2182,
-     "netIncome": 9335,
-     "operatingCF": 14126,
-     "capex": 2021,
-     "da": 2451,
-     "changeNWC": -1224,
-     "cash": 66078,
-     "currentAssets": 74515,
-     "currentLiabilities": 24178,
-     "inventory": null,
-     "assets": 134991,
-     "liabilities": 80745,
-     "debt": 57909,
-     "equity": 54246,
-     "minority": 386,
-     "nonoperatingAssets": 0,
-     "shares": 4217,
-     "leases": 0,
-     "acquisitions": null,
-     "financingCF": 9086,
-     "dividendsBuybacks": 6192,
-     "sbc": 1350,
-     "rd": 6159,
-     "nol": null
-    },
     {
      "year": 2018,
      "revenue": 39383,
@@ -4515,7 +4478,8 @@
      "dividendsBuybacks": 14487,
      "sbc": 1607,
      "rd": 6084,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2019,
@@ -4548,7 +4512,8 @@
      "dividendsBuybacks": 39072,
      "sbc": 1653,
      "rd": 6026,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2020,
@@ -4581,7 +4546,8 @@
      "dividendsBuybacks": 22310,
      "sbc": 1590,
      "rd": 6067,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2021,
@@ -4614,7 +4580,8 @@
      "dividendsBuybacks": 23997,
      "sbc": 1837,
      "rd": 6527,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2022,
@@ -4647,7 +4614,8 @@
      "dividendsBuybacks": 19705,
      "sbc": 2613,
      "rd": 7219,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2023,
@@ -4680,7 +4648,8 @@
      "dividendsBuybacks": 4968,
      "sbc": 3547,
      "rd": 8623,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2024,
@@ -4713,7 +4682,8 @@
      "dividendsBuybacks": 5593,
      "sbc": 3974,
      "rd": 8915,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2025,
@@ -4746,7 +4716,8 @@
      "dividendsBuybacks": 5343,
      "sbc": 4674,
      "rd": 9860,
-     "nol": null
+     "nol": null,
+     "equityEarnings": null
     },
     {
      "year": 2026,
@@ -4780,7 +4751,43 @@
      "sbc": 4811,
      "rd": 10272,
      "nol": 374,
-     "sharePrice": 127.11
+     "equityEarnings": null
+    },
+    {
+     "year": 2027,
+     "revenue": 71776,
+     "cogs": 25870,
+     "ebit": 23057,
+     "interestExpense": 5104,
+     "nonOperatingIncome": 3781,
+     "pretaxIncome": 21734,
+     "taxExpense": 2814,
+     "netIncome": 18920,
+     "operatingCF": 46940,
+     "capex": 75660,
+     "da": 10881,
+     "changeNWC": null,
+     "cash": 37077,
+     "currentAssets": 55630,
+     "currentLiabilities": 47514,
+     "inventory": null,
+     "assets": 303259,
+     "liabilities": 236063,
+     "debt": 125337,
+     "equity": 67196,
+     "minority": 5378,
+     "nonoperatingAssets": 2400,
+     "shares": 3024,
+     "leases": 7701,
+     "acquisitions": null,
+     "financingCF": 53185,
+     "dividendsBuybacks": 5941,
+     "sbc": 4814,
+     "rd": 10182,
+     "nol": 0,
+     "equityEarnings": 0,
+     "sharePrice": 127.11,
+     "periodo": "LTM 31-ago-2026"
     }
    ],
    "assumptions": {
@@ -4793,8 +4800,8 @@
      "salesToCapital1to5": 0.35,
      "salesToCapital6to10": 0.65,
      "roicTerminal": 0.095,
-     "waccInitial": 0.102034789816435,
-     "waccTerminal": 0.0873,
+     "waccInitial": 0.09824996029984,
+     "waccTerminal": 0.08537,
      "gTerminal": 0.045,
      "marginalTax": 0.25,
      "mos": 0.35,
@@ -4810,8 +4817,8 @@
      "salesToCapital1to5": 0.46,
      "salesToCapital6to10": 0.9,
      "roicTerminal": 0.125,
-     "waccInitial": 0.102034789816435,
-     "waccTerminal": 0.0873,
+     "waccInitial": 0.09824996029984,
+     "waccTerminal": 0.08537,
      "gTerminal": 0.045,
      "marginalTax": 0.25,
      "mos": 0.35,
@@ -4827,8 +4834,8 @@
      "salesToCapital1to5": 0.58,
      "salesToCapital6to10": 1.1,
      "roicTerminal": 0.155,
-     "waccInitial": 0.102034789816435,
-     "waccTerminal": 0.0873,
+     "waccInitial": 0.09824996029984,
+     "waccTerminal": 0.08537,
      "gTerminal": 0.045,
      "marginalTax": 0.25,
      "mos": 0.35,
@@ -4839,79 +4846,79 @@
    "provenance": [
     {
      "destino": "financials.revenue",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.67 · Consolidated Statements of Operations",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Income Statement · LTM",
      "moneda": "USD",
      "unidades": "USD millones",
-     "valorReportado": 67357,
+     "valorReportado": 71776,
      "ajuste": 0,
      "celdaDestino": "'JMR Estados'!L6"
     },
     {
      "destino": "financials.debt",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.66 y Nota 9 p.91 · Préstamos y bonos 129.541 + Arrendamientos financieros 7.701 (620 corr. + 7.081 no corr.)",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Balance Sheet · deuda de corto plazo 7.625 + largo plazo 117.712; ajuste = arrendamientos financieros 7.701 arrastrados de FY2026 (estimación; el 10-Q del 31-ago no es accesible). Los arrendamientos operativos no se suman.",
      "moneda": "USD",
      "unidades": "USD millones",
-     "valorReportado": 129541,
+     "valorReportado": 125337,
      "ajuste": 7701,
-     "celdaDestino": "'JMR Estados'!L24:L25"
+     "celdaDestino": "'JMR Estados'!L24"
     },
     {
      "destino": "financials.cash",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.66 · Balance: efectivo 31.289 + valores negociables 605",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Balance Sheet · Total Cash and Cash Equivalents",
      "moneda": "USD",
      "unidades": "USD millones",
-     "valorReportado": 31894,
+     "valorReportado": 37077,
      "ajuste": 0,
      "celdaDestino": "'JMR Estados'!L19"
     },
     {
      "destino": "financials.minority",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.66 · Balance: participaciones minoritarias 548 (+ preferente Serie D 4.954 como ajuste)",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Balance Sheet · patrimonio total 67.196 − común 61.818 = 5.378 (minoritarias 424 + preferente Serie D 4.954 como reclamo no común)",
      "moneda": "USD",
      "unidades": "USD millones",
-     "valorReportado": 548,
+     "valorReportado": 424,
      "ajuste": 4954,
      "celdaDestino": "'JMR Estados'!L28"
     },
     {
      "destino": "financials.nonoperatingAssets",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.76 (Nota 1) · Inversiones no comercializables de deuda y capital (incl. 15% TikTok USDS JV)",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Input sheet · inversiones no operativas",
      "moneda": "USD",
      "unidades": "USD millones",
-     "valorReportado": 2300,
+     "valorReportado": 2400,
      "ajuste": 0,
      "celdaDestino": "'JMR Estados'!L29"
     },
     {
      "destino": "financials.shares",
-     "documento": "Oracle Corp. Form 10-K FY2026",
-     "periodo": 2026,
-     "pagina": "PDF p.67 · promedio ponderado diluido FY2026",
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (hojas de estados e Input sheet, LTM al 31-ago-2026)",
+     "periodo": 2027,
+     "pagina": "Shares Outstanding (31-ago-2026); la preferente Serie D no se convierte en el cálculo",
      "moneda": "USD",
-     "unidades": "USD millones",
-     "valorReportado": 2914,
+     "unidades": "millones de acciones",
+     "valorReportado": 3024,
      "ajuste": 0,
      "celdaDestino": "'JMR Estados'!L41"
     }
    ],
    "libro": {
-    "id": "ORCL-V2-FY26-R3",
-    "sha256": "f6a3ca5e2e9233a4582b6adb884c64221b6e3a3cd0c491ca944e33df20c0e707",
+    "id": "ORCL_JMR_V2_20261113_R4.xlsx",
+    "sha256": "58d9399927bf7c961fb22e242148cd6a13c04211734a8074dd5e2f8174d69599",
     "motor": "fcffsimpleginzu",
     "valores": {
-     "conservador": 23.9635179043052,
-     "base": 96.3840090159975,
-     "optimista": 188.312921690741
+     "conservador": 35.1571953336171,
+     "base": 114.899110768389,
+     "optimista": 215.571868923662
     }
    },
    "controlesLibro": {
@@ -4921,9 +4928,9 @@
    "analysis": {
     "business": "Oracle Corporation vende software de bases de datos y aplicaciones empresariales, infraestructura en la nube (OCI), hardware y servicios. En el ejercicio fiscal 2026 (cerrado el 31-may-2026) facturó US$ 67.357 millones: nube 33.989 (50 %), software 24.541 (36 %), hardware 3.084 (5 %) y servicios 5.743 (9 %); por geografía, Américas 66 %, EMEA 23 % y Asia-Pacífico 11 %. Emplea ~141.000 personas (49.000 en EE. UU.). En diez años los ingresos crecieron 6,7 % anual (37.728 → 67.357), pero con dos regímenes: casi planos hasta el FY2022 y acelerados desde entonces; el FY2026 creció 17 % y el primer trimestre del FY2027 (a agosto de 2026) 29,6 %, con la nube a +61,5 %. El negocio de nube y software ya es el 87 % de los ingresos. Las obligaciones de desempeño pendientes (RPO) pasaron de 138.000 millones (31-may-2025) a 638.000 millones (31-may-2026) y a 664.000 millones (31-ago-2026); Oracle espera reconocer ~12 % en los siguientes 12 meses y 34 % en los meses 13–36 al cierre de mayo (13 % y 37 % al cierre de agosto).",
     "moat": "La ventaja competitiva es desigual según el negocio. En bases de datos y aplicaciones hay una base instalada con altos costos de cambio: el ingreso de software es estable (24.541 en FY2026 frente a 24.724 en FY2025) y de muy alto margen; esto es evidencia de retención, no de crecimiento. En infraestructura de nube para cargas de IA la ventaja es menos clara: es intensiva en capital, compite con hiperescaladores y su protección es contractual (RPO de 664.000 millones) más que tecnológica. El retorno sobre el capital lo refleja: el ROIC calculado por el libro bajó de 22–37 % (FY2017 y FY2019–FY2021; FY2018 fue 9,7 % por el efecto de la reforma tributaria) a 12,1 % en FY2026 (R3), apenas por encima del WACC de 10,2 %, y los ingresos por dólar de capital invertido cayeron de 0,82 a 0,45. Es un juicio de JMR basado en esas cifras, no una medición de poder de precios.",
-    "story": "Historia → números (revisión R3; auditoría de IA provisional). Base: la nube absorbe el RPO ya contratado (de US$ 664.000 M al 31-ago-2026, 13 % a reconocer en 12 meses): los ingresos pasan de 67.357 a ~86.200 en FY2027 (+28,0 %, por debajo de la guía de ≥ 90.000) y crecen 18,0 % anual en los años 2–5 (≈167.200 en el año 5); el margen EBIT parte de 31,5 % y converge a 29,0 % porque la mezcla de infraestructura (OCI > 65 % de las ventas) comprime el margen bruto (65,8 % en FY2026 frente a 80,6 % en FY2021); sales to capital 0,46× (años 1–5) y 0,90× (años 6–10); ROIC terminal 12,5 %, conectado con el 12,7 % que el propio modelo alcanza en el año 10; crecimiento terminal 4,50 % = tasa libre. Conservador: cuellos de botella de energía y GPUs (crecimiento 22 % y luego 12 %, margen objetivo 25,0 %, 0,35× y 0,65×, ROIC terminal 9,5 %): US$ 23,96. Optimista: se cumple la guía de 90.000 y se sostiene el margen (33 % y luego 22 %, margen 32,5 %, 0,58× y 1,10×, ROIC terminal 15,5 %): US$ 188,31. El WACC (10,20 % → 8,73 %) es común a los tres escenarios; solo cambian las historias.",
+    "story": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p>Historia → números (revisión R3; auditoría de IA provisional). Base: la nube absorbe el RPO ya contratado (de US$ 664.000 M al 31-ago-2026, 13 % a reconocer en 12 meses): los ingresos pasan de 67.357 a ~86.200 en FY2027 (+28,0 %, por debajo de la guía de ≥ 90.000) y crecen 18,0 % anual en los años 2–5 (≈167.200 en el año 5); el margen EBIT parte de 31,5 % y converge a 29,0 % porque la mezcla de infraestructura (OCI > 65 % de las ventas) comprime el margen bruto (65,8 % en FY2026 frente a 80,6 % en FY2021); sales to capital 0,46× (años 1–5) y 0,90× (años 6–10); ROIC terminal 12,5 %, conectado con el 12,7 % que el propio modelo alcanza en el año 10; crecimiento terminal 4,50 % = tasa libre. Conservador: cuellos de botella de energía y GPUs (crecimiento 22 % y luego 12 %, margen objetivo 25,0 %, 0,35× y 0,65×, ROIC terminal 9,5 %): US$ 23,96. Optimista: se cumple la guía de 90.000 y se sostiene el margen (33 % y luego 22 %, margen 32,5 %, 0,58× y 1,10×, ROIC terminal 15,5 %): US$ 188,31. El WACC (10,20 % → 8,73 %) es común a los tres escenarios; solo cambian las historias.",
     "risks": "1) Valor terminal: explica el 93,0 % del valor de las operaciones en el caso base (99,9 % en el conservador, 87,2 % en el optimista); el VP de los diez años explícitos es de solo US$ 27.366 M, porque el FCFF es negativo mientras dura el ciclo de inversión. 2) Sensibilidad al costo de capital: +100 pb de WACC llevan el valor base a US$ 62,44 y −100 pb a US$ 152,07. 3) Financiamiento y apalancamiento: deuda financiera ajustada de 137.242 M (préstamos y bonos 129.541 + arrendamientos financieros 7.701), capex de 55.663 M frente a un flujo operativo de 31.977 M; arrendamientos de centros de datos no iniciados por 260.000 M (288.000 M en agosto) que entrarán a balance entre FY2027 y FY2029 como deuda o como presión sobre el EBIT. 4) Dilución: emitió 141 M de acciones por 19.909 M en el Q1 FY2027 (ATM) y 86,2 M más (~US$ 10.000 M) en noviembre de 2026, con 10.000 M adicionales en notas; la prueba de +8 % de acciones sin entrada de caja baja el valor base a US$ 89,24, y un capex extraordinario improductivo de +30.000 M en valor presente lo baja a US$ 86,09. 5) Concentración y calidad crediticia del RPO (US$ 638.000–664.000 M): Oracle no desglosa el peso de un único cliente ni las penalizaciones por cancelación. 6) Vida útil de 6 años de los servidores frente a chips nuevos cada 18–24 meses: sin evidencia histórica de recuperación del precio original. 7) Lo que el modelo no incluye: los arrendamientos operativos (30.190 M) quedan fuera de la deuda para no duplicar su costo, que ya está en el EBIT.",
-    "conclusion": "Valor intrínseco por acción (revisión R3, ajustada tras el informe de auditoría de IA (Gemini, provisional) del 13-nov-2026): conservador US$ 23,96, base US$ 96,38, optimista US$ 188,31. Precio con margen de seguridad del 35 % sobre el escenario base: US$ 62,65. El precio de mercado (US$ 127,11, cierre del 12-nov-2026) está 31,9 % por encima del valor base y es 2,03 veces el precio con margen de seguridad; queda entre el base y el optimista. Al corte proforma (Q1 FY2027 con las ofertas de noviembre: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M) el valor base es US$ 97,00 y el precio con MOS US$ 63,05, sin cambiar la conclusión. Frente a R1 (US$ 55,66) y R2 (US$ 53,10) el valor sube, sobre todo por tres supuestos que la auditoría recalibró (ROIC terminal alineado con el del año 10, tasa libre y crecimiento terminal de 4,50 % en vez de 4,98 %, y sales to capital que no castiga dos veces los 39.973 M de obras en curso), y baja por el margen objetivo más prudente de 29,0 %. El informe de auditoría de IA (provisional) concluye NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE: es una conclusión del informe, no una recomendación de este modelo. Sin aprobación del propietario sobre la revisión R3."
+    "conclusion": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p>Valor intrínseco por acción (revisión R3, ajustada tras el informe de auditoría de IA (Gemini, provisional) del 13-nov-2026): conservador US$ 23,96, base US$ 96,38, optimista US$ 188,31. Precio con margen de seguridad del 35 % sobre el escenario base: US$ 62,65. El precio de mercado (US$ 127,11, cierre del 12-nov-2026) está 31,9 % por encima del valor base y es 2,03 veces el precio con margen de seguridad; queda entre el base y el optimista. Al corte proforma (Q1 FY2027 con las ofertas de noviembre: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M) el valor base es US$ 97,00 y el precio con MOS US$ 63,05, sin cambiar la conclusión. Frente a R1 (US$ 55,66) y R2 (US$ 53,10) el valor sube, sobre todo por tres supuestos que la auditoría recalibró (ROIC terminal alineado con el del año 10, tasa libre y crecimiento terminal de 4,50 % en vez de 4,98 %, y sales to capital que no castiga dos veces los 39.973 M de obras en curso), y baja por el margen objetivo más prudente de 29,0 %. El informe de auditoría de IA (provisional) concluye NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE: es una conclusión del informe, no una recomendación de este modelo. Sin aprobación del propietario sobre la revisión R3."
    },
    "sources": [
     {
@@ -5001,46 +5008,99 @@
     {
      "documento": "Informe de auditoría de IA (Gemini, provisional) de ORCL · revisión R2 → propuesta R3 (13-nov-2026)",
      "url": "https://drive.google.com/file/d/18fa0fJR8bIAdrgcOhatrcoJV0heiiRIm/view"
+    },
+    {
+     "documento": "Treasury de EE. UU. a 10 años, 13-nov-2026 = 5,15 % (FMP)",
+     "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve"
+    },
+    {
+     "documento": "Damodaran · prima de riesgo implícita noviembre 2026",
+     "url": "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPNov26.xlsx"
+    },
+    {
+     "documento": "Libro Floyd ORCL-FLOYD-FY26Q1FY27-R1 (estados LTM al 31-ago-2026)",
+     "url": "https://docs.google.com/spreadsheets/d/18XcbMlHfKMC6E4I3MvudGm4B1Vv0ruUwmFkgYKMHZmc/edit"
     }
    ],
    "justificaciones": {
-    "calificacion": "El 10-K no declara calificación crediticia en sus estados; la auditoría R3 la confirma como Baa2/BBB por la calificación publicada y por la cobertura de intereses sintética (EBIT/intereses = 20.606 / 4.599 = 4,48×). Diferencial de 1,11 % sobre la tasa libre de 4,50 %: costo de deuda 5,61 % antes de impuestos y 4,21 % después.",
-    "hechosPosteriores": "El libro R3 valora con el balance auditado del FY2026 (acciones diluidas 2.914 M, deuda 137.242 M, caja 31.894 M). Los hechos posteriores —ATM de 20.000 M en el Q1 FY2027 y la oferta de noviembre de 2026 (86,2 M de acciones y 10.000 M en notas)— se informan aparte en el escenario proforma (3.144 M de acciones; valor base US$ 97,00; MOS US$ 63,05) y no cambian el libro.",
+    "calificacion": "El 10-K no declara calificación crediticia; la auditoría R3 la confirma como Baa2/BBB por la calificación publicada y la cobertura de intereses sintética (EBIT/intereses = 4,48×). R4: diferencial de 1,11 % sobre la tasa libre de 5,15 %: costo de deuda 6,26 % antes de impuestos y 4,70 % después.",
+    "hechosPosteriores": "R4 valora con el LTM al 31-ago-2026 (libro Floyd; el 10-Q no fue accesible en esta sesión): ingresos 71.776 M, EBIT 23.057 M, acciones 3.024 M, caja 37.077 M, préstamos y bonos 125.337 M más arrendamientos financieros de 7.701 M (estimación arrastrada de FY2026; deuda 133.038 M), minoritarias 424 M y preferente Serie D 4.954 M. Los arrendamientos operativos (34.621 M) no se suman. La oferta de noviembre de 2026 (86,2 M de acciones y 10.000 M en notas) sigue fuera del libro.",
     "escenarios": {
      "conservador": {
-      "tesis": "Los cuellos de botella físicos (energía, GPUs, refrigeración líquida, subestaciones) retrasan la conversión del RPO y el capital nuevo rinde poco: Oracle gasta pero entrega más tarde. Valor US$ 23,96 por acción.",
+      "tesis": "Los cuellos de botella físicos (energía, GPUs, refrigeración líquida, subestaciones) retrasan la conversión del RPO y el capital nuevo rinde poco: Oracle gasta pero entrega más tarde. Valor US$ 35,16 por acción.",
       "crecimiento": "22,0 % en el año 1 (frente a 28 % del base y ≥ 33 % que implica la guía de 90.000 M) y 12,0 % anual en los años 2–5, descontando ~30 % del backlog de IA por retrasos o renegociaciones; desde el año 6 el crecimiento se desvanece hacia 4,50 %.",
       "margenes": "Margen EBIT de 28,5 % en el año 1 y objetivo de 25,0 % a partir del año 5: menor utilización y precios en OCI mientras la depreciación de servidores y los arrendamientos operativos siguen creciendo (margen bruto GAAP 65,8 % en FY2026 y 60,0 % en el Q1 FY2027).",
       "reinversion": "Sales to capital de 0,35× en los años 1–5 y 0,65× en los años 6–10: cada dólar de ingreso incremental exige casi tres de capital. Con 0,35× el VP de los primeros 10 años es negativo y el valor terminal supera el 100 % del valor de las operaciones.",
       "roic": "ROIC terminal de 9,50 %, alineado con el 9,11 % que el propio modelo alcanza en el año 10: sin ventaja competitiva excedente sobre el WACC terminal de 8,73 %.",
-      "descuento": "WACC común a los tres escenarios: 10,20 % en los años 1–5 (Ke 12,05 %, Kd después de impuestos 4,21 %, beta apalancada 1,5372, prima operativa 4,9134 %) que converge a 8,73 % (tasa libre 4,50 % + prima de mercado maduro 4,23 %).",
-      "terminal": "Crecimiento terminal de 4,50 %, igual a la tasa libre de riesgo del Tesoro a 10 años normalizada. El valor terminal es el 99,88 % del valor de las operaciones: el escenario es el más frágil frente a cualquier aumento del WACC.",
+      "descuento": "WACC común a los tres escenarios: 9,82 % en los años 1–5 (Ke 11,41 % = 5,15 % + 1,5372 × 4,0704 %; Kd después de impuestos 4,70 %; pesos 76,43 % / 23,57 %) que converge a 8,54 % (tasa libre 5,15 % + prima de mercado maduro 3,387 %).",
+      "terminal": "Crecimiento terminal de 4,50 %, por debajo de la tasa libre de 5,15 % (criterio de la auditoría R3; con g = tasa libre el Base sería US$ 130,75). El valor terminal es el 99,81 % del valor de las operaciones: el escenario es el más frágil frente a cualquier aumento del WACC.",
       "contraevidencia": "El Q1 FY2027 ya creció +29,6 % anual (OCI +120,7 %), el RPO es de 664.000 M y el 13 % (~86.300 M) se reconoce en 12 meses: un crecimiento de 22 % exige que casi nada de eso se entregue a tiempo, lo que los datos hasta ahora no muestran.",
-      "evidencia": "Form 10-K FY2026 (Nota 1 p. 74; Nota 4 p. 83; Nota 13 pp. 103–104), Form 10-Q Q1 FY2027 (p. 4 y Nota 9 p. 20) e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026 (secciones 5, 6 y 7)."
+      "evidencia": "Form 10-K FY2026 (Nota 1 p. 74; Nota 4 p. 83; Nota 13 pp. 103–104), Form 10-Q Q1 FY2027 (p. 4 y Nota 9 p. 20) e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026 (secciones 5, 6 y 7). R4: base LTM del libro Floyd (31-ago-2026), Treasury FMP 13-nov-2026 y ERP implícita de Damodaran de nov-2026."
      },
      "base": {
-      "tesis": "La nube absorbe el RPO contratado con alguna fricción de entrega física y el capital construido rinde menos que el histórico pero más que el WACC. Valor US$ 96,38 por acción; con MOS del 35 %, US$ 62,65.",
-      "crecimiento": "28,0 % en el año 1 (≈ 86.217 M, por debajo de la guía de ≥ 90.000 M para absorber retrasos) y 18,0 % anual en los años 2–5, respaldado por el 71 % del RPO que se reconoce entre los meses 13 y 60 (~471.000 M); luego desaceleración lineal hacia 4,50 %.",
+      "tesis": "La nube absorbe el RPO contratado con alguna fricción de entrega física y el capital construido rinde menos que el histórico pero más que el WACC. Valor US$ 114,90 por acción; con MOS del 35 %, US$ 74,68.",
+      "crecimiento": "28,0 % en el año 1 (≈ 91.873 M sobre la base LTM de agosto de 2026; los doce meses siguientes a agosto superan la guía anual de ≥ 90.000 M de FY2027, que cierra en mayo) y 18,0 % anual en los años 2–5, respaldado por el 71 % del RPO que se reconoce entre los meses 13 y 60 (~471.000 M); luego desaceleración lineal hacia 4,50 %.",
       "margenes": "Margen EBIT de 31,5 % en el año 1 (consistente con el 32,1 % de los últimos doce meses a agosto) y objetivo de 29,0 % desde el año 5, 160 pb menos que el 30,6 % de FY2026, porque el peso de OCI (> 65 % de las ventas), la depreciación de GPUs y los arrendamientos comprimen el margen bruto.",
       "reinversion": "Sales to capital de 0,46× (años 1–5) y 0,90× (años 6–10): reconoce la inversión inicial en centros de datos sin castigar dos veces los 39.973 M de obras en curso, que ya están en la deuda del año 0; en FY2026 el observado fue 0,45×.",
       "roic": "ROIC terminal de 12,50 %, conectado con el 12,71 % que el modelo alcanza en el año 10, es decir +377 pb sobre el WACC terminal: costos de cambio en bases de datos y ERP y escala en OCI. En R1 y R2 caía artificialmente a 9,50 %.",
-      "descuento": "WACC común: 10,20 % en los años 1–5 (Ke 12,05 % = 4,50 % + 1,5372 × 4,9134 %; deuda de mercado 114.237 M; pesos 76,43 % / 23,57 %) que converge a 8,73 %. +100 pb de WACC llevan el valor a US$ 62,44; −100 pb a US$ 152,07.",
-      "terminal": "Crecimiento terminal de 4,50 % (tasa libre = techo de crecimiento nominal en USD; antes 4,98 %). El valor terminal explica el 92,97 % del valor de las operaciones; el VP de los diez años explícitos es de 27.366 M sobre un valor total de 389.413 M.",
-      "contraevidencia": "El capex de FY2026 (55.663 M) supera 1,7 veces el flujo operativo (31.977 M) y el FCFF es negativo en los primeros años; el RPO está concentrado en pocos clientes de IA sin penalizaciones divulgadas y la deuda financiera ajustada es de 137.242 M.",
-      "evidencia": "Form 10-K FY2026 (Notas 1, 4, 6, 9, 10, 11 y 13), Form 10-Q Q1 FY2027, Form 424B5 de noviembre de 2026, datos de Damodaran de enero de 2026 e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026 (secciones 3 a 7)."
+      "descuento": "WACC común a los tres escenarios: 9,82 % en los años 1–5 (Ke 11,41 % = 5,15 % + 1,5372 × 4,0704 %; Kd después de impuestos 4,70 %; pesos 76,43 % / 23,57 %) que converge a 8,54 % (tasa libre 5,15 % + prima de mercado maduro 3,387 %). +100 pb de WACC llevan el valor a US$ 76,42; −100 pb a US$ 179,55.",
+      "terminal": "Crecimiento terminal de 4,50 %, por debajo de la tasa libre de 5,15 % (criterio de la auditoría R3; con g = tasa libre el Base sería US$ 130,75). El valor terminal explica el 93,26 % del valor de las operaciones.",
+      "contraevidencia": "El capex de FY2026 (55.663 M) supera 1,7 veces el flujo operativo (31.977 M) y el FCFF es negativo en los primeros años; el RPO está concentrado en pocos clientes de IA sin penalizaciones divulgadas y la deuda financiera ajustada es de 133.038 M (LTM ago-2026, con arrendamientos financieros estimados).",
+      "evidencia": "Form 10-K FY2026 (Notas 1, 4, 6, 9, 10, 11 y 13), Form 10-Q Q1 FY2027, Form 424B5 de noviembre de 2026, datos de Damodaran de enero de 2026 e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026 (secciones 3 a 7). R4: base LTM del libro Floyd (31-ago-2026), Treasury FMP 13-nov-2026 y ERP implícita de Damodaran de nov-2026."
      },
      "optimista": {
-      "tesis": "Oracle cumple la guía de 90.000 M en FY2027, entrega la capacidad contratada y sostiene el margen por software autónomo e inferencia empresarial: el capital nuevo rinde más que el WACC. Valor US$ 188,31 por acción.",
+      "tesis": "Oracle cumple la guía de 90.000 M en FY2027, entrega la capacidad contratada y sostiene el margen por software autónomo e inferencia empresarial: el capital nuevo rinde más que el WACC. Valor US$ 215,57 por acción.",
       "crecimiento": "33,0 % en el año 1 (≈ la guía de ≥ 90.000 M, +33,6 %) y 22,0 % anual en los años 2–5, capturando la venta cruzada de Base de Datos en OCI; luego desaceleración hacia 4,50 % (18,5 % al inicio del tramo 6–10).",
       "margenes": "Margen EBIT de 33,0 % en el año 1 y objetivo de 32,5 % sostenido: dilución continua de ventas y marketing (de 15,8 % a 10,3 %) y de I+D (de 17,2 % a 12,4 %) y caída de la amortización de intangibles de 1.671 M en FY2026 a 731 M en FY2027.",
       "reinversion": "Sales to capital de 0,58× (años 1–5) y 1,10× (años 6–10): la depreciación anual de servidores (~22.000–28.000 M) financia la reposición y reduce la reinversión neta por dólar de ingreso incremental.",
       "roic": "ROIC terminal de 15,50 %, frente al 16,95 % que el modelo alcanza en el año 10: se mantiene una ventaja competitiva alta, similar al ROIC de 14–16 % observado entre FY2023 y FY2025.",
-      "descuento": "WACC común a los tres escenarios: 10,20 % → 8,73 %. En este escenario el valor es el más sensible al descuento: con −200 pb el modelo da US$ 258,83 en el caso base de supuestos.",
-      "terminal": "Crecimiento terminal de 4,50 %. El valor terminal explica el 87,19 % del valor de las operaciones, el menor de los tres escenarios porque el VP de los flujos explícitos es el más alto.",
+      "descuento": "WACC común a los tres escenarios: 9,82 % en los años 1–5 (Ke 11,41 % = 5,15 % + 1,5372 × 4,0704 %; Kd después de impuestos 4,70 %; pesos 76,43 % / 23,57 %) que converge a 8,54 % (tasa libre 5,15 % + prima de mercado maduro 3,387 %).",
+      "terminal": "Crecimiento terminal de 4,50 %, por debajo de la tasa libre de 5,15 % (criterio de la auditoría R3; con g = tasa libre el Base sería US$ 130,75). El valor terminal explica el 87,77 % del valor de las operaciones.",
       "contraevidencia": "Exige entregar megavatios, refrigeración y clústeres en un mercado con cuellos de botella; la vida útil contable de 6 años de los servidores no tiene aún evidencia de recuperación frente a chips nuevos cada 18–24 meses, y 288.000 M de arrendamientos no iniciados entrarán a balance.",
-      "evidencia": "Form 10-Q Q1 FY2027 (p. 4 y Nota 9 p. 20), Form 10-K FY2026 (Nota 5 p. 84, Nota 13 pp. 103–104), comunicados de resultados Q4 FY2026 y Q1 FY2027 e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026."
+      "evidencia": "Form 10-Q Q1 FY2027 (p. 4 y Nota 9 p. 20), Form 10-K FY2026 (Nota 5 p. 84, Nota 13 pp. 103–104), comunicados de resultados Q4 FY2026 y Q1 FY2027 e informe de auditoría de IA (Gemini, provisional) R3 del 13-nov-2026. R4: base LTM del libro Floyd (31-ago-2026), Treasury FMP 13-nov-2026 y ERP implícita de Damodaran de nov-2026."
+     }
+    },
+    "tasasR4": "Tasa libre 5,15 % (Treasury 13-nov-2026). Prima de mercado maduro 3,387 % (Damodaran, implícita de nov-2026, igual que MELI) más la prima por país ponderada de R3 (0,683 pp): prima operativa 4,0704 %. Beta apalancada 1,5372 y pesos 76,43 % / 23,57 % de R3 (no actualizados: dependen de la deuda de mercado, no disponible a agosto). Ke 11,41 %; Kd 6,26 % antes de impuestos y 4,70 % después; WACC inicial 9,82 %; terminal = tasa libre + prima madura = 8,54 %."
+   },
+   "revision": {
+    "id": "ORCL-V2-LTM2608-R4",
+    "anterior": "ORCL-V2-FY26-R3",
+    "historial": {
+     "ORCL-V2-FY26-R1": {
+      "conservador": 5.07,
+      "base": 55.66,
+      "optimista": 143.71
+     },
+     "ORCL-V2-FY26-R2": {
+      "conservador": 2.47,
+      "base": 53.1,
+      "optimista": 141.23
+     },
+     "ORCL-V2-FY26-R3": {
+      "conservador": 23.96,
+      "base": 96.38,
+      "optimista": 188.31
      }
     }
+   },
+   "priceAsOf": "2026-11-13",
+   "warnings": [
+    "R4 sustituye a R3: tasa libre 5,15 % (Treasury 13-nov, FMP) en lugar de 4,50 % «normalizada», prima de mercado maduro 3,387 % (nov-2026, igual que MELI) en lugar de 4,23 % y base LTM del 31-ago-2026; Base US$ 114,90 frente a 96,38 de R3. Sin auditoría independiente; la aprobación de R3 no se traslada y requiere una nueva.",
+    "El balance LTM proviene del libro Floyd, no del 10-Q (la SEC no fue accesible): los arrendamientos financieros de 7.701 M son una estimación arrastrada de FY2026 y los pesos del WACC (76,43 % / 23,57 %) y la beta (1,5372) de R3 no se actualizaron por falta de deuda de mercado a agosto.",
+    "El valor terminal es 93 % del valor Base y 99,8 % en el Conservador; con g = tasa libre (5,15 %) el Base sería 130,75 y con prima madura de enero (4,23 %) bajaría a 80,22.",
+    "Los supuestos operativos de R3 (crecimiento 28 %/18 %, margen 31,5 % → 29 %, ventas/capital 0,46/0,90, ROIC terminal 12,5 %) se mantienen sobre una base 6,6 % mayor: ingresos del año 1 de 91.873 M. Brecha con Floyd (Base 174,36) explicada en el informe V2_vs_Floyd (Drive).",
+    "La oferta de noviembre de 2026 (86,2 M de acciones y 10.000 M en notas) no está en el libro; el informe de auditoría de IA de R3 (proforma y estrés) queda como antecedente y no se aplica a R4."
+   ],
+   "documentLinks": {
+    "workbook": "https://drive.google.com/file/d/1NirUH7zeGpN3XT5WdPj3GBmJHkMD7VUY/view",
+    "originalFundamentalAnalysis": "https://docs.google.com/document/d/1eNoK8Rov9m6EL-UjYN-3R7oY3Y7AcNTq7_Gs6YVi3ng/edit",
+    "annualReportsFolder": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs",
+    "priorWorkbooks": [
+     "https://drive.google.com/file/d/1zSBa1zaG-dm7MlEj3jEnSAEX_NAghjEQ/view",
+     "https://drive.google.com/file/d/1rrDeCErDGGmH0H7RZZyNY8S3hR1vrlSI/view",
+     "https://drive.google.com/file/d/1Lx3t_dpyqCNuQ7Bx7JWZZHXtigiqwcWS/view"
+    ],
+    "auditReportR3": "https://drive.google.com/file/d/18fa0fJR8bIAdrgcOhatrcoJV0heiiRIm/view"
    },
    "annualReportDocuments": [
     {
@@ -5124,225 +5184,13 @@
     }
    ],
    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
-   "logoSource": "Wikimedia Commons Oracle logo.svg (logotipo Oracle 2021)",
-   "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1zSBa1zaG-dm7MlEj3jEnSAEX_NAghjEQ/view",
-    "originalFundamentalAnalysis": "https://docs.google.com/document/d/1eNoK8Rov9m6EL-UjYN-3R7oY3Y7AcNTq7_Gs6YVi3ng/edit",
-    "annualReportsFolder": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs",
-    "auditReport": "https://drive.google.com/file/d/18fa0fJR8bIAdrgcOhatrcoJV0heiiRIm/view",
-    "priorWorkbooks": [
-     "https://drive.google.com/file/d/1rrDeCErDGGmH0H7RZZyNY8S3hR1vrlSI/view",
-     "https://drive.google.com/file/d/1Lx3t_dpyqCNuQ7Bx7JWZZHXtigiqwcWS/view"
-    ]
-   },
-   "revision": {
-    "id": "ORCL-V2-FY26-R3",
-    "anterior": "ORCL-V2-FY26-R2",
-    "historial": {
-     "ORCL-V2-FY26-R1": {
-      "conservador": 5.07,
-      "base": 55.66,
-      "optimista": 143.71
-     },
-     "ORCL-V2-FY26-R2": {
-      "conservador": 2.47,
-      "base": 53.1,
-      "optimista": 141.23
-     }
-    }
-   },
-   "informeAuditoria": {
-    "titulo": "Informe de auditoría de IA (Gemini) · PROVISIONAL · revisión R2 → propuesta R3 (ORCL-V2-FY26-R3)",
-    "fecha": "2026-11-13",
-    "evidencia": "https://drive.google.com/file/d/18fa0fJR8bIAdrgcOhatrcoJV0heiiRIm/view",
-    "libroAuditado": "https://drive.google.com/file/d/1zSBa1zaG-dm7MlEj3jEnSAEX_NAghjEQ/view",
-    "revisionAuditada": "ORCL-V2-FY26-R2",
-    "revisionResultante": "ORCL-V2-FY26-R3",
-    "valoresR3": {
-     "conservador": 23.96,
-     "base": 96.38,
-     "optimista": 188.31,
-     "precioMOS": 62.65,
-     "proforma": {
-      "base": 97,
-      "precioMOS": 63.05,
-      "nota": "Q1 FY2027 + ofertas de noviembre de 2026; 3.144 M de acciones"
-     }
-    },
-    "erroresCorregidos": [
-     "Trazabilidad JMR Fuentes!H5/J5/J11 rota tras añadir arrendamientos financieros (7.701 M)",
-     "Capital invertido, deuda neta/EBITDA y deuda/patrimonio sin la fila de arrendamientos financieros",
-     "Activos no operativos de 2.300 M omitidos (Nota 1 del 10-K, p. 76)",
-     "Referencia circular #VALUE! en Option value!B17 y cifras residuales de otra compañía en Input sheet!B38:B41",
-     "Instantáneas de escenarios sin guardar en JMR Escenarios!D28:F30"
-    ],
-    "mejorasEconomicas": [
-     "ROIC terminal alineado con el ROIC del año 10 (12,5 % base)",
-     "Tasa libre y crecimiento terminal de 4,98 % a 4,50 %",
-     "Sales to capital sin doble castigo de las obras en curso (39.973 M) y margen objetivo de 29,0 %"
-    ],
-    "salvedadesAbiertas": [
-     "Concentración y calidad crediticia del RPO de IA (638.000–664.000 M)",
-     "Economía unitaria de renovación de GPUs en ciclo de 6 años",
-     "Entrada a balance de 288.000 M de arrendamientos no iniciados (financieros vs. operativos)"
-    ],
-    "conclusionDelInforme": "NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE (conclusión del informe; no es una recomendación del modelo)",
-    "responsable": "Gemini (Google), según declaración del propietario del 14-nov-2026. El mismo emisor elaboró el libro R3 que el informe propone, por lo que R3 no tiene una auditoría de un tercero distinto de su emisor. Las reglas de V2 (control P03) no aceptan a una IA como auditor firmado, así que el informe no se registra en el campo `auditoria`.",
-    "registradoPor": "Claude (IA), a partir del informe del 13-nov-2026",
-    "aprobacionPropietario": {
-     "fecha": "2026-11-14",
-     "aprobadaPor": "JuanMaRobledo",
-     "referencia": "auditoriaUsuario"
-    },
-    "limitaciones": "El análisis fundamental R3 «AUDITADO» en Drive está vacío; los capítulos de esta revisión los actualizó la IA con las cifras del informe. Las justificaciones por escenario del libro R3 estaban en blanco y se redactaron desde el informe.",
-    "emisor": "Gemini (Google)",
-    "atribucion": "Declaración del propietario, 14-nov-2026",
-    "independenciaR3": "PENDIENTE: R3 fue elaborada por el mismo emisor del informe",
-    "estado": "PROVISIONAL",
-    "etiqueta": "Auditoría de IA · provisional",
-    "nota": "Decisión del propietario, 14-nov-2026: la auditoría de la IA se mantiene como provisional hasta que la revise un tercero distinto de su emisor. No es una auditoría independiente ni firmada.",
-    "pruebasEstres": {
-     "fuente": "Informe de auditoría de IA (Gemini, provisional), sección 7.5. Informativo: lo calculó el emisor del informe con su libro; este motor no lo reproduce y no modifica el DCF.",
-     "filas": [
-      {
-       "tipo": "base",
-       "escenario": "Escenario Base R3 (corte FY2026)",
-       "valorEmpresa": 389413,
-       "patrimonioComun": 280863,
-       "acciones": 2914,
-       "valorPorAccion": 96.38,
-       "precioMOS": 62.65,
-       "impactoVsBase": 0
-      },
-      {
-       "tipo": "opciones",
-       "escenario": "Deducción explícita de opciones Black-Scholes (Option value!B29 = 1.176 M)",
-       "valorEmpresa": 389413,
-       "patrimonioComun": 279686.8,
-       "acciones": 2914,
-       "valorPorAccion": 95.98,
-       "precioMOS": 62.39,
-       "impactoVsBase": -0.4
-      },
-      {
-       "tipo": "acciones",
-       "escenario": "Acciones al cierre de FY2026 + RSUs dilutivas (2.934,5 M)",
-       "valorEmpresa": 389413,
-       "patrimonioComun": 280863,
-       "acciones": 2934.5,
-       "valorPorAccion": 95.71,
-       "precioMOS": 62.21,
-       "impactoVsBase": -0.67
-      },
-      {
-       "tipo": "preferente",
-       "escenario": "Conversión de la Serie D en 31,24 M de acciones (sin deducir 4.954 M)",
-       "valorEmpresa": 389413,
-       "patrimonioComun": 285817,
-       "acciones": 2945.2,
-       "valorPorAccion": 97.04,
-       "precioMOS": 63.08,
-       "impactoVsBase": 0.66
-      },
-      {
-       "tipo": "proforma",
-       "escenario": "Proforma LTM Q1 FY2027 + ofertas de noviembre de 2026 (+227,2 M de acciones; caja y deuda reales)",
-       "valorEmpresa": 395700.7,
-       "patrimonioComun": 304953.7,
-       "acciones": 3144,
-       "valorPorAccion": 97,
-       "precioMOS": 63.05,
-       "impactoVsBase": 0.61
-      },
-      {
-       "tipo": "dilucion",
-       "escenario": "Estrés: +8 % de acciones sin entrada de caja",
-       "valorEmpresa": 389413,
-       "patrimonioComun": 280863,
-       "acciones": 3147.1,
-       "valorPorAccion": 89.24,
-       "precioMOS": 58.01,
-       "impactoVsBase": -7.14
-      },
-      {
-       "tipo": "capex",
-       "escenario": "Estrés: capex extraordinario improductivo de +15.000 M en valor presente",
-       "valorEmpresa": 374413,
-       "patrimonioComun": 265863,
-       "acciones": 2914,
-       "valorPorAccion": 91.24,
-       "precioMOS": 59.3,
-       "impactoVsBase": -5.15
-      },
-      {
-       "tipo": "capex",
-       "escenario": "Estrés: capex extraordinario improductivo de +30.000 M en valor presente",
-       "valorEmpresa": 359413,
-       "patrimonioComun": 250863,
-       "acciones": 2914,
-       "valorPorAccion": 86.09,
-       "precioMOS": 55.96,
-       "impactoVsBase": -10.29
-      },
-      {
-       "tipo": "capex",
-       "escenario": "Estrés: capex extraordinario improductivo de +50.000 M en valor presente",
-       "valorEmpresa": 339413,
-       "patrimonioComun": 230863,
-       "acciones": 2914,
-       "valorPorAccion": 79.23,
-       "precioMOS": 51.5,
-       "impactoVsBase": -17.16
-      },
-      {
-       "tipo": "capex",
-       "escenario": "Estrés: capex extraordinario improductivo de +75.000 M en valor presente",
-       "valorEmpresa": 314413,
-       "patrimonioComun": 205863,
-       "acciones": 2914,
-       "valorPorAccion": 70.65,
-       "precioMOS": 45.92,
-       "impactoVsBase": -25.74
-      }
-     ]
-    }
-   },
-   "auditoriaUsuario": {
-    "resultado": "APROBADA",
-    "aprobadaPor": "JuanMaRobledo",
-    "fecha": "2026-11-14",
-    "revisionSha256": "f6a3ca5e2e9233a4582b6adb884c64221b6e3a3cd0c491ca944e33df20c0e707",
-    "evidencia": "Aprobación expresa del propietario en la sesión de trabajo del 14-nov-2026 (mensaje «Apruebo»), tras revisar el informe de auditoría de IA (provisional) R3 y los asuntos abiertos.",
-    "alcance": "Revisión ORCL-V2-FY26-R3 (valoración y análisis) tal como está publicada: base US$ 96,38, conservador 23,96, optimista 188,31.",
-    "salvedadesAceptadas": [
-     "Concentración y calidad crediticia del RPO de IA (638.000–664.000 M)",
-     "Economía unitaria de renovación de GPUs en ciclo de 6 años",
-     "Entrada a balance de 288.000 M de arrendamientos no iniciados",
-     "Capítulos de análisis 1, 3, 5, 6, 7, 9, 10, 11, 12 y 14 actualizados por IA con las cifras del informe, sin auditoría de tercero",
-     "Informe de auditoría sin responsable declarado: no se registra como auditoría firmada (control P02)"
-    ],
-    "notas": [
-     {
-      "fecha": "2026-11-14",
-      "texto": "Tras la aprobación, el propietario informó que el informe de auditoría es de Gemini (ver informeAuditoria.emisor). La aprobación y su alcance no cambian."
-     },
-     {
-      "fecha": "2026-11-14",
-      "texto": "El propietario dejó la auditoría de la IA como PROVISIONAL (informeAuditoria.estado). La aprobación del propietario de R3 no cambia."
-     }
-    ]
-   },
-   "warnings": [
-    "Contraste con Floyd (14-nov-2026): Base Floyd US$174,36 frente a V2 96,38. El motor V2 reproduce Floyd con 0,00 % usando sus insumos y coincide con el libro de Damodaran; la brecha viene de insumos (crecimiento años 2–5 +30, margen +36, ventas/capital +29 por acción). Ver informe «V2_vs_Floyd_Contraste_y_errores» (Drive, carpeta MELI).",
-    "Tasa libre de 4,50 % «normalizada» frente a Treasury a 10 años de 5,15 % el 13-nov (4,98 % el 10-nov): con 5,15 % en el WACC el Base sería 74,13 (−22,25) y 82,10 si g = tasa libre. Prima de mercado maduro 4,23 % (enero), distinta de la usada en MELI R4/R3 (3,387 % de noviembre). Criterio documentado en la auditoría, no verificado como error; no cambia el valor publicado.",
-    "El balance es el de FY2026 (31-may); Floyd usa el LTM de agosto (ingresos 71.776, deuda 169.143, acciones 3.024): efecto neto −2,41 en el Base."
-   ]
+   "logoSource": "Wikimedia Commons Oracle logo.svg (logotipo Oracle 2021)"
   },
   "analisis/ORCL.json": {
    "schemaVersion": "jmr-v2-analisis-2",
    "ticker": "ORCL",
    "status": "BORRADOR_EDITORIAL_NO_AUDITADO",
-   "revision": "ORCL-V2-FY26-R3",
+   "revision": "ORCL-V2-LTM2608-R4",
    "source": {
     "type": "Google Docs",
     "url": "https://docs.google.com/document/d/1eNoK8Rov9m6EL-UjYN-3R7oY3Y7AcNTq7_Gs6YVi3ng/edit",
@@ -5358,7 +5206,7 @@
     "actualizacionR3": "Capítulos tesis, industria, ciclos, finanzas, reinversión, método, supuestos, valoración, riesgos y fuentes actualizados el 13/14-nov-2026 con las cifras de la revisión R3 y el informe de auditoría de IA (provisional); los demás capítulos se conservan de R1."
    },
    "blocks": {
-    "tesis": "<p><strong>Tesis preliminar.</strong> Oracle combina una base instalada de software con costos de cambio altos y una expansión rápida, intensiva en capital, de OCI. El crecimiento contratado mejora la visibilidad, pero el desembolso para construir capacidad, la financiación y la conversión del RPO en ingresos determinan si existe creación de valor. El diferencial ROIC–WACC se ha estrechado (ROIC de 12,1 % sobre el capital de cierre de 148.404 M frente a un WACC de 10,2 %). El DCF Base R3, ajustado tras el informe de auditoría de IA (provisional), es US$ 96,38 por acción frente a la cotización de referencia de US$ 127,11 del 12-nov-2026 (prima de 31,9 %). La tesis exige comprobar eficiencia de capital, margen sostenible, dilución y valor terminal antes de aprobación.</p>",
+    "tesis": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p><p><strong>Tesis preliminar.</strong> Oracle combina una base instalada de software con costos de cambio altos y una expansión rápida, intensiva en capital, de OCI. El crecimiento contratado mejora la visibilidad, pero el desembolso para construir capacidad, la financiación y la conversión del RPO en ingresos determinan si existe creación de valor. El diferencial ROIC–WACC se ha estrechado (ROIC de 12,1 % sobre el capital de cierre de 148.404 M frente a un WACC de 10,2 %). El DCF Base R3, ajustado tras el informe de auditoría de IA (provisional), es US$ 96,38 por acción frente a la cotización de referencia de US$ 127,11 del 12-nov-2026 (prima de 31,9 %). La tesis exige comprobar eficiencia de capital, margen sostenible, dilución y valor terminal antes de aprobación.</p>",
     "negocio": "<h4>Descripción de la empresa</h4><p>Oracle Corporation vende software de bases de datos y aplicaciones empresariales, infraestructura en la nube (OCI), hardware y servicios. En el ejercicio fiscal 2026 (cerrado el 31-may-2026) facturó US$ 67.357 millones: nube 33.989 (50 %), software 24.541 (36 %), hardware 3.084 (5 %) y servicios 5.743 (9 %); por geografía, Américas 66 %, EMEA 23 % y Asia-Pacífico 11 %. Emplea ~141.000 personas (49.000 en EE. UU.). En diez años los ingresos crecieron 6,7 % anual (37.728 → 67.357), pero con dos regímenes: casi planos hasta el FY2022 y acelerados desde entonces; el FY2026 creció 17 % y el primer trimestre del FY2027 (a agosto de 2026) 29,6 %, con la nube a +61,5 %. El negocio de nube y software ya es el 87 % de los ingresos. Las obligaciones de desempeño pendientes (RPO) pasaron de 138.000 millones (31-may-2025) a 638.000 millones (31-may-2026) y a 664.000 millones (31-ago-2026); Oracle espera reconocer ~12 % en los siguientes 12 meses y 34 % en los meses 13–36 al cierre de mayo (13 % y 37 % al cierre de agosto).</p>\n<h4>Historia y evolución</h4><p>Entre FY2017 y FY2019 Oracle recompró acciones por 3.561, 11.347 y 36.140 millones (FY2019 financiado en parte con deuda: la deuda subió de 57.909 a 71.597 millones hasta FY2020); las acciones diluidas cayeron de 4.238 a 2.766 millones (FY2023) y el patrimonio de los accionistas de Oracle llegó a −6.220 millones en FY2022. La adquisición de Cerner (anunciada en el FY2022) coincide con el salto de los ingresos de servicios de 3.205 a 5.594 millones en FY2023. Desde FY2024 la recompra casi desaparece (95 millones en FY2026) y el capital pasa a financiar centros de datos.</p>\n<p>Ejercicio fiscal (cierre 31-may)</p>\n<p><em>La tabla original de este apartado se consulta en las pestañas de Estados financieros, Modelo y supuestos o Sensibilidades; el documento fuente conserva la tabla detallada.</em></p>\n<h4>Modelo de negocio</h4><p>Ingresos recurrentes por nube y soporte de licencias, licencias, hardware y servicios. El cambio estratégico visible en las cifras es la infraestructura de nube con contratos plurianuales comprometidos (RPO), que convierte inversión en capacidad en ingreso contratado pero eleva la intensidad de capital.</p>\n<h4>Productos y segmentos</h4><p>FY2026: Cloud 33.989 (+39 % frente a 24.506), Software 24.541 (−0,7 %), Hardware 3.084, Services 5.743. Primer trimestre FY2027: Cloud 11.607 (+61,5 %), Software 5.550 (−3,0 %), Hardware 774, Services 1.414.</p>",
     "industria": "<h4>Mercado y sector</h4><p>Industria de referencia del libro (Damodaran, enero 2026): «Software (System &amp; Application)», 309 empresas, crecimiento medio de ingresos a 5 años 19,6 %, margen operativo antes de impuestos 33,0 %, ROC después de impuestos 29,3 %, beta desapalancada 1,248. Oracle creció por debajo del 19,6 % del sector en todos los ejercicios FY2018–FY2026; el primer trimestre del FY2027 (+29,6 %) es la primera lectura por encima. Su ROIC (12,1 % en la revisión R3) está muy por debajo del ROC sectorial (29,3 %; definiciones comparables pero no idénticas).</p>\n<h4>Ventaja competitiva</h4><p>La ventaja competitiva es desigual según el negocio. En bases de datos y aplicaciones hay una base instalada con altos costos de cambio: el ingreso de software es estable (24.541 en FY2026 frente a 24.724 en FY2025) y de muy alto margen; esto es evidencia de retención, no de crecimiento. En infraestructura de nube para cargas de IA la ventaja es menos clara: es intensiva en capital, compite con hiperescaladores y su protección es contractual (RPO de 664.000 millones) más que tecnológica. El retorno sobre el capital lo refleja: el ROIC calculado por el libro bajó de 22–37 % (FY2017 y FY2019–FY2021; FY2018 fue 9,7 % por el efecto de la reforma tributaria) a 12,1 % en FY2026 (R3), apenas por encima del WACC de 10,2 %, y los ingresos por dólar de capital invertido cayeron de 0,82 a 0,45. Es un juicio de JMR basado en esas cifras, no una medición de poder de precios.</p>",
     "crecimiento": "<h4>Calidad y sostenibilidad del crecimiento</h4><p>El crecimiento reciente está respaldado por contratos (RPO), no por demanda spot: eso mejora la visibilidad pero concentra el riesgo en la capacidad de entrega y en las contrapartes. Las obligaciones de desempeño pendientes (RPO) pasaron de 138.000 millones (31-may-2025) a 638.000 millones (31-may-2026) y a 664.000 millones (31-ago-2026); Oracle espera reconocer ~12 % en los siguientes 12 meses y 34 % en los meses 13–36 al cierre de mayo (13 % y 37 % al cierre de agosto). El software no crece; todo el crecimiento viene de la nube.</p>",
@@ -5366,12 +5214,12 @@
     "finanzas": "<h4>Evolución de márgenes</h4><p>Margen operativo GAAP: 33,7 % (FY2017), mínimo de 25,7 % (FY2022, con cargos de adquisición), 30,6 % (FY2026) y 34,8 % en el primer trimestre del FY2027 (con menor amortización de intangibles). Pero el margen «bruto» definido por JMR (ingresos menos costos de nube/software, hardware y servicios, sin amortización) cayó de 88,2 % a 65,8 % entre FY2017 y FY2026; en el primer trimestre del FY2027 el costo de ventas es 40 % de los ingresos. El EBIT se sostiene por menor amortización de intangibles y gasto de ventas, no por la mezcla de negocio.</p>\n<h4>Salud financiera</h4><p>Deuda financiera 129.541 millones (FY2026) y 125.337 (31-ago-2026); caja y valores 31.894 y 37.077; deuda neta/EBITDA 3,3× (3,5× con la deuda ajustada de 137.242 M, que suma 7.701 M de arrendamientos financieros); cobertura de intereses 4,5×; liquidez corriente 1,1×. Vencimientos de principal: 7.210 (FY2027), 10.145 (FY2028), 5.500 (FY2029), 7.250 (FY2030), 9.750 (FY2031) y 90.250 después. Fuera de la deuda del modelo: arrendamientos operativos (26.648 no corrientes en FY2026; 30.594 en agosto de 2026) cuyo gasto ya está en el EBIT. Calificación crediticia: no declarada en el 10-K; el modelo supone BBB (juicio JMR, ver §19).</p>",
     "reinversion": "<h4>ROIC y creación de valor</h4><p>ROIC (NOPAT / (deuda + arrendamientos financieros + patrimonio − caja)) del libro R3: FY2022 19,9 %, FY2025 14,8 %, FY2026 12,1 % (13,3 % en R1, que omitía los 7.701 M de arrendamientos financieros). El WACC del modelo es 10,2 %: el diferencial es de ~2 puntos y se estrecha mientras el capital invertido crece de 48.189 (FY2022) a 148.404 millones (FY2026). El valor se crea solo si el ROIC se mantiene por encima del WACC en el capital nuevo.</p>\n<h4>Reinversión</h4><p>CAPEX: 2.021 (FY2017) → 6.866 (FY2024) → 21.215 (FY2025) → 55.663 millones (FY2026); en el primer trimestre del FY2027 fue de 28.499 millones. El flujo operativo no lo cubre: FCO − CAPEX = −23.686 millones en FY2026. Oracle espera que la tendencia ascendente continúe en el FY2027 y siguientes. El Ginsu calcula la reinversión del año t sobre el ingreso incremental del año t+1, por lo que subestima el pico de capex de los primeros años; el escenario conservador (0,35) compensa parcialmente.</p>\n<h4>Eficiencia del capital</h4><p>Ingresos por dólar de capital invertido: 0,82 (FY2017) → 0,48 (FY2026). Marginal: en FY2026 los ingresos aumentaron 9.958 millones con una reinversión neta de ~42.000 millones (≈0,24); en FY2025, 4.438 con ~16.500 (≈0,27). Supuesto base de 0,46 para los años 1–5 (0,45 observado sobre el capital de cierre de FY2026): reconoce que parte del capital ya construido (39.973 M de obras en curso, ya incluidas en la deuda del año 0) aún no genera ingreso sin castigarlo dos veces; sigue siendo el supuesto con mayor incertidumbre del modelo.</p>",
     "gobierno": "<h4>Asignación de capital</h4><p>De recompras masivas (36.140 millones en FY2019) a cero, dividendos de 5.787 millones en FY2026 (0,50 dólares trimestrales por acción, que se mantienen) con flujo libre negativo, financiados con deuda (46.093 millones en emisiones en FY2026), preferente convertible (4.954) y acciones (19.909 en un trimestre). Los dividendos se pagan con capital externo mientras dure la inversión.</p>\n<h4>Dirección y gobierno corporativo</h4><p>Según el 10-K FY2026: Lawrence J. Ellison, Presidente Ejecutivo del Consejo y Director de Tecnología; Clayton M. Magouyrk (39 años, CEO desde septiembre de 2025, antes responsable de OCI) y Michael D. Sicilia, ambos Chief Executive Officer; Hilary Maxson, CFO; Safra A. Catz y Jeffrey O. Henley, Vicepresidentes Ejecutivos del Consejo. Estructura de doble CEO bajo un fundador que sigue como presidente y CTO: continuidad estratégica pero riesgo de dependencia de una persona. No se evaluó la propiedad accionaria ni la remuneración (no extraídas): pendiente.</p>",
-    "metodo": "<p>Valuación por FCFF con el motor de diez años basado en <em>fcffsimpleginzu</em> de Damodaran, usando los estados auditados FY2026, tres historias económicas y valores comparados contra el mismo libro. Los datos del 10-Q a agosto de 2026 se informan como hechos posteriores, sin mezclarlos con el corte anual del libro. El modelo incorpora WACC inicial y terminal, g y ROIC terminal. Múltiplos y cotización son contrastes, no sustituyen el valor intrínseco Base. Existe un informe de auditoría de IA (Gemini) del 13-nov-2026, provisional, que dio lugar a la revisión R3; lo emitió Gemini (según el propietario) y el mismo emisor elaboró el libro R3, por lo que su auditoría por un tercero distinto sigue pendiente; el propietario aprobó la revisión R3 el 14-nov-2026.</p><p><strong>Límites de método que pueden ser materiales:</strong> CAPEX adelantado frente a la reinversión modelada, arrendamientos operativos, opciones y RSU, inversiones no operativas, fiscalidad y dilución. Deben verificarse sin modificar cifras automáticamente.</p>",
-    "supuestos": "<h4>Historias conservadora, base y optimista</h4><p>Historia → números (revisión R3; auditoría de IA provisional). Base: la nube absorbe el RPO ya contratado (de US$ 664.000 M al 31-ago-2026, 13 % a reconocer en 12 meses): los ingresos pasan de 67.357 a ~86.200 en FY2027 (+28,0 %, por debajo de la guía de ≥ 90.000) y crecen 18,0 % anual en los años 2–5 (≈167.200 en el año 5); el margen EBIT parte de 31,5 % y converge a 29,0 % porque la mezcla de infraestructura (OCI > 65 % de las ventas) comprime el margen bruto (65,8 % en FY2026 frente a 80,6 % en FY2021); sales to capital 0,46× (años 1–5) y 0,90× (años 6–10); ROIC terminal 12,5 %, conectado con el 12,7 % que el propio modelo alcanza en el año 10; crecimiento terminal 4,50 % = tasa libre. Conservador: cuellos de botella de energía y GPUs (crecimiento 22 % y luego 12 %, margen objetivo 25,0 %, 0,35× y 0,65×, ROIC terminal 9,5 %): US$ 23,96. Optimista: se cumple la guía de 90.000 y se sostiene el margen (33 % y luego 22 %, margen 32,5 %, 0,58× y 1,10×, ROIC terminal 15,5 %): US$ 188,31. El WACC (10,20 % → 8,73 %) es común a los tres escenarios; solo cambian las historias.</p>\n<p>Supuesto</p>\n<p><em>La tabla original de este apartado se consulta en las pestañas de Estados financieros, Modelo y supuestos o Sensibilidades; el documento fuente conserva la tabla detallada.</em></p>\n<h4>Justificación de los supuestos</h4><p>* Tasa libre 4,50 %: normalizada (tesoro a 10 años y crecimiento nominal sostenible en USD: PIB real ~2,0 % + inflación 2,2–2,5 %). Es también el crecimiento terminal (convención del Ginsu).</p>\n<p>* Costo de capital 10,2 % → 8,73 %: modo «Detailed» del Ginsu. Beta desapalancada 1,248 («Software (System &amp; Application)», Damodaran, enero de 2026) reapalancada con deuda de mercado de 114.237 M y capitalización de 370.399 M (beta 1,5372); prima de riesgo 4,9134 % ponderada por ingresos regionales del 10-K (Américas 66 %, EMEA 23 %, Asia-Pacífico 11 %); costo de deuda antes de impuestos 5,61 % = 4,50 % + diferencial 1,11 % (Baa2/BBB, confirmada por la cobertura de intereses de 4,48×); tasa marginal 25 %.</p>\n<p>* Ingresos: base +28 % en FY2027 (~86.217 M, por debajo de la guía de ≥ 90.000 M) y 18 % anual en los años 2–5 (71 % del RPO de 664.000 M se reconoce entre los meses 13 y 60).</p>\n<p>* Margen: 31,5 % en el año 1 (el último año de doce meses a agosto es 32,1 %) y objetivo de 29,0 %: la mezcla de infraestructura de OCI comprime el margen bruto (65,8 % en FY2026) aunque la amortización de intangibles caiga de 1.671 M a 731 M en FY2027.</p>\n<p>* Sales to capital 0,46 (años 1–5) y 0,90 (6–10): reconoce el capital en construcción sin castigarlo dos veces.</p>\n<p>* ROIC terminal 12,5 %: conectado con el 12,7 % que el modelo alcanza en el año 10 (+377 pb sobre el WACC terminal de 8,73 %); en R1/R2 caía artificialmente a 9,5 %.</p>\n<p>* Tasa de impuestos: efectiva de FY2026 (12,6 %) que converge a la marginal de 25 % hacia el año 10.</p>\n<p>Variable (escenario base, resto constante)</p>\n<p><em>La tabla original de este apartado se consulta en las pestañas de Estados financieros, Modelo y supuestos o Sensibilidades; el documento fuente conserva la tabla detallada.</em></p>",
-    "valoracion": "<h4>Conclusión de valoración</h4><p>Valor intrínseco por acción (revisión R3, ajustada tras el informe de auditoría de IA (Gemini, provisional) del 13-nov-2026): conservador US$ 23,96, base US$ 96,38, optimista US$ 188,31. Precio con margen de seguridad del 35 % sobre el escenario base: US$ 62,65. El precio de mercado (US$ 127,11, cierre del 12-nov-2026) está 31,9 % por encima del valor base y es 2,03 veces el precio con margen de seguridad; queda entre el base y el optimista. Al corte proforma (Q1 FY2027 con las ofertas de noviembre: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M) el valor base es US$ 97,00 y el precio con MOS US$ 63,05, sin cambiar la conclusión. Frente a R1 (US$ 55,66) y R2 (US$ 53,10) el valor sube, sobre todo por tres supuestos que la auditoría recalibró (ROIC terminal alineado con el del año 10, tasa libre y crecimiento terminal de 4,50 % en vez de 4,98 %, y sales to capital que no castiga dos veces los 39.973 M de obras en curso), y baja por el margen objetivo más prudente de 29,0 %. El informe de auditoría de IA (provisional) concluye NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE: es una conclusión del informe, no una recomendación de este modelo. Sin aprobación del propietario sobre la revisión R3.</p>",
+    "metodo": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p><p>Valuación por FCFF con el motor de diez años basado en <em>fcffsimpleginzu</em> de Damodaran, usando los estados auditados FY2026, tres historias económicas y valores comparados contra el mismo libro. Los datos del 10-Q a agosto de 2026 se informan como hechos posteriores, sin mezclarlos con el corte anual del libro. El modelo incorpora WACC inicial y terminal, g y ROIC terminal. Múltiplos y cotización son contrastes, no sustituyen el valor intrínseco Base. Existe un informe de auditoría de IA (Gemini) del 13-nov-2026, provisional, que dio lugar a la revisión R3; lo emitió Gemini (según el propietario) y el mismo emisor elaboró el libro R3, por lo que su auditoría por un tercero distinto sigue pendiente; el propietario aprobó la revisión R3 el 14-nov-2026.</p><p><strong>Límites de método que pueden ser materiales:</strong> CAPEX adelantado frente a la reinversión modelada, arrendamientos operativos, opciones y RSU, inversiones no operativas, fiscalidad y dilución. Deben verificarse sin modificar cifras automáticamente.</p>",
+    "supuestos": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p><h4>Historias conservadora, base y optimista</h4><p>Historia → números (revisión R3; auditoría de IA provisional). Base: la nube absorbe el RPO ya contratado (de US$ 664.000 M al 31-ago-2026, 13 % a reconocer en 12 meses): los ingresos pasan de 67.357 a ~86.200 en FY2027 (+28,0 %, por debajo de la guía de ≥ 90.000) y crecen 18,0 % anual en los años 2–5 (≈167.200 en el año 5); el margen EBIT parte de 31,5 % y converge a 29,0 % porque la mezcla de infraestructura (OCI > 65 % de las ventas) comprime el margen bruto (65,8 % en FY2026 frente a 80,6 % en FY2021); sales to capital 0,46× (años 1–5) y 0,90× (años 6–10); ROIC terminal 12,5 %, conectado con el 12,7 % que el propio modelo alcanza en el año 10; crecimiento terminal 4,50 % = tasa libre. Conservador: cuellos de botella de energía y GPUs (crecimiento 22 % y luego 12 %, margen objetivo 25,0 %, 0,35× y 0,65×, ROIC terminal 9,5 %): US$ 23,96. Optimista: se cumple la guía de 90.000 y se sostiene el margen (33 % y luego 22 %, margen 32,5 %, 0,58× y 1,10×, ROIC terminal 15,5 %): US$ 188,31. El WACC (10,20 % → 8,73 %) es común a los tres escenarios; solo cambian las historias.</p>\n<p>Supuesto</p>\n<p><em>La tabla original de este apartado se consulta en las pestañas de Estados financieros, Modelo y supuestos o Sensibilidades; el documento fuente conserva la tabla detallada.</em></p>\n<h4>Justificación de los supuestos</h4><p>* Tasa libre 4,50 %: normalizada (tesoro a 10 años y crecimiento nominal sostenible en USD: PIB real ~2,0 % + inflación 2,2–2,5 %). Es también el crecimiento terminal (convención del Ginsu).</p>\n<p>* Costo de capital 10,2 % → 8,73 %: modo «Detailed» del Ginsu. Beta desapalancada 1,248 («Software (System &amp; Application)», Damodaran, enero de 2026) reapalancada con deuda de mercado de 114.237 M y capitalización de 370.399 M (beta 1,5372); prima de riesgo 4,9134 % ponderada por ingresos regionales del 10-K (Américas 66 %, EMEA 23 %, Asia-Pacífico 11 %); costo de deuda antes de impuestos 5,61 % = 4,50 % + diferencial 1,11 % (Baa2/BBB, confirmada por la cobertura de intereses de 4,48×); tasa marginal 25 %.</p>\n<p>* Ingresos: base +28 % en FY2027 (~86.217 M, por debajo de la guía de ≥ 90.000 M) y 18 % anual en los años 2–5 (71 % del RPO de 664.000 M se reconoce entre los meses 13 y 60).</p>\n<p>* Margen: 31,5 % en el año 1 (el último año de doce meses a agosto es 32,1 %) y objetivo de 29,0 %: la mezcla de infraestructura de OCI comprime el margen bruto (65,8 % en FY2026) aunque la amortización de intangibles caiga de 1.671 M a 731 M en FY2027.</p>\n<p>* Sales to capital 0,46 (años 1–5) y 0,90 (6–10): reconoce el capital en construcción sin castigarlo dos veces.</p>\n<p>* ROIC terminal 12,5 %: conectado con el 12,7 % que el modelo alcanza en el año 10 (+377 pb sobre el WACC terminal de 8,73 %); en R1/R2 caía artificialmente a 9,5 %.</p>\n<p>* Tasa de impuestos: efectiva de FY2026 (12,6 %) que converge a la marginal de 25 % hacia el año 10.</p>\n<p>Variable (escenario base, resto constante)</p>\n<p><em>La tabla original de este apartado se consulta en las pestañas de Estados financieros, Modelo y supuestos o Sensibilidades; el documento fuente conserva la tabla detallada.</em></p>",
+    "valoracion": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p><h4>Conclusión de valoración</h4><p>Valor intrínseco por acción (revisión R3, ajustada tras el informe de auditoría de IA (Gemini, provisional) del 13-nov-2026): conservador US$ 23,96, base US$ 96,38, optimista US$ 188,31. Precio con margen de seguridad del 35 % sobre el escenario base: US$ 62,65. El precio de mercado (US$ 127,11, cierre del 12-nov-2026) está 31,9 % por encima del valor base y es 2,03 veces el precio con margen de seguridad; queda entre el base y el optimista. Al corte proforma (Q1 FY2027 con las ofertas de noviembre: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M) el valor base es US$ 97,00 y el precio con MOS US$ 63,05, sin cambiar la conclusión. Frente a R1 (US$ 55,66) y R2 (US$ 53,10) el valor sube, sobre todo por tres supuestos que la auditoría recalibró (ROIC terminal alineado con el del año 10, tasa libre y crecimiento terminal de 4,50 % en vez de 4,98 %, y sales to capital que no castiga dos veces los 39.973 M de obras en curso), y baja por el margen objetivo más prudente de 29,0 %. El informe de auditoría de IA (provisional) concluye NO COMPRAR / ESPERAR CORRECCIÓN O MAYOR EVIDENCIA DE CONVERSIÓN DE FLUJO LIBRE: es una conclusión del informe, no una recomendación de este modelo. Sin aprobación del propietario sobre la revisión R3.</p>",
     "riesgos": "<h4>Riesgos y disrupciones</h4><p>1) Valor terminal: explica el 93,0 % del valor de las operaciones en el caso base (99,9 % en el conservador, 87,2 % en el optimista); el VP de los diez años explícitos es de solo US$ 27.366 M, porque el FCFF es negativo mientras dura el ciclo de inversión. 2) Sensibilidad al costo de capital: +100 pb de WACC llevan el valor base a US$ 62,44 y −100 pb a US$ 152,07. 3) Financiamiento y apalancamiento: deuda financiera ajustada de 137.242 M (préstamos y bonos 129.541 + arrendamientos financieros 7.701), capex de 55.663 M frente a un flujo operativo de 31.977 M; arrendamientos de centros de datos no iniciados por 260.000 M (288.000 M en agosto) que entrarán a balance entre FY2027 y FY2029 como deuda o como presión sobre el EBIT. 4) Dilución: emitió 141 M de acciones por 19.909 M en el Q1 FY2027 (ATM) y 86,2 M más (~US$ 10.000 M) en noviembre de 2026, con 10.000 M adicionales en notas; la prueba de +8 % de acciones sin entrada de caja baja el valor base a US$ 89,24, y un capex extraordinario improductivo de +30.000 M en valor presente lo baja a US$ 86,09. 5) Concentración y calidad crediticia del RPO (US$ 638.000–664.000 M): Oracle no desglosa el peso de un único cliente ni las penalizaciones por cancelación. 6) Vida útil de 6 años de los servidores frente a chips nuevos cada 18–24 meses: sin evidencia histórica de recuperación del precio original. 7) Lo que el modelo no incluye: los arrendamientos operativos (30.190 M) quedan fuera de la deuda para no duplicar su costo, que ya está en el EBIT.</p>",
     "catalizadores": "<p><strong>Seguimiento sin fechas inventadas.</strong> En cada publicación de resultados se revisarán la conversión del RPO en ingresos, el crecimiento de OCI, el CAPEX frente al flujo operativo, el margen EBIT y su depreciación, la eficiencia marginal de ventas/capital, la deuda y los intereses, la financiación externa y la evolución de acciones diluidas. Una divergencia sostenida entre capacidad construida, generación de ingresos y retornos constituye señal para reabrir las historias Base, Conservadora y Optimista.</p><p><strong>Pendiente:</strong> documentar calendarios concretos de catalizadores, umbrales cuantitativos de revisión y fuentes verificables. No dar el capítulo por auditado.</p>",
-    "fuentes": "<h4>Anexo · Trazabilidad, conciliaciones y límites</h4>\n<p>* Fuentes primarias (carpeta «Annual reports» de ORCL en Drive): Forms 10-K de los ejercicios FY2017 a FY2026 y Form 10-Q del trimestre cerrado el 31-ago-2026. Las cifras se extrajeron del texto de los PDF y se verificó que el balance cuadra exactamente en los diez ejercicios (activos = pasivos corrientes + no corrientes + patrimonio + minoritarias) y que utilidad neta = UAI − impuestos y UAI = EBIT − intereses + no operativos. Las páginas citadas son páginas del PDF, no la numeración impresa.</p>\n<p>* Mercado: precio de cierre 12-nov-2026 y tasa del Tesoro vía Alpha Vantage; las API de Financial Datasets y FMP no estuvieron disponibles (sin crédito / plan). Prima de riesgo y betas de industria: tablas del propio libro de Damodaran (1-ene-2026).</p>\n<p>* Conciliación libro ↔ motor: el valor por acción calculado por el libro (recalculado con LibreOffice) y el del motor del navegador coinciden en los tres escenarios. Controles de cuadre del libro: OK. Controles del expediente: solo falta una auditoría de R3 por un tercero distinto de su emisor (control P02); la aprobación del propietario consta desde el 14-nov-2026.</p>\n<p>* Hechos posteriores al cierre (10-Q de agosto de 2026 y ofertas de noviembre de 2026): el libro sigue siendo anual. El informe de auditoría R3 los calcula aparte con el mismo motor (Q1 FY2027 + ofertas: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M, ingresos de 12 meses 71.776 M y EBIT 23.057 M): valor base US$ 97,00 y precio con MOS US$ 63,05. No se incorporaron para mantener el libro como fuente única.</p>\n<p>* Límites: (i) arrendamientos operativos no convertidos a deuda (consistente con un EBIT que ya los descuenta); (ii) activos no operativos: 2.300 M separados en R3 (inversiones no comercializables, Nota 1 del 10-K p. 76; principalmente la participación en TikTok USDS Joint Venture); el resto de inversiones no marketables no se separó; (iii) opciones y RSU capturadas solo mediante acciones diluidas; (iv) la preferente Serie D se trata como reclamo no común a valor en libros; (v) pérdidas fiscales acumuladas no revisadas (0); (vi) el modelo Ginsu retrasa la reinversión un año y subestima el pico de capex; (vii) ROE y apalancamiento sobre patrimonio carecen de sentido en FY2022–FY2023 por patrimonio cercano a cero o negativo; (viii) FY2017 sin reexpresión (ingresos 37.728 frente a 37.792 reexpresados).</p>\n<p>* Qué cambiaría la conclusión: un WACC 1–2 puntos menor, un margen operativo estable sobre 40 %, o evidencia de que cada dólar de capex genera más de 0,55 dólares de ingreso anual.</p>\n<p>Documento generado por Claude con el procedimiento JMR V2.0. No es una recomendación de inversión; no está auditado por un tercero.</p>\n<p>* Informe de auditoría de IA (Gemini, provisional) de ORCL (revisión R2 → R3, 13-nov-2026): fuente de las cifras de la revisión R3 y de las justificaciones por escenario. El análisis fundamental R3 «AUDITADO» de la carpeta de Drive está vacío; los capítulos 1, 3, 5, 6, 7, 9, 10, 11, 12 y 14 de este documento los actualizó la IA con las cifras del informe.</p>"
+    "fuentes": "<p><strong>Revisión R4 (14-nov-2026) · sustituye a R3.</strong> Corrige tres hallazgos del contraste con Floyd: (1) tasa libre 5,15 % (Treasury a 10 años del 13-nov, verificado en FMP) en lugar de 4,50 % «normalizada»; (2) prima de mercado maduro única con el resto de fichas V2: 3,387 % (implícita de Damodaran de noviembre de 2026) en lugar de 4,23 % (enero); (3) base LTM al 31-ago-2026 en lugar del balance de FY2026. Resultado: conservador US$ 35.16, base US$ 114.90, optimista US$ 215.57 (R3: 23,96 / 96,38 / 188,31); precio con MOS 35 % US$ 74.68. WACC inicial 9,82 % y terminal 8,54 %; g terminal 4,50 % (se mantiene por debajo de la tasa libre). Los supuestos operativos de R3 (crecimiento, márgenes, ventas/capital, ROIC terminal) no cambian. Las cifras de este texto fechadas en R3 (WACC 10,20 %, tasa libre 4,50 %, balance FY2026, valores 23,96 / 96,38 / 188,31) quedan sustituidas por las de R4. La aprobación personal de R3 no se traslada: R4 requiere una nueva aprobación.</p><h4>Anexo · Trazabilidad, conciliaciones y límites</h4>\n<p>* Fuentes primarias (carpeta «Annual reports» de ORCL en Drive): Forms 10-K de los ejercicios FY2017 a FY2026 y Form 10-Q del trimestre cerrado el 31-ago-2026. Las cifras se extrajeron del texto de los PDF y se verificó que el balance cuadra exactamente en los diez ejercicios (activos = pasivos corrientes + no corrientes + patrimonio + minoritarias) y que utilidad neta = UAI − impuestos y UAI = EBIT − intereses + no operativos. Las páginas citadas son páginas del PDF, no la numeración impresa.</p>\n<p>* Mercado: precio de cierre 12-nov-2026 y tasa del Tesoro vía Alpha Vantage; las API de Financial Datasets y FMP no estuvieron disponibles (sin crédito / plan). Prima de riesgo y betas de industria: tablas del propio libro de Damodaran (1-ene-2026).</p>\n<p>* Conciliación libro ↔ motor: el valor por acción calculado por el libro (recalculado con LibreOffice) y el del motor del navegador coinciden en los tres escenarios. Controles de cuadre del libro: OK. Controles del expediente: solo falta una auditoría de R3 por un tercero distinto de su emisor (control P02); la aprobación del propietario consta desde el 14-nov-2026.</p>\n<p>* Hechos posteriores al cierre (10-Q de agosto de 2026 y ofertas de noviembre de 2026): el libro sigue siendo anual. El informe de auditoría R3 los calcula aparte con el mismo motor (Q1 FY2027 + ofertas: 3.144 M de acciones, deuda 144.522 M, caja 56.877 M, ingresos de 12 meses 71.776 M y EBIT 23.057 M): valor base US$ 97,00 y precio con MOS US$ 63,05. No se incorporaron para mantener el libro como fuente única.</p>\n<p>* Límites: (i) arrendamientos operativos no convertidos a deuda (consistente con un EBIT que ya los descuenta); (ii) activos no operativos: 2.300 M separados en R3 (inversiones no comercializables, Nota 1 del 10-K p. 76; principalmente la participación en TikTok USDS Joint Venture); el resto de inversiones no marketables no se separó; (iii) opciones y RSU capturadas solo mediante acciones diluidas; (iv) la preferente Serie D se trata como reclamo no común a valor en libros; (v) pérdidas fiscales acumuladas no revisadas (0); (vi) el modelo Ginsu retrasa la reinversión un año y subestima el pico de capex; (vii) ROE y apalancamiento sobre patrimonio carecen de sentido en FY2022–FY2023 por patrimonio cercano a cero o negativo; (viii) FY2017 sin reexpresión (ingresos 37.728 frente a 37.792 reexpresados).</p>\n<p>* Qué cambiaría la conclusión: un WACC 1–2 puntos menor, un margen operativo estable sobre 40 %, o evidencia de que cada dólar de capex genera más de 0,55 dólares de ingreso anual.</p>\n<p>Documento generado por Claude con el procedimiento JMR V2.0. No es una recomendación de inversión; no está auditado por un tercero.</p>\n<p>* Informe de auditoría de IA (Gemini, provisional) de ORCL (revisión R2 → R3, 13-nov-2026): fuente de las cifras de la revisión R3 y de las justificaciones por escenario. El análisis fundamental R3 «AUDITADO» de la carpeta de Drive está vacío; los capítulos 1, 3, 5, 6, 7, 9, 10, 11, 12 y 14 de este documento los actualizó la IA con las cifras del informe.</p>"
    }
   },
   "empresas/UBER.json": {
