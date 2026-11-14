@@ -59,8 +59,8 @@
      "currency": "USD",
      "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Duolingo_logo_(2019).svg",
      "precio": 165.31,
-     "valorBase": 120.29375410860149,
-     "precioMOS": 78.19094017059098,
+     "valorBase": 124.64418010971181,
+     "precioMOS": 81.01871707131268,
      "estado": "EN_PROCESO",
      "estadoPermitido": "EN_REVISION",
      "estadoDeclarado": "EN_PROCESO",
@@ -789,7 +789,9 @@
     "Floyd: Pagos de Google por búsqueda (del orden de 20.000 M anuales) no verificados con fuente primaria en esta revisión.",
     "Floyd: Gobierno corporativo y compensación de la dirección no analizados.",
     "Floyd: Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base); la hoja conserva el precio FY+3 sin descontar.",
-    "ROIC terminal 44,76 % en Base y Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita)."
+    "ROIC terminal 44,76 % en Base y Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita).",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): la tasa libre de este expediente (4,86 %, 6-nov-2026) es 0,29 pp menor que la de EPAM y ORCL (5,15 %, 13-nov-2026). Subir en 0,29 pp el WACC inicial y el terminal bajaría el valor Base un 6,1 %. No se modificó ningún valor; actualizar la tasa libre exige una revisión nueva (R+1).",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): el precio de mercado (US$ 342,37) supera el valor del escenario Optimista (US$ 260,33): los tres escenarios no cubren las expectativas implícitas en el precio. Sin cambio de valores."
    ],
    "documentLinks": {
     "workbook": "https://drive.google.com/file/d/1NCXX6ypP7zhGmiGuM28noRRTp_dTSGFa/view",
@@ -1404,7 +1406,8 @@
     "Floyd: Volatilidad de las opciones (35 %) y beta de industria 0,783 (tabla de enero 2026) son supuestos; el valor es sensible al costo de capital.",
     "Floyd: Participación de mercado N/D; gobierno corporativo no analizado.",
     "Floyd: Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base); el libro de Múltiplos no descuenta el valor de las opciones.",
-    "ROIC terminal 18,36 % en Base y Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita)."
+    "ROIC terminal 18,36 % en Base y Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita).",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): la tasa libre de este expediente (4,86 %, 6-nov-2026) es 0,29 pp menor que la de EPAM y ORCL (5,15 %, 13-nov-2026). Subir en 0,29 pp el WACC inicial y el terminal bajaría el valor Base un 6,5 %. No se modificó ningún valor; actualizar la tasa libre exige una revisión nueva (R+1)."
    ],
    "documentLinks": {
     "workbook": "https://drive.google.com/file/d/1pQrElujRfKZaUfI9aKcys47SsO6NKiBq/view",
@@ -1723,9 +1726,9 @@
      "salesToCapital1to5": 1.5,
      "salesToCapital6to10": 1.5,
      "roicTerminal": 0.1,
-     "waccInitial": 0.114501693437601,
-     "waccTerminal": 0.0933,
-     "gTerminal": 0.051,
+     "waccInitial": 0.110532584644666,
+     "waccTerminal": 0.08487,
+     "gTerminal": 0.04,
      "marginalTax": 0.25,
      "mos": 0.35,
      "failureProbability": 0,
@@ -1740,9 +1743,9 @@
      "salesToCapital1to5": 3,
      "salesToCapital6to10": 3,
      "roicTerminal": 0.15,
-     "waccInitial": 0.114501693437601,
-     "waccTerminal": 0.0933,
-     "gTerminal": 0.051,
+     "waccInitial": 0.110532584644666,
+     "waccTerminal": 0.08487,
+     "gTerminal": 0.04,
      "marginalTax": 0.25,
      "mos": 0.35,
      "failureProbability": 0,
@@ -1757,9 +1760,9 @@
      "salesToCapital1to5": 5,
      "salesToCapital6to10": 4,
      "roicTerminal": 0.2,
-     "waccInitial": 0.114501693437601,
-     "waccTerminal": 0.0933,
-     "gTerminal": 0.051,
+     "waccInitial": 0.110532584644666,
+     "waccTerminal": 0.08487,
+     "gTerminal": 0.04,
      "marginalTax": 0.25,
      "mos": 0.35,
      "failureProbability": 0,
@@ -1835,13 +1838,13 @@
     }
    ],
    "libro": {
-    "id": "DUOL-V2-LTM20260930-R1_VALORACION.xlsx",
-    "sha256": "4abf99ee783a9c0d0b3a8e7e1bc29cd92f65658482aaedf434ae32a3bf5d154c",
+    "id": "DUOL-V2-LTM20260930-R2_VALORACION.xlsx",
+    "sha256": "0cd90ef6555ea4503bd4e552b7dc92fb8eda1b986bc3da123f9e363c5d748260",
     "motor": "fcffsimpleginzu",
     "valores": {
-     "conservador": 61.6929333553358,
-     "base": 120.293754108601,
-     "optimista": 199.829695216048
+     "conservador": 66.1402876668017,
+     "base": 124.644180109712,
+     "optimista": 203.433979240904
     }
    },
    "controlesLibro": {
@@ -1851,9 +1854,9 @@
    "analysis": {
     "business": "Duolingo (Nasdaq: DUOL) es una plataforma de aprendizaje de idiomas y otras materias, gratuita con suscripción Super Duolingo y Duolingo Max; también vende publicidad, el Duolingo English Test y compras dentro de la app. En los doce meses a septiembre de 2026 facturó US$ 1.182 M (3T26: US$ 309,0 M, +13,7 %), de los cuales la suscripción fue 87 % en el 3T26; 64,9 M de DAU (+29 %), 153,1 M de MAU y 13,1 M de suscriptores pagos (+14 %). Margen bruto de 72,9 %, sin deuda financiera y con US$ 1.484 M en efectivo e inversiones.",
     "moat": "La ventaja se basa en marca, hábito diario (DAU/MAU) y escala de datos para mejorar el producto; el contenido es gratuito, por lo que la protección es de adquisición y retención de usuarios, no de contenido. Evidencia: ~9 % de los MAU pagan (10-K FY2025) y los DAU crecen más rápido que los ingresos. Contraevidencia: competidores gratuitos y apps de IA generativa, y dependencia de las tiendas de aplicaciones.",
-    "story": "Historia Base: los DAU se convierten gradualmente en suscriptores y precio, el crecimiento se mantiene alrededor de 12–13 % durante cinco años y el margen EBIT GAAP sube de 12 % a 24 % a medida que I+D se apalanca. Valor Base US$ 120,29 por acción (Conservador US$ 61,69, Optimista US$ 199,83), frente a un precio de US$ 165,31 (13-nov-2026). El precio cotiza 37 % por encima del Base y por debajo del Optimista: el mercado descuenta más margen o crecimiento que el Base.",
+    "story": "Historia Base: los DAU se convierten gradualmente en suscriptores y precio, el crecimiento se mantiene alrededor de 12–13 % durante cinco años y el margen EBIT GAAP sube de 12 % a 24 % a medida que I+D se apalanca. Valor Base US$ 124,64 por acción (Conservador US$ 66,14, Optimista US$ 203,43), frente a un precio de US$ 165,31 (13-nov-2026). El precio cotiza 33 % por encima del Base y por debajo del Optimista: el mercado descuenta más margen o crecimiento que el Base.",
     "risks": "Desaceleración del ingreso (26,5 % → 13,7 % en tres trimestres), aumento de 30 % de I+D con margen EBIT del 3T26 en 7,8 %, regulación y dependencia de Apple/Google, competencia de IA generativa, demanda de acción colectiva por valores (7-oct-2026) y control de voto de los fundadores (Clase B, 20 votos, 76,3 % del poder de voto). Alrededor de 70 % del valor depende del valor terminal.",
-    "conclusion": "Valor Base preliminar US$ 120,29 contra precio US$ 165,31. Con margen de seguridad de 35 % el precio de compra de referencia es US$ 78,19. La acción no ofrece margen de seguridad bajo el escenario Base; solo el Optimista la justifica. Valoración preliminar sin auditoría independiente ni aprobación personal."
+    "conclusion": "Valor Base preliminar US$ 124,64 contra precio US$ 165,31. Con margen de seguridad de 35 % el precio de compra de referencia es US$ 81,02. La acción no ofrece margen de seguridad bajo el escenario Base; solo el Optimista la justifica. Valoración preliminar sin auditoría independiente ni aprobación personal."
    },
    "sources": [
     {
@@ -1865,17 +1868,17 @@
      "url": "https://drive.google.com/drive/folders/1jGOlc1k-DUF-Uzwmu4Pn1A_yVZHg1RoM"
     },
     {
-     "documento": "Damodaran, A. · fcffsimpleginzu.xlsx (hojas Cost of capital worksheet, Industry Averages(US), Country equity risk premiums; actualización de enero de 2026)"
+     "documento": "Damodaran, A. · fcffsimpleginzu.xlsx (hojas Cost of capital worksheet, Industry Averages(US), Country equity risk premiums; betas y primas por país de enero de 2026; prima de mercado maduro de nov-2026 = 3,387 %, valor tomado de las fichas EPAM, ORCL y MELI, no verificado aún contra la fuente primaria)"
     },
     {
      "documento": "Alpha Vantage · cierre de DUOL del 13-nov-2026 (US$ 165,31) y rendimiento del Tesoro a 10 años del 12-nov-2026 (5,10 %): fuente secundaria de mercado"
     }
    ],
    "justificaciones": {
-    "wacc": "WACC inicial común de 11,45 % que converge a 9,33 % (tasa libre 5,10 % + prima de mercado maduro 4,23 %). Tasa libre: rendimiento del Tesoro a 10 años publicado el 12-nov-2026 (5,10 %). Beta desapalancada 1,248 de «Software (System & Application)» (Damodaran, enero 2026) con apalancamiento de ~0,9 % (deuda por arrendamientos US$ 84,2 M frente a capitalización de ~US$ 8,3 mil M) = beta de 1,256. Prima de riesgo 5,10 %: promedio ponderado por ingresos FY2025 de Norteamérica (37,8 %: EE. UU. US$ 392,2 M) y resto del mundo (62,2 %: US$ 645,4 M). Costo del patrimonio 11,51 %; costo de la deuda 6,1 % antes de impuestos (tasa libre + 1 pp, sin deuda financiera; peso < 2 %). La beta y la prima por país son elecciones del analista y no hay un contraste independiente con regresión de mercado.",
-    "tasas": "Los tres escenarios comparten WACC, tasa libre, tasa marginal (25 %) y crecimiento terminal (= tasa libre, 5,10 %, por defecto de Damodaran). Solo cambian los ocho supuestos de la hoja «JMR Escenarios».",
-    "roicTerminal": "Conservador 10 % (≈ WACC terminal 9,33 %: sin ventaja competitiva), Base 15 %, Optimista 20 %. Base reconoce marca, datos de 153 M de MAU y efecto de red parcial, pero no una rentabilidad perpetuamente superior: el ROIC implícito del año 10 supera 80 % por el capital contable mínimo y no se usa como terminal.",
-    "terminal": "Crecimiento terminal igual a la tasa libre de riesgo (5,10 %), por defecto de Damodaran, sin override; es un supuesto de alto impacto que debe sensibilizarse (pestaña Sensibilidades) y revisarse en la auditoría.",
+    "wacc": "WACC inicial común de 11,05 % que converge a 8,49 % (tasa libre 5,10 % + prima de mercado maduro 3,387 %). Tasa libre: rendimiento del Tesoro a 10 años publicado el 12-nov-2026 (5,10 %). Beta desapalancada 1,248 de «Software (System & Application)» (Damodaran, enero 2026) con apalancamiento de ~0,9 % (deuda por arrendamientos US$ 84,2 M frente a capitalización de ~US$ 8,3 mil M) = beta de 1,256. Prima de riesgo 4,78 % (prima madura 3,387 % de noviembre de 2026 más prima por región): promedio ponderado por ingresos FY2025 de Norteamérica (37,8 %: EE. UU. US$ 392,2 M) y resto del mundo (62,2 %: US$ 645,4 M). Costo del patrimonio 11,11 %; costo de la deuda 6,1 % antes de impuestos (tasa libre + 1 pp, sin deuda financiera; peso < 2 %). La beta y la prima por país son elecciones del analista y no hay un contraste independiente con regresión de mercado.",
+    "tasas": "Los tres escenarios comparten WACC, tasa libre, tasa marginal (25 %) y crecimiento terminal (4,0 %, override del defecto de Damodaran, g = tasa libre). Solo cambian los ocho supuestos de la hoja «JMR Escenarios».",
+    "roicTerminal": "Conservador 10 % (≈ WACC terminal 8,49 %: sin ventaja competitiva), Base 15 %, Optimista 20 %. Base reconoce marca, datos de 153 M de MAU y efecto de red parcial, pero no una rentabilidad perpetuamente superior: el ROIC implícito del año 10 supera 80 % por el capital contable mínimo y no se usa como terminal.",
+    "terminal": "Crecimiento terminal de 4,0 % (override del defecto de Damodaran, g = tasa libre de 5,10 %), igual al de AAPL, CMG, MELI, MSFT y UBER; es un supuesto de alto impacto que debe sensibilizarse (pestaña Sensibilidades) y revisarse en la auditoría.",
     "calificacion": "DUOL no tiene deuda financiera. Se usa un costo de deuda directo de 6,1 % (tasa libre + 1 pp) solo para los US$ 84,2 M de arrendamientos; peso de ~0,9 % en la estructura de capital.",
     "dilucion": "Acciones: 47,107 M en circulación (Clase A 40,708 + Clase B 6,399) + 2,638 M de RSU no consolidadas (10-Q 3T26 nota 9) + 0,423 M de opciones por el método de la acción en tesorería (0,482 M a US$ 20,36 con precio US$ 165,31). La SBC futura está en el EBIT. No se usa la hoja de opciones de Damodaran porque su fórmula es circular.",
     "idyarrendamientos": "No se capitaliza I+D (US$ 362,5 M LTM, 30,7 % de los ingresos) ni arrendamientos adicionales; el EBIT es el reportado. Las obligaciones por arrendamientos operativos de largo plazo (US$ 84,2 M) se tratan como deuda; la porción corriente (US$ 7,2 M a dic-2025) no está desglosada en el 10-Q y queda pendiente.",
@@ -1883,61 +1886,68 @@
     "escenarios": {
      "conservador": {
       "tesis": "La desaceleración observada en 2026 continúa: más competencia de aplicaciones con IA generativa y saturación de suscriptores pagos (13,1 M, ~9 % de los MAU) reducen el crecimiento a un dígito; el gasto en I+D no se apalanca. Es una hipótesis adversa, no una previsión.",
-      "crecimiento": "8,0 % en el año 1 y 7,0 % anual en los años 2–5 (ingresos 2030 de US$ 1.674 M); desde el año 6 converge a 5,10 %. El 3T26 ya creció 13,7 % y las reservas de suscripción 16 %, por lo que este escenario exige una desaceleración mayor que la observada.",
+      "crecimiento": "8,0 % en el año 1 y 7,0 % anual en los años 2–5 (ingresos 2030 de US$ 1.674 M); desde el año 6 converge a 4,0 %. El 3T26 ya creció 13,7 % y las reservas de suscripción 16 %, por lo que este escenario exige una desaceleración mayor que la observada.",
       "margenes": "Margen EBIT de 7,0 % en el año 1 (similar al 3T26, 7,8 %) que sube hasta 16,0 % en el año 7; por debajo del margen LTM de 12,4 % a corto plazo y bastante inferior al 24 % del Base.",
       "reinversion": "Sales to capital de 1,5× en los años 1–5 y 6–10, el promedio de «Software (System & Application)» y «Software (Internet)» (1,35–1,54×): equivale a que DUOL no conserve su ventaja de capital liviano.",
-      "roic": "ROIC terminal de 10 %, apenas superior al WACC terminal de 9,33 %: la ventaja competitiva se agota y el crecimiento perpetuo apenas crea valor.",
-      "descuento": "WACC común de 11,45 % inicial y 9,33 % terminal (Ke 11,51 %; beta 1,256; prima 5,10 %; tasa libre 5,10 %). No se aumenta el WACC para castigar: el riesgo ya está en los flujos.",
-      "terminal": "Crecimiento perpetuo de 5,10 % (= tasa libre, regla de Damodaran). Con ROIC de 10 % la tasa de reinversión terminal es 51 % del NOPAT. El valor terminal es 68,7 % del valor de las operaciones.",
+      "roic": "ROIC terminal de 10 %, apenas superior al WACC terminal de 8,49 %: la ventaja competitiva se agota y el crecimiento perpetuo apenas crea valor.",
+      "descuento": "WACC común de 11,05 % inicial y 8,49 % terminal (Ke 11,11 %; beta 1,256; prima 4,78 %; tasa libre 5,10 %). No se aumenta el WACC para castigar: el riesgo ya está en los flujos.",
+      "terminal": "Crecimiento perpetuo de 4,0 % (por debajo de la tasa libre de 5,10 %; igual al de AAPL, CMG, MELI, MSFT y UBER). Con ROIC de 10 % la tasa de reinversión terminal es 40 % del NOPAT. El valor terminal es 70,5 % del valor de las operaciones.",
       "contraevidencia": "Los DAU crecen 29 %, el margen bruto subió a 72,9 % por menores costos de IA y la caja neta es de US$ 1.400 M: la hipótesis adversa ignora que la base de usuarios sigue creciendo mucho más que los ingresos.",
       "evidencia": "10-Q 3T26 (ingresos, reservas, DAU, suscriptores, gastos), 10-K FY2025 (competencia, concentración en tiendas de apps y plataformas) y Damodaran (sales to capital del sector). Fuente primaria cotejada; supuestos son criterio del analista."
      },
      "base": {
       "tesis": "La monetización de una base de usuarios en expansión mantiene un crecimiento de doble dígito con apalancamiento operativo gradual: el margen EBIT GAAP pasa de ~12 % a 24 % en siete años. Duolingo no tiene deuda, tiene caja neta de US$ 1.400 M y genera caja libre de ~US$ 395 M LTM; el debate es cuánto margen puede ganar sin sacrificar I+D e IA.",
-      "crecimiento": "13,0 % en el año 1 y 12,0 % anual en los años 2–5 (ingresos 2030 de US$ 2.102 M); luego converge a 5,10 %. Coherente con el 3T26 (13,7 %) y con las reservas de suscripción (+16 %); menor que los 19 % del 9M26 porque el 1T26 fue excepcionalmente alto.",
+      "crecimiento": "13,0 % en el año 1 y 12,0 % anual en los años 2–5 (ingresos 2030 de US$ 2.102 M); luego converge a 4,0 %. Coherente con el 3T26 (13,7 %) y con las reservas de suscripción (+16 %); menor que los 19 % del 9M26 porque el 1T26 fue excepcionalmente alto.",
       "margenes": "Margen EBIT de 10,0 % en el año 1 y 24,0 % en el año 7. El LTM es 12,4 % y el 3T26 7,8 %: el año 1 supone otro año de inversión en I+D (+30 % en el 3T26). El 24 % es inferior al 33 % del sector y sigue incluyendo SBC (13 % de ingresos): requiere ~11 pp de apalancamiento operativo en siete años.",
       "reinversion": "Sales to capital de 3,0× en ambos tramos: reinversión de ~33 % del ingreso incremental, más del doble de los 1,35–1,54× del sector pero muy por debajo de lo que sugiere el capital contable de US$ 82 M; consistente con capex + software capitalizado de 2,6 % de ingresos en 2025 y capital de trabajo negativo.",
       "roic": "ROIC terminal de 15 %: reconoce marca, escala de datos y efecto de red parcial, sin asumir retornos extraordinarios a perpetuidad. El ROIC implícito del año 10 (> 80 %) refleja el capital contable mínimo y no se usa.",
-      "descuento": "WACC común de 11,45 % inicial y 9,33 % terminal. Un beta de 1,0 en vez de 1,256 reduciría el WACC inicial ~1,3 pp y elevaría el valor Base de forma material; no hay regresión de mercado en este expediente.",
-      "terminal": "Crecimiento perpetuo de 5,10 % (= tasa libre). La reinversión terminal es 34 % del NOPAT (g/ROIC). El valor terminal es 70,0 % del valor de las operaciones, concentración alta típica de empresas jóvenes.",
+      "descuento": "WACC común de 11,05 % inicial y 8,49 % terminal. Un beta de 1,0 en vez de 1,256 reduciría el WACC inicial ~1,2 pp y elevaría el valor Base de forma material; no hay regresión de mercado en este expediente.",
+      "terminal": "Crecimiento perpetuo de 4,0 % (por debajo de la tasa libre de 5,10 %). La reinversión terminal es 27 % del NOPAT (g/ROIC). El valor terminal es 70,4 % del valor de las operaciones, concentración alta típica de empresas jóvenes.",
       "contraevidencia": "La desaceleración del ingreso (26,5 % → 13,7 % en tres trimestres), el aumento de 30 % de I+D, los ingresos de IAP −38 %, una demanda de acción colectiva (7-oct-2026) y el control con voto 20:1 de los fundadores. Si el margen se queda en 12–15 %, el valor Base cae por debajo del Conservador implícito.",
       "evidencia": "10-K FY2025 y 10-Q 1T26–3T26 (cifras reportadas); Damodaran (beta, prima, sales to capital, margen del sector); precio de mercado 13-nov-2026. Estados históricos cotejados contra los informes originales; supuestos de margen y ROIC son criterio del analista."
      },
      "optimista": {
       "tesis": "DUOL convierte DAU y MAU en suscriptores y precio (tarifas premium e IA) y gana escala: crecimiento de ~17 % durante cinco años y margen EBIT GAAP de 30 % en el año 7, similar al promedio de «Software (System & Application)» (33 %).",
-      "crecimiento": "18,0 % en el año 1 y 17,0 % anual en los años 2–5 (ingresos 2030 de US$ 2.614 M); luego converge a 5,10 %. El 9M26 creció 19,2 % y el 1T26 26,5 %: es el ritmo de 2026 sostenido, no una aceleración.",
+      "crecimiento": "18,0 % en el año 1 y 17,0 % anual en los años 2–5 (ingresos 2030 de US$ 2.614 M); luego converge a 4,0 %. El 9M26 creció 19,2 % y el 1T26 26,5 %: es el ritmo de 2026 sostenido, no una aceleración.",
       "margenes": "Margen EBIT de 12,5 % en el año 1 (≈ LTM 12,4 %) y 30,0 % en el año 7, con el margen bruto en 73 % y una SBC que no crece más que los ingresos.",
       "reinversion": "Sales to capital de 5,0× en los años 1–5 y 4,0× en los años 6–10: un modelo aún más liviano en capital, apoyado en ingresos diferidos y software ya capitalizado.",
-      "roic": "ROIC terminal de 20 %, 10,7 pp sobre el WACC terminal de 9,33 %: marca y efecto de red duraderos. Es el escenario donde la ventaja competitiva dura más y se justifica explícitamente.",
-      "descuento": "WACC común de 11,45 % inicial y 9,33 % terminal; no se reduce en el escenario optimista, para no mezclar riesgo con crecimiento.",
-      "terminal": "Crecimiento perpetuo de 5,10 % (= tasa libre). La reinversión terminal es 25,5 % del NOPAT. El valor terminal es 72,2 % del valor de las operaciones.",
+      "roic": "ROIC terminal de 20 %, 11,5 pp sobre el WACC terminal de 8,49 %: marca y efecto de red duraderos. Es el escenario donde la ventaja competitiva dura más y se justifica explícitamente.",
+      "descuento": "WACC común de 11,05 % inicial y 8,49 % terminal; no se reduce en el escenario optimista, para no mezclar riesgo con crecimiento.",
+      "terminal": "Crecimiento perpetuo de 4,0 % (por debajo de la tasa libre de 5,10 %). La reinversión terminal es 20 % del NOPAT. El valor terminal es 72,1 % del valor de las operaciones.",
       "contraevidencia": "Las reservas totales crecen 12 % y los IAP caen 38 %: el ritmo de 17 % exige aceleración de la conversión, y un margen de 30 % se logra con SBC de 13 % de los ingresos.",
-      "evidencia": "10-Q 3T26 (DAU +29 %, suscriptores +14 %, margen bruto 72,9 %), 10-K FY2025 (suscriptores pagos ~9 % de MAU) y Damodaran (margen del sector). El valor Optimista (US$ 199,83) queda por encima del precio de US$ 165,31."
+      "evidencia": "10-Q 3T26 (DAU +29 %, suscriptores +14 %, margen bruto 72,9 %), 10-K FY2025 (suscriptores pagos ~9 % de MAU) y Damodaran (margen del sector). El valor Optimista (US$ 203,43) queda por encima del precio de US$ 165,31."
      }
     }
    },
    "revision": {
-    "id": "DUOL-V2-LTM20260930-R1",
-    "anterior": null,
-    "historial": {},
-    "nota": "Revisión nueva desde cero en V2; no usa los libros Floyd/Atlas de DUOL."
+    "id": "DUOL-V2-LTM20260930-R2",
+    "anterior": "DUOL-V2-LTM20260930-R1",
+    "historial": {
+     "DUOL-V2-LTM20260930-R1": {
+      "conservador": 61.69,
+      "base": 120.29,
+      "optimista": 199.83
+     }
+    },
+    "nota": "R2 (14-nov-2026) tras la auditoría de IA: prima de mercado maduro de nov-2026 (3,387 %, como EPAM, ORCL y MELI) en lugar de 4,23 % de enero de 2026, y crecimiento terminal de 4,0 % (como AAPL, CMG, MELI, MSFT y UBER) en lugar de 5,10 %. Estados, escenarios y demás supuestos sin cambio. Reemplaza a R1 en la ficha."
    },
    "priceAsOf": "2026-11-13",
    "warnings": [
     "VALORACIÓN PRELIMINAR · EN_PROCESO (falta auditoría): sin auditoría independiente ni aprobación personal.",
+    "R2: reemplaza a R1 (Base 120,29). Cambios por la auditoría de IA del 14-nov-2026: prima de mercado maduro 3,387 % (antes 4,23 %) y crecimiento terminal 4,0 % (antes 5,10 %). Ambos supuestos son sensibles al valor y siguen pendientes de auditoría.",
+    "Indicadores: el crecimiento de ingresos de la columna 2026 compara el LTM con FY2025 (13,9 %), no es interanual; el crecimiento interanual del 3T26 es 13,7 % y el del 9M26 es 19,2 %.",
     "Serie de 6 ejercicios (FY2020–FY2025) más LTM al 30-sep-2026: el IPO fue en 2021 y no hay 10-K anteriores en la carpeta; no se inventan ejercicios 2016–2019.",
     "FY2025 incluye un beneficio fiscal único de US$ 256,7 M por liberación de la provisión de valoración de los activos por impuesto diferido; la utilidad neta FY2025 (US$ 414,1 M) no es recurrente.",
     "Los estados de FY2020 muestran las preferentes convertibles dentro del patrimonio total (US$ 182,6 M) para cuadrar el balance.",
-    "Cifras de mercado (precio y tasa libre) provienen de Alpha Vantage, fuente secundaria; la prima por regiones y las betas de industria son de Damodaran (enero de 2026).",
+    "Cifras de mercado (precio y tasa libre) provienen de Alpha Vantage, fuente secundaria; las betas de industria y las primas por país son de Damodaran (enero de 2026) y la prima de mercado maduro (3,387 %, nov-2026) se tomó de las fichas EPAM, ORCL y MELI sin verificarla contra la fuente primaria.",
     "La beta es la del sector «Software (System & Application)»; con «Software (Entertainment)» (1,02) el valor sube de forma material. Sin regresión propia.",
     "No se capitaliza I+D ni se aplica NOL; la porción corriente de arrendamientos no está desglosada en el 10-Q 3T26.",
-    "La demanda de acción colectiva de valores presentada el 7-oct-2026 no se ha incorporado al valor (sin estimación fiable).",
-    "Indicadores: el crecimiento de ingresos de la columna 2026 compara el LTM con FY2025 (13,9 %), no es interanual; el crecimiento interanual del 3T26 es 13,7 % y del 9M26 es 19,2 %."
+    "La demanda de acción colectiva de valores presentada el 7-oct-2026 no se ha incorporado al valor (sin estimación fiable)."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1vVHZ5S1OEhNRttFmYb6K7CKJ9eSa8xKz/view",
     "annualReportsFolder": "https://drive.google.com/drive/folders/1jGOlc1k-DUF-Uzwmu4Pn1A_yVZHg1RoM",
-    "valuationFolder": "https://drive.google.com/drive/folders/1g5tGwlskob-J5fIpxzoIXXaRHEbJ7NxM"
+    "valuationFolder": "https://drive.google.com/drive/folders/1g5tGwlskob-J5fIpxzoIXXaRHEbJ7NxM",
+    "workbook": "https://drive.google.com/file/d/16RZOFWNitUnJItV79RYxcccwyVHJe23b/view"
    },
    "annualReportDocuments": [
     {
@@ -2023,27 +2033,27 @@
    "schemaVersion": "jmr-v2-analisis-2",
    "ticker": "DUOL",
    "status": "BORRADOR_EDITORIAL_NO_AUDITADO",
-   "revision": "DUOL-V2-LTM20260930-R1",
+   "revision": "DUOL-V2-LTM20260930-R2",
    "editorialStandard": "ESTILO_JMR_14_2026-10-30",
    "source": {
-    "type": "10-K FY2021–FY2025 y 10-Q 1T26–3T26 de Duolingo, Inc. (carpeta de Drive); cifras del libro DUOL-V2-LTM20260930-R1_VALORACION.xlsx",
+    "type": "10-K FY2021–FY2025 y 10-Q 1T26–3T26 de Duolingo, Inc. (carpeta de Drive); cifras del libro DUOL-V2-LTM20260930-R2_VALORACION.xlsx",
     "url": "https://drive.google.com/drive/folders/1jGOlc1k-DUF-Uzwmu4Pn1A_yVZHg1RoM"
    },
    "blocks": {
-    "tesis": "Duolingo es una plataforma de consumo con 64,9 M de usuarios activos diarios (+29 %) y 13,1 M de suscriptores pagos que factura US$ 1.182 M en los últimos doce meses, tiene 73 % de margen bruto, caja neta de unos US$ 1.400 M y genera ~US$ 395 M de caja libre. La tesis Base supone que esa audiencia se monetiza con un crecimiento de 12–13 % y que el margen EBIT GAAP pasa de 12 % a 24 % en siete años: valor intrínseco Base de US$ 120,29 por acción (Conservador 61,69; Optimista 199,83). Dos factores deciden el valor: el margen objetivo y el ROIC terminal. El precio de US$ 165,31 (13-nov-2026) está 37 % por encima del Base y por debajo del Optimista; con margen de seguridad de 35 % el precio de referencia es US$ 78,19. Las principales reservas: desaceleración del ingreso, gasto creciente en I+D e IA y una demanda colectiva de valores. Valoración preliminar sin auditoría.",
+    "tesis": "Duolingo es una plataforma de consumo con 64,9 M de usuarios activos diarios (+29 %) y 13,1 M de suscriptores pagos que factura US$ 1.182 M en los últimos doce meses, tiene 73 % de margen bruto, caja neta de unos US$ 1.400 M y genera ~US$ 395 M de caja libre. La tesis Base supone que esa audiencia se monetiza con un crecimiento de 12–13 % y que el margen EBIT GAAP pasa de 12 % a 24 % en siete años: valor intrínseco Base de US$ 124,64 por acción (Conservador 66,14; Optimista 203,43). Dos factores deciden el valor: el margen objetivo y el ROIC terminal. El precio de US$ 165,31 (13-nov-2026) está 33 % por encima del Base y por debajo del Optimista; con margen de seguridad de 35 % el precio de referencia es US$ 81,02. Las principales reservas: desaceleración del ingreso, gasto creciente en I+D e IA y una demanda colectiva de valores. Valoración preliminar sin auditoría.",
     "negocio": "Duolingo ofrece contenido gratuito y monetiza con la suscripción Super Duolingo (plan familiar desde 2021) y la gama Duolingo Max (desde 2023), además de publicidad, el Duolingo English Test (desde 2016) y compras dentro de la app (IAP). En el 3T26 los ingresos fueron US$ 309,0 M: suscripción US$ 270,0 M (+18 %, 87 %), publicidad US$ 20,8 M (−1 %), Duolingo English Test US$ 9,9 M (+2 %), IAP US$ 6,9 M (−38 %). En FY2025 la facturación fue de US$ 1.037,6 M: EE. UU. US$ 392,2 M (38 %) y resto del mundo US$ 645,4 M (62 %). Más de 900 empleados, 430 de ellos ingenieros (dic-2025). Los suscriptores pagos eran ~9 % de los MAU al cierre de 2025. Los ingresos pasaron de US$ 161,7 M (FY2020) a US$ 1.037,6 M (FY2025), un 45 % anual.",
     "industria": "Duolingo compite por tiempo y gasto de los usuarios con otras aplicaciones de idiomas, plataformas de aprendizaje, medios y contenido gratuito, y con apps de IA generativa; el propio 10-K reconoce competidores que pueden tener menos presión por rentabilidad. La ventaja competitiva proviene de la marca, el hábito diario de la audiencia (DAU/MAU de ~42 %: 64,9 / 153,1 en el 3T26) y datos para mejorar el producto. La evidencia de poder de precios es parcial: el margen bruto subió a 72,9 % por menores costos de IA, pero los IAP bajan y el ingreso por suscriptor no se divulga en el 10-Q. La dependencia de Apple/Google como canales de distribución y cobro es un riesgo estructural. El moat se considera moderado y no probado en un ciclo adverso. Faltan datos de retención por cohorte y precio medio por suscriptor.",
-    "crecimiento": "Los motores son (1) más DAU (+29 % interanual), (2) mayor conversión a suscripción (suscriptores +14 %, reservas de suscripción +16 %), (3) precio y mezcla con Max y el plan familiar, y (4) nuevas materias y geografías. El crecimiento trimestral del ingreso se desaceleró: 26,5 % (1T26), 18,3 % (2T26) y 13,7 % (3T26); las reservas totales crecieron 12 % en el 3T26. El Base supone 13 % en el año 1 y 12 % anual en 2–5, con ingresos de US$ 2.102 M en el año 5; luego converge a 5,10 %. El techo depende de cuántos usuarios pagan: si el 9 % de los MAU pasara a 12 %, los suscriptores subirían un tercio. No se proyectan catalizadores con fecha.",
-    "ciclos": "Empresa: DUOL está en la fase de crecimiento ya rentable del ciclo de vida de Damodaran (utilidad operativa GAAP positiva desde 2024: 8,4 % en 2024, 13,1 % en 2025, 12,4 % LTM). Macro: la tasa libre de riesgo (Tesoro a 10 años) fue de 5,10 % el 12-nov-2026, lo que sube el costo de capital y comprime el valor de flujos lejanos; el valor terminal pesa ~70 % del valor. Mercado: la acción subió 26 % el 4-nov-2026 (de US$ 128,00 a US$ 161,27) tras el 3T26; cierra el 13-nov en US$ 165,31, el máximo de los cierres desde el 25-jun (mínimo US$ 115,02 el 30-jun), 37 % sobre el valor Base. En el ciclo de mercado de Howard Marks eso pide más cautela, no menos; no se cambia el WACC ni los flujos por ese motivo (sin doble castigo).",
+    "crecimiento": "Los motores son (1) más DAU (+29 % interanual), (2) mayor conversión a suscripción (suscriptores +14 %, reservas de suscripción +16 %), (3) precio y mezcla con Max y el plan familiar, y (4) nuevas materias y geografías. El crecimiento trimestral del ingreso se desaceleró: 26,5 % (1T26), 18,3 % (2T26) y 13,7 % (3T26); las reservas totales crecieron 12 % en el 3T26. El Base supone 13 % en el año 1 y 12 % anual en 2–5, con ingresos de US$ 2.102 M en el año 5; luego converge a 4,0 %. El techo depende de cuántos usuarios pagan: si el 9 % de los MAU pasara a 12 %, los suscriptores subirían un tercio. No se proyectan catalizadores con fecha.",
+    "ciclos": "Empresa: DUOL está en la fase de crecimiento ya rentable del ciclo de vida de Damodaran (utilidad operativa GAAP positiva desde 2024: 8,4 % en 2024, 13,1 % en 2025, 12,4 % LTM). Macro: la tasa libre de riesgo (Tesoro a 10 años) fue de 5,10 % el 12-nov-2026, lo que sube el costo de capital y comprime el valor de flujos lejanos; el valor terminal pesa ~70 % del valor. Mercado: la acción subió 26 % el 4-nov-2026 (de US$ 128,00 a US$ 161,27) tras el 3T26; cierra el 13-nov en US$ 165,31, el máximo de los cierres desde el 25-jun (mínimo US$ 115,02 el 30-jun), 33 % sobre el valor Base. En el ciclo de mercado de Howard Marks eso pide más cautela, no menos; no se cambia el WACC ni los flujos por ese motivo (sin doble castigo).",
     "finanzas": "Ingresos FY2020–FY2025: 161,7; 250,8; 369,5; 531,1; 748,0; 1.037,6 (US$ M); LTM 1.182,3. Margen bruto estable en ~72–73 %. Margen EBIT GAAP: −9,9 % (2020), −23,9 %, −17,6 %, −2,5 %, 8,4 %, 13,1 % (2025) y 12,4 % LTM; en el 3T26 fue 7,8 % porque I+D creció 30 %. La utilidad neta de 2025 (US$ 414,1 M) incluye un beneficio fiscal único de US$ 256,7 M; la LTM es US$ 145,7 M. Flujo operativo LTM US$ 435,8 M; caja libre ~US$ 395 M. SBC LTM US$ 156,6 M (13,2 % de ingresos) y recompras de US$ 76,5 M en 9M26. Sin deuda financiera; arrendamientos de largo plazo US$ 84,2 M. Los ingresos diferidos (US$ 513,6 M) financian el capital de trabajo.",
     "reinversion": "La reinversión es baja: capex más software capitalizado fue US$ 27,4 M en 2025 (2,6 % de los ingresos) y US$ 40,3 M LTM, el capital de trabajo aporta caja (cambio de −US$ 78,1 M LTM) y las adquisiciones suman US$ 5,0 M LTM. El capital invertido contable es casi cero (deuda 0 + patrimonio 1.481,6 − caja 1.484,0), por lo que el ROIC histórico no es informativo y el ROIC terminal se fija por criterio (Base 15 %). El Base usa sales to capital de 3,0× (el sector 1,35–1,54×). I+D es 30,7 % de los ingresos LTM (US$ 362,5 M) y no se capitaliza; hacerlo elevaría el EBIT y el capital pero no el valor, porque los márgenes son supuestos del analista.",
     "gobierno": "Los fundadores Luis von Ahn y Severin Hacker dirigen la empresa y dependen de su continuidad según el 10-K. La estructura de doble clase da 20 votos a la acción Clase B: los tenedores de Clase B controlan 76,3 % del poder de voto (10-K FY2025) con 6,4 M de acciones frente a 40,7 M de Clase A. En febrero de 2026 el consejo autorizó recompras de hasta US$ 400 M; entre enero y septiembre de 2026 se recompraron US$ 76,5 M (precio medio ~US$ 122–141 en el 3T26) y quedaban US$ 323,3 M. La SBC es alta (13 % de los ingresos) y las 2,6 M RSU sin consolidar se suman al número de acciones. Una demanda colectiva de valores contra la compañía y ejecutivos se presentó el 7-oct-2026 (10-Q 3T26, nota 13).",
     "metodo": "Se aplica el modelo FCFF Simple Ginsu de Damodaran (fcffsimpleginzu.xlsx, copia de referencia) con tres escenarios en un solo libro, base de valoración LTM al 30-sep-2026 (FY2025 + 9M26 − 9M25), precio de mercado del 13-nov-2026 y la tasa libre del Tesoro a 10 años del 12-nov-2026. Las cifras provienen de los 10-K FY2021–FY2025 y los 10-Q 1T26–3T26 en la carpeta de Drive; el libro oficial «JMR Estados» las consolida con controles de cuadre en OK, y el expediente de la app se deriva del libro y concilia con el motor en los tres escenarios (±0,5 %). El WACC se calcula con la beta del sector «Software (System & Application)», la prima por regiones y un costo de deuda directo. Los múltiplos son un contraste, no se promedian con el DCF.",
-    "supuestos": "Crecimiento año 1 (Conservador/Base/Optimista): 8/13/18 %; años 2–5: 7/12/17 %; margen EBIT año 1: 7/10/12,5 %; margen objetivo (año 7): 16/24/30 %; sales to capital: 1,5/3,0/5,0× (años 1–5) y 1,5/3,0/4,0× (años 6–10); ROIC terminal 10/15/20 %. Comunes: WACC 11,45 % → 9,33 %, tasa libre 5,10 %, crecimiento terminal 5,10 %, tasa marginal 25 %, 50,17 M de acciones diluidas. Cada supuesto tiene razón, evidencia y contraevidencia en la pestaña «Modelo y supuestos». Los más sensibles son el margen objetivo y la beta: con la beta de «Software (Entertainment)» (1,02) el WACC bajaría ~1,2 pp. Las elecciones de beta, prima y margen objetivo son criterio del analista y deben auditarse.",
-    "valoracion": "Valor por acción: Conservador US$ 61,69, Base US$ 120,29 y Optimista US$ 199,83; precio US$ 165,31 (13-nov-2026) = 137 % del Base. Precio con margen de seguridad de 35 % sobre el Base: US$ 78,19. Valor de las operaciones: US$ 1.695 M, US$ 4.635 M y US$ 8.625 M; el valor terminal pesa 68,7 %, 70,0 % y 72,2 %. Caja neta de deuda US$ 1.400 M (≈ US$ 28 por acción). El precio queda entre el Base y el Optimista: el mercado descuenta más margen o crecimiento que el Base. Las sensibilidades 5×5 y el estado del libro están en el expediente. Los múltiplos (P/E, EV/ventas) quedan fuera del valor.",
+    "supuestos": "Crecimiento año 1 (Conservador/Base/Optimista): 8/13/18 %; años 2–5: 7/12/17 %; margen EBIT año 1: 7/10/12,5 %; margen objetivo (año 7): 16/24/30 %; sales to capital: 1,5/3,0/5,0× (años 1–5) y 1,5/3,0/4,0× (años 6–10); ROIC terminal 10/15/20 %. Comunes: WACC 11,05 % → 8,49 %, tasa libre 5,10 %, crecimiento terminal 4,0 %, tasa marginal 25 %, 50,17 M de acciones diluidas. Cada supuesto tiene razón, evidencia y contraevidencia en la pestaña «Modelo y supuestos». Los más sensibles son el margen objetivo y la beta: con la beta de «Software (Entertainment)» (1,02) el WACC bajaría ~1,1 pp. Las elecciones de beta, prima y margen objetivo son criterio del analista y deben auditarse.",
+    "valoracion": "Valor por acción: Conservador US$ 66,14, Base US$ 124,64 y Optimista US$ 203,43; precio US$ 165,31 (13-nov-2026) = 133 % del Base. Precio con margen de seguridad de 35 % sobre el Base: US$ 81,02. Valor de las operaciones: US$ 1.918 M, US$ 4.853 M y US$ 8.806 M; el valor terminal pesa 70,5 %, 70,4 % y 72,1 %. Caja neta de deuda US$ 1.400 M (≈ US$ 28 por acción). El precio queda entre el Base y el Optimista: el mercado descuenta más margen o crecimiento que el Base. Las sensibilidades 5×5 y el estado del libro están en el expediente. Los múltiplos (P/E, EV/ventas) quedan fuera del valor.",
     "riesgos": "1) Desaceleración: el ingreso pasó de +26,5 % a +13,7 % en tres trimestres. 2) Margen: I+D +30 % en el 3T26 y un bono ligado a DAU; si el margen se estanca en 12–15 % el valor cae cerca del Conservador. 3) IA generativa y gratuidad: apps que reproducen el producto a bajo costo. 4) Plataformas: dependencia de Apple/Google. 5) Concentración de valor en el terminal (~70 %). 6) Gobierno: doble clase y demanda colectiva (7-oct-2026). 7) Calidad de la utilidad neta: 2025 incluyó un beneficio fiscal único. La tesis contraria es que el precio ya descuenta un escenario entre Base y Optimista; la tesis Base se invalidaría si el crecimiento cae por debajo de ~10 % con un margen LTM por debajo de ~12 % (umbrales de seguimiento, no pronósticos). No se doble castiga el riesgo en el WACC.",
     "catalizadores": "Indicadores de seguimiento: crecimiento trimestral de ingresos y reservas de suscripción (umbral: < 10 % implica Conservador), DAU y suscriptores pagos (conversión sobre MAU), margen bruto (≥ 72 %), margen EBIT y gasto de I+D (umbral: margen EBIT LTM < 10 %), SBC sobre ingresos, recompras (US$ 323,3 M disponibles) y el avance de la demanda colectiva (las mociones para designar demandante principal vencen el 7-dic-2026). Cada 10-Q y el 10-K FY2026 son los eventos verificables; no se inventan fechas ni resultados esperados. Revisar la valoración cuando se publique el 4T26/FY2026.",
-    "fuentes": "Fuentes primarias: Forms 10-K de FY2021, FY2022, FY2023, FY2024 y FY2025 y Forms 10-Q del 1T26, 2T26 y 3T26 de Duolingo, Inc. (PDF de la SEC, carpeta «Annual reports» en Drive). Insumos de Damodaran: fcffsimpleginzu.xlsx (beta y márgenes de industria, prima por país/región, enero de 2026). Mercado: Alpha Vantage (precio de cierre 13-nov-2026 de US$ 165,31 y Tesoro a 10 años 5,10 %), fuente secundaria. Limitaciones: 6 ejercicios más LTM (IPO en 2021), sin regresión de beta propia, I+D sin capitalizar, NOL no aplicada, sin logo, sin auditoría independiente ni aprobación personal. Estado: borrador editorial no auditado; EN_PROCESO por falta de auditoría."
+    "fuentes": "Fuentes primarias: Forms 10-K de FY2021, FY2022, FY2023, FY2024 y FY2025 y Forms 10-Q del 1T26, 2T26 y 3T26 de Duolingo, Inc. (PDF de la SEC, carpeta «Annual reports» en Drive). Insumos de Damodaran: fcffsimpleginzu.xlsx (beta y márgenes de industria y primas por país/región de enero de 2026; prima de mercado maduro de nov-2026 de 3,387 %, tomada de las fichas EPAM, ORCL y MELI y no verificada aún contra la fuente primaria). Mercado: Alpha Vantage (precio de cierre 13-nov-2026 de US$ 165,31 y Tesoro a 10 años 5,10 %), fuente secundaria. Limitaciones: 6 ejercicios más LTM (IPO en 2021), sin regresión de beta propia, I+D sin capitalizar, NOL no aplicada, sin logo, sin auditoría independiente ni aprobación personal. Estado: R2, borrador editorial no auditado; EN_PROCESO por falta de auditoría. R2 reemplaza a R1 (Base 120,29) tras la auditoría de IA del 14-nov-2026."
    }
   },
   "empresas/EPAM.json": {
@@ -3460,7 +3470,8 @@
     "Impuesto marginal 32 % (Floyd) frente a 28 % en V2 R3.",
     "Cifras reportadas tomadas del libro Floyd/R1; la SEC no fue accesible en esta sesión y no se recotejaron con los originales.",
     "Corte 6-nov-2026 (precio 1.510,00 y Treasury 4,86 %), distinto del corte 13-nov de R3 (1.491,49 y 5,15 %).",
-    "Esta revisión reemplaza a R3 en la ficha MELI; R3 (Base 1.351,48) se conserva en Drive y en el historial de Git."
+    "Esta revisión reemplaza a R3 en la ficha MELI; R3 (Base 1.351,48) se conserva en Drive y en el historial de Git.",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): la tasa libre de este expediente (4,86 %, 6-nov-2026) es 0,29 pp menor que la de EPAM y ORCL (5,15 %, 13-nov-2026). Subir en 0,29 pp el WACC inicial y el terminal bajaría el valor Base un 6,9 %. No se modificó ningún valor; actualizar la tasa libre exige una revisión nueva (R+1)."
    ],
    "documentLinks": {
     "carpetaMELI": "https://drive.google.com/drive/folders/1BTogdUbxzqjVIG21Z182-Vnf3pLxJNJJ",
@@ -4140,7 +4151,8 @@
     "Floyd: EV/FCFF (47,70x) y P/FCFE (44,60x) usan la mediana de 5 años como múltiplo de salida porque el flujo libre del LTM está deprimido por el capex de IA; el múltiplo actual es N/D o extremo.",
     "Floyd: Acciones: 7.426,195 M (portada del 10-Q) + 78 M de acciones restringidas no devengadas (todas; conservador). Participación de mercado y gobierno corporativo N/D o no analizados. Ceros por dato no separable en el libro de Múltiplos y reparto corriente/no corriente de arrendamientos financieros no disponible.",
     "Floyd: Integridad de fórmulas y comentarios del motor fcffsimpleginzu no re-verificada en las copias de MSFT. Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base y ajustado por dividendos).",
-    "ROIC terminal 26 % en el Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita)."
+    "ROIC terminal 26 % en el Optimista (WACC terminal 8,25 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita).",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): la tasa libre de este expediente (4,86 %, 6-nov-2026) es 0,29 pp menor que la de EPAM y ORCL (5,15 %, 13-nov-2026). Subir en 0,29 pp el WACC inicial y el terminal bajaría el valor Base un 6,8 %. No se modificó ningún valor; actualizar la tasa libre exige una revisión nueva (R+1)."
    ],
    "documentLinks": {
     "workbook": "https://drive.google.com/file/d/1XbCtE_0K-XmUfnd6Cj4FH4q-Nz0Ou4-A/view",
@@ -6532,7 +6544,8 @@
     "Floyd: «Otros ajustes» del flujo de caja LTM (6.540 M) sin desglosar; afecta el CFO proyectado de P/OCF y P/FCFE.",
     "Floyd: Costo de la deuda (6,10 %) y volatilidad de las opciones (40 %) son estimaciones; participación de mercado N/D; gobierno corporativo no analizado.",
     "Floyd: Integridad de fórmulas y comentarios del motor fcffsimpleginzu no re-verificada en las copias de UBER.",
-    "Floyd: Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base); el libro de Múltiplos no descuenta el valor de las opciones. EV/FCFF usa el valor de FY2025 como actual (LTM N/D); P/E es el método menos fiable (peso 5 %)."
+    "Floyd: Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base); el libro de Múltiplos no descuenta el valor de las opciones. EV/FCFF usa el valor de FY2025 como actual (LTM N/D); P/E es el método menos fiable (peso 5 %).",
+    "Hallazgo de auditoría IA (provisional, 14-nov-2026): la tasa libre de este expediente (4,86 %, 6-nov-2026) es 0,29 pp menor que la de EPAM y ORCL (5,15 %, 13-nov-2026). Subir en 0,29 pp el WACC inicial y el terminal bajaría el valor Base un 6,6 %. No se modificó ningún valor; actualizar la tasa libre exige una revisión nueva (R+1)."
    ],
    "documentLinks": {
     "workbook": "https://drive.google.com/file/d/1ILBPORM27vh0F79pXzB1YLyyji5Omv6u/view",
