@@ -162,7 +162,7 @@
      "controles": {
       "bloqueos": 0,
       "errores": 1,
-      "avisos": 0
+      "avisos": 1
      },
      "archivo": "empresas/NVDA.json"
     },
@@ -708,6 +708,13 @@
      "conservador": 105.425493925376,
      "base": 196.903012133166,
      "optimista": 244.267344687613
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.105374365051994,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -1343,6 +1350,13 @@
      "conservador": 17.0875984122013,
      "base": 30.2775698599506,
      "optimista": 37.8742053558032
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.07971149,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -1881,6 +1895,13 @@
      "conservador": 65.6898394184333,
      "base": 123.507233578253,
      "optimista": 201.333755309702
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.111028369468083,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -2591,6 +2612,13 @@
      "conservador": 127.185843436893,
      "base": 197.316639891322,
      "optimista": 276.944295296714
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.0877604272262974,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -3364,6 +3392,13 @@
      "conservador": 872.69937622208,
      "base": 2364.76308610002,
      "optimista": 3835.6595351949
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.119439921019879,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -4140,6 +4175,13 @@
      "conservador": 223.244790568959,
      "base": 462.853670319629,
      "optimista": 629.850338673182
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.107702000593577,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -4911,14 +4953,21 @@
    ],
    "libro": {
     "id": "NVDA-V2-FY26Q2FY27-R2_VALORACION.xlsx",
-    "sha256": "9931d72cd2d89deea6d8c51c1fa7a7e7921b3cb009882f4736a38fdf9739ad8a",
+    "sha256": "ee50392c1e21dfc481a1bb47767af1c9b1df7ce32c331ced0ff2d02c486231d4",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 98.5334028790459,
      "base": 196.046231784557,
      "optimista": 321.207989330598
     },
-    "url": "https://drive.google.com/file/d/1SBwu8u_NzD676CMz5ovIylnoOETErIjA/view"
+    "url": "https://drive.google.com/file/d/1SBwu8u_NzD676CMz5ovIylnoOETErIjA/view",
+    "costoCapital": {
+     "formulas": false,
+     "tasaLibre": 0.03,
+     "primaMadura": 0.0423,
+     "waccInicial": 0.113,
+     "waccTerminal": 0.0925
+    }
    },
    "controlesLibro": {
     "estados": "OK",
@@ -4930,9 +4979,14 @@
    "fictional": false,
    "revision": {
     "id": "NVDA-V2-FY26Q2FY27-R2",
-    "anterior": "NVDA-V2-FY26Q2FY27-R1",
+    "anterior": "NVDA-V2-FY26Q2FY27-R2",
     "historial": {
      "NVDA-V2-FY26Q2FY27-R1": {
+      "conservador": 98.53,
+      "base": 196.05,
+      "optimista": 321.21
+     },
+     "NVDA-V2-FY26Q2FY27-R2": {
       "conservador": 98.53,
       "base": 196.05,
       "optimista": 321.21
@@ -5003,6 +5057,7 @@
    "warnings": [
     "WACC de continuidad; falta auditoría económica independiente.",
     "R2 (15-nov-2026): corrección técnica del libro: se eliminaron valores en caché inválidos (una celda de texto guardada como número en «Stories to Numbers») que impedían abrirlo con herramientas de lectura. Valores sin cambio. El WACC (11,30 % inicial y 9,25 % terminal) sigue siendo de continuidad (valores directos, no fórmulas) y la tasa libre del libro (3,0 %) es un marcador que no entra en el WACC. Con los insumos de Floyd (beta 1,51; prima de 4,64 % derivada de su Ke de 11,34 %; diferencial de deuda 0,82 pp) y la tasa libre de 5,15 % el libro daría 101,34 / 203,80 / 335,72 y un WACC terminal de 8,54 %; no se aplica hasta documentar beta y prima propias de NVDA.",
+    "R2 (15-nov-2026): corrección técnica del libro: se eliminaron valores en caché inválidos (una celda de texto guardada como número en «Stories to Numbers») que impedían abrirlo con herramientas de lectura. Valores sin cambio. El WACC (11,30 % inicial y 9,25 % terminal) sigue siendo de continuidad (valores directos, no fórmulas) y la tasa libre del libro (3,0 %) es un marcador que no entra en el WACC. Con los insumos de Floyd (beta 1,51; prima de 4,64 % derivada de su Ke de 11,34 %; diferencial de deuda 0,82 pp) y la tasa libre de 5,15 % el libro daría 101,34 / 203,80 / 335,72 y un WACC terminal de 8,54 %; no se aplica hasta documentar beta y prima propias de NVDA.",
     "Los datos históricos no divulgados de forma homogénea se dejan vacíos.",
     "Descuento de 30 % a las participaciones privadas y dilución trimestral son aproximaciones.",
     "Modelo de I+D conserva los flujos y los impuestos del caso GAAP; no supone beneficios fiscales nuevos.",
@@ -5063,7 +5118,7 @@
     }
    },
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1sDyVpsA2YYsuBpj2eu3tcK1fpev9a2Rc/view",
+    "workbook": "https://drive.google.com/file/d/1ZnZdlRPwRHSwCZWuAuB9G4z77lH0bHZx/view",
     "annualReportsFolder": "https://drive.google.com/drive/folders/1JjiM4cLn9hHH_5qT9ETJ8v0t_xQtFDbM",
     "valuationFolder": "https://drive.google.com/drive/folders/1P9CkXCDGnZLlxBl7To8wtGqhwHNfTX-O"
    },
@@ -5263,7 +5318,7 @@
     "gobierno": "<p>Los compromisos de suministro, concentración de clientes, inversiones privadas y dilución se revisan en los capítulos financieros y de riesgos. Falta una revisión específica del gobierno corporativo y de los incentivos de la dirección con fuentes primarias; no se infiere una conclusión favorable por ausencia de información.</p>",
     "metodo": "<p>Empresa operativa valorada por FCFF Simple Ginsu de Damodaran, con tres escenarios. El MOS del 35 % se aplica solo al DCF Base. Los múltiplos son un contraste secundario.</p><p>Al precio de US$162,85 y con 24.242 millones de acciones diluidas, la capitalización indicativa es US$3,948 billones. Con la misma metodología del puente, EV operativo ≈ US$3,843 billones, EV/ventas LTM ≈12,68×, EV/EBITDA reportado ≈19,09× y EV/EBIT ≈19,45×. P/E reportado ≈20,47× y P/flujo operativo menos CAPEX ≈31,08×. El P/E incluye ganancias no operativas y requiere cuidado al comparar. Estos múltiplos describen la cotización; el DCF fija el valor intrínseco.</p>",
     "supuestos": "<h4>Conservador</h4><p>Crecimiento del año 1: 30,00 %; crecimiento anual de años 2–5: 13,00 %. Margen operativo del año 1: 59,00 %; objetivo: 34,00 % en año 10. Ventas/capital: 2,20× en años 1–5 y 1,80× en años 6–10. ROIC terminal: 12,00 %. WACC inicial: 11,30 %; terminal: 9,25 %. Crecimiento terminal: 3,00 %. Tasa marginal de impuestos: 21,00 %. Probabilidad de fracaso modelada: 0,00 %.</p><h4>Base</h4><p>Crecimiento del año 1: 42,00 %; crecimiento anual de años 2–5: 22,00 %. Margen operativo del año 1: 63,00 %; objetivo: 44,00 % en año 10. Ventas/capital: 2,70× en años 1–5 y 2,20× en años 6–10. ROIC terminal: 16,00 %. WACC inicial: 11,30 %; terminal: 9,25 %. Crecimiento terminal: 3,00 %. Tasa marginal de impuestos: 21,00 %. Probabilidad de fracaso modelada: 0,00 %.</p><h4>Optimista</h4><p>Crecimiento del año 1: 50,00 %; crecimiento anual de años 2–5: 29,00 %. Margen operativo del año 1: 65,00 %; objetivo: 51,00 % en año 10. Ventas/capital: 3,40× en años 1–5 y 2,70× en años 6–10. ROIC terminal: 19,00 %. WACC inicial: 11,30 %; terminal: 9,25 %. Crecimiento terminal: 3,00 %. Tasa marginal de impuestos: 21,00 %. Probabilidad de fracaso modelada: 0,00 %.</p><p>El margen EBIT parte de 59 % / 63 % / 65 % y converge en año 10 a 34 % / 44 % / 51 %. Menor poder de precio y mayor intensidad de infraestructura explican el conservador; reutilización de software, redes y aceleradores sostienen el base; el optimista requiere un mix premium persistente. Las cifras son márgenes GAAP con I+D y SBC. La reclasificación económica de I+D usa tres años de vida: activo de US$37.371 millones, amortización US$11.255 millones y EBIT ajustado de US$209.916 millones. La proyección concilia año a año el EBIT y la reinversión ajustados, conservando los impuestos implícitos del DCF.</p>",
-    "valoracion": "<p><strong>Revisión técnica R2 (15-nov-2026).</strong> corrección técnica del libro: se eliminaron valores en caché inválidos (una celda de texto guardada como número en «Stories to Numbers») que impedían abrirlo con herramientas de lectura. Valores sin cambio. El WACC (11,30 % inicial y 9,25 % terminal) sigue siendo de continuidad (valores directos, no fórmulas) y la tasa libre del libro (3,0 %) es un marcador que no entra en el WACC. Con los insumos de Floyd (beta 1,51; prima de 4,64 % derivada de su Ke de 11,34 %; diferencial de deuda 0,82 pp) y la tasa libre de 5,15 % el libro daría 101,34 / 203,80 / 335,72 y un WACC terminal de 8,54 %; no se aplica hasta documentar beta y prima propias de NVDA.</p><p>El motor operativo JMR V2 y el libro original Simple Ginsu concilian al centavo: conservador US$98,53, base US$196,05 y optimista US$321,21. WACC común 11,30 % inicial y 9,25 % terminal, g 3 %, impuesto efectivo LTM 16,05 % y marginal 21 %. Los WACC se conservaron como supuestos de la revisión previa. El valor terminal representa 56,9 % del valor operativo base. Con g fijo de 3 % y WACC terminal de 10,25 %, el valor cae a US$181,00 manteniendo la trayectoria explícita. La matriz 5×5 se calcula desde el motor con g de 2 % a 4 % y WACC terminal de 7,25 % a 11,25 %.</p>",
+    "valoracion": "<p><strong>Revisión técnica R2 (15-nov-2026).</strong> corrección técnica del libro: se eliminaron valores en caché inválidos (una celda de texto guardada como número en «Stories to Numbers») que impedían abrirlo con herramientas de lectura. Valores sin cambio. El WACC (11,30 % inicial y 9,25 % terminal) sigue siendo de continuidad (valores directos, no fórmulas) y la tasa libre del libro (3,0 %) es un marcador que no entra en el WACC. Con los insumos de Floyd (beta 1,51; prima de 4,64 % derivada de su Ke de 11,34 %; diferencial de deuda 0,82 pp) y la tasa libre de 5,15 % el libro daría 101,34 / 203,80 / 335,72 y un WACC terminal de 8,54 %; no se aplica hasta documentar beta y prima propias de NVDA.</p><p><strong>Revisión técnica R2 (15-nov-2026).</strong> corrección técnica del libro: se eliminaron valores en caché inválidos (una celda de texto guardada como número en «Stories to Numbers») que impedían abrirlo con herramientas de lectura. Valores sin cambio. El WACC (11,30 % inicial y 9,25 % terminal) sigue siendo de continuidad (valores directos, no fórmulas) y la tasa libre del libro (3,0 %) es un marcador que no entra en el WACC. Con los insumos de Floyd (beta 1,51; prima de 4,64 % derivada de su Ke de 11,34 %; diferencial de deuda 0,82 pp) y la tasa libre de 5,15 % el libro daría 101,34 / 203,80 / 335,72 y un WACC terminal de 8,54 %; no se aplica hasta documentar beta y prima propias de NVDA.</p><p>El motor operativo JMR V2 y el libro original Simple Ginsu concilian al centavo: conservador US$98,53, base US$196,05 y optimista US$321,21. WACC común 11,30 % inicial y 9,25 % terminal, g 3 %, impuesto efectivo LTM 16,05 % y marginal 21 %. Los WACC se conservaron como supuestos de la revisión previa. El valor terminal representa 56,9 % del valor operativo base. Con g fijo de 3 % y WACC terminal de 10,25 %, el valor cae a US$181,00 manteniendo la trayectoria explícita. La matriz 5×5 se calcula desde el motor con g de 2 % a 4 % y WACC terminal de 7,25 % a 11,25 %.</p>",
     "riesgos": "<p>En H1 FY2027 tres clientes directos representaron 16 %, 15 % y 13 % de ingresos. El 10-Q reporta compromisos de suministro de US$279.000 millones y compromisos separados de servicios de nube, arrendamientos aún sin iniciar e inversiones. Los compromisos de suministro no se equiparan a deuda; afectan el circulante y la pérdida potencial si se desacelera el volumen. Riesgos adicionales: restricciones de exportación, concentración de fabricación y memoria, riesgo de contraparte y coincidencia entre clientes e inversiones.</p>",
     "catalizadores": "<p>Vigilar ingresos secuenciales de Data Center, margen bruto GAAP, rotación de inventario, cuentas por cobrar, cancelaciones o utilización de compromisos y adopción de Rubin. La señal que más cambiaría el base sería una revisión sostenida del ritmo de crecimiento en años 2–5 junto con menor margen o mayor capital por dólar vendido.</p>",
     "fuentes": "<h4>Fuentes declaradas en el expediente</h4><ul><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581017000027/nvda-2017x10k.htm\">NVIDIA Form 10-K FY2017</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581018000010/nvda-2018x10k.htm\">NVIDIA Form 10-K FY2018</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581019000023/nvda-2019x10k.htm\">NVIDIA Form 10-K FY2019</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581020000010/nvda-2020x10k.htm\">NVIDIA Form 10-K FY2020</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581021000010/nvda-20210131.htm\">NVIDIA Form 10-K FY2021</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/nvda-20220130.htm\">NVIDIA Form 10-K FY2022</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm\">NVIDIA Form 10-K FY2023</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm\">NVIDIA Form 10-K FY2024</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm\">NVIDIA Form 10-K FY2025</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm\">NVIDIA Form 10-K FY2026</a></li><li><a href=\"https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm\">NVIDIA Form 10-Q Q2 FY2027</a></li><li><a href=\"https://stockanalysis.com/stocks/nvda/history/\">Cierre de mercado 13-nov-2026</a></li><li>Estimaciones de ingresos FY2027–FY2031; dato secundario, no auditado</li></ul><p>WACC de continuidad; falta auditoría económica independiente.</p><p>Los datos históricos no divulgados de forma homogénea se dejan vacíos.</p><p>Descuento de 30 % a las participaciones privadas y dilución trimestral son aproximaciones.</p><p>Modelo de I+D conserva los flujos y los impuestos del caso GAAP; no supone beneficios fiscales nuevos.</p><p>Floyd usa tasa libre 4,33 % (Treasury 5,10 % el 12-nov) y un precio de 198,69 el 11-nov que no concilia con el cierre de 162,85 (FMP): la brecha frente a Floyd no debe leerse como error de V2 sin verificar esos dos datos.</p><p>Contraste con Floyd (14-nov-2026): Base Floyd US$176,48 frente a V2 196,05 (+11,1 %). El motor V2 reproduce Floyd con 0,00 %; el paso que más pesa es el crecimiento (V2 42 % y 22 % frente a 28 % y 16 % de Floyd: −64,56 por acción). El consenso de analistas (ingresos FY2031 ≈ US$1,21 billones frente a US$953.000 millones del Base V2 y US$702.000 millones de Floyd) sitúa a V2 entre Floyd y el consenso, de modo que la diferencia es de supuestos y no un exceso injustificado de V2. El consenso es dato secundario y no sustituye la auditoría.</p>"
@@ -5271,7 +5326,7 @@
    "conciliacionEditorial": {
     "fecha": "2026-11-14",
     "revisionValoracion": "NVDA-V2-FY26Q2FY27-R2",
-    "revisionEditorialAnterior": "NVDA-V2-FY26Q2FY27-R1",
+    "revisionEditorialAnterior": "NVDA-V2-FY26Q2FY27-R2",
     "alcance": "Corrección de cifras vigentes, referencias y presentación; sin cambios de supuestos ni aprobación personal."
    }
   },
@@ -5772,6 +5827,13 @@
      "conservador": 35.1571953336171,
      "base": 114.899110768389,
      "optimista": 215.571868923662
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.09824996029984,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
@@ -6584,6 +6646,13 @@
      "conservador": 43.5021133530622,
      "base": 92.4361515422323,
      "optimista": 139.835267279223
+    },
+    "costoCapital": {
+     "formulas": true,
+     "tasaLibre": 0.0515,
+     "primaMadura": 0.03387,
+     "waccInicial": 0.102455704396449,
+     "waccTerminal": 0.08537
     }
    },
    "controlesLibro": {
