@@ -702,7 +702,7 @@
    ],
    "libro": {
     "id": "AAPL-V2-FY2026-R2_VALORACION.xlsx",
-    "sha256": "41102157c4fe154bf784d39c38f5e8dd34d723e7dca4f017df3b76be6905e229",
+    "sha256": "2bc43465ed699ffd075a817020155659a4201b5f00da2b3e9b5d2a3a86689f9e",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 105.425493925376,
@@ -796,6 +796,7 @@
    "warnings": [
     "R2: esta revisión usa la tasa libre y el precio del 13-nov y ya no reproduce a Floyd (tasa libre 4,86 %, precio del 6-nov). Valores V2 por acción: Conservador US$105,43, Base US$196,90, Optimista US$244,27. Revisión anterior (con insumos de Floyd): 109,02 / 209,49 / 260,33. Sin auditoría independiente ni aprobación del propietario; estado EN_PROCESO.",
     "R2: el WACC pasó de un valor pegado desde Floyd a un cálculo con fórmulas en el libro (hoja «Cost of capital worksheet»). Con los insumos de Floyd reproduce su WACC inicial dentro de 0,05 pp; WACC inicial 10,54 % y terminal 8,54 % con la tasa libre de noviembre.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "Los históricos y el puente (caja, inversiones, deuda, minoritarios, acciones) provienen del libro Floyd (hojas de estados e Input sheet); no se recotejaron con la SEC, no accesible en esta sesión.",
     "R2 (14-nov-2026): tasa libre de noviembre (Treasury a 10 años 5,15 %, 13-nov-2026) y precio del 13-nov (US$356,27) en lugar de 4,86 % y precio del 6-nov de la revisión anterior; WACC terminal 8,54 % (5,15 % + 3,387 %) y g 4,0 % (heredado de Floyd).",
     "La auditoría económica R6 de Floyd no se realizó; las salvedades de Floyd se conservan abajo.",
@@ -811,7 +812,7 @@
     "Hallazgo de auditoría IA (provisional, 14-nov-2026): el precio de mercado (US$356,27) supera el valor del escenario Optimista (US$244,27): los tres escenarios no cubren las expectativas implícitas en el precio. Sin cambio de supuestos."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1qBBhcEVoctcVERgk_L73L2b9xQjwlJI1/view",
+    "workbook": "https://drive.google.com/file/d/14C8LGWAfGiT8TF67mHYBQ9Ru3Q9oAtsb/view",
     "carpeta": "https://drive.google.com/drive/folders/1x5J9Y0ktxSlUqjwGEFnvHR3vTIUep8eT",
     "analisisFloyd": "https://docs.google.com/document/d/1CxPNSRM5GcV0UvMgxiaByM5xOQ55b1peHqMOT_c8n60/edit",
     "libroFloyd": "https://docs.google.com/spreadsheets/d/11e8teDTyST4OB0XSnSecXvti0UNkpPOCQw1mBrfPyH4/edit",
@@ -1344,7 +1345,7 @@
    ],
    "libro": {
     "id": "CMG-V2-LTM20260930-R2_VALORACION.xlsx",
-    "sha256": "a8f5463438d29cb26f9fb5b457b44641331524a3de46a76cb13504a4e049baee",
+    "sha256": "c7e7eaa96868209e323406ada6616da317e3152304196ec5d70fe8510466caf6",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 17.0875984122013,
@@ -1438,6 +1439,7 @@
    "warnings": [
     "R2: esta revisión usa la tasa libre y el precio del 13-nov y ya no reproduce a Floyd (tasa libre 4,86 %, precio del 6-nov). Valores V2 por acción: Conservador US$17,09, Base US$30,28, Optimista US$37,87. Revisión anterior (con insumos de Floyd): 17,78 / 32,37 / 40,55. Sin auditoría independiente ni aprobación del propietario; estado EN_PROCESO.",
     "R2: el WACC pasó de un valor pegado desde Floyd a un cálculo con fórmulas en el libro (hoja «Cost of capital worksheet»). Con los insumos de Floyd reproduce su WACC inicial dentro de 0,05 pp; WACC inicial 7,97 % y terminal 8,54 % con la tasa libre de noviembre.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "Los históricos y el puente (caja, inversiones, deuda, minoritarios, acciones) provienen del libro Floyd (hojas de estados e Input sheet); no se recotejaron con la SEC, no accesible en esta sesión.",
     "R2 (14-nov-2026): tasa libre de noviembre (Treasury a 10 años 5,15 %, 13-nov-2026) y precio del 13-nov (US$35,28) en lugar de 4,86 % y precio del 6-nov de la revisión anterior; WACC terminal 8,54 % (5,15 % + 3,387 %) y g 4,0 % (heredado de Floyd).",
     "La auditoría económica R6 de Floyd no se realizó; las salvedades de Floyd se conservan abajo.",
@@ -1452,7 +1454,7 @@
     "ROIC terminal 18,36 % en Base y Optimista (WACC terminal 8,54 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita)."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1jCYm2DJsw26JozJwcXDFRiXPxHLJoH2n/view",
+    "workbook": "https://drive.google.com/file/d/1WLL2Prnw2mFw5LN3NO0oURc9spDeCb9S/view",
     "carpeta": "https://drive.google.com/drive/folders/1vmpKJs3eNdbnjmi2viEgIQDcFzwgPXqC",
     "analisisFloyd": "https://docs.google.com/document/d/1jlt6v-PWeZOckqaLJWs6nClg2GyayuhQFOt-A4rCwlY/edit",
     "libroFloyd": "https://docs.google.com/spreadsheets/d/1FQy5Z-R9qiWf1oy6kVGidaqShPQFM6CZ9g1mES19HUc/edit",
@@ -2606,7 +2608,7 @@
    ],
    "libro": {
     "id": "EPAM-V2-LTM20260930-R3_VALORACION.xlsx",
-    "sha256": "a9210655efa4a22f7a6dd797416086c24cf8f4e3503bf6b2d97bf616fd4c4339",
+    "sha256": "9b5aad406bf9aeccc6996e39b098f0beadc4d376cb814400dad253409c2b22d6",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 127.185843436893,
@@ -2748,6 +2750,7 @@
    "warnings": [
     "BETA REAL · EN_PROCESO. Datos compilados en Floyd; no revalidados contra originales SEC para V2.",
     "R3 (15-nov-2026): corrección técnica del libro. El WACC inicial (8,78 %) y el terminal (8,54 %) estaban pegados como valores; ahora se calculan con fórmulas en el libro (hoja «Cost of capital worksheet» con la beta 1,0739, la prima 3,387 % y el diferencial de deuda 1,11 pp de R2; terminal = tasa libre + prima madura en la hoja de países). Los valores por acción no cambian (diferencia máxima de 0,01 por redondeo).",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "Serie incluye diez ejercicios fiscales 2016–2025 más LTM al 30-sep-2026, identificado con year=2026 solo para continuidad de la tabla (NO es FY2026).",
     "Los supuestos son una traslación preliminar desde Floyd, NO calibración independiente del modelo V2.",
     "El valor de opciones (29,824 M), 2,292 M de RSU, tratamiento de arrendamientos operativos, NOL y WACC requieren revisión documental independiente.",
@@ -2765,7 +2768,7 @@
     "valuationFolder": "https://drive.google.com/drive/folders/1Eyr3aelBSRhUdljFfKx9tAenAokEJEZZ",
     "auditFolder": "https://drive.google.com/drive/folders/1QnWZCI-_beNxIKs0EoBvrwQpVP2KqnVk",
     "originalFundamentalAnalysis": null,
-    "workbook": "https://drive.google.com/file/d/172unyoEzbMC2qQUqiFju3GWqafiCbxnf/view"
+    "workbook": "https://drive.google.com/file/d/1XYSiD2JL4ABMTwozog37A8kVp0ch-nqW/view"
    },
    "fictional": false,
    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/EPAM_logo.png",
@@ -3386,7 +3389,7 @@
    ],
    "libro": {
     "id": "MELI-V2-LTM20260930-R5_VALORACION.xlsx",
-    "sha256": "fff0990b9d579d3efb61f25a14b78cd1b37c45bd3b90240944514cbe02e70b71",
+    "sha256": "875e6c854db09912d9d0c68030107d4f710c8d5debeaf7dd16484a0fb4d96a0f",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 872.69937622208,
@@ -3561,6 +3564,7 @@
    "warnings": [
     "R2: esta revisión usa la tasa libre y el precio del 13-nov y ya no reproduce a Floyd (tasa libre 4,86 %, precio del 6-nov). Valores V2 por acción: Conservador US$872,70, Base US$2.364,76, Optimista US$3.835,66. Revisión anterior (con insumos de Floyd): 907,93 / 2.534,98 / 4.117,68. Sin auditoría independiente ni aprobación del propietario; estado EN_PROCESO.",
     "R2: el WACC pasó de un valor pegado desde Floyd a un cálculo con fórmulas en el libro (hoja «Cost of capital worksheet»). Con los insumos de Floyd reproduce su WACC inicial dentro de 0,05 pp; WACC inicial 11,94 % y terminal 8,54 % con la tasa libre de noviembre.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "La auditoría económica R6 de Floyd no se realizó y la integridad de fórmulas de su libro no fue reverificada.",
     "Excepción declarada: el fondeo del crédito (10.821) no se resta como deuda; si se restara completo el valor bajaría ≈213 por acción (sería doble conteo del costo de fondeo).",
     "Beta 0,93, costo de la deuda 6,90 % y deuda corporativa de 2.369 son estimaciones del analista Floyd, no datos.",
@@ -3575,7 +3579,7 @@
     "carpetaMELI": "https://drive.google.com/drive/folders/1BTogdUbxzqjVIG21Z182-Vnf3pLxJNJJ",
     "analisisFloydR1": "https://docs.google.com/document/d/1LslHW-GKMNM1W_LOa3FUKMvnVDlz7MsSX9qwfGNK33o/edit",
     "conciliacion": "https://drive.google.com/file/d/1H_57bnJVMUx2UQEzm6jV_IFnu3gR6G2R/view",
-    "workbook": "https://drive.google.com/file/d/12zaWHG2OQ5vvDVdXEV3n5jYwd542fxo0/view",
+    "workbook": "https://drive.google.com/file/d/16IB-IzqEaZdYdVup4fhLAg3JHBayIUNy/view",
     "valuationFolder": "https://drive.google.com/drive/folders/1lkkA8F1bAJYy0pOIcuWHcyQRCCgFu1t5"
    },
    "annualReportDocuments": [
@@ -4169,7 +4173,7 @@
    ],
    "libro": {
     "id": "MSFT-V2-LTM20260930-R2_VALORACION.xlsx",
-    "sha256": "59fd69dd920b2fc529ea7fb9f9be0f8243639c9f8a10fecf9e5a724ca3814d0a",
+    "sha256": "2deb29f9c2f9187c4672354cf55e97f0d011419920fc6e14638fc05fa920720e",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 223.244790568959,
@@ -4263,6 +4267,7 @@
    "warnings": [
     "R2: esta revisión usa la tasa libre y el precio del 13-nov y ya no reproduce a Floyd (tasa libre 4,86 %, precio del 6-nov). Valores V2 por acción: Conservador US$223,24, Base US$462,85, Optimista US$629,85. Revisión anterior (con insumos de Floyd): 232,37 / 496,04 / 675,85. Sin auditoría independiente ni aprobación del propietario; estado EN_PROCESO.",
     "R2: el WACC pasó de un valor pegado desde Floyd a un cálculo con fórmulas en el libro (hoja «Cost of capital worksheet»). Con los insumos de Floyd reproduce su WACC inicial dentro de 0,05 pp; WACC inicial 10,77 % y terminal 8,54 % con la tasa libre de noviembre.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "Los históricos y el puente (caja, inversiones, deuda, minoritarios, acciones) provienen del libro Floyd (hojas de estados e Input sheet); no se recotejaron con la SEC, no accesible en esta sesión.",
     "R2 (14-nov-2026): tasa libre de noviembre (Treasury a 10 años 5,15 %, 13-nov-2026) y precio del 13-nov (US$523,88) en lugar de 4,86 % y precio del 6-nov de la revisión anterior; WACC terminal 8,54 % (5,15 % + 3,387 %) y g 4,0 % (heredado de Floyd).",
     "La auditoría económica R6 de Floyd no se realizó; las salvedades de Floyd se conservan abajo.",
@@ -4278,7 +4283,7 @@
     "ROIC terminal 26 % en el Optimista (WACC terminal 8,54 %) supera el WACC terminal en más de 10 pp: supuesto de Floyd sin evidencia independiente en V2 (control V10 resuelto por justificación escrita)."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1q-QMCtLLrWKTknoAvLYBc2KTRSLbeyUo/view",
+    "workbook": "https://drive.google.com/file/d/15eBTVGe4kKe-xVdZkFA6Zp0PNTlZZnOx/view",
     "carpeta": "https://drive.google.com/drive/folders/1G5bAWNonzbCGclF_COHyUgyFPoGVgFQo",
     "analisisFloyd": "https://docs.google.com/document/d/1UH8C1KdvAlGCoCOLYGy20HP2GIjrQx_vZ63fHgOVoEY/edit",
     "libroFloyd": "https://docs.google.com/spreadsheets/d/1nCz65su5xCtSkFg39SN0OfavWHmkGWCfJk6hthhjVI0/edit",
@@ -4953,7 +4958,7 @@
    ],
    "libro": {
     "id": "NVDA-V2-FY26Q2FY27-R3_VALORACION.xlsx",
-    "sha256": "2d54f0750a9bd386ef14cff2a6a4d3c1ade2a96d5607499e957ff9fad1ce0644",
+    "sha256": "ef3eea36b01bc57c9f36295702f81e0d2c375348a4d96c7e36c309bde7f08857",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 105.186000497545,
@@ -5057,6 +5062,7 @@
    "warnings": [
     "WACC calculado con fórmulas en el libro (R3) con los insumos de NVDA; falta auditoría económica independiente.",
     "R3 (15-nov-2026): WACC con fórmulas y con insumos propios de NVDA (antes valores de continuidad). Insumos tomados del libro de Floyd de NVDA (industria Semiconductor, ingresos por país, calificación Aa2/AA); tasa libre 5,15 % y prima madura 3,387 % de la convención v1.3.0. WACC inicial 11,35 % y terminal 8,54 % (antes 11,30 % y 9,25 %). Valores por acción 105,19 / 212,33 / 350,35 (R2: 105,19 / 212,33 / 350,35). Pendiente: enlazar los datos de base de «Input sheet» a «JMR Estados» y verificar los ingresos por país contra el 10-K/10-Q.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "R3 (15-nov-2026): WACC con fórmulas y con insumos propios de NVDA (antes valores de continuidad). Insumos tomados del libro de Floyd de NVDA (industria Semiconductor, ingresos por país, calificación Aa2/AA); tasa libre 5,15 % y prima madura 3,387 % de la convención v1.3.0. WACC inicial 11,35 % y terminal 8,54 % (antes 11,35 % y 8,54 %). Valores por acción 105,19 / 212,33 / 350,35 (R2: 98,53 / 196,05 / 321,21). Pendiente: enlazar los datos de base de «Input sheet» a «JMR Estados» y verificar los ingresos por país contra el 10-K/10-Q.",
     "Los datos históricos no divulgados de forma homogénea se dejan vacíos.",
     "Descuento de 30 % a las participaciones privadas y dilución trimestral son aproximaciones.",
@@ -5119,7 +5125,7 @@
     "roicTerminal": "ROIC terminal del Optimista de 19 %, 10,5 pp sobre el WACC terminal de 8,54 % (con el WACC terminal anterior de 9,25 % la brecha era de 9,75 pp): supuesto del analista que exige una ventaja competitiva duradera (ecosistema CUDA, redes y escala en aceleradores). No está verificado de forma independiente; el Base (16 %) y el Conservador (12 %) no superan los 10 pp."
    },
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1wSMY_F2uCs2gozCBNCOHXm5i76VFgbOY/view",
+    "workbook": "https://drive.google.com/file/d/1x5WBoaIsPjKvBLcn_5fD-iTdi1YJDHlk/view",
     "annualReportsFolder": "https://drive.google.com/drive/folders/1JjiM4cLn9hHH_5qT9ETJ8v0t_xQtFDbM",
     "valuationFolder": "https://drive.google.com/drive/folders/1Vd-AnBd0nBL7NqYuC-JmaPeFYKD2vGg8"
    },
@@ -5822,7 +5828,7 @@
    ],
    "libro": {
     "id": "ORCL-V2-LTM20260831-R5_VALORACION.xlsx",
-    "sha256": "8b3ce162e55318d004637dce349c0b9bcd76bc36a3a63b5e46fb9354cf026e67",
+    "sha256": "eaeab42d63204ffd91597f7fd8e1c25ab0c9edbbaff7224c4924385e725c7cd2",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 35.1571953336171,
@@ -6008,13 +6014,14 @@
    "warnings": [
     "R4 sustituye a R3: tasa libre 5,15 % (Treasury 13-nov, FMP) en lugar de 4,50 % «normalizada», prima de mercado maduro 3,387 % (nov-2026, igual que MELI) en lugar de 4,23 % y base LTM del 31-ago-2026; Base US$ 114,90 frente a 96,38 de R3. Sin auditoría independiente; la aprobación de R3 no se traslada y requiere una nueva.",
     "R5 (15-nov-2026): corrección técnica del libro. El WACC inicial (9,82 %) y el terminal (8,54 %) estaban pegados como valores; ahora el inicial es una fórmula ligada a la tasa libre del libro (pesos fijos de R3 76,43 % / 23,57 %, beta 1,5372, prima 4,0704 %, diferencial 1,11 pp) y el terminal es tasa libre + prima madura 3,387 % en la hoja de países. Los valores por acción no cambian.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "El balance LTM proviene del libro Floyd, no del 10-Q (la SEC no fue accesible): los arrendamientos financieros de 7.701 M son una estimación arrastrada de FY2026 y los pesos del WACC (76,43 % / 23,57 %) y la beta (1,5372) de R3 no se actualizaron por falta de deuda de mercado a agosto.",
     "El valor terminal es 93 % del valor Base y 99,8 % en el Conservador; con g = tasa libre (5,15 %) el Base sería 130,75 y con prima madura de enero (4,23 %) bajaría a 80,22.",
     "Los supuestos operativos de R3 (crecimiento 28 %/18 %, margen 31,5 % → 29 %, ventas/capital 0,46/0,90, ROIC terminal 12,5 %) se mantienen sobre una base 6,6 % mayor: ingresos del año 1 de 91.873 M. Brecha con Floyd (Base 174,36) explicada en el informe V2_vs_Floyd (Drive).",
     "La oferta de noviembre de 2026 (86,2 M de acciones y 10.000 M en notas) no está en el libro; el informe de auditoría de IA de R3 (proforma y estrés) queda como antecedente y no se aplica a R4."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1I0UJVazHafKyDZN9BvWt1xjO3XYJSfQ4/view",
+    "workbook": "https://drive.google.com/file/d/1aewRwOmGVZ6vDiJMxb-lQ3f8bLMJ5sH3/view",
     "originalFundamentalAnalysis": "https://docs.google.com/document/d/1eNoK8Rov9m6EL-UjYN-3R7oY3Y7AcNTq7_Gs6YVi3ng/edit",
     "annualReportsFolder": "https://drive.google.com/drive/folders/15t9aVeWyOMJERF5vZBpCa7iPAorf7CTs",
     "priorWorkbooks": [
@@ -6641,7 +6648,7 @@
    ],
    "libro": {
     "id": "UBER-V2-LTM20260930-R2_VALORACION.xlsx",
-    "sha256": "ff163585a4793e827bc0583233ad48cc1cbf9f23633f2a180273d5378a85b591",
+    "sha256": "86d47e56a1229b605f3bc8d067a26704de279a46c63cdca39a3ce3875061c853",
     "motor": "fcffsimpleginzu",
     "valores": {
      "conservador": 43.5021133530622,
@@ -6734,6 +6741,7 @@
    "warnings": [
     "R2: esta revisión usa la tasa libre y el precio del 13-nov y ya no reproduce a Floyd (tasa libre 4,86 %, precio del 6-nov). Valores V2 por acción: Conservador US$43,50, Base US$92,44, Optimista US$139,84. Revisión anterior (con insumos de Floyd): 45,28 / 98,68 / 149,58. Sin auditoría independiente ni aprobación del propietario; estado EN_PROCESO.",
     "R2: el WACC pasó de un valor pegado desde Floyd a un cálculo con fórmulas en el libro (hoja «Cost of capital worksheet»). Con los insumos de Floyd reproduce su WACC inicial dentro de 0,05 pp; WACC inicial 10,25 % y terminal 8,54 % con la tasa libre de noviembre.",
+    "Corrección técnica del libro (15-nov-2026): «Input sheet»!B46 se restableció a la fórmula original de Damodaran (=B35); estaba reemplazada por un valor pegado, inactivo desde que el WACC terminal lo calcula el libro. Valores por acción sin cambio; el sha256 del libro cambió.",
     "Los históricos y el puente (caja, inversiones, deuda, minoritarios, acciones) provienen del libro Floyd (hojas de estados e Input sheet); no se recotejaron con la SEC, no accesible en esta sesión.",
     "R2 (14-nov-2026): tasa libre de noviembre (Treasury a 10 años 5,15 %, 13-nov-2026) y precio del 13-nov (US$69,69) en lugar de 4,86 % y precio del 6-nov de la revisión anterior; WACC terminal 8,54 % (5,15 % + 3,387 %) y g 4,0 % (heredado de Floyd).",
     "La auditoría económica R6 de Floyd no se realizó; las salvedades de Floyd se conservan abajo.",
@@ -6749,7 +6757,7 @@
     "Floyd: Matrices 5×5 de múltiplos derivadas de las hojas de método (precio FY+3 descontado con el Ke Base); el libro de Múltiplos no descuenta el valor de las opciones. EV/FCFF usa el valor de FY2025 como actual (LTM N/D); P/E es el método menos fiable (peso 5 %)."
    ],
    "documentLinks": {
-    "workbook": "https://drive.google.com/file/d/1UVghgDY9dtIcDIblX0DU1-ccCpQAKSnr/view",
+    "workbook": "https://drive.google.com/file/d/1QLur3TiwGopKBp7d-NQPcaGN-Z7UA3QB/view",
     "carpeta": "https://drive.google.com/drive/folders/1lQYMPGF_LN79HJsVLRNxkDHKwHfCTot-",
     "analisisFloyd": "https://docs.google.com/document/d/1rTADOh6ToqyWA598V2cCwjnpGxn84-eNZlErMQAKEB8/edit",
     "libroFloyd": "https://docs.google.com/spreadsheets/d/18eXMULWVXtBRq-TvfoEplQbINU1npHGxPk_lS3xYNT4/edit",
