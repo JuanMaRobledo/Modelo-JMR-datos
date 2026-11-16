@@ -26,7 +26,7 @@ for(const c of d.files['catalogo.json'].empresas){
   rows.push({periodo:x.periodo||x.year,precio:num(px),accionesCierre:num(shares),caja:num(cash),inversionesCorto:num(inv),deuda:num(debt),minoritarias:num(minority),cap:num(px)&&num(shares),ev:num(px)&&num(shares)&&num(cash)&&num(inv)&&num(debt)&&num(minority)});
  }
  const cnt=k=>rows.filter(x=>x[k]).length;
- reps.push({ticker:c.ticker,total:rows.length,precio:cnt('precio'),accionesCierre:cnt('accionesCierre'),capitalizacion:cnt('cap'),evCompleto:cnt('ev'),
+ reps.push({ticker:c.ticker,cik:m.cik||null,annualReportDocuments:(m.annualReportDocuments||[]).map(z=>({fy:z.fy,periodEnd:z.periodEnd})),periodos:m.financialPresentation?.periods?.map(z=>({year:z.year,periodo:z.periodo,fechaCierre:z.fechaCierre,periodEnd:z.periodEnd}))?.slice(0,12),total:rows.length,precio:cnt('precio'),accionesCierre:cnt('accionesCierre'),capitalizacion:cnt('cap'),evCompleto:cnt('ev'),
  faltantesMasReciente:rows.at(-1),sinDato:rows.filter(x=>!x.cap).map(x=>x.periodo)});
 }
 console.log('DIAGNOSTICO_TRAILING_V2='+JSON.stringify(reps));
