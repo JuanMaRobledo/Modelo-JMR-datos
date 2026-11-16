@@ -1,0 +1,19 @@
+name: Candidato de precios históricos Trailing V2
+on:
+  pull_request:
+    paths:
+      - 'scripts/enriquecer_precios_trailing_v2.mjs'
+      - '.github/workflows/precios-trailing-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  candidato:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/enriquecer_precios_trailing_v2.mjs
