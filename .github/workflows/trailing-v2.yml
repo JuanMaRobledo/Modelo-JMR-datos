@@ -16,3 +16,19 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/diagnosticar_trailing_v2.mjs
+      - name: Probar acceso a fuentes de cierre (sin modificar expedientes)
+        continue-on-error: true
+        run: |
+          node --input-type=module - <<'JS'
+          const urls=[
+            ['Yahoo', 'https://query1.finance.yahoo.com/v8/finance/chart/AAPL?period1=1751328000&period2=1752192000&interval=1d&events=splits'],
+            ['SEC listado', 'https://www.sec.gov/files/company_tickers.json'],
+            ['SEC companyfacts', 'https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json']
+          ];
+          for(const [name,url] of urls){
+            try{
+              const response=await fetch(url,{headers:{'User-Agent':'JMR-V2-financial-research https://github.com/JuanMaRobledo/Modelo-JMR-V2'},signal:AbortSignal.timeout(10000)});
+              console.log('FUENTE_TRAILING',name,response.status,response.headers.get('content-type'));
+            }catch(e){console.log('FUENTE_TRAILING',name,e.message)}
+          }
+          JS
