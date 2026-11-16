@@ -1,0 +1,29 @@
+name: Integridad de la biblioteca JMR V2
+on:
+  pull_request:
+    paths:
+      - 'jmr-v2/biblioteca.json'
+      - 'jmr-v2/biblioteca-*.json.gz'
+      - 'scripts/verificar_biblioteca_v2.mjs'
+      - '.github/workflows/biblioteca-v2.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'jmr-v2/biblioteca.json'
+      - 'jmr-v2/biblioteca-*.json.gz'
+      - 'scripts/verificar_biblioteca_v2.mjs'
+      - '.github/workflows/biblioteca-v2.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verificar-integridad-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar SHA-256, gzip, catálogo y expediente
+        run: node scripts/verificar_biblioteca_v2.mjs
