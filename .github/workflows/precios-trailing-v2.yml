@@ -4,16 +4,34 @@ on:
     paths:
       - 'scripts/enriquecer_precios_trailing_v2.mjs'
       - '.github/workflows/precios-trailing-v2.yml'
+      - 'jmr-v2/biblioteca.json'
+      - 'jmr-v2/biblioteca-*.json.gz'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   candidato:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: codex/v2-trailing-historicos-mercado-20261116
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node scripts/enriquecer_precios_trailing_v2.mjs
+      - run: node scripts/enriquecer_precios_trailing_v2.mjs --aplicar
+      - name: Comprobar biblioteca y cobertura nueva
+        run: |
+          node scripts/verificar_biblioteca_v2.mjs
+          node scripts/diagnosticar_trailing_v2.mjs
+      - name: Guardar candidato en la rama, jamás en main
+        run: |
+          git add jmr-v2/biblioteca.json jmr-v2/biblioteca-*.json.gz
+          if ! git diff --cached --quiet; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "data(v2): precios FY verificables para multiples trailing"
+            git push origin HEAD:codex/v2-trailing-historicos-mercado-20261116
+          fi
