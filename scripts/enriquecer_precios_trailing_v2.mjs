@@ -64,7 +64,13 @@ for(const [ticker,dates] of Object.entries(cierres)){
     console.log('PRECIO_VERIFICADO',ticker,year,cierre,x.date,val);
   }
 }
-if(!changed)throw Error('No hubo precios nuevos: revisar si la biblioteca ya estaba actualizada');
+if(!changed){console.log('SIN_CAMBIOS_TRAS_PUBLICACION');process.exit(0);}
+for(const ticker of Object.keys(cierres)){
+  const model=data.files['empresas/'+ticker+'.json'];
+  const fy=(model.financialPresentation?.periods||[]).filter(p=>!/^LTM/i.test(p.periodo||''));
+  const conCap=fy.filter(p=>{const sh=p.values?.sharesOutstanding??model.history?.find(h=>h.year===p.year&&!/^LTM/i.test(h.periodo||''))?.sharesOutstanding;return asNum(p.values?.stockPrice)>0&&asNum(sh)>0;});
+  console.log('MULTIPLOS_CANDIDATOS',ticker,conCap.length+'/'+fy.length,'FY con capitalizacion calculable');
+}
 console.log('RESUMEN_PRECIO_V2',changed,'celdas nuevas; DCF, acciones e históricos económicos inalterados');
 if(process.argv.includes('--aplicar')){
   const serialized=JSON.stringify(data,null,1)+'\n',sha=createHash('sha256').update(serialized).digest('hex');
