@@ -1,0 +1,19 @@
+name: Inspección AAPL JMR V2 R6 (candidato)
+on:
+  push:
+    branches: ['jmr-v2/publicar-aapl-r6-20261116']
+    paths:
+      - 'scripts/inspeccionar_aapl_r6.mjs'
+      - '.github/workflows/aapl-r6-candidato.yml'
+permissions:
+  contents: read
+jobs:
+  inspeccionar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/inspeccionar_aapl_r6.mjs
