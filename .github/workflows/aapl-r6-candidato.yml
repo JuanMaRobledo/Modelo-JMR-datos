@@ -1,0 +1,37 @@
+name: Publicación candidata AAPL R6 · JMR V2
+on:
+  push:
+    branches: ['jmr-v2/publicar-aapl-r6-20261116']
+    paths:
+      - 'scripts/publicar_aapl_r6_v2.mjs'
+      - '.github/workflows/aapl-r6-candidato.yml'
+permissions:
+  contents: write
+jobs:
+  generar-candidato:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: jmr-v2/publicar-aapl-r6-20261116
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Derivar biblioteca desde R5 y valores comprobados del libro R6
+        run: node scripts/publicar_aapl_r6_v2.mjs --aplicar
+      - name: Verificar SHA, integridad y colección completa
+        run: node scripts/verificar_biblioteca_v2.mjs
+      - name: Confirmar cambio limitado a AAPL en rama de revisión
+        run: |
+          git add jmr-v2/biblioteca.json jmr-v2/biblioteca-*.json.gz
+          git diff --cached --stat
+          if git diff --cached --quiet; then
+            echo "Sin cambios"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data(v2): AAPL R6 provisional con libro y salvedades"
+          git push origin HEAD:jmr-v2/publicar-aapl-r6-20261116
