@@ -6,6 +6,29 @@
    "schemaVersion": "jmr-multiplos-catalogo-1",
    "empresas": [
     {
+     "ticker": "NVDA",
+     "company": "NVIDIA Corporation",
+     "perfil": "alto-crecimiento",
+     "asOf": "2026-11-18",
+     "currency": "USD",
+     "precio": 155.46,
+     "valorBase": 407.376575890319,
+     "precioMOS": 264.7947743287073,
+     "brecha": 1.6204591270443776,
+     "v2Ref": null,
+     "estado": "EN_REVISION",
+     "estadoDeclarado": "EN_REVISION",
+     "visibilidadApp": "PUBLICADA_PARA_REVISION",
+     "aprobacionUsuario": null,
+     "solicitudExpresa": "2026-11-18",
+     "controles": {
+      "bloqueos": 0,
+      "errores": 0,
+      "avisos": 1
+     },
+     "archivo": "empresas/NVDA.json"
+    },
+    {
      "ticker": "ORCL",
      "company": "Oracle Corporation",
      "perfil": "operativa",
@@ -521,6 +544,310 @@
      "2026-11-14: A1 cerrado por decisión del propietario (comparables MSFT y ADBE). La valoración NO está aprobada: A2 (capex) sigue CRÍTICO y abierto."
     ]
    }
+  },
+  "empresas/NVDA.json": {
+   "schemaVersion": "jmr-multiplos-0.1",
+   "ticker": "NVDA",
+   "company": "NVIDIA Corporation",
+   "profile": "alto-crecimiento",
+   "currency": "USD",
+   "units": "millones, excepto valor/acción",
+   "asOf": "2026-11-18",
+   "estado": "EN_REVISION",
+   "revision": "NVDA-MULTIPLOS-FY27Q3-R1",
+   "contrato": {
+    "version": "1.0.0",
+    "commit": "6888c891a66a9b4329179450b53a67984f999038",
+    "motorBlob": "f356c11468ac64f0e81612c403b155ced6c2c8f0"
+   },
+   "solicitudExpresa": {
+    "fecha": "2026-11-18",
+    "texto": "Quiero que valores por JMR múltiplos NVDA y lo publiques en la app JMR múltiplos"
+   },
+   "market": {
+    "fecha": "2026-11-17",
+    "sharePrice": 155.46,
+    "shares": 24186,
+    "debt": 32371,
+    "cash": 53512,
+    "minority": 0,
+    "nonOperatingAssets": 114447,
+    "optionsValue": 0,
+    "preferred": 0,
+    "base": "LTM Q3 FY2027",
+    "nota": "Precio de cierre 17-nov; balance al 25-oct-2026. Acciones diluidas promedio del trimestre (24.186 M), aproximación conservadora hasta disponer de acciones a cierre del 10-Q, sin deducción adicional por opciones para evitar doble conteo. Caja = 29.089 + títulos de deuda negociables 24.423. Activos no operativos = títulos de capital negociables 44.219 + no negociables 65.528 + acciones restringidas a largo plazo en Otros activos ~4.700; valor contable, sin duplicación. Deuda financiera reportada; arrendamientos operativos no se suman pues EBITDA no ajusta su alquiler."
+   },
+   "history": [
+    {
+     "year": 2022,
+     "revenue": 26914,
+     "cogs": 9439,
+     "ebit": 10041,
+     "interestExpense": 236,
+     "pretaxIncome": 9941,
+     "taxExpense": 189,
+     "netIncome": 9752,
+     "operatingCF": 9108,
+     "capex": 976,
+     "da": 1174,
+     "changeNWC": 3555,
+     "cash": 21208,
+     "debt": 10946,
+     "equity": 26612,
+     "minority": 0,
+     "nonoperatingAssets": null,
+     "shares": 25060,
+     "sharePrice": 22.74,
+     "assets": 44187
+    },
+    {
+     "year": 2023,
+     "revenue": 26974,
+     "cogs": 11618,
+     "ebit": 4224,
+     "interestExpense": 262,
+     "pretaxIncome": 4181,
+     "taxExpense": -187,
+     "netIncome": 4368,
+     "operatingCF": 5641,
+     "capex": 1833,
+     "da": 1544,
+     "changeNWC": 2459,
+     "cash": 13296,
+     "debt": 10953,
+     "equity": 22101,
+     "minority": 0,
+     "nonoperatingAssets": 299,
+     "shares": 24660,
+     "sharePrice": 20.3,
+     "assets": 41182
+    },
+    {
+     "year": 2024,
+     "revenue": 60922,
+     "cogs": 16621,
+     "ebit": 32972,
+     "interestExpense": 257,
+     "pretaxIncome": 33818,
+     "taxExpense": 4058,
+     "netIncome": 29760,
+     "operatingCF": 28090,
+     "capex": 1069,
+     "da": 1508,
+     "changeNWC": 4236,
+     "cash": 25984,
+     "debt": 9709,
+     "equity": 42978,
+     "minority": 0,
+     "nonoperatingAssets": 1546,
+     "shares": 24640,
+     "sharePrice": 60.85,
+     "assets": 65728
+    },
+    {
+     "year": 2025,
+     "revenue": 130497,
+     "cogs": 32639,
+     "ebit": 81453,
+     "interestExpense": 247,
+     "pretaxIncome": 84026,
+     "taxExpense": 11146,
+     "netIncome": 72880,
+     "operatingCF": 64089,
+     "capex": 3236,
+     "da": 1864,
+     "changeNWC": 10604,
+     "cash": 43210,
+     "debt": 8463,
+     "equity": 79327,
+     "minority": 0,
+     "nonoperatingAssets": 3387,
+     "shares": 24477,
+     "sharePrice": 142.25,
+     "assets": 111601
+    },
+    {
+     "year": 2026,
+     "revenue": 215938,
+     "cogs": 62475,
+     "ebit": 130387,
+     "interestExpense": 259,
+     "pretaxIncome": 141450,
+     "taxExpense": 21383,
+     "netIncome": 120067,
+     "operatingCF": 102718,
+     "capex": 6042,
+     "da": 2843,
+     "changeNWC": 17793,
+     "cash": 49670,
+     "debt": 8468,
+     "equity": 157293,
+     "minority": 0,
+     "nonoperatingAssets": 39937,
+     "shares": 24304,
+     "sharePrice": 187.23,
+     "assets": 206803
+    }
+   ],
+   "ltm": {
+    "periodo": "LTM al 2026-10-25",
+    "fecha": "2026-10-25",
+    "fuente": "10-K FY2026 + 8-K Q3 FY2027 (17-nov), FY26 + 9M FY27 − 9M FY26",
+    "datos": {
+     "revenue": 361808,
+     "cogs": 90739,
+     "ebit": 239090,
+     "pretaxIncome": 270825,
+     "taxExpense": 44568,
+     "netIncome": 226257,
+     "operatingCF": 158863,
+     "capex": 10140,
+     "da": 4190,
+     "changeNWC": 55482
+    },
+    "metricas": {
+     "ebitda": 243280,
+     "fcff": 138312.43323179174,
+     "ventas": 361808,
+     "utilidad": 226257,
+     "ocf": 158863
+    },
+    "nota": "GAAP; impuesto efectivo LTM; reinversión = capex − D&A + ΔNWC. ΔNWC = signo inverso de los cambios en AR, inventario, prepagos/otros activos, AP, devengos y otros pasivos corrientes del flujo; excluye otros pasivos a largo plazo. No se capitaliza I+D en la referencia GAAP de múltiplos para mantener comparabilidad; no equivale al DCF ajustado."
+   },
+   "comparables": [
+    {
+     "ticker": "AMD",
+     "fuente": "StockAnalysis / S&P Global Market Intelligence, ratios TTM consultados 18-nov-2026 https://stockanalysis.com/stocks/amd/financials/ratios/",
+     "fecha": "2026-11-18",
+     "evEbitda": 74.18,
+     "evFcff": null,
+     "evVentas": 18.45,
+     "pe": 109.11,
+     "pOcf": 91.33
+    },
+    {
+     "ticker": "AVGO",
+     "fuente": "StockAnalysis / S&P Global Market Intelligence, ratios TTM consultados 18-nov-2026 https://stockanalysis.com/stocks/avgo/financials/ratios/",
+     "fecha": "2026-11-18",
+     "evEbitda": 31.88,
+     "evFcff": null,
+     "evVentas": 19.07,
+     "pe": 43.6,
+     "pOcf": 40.11
+    },
+    {
+     "ticker": "TSM",
+     "fuente": "StockAnalysis / S&P Global Market Intelligence, ratios TTM consultados 18-nov-2026 https://stockanalysis.com/stocks/tsm/financials/ratios/",
+     "fecha": "2026-11-18",
+     "evEbitda": 14.37,
+     "evFcff": null,
+     "evVentas": null,
+     "pe": 24.6,
+     "pOcf": 18.01
+    }
+   ],
+   "pesos": {
+    "EV/EBITDA": 0.4,
+    "EV/FCFF": 0.25,
+    "P/E": 0.25,
+    "P/OCF": 0.1
+   },
+   "justificacionPesos": "EV/EBITDA 40% por rentabilidad operativa y neutralidad financiera; EV/FCFF 25% por reinversión y capital circulante, con referencias exclusivamente propias (EV/FCF comercial no equivale a FCFF JMR); P/E 25% por utilidades positivas y comparabilidad, con cautela sobre ganancias de inversiones; P/OCF 10% porque ignora capex y SBC. EV/Ventas excluido: los márgenes son muy distintos entre pares; no es necesario en una empresa rentable.",
+   "escenarios": {
+    "conservador": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    },
+    "base": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    },
+    "optimista": {
+     "crecimientoMetrica": 0,
+     "multiplos": {},
+     "justificacion": {}
+    }
+   },
+   "analysis": {
+    "resumen": "Valoración relativa con LTM al 25-oct-2026: conservador US$347.90, base US$407.38, optimista US$563.73 y MOS 35% US$264.79. Precio de referencia US$155,46 al 17-nov. No es DCF ni precio objetivo intrínseco.",
+    "calidad": "Ingresos LTM US$361808 M; EBIT US$239090 M, EBITDA US$243280 M, FCFF JMR US$138312.43 M, OCF US$158863 M, utilidad GAAP US$226257 M. Q3 FY27 ingresos +103% interanual; CUDA, ecosistema e integración hardware/software aportan diferenciación. Comparables AMD (competencia aceleradores), AVGO (ASIC/redes), TSM (fabricación con distinta intensidad de capital).",
+    "riesgos": "El LTM incorpora márgenes extraordinarios del auge IA; la mediana histórica no necesariamente es sostenible. AMD tiene P/E elevado por menor margen y amortización; AVGO incluye software y TSM es foundry. Compromisos de suministro, concentración en grandes nubes, restricciones a China, transición directiva, garantías y cartera de participaciones estratégicas aumentan riesgo. Las ganancias de valores inflan el P/E LTM. El motor actual muestra múltiplos actuales calculados sobre FY26 aunque la valoración utiliza métricas LTM; no confundir ambas bases.",
+    "conclusion": "La brecha relativa de 162.05% refleja expansión del beneficio y contracción bursátil, pero extrapolar el múltiplo histórico a beneficios récord puede producir una sobrevaloración considerable. Usar como contraste y no promediar con V2. La referencia base aplica mediana sin prima manual, crecimiento adicional 0%. Valor de revisión, no auditoría ni recomendación."
+   },
+   "sources": [
+    {
+     "documento": "NVIDIA Form 10-K FY2026",
+     "periodo": "FY2026",
+     "pagina": "51,53,55 y notas 7–9",
+     "moneda": "USD",
+     "unidades": "millones excepto precios",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+    },
+    {
+     "documento": "NVIDIA Form 10-K FY2024",
+     "periodo": "FY2024",
+     "pagina": "Estados consolidados, nota inversiones y componentes del balance",
+     "moneda": "USD",
+     "unidades": "millones excepto precios",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128.htm"
+    },
+    {
+     "documento": "NVIDIA Form 10-K FY2023",
+     "periodo": "FY2023",
+     "pagina": "Balance FY22/FY23, nota inversiones",
+     "moneda": "USD",
+     "unidades": "millones excepto precios",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581023000017/nvda-20230129.htm"
+    },
+    {
+     "documento": "8-K comunicado Q3 FY27, estados y reconciliación",
+     "periodo": "9M FY27 y FY26",
+     "pagina": "Estados consolidados condensados",
+     "moneda": "USD",
+     "unidades": "millones",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+    },
+    {
+     "documento": "8-K supplemental, balance y títulos restringidos",
+     "periodo": "2026-10-25",
+     "pagina": "2,3,5–6",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/supplementalfinancialinfor.htm"
+    },
+    {
+     "documento": "Precios propios de fin de ejercicio ajustados por split, S&P Global",
+     "periodo": "FY22–FY26 y 17-nov-26",
+     "pagina": "Last Close Price",
+     "url": "https://stockanalysis.com/stocks/nvda/financials/ratios/"
+    }
+   ],
+   "asuntosPorRevisar": [
+    {
+     "id": "NVDA-M01",
+     "severidad": "ALTA",
+     "estado": "ABIERTO",
+     "asunto": "Los percentiles propios incluyen un régimen anterior de múltiplos altos y FY23 deprimido; no son estimación de valor intrínseco."
+    },
+    {
+     "id": "NVDA-M02",
+     "severidad": "MEDIA",
+     "estado": "ABIERTO",
+     "asunto": "Pendiente contrastar acciones de cierre Q3 con 10-Q, y conciliar libro Excel M13; se publica cálculo verificable del motor."
+    },
+    {
+     "id": "NVDA-M03",
+     "severidad": "ALTA",
+     "estado": "ABIERTO",
+     "asunto": "Ganancias de inversiones inflan utilidad GAAP LTM; P/E se conserva comparable con históricos GAAP. EV/FCFF sin pares por diferencia definicional."
+    },
+    {
+     "id": "NVDA-M04",
+     "severidad": "MEDIA",
+     "estado": "ABIERTO",
+     "asunto": "Cinco ejercicios completos (contrato mínimo 3); FY22 activo no operativo menor no verificado se conserva N/D; ampliar históricos y verificar ajustes de activos FY25, I+D y arrendamientos antes de auditoría independiente."
+    }
+   ]
   }
  }
 }
