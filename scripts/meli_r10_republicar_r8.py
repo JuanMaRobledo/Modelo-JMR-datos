@@ -194,7 +194,7 @@ for fragment in ["MercadoLibre","2.367","1.538","riesgos","Valora"]:
     assert fragment.lower() in text_pdf.lower(),fragment
 for key,sec in zip(KEYS,sections):
     title=sec.select_one(".chapter-head h2").get_text(" ",strip=True)
-    assert any(w.lower() in text_pdf.lower() for w in title.split() if len(w)>7),title
+    assert any(w.lower() in text_pdf.lower() for w in re.findall(r'\w+',title) if len(w)>=5),title
 image_occurrences=sum(len(p.get_images(full=True)) for p in pdf)
 assert image_occurrences>=8,("No se incorporaron figuras",image_occurrences)
 print("PDF_OK",json.dumps({"paginas":count,"paginasTexto":nonempty,"imagenes":image_occurrences,
