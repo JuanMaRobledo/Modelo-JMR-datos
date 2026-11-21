@@ -1,10 +1,11 @@
 name: MELI R10 · restauración editorial R8 · construir y verificar publicación
 on:
   push:
-    branches: [editorial/meli-r10-integrar-r8-20261121]
+    branches: [main, editorial/meli-r10-integrar-r8-20261121]
     paths:
       - '.github/workflows/meli-r10-restauracion-r8.yml'
       - 'scripts/meli_r10_republicar_r8.py'
+      - 'jmr-v2/fuentes-editoriales/MELI-R10-20261121.html'
   workflow_dispatch:
   pull_request:
     branches: [main]
@@ -23,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: editorial/meli-r10-integrar-r8-20261121
+          ref: ${{ github.ref_name }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -46,5 +47,5 @@ jobs:
           git diff --cached --stat
           git diff --cached --quiet && { echo "SIN_CAMBIOS"; exit 0; }
           git commit -m "data(v2): publicar restauración R8 de MELI R10, 14 capítulos y PDF"
-          git push origin HEAD:editorial/meli-r10-integrar-r8-20261121
+          git push origin HEAD:${{ github.ref_name }}
           echo "RAMA_ACTUALIZADA_CON_VERIFICACION"
