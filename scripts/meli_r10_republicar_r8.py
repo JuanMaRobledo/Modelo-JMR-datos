@@ -33,8 +33,9 @@ assert doc["revision"] == REVISION
 assert all(abs(base_model["libro"]["valores"][k] - expected) < .02 for k,expected in VALUES.items())
 assert abs(base_model["libro"]["valores"]["base"] * .65 - 1538.9344647956927) < .02
 assert "INFORME" in PDF_REL
-if doc.get("editorialVersion")=="R10-ED2-20261121":
-    assert PDF_PATH.is_file(), "La revisión editorial ya figura en biblioteca pero falta PDF"
+already=doc.get("editorialVersion")=="R10-ED2-20261121"
+if already and doc.get("renderVersion")=="fit-figures-v2":
+    assert PDF_PATH.is_file(), "La revisión editorial existe pero falta PDF"
     assert hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()==base_model["informe"]["pdf"]["sha256"]
     assert doc.get("schemaVersion")=="jmr-v2-analisis-3"
     assert len(doc.get("blocks",{}))==14
@@ -53,112 +54,117 @@ soup = BeautifulSoup(SOURCE.read_text(encoding="utf-8"), "html.parser")
 sections = soup.select("section.chapter")
 assert len(sections)==14, "Fuente editorial no contiene 14 capítulos"
 assert [s.get("id") for s in sections] == [f"cap-{i}" for i in range(1,15)]
-blocks={}
-for key, section in zip(KEYS, sections):
-    fragment=BeautifulSoup(str(section),"html.parser").select_one("section.chapter")
-    heading=fragment.select_one(".chapter-head")
-    assert heading and heading.h2 and heading.h2.get_text(strip=True)
-    heading.decompose()
-    for x in fragment.select("aside.reading"):
-        x.name="blockquote"
-        x.attrs={}
-    for x in fragment.select(".key-label"):
-        x.attrs={}
-    for x in fragment.select(".table-scroll"):
-        x.unwrap()
-    for el in fragment.find_all(True):
-        if el.has_attr("class"):el.attrs.pop("class")
-        if el.has_attr("id"):el.attrs.pop("id")
-        if el.has_attr("loading"):el.attrs.pop("loading")
-    html="".join(str(x) for x in fragment.contents).strip()
-    assert len(BeautifulSoup(html,"html.parser").get_text(" ",strip=True))>500,key
-    blocks[key]=html
+if not already:
+    blocks={}
+    for key, section in zip(KEYS, sections):
+        fragment=BeautifulSoup(str(section),"html.parser").select_one("section.chapter")
+        heading=fragment.select_one(".chapter-head")
+        assert heading and heading.h2 and heading.h2.get_text(strip=True)
+        heading.decompose()
+        for x in fragment.select("aside.reading"):
+            x.name="blockquote"
+            x.attrs={}
+        for x in fragment.select(".key-label"):
+            x.attrs={}
+        for x in fragment.select(".table-scroll"):
+            x.unwrap()
+        for el in fragment.find_all(True):
+            if el.has_attr("class"):el.attrs.pop("class")
+            if el.has_attr("id"):el.attrs.pop("id")
+            if el.has_attr("loading"):el.attrs.pop("loading")
+        html="".join(str(x) for x in fragment.contents).strip()
+        assert len(BeautifulSoup(html,"html.parser").get_text(" ",strip=True))>500,key
+        blocks[key]=html
 
-periods=base_model.get("financialPresentation",{}).get("periods",[])
-assert len(periods)>=8, "No hay históricos suficientes para informe"
-statements=[
-  ("Estado de resultados — importes absolutos",
-   [("Ingresos","revenue"),("Costo de ingresos","cogs"),("EBIT operativo","operatingProfit"),("Utilidad neta común","netIncomeCommon")]),
-  ("Situación financiera — importes absolutos",
-   [("Activos totales","assets"),("Pasivos totales","liabilities"),("Patrimonio","equity"),("Caja","cash"),("Deuda total reportada","totalDebt")]),
-  ("Flujo de efectivo — importes absolutos",
-   [("Flujo operativo","operatingCF"),("CAPEX","capex"),("Flujo de financiación","financingCF"),("Depreciación y amortización","da")])
-]
-def historic_tables(builder):
-    h3=builder.new_tag("h3");h3.string="Anexo histórico R10 — los tres estados"
-    desc=builder.new_tag("p");desc.string=("Importes absolutos en USD millones, años fiscales (FY) y LTM separados. "
-                  "Fuente: cuadro A-1.2 del expediente vigente; N/D es dato no disponible, nunca cero.")
-    tags=[h3,desc]
-    for title, cols in statements:
-        h4=builder.new_tag("h4");h4.string=title
-        table=builder.new_tag("table")
-        thead=builder.new_tag("thead");row=builder.new_tag("tr")
-        for column in ["Período"]+[name for name,key in cols]:
-            th=builder.new_tag("th");th.string=column;row.append(th)
-        thead.append(row);table.append(thead)
-        tbody=builder.new_tag("tbody")
-        for item in periods:
-            yr=item.get("year")
-            period=item.get("periodo") or ("LTM sep-2026" if yr==2026 else f"FY{yr}")
-            tr=builder.new_tag("tr")
-            values=item.get("values") or {}
-            colsout=[str(period)]
-            for name,key in cols:
-                v=values.get(key)
-                if isinstance(v,(float,int)) and not isinstance(v,bool) and abs(v)<1e6:
-                    colsout.append(fmt(v))
-                else:
-                    colsout.append("N/D")
-            for val in colsout:
-                td=builder.new_tag("td");td.string=val;tr.append(td)
-            tbody.append(tr)
-        table.append(tbody)
-        wrapper=builder.new_tag("div");wrapper["class"]="table-scroll";wrapper.append(table)
-        tags.extend([h4,wrapper])
-    return tags
-# Mantener íntegro el análisis R10 publicado: añadir la lectura R8, no reemplazar evidencia.
-original_blocks=doc["blocks"].copy()
-original_lengths={k:len(BeautifulSoup(str(v),"html.parser").get_text(" ",strip=True))
-                  for k,v in original_blocks.items()}
-for key in KEYS:
-    old=BeautifulSoup(str(original_blocks.get(key,"")),"html.parser")
-    current=BeautifulSoup(blocks[key],"html.parser")
-    present={im.get("src") for im in current.find_all("img") if im.get("src")}
-    for pic in old.find_all("img"):
-        if pic.get("src") in present:
-            ancestor=pic.find_parent("figure")
-            if ancestor:ancestor.decompose()
-            else:pic.decompose()
-    evidence=old.get_text(" ",strip=True)
-    if evidence and len(evidence)>150:
-        addition='<h3>Detalle documental y evidencia de R10</h3>'+''.join(str(x) for x in old.contents)
-        blocks[key]=blocks[key]+'\n'+addition
-# Incorporar estados A-1.2 si el capítulo existente no muestra al menos tres tablas.
-orig_quality=BeautifulSoup(str(original_blocks.get("calidad","")),"html.parser")
-if len(orig_quality.find_all("table"))<3:
-    q=BeautifulSoup(blocks["calidad"],"html.parser")
-    for tag in historic_tables(q):q.append(tag)
-    blocks["calidad"]="".join(str(x) for x in q.contents)
-assert all(len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True)) >= original_lengths.get(k,0)
-           for k in KEYS), "Se perdió contenido narrativo original R10"
-print("SIN_REGRESION_NARRATIVA",json.dumps({
- k:{"antes":original_lengths.get(k,0),"despues":len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True))}
- for k in KEYS},ensure_ascii=False))
+    periods=base_model.get("financialPresentation",{}).get("periods",[])
+    assert len(periods)>=8, "No hay históricos suficientes para informe"
+    statements=[
+      ("Estado de resultados — importes absolutos",
+       [("Ingresos","revenue"),("Costo de ingresos","cogs"),("EBIT operativo","operatingProfit"),("Utilidad neta común","netIncomeCommon")]),
+      ("Situación financiera — importes absolutos",
+       [("Activos totales","assets"),("Pasivos totales","liabilities"),("Patrimonio","equity"),("Caja","cash"),("Deuda total reportada","totalDebt")]),
+      ("Flujo de efectivo — importes absolutos",
+       [("Flujo operativo","operatingCF"),("CAPEX","capex"),("Flujo de financiación","financingCF"),("Depreciación y amortización","da")])
+    ]
+    def historic_tables(builder):
+        h3=builder.new_tag("h3");h3.string="Anexo histórico R10 — los tres estados"
+        desc=builder.new_tag("p");desc.string=("Importes absolutos en USD millones, años fiscales (FY) y LTM separados. "
+                      "Fuente: cuadro A-1.2 del expediente vigente; N/D es dato no disponible, nunca cero.")
+        tags=[h3,desc]
+        for title, cols in statements:
+            h4=builder.new_tag("h4");h4.string=title
+            table=builder.new_tag("table")
+            thead=builder.new_tag("thead");row=builder.new_tag("tr")
+            for column in ["Período"]+[name for name,key in cols]:
+                th=builder.new_tag("th");th.string=column;row.append(th)
+            thead.append(row);table.append(thead)
+            tbody=builder.new_tag("tbody")
+            for item in periods:
+                yr=item.get("year")
+                period=item.get("periodo") or ("LTM sep-2026" if yr==2026 else f"FY{yr}")
+                tr=builder.new_tag("tr")
+                values=item.get("values") or {}
+                colsout=[str(period)]
+                for name,key in cols:
+                    v=values.get(key)
+                    if isinstance(v,(float,int)) and not isinstance(v,bool) and abs(v)<1e6:
+                        colsout.append(fmt(v))
+                    else:
+                        colsout.append("N/D")
+                for val in colsout:
+                    td=builder.new_tag("td");td.string=val;tr.append(td)
+                tbody.append(tr)
+            table.append(tbody)
+            wrapper=builder.new_tag("div");wrapper["class"]="table-scroll";wrapper.append(table)
+            tags.extend([h4,wrapper])
+        return tags
+    # Mantener íntegro el análisis R10 publicado: añadir la lectura R8, no reemplazar evidencia.
+    original_blocks=doc["blocks"].copy()
+    original_lengths={k:len(BeautifulSoup(str(v),"html.parser").get_text(" ",strip=True))
+                      for k,v in original_blocks.items()}
+    for key in KEYS:
+        old=BeautifulSoup(str(original_blocks.get(key,"")),"html.parser")
+        current=BeautifulSoup(blocks[key],"html.parser")
+        present={im.get("src") for im in current.find_all("img") if im.get("src")}
+        for pic in old.find_all("img"):
+            if pic.get("src") in present:
+                ancestor=pic.find_parent("figure")
+                if ancestor:ancestor.decompose()
+                else:pic.decompose()
+        evidence=old.get_text(" ",strip=True)
+        if evidence and len(evidence)>150:
+            addition='<h3>Detalle documental y evidencia de R10</h3>'+''.join(str(x) for x in old.contents)
+            blocks[key]=blocks[key]+'\n'+addition
+    # Incorporar estados A-1.2 si el capítulo existente no muestra al menos tres tablas.
+    orig_quality=BeautifulSoup(str(original_blocks.get("calidad","")),"html.parser")
+    if len(orig_quality.find_all("table"))<3:
+        q=BeautifulSoup(blocks["calidad"],"html.parser")
+        for tag in historic_tables(q):q.append(tag)
+        blocks["calidad"]="".join(str(x) for x in q.contents)
+    assert all(len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True)) >= original_lengths.get(k,0)
+               for k in KEYS), "Se perdió contenido narrativo original R10"
+    print("SIN_REGRESION_NARRATIVA",json.dumps({
+     k:{"antes":original_lengths.get(k,0),"despues":len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True))}
+     for k in KEYS},ensure_ascii=False))
 
-# El modelo económico, su revisión, el estado de auditoría y el resto del catálogo no cambian.
-doc["schemaVersion"]="jmr-v2-analisis-3"
-doc["blocks"]=blocks
-doc["revision"]=REVISION
-doc["editorialVersion"]="R10-ED2-20261121"
-doc["editorialReference"]="MELI R8 (profundidad) y NVIDIA R6 (estilo), con cifras vigentes MELI R10"
-doc["informePdf"]=PDF_REL
-doc["pdf"]=PDF_REL
-if isinstance(doc.get("source"),dict):
-    doc["source"]["editorial"]="Restauración narrativa R8 y diseño editorial, 21-nov-2026; cifras y motor de R10 intactos"
-doc["status"]=doc.get("status") if doc.get("status") not in (None,"") else "EN_REVISION"
-assert set(blocks)==set(KEYS)
-print("CAPITULOS",json.dumps({k:len(BeautifulSoup(v,"html.parser").get_text(" ",strip=True)) for k,v in blocks.items()},ensure_ascii=False))
-print("TABLAS",sum(v.count("<table") for v in blocks.values()),"FIGURAS",sum(v.count("<figure") for v in blocks.values()))
+    # El modelo económico, su revisión, el estado de auditoría y el resto del catálogo no cambian.
+    doc["schemaVersion"]="jmr-v2-analisis-3"
+    doc["blocks"]=blocks
+    doc["revision"]=REVISION
+    doc["editorialVersion"]="R10-ED2-20261121"
+    doc["editorialReference"]="MELI R8 (profundidad) y NVIDIA R6 (estilo), con cifras vigentes MELI R10"
+    doc["informePdf"]=PDF_REL
+    doc["pdf"]=PDF_REL
+    if isinstance(doc.get("source"),dict):
+        doc["source"]["editorial"]="Restauración narrativa R8 y diseño editorial, 21-nov-2026; cifras y motor de R10 intactos"
+    doc["status"]=doc.get("status") if doc.get("status") not in (None,"") else "EN_REVISION"
+    assert set(blocks)==set(KEYS)
+    print("CAPITULOS",json.dumps({k:len(BeautifulSoup(v,"html.parser").get_text(" ",strip=True)) for k,v in blocks.items()},ensure_ascii=False))
+    print("TABLAS",sum(v.count("<table") for v in blocks.values()),"FIGURAS",sum(v.count("<figure") for v in blocks.values()))
+
+else:
+    blocks=doc["blocks"]
+    print("RENDER_RECONSTRUCCION_CONSERVADA",len(blocks),sum(v.count("<figure") for v in blocks.values()))
 
 # En el PDF se usan las mismas tablas que en la web. La composición conserva la portada
 # y la presentación R8/R10, eliminando instrucciones internas de borrador.
@@ -173,6 +179,13 @@ for index,key in enumerate(KEYS,1):
     target.append(header)
     target.append(BeautifulSoup(blocks[key],"html.parser"))
 page=str(pdfsoup)
+page=page.replace("</style>", """section.chapter figure{display:block;max-width:100%!important;overflow:visible!important;break-inside:avoid;margin:12pt 0!important}
+section.chapter figure img,section.chapter img{max-width:100%!important;width:100%!important;height:auto!important;object-fit:contain!important}
+@media print{section.chapter figure img{max-width:100%!important;width:100%!important;height:auto!important;object-fit:contain!important}
+section.chapter table{max-width:100%!important;font-size:7.25pt!important;table-layout:auto!important}
+section.chapter .table-scroll{overflow:visible!important}
+section.chapter figure figcaption{font-size:7pt!important;line-height:1.3!important}}
+</style>""")
 page=page.replace("Borrador editorial sobre R10 — no publicado ni auditado", "INFORME FUNDAMENTAL R10 · EN REVISIÓN ECONÓMICA")
 page=page.replace("Borrador editorial / No publicado en aplicación","INFORME R10 · EN REVISIÓN ECONÓMICA")
 page=page.replace("Este HTML es una vista previa editorial de la reconstrucción R8 + R10. No modifica ni reemplaza la publicación vigente de la app. Los valores proceden de la R10 y permanecen sujetos a auditoría económica.",
@@ -202,12 +215,20 @@ for fragment in ["MercadoLibre","2.367","1.538","riesgos","Valora"]:
 for key,sec in zip(KEYS,sections):
     title=sec.select_one(".chapter-head h2").get_text(" ",strip=True)
     assert any(w.lower() in text_pdf.lower() for w in re.findall(r'\w+',title) if len(w)>=5),title
-image_occurrences=sum(len(p.get_images(full=True)) for p in pdf)
+image_occurrences=sum(displayed_images)
 assert image_occurrences>=8,("No se incorporaron figuras",image_occurrences)
+overflow_images=[]
+for i,page_obj in enumerate(pdf):
+    for im in page_obj.get_image_info():
+        x0,y0,x1,y1=im.get("bbox",(0,0,0,0))
+        if x0 < -0.5 or x1 > page_obj.rect.width + 0.5:
+            overflow_images.append((i+1,round(x0,1),round(x1,1),round(page_obj.rect.width,1)))
+assert not overflow_images,("Gráficas recortadas horizontalmente",overflow_images[:12])
 print("PDF_OK",json.dumps({"paginas":count,"paginasTexto":nonempty,"imagenes":image_occurrences,
    "bytes":PDF_PATH.stat().st_size,"sha256":hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()},ensure_ascii=False))
 pdf.close()
 
+doc["renderVersion"]="fit-figures-v2"
 base_model["informe"]["pdf"]["ruta"]=PDF_REL
 base_model["informe"]["pdf"]["sha256"]=hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()
 base_model["informe"]["paginas"]=count
