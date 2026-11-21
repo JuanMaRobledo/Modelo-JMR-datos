@@ -124,6 +124,38 @@ def prepare(repo,staging):
 '''
     d["blocks"]["supuestos"] += '<figure><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-trayectorias.png" alt="MELI R10: trayectoria de ingresos y margen operativo Base"/><figcaption>Proyección R10 Base calculada a partir del libro oficial; cifras USD millones y porcentajes.</figcaption></figure>'
     d["blocks"]["valoracion"] += '<figure><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-valor-precio.png" alt="MELI R10: valor por escenario, MOS y precio de referencia"/><figcaption>Valores recalculados por el mismo motor, sin auditoría independiente.</figcaption></figure><figure><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-puente.png" alt="Puente de valor operativo a patrimonio, MELI R10"/><figcaption>USD millones; el fondeo Mercado Pago requiere auditoría.</figcaption></figure><figure><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-sens-wacc-g.png" alt="Sensibilidad R10 WACC y g terminal"/><figcaption>Sensibilidad 5×5 calculada por el motor V2; valor por acción USD.</figcaption></figure>'
+    # Cuadros históricos auténticos del A-1.2/financialPresentation:
+    # evita un PDF que se limita a describir los estados sin presentarlos.
+    import html as html_escape
+    periods=m.get("financialPresentation",{}).get("periods",[])
+    if len(periods)<3:raise ValueError("No hay períodos suficientes para presentar los tres cuadros")
+    specs=[
+      ("Estado de resultados",[
+        ("Ingresos", "revenue"),("Costo de ingresos", "cogs"),
+        ("EBIT operativo", "operatingProfit"),("Utilidad neta", "netIncomeCommon")]),
+      ("Balance general",[
+        ("Activos", "assets"),("Pasivos", "liabilities"),
+        ("Patrimonio", "equity"),("Caja", "cash"),("Deuda total reportada", "totalDebt")]),
+      ("Estado de flujos de efectivo",[
+        ("Flujo operativo", "operatingCF"),("Capex", "capex"),
+        ("Flujo de financiación", "financingCF"),("Depreciación y amortización", "da")])
+    ]
+    tables=['<h3>Cuadros históricos oficiales · FY y LTM separados</h3><p>Importes absolutos, USD millones. Fuente: estados A-1.2 del expediente y 10-K/10-Q de MercadoLibre. N/D significa no disponible, no cero.</p>']
+    for title,cols in specs:
+        tables.append('<h4>'+html_escape.escape(title)+'</h4><table><thead><tr><th>Período</th>'+''.join('<th>'+html_escape.escape(label)+'</th>' for label,_ in cols)+'</tr></thead><tbody>')
+        for item in periods:
+            year=item.get("year"); period=item.get("periodo") or (("LTM 30-sep-2026" if year==2026 else "FY"+str(year)))
+            values=item.get("values") or {}
+            row=['<tr><td>'+html_escape.escape(str(period))+'</td>']
+            for label,key in cols:
+                value=values.get(key)
+                cell=("N/D" if value is None or not isinstance(value,(int,float)) else f"{value:,.1f}")
+                row.append('<td>'+cell+'</td>')
+            row.append('</tr>');tables.append(''.join(row))
+        tables.append('</tbody></table>')
+    chapter="calidad" if "calidad" in d["blocks"] else ("finanzas" if "finanzas" in d["blocks"] else None)
+    if not chapter:raise ValueError("No hay capítulo de calidad/finanzas para incluir los tres estados históricos")
+    d["blocks"][chapter]+='\n'+''.join(tables)
     # Sincronizar cabeceras de los capítulos y las referencias a imágenes de valoración.
     for key,html in d["blocks"].items():
         if key in ("supuestos","valoracion"): continue
