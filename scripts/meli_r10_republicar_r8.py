@@ -168,7 +168,6 @@ pdf.close()
 base_model["informe"]["pdf"]["ruta"]=PDF_REL
 base_model["informe"]["pdf"]["sha256"]=hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()
 base_model["informe"]["paginas"]=count
-base_model["informe"]["html"]="MELI_R10_VISTA_PREVIA_EDITORIAL_R8.html"
 base_model["cierreEditorial"]={
     "completo":False, "revision":REVISION, "contratoVersion":"1.5.4",
     "pendientes":["La auditoría económica de Mercado Pago, arrendamientos y WACC sigue abierta; no existe aprobación personal"],
@@ -191,10 +190,7 @@ manifest["sha256"]=sha
 manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
 assert hashlib.sha256(gzip.decompress((DIR/new_name).read_bytes())).hexdigest()==sha
 assert set(lib["files"])==set(old_other)|{"analisis/MELI.json","empresas/MELI.json","catalogo.json"}
-# Limpiar archivos gzip anteriores solo dentro de la rama antes de fusionar; git retendrá el historial.
-for old in DIR.glob("biblioteca-*.json.gz"):
-    if old.name != new_name:
-        old.unlink()
+# Conservar las bibliotecas históricas y sus respaldos: solo la nueva será activa.
 print("PUBLICACION_PREPARADA",json.dumps({
  "hash":sha,"archive":new_name,"pdf":PDF_REL,"paginas":count,
  "otrosArchivosIguales":len(old_other),"valorBase":base_model["libro"]["valores"]["base"],
