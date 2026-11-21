@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<title>Nu Holdings Ltd. (NU) · Análisis fundamental · Modelo JMR V2</title>
+<style>
+
+:root{--blue:#5b8baa;--navy:#1c344a;--ink:#1e2830;--pale:#a8c3d3;--sand:#c5a383;--muted:#7b868f;--wash:#f1f5f7}
+@page{size:A4;margin:16mm 15mm 16mm;@bottom-left{content:"Modelo JMR V2 · {{TICKER}} · {{ESTADO}}";font:6.5pt "Liberation Sans",Arial,sans-serif;color:#555}@bottom-right{content:counter(page);font:7pt "Liberation Sans",Arial,sans-serif;color:#555}}
+@page cover{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+*{box-sizing:border-box}
+body{margin:0;background:white;color:var(--ink);font:10pt/1.43 "Liberation Serif",Georgia,serif}
+p{margin:0 0 7.5pt;orphans:3;widows:3}
+h1,h2,h3,h4{break-after:avoid}
+.cover{page:cover;break-after:page;height:297mm;min-height:297mm;background:var(--blue);color:white;display:flex;flex-direction:column;justify-content:space-between;padding:29mm 22mm 21mm}
+.cover .brand{font:700 10pt/1.45 "Liberation Sans",Arial,sans-serif;letter-spacing:1px}
+.cover .brand small{display:block;font:400 8pt/1.4 "Liberation Sans",Arial,sans-serif;letter-spacing:1px}
+.cover .middle h1{font:normal 40pt/1.1 "Liberation Serif",Georgia,serif;margin:0 0 17pt;border:0;padding:0;color:white}
+.cover .middle p{font:italic 17pt/1.37 "Liberation Serif",Georgia,serif;max-width:141mm;margin:0;color:white}
+.cover .bottom{border-top:.6pt solid #b9d3e1;padding-top:12pt;display:flex;justify-content:space-between;font:7.2pt "Liberation Sans",Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:white}
+.page,.chapter{break-before:page}
+.profile{counter-reset:page 1}
+.kicker,.label{font:7.8pt/1.3 "Liberation Sans",Arial,sans-serif;color:var(--blue);letter-spacing:1.35px;text-transform:uppercase}
+.profile h1{font:normal 28pt/1.18 "Liberation Serif",Georgia,serif;border-bottom:.6pt solid #ced7dc;padding-bottom:8pt;margin:6pt 0 12pt}
+.profile-grid{display:grid;grid-template-columns:1.75fr 1fr;gap:10mm}
+.profile .thesis{font:italic 11.8pt/1.42 "Liberation Serif",Georgia,serif;margin:8pt 0 12pt}
+.profile p{line-height:1.43}
+.profile .right>div{border-top:.6pt solid #d4e0e6;padding:5.5pt 0}
+.profile .right>div:first-child{border-top:2pt solid var(--ink)}
+.profile .right .label{font-size:7pt}
+.profile .right strong{display:block;font:normal 12pt "Liberation Serif",Georgia,serif;margin-top:4pt;color:var(--ink)}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8pt;border-top:.8pt solid var(--ink);padding:10pt 4pt;margin:12pt 0 10pt}
+.metrics small{display:block;color:var(--muted);font:6.5pt "Liberation Sans",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:5pt}
+.metrics strong{font:normal 11pt "Liberation Serif",Georgia,serif}
+.stock{border-top:.5pt solid #d4dee3;padding-top:9pt;margin:0;break-inside:avoid}
+.stock img{max-width:100%;height:auto;max-height:49mm;display:block;margin:4pt auto 3pt}
+.stock figcaption,figure figcaption,.source{font:7pt/1.32 "Liberation Sans",Arial,sans-serif;color:#697984;text-align:center;margin-top:4pt}
+.legal h1,.toc-page h1{font:normal 28pt/1.18 "Liberation Serif",Georgia,serif;border-bottom:.6pt solid #ced7dc;padding-bottom:10pt;margin:0 0 16pt}
+.legal p{font:9.2pt/1.48 "Liberation Serif",Georgia,serif;color:#4a5560;margin:0 0 10pt}
+.legal h3{color:var(--blue);font:7.8pt "Liberation Sans",Arial,sans-serif;font-style:normal;letter-spacing:1.2px;text-transform:uppercase;margin:18pt 0 7pt}
+.toc{padding:0;margin:4pt 0 0;list-style:none}
+.toc li{display:flex;align-items:baseline;gap:14pt;border-bottom:.6pt solid #e1e6ea;padding:9pt 0;font:13pt/1.25 "Liberation Serif",Georgia,serif;break-inside:avoid}
+.toc .num{color:var(--blue);font:10pt "Liberation Sans",Arial,sans-serif;width:22pt;flex-shrink:0}
+.toc a{color:inherit;text-decoration:none}
+.chapter>.kicker{margin-bottom:6pt}
+.chapter>h1{font:normal 26pt/1.16 "Liberation Serif",Georgia,serif;border-bottom:.7pt solid #aac0cb;padding-bottom:9pt;margin:0 0 14pt}
+.chapter h2{font:italic bold 12pt "Liberation Serif",Georgia,serif;margin:14pt 0 6pt}
+.chapter h3,.chapter h4{font:italic bold 10.5pt "Liberation Serif",Georgia,serif;margin:12pt 0 5pt}
+.chapter ul,.chapter ol{padding-left:18pt;margin:7pt 0 9pt}
+.chapter li{margin:3pt 0}
+.essential{background:var(--wash);border-top:1.5pt solid var(--blue);padding:9pt 11pt;margin:10pt 0 13pt;break-inside:avoid}
+.essential .label,.essential .kicker{font-size:7.2pt}
+.essential ul{font:8.2pt/1.42 "Liberation Sans",Arial,sans-serif;padding-left:14pt;margin:5pt 0 0}
+.essential li{margin:2.5pt 0}
+.reading{background:var(--wash);border-left:2pt solid var(--blue);padding:10pt 12pt;margin:12pt 0;font-style:italic;break-inside:avoid}
+table{border-collapse:collapse;width:100%;max-width:100%;margin:8pt 0;font:7.6pt/1.3 "Liberation Sans",Arial,sans-serif;font-variant-numeric:tabular-nums}
+thead{display:table-header-group}
+th{background:var(--blue);color:white;text-align:left;font-weight:bold}
+th,td{padding:3.5pt 4.5pt;border-bottom:.5pt solid #d8e1e6;vertical-align:top;overflow-wrap:break-word}
+tbody tr:nth-child(even){background:#f8fafb}
+td.num,th.num{text-align:right}
+tr.total{background:var(--wash);font-weight:bold}
+tr{break-inside:avoid}
+figure{margin:10pt 0;break-inside:avoid}
+.chapter img{display:block;max-width:100%;max-height:92mm;width:auto;height:auto;margin:auto;object-fit:contain}
+.scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;break-inside:avoid}
+.scenario{border-top:2pt solid var(--blue);padding-top:6pt}
+.scenario strong{font-size:18pt}
+a{color:var(--navy)}
+@media screen{body{max-width:900px;margin:auto;padding:20px}.cover{min-height:80vh;height:auto}}
+
+@page {
+  @bottom-left { content: "Modelo JMR V2 · Nu Holdings · En revisión"; font-family: "Liberation Sans", sans-serif; font-size: 7.5pt; color: #7B868F; }
+  @bottom-right { content: counter(page); font-family: "Liberation Sans", sans-serif; font-size: 7.5pt; color: #7B868F; }
+}
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="brand">MODELO JMR<small>Análisis fundamental · V2</small></div>
+  <div class="middle">
+    <h1>Nu Holdings</h1>
+    <p class="question">La mayor fintech digital de Latinoamérica supera USD 1.090 M de utilidad trimestral y 142,6 M de clientes, pero la mora 90+ sube a 7,3 % y la acción cae 41 % desde máximos. ¿Cuánto vale su ventaja estructural?</p>
+  </div>
+  <div class="bottom">
+    <span>INFORME FUNDAMENTAL · EN REVISIÓN</span>
+    <span>NOVIEMBRE 2026</span>
+  </div>
+</section>
+
+<section class="page profile" id="perfil">
+  <div class="kicker">Perfil de la empresa</div>
+  <h1>Nu Holdings</h1>
+  <div class="profile-grid">
+    <div class="left">
+      <div class="label">Tesis</div>
+      <p class="thesis">Nu Holdings construyó la mayor fintech de Latinoamérica (142,6 M clientes, eficiencia 19,3 %, EBIT LTM US$4.633 M y ROE 32 %). La mora 90+ en 7,3 % llevó el precio a US$11,27 (−41 % desde máximos). Nuestro DCF Simple Ginsu (WACC 11,29 %, S2C 1,8×) estima un Base de US$16,65 (+47,8 %) y MOS 35 % en US$10,82.</p>
+      <div class="label">La empresa</div>
+      <p>Nu Holdings Ltd. (NYSE: NU; Nubank) opera una plataforma financiera 100 % digital en Brasil (119,9 M clientes, 65 % adultos), México (16,6 M; banco múltiple ago-2026) y Colombia (6,1 M), más lanzamientos en EE. UU. y Nu Global (sep–oct 2026).</p>
+      <p>En LTM al 30-sep-2026 registró ingresos IFRS de US$20.987 M, EBIT de US$4.633 M (22,1 %), utilidad neta de US$3.919 M y caja libre Holdco de US$2.100 M. Solvencia Basilea III: CET1 Brasil 12,1 % (mín. 7,0 %).</p>
+    </div>
+    <aside class="right">
+      <div><span class="label">Valor intrínseco base (R2)</span><strong>US$16,65</strong></div>
+      <div><span class="label">Potencial sobre el cierre</span><strong>+47,8 %</strong></div>
+      <div><span class="label">Precio con margen de seguridad (35 %)</span><strong>US$10,82</strong></div>
+      <div><span class="label">Sector · Perfil</span><strong>Fintech digital · Operativa</strong></div>
+      <div><span class="label">Mercado · Moneda</span><strong>NYSE · USD</strong></div>
+      <div><span class="label">Revisión de valoración</span><strong>R2 · LTM 30-sep-2026</strong></div>
+    </aside>
+  </div>
+  <div class="metrics">
+    <div><div class="label">Precio (20-nov-2026)</div><strong>US$11,27</strong></div>
+    <div><div class="label">Rango 52 semanas</div><strong>11,20 – 18,98</strong></div>
+    <div><div class="label">CET1 Brasil (3T26)</div><strong>12,1 % (mín. 7,0 %)</strong></div>
+    <div><div class="label">Capitalización</div><strong>US$55,0 mil M</strong></div>
+  </div>
+  <figure class="stock">
+    <div class="kicker">Cotización semanal desde OPI (dic-2021 a nov-2026 · US$)</div>
+    <img src="../../imagenes/NU/cotizacion_5a.png" alt="Cotización semanal Nu Holdings"/>
+    <figcaption>Cierre semanal desde OPI (9-dic-2021 a 20-nov-2026). Rango 52 semanas: US$11,20–18,98; var. desde OPI: +9,1 %. Fuente: Yahoo Finance y Forms 6-K.</figcaption>
+  </figure>
+</section>
+
+<section class="page legal">
+  <h1>Aviso legal</h1>
+  <p>Este informe es un estudio educativo y de análisis fundamental elaborado bajo el Modelo JMR V2.0 (contrato v1.5.6) para revisión personal de su propietario. No constituye asesoramiento financiero, oferta ni recomendación individualizada de compra o venta de valores. La inversión en empresas fintech y de crédito de mercados emergentes conlleva riesgos de crédito, liquidez, tipo de cambio y pérdida sustancial o total de capital.</p>
+  <p>Las cifras históricas proceden de documentos oficiales presentados ante la SEC por Nu Holdings Ltd. (CIK 0001691493: Forms 20-F FY2021–FY2025 y Forms 6-K hasta el 3T26, publicados el 12-nov-2026). Las proyecciones, escenarios y pruebas de estrés ilustrativas reflejan supuestos explícitos del analista y no garantías de resultados futuros.</p>
+  <div class="label">Estado de este estudio</div>
+  <p>Revisión <strong>NU-V2-LTM20260930-R2</strong>, corte contable LTM al 30-sep-2026 y precio de cierre al 20-nov-2026 (US$11,27). Estado técnico: <strong>EN REVISIÓN</strong> (valoración preliminar visible en el visor de pendientes, sin auditoría independiente ni aprobación personal del propietario). Sustituye al borrador bancario R1 conforme a instrucción expresa del propietario de valorar Nu Holdings como fintech bajo el motor oficial Simple Ginsu.</p>
+  <div class="label">Cómo se elaboró</div>
+  <p>Conforme al contrato JMR V2.0 v1.5.6 y la guía de calibración Damodaran–MELI, el cálculo económico se ejecuta en el libro oficial de 42 hojas Damodaran Simple Ginsu FCFF (<code>NU-V2-LTM20260930-R2_VALORACION.xlsx</code>) con WACC calculado por fórmula en <em>Cost of capital worksheet</em> (11,29 % inicial y terminal conservando prima país LatAm; rf 5,15 % + β 0,806 × ERP 7,62 %), puente fintech EV–patrimonio sin doble conteo (caja libre Holdco US$2.100 M; arrendamientos US$68,5 M; depósitos y fondeo Nu Financeira excluidos por ya descontar en EBIT), tres escenarios (Conservador US$8,18 · Base US$16,65 · Optimista US$26,49), margen de seguridad 35 % exclusivamente sobre el Base (US$10,82) y paridad exacta libro ↔ motor JS de 0,000 %. La maquetación reproduce de forma idéntica NVIDIA R6 (38 págs.) y MercadoLibre R8 (31 págs.).</p>
+</section>
+
+<section class="page toc-page">
+  <h1>Contenido</h1>
+  <ol class="toc"><li><span class="num">01</span><a href="#introduccion">Introducción</a></li><li><span class="num">02</span><a href="#negocio">Modelo de negocio</a></li><li><span class="num">03</span><a href="#calidad">Calidad del negocio</a></li><li><span class="num">04</span><a href="#direccion">Equipo directivo y gestión del capital</a></li><li><span class="num">05</span><a href="#competencia">Competitividad</a></li><li><span class="num">06</span><a href="#ciclos">Los tres ciclos: empresa, macroeconomía y mercado</a></li><li><span class="num">07</span><a href="#riesgos">Riesgos</a></li><li><span class="num">08</span><a href="#destruccion">¿Qué podría destruir a Nu Holdings?</a></li><li><span class="num">09</span><a href="#tesis_contraria">Los alcistas vs. los bajistas</a></li><li><span class="num">10</span><a href="#supuestos">Supuestos y escenarios</a></li><li><span class="num">11</span><a href="#valoracion">Valoración</a></li><li><span class="num">12</span><a href="#conclusiones">Conclusiones y plan de seguimiento</a></li><li><span class="num">A</span><a href="#fuentes">Anexo: fuentes, limitaciones y glosario</a></li></ol>
+</section>
+
+<section class="chapter" id="introduccion">
+<div class="kicker">SECCIÓN 01</div>
+<h1>Introducción</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>En el tercer trimestre de 2026 Nu Holdings superó los <strong>USD 1.091 M de utilidad neta trimestral</strong> (+31 % interanual neutral a divisas), con ingresos gerenciales de USD 6.259 M (+37 % FXN), 142,6 M de clientes y un ROE anualizado de 32 %.</li>
+<li>Pese a resultados récord, la acción retrocedió <strong>40,6 % desde su máximo de 52 semanas</strong> (USD 18,98) hasta <strong>USD 11,27</strong> el 20-nov-2026 (casi su mínimo anual de USD 11,20), comprimiéndose a 14,1× utilidad neta LTM y 3,8× patrimonio contable.</li>
+<li>El mercado penaliza el repunte de la morosidad 90+ días a <strong>7,3 %</strong> (máximo de trece trimestres), un cargo por pérdidas crediticias esperadas (ECL) de USD 1.668 M en 3T26 (+70,7 % interanual), la compresión del margen operativo LTM a 22,1 % (vs. 24,5 % en FY25) y la incertidumbre de la expansión a Estados Unidos.</li>
+<li>La pregunta central de este informe es si a USD 11,27 el mercado exagera el ciclo de morosidad de la mayor fintech de Latinoamérica —dejando un potencial de <strong>+47,8 %</strong> hacia nuestro valor intrínseco Base de <strong>USD 16,65</strong>— o si la normalización de impuestos y el costo del riesgo impiden todavía exigir el margen de seguridad del 35 % (<strong>USD 10,82</strong>).</li>
+</ul></div>
+<h3>Beneficios récord frente a un mercado escéptico</h3>
+<p>Pocas fintechs en el mundo han escalado con la velocidad y rentabilidad de Nu Holdings. En menos de cinco años desde su OPI en Nueva York (diciembre de 2021), la plataforma pasó de 53,9 millones de clientes y pérdidas operativas de USD 170 M a <strong>142,6 millones de clientes</strong>, ingresos IFRS LTM de <strong>USD 20.987 M</strong> y un EBIT reportado de <strong>USD 4.633 M</strong> al 30 de septiembre de 2026 (Forms 20-F FY2021–FY2025 y Form 6-K 3T26). Solo en los dos últimos trimestres (2T26 y 3T26), Nubank generó USD 2.153 M de utilidad neta, superando por primera vez el umbral de los mil millones de dólares trimestrales de forma consecutiva.</p>
+<p>Sin embargo, la cotización cuenta una historia mucho más exigente. Tras marcar USD 18,98 en 2026, el título cayó hasta <strong>USD 11,27 el 20 de noviembre de 2026</strong> (−40,6 % desde máximos). La corrección se aceleró tras publicar el 3T26 el 12 de noviembre de 2026, debido a tres señales que exigen rigor financiero: (i) la mora mayor a 90 días (NPL 90+) subió a <strong>7,3 %</strong> (desde 6,9 % en 2T26 y 6,7 % en 3T25); (ii) el cargo por pérdidas crediticias esperadas saltó <strong>+70,7 % interanual</strong> hasta USD 1.668 M en el trimestre (USD 4.869 M en 9M26), comprimiendo el margen operativo LTM en 245 pb respecto a FY2025; y (iii) el ratio CET1 del conglomerado prudencial brasileño cedió 90 pb en nueve meses, de 13,0 % a <strong>12,1 %</strong>, mientras los activos ponderados por riesgo crecían +28,3 % YTD.</p>
+<p>Durante 2026 se acumularon además hitos estratégicos determinantes: el programa inaugural de recompra por USD 1.000 M en junio (con USD 500,4 M ejecutados en 9M26), el acuerdo para adquirir <strong>Banco Porto Real</strong> en julio, la entrada en operación como banco múltiple en México el 6 de agosto, el lanzamiento comercial de <strong>Nu US</strong> (en alianza con Lead Bank tras la aprobación condicional de la OCC para Nubank, N.A.) y <strong>Nu Global</strong> en septiembre–octubre, y la salida del CTO Eric Young el 23 de octubre antes del primer <em>Investor Day</em> del 8 de diciembre de 2026.</p>
+<table>
+<thead><tr><th>Fecha (2026)</th><th>Hito verificado (fuente primaria SEC)</th><th>Implicación económica / estratégica</th></tr></thead>
+<tbody>
+<tr><td style="white-space:nowrap">Ene 2026</td><td>Aprobación condicional OCC para Nubank, N.A. (Forms 6-K)</td><td>Habilita la ruta hacia carta bancaria nacional en EE. UU., con mayores exigencias de capital y cumplimiento.</td></tr>
+<tr><td style="white-space:nowrap">8 abr</td><td>Form 20-F FY2025 (acc. 0001292814-26-002166)</td><td>Confirma ingresos IFRS de USD 15.775 M (+37,0 %), EBIT de USD 3.872 M (24,5 %) y utilidad común de USD 2.869 M.</td></tr>
+<tr><td style="white-space:nowrap">4 jun</td><td>Programa de recompra hasta USD 1.000 M (6-K 0001292814-26-003326)</td><td>Primera devolución material de capital: 40,66 M de acciones Clase A recompradas por USD 500,4 M en 9M26.</td></tr>
+<tr><td style="white-space:nowrap">20 jul</td><td>Acuerdo por Banco Porto Real (6-K 0001292814-26-003814)</td><td>Añade licencia bancaria formal en Brasil (Resolución Conjunta del BCB; sujeto a aprobación regulatoria).</td></tr>
+<tr><td style="white-space:nowrap">6 ago</td><td>Inicio de operaciones como banco múltiple en México (6-K 3T26)</td><td>Multiplica 16× el seguro de depósito (hasta ~USD 195 mil) y habilita cuentas de nómina; CAR MX 16,4 %.</td></tr>
+<tr><td style="white-space:nowrap">10 sep</td><td>Lanzamiento de Nu US (Lead Bank) y Nu Global (6-K 0001292814-26-004518)</td><td>Cuenta 3,5 % APY y tarjeta 1,5 % cashback en 50 estados; impacto comprometido ≤ 100 pb en eficiencia 2026–27.</td></tr>
+<tr><td style="white-space:nowrap">23 oct</td><td>Renuncia del CTO Eric Young (6-K 0001292814-26-005000)</td><td>Transición hasta 12-nov; David Vélez y el CISO John Walton asumen liderazgo interino de tecnología.</td></tr>
+<tr><td style="white-space:nowrap">12 nov</td><td>Resultados 3T26 (6-K 0001292814-26-005272 / 5273 / 5275)</td><td>Utilidad récord USD 1.092 M y ROE 32 %, pero NPL 90+ sube a 7,3 % y la acción cae a USD 11,27.</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: SEC EDGAR (CIK 0001691493), Forms 20-F y 6-K publicados entre enero y noviembre de 2026.</p>
+<div class="reading"><strong>Nuestra lectura.</strong> Nu Holdings llega a noviembre de 2026 con el mayor contraste de su historia bursátil: fundamentos operativos en máximos (USD 21,0 B de ingresos LTM, 142,6 M clientes) frente a un castigo de mercado del 41 % por el ciclo de crédito en Brasil. El modelo DCF fintech nos permite separar si el precio descuenta un bache cíclico manejable o una erosión estructural de márgenes.</div>
+</section>
+<section class="chapter" id="negocio">
+<div class="kicker">SECCIÓN 02</div>
+<h1>Modelo de negocio</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>Nu opera un modelo <strong>fintech 100 % digital sin sucursales</strong> con tres palancas complementarias: captación de depósitos de bajo costo (USD 47,5 B al 87 % de la tasa interbancaria), originación algorítmica de crédito minorista (cartera bruta USD 41,6 B) y pagos/comisiones de alta frecuencia (USD 3,0 B LTM).</li>
+<li>La brecha de economía unitaria explica su rentabilidad: <strong>ARPAC mensual de USD 17,7</strong> (+25 % FXN interanual) frente a un <strong>costo de servir de USD 1,1/mes</strong> y un ratio de eficiencia de <strong>19,3 %</strong>.</li>
+<li>Brasil concentra el <strong>90,3 % de los ingresos consolidados de 9M26</strong> (USD 14.713 M, Nota 34), mientras México (7,4 %, USD 1.212 M) y Colombia (2,3 %, USD 377 M) son los motores de expansión regional con 22,7 M de clientes combinados.</li>
+<li>En el enfoque DCF fintech (Damodaran–MELI), los depósitos y las letras financieras de Nu Financeira son <strong>fondeo operativo</strong> cuyo costo ya descuenta del EBIT reportado; la caja libre de la matriz (<em>Nu Holdings Cash &amp; Securities</em>) asciende a <strong>USD 2.100 M</strong> (Slide 22, Form 6-K 3T26).</li>
+</ul></div>
+<h3>Motor económico: plataforma fintech de costo mínimo y monetización por cohortes</h3>
+<p>A diferencia de la banca tradicional cargada de redes físicas y sistemas heredados, Nu diseñó una arquitectura nativa en la nube (AWS) centrada en una sola aplicación móvil. Al 30-sep-2026 servía a <strong>142,6 millones de clientes</strong> (119,2 M activos; 83,6 % de actividad consolidada y 86,3 % en Brasil) con un costo mensual de servir de apenas <strong>USD 1,1</strong>. En las cohortes brasileñas maduras (más de 84–96 meses), el ingreso mensual por cliente activo supera los <strong>USD 22–30</strong> (Apéndice Slide 25, Form 6-K 3T26), demostrando un apalancamiento operativo sobresaliente a medida que los usuarios adoptan pagos Pix, tarjeta de crédito, préstamos personales, crédito nómina (<em>consignado</em>), inversiones y seguros.</p>
+<p>La secuencia de monetización sigue un guion disciplinado en cada país: (1) captar masa crítica con cuenta remunerada sin comisiones y tarjeta gratuita de alta satisfacción (NPS líder regional); (2) convertir la cuenta en cuenta principal de depósitos y pagos cotidianos, acumulando datos transaccionales propietarios; (3) desplegar líneas de crédito graduales —primero tarjetas de límite bajo y luego préstamos personales con o sin garantía (FGTS/INSS/nómina)—; y (4) añadir ingresos por comisiones, inversiones y seguros con menor consumo de capital.</p>
+<figure><img src="../../imagenes/NU/clientes_arpac.png" alt="Evolución de la base de clientes (FY20–3T26) y divergencia estructural entre ARPAC mensual (USD 17,7) y costo de servir (USD 1,1). Fuente: Forms 20-F y 6-K."/><figcaption>Evolución de la base de clientes (FY20–3T26) y divergencia estructural entre ARPAC mensual (USD 17,7) y costo de servir (USD 1,1). Fuente: Forms 20-F y 6-K.</figcaption></figure>
+<h3>Composición de ingresos, cartera y geografías (3T26 y 9M26)</h3>
+<p>El <strong>86,1 % de los ingresos IFRS de 9M26</strong> provino de ingresos por intereses y ganancias financieras (USD 14.039 M), mientras el <strong>13,9 %</strong> correspondió a comisiones y tarifas de intercambio y servicios (USD 2.262 M). La Nota 34 del Form 6-K 3T26 confirma que Brasil sigue generando nueve de cada diez dólares de ingresos, aunque México (+68 % interanual en cartera) y Colombia (+80 % FXN) ganan peso rápidamente:</p>
+<table>
+<thead><tr><th>País / segmento (9M26 · Nota 34 y 6-K)</th><th class="num">Clientes (M)</th><th class="num">% adultos</th><th class="num">Ingresos 9M26 (USD M)</th><th class="num">% ingresos</th><th class="num">Cartera / estado regulatorio</th></tr></thead>
+<tbody>
+<tr><td><strong>Brasil</strong></td><td class="num">119,9</td><td class="num">65 %</td><td class="num">14.712,7</td><td class="num">90,3 %</td><td>Conglomerado Tipo 3 (CET1 12,1 %); acuerdo Banco Porto Real</td></tr>
+<tr><td><strong>México</strong></td><td class="num">16,6</td><td class="num">17 %</td><td class="num">1.211,7</td><td class="num">7,4 %</td><td>Banco múltiple operativo desde 6-ago-2026 (CAR 16,4 %)</td></tr>
+<tr><td><strong>Colombia y otros (incl. Nu US/Global)</strong></td><td class="num">6,1</td><td class="num">14 %</td><td class="num">377,1</td><td class="num">2,3 %</td><td>Nu Financiera (CAR 17,3 %); Nu US / Nu Global lanzados sep–oct 26</td></tr>
+<tr class="total"><td><strong>Total consolidado (9M26 IFRS)</strong></td><td class="num"><strong>142,6</strong></td><td class="num">—</td><td class="num"><strong>16.301,5</strong></td><td class="num"><strong>100,0 %</strong></td><td><strong>Cartera bruta USD 41.588 M · Depósitos USD 47.487 M</strong></td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Form 6-K 3T26 Nota 34 (desglose geográfico IFRS) y Presentación 3T26 (acc. 0001292814-26-005275).</p>
+<h3>Estructura de fondeo, liquidez y puente fintech</h3>
+<p>Al 30 de septiembre de 2026, los depósitos de clientes alcanzaron <strong>USD 47.487 M</strong> (RDB Brasil USD 37.564 M, depósitos a la vista USD 9.054 M, CDB USD 823 M), respaldados por una posición líquida consolidada de USD 13.772 M en efectivo y equivalentes más USD 21.152 M en valores soberanos y títulos financieros y USD 10.220 M en encajes del banco central. El ratio gerencial cartera neta / fondeo disponible (LDR neto) fue de apenas <strong>57 %</strong> (USD 24,7 B de crédito neto vs. USD 43,7 B de fondeo disponible). Adicionalmente, la matriz <strong>Nu Holdings Ltd.</strong> mantiene <strong>USD 2.100 M de caja y valores libres</strong> fuera de las subsidiarias reguladas (Slide 22, Form 6-K 3T26), sin bonos corporativos en el holding y con únicamente <strong>USD 68,5 M de pasivos por arrendamiento IFRS 16</strong>.</p>
+<div class="reading"><strong>Nuestra lectura.</strong> El negocio central de Nu combina la economía de una plataforma de software (eficiencia 19,3 %, costo USD 1,1/mes) con el balance de un originador de crédito masivo. Por ello, al valorarla como fintech operativa bajo Damodaran Simple Ginsu, es indispensable capturar dos realidades simultáneas: (1) excluir depósitos y letras financieras de la deuda corporativa para evitar doble conteo (su interés ya resta del EBIT), y (2) exigir una reinversión de capital acorde con el crecimiento de activos ponderados por riesgo (<em>Sales-to-Capital</em> de 1,8×, nunca un ratio de software puro de 4–5×).</div>
+</section>
+<section class="chapter" id="calidad">
+<div class="kicker">SECCIÓN 03</div>
+<h1>Calidad del negocio</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>Los ingresos IFRS crecieron <strong>28,5× en seis años</strong>: de USD 737 M en FY2020 a <strong>USD 20.987 M en LTM sep-2026</strong> (+47,0 % interanual en 9M26), mientras el EBIT reportado pasó de −USD 92 M a <strong>USD 4.633 M</strong> (margen operativo 22,1 %).</li>
+<li>El margen operativo se comprimió <strong>−245 pb</strong> frente al máximo de FY2025 (24,5 %) porque el cargo por pérdidas crediticias (ECL) alcanzó <strong>USD 6.110 M en LTM</strong> (29,1 % de ingresos) y la mora 90+ subió a 7,3 %.</li>
+<li>La <strong>tasa efectiva de impuestos LTM cayó a 15,2 %</strong> (vs. 25,8 % en FY25 y 29,4 % en FY24) por beneficios fiscales de I+D (<em>Lei do Bem</em>) y reconocimiento de activos fiscales diferidos (USD 3.346 M); nuestro DCF la normaliza hasta la tasa marginal estatutaria de <strong>34,0 %</strong> en el año 10.</li>
+<li>La solvencia regulatoria permanece sólida: <strong>CET1 Brasil 12,1 %</strong> (vs. mínimo 7,0 %, +510 pb), CAR Brasil 15,7 %, México 16,4 % y Colombia 17,3 %, más USD 2,1 B de caja libre en el holding.</li>
+</ul></div>
+<h3>Evolución financiera histórica (FY2020–FY2025 y LTM 30-sep-2026)</h3>
+<p>Nu Holdings cotiza en la NYSE desde el 9 de diciembre de 2021; se recopilaron <strong>siete períodos IFRS consecutivos completos</strong> desde los Forms 20-F FY2021, FY2023 y FY2025 más el Form 6-K 3T26 (separando estrictamente los ejercicios fiscales anuales FY del período acumulado LTM al 30-sep-2026). La ausencia de estados auditados públicos anteriores a FY2020 (etapa pre-OPI) se documenta transparentemente bajo el aviso <code>D02</code> del contrato V2.</p>
+<figure><img src="../../imagenes/NU/ingresos_margenes.png" alt="Trayectoria anual y LTM de ingresos IFRS, EBIT reportado y márgenes bruto y operativo (FY2020–LTM sep-2026). Fuente: SEC EDGAR."/><figcaption>Trayectoria anual y LTM de ingresos IFRS, EBIT reportado y márgenes bruto y operativo (FY2020–LTM sep-2026). Fuente: SEC EDGAR.</figcaption></figure>
+<figure><img src="../../imagenes/NU/trimestres.png" alt="Progresión trimestral de ingresos gerenciales, utilidad neta IFRS y ROE anualizado (4T24–3T26). Fuente: Comunicados Forms 6-K."/><figcaption>Progresión trimestral de ingresos gerenciales, utilidad neta IFRS y ROE anualizado (4T24–3T26). Fuente: Comunicados Forms 6-K.</figcaption></figure>
+<h3>Estados financieros históricos consolidados (patrón A-1.2 · IFRS · USD millones)</h3>
+<p>Siguiendo el contrato V2 v1.5.6 y el patrón MELI R9, se presentan las partidas contables en importes absolutos (USD millones) y los márgenes/ratios en su unidad natural (%, × y USD/acción), diferenciando el corte anual FY del período LTM:</p>
+<h4>Estado de resultados consolidado (IFRS · importes absolutos en USD M y ratios)</h4>
+<table>
+<thead><tr><th>Concepto</th><th>Unidad</th><th class="num">FY 2020</th><th class="num">FY 2021</th><th class="num">FY 2022</th><th class="num">FY 2023</th><th class="num">FY 2024</th><th class="num">FY 2025</th><th class="num">LTM sep-26</th></tr></thead>
+<tbody>
+<tr><td><strong>Ingresos totales (IFRS)</strong></td><td>USD M</td><td class="num">737,1</td><td class="num">1.698,0</td><td class="num">4.792,2</td><td class="num">8.029,0</td><td class="num">11.517,1</td><td class="num">15.774,7</td><td class="num">20.987,4</td></tr>
+<tr><td>Costo de servicios financieros y transacc. (incl. ECL)</td><td>USD M</td><td class="num">410,2</td><td class="num">965,1</td><td class="num">3.129,2</td><td class="num">4.538,1</td><td class="num">6.264,2</td><td class="num">9.149,7</td><td class="num">12.396,1</td></tr>
+<tr><td>&nbsp;&nbsp;<em>del cual: pérdida crediticia esperada (ECL)</em></td><td>USD M</td><td class="num">169,5</td><td class="num">480,6</td><td class="num">1.404,9</td><td class="num">2.285,2</td><td class="num">3.169,0</td><td class="num">4.204,9</td><td class="num">6.110,4</td></tr>
+<tr><td><strong>Utilidad bruta</strong></td><td>USD M</td><td class="num">326,9</td><td class="num">732,9</td><td class="num">1.663,0</td><td class="num">3.490,9</td><td class="num">5.252,9</td><td class="num">6.625,0</td><td class="num">8.591,3</td></tr>
+<tr><td>Gastos operativos netos (incl. D&amp;A y SBC)</td><td>USD M</td><td class="num">418,9</td><td class="num">903,1</td><td class="num">1.971,9</td><td class="num">1.951,8</td><td class="num">2.457,7</td><td class="num">2.752,9</td><td class="num">3.958,3</td></tr>
+<tr class="total"><td><strong>EBIT reportado (Utilidad operativa)</strong></td><td><strong>USD M</strong></td><td class="num"><strong>−92,0</strong></td><td class="num"><strong>−170,2</strong></td><td class="num"><strong>−308,9</strong></td><td class="num"><strong>1.539,1</strong></td><td class="num"><strong>2.795,2</strong></td><td class="num"><strong>3.872,1</strong></td><td class="num"><strong>4.633,0</strong></td></tr>
+<tr><td>Partidas financieras / participadas (no op.)</td><td>USD M</td><td class="num">−101,2</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">−3,7</td><td class="num">−14,4</td></tr>
+<tr><td>Utilidad antes de impuestos (UAI)</td><td>USD M</td><td class="num">−193,2</td><td class="num">−170,2</td><td class="num">−308,9</td><td class="num">1.539,1</td><td class="num">2.795,2</td><td class="num">3.868,4</td><td class="num">4.618,6</td></tr>
+<tr><td>Impuestos sobre la renta</td><td>USD M</td><td class="num">−21,7</td><td class="num">−4,8</td><td class="num">55,7</td><td class="num">508,5</td><td class="num">823,1</td><td class="num">996,7</td><td class="num">699,7</td></tr>
+<tr class="total"><td><strong>Utilidad neta consolidada (IFRS)</strong></td><td><strong>USD M</strong></td><td class="num"><strong>−171,5</strong></td><td class="num"><strong>−165,3</strong></td><td class="num"><strong>−364,6</strong></td><td class="num"><strong>1.030,5</strong></td><td class="num"><strong>1.972,1</strong></td><td class="num"><strong>2.871,7</strong></td><td class="num"><strong>3.918,9</strong></td></tr>
+<tr><td>Margen bruto</td><td>%</td><td class="num">44,4 %</td><td class="num">43,2 %</td><td class="num">34,7 %</td><td class="num">43,5 %</td><td class="num">45,6 %</td><td class="num">42,0 %</td><td class="num">40,9 %</td></tr>
+<tr><td>Margen operativo (EBIT / Ingresos)</td><td>%</td><td class="num">−12,5 %</td><td class="num">−10,0 %</td><td class="num">−6,4 %</td><td class="num">19,2 %</td><td class="num">24,3 %</td><td class="num">24,5 %</td><td class="num">22,1 %</td></tr>
+<tr><td>Margen neto</td><td>%</td><td class="num">−23,3 %</td><td class="num">−9,7 %</td><td class="num">−7,6 %</td><td class="num">12,8 %</td><td class="num">17,1 %</td><td class="num">18,2 %</td><td class="num">18,7 %</td></tr>
+<tr><td>Tasa efectiva de impuestos</td><td>%</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">33,0 %</td><td class="num">29,4 %</td><td class="num">25,8 %</td><td class="num">15,2 %</td></tr>
+<tr><td>UPA diluida (EPS)</td><td>USD/acc.</td><td class="num">−0,13</td><td class="num">−0,10</td><td class="num">−0,08</td><td class="num">0,21</td><td class="num">0,40</td><td class="num">0,58</td><td class="num">0,80</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Forms 20-F FY2021, FY2023 y FY2025; Form 6-K 3T26 (LTM = FY25 + 9M26 − 9M25). En FY20–22 la tasa efectiva es N/D por pérdidas antes de impuestos.</p>
+<h4>Balance general consolidado y métricas fintech (IFRS · USD millones)</h4>
+<table>
+<thead><tr><th>Concepto</th><th>Unidad</th><th class="num">FY 2020</th><th class="num">FY 2021</th><th class="num">FY 2022</th><th class="num">FY 2023</th><th class="num">FY 2024</th><th class="num">FY 2025</th><th class="num">30-sep-26</th></tr></thead>
+<tbody>
+<tr><td>Efectivo y equivalentes (consolidado)</td><td>USD M</td><td class="num">2.343,8</td><td class="num">2.705,7</td><td class="num">4.172,3</td><td class="num">5.923,4</td><td class="num">9.185,7</td><td class="num">15.003,6</td><td class="num">13.772,3</td></tr>
+<tr><td>&nbsp;&nbsp;<em>Caja y valores libres en Holdco (puente EV)</em></td><td>USD M</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num"><strong>2.100,0</strong></td></tr>
+<tr><td>Cartera bruta de crédito (tarjetas + préstamos)</td><td>USD M</td><td class="num">3.319,8</td><td class="num">6.554,5</td><td class="num">11.242,7</td><td class="num">18.202,1</td><td class="num">20.735,8</td><td class="num">32.666,7</td><td class="num">41.588,4</td></tr>
+<tr><td>Provisión acumulada ECL (balance)</td><td>USD M</td><td class="num">243,8</td><td class="num">588,2</td><td class="num">1.350,9</td><td class="num">2.608,4</td><td class="num">3.184,1</td><td class="num">5.022,0</td><td class="num">7.086,8</td></tr>
+<tr class="total"><td><strong>Activos totales</strong></td><td><strong>USD M</strong></td><td class="num"><strong>10.154,4</strong></td><td class="num"><strong>19.858,8</strong></td><td class="num"><strong>29.934,9</strong></td><td class="num"><strong>43.498,4</strong></td><td class="num"><strong>49.931,2</strong></td><td class="num"><strong>74.893,9</strong></td><td class="num"><strong>87.428,6</strong></td></tr>
+<tr><td>Depósitos de clientes (fondeo operativo)</td><td>USD M</td><td class="num">5.584,9</td><td class="num">9.667,3</td><td class="num">15.808,5</td><td class="num">23.691,1</td><td class="num">28.855,1</td><td class="num">41.925,1</td><td class="num">47.486,8</td></tr>
+<tr><td>Préstamos y financiamiento Nu Financeira (op.)</td><td>USD M</td><td class="num">177,2</td><td class="num">157,2</td><td class="num">585,6</td><td class="num">1.136,3</td><td class="num">1.730,4</td><td class="num">4.398,2</td><td class="num">4.980,1</td></tr>
+<tr><td>Pasivos por arrendamiento IFRS 16 (puente EV)</td><td>USD M</td><td class="num">12,0</td><td class="num">7,6</td><td class="num">20,4</td><td class="num">36,9</td><td class="num">26,2</td><td class="num">29,2</td><td class="num"><strong>68,5</strong></td></tr>
+<tr><td>Pasivos totales</td><td>USD M</td><td class="num">9.716,3</td><td class="num">15.416,2</td><td class="num">25.044,1</td><td class="num">37.092,1</td><td class="num">42.284,1</td><td class="num">63.572,3</td><td class="num">73.083,6</td></tr>
+<tr class="total"><td><strong>Patrimonio total (incl. NCI)</strong></td><td><strong>USD M</strong></td><td class="num"><strong>438,1</strong></td><td class="num"><strong>4.442,6</strong></td><td class="num"><strong>4.890,8</strong></td><td class="num"><strong>6.406,4</strong></td><td class="num"><strong>7.647,1</strong></td><td class="num"><strong>11.321,6</strong></td><td class="num"><strong>14.344,9</strong></td></tr>
+<tr><td>Inversiones en asociadas (activos no op.)</td><td>USD M</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">99,4</td><td class="num">98,7</td><td class="num">89,6</td></tr>
+<tr><td>Acciones diluidas promedio (Nota 9)</td><td>M acc.</td><td class="num">1.319,2</td><td class="num">1.602,1</td><td class="num">4.677,0</td><td class="num">4.857,6</td><td class="num">4.888,9</td><td class="num">4.907,4</td><td class="num">4.881,1</td></tr>
+<tr><td>ROE (Utilidad neta / Patrimonio final)</td><td>%</td><td class="num">−39,1 %</td><td class="num">−3,7 %</td><td class="num">−7,5 %</td><td class="num">16,1 %</td><td class="num">25,8 %</td><td class="num">25,4 %</td><td class="num">27,3 %</td></tr>
+<tr><td>ROIC operativo (NOPAT / Capital invertido*)</td><td>%</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">N/D</td><td class="num">31,9 %</td></tr>
+</tbody>
+</table>
+<p class="source">*Capital invertido fintech LTM = Patrimonio (USD 14.345 M) + Arrendamientos (USD 68,5 M) − Caja libre Holdco (USD 2.100 M) = USD 12.313 M; Ventas/Capital observado = 1,70×. Fuente: Libro oficial R2 y SEC EDGAR.</p>
+<h4>Flujos de efectivo, CapEx, SBC y recompras (IFRS · USD millones)</h4>
+<table>
+<thead><tr><th>Concepto</th><th>Unidad</th><th class="num">FY 2020</th><th class="num">FY 2021</th><th class="num">FY 2022</th><th class="num">FY 2023</th><th class="num">FY 2024</th><th class="num">FY 2025</th><th class="num">LTM sep-26</th></tr></thead>
+<tbody>
+<tr><td>Flujo de efectivo operativo (CFO IFRS)*</td><td>USD M</td><td class="num">974,5</td><td class="num">−2.924,3</td><td class="num">755,6</td><td class="num">1.266,2</td><td class="num">2.399,0</td><td class="num">3.500,5</td><td class="num">−218,5</td></tr>
+<tr><td>CAPEX (PPE + intangibles desarrollados IAS 38)</td><td>USD M</td><td class="num">8,0</td><td class="num">28,5</td><td class="num">114,3</td><td class="num">177,0</td><td class="num">175,0</td><td class="num">340,8</td><td class="num">407,3</td></tr>
+<tr><td>Flujo de inversión (CFI)</td><td>USD M</td><td class="num">−16,3</td><td class="num">−154,2</td><td class="num">−127,2</td><td class="num">−177,0</td><td class="num">−330,6</td><td class="num">−342,3</td><td class="num">−413,8</td></tr>
+<tr><td>Flujo de financiación (CFF)</td><td>USD M</td><td class="num">240,1</td><td class="num">3.336,0</td><td class="num">654,0</td><td class="num">425,2</td><td class="num">727,7</td><td class="num">2.290,2</td><td class="num">1.119,3</td></tr>
+<tr><td>Compensación basada en acciones (SBC)</td><td>USD M</td><td class="num">35,6</td><td class="num">157,3</td><td class="num">253,2</td><td class="num">212,6</td><td class="num">272,4</td><td class="num">271,8</td><td class="num">394,1</td></tr>
+<tr><td>Recompras de acciones (dividendos = 0)</td><td>USD M</td><td class="num">0,0</td><td class="num">4,6</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">0,0</td><td class="num">500,4</td></tr>
+</tbody>
+</table>
+<p class="source">*El CFO IFRS de entidades de crédito refleja la expansión neta de cartera (+USD 21,6 B en 9M26) y compras de títulos (−USD 4,9 B) frente a captación de depósitos (+USD 5,6 B); por ello, el DCF modela la reinversión vía Sales-to-Capital económico (1,8×) en lugar de proyectar CFO contable distorsionado por flotantes.</p>
+<figure><img src="../../imagenes/NU/cartera_depositos.png" alt="Expansión conjunta de la cartera bruta de crédito (USD 41,6 B) y los depósitos de clientes (USD 47,5 B), FY2020–3T26. Fuente: SEC EDGAR."/><figcaption>Expansión conjunta de la cartera bruta de crédito (USD 41,6 B) y los depósitos de clientes (USD 47,5 B), FY2020–3T26. Fuente: SEC EDGAR.</figcaption></figure>
+<figure><img src="../../imagenes/NU/calidad_credito.png" alt="Evolución trimestral de morosidad 15–90 días (4,9 %), mora 90+ días (7,3 %) y cobertura acumulada de provisiones (234 %). Fuente: Forms 6-K."/><figcaption>Evolución trimestral de morosidad 15–90 días (4,9 %), mora 90+ días (7,3 %) y cobertura acumulada de provisiones (234 %). Fuente: Forms 6-K.</figcaption></figure>
+<figure><img src="../../imagenes/NU/capital_basilea.png" alt="Ratios de solvencia Basilea III por jurisdicción (Nota 33) y posición de capital consolidada USD 9,9 B (incl. USD 2,1 B libres en Holdco). Fuente: Form 6-K 3T26."/><figcaption>Ratios de solvencia Basilea III por jurisdicción (Nota 33) y posición de capital consolidada USD 9,9 B (incl. USD 2,1 B libres en Holdco). Fuente: Form 6-K 3T26.</figcaption></figure>
+<div class="reading"><strong>Nuestra lectura.</strong> La calidad operativa de Nu es genuinamente excepcional (margen operativo 22,1 % después de absorber USD 6,1 B de provisiones crediticias), pero dos distorsiones exigen cautela analítica: (1) la tasa fiscal anormalmente baja de 15,2 % infla la utilidad neta actual y debe normalizarse hacia el 34 % estatutario; y (2) el CapEx contable de USD 407 M subestima enormemente las necesidades reales de capital para crecer la cartera de crédito, razón por la cual nuestro DCF exige un <em>Sales-to-Capital</em> conservador de 1,8× en el escenario Base.</div>
+</section>
+<section class="chapter" id="direccion">
+<div class="kicker">SECCIÓN 04</div>
+<h1>Equipo directivo y gestión del capital</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>Nu sigue liderada por su fundador, presidente y CEO <strong>David Vélez</strong> y su cofundadora <strong>Cristina Junqueira</strong>, con fuerte alineación patrimonial: Vélez posee 974,4 M de acciones Clase B (20,2 % del capital económico y <strong>74,4 % del poder de voto</strong> por la estructura dual de 20 votos/acción).</li>
+<li>La asignación de capital dio un giro histórico en 2026: primer programa de recompra por <strong>USD 1.000 M</strong> (USD 500,4 M ejecutados en 9M26 a ~USD 12,31 promedio), adquisición estratégica de Banco Porto Real y entrada controlada en EE. UU. sin dilución masiva.</li>
+<li>El riesgo principal de gobierno es la concentración de voto en Clase B y la transición técnica tras la renuncia del CTO <strong>Eric Young</strong> (23-oct-2026), asumida interinamente por David Vélez.</li>
+</ul></div>
+<h3>Liderazgo fundador, estructura dual-class y sucesión tecnológica</h3>
+<p>Fundada en 2013 por David Vélez (CEO), Cristina Junqueira (cofundadora y líder de crecimiento) y Edward Wible (cofundador), Nu mantiene una cultura técnica disciplinada y orientada al largo plazo. El consejo incluye directores independientes de peso global (entre ellos Douglas Mauro, Jacqueline Reses, Thuan Pham y Luis Alberto Moreno), y el comité de auditoría supervisa tanto el cumplimiento IFRS como las exigencias prudenciales en tres países.</p>
+<p>El punto de vigilancia estructural es el control absoluto mediante acciones supervotantes (20 votos por acción Clase B frente a 1 voto por Clase A, Form 20-F FY2025, Ítem 6.E). David Vélez controla el 74,4 % del voto a través de Rua California Ltd., y los tres fundadores superan el 80 % de los derechos de voto. Esto protege a la compañía de presiones cortoplacistas al invertir en México o EE. UU., pero reduce el contrapeso de los accionistas minoritarios si la expansión internacional destruyera valor.</p>
+<table>
+<thead><tr><th>Accionista / directivo clave</th><th>Rol / tipo</th><th class="num">Acciones Clase A</th><th class="num">Acciones Clase B</th><th class="num">% voto aprox.</th></tr></thead>
+<tbody>
+<tr><td><strong>David Vélez (Rua California Ltd.)</strong></td><td>Fundador, Presidente y CEO</td><td class="num">—</td><td class="num">974.417.638</td><td class="num">74,4 %</td></tr>
+<tr><td><strong>Cristina H. Junqueira</strong></td><td>Cofundadora y Ejecutiva</td><td class="num">11.417.400</td><td class="num">124.470.506</td><td class="num">9,5 %</td></tr>
+<tr><td><strong>Douglas Mauro / Otros directivos</strong></td><td>Directores y ejecutivos</td><td class="num">37.810.420</td><td class="num">—</td><td class="num">0,2 %</td></tr>
+<tr><td><strong>Baillie Gifford / Capital Research / FMR</strong></td><td>Institucionales principales (&gt;5 %)</td><td class="num">~1.100.000.000</td><td class="num">—</td><td class="num">~4,5 %</td></tr>
+<tr><td><strong>Resto del flotante público (Clase A)</strong></td><td>Mercado abierto NYSE</td><td class="num">~2.666.705.797</td><td class="num">—</td><td class="num">~11,4 %</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Form 20-F FY2025 (Ítem 6.E / 7.A) y Nota 31 del Form 6-K 3T26 (total emitidas 30-sep-2026: 3.815,93 M Clase A + 1.022,60 M Clase B = 4.838,53 M).</p>
+<h3>Asignación de capital, dilución y disciplina de SBC</h3>
+<p>En 2026 la directiva pasó de una fase pura de retención de capital a una política balanceada: (1) <strong>dividendos en efectivo = USD 0</strong>, priorizando el crecimiento compuesto en México, Colombia y EE. UU.; (2) <strong>recompra inaugural de USD 500,4 M en 9M26</strong> (40,66 M de acciones retiradas bajo el programa de USD 1.000 M), compensando con creces las emisiones de RSUs/SOPs (30,30 M de acciones emitidas en 9M26) y logrando reducir el conteo total emitido por primera vez desde la OPI (−0,35 % YTD); y (3) <strong>SBC controlada en USD 394 M LTM</strong> (1,9 % de ingresos, muy inferior al 5–8 % de fintechs estadounidenses comparables). En el DCF utilizamos 4.881,1 M de acciones diluidas promedio del 3T26 (Nota 9), incorporando íntegramente las 18,6 M de opciones y 60,5 M de RSUs vigentes sin doble conteo.</p>
+<div class="reading"><strong>Nuestra lectura.</strong> La ejecución histórica del equipo fundador ha sido sobresaliente y la primera reducción neta de acciones en 2026 refuerza la disciplina de capital. Las dos prioridades de seguimiento en los próximos 12 meses son el nombramiento de un CTO permanente de primer nivel y la confirmación en el Investor Day (8-dic-2026) de que la inversión en EE. UU. respetará estrictamente el tope de 100 pb sobre eficiencia.</div>
+</section>
+<section class="chapter" id="competencia">
+<div class="kicker">SECCIÓN 05</div>
+<h1>Competitividad</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>La ventaja competitiva de Nu descansa en una <strong>brecha estructural de costos operativos</strong> (eficiencia 19,3 % vs. 40–45 % de banca tradicional), una marca con altísima principalidad en Brasil (65 % de adultos) y datos transaccionales propietarios para suscripción de crédito.</li>
+<li>En Brasil compite frente a incumbentes muy capitalizados y rentables (<strong>Itaú Unibanco</strong>, ROE ~22 %; <strong>Banco do Brasil</strong>; <strong>Bradesco</strong>; <strong>Santander Brasil</strong>) y frente a rivales digitales agresivos como <strong>Mercado Pago (MELI)</strong>, <strong>Inter&amp;Co</strong> y <strong>C6 Bank</strong>.</li>
+<li>En México el mercado está menos bancarizado, pero el fondeo de depósitos es más competitivo (<strong>BBVA México</strong>, <strong>Banamex</strong>, <strong>Mercado Pago</strong>, <strong>Stori</strong>); en Estados Unidos (Nu US) la ventaja de marca aún no existe y la competencia digital (Chime, SoFi, Capital One) es feroz.</li>
+</ul></div>
+<h3>Estructura competitiva por geografía y durabilidad del foso</h3>
+<p>La industria financiera latinoamericana se caracterizó históricamente por un oligopolio de spreads elevados y costos operativos pesados. Nu rompió ese equilibrio eliminando sucursales y combinando software propietario con suscripción algorítmica de crédito en micro-lotes (<em>test-and-learn</em>). A escala actual (142,6 M clientes; ~14.000 clientes por empleado frente a ~700–1.500 en banca tradicional), esa ventaja de costos genera un <strong>foso económico real en Brasil</strong>: Nu puede remunerar depósitos cerca del 87 % del CDI, no cobrar comisiones de mantenimiento y aun así producir márgenes operativos superiores al 22 % y ROE por encima del 27–32 %.</p>
+<p>Sin embargo, el foso no es invulnerable. En Brasil, <strong>Itaú Unibanco</strong> modernizó su plataforma tecnológica y domina el segmento de ingresos altos y crédito corporativo/hipotecario; <strong>Mercado Pago</strong> captura el flujo comercial del ecosistema de MercadoLibre y crece aceleradamente en tarjetas y préstamos; e <strong>Inter&amp;Co</strong> compite con super-app integrada. En México, la licencia de banco múltiple obtenida en agosto de 2026 elimina la desventaja de seguro de depósito frente a <strong>BBVA México</strong> y permite captar nóminas, pero la rentabilidad sostenida aún debe demostrarse. En Estados Unidos, Nu parte sin ventaja incumbente y deberá probar que su experiencia de producto justifica el costo de adquisición.</p>
+<table>
+<thead><tr><th>Mercado</th><th>Rivales principales</th><th>Ventaja diferencial de Nu</th><th>Vulnerabilidad frente a rivales</th></tr></thead>
+<tbody>
+<tr><td><strong>Brasil</strong> (90 % ing.)</td><td>Itaú, Bradesco, BB, Santander, Mercado Pago, Inter, C6</td><td>Eficiencia 19,3 %, 119,9 M clientes (65 % adultos), marca líder</td><td>Penetración de renta alta (Itaú) y sensibilidad al ciclo de crédito masivo</td></tr>
+<tr><td><strong>México</strong> (7,4 % ing.)</td><td>BBVA México, Banamex, Banorte, Mercado Pago, Stori</td><td>16,6 M clientes, licencia banco múltiple (ago-26), app superior</td><td>Costo de fondeo alto en cuentas remuneradas y menor profundidad de buró</td></tr>
+<tr><td><strong>Colombia</strong> (2,3 % ing.)</td><td>Bancolombia, Davivienda, Lulo, RappiPay</td><td>6,1 M clientes, #1 emisora tarjetas de crédito, fondeo 76 % ref.</td><td>Escala todavía modesta y tope regulatorio de tasa de usura</td></tr>
+<tr><td><strong>EE. UU. / Global</strong></td><td>Chime, SoFi, Capital One, Ally, JPMorgan Chase</td><td>Base tecnológica común, remesas/latinos en EE. UU., opción de largo plazo</td><td>Sin ventaja de costos frente a neobancos locales; alto CAC y regulación OCC</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Form 20-F FY2025 (Ítem 4.B), Form 6-K 3T26 y Presentación 3T26 (acc. 0001292814-26-005275).</p>
+<h3>Matriz FODA de Nu Holdings</h3>
+<table>
+<thead><tr><th>Fortalezas (internas)</th><th>Debilidades (internas)</th></tr></thead>
+<tbody>
+<tr><td>• Ratio de eficiencia líder mundial (19,3 %) y costo de servir USD 1,1/mes.<br/>• Fondeo masivo y granular (USD 47,5 B depósitos; LDR neto 57 %).<br/>• Rentabilidad extraordinaria (EBIT 22,1 %; ROE 3T26 32 %).<br/>• Posición de capital sólida (CET1 Brasil 12,1 %; USD 2,1 B caja libre Holdco).</td><td>• Alta concentración geográfica y cambiaria en Brasil (90,3 % ingresos).<br/>• Cartera inclinada a crédito de consumo no garantizado (mayor volatilidad de NPL).<br/>• Tasa efectiva de impuestos artificialmente baja (15,2 %) dependiente de beneficios fiscales.<br/>• Estructura de voto dual-class concentrada y transición de CTO.</td></tr>
+<tr><th>Oportunidades (externas)</th><th>Amenazas (externas)</th></tr>
+<tr><td>• Escalar nómina y crédito en México con licencia de banco múltiple.<br/>• Crecer en crédito con garantía (<em>consignado</em>, FGTS, nómina) y renta alta en Brasil.<br/>• Capturar mercado de ingresos por comisiones, inversiones, seguros y pymes.<br/>• Opcionalidad a largo plazo de Nu US y Nu Global en remesas/banca digital.</td><td>• Deterioro prolongado del ciclo de crédito en Brasil (mora 90+ &gt; 8,0 %).<br/>• Cambios regulatorios (topes a tasas rotativas, CSLL o requisitos de capital BCB).<br/>• Guerra de precios en depósitos/crédito con Itaú y Mercado Pago.<br/>• Depreciación severa del real brasileño (BRL) frente al USD.</td></tr>
+</tbody>
+</table>
+<div class="reading"><strong>Nuestra lectura.</strong> El foso de costos de Nu en Brasil es genuino y difícil de replicar, lo que justifica un ROIC terminal del 18 % en nuestro escenario Base (por encima del WACC terminal del 11,71 %). No obstante, la competencia de Itaú y Mercado Pago y la menor madurez de México y EE. UU. impiden asumir expansión indefinida de márgenes sin presión competitiva.</div>
+</section>
+<section class="chapter" id="ciclos">
+<div class="kicker">SECCIÓN 06</div>
+<h1>Los tres ciclos: empresa, macroeconomía y mercado</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Ciclo corporativo (expansión madura):</strong> Nu se encuentra en transición desde hipercrecimiento puro (+67 % en FY23, +47 % en 9M26) hacia consolidación rentable en Brasil (65 % de adultos ya captados) y expansión de segunda ola en México, Colombia y EE. UU.</li>
+<li><strong>Ciclo macroeconómico (tasas altas y crédito tenso):</strong> el ciclo restrictivo del Banco Central de Brasil (Selic elevada) sostiene los ingresos por flotante pero presiona la capacidad de pago de los hogares, elevando la mora 90+ a 7,3 %.</li>
+<li><strong>Ciclo de mercado (Howard Marks — corrección de sentimiento):</strong> la caída de −40,6 % desde USD 18,98 hasta USD 11,27 ha comprimido el P/E de 28,5× (FY25) a 14,1× y el P/BV de 7,2× a 3,8×, desplazando el consenso desde la euforia de crecimiento hacia el escepticismo crediticio.</li>
+</ul></div>
+<h3>1. Ciclo de vida de la empresa y ciclo crediticio propio</h3>
+<p>En 2026 Nu Holdings combina dos fases corporativas distintas bajo un mismo techo: en <strong>Brasil</strong>, la adquisición de nuevos clientes ya madura (119,9 M, 65 % de adultos), por lo que el crecimiento depende de monetización (ARPAC USD 17,7/mes) y expansión hacia crédito personal/nómina, elevando la sensibilidad a la mora; en <strong>México</strong> (16,6 M clientes, licencia bancaria desde agosto de 2026) y <strong>Colombia</strong> (6,1 M), la franquicia todavía atraviesa la etapa de fuerte inversión en captación de depósitos y despliegue inicial de cartera.</p>
+<h3>2. Ciclo macroeconómico, monetario y cambiario (corte 20-nov-2026)</h3>
+<p>La economía brasileña genera el 90,3 % de los ingresos del grupo. Un entorno de tasas de interés reales elevadas (Selic) tiene un efecto dual: impulsa el rendimiento del excedente de liquidez y del crédito rotativo, pero encarece el servicio de la deuda familiar y empuja al alza los cargos por pérdidas crediticias esperadas (ECL USD 6,1 B en LTM). Al mismo tiempo, dado que Nu reporta en USD pero genera flujos en BRL, MXN y COP, una depreciación cambiaria impacta directamente tanto los ingresos traducidos en dólares como el valor intrínseco en USD —riesgo capturado en nuestra prima país ponderada (ERP total 7,62 %).</p>
+<h3>3. Ciclo de mercado (Howard Marks) y cambio de sentimiento</h3>
+<p>Durante 2024–2025 el mercado valoró a Nu como una historia de crecimiento casi lineal por encima de 25–28× utilidades y 6,5–7,2× valor en libros. El repunte de la mora 90+ a 7,3 % en el 3T26 y la salida del CTO provocaron un giro abrupto del péndulo hacia la cautela, llevando la cotización a USD 11,27 (−40,6 % desde máximos). Este reajuste reduce drásticamente el riesgo de pagar múltiplos excesivos, aunque exige disciplina sobre el margen de seguridad.</p>
+<table>
+<thead><tr><th>Dimensión del ciclo</th><th>Fase actual (nov-2026)</th><th>Indicador observado</th><th>Implicación en el DCF Simple Ginsu</th></tr></thead>
+<tbody>
+<tr><td><strong>Empresa</strong></td><td>Crecimiento rentable con presión de crédito</td><td>Ingresos +47 % 9M26; EBIT 22,1 % (−245 pb vs. FY25)</td><td>Desaceleración gradual: 25 % año 1 → 17 % años 2–5 en Base</td></tr>
+<tr><td><strong>Macro / tasas</strong></td><td>Tasas reales altas en Brasil; riesgo fiscal/FX</td><td>NPL 90+ en 7,3 %; ECL +70,7 % YoY en 3T26</td><td>WACC inicial 11,29 % → terminal 11,29 % reteniendo riesgo país</td></tr>
+<tr><td><strong>Mercado</strong></td><td>Péndulo pesimista tras 3T26</td><td>−40,6 % desde máximos; P/E LTM 14,1×; P/BV 3,8×</td><td>Precio USD 11,27 ya descuenta g2–5 ~4,6 % o margen ~16,7 %</td></tr>
+</tbody>
+</table>
+<div class="reading"><strong>Nuestra lectura.</strong> El punto más peligroso en una fintech de crédito es extrapolar el margen pico del ciclo benigno (24,5 % en FY25) como si fuera permanente. Nuestro escenario Base incorpora explícitamente la normalización del crecimiento y exige capital adicional (S2C 1,8×) mientras retiene la prima país de Latinoamérica hasta perpetuidad.</div>
+</section>
+<section class="chapter" id="riesgos">
+<div class="kicker">SECCIÓN 07</div>
+<h1>Riesgos</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Riesgo de crédito (máxima prioridad):</strong> la mora 90+ alcanzó 7,3 % y las provisiones ECL sumaron USD 6.110 M en LTM (29,1 % de ingresos); una recesión en Brasil puede comprimir severamente el margen operativo.</li>
+<li><strong>Normalización fiscal y activos diferidos (DTA):</strong> la tasa efectiva LTM cayó a 15,2 % frente a una tasa estatutaria combinada de ~34 %, acumulando USD 3.346 M de DTA en el balance; cambios legales en <em>Lei do Bem</em> o CSLL reducirían el flujo libre.</li>
+<li><strong>Concentración geográfica y riesgo cambiario:</strong> Brasil aporta 90,3 % de los ingresos; una devaluación del real brasileño o inestabilidad fiscal eleva el costo de capital y reduce los flujos en USD.</li>
+<li><strong>Consumo de capital regulatorio y expansión en EE. UU.:</strong> el crecimiento acelerado de APR redujo el CET1 Brasil en 90 pb YTD (a 12,1 %), mientras Nu US / Nu Global introducen riesgo de ejecución y costos iniciales.</li>
+</ul></div>
+<h3>Matriz de riesgos materiales</h3>
+<table>
+<thead><tr><th>Riesgo</th><th>Prob.</th><th>Impacto</th><th>Mecanismo de transmisión al valor</th><th>Mitigante / señal de alerta</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Deterioro crediticio en Brasil</strong></td><td>Alta</td><td>Muy alto</td><td>Eleva ECL por encima de 32–35 % de ingresos y comprime el margen EBIT hacia 14–16 %.</td><td>Cobertura ECL 234 % y 12,1 % NIM ajustado; alerta si NPL 90+ supera 8,0 % dos trimestres.</td></tr>
+<tr><td><strong>2. Normalización tributaria y DTA</strong></td><td>Alta</td><td>Alto</td><td>Aumenta la carga fiscal efectiva de 15,2 % hacia 34–40 % (CSLL bancaria), recortando NOPAT.</td><td>Ya modelado en DCF (convergencia 15,2 % → 34,0 %); vigilar leyes fiscales en Brasil.</td></tr>
+<tr><td><strong>3. Riesgo país y tipo de cambio (BRL)</strong></td><td>Media-Alta</td><td>Alto</td><td>Una caída de 20 % en BRL reduce proporcionalmente ingresos y FCFF en USD y sube el WACC.</td><td>Diversificación gradual en México/Colombia; WACC conserva prima país LatAm en perpetuidad.</td></tr>
+<tr><td><strong>4. Presión regulatoria y capital Basilea III</strong></td><td>Media</td><td>Alto</td><td>Topes a tasas rotativas o mayores requisitos de CET1 frenan el crecimiento y elevan capital requerido.</td><td>CET1 12,1 % (+510 pb sobre mínimo 7,0 %) y USD 2,1 B libres en Holdco; S2C 1,8× en Base.</td></tr>
+<tr><td><strong>5. Ejecución en EE. UU. y transición CTO</strong></td><td>Media</td><td>Medio</td><td>Fuga de gasto comercial en Nu US sin retorno o fallos operativos tras la salida del CTO.</td><td>Compromiso público ≤ 100 pb en eficiencia 2026–27; revisar en Investor Day 8-dic-2026.</td></tr>
+</tbody>
+</table>
+<div class="reading"><strong>Nuestra lectura.</strong> El riesgo de crédito y la normalización fiscal son inherentes al modelo de negocio y están internalizados en nuestro WACC (11,29 % → 11,29 %) y tasa marginal (34 %). El riesgo que podría invalidar la tesis no es una oscilación trimestral de mora, sino una ruptura simultánea de morosidad, regulación en Brasil y disciplina de gasto internacional.</div>
+</section>
+<section class="chapter" id="destruccion">
+<div class="kicker">SECCIÓN 08</div>
+<h1>¿Qué podría destruir a Nu Holdings?</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Muerte por ciclo de crédito descontrolado:</strong> un salto simultáneo de morosidad 90+ por encima de 10 % y caída del crecimiento destruiría el margen operativo y obligaría a recapitalizar subsidiarias, llevando el valor hacia USD 5–7/acción.</li>
+<li><strong>Muerte por choque regulatorio o fiscal extremo en Brasil:</strong> topes severos a tasas de tarjetas/préstamos o alzas abruptas de CSLL combinadas con fuga de liquidez dañarían la economía unitaria en el mercado que genera 90 % de los ingresos.</li>
+<li><strong>Muerte por indisciplina en asignación de capital:</strong> quemar la caja del holding (USD 2,1 B) en una guerra de subsidios en Estados Unidos o en adquisiciones destructivas de valor mientras cae el CET1 brasileño.</li>
+<li>En nuestra prueba de estrés combinada más severa (S4 · no oficial), el valor intrínseco cae a <strong>USD 4,61</strong> (−72,3 % vs. Base).</li>
+</ul></div>
+<h3>Tres rutas cualitativas de destrucción de valor</h3>
+<p><strong>1. Espiral de morosidad y restricción de capital:</strong> en una fintech con USD 41,6 B de cartera minorista mayoritariamente sin garantía, el crecimiento rápido puede ocultar el deterioro real de las cosechas nuevas (efecto denominador). Si el desempleo en Brasil repunta y las cosechas 2025–2026 acumulan pérdidas muy superiores a lo previsto, el cargo ECL absorbería el margen bruto, erosionaría el CET1 hacia el mínimo regulatorio de 7,0 % y forzaría a frenar el crédito en el peor momento del ciclo.</p>
+<p><strong>2. Intervención regulatoria o tributaria sobre la renta del negocio:</strong> Brasil ya introdujo límites al interés rotativo de tarjetas de crédito (ley <em>Desenrola</em>, tope de 100 % del principal). Si el Congreso o el BCB impusieran techos más estrictos a préstamos personales, elevaran encajes no remunerados o eliminaran la deducibilidad de <em>Lei do Bem</em> junto con una mayor alícuota bancaria (CSLL), la rentabilidad estructural caería varios puntos porcentuales de forma permanente.</p>
+<p><strong>3. Dilución estratégica en EE. UU. y falla de gobierno dual-class:</strong> Estados Unidos es un cementerio de expansiones extranjeras en banca minorista (BBVA, HSBC y Santander salieron total o parcialmente del retail estadounidense). Dado que David Vélez concentra 74,4 % del voto, los accionistas minoritarios carecen de poder de veto si la dirección decidiera subsidiar agresivamente el crecimiento de Nu US durante años con pérdidas operativas crecientes.</p>
+<h3>Pruebas de estrés ilustrativas (no oficiales · motor Simple Ginsu)</h3>
+<p>Las siguientes simulaciones se calcularon con el motor oficial <code>fcffsimpleginzu</code> variando supuestos sobre el escenario Base R2. Son <strong>estrictamente ilustrativas</strong> y no sustituyen los escenarios oficiales ni el margen de seguridad:</p>
+<figure><img src="../../imagenes/NU/estres.png" alt="Impacto de cuatro pruebas de estrés ilustrativas (no oficiales) recalculadas con el motor Simple Ginsu FCFF frente al escenario Base y al cierre USD 11,27."/><figcaption>Impacto de cuatro pruebas de estrés ilustrativas (no oficiales) recalculadas con el motor Simple Ginsu FCFF frente al escenario Base y al cierre USD 11,27.</figcaption></figure>
+<table>
+<thead><tr><th>Escenario de estrés ilustrativo (no oficial)</th><th class="num">Valor operativo</th><th class="num">Valor / acción</th><th class="num">MOS 35 %</th><th class="num">vs. Base R2</th></tr></thead>
+<tbody><tr class="total"><td>Base (referencia)</td><td class='num'>USD 79,2 B</td><td class='num'><strong>USD 16,65</strong></td><td class='num'>USD 10,82</td><td class='num'>Referencia</td></tr><tr><td>S1 · Ciclo crediticio severo (margen 16 %)</td><td class='num'>USD 36,0 B</td><td class='num'><strong>USD 7,81</strong></td><td class='num'>USD 5,07</td><td class='num'>-53,1 %</td></tr><tr><td>S2 · Shock riesgo país Brasil (+200 pb WACC)</td><td class='num'>USD 60,1 B</td><td class='num'><strong>USD 12,74</strong></td><td class='num'>USD 8,28</td><td class='num'>-23,5 %</td></tr><tr><td>S3 · Mayor exigencia de capital (S2C 1,2×) y tasa 38 %</td><td class='num'>USD 63,2 B</td><td class='num'><strong>USD 13,39</strong></td><td class='num'>USD 8,70</td><td class='num'>-19,6 %</td></tr><tr><td>S4 · Combinado adverso (mora + WACC +150 pb + S2C 1,2×)</td><td class='num'>USD 20,4 B</td><td class='num'><strong>USD 4,61</strong></td><td class='num'>USD 3,00</td><td class='num'>-72,3 %</td></tr></tbody>
+</table>
+<p class="source">Fuente: Simulaciones ilustrativas no oficiales ejecutadas con scripts/v2-motor.mjs (Simple Ginsu) sobre la base R2 (acciones diluidas 4.881,1 M).</p>
+<div class="reading"><strong>Nuestra lectura.</strong> Las pruebas de estrés demuestran que Nu no es inmune a un doble golpe de crédito y riesgo país: bajo S1 (margen 16 % y menor crecimiento) el valor desciende a USD 7,81, y bajo S4 (choque combinado) cae a USD 4,61. Esta asimetría explica por qué el Modelo JMR exige respetar el precio con margen de seguridad del 35 % (USD 10,82).</div>
+</section>
+<section class="chapter" id="tesis_contraria">
+<div class="kicker">SECCIÓN 09</div>
+<h1>Los alcistas vs. los bajistas</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Caso alcista:</strong> plataforma digital imbatible en eficiencia (19,3 %), 142,6 M clientes, monetización por cohortes en expansión (ARPAC USD 17,7 → USD 25–30 en cohortes maduras) y opción gratuita en México/Colombia/EE. UU., comprable a 14,1× P/E LTM tras caer 41 %.</li>
+<li><strong>Caso bajista:</strong> la mora 90+ en máximos de 13 trimestres (7,3 %) señala fatiga crediticia en Brasil, la tasa fiscal de 15,2 % es insosteniblemente baja y la valoración de 3,8× P/BV sigue duplicando a Itaú Unibanco pese a un balance expuesto a crédito de consumo.</li>
+<li><strong>Síntesis:</strong> a USD 11,27 la acción ofrece un potencial atractivo de <strong>+47,8 %</strong> hasta nuestro Base (<strong>USD 16,65</strong>), muy próximo al punto de compra disciplinado con MOS 35 % (<strong>USD 10,82</strong>).</li>
+</ul></div>
+<h3>El debate central: alcistas frente a bajistas</h3>
+<table>
+<thead><tr><th>Frente de debate</th><th>Argumento alcista (Bull)</th><th>Argumento bajista (Bear)</th><th>Evidencia verificada en R2</th></tr></thead>
+<tbody>
+<tr><td><strong>Calidad de crédito</strong></td><td>El alza de NPL 90+ (7,3 %) refleja cambio de mezcla hacia préstamos más rentables; el NIM ajustado por riesgo sigue en 12,1 % y la cobertura en 234 %.</td><td>NPL 90+ en máximo de 13 trimestres y ECL +70,7 % YoY anticipan deterioro de cosechas nuevas en un Brasil con tasas altas.</td><td>El EBIT LTM bajó de 24,5 % a 22,1 %. Nuestro Base modela 22 % en año 1 antes de recuperar 24 % al año 5; Conservador cae a 18 %.</td></tr>
+<tr><td><strong>Expansión regional y EE. UU.</strong></td><td>Licencia bancaria en México (16,6 M clientes) y liderazgo en tarjetas en Colombia replican el manual de Brasil; EE. UU. ofrece opcionalidad masiva.</td><td>México aún quema margen en depósitos remunerados y EE. UU. tiene CAC elevado y competidores consolidados sin ventaja de marca.</td><td>Brasil aún representa 90,3 % de ingresos (Nota 34). El Base no asume éxito extraordinario en EE. UU., solo desaceleración ordenada (17 % en años 2–5).</td></tr>
+<tr><td><strong>Tasa efectiva de impuestos</strong></td><td>Los beneficios de innovación (<em>Lei do Bem</em>) y la estructura corporativa sostienen tasas efectivas por debajo del 20–25 %.</td><td>15,2 % LTM es temporal; los DTA suman USD 3,3 B y la alícuota estatutaria combinada en Brasil supera el 34 %.</td><td>Nuestro DCF converge rigurosamente desde 15,15 % LTM hasta <strong>34,0 % marginal</strong> en el año 10, eliminando cualquier espejismo fiscal.</td></tr>
+<tr><td><strong>Eficiencia de capital (S2C)</strong></td><td>CapEx contable es apenas USD 407 M (1,9 % de ingresos), lo que sugiere un negocio ultra ligero en activos.</td><td>Crecer la cartera de crédito exige retener capital regulatorio (CET1 ≥ 12 %), no solo servidores y software.</td><td>Aplicamos la regla Damodaran–MELI §6: exigimos <strong>S2C 1,8×</strong> en Base (coherente con 1,70× histórico de Ventas/Capital), no 4–5× de software.</td></tr>
+<tr><td><strong>Gobierno dual-class</strong></td><td>El control de los fundadores (74,4 % voto de Vélez) permitió construir la franquicia sin presiones trimestrales.</td><td>Concentración extrema de voto y renuncia repentina del CTO sin sucesor anunciado elevan el riesgo de agencia.</td><td>La recompra de USD 500,4 M en 9M26 es una señal favorable, pero exige vigilancia continua en el Investor Day del 8-dic-2026.</td></tr>
+</tbody>
+</table>
+<div class="reading"><strong>Nuestra lectura.</strong> Ni el optimismo desbordado de 2025 ni el pánico post-3T26 se sostienen al contrastarlos con los números. El mercado descuenta hoy una desaceleración extrema (crecimiento ~4,6 % años 2–5 o margen ~16,7 %) que deja un potencial de +47,8 % frente al Base (USD 16,65), muy cerca del umbral MOS 35 % (USD 10,82).</div>
+</section>
+<section class="chapter" id="supuestos">
+<div class="kicker">SECCIÓN 10</div>
+<h1>Supuestos y escenarios</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Motor y calibración Damodaran–MELI:</strong> valoración <strong>fintech operativa (<code>fcffsimpleginzu</code>)</strong> con WACC común calculado por fórmula en <em>Cost of capital worksheet</em> (<strong>11,29 %</strong> inicial → <strong>11,29 %</strong> terminal conservando riesgo país de Brasil/México/Colombia), tasa marginal <strong>34,0 %</strong> y crecimiento perpetuo <strong>4,0 %</strong>.</li>
+<li><strong>Crecimiento de ingresos:</strong> Conservador 16 % / 11 % · <strong>Base 25 % año 1 / 17 % años 2–5</strong> · Optimista 32 % / 22 % (desacelerando ordenadamente desde +47 % 9M26 y +37 % FY25).</li>
+<li><strong>Margen operativo EBIT:</strong> Conservador 19 % → 18 % · <strong>Base 22 % → 24 % (año 5)</strong> · Optimista 24 % → 28 %, partiendo del 22,1 % reportado LTM y sin capitalizar I+D (software ya capitalizado bajo IAS 38; nube excluida per guía Damodaran–MELI §4).</li>
+<li><strong>Reinversión fintech realista (<em>Sales-to-Capital</em>):</strong> 1,5× / <strong>1,8×</strong> / 2,1× (alineado con el 1,70× observado de Ventas/Capital invertido) para capturar el capital regulatorio exigido por la expansión de cartera, y ROIC terminal de 11,71 % / <strong>18,0 %</strong> / 22,0 %.</li>
+</ul></div>
+<h3>De historia a números: justificación, contraevidencia e invalidadores</h3>
+<p><strong>Crecimiento de ingresos (Base: 25 % año 1; 17 % compuesto años 2–5; convergencia a 4,0 % al año 10):</strong> Nu creció +37,0 % en FY25 y +47,0 % en 9M26. Asumir 25 % en el año 1 y 17 % anual en años 2–5 refleja la maduración natural de Brasil (donde 65 % de adultos ya son clientes y el crecimiento pasa de nuevos usuarios a ARPAC y productos con garantía) compensada por la aceleración en México (16,6 M clientes con licencia bancaria desde ago-2026) y Colombia. Al año 10 los ingresos alcanzan <strong>USD 76,1 B</strong> (CAGR 10 años de 13,7 %). <em>Contraevidencia:</em> una recesión en Brasil o tope regulatorio llevaría al escenario Conservador (16 % / 11 %, USD 51,3 B al año 10).</p>
+<p><strong>Margen operativo EBIT (Base: 22,0 % año 1 → 24,0 % objetivo al año 5):</strong> el EBIT LTM reportado es 22,08 % (tras bajar desde 24,55 % en FY25 por el alza de ECL). El año 1 mantiene la presión actual (22,0 %) mientras se absorbe el ciclo de NPL 90+ en Brasil y el lanzamiento de Nu US, y converge gradualmente al 24,0 % al año 5 —aún por debajo del pico de FY25— apoyado en la escala operativa (eficiencia 19,3 %) y la entrada en rentabilidad de México. <em>Control de I+D (guía Damodaran–MELI §4–5):</em> Nu capitaliza su software interno directamente bajo IAS 38 (USD 306 M en 9M26; saldo neto USD 684 M, Nota 19) y no reporta una línea separada de I+D; el gasto de infraestructura/nube (USD 549 M) es gasto operativo puro y no se capitaliza, evitando sobreestimar artificialmente el EBIT.</p>
+<p><strong>Reinversión (Sales-to-Capital 1,8× en Base) y ROIC terminal (18,0 %):</strong> conforme a la guía Damodaran–MELI §6, una fintech con cartera de crédito no puede modelarse con ratios asset-light de software puro (4–5×) porque cada dólar de cartera exige capital regulatorio (CET1 ≥ 12 %). El ratio histórico Ventas / Capital invertido fintech (USD 20.987 M / USD 12.313 M) es exactamente <strong>1,70×</strong>; fijar 1,80× en Base (1,50× Conservador; 2,10× Optimista) exige reinvertir USD 28,2 B en los diez años explícitos para financiar el crecimiento hasta USD 76,1 B de ingresos. El ROIC terminal de 18,0 % (+629 pb sobre WACC terminal, con reinversión perpetua de 22,2 % del NOPAT) refleja la ventaja duradera de costos frente a la banca tradicional; en Conservador se iguala al WACC terminal (11,71 %, cero creación de valor en perpetuidad).</p>
+<p><strong>Costo de capital (WACC inicial 11,29 % → terminal 11,29 %) y puente EV–patrimonio:</strong> calculado automáticamente por fórmula en <em>Cost of capital worksheet</em> con tasa libre 5,15 % (convención biblioteca V2 nov-2026), ERP maduro 3,387 % más prima país Damodaran ponderada por ingresos 9M26 Nota 34 (Brasil 90,3 %, México 7,4 %, Colombia 2,3 % → <strong>ERP ponderado 7,62 %</strong>) y beta 1,05 → 1,00. Igual que en MELI R9, la celda <code>Input sheet!B46</code> retiene explícitamente el riesgo país latinoamericano en perpetuidad mediante fórmula (<code>=B34+'Cost of capital worksheet'!B27 = 11,29 %</code>), porque caer a la referencia madura estadounidense de 8,54 % ignoraría el riesgo soberano de Brasil y México (con 8,54 % el Base subiría irrealmente a USD 23,68). El puente EV–patrimonio suma <strong>USD 2.100 M de caja libre Holdco</strong> (Slide 22) y USD 89,6 M de asociadas, y resta USD 68,5 M de arrendamientos IFRS 16 y USD 2,3 M de minoritarios, sin restar doblemente depósitos (USD 47,5 B) ni fondeo de Nu Financeira (USD 5,0 B) cuyo costo ya descuenta del EBIT.</p>
+<table>
+<thead><tr><th>Parámetro (Simple Ginsu FCFF)</th><th class="num">Conservador</th><th class="num">Base</th><th class="num">Optimista</th><th>Base de calibración</th></tr></thead>
+<tbody>
+<tr><td>Crecimiento de ingresos · Año 1</td><td class="num">16,0 %</td><td class="num"><strong>25,0 %</strong></td><td class="num">32,0 %</td><td>Desaceleración desde +47 % 9M26 / +37 % FY25</td></tr>
+<tr><td>Crecimiento compuesto · Años 2–5</td><td class="num">11,0 %</td><td class="num"><strong>17,0 %</strong></td><td class="num">22,0 %</td><td>Monetización Brasil + escalado México/Colombia</td></tr>
+<tr><td>Margen operativo EBIT · Año 1</td><td class="num">19,0 %</td><td class="num"><strong>22,0 %</strong></td><td class="num">24,0 %</td><td>Anclado al 22,08 % LTM reportado</td></tr>
+<tr><td>Margen operativo objetivo (Año 5)</td><td class="num">18,0 %</td><td class="num"><strong>24,0 %</strong></td><td class="num">28,0 %</td><td>Debajo del pico FY25 (24,5 %) en Base</td></tr>
+<tr><td>Sales-to-Capital (Años 1–5 y 6–10)</td><td class="num">1,50×</td><td class="num"><strong>1,80×</strong></td><td class="num">2,10×</td><td>Alineado con 1,70× histórico (capital regulatorio)</td></tr>
+<tr><td>WACC inicial (fórmula Cost of capital)</td><td class="num">11,29 %</td><td class="num"><strong>11,29 %</strong></td><td class="num">11,29 %</td><td>Común: rf 5,15 % + β 1,05 × ERP LatAm 7,62 %</td></tr>
+<tr><td>WACC terminal (fórmula Input B46)</td><td class="num">11,29 %</td><td class="num"><strong>11,29 %</strong></td><td class="num">11,29 %</td><td>Común: rf 5,15 % + β 1,00 × ERP LatAm 7,62 %</td></tr>
+<tr><td>ROIC terminal</td><td class="num">11,29 %</td><td class="num"><strong>18,0 %</strong></td><td class="num">22,0 %</td><td>Cons. = WACC; Base refleja foso de costos 19,3 %</td></tr>
+<tr><td>Tasa efectiva → marginal impuestos</td><td class="num">15,2 → 34,0 %</td><td class="num"><strong>15,2 → 34,0 %</strong></td><td class="num">15,2 → 34,0 %</td><td>Convergencia a tasa estatutaria LatAm (Nota 30)</td></tr>
+<tr><td>Crecimiento perpetuo (g) / MOS</td><td class="num">4,0 % / 35 %</td><td class="num"><strong>4,0 % / 35 %</strong></td><td class="num">4,0 % / 35 %</td><td>g &lt; rf (5,15 %); MOS 35 % solo sobre Base</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Hojas «JMR Escenarios», «Cost of capital worksheet» e «Input sheet» del libro NU-V2-LTM20260930-R2_VALORACION.xlsx.</p>
+<figure><img src="../../imagenes/NU/trayectorias_dcf.png" alt="Trayectorias proyectadas de ingresos y flujo libre FCFF (Años 1–10) en los tres escenarios bajo Damodaran Simple Ginsu. Fuente: Libro oficial R2."/><figcaption>Trayectorias proyectadas de ingresos y flujo libre FCFF (Años 1–10) en los tres escenarios bajo Damodaran Simple Ginsu. Fuente: Libro oficial R2.</figcaption></figure>
+<h3>Proyección explícita del escenario Base (Años 1–10 · USD millones)</h3>
+<table>
+<thead><tr><th>Año</th><th class="num">Crec.</th><th class="num">Ingresos</th><th class="num">Margen</th><th class="num">EBIT</th><th class="num">Imp.</th><th class="num">NOPAT</th><th class="num">Reinv.</th><th class="num">FCFF</th><th class="num">WACC</th><th class="num">VP FCFF</th></tr></thead>
+<tbody><tr><td style='white-space:nowrap'>Año 1</td><td class='num' style='white-space:nowrap'>25,0&nbsp;%</td><td class='num'>26.234</td><td class='num' style='white-space:nowrap'>22,0&nbsp;%</td><td class='num'>5.772</td><td class='num' style='white-space:nowrap'>15,2&nbsp;%</td><td class='num'>4.897</td><td class='num'>2.478</td><td class='num'>2.419</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>2.174</td></tr><tr><td style='white-space:nowrap'>Año 2</td><td class='num' style='white-space:nowrap'>17,0&nbsp;%</td><td class='num'>30.694</td><td class='num' style='white-space:nowrap'>22,8&nbsp;%</td><td class='num'>6.998</td><td class='num' style='white-space:nowrap'>15,2&nbsp;%</td><td class='num'>5.938</td><td class='num'>2.899</td><td class='num'>3.039</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>2.454</td></tr><tr><td style='white-space:nowrap'>Año 3</td><td class='num' style='white-space:nowrap'>17,0&nbsp;%</td><td class='num'>35.912</td><td class='num' style='white-space:nowrap'>23,2&nbsp;%</td><td class='num'>8.332</td><td class='num' style='white-space:nowrap'>15,2&nbsp;%</td><td class='num'>7.069</td><td class='num'>3.392</td><td class='num'>3.678</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>2.668</td></tr><tr><td style='white-space:nowrap'>Año 4</td><td class='num' style='white-space:nowrap'>17,0&nbsp;%</td><td class='num'>42.017</td><td class='num' style='white-space:nowrap'>23,6&nbsp;%</td><td class='num'>9.916</td><td class='num' style='white-space:nowrap'>15,2&nbsp;%</td><td class='num'>8.414</td><td class='num'>3.968</td><td class='num'>4.445</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>2.898</td></tr><tr><td style='white-space:nowrap'>Año 5</td><td class='num' style='white-space:nowrap'>17,0&nbsp;%</td><td class='num'>49.160</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>11.798</td><td class='num' style='white-space:nowrap'>15,2&nbsp;%</td><td class='num'>10.011</td><td class='num'>3.933</td><td class='num'>6.078</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>3.560</td></tr><tr><td style='white-space:nowrap'>Año 6</td><td class='num' style='white-space:nowrap'>14,4&nbsp;%</td><td class='num'>56.239</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>13.497</td><td class='num' style='white-space:nowrap'>18,9&nbsp;%</td><td class='num'>10.944</td><td class='num'>3.687</td><td class='num'>7.257</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>3.820</td></tr><tr><td style='white-space:nowrap'>Año 7</td><td class='num' style='white-space:nowrap'>11,8&nbsp;%</td><td class='num'>62.875</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>15.090</td><td class='num' style='white-space:nowrap'>22,7&nbsp;%</td><td class='num'>11.666</td><td class='num'>3.214</td><td class='num'>8.452</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>3.997</td></tr><tr><td style='white-space:nowrap'>Año 8</td><td class='num' style='white-space:nowrap'>9,2&nbsp;%</td><td class='num'>68.660</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>16.478</td><td class='num' style='white-space:nowrap'>26,5&nbsp;%</td><td class='num'>12.118</td><td class='num'>2.518</td><td class='num'>9.601</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>4.080</td></tr><tr><td style='white-space:nowrap'>Año 9</td><td class='num' style='white-space:nowrap'>6,6&nbsp;%</td><td class='num'>73.191</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>17.566</td><td class='num' style='white-space:nowrap'>30,2&nbsp;%</td><td class='num'>12.256</td><td class='num'>1.626</td><td class='num'>10.629</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>4.059</td></tr><tr><td style='white-space:nowrap'>Año 10</td><td class='num' style='white-space:nowrap'>4,0&nbsp;%</td><td class='num'>76.119</td><td class='num' style='white-space:nowrap'>24,0&nbsp;%</td><td class='num'>18.269</td><td class='num' style='white-space:nowrap'>34,0&nbsp;%</td><td class='num'>12.057</td><td class='num'>1.692</td><td class='num'>10.366</td><td class='num' style='white-space:nowrap'>11,29&nbsp;%</td><td class='num'>3.557</td></tr></tbody>
+</table>
+<p class="source">Fuente: Hoja «Valuation output» del libro oficial NU-V2-LTM20260930-R2_VALORACION.xlsx (paridad exacta 0,000 % con scripts/v2-motor.mjs). VP FCFF Años 1–10: USD 33.266,2 M; VP Terminal: USD 45.901,6 M (58,0 % del valor operativo).</p>
+<h3>Hechos posteriores al corte contable (30-sep-2026 → 20-nov-2026)</h3>
+<p>Entre el cierre contable (30-sep-2026) y la fecha de precio (20-nov-2026) se registraron tres hitos verificados sin alterar retroactivamente el corte LTM: el lanzamiento de Nu Global (15-oct-2026), la renuncia del CTO Eric Young (23-oct-2026, Form 6-K) y la publicación del 3T26 (12-nov-2026) que llevó la acción a USD 11,27. El próximo hito clave será el <strong>Investor Day del 8 de diciembre de 2026</strong>.</p>
+<div class="reading"><strong>Nuestra lectura.</strong> El escenario Base es deliberadamente sobrio: exige normalizar la tasa fiscal de 15,2 % a 34 %, obliga a reinvertir USD 28,2 B en diez años para respetar los requisitos de capital (S2C 1,8×) y mantiene íntegra la prima de riesgo de Brasil/México en el WACC terminal (11,29 %), logrando que el peso del valor terminal quede contenido en <strong>58,0 %</strong> (muy por debajo del umbral de alerta del 75 %).</div>
+</section>
+<section class="chapter" id="valoracion">
+<div class="kicker">SECCIÓN 11</div>
+<h1>Valoración</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>El modelo oficial <strong>Damodaran Simple Ginsu (FCFF fintech)</strong> valora Nu Holdings en <strong>USD 16,65 por acción en el escenario Base</strong> (+47,8 % sobre el cierre del 20-nov-2026 de USD 11,27), dentro de un rango de <strong>USD 8,18 (Conservador)</strong> a <strong>USD 26,49 (Optimista)</strong>.</li>
+<li>El precio de entrada disciplinado con <strong>margen de seguridad del 35 % (aplicado solo al Base)</strong> es <strong>USD 10,82 por acción</strong> (−4,0 % respecto al mercado).</li>
+<li>La conciliación entre el libro oficial de 42 hojas recalculado en LibreOffice (<code>NU-V2-LTM20260930-R2_VALORACION.xlsx</code>) y el motor JavaScript (<code>scripts/v2-motor.mjs</code>) es exacta al <strong>0,000 %</strong> en los tres escenarios, con 0 errores de fórmula.</li>
+<li>A USD 11,27, el DCF inverso implica que el mercado descuenta un crecimiento años 2–5 de apenas <strong>~4,6 %</strong> (vs. 17 % Base) o un margen operativo objetivo de <strong>~16,7 %</strong> (vs. 24 % Base).</li>
+</ul></div>
+<figure><img src="../../imagenes/NU/valor_vs_precio.png" alt="Valor intrínseco por acción de los tres escenarios y precio MOS 35 % frente al cierre del 20-nov-2026 (USD 11,27), junto con la descomposición del Base (USD 16,65)."/><figcaption>Valor intrínseco por acción de los tres escenarios y precio MOS 35 % frente al cierre del 20-nov-2026 (USD 11,27), junto con la descomposición del Base (USD 16,65).</figcaption></figure>
+<h3>Puente del valor operativo al valor del patrimonio (Base · USD millones)</h3>
+<p>Aplicando la regla fintech de la guía Damodaran–MELI §8, el puente EV–patrimonio evita el doble conteo de depósitos y fondeo de crédito (ya deducidos en el EBIT) y evita sumar efectivo operativo de subsidiarias reguladas:</p>
+<table>
+<thead><tr><th>Componente del puente EV → Patrimonio (Base)</th><th class="num">USD millones</th><th class="num">USD / acción</th><th class="num">% del patrimonio</th></tr></thead>
+<tbody>
+<tr><td>VP de flujos libres FCFF explícitos (Años 1–10)</td><td class="num">33.266,2</td><td class="num">USD 6,82</td><td class="num">40,9 %</td></tr>
+<tr><td>VP del valor terminal (g = 4,0 %; WACC = 11,29 %; ROIC = 18,0 %)</td><td class="num">45.901,6</td><td class="num">USD 9,40</td><td class="num">56,5 %</td></tr>
+<tr class="total"><td><strong>Valor de los activos operativos (EV operativo)</strong></td><td class="num"><strong>79.167,8</strong></td><td class="num"><strong>USD 16,22</strong></td><td class="num"><strong>97,4 %</strong></td></tr>
+<tr><td>(+) Caja y valores libres en Holdco (Form 6-K 3T26 Slide 22)</td><td class="num">+2.100,0</td><td class="num">+USD 0,43</td><td class="num">+2,6 %</td></tr>
+<tr><td>(+) Activos no operativos (Inversiones en asociadas, Nota 18)</td><td class="num">+89,6</td><td class="num">+USD 0,02</td><td class="num">+0,1 %</td></tr>
+<tr><td>(−) Deuda corporativa y arrendamientos IFRS 16 (sin fondeo operativo)</td><td class="num">−68,5</td><td class="num">−USD 0,01</td><td class="num">−0,1 %</td></tr>
+<tr><td>(−) Participaciones minoritarias (Balance 30-sep-2026)</td><td class="num">−2,3</td><td class="num">−USD 0,00</td><td class="num">−0,0 %</td></tr>
+<tr class="total"><td><strong>Valor intrínseco total del patrimonio común (Base)</strong></td><td class="num"><strong>81.286,7</strong></td><td class="num"><strong>USD 16,65</strong></td><td class="num"><strong>100,0 %</strong></td></tr>
+<tr><td>Acciones diluidas promedio (3T26 Nota 9; optionsValue = 0)</td><td class="num">4.881,11 M</td><td class="num">—</td><td class="num">—</td></tr>
+<tr><td>Precio con margen de seguridad 35 % (solo Base)</td><td class="num">52.836,3</td><td class="num"><strong>USD 10,82</strong></td><td class="num">65,0 % del Base</td></tr>
+</tbody>
+</table>
+<p class="source">Fuente: Hoja «Valuation output» del libro NU-V2-LTM20260930-R2_VALORACION.xlsx. Peso del valor terminal sobre EV operativo: 58,0 % (&lt; umbral 75 %).</p>
+<div style="break-inside:avoid; page-break-inside:avoid;">
+<h3>Resumen de escenarios y conciliación libro ↔ motor</h3>
+<table>
+<thead><tr><th>Escenario</th><th class="num">Valor libro XLSX</th><th class="num">Valor motor JS</th><th class="num">Diferencia</th><th class="num">vs. Precio (USD 11,27)</th><th class="num">P/BV impl.</th><th class="num">P/E LTM impl.</th></tr></thead>
+<tbody>
+<tr><td>Conservador (g2-5: 11 %; mT: 18 %; S2C 1,5×)</td><td class="num">USD 8,18</td><td class="num">USD 8,18</td><td class="num">0,000 %</td><td class="num">−27,4 %</td><td class="num">2,76×</td><td class="num">10,2×</td></tr>
+<tr class="total"><td><strong>Base (g2-5: 17 %; mT: 24 %; S2C 1,8×)</strong></td><td class="num"><strong>USD 16,65</strong></td><td class="num"><strong>USD 16,65</strong></td><td class="num"><strong>0,000 %</strong></td><td class="num"><strong>+47,8 %</strong></td><td class="num"><strong>5,62×</strong></td><td class="num"><strong>20,8×</strong></td></tr>
+<tr><td>Precio con MOS 35 % (solo Base)</td><td class="num">USD 10,82</td><td class="num">USD 10,82</td><td class="num">0,000 %</td><td class="num">−4,0 %</td><td class="num">3,65×</td><td class="num">13,5×</td></tr>
+<tr><td>Optimista (g2-5: 22 %; mT: 28 %; S2C 2,1×)</td><td class="num">USD 26,49</td><td class="num">USD 26,49</td><td class="num">0,000 %</td><td class="num">+135,0 %</td><td class="num">8,94×</td><td class="num">33,0×</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Matrices de sensibilidad 5×5 (recalculadas con el motor completo)</h3>
+<figure><img src="../../imagenes/NU/sensibilidades.png" alt="Matrices de sensibilidad 5×5 del libro oficial: (izquierda) WACC terminal × crecimiento perpetuo; (derecha) Crecimiento años 2–5 × margen operativo objetivo. Centro = Base USD 16,65."/><figcaption>Matrices de sensibilidad 5×5 del libro oficial: (izquierda) WACC terminal × crecimiento perpetuo; (derecha) Crecimiento años 2–5 × margen operativo objetivo. Centro = Base USD 16,65.</figcaption></figure>
+<h4>Matriz 1: WACC terminal × crecimiento perpetuo (g)</h4>
+<table><thead><tr><th>WACC term. / g</th><th class="num">3,0&nbsp;%</th><th class="num">3,5&nbsp;%</th><th class="num">4,0&nbsp;%</th><th class="num">4,5&nbsp;%</th><th class="num">5,0&nbsp;%</th></tr></thead><tbody><tr><td><strong>9,29&nbsp;%</strong></td><td class="num">USD&nbsp;19,31</td><td class="num">USD&nbsp;20,10</td><td class="num">USD&nbsp;21,04</td><td class="num">USD&nbsp;22,17</td><td class="num">USD&nbsp;23,54</td></tr><tr><td><strong>10,29&nbsp;%</strong></td><td class="num">USD&nbsp;17,35</td><td class="num">USD&nbsp;17,89</td><td class="num">USD&nbsp;18,50</td><td class="num">USD&nbsp;19,22</td><td class="num">USD&nbsp;20,06</td></tr><tr><td><strong>11,29&nbsp;%</strong></td><td class="num">USD&nbsp;15,86</td><td class="num">USD&nbsp;16,24</td><td class="num"><strong>USD&nbsp;16,66</strong></td><td class="num">USD&nbsp;17,14</td><td class="num">USD&nbsp;17,68</td></tr><tr><td><strong>12,29&nbsp;%</strong></td><td class="num">USD&nbsp;14,69</td><td class="num">USD&nbsp;14,96</td><td class="num">USD&nbsp;15,25</td><td class="num">USD&nbsp;15,58</td><td class="num">USD&nbsp;15,95</td></tr><tr><td><strong>13,29&nbsp;%</strong></td><td class="num">USD&nbsp;13,75</td><td class="num">USD&nbsp;13,94</td><td class="num">USD&nbsp;14,15</td><td class="num">USD&nbsp;14,38</td><td class="num">USD&nbsp;14,63</td></tr></tbody></table>
+<h4>Matriz 2: Crecimiento años 2–5 × margen operativo objetivo</h4>
+<table><thead><tr><th>Crec. 2–5 / Margen</th><th class="num">20,0&nbsp;%</th><th class="num">22,0&nbsp;%</th><th class="num">24,0&nbsp;%</th><th class="num">26,0&nbsp;%</th><th class="num">28,0&nbsp;%</th></tr></thead><tbody><tr><td><strong>13,00&nbsp;%</strong></td><td class="num">USD&nbsp;12,15</td><td class="num">USD&nbsp;13,38</td><td class="num">USD&nbsp;14,61</td><td class="num">USD&nbsp;15,84</td><td class="num">USD&nbsp;17,07</td></tr><tr><td><strong>15,00&nbsp;%</strong></td><td class="num">USD&nbsp;12,89</td><td class="num">USD&nbsp;14,24</td><td class="num">USD&nbsp;15,59</td><td class="num">USD&nbsp;16,94</td><td class="num">USD&nbsp;18,29</td></tr><tr><td><strong>17,00&nbsp;%</strong></td><td class="num">USD&nbsp;13,70</td><td class="num">USD&nbsp;15,18</td><td class="num"><strong>USD&nbsp;16,66</strong></td><td class="num">USD&nbsp;18,14</td><td class="num">USD&nbsp;19,62</td></tr><tr><td><strong>19,00&nbsp;%</strong></td><td class="num">USD&nbsp;14,57</td><td class="num">USD&nbsp;16,19</td><td class="num">USD&nbsp;17,81</td><td class="num">USD&nbsp;19,44</td><td class="num">USD&nbsp;21,06</td></tr><tr><td><strong>21,00&nbsp;%</strong></td><td class="num">USD&nbsp;15,51</td><td class="num">USD&nbsp;17,29</td><td class="num">USD&nbsp;19,07</td><td class="num">USD&nbsp;20,84</td><td class="num">USD&nbsp;22,62</td></tr></tbody></table>
+<p class="source">Fuente: Hoja «JMR Sensibilidades» del libro NU-V2-LTM20260930-R2_VALORACION.xlsx. Control «Centro − Base = 0»: verificado en ambas matrices.</p>
+<h3>DCF inverso y contraste por múltiplos (diagnóstico)</h3>
+<p><strong>¿Qué descuenta el precio actual de USD 11,27?</strong> Manteniendo el WACC Base (11,29 % → 11,29 %), el margen objetivo (24 %) y S2C (1,8×), el precio de mercado descuenta un <strong>crecimiento años 2–5 de apenas 4,6 %</strong> (1.238 pb inferior al Base). Alternativamente, manteniendo el crecimiento Base intacto, el mercado descuenta un <strong>margen operativo objetivo de 16,7 %</strong> (728 pb inferior al Base). Esto indica que la corrección de 41 % ya puso en precio un escenario significativamente más adverso que nuestro caso central.</p>
+<p><strong>Contraste por múltiplos históricos (diagnóstico, no promedio con el DCF):</strong> a USD 11,27, Nu cotiza a <strong>3,80× P/BV</strong> (vs. 7,20× al cierre de FY25) y <strong>14,05× P/E LTM</strong> (vs. 28,6× en FY25). Nuestro valor intrínseco Base (USD 16,65) equivale a 20,8× utilidades LTM y 5,62× valor en libros —un múltiplo razonable para una plataforma fintech con ROIC operativo superior al 30 % y crecimiento proyectado de 17–25 %.</p>
+<figure><img src="../../imagenes/NU/multiplos_historicos.png" alt="Evolución histórica de P/BV y P/E de Nu Holdings (cierres FY21–FY25 y 20-nov-2026) frente a los múltiplos implícitos del escenario Base. Fuente: SEC EDGAR y Yahoo Finance."/><figcaption>Evolución histórica de P/BV y P/E de Nu Holdings (cierres FY21–FY25 y 20-nov-2026) frente a los múltiplos implícitos del escenario Base. Fuente: SEC EDGAR y Yahoo Finance.</figcaption></figure>
+<div class="reading"><strong>Nuestra lectura.</strong> A USD 11,27 Nu Holdings ofrece un descuento real de 32,3 % frente a su valor intrínseco Base (USD 16,65, potencial +47,8 %), pero la disciplina del Modelo JMR exige un margen de seguridad del 35 % (USD 10,82) antes de asumir una posición completa mientras la mora 90+ siga en tendencia alcista.</div>
+</section>
+<section class="chapter" id="conclusiones">
+<div class="kicker">SECCIÓN 12</div>
+<h1>Conclusiones y plan de seguimiento</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li><strong>Conclusión disciplinada:</strong> Nu Holdings es una franquicia fintech de primer orden (eficiencia 19,3 %, 142,6 M clientes, EBIT 22,1 %, CET1 Brasil 12,1 %) cuyo valor intrínseco Base bajo Damodaran Simple Ginsu es <strong>USD 16,65</strong> (+47,8 % sobre el cierre de USD 11,27).</li>
+<li><strong>Zona de entrada disciplinada:</strong> el precio actual ya está cerca del umbral con margen de seguridad 35 % (<strong>USD 10,82</strong>, a 4,1 % de distancia). Una corrección adicional hacia <strong>USD 9,50–10,00</strong> o evidencia confirmada de estabilización de mora 90+ (&lt; 6,8 %) activaría una oportunidad asimétrica clara.</li>
+<li><strong>Estado de auditoría:</strong> revisión R2 en estado técnico <code>EN_REVISION</code> (visor de pendientes), pendiente de auditoría independiente (<code>P02</code>) y aprobación personal del propietario.</li>
+</ul></div>
+<h3>Plan de seguimiento y umbrales trimestrales de decisión</h3>
+<p>A partir del <em>Investor Day</em> del 8 de diciembre de 2026 y el cierre anual FY2026 (febrero de 2027), la tesis debe contrastarse trimestralmente frente a seis umbrales objetivos:</p>
+<table>
+<thead><tr><th>Indicador de seguimiento</th><th>Nivel 3T26</th><th>Umbral favorable (refuerza Base/Opt.)</th><th>Umbral de alerta (revisar hacia Cons.)</th><th>Frecuencia</th></tr></thead>
+<tbody>
+<tr><td><strong>Mora 90+ días Brasil (NPL 90+)</strong></td><td class="num">7,3 %</td><td>Estabilización y caída &lt; 6,8 %</td><td>Superación sostenida &gt; 8,0 % dos trimestres</td><td>Trimestral (6-K)</td></tr>
+<tr><td><strong>Margen operativo EBIT (IFRS)</strong></td><td class="num">22,1 % LTM</td><td>Sostener ≥ 22 % y converger hacia 24 %</td><td>Caída &lt; 18,5 % por expansión de ECL</td><td>Trimestral (6-K)</td></tr>
+<tr><td><strong>Capital CET1 Brasil (BACEN)</strong></td><td class="num">12,1 %</td><td>Estable ≥ 11,5 % (holgura ≥ 450 pb)</td><td>Caída &lt; 10,0 % que limite crecimiento/recompras</td><td>Trimestral (Nota 33)</td></tr>
+<tr><td><strong>Tasa efectiva de impuestos</strong></td><td class="num">15,2 % LTM</td><td>Transición gradual &lt; 26 % sin pérdida de DTA</td><td>Alza abrupta &gt; 34 % o deterioro DTA (USD 3,3 B)</td><td>Trimestral (6-K)</td></tr>
+<tr><td><strong>Escala y rentabilidad México</strong></td><td class="num">16,6 M / 7,4 %</td><td>Nómina activa, caída costo fondeo y breakeven</td><td>Pérdidas crecientes o mora descontrolada</td><td>Trimestral (6-K)</td></tr>
+<tr><td><strong>Disciplina Nu US y sucesión CTO</strong></td><td class="num">Lanzado sep-26</td><td>Impacto ≤ 100 pb eficiencia y nuevo CTO sólido</td><td>Subsidios agresivos sin techo de gasto en EE. UU.</td><td>Investor Day / 6-K</td></tr>
+</tbody>
+</table>
+<div class="reading"><strong>Nuestra lectura.</strong> Nu Holdings es una de las mejores franquicias fintech construidas en mercados emergentes. La caída de 41 % la acerca por primera vez en dos años a nuestra zona de compra con margen de seguridad (USD 10,82), por lo que merece seguimiento prioritario inmediato de cara al Investor Day y los próximos resultados del 4T26.</div>
+</section>
+<section class="chapter" id="fuentes">
+<div class="kicker">ANEXO</div>
+<h1>Anexo: fuentes, limitaciones y glosario</h1>
+<div class="essential"><div class="label">Lo esencial</div><ul>
+<li>Todas las cifras contables proceden directamente de reportes primarios de <strong>Nu Holdings Ltd. (CIK 0001691493)</strong> ante la SEC: Forms 20-F FY2021, FY2023 y FY2025, y Forms 6-K del 3T26 (acc. <code>0001292814-26-005272</code>, <code>5273</code> y <code>5275</code>).</li>
+<li><strong>Libro oficial (42 hojas, 0 errores, paridad 0,000 %):</strong> <code>NU-V2-LTM20260930-R2_VALORACION.xlsx</code> (SHA-256: <code>3d4f8dd09f9cdb62…</code>), respaldado en Google Drive <code>ANALISIS/NU/NU-V2-LTM20260930-R2</code>.</li>
+<li><strong>Revisión y contrato:</strong> revisión <code>NU-V2-LTM20260930-R2</code> (reemplaza el borrador bancario R1 por valoración fintech operativa conforme a instrucción expresa del propietario y guía Damodaran–MELI), contrato V2 <strong>v1.5.6</strong>.</li>
+</ul></div>
+<h3>Fuentes primarias SEC EDGAR (Nu Holdings Ltd. · CIK 0001691493)</h3>
+<ul>
+<li><strong>Form 6-K 3T26 · Estados Financieros Intermedios IFRS (12-nov-2026):</strong> acc. <code>0001292814-26-005272</code> (<code>nufs3q26_6k.htm</code>) — Estado de Resultados (p. 5), Balance (p. 6), Flujos (p. 10), Nota 6 (intereses), Nota 8 (gastos op.), Nota 9 (acciones diluidas 4.881,1 M), Nota 10 (SOPs/RSUs), Nota 11 (efectivo), Nota 18 (asociadas), Nota 19 (intangibles IAS 38), Nota 24 (préstamos Nu Financeira), Nota 31 (acciones emitidas), Nota 33 (capital Basilea III) y Nota 34 (geografías).</li>
+<li><strong>Form 6-K 3T26 · Presentación de Resultados (12-nov-2026):</strong> acc. <code>0001292814-26-005275</code> (<code>nu20261112_6k.htm</code>) — Slide 22 (<em>Capital Position USD 9,9 B</em> y <em>Nu Holdings Cash &amp; Securities USD 2,1 B</em>), Slide 25 (ARPAC por cohortes) y KPIs Brasil/México/Colombia.</li>
+<li><strong>Form 6-K 3T26 · Comunicado de Resultados (12-nov-2026):</strong> acc. <code>0001292814-26-005273</code> (<code>nupr3q26_6k.htm</code>) — métricas gerenciales, NPL 15–90 (4,9 %), NPL 90+ (7,3 %) y eficiencia (19,3 %).</li>
+<li><strong>Form 20-F FY2025 (8-abr-2026):</strong> acc. <code>0001292814-26-002166</code> — Estados auditados FY2023–FY2025 y gobierno dual-class (Ítem 6.E).</li>
+<li><strong>Form 20-F FY2023 (19-abr-2024) y Form 20-F FY2021 (21-abr-2022):</strong> acc. <code>0001292814-24-001464</code> y <code>0001292814-22-001705</code> — Estados auditados FY2020–FY2022.</li>
+<li><strong>Forms 6-K corporativos 2026:</strong> recompra USD 1.000 M (<code>0001292814-26-003326</code>), Banco Porto Real (<code>0001292814-26-003814</code>), Nu US/Global (<code>0001292814-26-004518</code>) y salida CTO (<code>0001292814-26-005000</code>).</li>
+</ul>
+<h3>Fuentes de mercado, parámetros macro y logo</h3>
+<ul>
+<li><strong>Precios históricos y cierre:</strong> Yahoo Finance (NYSE: NU) al cierre del 20-nov-2026 (USD 11,27; rango 52 semanas USD 11,20 – USD 18,98; cierres anuales FY2021–FY2025).</li>
+<li><strong>Costo de capital y prima de riesgo país:</strong> tasa libre 5,15 % y ERP maduro 3,387 % (convención biblioteca V2 nov-2026) combinados con tabla <em>Country equity risk premiums</em> de Aswath Damodaran en el libro oficial (Brasil +3,24 %, México +2,46 %, Colombia +2,85 % → ERP ponderado 7,62 %).</li>
+<li><strong>Logo oficial:</strong> Wikimedia Commons (<code>File:Nubank_logo_2021.svg</code>, verificado HTTP 200).</li>
+</ul>
+<h3>Limitaciones, salvedades y estado técnico</h3>
+<ul>
+<li><strong>Historia auditada de 7 períodos (aviso D02):</strong> Nu realizó su OPI el 9-dic-2021; existen siete períodos consecutivos completos (FY2020–FY2025 + LTM sep-2026). No se inventan ejercicios anteriores a 2020.</li>
+<li><strong>Override de WACC terminal con fórmula (avisos V13/V14):</strong> <code>Input sheet!B45 = Yes</code> con fórmula <code>B46 = B34 + 'Cost of capital worksheet'!B27</code> (11,29 %) para conservar el riesgo país de Latinoamérica en perpetuidad, exactamente igual que en MELI R9/R10.</li>
+<li><strong>Puente fintech EV–patrimonio:</strong> caja libre Holdco (USD 2.100 M, excluyendo USD 11.672 M de liquidez operativa en subsidiarias) y arrendamientos IFRS 16 (USD 68,5 M, excluyendo depósitos y fondeo de Nu Financeira cuyo costo ya resta en EBIT).</li>
+<li><strong>Auditoría independiente pendiente (error P02):</strong> expediente en estado técnico <code>EN_REVISION</code>, publicado en el visor de pendientes sin autoaprobación ni auditoría independiente.</li>
+</ul>
+<h3>Glosario esencial</h3>
+<p><strong>APR / RWA:</strong> activos ponderados por riesgo regulatorio. <strong>ARPAC:</strong> ingreso mensual promedio por cliente activo. <strong>CAR / CET1:</strong> ratios de capital regulatorio Basilea III. <strong>ECL:</strong> pérdida crediticia esperada (IFRS 9). <strong>FCFF:</strong> flujo de caja libre para la firma. <strong>LDR:</strong> relación cartera neta sobre fondeo disponible. <strong>MOS:</strong> margen de seguridad (35 %, solo Base). <strong>NPL 90+:</strong> morosidad superior a 90 días. <strong>S2C (Sales-to-Capital):</strong> ingresos incrementales generados por cada dólar de capital reinvertido. <strong>WACC:</strong> costo promedio ponderado de capital.</p>
+</section>
+
+</body>
+</html>
