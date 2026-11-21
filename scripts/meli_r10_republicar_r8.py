@@ -33,6 +33,13 @@ assert doc["revision"] == REVISION
 assert all(abs(base_model["libro"]["valores"][k] - expected) < .02 for k,expected in VALUES.items())
 assert abs(base_model["libro"]["valores"]["base"] * .65 - 1538.9344647956927) < .02
 assert "INFORME" in PDF_REL
+if doc.get("editorialVersion")=="R10-ED2-20261121":
+    assert PDF_PATH.is_file(), "La revisión editorial ya figura en biblioteca pero falta PDF"
+    assert hashlib.sha256(PDF_PATH.read_bytes()).hexdigest()==base_model["informe"]["pdf"]["sha256"]
+    assert doc.get("schemaVersion")=="jmr-v2-analisis-3"
+    assert len(doc.get("blocks",{}))==14
+    print("PUBLICACION_EDITORIAL_YA_VERIFICADA",REVISION,manifest["sha256"],flush=True)
+    sys.exit(0)
 print("ESTADO_ORIGINAL",json.dumps({
     "revision": REVISION, "pdf":base_model.get("informe",{}).get("pdf"),
     "paginaOriginal":base_model.get("informe",{}).get("paginas"),
