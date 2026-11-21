@@ -1,0 +1,329 @@
+<!doctype html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MercadoLibre | JMR V2 · Análisis fundamental — R10</title><meta name="description" content="Reconstrucción editorial: profundidad de MELI R8, valoración R10 intacta, 14 capítulos y 8 figuras. Borrador de revisión; no es la publicación de la app."><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+:root{--ink:#1E2830;--navy:#1C344A;--blue:#5B8BAA;--pale:#A8C3D3;--sand:#C5A383;--muted:#7B868F;--wash:#F1F5F7;--paper:#fff;--line:#d9e1e6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Libre Baskerville",Georgia,serif;font-size:15px;line-height:1.77}
+a{color:#2e6587;text-decoration-color:#b5cbda;text-underline-offset:3px}a:hover{text-decoration-color:#2e6587}
+.kicker,.meta,nav,th,td,.evidence,.key-label,figcaption,.foot,.chapter-head span,.chapter-head .serial{font-family:"DM Sans",Arial,sans-serif}
+.cover{background:var(--navy);color:white;padding:min(9vh,95px) max(7vw,30px) 52px;min-height:620px;position:relative;overflow:hidden}
+.cover:after{content:"";position:absolute;right:-160px;bottom:-330px;width:780px;height:780px;border:1px solid rgba(168,195,211,.2);border-radius:50%;box-shadow:0 0 0 135px rgba(168,195,211,.035),0 0 0 260px rgba(168,195,211,.025);pointer-events:none}
+.cover-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.topline{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid rgba(255,255,255,.22);padding-bottom:25px}
+.brand{font-family:"DM Sans",Arial,sans-serif;font-size:15px;letter-spacing:.21em;font-weight:700}
+.cover .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--pale);margin:115px 0 22px}
+.cover h1{font-family:"Libre Baskerville",Georgia,serif;font-weight:400;font-size:clamp(48px,6.5vw,88px);letter-spacing:-.065em;line-height:1.05;max-width:850px;margin:0}
+.cover h1 em{display:block;color:var(--pale);font-weight:400;font-size:.39em;margin-top:22px;letter-spacing:-.035em;line-height:1.35}
+.cover .subtitle{font-family:"DM Sans",Arial,sans-serif;font-size:15px;letter-spacing:.05em;margin:42px 0;color:#d5e2eb}
+.cover .cover-status{font-family:"DM Sans",Arial,sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;line-height:1.55;color:#c1d0db}
+.hero-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:850px;margin-top:55px;padding-top:22px;border-top:1px solid rgba(255,255,255,.22)}
+.hero-values strong{font-family:"DM Sans",Arial,sans-serif;display:block;font-size:clamp(25px,3vw,39px);font-weight:500;line-height:1.5;color:white}
+.hero-values small{font-family:"DM Sans",Arial,sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#c7d9e5}
+.hero-values .base strong{color:#ecd3af}
+.notice{background:#f1f5f7;color:#3e525f;border-bottom:1px solid #d4dee3;font:12px/1.6 "DM Sans",Arial,sans-serif;padding:13px 7vw}
+.shell{max-width:1340px;margin:0 auto;display:grid;grid-template-columns:265px minmax(0,1fr);gap:54px;padding:52px 40px}
+.side{position:sticky;top:24px;align-self:start;height:calc(100vh - 48px);overflow-y:auto;scrollbar-width:thin;padding-right:10px}
+.side .kicker{font-weight:700;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;font-size:10px;margin-bottom:18px}
+.side nav{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.side nav a{font-size:12px;line-height:1.55;color:#374d5e;text-decoration:none;display:flex;align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid #eef1f4}
+.side nav a:hover{color:#1d6e96}.side nav span{color:var(--blue);font-size:10px;min-width:20px}
+.content{min-width:0;max-width:890px}
+.content>section{scroll-margin-top:28px}
+.summary{padding-bottom:65px;border-bottom:2px solid var(--navy)}
+.summary h2{font-size:28px;line-height:1.3;margin:10px 0 26px}
+.chapter{padding:68px 0 72px;border-bottom:1px solid var(--line)}
+.chapter-head{margin-bottom:26px}
+.chapter-head span{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--blue)}
+.chapter-head h2{font:400 clamp(29px,3.2vw,45px)/1.22 "Libre Baskerville",Georgia,serif;letter-spacing:-.035em;max-width:820px;margin:16px 0 26px;color:var(--navy)}
+.content p{margin:0 0 20px}
+.content p.key-label{font-family:"DM Sans",Arial,sans-serif;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:700;color:var(--navy);margin:20px 0 0;padding:17px 22px 0;background:var(--wash);border-top:3px solid var(--blue)}
+.evidence{background:var(--wash);border-bottom:1px solid #e0e8ec;font-size:13px;line-height:1.63;margin:0 0 30px;padding:10px 27px 22px 38px}
+.evidence li{margin:7px 0;padding-left:3px}
+.chapter>.evidence:not(.key-label+.evidence){background:transparent}
+.reading{background:#f5f7f8;border-left:3px solid var(--sand);padding:20px 25px;margin:29px 0 5px;font-size:14px;font-style:italic}
+.lead-quote{padding:20px 26px;margin:15px 0 36px;border-left:4px solid var(--sand);font-size:22px;line-height:1.55;color:#2b485c;background:#f5f6f7}
+.table-scroll{width:100%;overflow-x:auto;max-width:100%;margin:22px 0 31px;box-shadow:0 2px 15px rgba(28,52,74,.03)}
+table{border-collapse:collapse;width:100%;font:12px/1.4 "DM Sans",Arial,sans-serif;font-variant-numeric:tabular-nums}
+th{padding:13px 11px;background:var(--navy);color:white;text-align:left;font-weight:600;white-space:nowrap}
+td{border-bottom:1px solid #e2e9ee;padding:11px;vertical-align:top}
+td:not(:first-child){text-align:right;white-space:nowrap}
+td.rowlabel{font-weight:600;max-width:360px}
+tbody tr:nth-child(even){background:#f7f9fa}
+.figure{margin:34px 0;break-inside:avoid}
+.figure img{width:100%;height:auto;border:1px solid #e6edf0;border-radius:3px;display:block}
+.figure figcaption, p.caption{font:12px/1.55 "DM Sans",Arial,sans-serif;color:#607380;padding:11px 2px;margin:0}
+.thin{border:0;border-top:1px solid #e1e8ed;margin:34px 0}
+.editor-note{padding:40px;background:#f3f6f8;font-size:13px}
+.editor-note h2{font-size:20px}
+.foot{padding:28px 7vw;background:var(--navy);color:#cbdce6;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:1000px){.shell{grid-template-columns:minmax(0,1fr);padding:30px 23px}.side{position:static;height:auto;overflow:visible;padding:0}.side nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 15px}.cover .kicker{margin-top:65px}.chapter{padding-top:43px;padding-bottom:50px}}
+@media(max-width:600px){body{font-size:14px}.cover{padding:35px 23px;min-height:660px}.topline{flex-direction:column;align-items:flex-start}.cover .kicker{margin-top:70px}.hero-values{gap:10px}.hero-values strong{font-size:22px}.side nav{display:block}.shell{padding:20px}.chapter-head h2{font-size:28px}.lead-quote{font-size:16px}.evidence{padding-left:30px}.content p.key-label{padding:14px 16px 0}.foot{display:block}}
+@media print{@page{size:A4;margin:15mm 14mm}body{font-size:10pt;line-height:1.45}.cover{min-height:250mm;page-break-after:always;-webkit-print-color-adjust:exact;print-color-adjust:exact}.cover:after{display:none}.shell{display:block;padding:0}.side{display:none}.content{max-width:100%}.chapter{break-before:page;padding:0;border:0}.summary{break-after:page}.chapter-head h2{font-size:27pt}p{orphans:3;widows:3}h2,h3{break-after:avoid}.figure{break-inside:avoid}table{font-size:7.5pt}th,td{padding:5pt}td:not(:first-child){white-space:normal}.foot{display:none}.editor-note{break-before:page}}</style></head><body>
+<header class="cover"><div class="cover-inner"><div class="topline"><span class="brand">JMR / INVESTIGACIÓN</span><span class="cover-status">MODELO JMR V2 · R10 · 21 NOV 2026</span></div>
+<p class="kicker">Informe fundamental · NASDAQ: MELI</p>
+<h1>MercadoLibre<em>El valor detrás del crecimiento</em></h1>
+<p class="subtitle">Comercio · Logística · Pagos · Crédito</p>
+<div class="hero-values"><div><small>Conservador</small><strong>US$ 1.110</strong></div><div class="base"><small>Base</small><strong>US$ 2.368</strong></div><div><small>Optimista</small><strong>US$ 3.601</strong></div></div>
+<p class="cover-status" style="margin-top:40px">Borrador editorial sobre R10 — no publicado ni auditado<br>Valor con MOS 35%: US$ 1.538,93 por acción · corte LTM sep 2026</p>
+</div></header>
+<div class="notice">Este HTML es una vista previa editorial de la reconstrucción R8 + R10. No modifica ni reemplaza la publicación vigente de la app. Los valores proceden de la R10 y permanecen sujetos a auditoría económica.</div>
+<div class="shell"><aside class="side"><div class="kicker">CONTENIDO · 14 CAPÍTULOS</div><nav><a href="#perfil"><span>—</span> Ficha y tesis</a><a href="#cap-1"><span>01</span> Perfil de la empresa y tesis</a>
+<a href="#cap-2"><span>02</span> Introducción: qué ocurrió y qué necesita probarse</a>
+<a href="#cap-3"><span>03</span> Modelo de negocio y motores de caja</a>
+<a href="#cap-4"><span>04</span> Calidad del negocio, resultados y estados financieros</a>
+<a href="#cap-5"><span>05</span> Equipo directivo, gobierno y asignación de capital</a>
+<a href="#cap-6"><span>06</span> Competitividad y duración de la ventaja</a>
+<a href="#cap-7"><span>07</span> Los tres ciclos: empresa, macroeconomía y mercado</a>
+<a href="#cap-8"><span>08</span> Mapa de riesgos y transmisión al DCF</a>
+<a href="#cap-9"><span>09</span> ¿Qué podría destruir a MercadoLibre?</a>
+<a href="#cap-10"><span>10</span> Los alcistas frente a los bajistas</a>
+<a href="#cap-11"><span>11</span> Supuestos, escenarios y traducción de la historia a números</a>
+<a href="#cap-12"><span>12</span> Valoración: método, puente, escenarios y sensibilidad</a>
+<a href="#cap-13"><span>13</span> Conclusiones y plan de seguimiento</a>
+<a href="#cap-14"><span>14</span> Fuentes, límites y glosario</a></nav></aside><main class="content"><aside class="lead-quote">
+<p><strong>Pregunta de inversión:</strong> ¿puede MercadoLibre convertir su extraordinario crecimiento de comercio, pagos y crédito en una rentabilidad duradera para el accionista, sin que el riesgo crediticio, el costo de financiarlo y la reinversión disipen el valor económico?</p>
+</aside>
+<section class="summary" id="perfil"><h2>La compañía en cifras</h2>
+<div class="table-scroll"><table><thead><tr><th>Concepto</th><th>Valor o referencia</th></tr></thead><tbody>
+<tr><td class="rowlabel">Ingresos LTM al 30-sep-2026</td><td><strong>US$38.523 millones</strong></td></tr>
+<tr><td class="rowlabel">EBIT reportado LTM</td><td><strong>US$2.859 millones (7,42 %)</strong></td></tr>
+<tr><td class="rowlabel">EBIT ajustado por I+D en el libro revisado</td><td><strong>US$3.604,67 millones (9,36 %)</strong></td></tr>
+<tr><td class="rowlabel">Valor conservador por acción R10</td><td><strong>US$1.110,04</strong></td></tr>
+<tr><td class="rowlabel">Valor base por acción R10</td><td><strong>US$2.367,59</strong></td></tr>
+<tr><td class="rowlabel">Valor optimista por acción R10</td><td><strong>US$3.601,49</strong></td></tr>
+<tr><td class="rowlabel">Precio de entrada con MOS 35 % sobre Base</td><td><strong>US$1.538,93</strong></td></tr>
+<tr><td class="rowlabel">Precio usado por la figura R10, 19-nov-2026</td><td><strong>US$1.355,49</strong></td></tr>
+<tr><td class="rowlabel">Revisión de referencia</td><td><strong>R10 — EN REVISIÓN ECONÓMICA</strong></td></tr>
+</tbody></table></div>
+<p><strong>Aviso sobre las cifras.</strong> El historial contable, las observaciones de negocio y los números de valoración proceden de documentos de distintas revisiones: R8 conserva la exposición fundamental; R9/R10 conservan la valoración recalibrada. El informe distingue <em>reportado</em>, <em>ajustado</em>, <em>supuesto</em> e <em>inferencia</em>. No presenta los números históricos erróneos de EBITDA 2019, amortización 2019, utilidad neta 2019 o utilidad bruta negativa/positiva invertida que aparecían en la tabla R8. Los cuadros completos deben importarse de las hojas A-1.2 de R10 con su formato; no se reescriben aquí manualmente.</p>
+<hr class="thin">
+</section>
+<section class="chapter" id="cap-1"><header class="chapter-head"><span>CAPÍTULO 01 / 14</span><h2>Perfil de la empresa y tesis</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>MercadoLibre es un ecosistema latinoamericano de comercio, logística, publicidad, pagos y crédito, no una tienda virtual aislada.</li>
+<li>La ventaja competitiva potencial reside en que cada transacción puede fortalecer simultáneamente distribución, datos, pagos y acceso a clientes.</li>
+<li>La tensión fundamental es crecimiento frente a margen: los ingresos avanzan, pero la expansión del crédito y los envíos absorbe rentabilidad.</li>
+<li>El DCF R10 produce un valor Base de US$2.367,59 por acción, condicionado a una expansión significativa del margen operativo.</li>
+</ul>
+<p>La empresa crea valor para compradores al reducir fricciones de búsqueda, pagos y entrega; para vendedores, al reunir tráfico, conversión, servicios logísticos, publicidad y financiación; y para usuarios financieros, al integrar cuentas, pagos, tarjetas y préstamos. La eficiencia del conjunto no se deduce de contar usuarios: se demuestra si el costo incremental de adquirir, atender y financiar esos usuarios cae con la escala, mientras las pérdidas crediticias permanecen controladas.</p>
+<p>La tesis alcista exige tres hechos simultáneos: que el volumen de comercio mantenga densidad logística; que Mercado Pago monetice sus servicios sin depender exclusivamente de ampliar crédito; y que los márgenes operativos converjan hacia los niveles asumidos sin sacrificar participación ni calidad. La tesis bajista sostiene que el crédito y la logística empujan el crecimiento nominal, pero no necesariamente el flujo libre atribuible al accionista. Un múltiplo atractivo o una caída del precio no resuelven este debate.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> MercadoLibre merece análisis como plataforma de efectos de red y como financiador de consumo. La primera dimensión puede crear una barrera estructural; la segunda requiere una contabilidad y un costo del capital propios. No es suficiente afirmar que fintech es «asset light»: el procesamiento de pagos puede serlo, pero el crédito consume capital, fondos y reservas.</aside>
+</section>
+<section class="chapter" id="cap-2"><header class="chapter-head"><span>CAPÍTULO 02 / 14</span><h2>Introducción: qué ocurrió y qué necesita probarse</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>El crecimiento informado de ingresos y rendimiento financiero en el 3T26 fue del 45 % interanual en USD y 41 % neutral a divisas.</li>
+<li>La combinación de crecimiento de crédito, mayores provisiones y costes logísticos explica por qué el mercado puede desconfiar del ritmo de expansión.</li>
+<li>Una tesis de inversión necesita examinar la calidad del ingreso y del capital, no solo la tasa de crecimiento.</li>
+</ul>
+<p>En el acumulado de nueve meses de 2026, los ingresos y rendimientos financieros crecieron aproximadamente 47,8 %. El dato es poderoso, pero incorpora unidades de negocio con perfiles de riesgo muy diferentes. Una comisión por intermediación, un ingreso de publicidad y un ingreso por intereses no deben recibir el mismo juicio de margen, durabilidad, capital requerido ni riesgo. Al sumar los tres puede crecer la facturación consolidada y deteriorarse el beneficio operativo relativo.</p>
+<p>La R8 hacía correctamente esta distinción: documentaba el progreso de volumen de pagos, compradores y crédito, y explicaba el deterioro de EBIT pese a expandirse el negocio. La presente reconstrucción recupera esa línea causal, manteniendo separados los cálculos de R10. El resultado operativo reportado LTM de US$2.859 millones sobre US$38.523 millones de ingresos implica un margen de 7,42 %. Capitalizar la porción de I+D/tecnología bajo el procedimiento de Damodaran cambia la lectura del beneficio histórico ajustado a US$3.604,67 millones, equivalente al 9,36 %, pero <strong>no prueba</strong> que el negocio ya alcance de manera recurrente el margen de 12 % del año 1 proyectado en Base.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> El precio futuro razonable depende de si la caída del margen es una inversión transitoria para construir una red más valiosa o un cambio duradero en la economía marginal del crédito y de los envíos. Debe analizarse trimestralmente y por fuente de resultado.</aside>
+</section>
+<section class="chapter" id="cap-3"><header class="chapter-head"><span>CAPÍTULO 03 / 14</span><h2>Modelo de negocio y motores de caja</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Commerce incluye comisiones, logística, publicidad y ventas propias; cada actividad tiene una relación distinta entre ingresos contables y margen.</li>
+<li>Mercado Pago combina servicios transaccionales con crédito; una parte importante del balance y del gasto está ligada a financiar cartera.</li>
+<li>La venta cruzada ofrece sinergias reales, pero solo si sus costos y riesgos están correctamente asignados.</li>
+</ul>
+<p>En los primeros nueve meses de 2026, R8 desglosaba US$16.771 millones de Commerce (servicios de comercio y ventas propias) y US$12.993 millones de fintech. Dentro de fintech, los ingresos por crédito ascendieron a aproximadamente US$6.710 millones; los servicios y rendimientos financieros, a US$6.232 millones; y el resto correspondía a venta de productos financieros. Estas partidas han de actualizarse desde R10 para cualquier cuadro publicado, pero la arquitectura económica no ha cambiado: mercado digital, distribución, pagos y cartera de préstamos son negocios conectados y a la vez diferentes.</p>
+<p><strong>Commerce.</strong> El marketplace puede crecer sin ser propietario de todo el inventario, pero las ventas propias incorporan inventarios y afectan la composición del margen bruto. Las comisiones y los anuncios monetizan el tráfico; la logística mejora la experiencia y reduce fricciones, aunque requiere instalaciones, tecnología, transporte y subsidios. El parámetro relevante no es solo GMV: es el ingreso neto y la contribución económica después de costos de entrega, marketing y servicio.</p>
+<p><strong>Pagos.</strong> La infraestructura de Mercado Pago procesa transacciones propias y de terceros. La escala puede crear ventajas de aceptación, confianza y datos. Sin embargo, el volumen procesado no equivale a ingreso: hay que observar tasa de monetización, costos de procesamiento, fraude y usuarios transaccionales.</p>
+<p><strong>Crédito.</strong> Los préstamos a consumidores y comerciantes expanden la monetización y hacen más útil la plataforma, pero exigen financiar saldos y reconocer pérdidas esperadas. El crecimiento de los intereses no es valor por sí mismo. Deben compararse rendimientos de cartera, costo de fondeo, provisiones, castigos, vencimientos, concentración y capital necesario.</p>
+<p><strong>Geografías.</strong> Según el desglose 9M26 conservado en R8, Brasil representaba alrededor de 55 % de los ingresos, México 23 %, Argentina 18 % y el resto cerca de 5 %. Estas ponderaciones son referencias del corte, no cuotas de mercado. Cada país aporta riesgo cambiario, normativo, competitivo y de crédito, por lo que un único costo de capital consolidado requiere justificación.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> La evaluación de MELI debe tener una narrativa por negocios aun cuando el DCF oficial R10 sea consolidado. No fabricar una cuenta de resultados segmentada: la información publicada puede no permitir separar beneficio de Commerce, pagos y crédito con precisión.</aside>
+</section>
+<section class="chapter" id="cap-4"><header class="chapter-head"><span>CAPÍTULO 04 / 14</span><h2>Calidad del negocio, resultados y estados financieros</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>La trayectoria de ingresos 2023–2025 es fuerte; la del margen operativo reciente es descendente.</li>
+<li>El flujo de caja operativo no puede interpretarse sin ajustar por fondos de clientes, fondeo, depósitos y cartera crediticia.</li>
+<li>Los estados deben distinguir cifras contables y ajustes de valoración; N/D nunca se sustituye por cero.</li>
+</ul>
+<p>Ingresos reportados (US$ millones): FY2023 <strong>15.107</strong>, FY2024 <strong>20.777</strong>, FY2025 <strong>28.893</strong>, LTM septiembre de 2026 <strong>38.523</strong>. El crecimiento observado es una condición necesaria para el escenario Base, pero no suficiente. La utilidad operativa de los últimos doce meses, US$2.859 millones, implica margen del 7,42 %, frente a 11,1 % reportado en FY2025 según R8. La expansión del negocio con compresión del margen requiere una explicación económica verificable.</p>
+<p>En particular, el documento R8 recogía un aumento de provisiones para incobrables de aproximadamente US$2.108 millones a US$3.862 millones en los primeros nueve meses de 2026 y caída del resultado operativo acumulado pese al aumento de los ingresos. Esta dinámica debe analizarse con las notas de crédito del 10-Q: no tratar toda provisión como anomalía temporal, ni asumir que crecer la cartera automáticamente mejora el retorno.</p>
+<p><strong>Cuadro narrativo de control (no sustituye los tres estados completos):</strong></p>
+<div class="table-scroll"><table><thead><tr><th>Variable</th><th>FY2025 o punto de comparación</th><th>LTM sep-2026</th><th>Interpretación</th></tr></thead><tbody>
+<tr><td class="rowlabel">Ingresos (US$ M)</td><td>28.893</td><td>38.523</td><td>Escala en expansión</td></tr>
+<tr><td class="rowlabel">EBIT (US$ M)</td><td>3.201</td><td>2.859</td><td>Beneficio operativo rezagado</td></tr>
+<tr><td class="rowlabel">Margen EBIT reportado</td><td>11,1 %</td><td>7,42 %</td><td>Compresión visible</td></tr>
+<tr><td class="rowlabel">EBIT ajustado por I+D (US$ M)</td><td>Ajuste por cohortes</td><td>3.604,67</td><td>Medida analítica, no cifra reportada</td></tr>
+<tr><td class="rowlabel">Margen EBIT ajustado</td><td>N/D en este resumen</td><td>9,36 %</td><td>No es el margen proyectado</td></tr>
+<tr><td class="rowlabel">Caja, pasivos de clientes y cartera</td><td>Ver hoja R10 A-1.2</td><td>Ver hoja R10 A-1.2</td><td>Requieren conciliación para el puente</td></tr>
+</tbody></table></div>
+<p>Los estados de resultados, balance y flujo del artículo deben mostrarse en importes <strong>absolutos</strong> (US$ millones), separados por FY y LTM. Margen bruto, margen EBIT, ROIC, ROE, crecimiento y otras tasas en porcentajes; ventas/capital, deuda/EBITDA y cobertura en veces; días de cobro o inventario en días. Esta convención corresponde al estándar MELI R9/R10 y debe ser idéntica en web y PDF.</p>
+<p>La interpretación del flujo operativo exige cautela: un aumento de fondos transitorios de clientes o de financiación de cartera puede elevar la caja del grupo sin convertirse en flujo libre económico disponible para el accionista. Para medir eficiencia hay que mostrar capital de trabajo operativo, inversión neta, cartera crediticia y necesidades regulatorias, sin restar dos veces el costo de fondeo.</p>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-fcff.png" alt="R10 — flujo de caja libre proyectado del escenario Base" loading="lazy">
+<figcaption>Figura R10: FCFF proyectado por año, en miles de millones de USD. Es una proyección bajo los supuestos del modelo, no flujo histórico reportado. Fuente: expediente/modelo MELI R10.</figcaption></figure>
+<aside class="reading"><strong>Nuestra lectura.</strong> El mayor riesgo de interpretación es llamar «eficiencia» a una relación de ingresos/capital aparentemente extraordinaria sin atender los activos y pasivos operativos del negocio crediticio.</aside>
+</section>
+<section class="chapter" id="cap-5"><header class="chapter-head"><span>CAPÍTULO 05 / 14</span><h2>Equipo directivo, gobierno y asignación de capital</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>MELI privilegia reinvertir internamente sobre distribuir dividendos.</li>
+<li>La dirección asigna recursos entre logística, producto, publicidad y crédito: el costo de oportunidad de cada dólar es central.</li>
+<li>La evaluación de compensación, control societario y alineación de incentivos requiere fuente de proxy específica y no debe inventarse.</li>
+</ul>
+<p>Históricamente la organización ha concentrado inversión en infraestructura logística, software, captación y expansión financiera. R8 registraba recompras reducidas y ausencia de dividendos, lo que convierte la reinversión rentable en el principal mecanismo de creación de valor. Esta política tiene sentido mientras el retorno incremental supere al costo de capital; deja de ser favorable si los ingresos adicionales exigen sostener subsidios o absorber pérdidas de crédito superiores a lo previsto.</p>
+<p>El informe final debe incluir, a partir del proxy vigente, estructura de control, composición e independencia del consejo, remuneración variable, incentivos de retención, sucesión, operaciones con vinculados y dilución económica real. No asumir que la ausencia de pagos en acciones implica ausencia de obligaciones de incentivos: R8 aludía a planes de retención liquidados en efectivo. Verificar su costo y el tratamiento en EBIT.</p>
+<p>Las emisiones de deuda y el recurso a fondeo financiero son decisiones de estructura de capital con propósitos diferentes. El capital corporativo puede financiar la operación del grupo; las titulizaciones, certificados y préstamos ligados a la cartera responden a la financiación de un activo financiero. La política contable sobre cada uno puede mover sustancialmente la valoración patrimonial.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> La gestión debe juzgarse por retorno sobre reinversión incremental y calidad del riesgo de crédito, no por crecimiento agregado ni por la intensidad del gasto.</aside>
+</section>
+<section class="chapter" id="cap-6"><header class="chapter-head"><span>CAPÍTULO 06 / 14</span><h2>Competitividad y duración de la ventaja</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Mercado, red de pagos, logística y datos generan barreras potencialmente reforzadas entre sí.</li>
+<li>La permanencia del moat depende de costos de cambio, frecuencia de uso, satisfacción y rentabilidad, no solo de escala.</li>
+<li>Plataformas globales, competidores locales, bancos y fintech pueden erosionar cada capa de la propuesta.</li>
+</ul>
+<p>Una red de compradores atrae a vendedores; más vendedores elevan variedad y conversión; mayor densidad logística reduce tiempos de entrega; más actividad produce señales para prevención de fraude y decisiones de crédito. Son círculos virtuosos plausibles. No obstante, el efecto de red no significa monopolio: usuarios y comerciantes pueden operar en varias plataformas, comparar precios, financiarse por otra entidad y seguir pagando por canales alternativos.</p>
+<p>MELI compite en comercio con grandes plataformas y tiendas directas; en logística, con operadores establecidos; en medios de pago, con adquirentes, billeteras y bancos; en financiación, con prestamistas digitales y entidades bancarias. Una barrera en el marketplace no garantiza rentabilidad del crédito. Debe examinarse en cada mercado la retención por cohorte, la comisión neta después de incentivos, el costo por entrega y las pérdidas esperadas.</p>
+<p>La R8 relacionaba el incremento de GMV y TPV con efectos de red, pero reconocía que la participación precisa de mercado no estaba validada con fuentes primarias. Conservar <strong>cuota de mercado N/D</strong> hasta contar con un denominador comparable por país y línea, en lugar de inferirla desde el crecimiento de volúmenes.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> La mayor ventaja de MELI podría ser la coordinación de servicios, no la superioridad absoluta de cada componente. Esa hipótesis solo se confirma si la coordinación eleva el retorno del capital y no obliga a financiar permanentemente segmentos deficitarios.</aside>
+</section>
+<section class="chapter" id="cap-7"><header class="chapter-head"><span>CAPÍTULO 07 / 14</span><h2>Los tres ciclos: empresa, macroeconomía y mercado</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Ciclo empresarial: de expansión acelerada a reinversión intensiva con presión en márgenes.</li>
+<li>Ciclo macro: consumo, inflación, divisas, empleo y tasas afectan demanda, crédito y costo del capital.</li>
+<li>Ciclo de mercado: la expectativa sobre un gran compounder puede cambiar bruscamente si el margen no acompaña el crecimiento.</li>
+</ul>
+<p><strong>Ciclo de la empresa.</strong> El historial de MELI muestra crecimiento elevado y cambios en la mezcla de negocios. El margen operativo alcanzó aproximadamente 14,6 % en FY2023, cayó a 12,7 % en FY2024, a 11,1 % en FY2025 y a 7,42 % en el último doce meses de R10. Una lectura optimista considera que la compañía adelanta costos para construir infraestructura y cartera. Una lectura prudente pregunta cuánto de ese descenso proviene de una estructura de márgenes permanentemente menor en servicios con riesgo de crédito y en logística.</p>
+<p><strong>Ciclo macroeconómico.</strong> Brasil domina la exposición operativa: movimientos de tasas, desempleo y capacidad de pago pueden alterar costo de fondos, mora y consumo. En México importan la competencia de comercio y fintech, financiación y demanda. Argentina agrega devaluación, inflación y restricciones regulatorias; el ingreso convertido a USD no elimina el riesgo de convertibilidad ni el de depreciación futura.</p>
+<p><strong>Ciclo de mercado.</strong> Una acción con una narrativa de alto crecimiento puede negociar con múltiplos elevados mientras los beneficios parecen capaces de acompañarlo. El riesgo es la contracción simultánea de expectativas de crecimiento y margen. El punto de entrada debe compararse con valor intrínseco, margen de seguridad y reservas del modelo, no solo con la caída desde máximos.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> La Base de R10 supone desaceleración de ingresos pero recuperación del margen. Es una mezcla deliberada de prudencia sobre crecimiento y optimismo sobre eficiencia. Separar esas dos apuestas ayuda a localizar la sensibilidad verdadera de la tesis.</aside>
+</section>
+<section class="chapter" id="cap-8"><header class="chapter-head"><span>CAPÍTULO 08 / 14</span><h2>Mapa de riesgos y transmisión al DCF</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Crédito y fondeo son el principal riesgo económico de clasificación y de beneficio.</li>
+<li>WACC, margen objetivo y valor terminal dominan parte de la amplitud entre escenarios.</li>
+<li>País, regulación, competencia y divisas se transmiten al modelo por canales diferentes.</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>Riesgo</th><th>Mecanismo económico</th><th>Indicador y vínculo con la valoración</th></tr></thead><tbody>
+<tr><td class="rowlabel">Mora, castigos y provisiones</td><td>Menor margen neto de crédito; mayor capital para sostener cartera</td><td>Provisiones/cartera, mora por cohorte, costo de riesgo → EBIT/FCFF</td></tr>
+<tr><td class="rowlabel">Costo de fondeo</td><td>Absorbe spread de préstamos; encarece crecimiento</td><td>Tasa y plazo del fondeo → margen financiero y capital</td></tr>
+<tr><td class="rowlabel">Subsidios logísticos</td><td>Ventas crecen sin mejora proporcional de caja</td><td>Costo por envío, ingreso por envío → margen operativo</td></tr>
+<tr><td class="rowlabel">Comercio de menor margen</td><td>Más ventas propias o incentivos degradan rentabilidad</td><td>Mix y margen bruto → EBIT esperado</td></tr>
+<tr><td class="rowlabel">Riesgo regulatorio</td><td>Restricciones de crédito, datos, competencia o pagos</td><td>Capital y cumplimiento → reinversión/WACC</td></tr>
+<tr><td class="rowlabel">Cambio y país</td><td>Volatilidad de ingresos USD, riesgos de repatriación</td><td>Peso geográfico y ERP → crecimiento/WACC</td></tr>
+<tr><td class="rowlabel">Terminal elevado</td><td>Gran porción del DCF depende de décadas posteriores</td><td>WACC/g/ROIC terminal → valor por acción</td></tr>
+</tbody></table></div>
+<p>La R8 estimaba un riesgo de doble conteo en el puente de fondeo, y la auditoría R9/R10 lo mantiene abierto: clasificar pasivos financieros como operación puede ser razonable cuando el costo ya está en EBIT, pero debe conciliarse con la cartera que financian, reservas, efectivo restringido y capital regulatorio. No es válido quitar la deuda y olvidar el activo financiero; tampoco descontar de nuevo fondeo cuyo costo ya afectó el flujo.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> El mayor riesgo de precio y el mayor riesgo de método no siempre son el mismo. La caída del margen afecta el valor de operaciones; la clasificación de la fintech afecta el puente a valor patrimonial. Ambos necesitan pruebas separadas.</aside>
+</section>
+<section class="chapter" id="cap-9"><header class="chapter-head"><span>CAPÍTULO 09 / 14</span><h2>¿Qué podría destruir a MercadoLibre?</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Una corrección de precio no equivale a daño permanente del negocio.</li>
+<li>Un deterioro estructural sostenido de margen y crédito sí puede invalidar el DCF central.</li>
+<li>La ruptura real del ecosistema requeriría pérdida persistente de confianza, liquidez, aceptación o capacidad de financiar operaciones.</li>
+</ul>
+<p>La tesis de destrucción no exige que MELI desaparezca. Basta con que el crecimiento deje de generar retornos superiores al costo de capital o que el crédito consuma continuamente el valor creado por Commerce. Por ejemplo, si se deteriora de manera persistente la calidad de la cartera, las provisiones suben, el costo de fondos aumenta y la compañía debe destinar más patrimonio a respaldar el mismo crecimiento. El flujo disponible para accionistas disminuiría aunque los ingresos contables siguieran expandiéndose.</p>
+<p>Otro mecanismo sería una guerra de precios simultánea: menor comisión en el marketplace, entrega más costosa y necesidad de subvencionar pagos. Puede haber pérdida de margen por tres vías al mismo tiempo. Finalmente, cambios regulatorios sobre licencia, depósitos de usuarios, garantías, protección de datos o titulización podrían restringir actividades críticas.</p>
+<p><strong>Señales de ruptura — umbrales internos de vigilancia, no datos reportados ni reglas automáticas de venta:</strong> presión de provisiones durante varios trimestres sin mejora posterior; margen EBIT persistentemente por debajo de la trayectoria proyectada; contracción de compradores y actividad pagos junto con mayores incentivos; encarecimiento o restricción sostenida de fondeo; deterioro de balances que obligue a aumentar capital fuera de la hipótesis del DCF.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> El estudio debe distinguir tres escalones: volatilidad de cotización, revisión razonable de supuestos y quiebre económico del moat. Mezclarlos lleva tanto a vender por miedo como a ignorar riesgos materiales.</aside>
+</section>
+<section class="chapter" id="cap-10"><header class="chapter-head"><span>CAPÍTULO 10 / 14</span><h2>Los alcistas frente a los bajistas</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>Los alcistas observan un ecosistema con densidad, volumen y datos que puede monetizarse mejor.</li>
+<li>Los bajistas ven rentabilidad declinante y riesgo crediticio creciente.</li>
+<li>La asimetría no debe proclamarse solo a partir de una distancia entre precio y Base.</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>Debate</th><th>Posición alcista</th><th>Posición bajista</th><th>Evidencia decisiva</th></tr></thead><tbody>
+<tr><td class="rowlabel">Comercio</td><td>Escala logística y red refuerzan la recurrencia</td><td>Subsidios y competencia reducen take rate</td><td>Contribución después de logística e incentivos</td></tr>
+<tr><td class="rowlabel">Pagos</td><td>Más uso y servicios cruzados elevan monetización</td><td>Volúmenes altos con bajo margen unitario</td><td>Ingresos netos por TPV y costos de procesamiento</td></tr>
+<tr><td class="rowlabel">Crédito</td><td>Datos propios mejoran selección y retornos</td><td>Pérdidas y fondeo consumen la ventaja</td><td>Cohortes, provisiones, spread neto y capital</td></tr>
+<tr><td class="rowlabel">Margen</td><td>La reinversión se normalizará</td><td>La mezcla nueva es estructuralmente menos rentable</td><td>Trayectoria EBIT reportado/ajustado trimestral</td></tr>
+<tr><td class="rowlabel">Valoración</td><td>R10 Base supera el precio observado del corte</td><td>El terminal y la clasificación de crédito agregan incertidumbre</td><td>Sensibilidades, puente EV–equity y auditoría</td></tr>
+</tbody></table></div>
+<p>La empresa puede seguir creciendo notablemente sin cumplir el escenario Base: basta con mantener una rentabilidad inferior o un costo de capital superior al supuesto. Inversamente, un negocio más estable y rentable de lo esperado puede justificar un valor superior aun con crecimiento más bajo. Por eso se deben leer crecimiento y margen de forma conjunta.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> La disputa relevante no es si la marca es fuerte: es cuánto capital se necesita para sostener su ecosistema y cuánto beneficio económico retiene después de financiar el crédito.</aside>
+</section>
+<section class="chapter" id="cap-11"><header class="chapter-head"><span>CAPÍTULO 11 / 14</span><h2>Supuestos, escenarios y traducción de la historia a números</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>R10 conserva crecimiento Base de 30 % en el año 1 y 20 % anual estable durante los años 2–5.</li>
+<li>El margen EBIT Base comienza en 12 % proyectado y converge a 15 % hacia el año 5; esto exige una recuperación considerable frente al LTM.</li>
+<li>Los otros escenarios no son probabilidades, sino historias alternativas calculadas con el mismo motor.</li>
+<li>La capitalización de I+D ajusta la lectura histórica de EBIT/ROIC sin sumar arbitrariamente su activo al equity.</li>
+</ul>
+<div class="table-scroll"><table><thead><tr><th>Hipótesis R10, reconstruida desde la auditoría de R9 y la figura R10</th><th>Conservador</th><th>Base</th><th>Optimista</th></tr></thead><tbody>
+<tr><td class="rowlabel">Crecimiento ventas año 1</td><td>22 %</td><td>30 %</td><td>34 %</td></tr>
+<tr><td class="rowlabel">Crecimiento anual años 2, 3, 4 y 5</td><td>12 %</td><td>20 %</td><td>24 %</td></tr>
+<tr><td class="rowlabel">Margen operativo proyectado año 1</td><td>11 %</td><td>12 %</td><td>13 %</td></tr>
+<tr><td class="rowlabel">Margen operativo objetivo año 5</td><td>12 %</td><td>15 %</td><td>17,5 %</td></tr>
+<tr><td class="rowlabel">Valor intrínseco R10 por acción</td><td>US$1.110,04</td><td>US$2.367,59</td><td>US$3.601,49</td></tr>
+</tbody></table></div>
+<p class="caption"><em>Verificar contra Input sheet y JMR Escenarios de R10 antes de llevar a producción cualquier campo que no sea valor por acción. Los porcentajes se extraen del historial de auditoría de R9 y de la trayectoria gráfica R10; no constituyen una segunda ejecución del libro.</em></p>
+<p><strong>Crecimiento.</strong> La Base anticipa una desaceleración relevante frente al crecimiento observado de +45 % en el 3T26. La premisa de estabilidad años 2–5 debe quedar explícita: misma tasa porcentual anual del 20 %, no los mismos dólares adicionales cada año. Los ingresos proyectados del Base calculados a partir del ancla R9 revisada son aproximadamente US$50.080, 60.096, 72.115, 86.538 y 103.846 millones en años 1–5, frente a US$38.523 millones LTM.</p>
+<p><strong>Margen.</strong> El objetivo del 15 % es una hipótesis económica, no una prolongación del 7,42 % actual. Su coherencia exige identificar cuánto se recupera en logística, publicidad, software, servicios financieros y provisiones. Si el modelo no permite separar EBIT de pagos y crédito, esta salvedad debe declararse.</p>
+<p><strong>Reinversión.</strong> La eficiencia marginal de capital debe respaldar los flujos proyectados. No interpretar una relación sales-to-capital alta como evidencia automática de baja intensidad de capital: préstamos y fondos de clientes tienen tratamiento financiero particular.</p>
+<p><strong>Costo de capital y terminal.</strong> La revisión R9 aplicaba WACC de 10,68 % como entrada directa, mientras su cálculo alternativo mostraba 11,81 %, diferencia que la auditoría considera abierta. El informe R10 debe mostrar, sin ocultarla, la sensibilidad WACC × crecimiento perpetuo. La perpetuidad del 4 % y la tasa terminal exigen un margen entre WACC y g económicamente razonable.</p>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-trayectorias.png" alt="R10 — ingresos y margen operativo, escenario Base" loading="lazy">
+<figcaption>Figura R10: ingresos proyectados (USD miles de millones) y margen EBIT por año; la meseta de margen es una hipótesis, no un resultado realizado.</figcaption></figure>
+<aside class="reading"><strong>Nuestra lectura.</strong> La mejora de margen explica más de la tesis que una mera continuación del hipercrecimiento. Debe mostrarse qué tendría que pasar operativamente para alcanzar 15 % y qué evidencia lo contradice.</aside>
+</section>
+<section class="chapter" id="cap-12"><header class="chapter-head"><span>CAPÍTULO 12 / 14</span><h2>Valoración: método, puente, escenarios y sensibilidad</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>El motor vigente calcula DCF FCFF consolidado de diez años más terminal y puente EV–patrimonio.</li>
+<li>R10 conserva Base US$2.367,59 por acción; MOS 35 % solo sobre Base: US$1.538,93.</li>
+<li>La financiación de Mercado Pago y la clasificación de caja/deuda exigen lectura prudente.</li>
+<li>Las matrices muestran incertidumbre de variables, no probabilidades de cada resultado.</li>
+</ul>
+<p>El modelo operativo descontado es el <em>FCFF Simple Ginsu</em> de Damodaran. Los múltiplos de mercado sirven para contrastar supuestos de rentabilidad y crecimiento; no se promedian mecánicamente con el DCF. Esta decisión preserva la independencia de la aplicación JMR Múltiplos y evita modificar su motor o sus datos.</p>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-valor-precio.png" alt="R10 — valor intrínseco por escenarios" loading="lazy">
+<figcaption>Figura R10. Precio de referencia US$1.355,49 del 19-nov-2026; línea MOS Base 35 % US$1.538,93. Una comparación con cotizaciones posteriores exige actualizar solo la fecha del precio, no fingir que el DCF fue recalculado.</figcaption></figure>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-puente.png" alt="R10 — puente valor de operaciones a equity" loading="lazy">
+<figcaption>Figura R10. Verificar clasificación de efectivo disponible, fondos restringidos, cartera, fondeo financiero, deuda corporativa, arrendamientos e inversiones antes de aprobar el puente.</figcaption></figure>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-sens-wacc-g.png" alt="R10 — sensibilidad WACC × crecimiento perpetuo" loading="lazy">
+<figcaption>Figura R10. El centro del escenario Base se sitúa alrededor de US$2.368 por acción. Las celdas se interpretan como escenarios mecánicos con los otros supuestos fijos.</figcaption></figure>
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-sens-crec-margen.png" alt="R10 — sensibilidad crecimiento × margen" loading="lazy">
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-sens-roic-s2c.png" alt="R10 — sensibilidad ROIC terminal × ventas/capital" loading="lazy">
+<figure class="figure"><img src="https://raw.githubusercontent.com/JuanMaRobledo/Modelo-JMR-datos/main/jmr-v2/imagenes/MELI-R10/v-sens-m1-g1.png" alt="R10 — sensibilidad adicional del motor" loading="lazy">
+<figcaption><em>Tratamiento fintech.</em>* La auditoría R9 documentaba pasivos financieros de US$13.190 millones, de los que el modelo clasificaba cerca de US$10.821 millones como fondeo ligado a la actividad, dejando unos US$2.369 millones de deuda corporativa a descontar. Esta clasificación puede tener fundamento económico, pero no garantiza por sí sola que el puente sea correcto: se debe revisar simétricamente la cartera y el costo de fondeo ya incluido en EBIT, provisiones, activos de clientes, efectivo restringido y necesidades de patrimonio. No se modifica ese tratamiento desde este manuscrito.</figcaption></figure>
+<p><strong>I+D y arrendamientos.</strong> El libro R9 activó el convertidor de I+D y obtuvo ajuste histórico al EBIT de US$745,67 millones, con vida útil de tres años. El propio ejercicio de auditoría mostró que capitalizar I+D no elevó directamente el DCF bajo los márgenes prospectivos elegidos: la subida de valor correspondió al cambio de márgenes, no a sumar un activo contable al valor patrimonial. Los arrendamientos operativos y financieros continúan sujetos a conciliación de doble conteo.</p>
+<p><strong>Peso terminal.</strong> R9 atribuía aproximadamente el 75,4 % del valor de operaciones al valor terminal antes de los ajustes posteriores de margen y crecimiento; el peso exacto R10 debe leerse del libro, no heredarse como constante. Esa dependencia explica la importancia de probar distintas combinaciones de WACC, g, ROIC y reinversión terminal.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> Base es una consecuencia del motor, no un dictamen definitivo. Su interés es la historia económica que la produce, con brechas documentadas: margen, asignación de capital de crédito y costo de capital.</aside>
+</section>
+<section class="chapter" id="cap-13"><header class="chapter-head"><span>CAPÍTULO 13 / 14</span><h2>Conclusiones y plan de seguimiento</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>MELI combina una ventaja comercial potencialmente potente con riesgos financieros que deben desglosarse.</li>
+<li>El DCF R10 presenta una Base superior al precio observado en la figura, pero exige recuperación de EBIT y una conciliación económica incompleta.</li>
+<li>La prioridad es contrastar la calidad del crecimiento trimestre a trimestre, sin modificar la valoración por un rediseño editorial.</li>
+</ul>
+<p><strong>Tesis provisional.</strong> MercadoLibre mantiene una propuesta de valor difícil de replicar de manera integral: mercado, distribución, pagos, publicidad y acceso a crédito. Su fuerza en varias dimensiones puede sostener crecimiento superior al promedio regional. La contrapartida es que una porción del crecimiento financiero está apalancada en crédito y riesgo de balance, mientras la intensidad operativa de logística y el descenso reciente del margen hacen incierta la convergencia a 15 %.</p>
+<p><strong>Lo que tendría que confirmarse para fortalecer la Base:</strong> normalización progresiva del margen EBIT, pérdidas crediticias controladas respecto al rendimiento de cartera, economía unitaria positiva de envíos y pagos, y un puente patrimonial conciliado sin omisiones ni doble conteo. <strong>Lo que debilitaría la Base:</strong> persistencia del margen inferior al escenario, mayor costo de financiación, incremento de provisiones por encima del crecimiento sano de cartera, o deterioro del entorno competitivo/regulatorio.</p>
+<p><strong>Seguimiento recomendado:</strong> en cada 10-Q y 10-K comparar ingresos por actividad y geografía, GMV, volumen y monetización de pagos, cartera neta, provisiones/cartera, mora y castigos si se divulgan, EBIT reportado y ajustado, flujo y cambios de fondos de clientes, CAPEX, financiamiento y acciones diluidas. Recalcular los escenarios solo por el flujo oficial del modelo; no sustituir supuestos sin justificar los cambios de historia.</p>
+<aside class="reading"><strong>Nuestra lectura.</strong> El resultado es una oportunidad <em>condicional</em> y en revisión, no una aprobación de compra. La diferencia entre precio y valor Base no neutraliza las incertidumbres del crédito y del valor terminal.</aside>
+</section>
+<section class="chapter" id="cap-14"><header class="chapter-head"><span>CAPÍTULO 14 / 14</span><h2>Fuentes, límites y glosario</h2></header>
+<p class="key-label"><span>Lo esencial</span></p>
+<ul class="evidence">
+<li>La evidencia base procede del 10-Q/8-K de 3T26 y del libro R10; R8 se usa únicamente como referencia editorial e histórica.</li>
+<li>Los datos del modelo no deben confundirse con hechos reportados ni con una auditoría independiente.</li>
+<li>El sitio web y el PDF deben mostrar idéntico contenido económico sustantivo y las mismas unidades.</li>
+</ul>
+<p><strong>Fuentes y piezas de contraste.</strong></p>
+<ol class="evidence">
+<li>MercadoLibre, 10-Q al 30-sep-2026: https://www.sec.gov/Archives/edgar/data/1099590/000109959026000029/meli-20260930.htm</li>
+<li>MercadoLibre, resultados 3T2026 del 4-nov-2026, 8-K EX-99.1: https://www.sec.gov/Archives/edgar/data/1099590/000109959026000027/meli-20260930xex991.htm</li>
+<li>MELI R8 — análisis de referencia de 14 capítulos (Drive): https://docs.google.com/document/d/1ZP0BQ51XbdlEhtSVpyHtFX1xTe7OB4Kh/edit</li>
+<li>Libro R10 oficial para cálculos: https://docs.google.com/spreadsheets/d/1rlA1zK3hTDCYlUC7n90lMuO9wTTebMeICPbv4bs8mag/edit</li>
+<li>Auditoría R10 y registro de decisiones R9: https://docs.google.com/document/d/1QKUTVG08pYpMk_elluv91_coOfDmo5QS1McunyQOO9w/edit</li>
+<li>Aswath Damodaran, hoja original MercadoLibre y material metodológico: https://pages.stern.nyu.edu/~adamodar/pc/country/MercadoLibre26.xlsx</li>
+<li>Estándar de redacción, identidad visual y comprobación: Modelo-JMR-V2/docs/v2/metodologia/ESTANDAR_EDITORIAL_NVDA_R6.md y PLANTILLA_INFORME_NVDA_R6.html.</li>
+</ol>
+<p><strong>Limitaciones explícitas.</strong> La composición exacta del balance y del flujo debe tomarse del expediente R10, no de tablas R8 con errores numéricos. El texto no completa una auditoría de crédito, fondeo, arrendamientos, WACC ni valoración SOTP por negocios. Cuota precisa de mercado, desglose de rentabilidad por línea y algunos indicadores de calidad de cartera son N/D cuando no hay soporte de fuente primaria. Tampoco se atribuye revisión humana ni aprobación del propietario.</p>
+<p><strong>Glosario abreviado:</strong> GMV = volumen bruto de mercancías; TPV = volumen total de pagos; EBIT = resultado operativo; FCFF = flujo libre de caja para la firma; ROIC = retorno sobre capital invertido; WACC = costo promedio ponderado de capital; MOS = margen de seguridad; SOTP = suma de partes; LTM = últimos doce meses.</p>
+<hr class="thin">
+</section>
+<section class="editor-note"><h2>Notas de edición e integración</h2>
+<p>Esta reconstrucción <strong>sí</strong> recupera la profundidad de R8 y su análisis causal, y <strong>sí</strong> mantiene los valores y las ocho figuras de R10. <strong>No</strong> declara el informe final publicado ni auditado. Para la publicación real, el equipo/editor debe transformar el manuscrito al esquema jmr-v2-analisis-3, mantener los tres estados A-1.2 y sus 99+ datos trazables, construir PDF desde la plantilla NVIDIA R6 y verificar 25–45 páginas orientativas con lectura y fuentes completas. El manuscrito evita suplir con cifras inventadas los elementos no consultables y distingue datos del corte de hipótesis.</p>
+<p><strong>Control de no regresión:</strong> Base US$2.367,59 / Conservador US$1.110,04 / Optimista US$3.601,49 / MOS 35 % US$1.538,93; no modificar libro ni motor; no alterar otras empresas; no tocar JMR Múltiplos; no volver al análisis R8 como valoración vigente.</p>
+</section></main></div>
+<footer class="foot"><span>MODELO JMR V2 · MERCADOLIBRE · R10</span><span>Borrador editorial / No publicado en aplicación</span></footer>
+</body></html>
