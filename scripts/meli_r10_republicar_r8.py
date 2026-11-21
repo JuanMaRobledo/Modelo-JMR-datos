@@ -186,8 +186,14 @@ lengths=[len(p.get_text().strip()) for p in pdf]
 nonempty=sum(n>50 for n in lengths)
 assert count>=23 and count<=85,(count,"Extensión visual inesperada")
 empty=[i+1 for i,n in enumerate(lengths) if n<8]
-assert not empty,("Páginas completamente vacías",empty)
 print("CONTENIDO_POR_PAGINA",json.dumps(lengths))
+if empty:
+    for no in empty:
+        before=pdf[no-2].get_text().strip()[-190:] if no>=2 else ""
+        after=pdf[no].get_text().strip()[:190] if no<count else ""
+        print("PAGINA_EN_BLANCO",no,"ANTERIOR",repr(before),"SIGUIENTE",repr(after),
+              "IMAGENES",len(pdf[no-1].get_images(full=True)),flush=True)
+assert not empty,("Páginas completamente vacías",empty)
 for fragment in ["MercadoLibre","2.367","1.538","riesgos","Valora"]:
     assert fragment.lower() in text_pdf.lower(),fragment
 for key,sec in zip(KEYS,sections):
