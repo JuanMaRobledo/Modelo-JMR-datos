@@ -6,6 +6,8 @@ root=pathlib.Path(__file__).resolve().parents[1]
 pdf=root/'jmr-v2/informes/MELI/MELI-V2-LTM20260930-R10_INFORME_FUNDAMENTAL.pdf'
 dest=root/'jmr-v2/qa/MELI-R10-ED2'
 dest.mkdir(parents=True,exist_ok=True)
+for stale in dest.glob("*.jpg"):
+    stale.unlink()
 doc=fitz.open(pdf)
 assert doc.page_count>=23
 page_count=doc.page_count
