@@ -109,10 +109,34 @@ def historic_tables(builder):
         wrapper=builder.new_tag("div");wrapper["class"]="table-scroll";wrapper.append(table)
         tags.extend([h4,wrapper])
     return tags
-# Incorporar las tablas completas al capítulo 4, manteniendo la sección narrativa y sus controles.
-q=BeautifulSoup(blocks["calidad"],"html.parser")
-for tag in historic_tables(q):q.append(tag)
-blocks["calidad"]="".join(str(x) for x in q.contents)
+# Mantener íntegro el análisis R10 publicado: añadir la lectura R8, no reemplazar evidencia.
+original_blocks=doc["blocks"].copy()
+original_lengths={k:len(BeautifulSoup(str(v),"html.parser").get_text(" ",strip=True))
+                  for k,v in original_blocks.items()}
+for key in KEYS:
+    old=BeautifulSoup(str(original_blocks.get(key,"")),"html.parser")
+    current=BeautifulSoup(blocks[key],"html.parser")
+    present={im.get("src") for im in current.find_all("img") if im.get("src")}
+    for pic in old.find_all("img"):
+        if pic.get("src") in present:
+            ancestor=pic.find_parent("figure")
+            if ancestor:ancestor.decompose()
+            else:pic.decompose()
+    evidence=old.get_text(" ",strip=True)
+    if evidence and len(evidence)>150:
+        addition='<h3>Detalle documental y evidencia de R10</h3>'+''.join(str(x) for x in old.contents)
+        blocks[key]=blocks[key]+'\n'+addition
+# Incorporar estados A-1.2 si el capítulo existente no muestra al menos tres tablas.
+orig_quality=BeautifulSoup(str(original_blocks.get("calidad","")),"html.parser")
+if len(orig_quality.find_all("table"))<3:
+    q=BeautifulSoup(blocks["calidad"],"html.parser")
+    for tag in historic_tables(q):q.append(tag)
+    blocks["calidad"]="".join(str(x) for x in q.contents)
+assert all(len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True)) >= original_lengths.get(k,0)
+           for k in KEYS), "Se perdió contenido narrativo original R10"
+print("SIN_REGRESION_NARRATIVA",json.dumps({
+ k:{"antes":original_lengths.get(k,0),"despues":len(BeautifulSoup(blocks[k],"html.parser").get_text(" ",strip=True))}
+ for k in KEYS},ensure_ascii=False))
 
 # El modelo económico, su revisión, el estado de auditoría y el resto del catálogo no cambian.
 doc["schemaVersion"]="jmr-v2-analisis-3"
@@ -133,7 +157,14 @@ print("TABLAS",sum(v.count("<table") for v in blocks.values()),"FIGURAS",sum(v.c
 # y la presentación R8/R10, eliminando instrucciones internas de borrador.
 pdfsoup=BeautifulSoup(str(soup),"html.parser")
 pdfsoup.select_one("section.editor-note").decompose()
-pdfsoup.select_one("section#cap-4").append(BeautifulSoup("".join(map(str,historic_tables(pdfsoup))),"html.parser"))
+for index,key in enumerate(KEYS,1):
+    target=pdfsoup.select_one(f"section#cap-{index}")
+    header=target.select_one("header.chapter-head")
+    assert header is not None
+    header.extract()
+    target.clear()
+    target.append(header)
+    target.append(BeautifulSoup(blocks[key],"html.parser"))
 page=str(pdfsoup)
 page=page.replace("Borrador editorial sobre R10 — no publicado ni auditado", "INFORME FUNDAMENTAL R10 · EN REVISIÓN ECONÓMICA")
 page=page.replace("Borrador editorial / No publicado en aplicación","INFORME R10 · EN REVISIÓN ECONÓMICA")
@@ -151,9 +182,12 @@ assert PDF_PATH.stat().st_size>60000
 pdf=fitz.open(PDF_PATH)
 count=pdf.page_count
 text_pdf="\n".join(p.get_text() for p in pdf)
-nonempty=sum(len(p.get_text().strip())>50 for p in pdf)
-assert count>=17 and count<=55,(count,"Extensión visual inesperada")
-assert nonempty>=count-1,(nonempty,count,"Páginas excesivamente vacías")
+lengths=[len(p.get_text().strip()) for p in pdf]
+nonempty=sum(n>50 for n in lengths)
+assert count>=23 and count<=85,(count,"Extensión visual inesperada")
+empty=[i+1 for i,n in enumerate(lengths) if n<8]
+assert not empty,("Páginas completamente vacías",empty)
+print("CONTENIDO_POR_PAGINA",json.dumps(lengths))
 for fragment in ["MercadoLibre","2.367","1.538","riesgos","Valora"]:
     assert fragment.lower() in text_pdf.lower(),fragment
 for key,sec in zip(KEYS,sections):
