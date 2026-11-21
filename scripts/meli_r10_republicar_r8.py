@@ -185,15 +185,11 @@ text_pdf="\n".join(p.get_text() for p in pdf)
 lengths=[len(p.get_text().strip()) for p in pdf]
 nonempty=sum(n>50 for n in lengths)
 assert count>=23 and count<=85,(count,"Extensión visual inesperada")
-empty=[i+1 for i,n in enumerate(lengths) if n<8]
+displayed_images=[len(p.get_image_info()) for p in pdf]
+empty=[i+1 for i,n in enumerate(lengths) if n<8 and displayed_images[i]==0]
 print("CONTENIDO_POR_PAGINA",json.dumps(lengths))
-if empty:
-    for no in empty:
-        before=pdf[no-2].get_text().strip()[-190:] if no>=2 else ""
-        after=pdf[no].get_text().strip()[:190] if no<count else ""
-        print("PAGINA_EN_BLANCO",no,"ANTERIOR",repr(before),"SIGUIENTE",repr(after),
-              "IMAGENES",len(pdf[no-1].get_images(full=True)),flush=True)
-assert not empty,("Páginas completamente vacías",empty)
+print("IMAGENES_VISIBLES_POR_PAGINA",json.dumps(displayed_images))
+assert not empty,("Páginas sin texto ni imagen",empty)
 for fragment in ["MercadoLibre","2.367","1.538","riesgos","Valora"]:
     assert fragment.lower() in text_pdf.lower(),fragment
 for key,sec in zip(KEYS,sections):
@@ -213,7 +209,8 @@ base_model["cierreEditorial"]={
     "pendientes":["La auditoría económica de Mercado Pago, arrendamientos y WACC sigue abierta; no existe aprobación personal"],
     "evidenciaEditorial":{"capitulos":14,"figuras":image_occurrences,"paginasPdf":count,
         "publicacionWebPdf":"Mismo texto de catorce capítulos, cuadros A-1.2 y ocho figuras",
-        "visual":"Render PDF validado por PyMuPDF; revisión humana independiente no atribuida"}
+        "visual":"Render PDF validado por PyMuPDF; revisión humana independiente no atribuida",
+        "justificacionExtension":"Extensión adicional por 14 capítulos íntegros, 27 tablas y figuras del modelo MELI R10"}
 }
 assert json.dumps(files["catalogo.json"],ensure_ascii=False,sort_keys=True)==old_catalog,"Cambió catálogo"
 assert all(json.dumps(files[k],ensure_ascii=False,sort_keys=True)==v for k,v in old_other.items()),"Cambió otra empresa"
