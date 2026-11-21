@@ -1,0 +1,12 @@
+{
+  "cmd": [
+    "node",
+    "scripts/preflight_floyd.cjs",
+    "/workspace/xrx-pr277/candidatos/valoraciones/XRX-FLOYD-20261112-R1/valoracion.json",
+    "/workspace/xrx-pr277/candidatos/valoraciones/XRX-FLOYD-20261112-R1/analisis.json"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/assert/utils:77\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert.ok(st.every(h=>Number.isFinite(h.valor)&&h.probabilidad>=0&&h.probabilidad<=1))\n\n    at validateRebootRecord (/workspace/xrx-pr277/scripts/validar_reboot.cjs:39:10)\n    at preflight (/workspace/xrx-pr277/scripts/preflight_floyd.cjs:8:3)\n    at Object.<anonymous> (/workspace/xrx-pr277/scripts/preflight_floyd.cjs:27:30)\n    at Module._compile (node:internal/modules/cjs/loader:1872:14)\n    at Object..js (node:internal/modules/cjs/loader:2003:10)\n    at Module.load (node:internal/modules/cjs/loader:1594:32)\n    at Module._load (node:internal/modules/cjs/loader:1396:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n",
+  "motivo": "Valores comunes null no certificados; no publicar. Carga y sellos técnicos VIGENTE no sustituyen puente económico."
+}
