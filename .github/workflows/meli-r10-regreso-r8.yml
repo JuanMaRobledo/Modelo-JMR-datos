@@ -7,10 +7,16 @@ on:
       - scripts/meli_r10_qa_r8.py
       - .github/workflows/meli-r10-regreso-r8.yml
   workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - scripts/meli_r10_restaurar_diseno_r8.py
+      - scripts/meli_r10_qa_r8.py
+      - .github/workflows/meli-r10-regreso-r8.yml
 permissions:
   contents: write
 concurrency:
-  group: meli-r10-regreso-r8-${{ github.ref_name }}
+  group: meli-r10-regreso-r8-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 jobs:
   verificar:
@@ -19,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
@@ -44,6 +50,6 @@ jobs:
           git diff --cached --stat
           if ! git diff --cached --quiet; then
             git commit -m "data(v2): restaurar diseño R8 y cifras R10, PDF verificado"
-            git pull --rebase origin ${{ github.ref_name }}
-            git push origin HEAD:${{ github.ref_name }}
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
           fi
