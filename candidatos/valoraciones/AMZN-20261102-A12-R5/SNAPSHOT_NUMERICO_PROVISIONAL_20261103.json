@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "revision_id": "AMZN-20261102-A12-R5",
+  "ticker": "AMZN",
+  "metodo": "JMR A-1.2 FCFF",
+  "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+  "cutoff_financial": "2026-09-30",
+  "cutoff_market": "2026-10-30",
+  "currency": "USD",
+  "units": "USD millions except per_share and shares_millions",
+  "source_repo_head_on_capture": "b32b83edecf08d975a8d38113e7cca9114e52884",
+  "status": "SNAPSHOT_CANDIDATO_NO_CERTIFICADO",
+  "source_ranges": [
+    "Valuation output!C9:L16",
+    "Valuation output!B18:B35",
+    "Input sheet!B23",
+    "Sensibilidad DCF!D8,D19,D30"
+  ],
+  "note": "Captura numerica reproducible. No sustituye hash de formulas del libro, version de plantilla o gate integrado; es un testigo inmutable para regresion futura.",
+  "proyeccion_10_y": {
+    "nopat": [
+      96156.16425,
+      109616.09551200003,
+      121576.69569424505,
+      134183.95429924488,
+      147373.76927185265,
+      158426.80196724157,
+      169516.67810494849,
+      179687.67879124542,
+      188672.0627308077,
+      197162.30555369405
+    ],
+    "reinversion": [
+      121711.56937500022,
+      125295.29891770832,
+      127948.61113008358,
+      129547.96876920931,
+      129979.79533177342,
+      52018.92692134984,
+      45950.05211385898,
+      43422.7992475967,
+      45376.82521373856,
+      41948.3539753672
+    ],
+    "fcff": [
+      -25555.405125000223,
+      -15679.203405708293,
+      -6371.915435838528,
+      4635.98553003557,
+      17393.97394007923,
+      106407.87504589173,
+      123566.6259910895,
+      136264.8795436487,
+      143295.23751706915,
+      155213.95157832684
+    ],
+    "descuento": [
+      0.9243886764909857,
+      0.8544944252247562,
+      0.7898849708024379,
+      0.7301607227401864,
+      0.6749523041195025,
+      0.6229848839211005,
+      0.5741597099834351,
+      0.5283718450393871,
+      0.48551129358059236,
+      0.44546407338342264
+    ],
+    "vp_fcff": [
+      -23623.127120689907,
+      -13397.791902142748,
+      -5033.080237992919,
+      3385.014545223818,
+      11740.102788651058,
+      66290.49768375584,
+      70946.97814267555,
+      71998.5258185475,
+      69571.45613085048,
+      69142.2391160188
+    ]
+  },
+  "bridge": {
+    "fcff_terminal": 133727.4768103316,
+    "wacc_terminal": 0.08990000000000001,
+    "valor_terminal": 2679909.3549164645,
+    "vp_terminal": 1193803.3375394288,
+    "vp_10y": 321020.81496489746,
+    "ev": 1514824.1525043263,
+    "prob_failure": 0,
+    "failure_salvage": 757412.0762521632,
+    "op_assets": 1514824.1525043263,
+    "debt": 304841,
+    "minority": 0,
+    "cash": 114226,
+    "nonop": 288700,
+    "equity": 1612909.1525043263,
+    "option_value": 0,
+    "equity_common": 1612909.1525043263,
+    "shares_millions": 10811,
+    "dcf_per_share": 149.19148575564947
+  },
+  "market_price_per_share": 240.35,
+  "mos_35_per_share": 96.97446574117215,
+  "independent_checks": {
+    "max_fcff_reconciliation_abs": 0,
+    "max_pv_reconciliation_abs": 0,
+    "calculated_pv_10y": 321020.81496489746,
+    "calculated_equity": 1612909.1525043263,
+    "calculated_dcf_per_share": 149.19148575564947,
+    "terminal_fraction_ev": 0.7880804749289336,
+    "passed": true
+  },
+  "control_status_snapshot": {
+    "inputs": "PASS_0_BLANKS",
+    "zeros": "PASS_0_ALERTS",
+    "candados": "PASS_15_15",
+    "historicos": "PASS_CON_SALVEDADES_3_SECONDARY",
+    "sec": "20_20_CONCILIATED",
+    "formula_diff": "TIMED_OUT_AT_600S_REVIEW_PENDING",
+    "integrated_gate": "NOT_EXECUTED",
+    "publication": "NOT_ALLOWED"
+  }
+}

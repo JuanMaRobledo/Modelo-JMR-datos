@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/runner/work/JMR-valuation/JMR-valuation/scripts/candados.py", line 18, in <module>
+    import model_steps as ms
+  File "/home/runner/work/JMR-valuation/JMR-valuation/scripts/model_steps.py", line 13, in <module>
+    import refresh_native_model as rnm
+  File "/home/runner/work/JMR-valuation/JMR-valuation/scripts/refresh_native_model.py", line 55, in <module>
+    from jmr_valuation.io.comps_loader import load_comps_table
+  File "/home/runner/work/JMR-valuation/JMR-valuation/jmr_valuation/io/comps_loader.py", line 10, in <module>
+    from jmr_valuation.io.yfinance_client import PeerMultiples, get_peer_multiples
+  File "/home/runner/work/JMR-valuation/JMR-valuation/jmr_valuation/io/yfinance_client.py", line 17, in <module>
+    import yfinance as yf
+ModuleNotFoundError: No module named 'yfinance'
