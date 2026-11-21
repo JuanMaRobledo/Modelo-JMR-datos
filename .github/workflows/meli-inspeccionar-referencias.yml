@@ -1,0 +1,33 @@
+name: MELI · inspeccionar diseños originales R8 y NVIDIA R6
+on:
+  push:
+    branches: [fix/meli-r10-restaurar-diseno-r8-nvda-20261121]
+    paths:
+      - scripts/meli_inspeccionar_diseno_referencias.py
+      - .github/workflows/meli-inspeccionar-referencias.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  referencias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --disable-pip-version-check pymupdf pillow
+      - run: python scripts/meli_inspeccionar_diseno_referencias.py
+      - name: Guardar capturas de referencias
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jmr-v2/qa/referencias-diseno-r8-nvda/
+          if ! git diff --cached --quiet; then
+            git commit -m "qa(editorial): guardar capturas del R8 y NVIDIA R6"
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+            git push origin HEAD:${{ github.head_ref || github.ref_name }}
+          fi
