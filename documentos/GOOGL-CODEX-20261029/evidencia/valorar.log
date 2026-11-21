@@ -1,0 +1,15 @@
+
+##### GOOGL · 1. datos en la hoja nueva · 21:03:40
+DESTINO LOCAL APTO: no coincide con plantillas ni respaldos registrados; verificar copia en Sheets
+DESTINO LOCAL APTO: no coincide con plantillas ni respaldos registrados; verificar copia en Sheets
+== 1. Estados de la SEC (importador corregido: D&A total, acciones en millones, arrendamientos financieros, deuda corriente)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/workspace/JMR-valuation/scripts/refresh_native_model.py", line 55, in <module>
+    from jmr_valuation.io.comps_loader import load_comps_table
+  File "/workspace/JMR-valuation/jmr_valuation/io/comps_loader.py", line 10, in <module>
+    from jmr_valuation.io.yfinance_client import PeerMultiples, get_peer_multiples
+  File "/workspace/JMR-valuation/jmr_valuation/io/yfinance_client.py", line 17, in <module>
+    import yfinance as yf
+ModuleNotFoundError: No module named 'yfinance'
+BLOQUEADO: falló bash scripts/desde_cero.sh datos GOOGL 11HPn4cb1knp1l_VyxnHe5DHdtnM23x1fpZ6-AT9wZok META;MSFT;AMZN Software (Internet) (código 1)
