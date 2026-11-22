@@ -29,14 +29,16 @@ En todos sus libros los años 6–10 son iguales a los años 1–5 (`B32 = B31`)
 | AMZN | AMZN-V2-LTM20260930-R2 | Empresa actual (I27) | 1,0×/1,6× → 1,05× | US$196,96 → US$190,27 |
 | ONON | ONON-V2-LTM20260930-R2 | Empresa actual (I27) | 3,0× → 2,14× | CHF 72,77 → CHF 71,34 |
 | EPAM | EPAM-V2-LTM20260930-R7 | Empresa actual (I27) | 2,2×/2,0× → 2,13× | US$197,32 → US$197,36 |
+| XRX | XRX-V2-LTM20260930-R3 | Industria global promedio (K27) | 2,8×/2,8× → 2,09× | −US$6,67 → −US$6,45 |
 
 - Conservador y Optimista aplican un factor sobre el ancla que conserva la proporción de cada escenario frente al Base de la revisión anterior.
 - MSFT R6 también corrige la industria a Software (System & Application) y usa beta bottom-up de EE. UU. (Single Business): WACC inicial 10,77 % → 10,74 %.
 - EPAM R7 corrige la industria a Computer Services. Las dos venían con Food Processing, el valor por defecto de la plantilla.
 - GOOGL conserva Software (Internet) en lugar de Software (Entertainment) de indname, con la razón documentada en el libro y el expediente.
-- Paridad libro–motor: 0,0000 % en los tres escenarios de las seis empresas. Exportaciones .xlsx con SHA-256 en `scripts/v2_ventas_capital_20261122/xlsx_sha.json`.
-- Libros de la revisión anterior: los de EPAM R6 y ONON R1 se restauraron a su estado original. Las revisiones nuevas son copias con su propio ID.
-- Se actualizaron análisis (texto, tablas, sensibilidades, estrés y figuras `-rN`), justificaciones y PDF. Las pruebas de estrés que fijan su propio ventas/capital no cambian. Las demás se recalcularon con el Base nuevo.
+- XRX R3 conserva Office Equipment & Services en lugar de Computers/Peripherals de indname (ene-2026) con razón documentada (evita importar beta EE. UU. de Apple/servidores IA, +91 pb WACC), usa K27 = 2,09× en años 1–10 (prácticamente igual a I27 = 2,11× sin depender del patrimonio negativo; Conservador ×1,0714 = 2,24× y Optimista ×0,8929 = 1,86×), reubica el bloque de pensiones/fracaso R2 en A50:G55 y concilia el WACC inicial vivo (13,7647 %) con paridad 0,0000 %. Estado conservado en `EN_PROCESO`.
+- Paridad libro–motor: 0,0000 % en los tres escenarios de las siete empresas. Exportaciones .xlsx con SHA-256 en `scripts/v2_ventas_capital_20261122/xlsx_sha.json`.
+- Libros de la revisión anterior: los de EPAM R6 y ONON R1 se restauraron a su estado original y XRX R2 quedó intacto. Las revisiones nuevas son copias con su propio ID.
+- Se actualizaron análisis (texto, tablas, sensibilidades, estrés y figuras `-rN`/`_rN`), justificaciones y PDF. Las pruebas de estrés que fijan su propio ventas/capital no cambian. Las demás se recalcularon con el Base nuevo.
 - Estado declarado sin cambios. Todas siguen con P02 (falta auditoría independiente). Los manifiestos de cierre quedan pendientes de rehacer.
 
 ## Resto de la biblioteca
