@@ -18,6 +18,7 @@ const resumen=[];
 fs.mkdirSync(fragDir,{recursive:true});
 for(const c of F['catalogo.json'].empresas){
  const t=c.ticker, m=F['empresas/'+t+'.json'], a=F['analisis/'+t+'.json'], k=C[t];
+ if(['banco','aseguradora','holding'].includes(m.profile)) continue;
  if(!k) throw Error('Sin contenido '+t);
  const A=m.assumptions, B=A.base, cur=m.currency||'USD', mon=cur==='USD'?'US$':cur+' ';
  const res=eng.calculateAll(m).scenarios;

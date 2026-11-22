@@ -65,3 +65,19 @@ Ampliación editorial de las 22 valoraciones de la biblioteca V2. **No cambia su
 | UBER | jmr-v2/informes/UBER/UBER-V2-LTM20260930-R5_INFORME_FUNDAMENTAL.pdf | 24 | c23056f04f3898f4… |
 | XRX | jmr-v2/informes/XRX/XRX-V2-LTM20260930-R1_INFORME_FUNDAMENTAL.pdf | 37 | bcc13279531cc3b9… |
 | ZTS | jmr-v2/informes/ZTS/ZTS-V2-LTM20260930-R2_INFORME_FUNDAMENTAL.pdf | 27 | c5431e0c20b6d167… |
+
+## Correcciones aplicadas (22-nov-2026, segunda entrega)
+
+| Empresa | Revisión | Cambio | Base anterior | Base nuevo |
+|---|---|---|---|---|
+| NU | NU-V2-LTM20260930-R3 | Perfil banco, exceso de retorno (eqexret de Damodaran); Ke 10,94 % = 5,15 % + 0,76 × 7,62 %; ROE 26 % / retención 80 % / ROE estable 18 %. FCFF R2 se conserva como contraste. | US$16,65 | US$11,84 |
+| XRX | XRX-V2-LTM20260930-R2 | Déficit de pensiones después de impuestos (US$497,8 M) como deuda; probabilidad de fracaso por calificación (CCC/C 50,38 %; B 23,74 % en Optimista). Patrimonio del Base negativo: estado EN_PROCESO (V03). | US$3,31 | −US$6,67 (valor económico US$0) |
+| ADBE | ADBE-V2-LTM20260828-R2 | Tasa libre 5,15 % y prima madura 3,387 %: WACC 10,24 % → 8,537 %. | US$359,97 | US$442,99 |
+
+Libros: NU R3 sobre `eqexret` (subido a Drive); XRX R2 y ADBE R2 como copias Google Sheets en sus carpetas (el .xlsx de XRX, 3,6 MB, no se pudo subir por el límite del conector; su huella está en el expediente).
+
+Decisiones pendientes del propietario (archivos protegidos por el blindaje F1, no modificados):
+- `docs/v2/expediente-v2.mjs`: aceptar en D10 ajustes asimilables a deuda documentados (`financials.ajustesDeuda`); hoy XRX muestra D10 como error esperado.
+- `scripts/v2-libro-financiero.py`: tolerancia en valor absoluto del control «utilidad neta ≤ UAI − impuestos» (falso REVISAR en años con pérdidas); aplicada a mano en el libro NU R3.
+
+Correcciones propuestas sin aplicar (requieren decisión porque cambian supuestos autorizados): ventas/capital observado en MSFT (−10 %), GOOGL (−13 %), AMZN (−32 %), NVDA (−3 %) y ONON (−2 %); WACC inicial igual al terminal en CMG (−3 %), DPZ (−6 %), LULU (−2 %) y PYPL (−2 %); beta bottom-up en AAPL, MSFT y UBER; g de 2,5 % en el Conservador de ZTS.
