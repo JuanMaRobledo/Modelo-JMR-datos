@@ -1,0 +1,65 @@
+# Amazon.com, Inc. (AMZN) — Artículo de inversión JMR A-1.2 · Nivel 1
+**Revisión R5 | Borrador candidato para revisión visual | 3 de noviembre de 2026**
+
+**Corte de mercado:** 30 de octubre de 2026, US$240,35 por acción. **Corte contable:** 30 de septiembre de 2026. **Valor principal, DCF Base FCFF:** **US$149,19**, **MOS35% US$96,97**, aún **PROVISIONAL** y sujeto a reservas materiales en CAPEX, activos no operativos, descuento, terminal y conciliaciones de fuente. **No publicado / no certificado.** Disrupción va separada. La tesis y las cifras proceden de la hoja R5 y de la SEC fechadas al corte, NO de revisiones R2/R3/R4.
+
+## 1. La pregunta de inversión: negocio extraordinario, precio exigente
+Amazon combina una red de comercio y logística de difícil imitación con AWS, publicidad y servicios que generan economías muy distintas. El debate no consiste en si AWS está creciendo: el último trimestre registró un avance extraordinario; consiste en cuánto capital debe desplegar la empresa para sostener ese crecimiento, cuán rápido convierte la inversión en efectivo y cuánto dura la ventaja competitiva antes de converger. El caso Base no iguala la cotización: su valor es 149,19 frente a 240,35 al corte. El objetivo del análisis es descubrir qué debe suceder para justificar la diferencia, no retocar parámetros.
+
+## 2. Qué poseemos como accionistas
+Las acciones participan en el negocio operativo (AWS, retail y publicidad), pero también indirectamente en inversiones financieras no consolidadas, incluidas participaciones en Anthropic y OpenAI. El valor de activos operativos proviene del FCFF descontado; la deuda, caja y activos ajenos a FCFF se reconcilian en el puente hacia patrimonio una sola vez. No se mezclan ganancias contables extraordinarias de inversiones con el margen operativo recurrente.
+
+## 3. Ciclo vital de la empresa
+Amazon ya tiene tamaño de empresa madura por ventas, pero AWS e infraestructura de IA atraviesan una etapa intensiva de crecimiento que se parece más a una expansión de capacidad que a una plataforma madura de capital ligero. No basta etiquetarla como 'crecimiento' para derivar un múltiplo o unas probabilidades. Para el Método A, la historia Base debe situarse cerca del resultado más plausible: maduración gradual del retail, mayor peso de AWS/ads y eficiencia de nuevas inversiones todavía por verificar.
+
+## 4. Ciclo macroeconómico, monetario y de crédito
+En un DCF con 78,8% del EV originado en el valor terminal, los cambios del costo de capital importan tanto como una sorpresa del beneficio trimestral. El WACC inicial candidato es 8,18%, pero el costo de deuda, valor de mercado del pasivo, exposición internacional y coherencia temporal de Rf/ERP requieren nuevas comprobaciones. Un incremento de 50 puntos básicos del WACC reduce el Base matricial hasta ~133,45 dólares; no es un hecho previsto, sino una prueba de duración y riesgo. El coste energético, la disponibilidad de chips y el financiamiento de infraestructura afectan tanto al flujo como al riesgo.
+
+## 5. Sentimiento del mercado y precio frente al valor
+La discusión recuerda el análisis de ciclo de Howard Marks: un mercado puede reconocer correctamente una oportunidad de IA y, a la vez, pagar por adelantado resultados de ejecución excelentes. El precio al corte, 240,35, se aproxima al optimista calculado (241,84), no al central (149,19). Este contraste no es una recomendación mecánica de venta: la valoración contiene hipótesis y activos Level 3 no plenamente auditados, y las sensibilidades revelan dispersión notable. El análisis separa negocio, expectativas y precio.
+
+## 6. AWS: fuente de crecimiento y de reinversión
+El comunicado del 29-oct-2026 informa AWS trimestral +39,3% y una tasa anualizada de ingresos de ~184.000 millones USD. La dirección comunicó expectativas de crecimiento de AWS por encima de 40% en 2027–2028; esa afirmación es guía de management, no un compromiso verificable ni crecimiento garantizado del conglomerado. Deben analizarse utilización de capacidad, ingresos contratados, eficiencia de chips y la conversión de backlog a ingresos reales. El riesgo de infrautilización es el contrapeso del potencial alcista. El modelo conserva un desfase de reinversión de dos años que exige evidencia causal adicional.
+
+## 7. Retail, marketplace, logística y publicidad
+El comercio norteamericano e internacional expande ventas a ritmos inferiores a AWS, pero concentra capacidad de distribución, inventarios, vendedores y usuarios que soportan servicios de alto margen. Publicidad y comisiones se monetizan sobre una base instalada que no se reconstruye cada año; no por ello son gratis: envíos, fulfillment, tecnología, salarios y nuevas instalaciones deben financiarse. En Q3 2026 Norteamérica creció ~6% e Internacional ~5% (8% sin FX), mientras AWS ~39%; el mix futuro será determinante del margen consolidado.
+
+## 8. Fosos económicos: escala, ecosistema y duración
+La ventaja proviene de red logística, distribución y confianza de consumidores, catálogo de vendedores, herramientas de desarrolladores y escala de centros de datos. Pero una ventaja competitiva no equivale a margen perpetuo fijo: la inversión requerida para conservarla puede subir, competidores pueden imitar productos y un cliente de nube puede internalizar cargas. Amazon mezcla ventajas duraderas y actividades maduras con presión competitiva; el ROIC terminal Base 11,5% vs WACC terminal 8,99% presupone una prima competitiva persistente.
+
+## 9. Demanda, precio, volumen y mezcla
+Para fundamentar los ingresos totales conviene construir un puente por AWS, retail doméstico, internacional, publicidad y sus tasas de crecimiento. El modelo activa 11% de crecimiento del primer año y 8,8725% compuesto años 2–5, partiendo de LTM 797.455 M. La guía Q4 2026 de Amazon prevé crecimiento consolidado de 12–16%, con incertidumbre de FX y calendario de Prime Day; el 11% anual no es implausible pero podría ser conservador frente al mix esperado. La proyección de conjunto necesita justificar por qué desacelera AWS tan rápido pese a la guía.
+
+## 10. Historia financiera y disciplina contable
+Entre 2016 y 2025 los ingresos crecieron de 135.987 a 716.924 M, y el EBIT GAAP de 4.186 a 79.975 M, con un retroceso importante en 2022. El LTM sep-2026 asciende a ventas 797.455 y EBIT 104.366 M. Diez ejercicios y LTM están cargados y 88 identidades aritméticas históricas se conciliaron en la revisión precedente; eso no prueba cada clasificación SEC. El ingreso neto incluye inversiones no operativas y no debe tratarse como equivalente a ganancias recurrentes.
+
+## 11. La calidad de los márgenes
+El margen EBIT GAAP LTM es ~13,09%; después de capitalizar una fracción hipotética de I+D, el EBIT ajustado del modelo es ~115.503 M y margen inicial ~14,48%. El margen objetivo Base de 15,8% a cinco años requiere que AWS, publicidad y escala compensen mayores costos de energía, depreciación y operaciones. No usar la mediana sectorial como si fuera margen operativo activo de cada escenario; la referencia del Input tiene otro propósito. La estimación de R&D como 25% de Technology & Infrastructure es un juicio explícito y reversible, no una cifra SEC.
+
+## 12. El núcleo del desacuerdo: capital gastado y efectivo generado
+Amazon reportó CFO LTM de 168.300 M, compras de activos por 215.192 M, incentivos y ventas de activos por 4.535 M y flujo de caja libre de −42.357 M. La dirección guía unos 220.000 M de CAPEX cash para FY2026 y espera un aumento importante en 2027. El DCF no proyecta estos 215.192 M como un pago perpetuo: usa `Δventas/Sales-to-Capital` con desfase. Es económicamente correcto no deducir el CAPEX histórico de nuevo, pero no basta para afirmar que S/C 0,72 captura toda la inversión de 2027. La Base proyecta FCFF negativos para los primeros tres ejercicios, una posible consecuencia válida de expandir infraestructura.
+
+## 13. Sales-to-Capital: promedio no es marginal
+El S/C contable descriptivo ~1,34 representa ventas sobre capital invertido. El 0,72 de años1–5 y 1,65 de años6–10 son juicios de productividad de inversión nueva, no sustitutos del dato histórico. La necesidad inicial de reinversión es 121.712 M frente a NOPAT 96.156 M (126,6%); la rentabilidad de capital nueva llegará con rezago o no llegará. La sensibilidad documentada: a S/C 0,50 Base ~128,72, a 0,55 ~134,81 y a 0,90 ~158,50. La diferencia es material: sin un puente entre cash CAPEX, D&A, working capital, leasing, I+D y crecimiento incremental no se aprueba esta hipótesis.
+
+## 14. ROIC, retorno incremental y convergencia
+El ROIC GAAP histórico LTM calculado en la hoja es ~13,07%; el ajustado que usa el motor ~15,09%, el ROIC del décimo año ~13,93% y el terminal Base 11,5%. Es relevante tanto la diferencia de tratamiento contable como el descenso del retorno. El horizonte terminal supone g4% y reinversión g/ROIC ~34,78% del NOPAT sostenible. Hace falta contrastar ROIC marginal real de AWS, tiendas, anuncios y nuevas instalaciones, sin equiparar automáticamente margen×S/C marginal con ROIC del capital existente.
+
+## 15. Costo de capital y horizonte de valoración
+Se utilizó el WACC oficial del `Cost of capital worksheet`: tasa libre USD5,29%, ERP3,70%, beta de negocios combinados, calificación AA, y peso de patrimonio de mercado. El Ke es ~8,44%, WACC inicial ~8,18% y terminal 8,99%. La cartera de deuda debe revisarse a valor de mercado por tramos y cotejar el ERP por exposición geográfica: el modo Will Input se mantiene con reserva. El DCF de diez años genera PV flujos ~321.021 M, PV terminal ~1.193.803 M y EV ~1.514.824 M. El terminal domina, por lo que importa más la consistencia del régimen estable que un redondeo de FY+1.
+
+## 16. Participaciones en Anthropic y OpenAI, SBC y estructura patrimonial
+El 10-Q informa 92.500 M en acciones preferentes no votantes Anthropic, 146.200 M en notas convertibles de Anthropic **como activos**, y 50.000 M de OpenAI, suma de 288.700 M de activos no operativos incluida una vez en el puente de equity. Son partidas Level 3 con restricciones, eventuales impuestos e iliquidez. Un recorte hipotético 25% resta ~6,68 dólares por acción, sin incorporar impuestos. La deuda incluye pasivos de leases ASC842, que no deben capitalizarse dos veces. Las 223,3 M RSUs pendientes pueden diluir, pero tampoco se debe descontar SBC y dilución de modo inconsistente.
+
+## 17. Qué aportan y qué no aportan los múltiplos
+El control de EV/EBITDA produce un VP candidato Base ~341,10 y P/OCF ~190,40 en la salida actual; ambos pueden parecer atractivos frente al DCF porque EBITDA/OCF no descuentan automáticamente el costo de reinversión futura. EV/FCFF y P/FCFE no se fuerzan cuando sus denominadores FY+3 son negativos, y el P/E requiere normalizar plusvalías no operativas y efectos fiscales. Los paneles de salida FY+3 muestran valores distintos de VP HOY; comparar sin descontar mezcla fechas. El valor principal sigue siendo DCF Base y el agregado de métodos no se publica mientras faltan métodos aplicables y validación de pesos.
+
+## 18. Escenarios, conclusión provisional y preguntas de revisión
+La Conservadora 81,01 considera menor conversión de capacidad y márgenes; la Base 149,19 apuesta por crecimiento con reinversión intensa pero amortizable; la Optimista 241,84 exige alta utilización y márgenes; Disrupción 62,44 explora deterioro no lineal y **no entra** en el promedio ordinario. El MOS 35% aplicado **solo a Base** es 96,97. Desde el precio de 240,35 la valoración Base representa un descuento aproximado de 37,9% respecto de mercado; no invertir la definición de MOS para llamarlo descuento de compra. Antes de revisión de usuario hay que comprobar visualmente que todas las pantallas distinguen valor principal, precio con MOS, cotización al corte y valores secundarios.
+
+**Veredicto interno:** escenario calculado y reproducido, hipótesis económicas **con reservas materiales**. El riesgo primario para el valor económico no es que el flujo sea negativo en el año 1, sino que la escala de inversión real, el ROIC terminal y el valor de inversiones privadas no estén simultáneamente conciliados con el precio pagado. Tampoco se recomienda "normalizar" CAPEX retirando inversión de crecimiento sin retirarle ingresos futuros. Las acciones concretas están en `FASE_3_ENTREGA.md` y `AUDITORIA_INTERNA_PREVISUAL.md`. No implica publicación ni decisión de inversión.
+
+### Fuentes y trazabilidad
+- [SEC, Amazon 10-Q, 2026-09-30](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm) — operaciones, inversiones, cash, deuda, PPE y guía.
+- [Amazon, comunicado de resultados 2026Q3, 29-oct-2026](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx) — segmento AWS, guidance y flujos.
+- Revisión R5 de la hoja, `FASE_2_ENTREGA.md`, `INVENTARIO_ENTRADAS_F1.md`, `NORMALIZACION_CAPEX_Y_JUSTIFICACION_DCF.md`, acta técnica F1/F2 de 2026-11-03; Método A-1.2 y reglas v27. Los supuestos no publicados se identifican como **juicio**.

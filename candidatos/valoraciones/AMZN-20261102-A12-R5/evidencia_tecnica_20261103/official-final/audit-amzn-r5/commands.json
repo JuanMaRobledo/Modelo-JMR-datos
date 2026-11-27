@@ -1,0 +1,75 @@
+[
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/inputs_completos.py",
+      "AMZN",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/auditar_ceros_materiales.py",
+      "AMZN",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+      "--json-out",
+      "audit-amzn-r5/zeros.json"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/diff_formulas_plantilla.py",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+      "--salida",
+      "audit-amzn-r5/formulas.json"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/candados.py",
+      "AMZN",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/estados_completos.py",
+      "AMZN",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 1
+  },
+  {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.17/x64/bin/python",
+      "scripts/auditar_estados_sec.py",
+      "AMZN",
+      "--sheet-id",
+      "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+      "--cutoff",
+      "2026-10-30",
+      "--fiscal-year-end-month",
+      "12"
+    ],
+    "sheet_id": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+    "exit_code": 0
+  }
+]

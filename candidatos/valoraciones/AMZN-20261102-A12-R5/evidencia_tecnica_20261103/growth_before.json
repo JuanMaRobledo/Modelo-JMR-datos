@@ -1,0 +1,129 @@
+{
+  "spreadsheetId": "199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/199x_GNl2608SFjj58hCtTjWpxleL2rqtRPJl4lZdW5I/edit",
+  "properties": {
+    "title": "AMZN — Método JMR A-1.2 — R5 — Fase 1 nueva (plantilla IA limpia)",
+    "locale": "es_ES",
+    "timeZone": "America/Los_Angeles"
+  },
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 472781005,
+        "title": "Input sheet",
+        "index": 11,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 26,
+          "rowGroupControlAfter": true,
+          "columnGroupControlAfter": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 25,
+          "startColumn": 8,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "formulaValue": "=IF($A$1=\"\";\"\";IFERROR(IF(C12>0;(B12/C12)^(1/D12)-1; \"NA\");\"\"))"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.15250837032636233
+                  },
+                  "note": "AMZN R5, comprobación crecimiento 2026-11-02. HISTORICAL LTM YoY Sep2026/Sep2025 797455/691330-1. SEC source Q3 2025 9M2024 and Q3 2026 9M2025/26; correct for seasonal windows. This is company historic growth, not forecast. https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm ; https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 967931796,
+        "title": "Income Statement",
+        "index": 13,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 1000,
+          "columnCount": 25,
+          "frozenRowCount": 2,
+          "frozenColumnCount": 1,
+          "hideGridlines": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 3,
+          "startColumn": 11,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "formulaValue": "=IF(AND(ISNUMBER(L3);ISNUMBER(K3));IFERROR(L3/K3-1;\"\");\"\")"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 0.11232850343969525
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "properties": {
+        "sheetId": 998030,
+        "title": "Entradas históricas auxiliares",
+        "index": 40,
+        "sheetType": "GRID",
+        "gridProperties": {
+          "rowCount": 30,
+          "columnCount": 14,
+          "frozenRowCount": 2,
+          "hideGridlines": true
+        }
+      },
+      "data": [
+        {
+          "startRow": 5,
+          "startColumn": 9,
+          "rowData": [
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "numberValue": 450167
+                  },
+                  "effectiveValue": {
+                    "numberValue": 450167
+                  },
+                  "note": "AMZN R5, comprobación crecimiento 2026-11-02. Dato SEC FY9M2024, total net sales US$450167 M para reconstruir LTM Sep2025; 2025 10Q nueve meses 2024 y 2025. https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm"
+                }
+              ]
+            },
+            {
+              "values": [
+                {
+                  "userEnteredValue": {
+                    "formulaValue": "='Income Statement'!J3+'Income Statement'!M3-J6"
+                  },
+                  "effectiveValue": {
+                    "numberValue": 691330
+                  },
+                  "note": "AMZN R5, comprobación crecimiento 2026-11-02. Cálculo: FY2024 637959 + 9M2025 503538 - 9M2024 450167 = LTM Sep2025 691330 M. Datos comparables, no 2025 anual vs 2026 LTM. https://www.sec.gov/Archives/edgar/data/1018724/000101872425000123/amzn-20250930.htm"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
