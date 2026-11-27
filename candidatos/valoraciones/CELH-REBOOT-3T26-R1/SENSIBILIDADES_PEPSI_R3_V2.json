@@ -1,0 +1,224 @@
+{
+  "revisionId": "CELH-REBOOT-3T26-R1",
+  "fecha": "2026-11-10",
+  "estado": "CANDIDATO_ECONOMICO_NO_CERTIFICADO",
+  "unidad": "USD por accion ordinaria",
+  "origen": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/SENSIBILIDADES_R3_CELH.json",
+  "origenShaGithub": "12ad308aa947bf3177586f8ada05334ac38ac095",
+  "metodo": "transformación aritmética de 75 corridas originales Ginsu (sin nueva ejecución ni edición motor) para claims preferred de valor de mercado constante al spot observado",
+  "modeloPepsi": "candidatos/valoraciones/CELH-REBOOT-3T26-R1/PEPSI_ECONOMICO_R3_V2.json",
+  "preferredMarketValue": 1573.237514855562,
+  "commonOutstandingM": 251.725,
+  "dcfScenarioEquityBase": 7995.429897101783,
+  "centroBase": 25.512731680390193,
+  "matrices": [
+    {
+      "nombre": "Crecimiento FY+1 y FY2–5 × EBIT sostenible",
+      "etiquetaFilas": "CAGR anual primeros cinco años",
+      "etiquetaColumnas": "EBIT sostenible LTM USD millones",
+      "ejeFilas": [
+        0.07,
+        0.09,
+        0.11,
+        0.13,
+        0.15
+      ],
+      "ejeColumnas": [
+        445,
+        475,
+        505,
+        535,
+        565
+      ],
+      "valores": [
+        [
+          16.970303547912106,
+          18.760705268603104,
+          20.5511069892941,
+          22.341508709985103,
+          24.131910430676896
+        ],
+        [
+          18.9187525556401,
+          20.915578929959104,
+          22.912405304278103,
+          24.90923167859695,
+          26.906058052915792
+        ],
+        [
+          21.061583274218105,
+          23.287157477303634,
+          25.512731680390054,
+          27.73830588347647,
+          29.963880086562888
+        ],
+        [
+          23.41716426959191,
+          25.89593166910336,
+          28.37469906861589,
+          30.85346646812733,
+          33.33223386763877
+        ],
+        [
+          26.00532402902914,
+          28.76402152652066,
+          31.522719024011096,
+          34.281416521501534,
+          37.040114018991964
+        ]
+      ],
+      "centro": 25.512731680390054,
+      "centroConciliado": true,
+      "evidencia": {
+        "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+        "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+        "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+        "nuevasCorridasGinsu": false
+      },
+      "equityBeforePreferredCentre": 7995.429897101748
+    },
+    {
+      "nombre": "WACC inicial × crecimiento terminal",
+      "etiquetaFilas": "WACC inicial modificado por ERP Damodaran",
+      "etiquetaColumnas": "g terminal nominal USD",
+      "ejeFilas": [
+        0.06833321174134727,
+        0.07115676430225437,
+        0.07398031686316145,
+        0.07680386942406855,
+        0.07962742198497566
+      ],
+      "ejeColumnas": [
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+      ],
+      "valores": [
+        [
+          25.375646623807697,
+          25.944612592749195,
+          26.58026270620945,
+          27.299789545069785,
+          28.127103959853162
+        ],
+        [
+          24.858833009055154,
+          25.41727542347016,
+          26.041183492871312,
+          26.747435763375908,
+          27.559506337262917
+        ],
+        [
+          24.352185943412415,
+          24.90032271575984,
+          25.512731680390054,
+          26.20598379690182,
+          27.003125387297324
+        ],
+        [
+          23.855478892514242,
+          24.393522932660435,
+          24.994670158002428,
+          25.675190242713967,
+          26.45771049185144
+        ],
+        [
+          23.368490925533504,
+          23.896650266979478,
+          24.486767685283784,
+          25.154817726841397,
+          25.923017243592493
+        ]
+      ],
+      "centro": 25.512731680390054,
+      "centroConciliado": true,
+      "evidencia": {
+        "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+        "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+        "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+        "nuevasCorridasGinsu": false
+      },
+      "equityBeforePreferredCentre": 7995.429897101748
+    },
+    {
+      "nombre": "ROIC terminal × crecimiento terminal",
+      "etiquetaFilas": "ROIC perpetuo",
+      "etiquetaColumnas": "g terminal nominal USD",
+      "ejeFilas": [
+        0.08,
+        0.095,
+        0.11,
+        0.125,
+        0.14
+      ],
+      "ejeColumnas": [
+        0.02,
+        0.025,
+        0.03,
+        0.035,
+        0.04
+      ],
+      "valores": [
+        [
+          22.8333273954781,
+          22.818466209432103,
+          22.757772440365105,
+          22.637932709617104,
+          22.440405074461104
+        ],
+        [
+          23.712666554808468,
+          24.023751555200747,
+          24.35274884248513,
+          24.703646496992462,
+          25.08197999241844
+        ],
+        [
+          24.352185943412415,
+          24.90032271575984,
+          25.512731680390054,
+          26.20598379690182,
+          27.003125387297324
+        ],
+        [
+          24.838220678751675,
+          25.566516797784015,
+          26.394318637198182,
+          27.347760144833234,
+          28.46319588740475
+        ],
+        [
+          25.22010511366094,
+          26.089955005089575,
+          27.08699410326195,
+          28.244870132493634,
+          29.610394137489543
+        ]
+      ],
+      "centro": 25.512731680390054,
+      "centroConciliado": true,
+      "evidencia": {
+        "origen": "75 corridas originales del Ginsu, expresadas como puente estático",
+        "paso1": "inversión algebraica de preferencias y acciones del waterfall A/B previo para reconstruir equity pre-preferentes",
+        "paso2": "(equity pre-preferentes − valor de mercado preferente A/B estimado por el nuevo módulo) / 251.725M comunes",
+        "nuevasCorridasGinsu": false
+      },
+      "equityBeforePreferredCentre": 7995.429897101748
+    }
+  ],
+  "limitaciones": [
+    "Modelo de preferred es diagnóstico híbrido con supuestos y derechos no observados, no certificado.",
+    "Reutiliza las 75 corridas Ginsu conservadas y reconstruye equity pre-preferente desde resultados posteriores al antiguo waterfall estático; no representa nuevas corridas.",
+    "La valoración de claims es spot mercado y no varía al cambiar WACC ni ROIC del DCF; son sensibilidades parciales con otros factores constantes.",
+    "La versión base original 27.07 USD sigue preservada en su archivo y no debe borrarse."
+  ],
+  "controles": {
+    "cantidadMatrices": 3,
+    "celdas": 75,
+    "matrices5x5": true,
+    "centro": true,
+    "centroPepsi": 25.512731680390193
+  }
+}
