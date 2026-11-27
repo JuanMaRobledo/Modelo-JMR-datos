@@ -1,0 +1,470 @@
+[
+  {
+    "celda": "Input sheet!B27",
+    "plantilla": {
+      "formulaValue": "=IF($A$1=\"\";\"\";IFERROR('Income Statement'!L4;\"\"))"
+    },
+    "R5": {
+      "numberValue": 0.18
+    }
+  },
+  {
+    "celda": "Input sheet!B28",
+    "plantilla": {
+      "formulaValue": "=IF(ISNUMBER('Valuation output'!B6);'Valuation output'!B6;\"\")"
+    },
+    "R5": {
+      "numberValue": 0.388
+    }
+  },
+  {
+    "celda": "Input sheet!B29",
+    "plantilla": {
+      "formulaValue": "=IF($A$1=\"\";\"\";IFERROR(B27;\"\"))"
+    },
+    "R5": {
+      "numberValue": 0.145
+    }
+  },
+  {
+    "celda": "Input sheet!B32",
+    "plantilla": {
+      "formulaValue": "=IF($A$1=\"\";\"\";IFERROR(K28;\"\"))"
+    },
+    "R5": {
+      "numberValue": 0.7
+    }
+  },
+  {
+    "celda": "Input sheet!B33",
+    "plantilla": {
+      "formulaValue": "=IF($A$1=\"\";\"\";IFERROR(B32;\"\"))"
+    },
+    "R5": {
+      "numberValue": 1.7
+    }
+  },
+  {
+    "celda": "Input sheet!B47",
+    "plantilla": {
+      "formulaValue": "=IF($A$1=\"\";\"\";IFERROR(B36;\"\"))"
+    },
+    "R5": {
+      "numberValue": 0.0925
+    }
+  },
+  {
+    "celda": "Input sheet!B81",
+    "plantilla": {
+      "formulaValue": "=IF(B18=\"No\";\"NO APLICA\";IF(B18<>\"Yes\";\"PENDIENTE\";IF(AND(ISNUMBER(B78);ISNUMBER('Operating lease converter'!C29);ISNUMBER('Balance Sheet'!L21);ISNUMBER('Balance Sheet'!L26);B78>=0;B78<='Operating lease converter'!C29;B78<='Balance Sheet'!L21+'Balance Sheet'!L26);\"CONCILIADO\";\"REVISAR\")))"
+    },
+    "R5": {
+      "stringValue": "CONCILIADO"
+    }
+  },
+  {
+    "celda": "Valuation output!C6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!B28;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";'Input sheet'!B28;\"\")))-MAX(0;'Cohortes IA 2026'!L7-'Cohortes IA 2026'!O7)/C5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!D6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-D3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-D3));\"\")))-MAX(0;'Cohortes IA 2026'!L8-'Cohortes IA 2026'!O8)/D5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!E6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-E3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-E3));\"\")))-MAX(0;'Cohortes IA 2026'!L9-'Cohortes IA 2026'!O9)/E5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!F6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-F3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-F3));\"\")))-MAX(0;'Cohortes IA 2026'!L10-'Cohortes IA 2026'!O10)/F5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!G6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-G3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-G3));\"\")))-MAX(0;'Cohortes IA 2026'!L11-'Cohortes IA 2026'!O11)/G5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!H6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-H3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-H3));\"\")))-MAX(0;'Cohortes IA 2026'!L12-'Cohortes IA 2026'!O12)/H5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!I6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-I3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-I3));\"\")))-MAX(0;'Cohortes IA 2026'!L13-'Cohortes IA 2026'!O13)/I5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!J6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-J3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-J3));\"\")))-MAX(0;'Cohortes IA 2026'!L14-'Cohortes IA 2026'!O14)/J5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!K6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-K3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-K3));\"\")))-MAX(0;'Cohortes IA 2026'!L15-'Cohortes IA 2026'!O15)/K5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!L6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-$C$6)/'Input sheet'!$B$31)*('Input sheet'!$B$31-L3));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IFERROR((IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L3>'Input sheet'!$B$31;$C$46;$C$46-(($C$46-'Input sheet'!$B$28)/'Input sheet'!$B$31)*('Input sheet'!$B$31-L3));\"\")))-MAX(0;'Cohortes IA 2026'!L16-'Cohortes IA 2026'!O16)/L5;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!C9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(C7>0;IF(C7<B12;C7;C7-(C7-B12)*C8);C7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(C7>0;IF(C7<B12;C7;C7-(C7-B12)*C8);C7);\"\")))+'Puente CAPEX ROIC'!C35"
+    }
+  },
+  {
+    "celda": "Valuation output!D9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D7>0;IF(D7<C12;D7;D7-(D7-C12)*D8);D7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(D7>0;IF(D7<C12;D7;D7-(D7-C12)*D8);D7);\"\")))+'Puente CAPEX ROIC'!D35"
+    }
+  },
+  {
+    "celda": "Valuation output!E9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E7>0;IF(E7<D12;E7;E7-(E7-D12)*E8);E7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(E7>0;IF(E7<D12;E7;E7-(E7-D12)*E8);E7);\"\")))+'Puente CAPEX ROIC'!E35"
+    }
+  },
+  {
+    "celda": "Valuation output!F9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F7>0;IF(F7<E12;F7;F7-(F7-E12)*F8);F7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(F7>0;IF(F7<E12;F7;F7-(F7-E12)*F8);F7);\"\")))+'Puente CAPEX ROIC'!F35"
+    }
+  },
+  {
+    "celda": "Valuation output!G9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G7>0;IF(G7<F12;G7;G7-(G7-F12)*G8);G7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(G7>0;IF(G7<F12;G7;G7-(G7-F12)*G8);G7);\"\")))+'Puente CAPEX ROIC'!G35"
+    }
+  },
+  {
+    "celda": "Valuation output!H9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H7>0;IF(H7<G12;H7;H7-(H7-G12)*H8);H7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(H7>0;IF(H7<G12;H7;H7-(H7-G12)*H8);H7);\"\")))+'Puente CAPEX ROIC'!H35"
+    }
+  },
+  {
+    "celda": "Valuation output!I9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I7>0;IF(I7<H12;I7;I7-(I7-H12)*I8);I7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(I7>0;IF(I7<H12;I7;I7-(I7-H12)*I8);I7);\"\")))+'Puente CAPEX ROIC'!I35"
+    }
+  },
+  {
+    "celda": "Valuation output!J9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J7>0;IF(J7<I12;J7;J7-(J7-I12)*J8);J7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(J7>0;IF(J7<I12;J7;J7-(J7-I12)*J8);J7);\"\")))+'Puente CAPEX ROIC'!J35"
+    }
+  },
+  {
+    "celda": "Valuation output!K9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K7>0;IF(K7<J12;K7;K7-(K7-J12)*K8);K7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(K7>0;IF(K7<J12;K7;K7-(K7-J12)*K8);K7);\"\")))+'Puente CAPEX ROIC'!K35"
+    }
+  },
+  {
+    "celda": "Valuation output!L9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L7>0;IF(L7<K12;L7;L7-(L7-K12)*L8);L7);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";IF(L7>0;IF(L7<K12;L7;L7-(L7-K12)*L8);L7);\"\")))+'Puente CAPEX ROIC'!L35"
+    }
+  },
+  {
+    "celda": "Valuation output!M9",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M7*(1-M8);\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";M7*(1-M8);\"\")))+'Puente CAPEX ROIC'!M35"
+    }
+  },
+  {
+    "celda": "Valuation output!C10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(D5-C5)/C40;IF('Input sheet'!$B$58=0;(C5-B5)/C40;IF('Input sheet'!$B$58=2;(E5-D5)/C40;IF('Input sheet'!$B$58=3;(F5-E5)/C40;(D5-C5)/C40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!C37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!D10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(E5-D5)/D40;IF('Input sheet'!$B$58=0;(D5-C5)/D40;IF('Input sheet'!$B$58=2;(F5-E5)/D40;IF('Input sheet'!$B$58=3;(G5-F5)/D40;(E5-D5)/D40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!D37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!E10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(F5-E5)/E40;IF('Input sheet'!$B$58=0;(E5-D5)/E40;IF('Input sheet'!$B$58=2;(G5-F5)/E40;IF('Input sheet'!$B$58=3;(H5-G5)/E40;(F5-E5)/E40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!E37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!F10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(G5-F5)/F40;IF('Input sheet'!$B$58=0;(F5-E5)/F40;IF('Input sheet'!$B$58=2;(H5-G5)/F40;IF('Input sheet'!$B$58=3;(I5-H5)/F40;(G5-F5)/F40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!F37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!G10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(H5-G5)/G40;IF('Input sheet'!$B$58=0;(G5-F5)/G40;IF('Input sheet'!$B$58=2;(I5-H5)/G40;IF('Input sheet'!$B$58=3;(J5-I5)/G40;(H5-G5)/G40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!G37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!H10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(I5-H5)/H40;IF('Input sheet'!$B$58=0;(H5-G5)/H40;IF('Input sheet'!$B$58=2;(J5-I5)/H40;IF('Input sheet'!$B$58=3;(K5-J5)/H40;(I5-H5)/H40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!H37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!I10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(J5-I5)/I40;IF('Input sheet'!$B$58=0;(I5-H5)/I40;IF('Input sheet'!$B$58=2;(K5-J5)/I40;IF('Input sheet'!$B$58=3;(L5-K5)/I40;(J5-I5)/I40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!I37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!J10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(K5-J5)/J40;IF('Input sheet'!$B$58=0;(J5-I5)/J40;IF('Input sheet'!$B$58=2;(L5-K5)/J40;IF('Input sheet'!$B$58=3;(M5-L5)/J40;(K5-J5)/J40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!J37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!K10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(L5-K5)/K40;IF('Input sheet'!$B$58=0;(K5-J5)/K40;IF('Input sheet'!$B$58=2;L5*L4/K40;IF('Input sheet'!$B$58=3;M5*M4/K40;(L5-K5)/K40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!K37;\"\")"
+    }
+  },
+  {
+    "celda": "Valuation output!L10",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Escenarios e historias'!$K$5=\"LISTO\";LET(reinv;IF('Input sheet'!$B$57=\"No\";(M5-L5)/L40;IF('Input sheet'!$B$58=0;(L5-K5)/L40;IF('Input sheet'!$B$58=2;M5*M4/L40;IF('Input sheet'!$B$58=3;K10*(1+M4);(M5-L5)/L40))));IF(AND(reinv<0;'Input sheet'!$B$98=\"Sin liberación\");0;reinv));\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=IF('Escenarios e historias'!$K$5=\"LISTO\";'Puente CAPEX ROIC'!L37;\"\")"
+    }
+  },
+  {
+    "celda": "R& D converter!F8",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!L10);'Income Statement'!L10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!L10);'Income Statement'!L10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B12",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!K10);'Income Statement'!K10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!K10);'Income Statement'!K10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B13",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!J10);'Income Statement'!J10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!J10);'Income Statement'!J10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B14",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!I10);'Income Statement'!I10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!I10);'Income Statement'!I10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B15",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!H10);'Income Statement'!H10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!H10);'Income Statement'!H10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B16",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!G10);'Income Statement'!G10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!G10);'Income Statement'!G10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B17",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!F10);'Income Statement'!F10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!F10);'Income Statement'!F10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B18",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!E10);'Income Statement'!E10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!E10);'Income Statement'!E10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B19",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!D10);'Income Statement'!D10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!D10);'Income Statement'!D10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B20",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!C10);'Income Statement'!C10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!C10);'Income Statement'!C10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "R& D converter!B21",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!B10);'Income Statement'!B10;\"\"))"
+    },
+    "R5": {
+      "formulaValue": "=(IF('Input sheet'!$A$1=\"\";\"\";IF(ISNUMBER('Income Statement'!B10);'Income Statement'!B10;\"\")))*'Cohortes IA 2026'!$L$3"
+    }
+  },
+  {
+    "celda": "Escenarios e historias!G6",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!B49=\"Yes\";IF(ISNUMBER(N6);N6;IF(ISNUMBER('Input sheet'!B50);'Input sheet'!B50;\"\"));IF('Input sheet'!B49=\"No\";IF('Input sheet'!B46=\"Yes\";IF(ISNUMBER('Input sheet'!B47);'Input sheet'!B47;\"\");IF('Input sheet'!B65=\"Yes\";IF(ISNUMBER('Input sheet'!B66);'Input sheet'!B66+'Country equity risk premiums'!B2;\"\");IF(ISNUMBER('Input sheet'!B35);'Input sheet'!B35+'Country equity risk premiums'!B2;\"\")));\"\")))"
+    },
+    "R5": {
+      "numberValue": 0.12
+    }
+  },
+  {
+    "celda": "Escenarios e historias!G7",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!B49=\"Yes\";IF(ISNUMBER(N7);N7;IF(ISNUMBER('Input sheet'!B50);'Input sheet'!B50;\"\"));IF('Input sheet'!B49=\"No\";IF('Input sheet'!B46=\"Yes\";IF(ISNUMBER('Input sheet'!B47);'Input sheet'!B47;\"\");IF('Input sheet'!B65=\"Yes\";IF(ISNUMBER('Input sheet'!B66);'Input sheet'!B66+'Country equity risk premiums'!B2;\"\");IF(ISNUMBER('Input sheet'!B35);'Input sheet'!B35+'Country equity risk premiums'!B2;\"\")));\"\")))"
+    },
+    "R5": {
+      "numberValue": 0.095
+    }
+  },
+  {
+    "celda": "Escenarios e historias!G8",
+    "plantilla": {
+      "formulaValue": "=IF('Input sheet'!$A$1=\"\";\"\";IF('Input sheet'!B49=\"Yes\";IF(ISNUMBER(N8);N8;IF(ISNUMBER('Input sheet'!B50);'Input sheet'!B50;\"\"));IF('Input sheet'!B49=\"No\";IF('Input sheet'!B46=\"Yes\";IF(ISNUMBER('Input sheet'!B47);'Input sheet'!B47;\"\");IF('Input sheet'!B65=\"Yes\";IF(ISNUMBER('Input sheet'!B66);'Input sheet'!B66+'Country equity risk premiums'!B2;\"\");IF(ISNUMBER('Input sheet'!B35);'Input sheet'!B35+'Country equity risk premiums'!B2;\"\")));\"\")))"
+    },
+    "R5": {
+      "numberValue": 0.22
+    }
+  }
+]

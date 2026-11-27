@@ -1,0 +1,189 @@
+{
+  "revision_id": "GOOGL-CODEX-20261029",
+  "fecha_corte_informacion": "2026-10-29",
+  "estado": "PENDIENTE_NO_PUBLICADO",
+  "controles": [
+    {
+      "control": "R5 aritmética desde FCFF capturados",
+      "estado": "APROBADO",
+      "detalle": {
+        "replay": 287.20493379569,
+        "hoja": 287.20493379569007,
+        "MOS35": 186.68320696719852,
+        "VP_explicito_USDm": 688564.6110672046,
+        "VP_terminal_USDm": 2602921.845017008,
+        "puente_equity_USDm": 239411,
+        "acciones_millones": 12294,
+        "alcance": "No reproduce inputs ni recalcula fórmulas en copia oficial."
+      }
+    },
+    {
+      "control": "R5 FCFF = NOPAT menos reinversión, 10 años",
+      "estado": "APROBADO",
+      "detalle": "Identidad aritmética de valores capturados; no certifica clasificación económica."
+    },
+    {
+      "control": "R5 reinversión física más I+D neta, 10 años",
+      "estado": "APROBADO",
+      "detalle": "S/C no se suma a esta reinversión. No prueba ausencia de solapamiento en gastos de origen."
+    },
+    {
+      "control": "Fórmulas R5 conservadas vs plantilla, solo rangos capturados",
+      "estado": "FALLIDO",
+      "detalle": {
+        "diferencias": 52,
+        "formulas_sustituidas_por_literal_o_vacio": [
+          "Input sheet!B27",
+          "Input sheet!B28",
+          "Input sheet!B29",
+          "Input sheet!B32",
+          "Input sheet!B33",
+          "Input sheet!B47",
+          "Input sheet!B81",
+          "Escenarios e historias!G6",
+          "Escenarios e historias!G7",
+          "Escenarios e historias!G8"
+        ],
+        "inventario": "evidencia/diferencias-formulas.json",
+        "cobertura": "Parcial, no todas las 48 pestañas."
+      }
+    },
+    {
+      "control": "Validaciones R5 vs plantilla en celdas comunes capturadas",
+      "estado": "APROBADO",
+      "detalle": []
+    },
+    {
+      "control": "Fracción I+D uniforme explícito-terminal",
+      "estado": "FALLIDO",
+      "detalle": {
+        "C32": {
+          "formulaValue": "='Valuation output'!C5*C31*'Cohortes IA 2026'!$L$3"
+        },
+        "L32": {
+          "formulaValue": "='Valuation output'!L5*L31*'Cohortes IA 2026'!$L$3"
+        },
+        "M32": {
+          "formulaValue": "='Valuation output'!M5*M31"
+        },
+        "hallazgo": "C:L multiplican por 85%; M no. Cambio no explicado de base contable."
+      }
+    },
+    {
+      "control": "WACC terminal > g y ROIC terminal > g R5",
+      "estado": "APROBADO",
+      "detalle": {
+        "wacc_terminal": 0.0925,
+        "g": 0.04,
+        "roic_terminal": 0.21
+      }
+    },
+    {
+      "control": "AZ Base: FCFF desde sus entradas y perpetuidad",
+      "estado": "APROBADO",
+      "detalle": {
+        "replay": 218.81574042769319,
+        "hoja": 218.81574042769319,
+        "error_max_FCFF_USDm": 0.0,
+        "MOS35_comparativo": 142.2302312780006
+      }
+    },
+    {
+      "control": "AZ Conservador: FCFF desde sus entradas y perpetuidad",
+      "estado": "APROBADO",
+      "detalle": {
+        "replay": 140.7505922563713,
+        "hoja": 140.75059225637128,
+        "error_max_FCFF_USDm": 5.820766091346741e-11,
+        "MOS35_comparativo": 91.48788496664135
+      }
+    },
+    {
+      "control": "AZ Optimista: FCFF desde sus entradas y perpetuidad",
+      "estado": "APROBADO",
+      "detalle": {
+        "replay": 391.25560957913194,
+        "hoja": 391.255609579132,
+        "error_max_FCFF_USDm": 5.820766091346741e-11,
+        "MOS35_comparativo": 254.31614622643576
+      }
+    },
+    {
+      "control": "AZ WACC desde sus componentes",
+      "estado": "APROBADO",
+      "detalle": {
+        "WACC": 0.09942174000000001,
+        "alcance": "Identidad, no validación de Rf/ERP/beta/pesos."
+      }
+    },
+    {
+      "control": "Comparación: mismo puente EV-equity",
+      "estado": "APROBADO",
+      "detalle": {
+        "R5": 239411,
+        "AZ": 239411
+      }
+    },
+    {
+      "control": "Reproducción R5 desde copia oficial de 46 pestañas",
+      "estado": "NO_EJECUTADO",
+      "detalle": "NO EJECUTADA: R5 no conserva el motor; no se copiaron modificaciones."
+    },
+    {
+      "control": "Nueva valoración JMR independiente A-1.2",
+      "estado": "NO_EJECUTADO",
+      "detalle": "PENDIENTE: no se han completado datos, fichas de calibración ni cuatro DCF nativos."
+    },
+    {
+      "control": "Nueva valoración AZ independiente",
+      "estado": "NO_EJECUTADO",
+      "detalle": "PENDIENTE: el replay usa hipótesis AZ existentes, no hipótesis nuevas."
+    },
+    {
+      "control": "18 secciones de research completo",
+      "estado": "NO_EJECUTADO",
+      "detalle": "PENDIENTE: informe de hallazgos no sustituye research completo."
+    },
+    {
+      "control": "Siete múltiplos, DCF inverso y sensibilidades nuevas",
+      "estado": "NO_EJECUTADO",
+      "detalle": "NO EJECUTADOS."
+    },
+    {
+      "control": "Integridad global, perfil 46, selectores y regresión nativa",
+      "estado": "NO_EJECUTADO",
+      "detalle": "NO EJECUTADOS integralmente; comparación acotada arriba."
+    },
+    {
+      "control": "Trazabilidad primaria de todos los datos históricos/LTM",
+      "estado": "NO_EJECUTADO",
+      "detalle": "PENDIENTE: historia heredada no validada línea a línea contra SEC."
+    }
+  ],
+  "diagnostico_factor_RD_terminal": {
+    "delta_USD_accion_aislado": -3.259727412731981,
+    "valor_diagnostico_no_oficial": 283.945206382958,
+    "limitacion": "Solo aplica 85% a M32 y propaga escudo fiscal/retención terminal manteniendo resto fijo. No recalibra cohortes, GAAP ni ROIC."
+  },
+  "replay_R5": 287.20493379569,
+  "replay_AZ_existente": {
+    "Base": {
+      "replay": 218.81574042769319,
+      "hoja": 218.81574042769319,
+      "error_max_FCFF_USDm": 0.0,
+      "MOS35_comparativo": 142.2302312780006
+    },
+    "Conservador": {
+      "replay": 140.7505922563713,
+      "hoja": 140.75059225637128,
+      "error_max_FCFF_USDm": 5.820766091346741e-11,
+      "MOS35_comparativo": 91.48788496664135
+    },
+    "Optimista": {
+      "replay": 391.25560957913194,
+      "hoja": 391.255609579132,
+      "error_max_FCFF_USDm": 5.820766091346741e-11,
+      "MOS35_comparativo": 254.31614622643576
+    }
+  }
+}
