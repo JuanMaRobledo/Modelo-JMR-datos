@@ -1,0 +1,370 @@
+{
+  "ticker": "XRX",
+  "nombreActivo": "Xerox Holdings Corporation",
+  "revisionId": "XRX-FLOYD-20261112-R1",
+  "perfil_valoracion": "Floyd",
+  "version_metodo": "Floyd",
+  "metodo_valoracion": "A",
+  "perfilEmpresa": "operativa",
+  "subtipo": "operativa híbrida con financiación cautiva material",
+  "estado": "CANDIDATO",
+  "publicationStatus": "CANDIDATO",
+  "candidata": true,
+  "contratoLibros": "floyd-libro-unico-v1",
+  "contratoPendiente": null,
+  "metodoPrincipal": "FCFF consolidado Base calculado; puente al común no certificado",
+  "fechaValoracion": "2026-11-12",
+  "fechaCorteContable": "2026-09-30",
+  "precioReferenciaFecha": "2026-11-11",
+  "precio": 1.02,
+  "moneda": "USD",
+  "escala": "millones salvo acciones/acción",
+  "market": "Nasdaq Global Select Market",
+  "clase": "Common Stock $1 par",
+  "estadoCotizacion": "COTIZADA según 10-Q y cierre IR 11-nov; sin baja identificada",
+  "acciones": {
+    "balance": {
+      "fecha": "2026-09-30",
+      "millones": 132.694
+    },
+    "ultimaPublicada": {
+      "fecha": "2026-10-30",
+      "millones": 133.208753
+    },
+    "fechaPrecio": {
+      "fecha": "2026-11-11",
+      "millones": null,
+      "estado": "PENDIENTE puente postcorte"
+    }
+  },
+  "libros": {
+    "analisis": "https://docs.google.com/document/d/1QbkvjyS24sS3bA2IgF7tWfty4qXMZVRoZ7BuS21zKiM/edit",
+    "unico": "https://docs.google.com/spreadsheets/d/110kJtFEN9GL43ndBhCA6zpZh6HW6DDFDmCH4pbl7l0k/edit"
+  },
+  "sheet_id": "110kJtFEN9GL43ndBhCA6zpZh6HW6DDFDmCH4pbl7l0k",
+  "hojaGoogle": "https://docs.google.com/spreadsheets/d/110kJtFEN9GL43ndBhCA6zpZh6HW6DDFDmCH4pbl7l0k/edit",
+  "valorPrincipal": null,
+  "precioMOS": null,
+  "mos": 0.35,
+  "baseMOS": "dcfBase",
+  "valorEsperado": {
+    "valor": null,
+    "dcfBase": null,
+    "disrupcionEnPromedio": false,
+    "escenariosPromedio": 3,
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "valor": null,
+        "probabilidad": 0.5
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "valor": null,
+        "probabilidad": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista",
+        "valor": null,
+        "probabilidad": 0.25
+      }
+    ],
+    "nota": "Probabilidades tecnicas actuales del libro, no calibracion economica aprobada; valor comun no certificado. Los Ginsu brutos se registran aparte."
+  },
+  "auditoriaEconomica": "NO_REALIZADA",
+  "r6": "PENDIENTE INDEPENDIENTE",
+  "contrato": {
+    "repositorio": "JuanMaRobledo/Modelo-JMR",
+    "ref": "main",
+    "sha": "b50fbb431095ed1a3f6ebfc2ab923fd405fcbd30",
+    "reglasVersion": 41,
+    "libroUnicoVersion": "1.5"
+  },
+  "repositorios": {
+    "datos": "4a8779f584d41023786be109c806c86b40871e20",
+    "motor": "a11510b17f9c8349cc8a5445937fb595ca1c0d99"
+  },
+  "fases": {
+    "R1": "PARCIAL: riesgo/precio/corte verificados; WACC definitivo pendiente",
+    "R2": "NO CERRADO:19ND",
+    "R3": "PARCIAL ECONÓMICO: S/C y fiscal implantados;75 sensibilidades y4 inversos cargados, conciliados y VIGENTE",
+    "R4": "PARCIAL: EBITDA corregido, cobertura no aprobada",
+    "R5": "CANDIDATO: Doc y datos misma revisión actualizados tras autorización; NO PUBLICAR",
+    "R6": "PENDIENTE INDEPENDIENTE"
+  },
+  "salvedades": [
+    {
+      "id": "XRX-01",
+      "estado": "ABIERTO",
+      "severidad": "CRÍTICO",
+      "descripcion": "R2:19indicadores pendientes de leasing propio al corte/comparable",
+      "evidencia": "Auxiliares!B64/B67; Balance Sheet!L21/L26; Auxiliares!L29/L31",
+      "impacto": "XRX-01 · ÚLTIMA COMPROBACIÓN 12-nov-2026: SEC accession 0001770450-26-000051 10-Q Q3 2026 fechado 5-nov reporta 2026-09-30 balances consolidados y equipo leasing A CLIENTES neto 272m, pero no publica tabla de obligaciones operativas propias por vencimiento ni desglose current/noncurrent comparables FY2025 y Q3 2025. 2025-09-30 Nota Lessee sí reportó lease propio 74m corto+265m largo, cargados y vinculados. Obligaciones 2026 se incluyen contablemente dentro de 'accrued expenses and other current liabilities' y 'other long-term liabilities', pero no hay desagregación primaria para separar. No poner en balance histórico ni $0 ni proxy FY2025 con etiqueta reportado; deuda/leasing material no es exceptuable por §4B-bis. XRX-01 sigue PENDIENTE por fuente no publicada."
+    },
+    {
+      "id": "XRX-02",
+      "estado": "ABIERTO",
+      "severidad": "MATERIAL",
+      "descripcion": "FCFF consolidado seleccionado; proyección de capital financiero pendiente",
+      "evidencia": "Income Statement!L12/L15/L19; cartera y fondeo Q26",
+      "impacto": "INVESTIGADO Y PROBADO EN COPIA. CFO9M: liberación cartera152, consumo inventarios97, AR52, equipo neto22; subtotal parcial25m, no FCFF. S/C propuesto C12/8, B8/4, O2,1/2,1 limita recuperación; Base NOPAT81,909/reinversión−27,303/FCFF109,212. Con WACC10,3% y resto constante, EVBase2830,0527→2367,2601m (−462,7926m). Propuesta no instalada: auto review exige autorización específica."
+    },
+    {
+      "id": "XRX-03",
+      "estado": "ABIERTO",
+      "severidad": "CRÍTICO",
+      "descripcion": "Preferente temporal no deducida en el valor común principal",
+      "evidencia": "Auxiliares!L51; Valuation output!B29:B33; Puente EEFF!B92; Resumen!D5/B17",
+      "impacto": "NUEVO: principal contractual4348 frente a book4220 (costes95+descuentos33) y FV2893. Damodaran prescribe deuda a mercado para EV→equity; principal se conserva para obligaciones/restructuración/opción. SerieA180liquidación,214book,14,4dividendo acumulativo y6,741576mconversión opcional. En copia: PV preferente63,326m bajo hipótesis22%y2años de aplazamiento; NO valor certificado. WarrantsFV21m aparte de opciones empleados≈0,000021m."
+    },
+    {
+      "id": "XRX-04",
+      "estado": "ABIERTO",
+      "severidad": "MATERIAL",
+      "descripcion": "Deuda/caja/acciones postcorte y dilución económica pendientes",
+      "evidencia": "Q26 notas12/20/22; Puente EEFF!82:90",
+      "impacto": "POSTCORTE CONSUMADO: ABL0 al30sep y75m dispuestos al5nov, disponibilidad neta225m (366−66LC−75). No sumar75 a caja libre sin conciliar usos. Acciones132,694sep/133,208753oct; canje174m anunciado para13nov NO consumado al corte de precio. RSU18,586m y warrants81,412m antiEPS no equivalen a emisiones automáticas."
+    },
+    {
+      "id": "XRX-06",
+      "estado": "ABIERTO",
+      "severidad": "MATERIAL",
+      "descripcion": "Auditoría económica R6 independiente pendiente",
+      "evidencia": "Revisión XRX-FLOYD-20261112-R1",
+      "impacto": "463celdas verificadas y controles técnicos no certifican R6"
+    },
+    {
+      "id": "XRX-07",
+      "estado": "ABIERTO",
+      "severidad": "CRÍTICO",
+      "descripcion": "Tipo efectivo histórico negativo no representativo para DCF",
+      "evidencia": "Income Statement!L29 histórico→Control económico XRX!B3; prospectivoB5:D5→Input sheet B23 de C/B/O",
+      "impacto": "CORRECCIÓN TÉCNICA IMPLANTADA #204: ETR histórica−6,402164% permanece; selector fiscal separado usa25% inicial prospectivo como hipótesis sin reconocer NOL anteriores.9/9resultados de regresión exactos (histórico,0%,25%×3). Oficial bruto C−15,7289196/B−7,4615768/O3,4070555. EVBase3195,3212→2830,0527m por impuesto:−365,2685m. DTA2242/allowance1933/neto309 FY25; NOLnominal8100 no cargado como realizable."
+    },
+    {
+      "id": "XRX-08",
+      "estado": "ABIERTO",
+      "severidad": "CRÍTICO",
+      "descripcion": "Salida Base Ginsu negativa y MOS / precio del común no interpretables",
+      "evidencia": "Valuation output!B29:B33; Resumen de valoraciones!B16:B18; Sensibilidades DCF!D8/D16/D39",
+      "impacto": "OFICIAL tras fiscal25%: Base bruto−7,4616 NO precio negativo. Se ejecutaron75corridas nuevas y4inversos brutos; centros−7,4615768 exactos. La carga de75entradas estáticas y guardiaMOS fue rechazada por auto review; original conserva OBSOLETO y MOS negativo mecánico NO UTILIZABLE. En copia guardiaMOS pasa negativo→N/M y positivo1,019999→0,662999. No mostrar ese MOS como compra."
+    },
+    {
+      "id": "XRX-09",
+      "estado": "ABIERTO",
+      "severidad": "CRÍTICO",
+      "descripcion": "R4 múltiplos aplicables y cobertura comparables pendientes",
+      "evidencia": "Supuestos y control!B60/H61:H80; Resumen de Valoración!G3; M · Income Statement!L11:L28",
+      "impacto": "ERROR DE DATOS RESUELTO EN OFICIAL: M Income Statement B27:L27 sólo sumaba D&A separado(P&L124m LTM), omitía279m embebidos. Ya vinculado al EBITDA deH calculado con D&A CFO403m;11FY/LTM conciliados. EBITDA LTM−250m, no−529m. +goodwill959−IEEPA105=604m de contraste; retiene reestructuraciones. No es normalización definitiva ni EV/EBITDA430."
+    }
+  ],
+  "asuntosPorRevisar": [
+    {
+      "id": "XRX-01",
+      "titulo": "R2:19indicadores pendientes de leasing propio al corte/comparable",
+      "severidad": "CRÍTICO",
+      "evidencia": "Auxiliares!B64/B67; Balance Sheet!L21/L26; Auxiliares!L29/L31",
+      "impacto": "XRX-01 · ÚLTIMA COMPROBACIÓN 12-nov-2026: SEC accession 0001770450-26-000051 10-Q Q3 2026 fechado 5-nov reporta 2026-09-30 balances consolidados y equipo leasing A CLIENTES neto 272m, pero no publica tabla de obligaciones operativas propias por vencimiento ni desglose current/noncurrent comparables FY2025 y Q3 2025. 2025-09-30 Nota Lessee sí reportó lease propio 74m corto+265m largo, cargados y vinculados. Obligaciones 2026 se incluyen contablemente dentro de 'accrued expenses and other current liabilities' y 'other long-term liabilities', pero no hay desagregación primaria para separar. No poner en balance histórico ni $0 ni proxy FY2025 con etiqueta reportado; deuda/leasing material no es exceptuable por §4B-bis. XRX-01 sigue PENDIENTE por fuente no publicada.",
+      "accion": "Fuente primaria y XBRL por corte: documentar ausencia en 2026. Si el saldo sigue no reportado, sólo tratamiento como hipótesis prospectiva explícita/sensibilidad con mantenimiento autorizable; no imputar cifras a Balance Sheet L21/L26 reportadas. Cierre R2 requiere nuevo dato o excepción formal del usuario; REGLAS §4B-bis NO permite exceptuar un insumo material de deuda/EV. Diferencia 2025 entre leasing operativo 339m y FY2025 327m recuerda magnitud material.",
+      "dependencia": "Fuentes del corte y clasificación",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-02",
+      "titulo": "FCFF consolidado seleccionado; proyección de capital financiero pendiente",
+      "severidad": "MATERIAL",
+      "evidencia": "Income Statement!L12/L15/L19; cartera y fondeo Q26",
+      "impacto": "IMPLANTADO tras autorización «Si autorizo»: S/C C12/8, B8/4, O2,1/2,1. Base NOPAT81,909, reinversión−27,303 y FCFF109,212m. EVBase2830,0527→2367,2601m (−462,7926m) manteniendo WACC10,3%. CFO9M: cartera152, inventarios−97, AR−52, equipo neto22; subtotal25 no es FCFF.",
+      "accion": "Escrituras y recálculo cerrados técnicamente. Validar originación/cobro/ventas122m, pérdidas, mantenimiento, I+D y NWC; la liberación no es flujo perpetuo ni caja inmediata del común. Permanece abierto el juicio económico.",
+      "dependencia": "R2 y supuestos R3",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-03",
+      "titulo": "Preferente temporal no deducida en el valor común principal",
+      "severidad": "CRÍTICO",
+      "evidencia": "Auxiliares!L51; Valuation output!B29:B33; Puente EEFF!B92; Resumen!D5/B17",
+      "impacto": "NUEVO: principal contractual4348 frente a book4220 (costes95+descuentos33) y FV2893. Damodaran prescribe deuda a mercado para EV→equity; principal se conserva para obligaciones/restructuración/opción. SerieA180liquidación,214book,14,4dividendo acumulativo y6,741576mconversión opcional. En copia: PV preferente63,326m bajo hipótesis22%y2años de aplazamiento; NO valor certificado. WarrantsFV21m aparte de opciones empleados≈0,000021m.",
+      "accion": "Puente en copia calcula alternativas no-convertida/convertida sin doble conteo; rango IEEPA0–81 por activo compensatorio pendiente, caja412 excluye118restringidos. No deducir pensiones brutas1135sin netear activos/flujo: FY25prepaid578 y guía aportes160. WACC experimental22,075% NO adoptado: IBR19,29%no es YTM; beta deuda0 y geografía requieren contraste.",
+      "dependencia": "Compatibilidad económica",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-04",
+      "titulo": "Deuda/caja/acciones postcorte y dilución económica pendientes",
+      "severidad": "MATERIAL",
+      "evidencia": "Q26 notas12/20/22; Puente EEFF!82:90",
+      "impacto": "POSTCORTE CONSUMADO: ABL0 al30sep y75m dispuestos al5nov, disponibilidad neta225m (366−66LC−75). No sumar75 a caja libre sin conciliar usos. Acciones132,694sep/133,208753oct; canje174m anunciado para13nov NO consumado al corte de precio. RSU18,586m y warrants81,412m antiEPS no equivalen a emisiones automáticas.",
+      "accion": "Solo llevar a Puente EEFF C83:C85 un cambio NETO con confirmación consumada y fecha; no anticipar hasta 13-nov. Instrumentos potenciales en cada estado sólo una vez (opción in/out-of-money, warrants por entrega de deuda, preferente). Monitorear SEC 8-K confirmación de settlement; no suponer rescate de bonos sin flujo ni emisión.",
+      "dependencia": "Fuentes y escenarios",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-05",
+      "titulo": "Textos específicos de Oracle conservados en la plantilla oficial",
+      "severidad": "MENOR",
+      "evidencia": "Puente EEFF!C21/A92/A97:A99/E107:E112",
+      "impacto": "Corrección aplicada sobre Puente EEFF: notas C21, A92/E92, A95/E96/E97, A98/E98, A99, E101/E103/E107/E112; 180.000 preferentes y ratio opcional 37,4532 cargados, 6,741576m dilución automática, acciones septiembre/octubre conciliadas. Barrido A1:G120 sin texto Oracle/ORCL/Series D/agosto; B92 permanece 0 por fórmula, claramente señalado NO serie A. No se editó ni una fórmula Damodaran.",
+      "accion": "CERRADO editorialmente, sin modificar B92 ni Ginsu. La valoración económica del Series A permanece XRX-03; el estado de publicación sigue CANDIDATO.",
+      "dependencia": "Integridad editorial",
+      "estado": "CERRADO"
+    },
+    {
+      "id": "XRX-06",
+      "titulo": "Auditoría económica R6 independiente pendiente",
+      "severidad": "MATERIAL",
+      "evidencia": "Revisión XRX-FLOYD-20261112-R1",
+      "impacto": "463celdas verificadas y controles técnicos no certifican R6",
+      "accion": "Auditoría independiente tras completar R1–R5",
+      "dependencia": "Sesión independiente",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-07",
+      "titulo": "Tipo efectivo histórico negativo no representativo para DCF",
+      "severidad": "CRÍTICO",
+      "evidencia": "Income Statement!L29 histórico→Control económico XRX!B3; prospectivoB5:D5→Input sheet B23 de C/B/O",
+      "impacto": "REPARACIÓN #204 IMPLANTADA: ETR histórica−6,402164% intacta; prospectivo25% hipótesis sin NOL inicial reconocido.9/9regresiones exactas con S/C anterior. Con S/C autorizado, brutos C−24,2169566/B−10,9357674/O3,4852556. Efecto fiscal aislado anterior: EVBase−365,2685m. DTA2242/allowance1933/neto309; NOL8100 no reconocido automáticamente.",
+      "accion": "Mantener abierto el juicio fiscal por jurisdicción y caja;59m9M es gasto contable, no prueba de impuesto pagado. Defecto de crédito fiscal negativo ya reparado sin tocar Valuation output; maestra no modificada. Issue204 sigue abierto para revisión técnica/regresión ampliada; no confundir reparación implantada con R3/R5cerradas.",
+      "dependencia": "Impuestos y compatibilidad del motor",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-08",
+      "titulo": "Salida Base Ginsu negativa y MOS / precio del común no interpretables",
+      "severidad": "CRÍTICO",
+      "evidencia": "Valuation output!B29:B33; Resumen de valoraciones!B16:B18; Sensibilidades DCF!D8/D16/D39",
+      "impacto": "75 nuevas corridas y4inversos cargados tras autorización «Si autorizo», con S/C vigente. Centros−10,9357673798 exactos; firmas matrices e inversos VIGENTE. GuardiaMOS implantada: N/M para Base no positivo. Son residuales brutos, no precios certificados del común.",
+      "accion": "Carga, conciliación, restauración y sellos completados;0fórmulas de cálculo Damodaran alteradas. Permanece reconciliar derechos comunes, deuda/riesgo, hechos postcorte y opcionalidad. Las sensibilidades conjuntas favorables impiden certificar un valor total0.",
+      "dependencia": "Derechos económicos y conciliación EV común",
+      "estado": "ABIERTO"
+    },
+    {
+      "id": "XRX-09",
+      "titulo": "R4 múltiplos aplicables y cobertura comparables pendientes",
+      "severidad": "CRÍTICO",
+      "evidencia": "Supuestos y control!B60/H61:H80; Resumen de Valoración!G3; M · Income Statement!L11:L28",
+      "impacto": "ERROR DE DATOS RESUELTO EN OFICIAL: M Income Statement B27:L27 sólo sumaba D&A separado(P&L124m LTM), omitía279m embebidos. Ya vinculado al EBITDA deH calculado con D&A CFO403m;11FY/LTM conciliados. EBITDA LTM−250m, no−529m. +goodwill959−IEEPA105=604m de contraste; retiene reestructuraciones. No es normalización definitiva ni EV/EBITDA430.",
+      "accion": "EV/EBITDA: normalización mínima604m, contrastar guía739−105=634m y licencia no recurrente/financiación. P/E N/M; EV/FCFF yP/FCFE N/Dnormalizado; P/OCF131positivo pero cartera condiciona. No fabricar2métodos/80%cobertura. Mantener R4NOAPROBADO mientras NWC y múltiplos no sostengan controles.",
+      "dependencia": "R2, capital operativo, M e inputs financieros",
+      "estado": "ABIERTO"
+    }
+  ],
+  "fuenteDatosActiva": "HISTORICOS_REPORTADOS_10FY_COMPARATIVOS.json",
+  "stagingInicial": "entradas_primarias.json (captura inicial conservada; no sustituye selección de versiones actual)",
+  "capturaActualizada": {
+    "fecha": "2026-11-12",
+    "pdfsAportados": 10,
+    "tablasPDF": 15,
+    "tablasSEC": 9,
+    "controlesPDF": 96,
+    "controlesSEC": 68,
+    "R2NativoConciliado": false,
+    "valoresCalculados": false,
+    "controlesClasificacion": 42,
+    "controlesNativosBalanceCaja": 22,
+    "celdasAdicionalesVerificadas": 463,
+    "preciosFiscalesPrimarios": 10,
+    "LTMNativo": true,
+    "indicadoresPendientes": 19
+  },
+  "corroboracionAportes2020a2024": {
+    "directorio": "fuentes/aportes_usuario_2020_2024",
+    "pdfs": 5,
+    "anclasSinDiferencias": 30,
+    "identidadesTablasAdicionales": 38,
+    "notasReportadasAdicionales": 41,
+    "versionActivaModificada": false,
+    "r2NativoCompleto": false
+  },
+  "copiaOficial": {
+    "maestra": "1T1Cs2HGlVSe5_5OwqGGQvsN1k1KJaweXZEUM3HGttKk",
+    "pestanas": 85,
+    "entradasYMetadatosVerificados": 816,
+    "diferenciasCarga": 0,
+    "formulasHAlteradas": 0,
+    "integridadMotoresCompleta": false,
+    "r2": "NO CERRADO",
+    "indicadoresND": 19,
+    "publicacion": "NO PUBLICAR",
+    "compatibilidadEconomica": false,
+    "celdasAdicionalesVerificadas": 463,
+    "formulasDeSalidaHAlteradas": 0,
+    "formulasDeEntrada19SustituidasPorDatoPrimario": 10,
+    "preciosFiscalesConFuente": 10,
+    "LTMNativo": true,
+    "identidadesNativasCuadradas": 22,
+    "opcionesNumeroReportadoCargado": 0.073,
+    "opcionesParametrosCompletos": false
+  },
+  "decisionMetodo": "DECISION_FCFF_Y_BLOQUEOS_REALES.md",
+  "baseMOSDescripcion": "DCF FCFF consolidado Base al patrimonio común",
+  "versionCalibracion": "A-1.2",
+  "salidasBrutasGinsuDiagnostico": {
+    "conservadora": -24.216956553181635,
+    "base": -10.935767379800657,
+    "optimista": 3.485255564323339,
+    "moneda": "USD/accion",
+    "nota": "NO precios intrínsecos certificados del común; S/C autorizados,fiscal25% hipótesis,WACC10,3% provisional",
+    "EV_USDm": {
+      "conservadora": 598.0894374124143,
+      "base": 2367.260085555595,
+      "optimista": 4288.2665689267415
+    },
+    "FCFF_Base_Y1_USDm": 109.212,
+    "NOPAT_Base_Y1_USDm": 81.909,
+    "reinversion_Base_Y1_USDm": -27.303
+  },
+  "controlCierreEconomico": "ESTADO_CIERRE_ECONOMICO.json",
+  "notaPublicacion": "No se modifica catalogo. Base/esperado/MOScomun siguen N/D; R6independiente pendiente.",
+  "escenariosDCF": {
+    "historias": [
+      {
+        "id": "A",
+        "nombre": "Base",
+        "valor": null,
+        "probabilidad": 0.5
+      },
+      {
+        "id": "B",
+        "nombre": "Conservadora",
+        "valor": null,
+        "probabilidad": 0.25
+      },
+      {
+        "id": "C",
+        "nombre": "Optimista",
+        "valor": null,
+        "probabilidad": 0.25
+      }
+    ]
+  },
+  "adaptacionFiscal": {
+    "issue": 204,
+    "estado": "IMPLANTADA_EN_CANDIDATO",
+    "version": "xrx-fiscal-inicial-v1",
+    "maestraModificada": false,
+    "formulasCalculoGinsuModificadas": 0,
+    "regresionesExactas": 9,
+    "compatibilidadApp": "NO_VERIFICADA"
+  },
+  "reinversionImplantada": {
+    "sc15": {
+      "conservadora": 12,
+      "base": 8,
+      "optimista": 2.1
+    },
+    "sc610": {
+      "conservadora": 8,
+      "base": 4,
+      "optimista": 2.1
+    },
+    "baseFCFF1": 109.212,
+    "baseEV_MismoWACC10_3": 2367.260085555595,
+    "deltaEVSoloSC": -462.79259380538,
+    "estado": "IMPLANTADA: autorización explícita «Si autorizo»; nuevo recálculo75+4 vigente; no incluye adoptar WACCexperimental"
+  }
+}
